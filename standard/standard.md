@@ -125,12 +125,13 @@ Open Contracting Core Concepts
 Within open contracting data, we find a core set of concepts that
 encapsulate the data along the contracting journey.
 
-First, there's the data that describes the **body** of the contract:
+First, there's the data that describes the **basis** of the contract:
 
 -   Goods / services
 
     -   Details, ideally at the line item level, of the goods and
-        services being procured. This should include a standardized code
+        services being procured. This should include a standardized code (detailing 
+        the items category e.g. construction or agricultural goods)
         & description as well as any supporting information.
 
 -   Amount
@@ -148,13 +149,13 @@ First, there's the data that describes the **body** of the contract:
     -   The buyer is the department, agency or entity who is paying for
         the goods /services in the contract. The buyer may be distinct
         from a procuring agency or awarding body - an independent entity
-        that runs the procurement process (tender and award). (This
+        that runs the procurement process (tender and award) - this
         allows for pooling of resources as well as enhancing
         impartiality).
 
 -   Supplier
 
-    -   The supplier is the entity providing the goods or services in
+    -   The supplier is the entity, or entities, providing the goods or services in
         the contract. It could be an individual, a private organization,
         or another public body.
 
@@ -228,9 +229,9 @@ representations of the data:
 -   The contracting record - an up-to-date entry that brings together
     data from across the contracting process
 
--   The contracting revisions - a series of entries that are the
+-   The contracting releases - a series of entries that are the
     published notices and amendments that occur along the contracting
-    process. The revisions update the contracting record.
+    process. The releases update the contracting record.
 
 ![Visual of publishing process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/revisions%20and%20record.png)
 
@@ -247,11 +248,9 @@ administrative links, and any add on pieces of information that the
 publisher wishes or needs to publish as part of their procurement
 process.
 
-**Example Contracting Record** (coming soon)
-
 The contracting record should ideally be available compiled, on-line and
 as a download-able set of records. However, at the minimum, the a
-collection of links to the contracting revisions should be available.
+collection of links to the contracting releases should be available.
 
 Many public procurements take place under framework agreements, or
 standing arrangements. These help facilitate routine purchasing.
@@ -261,9 +260,9 @@ The contract record will allow for repeating sections of information
 where its necessary to represent the information. For example, the
 contracting
 
-### Contracting revisions: notices and amendments 
+### Contracting releases: notices and amendments 
 
-The contracting record is formed and updated through revisions, which
+The contracting record is formed and updated through releases, which
 are either notices and amendments. There are four types of notice:
 
 -   Tender notice
@@ -279,11 +278,6 @@ process. After a new phase has been commenced, amendments may be issued
 to updated the information. Once a new phase commences, amendments
 should not be made to the previous phase.
 
-**Example Tender Notice** (coming soon)
-
-**Example Tender Amendment** (coming soon)
-
-
 Not all notices are necessary for a complete contracting record. If an
 entity was only publishing award notice data, it could still publish an
 almost complete contracting record as the award contains a description
@@ -292,7 +286,7 @@ award information also. We would encourage further disclosure, but lack
 of disclosure on one part of the contracting process does not preclude a
 contracting record.
 
-### Revision tracking 
+### Release tracking 
 
 **This section requires research & consultation**
 
@@ -306,14 +300,14 @@ forward the contracting process. Subsequent notices and amendments may
 have their own unique identifiers (e.g. an award notice identifier) but
 they must all contain a reference to the unique identifier.
 
-Each revision, or a group of revisions, will contain publisher
-information, and each revision will contain a revision number and date
+Each release, or a group of releases, will contain publisher
+information, and each release will contain a release number and date
 from that publisher. The idea is to accommodate the modularization of
 publishing such that along the contracting journey, different bodies
-could publish different sets of revisions. For example, one publisher
+could publish different sets of releases. For example, one publisher
 for tenders and awards, and a separate publisher for contracts
-revisions. In addition, third-party publishers may wish to augment the
-contracting data with their own revisions such as an Add On containing
+releases. In addition, third-party publishers may wish to augment the
+contracting data with their own releases such as an Add On containing
 geo-coding information
 
 Schema re-use 
