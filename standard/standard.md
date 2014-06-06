@@ -233,7 +233,7 @@ representations of the data:
     published notices and amendments that occur along the contracting
     process. The releases update the contracting record.
 
-![Visual of publishing process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/revisions%20and%20record.png)
+![Visual of publishing process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/releases%20and%20record.png)
 
 ### The contracting record 
 
