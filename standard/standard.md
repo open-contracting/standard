@@ -1,7 +1,3 @@
-# Open Contracting Data Standard: Conceptual Model (Alpha)
-
-Draft - June 10th 2014
-
 This version open for consultation until July 10th. Visit [http://open-contracting.github.io](http://open-contracting.github.io) for more background information.
 
 <div class="panel panel-primary">
