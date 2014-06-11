@@ -101,8 +101,6 @@ awarding a contract, negotiating and signing a contract, performing the
 contract and exchanging money and reviewing whether the contract has been met. 
 We use the term 'Contracting Journey' to describe an overarching container for all these stages.
 
-The proposed OCDS data model is based around the idea of an identifiable Contracting Journey with a unique **Open Contracting Identifier**.
-
 #### Defining a unique contracting journey
 There are cases where what the unique journey is not obvious. For example, a framework contract has only one tender and award but many contracts associated with that award.
 
