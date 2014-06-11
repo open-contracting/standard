@@ -21,9 +21,9 @@ Table of contents
 
 * [About this document](#about)
 * [Background & context](#background)
-** [Motivation](#motivation)
-** [Development process](#process)
-** [Sources](#sources)
+  * [Motivation](#motivation)
+  * [Development process](#process)
+  * [Sources](#sources)
 * [Conceptual Model](#model)
  * [Overview](#model)
  * [Vocabulary](#vocab)
