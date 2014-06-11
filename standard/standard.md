@@ -121,7 +121,7 @@ The world of procurement and contacting has many specialist terms. However, the 
 </div>
 
 ### The contracting journey 
-![Contracting Journey](contracting_journey.png)
+![Contracting Journey](https://raw.githubusercontent.com/open-contracting/standard/master/standard/contracting_journey.png)
 
 There are many different stages involved in contracting: from the
 decision that some goods or services are required, through to deciding
