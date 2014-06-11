@@ -111,14 +111,18 @@ We define a unique contracting journey as that with a unique tendering / competi
 
 **Example 1**
 
-![Multiple journeys](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png)
+<div class="pull-left"><img alt="Multiple journeys" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png">
 
 This Tender notice has a single ID and six line items. However, to secure each item vendors must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting journeys here, in spite of the single Tender Notice ID.
 
-**Example 2 **
-![Single journey](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png)
+<div class="clearfix"></div>
+
+**Example 2**
+<div class="pull-left"><img alt="Single journey" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png"></div>
 
 This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting journey, because of the single bidding process.
+
+<div class="clearfix"></div>
 
 ### Scope of the standard
 In this first draft, and for the planned beta in Q3 2014, we propose a focus on the four phases:
