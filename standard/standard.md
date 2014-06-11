@@ -21,7 +21,7 @@ This version is open for consultation until July 10th. Visit [http://open-contra
 ##About this document
 This document sets out a proposed conceptual model for the [Open Contracting Data Standard](http://open-contracting.github.io), and poses a series of questions for consultation. 
 
-It *does not* provide a field-level specification of the standard, or how the data may be represented in specific file formats. That will be provided through the beta release of the standard in early Q3 2014, developed based on responses to this document. 
+It *does not* provide a field-level specification of the standard, or how the data may be represented in specific file formats. That will be provided through the beta release of the standard in Q3 2014, developed based on responses to this document. 
 
 
 ##Background and context
@@ -36,7 +36,7 @@ The development of the standard is being undertaken by the World Wide Web Founda
 ### Development process
 This first release from the development of an Open Contracting Data Standard presents a high-level overview of a proposed data model.
 
-Following a [technical scoping exercise](LINK) we have adopted a development process based on:
+Following a technical scoping exercise we have adopted a development process based on:
 
 - specifying a single format-independent conceptual model;
 - developing this into a data model, identifying common vocabularies and taxonomies to use in defining fields, and creating new fields where required;
@@ -51,37 +51,6 @@ The development of the alpha data model has been based on:
 * **Exploring demand for data on contracting** - to identify the ways in which different users think about contracting data, and how they want to useit.
 
 We offer this draft data model as the basis for a discussion. Following feedback over June and July 2014 we will revise or confirm the conceptual model, and will work towards providing more detailed field-level information by the third quarter of 2014.
-
-##Conceptual Model
-We propose an Open Contracting Data Standard consisting of two parts:
-
-- A **contracting record** - a core summary record used to describe key features of a complete 'contracting journey' - updated as new information becomes available to accurately reflect the state of tender, award or contract processes. The contracting record should provide an at-a-glance view of key information used in locating and analysing current, past or future contracting activities.
-
-
-- A set of **contracting releases** - specific releases of information, such as tender notices, award notices, or details of a contract. The revision history of releases should be kept, and releases will often have a number of attached documents. The contracting releases provide in-depth information about a particular aspect of the contracting process, and should be published in a timely fashion.  
-
-The information in contracting **releases** can be used to build a contracting **record** - as each contracting release should be tied to a unique **open contracting identifier**. 
-
-The standard will specific a range of common kinds of contracting release, such as:
-
-* Tender notices
-* Award notices
-* Contract details
-* Termination notices
-
-The following section provides more details on this conceptual model, and a high-level description of the contracting record and releases. The beta standard (due Q3 2014) will provide field-level definitions. 
-
-<div class="panel panel-success">
-    <div class="panel-heading">
-       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h3>
-     </div>
-     <div class="panel-body">
-         <ul>
-             <li>Does the proposed conceptual model make sense for the ways you want to publish or use open contracting data?</li>
-             <li>Which do you need most: a summary contracting record, or detailed releases of information at each stage of the contracting journey?</li>
-         </ul>     
-     </div>
-</div>
 
 ### Vocabulary
 
@@ -120,32 +89,44 @@ The world of procurement and contacting has many specialist terms. However, the 
      </div>
 </div>
 
+
+##Conceptual Model
+
 ### The contracting journey 
-![Contracting Journey](https://raw.githubusercontent.com/open-contracting/standard/master/standard/contracting_journey.png)
+![Contracting Journey](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/contracting_journey.png)
 
-There are many different stages involved in contracting: from the
+There are many different stages involved in contracting: from the 
 decision that some goods or services are required, through to deciding
-how they will be bought (procurement processes), assessing bids,
+how they will be bought (procurement processes), assessing bids, 
 awarding a contract, negotiating and signing a contract, performing the
-contract and exchanging money and reviewing whether the contract has
-been met. We use the term 'Contracting Journey' to describe an overarching
-container for all these stages.
+contract and exchanging money and reviewing whether the contract has been met. 
+We use the term 'Contracting Journey' to describe an overarching container for all these stages.
 
-The proposed OCDS data model is based around the idea of an identifiable
-Contracting Journey with a unique **Open Contracting Identifier**.
+The proposed OCDS data model is based around the idea of an identifiable Contracting Journey with a unique **Open Contracting Identifier**.
+
+#### Defining a unique contracting journey
+There are cases where what the unique journey is not obvious. For example, a framework contract has only one tender and award but many contracts associated with that award.
+
+We define a unique contracting journey as that with a unique tendering / competitive phase.
+
+**Example 1**
+
+![Multiple journeys](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png)
+
+This Tender notice has a single ID and six line items. However, to secure each item vendors must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting journeys here, in spite of the single Tender Notice ID.
+
+**Example 2 **
+![Single journey](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png)
+
+This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting journey, because of the single bidding process.
 
 ### Scope of the standard
-In this first draft, and for the planned beta in Q3 2014, we propose a focus on the central three phases:
+In this first draft, and for the planned beta in Q3 2014, we propose a focus on the four phases:
 
 * Tender
 * Award
 * Contract
-
-With a further focus on:
-
-* Termination
-
-Although we note from our supply side assessment that limited existing data is available on the termination and evaluation of contracts to inform the development of standards.
+* Termination[^2]
 
 We have excluded the planning and spending elements of the contracting journey from this draft standard for the following reasons:
 
@@ -156,6 +137,7 @@ We have excluded the planning and spending elements of the contracting journey f
     consistent data (often drawn from the same systems inside a publisher) and share much terminology. By contrast, planning, budgeting and spending data is often held in different systems, and may not be stored in ways that link it to a contracting journey. 
     
 -   There is an [existing standardisation effort](http://community.openspending.org/research/standard/) for Budget and Spending data under development through the Open Spending project. In line with the principles of Joined Up Data we will explore ways to connect data in the Open Contracting Data Standard with data in the proposed Open Spending and Open Budget data standards. 
+   
 
 <div class="panel panel-success">
     <div class="panel-heading">
@@ -169,56 +151,44 @@ We have excluded the planning and spending elements of the contracting journey f
      </div>
 </div>
 
-### Use Cases 
-This draft is based primarily on research of existing published datasets
-as well as preliminary work on use cases for data demand. In particular,
-we are seeking to support the following demands on the data:
+### Conceptual Model
+We propose an Open Contracting Data Standard consisting of two parts:
 
--   publishers release download-able data documenting tenders, contract
-    awards, contracts and contract amendments as part of transparency
-    obligations
+- A **contracting record** - a core summary record used to describe key features of a complete 'contracting journey' - updated as new information becomes available to accurately reflect the state of tender, award or contract processes. The contracting record should provide an at-a-glance view of key information used in locating and analysing current, past or future contracting activities.
 
--   publishers release feeds of tender notices for individual suppliers
-    and third-party data providers to stay up-to-date on contracting
-    opportunities
+- A set of **contracting releases** - specific releases of information, such as tender notices, award notices, or details of a contract. The revision history of releases should be kept, and releases will often have a number of attached documents. The contracting releases provide in-depth information about a particular aspect of the contracting process, and should be published in a timely fashion.  
 
--   publishers release feeds or downloads of award notices as part of
-    transparency obligations
+The information in contracting **releases** is used to build a contracting **record** - each contracting release must, therefore, be tied to a unique **open contracting identifier**. 
 
--   users of data want to be able to compare costs of goods / services
-    in one area compared to another
+![Visual of publishing process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/releases%20and%20record.png)
 
--   users want to be able to see joined-up information in one place that
-    brings together the contracting journey
-    
+The following sections are a high-level description of the open-contracting concepts, record and releases. The beta standard (due Q3 2014) will provide field-level definitions. 
+
 <div class="panel panel-success">
     <div class="panel-heading">
        <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h3>
      </div>
      <div class="panel-body">
          <ul>
-             <li>In your opinion, does the proposed conceptual model work for these use cases?</li>
-             <li>Are there other important use cases we should be considering? </li>
-             <li>Are there use cases you can envisage where the proposed conceptual model does not work well? </li>
+             <li>Does the proposed conceptual model make sense for the ways you want to publish or use open contracting data?</li>
+             <li>Which do you need most: a summary contracting record, or detailed releases of information at each stage of the contracting journey?</li>
          </ul>     
      </div>
 </div>
 
+
 ##Core components
-Both the **contracting record** and individual **contracting releases** will describe some core components of the contracting journey. These components are outlined below, divided into three kinds: contracting features, contracting process, and add-on information. 
+The Data Standard will provide core components with which to publish data. These split into features, process, and add-ons.
 
 ### Contracting features
 First, there is data that describes the **key features** of a proposed or enacted contract:
 
 -   Goods / services
-
     -   Details, ideally at the line item level, of the goods and
         services being procured. This should include a standardized code (detailing 
         the items category e.g. construction or agricultural goods)
         & description as well as any supporting information.
-
 -   Amount
-
     -   Details of the value of the goods / services being procured. At
         the tender phase, this may include a budget for the procurement
         or a minimum & maximum value for potential bids. At the award
@@ -226,18 +196,14 @@ First, there is data that describes the **key features** of a proposed or enacte
         per-item basis. At the contract phase, this would include any
         contract amendments to alter the contract value, and the total
         and final value of the contract.
-
 -   Buyer
-
     -   The buyer is the department, agency or entity who is paying for
         the goods /services in the contract. The buyer may be distinct
         from a procuring agency or awarding body - an independent entity
         that runs the procurement process (tender and award) - this
         allows for pooling of resources as well as enhancing
         impartiality).
-
 -   Supplier
-
     -   The supplier is the entity, or entities, providing the goods or services in
         the contract. It could be an individual, a private organization,
         or another public body.
@@ -246,7 +212,6 @@ First, there is data that describes the **key features** of a proposed or enacte
 Secondly, there is data that describes the **process** of contracting:
 
 -   Tender
-
     -   This the information about the tender process. It may include:
         opening dates, closing dates, consultation information, the type
         of bidding process (open process, selective tendering, limited
@@ -255,7 +220,6 @@ Secondly, there is data that describes the **process** of contracting:
         documentation, a tender ID, and a link to the tender notice.
 
 -   Award
-
     -   The information about the award process. Along with supplier and
         the awarded value, the award information would include a link to
         the award notice with an award date. It may also include
@@ -263,28 +227,26 @@ Secondly, there is data that describes the **process** of contracting:
         the process.
 
 -   Contract
-
     -   Information about the contract and the process through to
         completion. Including links to the contract documents, details
         of contract amendments (change of value, deliverables
         alterations, no-cost extensions), reports on deliverables and
         the status of the contract (active, completed, terminated).
-        
--   Termination
-
-    - Information about the end of a contract, including details of why the contract ended (e.g. work completed; breach of contract), final costs paid, final deliverables, and evaluation information.
+    -   Note that Termination information (details of why the contract
+        ended, final costs paid, final deliverables, and evaluation information.)
+        is included under contract within our data model although it is a seperate
+        phase in the contracting journey.
 
 ### Add on information
-
-Thirdly, in addition to the core components, there will be lots of cases where
-publishers or users of the data need to augment the core data with their
+Thirdly, in addition to the core components, there will be cases where
+publishers, or users, need to augment the core data with their
 own information. The standard will provide a mechanism for Add-On
 information. This will include additional fields in core components as
 well as Add On components (e.g. new kinds of **contracting release**).
 
 The publishing and re-use of add-ons will be encouraged to try and
 reduce duplication and facilitate reuse of tools. The use of Add-Ons
-will be subject to the following restrictions[1](#footnote):
+will be subject to the following restrictions[^1]:
 
 -   It must not use terms from outside this specification's terms where
     this specification's terms would suffice
@@ -317,7 +279,6 @@ The contracting record will contains the latest version of the information for e
 * A unique open contracting identifier
 * Meta-data about the publisher providing information
 * Last-updated information
-* Current phase of the contract
 * The buyer
 * The supplier
 * Goods and services 
@@ -325,11 +286,10 @@ The contracting record will contains the latest version of the information for e
 * The tender process
 * The award process
 * The contracting process
-* Contract termination
-* Links to detailed **contracting releases** for this contracting journey
+* Links to the contracting releases for this contracting journey
 * Links to other supporting documents
 
-This is likely to comprise between 30 and 50 fields of data, and should always reflect the latest state of the contracting process. For example, if a tender is issued for Widget A with a minimum value of $10 and maximum of $20, at the tender stage the 'Amounts:minimum' would be $10, and 'Amounts:maximum' would be $20. If an award is then made for between $15 and $18, at the award phase the Amounts fields in the contracting record would be updated to an 'Amounts:minimum' of $15 and 'Amounts:maximum' of $18. To compare tender to award amounts would require looking at the **contracting releases** or tracking changes to the Contracting Record. 
+The contracting record will reflect the latest state of the contracting process. For example, if a tender is issued for Widget A with a minimum value of $10 and maximum of $20, at the tender stage the 'Amounts:minimum' would be $10, and 'Amounts:maximum' would be $20. If during consulation the range is determined to be unrealistic and a tender ammendment is issued changing the range of acceptable tenders to $20 - $30 then the contracting record would be updated to an 'Amounts:minimum' of $20 and 'Amounts:maximum' of $30. To see the history of these amounts would require looking at the individual contracting releases or tracking changes to the contracting record. 
 
 <div class="panel panel-success">
     <div class="panel-heading">
@@ -344,22 +304,16 @@ This is likely to comprise between 30 and 50 fields of data, and should always r
 </div>
 
 ### A note on framework contracts
-Many public procurements take place under framework agreements, or
-standing arrangements. These help facilitate routine purchasing.
-Suppliers are pre-approved to provide a list of goods or services. In
-this case, there are typically multiple contracts under a given award.
-The contracting record will need to allow for repeating sections of information
-where its necessary to represent the information.
-
+Many public procurements take place under framework agreements, or standing arrangements. These help facilitate routine purchasing. Suppliers are pre-approved to provide a list of goods or services. In
+this case, there are typically multiple contracts under a given award. The contracting record will need to allow for repeating sections of information where its necessary to represent the information.
 
 ##Contracting releases: notices and amendments 
 The contracting record is formed and updated through releases, which
-are either notices and amendments. There are four types of notice:
+are either notices and amendments. There are three types of notice:
 
 -   Tender notice
 -   Award notice
 -   Contract notice
--   Termination notice
 
 A notice signifies the commencement of a new phase of the contracting
 process. After a new phase has been commenced, amendments may be issued
@@ -369,13 +323,12 @@ should not be made to the previous phase.
 Not all notices are necessary for a complete contracting record. If an
 entity was only publishing award notice data, it could still publish an
 almost complete contracting record as the award contains a description
-of the goods, the value, the buyer, seller, and could contain tender and
-award information also. We would encourage further disclosure, but lack
+of the goods, the value, the buyer, seller, and could contain tender process 
+information also. We would encourage further disclosure, but lack
 of disclosure on one part of the contracting process does not preclude a
 contracting record being created.
 
 ### Release tracking 
-
 Ideally, each notice and amendment will refer to the parent contracting
 record, and the contracting record will be updated with a link to each
 notice and amendment, thereby providing a two-way data link.
@@ -409,95 +362,38 @@ geo-coding information.
      </div>
 </div>
 
-##Publishing models
-Given the diversity of systems from which contracting data is drawn, we propose that the Open Contracting Data Standard support a range of different publishing models, although always ensuring that it is possible to construct a **contracting record**, but allowing that the data for this might be provided in a range of different ways. 
+## Use Cases 
+This draft is based primarily on research of existing published datasets as well as preliminary work on use cases for data demand. In particular, we are seeking to support the following demands on the data:
 
-The diagram below represents the overall approach of releases building a contract record.
+-   publishers release download-able data documenting tender opportunities, contract
+    awards, contracts and contract amendments as part of transparency
+    obligations
 
-![Visual of publishing process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/releases%20and%20record.png)
+-   publishers release feeds of tender notices for individual suppliers
+    and third-party data providers to stay up-to-date on contracting
+    opportunities
 
-Below we outline a number of possible models by which data might be made available. These are suggestions for consultation and we welcome comment on the appropriateness of each model. 
+-   publishers release feeds or downloads of award notices as part of trade-agreement and/or transparency obligations
 
-### Contracting release API standard
+-   users of data want to be able to compare costs of goods / services in one area compared to another
 
-Releases could be provided through an open REST API. For example, the standard may develop a common API pattern such that URIs such as:
-
-<code>
-/open-contracting/{open-contracting-id}/tender 
-</code>
-
-<code>
-/open-contracting/{open-contracting-id}/award 
-</code>
-
-return serialised representations of the relevant releases, and a call to:
-
-<code>
-/open-contracting/{open-contracting-id}
-</code>
-
-would provide a list of all the releases related to that **open contracting id**. 
-
-This API call would allow parties would to draw upon all the information on a contracting journey to build a full contracting record. 
-
+-   users want to be able to see joined-up information in one place that brings together the contracting journey
+    
 <div class="panel panel-success">
     <div class="panel-heading">
        <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h3>
      </div>
      <div class="panel-body">
          <ul>
-             <li>Should we look to propose an API standard as part of the version 1.0 Open Contracting Data Standard?</li>
-             <li>Should it be possible for publishers to provide only releases, leaving it to third parties to create the contracting record?</li>
+             <li>In your opinion, does the proposed conceptual model work for these use cases?</li>
+             <li>Are there other important use cases we should be considering? </li>
+             <li>Are there use cases you can envisage where the proposed conceptual model does not work well? </li>
          </ul>     
      </div>
 </div>
-
-### Abbreviated contracting record
-A publisher may provide an abbreviated contracting record which consists only of:
-
-* A unique open contracting identifier
-* Meta-data about the publisher providing information
-* Last-updated information
-* URLs to related releases
-
-Users would then follow these URLs to look up each individual release and to build a contracting record. These URLs may point to static documents, API endpoints or other locations which return machine-readable data for the relevant contracting release. 
-
-<div class="panel panel-success">
-    <div class="panel-heading">
-       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h3>
-     </div>
-     <div class="panel-body">
-         <ul>
-             <li>Will all publishers be able to maintain release information at RESTFUL URIs?</li>
-             <li>Should it be possible for publishers to provide only releases, leaving it to third parties to create the contracting record?</li>
-         </ul>     
-     </div>
-</div>
-
-### Full contracting record & releases
-Publishers build their own **Contracting Records** and keep these updated throughout the contracting journey. 
-
-These records should contain URLs to each of the related releases, allowing third parties to validate the contents of the contracting record.  
-
-A full contracting record may be available as a single record at a specified URL, or as part of a bulk download file. 
-
-### Bulk download
-A publisher may provide contracting records and releases packaged together as part of a single file for bulk download, or as a collection of files together in an archive. 
-
-<div class="panel panel-success">
-    <div class="panel-heading">
-       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h3>
-     </div>
-     <div class="panel-body">
-         <ul>
-             <li>Should the standard specify maximum file sizes for bulk downloads?</li>
-         </ul>     
-     </div>
-</div>
-
 
 ##Next steps
-Over June 2014 we will be validating the conceptual model proposed in this document of Contracting Records and Contracting Releases. You are invited to add your comments directly to the online copy of this document at [http://ocds.aptivate.org/standard/](http://ocds.aptivate.org/standard/), or to join discussions on [the project technical e-mail list](http://open-contracting.github.io/pages/community.html). 
+Over June 2014 we will be validating the conceptual model proposed in this document of a Contracing Journey, Contracting Records and Contracting Releases. You are invited to add your comments directly to the online copy of this document at [http://ocds.aptivate.org/standard/](http://ocds.aptivate.org/standard/), or to join discussions on [the project technical e-mail list](http://open-contracting.github.io/pages/community.html). 
 
 Over July and August 2014 we will be fleshing out in more detail the data fields that belong to each of the core components, and will develop a full data model. The proposed model will be validated against a range of use cases developed through demand side research. 
 
@@ -517,12 +413,12 @@ Organization, that will have People and Addresses. There are already
 well-known schemas for Organizations, People and Addresses and so we
 will re-use this existing standard work where possible.
 
-
-
 ##Footnotes
-[1](#footnote) The use of add-on conditions were adapted from the
-The Popolo Project -
-[http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
+[^1]:
+    The use of add-on conditions were adapted from the
+    The Popolo Project - [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
+   
+[^2]: It is worth noting that, from our supply side assessment, there is currently only limited existing data available on the termination and evaluation of contracts.
 
 ##Credits
 The Open Contracting Data Standard project is a collaboration of the [Open Contracting Partnership](http://www.open-contracting.org/home-v1) and the [World Wide Web Foundation (Web Foundation)](http://www.webfoundation.org), supported by a grant from [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org), with [Aptivate](http://www.aptivate.org) as the lead technical partner to the project. The development of this draft has been led by Sarah Bird ([Aptivate](http://www.aptivate.org)), with contributions from Tim Davies (Web Foundation) and Ana Brandusescu. 
