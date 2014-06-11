@@ -16,59 +16,23 @@ This version is open for consultation until July 10th. Visit [http://open-contra
      </div>
 </div>
 
-Table of contents
------------------
+[TOC]
 
-* [About this document](#about)
-* [Background & context](#background)
-  * [Motivation](#motivation)
-  * [Development process](#process)
-  * [Sources](#sources)
-* [Conceptual Model](#model)
- * [Overview](#model)
- * [Vocabulary](#vocab)
- * [Contracting Journey](#journey)
- * [Scope of the standard](#scope)
- * [Use cases](#usecases)
-* [Core components](#components)
- * [Contracting features](#cfeatures)
- * [Contracting process](#cprocess)
- * [Add ons](#caddon)
-* [Contracting Record](#record)
-* [Contracting Releases](#releases)
-* [Publishing models](#publishing)
- * [API](#api)
- * [Abbreviated contracting record and releases](#short)
- * [Full contracting record](#full)
- * [Bulk download](#bulk)
-* [Next steps](#next)
- * [Schema re-use](#reuse)
-  
-<a name="about"></a>
-About this document
--------------------
+##About this document
 This document sets out a proposed conceptual model for the [Open Contracting Data Standard](http://open-contracting.github.io), and poses a series of questions for consultation. 
 
 It *does not* provide a field-level specification of the standard, or how the data may be represented in specific file formats. That will be provided through the beta release of the standard in early Q3 2014, developed based on responses to this document. 
 
 
+##Background and context
 
-
-
-<a name="background"></a>
-Background and context
-----------------------
-
-<a name="motivation"></a>
 ### Motivation
-
 Countries signing up to the [Open Contracting Global Principles](http://www.open-contracting.org/global_principles) commit to share "information related to the formation, award, execution, performance, and completion of public contracts" including data on all stages of contracting, from pre-bid to performance evaluations, and information on subcontracting arrangements. 
 
 The Open Contracting Data Standard is being developed to allow much of this information to be shared as structured data: delivered in ways that enable the widest possible range of users to benefit from greater transparency of contracting arrangements and supporting greater participation, monitoring and oversight in contracting processes.
 
 The development of the standard is being undertaken by the World Wide Web Foundation and Aptivate, supported by The Omidyar Network and the World Bank, and working in partnership with the Open Contracting Partnership. The development process is also a process of action-research into creating accessible and effective open data standards, and exploring opportunities for [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/). 
 
-<a name="process"></a>
 ### Development process
 This first release from the development of an Open Contracting Data Standard presents a high-level overview of a proposed data model.
 
@@ -80,9 +44,7 @@ Following a [technical scoping exercise](LINK) we have adopted a development pro
 
 This document contributes to the first of these steps, offering a conceptual model for publishing Open Contracting Data and outlining the components that are captured within that model. The next phase of work will identify and create vocabularies covering key field definitions and will present a full data model. The final phase of this development process will recommend approaches to serialise this model and vocabulary using different formats. In parallel, work is taking place to develop a governance model for the future development of the standard. 
 
-<a name="sources"></a>
 ### Sources
-
 The development of the alpha data model has been based on:
 
 * **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured.
@@ -90,9 +52,7 @@ The development of the alpha data model has been based on:
 
 We offer this draft data model as the basis for a discussion. Following feedback over June and July 2014 we will revise or confirm the conceptual model, and will work towards providing more detailed field-level information by the third quarter of 2014.
 
-<a name="model"></a>
-Conceptual Model
-----------------
+##Conceptual Model
 We propose an Open Contracting Data Standard consisting of two parts:
 
 - A **contracting record** - a core summary record used to describe key features of a complete 'contracting journey' - updated as new information becomes available to accurately reflect the state of tender, award or contract processes. The contracting record should provide an at-a-glance view of key information used in locating and analysing current, past or future contracting activities.
@@ -123,7 +83,6 @@ The following section provides more details on this conceptual model, and a high
      </div>
 </div>
 
-<a name="vocab"></a>
 ### Vocabulary
 
 The world of procurement and contacting has many specialist terms. However, the precise way that these terms are used can vary from sector to sector, and country to country. Below we define how we are using a number of key terms. 
@@ -161,10 +120,7 @@ The world of procurement and contacting has many specialist terms. However, the 
      </div>
 </div>
 
-
-<a name="journey"></a>
 ### The contracting journey 
-
 ![Contracting Journey](contracting_journey.png)
 
 There are many different stages involved in contracting: from the
@@ -178,9 +134,7 @@ container for all these stages.
 The proposed OCDS data model is based around the idea of an identifiable
 Contracting Journey with a unique **Open Contracting Identifier**.
 
-<a name="scope"></a>
 ### Scope of the standard
-
 In this first draft, and for the planned beta in Q3 2014, we propose a focus on the central three phases:
 
 * Tender
@@ -215,8 +169,6 @@ We have excluded the planning and spending elements of the contracting journey f
      </div>
 </div>
 
-
-<a name="usecases"></a>
 ### Use Cases 
 This draft is based primarily on research of existing published datasets
 as well as preliminary work on use cases for data demand. In particular,
@@ -252,13 +204,9 @@ we are seeking to support the following demands on the data:
      </div>
 </div>
 
-<a name="components"></a>
-Core components
----------------
-
+##Core components
 Both the **contracting record** and individual **contracting releases** will describe some core components of the contracting journey. These components are outlined below, divided into three kinds: contracting features, contracting process, and add-on information. 
 
-<a name="cfeatures"></a>
 ### Contracting features
 First, there is data that describes the **key features** of a proposed or enacted contract:
 
@@ -294,7 +242,6 @@ First, there is data that describes the **key features** of a proposed or enacte
         the contract. It could be an individual, a private organization,
         or another public body.
 
-<a name="cprocess"></a>
 ### Contracting process
 Secondly, there is data that describes the **process** of contracting:
 
@@ -327,7 +274,6 @@ Secondly, there is data that describes the **process** of contracting:
 
     - Information about the end of a contract, including details of why the contract ended (e.g. work completed; breach of contract), final costs paid, final deliverables, and evaluation information.
 
-<a name="caddon"></a>
 ### Add on information
 
 Thirdly, in addition to the core components, there will be lots of cases where
@@ -359,10 +305,7 @@ will be subject to the following restrictions[1](#footnote):
 </div>
 
 
-<a name="record"></a>
-The contracting record 
-----------------------
-
+##The contracting record 
 The contracting record is a master document that collects together a summary of key information about a contracting process. 
 
 Each contracting record represents a single **contracting journey** and should have a unique **open contracting identifier**.
@@ -400,7 +343,7 @@ This is likely to comprise between 30 and 50 fields of data, and should always r
      </div>
 </div>
 
-#### A note on framework contracts
+### A note on framework contracts
 Many public procurements take place under framework agreements, or
 standing arrangements. These help facilitate routine purchasing.
 Suppliers are pre-approved to provide a list of goods or services. In
@@ -409,19 +352,13 @@ The contracting record will need to allow for repeating sections of information
 where its necessary to represent the information.
 
 
-<a name="release"></a>
-Contracting releases: notices and amendments 
---------------------------------------------
-
+##Contracting releases: notices and amendments 
 The contracting record is formed and updated through releases, which
 are either notices and amendments. There are four types of notice:
 
 -   Tender notice
-
 -   Award notice
-
 -   Contract notice
-
 -   Termination notice
 
 A notice signifies the commencement of a new phase of the contracting
@@ -472,12 +409,7 @@ geo-coding information.
      </div>
 </div>
 
-
-<a name="publishing"></a>
-
-Publishing models
------------------
-
+##Publishing models
 Given the diversity of systems from which contracting data is drawn, we propose that the Open Contracting Data Standard support a range of different publishing models, although always ensuring that it is possible to construct a **contracting record**, but allowing that the data for this might be provided in a range of different ways. 
 
 The diagram below represents the overall approach of releases building a contract record.
@@ -486,7 +418,6 @@ The diagram below represents the overall approach of releases building a contrac
 
 Below we outline a number of possible models by which data might be made available. These are suggestions for consultation and we welcome comment on the appropriateness of each model. 
 
-<a name="api"></a>
 ### Contracting release API standard
 
 Releases could be provided through an open REST API. For example, the standard may develop a common API pattern such that URIs such as:
@@ -521,9 +452,7 @@ This API call would allow parties would to draw upon all the information on a co
      </div>
 </div>
 
-<a name="short"></a>
 ### Abbreviated contracting record
-
 A publisher may provide an abbreviated contracting record which consists only of:
 
 * A unique open contracting identifier
@@ -545,18 +474,14 @@ Users would then follow these URLs to look up each individual release and to bui
      </div>
 </div>
 
-<a name="full"></a>
 ### Full contracting record & releases
-
 Publishers build their own **Contracting Records** and keep these updated throughout the contracting journey. 
 
 These records should contain URLs to each of the related releases, allowing third parties to validate the contents of the contracting record.  
 
 A full contracting record may be available as a single record at a specified URL, or as part of a bulk download file. 
 
-<a name="bulk"></a>
 ### Bulk download
-
 A publisher may provide contracting records and releases packaged together as part of a single file for bulk download, or as a collection of files together in an archive. 
 
 <div class="panel panel-success">
@@ -571,10 +496,7 @@ A publisher may provide contracting records and releases packaged together as pa
 </div>
 
 
-
-<a name="next"></a>
-Next steps
------------
+##Next steps
 Over June 2014 we will be validating the conceptual model proposed in this document of Contracting Records and Contracting Releases. You are invited to add your comments directly to the online copy of this document at [http://ocds.aptivate.org/standard/](http://ocds.aptivate.org/standard/), or to join discussions on [the project technical e-mail list](http://open-contracting.github.io/pages/community.html). 
 
 Over July and August 2014 we will be fleshing out in more detail the data fields that belong to each of the core components, and will develop a full data model. The proposed model will be validated against a range of use cases developed through demand side research. 
@@ -585,7 +507,6 @@ Following the development and validation of the model, we will outline a number 
 
 Throughout this process we will be seeking to re-use existing data structures from prior standards. 
 
-<a name="reuse"></a>
 ### Schema re-use 
 This document is intended as a non-technical introduction to the
 standard, and as a such does not include an ontology (the formal data
@@ -598,15 +519,12 @@ will re-use this existing standard work where possible.
 
 
 
-Footnotes
----------
-
+##Footnotes
 [1](#footnote) The use of add-on conditions were adapted from the
 The Popolo Project -
 [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
 
-Credits
----------
-The Open Contracting Data Standard project is a collaboration of the [Open Contracting Partnership](http://www.open-contracting.org/home-v1) and the [World Wide Web Foundation (Web Foundation)](http://www.webfoundation.org), supported by a grant from [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org), with [Aptivate](http://www.aptivate.org) as the lead technical partner to the project. The development of this draft has been led by Sarah Bird (Aptivate), with contributions from Tim Davies (Web Foundation) and Ana Brandusescu. 
+##Credits
+The Open Contracting Data Standard project is a collaboration of the [Open Contracting Partnership](http://www.open-contracting.org/home-v1) and the [World Wide Web Foundation (Web Foundation)](http://www.webfoundation.org), supported by a grant from [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org), with [Aptivate](http://www.aptivate.org) as the lead technical partner to the project. The development of this draft has been led by Sarah Bird ([Aptivate](http://www.aptivate.org)), with contributions from Tim Davies (Web Foundation) and Ana Brandusescu. 
 
 Coordinators of the research leading towards this standard include: Michael Roberts, Lindsey Marchessault, Marcela Rozo and Steven Davenport. 
