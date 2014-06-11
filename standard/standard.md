@@ -1,4 +1,4 @@
-This version open for consultation until July 10th. Visit [http://open-contracting.github.io](http://open-contracting.github.io) for more background information.
+This version is open for consultation until July 10th. Visit [http://open-contracting.github.io](http://open-contracting.github.io) for more background information.
 
 <div class="panel panel-primary">
     <div class="panel-heading">
