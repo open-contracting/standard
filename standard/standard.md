@@ -8,7 +8,6 @@ This version is open for consultation until July 10th. Visit [http://open-contra
          The online version of this document is open for comment. You can share your comments in three ways:
          <ul>
              <li><strong>Inline comments on the document</strong> - select the <span class="glyphicon glyphicon glyphicon-comment"></span> icon at the top of the page for details of how to add in-line comments on the document. Once authenticated you can highlight any text on the page and add your own shared annotations, or respond to those left by others.</li>
-             <li><strong><a href="https://groups.google.com/a/webfoundation.org/forum/#!forum/public-ocds-dev">Developer mailing list</a></strong> - you can post questions or comments for discussion to <a href="https://groups.google.com/a/webfoundation.org/forum/#!forum/public-ocds-dev">the OCDS developer e-mail list</a>.</a>
              <li><strong><a href="https://github.com/open-contracting/standard/issues">Issue tracker</a></strong> - you can add issues to the <a href="https://github.com/open-contracting/standard/issues">standard's GitHub issue tracker</a>.</li>
         </ul>
         Throughout this document there are specific questions for consultation included, but you are not limited to responding to these questions: we welcome all input you can offer. 
