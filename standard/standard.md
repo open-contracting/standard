@@ -1,8 +1,3 @@
----
-layout: default
-title: Development principles
----
-
 # Open Contracting Data Standard: Conceptual Model (Alpha)
 
 Draft - June 10th 2014
