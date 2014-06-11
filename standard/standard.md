@@ -110,7 +110,7 @@ We define a unique contracting journey as that with a unique tendering / competi
 
 **Example 1**
 
-<div class="pull-left"><img alt="Multiple journeys" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png">
+<div class="pull-left"><img alt="Multiple journeys" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png"></div>
 
 This Tender notice has a single ID and six line items. However, to secure each item vendors must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting journeys here, in spite of the single Tender Notice ID.
 
