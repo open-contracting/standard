@@ -65,7 +65,7 @@ Within this sequence, we identify five broad phases:
     </div></div>
     <div class="col-md-2"><div class="panel panel-primary">
         <div class="panel-heading"><h4 class="panel-title">Tendering</h4></div>
-        <div class="panel-body">The process of identifying & selecting vendors.</div>
+        <div class="panel-body">The process of identifying and selecting vendors.</div>
     </div></div>
     <div class="col-md-2"><div class="panel panel-primary">
         <div class="panel-heading"><h4 class="panel-title">Award</h4></div>
@@ -73,24 +73,25 @@ Within this sequence, we identify five broad phases:
     </div></div>
     <div class="col-md-2"><div class="panel panel-primary">
         <div class="panel-heading"><h4 class="panel-title">Performance</h4></div>
-        <div class="panel-body">The period of contract performance and management. Payments are made against deliverables.</div>
+        <div class="panel-body">Payments are made against deliverables.</div>
     </div></div>
     <div class="col-md-2"><div class="panel panel-primary">
         <div class="panel-heading"><h4 class="panel-title">Termination</h4></div>
-        <div class="panel-body">The closing of the contract once the obligations have been fulfilled.</div>
+        <div class="panel-body">Closing of the contract once obligations have been fulfilled.</div>
     </div></div>
 </div>
 
 ### Scope of the standard
 In this first draft, we propose a focus on the three phases:
+
 * Tender
 * Award
 * Termination[^2]
 
+[^2]: It is worth noting that, from our supply side assessment, there is currently only limited existing data available on the termination and evaluation of contracts.
+
 We have excluded the planning and performance elements of the contracting 
-process from this draft standard for a number of reasons. We want to implement 
-a readily adoptable standard and so, for a first version, we want to focus our 
-efforts where we can add the most value. The tender, and award phase of 
+process from this draft standard for a number of reasons. The tender, and award phase of 
 contracting have consistent data (often drawn from the same systems inside 
 a publisher) and share much terminology. By contrast, planning, budgeting and 
 spending data is often held in different systems, and may not be stored in 
@@ -202,6 +203,10 @@ will be subject to the following restrictions[^1]:
 
 -   It may use terms from outside this specification's terms where this
     specification's terms are insufficient.
+
+[^1]:
+    The use of add-on conditions were adapted from the
+    The Popolo Project - [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
 
 <div class="panel panel-success">
     <div class="panel-heading">
@@ -363,7 +368,7 @@ Following the development and validation of the model, we will outline a number 
 
 Throughout this process we will be seeking to re-use existing data structures from prior standards. 
 
-### Schema re-use 
+## Schema re-use 
 This document is intended as a non-technical introduction to the
 standard, and as a such does not include an ontology (the formal data
 representation of the standard). However, its worth noting here that we
@@ -372,13 +377,6 @@ particular, we already know that Buyer and Supplier are types of
 Organization, that will have People and Addresses. There are already
 well-known schemas for Organizations, People and Addresses and so we
 will re-use this existing standard work where possible.
-
-##Footnotes
-[^1]:
-    The use of add-on conditions were adapted from the
-    The Popolo Project - [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
-   
-[^2]: It is worth noting that, from our supply side assessment, there is currently only limited existing data available on the termination and evaluation of contracts.
 
 ##Credits
 The Open Contracting Data Standard project is a collaboration of the [Open Contracting Partnership](http://www.open-contracting.org/home-v1) and the [World Wide Web Foundation (Web Foundation)](http://www.webfoundation.org), supported by a grant from [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org), with [Aptivate](http://www.aptivate.org) as the lead technical partner to the project. The development of this draft has been led by Sarah Bird ([Aptivate](http://www.aptivate.org)), with contributions from Tim Davies (Web Foundation) and Ana Brandusescu. 
