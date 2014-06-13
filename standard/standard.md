@@ -1,8 +1,9 @@
+<br />
 <div class="panel panel-warning">
     <div class="panel-heading">
        <h4 class="panel-title"> <span class="glyphicon glyphicon-comment"></span>Open for consultation</h4>
      </div>
-     <div class="panel-body"><p>This version is open for consultation until July 10th. Visit [http://open-contracting.github.io](http://open-contracting.github.io) for more background information.</p>
+     <div class="panel-body"><p>This version is open for consultation until July 10th. Visit <a hef="http://open-contracting.github.io">http://open-contracting.github.io</a> for more background information.</p>
      </div>
 </div>
 
