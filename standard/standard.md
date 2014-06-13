@@ -1,17 +1,8 @@
-This version is open for consultation until July 10th. Visit [http://open-contracting.github.io](http://open-contracting.github.io) for more background information.
-
-<div class="panel panel-primary">
+<div class="panel panel-warning">
     <div class="panel-heading">
-       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Share your comments</h4>
+       <h4 class="panel-title"> <span class="glyphicon glyphicon-comment"></span>Open for consultation</h4>
      </div>
-     <div class="panel-body">
-         The online version of this document is open for comment. You can share your comments in two ways:
-         <ul>
-             <li><strong>Inline comments on the document</strong> - select the <span class="glyphicon glyphicon glyphicon-comment"></span> icon at the top of the page for details of how to add in-line comments on the document. Once authenticated you can highlight any text on the page and add your own shared annotations, or respond to those left by others.</li>
-             <li><strong><a href="https://github.com/open-contracting/standard/issues">Issue tracker</a></strong> - you can add issues to the <a href="https://github.com/open-contracting/standard/issues">standard's GitHub issue tracker</a>.</li>
-        </ul>
-        Throughout this document there are specific questions for consultation included, but you are not limited to responding to these questions: we welcome all input you can offer. 
-         
+     <div class="panel-body"><p>This version is open for consultation until July 10th. Visit [http://open-contracting.github.io](http://open-contracting.github.io) for more background information.</p>
      </div>
 </div>
 
