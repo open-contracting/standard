@@ -3,7 +3,7 @@
     <div class="panel-heading">
        <h4 class="panel-title"> <span class="glyphicon glyphicon-comment"></span>Open for consultation</h4>
      </div>
-     <div class="panel-body"><p>This version is open for consultation until July 10th. Visit <a hef="http://open-contracting.github.io">http://open-contracting.github.io</a> for more background information.</p>
+     <div class="panel-body"><p>This version is open for consultation until July 15th. Visit <a hef="http://open-contracting.github.io">http://open-contracting.github.io</a> for more background information.</p>
      </div>
 </div>
 
@@ -38,8 +38,8 @@ This document contributes to the first of these steps, offering a conceptual mod
 ### Sources
 The development of the alpha data model has been based on:
 
-* **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured.
-* **Exploring demand for data on contracting** - to identify the ways in which different users think about contracting data, and how they want to useit.
+* **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.aptivate.org/opendatacomparison/), and [Contracting Data Map](http://ocds.aptivate.org/opendatacomparison/datamap/) which explores the fields of data available from a wide range of different government contracting data portals around the world. 
+* **Exploring demand for data on contracting** - to identify the ways in which different users think about contracting data, and how they want to use it. This work is ongoing, and only initial use cases are factored into this conceptual model. In the next iteration of the conceptual model and field level information, further emphasis will be placed on use cases. 
 
 We offer this draft data model as the basis for a discussion. Following feedback over June and July 2014 we will revise or confirm the conceptual model, and will work towards providing more detailed field-level information by the third quarter of 2014.
 
@@ -74,15 +74,16 @@ Within this sequence, we identify five broad phases:
 </div>
 
 ### Scope of the standard
-In this first draft, we propose a focus on the three phases:
+In this first draft, we propose a focus on four key aspects:
 
 * Tender
 * Award
+* Implementation
 * Termination[^2]
 
 [^2]: It is worth noting that, from our supply side assessment, there is currently only limited existing data available on the termination and evaluation of contracts.
 
-We have excluded the planning and performance elements of the contracting 
+We have excluded the planning and transaction level spending data elements of the contracting 
 process from this draft standard for a number of reasons. The tender, and award phase of 
 contracting have consistent data (often drawn from the same systems inside 
 a publisher) and share much terminology. By contrast, planning, budgeting and 
