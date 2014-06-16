@@ -41,6 +41,8 @@ The development of the alpha data model has been based on:
 * **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.aptivate.org/opendatacomparison/), and [Contracting Data Map](http://ocds.aptivate.org/opendatacomparison/datamap/) which explores the fields of data available from a wide range of different government contracting data portals around the world. 
 * **Exploring demand for data on contracting** - to identify the ways in which different users think about contracting data, and how they want to use it. This work is ongoing, and only initial use cases are factored into this conceptual model. In the next iteration of the conceptual model and field level information, further emphasis will be placed on use cases. 
 
+This initial iteration of the conceptual model is focussed on procurement processes. Future iterations will look at contracts in the land and extractives sector, and we anticipate this will lead to further developments in the terminology used. 
+
 We offer this draft data model as the basis for a discussion. Following feedback over June and July 2014 we will revise or confirm the conceptual model, and will work towards providing more detailed field-level information by the third quarter of 2014.
 
 ##Conceptual Model
