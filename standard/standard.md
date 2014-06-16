@@ -94,12 +94,6 @@ contain information about contract amendments and, occasionally, termination
 data. This data strongly overlaps with tender and award data and so is also a 
 natural fit for us at this stage.
 
-Finally, there is an [existing standardisation effort](http://community.openspending.org/research/standard/) 
-for Budget and Spending data under development 
-through the Open Spending project. In line with the principles of Joined Up 
-Data we will explore ways to connect data in the Open Contracting 
-Data Standard with data in the proposed Open Spending and 
-Open Budget data standards. 
 
 <div class="panel panel-success">
     <div class="panel-heading">
@@ -370,6 +364,12 @@ particular, we already know that Buyer and Supplier are types of
 Organization, that will have People and Addresses. There are already
 well-known schemas for Organizations, People and Addresses and so we
 will re-use this existing standard work where possible.
+
+There is an [existing standardisation effort](http://community.openspending.org/research/standard/) 
+for Budget and Spending data under development through the Open Spending project. In line with the principles of Joined Up 
+Data we will explore ways to connect data in the Open Contracting Data Standard with data in the proposed Open Spending and 
+Open Budget data standards. 
+
 
 ##Credits
 The Open Contracting Data Standard project is a collaboration of the [Open Contracting Partnership](http://www.open-contracting.org/home-v1) and the [World Wide Web Foundation (Web Foundation)](http://www.webfoundation.org), supported by a grant from [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org), with [Aptivate](http://www.aptivate.org) as the lead technical partner to the project. The development of this draft has been led by Sarah Bird ([Aptivate](http://www.aptivate.org)), with contributions from Tim Davies (Web Foundation) and Ana Brandusescu. 
