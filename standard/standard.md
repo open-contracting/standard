@@ -88,7 +88,7 @@ process from this draft standard for a number of reasons. The tender, and award 
 contracting have consistent data (often drawn from the same systems inside 
 a publisher) and share much terminology. By contrast, planning, budgeting and 
 spending data is often held in different systems, and may not be stored in 
-ways that link it to a contracting journey. In addition to tender and award 
+ways that link it to a contracting process. In addition to tender and award 
 data we often see transparency initiatives with "contract" datasets that 
 contain information about contract amendments and, occasionally, termination 
 data. This data strongly overlaps with tender and award data and so is also a 
@@ -108,7 +108,7 @@ Open Budget data standards.
      <div class="panel-body">
          <ul>
              <li>Is this the right scope for the version 1.0 standard?</li>
-             <li>Are there other standards we should looking to 'join up' to in order to supply tracing the full contracting journey, beyond those aspects that will be captured in the Open Contracting Data Standard?</li>
+             <li>Are there other standards we should looking to 'join up' to in order to supply tracing the full contracting process, beyond those aspects that will be captured in the Open Contracting Data Standard?</li>
          </ul>     
      </div>
 </div>
@@ -208,7 +208,7 @@ will be subject to the following restrictions[^1]:
      <div class="panel-body">
          <ul>
              <li>Does the proposed conceptual model make sense for the ways you want to publish or use open contracting data?</li>
-             <li>Which do you need most: a summary contracting record, or detailed releases of information at each stage of the contracting journey?</li>
+             <li>Which do you need most: a summary contracting record, or detailed releases of information at each stage of the contracting process?</li>
              <li>Do these components cover all the relevant information you want to publish or access about contracting?</li>
              <li>Are we missing key elements in our description of what each component will contain?</li>
          </ul>     
@@ -279,7 +279,7 @@ they must all contain a reference to the unique identifier.
 Each release, or a group of releases, will contain publisher
 information, and each release will contain a release number and date
 from that publisher. The idea is to accommodate the modularization of
-publishing such that along the contracting journey, different bodies
+publishing such that along the contracting process, different bodies
 could publish different sets of releases. For example, one publisher
 for tenders and awards, and a separate publisher for contracts
 releases. In addition, third-party publishers may wish to augment the
@@ -307,16 +307,16 @@ We define a unique contracting process as that with a unique tendering / competi
 
 **Example 1**
 
-<div class="pull-left"><img alt="Multiple journeys" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png"></div>
+<div class="pull-left"><img alt="Multiple processes" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png"></div>
 
-This Tender notice has a single ID and six line items. However, to secure each item vendors must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting journeys here, in spite of the single Tender Notice ID.
+This Tender notice has a single ID and six line items. However, to secure each item vendors must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting processes here, in spite of the single Tender Notice ID.
 
 <div class="clearfix"></div>
 
 **Example 2**
-<div class="pull-left"><img alt="Single journey" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png"></div>
+<div class="pull-left"><img alt="Single process" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png"></div>
 
-This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting journey, because of the single bidding process.
+This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting process, because of the single bidding process.
 
 <div class="clearfix"></div>
 
@@ -335,7 +335,7 @@ This draft is based primarily on research of existing published datasets as well
 
 -   users of data want to be able to compare costs of goods / services in one area compared to another
 
--   users want to be able to see joined-up information in one place that brings together the contracting journey
+-   users want to be able to see joined-up information in one place that brings together the contracting process
     
 <div class="panel panel-success">
     <div class="panel-heading">
@@ -351,7 +351,7 @@ This draft is based primarily on research of existing published datasets as well
 </div>
 
 ##Next steps
-Over June 2014 we will be validating the conceptual model proposed in this document of a Contracing Journey, Contracting Records and Contracting Releases. You are invited to add your comments directly to the online copy of this document at [http://ocds.aptivate.org/standard/](http://ocds.aptivate.org/standard/), or to join discussions on [the project technical e-mail list](http://open-contracting.github.io/pages/community.html). 
+Over June 2014 we will be validating the conceptual model proposed in this document of a Contracing Process, Contracting Records and Contracting Releases. You are invited to add your comments directly to the online copy of this document at [http://ocds.aptivate.org/standard/](http://ocds.aptivate.org/standard/), or to join discussions on [the project technical e-mail list](http://open-contracting.github.io/pages/community.html). 
 
 Over July and August 2014 we will be fleshing out in more detail the data fields that belong to each of the core components, and will develop a full data model. The proposed model will be validated against a range of use cases developed through demand side research. 
 
