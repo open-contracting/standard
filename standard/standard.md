@@ -14,7 +14,6 @@ This document sets out a proposed conceptual model for the [Open Contracting Dat
 
 It *does not* provide a field-level specification of the standard, or how the data may be represented in specific file formats. That will be provided through the beta release of the standard in Q3 2014, developed based on responses to this document. 
 
-
 ##Background and context
 
 ### Motivation
@@ -51,52 +50,13 @@ We offer this draft data model as the basis for a discussion. Following feedback
 
 The contracting process is the sequence of events related to the lifespan of a contract, beginning with planning and culminating in contract closure. 
 
-Within this sequence, we identify five broad phases:
-<div class="row">
-    <div class="col-md-2"><div class="panel panel-primary">
-        <div class="panel-heading"><h4 class="panel-title">Planning</h4></div>
-        <div class="panel-body">Assessment and decision to procure.</div>
-    </div></div>
-    <div class="col-md-2"><div class="panel panel-primary">
-        <div class="panel-heading"><h4 class="panel-title">Tendering</h4></div>
-        <div class="panel-body">The process of identifying and selecting vendors.</div>
-    </div></div>
-    <div class="col-md-2"><div class="panel panel-primary">
-        <div class="panel-heading"><h4 class="panel-title">Award</h4></div>
-        <div class="panel-body">Announcing the award, finalizing and signing the legal document.</div>
-    </div></div>
-    <div class="col-md-2"><div class="panel panel-primary">
-        <div class="panel-heading"><h4 class="panel-title">Performance</h4></div>
-        <div class="panel-body">Payments are made against deliverables.</div>
-    </div></div>
-    <div class="col-md-2"><div class="panel panel-primary">
-        <div class="panel-heading"><h4 class="panel-title">Termination</h4></div>
-        <div class="panel-body">Closing of the contract once obligations have been fulfilled.</div>
-    </div></div>
-</div>
+<div><img alt="Visual of opencontrating process" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/contracting%20process.png"></div>
+* Tendering & Award is more broadly known as Formation to accomodate other
+types of procurement process, we use the term formation within the standard to accomodate this
+** We use the term Implementation instead of Execution in the standard to refer to the period while the contract is being performed.
 
-### Scope of the standard
-In this first draft, we propose a focus on four key aspects:
-
-* Tender
-* Award
-* Implementation
-* Termination[^2]
-
-[^2]: It is worth noting that, from our supply side assessment, there is currently only limited existing data available on the termination and evaluation of contracts.
-
-We have excluded the planning and transaction level spending data elements of the contracting 
-process from this draft standard for a number of reasons. The tender, and award phase of 
-contracting have consistent data (often drawn from the same systems inside 
-a publisher) and share much terminology. By contrast, planning, budgeting and 
-spending data is often held in different systems, and may not be stored in 
-ways that link it to a contracting process. In addition to tender and award 
-data we often see transparency initiatives with "contract" datasets that 
-contain information about contract amendments and, occasionally, termination 
-data. This data strongly overlaps with tender and award data and so is also a 
-natural fit for us at this stage.
-
-
+For descriptions of the phases, taken from the book *Open Contracting - A guide for practitioners by practitioners*[^1] above see the definitions tab.
+[^1] The book is available free of charge at [http://www.pro-act.org](http://www.pro-act.org)
 
 ### Conceptual Model
 We propose an Open Contracting Data Standard consisting of two parts:
