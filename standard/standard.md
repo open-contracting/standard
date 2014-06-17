@@ -97,17 +97,6 @@ data. This data strongly overlaps with tender and award data and so is also a
 natural fit for us at this stage.
 
 
-<div class="panel panel-success">
-    <div class="panel-heading">
-       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h4>
-     </div>
-     <div class="panel-body">
-         <ul>
-             <li>Is this the right scope for the version 1.0 standard?</li>
-             <li>Are there other standards we should looking to 'join up' to in order to supply tracing the full contracting process, beyond those aspects that will be captured in the Open Contracting Data Standard?</li>
-         </ul>     
-     </div>
-</div>
 
 ### Conceptual Model
 We propose an Open Contracting Data Standard consisting of two parts:
@@ -171,7 +160,7 @@ The Contracting Record above shows the core components of our data model.
 Over the contracting process, there are different
 types of amounts that its important to capture. For example on each good to be
 procured: at the tender phase there may be a minimum & maximum budged value, 
-but t the award phase, we know the actual contract value. Or, it is important
+but the award phase, we know the actual contract value. Or, it is important
 to note the total awarded contract value and the final contract value at 
 termination. It is our intention that the contracting record will store this 
 more subtle value data, not just the most recent number from a release.
@@ -207,6 +196,7 @@ will be subject to the following restrictions[^1]:
              <li>Which do you need most: a summary contracting record, or detailed releases of information at each stage of the contracting process?</li>
              <li>Do these components cover all the relevant information you want to publish or access about contracting?</li>
              <li>Are we missing key elements in our description of what each component will contain?</li>
+             <li>Is this the right scope for the version 1.0 standard?</li>
          </ul>     
      </div>
 </div>
@@ -371,6 +361,17 @@ There is an [existing standardisation effort](http://community.openspending.org/
 for Budget and Spending data under development through the Open Spending project. In line with the principles of Joined Up 
 Data we will explore ways to connect data in the Open Contracting Data Standard with data in the proposed Open Spending and 
 Open Budget data standards. 
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h4>
+     </div>
+     <div class="panel-body">
+         <ul>
+             <li>Are there other standards we should looking to 'join up' to in order to supply tracing the full contracting process, beyond those aspects that will be captured in the Open Contracting Data Standard?</li>
+         </ul>     
+     </div>
+</div>
 
 
 ##Credits
