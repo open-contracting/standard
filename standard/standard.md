@@ -21,7 +21,11 @@ Countries signing up to the [Open Contracting Global Principles](http://www.open
 
 The Open Contracting Data Standard is being developed to allow much of this information to be shared as structured data: delivered in ways that enable the widest possible range of users to benefit from greater transparency of contracting arrangements and supporting greater participation, monitoring and oversight in contracting processes.
 
-The development of the standard is being undertaken by the World Wide Web Foundation and Aptivate, supported by The Omidyar Network and the World Bank, and working in partnership with the Open Contracting Partnership. The development process is also a process of action-research into creating accessible and effective open data standards, and exploring opportunities for [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/). 
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org/). 
+Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org) and [Aptivate](http://www.aptivate.org), through a project supported by 
+The [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org).
+
+The development process is also a process of action-research into creating accessible and effective open data standards, and exploring opportunities for [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/). 
 
 ### Development process
 This first release from the development of an Open Contracting Data Standard presents a high-level overview of a proposed data model.
@@ -31,6 +35,7 @@ Following a technical scoping exercise we have adopted a development process bas
 - specifying a single format-independent conceptual model;
 - developing this into a data model, identifying common vocabularies and taxonomies to use in defining fields, and creating new fields where required;
 - specifying how this data model should be represented in key formats such as CSV, JSON, XML and RDF, respecting the particular idioms most familiar in these formats.
+- identifying the tools that are necessary for standard to thrive such as aggregation and visualization.
 
 This document contributes to the first of these steps, offering a conceptual model for publishing Open Contracting Data and outlining the components that are captured within that model. The next phase of work will identify and create vocabularies covering key field definitions and will present a full data model. The final phase of this development process will recommend approaches to serialise this model and vocabulary using different formats. In parallel, work is taking place to develop a governance model for the future development of the standard. 
 
@@ -50,13 +55,15 @@ We offer this draft data model as the basis for a discussion. Following feedback
 
 The contracting process is the sequence of events related to the lifespan of a contract, beginning with planning and culminating in contract closure. 
 
-<div><img alt="Visual of opencontrating process" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/contracting%20process.png"></div>
-* Tendering & Award is more broadly known as Formation to accomodate other
-types of procurement process, we use the term formation within the standard to accomodate this
-** We use the term Implementation instead of Execution in the standard to refer to the period while the contract is being performed.
+![Visual of opencontrating process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/contracting%20process.png)
 
-For descriptions of the phases, taken from the book *Open Contracting - A guide for practitioners by practitioners*[^1] above see the definitions tab.
-[^1] The book is available free of charge at [http://www.pro-act.org](http://www.pro-act.org)
+`*` Tendering & Award is more broadly known as Formation to accomodate other
+types of procurement process, we use the term formation within the standard to accomodate this
+
+`**` We use the term Implementation instead of Execution in the standard to refer to the period while the contract is being performed.
+
+For descriptions of the phases, taken from the book *Open Contracting - A guide for practitioners by practitioners* [^1] above see the "Definitions" tab at the top.
+[^1]: The book is available free of charge at [http://www.pro-act.org](http://www.pro-act.org)
 
 ### Conceptual Model
 We propose an Open Contracting Data Standard consisting of two parts:
@@ -95,19 +102,14 @@ The Contracting Record above shows the core components of our data model.
     -   The supplier is the entity, or entities, providing the goods or services in
         the contract. It could be an individual, a private organization,
         or another public body.
--   Goods / services
-    -   Details, ideally at the line item level, of the goods and
-        services being procured. This should include a standardized code (detailing 
+-   Items - Goods / services / works
+    -   Details, ideally at the line item level, of the goods,
+        services or works being procured. This should include a standardized code (detailing 
         the items category e.g. construction or agricultural goods)
-        & description as well as any supporting information.
--   Contract details
-    -   Information about the contract award, the document, and the closing.  
-        Including award date, signature date, start & end date, 
-        links to the award & contract documents, and termination information. 
-        It would also capture details of contract amendments (change of value, deliverables
-        alterations, no-cost extensions)
--   Tender process
-    -   This the information about the tender process. It may include:
+        & description as well as any supporting information or documents, such as technical specifications. This category will be expanded later
+        as we move to support other types of contract beyond procurement.
+-   Formation
+    -   In the case of standard procurement, this the information about the tender process. It may include:
         opening dates, closing dates, consultation information, the type
         of bidding process (open process, selective tendering, limited
         tendering or sole source), award criteria (lowest cost, best
@@ -115,36 +117,24 @@ The Contracting Record above shows the core components of our data model.
         documentation, a tender ID, and a link to the tender notice. It may
         also include information such as the number of bids and bidders who
         participated in the process.
-
-#### Amounts / values
-Over the contracting process, there are different
-types of amounts that its important to capture. For example on each good to be
-procured: at the tender phase there may be a minimum & maximum budged value, 
-but the award phase, we know the actual contract value. Or, it is important
-to note the total awarded contract value and the final contract value at 
-termination. It is our intention that the contracting record will store this 
-more subtle value data, not just the most recent number from a release.
-
-#### Add on information
-In addition to the core components, there will be cases where
-publishers, or users, need to augment the core data with their
-own information. The standard will provide a mechanism for Add-On
-information. This will include additional fields in core components as
-well as Add On components (e.g. new kinds of **contracting release**).
-
-The publishing and re-use of add-ons will be encouraged to try and
-reduce duplication and facilitate reuse of tools. The use of Add-Ons
-will be subject to the following restrictions[^1]:
-
--   It must not use terms from outside this specification's terms where
-    this specification's terms would suffice
-
--   It may use terms from outside this specification's terms where this
-    specification's terms are insufficient.
-
-[^1]:
-    The use of add-on conditions were adapted from the
-    The Popolo Project - [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
+    -   This category will also include other types of formation such as
+        negotiation of Public Private Partnerships, extractives and land contracts. We will be focusing on these 
+        other types of contracting after building out all the fields for standard procurement.
+-   Award
+    -   This is information about the Contract Award e.g. the award date, and the
+        awarded value. This is distinct from the contract information which reflects the
+        actual contract document which is finalized and signed after an award. In the case
+        of framework contracts, where multiple contracts are issued in a contracting process, the
+        award would contain the details of the framework award.
+-   Contract
+    -   Information about the contract document(s) itself.
+        Including award signature date, start & end date, 
+        links to the award & contract documents, and termination information. 
+        It would also capture details of contract amendments (change of value, deliverables
+        alterations, no-cost extensions)
+-   Implementation
+    -   In implementation we store details related to the contract performance
+        including details of payments made, evaluation and performance reports.
 
 <div class="panel panel-success">
     <div class="panel-heading">
@@ -157,10 +147,66 @@ will be subject to the following restrictions[^1]:
              <li>Do these components cover all the relevant information you want to publish or access about contracting?</li>
              <li>Are we missing key elements in our description of what each component will contain?</li>
              <li>Is this the right scope for the version 1.0 standard?</li>
+             <li>What are the most important fields you need in a summary contracting record?</li>
+             <li>How does the proposed approach of having the contracting record represent the latest stage of contracting (i.e. overwriting earlier data) affect how you might publish or use open contracting data?</li>
          </ul>     
      </div>
 </div>
 
+### Add on information
+In addition to the core components, there will be cases where
+publishers, or users, need to augment the core data with their
+own information. The standard will provide a mechanism for Add-On
+information. This will include additional fields in core components as
+well as Add On components (e.g. new kinds of **contracting release**).
+
+The publishing and re-use of add-ons will be encouraged to try and
+reduce duplication and facilitate reuse of tools. The use of Add-Ons
+will be subject to the following restrictions[^2]:
+
+-   It must not use terms from outside this specification's terms where
+    this specification's terms would suffice
+
+-   It may use terms from outside this specification's terms where this
+    specification's terms are insufficient.
+
+[^2]:
+    The use of add-on conditions were adapted from the
+    The Popolo Project - [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
+
+### A note on framework contracts
+Many public procurements take place under framework agreements, or standing arrangements. These help facilitate routine purchasing. Suppliers are pre-approved to provide a list of goods or services. In
+this case, there are typically multiple contracts under a given award. In the case of a framework contract an award notice would define the framework
+and this information would be stored in the contracting record under Award. Then the multiple contracts that are issued under the contract will
+hold the seperately issued contracts under this framework award.
+
+### Linking to documents
+There are often many documents associated with a contracting process including tender specifications, contract documents, performance reports etc. The standard will
+provide a way to link to these documents. We are considering how to handle documents in the contracting record. We
+ may have a simplified contracting record that indicates that documents are available and a full contracting record that provides links to all
+the available documents. As we flesh out the different serializations over July and August this will be defined. Document links will always 
+be available through the release that declared them.
+
+### Defining a unique contracting process
+For the data standard, defining a unique contracting process is critical for getting useful, comparable, clean data. But, there are cases 
+where what the unique process is not obvious. For example, a framework contract has only one tender and award but many contracts associated with that award.
+
+We define a unique contracting process as that with a unique tendering / competitive phase.
+
+**Example 1**
+
+<div class="pull-left"><img alt="Multiple processes" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png"></div>
+
+This Tender notice has a single ID and six line items. However, to secure each item suppliers must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting processes here, in spite of the single Tender Notice ID.
+
+<div class="clearfix"></div>
+
+**Example 2**
+<div class="pull-left"><img alt="Single process" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png"></div>
+
+This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting process, because of the single bidding process.
+
+<div class="clearfix"></div>
 
 ##The contracting record 
 The contracting record is a master document that collects together a summary of key information about a contracting process. 
@@ -182,34 +228,21 @@ updated to an 'Amounts:minimum' of $20 and 'Amounts:maximum' of $30.
 To see the history of these amounts would require looking at the individual 
 contracting releases or tracking changes to the contracting record. 
 
-### A note on framework contracts
-Many public procurements take place under framework agreements, or standing arrangements. These help facilitate routine purchasing. Suppliers are pre-approved to provide a list of goods or services. In
-this case, there are typically multiple contracts under a given award. The contracting record will need to allow for repeating sections of information where its necessary to represent the information.
-
-<div class="panel panel-success">
-    <div class="panel-heading">
-       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h4>
-     </div>
-     <div class="panel-body">
-         <ul>
-             <li>What are the most important fields you need in a summary contracting record?</li>
-             <li>How does the proposed approach of having the contracting record represent the latest stage of contracting (i.e. overwriting earlier data) affect how you might publish or use open contracting data?</li>
-         </ul>     
-     </div>
-</div>
-
 ## Contracting releases
 The contracting record is formed and updated through releases. Releases are
 snapshots of information which may be the first time information has been 
-released or they may be revisions or amendments. Within procurement and 
-procurement data, it is important to recognize that some releases of 
-information are more important than others. Therefore, we releases will have
-types which help us determine this factor. Examples of release types are:
-- Tender notice
-- Tender notice amendment
-- Award notice
-- Contract amendment
-- Termination notice
+released or they may be revisions or amendments. Examples of release types are:
+
+* Tender notice (declaring formation information)
+* Tender notice amendment (an amendment to the formation information - perhaps
+  after a clarification or consultation period)
+* Award notice
+* Award notice amendment
+* Contract signature (with details of the signed contract)
+* Contract amendment
+* Reports release (containing an implementation report)
+* Spending release (containing spending data or a reference to spending data)
+* Termination notice
 
 ### Release tracking 
 Ideally, each release will refer to the unique open contracting process id, 
@@ -245,26 +278,6 @@ geo-coding information.
      </div>
 </div>
 
-## Defining a unique contracting process
-For the data standard, defining a unique contracting process is critical for getting useful, comparable, clean data. But, there are cases 
-where what the unique process is not obvious. For example, a framework contract has only one tender and award but many contracts associated with that award.
-
-We define a unique contracting process as that with a unique tendering / competitive phase.
-
-**Example 1**
-
-<div class="pull-left"><img alt="Multiple processes" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png"></div>
-
-This Tender notice has a single ID and six line items. However, to secure each item vendors must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting processes here, in spite of the single Tender Notice ID.
-
-<div class="clearfix"></div>
-
-**Example 2**
-<div class="pull-left"><img alt="Single process" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png"></div>
-
-This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting process, because of the single bidding process.
-
-<div class="clearfix"></div>
 
 ## Use Cases 
 This draft is based primarily on research of existing published datasets as well as preliminary work on use cases for data demand. In particular, we are seeking to support the following demands on the data:
