@@ -63,10 +63,6 @@ For descriptions of the phases see the "Definitions" tab at the top.
 
 In this version of the standard, you will not see planning included. 
 Please see "[A note on planning](#a-note-on-planning)" for a full explanation.
-This is because the standard, at this point, has been drafted primarily 
-on the basis of a deep search into the existing data, where we did not find planning data.
-The standard will evolve on the basis of use cases and demand for contracting data also,
-so we welcome detailed use cases regarding planning data to help us build out this area of the standard.
 
 ### Conceptual Model
 We propose an Open Contracting Data Standard consisting of two parts:
