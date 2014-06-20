@@ -57,7 +57,7 @@ The contracting process is the sequence of events related to the lifespan of a c
 
 ![Visual of opencontrating process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/contracting%20process.png)
 
-`*` Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.
+<p>* Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.</p>
 
 For descriptions of the phases see the "Definitions" tab at the top.
 
@@ -111,7 +111,7 @@ The Contracting Record above shows the core components of our data model.
         the items category e.g. construction or agricultural goods)
         & description as well as any supporting information or documents, such as technical specifications. This category will be expanded later
         as we move to support other types of contract beyond procurement.
--   Formation
+-   Formation process
     -   In the case of standard procurement, this the information about the tender process. It may include:
         opening dates, closing dates, consultation information, the type
         of bidding process (open process, selective tendering, limited
@@ -123,7 +123,7 @@ The Contracting Record above shows the core components of our data model.
     -   This category will also include other types of formation such as
         negotiation of Public Private Partnerships, extractives and land contracts. We will be focusing on these 
         other types of contracting after building out all the fields for standard procurement.
--   Award
+-   Award details
     -   This is information about the Contract Award e.g. the award date, and the
         awarded value. This is distinct from the contract information which reflects the
         actual contract document which is finalized and signed after an award. In the case
