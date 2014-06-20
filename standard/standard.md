@@ -61,15 +61,22 @@ The contracting process is the sequence of events related to the lifespan of a c
 
 For descriptions of the phases see the "Definitions" tab at the top.
 
+In this version of the standard, you will not see planning included. 
+Please see "[A note on planning](#a-note-on-planning)" for a full explanation.
+This is because the standard, at this point, has been drafted primarily 
+on the basis of a deep search into the existing data, where we did not find planning data.
+The standard will evolve on the basis of use cases and demand for contracting data also,
+so we welcome detailed use cases regarding planning data to help us build out this area of the standard.
+
 ### Conceptual Model
 We propose an Open Contracting Data Standard consisting of two parts:
 
-- A **contracting record** - a core summary record used to describe key
-  features of the complete Contracting Process. It is updated as 
-  new information becomes available to accurately reflect the state of tender, 
-  award or contract processes. The contracting record should provide an 
-  at-a-glance view of key information used in locating and analysing current, 
-  past or future contracting activities.
+- A **contracting record** - is used to summarize all the key
+  features of the a unique contracting process, bringing together information from 
+  all phases of the contracting process into one record. It is updated as 
+  new information becomes available to accurately reflect the current state of the 
+  contract processes. The contracting record should provide an 
+  at-a-glance view of key information and can then be used to access more detailed information from the releases.
 
 - A set of **contracting releases** - specific releases of information, 
   such as tender notices, award notices, or details of a contract. 
@@ -128,9 +135,9 @@ The Contracting Record above shows the core components of our data model.
         links to the award & contract documents, and termination information. 
         It would also capture details of contract amendments (change of value, deliverables
         alterations, no-cost extensions)
--   Implementation
-    -   In implementation we store details related to the contract performance
-        including details of payments made, evaluation and performance reports.
+-   Performance
+    -   In performance we store details related to the contract implementation
+        including details of payments made, evaluation, audit and performance reports.
 
 <div class="panel panel-success">
     <div class="panel-heading">
@@ -146,6 +153,27 @@ The Contracting Record above shows the core components of our data model.
          </ul>     
      </div>
 </div>
+
+### Defining a unique contracting process
+For the data standard, defining a unique contracting process is critical for getting useful, comparable, clean data. But, there are cases 
+where what the unique process is not obvious. For example, a framework contract has only one tender and award but many contracts associated with that award.
+
+We define a unique contracting process as that with a unique tendering / competitive phase.
+
+**Example 1**
+
+<div class="pull-left"><img alt="Multiple processes" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png"></div>
+
+This Tender notice has a single ID and six line items. However, to secure each item suppliers must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting processes here, in spite of the single Tender Notice ID.
+
+<div class="clearfix"></div>
+
+**Example 2**
+<div class="pull-left"><img alt="Single process" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png"></div>
+
+This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting process, because of the single bidding process.
+
+<div class="clearfix"></div>
 
 ### Add on information
 In addition to the core components, there will be cases where
@@ -181,26 +209,12 @@ provide a way to link to these documents. We are considering how to handle docum
 the available documents. As we flesh out the different serializations over July and August this will be defined. Document links will always 
 be available through the release that declared them.
 
-### Defining a unique contracting process
-For the data standard, defining a unique contracting process is critical for getting useful, comparable, clean data. But, there are cases 
-where what the unique process is not obvious. For example, a framework contract has only one tender and award but many contracts associated with that award.
-
-We define a unique contracting process as that with a unique tendering / competitive phase.
-
-**Example 1**
-
-<div class="pull-left"><img alt="Multiple processes" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_journeys.png"></div>
-
-This Tender notice has a single ID and six line items. However, to secure each item suppliers must enter a seperate bid and the competition is handled seperately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting processes here, in spite of the single Tender Notice ID.
-
-<div class="clearfix"></div>
-
-**Example 2**
-<div class="pull-left"><img alt="Single process" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_journey_multiple_contracts.png"></div>
-
-This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting process, because of the single bidding process.
-
-<div class="clearfix"></div>
+### A note on planning
+In this version of the standard, you will not see planning included. 
+This is because the standard, at this point, has been drafted primarily 
+on the basis of a deep search into the existing data, where we did not find planning data.
+The standard will evolve on the basis of use cases and demand for contracting data also,
+so we welcome detailed use cases regarding planning data to help us build out this area of the standard.
 
 ##The contracting record 
 The contracting record is a master document that collects together a summary of key information about a contracting process. 
