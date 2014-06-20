@@ -42,7 +42,7 @@ This document contributes to the first of these steps, offering a conceptual mod
 ### Sources
 The development of the alpha data model has been based on:
 
-* **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.aptivate.org/opendatacomparison/), and [Contracting Data Map](http://ocds.aptivate.org/opendatacomparison/datamap/) which explores the fields of data available from a wide range of different government contracting data portals around the world. 
+* **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and [Contracting Data Map](http://ocds.open-contracting.org/opendatacomparison/datamap/) which explores the fields of data available from a wide range of different government contracting data portals around the world. 
 * **Exploring demand for data on contracting** - to identify the ways in which different users think about contracting data, and how they want to use it. This work is ongoing, and only initial use cases are factored into this conceptual model. In the next iteration of the conceptual model and field level information, further emphasis will be placed on use cases. 
 
 This initial iteration of the conceptual model is focussed on procurement processes. Future iterations will look at contracts in the land and extractives sector, and we anticipate this will lead to further developments in the terminology used. 
@@ -57,19 +57,15 @@ The contracting process is the sequence of events related to the lifespan of a c
 
 ![Visual of opencontrating process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/contracting%20process.png)
 
-`*` Tendering & Award is more broadly known as Formation to accomodate other
-types of procurement process, we use the term formation within the standard to accomodate this
+`*` Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.
 
-`**` We use the term Implementation instead of Execution in the standard to refer to the period while the contract is being performed.
-
-For descriptions of the phases, taken from the book *Open Contracting - A guide for practitioners by practitioners* [^1] above see the "Definitions" tab at the top.
-[^1]: The book is available free of charge at [http://www.pro-act.org](http://www.pro-act.org)
+For descriptions of the phases see the "Definitions" tab at the top.
 
 ### Conceptual Model
 We propose an Open Contracting Data Standard consisting of two parts:
 
 - A **contracting record** - a core summary record used to describe key
-  features of the comple Contracting Process. It is updated as 
+  features of the complete Contracting Process. It is updated as 
   new information becomes available to accurately reflect the state of tender, 
   award or contract processes. The contracting record should provide an 
   at-a-glance view of key information used in locating and analysing current, 
@@ -146,8 +142,6 @@ The Contracting Record above shows the core components of our data model.
              <li>Which do you need most: a summary contracting record, or detailed releases of information at each stage of the contracting process?</li>
              <li>Do these components cover all the relevant information you want to publish or access about contracting?</li>
              <li>Are we missing key elements in our description of what each component will contain?</li>
-             <li>Is this the right scope for the version 1.0 standard?</li>
-             <li>What are the most important fields you need in a summary contracting record?</li>
              <li>How does the proposed approach of having the contracting record represent the latest stage of contracting (i.e. overwriting earlier data) affect how you might publish or use open contracting data?</li>
          </ul>     
      </div>
@@ -310,7 +304,9 @@ This draft is based primarily on research of existing published datasets as well
 </div>
 
 ##Next steps
-Over June 2014 we will be validating the conceptual model proposed in this document of a Contracing Process, Contracting Records and Contracting Releases. You are invited to add your comments directly to the online copy of this document at [http://ocds.aptivate.org/standard/](http://ocds.aptivate.org/standard/), or to join discussions on [the project technical e-mail list](http://open-contracting.github.io/pages/community.html). 
+Over June 2014 we will be validating the conceptual model proposed in this document of a Contracing Process, Contracting Records and Contracting Releases. 
+You are invited to add your comments directly to the online copy of this document at [http://ocds.open-contracting.org/standard/](http://ocds.open-contracting.org/standard/), 
+or to join discussions on [the project mailing list](https://groups.google.com/a/webfoundation.org/forum/#!forum/public-ocds). 
 
 Over July and August 2014 we will be fleshing out in more detail the data fields that belong to each of the core components, and will develop a full data model. The proposed model will be validated against a range of use cases developed through demand side research. 
 
