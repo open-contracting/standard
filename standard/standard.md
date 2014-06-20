@@ -193,10 +193,8 @@ will be subject to the following restrictions[^2]:
     The Popolo Project - [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
 
 ### A note on framework contracts
-Many public procurements take place under framework agreements, or standing arrangements. These help facilitate routine purchasing. Suppliers are pre-approved to provide a list of goods or services. In
-this case, there are typically multiple contracts under a given award. In the case of a framework contract an award notice would define the framework
-and this information would be stored in the contracting record under Award. Then the multiple contracts that are issued under the contract will
-hold the seperately issued contracts under this framework award.
+Many public procurements take place under framework agreements, or standing arrangements. These help facilitate routine purchasing. Suppliers are pre-approved to provide a list of goods or services. Under a framework agreement, there are typically multiple contracts that are all authorized by a single award. In the data standard, an award notice release would define the framework
+and this information would be stored in the contracting record under Award details. Then there will be multiple contract signature releases and each one would create a new Contract section in the contracting record. This provides a way to aggregate all the information on the contracts given under a single framework agreement.
 
 ### Linking to documents
 There are often many documents associated with a contracting process including tender specifications, contract documents, performance reports etc. The standard will
