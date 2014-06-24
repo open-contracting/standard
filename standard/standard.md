@@ -50,10 +50,10 @@ This draft is based primarily on research of existing published datasets. At the
 
 In our consultations with government, civil society, donors, journalists, auditors, and the private sector, four primary use cases emerged. These users are wishing to use open contracting data in order to:
 
-• Achieve value for money for the procuring entity;
-• Enable the private sector to compete for public contracts;
-• Monitor service delivery for effectiveness; and
-• Detect corruption and fraud in public contracting.
+* Achieve value for money for the procuring entity;
+* Enable the private sector to compete for public contracts;
+* Monitor service delivery for effectiveness; and
+* Detect corruption and fraud in public contracting.
 
 The draft use cases are being developed on an ongoing basis and can be found [here](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing). These use cases not only demonstrate what can and could be done with open contracting data, but will also shape the development of the Open Contracting Data Standard as we move towards defining the field-level specification.
 
