@@ -64,7 +64,7 @@ There are existing standardization efforts for Budget and Spending data under de
 In addition the approach taken for this process is partly based on the development of other data standards that has in part informed decisions to architect at a higher level beginning with the data model itself. Research related to architecting the data standard as well as its governance will be released separately from this data model.
 
 ### Sources
-The development of the alpha data model has been based on:
+The development of the data model draft has been based on:
 
 * **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and [Contracting Data Map](http://ocds.open-contracting.org/opendatacomparison/datamap/) which explores the fields of data available from a wide range of different government contracting data portals around the world. 
 * **Exploring demand for data on contracting** - to identify the ways in which different users think about contracting data, and how they want to use it. This work is ongoing, and only initial use cases are factored into this conceptual model. In the next iteration of the conceptual model and field level information, further emphasis will be placed on use cases. 
