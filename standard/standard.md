@@ -9,7 +9,7 @@
 
 [TOC]
 
-##Purpose and community feedback
+##Purpose and community feedback -
 This document sets out a proposed conceptual model for the [Open Contracting Data Standard](http://open-contracting.github.io), and poses a series of questions for consultation. 
 
 It *does not* provide a field-level specification of the standard, or how the data may be represented in specific file formats. That will be provided through the beta release of the standard in Q3 2014, developed based on responses to this document. 
