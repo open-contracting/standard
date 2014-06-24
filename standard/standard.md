@@ -22,6 +22,7 @@ Over the coming weeks we will continue to iteratively revise the Data Model Draf
 This document is focused on traditional procurement, later revisions of the standard are planned to include other types of contracting such as Public Private Partnerships, Extractives and Land.
 
 There are three main discussion areas that we hope to stimulate feedback and debate on with this early release:
+
 - What are the core components of a procurement standard
 - The idea of balancing the need of data producers & data consumers through releases & a compiled contracting record
 - The need for a unique contracting ID
