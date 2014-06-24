@@ -9,35 +9,54 @@
 
 [TOC]
 
-##Purpose and community feedback -
-This document sets out a proposed conceptual model for the [Open Contracting Data Standard](http://open-contracting.github.io), and poses a series of questions for consultation. 
+##Purpose
 
-It *does not* provide a field-level specification of the standard, or how the data may be represented in specific file formats. That will be provided through the beta release of the standard in Q3 2014, developed based on responses to this document. 
+This is the first release of the Open Contracting data standard, data model. It presents a high-level overview of the structure of the data standard based on supply-side research and initial use-case feedback. 
 
-##Background and context
+The purpose of this release is to obtain feedback from the Open Contracting community on the data model draft before creating specific specific field names, reference lists, and file formats.
 
-### Motivation
-Countries signing up to the [Open Contracting Global Principles](http://www.open-contracting.org/global_principles) commit to share "information related to the formation, performance, and completion of public contracts" including data on all stages of contracting, from pre-bid to performance evaluations, and information on subcontracting arrangements. 
+Throughout the document there are a series of questions to help guide the type of feedback we are seeking. We also welcome general feedback.
 
-The Open Contracting Data Standard is being developed to allow much of this information to be shared as structured data: delivered in ways that enable the widest possible range of users to benefit from greater transparency of contracting arrangements and supporting greater participation, monitoring and oversight in contracting processes.
+Over the coming weeks we will continue to iteratively revise the data model based on community feedback. One can follow revisions at [Open Contracting Data Standard](ocds.open-contracting.org/standard)
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org/). 
-Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org) and [Aptivate](http://www.aptivate.org), through a project supported by 
-The [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org).
+##Background
 
-The development process is also a process of action-research into creating accessible and effective open data standards, and exploring opportunities for [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/). 
+Countries signing up to the Open Contracting Global Principles commit to share "information related to the formation, performance, and completion of public contracts" including data on all stages of contracting, from planning to performance evaluations, and information on subcontracting arrangements.
 
-### Development process
-This first release from the development of an Open Contracting Data Standard presents a high-level overview of a proposed data model.
+The Open Contracting data standard is being developed to allow much of this information to be shared as structured data: delivered in ways that enable the widest possible range of users to benefit from greater transparency of contracting arrangements and supporting greater participation, monitoring and oversight in contracting processes.
 
-Following a technical scoping exercise we have adopted a development process based on:
+The Open Contracting Data Standard is a core product of the Open Contracting Partnership. Version 1.0 of the standard is being developed for the OCP by the World Wide Web Foundation and World Bank, through a project supported by The Omidyar Network and the World Bank.
 
-- specifying a single format-independent conceptual model;
-- developing this into a data model, identifying common vocabularies and taxonomies to use in defining fields, and creating new fields where required;
-- specifying how this data model should be represented in key formats such as CSV, JSON, XML and RDF, respecting the particular idioms most familiar in these formats.
-- identifying the tools that are necessary for standard to thrive such as aggregation and visualization.
+## Development process
 
-This document contributes to the first of these steps, offering a conceptual model for publishing Open Contracting Data and outlining the components that are captured within that model. The next phase of work will identify and create vocabularies covering key field definitions and will present a full data model. The final phase of this development process will recommend approaches to serialise this model and vocabulary using different formats. In parallel, work is taking place to develop a governance model for the future development of the standard. 
+The development of the Data Model has been based on:
+
+### 1) Supply-side research 
+
+The supply-side research is focused on comparing contract data (37 datasets with over 175 downloadable assets from 27 publishers, from across the world). 26 publishers are from 15 countries that were selected as priorities countries due to their current activity in open government and the Open Government Partnership (OGP) Action Plan followed by countries that are in the stages of developing a first and second OGP Action Plan. The effort sought to understand:
+
+	a) which elements of the contracting process are captured in currently published data;
+	b) which fields are commonly found across different datasets;
+	c) how do different datasets represent and model the contracting process; and
+	d) how far are there common identifiers that can be used to link datasets.
+	
+To answer the above questions a Contracting Data Comparison tool was created with a team of volunteer developers to provide a platform for curating meta-data about public contracting datasets from the priority countries. 
+
+The effort focused on capturing the metadata of contract data available. As it develops, the intention is for the Contracting Data Comparison to allow for wider public participation and thus create an ever more detailed picture of the landscape of contracting data availability and focus. 
+  
+### 2) Demand-side use-cases
+
+The demand-side use-cases is focused on developing 6-12 priority use-cases based on workshops, webinars, and bilateral discussions with more than 260 stakeholders. 
+
+This process is part of determining what use-cases to best address in the initial version of the standard and is intended to allow a simple-to-adopt standard. Thus the approach taken has been to explore breath of adoption versus a too overbearing standard for the initial release and one that meets the scope and timeframe for the project.
+
+Some preliminary research has assisted in the development of the data model, and this research will continue to further inform the data standard and model in the coming weeks. 
+
+### 3) Research on related initiatives 
+
+There are existing standardization efforts for Budget and Spending data under development through the Open Spending project. In line with the principles of [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/) the project will explore ways to connect data in the Open Contracting Data Standard with data in the proposed Open Spending and Open Budget data standards, among others.
+
+In addition the approach taken for this process is partly based on the development of other data standards that has in part informed decisions to architect at a higher level beginning with the data model itself. Research related to architecting the data standard as well as its governance will be released separately from this data model.
 
 ### Sources
 The development of the alpha data model has been based on:
@@ -352,6 +371,7 @@ Open Budget data standards.
 
 
 ##Credits
-The Open Contracting Data Standard project is a collaboration of the [Open Contracting Partnership](http://www.open-contracting.org/home-v1) and the [World Wide Web Foundation (Web Foundation)](http://www.webfoundation.org), supported by a grant from [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org), with [Aptivate](http://www.aptivate.org) as the lead technical partner to the project. The development of this draft has been led by Sarah Bird ([Aptivate](http://www.aptivate.org)), with contributions from Tim Davies (Web Foundation) and Ana Brandusescu. 
 
-Coordinators of the research leading towards this standard include: Michael Roberts, Lindsey Marchessault, Marcela Rozo and Steven Davenport. 
+The Open Contracting Data Standard project is a collaboration of the [Open Contracting Partnership](http://www.open-contracting.org/) and the [World Wide Web Foundation (Web Foundation)](http://www.webfoundation.org), supported by a grant from [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org). 
+
+The development of this draft has been led by Sarah Bird ([Aptivate](http://www.aptivate.org)), with contributions from Tim Davies (Web Foundation) and Ana Brandusescu. Coordinators of the research leading towards this standard include: Michael Roberts, Lindsey Marchessault, Marcela Rozo and Steven Davenport. 
