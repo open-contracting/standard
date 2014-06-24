@@ -3,7 +3,7 @@
     <div class="panel-heading">
        <h4 class="panel-title"> <span class="glyphicon glyphicon-comment"></span>Open for consultation</h4>
      </div>
-     <div class="panel-body"><p>This version is open for consultation until July 15th. Visit <a hef="http://open-contracting.github.io">http://open-contracting.github.io</a> for more background information.</p>
+     <div class="panel-body"><p>This version is open for consultation until July 15th. Visit <a hef="http://ocds.open-contracting.org">http://ocds.open-contracting.org</a> for more background information.</p>
      </div>
 </div>
 
@@ -11,19 +11,20 @@
 
 ##Purpose
 
-This is the first release of the Open Contracting data standard, data model. It presents a high-level overview of the structure of the data standard based on supply-side research and initial use-case feedback. 
+This is the first release of the Open Contracting Data Standard, Data Model. It presents a high-level overview of the structure of the Data Standard based on supply-side research and initial use-case feedback. 
 
-The purpose of this release is to obtain feedback from the Open Contracting community on the data model draft before creating specific specific field names, reference lists, and file formats.
+The purpose of this release is to obtain feedback from the Open Contracting community on the Data Model Draft before creating specific specific field names, reference lists, and file formats.
 
 Throughout the document there are a series of questions to help guide the type of feedback we are seeking. We also welcome general feedback.
 
-Over the coming weeks we will continue to iteratively revise the data model based on community feedback. One can follow revisions at [Open Contracting Data Standard](ocds.open-contracting.org/standard)
+Over the coming weeks we will continue to iteratively revise the 
+Data Model Draft based on community feedback. One can follow revisions at [Open Contracting Data Standard](ocds.open-contracting.org/standard)
 
 ##Background
 
 Countries signing up to the Open Contracting Global Principles commit to share "information related to the formation, performance, and completion of public contracts" including data on all stages of contracting, from planning to performance evaluations, and information on subcontracting arrangements.
 
-The Open Contracting data standard is being developed to allow much of this information to be shared as structured data: delivered in ways that enable the widest possible range of users to benefit from greater transparency of contracting arrangements and supporting greater participation, monitoring and oversight in contracting processes.
+The Open Contracting Data Standard is being developed to allow much of this information to be shared as structured data: delivered in ways that enable the widest possible range of users to benefit from greater transparency of contracting arrangements and supporting greater participation, monitoring and oversight in contracting processes.
 
 The Open Contracting Data Standard is a core product of the Open Contracting Partnership. Version 1.0 of the standard is being developed for the OCP by the World Wide Web Foundation and World Bank, through a project supported by The Omidyar Network and the World Bank.
 
@@ -33,22 +34,22 @@ The development of the Data Model has been based on:
 
 ### 1) Supply-side research 
 
-The supply-side research is focused on comparing contract data (37 datasets with over 175 downloadable assets from 27 publishers, from across the world). 26 publishers are from 15 countries that were selected as priorities countries due to their current activity in open government and the Open Government Partnership (OGP) Action Plan followed by countries that are in the stages of developing a first and second OGP Action Plan. The effort sought to understand:
+The supply-side research is focused on comparing contract data (37 datasets with over 175 downloadable assets from 27 publishers, from across the world). 26 publishers are from 15 countries that were selected as priority countries due to their current activity in open government and the Open Government Partnership (OGP) Action Plan. The effort sought to understand:
 
-	a) which elements of the contracting process are captured in currently published data;
-	b) which fields are commonly found across different datasets;
-	c) how do different datasets represent and model the contracting process; and
-	d) how far are there common identifiers that can be used to link datasets.
+* which elements of the contracting process are captured in currently published data;
+* which fields are commonly found across different datasets;
+* how do different datasets represent and model the contracting process; and
+* how far are there common identifiers that can be used to link datasets.
 	
 To answer the above questions a Contracting Data Comparison tool was created with a team of volunteer developers to provide a platform for curating meta-data about public contracting datasets from the priority countries. 
 
-The effort focused on capturing the metadata of contract data available. As it develops, the intention is for the Contracting Data Comparison to allow for wider public participation and thus create an ever more detailed picture of the landscape of contracting data availability and focus. 
+The effort focused on capturing the metadata of contract data available. As it develops, the intention is for the Contracting Data Comparison tool to allow for wider public participation and thus create an ever more detailed picture of the landscape of contracting data availability and focus. 
   
 ### 2) Demand-side use-cases
 
-This draft is based primarily on research of existing published datasets. At the same time, we have begun to explore priority use cases for open contracting data through workshops, webinars, a mailing list, and bilateral discussions with more than 200 stakeholders. The purpose of demand-side research is to capture the real needs and circumstances of the publishers and users of public contracting data. 
+This draft is based primarily on research of existing published datasets. At the same time, the project has begun to explore priority use cases for open contracting data through workshops, webinars, a mailing list, and bilateral discussions with more than 200 stakeholders. The purpose of demand-side research is to capture the real needs and circumstances of the publishers and users of public contracting data. 
 
-In our consultations with government, civil society, donors, journalists, auditors, and the private sector, four primary use cases emerged. These users are wishing to use open contracting data in order to:
+In our consultations with government, civil society, donors, journalists, auditors, and the private sector, four primary use cases emerged. These users are interested to use open contracting data in order to:
 
 * Achieve value for money for the procuring entity;
 * Enable the private sector to compete for public contracts;
@@ -59,12 +60,12 @@ The draft use cases are being developed on an ongoing basis and can be found [he
 
 ### 3) Research on related initiatives 
 
-There are existing standardization efforts for Budget and Spending data under development through the Open Spending project. In line with the principles of [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/) the project will explore ways to connect data in the Open Contracting Data Standard with data in the proposed Open Spending and Open Budget data standards, among others.
+There are existing standardization efforts for budget and spending data under development through the Open Spending Project. In line with the principles of [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/) this project will explore ways to connect data in the Open Contracting Data Standard with data in the proposed Open Spending and Open Budget Data Standards, among others.
 
-In addition the approach taken for this process is partly based on the development of other data standards that has in part informed decisions to architect at a higher level beginning with the data model itself. Research related to architecting the data standard as well as its governance will be released separately from this data model.
+In addition, the approach taken is informed by the development of other data standards. Research related to the Data Standard Architecture and Data Standard Governance will be released separately from the Data Model Draft.
 
 ### Sources
-The development of the data model draft has been based on:
+The development of the Data Model Draft has been based on:
 
 * **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and [Contracting Data Map](http://ocds.open-contracting.org/opendatacomparison/datamap/) which explores the fields of data available from a wide range of different government contracting data portals around the world. 
 * **Exploring demand for data on contracting** - to identify the ways in which different users think about contracting data, and how they want to use it. This work is ongoing, and only initial use cases are factored into this conceptual model. In the next iteration of the conceptual model and field level information, further emphasis will be placed on use cases. 
@@ -342,7 +343,7 @@ or to join discussions on [the project mailing list](https://groups.google.com/a
 
 Over July and August 2014 we will be fleshing out in more detail the data fields that belong to each of the core components, and will develop a full data model. The proposed model will be validated against a range of use cases developed through demand side research. 
 
-This data model will be format-agnostic. That is, it will be a generic model rather than a specific serialization in JSON, XML or CSV. 
+This Data Model Draft will be format-agnostic. That is, it will be a generic model rather than a specific serialization in JSON, XML or CSV. 
 
 Following the development and validation of the model, we will outline a number of approaches to serialize this data in different priority formats. 
 
