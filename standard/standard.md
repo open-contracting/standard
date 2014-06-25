@@ -9,7 +9,7 @@
 
 [TOC]
 
-# Draft Data Model
+## Draft Data Model
 
 ## Purpose
 
