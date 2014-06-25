@@ -73,7 +73,7 @@ In most countries, public contracting information is scattered across multiple s
 
 The information in the contracting **releases** would be used to build a contracting **record. **For this to work, each contracting release must be tied to a unique **open contracting identifier**. Each of these components is discussed below. 
 
-![image alt text](https://github.com/open-contracting/standard/blob/master/standard/assets/image_1.png)
+![Diagram 2](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/image_1.png)
 
 ## The contracting record
 
@@ -153,13 +153,13 @@ We define a unique contracting process as that with a unique tendering / competi
 
 **Example 1**
 
-![image alt text](https://github.com/open-contracting/standard/blob/master/standard/assets/image_2.png)
+![image alt text](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/image_2.png)
 
 This Tender notice has a single ID and six line items. However, to secure each item suppliers must enter a separate bid and the competition is handled separately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting processes here, in spite of the single Tender Notice ID.
 
 **Example 2**
 
-![image alt text](https://github.com/open-contracting/standard/blob/master/standard/assets/image_3.png)
+![image alt text](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/image_3.png)
 
 This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting process, because of the single bidding process.
 
