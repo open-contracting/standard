@@ -69,7 +69,7 @@ In most countries, public contracting information is scattered across multiple s
 
 The information in the contracting **releases** would be used to build a contracting **record. **For this to work, each contracting release must be tied to a unique **open contracting identifier**. Each of these components is discussed below. 
 
-![Diagram 2](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/image_1.png)
+![Open Contracting Conceptual Model](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/releases%20and%20record.png)
 
 ## The contracting record
 
