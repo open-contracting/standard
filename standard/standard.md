@@ -55,7 +55,7 @@ The contracting process is the sequence of stages related to the lifespan of a c
 
 ![Contracting Process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/contracting%20process.png)
 
-* Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.
+<p>* Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.</p>
 
 For descriptions of the phases see the "Vocabulary" section at the end.
 
@@ -111,17 +111,20 @@ The core components of the Contracting Record and our data model are:
 
 The contracting record will reflect the latest state of the contracting process. For example, if a tender is issued for Widget A with a minimum value of $10 and maximum of $20, at the tender stage the 'Amounts:minimum' would be $10, and 'Amounts:maximum' would be $20. If during consultation the range is determined to be unrealistic and a tender amendment is issued changing the range of acceptable tenders to $20 - $30 then the contracting record would be updated to an 'Amounts:minimum' of $20 and 'Amounts:maximum' of $30. To see the history of these amounts would require looking at the individual contracting releases or tracking changes to the contracting record.
 
-#### **Consultation questions**
-
-* Does the proposed conceptual model make sense for the ways you want to publish or use open contracting data?
-
-* Which do you need most: a summary contracting record, or detailed releases of information at each stage of the contracting process?
-
-* Do these components cover all the relevant categories of information you want to publish or access about contracting?
-
-* How does the proposed approach of having the contracting record represent the latest stage of contracting (i.e. overwriting earlier data) affect how you might publish or use open contracting data?
-
-* This model necessitates a unique contracting ID across the entire contracting process. What are the challenges around this?
+<div class="panel panel-success">
+    <div class="panel-heading">
+       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h4>
+     </div>
+     <div class="panel-body">
+         <ul>
+             <li>Does the proposed conceptual model make sense for the ways you want to publish or use open contracting data?</li>
+             <li>Which do you need most: a summary contracting record, or detailed releases of information at each stage of the contracting process?</li>
+             <li>Do these components cover all the relevant categories of information you want to publish or access about contracting?</li>
+             <li>Are we missing key elements in our description of what each component will contain?</li>
+             <li>How does the proposed approach of having the contracting record represent the latest stage of contracting (i.e. overwriting earlier data) affect how you might publish or use open contracting data?</li>
+         </ul>     
+     </div>
+</div>
 
 ## Contracting releases
 
@@ -135,11 +138,17 @@ In the event that the publisher is not maintaining a contract record, the ID of 
 
 Each release, or a group of releases, will contain publisher information, and each release will contain a release number and date from that publisher. The idea is to accommodate the modularization of publishing such that along the contracting process, different bodies could publish different sets of releases. For example, one publisher for tenders and awards, and a separate publisher for contracts releases. In addition, third-party publishers may wish to augment the contracting data with their own releases such as an Add On containing geo-coding information.
 
-#### **Consultation questions**
-
-In future research we will be investigating different ways that amendments and updates to releases might be represented.
-
-* What are options / approaches, from a technical / data structure point of view to represent and publish amendments or revisions to releases? And what are the strengths and weaknesses?
+<div class="panel panel-success">
+    <div class="panel-heading">
+       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h4>
+     </div>
+     <div class="panel-body">
+         <p>In future research we will be investigating different ways that amendments and updates to releases might be represented.</p>
+         <ul>
+             <li>What are options / approaches, from a technical / data structure point of view to represent and publish amendments or revisions to releases? And what are the strengths and weaknesses?</li>
+         </ul>     
+     </div>
+</div>
 
 ### Defining a unique contracting process
 
@@ -148,26 +157,33 @@ For the data standard, defining a unique contracting process is critical for get
 We define a unique contracting process as that with a unique tendering / competitive phase.
 
 **Example 1**
-
-![A tender notice with multiple processes](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_processes.png)
+<div class="pull-left"><img alt="Multiple processes" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_processes.png"></div>
 
 This Tender notice has a single ID and six line items. However, to secure each item suppliers must enter a separate bid and the competition is handled separately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting processes here, in spite of the single Tender Notice ID.
 
+<div class="clearfix"></div>
+
 **Example 2**
 
-![One process with multiple contracts](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_process_with_multiple_contracts.png)
+<div class="pull-left"><img alt="Single process" src="https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_process_multiple_contracts.png"></div>
 
 This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting process, because of the single bidding process.
+
+<div class="clearfix"></div>
 
 ### Add on information
 
 In addition to the core components, there will be cases where publishers, or users, need to augment the core data with their own information. The standard will provide a mechanism for Add-On information. This will include additional fields in core components as well as Add On components (e.g. new kinds of **contracting release**).
 
-The publishing and re-use of add-ons will be encouraged to try and reduce duplication and facilitate reuse of tools. The use of Add-Ons will be subject to the following restrictions [1](http://ocds.open-contracting.org/standard/r/master/#fn:2):
+The publishing and re-use of add-ons will be encouraged to try and reduce duplication and facilitate reuse of tools. The use of Add-Ons will be subject to the following restrictions [^1]
 
 * It must not use terms from outside this specification's terms where this specification's terms would suffice
 
 * It may use terms from outside this specification's terms where this specification's terms are insufficient.
+
+[^1]:
+    The use of add-on conditions were adapted from the
+    The Popolo Project - [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
 
 ### A note on framework contracts
 
@@ -213,15 +229,20 @@ In our consultations with government, civil society, donors, journalists, audito
 
 * Detect corruption and fraud in public contracting.
 
-The draft use cases are being developed on an ongoing basis and can be found [ here](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing). These use cases not only demonstrate what can and could be done with open contracting data, but will also shape the development of the Open Contracting Data Standard as we move towards defining the field-level specification.
+The draft use cases are being developed on an ongoing basis and can be found [here](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing). These use cases not only demonstrate what can and could be done with open contracting data, but will also shape the development of the Open Contracting Data Standard as we move towards defining the field-level specification.
 
-#### **Consultation questions**
-
-* In your opinion, does the proposed conceptual model work for these use cases?
-
-* Are there other important use cases we should be considering?
-
-* Are there use cases you can envisage where the proposed conceptual model does not work well?
+<div class="panel panel-success">
+    <div class="panel-heading">
+       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h4>
+     </div>
+     <div class="panel-body">
+         <ul>
+             <li>In your opinion, does the proposed conceptual model work for these use cases?</li>
+             <li>Are there other important use cases we should be considering?</li>
+             <li>Are there use cases you can envisage where the proposed conceptual model does not work well?</li>
+         </ul>     
+     </div>
+</div>
 
 ### 3) Research on related initiatives
 
@@ -239,39 +260,8 @@ The Data Standard itself will be format-agnostic. However following the developm
 
 Throughout this process we will be seeking to re-use existing data structures from prior standards.
 
-## Vocabulary
-
-The world of procurement and contracting has many specialist terms. However, the precise way that these terms are used can vary from sector to sector, and country to country. Below we define how we are using a number of key terms.
-
-* **Contract** - a legally enforceable agreement between two (or more) parties. Often times, contracts are thought of as a single document, the document that is signed by the parties. However, in many cases, a contract can be made up of multiple documents incorporated by reference containing additional terms, specifications, provisions, standard forms or other information (known as addendums, annexes, appendices, schedules, riders, etc.) A contract should also be understood to include any later agreements of the parties that change the terms of the contract (amendments). As a legal document, the law (statutes, regulations, case law) may also impose additional terms or conditions or otherwise affect a contract.
-
-* **Open Contracting** - norms and practices for increased disclosure and participation in public contracting including tendering, performance and completion. It includes the variety of contract types, from more basic contracts for the procurement of goods, to complex contracts, joint venture agreements, licenses and production sharing agreements. Open contracting encompasses all public contracting, including contracts funded by combinations of public, private and donor sources.
-
-* **Public Contracting Process** - the planning, formation, award, execution, performance, and completion of a contract to which a government entity is a party.
-
-    * **Planning** - the process of deciding what to contract for, when and how. A procurement plan is a product of the planning process that indicates an procuring entities planned procurement activities over a period of time.
-
-    * **Formation** - the activities undertaken in order to enter into a contract. Good public contracting practice favours open competitive bidding or tendering as a method to form contracts (the process of publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners). However, contracts can be awarded in other ways, such as through non-competitive direct negotiation, prequalification of bidders, and other methodologies. The contract is then "awarded" to a selected contractor. Once the contractor has been selected and the terms of the contract have been agreed, the contract is signed (or executed) by the parties, and becomes active on an effective date.
-
-    * **Performance** - the implementation of the contract in accordance with the obligations laid out therein. Often, contractors will enter into additional contracts with sub-contractors in order to implement the public contract.
-
-    * **Completion** - the confirmation that all obligations (deliverables and payments) of the contract have been completed, or that the contract has been terminated for some other reason.
-
-#### **Consultation questions**
-
-* Is this proposed use of vocabulary clear and robust?
-
-* Are there any third-party sources we should draw upon for clear definitions of these and other terms?
-
 ## Acknowledgements
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership (OCP)](http://www.open-contracting.org/). Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by The[ Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org)".
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership (OCP)](http://www.open-contracting.org/). Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by The [Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org)".
 
 This document contains significant contributions from Sarah Bird ([Aptivate](http://www.aptivate.org)), Ana Brandusescu and Tim Davies (World Wide Web Foundation). Other contributors include: Jose M. Alonso (World Wide Web Foundation), Steven Davenport (World Bank), Lindsey Marchessault, Michael Roberts (World Wide Web Foundation), and Marcela Rozo (World Bank).
-
-* * *
-
-
-1. The use of add-on conditions were adapted from the The Popolo Project -[ http://popoloproject.com/specs/#conformance](http://popoloproject.com/specs/#conformance) 
-
-
