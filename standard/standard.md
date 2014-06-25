@@ -149,13 +149,13 @@ We define a unique contracting process as that with a unique tendering / competi
 
 **Example 1**
 
-![image alt text](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/image_2.png)
+![A tender notice with multiple processes](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/tender_notice_with_multiple_processes.png)
 
 This Tender notice has a single ID and six line items. However, to secure each item suppliers must enter a separate bid and the competition is handled separately for each item leading to 6 contracts. Because the competitive process is unique for each 6 items there are 6 contracting processes here, in spite of the single Tender Notice ID.
 
 **Example 2**
 
-![image alt text](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/image_3.png)
+![One process with multiple contracts](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/one_process_with_multiple_contracts.png)
 
 This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/tender-notice/PW-14-00635129) offers an unspecified number of contracts for the successful supplier(s). The details note that there is a limit of $25k per contract, anything higher than that must be rebid competitively. All of the $25k or less contracts that are awarded under the award that will result from this tender are part of a single contracting process, because of the single bidding process.
 
