@@ -53,7 +53,7 @@ More detailed information about the Development Process is available below.
 
 The contracting process is the sequence of stages related to the lifespan of a contract, beginning with planning and culminating in contract closure.
 
-![Diagram 1](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/image_0.png)
+![Contracting Process](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/contracting%20process.png)
 
 * Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.
 
