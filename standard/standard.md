@@ -1,4 +1,4 @@
-<br />
+<br /><a id="above"></a>
 <div class="panel panel-warning">
     <div class="panel-heading">
        <h4 class="panel-title"> <span class="glyphicon glyphicon-comment"></span>Open for consultation</h4>
@@ -11,7 +11,7 @@
 
 ## Purpose
 
-This is the first release of the Open Contracting Data Standard. In this release we would like to present our draft Data Model for Public Procurement. It presents a high-level overview of the structure of the Data Standard based on supply-side research and initial use-case feedback. This version of the Data Model has been designed for public procurement contracts. Our goal over the coming months is to adapt this model for public contracting in land and extractive industries.
+This is the first release of the Open Contracting Data Standard. In this release we present our draft Data Model for Public Procurement. It presents a high-level overview of the structure of the Data Standard based on supply-side research and initial use-case feedback. This version of the Data Model has been designed for public procurement contracts. Our goal over the coming months is to adapt this model for public contracting in land and extractive industries.
 
 The purpose of this release is to obtain feedback from the Open Contracting community on the draft Data Model before creating specific field names, reference lists, and file formats. 
 
@@ -43,7 +43,7 @@ The development of the Data Model Draft has been based on:
 
 The Open Contracting Data Standard is a core product of the Open Contracting Partnership. Version 1.0 of the standard is being developed for the OCP by the World Wide Web Foundation and World Bank, through a project supported by The Omidyar Network and the World Bank.
 
-More detailed information about the Development Process is available below. 
+More detailed information about the development process is available [below](#development-process). 
 
 ## Conceptual Model
 
@@ -55,15 +55,16 @@ The contracting process is the sequence of stages related to the lifespan of a c
 
 <p>* Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.</p>
 
-For descriptions of the phases see the "Vocabulary" section at the end.
-
+For descriptions of the phases see the "Definitions" tab [above](#start).
 ### Conceptual Model
 
-In most countries, public contracting information is scattered across multiple systems (and websites). Data released might be split across files by month or by some other segmentation. The siloed nature of contracting data suggests a simple standard may have substantial value to help link this information together to enhance its utility. Therefore, we propose a single specification containing all of the Open Contracting Data Standard fields grouped according to the components of the contracting record. Each contracting record would be uniquely identifiable, and serialized in a flat/table form. The fields within the record will be populated (or revised) through contracting releases. This is described below and in the diagram.
+In most countries, public contracting information is scattered across multiple systems (and websites). Data released might be split across files by month or by some other segmentation. The siloed nature of contracting data suggests a simple standard may have substantial value to help link this information together to enhance its utility. Therefore, we propose a data model that allows releasing data incrementally, but facilitates aggregateing it into a single record.
 
-* A **contracting record** - is a summary of all the key elements of a unique contracting process, including its planning, formation, performance and completion. It is updated as new information becomes available in the form of contracting releases to accurately reflect the current state of the contract processes. The contracting record should provide an at-a-glance view of key information and can then be used to access more detailed information from the releases. In the image below, the blue boxes represent core components of the contracting record and will contain the "field-level" data. Descriptions of each of these components is below the diagram.
+* A set of** releases** of information pertaining to stages in the contracting process -- such as tender notices, award notices, or details of a finalized contract. A series of releases form a revision history for the contracting process. The contracting releases may originate in different systems but can be compiled into the contracting record.
 
-* A set of** releases** - of information pertaining to stages in the contracting process -- such as tender notices, award notices, or details of a finalized contract. The revision history of releases should be kept, and releases will often have a number of attached documents. The contracting releases may originate in different systems but can be compiled into the contracting record. The releases should be published in a timely fashion. 
+* A **contracting record** is a summary of all the key elements of a unique contracting process, including its planning, formation, performance and completion. It is updated as new information becomes available in the form of contracting releases to accurately reflect the current state of the contract processes. The contracting record should provide an at-a-glance view of key information and can then be used to access more detailed information from the releases. The standard will provide a specification for compiling a contracting record so that data consumers can compile their own if publishers are only producing releases.
+
+In the image below, the blue boxes represent core components of the contracting record. Descriptions of each of these components is below the diagram.
 
 The information in the contracting **releases** would be used to build a contracting **record. **For this to work, each contracting release must be tied to a unique **open contracting identifier**. Each of these components is discussed below. 
 
