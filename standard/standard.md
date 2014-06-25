@@ -9,11 +9,7 @@
 
 [TOC]
 
-## Open Contracting Data Standard
-
-## Draft Data Model
-
-## *Revision: 0.20 - June 24, 2014*
+# Draft Data Model
 
 ## Purpose
 
