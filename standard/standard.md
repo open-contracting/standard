@@ -9,8 +9,6 @@
 
 [TOC]
 
-## Draft Data Model
-
 ## Purpose
 
 This is the first release of the Open Contracting Data Standard. In this release we would like to present our draft Data Model for Public Procurement. It presents a high-level overview of the structure of the Data Standard based on supply-side research and initial use-case feedback. This version of the Data Model has been designed for public procurement contracts. Our goal over the coming months is to adapt this model for public contracting in land and extractive industries.
