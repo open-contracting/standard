@@ -55,7 +55,7 @@ The contracting process is the sequence of stages related to the lifespan of a c
 
 <p>* Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.</p>
 
-For descriptions of the phases see the "Definitions" tab [above](#start).
+For descriptions of the phases see the "Definitions" tab [above](#above).
 ### Conceptual Model
 
 In most countries, public contracting information is scattered across multiple systems (and websites). Data released might be split across files by month or by some other segmentation. The siloed nature of contracting data suggests a simple standard may have substantial value to help link this information together to enhance its utility. Therefore, we propose a data model that allows releasing data incrementally, but facilitates aggregateing it into a single record.
