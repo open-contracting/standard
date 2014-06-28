@@ -186,7 +186,9 @@ The publishing and re-use of add-ons will be encouraged to try and reduce duplic
 
 ### A note on framework contracts
 
-Many public procurements take place under framework agreements, or standing arrangements. These help facilitate routine purchasing. Suppliers are pre-approved to provide a list of goods or services. Under a framework agreement, there are typically multiple contracts that are all authorized by a single award. In the data standard, an award notice release would define the framework and this information would be stored in the contracting record under Award details. Then there will be multiple contract signature releases and each one would create a new Contract section in the contracting record. This provides a way to aggregate all the information on the contracts given under a single framework agreement.
+Many public procurements take place under framework agreements. These help facilitate routine purchasing. Suppliers are pre-approved to provide a list of goods or services. Under a framework agreement, there are typically multiple contracts that are all authorized by a single award. In the data standard, an award notice release would define the framework and this information would be stored in the contracting record under Award details. Then there will be multiple contract signature releases and each one would create a new Contract section in the contracting record. This provides a way to aggregate all the information on the contracts given under a single framework agreement.
+
+Alternative names for framework agreements: Dynamic Purchasing System (EU), Standing Offers and Supply Arrangements (buyandsell.gc.ca)
 
 ### Linking to documents
 
