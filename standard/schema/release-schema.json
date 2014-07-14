@@ -1,5 +1,5 @@
 {
-	"id": "http://github.com/open-contracting/standard/tree/master/standard/release-schema.json",
+	"id": "http://github.com/open-contracting/standard/tree/master/standard/schema/release-schema.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"description": "Schema for an Open Contracting Release",
 	"properties": {
@@ -10,42 +10,45 @@
 			"minItems": 1,
 			"items": { "$ref": "#/definitions/release" },
 			"uniqueItems": true
-			} 
-		},
+		} 
+	},
 	"required": ["publisher", "publishingMeta", "releases"],
 	"definitions": {
 		"publisher": {
 			"properties": {
 				"name": { 
 					"type": "string" 
-					},
+				},
 				"uri": { 
 					"type": "string",
 					"format" : "uri"
-				 	}
-				},
-			"required": ["name", "uri"]
-			},
-		"publishingMeta": {
-			"date": {
-				"type": "string",
-				"format": "date-time"
 				}
 			},
-			"required": ["date"],
+			"required": ["name", "uri"]
+		},
+		"publishingMeta": {
+            "properties": {
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+			"required": ["date"]
+		},
 		"release": {
 			"properties": {
-				"releaseMeta": { "$ref": "#/definitions/releases/definitions/releaseMeta" },
+				"releaseMeta": { "$ref": "#/definitions/release/definitions/releaseMeta" },
 				"buyer": { "$ref": "#/definitions/release/definitions/buyer" },
-				"supplier": { "$ref": "#/definitions/release/definitions/supplier" },
-				"items": { "$ref": "#/definitions/release/definitions/items" },
 				"planning": { "$ref": "#/definitions/release/definitions/planning" },
-				"formation": { "$ref": "#/definitions/release/definitions/formation" },
+				"formation": {
+                    "oneOf": [{ "$ref": "#/definitions/release/definitions/tender" }]
+                },
 				"award": { "$ref": "#/definitions/release/definitions/award" },
 				"contract": { "$ref": "#/definitions/release/definitions/contract" },
 				"performance": { "$ref": "#/definitions/release/definitions/performance" },
 				"additionalProperties": true
-				},
+			},
+            "required": ["releaseMeta"],
 			"definitions": {
 				"releaseMeta": {
 					"title": "Meta information about the release.",
@@ -58,7 +61,7 @@
 							},
 							"releaseTag": {
 								"title": "Release Tag",
-								"description": "A tag that helps to identify the type of data in the dataset.",
+								"description": "A tag that helps to identify the type of data in the dataset. These may be used for advanced validation.",
 								"type": "string",
 								"enum": ["planning", "tenderNotice", "awardNotice", "contractSignature", "contractAmendment", "report", "spending", "terminationNotice"]
 							},
@@ -68,19 +71,64 @@
 								"type": "string",
 								"default": "en_US"
 							}
-						},
+					},
 					"required": ["ocid"]
 				},
 				"buyer": {},
 				"supplier": {},
 				"items": {},
 				"planning": {},
-				"formation": {},
+                "tender": {
+                    "properties": {
+                        "notice": { "$ref": "#/definitions/release/definitions/notice" }
+                    }
+                },
 				"award": {},
 				"contract": {},
-				"performance": {}
-				}
+				"performance": {},
+                "notice": {
+                    "properties": {
+                        "id": {
+                            "title": "Notice identifier",
+                            "description": "The identifier that identifies the notice to the publisher. This may be the same or different from the OCID.",
+                            "format": "string"
+                        },
+                        "uri": {
+                            "title": "Notice URI",
+                            "description": "A permanent uri that provides access to the uri.",
+                            "format": "uri"
+                        },
+                        "publishedDate": {
+                            "title": "Notice published date",
+                            "description": "The date this version of the notice was published. In the case of notice amendments, it is the date that reflects to this version of the data.",
+                            "format": "date-time"
+                        },
+                        "isAmendment": {
+                            "title": "Is this an amendment to the notice?",
+                            "description": "If true, then amendment information should be provided.",
+                            "type": "boolean"
+                        },
+                        "amendment": { "$ref": "#/definitions/release/definitions/amendment" }
+                    }
+				},
+                "amendment": {
+                    "title": "Amendment information",
+                    "properties": {
+                        "amendmentDate": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "amendedFields": {
+                            "description": "Comma-seperated list of affected fields.",
+                            "type": "string"
+                        },
+                        "justification": {
+                            "description": "An explanation / justification for the amendment.",
+                            "type": "string"
+                        }
+                    }
+                }
 			}
 		}
-
+    }
 }
