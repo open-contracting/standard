@@ -80,7 +80,50 @@
 				"planning": {},
                 "tender": {
                     "properties": {
-                        "notice": { "$ref": "#/definitions/release/definitions/notice" }
+                        "notice": { "$ref": "#/definitions/release/definitions/notice" },
+                        "method": { 
+                            "description": "Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)",
+                            "type": "string",
+                            "enum": ["Open", "Selective", "Limited"]
+                        },
+                        "methodJustification": {
+                            "description": "Justification of procurement method, especially in the case of Limited tendering.",
+                            "type": "string"
+                        },
+                        "selectionCriteria": {
+                            "description": "Specify the selection criteria, by lowest cost, ",
+                            "type": "string",
+                            "enum": ["Lowest Cost", "Best Proposal", "Best Value to Government", "Single bid only"]
+                        },
+                        "selectionDetails": {
+                            "description": "Any detailed or further information on the selection criteria.",
+                            "type": "string"
+                        },
+                        "submissionMethod": {
+                            "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction",
+                            "type": "string",
+                            "enum": ["Electronic Auction", "Electronic Submission", "Written", "In Person"]
+                        },
+                        "submissionDetails" : {
+                            "description": "Any detailed or further information on the submission method.",
+                            "type": "string"
+                        },
+                        "clarificationPeriod": {
+                            "description": "",
+                            "$ref": "#/definitions/release/definitions/period" 
+                        },
+                        "tenderPeriod": {
+                            "description": "",
+                            "$ref": "#/definitions/release/definitions/period"
+                        },
+                        "awardPeriod": {
+                            "description": "",
+                            "$ref": "#/definitions/release/definitions/period"
+                        },
+                        "numberOfBidders": {
+                            "description": "The number of unique bidders who participated in the tender",
+                            "type": "integer"
+                        }
                     }
                 },
 				"award": {},
@@ -125,6 +168,19 @@
                         "justification": {
                             "description": "An explanation / justification for the amendment.",
                             "type": "string"
+                        }
+                    }
+                },
+                "period": {
+                    "title": "Period",
+                    "properties": {
+                        "startDate": {
+                            "type": "string",
+                            "format": "date"
+                        },
+                        "endDate": {
+                            "type": "string",
+                            "format": "date"
                         }
                     }
                 }
