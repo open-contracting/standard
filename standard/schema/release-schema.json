@@ -3,29 +3,38 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"description": "Schema for an Open Contracting Release",
 	"properties": {
-		"publisher": { "$ref": "#/definitions/publisher" },
+		"publisher": { "$ref": "#/definitions/identifier" },
 		"publishingMeta": { "$ref": "#/definitions/publishingMeta" },
 		"releases": {
 			"type": "array",
 			"minItems": 1,
 			"items": { "$ref": "#/definitions/release" },
 			"uniqueItems": true
-		} 
+		}
 	},
 	"required": ["publisher", "publishingMeta", "releases"],
 	"definitions": {
-		"publisher": {
+        "identifier": {
 			"properties": {
-				"name": { 
-					"type": "string" 
+				"name": {
+					"type": "string"
 				},
-				"uri": { 
+                "scheme": {
+                    "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "uid": {
+                    "description": "The unique ID for this entity under the given ID scheme.",
+                    "type": "string"
+                },
+				"uri": {
 					"type": "string",
 					"format" : "uri"
 				}
 			},
-			"required": ["name", "uri"]
-		},
+			"required": ["name"]
+        },
 		"publishingMeta": {
             "properties": {
                 "date": {
@@ -74,14 +83,60 @@
 					},
 					"required": ["ocid"]
 				},
-				"buyer": {},
-				"supplier": {},
-				"items": {},
+                "buyer": {
+                    "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
+                    "properties": {
+                        "id": { "$ref": "#/definitions/identifier" },
+                        "additionalProperties": true
+                    }
+                },
+				"supplier": {
+                    "properties": {
+                        "id": { "$ref": "#/definitions/identifier" },
+                        "additionalProperties": true
+                    }
+                },
+				"item": {
+                    "description": "A good, service, or work to be contracted.",
+                    "properties": {
+                        "description": {
+                            "description": "A description of the goods, services to be provided.",
+                            "type": "string"
+                        },
+                        "classificationScheme": {
+                        },
+                        "otherClassificationScheme": {
+                        },
+                        "classificationID": {
+                        },
+                        "classificationDescription": {
+                        },
+                        "unitOfMeasure": {
+                            "description": "Description of the unit which the good comes in e.g. hours, kilograms",
+                            "type": "string"
+                        },
+                        "quantity": {
+                            "description": "The number of units required"
+                        },
+                        "valuePerUnit": { "ref": "#/definitions/release/definitions/value" }
+                    }
+                },
 				"planning": {},
                 "tender": {
                     "properties": {
                         "notice": { "$ref": "#/definitions/release/definitions/notice" },
-                        "method": { 
+                        "itemsToBeProcured": {
+                            "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
+                            "type": "array",
+                            "minItems": 1,
+                            "items": { "$ref": "#/definitions/release/definitions/item" },
+                            "uniqueItems": true
+                        },
+                        "totalValue": {
+                            "description": "The total estimated value of the contract",
+                            "$ref": "#/definitions/release/definitions/value"
+                        },
+                        "method": {
                             "description": "Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)",
                             "type": "string",
                             "enum": ["Open", "Selective", "Limited"]
@@ -108,21 +163,42 @@
                             "description": "Any detailed or further information on the submission method.",
                             "type": "string"
                         },
-                        "clarificationPeriod": {
-                            "description": "",
-                            "$ref": "#/definitions/release/definitions/period" 
-                        },
                         "tenderPeriod": {
-                            "description": "",
+                            "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
                             "$ref": "#/definitions/release/definitions/period"
                         },
+                        "clarificationPeriod": {
+                            "description": "The period during which clarification requests may be made and will be answered.",
+                            "$ref": "#/definitions/release/definitions/period"
+                        },
+                        "clarifications": {
+                            "description": "A Yes/No field as to whether clarifications were issued. Would expect clarifications to appear as amendments.",
+                            "type": "boolean"
+                        },
                         "awardPeriod": {
-                            "description": "",
+                            "description": "The date or period on which an award is anticipated to be made.",
                             "$ref": "#/definitions/release/definitions/period"
                         },
                         "numberOfBidders": {
                             "description": "The number of unique bidders who participated in the tender",
                             "type": "integer"
+                        },
+                        "numberOfBids": {
+                            "description": "The number of bids or submissions to the tender. In the case of an auction, the number of bids may differ from the numberOfBidders.",
+                            "type": "integer"
+                        },
+                        "bidders": {
+                            "description": "A list of all the companies who entered submissions for the tender.",
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/supplier" },
+                            "uniqueItems": true
+                        },
+                        "procuringEntity": { "$ref": "#/definitions/release/definitions/buyer" },
+                        "attachments": {
+                            "description": "All documents and attachments related to the tender.",
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/release/definitions/attachment" },
+                            "uniqueItems": true
                         }
                     }
                 },
@@ -138,7 +214,7 @@
                         },
                         "uri": {
                             "title": "Notice URI",
-                            "description": "A permanent uri that provides access to the uri.",
+                            "description": "A permanent uri that provides access to the tender.",
                             "format": "uri"
                         },
                         "publishedDate": {
@@ -181,6 +257,40 @@
                         "endDate": {
                             "type": "string",
                             "format": "date"
+                        }
+                    }
+                },
+                "attachment": {
+                    "title": "Attachment",
+                    "properties": {
+                        "description": {
+                            "description": "A description of the document",
+                            "type": "string"
+                        },
+                        "uri": {
+                            "description": "Link to the document or attachment.",
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "lastModified": {
+                            "description": "Date that the document was last modified",
+                            "type": "string",
+                            "format": "date"
+                        }
+                    }
+                },
+                "value": {
+                    "properties": {
+                        "amount": {
+                            "description": "Amount as a number.",
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        "currency": {
+                            "description": "The currency in 3-letter ISO 4217 format.",
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 3
                         }
                     }
                 }
