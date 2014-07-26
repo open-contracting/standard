@@ -38,6 +38,7 @@
 			"required": ["name"]
         },
 		"publishingMeta": {
+            "type": "object",
             "properties": {
                 "date": {
                     "type": "string",
@@ -47,27 +48,34 @@
 			"required": ["date"]
 		},
 		"release": {
+			"type": "object",
 			"properties": {
 				"releaseMeta": { "$ref": "#/definitions/release/definitions/releaseMeta" },
 				"buyer": { "$ref": "#/definitions/release/definitions/buyer" },
 				"planning": { "$ref": "#/definitions/release/definitions/planning" },
 				"formation": {
+                    "type": "object",
                     "oneOf": [{ "$ref": "#/definitions/release/definitions/tender" }]
                 },
 				"award": { "$ref": "#/definitions/release/definitions/award" },
 				"contract": { "$ref": "#/definitions/release/definitions/contract" },
-				"performance": { "$ref": "#/definitions/release/definitions/performance" },
-				"additionalProperties": true
+				"performance": { "$ref": "#/definitions/release/definitions/performance" }
 			},
             "required": ["releaseMeta"],
 			"definitions": {
 				"releaseMeta": {
 					"title": "Meta information about the release.",
 					"description": "Meta information about the release, must include the unique contracting identifier, may include a release tag to identify the kind of information present.",
+					"type": "object",
 					"properties": {
 							"ocid": {
 								"title": "Open Contracting ID",
 								"description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/0__2__0/#defining-a-unique-contracting-process",
+								"type": "string"
+							},
+							"releaseID": {
+								"title": "Release ID",
+								"description": "A unique identifier that identifies this release.",
 								"type": "string"
 							},
 							"releaseTag": {
@@ -87,15 +95,14 @@
 				},
                 "buyer": {
                     "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
+                    "type": "object",
                     "properties": {
-                        "id": { "$ref": "#/definitions/identifier" },
-                        "additionalProperties": true
+                        "id": { "$ref": "#/definitions/identifier" }
                     }
                 },
                 "supplier": {
                     "properties": {
-                        "id": { "$ref": "#/definitions/identifier" },
-                        "additionalProperties": true
+                        "id": { "$ref": "#/definitions/identifier" }
                     }
                 },
 				"item": {
@@ -123,8 +130,9 @@
                         "valuePerUnit": { "$ref": "#/definitions/release/definitions/value" }
                     }
                 },
-				"planning": {},
+				"planning": {"type": "object"},
                 "tender": {
+                    "type": "object",
                     "properties": {
                         "notice": { "$ref": "#/definitions/release/definitions/notice" },
                         "itemsToBeProcured": {
@@ -204,9 +212,9 @@
                         }
                     }
                 },
-				"award": {},
-				"contract": {},
-				"performance": {},
+				"award": {"type": "object"},
+				"contract": {"type": "object"},
+				"performance": {"type": "object"},
                 "notice": {
                     "properties": {
                         "id": {
