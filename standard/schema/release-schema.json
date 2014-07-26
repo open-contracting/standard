@@ -38,6 +38,7 @@
 			"required": ["name"]
         },
 		"publishingMeta": {
+            "type": "object",
             "properties": {
                 "date": {
                     "type": "string",
@@ -47,6 +48,7 @@
 			"required": ["date"]
 		},
 		"release": {
+			"type": "object",
 			"properties": {
 				"releaseMeta": { "$ref": "#/definitions/release/definitions/releaseMeta" },
 				"buyer": { "$ref": "#/definitions/release/definitions/buyer" },
@@ -63,6 +65,7 @@
 				"releaseMeta": {
 					"title": "Meta information about the release.",
 					"description": "Meta information about the release, must include the unique contracting identifier, may include a release tag to identify the kind of information present.",
+					"type": "object",
 					"properties": {
 							"ocid": {
 								"title": "Open Contracting ID",
@@ -86,6 +89,7 @@
 				},
                 "buyer": {
                     "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
+                    "type": "object",
                     "properties": {
                         "id": { "$ref": "#/definitions/identifier" }
                     }
@@ -120,7 +124,7 @@
                         "valuePerUnit": { "$ref": "#/definitions/release/definitions/value" }
                     }
                 },
-				"planning": {},
+				"planning": {"type": "object"},
                 "tender": {
                     "properties": {
                         "notice": { "$ref": "#/definitions/release/definitions/notice" },
@@ -201,9 +205,9 @@
                         }
                     }
                 },
-				"award": {},
-				"contract": {},
-				"performance": {},
+				"award": {"type": "object"},
+				"contract": {"type": "object"},
+				"performance": {"type": "object"},
                 "notice": {
                     "properties": {
                         "id": {
