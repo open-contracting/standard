@@ -56,8 +56,7 @@
                 },
 				"award": { "$ref": "#/definitions/release/definitions/award" },
 				"contract": { "$ref": "#/definitions/release/definitions/contract" },
-				"performance": { "$ref": "#/definitions/release/definitions/performance" },
-				"additionalProperties": true
+				"performance": { "$ref": "#/definitions/release/definitions/performance" }
 			},
             "required": ["releaseMeta"],
 			"definitions": {
@@ -88,14 +87,12 @@
                 "buyer": {
                     "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
                     "properties": {
-                        "id": { "$ref": "#/definitions/identifier" },
-                        "additionalProperties": true
+                        "id": { "$ref": "#/definitions/identifier" }
                     }
                 },
                 "supplier": {
                     "properties": {
-                        "id": { "$ref": "#/definitions/identifier" },
-                        "additionalProperties": true
+                        "id": { "$ref": "#/definitions/identifier" }
                     }
                 },
 				"item": {
