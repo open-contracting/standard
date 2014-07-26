@@ -54,6 +54,7 @@
 				"buyer": { "$ref": "#/definitions/release/definitions/buyer" },
 				"planning": { "$ref": "#/definitions/release/definitions/planning" },
 				"formation": {
+                    "type": "object",
                     "oneOf": [{ "$ref": "#/definitions/release/definitions/tender" }]
                 },
 				"award": { "$ref": "#/definitions/release/definitions/award" },
@@ -131,6 +132,7 @@
                 },
 				"planning": {"type": "object"},
                 "tender": {
+                    "type": "object",
                     "properties": {
                         "notice": { "$ref": "#/definitions/release/definitions/notice" },
                         "itemsToBeProcured": {
