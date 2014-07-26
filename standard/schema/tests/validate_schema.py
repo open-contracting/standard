@@ -8,8 +8,5 @@ def validate_release_schema():
         json_schema = json.loads(f.read())
     with open('./standard/schema/release-schema.json', 'r') as f:
         schema = json.loads(f.read())
-    try:
-        validate(schema, json_schema)
-        print "SUCCESS: Schema is valid against JSON Schema Draft 4."
-    except ValidationError as e:
-        print e
+    validate(schema, json_schema)
+    print "SUCCESS: Schema is valid against JSON Schema Draft 4."
