@@ -2,6 +2,7 @@
 	"id": "http://github.com/open-contracting/standard/tree/master/standard/schema/release-schema.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"description": "Schema for an Open Contracting Release",
+	"type": "object",
 	"properties": {
 		"publisher": { "$ref": "#/definitions/identifier" },
 		"publishingMeta": { "$ref": "#/definitions/publishingMeta" },
@@ -15,6 +16,7 @@
 	"required": ["publisher", "publishingMeta", "releases"],
 	"definitions": {
         "identifier": {
+			"type": "object",
 			"properties": {
 				"name": {
 					"type": "string"
@@ -118,7 +120,7 @@
                         "quantity": {
                             "description": "The number of units required"
                         },
-                        "valuePerUnit": { "ref": "#/definitions/release/definitions/value" }
+                        "valuePerUnit": { "$ref": "#/definitions/release/definitions/value" }
                     }
                 },
 				"planning": {},
