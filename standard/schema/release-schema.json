@@ -101,11 +101,13 @@
                     }
                 },
                 "supplier": {
+                    "type": "object",
                     "properties": {
                         "id": { "$ref": "#/definitions/identifier" }
                     }
                 },
 				"item": {
+                    "type": "object",
                     "description": "A good, service, or work to be contracted.",
                     "properties": {
                         "description": {
@@ -113,12 +115,21 @@
                             "type": "string"
                         },
                         "classificationScheme": {
+                            "description": "The classification scheme for the goods",
+                            "type": "string",
+                            "enum": ["CPV", "GSIN", "UNSPSC", "Other"]
                         },
                         "otherClassificationScheme": {
+                            "description": "If the classification schema was not in list, please specify",
+                            "type": "string"
                         },
                         "classificationID": {
+                            "description": "The classification ID from the Scheme used",
+                            "type": "string"
                         },
                         "classificationDescription": {
+                            "description": "A description of the goods, services to be provided.",
+                            "type": "string"
                         },
                         "unitOfMeasure": {
                             "description": "Description of the unit which the good comes in e.g. hours, kilograms",
@@ -216,6 +227,7 @@
 				"contract": {"type": "object"},
 				"performance": {"type": "object"},
                 "notice": {
+                    "type": "object",
                     "properties": {
                         "id": {
                             "title": "Notice identifier",
@@ -241,6 +253,7 @@
                     }
 				},
                 "amendment": {
+                    "type": "object",
                     "title": "Amendment information",
                     "properties": {
                         "amendmentDate": {
@@ -258,6 +271,7 @@
                     }
                 },
                 "period": {
+                    "type": "object",
                     "title": "Period",
                     "properties": {
                         "startDate": {
@@ -271,6 +285,7 @@
                     }
                 },
                 "attachment": {
+                    "type": "object",
                     "title": "Attachment",
                     "properties": {
                         "description": {
@@ -290,6 +305,7 @@
                     }
                 },
                 "value": {
+                    "type": "object",
                     "properties": {
                         "amount": {
                             "description": "Amount as a number.",
