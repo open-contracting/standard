@@ -1,0 +1,90 @@
+{
+	"id": "http://github.com/open-contracting/standard/tree/master/standard/schema/record-schema.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "Schema for an Open Contracting Record",
+	"type": "object",
+	"properties": {
+		"publisher": { "$ref": "#/definitions/identifier" },
+		"publishingMeta": { "$ref": "#/definitions/publishingMeta" },
+		"records": {
+			"type": "array",
+			"minItems": 1,
+			"items": { "$ref": "#/definitions/record" },
+			"uniqueItems": true
+        }
+    },
+	"definitions": {
+        "identifier": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+                "scheme": {
+                    "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
+                    "type": "string",
+                    "format": "uri"
+                },
+                "uid": {
+                    "description": "The unique ID for this entity under the given ID scheme.",
+                    "type": "string"
+                },
+				"uri": {
+					"type": "string",
+					"format" : "uri"
+				}
+			},
+			"required": ["name"]
+        },
+		"publishingMeta": {
+            "type": "object",
+            "properties": {
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+			"required": ["date"]
+		},
+        "record": {
+            "type": "object",
+            "properties": {
+                "ocid": {
+                    "title": "Open Contracting ID",
+                    "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/0__2__0/#defining-a-unique-contracting-process",
+                    "type": "string"
+                },
+                "releases": {
+                    "description": "An array of linking identifiers or releases",
+                    "oneOf": [
+                        {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/identifier"
+                            },
+                            "minItems": 1
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "$ref": "http://github.com/open-contracting/standard/tree/master/standard/schema/release-schema.json" 
+                            },
+                            "minItems": 1
+                        }
+                    ]
+                },
+                "compiledRecord": {
+                    "date": {
+                        "description": "Date on which the compilation was made (additional releases may have been added with more data).",
+                        "format": "date-time"
+                    },
+                    "compiledRecord": {
+                        "type": "object",
+                        "description": "Validates through magic merging of release and mergeStrategy."
+                    }
+                }
+            },
+            "required": ["ocid", "name"]
+        }
+    }
+}
