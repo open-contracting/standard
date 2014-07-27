@@ -77,13 +77,16 @@
                     ]
                 },
                 "compiledRecord": {
-                    "date": {
-                        "description": "Date on which the compilation was made (additional releases may have been added with more data).",
-                        "format": "date-time"
-                    },
-                    "compiledRecord": {
-                        "type": "object",
-                        "description": "Validates through magic merging of release and mergeStrategy."
+                    "type": "object",
+                    "properties": {
+                        "date": {
+                            "description": "Date on which the compilation was made (additional releases may have been added with more data).",
+                            "format": "date-time"
+                        },
+                        "compiledRecord": {
+                            "type": "object",
+                            "description": "Validates through magic merging of release and mergeStrategy."
+                        }
                     }
                 }
             },
