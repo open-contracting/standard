@@ -5,7 +5,15 @@
 	"type": "object",
 	"properties": {
 		"publisher": { "$ref": "#/definitions/identifier" },
-		"publishingMeta": { "$ref": "#/definitions/publishingMeta" },
+        "date": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "license": {
+            "description": "A license document that applies to this content.",
+            "type": "string",
+            "format": "uri"
+        },
 		"releases": {
 			"type": "array",
 			"minItems": 1,
@@ -13,7 +21,7 @@
 			"uniqueItems": true
 		}
 	},
-	"required": ["publisher", "publishingMeta", "releases"],
+	"required": ["publisher", "date", "releases"],
 	"definitions": {
         "identifier": {
 			"type": "object",
@@ -37,21 +45,6 @@
 			},
 			"required": ["name"]
         },
-		"publishingMeta": {
-            "type": "object",
-            "properties": {
-                "date": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "license": {
-                    "description": "A license document that applies to this content.",
-                    "type": "string",
-                    "format": "uri"
-                }
-            },
-			"required": ["date"]
-		},
 		"release": {
 			"type": "object",
 			"properties": {
@@ -77,7 +70,10 @@
                     "type": "string",
                     "default": "en_US"
                 },
-				"buyer": { "$ref": "#/definitions/release/definitions/buyer" },
+				"buyer": { 
+                    "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
+                    "$ref": "#/definitions/release/definitions/organization" 
+                },
 				"planning": { "$ref": "#/definitions/release/definitions/planning" },
 				"formation": {
                     "type": "object",
@@ -113,7 +109,7 @@
                     "dependencies": {
                         "post-office-box": ["street-address"],
                         "extended-address": ["street-address"]
-                    }
+                   }
                 },
                 "organization": {
                     "title": "Organization",
@@ -124,12 +120,9 @@
                         "address": { "$ref": "#/definitions/release/definitions/address" }
                     }
                 },
-                "buyer": {
-                    "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
-                    "$ref": "#/definitions/release/definitions/organization"
-                },
                 "supplier": {
                     "description": "The buyer is the entity whose budget will be used to purchase the goods.",
+                    "type": "object",
                     "$ref": "#/definitions/release/definitions/organization"
                 },
 				"item": {
