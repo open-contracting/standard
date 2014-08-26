@@ -37,6 +37,33 @@
 			},
 			"required": ["name"]
         },
+        "address": {
+            "description": "An Address following the convention of http://microformats.org/wiki/hcard (from http://json-schema.org/address)",
+            "type": "object",
+            "properties": {
+                "post-office-box": { "type": "string" },
+                "extended-address": { "type": "string" },
+                "street-address": { "type": "string" },
+                "locality":{ "type": "string" },
+                "region": { "type": "string" },
+                "postal-code": { "type": "string" },
+                "country-name": { "type": "string"}
+            },
+            "required": ["locality", "region", "country-name"],
+            "dependencies": {
+                "post-office-box": ["street-address"],
+                "extended-address": ["street-address"]
+            }
+        },
+        "organization": {
+            "title": "Organization",
+            "description": "An organization.",
+            "type": "object",
+            "properties": {
+                "id": { "$ref": "#/definitions/identifier" },
+                "address": { "$ref": "#/definitions/address" }
+            }
+        },
 		"publishingMeta": {
             "type": "object",
             "properties": {
@@ -108,19 +135,11 @@
 				},
                 "buyer": {
                     "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
-                    "type": "object",
-                    "properties": {
-                        "id": { 
-                            "$ref": "#/definitions/identifier" 
-                        }
-                    }
+                    "$ref": "#/definitions/organization"
                 },
                 "supplier": {
-                    "type": "object",
                     "description": "The buyer is the entity whose budget will be used to purchase the goods.",
-                    "properties": {
-                        "id": { "$ref": "#/definitions/identifier" }
-                    }
+                    "$ref": "#/definitions/organization"
                 },
 				"item": {
                     "type": "object",
