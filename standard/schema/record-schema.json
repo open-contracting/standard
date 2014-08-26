@@ -81,16 +81,21 @@
                     "properties": {
                         "date": {
                             "description": "Date on which the compilation was made (additional releases may have been added with more data).",
+                            "type": "string",
                             "format": "date-time"
                         },
-                        "compiledRecord": {
-                            "type": "object",
-                            "description": "Validates through magic merging of release and mergeStrategy."
+                        "latestRecord": {
+                            "description": "This is the latest version of all the contracting data, it has the same schema as an open contracting release.",
+                            "$ref": "release-schema.json#/definitions/release"
                         }
                     }
+                },
+                "versionedRecord": {
+                    "description": "This contains the history of the data in the compiledRecord. With all versions of the information and the release they came from."
+                    "$ref": "versioned-record-schema.json",
                 }
             },
-            "required": ["ocid", "name"]
+            "required": ["ocid", "name", "releases", "latestRecord", "versionedRecord"]
         }
     }
 }

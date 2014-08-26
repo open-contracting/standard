@@ -37,33 +37,6 @@
 			},
 			"required": ["name"]
         },
-        "address": {
-            "description": "An Address following the convention of http://microformats.org/wiki/hcard (from http://json-schema.org/address)",
-            "type": "object",
-            "properties": {
-                "post-office-box": { "type": "string" },
-                "extended-address": { "type": "string" },
-                "street-address": { "type": "string" },
-                "locality":{ "type": "string" },
-                "region": { "type": "string" },
-                "postal-code": { "type": "string" },
-                "country-name": { "type": "string"}
-            },
-            "required": ["locality", "region", "country-name"],
-            "dependencies": {
-                "post-office-box": ["street-address"],
-                "extended-address": ["street-address"]
-            }
-        },
-        "organization": {
-            "title": "Organization",
-            "description": "An organization.",
-            "type": "object",
-            "properties": {
-                "id": { "$ref": "#/definitions/identifier" },
-                "address": { "$ref": "#/definitions/address" }
-            }
-        },
 		"publishingMeta": {
             "type": "object",
             "properties": {
@@ -82,7 +55,28 @@
 		"release": {
 			"type": "object",
 			"properties": {
-				"releaseMeta": { "$ref": "#/definitions/release/definitions/releaseMeta" },
+                "ocid": {
+                    "title": "Open Contracting ID",
+                    "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/0__2__0/#defining-a-unique-contracting-process",
+                    "type": "string"
+                },
+                "releaseID": {
+                    "title": "Release ID",
+                    "description": "A unique identifier that identifies this release.",
+                    "type": "string"
+                },
+                "releaseTag": {
+                    "title": "Release Tag",
+                    "description": "A tag that helps to identify the type of data in the dataset. These may be used for advanced validation.",
+                    "type": "string",
+                    "enum": ["planning", "tenderNotice", "awardNotice", "contractSignature", "contractAmendment", "report", "spending", "terminationNotice"]
+                },
+                "locale": {
+                    "title": "Release locale",
+                    "description": "Specifies the locale of the data, to identify language of text inputs, as well as formats of date-time and numbers.",
+                    "type": "string",
+                    "default": "en_US"
+                },
 				"buyer": { "$ref": "#/definitions/release/definitions/buyer" },
 				"planning": { "$ref": "#/definitions/release/definitions/planning" },
 				"formation": {
@@ -101,45 +95,42 @@
                 },
 				"performance": { "$ref": "#/definitions/release/definitions/performance" }
 			},
-            "required": ["releaseMeta"],
+            "required": ["ocid", "releaseID"],
 			"definitions": {
-				"releaseMeta": {
-					"title": "Meta information about the release.",
-					"description": "Meta information about the release, must include the unique contracting identifier, may include a release tag to identify the kind of information present.",
-					"type": "object",
-					"properties": {
-							"ocid": {
-								"title": "Open Contracting ID",
-								"description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/0__2__0/#defining-a-unique-contracting-process",
-								"type": "string"
-							},
-							"releaseID": {
-								"title": "Release ID",
-								"description": "A unique identifier that identifies this release.",
-								"type": "string"
-							},
-							"releaseTag": {
-								"title": "Release Tag",
-								"description": "A tag that helps to identify the type of data in the dataset. These may be used for advanced validation.",
-								"type": "string",
-								"enum": ["planning", "tenderNotice", "awardNotice", "contractSignature", "contractAmendment", "report", "spending", "terminationNotice"]
-							},
-							"locale": {
-								"title": "Release locale",
-								"description": "Specifies the locale of the data, to identify language of text inputs, as well as formats of date-time and numbers.",
-								"type": "string",
-								"default": "en_US"
-							}
-					},
-					"required": ["ocid"]
-				},
+                "address": {
+                    "description": "An Address following the convention of http://microformats.org/wiki/hcard (from http://json-schema.org/address)",
+                    "type": "object",
+                    "properties": {
+                        "post-office-box": { "type": "string" },
+                        "extended-address": { "type": "string" },
+                        "street-address": { "type": "string" },
+                        "locality":{ "type": "string" },
+                        "region": { "type": "string" },
+                        "postal-code": { "type": "string" },
+                        "country-name": { "type": "string"}
+                    },
+                    "required": ["locality", "region", "country-name"],
+                    "dependencies": {
+                        "post-office-box": ["street-address"],
+                        "extended-address": ["street-address"]
+                    }
+                },
+                "organization": {
+                    "title": "Organization",
+                    "description": "An organization.",
+                    "type": "object",
+                    "properties": {
+                        "id": { "$ref": "#/definitions/release/definitions/identifier" },
+                        "address": { "$ref": "#/definitions/release/definitions/address" }
+                    }
+                },
                 "buyer": {
                     "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
-                    "$ref": "#/definitions/organization"
+                    "$ref": "#/definitions/release/definitions/organization"
                 },
                 "supplier": {
                     "description": "The buyer is the entity whose budget will be used to purchase the goods.",
-                    "$ref": "#/definitions/organization"
+                    "$ref": "#/definitions/release/definitions/organization"
                 },
 				"item": {
                     "type": "object",
@@ -180,11 +171,105 @@
                         }
                     }
                 },
+                "milestone": {
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "description": "A description of the milestone.",
+                            "type": "string"
+                        },
+                        "date": {
+                            "description": "The date the milestone is either due or completed (as specified by dateType).",
+                            "type": "string",
+                            "format": "date"
+                        },
+                        "dateType": {
+                            "description": "Specify whether the date field is referring to a due date or a completed date.",
+                            "type": "string",
+                            "enum": ["due", "completed"]
+                        },
+                        "attachments": {
+                            "description": "List of documents associated with this milestone.",
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/release/definitions/attachment" }
+                        }
+                    }
+                },
 				"performance": {
-                    "type": "object"
+                    "type": "object",
+                    "properties": {
+                        "transactions": {
+                            "description": "A list of the spending transactions made against this contract",
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "transactionDataPackageURI": {
+                                        "description": "The link to the budget data package (called a budget data package, but includes budget and spending data), as defined by http://github.com/openspending/budget-data-package",
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    "transactionID": {
+                                        "description": "The ID of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories",
+                                        "type": "string"
+                                    },
+                                    "transactionAmount": {
+                                        "description": "The amount of the transaction as described in the budget data package (https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories). This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
+                                        "type": "number"
+                                    }
+                                },
+                                "required": ["transactionDataPackageURI", "transactionID"]
+                            }
+                        },
+                        "milestones": {
+                            "description": "As milestones are completed, milestone completions should be documented.",
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/release/definitions/milestone" }
+                        },
+                        "reports":{
+                            "description": "Any additional reports that are part of the performance phase e.g. audit and evaluation reports.",
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/release/definitions/attachment"}
+                        }
+                    }
                 },
 				"planning": {
-                    "type": "object"
+                    "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
+                    "type": "object",
+                    "properties": {
+                        "budgetDataPackageURI": {
+                            "description": "The link to the budget data package, as defined by http://github.com/openspending/budget-data-package",
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "budgetID": {
+                            "description": "The ID of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories",
+                            "type": "string"
+                        },
+                        "budgetAmount": {
+                            "description": "The amount of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories. This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
+                            "type": "number"
+                        },
+                        "publicHearingNotices": {
+                            "description": "A list of notices of any public hearings on this contract",
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/release/definitions/notice" },
+                            "uniqueItems": true
+                        },
+                        "strategicJustificiation": {
+                            "description": "A description of the rationale for this procurement",
+                            "type": "string"
+                        },
+                        "anticipatedMilestones": {
+                            "description": "A list of anticipated milestones for the contract.",
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/release/definitions/milestone" }
+                        }
+                    },
+                    "dependencies": {
+                        "budgetID": ["budgetDataPackageURI"],
+                        "budgetAmount": ["budgetDataPackageURI"]
+                    }
                 },
                 "tender": {
                     "type": "object",
@@ -371,7 +456,7 @@
                         },
                         "uri": {
                             "title": "Notice URI",
-                            "description": "A permanent uri that provides access to the tender.",
+                            "description": "A permanent uri that provides access to the notice.",
                             "format": "uri"
                         },
                         "publishedDate": {
