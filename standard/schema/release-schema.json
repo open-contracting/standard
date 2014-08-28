@@ -116,7 +116,7 @@
                     "description": "An organization.",
                     "type": "object",
                     "properties": {
-                        "id": { "$ref": "#/definitions/release/definitions/identifier" },
+                        "id": { "$ref": "#/definitions/identifier" },
                         "address": { "$ref": "#/definitions/release/definitions/address" }
                     }
                 },
@@ -338,7 +338,7 @@
                         },
                         "procuringEntity": { 
                             "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
-                            "$ref": "#/definitions/release/definitions/buyer" 
+                            "$ref": "#/definitions/release/definitions/organization" 
                         },
                         "attachments": {
                             "description": "All documents and attachments related to the tender.",
