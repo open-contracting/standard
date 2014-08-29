@@ -20,11 +20,11 @@
             "type": "string",
             "enum": ["planning", "tenderNotice", "awardNotice", "contractSignature", "contractAmendment", "report", "spending", "terminationNotice"]
         },
-        "locale": {
-            "title": "Release locale",
-            "description": "Specifies the locale of the data, to identify language of text inputs, as well as formats of date-time and numbers.",
+        "language": {
+            "title": "Release language",
+            "description": "Specifies the default language of the data, if no language suffix is given.",
             "type": "string",
-            "default": "en_US"
+            "default": "en"
         },
         "buyer": { 
             "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
@@ -152,7 +152,7 @@
                 "date": {
                     "description": "The date the milestone is either due or completed (as specified by dateType).",
                     "type": "string",
-                    "format": "date"
+                    "format": "date-time"
                 },
                 "dateType": {
                     "description": "Specify whether the date field is referring to a due date or a completed date.",
@@ -244,7 +244,13 @@
         },
         "tender": {
             "type": "object",
+            "required": ["tenderID"],
             "properties": {
+                "tenderID": {
+                    "title": "Tender ID",
+                    "description": "TenderID should always be the same as the OCID. It is included to make the flattened data structure more convenient.",
+                    "type": "string"
+                }
                 "notice": { "$ref": "#/definitions/notice" },
                 "itemsToBeProcured": {
                     "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
@@ -329,7 +335,12 @@
         "award": {
             "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "object",
+            "required": ["awardID"],
             "properties": {
+                "awardID": { 
+                    "title": "Award ID",
+                    "description": "The identifier for this award. It must be unique within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.", 
+                },
                 "notice": { "$ref": "#/definitions/notice" },
                 "awardDate": {
                     "title": "Award date",
@@ -358,23 +369,16 @@
         },
         "contract": {
             "type": "object",
+            "required": ["contractID"],
             "properties": {
-                "id": { "$ref": "#/definitions/identifier" },
-                "awardNotice": {
-                    "type": "object",
-                    "description": "The awardNotice against which this contract is being issued.",
-                    "properties": {
-                        "id": {
-                            "title": "Notice identifier",
-                            "description": "The identifier that identifies the notice to the publisher. This may be the same or different from the OCID.",
-                            "format": "string"
-                        },
-                        "uri": {
-                            "title": "Notice URI",
-                            "description": "A permanent uri that provides access to the tender.",
-                            "format": "uri"
-                        }
-                    }
+                "contractID": { 
+                    "title": "Contract ID",
+                    "description": "The identifier for this contract. It must be unique within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have contractID 1 & contractID 2 and ocid DEF can also have contractID 1 & 2. But if it is a different contract, ocid cannot have contractID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.", 
+                },
+                "awardID": {
+                    "title": "Award ID",
+                    "description": "The awardID against which this contract is being issued.",
+                    "type": "string"
                 },
                 "contractPeriod": {
                     "description": "The start and end date for the contract.",
@@ -467,11 +471,11 @@
             "properties": {
                 "startDate": {
                     "type": "string",
-                    "format": "date"
+                    "format": "date-time"
                 },
                 "endDate": {
                     "type": "string",
-                    "format": "date"
+                    "format": "date-time"
                 }
             }
         },
@@ -491,7 +495,7 @@
                 "lastModified": {
                     "description": "Date that the document was last modified",
                     "type": "string",
-                    "format": "date"
+                    "format": "date-time"
                 }
             }
         },
