@@ -90,7 +90,7 @@
                             "description": "A list of releases, with all the data",
                             "type": "array",
                             "items": {
-                                "$ref": "http://raw.githubusercontent.com/open-contracting/standard/master/standard/schema/release-schema.json"
+                                "$ref": "http://ocds.open-contracting.org/standard/r/standard/release-schema.json"
                             },
                             "minItems": 1
                         }
@@ -99,7 +99,7 @@
                 "compiledRelease": {
                     "title": "Compiled release",
                     "description": "This is the latest version of all the contracting data, it has the same schema as an open contracting release.",
-                    "$ref": "http://raw.githubusercontent.com/open-contracting/standard/master/standard/schema/release-schema.json"
+                    "$ref": "http://ocds.open-contracting.org/standard/r/standard/release-schema.json"
                 },
                 "versionedRelease": {
                     "description": "This contains the history of the data in the compiledRecord. With all versions of the information and the release they came from.",
