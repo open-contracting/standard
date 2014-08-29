@@ -4,8 +4,12 @@
 	"description": "Schema for an Open Contracting Release",
 	"type": "object",
 	"properties": {
-		"publisher": { "$ref": "#/definitions/identifier" },
+		"publisher": { 
+            "description": "Information to uniquely identify the publisher",
+            "$ref": "#/definitions/identifier" 
+        },
         "date": {
+            "description": "Date this package of releases was published.",
             "type": "string",
             "format": "date-time"
         },

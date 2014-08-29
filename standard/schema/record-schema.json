@@ -5,14 +5,29 @@
 	"type": "object",
 	"properties": {
 		"publisher": { "$ref": "#/definitions/identifier" },
-		"publishingMeta": { "$ref": "#/definitions/publishingMeta" },
+        "date": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "packages": {
+            "description": "A list of URIs of all the release packages that were used to create this record package.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string",
+                "format": "uri"
+            },
+            "uniqueItems": true
+        },
 		"records": {
+            "description": "The records for this data package.",
 			"type": "array",
 			"minItems": 1,
 			"items": { "$ref": "#/definitions/record" },
 			"uniqueItems": true
         }
     },
+    "required": ["publisher, date, packages, records"],
 	"definitions": {
         "identifier": {
 			"type": "object",
@@ -36,16 +51,6 @@
 			},
 			"required": ["name"]
         },
-		"publishingMeta": {
-            "type": "object",
-            "properties": {
-                "date": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-			"required": ["date"]
-		},
         "record": {
             "type": "object",
             "properties": {
@@ -92,7 +97,7 @@
                 },
                 "versionedRecord": {
                     "description": "This contains the history of the data in the compiledRecord. With all versions of the information and the release they came from.",
-                    "$ref": "versioned-record-schema.json"
+                    "$ref": "versioned-release-schema.json"
                 }
             },
             "required": ["ocid", "name", "releases", "latestRecord", "versionedRecord"]
