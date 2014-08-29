@@ -7,6 +7,8 @@ from jsonschema import validate
 DRAFT_SCHEMA_PATH = path(__file__).parent / 'json-schema-draft-4.json'
 RELEASE_SCHEMA_PATH = path(__file__).parent.parent / 'release-schema.json'
 RECORD_SCHEMA_PATH = path(__file__).parent.parent / 'record-schema.json'
+RELEASE_PACKAGE_SCHEMA_PATH = path(__file__).parent.parent / 'release-package-schema.json'
+VERSIONED_RELEASE_SCHEMA_PATH = path(__file__).parent.parent / 'versioned-release-schema.json'
 
 
 def validate_schema(schema_to_validate_path):
@@ -24,3 +26,11 @@ def test_validate_release_schema():
 
 def test_validate_record_schema():
     validate_schema(RECORD_SCHEMA_PATH)
+
+
+def test_validate_release_package_schema():
+    validate_schema(RELEASE_PACKAGE_SCHEMA_PATH)
+
+
+def test_validate_versioned_release_schema():
+    validate_schema(VERSIONED_RELEASE_SCHEMA_PATH)
