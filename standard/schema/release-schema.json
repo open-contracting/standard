@@ -197,6 +197,8 @@
         },
         "performance": {
             "type": "object",
+            "title": "Performance",
+            "description": "Information during the performance, or implementation stage of the contract.",
             "properties": {
                 "transactions": {
                     "description": "A list of the spending transactions made against this contract",
@@ -234,6 +236,7 @@
             }
         },
         "planning": {
+            "title": "Planning",
             "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
             "type": "object",
             "properties": {
@@ -278,6 +281,8 @@
             }
         },
         "tender": {
+            "title": "Tender",
+            "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.",
             "type": "object",
             "required": ["tenderID"],
             "properties": {
@@ -380,6 +385,7 @@
             }
         },
         "award": {
+            "title": "Award",
             "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "object",
             "required": ["awardID"],
@@ -417,6 +423,8 @@
         },
         "contract": {
             "type": "object",
+            "title": "Contract",
+            "description": "Information regarding the signed contract between the buyer and supplier(s).",
             "required": ["contractID"],
             "properties": {
                 "contractID": { 
@@ -472,6 +480,8 @@
         },
         "notice": {
             "type": "object",
+            "title": "Notice",
+            "description": "The notice is a published document that notifies the public at various stages of the contracting process.",
             "properties": {
                 "id": {
                     "title": "Notice identifier",
