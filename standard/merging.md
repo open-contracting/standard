@@ -12,7 +12,7 @@ The basic format of a record is simple. There are three component:
   For each field in the release, the versioned release contains a list of objects
   describing where the data came from and previous values of a field.
 
-The basic principle of of merging is very simple, the latest data overrides
+The basic principle of of merging is very simple, the latest data overwrites
 previous data.  For example:
 
 <pre>
@@ -74,22 +74,22 @@ record = {
 Merging gets more complicated when trying to merge arrays / lists of data.
 
 We adopt two approaches to merging arrays:
-- override (the same treatment as the fields above)
-- overrideByKey (override looks for a uniqueID when making the merge)
+- overwrite (the same treatment as the fields above)
+- overwriteByKey (overwrite looks for a uniqueID when making the merge)
 
-For most array fields, override is used. 
+For most array fields, overwrite is used. 
 
-OverrideByKey is used on only two arrays:
+OverwriteByKey is used on only two arrays:
 
 - Awards 
 - Contracts
 
-First, we will discuss, basic override. In this strategy a list of objects
+First, we will discuss, basic overwrite. In this strategy a list of objects
 must **always be given in the same order** in each release. Whilst this 
 may be a problem for data quality, the alternative, as used in awards and contracts
 is that every object requires a unique value, which is also practically challenging.
 
-Basic, override works as follows, where the value of Item 2 changes:
+Basic, overwrite works as follows, where the value of Item 2 changes:
 
 <pre>
 release_1_snippet = {
@@ -227,13 +227,13 @@ record_snippet = {
 }
 </pre>
 
-We have made two exceptions to this type of merging with the overrideByKey on
+We have made two exceptions to this type of merging with the overwriteByKey on
 awards and contract. Over the course of a large or framework contracting process
 many awards and contracts are made, it is useful to be able to just release 
 information about one award or contract at a time rather than having to 
 include all information about all awards and contracts previously made each
 time. The items in the array are first matched on the unique identifier, awardID 
-and contractID respectively, and then the standard override takes place. This
+and contractID respectively, and then the standard overwrite takes place. This
 means that awardID and contractID cannot change.
 
 A simplified example is given below (with incomplete data) to illustrate the pattern:
