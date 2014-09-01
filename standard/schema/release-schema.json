@@ -14,11 +14,17 @@
             "description": "A unique identifier that identifies this release. A releaseID must be unique within a release-package and must not containt # or / characters.",
             "type": "string"
         },
+        "releaseDate": {
+            "title" "Release Date",
+            "description": "The date this information is released, it may well be the same as the parent publishedDate, it must not be later than the publishedDate from the parent package. It is used to determine merge order.",
+            "type": "string",
+            "format": "date-time",
+        },
         "releaseTag": {
             "title": "Release Tag",
-            "description": "A tag that helps to identify the type of data in the dataset. These may be used for advanced validation.",
+            "description": "A tag that helps to identify the type of data in the dataset. These may be used for advanced validation. Compiled must only be used in a record-package-schema.",
             "type": "string",
-            "enum": ["planning", "tenderNotice", "awardNotice", "contractSignature", "contractAmendment", "report", "spending", "terminationNotice"]
+            "enum": ["planning", "tenderNotice", "awardNotice", "contractSignature", "contractAmendment", "report", "spending", "terminationNotice", "compiled"]
         },
         "language": {
             "title": "Release language",
@@ -47,7 +53,7 @@
         },
         "performance": { "$ref": "#/definitions/performance" }
     },
-    "required": ["ocid", "releaseID"],
+    "required": ["ocid", "releaseID", "releaseDate", "releaseTag"],
     "definitions": {
         "identifier": {
 			"type": "object",
