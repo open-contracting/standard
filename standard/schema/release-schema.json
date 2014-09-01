@@ -1,8 +1,8 @@
 {
-	"id": "https://raw.githubusercontent.com/open-contracting/standard/master/standard/schema/release-schema.json",
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"description": "Schema for an Open Contracting Release",
-	"type": "object",
+    "id": "https://raw.githubusercontent.com/open-contracting/standard/master/standard/schema/release-schema.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Schema for an Open Contracting Release",
+    "type": "object",
     "properties": {
         "ocid": {
             "title": "Open Contracting ID",
@@ -56,11 +56,11 @@
     "required": ["ocid", "releaseID", "releaseDate", "releaseTag"],
     "definitions": {
         "identifier": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
-				},
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
                 "scheme": {
                     "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
                     "type": "string",
@@ -70,12 +70,17 @@
                     "description": "The unique ID for this entity under the given ID scheme.",
                     "type": "string"
                 },
-				"uri": {
-					"type": "string",
-					"format" : "uri"
-				}
-			},
-			"required": ["name"]
+                "uri": {
+                    "type": "string",
+                    "format" : "uri"
+                }
+            },
+            "patternProperties": {
+                "^(name_[A-Za-z]{2})$": {
+                    "type": "string"
+                }
+            },
+            "required": ["name"]
         },
         "address": {
             "description": "An Address following the convention of http://microformats.org/wiki/hcard (from http://json-schema.org/address)",
@@ -88,6 +93,11 @@
                 "region": { "type": "string" },
                 "postal-code": { "type": "string" },
                 "country-name": { "type": "string"}
+            },
+            "patternProperties": {
+                "^(country-name_[A-Za-z]{2})$": {
+                    "type": "string"
+                }
             },
             "required": ["locality", "region", "country-name"],
             "dependencies": {
@@ -146,6 +156,14 @@
                     "description": "The value per unit of the item specified.",
                     "$ref": "#/definitions/value" 
                 }
+            },
+            "patternProperties": {
+                "^(description_[A-Za-z]{2})$": {
+                    "type": "string"
+                },
+                "^(classificationDescription_[A-Za-z]{2})$": {
+                    "type": "string"
+                }
             }
         },
         "milestone": {
@@ -169,6 +187,11 @@
                     "description": "List of documents associated with this milestone.",
                     "type": "array",
                     "items": { "$ref": "#/definitions/attachment" }
+                }
+            },
+            "patternProperties": {
+                "^(description_[A-Za-z]{2})$": {
+                    "type": "string"
                 }
             }
         },
@@ -243,6 +266,12 @@
                     "items": { "$ref": "#/definitions/milestone" }
                 }
             },
+            "patternProperties": {
+                "^(strategicJustificiation_[A-Za-z]{2})$": {
+                    "type": "string"
+                }
+            },
+            
             "dependencies": {
                 "budgetID": ["budgetDataPackageURI"],
                 "budgetAmount": ["budgetDataPackageURI"]
@@ -336,6 +365,18 @@
                     "items": { "$ref": "#/definitions/attachment" },
                     "uniqueItems": true
                 }
+            },
+            "patternProperties": {
+                "^(methodJustification_[A-Za-z]{2})$": {
+                    "type": "string"
+                },
+                "^(selectionMethod_[A-Za-z]{2})$": {
+                    "type": "string"
+                },
+                "^(submissionDetails_[A-Za-z]{2})$": {
+                    "type": "string"
+                }
+
             }
         },
         "award": {
@@ -505,6 +546,11 @@
                     "type": "string",
                     "format": "date-time"
                 }
+            },
+            "patternProperties": {
+                "^(description_[A-Za-z]{2})$": {
+                    "type": "string"
+                }
             }
         },
         "value": {
@@ -539,6 +585,11 @@
                 "attachment": {
                     "description": "Attachment describing deliverable",
                     "$ref": "#/definitions/attachment"
+                }
+            },
+            "patternProperties": {
+                "^(description_[A-Za-z]{2})$": {
+                    "type": "string"
                 }
             }
         }
