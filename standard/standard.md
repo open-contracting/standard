@@ -77,7 +77,7 @@ For the beta of the Open Contracting Data Standard we have developed a [JSON Sch
 
 We have carried out initial work to identify [JSON-LD mapping](http://www.w3.org/TR/json-ld/) but this is [not currently a development priority for version 1.0](https://github.com/open-contracting/standard/issues/40). 
 
-## Releases
+## Release data
 
 A full schema for releases can be accessed from the 'Release Schema' tab above. Click each section to expand that component of the schema. 
 
@@ -114,57 +114,67 @@ The blocks are described in more detail below
 ### Awards
 <script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/performance"></script>
 
+## Record data
 
+There should be one record for each open contracting process. The record MUST contain:
+
+* An **ocid** - An globally unique Open Contracting ID for this contracting process.
+* An array of **releases** - either by providing URLs to each of the releases (so that a user can compile their own record), or embedding copies of each of the releases relating to this contracting process.
+
+It SHOULD contain:
+
+* **compiledRelease** - the latest version of all open contracting process fields, represented using the release schema. For example, if a contractSignature release has been issued with with a contractValue of $100, and then a contractAmendment release has been issued with a contractValue updated to $200, the compiledRelease would have contract/contractValue of $200. 
+
+and
+
+* **versionedRelease** - containing the history of the data in the compiledRecord, with all known past values of any field and the release that information came from. 
 
 ## Common data elements
 
-The following data elements are used in a number of places throughout the standard. 
+The following data elements are used in a number of places throughout the standard.
+
+### Values
+
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/value"></script>
+
+### Periods
+
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/period"></script>
+
+### Attachments
+
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/attachment"></script>
 
 
+### Organization
 
+Used for representing buyers, suppliers and bidders. We follow the IATI Organisation ID Standard for organisational identifiers.
 
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/organization"></script>
 
+### Items
 
+Used to itemsToBeProcured, itemsAwarded and itemsContracted
 
-## The contracting record
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/item"></script>
+ 
+### Notices
 
-The contracting record would contain the latest version of the information for each of the core components, as well as information about the publishing source, the last updated information, and crucially, links to all releases associated with this contracting process.
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/notice"></script>
+ 
+### Milestones
 
-The core components of the Contracting Record and our data model are:
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/milestone"></script>
 
-* Buyer
+### Amendment information
 
-    * The buyer is the department, agency or entity who is paying for the goods /services in the contract. The buyer may be distinct from a procuring agency or awarding body - an independent entity that runs the procurement process (tender and award) - this allows for pooling of resources as well as enhancing impartiality).
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/ammendment"></script>
 
-* Supplier
+#### A note on amendments
 
-    * The supplier is the entity, or entities, providing the goods or services in the contract. It could be an individual, a private organization, or another public body.
+When amending arrays (e.g. a list of itemsToBeProcured) then the amendment should contain *all* the items in the updated array, not just new items that are being added. 
 
-* Items - Goods / services / works
-
-    * Details, ideally at the line item level, of the goods, services or works being procured. This should include a standardized code (detailing the items category e.g. construction or agricultural goods) & description as well as any supporting information or documents, such as technical specifications. This category will be expanded later as we move to support other types of contract beyond procurement.
-
-* Planning
-
-    * Before a tender notice is issued, the public entity will identify its procurement needs, such as: what the entity intends to procure, the justification for the procurement, the likelihood of the procurement, the cost estimates, and any anticipated milestones. This category contains information specific to planning for this specific contracting process. 
-
-* Formation process
-
-    * In the case of standard procurement, this the information about the tender process. It may include: opening dates, closing dates, consultation information, the type of bidding process (open process, selective tendering, limited tendering or sole source), award criteria (lowest cost, best proposal, appropriate quality), as well as links to supporting documentation, a tender ID, and a link to the tender notice. It may also include information such as the number of bids and bidders who participated in the process.
-
-* Award details
-
-    * This is information about the Contract Award e.g. the award date, and the awarded value. This is distinct from the contract information which reflects the actual contract document which is finalized and signed after an award. In the case of framework contracts, where multiple contracts are issued in a contracting process, the award would contain the details of the framework award.
-
-* Contract
-
-    * Information about the contract document(s) itself. Including award signature date, start & end date, links to the award & contract documents, and termination information. It would also capture details of contract amendments (change of value, deliverables alterations, no-cost extensions)
-
-* Performance
-
-    * In performance we store details related to the contract implementation including details of payments made, evaluation, audit and performance reports.
-
-The contracting record will reflect the latest state of the contracting process. For example, if a tender is issued for Widget A with a minimum value of $10 and maximum of $20, at the tender stage the 'Amounts:minimum' would be $10, and 'Amounts:maximum' would be $20. If during consultation the range is determined to be unrealistic and a tender amendment is issued changing the range of acceptable tenders to $20 - $30 then the contracting record would be updated to an 'Amounts:minimum' of $20 and 'Amounts:maximum' of $30. To see the history of these amounts would require looking at the individual contracting releases or tracking changes to the contracting record.
+# 
 
 <div class="panel panel-success">
     <div class="panel-heading">
@@ -181,32 +191,12 @@ The contracting record will reflect the latest state of the contracting process.
      </div>
 </div>
 
-## Contracting releases
 
-The contracting record is formed and updated through releases. Releases are snapshots of information which may be the first time information has been released or they may be revisions or amendments. 
 
-### Release tracking
-
-Ideally, each release will refer to the unique open contracting process ID, and the contracting record will be updated with a link to each notice and amendment, thereby providing a two-way data link.
-
-In the event that the publisher is not maintaining a contract record, the ID of the first notice will serve as the unique identifier moving forward the contracting process. Subsequent notices and amendments may have their own unique identifiers (e.g. an award notice identifier) but they must all contain a reference to the unique identifier.
-
-Each release, or a group of releases, will contain publisher information, and each release will contain a release number and date from that publisher. The idea is to accommodate the modularization of publishing such that along the contracting process, different bodies could publish different sets of releases. For example, one publisher for tenders and awards, and a separate publisher for contracts releases. In addition, third-party publishers may wish to augment the contracting data with their own releases such as an Add On containing geo-coding information.
-
-<div class="panel panel-success">
-    <div class="panel-heading">
-       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h4>
-     </div>
-     <div class="panel-body">
-         <p>In future research we will be investigating different ways that amendments and updates to releases might be represented.</p>
-         <ul>
-             <li>What are options / approaches, from a technical / data structure point of view to represent and publish amendments or revisions to releases? And what are the strengths and weaknesses?</li>
-         </ul>     
-     </div>
-</div>
+# Further information
 
 <a name="unique"></a>
-### Defining a unique contracting process
+## Defining a unique contracting process
 
 For the data standard, defining a unique contracting process is critical for getting useful, comparable, clean data. But, there are cases where what the unique process is not obvious. For example, a framework contract has only one tender and award but many contracts associated with that award.
 
@@ -227,7 +217,7 @@ This snippet from a [tender notice](https://buyandsell.gc.ca/procurement-data/te
 
 <div class="clearfix"></div>
 
-### Add on information
+## Add-ons
 
 In addition to the core components, there will be cases where publishers, or users, need to augment the core data with their own information. The standard will provide a mechanism for Add-On information. This will include additional fields in core components as well as Add On components (e.g. new kinds of **contracting release**).
 
@@ -237,19 +227,21 @@ The publishing and re-use of add-ons will be encouraged to try and reduce duplic
 
 * It may use terms from outside this specification's terms where this specification's terms are insufficient.
 
+We have identified that a location add-on will be a priority for future development, but as no publishers are currently providing location data, we were not able to develop this during the iterations towards the beta standard.
+
 [^1]:
     The use of add-on conditions were adapted from the
     The Popolo Project - [http://popoloproject.com/specs/\#conformance](http://popoloproject.com/specs/#conformance)
 
-### A note on framework contracts
+## A note on framework contracts
 
 Many public procurements take place under framework agreements. These help facilitate routine purchasing. Suppliers are pre-approved to provide a list of goods or services. Under a framework agreement, there are typically multiple contracts that are all authorized by a single award. In the data standard, an award notice release would define the framework and this information would be stored in the contracting record under Award details. Then there will be multiple contract signature releases and each one would create a new Contract section in the contracting record. This provides a way to aggregate all the information on the contracts given under a single framework agreement.
 
 Alternative names for framework agreements: Dynamic Purchasing System (EU), Standing Offers and Supply Arrangements (buyandsell.gc.ca)
 
-### Linking to documents
+## Validator
 
-There are often many documents associated with a contracting process including tender specifications, contract documents, performance reports etc. The standard will provide a way to link to these documents. We are considering how to handle documents in the contracting record. We may have a simplified contracting record that indicates that documents are available and a full contracting record that provides links to all the available documents. As we flesh out the different serializations over July and August this will be defined. Document links will always be available through the release that declared them.
+A prototype validator is available at [http://ocds.open-contracting.org/validator/](http://ocds.open-contracting.org/validator/) which can be used to check draft documents against the schema.
 
 ## Development process
 
@@ -310,6 +302,13 @@ In addition, the approach taken is informed by the development of other data sta
 
 ## Next steps
 
+Over the coming months (September - November 2014) we are working towards a version 1.0 standard which can be implemented, with future changes taking place through an open consultative process. 
+
+To get there:
+
+* We are inviting feedback on the data model and fields in this beta release;
+* We will be exploring further user demands and building these into the standard;
+* We will be exploring how the standard may be adapted to other contracting use cases outside public procurement
 
 
 ## Acknowledgements
