@@ -168,7 +168,7 @@ Used to itemsToBeProcured, itemsAwarded and itemsContracted
 
 ### Amendment information
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/ammendment"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/amendment"></script>
 
 #### A note on amendments
 
