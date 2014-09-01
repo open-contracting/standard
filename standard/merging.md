@@ -15,7 +15,7 @@ The basic format of a record is simple. There are three component:
 The basic principle of of merging is very simple, the latest data overrides
 previous data.  For example:
 
-<code>
+<pre>
 release_1 = {
     "releaseDate": "2014-01-01",
     "releaseID": "1",
@@ -69,7 +69,7 @@ record = {
         }
     }
 }
-</code>
+</pre>
 
 Merging gets more complicated when trying to merge arrays / lists of data.
 
