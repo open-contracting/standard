@@ -16,14 +16,3 @@ The world of procurement and contracting has many specialist terms. However, the
 
     - **Completion** - the confirmation that all obligations (deliverables and payments) of the contract have been completed, or that the contract has been terminated for some other reason.
 
-<div class="panel panel-success">
-    <div class="panel-heading">
-       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h3>
-     </div>
-     <div class="panel-body">
-         <ul>
-             <li>Is this proposed use of vocabulary clear and robust?</li>
-             <li>Are there any third-party sources we should draw upon for clear definitions of these and other terms?</li>
-         </ul>     
-     </div>
-</div>

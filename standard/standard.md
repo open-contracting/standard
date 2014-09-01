@@ -1,35 +1,29 @@
 <br /><a id="above"></a>
-<!--
+
 <div class="panel panel-warning">
     <div class="panel-heading">
        <h4 class="panel-title"> <span class="glyphicon glyphicon-comment"></span>Open for consultation</h4>
      </div>
-     <div class="panel-body"><p>This version is open for consultation until July 15th. Visit <a hef="http://ocds.open-contracting.org">http://ocds.open-contracting.org</a> for more background information.</p>
+     <div class="panel-body"><p>This version is open for consultation until September 30th. Visit <a hef="http://standard.open-contracting.org">http://standard.open-contracting.org</a> for more background information.</p>
      </div>
 </div>
--->
+
 
 [TOC]
 
 ## Purpose
 
-This is the first release of the Open Contracting Data Standard. In this release we present our draft Data Model for Public Procurement. It presents a high-level overview of the structure of the Data Standard based on supply-side research and initial use-case feedback. This version of the Data Model has been designed for public procurement contracts. Our goal over the coming months is to adapt this model for public contracting in land and extractive industries.
+This is the beta release of the Open Contracting Data Standard. This release provides:
 
-The purpose of this release is to obtain feedback from the Open Contracting community on the draft Data Model before creating specific field names, reference lists, and file formats. 
+* A description of the overall Open Contracting Data Standard Model
+* A JSON Schema for open contracting **releases** and **records** 
+* Details of suggested implementation.
 
-There are three main discussion areas on which we hope to stimulate feedback and debate with this early release:
+This beta offers early adopters the chance to test the overall data model for the standard, and to provide feedback on the coverage and definition of fields provided by the standard.
 
-* What are the core components of a procurement standard?
+Both structural and field changes should be anticipated between the beta and initial release version.
 
-* Can the needs of data producers and consumers be met with a system of various releases being compiled into a contracting record? 
-
-* The need for and feasibility of a unique contracting identifier.
-
-Throughout the document there are a series of questions to help guide the type of feedback we are seeking. We welcome general feedback.
-
-Over the coming weeks we will continue to iteratively revise the Data Model Draft based on community feedback. One can follow revisions at [Open Contracting Data Standard](https://github.com/open-contracting/standard/commits/master/standard/standard.md). During the period over June and July 2014 the team will be revising the conceptual model as feedback is received. In addition, we will begin providing detailed field-level information for a formal release in the third quarter of 2014.
-
-## Background
+## Background 
 
 Countries signing up to the Open Contracting Global Principles commit to share "information related to the formation, performance, and completion of public contracts" including data on all stages of contracting, including subcontracting arrangements.
 
@@ -39,13 +33,17 @@ The development of the Data Model Draft has been based on:
 
 * **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and [Contracting Data Map](http://ocds.open-contracting.org/opendatacomparison/datamap/) which explores the fields of data available from a wide range of different government contracting data portals around the world.
 
+
+
 * **Exploring demand for data on contracting** - to identify the ways in which different users think about contracting data, and how they want to use it. This work is ongoing, and initial use cases are factored into this conceptual model and will continue to shape future iterations.
+
+
 
 * **A Review of existing schemas: **There are already well-known schemas for Organizations, People and Addresses, and related purposes. This project will build upon existing standards efforts where appropriate. 
 
 The Open Contracting Data Standard is a core product of the Open Contracting Partnership. Version 1.0 of the standard is being developed for the OCP by the World Wide Web Foundation and World Bank, through a project supported by The Omidyar Network and the World Bank.
 
-More detailed information about the development process is available [below](#development-process). 
+More detailed information about the development process is available [below](#development-process).
 
 ## Conceptual Model
 
@@ -58,19 +56,35 @@ The contracting process is the sequence of stages related to the lifespan of a c
 <p>* Formation, when dealing with basic procurement processes, will often be referred to as Tendering & Award.</p>
 
 For descriptions of the phases see the "Definitions" tab [above](#above).
-### Conceptual Model
 
-In most countries, public contracting information is scattered across multiple systems (and websites). Data released might be split across files by month or by some other segmentation. The siloed nature of contracting data suggests a simple standard may have substantial value to help link this information together to enhance its utility. Therefore, we propose a data model that allows releasing data incrementally, but facilitates aggregateing it into a single record.
+Each Open Contracting Process should be given a unique **Open Contracting ID** (ocid). We define an Open Contracting Process as having a single unique tendering / competitive phase, but with the possibility of this resulting in multiple awards and contracts. See defining a unique contracting process [below](#unique) for more details. 
 
-* A set of** releases** of information pertaining to stages in the contracting process -- such as tender notices, award notices, or details of a finalized contract. A series of releases form a revision history for the contracting process. The contracting releases may originate in different systems but can be compiled into the contracting record.
+### Contracting releases and record
 
-* A **contracting record** is a summary of all the key elements of a unique contracting process, including its planning, formation, performance and completion. It is updated as new information becomes available in the form of contracting releases to accurately reflect the current state of the contract processes. The contracting record should provide an at-a-glance view of key information and can then be used to access more detailed information from the releases. The standard will provide a specification for compiling a contracting record so that data consumers can compile their own if publishers are only producing releases.
+Information about an Open Contracting Process may accumulate over time. As a result, the Open Contracting Data Standard provides for two kinds of data:
 
-In the image below, the blue boxes represent core components of the contracting record. Descriptions of each of these components is below the diagram.
+* **Contracting releases** - each release provides information pertaining to a particular stage in the contracting process -- such as tender notices, award notices, or details of a finalized contract. These releases may equate to formal legal notices as part of a procurement process, or may be new releases of information. They can have attached documents. Release may also include amendments. Once published a release should not be changed, and new information should be shared through new releases with relevant amendments. 
 
-The information in the contracting **releases** would be used to build a contracting **record. **For this to work, each contracting release must be tied to a unique **open contracting identifier**. Each of these components is discussed below. 
+* **Contracting record.** - A contracting record provides a snapshot of all the key elements of a unique contracting process, including its planning, formation, performance and completion. It is updated as new information becomes available through contracting releases to accurately reflect the current state of the contract processes. The contracting record should provide an at-a-glance view of key information and can then be used to access more detailed information from the releases. A full contracting record can contain detailed revision information for fields. Contracting records may be published in full, or may contain a pointer to releases, allowing third-parties to assemble and verify a record of the whole contracting process.
 
-![Open Contracting Conceptual Model](https://raw.githubusercontent.com/open-contracting/standard/master/standard/assets/releases%20and%20record.png)
+Both **contracting releases** and **contracting records** should be provided within data packages, containing meta-data about the publisher, publication data and licensing information. 
+
+Publishers can package a number of releases and records together in the same file, or can publish one release / record per-file.
+
+### Data model and serialisations
+
+For the beta of the Open Contracting Data Standard we have developed a [JSON Schema](http://json-schema.org/) rendering of a data model, whilst at the same time paying attention to ensure this model can be easily serialised in other formats. We have proposed an approach to map this data model into [flat file CSV and DataPackage formats](https://github.com/open-contracting/standard/issues/32). 
+
+We have carried out initial work to identify [JSON-LD mapping](http://www.w3.org/TR/json-ld/) but this is [not currently a development priority for version 1.0](https://github.com/open-contracting/standard/issues/40). 
+
+## Releases
+
+A full schema for releases can be accessed from the 'Release Schema' tab above. Click each section to expand that component of the schema. 
+
+A release should contain the following elements:
+
+### Planning
+<script src="/standard/static/docson/widget.js" data-schema="release-schema.json$/definitions/planning"></script>
 
 ## The contracting record
 
@@ -151,6 +165,7 @@ Each release, or a group of releases, will contain publisher information, and ea
      </div>
 </div>
 
+<a name="unique"></a>
 ### Defining a unique contracting process
 
 For the data standard, defining a unique contracting process is critical for getting useful, comparable, clean data. But, there are cases where what the unique process is not obvious. For example, a framework contract has only one tender and award but many contracts associated with that award.
@@ -255,13 +270,7 @@ In addition, the approach taken is informed by the development of other data sta
 
 ## Next steps
 
-Over June 2014 we will be validating the conceptual model proposed in this document of a Contracting Process, Contracting Records and Contracting Releases. You are invited to add your comments directly to the online copy of this document at [ http://ocds.open-contracting.org/standard/](http://ocds.open-contracting.org/standard/), or to join discussions on [the project mailing list](https://groups.google.com/a/webfoundation.org/forum/#%21forum/public-ocds).
 
-Over July and August 2014 we will be fleshing out in more detail the data fields that belong to each of the core components, and will develop a full draft data standard. The proposed model will be validated against a range of use cases developed through demand side research.
-
-The Data Standard itself will be format-agnostic. However following the development and validation of the Data Standard, we will outline a number of approaches to serialize this data in different priority formats such as JSON, XML, and CSV.
-
-Throughout this process we will be seeking to re-use existing data structures from prior standards.
 
 ## Acknowledgements
 
