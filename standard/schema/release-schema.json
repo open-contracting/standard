@@ -476,21 +476,24 @@
                 "id": {
                     "title": "Notice identifier",
                     "description": "The identifier that identifies the notice to the publisher. This may be the same or different from the OCID.",
-                    "format": "string"
+                    "type": "string"
                 },
                 "uri": {
                     "title": "Notice URI",
                     "description": "A permanent uri that provides access to the notice.",
+                    "type": "string"
                     "format": "uri"
                 },
                 "publishedDate": {
                     "title": "Notice published date",
                     "description": "The date this version of the notice was published. In the case of notice amendments, it is the date that reflects to this version of the data.",
+                    "type": "string"
                     "format": "date-time"
                 },
                 "isAmendment": {
                     "title": "Is this an amendment to the notice?",
                     "description": "If true, then amendment information should be provided.",
+                    "type": "string"
                     "type": "boolean"
                 },
                 "amendment": { "$ref": "#/definitions/amendment" }
