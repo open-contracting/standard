@@ -91,7 +91,7 @@ is that every object requires a unique value, which is also practically challeng
 
 Basic, override works as follows, where the value of Item 2 changes:
 
-<code>
+<pre>
 release_1_snippet = {
     "formation": {
         "itemsToBeProcured": [
@@ -163,13 +163,13 @@ record_snipped = {
             ]
         }
 }
-</code>
+</pre>
 
 If only the changed item was provided in the second release, when the entire 
 array is updated, only the second item would be available in
 the merged record, as follows.
 
-<code>
+<pre>
 release_1_snippet = {
     "formation": {
         "itemsToBeProcured": [
@@ -225,7 +225,7 @@ record_snippet = {
             ]
         }
 }
-</code>
+</pre>
 
 We have made two exceptions to this type of merging with the overrideByKey on
 awards and contract. Over the course of a large or framework contracting process
@@ -238,7 +238,7 @@ means that awardID and contractID cannot change.
 
 A simplified example is given below (with incomplete data) to illustrate the pattern:
 
-<code>
+<pre>
 release_1 = {
     "awards": [
         {
@@ -278,4 +278,4 @@ record_snippet = {
         ]
     }
 }
-</code>
+</pre>
