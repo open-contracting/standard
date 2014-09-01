@@ -33,10 +33,12 @@
             "default": "en"
         },
         "buyer": { 
+            "title": "Buyer",
             "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
             "$ref": "#/definitions/organization" 
         },
-        "planning": { "$ref": "#/definitions/planning" },
+        "planning": { 
+           "$ref": "#/definitions/planning" },
         "formation": {
             "type": "object",
             "oneOf": [{ "$ref": "#/definitions/tender" }]
