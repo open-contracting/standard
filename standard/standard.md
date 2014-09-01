@@ -81,10 +81,50 @@ We have carried out initial work to identify [JSON-LD mapping](http://www.w3.org
 
 A full schema for releases can be accessed from the 'Release Schema' tab above. Click each section to expand that component of the schema. 
 
-A release should contain the following elements:
+A release should always contain:
+
+* **ocid** - the Open Contracting Identifier for this Contracting Process. This should be globally unique. 
+* **releaseID** - this should uniquely identify this release within the current 'package'. Generally these should be unique to a publisher, but are not required to be globally unique. 
+* **releaseTag** - A tag that helps to identify the type of release being made. These may be used for advanced validation (i.e. certain kinds of release may in future require certain fields to be provided). The current list of tags is: planning, tenderNotice, awardNotice, contractSignature, contractAmendment, report, spending, terminationNotice
+* **language** - An ISO 2-Digit Country code for the default language used in the document
+* **buyer** - identifier and address details of the buying organisation (see below for the specification of an organisation)
+
+A release can then contain elements within one or more of the following blocks: 
+
+* planning
+* formation
+* awards
+* contracts
+* performance
+
+The blocks are described in more detail below
 
 ### Planning
 <script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/planning"></script>
+
+### Formation
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/tender"></script>
+
+### Awards
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/award"></script>
+
+### Contracts
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/contract"></script>
+
+### Awards
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/performance"></script>
+
+
+
+## Common data elements
+
+The following data elements are used in a number of places throughout the standard. 
+
+
+
+
+
+
 
 ## The contracting record
 
