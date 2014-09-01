@@ -84,7 +84,7 @@ A full schema for releases can be accessed from the 'Release Schema' tab above. 
 A release should contain the following elements:
 
 ### Planning
-<script src="/standard/static/docson/widget.js" data-schema="release-schema.json$/definitions/planning"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/planning"></script>
 
 ## The contracting record
 
