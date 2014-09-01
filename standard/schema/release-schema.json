@@ -114,11 +114,6 @@
                 "address": { "$ref": "#/definitions/address" }
             }
         },
-        "supplier": {
-            "description": "The buyer is the entity whose budget will be used to purchase the goods.",
-            "type": "object",
-            "$ref": "#/definitions/organization"
-        },
         "item": {
             "type": "object",
             "description": "A good, service, or work to be contracted.",
@@ -357,7 +352,7 @@
                 "bidders": {
                     "description": "A list of all the companies who entered submissions for the tender.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/supplier" },
+                    "items": { "$ref": "#/definitions/organization" },
                     "uniqueItems": true
                 },
                 "procuringEntity": { 
@@ -409,7 +404,7 @@
                 "suppliers": {
                     "description": "The suppliers awarded this award.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/supplier" },
+                    "items": { "$ref": "#/definitions/organization" },
                     "uniqueItems": true
                 },
                 "itemsAwarded": {
