@@ -102,7 +102,7 @@ The blocks are described in more detail below
 ### Planning
 <script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/planning"></script>
 
-### Formation
+### Tender
 <script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/tender"></script>
 
 ### Awards
