@@ -49,14 +49,15 @@
             "oneOf": [{ "$ref": "#/definitions/tender" }]
         },
         "awards": { "title": "Awards",
-            "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
+            "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "array",
             "mergeStrategy": "overwriteByKey",
             "mergeOptions": {"match_key": "awardID"},
             "items": { "$ref": "#/definitions/award" },
             "uniqueItems": true
         },
-        "contracts": {
+        "contracts": { "title": "Contracts",
+            "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "array",
             "mergeStrategy": "overwriteByKey",
             "mergeOptions": {"match_key": "contractID"},
