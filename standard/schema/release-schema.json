@@ -554,11 +554,15 @@
             "type": "object",
             "title": "Period",
             "properties": {
-                "startDate": {
+                "startDate": { 
+                  "title": "Start Date",
+            "description": "The state date for the period.",
                     "type": "string",
                     "format": "date-time"
                 },
                 "endDate": {
+                   "title": "End Date",
+            "description": "The end date for the period.",
                     "type": "string",
                     "format": "date-time"
                 }
