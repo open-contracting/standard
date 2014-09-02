@@ -1,3 +1,5 @@
+[TOC]
+
 ## Merging
 
 To turn releases into a record, they must be merged into a single record.
@@ -279,3 +281,19 @@ record_snippet = {
     }
 }
 </pre>
+
+## Implementing merging
+To merge releases into records, we use the jsonmerge library with its 
+add-ons to json schema that specify a mergeStrategy on each field.
+
+A customized version of the jsonmerge library is available at [https://github.com/open-contracting/jsonmerge](https://github.com/open-contracting/jsonmerge) using the ocds branch (set as default).
+
+An example of merging releases into a record can be seen in this ipython notebook:
+[http://nbviewer.ipython.org/github/open-contracting/sample-data/blob/master/buyandsell/processing/Demonstrate%20merging%20a%20release.ipynb](http://nbviewer.ipython.org/github/open-contracting/sample-data/blob/master/buyandsell/processing/Demonstrate%20merging%20a%20release.ipynb)
+
+The compiledRelease is built using the mergeStrategies that are in the normal Release Schema.
+
+To build a versionedRelease, we use the mergeStrategies specified in the Versioned Release Schema.
+
+Data in the compiledRelease, should validate against the regular Release Schema. Data in a versionedRelease needs to be validated against a seperate schema, which will be published soon (and can be generated
+using the jsonmerge library).
