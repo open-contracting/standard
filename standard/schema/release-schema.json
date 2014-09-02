@@ -32,26 +32,26 @@
             "type": "string",
             "default": "en"
         },
-        "buyer": { 
+        "buyer": {
             "title": "Buyer",
             "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
-            "$ref": "#/definitions/organization" 
+            "$ref": "#/definitions/organization"
         },
-        "planning": { 
-           "$ref": "#/definitions/planning" 
+        "planning": {
+           "$ref": "#/definitions/planning"
         },
         "formation": {
             "type": "object",
             "oneOf": [{ "$ref": "#/definitions/tender" }]
         },
-        "awards": { 
+        "awards": {
             "type": "array",
             "mergeStrategy": "overwriteByKey",
             "mergeOptions": {"match_key": "awardID"},
             "items": { "$ref": "#/definitions/award" },
             "uniqueItems": true
         },
-        "contracts": { 
+        "contracts": {
             "type": "array",
             "mergeStrategy": "overwriteByKey",
             "mergeOptions": {"match_key": "contractID"},
@@ -93,13 +93,27 @@
             "description": "An Address following the convention of http://microformats.org/wiki/hcard (from http://json-schema.org/address)",
             "type": "object",
             "properties": {
-                "post-office-box": { "type": "string" },
-                "extended-address": { "type": "string" },
-                "street-address": { "type": "string" },
-                "locality":{ "type": "string" },
-                "region": { "type": "string" },
-                "postal-code": { "type": "string" },
-                "country-name": { "type": "string"}
+                "post-office-box": {
+                    "type": "string"
+                },
+                "extended-address": {
+                    "type": "string"
+                },
+                "street-address": {
+                    "type": "string"
+                },
+                "locality":{
+                    "type": "string"
+                },
+                "region": {
+                    "type": "string"
+                },
+                "postal-code": {
+                    "type": "string"
+                },
+                "country-name": {
+                    "type": "string"
+                }
             },
             "patternProperties": {
                 "^(country-name_[A-Za-z]{2})$": {
@@ -154,9 +168,9 @@
                     "description": "The number of units required",
                     "type": "integer"
                 },
-                "valuePerUnit": { 
+                "valuePerUnit": {
                     "description": "The value per unit of the item specified.",
-                    "$ref": "#/definitions/value" 
+                    "$ref": "#/definitions/value"
                 }
             },
             "patternProperties": {
@@ -219,7 +233,7 @@
                             },
                             "transactionAmount": {
                                 "description": "The amount of the transaction as described in the budget data package (https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories). This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
-                                "type": "number"
+                                "type": ["number", "null"]
                             }
                         },
                         "required": ["transactionDataPackageURI", "transactionID"]
@@ -253,7 +267,7 @@
                 },
                 "budgetAmount": {
                     "description": "The amount of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories. This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
-                    "type": "number"
+                    "type": ["number", "null"]
                 },
                 "publicHearingNotices": {
                     "description": "A list of notices of any public hearings on this contract",
@@ -276,7 +290,7 @@
                     "type": "string"
                 }
             },
-            
+
             "dependencies": {
                 "budgetID": ["budgetDataPackageURI"],
                 "budgetAmount": ["budgetDataPackageURI"]
@@ -342,7 +356,7 @@
                 },
                 "clarifications": {
                     "description": "A Yes/No field as to whether clarifications were issued. Would expect clarifications to appear as amendments.",
-                    "type": "boolean"
+                    "type": ["boolean", "null"]
                 },
                 "awardPeriod": {
                     "description": "The date or period on which an award is anticipated to be made.",
@@ -362,9 +376,9 @@
                     "items": { "$ref": "#/definitions/organization" },
                     "uniqueItems": true
                 },
-                "procuringEntity": { 
+                "procuringEntity": {
                     "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
-                    "$ref": "#/definitions/organization" 
+                    "$ref": "#/definitions/organization"
                 },
                 "attachments": {
                     "description": "All documents and attachments related to the tender.",
@@ -392,9 +406,9 @@
             "type": "object",
             "required": ["awardID"],
             "properties": {
-                "awardID": { 
+                "awardID": {
                     "title": "Award ID",
-                    "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.", 
+                    "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
                 },
                 "notice": { "$ref": "#/definitions/notice" },
@@ -421,7 +435,7 @@
                     "items": { "$ref": "#/definitions/item" },
                     "uniqueItems": true
                 }
-            } 
+            }
         },
         "contract": {
             "type": "object",
@@ -429,9 +443,9 @@
             "description": "Information regarding the signed contract between the buyer and supplier(s).",
             "required": ["contractID"],
             "properties": {
-                "contractID": { 
+                "contractID": {
                     "title": "Contract ID",
-                    "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have contractID 1 & contractID 2 and ocid DEF can also have contractID 1 & 2. But if it is a different contract, ocid cannot have contractID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.", 
+                    "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have contractID 1 & contractID 2 and ocid DEF can also have contractID 1 & 2. But if it is a different contract, ocid cannot have contractID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
                 },
                 "awardID": {
@@ -450,7 +464,7 @@
                 "isAmendment": {
                     "title": "Is this an amendment to the contract?",
                     "description": "If true, then amendment information should be provided.",
-                    "type": "boolean"
+                    "type": ["boolean", "null"]
                 },
                 "amendment": { "$ref": "#/definitions/amendment" },
                 "itemsContracted": {
@@ -506,7 +520,7 @@
                     "title": "Is this an amendment to the notice?",
                     "description": "If true, then amendment information should be provided.",
                     "type": "string",
-                    "type": "boolean"
+                    "type": ["boolean", "null"]
                 },
                 "amendment": { "$ref": "#/definitions/amendment" }
             }
@@ -573,14 +587,12 @@
             "properties": {
                 "amount": {
                     "description": "Amount as a number.",
-                    "type": "number",
+                    "type": ["number", "null"],
                     "minimum": 0
                 },
                 "currency": {
                     "description": "The currency in 3-letter ISO 4217 format.",
-                    "type": "string",
-                    "minLength": 3,
-                    "maxLength": 3
+                    "type": "string"
                 }
             }
         },
