@@ -1,7 +1,6 @@
 {
     "id": "https://raw.githubusercontent.com/open-contracting/standard/master/standard/schema/versioned-release-schema.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "mergeStrategy": "ocdsVersion",
     "type": "object",
     "properties": {
         "ocid": {
@@ -34,16 +33,16 @@
             "oneOf": [{ "$ref": "#/definitions/tender" }]
         },
         "awards": { 
-            "type": "array",
             "mergeStrategy": "overwriteByKey",
             "mergeOptions": {"match_key": "awardID"},
+            "type": "array",
             "items": { "$ref": "#/definitions/award" },
             "uniqueItems": true
         },
         "contracts": { 
-            "type": "array",
             "mergeStrategy": "overwriteByKey",
             "mergeOptions": {"match_key": "contractID"},
+            "type": "array",
             "items": {"$ref": "#/definitions/contract" },
             "uniqueItems": true
         },
@@ -197,6 +196,7 @@
                     "enum": ["due", "completed"]
                 },
                 "attachments": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/attachment" }
                 }
@@ -212,6 +212,7 @@
             "type": "object",
             "properties": {
                 "transactions": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": {
                         "type": "object",
@@ -234,10 +235,12 @@
                     }
                 },
                 "milestones": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/milestone" }
                 },
                 "reports":{
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/attachment"}
                 }
@@ -260,6 +263,7 @@
                     "type": "number"
                 },
                 "publicHearingNotices": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/notice" },
                     "uniqueItems": true
@@ -269,6 +273,7 @@
                     "type": "string"
                 },
                 "anticipatedMilestones": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/milestone" }
                 }
@@ -295,6 +300,7 @@
                 },
                 "notice": { "$ref": "#/definitions/notice" },
                 "itemsToBeProcured": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "minItems": 1,
                     "items": { "$ref": "#/definitions/item" },
@@ -352,6 +358,7 @@
                     "type": "integer"
                 },
                 "bidders": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/organization" },
                     "uniqueItems": true
@@ -360,6 +367,7 @@
                     "$ref": "#/definitions/organization" 
                 },
                 "attachments": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/attachment" },
                     "uniqueItems": true
@@ -386,7 +394,6 @@
             "required": ["awardID"],
             "properties": {
                 "awardID": { 
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "notice": { "$ref": "#/definitions/notice" },
@@ -399,11 +406,13 @@
                     "$ref": "#/definitions/value"
                 },
                 "suppliers": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/organization" },
                     "uniqueItems": true
                 },
                 "itemsAwarded": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "minItems": 1,
                     "items": { "$ref": "#/definitions/item" },
@@ -416,7 +425,6 @@
             "required": ["contractID"],
             "properties": {
                 "contractID": { 
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "awardID": {
@@ -435,12 +443,14 @@
                 },
                 "amendment": { "$ref": "#/definitions/amendment" },
                 "itemsContracted": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "minItems": 1,
                     "items": { "$ref": "#/definitions/item" },
                     "uniqueItems": true
                 },
                 "deliverables": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "minItems": 1,
                     "items": { "$ref": "#/definitions/deliverable" },
@@ -452,6 +462,7 @@
                     "format": "date-time"
                 },
                 "attachments": {
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/attachment" },
                     "uniqueItems": true
