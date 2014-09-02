@@ -39,7 +39,7 @@
         },
         "planning": { 
           "title": "Planning",
-            "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
+            "description": "Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract for, when and how.",
            "$ref": "#/definitions/planning"
         },
         "formation": {
@@ -64,7 +64,8 @@
             "items": {"$ref": "#/definitions/contract" },
             "uniqueItems": true
         },
-        "performance": { "$ref": "#/definitions/performance" }
+        "performance": { "title": "Performance",
+            "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.","$ref": "#/definitions/performance" }
     },
     "required": ["ocid", "releaseID", "releaseDate", "releaseTag"],
     "definitions": {
