@@ -46,11 +46,13 @@
         },
         "awards": { 
             "type": "array",
+            "mergeStrategy": "overwriteByKey",
             "items": { "$ref": "#/definitions/award" },
             "uniqueItems": true
         },
         "contracts": { 
             "type": "array",
+            "mergeStrategy": "overwriteByKey",
             "items": {"$ref": "#/definitions/contract" },
             "uniqueItems": true
         },
