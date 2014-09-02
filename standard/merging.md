@@ -52,7 +52,7 @@ record = {
         "ocid": "A",
         "formation": {
             "tenderId": "A",
-            "totalValue": [
+            "method": [
                 {
                     "value": "Selective",
                     "releaseDate": "2014-01-01",
