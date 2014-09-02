@@ -54,14 +54,14 @@ record = {
             "tenderId": "A",
             "totalValue": [
                 {
-                    "valueFromRelease": "Selective",
-                    "date": "2014-01-01",
+                    "value": "Selective",
+                    "releaseDate": "2014-01-01",
                     "releaseTag": "tenderNotice",
                     "releaseID": "1"
                 },
                 {
-                    "valueFromRelease": "Open",
-                    "date": "2014-01-02",
+                    "value": "Open",
+                    "releaseDate": "2014-01-02",
                     "releaseTag": "tenderNotice",
                     "releaseID": "2"
                 }
