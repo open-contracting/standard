@@ -47,12 +47,14 @@
         "awards": { 
             "type": "array",
             "mergeStrategy": "overwriteByKey",
+            "mergeOptions": {"match_key": "awardID"},
             "items": { "$ref": "#/definitions/award" },
             "uniqueItems": true
         },
         "contracts": { 
             "type": "array",
             "mergeStrategy": "overwriteByKey",
+            "mergeOptions": {"match_key": "contractID"},
             "items": {"$ref": "#/definitions/contract" },
             "uniqueItems": true
         },
