@@ -48,7 +48,8 @@
             "type": "object",
             "oneOf": [{ "$ref": "#/definitions/tender" }]
         },
-        "awards": {
+        "awards": { "title": "Awards",
+            "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "array",
             "mergeStrategy": "overwriteByKey",
             "mergeOptions": {"match_key": "awardID"},
