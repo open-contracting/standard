@@ -111,7 +111,7 @@ The blocks are described in more detail below
 ### Contracts
 <script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/contract"></script>
 
-### Awards
+### Performance
 <script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/performance"></script>
 
 ## Record data
