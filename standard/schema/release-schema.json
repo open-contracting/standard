@@ -37,7 +37,9 @@
             "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
             "$ref": "#/definitions/organization"
         },
-        "planning": {
+        "planning": { 
+          "title": "Planning",
+            "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
            "$ref": "#/definitions/planning"
         },
         "formation": {
