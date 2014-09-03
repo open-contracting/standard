@@ -313,7 +313,7 @@ Over the coming months (September - November 2014) we are working towards a vers
 
 To get there:
 
-* We are inviting general feedback on the data model and fields in this beta release through the [public mailing list] (http://groups.google.com/a/webfoundation.org/group/public-ocds/) and/or by commenting on the document directly [ see instructions at the top of this page ];
+* We are inviting general feedback on the data model and fields in this beta release through the [public mailing list](http://groups.google.com/a/webfoundation.org/group/public-ocds/) and/or by commenting on the document directly (see instructions at the top of this page);
 
 * We are establishing working groups around the private sector, civil society, and publishers to provide additional input;  
 
