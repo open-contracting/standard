@@ -288,6 +288,19 @@ the requirements identified, and have found that 30 are already handled by field
 
 These use cases not only demonstrate what can and could be done with open contracting data, but will also shape the development of the Open Contracting Data Standard as we move towards defining the field-level specification.
 
+<div class="panel panel-success">
+    <div class="panel-heading">
+       <h4 class="panel-title"> <span class="glyphicon glyphicon-question-sign"></span> Consultation questions</h4>
+     </div>
+     <div class="panel-body">
+         <ul>
+             <li>In your opinion, does the proposed conceptual model work for these use cases?</li>
+             <li>Are there other important use cases we should be considering?</li>
+             <li>Are there use cases you can envisage where the proposed conceptual model does not work well?</li>
+         </ul>     
+     </div>
+</div>
+
 ### 3) Research on related initiatives
 
 There are existing standardization efforts for budget and spending data under development through the Open Spending Project. In line with the principles of [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/) this project will explore ways to connect data in the Open Contracting Data Standard with data in the proposed Open Spending and Open Budget Data Standards, among others.
