@@ -267,19 +267,24 @@ The effort focused on capturing the metadata of contract data available. As it d
 
 ### 2) Demand-side use-cases
 
-This draft is based primarily on research of existing published datasets. At the same time, the project has begun to explore priority use cases for open contracting data through workshops, webinars, a mailing list, and bilateral discussions with more than 200 stakeholders. The purpose of demand-side research is to capture the real needs and circumstances of the publishers and users of public contracting data.
+This draft is based primarily on research of existing published datasets. At the same time, the project has begun to explore priority use cases for open contracting data through workshops, webinars, a mailing list, and bilateral discussions with more than 200 stakeholders. The purpose of demand-side research is to capture the real needs and circumstances of the publishers and users of public contracting data. We wanted to understand who wants to use contracting information, what information do they need, how do they  want to use the information, and why? 
 
-In our consultations with government, civil society, donors, journalists, auditors, and the private sector, four primary use cases emerged. These users are interested to use open contracting data in order to:
+A [questionnaire](https://docs.google.com/a/webfoundation.org/document/d/1GmOwGpvTgkPNiq1rzw1s1oj5TbE3G0KLowIaLSA19a4) was created and shared with our online community, and with specific stakeholders representing different user profiles (including government publishers, policymakers, procuring entities, auditors, donors, journalists, auditors, data aggregators, contractors, contract monitors, service delivery monitors, anti-corruption monitors, researchers, and transparency activists).
+
+In our consultations four primary use cases emerged. These users are interested to use open contracting data in order to:
 
 * Achieve value for money for the procuring entity;
-
 * Enable the private sector to compete for public contracts;
-
 * Monitor service delivery for effectiveness; and
-
 * Detect corruption and fraud in public contracting.
 
-The draft use cases are being developed on an ongoing basis and can be found [here](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing). These use cases not only demonstrate what can and could be done with open contracting data, but will also shape the development of the Open Contracting Data Standard as we move towards defining the field-level specification.
+Each of the use cases we created includes a user profile, their objectives, and their contracting information needs. This document was posted [here](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing) for public comment.
+
+Drawing on these summaries we then identified 141 specific user requirements and 145 related technical requirements for the open contracting data standard. You can find a list of all the requirements we identified  here. 
+
+For the most recently release of the standard we’ve worked through over 50 of the requirements identified, and have found that 30 are already handled by fields in the draft standard. For the remaining requirements, a number have resulted in [issues](https://github.com/open-contracting/standard/issues) for future cycles of development logged on the standards GitHub pages, and others highlight some of the tools that may need to be created alongside the standard, such as aggregators and analysis tools.
+
+These use cases not only demonstrate what can and could be done with open contracting data, but will also shape the development of the Open Contracting Data Standard as we move towards defining the field-level specification.
 
 <div class="panel panel-success">
     <div class="panel-heading">
