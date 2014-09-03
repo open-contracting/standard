@@ -312,13 +312,14 @@ To get there:
 
 * We will be exploring further user demands and building these into the standard by:
 	* Completing an assessment of user requirements and how these can be met either directly in the standard, or in accompanying tools and services;
-	* Building up a list of issues to be addressed in the next iteration of the standard as we move towards version 1.0 later in the year - and prioritising these in consultation with key potential users of open contracting data;
+	* Building up a list of issues to be addressed in the next iteration of the standard as we move towards version 1.0 later in the year - and prioritising these in consultation with key potential users of open contracting data; and
 	* Using the GitHub issue tracker to identify which requirements can be met over the short-term, and which will need further development beyond the version 1.0 release.
 
 * We will conduct field missions to the first two pilot countries in October 2014 to: 
 	* Explore how the standard may be adapted to other contracting use cases outside public procurement including extractives and land;
-	* Meet and/or host workshops with civil society and government to better understand demand use-cases;
-	* Compare the draft data standard with country-specific procurement datas
+	* Meet and/or host workshops with civil society and government to better understand demand use-cases; and
+	* Compare the draft data standard with country-specific procurement datasets including the possibility of piloting the data standard.
+
 
 ## Acknowledgements
 
