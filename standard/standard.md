@@ -308,7 +308,7 @@ To get there:
 
 * We are inviting general feedback on the data model and fields in this beta release through the public mailing list http://groups.google.com/a/webfoundation.org/group/public-ocds/ and/or by commenting on the document directly [ see instructions at the top of this page ];
 
-* Establishing working groups around the private sector, civil society, and publishers to provide additional input;  
+* We are establishing working groups around the private sector, civil society, and publishers to provide additional input;  
 
 * We will be exploring further user demands and building these into the standard by:
 	* Completing an assessment of user requirements and how these can be met either directly in the standard, or in accompanying tools and services;
