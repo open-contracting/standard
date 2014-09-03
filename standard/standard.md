@@ -280,7 +280,11 @@ In our consultations four primary use cases emerged. These users are interested 
 
 Each of the use cases we created includes a user profile, their objectives, and their contracting information needs. This document was posted [here](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing) for public comment.
 
-Drawing on these summaries we then identified 141 specific user requirements and 145 related technical requirements for the open contracting data standard. You can find a list of all the requirements we identified here. 
+Drawing on these summaries we then identified 141 specific user requirements and 145 related technical requirements for the open contracting data standard. You can find a list of all the requirements we identified [here](https://docs.google.com/a/webfoundation.org/spreadsheets/d/1m_Kr7I5XqM7PFcz75ZNmcdFCzLaike_IsEmAh5eN-WE). 
+
+For the most recently release of the standard we’ve worked through over 50 of the requirements identified, and have found that 30 are already handled by fields in the draft standard. For the remaining requirements, a number have resulted in issues for future cycles of development logged on the standards GitHub pages, and others highlight some of the tools that may need to be created alongside the standard, such as aggregators and analysis tools.
+
+
 
 ### 3) Research on related initiatives
 
