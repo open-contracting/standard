@@ -282,7 +282,7 @@ Each of the use cases we created includes a user profile, their objectives, and 
 
 Drawing on these summaries we then identified 141 specific user requirements and 145 related technical requirements for the open contracting data standard. You can find a list of all the requirements we identified  here. 
 
-For the most recently release of the standard we’ve worked through over 50 of the requirements identified, and have found that 30 are already handled by fields in the draft standard. For the remaining requirements, a number have resulted in [issues](https://github.com/open-contracting/standard/issues) for future cycles of development logged on the standards GitHub pages, and others highlight some of the tools that may need to be created alongside the standard, such as aggregators and analysis tools.
+For the most recently release of the standard we’ve worked through over 50 of the requirements identified, and have found that 30 are already handled by fields in the draft standard. For the remaining requirements, a number have resulted in issues for future cycles of development logged on the standards GitHub pages, and others highlight some of the tools that may need to be created alongside the standard, such as aggregators and analysis tools.
 
 These use cases not only demonstrate what can and could be done with open contracting data, but will also shape the development of the Open Contracting Data Standard as we move towards defining the field-level specification.
 
