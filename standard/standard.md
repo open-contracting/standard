@@ -271,6 +271,17 @@ This draft is based primarily on research of existing published datasets. At the
 
 A [questionnaire](https://docs.google.com/a/webfoundation.org/document/d/1GmOwGpvTgkPNiq1rzw1s1oj5TbE3G0KLowIaLSA19a4) was created and shared with our online community, and with specific stakeholders representing different user profiles (including government publishers, policymakers, procuring entities, auditors, donors, journalists, auditors, data aggregators, contractors, contract monitors, service delivery monitors, anti-corruption monitors, researchers, and transparency activists).
 
+In our consultations four primary use cases emerged. These users are interested to use open contracting data in order to:
+
+* Achieve value for money for the procuring entity;
+* Enable the private sector to compete for public contracts;
+* Monitor service delivery for effectiveness; and
+* Detect corruption and fraud in public contracting.
+
+Each of the use cases we created includes a user profile, their objectives, and their contracting information needs. This document was posted [here](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing) for public comment.
+
+Drawing on these summaries we then identified 141 specific user requirements and 145 related technical requirements for the open contracting data standard. You can find a list of all the requirements we identified  here. 
+
 ### 3) Research on related initiatives
 
 There are existing standardization efforts for budget and spending data under development through the Open Spending Project. In line with the principles of [Joined Up Data](http://devinit.org/report/joined-data-building-blocks-common-standards/) this project will explore ways to connect data in the Open Contracting Data Standard with data in the proposed Open Spending and Open Budget Data Standards, among others.
