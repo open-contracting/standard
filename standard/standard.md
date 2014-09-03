@@ -267,7 +267,9 @@ The effort focused on capturing the metadata of contract data available. As it d
 
 ### 2) Demand-side use-cases
 
+This draft is based primarily on research of existing published datasets. At the same time, the project has begun to explore priority use cases for open contracting data through workshops, webinars, a mailing list, and bilateral discussions with more than 200 stakeholders. The purpose of demand-side research is to capture the real needs and circumstances of the publishers and users of public contracting data. We wanted to understand who wants to use contracting information, what information do they need, how do they  want to use the information, and why? 
 
+A [questionnaire](https://docs.google.com/a/webfoundation.org/document/d/1GmOwGpvTgkPNiq1rzw1s1oj5TbE3G0KLowIaLSA19a4) was created and shared with our online community, and with specific stakeholders representing different user profiles (including government publishers, policymakers, procuring entities, auditors, donors, journalists, auditors, data aggregators, contractors, contract monitors, service delivery monitors, anti-corruption monitors, researchers, and transparency activists).
 
 ### 3) Research on related initiatives
 
