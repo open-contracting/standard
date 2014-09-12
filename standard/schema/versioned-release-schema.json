@@ -28,19 +28,18 @@
         "planning": { 
            "$ref": "#/definitions/planning" 
         },
-        "formation": {
-            "type": "object",
-            "oneOf": [{ "$ref": "#/definitions/tender" }]
+        "tender": {
+            "$ref": "#/definitions/tender" 
         },
         "awards": { 
-            "mergeStrategy": "overwriteByKey",
+            "mergeStrategy": "arrayMergeById",
             "mergeOptions": {"match_key": "awardID"},
             "type": "array",
             "items": { "$ref": "#/definitions/award" },
             "uniqueItems": true
         },
         "contracts": { 
-            "mergeStrategy": "overwriteByKey",
+            "mergeStrategy": "arrayMergeById",
             "mergeOptions": {"match_key": "contractID"},
             "type": "array",
             "items": {"$ref": "#/definitions/contract" },
@@ -132,78 +131,80 @@
             }
         },
         "item": {
+            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.",
             "type": "object",
             "properties": {
                 "description": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "classificationScheme": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string",
                     "enum": ["CPV", "GSIN", "UNSPSC", "Other"]
                 },
                 "otherClassificationScheme": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "classificationID": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "classificationDescription": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "unitOfMeasure": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "quantity": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "integer"
                 },
                 "valuePerUnit": { 
-                    "$ref": "#/definitions/value" 
+                    "__comment": "This is unversioned, as all items in item array will be versioned.",
+                    "type": "object",
+                    "properties": {
+                        "amount": {
+                            "mergeStrategy": "ocdsVersion",
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        "currency": {
+                            "mergeStrategy": "ocdsVersion",
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 3
+                        }
+                    }
                 }
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "^(classificationDescription_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 }
             }
         },
         "milestone": {
+            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.",
             "type": "object",
             "properties": {
                 "description": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "date": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string",
                     "format": "date-time"
                 },
                 "dateType": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string",
                     "enum": ["due", "completed"]
                 },
                 "attachments": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": { "$ref": "#/definitions/attachment" }
                 }
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 }
             }
@@ -390,6 +391,7 @@
             }
         },
         "award": {
+            "__comment": "TODO",
             "type": "object",
             "required": ["awardID"],
             "properties": {
@@ -421,6 +423,7 @@
             } 
         },
         "contract": {
+            "__comment": "TODO",
             "type": "object",
             "required": ["contractID"],
             "properties": {
@@ -528,26 +531,23 @@
             }
         },
         "attachment": {
+            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.",
             "type": "object",
             "properties": {
                 "description": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "uri": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string",
                     "format": "uri"
                 },
                 "lastModified": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string",
                     "format": "date-time"
                 }
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 }
             }
@@ -569,14 +569,13 @@
             }
         },
         "deliverable": {
+            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.",
             "type": "object",
             "properties": {
                 "description": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "dueDate": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string",
                     "format": "date-time"
                 },
@@ -586,7 +585,6 @@
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 }
             }
