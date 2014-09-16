@@ -29,7 +29,7 @@
         "language": {
             "title": "Release language",
             "description": "Specifies the default language of the data, in ISO 639-1 codes see: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes.",
-            "type": "string",
+            "type": ["string", "null"],
             "default": "en"
         },
         "buyer": {
@@ -77,21 +77,21 @@
                 },
                 "scheme": {
                     "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "uri"
                 },
                 "uid": {
                     "description": "The unique ID for this entity under the given ID scheme.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "uri": {
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format" : "uri"
                 }
             },
             "patternProperties": {
                 "^(name_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             },
             "required": ["name"]
@@ -101,13 +101,13 @@
             "type": "object",
             "properties": {
                 "post-office-box": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "extended-address": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "street-address": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "locality":{
                     "type": "string"
@@ -116,7 +116,7 @@
                     "type": "string"
                 },
                 "postal-code": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "country-name": {
                     "type": "string"
@@ -124,7 +124,7 @@
             },
             "patternProperties": {
                 "^(country-name_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             },
             "required": ["locality", "region", "country-name"],
@@ -148,32 +148,32 @@
             "properties": {
                 "description": {
                     "description": "A description of the goods, services to be provided.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "classificationScheme": {
                     "description": "The classification scheme for the goods",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "enum": ["CPV", "GSIN", "UNSPSC", "Other"]
                 },
                 "otherClassificationScheme": {
                     "description": "If the classification schema was not in list, please specify",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "classificationID": {
                     "description": "The classification ID from the Scheme used",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "classificationDescription": {
                     "description": "A description of the goods, services to be provided.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "unitOfMeasure": {
                     "description": "Description of the unit which the good comes in e.g. hours, kilograms",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "quantity": {
                     "description": "The number of units required",
-                    "type": "integer"
+                    "type": ["integer", "null"]
                 },
                 "valuePerUnit": {
                     "description": "The value per unit of the item specified.",
@@ -182,10 +182,10 @@
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "^(classificationDescription_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             }
         },
@@ -194,16 +194,16 @@
             "properties": {
                 "description": {
                     "description": "A description of the milestone.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "date": {
                     "description": "The date the milestone is either due or completed (as specified by dateType).",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 },
                 "dateType": {
                     "description": "Specify whether the date field is referring to a due date or a completed date.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "enum": ["due", "completed"]
                 },
                 "attachments": {
@@ -214,7 +214,7 @@
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             }
         },
@@ -265,12 +265,12 @@
             "properties": {
                 "budgetDataPackageURI": {
                     "description": "The link to the budget data package, as defined by http://github.com/openspending/budget-data-package",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "uri"
                 },
                 "budgetID": {
                     "description": "The ID of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "budgetAmount": {
                     "description": "The amount of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories. This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
@@ -284,7 +284,7 @@
                 },
                 "strategicJustificiation": {
                     "description": "A description of the rationale for this procurement",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "anticipatedMilestones": {
                     "description": "A list of anticipated milestones for the contract.",
@@ -294,7 +294,7 @@
             },
             "patternProperties": {
                 "^(strategicJustificiation_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             },
 
@@ -328,30 +328,30 @@
                 },
                 "method": {
                     "description": "Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "enum": ["Open", "Selective", "Limited"]
                 },
                 "methodJustification": {
                     "description": "Justification of procurement method, especially in the case of Limited tendering.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "selectionCriteria": {
                     "description": "Specify the selection criteria, by lowest cost, ",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "enum": ["Lowest Cost", "Best Proposal", "Best Value to Government", "Single bid only"]
                 },
                 "selectionDetails": {
                     "description": "Any detailed or further information on the selection criteria.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "submissionMethod": {
                     "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "enum": ["Electronic Auction", "Electronic Submission", "Written", "In Person"]
                 },
                 "submissionDetails" : {
                     "description": "Any detailed or further information on the submission method.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "tenderPeriod": {
                     "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
@@ -371,11 +371,11 @@
                 },
                 "numberOfBidders": {
                     "description": "The number of unique bidders who participated in the tender",
-                    "type": "integer"
+                    "type": ["integer", "null"]
                 },
                 "numberOfBids": {
                     "description": "The number of bids or submissions to the tender. In the case of an auction, the number of bids may differ from the numberOfBidders.",
-                    "type": "integer"
+                    "type": ["integer", "null"]
                 },
                 "bidders": {
                     "description": "A list of all the companies who entered submissions for the tender.",
@@ -396,13 +396,13 @@
             },
             "patternProperties": {
                 "^(methodJustification_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "^(selectionMethod_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "^(submissionDetails_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
 
             }
@@ -422,7 +422,7 @@
                 "awardDate": {
                     "title": "Award date",
                     "description": "The date of the contract award.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 },
                 "awardValue": {
@@ -458,7 +458,7 @@
                 "awardID": {
                     "title": "Award ID",
                     "description": "The awardID against which this contract is being issued.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "contractPeriod": {
                     "description": "The start and end date for the contract.",
@@ -490,7 +490,7 @@
                 },
                 "signatureDate": {
                     "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 },
                 "attachments": {
@@ -509,24 +509,24 @@
                 "id": {
                     "title": "Notice identifier",
                     "description": "The identifier that identifies the notice to the publisher. This may be the same or different from the OCID.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "uri": {
                     "title": "Notice URI",
                     "description": "A permanent uri that provides access to the notice.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "uri"
                 },
                 "publishedDate": {
                     "title": "Notice published date",
                     "description": "The date this version of the notice was published. In the case of notice amendments, it is the date that reflects to this version of the data.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 },
                 "isAmendment": {
                     "title": "Is this an amendment to the notice?",
                     "description": "If true, then amendment information should be provided.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "type": ["boolean", "null"]
                 },
                 "amendment": { "$ref": "#/definitions/amendment" }
@@ -537,16 +537,16 @@
             "title": "Amendment information",
             "properties": {
                 "amendmentDate": {
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 },
                 "amendedFields": {
                     "description": "Comma-seperated list of affected fields.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "justification": {
                     "description": "An explanation / justification for the amendment.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             }
         },
@@ -556,12 +556,12 @@
             "properties": {
                 "startDate": { 
                     "description": "The state date for the period.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 },
                 "endDate": {
                     "description": "The end date for the period.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 }
             }
@@ -572,22 +572,22 @@
             "properties": {
                 "description": {
                     "description": "A description of the document.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "uri": {
                     "description": "Link to the document or attachment.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "uri"
                 },
                 "lastModified": {
                     "description": "Date that the document was last modified",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 }
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             }
         },
@@ -601,7 +601,7 @@
                 },
                 "currency": {
                     "description": "The currency in 3-letter ISO 4217 format.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             }
         },
@@ -611,11 +611,11 @@
             "properties": {
                 "description": {
                     "description": "A description of the deliverable",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "dueDate": {
                     "description": "Date deliverable is due",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "date-time"
                 },
                 "attachment": {
@@ -625,7 +625,7 @@
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             }
         }
