@@ -42,11 +42,16 @@
             "description": "Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract for, when and how.",
            "$ref": "#/definitions/planning"
         },
-        "formation": {
-          	"title": "Formation",
+        "formationType": {
+            "title": "Formation type",
+            "description": "String specifying the type of formation process used for this contract. Currently only tender is supported.",
+            "type": "string",
+            "enum": ["tender"]
+        },
+        "tender": {
+          	"title": "Tender",
             "description": "The activities undertaken in order to enter into a contract.",
-            "type": "object",
-            "oneOf": [{ "$ref": "#/definitions/tender" }]
+            "$ref": "#/definitions/tender"
         },
         "awards": { "title": "Awards",
             "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
@@ -67,7 +72,7 @@
         "performance": { "title": "Performance",
             "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.","$ref": "#/definitions/performance" }
     },
-    "required": ["ocid", "releaseID", "releaseDate", "releaseTag"],
+    "required": ["ocid", "releaseID", "releaseDate", "releaseTag", "formationType"],
     "definitions": {
         "identifier": {
             "type": "object",
