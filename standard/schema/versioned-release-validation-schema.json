@@ -3276,15 +3276,21 @@
             }, 
             "type": "array"
         }, 
+        "formationType": {
+            "enum": [
+                "tender"
+            ], 
+            "type": "string"
+        }, 
+        "ocid": {
+            "type": "string"
+        }, 
         "contracts": {
             "uniqueItems": true, 
             "items": {
                 "$ref": "#/definitions/contract"
             }, 
             "type": "array"
-        }, 
-        "ocid": {
-            "type": "string"
         }, 
         "releaseDate": {
             "type": "string", 
