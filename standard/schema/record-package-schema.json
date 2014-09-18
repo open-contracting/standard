@@ -20,15 +20,15 @@
 				},
                 "scheme": {
                     "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "format": "uri"
                 },
                 "uid": {
                     "description": "The unique ID for this entity under the given ID scheme.",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
 				"uri": {
-					"type": "string",
+					"type": ["string", "null"],
 					"format" : "uri"
 				}
 			},
@@ -36,7 +36,7 @@
         },
         "license": {
             "description": "A license document that applies to this content.",
-            "type": "string",
+            "type": ["string", "null"],
             "format": "uri"
         },
         "publishedDate": {
