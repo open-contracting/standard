@@ -4,6 +4,7 @@
     "title": "Schema for an Open Contracting Release Package",
 	"description": "Note that all releases within a release package must have a unique releaseID within this release package.",
 	"type": "object",
+	"required": ["uri", "publisher", "publishedDate", "releases"]
 	"properties": {
         "uri": {
             "title": "Package Identifier",
@@ -51,5 +52,4 @@
             "format": "uri"
         }
 	},
-	"required": ["uri", "publisher", "date", "releases"]
 }
