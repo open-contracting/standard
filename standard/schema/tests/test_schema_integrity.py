@@ -40,7 +40,7 @@ def test_versioned_release_schema_and_release_schema_types_are_in_sync():
                 if k not in keywords_to_ignore:
                     recurse(original[k], should_be_equal[k], k)
         else:
-            if k == 'type':
+            if k in ['type', 'enum']:
                 assert original == should_be_equal
 
     recurse(release, versioned_release, None)
