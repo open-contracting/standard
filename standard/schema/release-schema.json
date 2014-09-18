@@ -158,7 +158,7 @@
                 "classificationScheme": {
                     "description": "The classification scheme for the goods",
                     "type": ["string", "null"],
-                    "enum": ["CPV", "GSIN", "UNSPSC", "Other"]
+                    "enum": ["CPV", "GSIN", "UNSPSC", "Other", null]
                 },
                 "otherClassificationScheme": {
                     "description": "If the classification schema was not in list, please specify",
@@ -209,7 +209,7 @@
                 "dateType": {
                     "description": "Specify whether the date field is referring to a due date or a completed date.",
                     "type": ["string", "null"],
-                    "enum": ["due", "completed"]
+                    "enum": ["due", "completed", null]
                 },
                 "attachments": {
                     "description": "List of documents associated with this milestone.",
@@ -334,7 +334,7 @@
                 "method": {
                     "description": "Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)",
                     "type": ["string", "null"],
-                    "enum": ["Open", "Selective", "Limited"]
+                    "enum": ["Open", "Selective", "Limited", null]
                 },
                 "methodJustification": {
                     "description": "Justification of procurement method, especially in the case of Limited tendering.",
@@ -343,7 +343,7 @@
                 "selectionCriteria": {
                     "description": "Specify the selection criteria, by lowest cost, ",
                     "type": ["string", "null"],
-                    "enum": ["Lowest Cost", "Best Proposal", "Best Value to Government", "Single bid only"]
+                    "enum": ["Lowest Cost", "Best Proposal", "Best Value to Government", "Single bid only", null]
                 },
                 "selectionDetails": {
                     "description": "Any detailed or further information on the selection criteria.",
@@ -352,7 +352,7 @@
                 "submissionMethod": {
                     "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction",
                     "type": ["string", "null"],
-                    "enum": ["Electronic Auction", "Electronic Submission", "Written", "In Person"]
+                    "enum": ["Electronic Auction", "Electronic Submission", "Written", "In Person", null]
                 },
                 "submissionDetails" : {
                     "description": "Any detailed or further information on the submission method.",
