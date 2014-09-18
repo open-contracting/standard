@@ -77,11 +77,30 @@
                     "oneOf": [
                         {
                             "title": "Linked releases",
-                            "description": "A list of uri's that identify the releases associated with this Open Contracting ID. The URI is composed of the uri for the release-package and the releaseID e.g. http://publisher.gov/release-package.json#releaseID1",
+                            "description": "A list of objects that identify the releases associated with this Open Contracting ID.",
                             "type": "array",
                             "items": {
-                                "type": "string",
-                                "format": "uri"
+                                "description": "Information to uniquely identify the release.",
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "scheme": {
+                                        "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
+                                        "type": ["string", "null"],
+                                        "format": "uri"
+                                    },
+                                    "uid": {
+                                        "description": "The unique ID for this entity under the given ID scheme.",
+                                        "type": ["string", "null"]
+                                    },
+                                    "uri": {
+                                        "type": ["string", "null"],
+                                        "format" : "uri"
+                                    }
+                                },
+                                "required": ["name"]
                             },
                             "minItems": 1
                         },
