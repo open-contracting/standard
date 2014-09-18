@@ -100,11 +100,11 @@
                 },
                 "locality":{
                     "mergeStrategy": "ocdsVersion",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "region": {
                     "mergeStrategy": "ocdsVersion",
-                    "type": "string"
+                    "type": ["string", "null"]
                 },
                 "postal-code": {
                     "mergeStrategy": "ocdsVersion",
@@ -112,7 +112,7 @@
                 },
                 "country-name": {
                     "mergeStrategy": "ocdsVersion",
-                    "type": "string"
+                    "type": ["string", "null"]
                 }
             },
             "patternProperties": {
