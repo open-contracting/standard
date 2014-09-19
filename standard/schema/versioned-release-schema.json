@@ -23,6 +23,8 @@
             "default": "en"
         },
         "buyer": { 
+            "mergeStrategy": "ocdsVersion",
+            "type": "object",
             "$ref": "#/definitions/organization" 
         },
         "planning": { 
@@ -57,27 +59,22 @@
             "type": "object",
             "properties": {
                 "name": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
                 "scheme": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
                     "format": "uri"
                 },
                 "uid": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "uri": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
                     "format" : "uri"
                 }
             },
             "patternProperties": {
                 "^(name_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 }
             },
@@ -87,37 +84,29 @@
             "type": "object",
             "properties": {
                 "post-office-box": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "extended-address": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "street-address": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "locality":{
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "region": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "postal-code": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "country-name": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 }
             },
             "patternProperties": {
                 "^(country-name_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 }
             },
@@ -369,6 +358,7 @@
                     "uniqueItems": true
                 },
                 "procuringEntity": { 
+                    "mergeStrategy": "ocdsVersion",
                     "$ref": "#/definitions/organization" 
                 },
                 "attachments": {
