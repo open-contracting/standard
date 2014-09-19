@@ -74,75 +74,77 @@
     },
     "required": ["ocid", "releaseID", "releaseDate", "releaseTag", "formationType"],
     "definitions": {
+        "identifier": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "scheme": {
+                    "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
+                    "type": ["string", "null"],
+                    "format": "uri"
+                },
+                "uid": {
+                    "description": "The unique ID for this entity under the given ID scheme.",
+                    "type": ["string", "null"]
+                },
+                "uri": {
+                    "type": ["string", "null"],
+                    "format" : "uri"
+                }
+            },
+            "patternProperties": {
+                "^(name_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                }
+            },
+            "required": ["name"]
+        },
+        "address": {
+            "description": "An Address following the convention of http://microformats.org/wiki/hcard (from http://json-schema.org/address)",
+            "type": "object",
+            "properties": {
+                "post-office-box": {
+                    "type": ["string", "null"]
+                },
+                "extended-address": {
+                    "type": ["string", "null"]
+                },
+                "street-address": {
+                    "type": ["string", "null"]
+                },
+                "locality":{
+                    "type": ["string", "null"]
+                },
+                "region": {
+                    "type": ["string", "null"]
+                },
+                "postal-code": {
+                    "type": ["string", "null"]
+                },
+                "country-name": {
+                    "type": ["string", "null"]
+                }
+            },
+            "patternProperties": {
+                "^(country-name_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                }
+            },
+            "required": ["locality", "region", "country-name"],
+            "dependencies": {
+                "post-office-box": ["street-address"],
+                "extended-address": ["street-address"]
+            }
+        },
         "organization": {
             "title": "Organization",
             "description": "An organization.",
             "type": "object",
             "properties": {
-                "id": { 
-                    "type": "object",
-                    "properties": {
-                        "name": {
-                            "type": "string"
-                        },
-                        "scheme": {
-                            "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
-                            "type": ["string", "null"],
-                            "format": "uri"
-                        },
-                        "uid": {
-                            "description": "The unique ID for this entity under the given ID scheme.",
-                            "type": ["string", "null"]
-                        },
-                        "uri": {
-                            "type": ["string", "null"],
-                            "format" : "uri"
-                        }
-                    },
-                    "patternProperties": {
-                        "^(name_[A-Za-z]{2})$": {
-                            "type": ["string", "null"]
-                        }
-                    },
-                    "required": ["name"]
-                },
-                "address": {
-                    "description": "An Address following the convention of http://microformats.org/wiki/hcard (from http://json-schema.org/address)",
-                    "type": "object",
-                    "properties": {
-                        "post-office-box": {
-                            "type": ["string", "null"]
-                        },
-                        "extended-address": {
-                            "type": ["string", "null"]
-                        },
-                        "street-address": {
-                            "type": ["string", "null"]
-                        },
-                        "locality":{
-                            "type": ["string", "null"]
-                        },
-                        "region": {
-                            "type": ["string", "null"]
-                        },
-                        "postal-code": {
-                            "type": ["string", "null"]
-                        },
-                        "country-name": {
-                            "type": ["string", "null"]
-                        }
-                    },
-                    "patternProperties": {
-                        "^(country-name_[A-Za-z]{2})$": {
-                            "type": ["string", "null"]
-                        }
-                    },
-                    "required": ["locality", "region", "country-name"],
-                    "dependencies": {
-                        "post-office-box": ["street-address"],
-                        "extended-address": ["street-address"]
-                    }
-                }
+                "id": { "$ref": "#/definitions/identifier" },
+                "address": { "$ref": "#/definitions/address" }
             }
         },
         "item": {
