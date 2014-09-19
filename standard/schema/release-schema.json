@@ -281,11 +281,9 @@
                     "description": "The amount of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories. This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
                     "type": ["number", "null"]
                 },
-                "publicHearingNotices": {
-                    "description": "A list of notices of any public hearings on this contract",
-                    "type": "array",
-                    "items": { "$ref": "#/definitions/notice" },
-                    "uniqueItems": true
+                "publicHearingNotice": {
+                    "description": "Public hearing notice for this contract",
+                    "$ref": "#/definitions/notice"
                 },
                 "strategicJustificiation": {
                     "description": "A description of the rationale for this procurement",

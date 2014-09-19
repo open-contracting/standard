@@ -256,11 +256,8 @@
                     "mergeStrategy": "ocdsVersion",
                     "type": ["number", "null"]
                 },
-                "publicHearingNotices": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": "array",
-                    "items": { "$ref": "#/definitions/notice" },
-                    "uniqueItems": true
+                "publicHearingNotice": {
+                    "$ref": "#/definitions/notice"
                 },
                 "strategicJustificiation": {
                     "mergeStrategy": "ocdsVersion",
