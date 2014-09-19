@@ -37,14 +37,14 @@
         },
         "awards": { 
             "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {"match_key": "awardID"},
+            "mergeOptions": {"idRef": "awardID"},
             "type": "array",
             "items": { "$ref": "#/definitions/award" },
             "uniqueItems": true
         },
         "contracts": { 
             "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {"match_key": "contractID"},
+            "mergeOptions": {"idRef": "contractID"},
             "type": "array",
             "items": {"$ref": "#/definitions/contract" },
             "uniqueItems": true
