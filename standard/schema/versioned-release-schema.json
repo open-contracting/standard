@@ -23,6 +23,7 @@
             "default": "en"
         },
         "buyer": { 
+            "mergeStrategy": "ocdsVersion",
             "$ref": "#/definitions/organization" 
         },
         "planning": { 
@@ -53,85 +54,70 @@
     },
     "required": ["ocid", "releaseID", "releaseDate", "releaseTag"],
     "definitions": {
-        "identifier": {
-            "type": "object",
-            "properties": {
-                "name": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": "string"
-                },
-                "scheme": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"],
-                    "format": "uri"
-                },
-                "uid": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "uri": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"],
-                    "format" : "uri"
-                }
-            },
-            "patternProperties": {
-                "^(name_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                }
-            },
-            "required": ["name"]
-        },
-        "address": {
-            "type": "object",
-            "properties": {
-                "post-office-box": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "extended-address": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "street-address": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "locality":{
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "region": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "postal-code": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "country-name": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                }
-            },
-            "patternProperties": {
-                "^(country-name_[A-Za-z]{2})$": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                }
-            },
-            "required": ["locality", "region", "country-name"],
-            "dependencies": {
-                "post-office-box": ["street-address"],
-                "extended-address": ["street-address"]
-            }
-        },
         "organization": {
             "type": "object",
             "properties": {
-                "id": { "$ref": "#/definitions/identifier" },
-                "address": { "$ref": "#/definitions/address" }
+                "id": { 
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "scheme": {
+                            "type": ["string", "null"],
+                            "format": "uri"
+                        },
+                        "uid": {
+                            "type": ["string", "null"]
+                        },
+                        "uri": {
+                            "type": ["string", "null"],
+                            "format" : "uri"
+                        }
+                    },
+                    "patternProperties": {
+                        "^(name_[A-Za-z]{2})$": {
+                            "type": ["string", "null"]
+                        }
+                    },
+                    "required": ["name"]
+                },
+                "address": { 
+                    "type": "object",
+                    "properties": {
+                        "post-office-box": {
+                            "type": ["string", "null"]
+                        },
+                        "extended-address": {
+                            "type": ["string", "null"]
+                        },
+                        "street-address": {
+                            "type": ["string", "null"]
+                        },
+                        "locality":{
+                            "type": ["string", "null"]
+                        },
+                        "region": {
+                            "type": ["string", "null"]
+                        },
+                        "postal-code": {
+                            "type": ["string", "null"]
+                        },
+                        "country-name": {
+                            "type": ["string", "null"]
+                        }
+                    },
+                    "patternProperties": {
+                        "^(country-name_[A-Za-z]{2})$": {
+                            "type": ["string", "null"]
+                        }
+                    },
+                    "required": ["locality", "region", "country-name"],
+                    "dependencies": {
+                        "post-office-box": ["street-address"],
+                        "extended-address": ["street-address"]
+                    }
+                }
             }
         },
         "item": {
@@ -369,6 +355,7 @@
                     "uniqueItems": true
                 },
                 "procuringEntity": { 
+                    "mergeStrategy": "ocdsVersion",
                     "$ref": "#/definitions/organization" 
                 },
                 "attachments": {
