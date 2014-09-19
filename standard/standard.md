@@ -100,19 +100,19 @@ A release can then contain elements within one or more of the following blocks:
 The blocks are described in more detail below
 
 ### Planning
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/planning"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/planning"></script>
 
 ### Tender
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/tender"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/tender"></script>
 
 ### Awards
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/award"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/award"></script>
 
 ### Contracts
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/contract"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/contract"></script>
 
 ### Performance
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/performance"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/performance"></script>
 
 ## Record data
 
@@ -135,40 +135,40 @@ The following data elements are used in a number of places throughout the standa
 
 ### Values
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/value"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/value"></script>
 
 ### Periods
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/period"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/period"></script>
 
 ### Attachments
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/attachment"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/attachment"></script>
 
 
 ### Organization
 
 Used for representing buyers, suppliers and bidders. We follow the IATI Organisation ID Standard for organisational identifiers.
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/organization"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/organization"></script>
 
 ### Items
 
 Used to itemsToBeProcured, itemsAwarded and itemsContracted
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/item"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/item"></script>
  
 ### Notices
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/notice"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/notice"></script>
  
 ### Milestones
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/milestone"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/milestone"></script>
 
 ### Amendment information
 
-<script src="/standard/static/docson/widget.js" data-schema="/standard/r/0__3__3/release-schema.json$/definitions/amendment"></script>
+<script src="/standard/static/docson/widget.js" data-schema="/standard/r/master/release-schema.json$/definitions/amendment"></script>
 
 #### A note on amendments
 
