@@ -102,15 +102,9 @@
             "required": ["name"]
         },
         "address": {
-            "description": "An Address following the convention of http://microformats.org/wiki/hcard (from http://json-schema.org/address)",
+            "description": "An address",
             "type": "object",
             "properties": {
-                "post-office-box": {
-                    "type": ["string", "null"]
-                },
-                "extended-address": {
-                    "type": ["string", "null"]
-                },
                 "street-address": {
                     "type": ["string", "null"]
                 },
@@ -131,11 +125,6 @@
                 "^(country-name_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-            },
-            "required": ["locality", "region", "country-name"],
-            "dependencies": {
-                "post-office-box": ["street-address"],
-                "extended-address": ["street-address"]
             }
         },
         "organization": {
