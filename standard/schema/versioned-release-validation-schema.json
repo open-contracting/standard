@@ -2454,7 +2454,7 @@
         }, 
         "address": {
             "patternProperties": {
-                "^(country-name_[A-Za-z]{2})$": {
+                "^(countryName_[A-Za-z]{2})$": {
                     "type": [
                         "string", 
                         "null"
@@ -2464,7 +2464,7 @@
             "required": [
                 "locality", 
                 "region", 
-                "country-name"
+                "countryName"
             ], 
             "type": "object", 
             "properties": {
@@ -2480,45 +2480,25 @@
                         "null"
                     ]
                 }, 
-                "extended-address": {
+                "streetAddress": {
                     "type": [
                         "string", 
                         "null"
                     ]
                 }, 
-                "post-office-box": {
+                "postalCode": {
                     "type": [
                         "string", 
                         "null"
                     ]
                 }, 
-                "street-address": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "postal-code": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "country-name": {
+                "countryName": {
                     "type": [
                         "string", 
                         "null"
                     ]
                 }
             }, 
-            "dependencies": {
-                "post-office-box": [
-                    "street-address"
-                ], 
-                "extended-address": [
-                    "street-address"
-                ]
-            }
         }, 
         "attachment": {
             "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
