@@ -83,13 +83,7 @@
         "address": {
             "type": "object",
             "properties": {
-                "post-office-box": {
-                    "type": ["string", "null"]
-                },
-                "extended-address": {
-                    "type": ["string", "null"]
-                },
-                "street-address": {
+                "streetAddress": {
                     "type": ["string", "null"]
                 },
                 "locality":{
@@ -98,23 +92,18 @@
                 "region": {
                     "type": ["string", "null"]
                 },
-                "postal-code": {
+                "postalCode": {
                     "type": ["string", "null"]
                 },
-                "country-name": {
+                "countryName": {
                     "type": ["string", "null"]
                 }
             },
             "patternProperties": {
-                "^(country-name_[A-Za-z]{2})$": {
+                "^(countryName_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
             },
-            "required": ["locality", "region", "country-name"],
-            "dependencies": {
-                "post-office-box": ["street-address"],
-                "extended-address": ["street-address"]
-            }
         },
         "organization": {
             "type": "object",
