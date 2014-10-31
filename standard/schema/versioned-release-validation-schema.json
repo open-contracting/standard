@@ -2461,31 +2461,8 @@
                     ]
                 }
             }, 
-            "required": [
-                "locality", 
-                "region", 
-                "countryName"
-            ], 
             "type": "object", 
             "properties": {
-                "locality": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "region": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "streetAddress": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
                 "postalCode": {
                     "type": [
                         "string", 
@@ -2497,8 +2474,26 @@
                         "string", 
                         "null"
                     ]
+                }, 
+                "streetAddress": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
+                "region": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
+                "locality": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
                 }
-            }, 
+            }
         }, 
         "attachment": {
             "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
