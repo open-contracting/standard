@@ -1567,6 +1567,35 @@
             ], 
             "type": "object", 
             "properties": {
+                "procurementMethod": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "Open", 
+                                    "Selective", 
+                                    "Limited", 
+                                    null
+                                ], 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ]
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "clarificationPeriod": {
                     "type": "object", 
                     "properties": {
@@ -1619,29 +1648,6 @@
                             "type": "array"
                         }
                     }
-                }, 
-                "numberOfBids": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "integer", 
-                                    "null"
-                                ]
-                            }
-                        }
-                    }, 
-                    "type": "array"
                 }, 
                 "notice": {
                     "type": "object", 
@@ -1946,6 +1952,29 @@
                         }
                     }
                 }, 
+                "numberOfBids": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "integer", 
+                                    "null"
+                                ]
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "attachments": {
                     "items": {
                         "properties": {
@@ -2231,35 +2260,6 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ]
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "method": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "enum": [
-                                    "Open", 
-                                    "Selective", 
-                                    "Limited", 
-                                    null
-                                ], 
                                 "type": [
                                     "string", 
                                     "null"
@@ -3118,6 +3118,35 @@
             ], 
             "type": "object", 
             "properties": {
+                "procurementMethod": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "Open", 
+                                    "Selective", 
+                                    "Limited", 
+                                    null
+                                ], 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ]
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "clarificationPeriod": {
                     "type": "object", 
                     "properties": {
@@ -3170,29 +3199,6 @@
                             "type": "array"
                         }
                     }
-                }, 
-                "numberOfBids": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "integer", 
-                                    "null"
-                                ]
-                            }
-                        }
-                    }, 
-                    "type": "array"
                 }, 
                 "notice": {
                     "type": "object", 
@@ -3497,6 +3503,29 @@
                         }
                     }
                 }, 
+                "numberOfBids": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "integer", 
+                                    "null"
+                                ]
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "attachments": {
                     "items": {
                         "properties": {
@@ -3782,35 +3811,6 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ]
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "method": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "enum": [
-                                    "Open", 
-                                    "Selective", 
-                                    "Limited", 
-                                    null
-                                ], 
                                 "type": [
                                     "string", 
                                     "null"
