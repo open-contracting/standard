@@ -24,7 +24,6 @@
         },
         "buyer": { 
             "mergeStrategy": "ocdsVersion",
-            "type": "object",
             "$ref": "#/definitions/organization" 
         },
         "planning": { 
@@ -144,15 +143,11 @@
                     "type": "object",
                     "properties": {
                         "amount": {
-                            "mergeStrategy": "ocdsVersion",
                             "type": ["number", "null"],
                             "minimum": 0
                         },
                         "currency": {
-                            "mergeStrategy": "ocdsVersion",
-                            "type": ["string", "null"],
-                            "minLength": 3,
-                            "maxLength": 3
+                            "type": ["string", "null"]
                         }
                     }
                 }
@@ -541,9 +536,7 @@
                 },
                 "currency": {
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"],
-                    "minLength": 3,
-                    "maxLength": 3
+                    "type": ["string", "null"]
                 }
             }
         },

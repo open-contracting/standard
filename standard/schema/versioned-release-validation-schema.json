@@ -93,12 +93,10 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "minLength": 3, 
                                 "type": [
                                     "string", 
                                     "null"
-                                ], 
-                                "maxLength": 3
+                                ]
                             }
                         }
                     }, 
@@ -647,12 +645,10 @@
                                         "type": "string"
                                     }, 
                                     "value": {
-                                        "minLength": 3, 
                                         "type": [
                                             "string", 
                                             "null"
-                                        ], 
-                                        "maxLength": 3
+                                        ]
                                     }
                                 }
                             }, 
@@ -778,23 +774,20 @@
                     "type": "object", 
                     "properties": {
                         "currency": {
-                            "minLength": 3, 
                             "type": [
                                 "string", 
                                 "null"
-                            ], 
-                            "mergeStrategy": "ocdsVersion", 
-                            "maxLength": 3
+                            ]
                         }, 
                         "amount": {
                             "minimum": 0, 
                             "type": [
                                 "number", 
                                 "null"
-                            ], 
-                            "mergeStrategy": "ocdsVersion"
+                            ]
                         }
-                    }
+                    }, 
+                    "__skip_validation": true
                 }, 
                 "classificationID": {
                     "type": [
@@ -1382,12 +1375,10 @@
                                         "type": "string"
                                     }, 
                                     "value": {
-                                        "minLength": 3, 
                                         "type": [
                                             "string", 
                                             "null"
-                                        ], 
-                                        "maxLength": 3
+                                        ]
                                     }
                                 }
                             }, 
@@ -2203,12 +2194,10 @@
                                         "type": "string"
                                     }, 
                                     "value": {
-                                        "minLength": 3, 
                                         "type": [
                                             "string", 
                                             "null"
-                                        ], 
-                                        "maxLength": 3
+                                        ]
                                     }
                                 }
                             }, 
@@ -2949,7 +2938,6 @@
                         "type": "string"
                     }, 
                     "value": {
-                        "type": "object", 
                         "$ref": "#/definitions/organization"
                     }
                 }
@@ -3744,12 +3732,10 @@
                                         "type": "string"
                                     }, 
                                     "value": {
-                                        "minLength": 3, 
                                         "type": [
                                             "string", 
                                             "null"
-                                        ], 
-                                        "maxLength": 3
+                                        ]
                                     }
                                 }
                             }, 
