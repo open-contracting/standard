@@ -35,12 +35,12 @@
         "buyer": {
             "title": "Buyer",
             "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
-            "$ref": "#/definitions/organization"
+            "$ref": "#/definitions/Organization"
         },
         "planning": { 
             "title": "Planning",
             "description": "Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract for, when and how.",
-            "$ref": "#/definitions/planning"
+            "$ref": "#/definitions/Planning"
         },
         "formationType": {
             "title": "Formation type",
@@ -51,14 +51,14 @@
         "tender": {
           	"title": "Tender",
             "description": "The activities undertaken in order to enter into a contract.",
-            "$ref": "#/definitions/tender"
+            "$ref": "#/definitions/Tender"
         },
         "awards": { "title": "Awards",
             "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "array",
             "mergeStrategy": "arrayMergeById",
             "mergeOptions": {"idRef": "awardID"},
-            "items": { "$ref": "#/definitions/award" },
+            "items": { "$ref": "#/definitions/Award" },
             "uniqueItems": true
         },
         "contracts": { "title": "Contracts",
@@ -66,15 +66,15 @@
             "type": "array",
             "mergeStrategy": "arrayMergeById",
             "mergeOptions": {"idRef": "contractID"},
-            "items": {"$ref": "#/definitions/contract" },
+            "items": {"$ref": "#/definitions/Contract" },
             "uniqueItems": true
         },
         "performance": { "title": "Performance",
-            "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.","$ref": "#/definitions/performance" }
+            "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.","$ref": "#/definitions/Performance" }
     },
     "required": ["ocid", "releaseID", "releaseDate", "releaseTag", "formationType"],
     "definitions": {
-        "identifier": {
+        "Identifier": {
             "type": "object",
             "properties": {
                 "name": {
@@ -101,7 +101,7 @@
             },
             "required": ["name"]
         },
-        "address": {
+        "Address": {
             "description": "An address",
             "type": "object",
             "properties": {
@@ -127,16 +127,16 @@
                 }
             }
         },
-        "organization": {
+        "Organization": {
             "title": "Organization",
             "description": "An organization.",
             "type": "object",
             "properties": {
-                "id": { "$ref": "#/definitions/identifier" },
-                "address": { "$ref": "#/definitions/address" }
+                "id": { "$ref": "#/definitions/Identifier" },
+                "address": { "$ref": "#/definitions/Address" }
             }
         },
-        "item": {
+        "Item": {
             "type": "object",
             "description": "A good, service, or work to be contracted.",
             "properties": {
@@ -171,7 +171,7 @@
                 },
                 "valuePerUnit": {
                     "description": "The value per unit of the item specified.",
-                    "$ref": "#/definitions/value"
+                    "$ref": "#/definitions/Value"
                 }
             },
             "patternProperties": {
@@ -183,7 +183,7 @@
                 }
             }
         },
-        "milestone": {
+        "Milestone": {
             "type": "object",
             "properties": {
                 "description": {
@@ -203,7 +203,7 @@
                 "attachments": {
                     "description": "List of documents associated with this milestone.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/attachment" }
+                    "items": { "$ref": "#/definitions/Attachment" }
                 }
             },
             "patternProperties": {
@@ -212,7 +212,7 @@
                 }
             }
         },
-        "performance": {
+        "Performance": {
             "type": "object",
             "title": "Performance",
             "description": "Information during the performance, or implementation stage of the contract.",
@@ -243,16 +243,16 @@
                 "milestones": {
                     "description": "As milestones are completed, milestone completions should be documented.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/milestone" }
+                    "items": { "$ref": "#/definitions/Milestone" }
                 },
                 "reports":{
                     "description": "Any additional reports that are part of the performance phase e.g. audit and evaluation reports.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/attachment"}
+                    "items": { "$ref": "#/definitions/Attachment"}
                 }
             }
         },
-        "planning": {
+        "Planning": {
             "title": "Planning",
             "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
             "type": "object",
@@ -272,7 +272,7 @@
                 },
                 "publicHearingNotice": {
                     "description": "Public hearing notice for this contract",
-                    "$ref": "#/definitions/notice"
+                    "$ref": "#/definitions/Notice"
                 },
                 "rationale": {
                     "description": "The rationale for the procurement",
@@ -281,7 +281,7 @@
                 "anticipatedMilestones": {
                     "description": "A list of anticipated milestones for the contract.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/milestone" }
+                    "items": { "$ref": "#/definitions/Milestone" }
                 }
             },
             "patternProperties": {
@@ -295,7 +295,7 @@
                 "budgetAmount": ["budgetDataPackageURI"]
             }
         },
-        "tender": {
+        "Tender": {
             "title": "Tender",
             "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.",
             "type": "object",
@@ -306,17 +306,17 @@
                     "description": "TenderID should always be the same as the OCID. It is included to make the flattened data structure more convenient.",
                     "type": "string"
                 },
-                "notice": { "$ref": "#/definitions/notice" },
+                "notice": { "$ref": "#/definitions/Notice" },
                 "itemsToBeProcured": {
                     "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
                     "type": "array",
                     "minItems": 1,
-                    "items": { "$ref": "#/definitions/item" },
+                    "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 },
                 "totalValue": {
                     "description": "The total estimated value of the procurement.",
-                    "$ref": "#/definitions/value"
+                    "$ref": "#/definitions/Value"
                 },
                 "method": {
                     "description": "Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)",
@@ -347,11 +347,11 @@
                 },
                 "tenderPeriod": {
                     "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
-                    "$ref": "#/definitions/period"
+                    "$ref": "#/definitions/Period"
                 },
                 "clarificationPeriod": {
                     "description": "The period during which clarification requests may be made and will be answered.",
-                    "$ref": "#/definitions/period"
+                    "$ref": "#/definitions/Period"
                 },
                 "clarifications": {
                     "description": "A Yes/No field as to whether clarifications were issued. Would expect clarifications to appear as amendments.",
@@ -359,7 +359,7 @@
                 },
                 "awardPeriod": {
                     "description": "The date or period on which an award is anticipated to be made.",
-                    "$ref": "#/definitions/period"
+                    "$ref": "#/definitions/Period"
                 },
                 "numberOfBidders": {
                     "description": "The number of unique bidders who participated in the tender",
@@ -372,17 +372,17 @@
                 "bidders": {
                     "description": "A list of all the companies who entered submissions for the tender.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/organization" },
+                    "items": { "$ref": "#/definitions/Organization" },
                     "uniqueItems": true
                 },
                 "procuringEntity": {
                     "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
-                    "$ref": "#/definitions/organization"
+                    "$ref": "#/definitions/Organization"
                 },
                 "attachments": {
                     "description": "All documents and attachments related to the tender.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/attachment" },
+                    "items": { "$ref": "#/definitions/Attachment" },
                     "uniqueItems": true
                 }
             },
@@ -399,7 +399,7 @@
 
             }
         },
-        "award": {
+        "Award": {
             "title": "Award",
             "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "object",
@@ -410,7 +410,7 @@
                     "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
                 },
-                "notice": { "$ref": "#/definitions/notice" },
+                "notice": { "$ref": "#/definitions/Notice" },
                 "awardDate": {
                     "title": "Award date",
                     "description": "The date of the contract award.",
@@ -419,24 +419,24 @@
                 },
                 "awardValue": {
                     "description": "The total value of this award. There may be more than one award per procurement.",
-                    "$ref": "#/definitions/value"
+                    "$ref": "#/definitions/Value"
                 },
                 "suppliers": {
                     "description": "The suppliers awarded this award.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/organization" },
+                    "items": { "$ref": "#/definitions/Organization" },
                     "uniqueItems": true
                 },
                 "itemsAwarded": {
                     "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
                     "type": "array",
                     "minItems": 1,
-                    "items": { "$ref": "#/definitions/item" },
+                    "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 }
             }
         },
-        "contract": {
+        "Contract": {
             "type": "object",
             "title": "Contract",
             "description": "Information regarding the signed contract between the buyer and supplier(s).",
@@ -454,30 +454,30 @@
                 },
                 "contractPeriod": {
                     "description": "The start and end date for the contract.",
-                    "$ref": "#/definitions/period"
+                    "$ref": "#/definitions/Period"
                 },
                 "contractValue": {
                     "description": "The total value of this contract.",
-                    "$ref": "#/definitions/value"
+                    "$ref": "#/definitions/Value"
                 },
                 "isAmendment": {
                     "title": "Is this an amendment to the contract?",
                     "description": "If true, then amendment information should be provided.",
                     "type": ["boolean", "null"]
                 },
-                "amendment": { "$ref": "#/definitions/amendment" },
+                "amendment": { "$ref": "#/definitions/Amendment" },
                 "itemsContracted": {
                     "description": "(Optional) The goods and services in this contract. If the items are the same as the award do not repeat.",
                     "type": "array",
                     "minItems": 1,
-                    "items": { "$ref": "#/definitions/item" },
+                    "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 },
                 "deliverables": {
                     "description": "Deliverables or milestones included in the contract.",
                     "type": "array",
                     "minItems": 1,
-                    "items": { "$ref": "#/definitions/deliverable" },
+                    "items": { "$ref": "#/definitions/Deliverable" },
                     "uniqueItems": true
                 },
                 "signatureDate": {
@@ -488,12 +488,12 @@
                 "attachments": {
                     "description": "All documents and attachments related to the contract.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/attachment" },
+                    "items": { "$ref": "#/definitions/Attachment" },
                     "uniqueItems": true
                 }
             }
         },
-        "notice": {
+        "Notice": {
             "type": "object",
             "title": "Notice",
             "description": "The notice is a published document that notifies the public at various stages of the contracting process.",
@@ -521,10 +521,10 @@
                     "type": ["string", "null"],
                     "type": ["boolean", "null"]
                 },
-                "amendment": { "$ref": "#/definitions/amendment" }
+                "amendment": { "$ref": "#/definitions/Amendment" }
             }
         },
-        "amendment": {
+        "Amendment": {
             "type": "object",
             "title": "Amendment information",
             "properties": {
@@ -542,7 +542,7 @@
                 }
             }
         },
-        "period": {
+        "Period": {
             "type": "object",
             "title": "Period",
             "properties": {
@@ -558,7 +558,7 @@
                 }
             }
         },
-        "attachment": {
+        "Attachment": {
             "type": "object",
             "title": "Attachment",
             "properties": {
@@ -583,7 +583,7 @@
                 }
             }
         },
-        "value": {
+        "Value": {
             "type": "object",
             "properties": {
                 "amount": {
@@ -597,7 +597,7 @@
                 }
             }
         },
-        "deliverable": {
+        "Deliverable": {
             "type": "object",
             "title": "Deliverable",
             "properties": {
@@ -612,7 +612,7 @@
                 },
                 "attachment": {
                     "description": "Attachment describing deliverable.",
-                    "$ref": "#/definitions/attachment"
+                    "$ref": "#/definitions/Attachment"
                 }
             },
             "patternProperties": {
