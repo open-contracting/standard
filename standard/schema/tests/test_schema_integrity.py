@@ -34,13 +34,22 @@ def test_versioned_release_schema_and_release_schema_types_are_in_sync():
         versioned_release = json.loads(f.read())
 
     def recurse(original, should_be_equal, k):
-        keywords_to_ignore = ["title", "description", "mergeStrategy", "$ref"]
+        keywords_to_not_recurse = ["title",
+                                   "description",
+                                   "mergeStrategy",
+                                   "$ref",
+                                   "__comment"]
+
         if isinstance(original, dict):
-            for k in original:
-                if k not in keywords_to_ignore:
-                    recurse(original[k], should_be_equal[k], k)
+            if original.get("__skip_validation"):
+                print "skipping validation for %s" % original
+            else:
+                for k in original:
+                    if k not in keywords_to_not_recurse:
+                        recurse(original[k], should_be_equal[k], k)
         else:
             if k in ['type', 'enum']:
                 assert original == should_be_equal
 
     recurse(release, versioned_release, None)
+    recurse(versioned_release, release, None)
