@@ -477,20 +477,13 @@
                 },
                 "amendment": { "$ref": "#/definitions/Amendment" },
                 "itemsContracted": {
-                    "description": "(Optional) The goods and services in this contract. If the items are the same as the award do not repeat.",
+                    "description": "(Optional) The goods, services, and any intangible outcomes in this contract. If the items are the same as the award do not repeat.",
                     "type": "array",
                     "minItems": 1,
                     "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 },
-                "deliverables": {
-                    "description": "Deliverables or milestones included in the contract.",
-                    "type": "array",
-                    "minItems": 1,
-                    "items": { "$ref": "#/definitions/Deliverable" },
-                    "uniqueItems": true
-                },
-                "signatureDate": {
+                "dateSigned": {
                     "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
                     "type": ["string", "null"],
                     "format": "date-time"
@@ -605,30 +598,6 @@
                 },
                 "currency": {
                     "description": "The currency in 3-letter ISO 4217 format.",
-                    "type": ["string", "null"]
-                }
-            }
-        },
-        "Deliverable": {
-            "type": "object",
-            "title": "Deliverable",
-            "properties": {
-                "description": {
-                    "description": "A description of the deliverable.",
-                    "type": ["string", "null"]
-                },
-                "dueDate": {
-                    "description": "Date deliverable is due.",
-                    "type": ["string", "null"],
-                    "format": "date-time"
-                },
-                "attachment": {
-                    "description": "Attachment describing deliverable.",
-                    "$ref": "#/definitions/Attachment"
-                }
-            },
-            "patternProperties": {
-                "^(description_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
             }

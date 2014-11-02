@@ -355,30 +355,6 @@
                     }, 
                     "type": "array"
                 }, 
-                "signatureDate": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "format": "date-time"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
                 "isAmendment": {
                     "items": {
                         "properties": {
@@ -532,7 +508,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "deliverables": {
+                "dateSigned": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -546,12 +522,11 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "minItems": 1, 
-                                "items": {
-                                    "$ref": "#/definitions/Deliverable"
-                                }, 
-                                "uniqueItems": true, 
-                                "type": "array"
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "format": "date-time"
                             }
                         }
                     }, 
@@ -1040,36 +1015,6 @@
                 }, 
                 "id": {
                     "type": "string"
-                }
-            }
-        }, 
-        "Deliverable": {
-            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
-            "patternProperties": {
-                "^(description_[A-Za-z]{2})$": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }
-            }, 
-            "type": "object", 
-            "properties": {
-                "attachment": {
-                    "$ref": "#/definitions/Attachment"
-                }, 
-                "description": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "dueDate": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "format": "date-time"
                 }
             }
         }, 

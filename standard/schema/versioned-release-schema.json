@@ -427,14 +427,7 @@
                     "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 },
-                "deliverables": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": "array",
-                    "minItems": 1,
-                    "items": { "$ref": "#/definitions/Deliverable" },
-                    "uniqueItems": true
-                },
-                "signatureDate": {
+                "dateSigned": {
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
                     "format": "date-time"
@@ -537,27 +530,6 @@
                 },
                 "currency": {
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                }
-            }
-        },
-        "Deliverable": {
-            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.",
-            "type": "object",
-            "properties": {
-                "description": {
-                    "type": ["string", "null"]
-                },
-                "dueDate": {
-                    "type": ["string", "null"],
-                    "format": "date-time"
-                },
-                "attachment": {
-                    "$ref": "#/definitions/Attachment"
-                }
-            },
-            "patternProperties": {
-                "^(description_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
             }
