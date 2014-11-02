@@ -355,6 +355,31 @@
                     }, 
                     "type": "array"
                 }, 
+                "items": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "minItems": 1, 
+                                "items": {
+                                    "$ref": "#/definitions/Item"
+                                }, 
+                                "uniqueItems": true, 
+                                "type": "array"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "isAmendment": {
                     "items": {
                         "properties": {
@@ -482,31 +507,6 @@
                             "type": "array"
                         }
                     }
-                }, 
-                "itemsContracted": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "minItems": 1, 
-                                "items": {
-                                    "$ref": "#/definitions/Item"
-                                }, 
-                                "uniqueItems": true, 
-                                "type": "array"
-                            }
-                        }
-                    }, 
-                    "type": "array"
                 }, 
                 "dateSigned": {
                     "items": {
@@ -714,31 +714,6 @@
             ], 
             "type": "object", 
             "properties": {
-                "itemsAwarded": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "minItems": 1, 
-                                "items": {
-                                    "$ref": "#/definitions/Item"
-                                }, 
-                                "uniqueItems": true, 
-                                "type": "array"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
                 "notice": {
                     "type": "object", 
                     "properties": {
@@ -912,6 +887,31 @@
                             "type": "array"
                         }
                     }
+                }, 
+                "items": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "minItems": 1, 
+                                "items": {
+                                    "$ref": "#/definitions/Item"
+                                }, 
+                                "uniqueItems": true, 
+                                "type": "array"
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }, 
                 "suppliers": {
                     "items": {
@@ -1891,6 +1891,31 @@
                     }, 
                     "type": "array"
                 }, 
+                "items": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "minItems": 1, 
+                                "items": {
+                                    "$ref": "#/definitions/Item"
+                                }, 
+                                "uniqueItems": true, 
+                                "type": "array"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "value": {
                     "type": "object", 
                     "properties": {
@@ -1991,31 +2016,6 @@
                                 "items": {
                                     "$ref": "#/definitions/Attachment"
                                 }, 
-                                "type": "array"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "itemsToBeProcured": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "minItems": 1, 
-                                "items": {
-                                    "$ref": "#/definitions/Item"
-                                }, 
-                                "uniqueItems": true, 
                                 "type": "array"
                             }
                         }
@@ -3421,6 +3421,31 @@
                     }, 
                     "type": "array"
                 }, 
+                "items": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "minItems": 1, 
+                                "items": {
+                                    "$ref": "#/definitions/Item"
+                                }, 
+                                "uniqueItems": true, 
+                                "type": "array"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "value": {
                     "type": "object", 
                     "properties": {
@@ -3521,31 +3546,6 @@
                                 "items": {
                                     "$ref": "#/definitions/Attachment"
                                 }, 
-                                "type": "array"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "itemsToBeProcured": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "minItems": 1, 
-                                "items": {
-                                    "$ref": "#/definitions/Item"
-                                }, 
-                                "uniqueItems": true, 
                                 "type": "array"
                             }
                         }

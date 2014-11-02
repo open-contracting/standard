@@ -276,7 +276,7 @@
                     "type": "string"
                 },
                 "notice": { "$ref": "#/definitions/Notice" },
-                "itemsToBeProcured": {
+                "items": {
                     "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "minItems": 1,
@@ -389,7 +389,7 @@
                     "items": { "$ref": "#/definitions/Organization" },
                     "uniqueItems": true
                 },
-                "itemsAwarded": {
+                "items": {
                     "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "minItems": 1,
@@ -420,7 +420,7 @@
                     "type": ["boolean", "null"]
                 },
                 "amendment": { "$ref": "#/definitions/Amendment" },
-                "itemsContracted": {
+                "items": {
                     "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "minItems": 1,
