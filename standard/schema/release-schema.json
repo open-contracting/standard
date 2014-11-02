@@ -69,8 +69,11 @@
             "items": {"$ref": "#/definitions/Contract" },
             "uniqueItems": true
         },
-        "performance": { "title": "Performance",
-            "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.","$ref": "#/definitions/Performance" }
+        "implementation": { 
+            "title": "Implementation",
+            "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.",
+            "$ref": "#/definitions/Implementation" 
+        }
     },
     "required": ["ocid", "id", "date", "tag", "formationType"],
     "definitions": {
@@ -212,10 +215,10 @@
                 }
             }
         },
-        "Performance": {
+        "Implementation": {
             "type": "object",
-            "title": "Performance",
-            "description": "Information during the performance, or implementation stage of the contract.",
+            "title": "Implementation",
+            "description": "Information during the performance / implementation stage of the contract.",
             "properties": {
                 "transactions": {
                     "description": "A list of the spending transactions made against this contract",
@@ -250,7 +253,7 @@
                     "items": { "$ref": "#/definitions/Milestone" }
                 },
                 "reports":{
-                    "description": "Any additional reports that are part of the performance phase e.g. audit and evaluation reports.",
+                    "description": "Any additional reports that are part of the implementation phase e.g. audit and evaluation reports.",
                     "type": "array",
                     "items": { "$ref": "#/definitions/Attachment"}
                 }

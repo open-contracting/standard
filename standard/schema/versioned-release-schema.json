@@ -50,7 +50,7 @@
             "items": {"$ref": "#/definitions/Contract" },
             "uniqueItems": true
         },
-        "performance": { "$ref": "#/definitions/Performance" }
+        "implementation": { "$ref": "#/definitions/Implementation" }
     },
     "required": ["ocid", "id", "date", "tag", "formationType"],
     "definitions": {
@@ -187,7 +187,7 @@
                 }
             }
         },
-        "Performance": {
+        "Implementation": {
             "type": "object",
             "properties": {
                 "transactions": {

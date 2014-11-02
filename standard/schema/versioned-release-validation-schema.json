@@ -250,88 +250,10 @@
                 }
             }
         }, 
-        "Contract": {
-            "required": [
-                "id"
-            ], 
+        "Implementation": {
             "type": "object", 
             "properties": {
-                "amendment": {
-                    "type": "object", 
-                    "properties": {
-                        "date": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "format": "date-time"
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }, 
-                        "fields": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ]
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }, 
-                        "justification": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ]
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }
-                    }
-                }, 
-                "attachments": {
+                "milestones": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -345,7 +267,29 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "uniqueItems": true, 
+                                "items": {
+                                    "$ref": "#/definitions/Milestone"
+                                }, 
+                                "type": "array"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "reports": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
                                 "items": {
                                     "$ref": "#/definitions/Attachment"
                                 }, 
@@ -355,7 +299,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "items": {
+                "transactions": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -369,194 +313,41 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "minItems": 1, 
                                 "items": {
-                                    "$ref": "#/definitions/Item"
+                                    "required": [
+                                        "dataPackageURI", 
+                                        "id"
+                                    ], 
+                                    "type": "object", 
+                                    "properties": {
+                                        "dataPackageURI": {
+                                            "type": "string", 
+                                            "format": "uri"
+                                        }, 
+                                        "amount": {
+                                            "type": [
+                                                "number", 
+                                                "null"
+                                            ]
+                                        }, 
+                                        "id": {
+                                            "type": "string"
+                                        }
+                                    }, 
+                                    "dependencies": {
+                                        "amount": [
+                                            "dataPackageURI"
+                                        ], 
+                                        "id": [
+                                            "dataPackageURI"
+                                        ]
+                                    }
                                 }, 
-                                "uniqueItems": true, 
                                 "type": "array"
                             }
                         }
                     }, 
                     "type": "array"
-                }, 
-                "isAmendment": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "boolean", 
-                                    "null"
-                                ]
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "period": {
-                    "type": "object", 
-                    "properties": {
-                        "startDate": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "format": "date-time"
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }, 
-                        "endDate": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "format": "date-time"
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }
-                    }
-                }, 
-                "value": {
-                    "type": "object", 
-                    "properties": {
-                        "currency": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ]
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }, 
-                        "amount": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "minimum": 0, 
-                                        "type": [
-                                            "number", 
-                                            "null"
-                                        ]
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }
-                    }
-                }, 
-                "dateSigned": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "format": "date-time"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "awardID": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ]
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "id": {
-                    "type": "string"
                 }
             }
         }, 
@@ -1406,6 +1197,360 @@
                 }
             }
         }, 
+        "Contract": {
+            "required": [
+                "id"
+            ], 
+            "type": "object", 
+            "properties": {
+                "amendment": {
+                    "type": "object", 
+                    "properties": {
+                        "date": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "format": "date-time"
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }, 
+                        "fields": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ]
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }, 
+                        "justification": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ]
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }
+                    }
+                }, 
+                "attachments": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "uniqueItems": true, 
+                                "items": {
+                                    "$ref": "#/definitions/Attachment"
+                                }, 
+                                "type": "array"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "items": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "minItems": 1, 
+                                "items": {
+                                    "$ref": "#/definitions/Item"
+                                }, 
+                                "uniqueItems": true, 
+                                "type": "array"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "isAmendment": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "boolean", 
+                                    "null"
+                                ]
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "period": {
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "format": "date-time"
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }, 
+                        "endDate": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "format": "date-time"
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }
+                    }
+                }, 
+                "value": {
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ]
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }, 
+                        "amount": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "minimum": 0, 
+                                        "type": [
+                                            "number", 
+                                            "null"
+                                        ]
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }
+                    }
+                }, 
+                "dateSigned": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "format": "date-time"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "awardID": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ]
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "id": {
+                    "type": "string"
+                }
+            }
+        }, 
+        "Milestone": {
+            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
+            "patternProperties": {
+                "^(description_[A-Za-z]{2})$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }
+            }, 
+            "type": "object", 
+            "properties": {
+                "date": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ], 
+                    "format": "date-time"
+                }, 
+                "dateType": {
+                    "enum": [
+                        "due", 
+                        "completed", 
+                        null
+                    ], 
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
+                "description": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
+                "attachments": {
+                    "items": {
+                        "$ref": "#/definitions/Attachment"
+                    }, 
+                    "type": "array"
+                }
+            }
+        }, 
         "Tender": {
             "patternProperties": {
                 "^(methodJustification_[A-Za-z]{2})$": {
@@ -2210,151 +2355,6 @@
                 }
             }
         }, 
-        "Milestone": {
-            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
-            "patternProperties": {
-                "^(description_[A-Za-z]{2})$": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }
-            }, 
-            "type": "object", 
-            "properties": {
-                "date": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "format": "date-time"
-                }, 
-                "dateType": {
-                    "enum": [
-                        "due", 
-                        "completed", 
-                        null
-                    ], 
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "description": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "attachments": {
-                    "items": {
-                        "$ref": "#/definitions/Attachment"
-                    }, 
-                    "type": "array"
-                }
-            }
-        }, 
-        "Performance": {
-            "type": "object", 
-            "properties": {
-                "milestones": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "items": {
-                                    "$ref": "#/definitions/Milestone"
-                                }, 
-                                "type": "array"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "reports": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "items": {
-                                    "$ref": "#/definitions/Attachment"
-                                }, 
-                                "type": "array"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "transactions": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "items": {
-                                    "required": [
-                                        "dataPackageURI", 
-                                        "id"
-                                    ], 
-                                    "type": "object", 
-                                    "properties": {
-                                        "dataPackageURI": {
-                                            "type": "string", 
-                                            "format": "uri"
-                                        }, 
-                                        "amount": {
-                                            "type": [
-                                                "number", 
-                                                "null"
-                                            ]
-                                        }, 
-                                        "id": {
-                                            "type": "string"
-                                        }
-                                    }, 
-                                    "dependencies": {
-                                        "amount": [
-                                            "dataPackageURI"
-                                        ], 
-                                        "id": [
-                                            "dataPackageURI"
-                                        ]
-                                    }
-                                }, 
-                                "type": "array"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }
-            }
-        }, 
         "Organization": {
             "type": "object", 
             "properties": {
@@ -2831,11 +2831,7 @@
             }, 
             "type": "array"
         }, 
-        "date": {
-            "type": "string", 
-            "format": "date-time"
-        }, 
-        "performance": {
+        "implementation": {
             "type": "object", 
             "properties": {
                 "milestones": {
@@ -2935,6 +2931,10 @@
                     "type": "array"
                 }
             }
+        }, 
+        "date": {
+            "type": "string", 
+            "format": "date-time"
         }, 
         "tender": {
             "patternProperties": {
