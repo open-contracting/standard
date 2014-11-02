@@ -6,14 +6,14 @@
         "ocid": {
             "type": "string"
         },
-        "releaseID": {
+        "id": {
             "type": "string"
         },
-        "releaseDate": {
+        "date": {
             "type": "string",
             "format": "date-time"
         },
-        "releaseTag": {
+        "tag": {
             "type": "string",
             "enum": ["planning", "tenderNotice", "awardNotice", "contractSignature", "contractAmendment", "report", "spending", "terminationNotice", "compiled"]
         },
@@ -38,21 +38,21 @@
         },
         "awards": { 
             "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {"idRef": "awardID"},
+            "mergeOptions": {"idRef": "id"},
             "type": "array",
             "items": { "$ref": "#/definitions/Award" },
             "uniqueItems": true
         },
         "contracts": { 
             "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {"idRef": "contractID"},
+            "mergeOptions": {"idRef": "id"},
             "type": "array",
             "items": {"$ref": "#/definitions/Contract" },
             "uniqueItems": true
         },
         "performance": { "$ref": "#/definitions/Performance" }
     },
-    "required": ["ocid", "releaseID", "releaseDate", "releaseTag"],
+    "required": ["ocid", "id", "date", "tag", "formationType"],
     "definitions": {
         "Identifier": {
             "type": "object",
@@ -196,21 +196,22 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "transactionDataPackageURI": {
-                                "mergeStrategy": "ocdsVersion",
+                            "dataPackageURI": {
                                 "type": "string",
                                 "format": "uri"
                             },
-                            "transactionID": {
-                                "mergeStrategy": "ocdsVersion",
+                            "id": {
                                 "type": "string"
                             },
-                            "transactionAmount": {
-                                "mergeStrategy": "ocdsVersion",
+                            "amount": {
                                 "type": ["number", "null"]
                             }
                         },
-                        "required": ["transactionDataPackageURI", "transactionID"]
+                        "required": ["dataPackageURI", "id"],
+                        "dependencies": {
+                            "id": ["dataPackageURI"],
+                            "amount": ["dataPackageURI"]
+                        }
                     }
                 },
                 "milestones": {
@@ -228,22 +229,27 @@
         "Planning": {
             "type": "object",
             "properties": {
-                "budgetDataPackageURI": {
+                "budget": {
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"],
-                    "format": "uri"
+                    "type": "object",
+                    "properties": {
+                        "dataPackageURI": {
+                            "type": ["string", "null"],
+                            "format": "uri"
+                        },
+                        "id": {
+                            "type": ["string", "null"]
+                        },
+                        "amount": {
+                            "type": ["number", "null"]
+                        }
+                    },
+                    "dependencies": {
+                        "id": ["dataPackageURI"],
+                        "amount": ["dataPackageURI"]
+                    }
                 },
-                "budgetID": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "budgetAmount": {
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["number", "null"]
-                },
-                "publicHearingNotice": {
-                    "$ref": "#/definitions/Notice"
-                },
+                "publicHearingNotice": { "$ref": "#/definitions/Notice" },
                 "rationale": {
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
@@ -259,18 +265,13 @@
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 }
-            },
-            
-            "dependencies": {
-                "budgetID": ["budgetDataPackageURI"],
-                "budgetAmount": ["budgetDataPackageURI"]
             }
         },
         "Tender": {
             "type": "object",
-            "required": ["tenderID"],
+            "required": ["id"],
             "properties": {
-                "tenderID": {
+                "id": {
                     "mergeStrategy": "ocdsVersion",
                     "type": "string"
                 },
@@ -282,7 +283,7 @@
                     "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 },
-                "totalValue": {
+                "value": {
                     "$ref": "#/definitions/Value"
                 },
                 "procurementMethod": {
@@ -368,18 +369,18 @@
         },
         "Award": {
             "type": "object",
-            "required": ["awardID"],
+            "required": ["id"],
             "properties": {
-                "awardID": { 
+                "id": { 
                     "type": "string"
                 },
                 "notice": { "$ref": "#/definitions/Notice" },
-                "awardDate": {
+                "date": {
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
                     "format": "date-time"
                 },
-                "awardValue": {
+                "value": {
                     "$ref": "#/definitions/Value"
                 },
                 "suppliers": {
@@ -399,19 +400,19 @@
         },
         "Contract": {
             "type": "object",
-            "required": ["contractID"],
+            "required": ["id"],
             "properties": {
-                "contractID": { 
+                "id": { 
                     "type": "string"
                 },
                 "awardID": {
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
-                "contractPeriod": {
+                "period": {
                     "$ref": "#/definitions/Period"
                 },
-                "contractValue": {
+                "value": {
                     "$ref": "#/definitions/Value"
                 },
                 "isAmendment": {
@@ -458,7 +459,7 @@
                     "type": ["string", "null"],
                     "format": "uri"
                 },
-                "publishedDate": {
+                "date": {
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
                     "format": "date-time"
@@ -474,12 +475,12 @@
         "Amendment": {
             "type": "object",
             "properties": {
-                "amendmentDate": {
+                "date": {
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
                     "format": "date-time"
                 },
-                "amendedFields": {
+                "fields": {
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },

@@ -9,18 +9,18 @@
             "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/0__3__2/#defining-a-unique-contracting-process",
             "type": "string"
         },
-        "releaseID": {
+        "id": {
             "title": "Release ID",
             "description": "A unique identifier that identifies this release. A releaseID must be unique within a release-package and must not containt # or / characters.",
             "type": "string"
         },
-        "releaseDate": {
+        "date": {
             "title": "Release Date",
             "description": "The date this information is released, it may well be the same as the parent publishedDate, it must not be later than the publishedDate from the parent package. It is used to determine merge order.",
             "type": "string",
             "format": "date-time"
         },
-        "releaseTag": {
+        "tag": {
             "title": "Release Tag",
             "description": "A tag that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for for advanced validation when certain kinds of releases should contain certain fields. See the codelist guidance for definitions of each tag.",
             "type": "string",
@@ -57,7 +57,7 @@
             "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "array",
             "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {"idRef": "awardID"},
+            "mergeOptions": {"idRef": "id"},
             "items": { "$ref": "#/definitions/Award" },
             "uniqueItems": true
         },
@@ -65,14 +65,14 @@
             "description": "Information from the contract creation phase of the procurement process.",
             "type": "array",
             "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {"idRef": "contractID"},
+            "mergeOptions": {"idRef": "id"},
             "items": {"$ref": "#/definitions/Contract" },
             "uniqueItems": true
         },
         "performance": { "title": "Performance",
             "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.","$ref": "#/definitions/Performance" }
     },
-    "required": ["ocid", "releaseID", "releaseDate", "releaseTag", "formationType"],
+    "required": ["ocid", "id", "date", "tag", "formationType"],
     "definitions": {
         "Identifier": {
             "type": "object",
@@ -85,7 +85,7 @@
                     "type": ["string", "null"],
                     "format": "uri"
                 },
-                "uid": {
+                    "uid": {
                     "description": "The unique ID for this entity under the given ID scheme.",
                     "type": ["string", "integer", "null"]
                 },
@@ -223,21 +223,25 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "transactionDataPackageURI": {
+                            "dataPackageURI": {
                                 "description": "The link to the budget data package (called a budget data package, but includes budget and spending data), as defined by http://github.com/openspending/budget-data-package",
                                 "type": "string",
                                 "format": "uri"
                             },
-                            "transactionID": {
+                            "id": {
                                 "description": "The ID of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories",
                                 "type": "string"
                             },
-                            "transactionAmount": {
+                            "amount": {
                                 "description": "The amount of the transaction as described in the budget data package (https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories). This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
                                 "type": ["number", "null"]
                             }
                         },
-                        "required": ["transactionDataPackageURI", "transactionID"]
+                        "required": ["dataPackageURI", "id"],
+                        "dependencies": {
+                            "id": ["dataPackageURI"],
+                            "amount": ["dataPackageURI"]
+                        }
                     }
                 },
                 "milestones": {
@@ -257,18 +261,29 @@
             "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
             "type": "object",
             "properties": {
-                "budgetDataPackageURI": {
-                    "description": "The link to the budget data package, as defined by http://github.com/openspending/budget-data-package",
-                    "type": ["string", "null"],
-                    "format": "uri"
-                },
-                "budgetID": {
-                    "description": "The ID of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories",
-                    "type": ["string", "null"]
-                },
-                "budgetAmount": {
-                    "description": "The amount of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories. This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
-                    "type": ["number", "null"]
+                "budget": {
+                    "type": "object",
+                    "title": "Budget",
+                    "description": "Information about the budget item that this procurement relates to.",
+                    "properties": {
+                        "dataPackageURI": {
+                            "description": "The link to the budget data package, as defined by http://github.com/openspending/budget-data-package",
+                            "type": ["string", "null"],
+                            "format": "uri"
+                        },
+                        "id": {
+                            "description": "The ID of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories",
+                            "type": ["string", "null"]
+                        },
+                        "amount": {
+                            "description": "The amount of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories. This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
+                            "type": ["number", "null"]
+                        }
+                    },
+                    "dependencies": {
+                        "id": ["dataPackageURI"],
+                        "amount": ["dataPackageURI"]
+                    }
                 },
                 "publicHearingNotice": {
                     "description": "Public hearing notice for this contract",
@@ -288,20 +303,15 @@
                 "^(strategicJustificiation_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-            },
-
-            "dependencies": {
-                "budgetID": ["budgetDataPackageURI"],
-                "budgetAmount": ["budgetDataPackageURI"]
             }
         },
         "Tender": {
             "title": "Tender",
             "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.",
             "type": "object",
-            "required": ["tenderID"],
+            "required": ["id"],
             "properties": {
-                "tenderID": {
+                "id": {
                     "title": "Tender ID",
                     "description": "TenderID should always be the same as the OCID. It is included to make the flattened data structure more convenient.",
                     "type": "string"
@@ -314,7 +324,7 @@
                     "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 },
-                "totalValue": {
+                "value": {
                     "description": "The total estimated value of the procurement.",
                     "$ref": "#/definitions/Value"
                 },
@@ -403,21 +413,21 @@
             "title": "Award",
             "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "object",
-            "required": ["awardID"],
+            "required": ["id"],
             "properties": {
-                "awardID": {
+                "id": {
                     "title": "Award ID",
                     "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
                 },
                 "notice": { "$ref": "#/definitions/Notice" },
-                "awardDate": {
+                "date": {
                     "title": "Award date",
                     "description": "The date of the contract award.",
                     "type": ["string", "null"],
                     "format": "date-time"
                 },
-                "awardValue": {
+                "value": {
                     "description": "The total value of this award. There may be more than one award per procurement.",
                     "$ref": "#/definitions/Value"
                 },
@@ -440,23 +450,23 @@
             "type": "object",
             "title": "Contract",
             "description": "Information regarding the signed contract between the buyer and supplier(s).",
-            "required": ["contractID"],
+            "required": ["id"],
             "properties": {
-                "contractID": {
+                "id": {
                     "title": "Contract ID",
                     "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have contractID 1 & contractID 2 and ocid DEF can also have contractID 1 & 2. But if it is a different contract, ocid cannot have contractID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
                 },
                 "awardID": {
                     "title": "Award ID",
-                    "description": "The awardID against which this contract is being issued.",
+                    "description": "The award.id against which this contract is being issued.",
                     "type": ["string", "null"]
                 },
-                "contractPeriod": {
+                "period": {
                     "description": "The start and end date for the contract.",
                     "$ref": "#/definitions/Period"
                 },
-                "contractValue": {
+                "value": {
                     "description": "The total value of this contract.",
                     "$ref": "#/definitions/Value"
                 },
@@ -509,7 +519,7 @@
                     "type": ["string", "null"],
                     "format": "uri"
                 },
-                "publishedDate": {
+                "date": {
                     "title": "Notice published date",
                     "description": "The date this version of the notice was published. In the case of notice amendments, it is the date that reflects to this version of the data.",
                     "type": ["string", "null"],
@@ -528,11 +538,13 @@
             "type": "object",
             "title": "Amendment information",
             "properties": {
-                "amendmentDate": {
+                "date": {
+                    "title": "Amendment Date",
                     "type": ["string", "null"],
                     "format": "date-time"
                 },
-                "amendedFields": {
+                "fields": {
+                    "title": "Amended fields",
                     "description": "Comma-seperated list of affected fields.",
                     "type": ["string", "null"]
                 },
