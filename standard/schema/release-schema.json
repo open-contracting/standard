@@ -205,10 +205,13 @@
                     "type": ["string", "null"],
                     "enum": ["due", "completed", null]
                 },
-                "attachments": {
+                "documents": {
                     "description": "List of documents associated with this milestone.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/Attachment" }
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": {"idRef": "id"},
+                    "items": { "$ref": "#/definitions/Document" },
+                    "uniqueItems": true
                 }
             },
             "patternProperties": {
@@ -254,10 +257,13 @@
                     "type": "array",
                     "items": { "$ref": "#/definitions/Milestone" }
                 },
-                "reports":{
-                    "description": "Any additional reports that are part of the implementation phase e.g. audit and evaluation reports.",
+                "documents":{
+                    "description": "Documents and reports that are part of the implementation phase e.g. audit and evaluation reports.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/Attachment"}
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": {"idRef": "id"},
+                    "items": { "$ref": "#/definitions/Document" },
+                    "uniqueItems": true
                 }
             }
         },
@@ -324,7 +330,6 @@
                     "description": "An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.",
                     "type": "string"
                 },
-                "notice": { "$ref": "#/definitions/Notice" },
                 "items": {
                     "title": "Items to be procured",
                     "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
@@ -398,10 +403,12 @@
                     "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
                     "$ref": "#/definitions/Organization"
                 },
-                "attachments": {
-                    "description": "All documents and attachments related to the tender.",
+                "documents": {
+                    "description": "All documents and attachments related to the tender, including any notices.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/Attachment" },
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": {"idRef": "id"},
+                    "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
                 }
             },
@@ -429,7 +436,6 @@
                     "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
                 },
-                "notice": { "$ref": "#/definitions/Notice" },
                 "date": {
                     "title": "Award date",
                     "description": "The date of the contract award.",
@@ -452,6 +458,14 @@
                     "type": "array",
                     "minItems": 1,
                     "items": { "$ref": "#/definitions/Item" },
+                    "uniqueItems": true
+                },
+                "documents": {
+                    "description": "All documents and attachments related to the award, including any notices.",
+                    "type": "array",
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": {"idRef": "id"},
+                    "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
                 }
             }
@@ -499,43 +513,14 @@
                     "type": ["string", "null"],
                     "format": "date-time"
                 },
-                "attachments": {
-                    "description": "All documents and attachments related to the contract.",
+                "documents": {
+                    "description": "All documents and attachments related to the contract, including any notices.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/Attachment" },
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": {"idRef": "id"},
+                    "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
                 }
-            }
-        },
-        "Notice": {
-            "type": "object",
-            "title": "Notice",
-            "description": "The notice is a published document that notifies the public at various stages of the contracting process.",
-            "properties": {
-                "id": {
-                    "title": "Notice identifier",
-                    "description": "The identifier that identifies the notice to the publisher. This may be the same or different from the OCID.",
-                    "type": ["string", "null"]
-                },
-                "uri": {
-                    "title": "Notice URI",
-                    "description": "A permanent uri that provides access to the notice.",
-                    "type": ["string", "null"],
-                    "format": "uri"
-                },
-                "date": {
-                    "title": "Notice published date",
-                    "description": "The date this version of the notice was published. In the case of notice amendments, it is the date that reflects to this version of the data.",
-                    "type": ["string", "null"],
-                    "format": "date-time"
-                },
-                "isAmendment": {
-                    "title": "Is this an amendment to the notice?",
-                    "description": "If true, then amendment information should be provided.",
-                    "type": ["string", "null"],
-                    "type": ["boolean", "null"]
-                },
-                "amendment": { "$ref": "#/definitions/Amendment" }
             }
         },
         "Amendment": {
