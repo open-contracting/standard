@@ -686,12 +686,12 @@
                 },
                 "project": {
                     "title": "Project Title",
-                    "description": "The name of the project that through which this contracting process is funded (if applicable). Some organisations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
+                    "description": "The name of the project that through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
                     "type": ["string", "null"]
                 },
                 "projectID": {
                     "title": "Project Identifier",
-                    "description": "An external identifier for the project that this contracting process is funded (if applicable). Some organisations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.",
+                    "description": "An external identifier for the project that this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.",
                     "type:": ["string", "integer", "null"]
                 },
                 "uri":{
@@ -707,6 +707,46 @@
                 },
                 "^(project_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
+                }
+            }
+        },
+        "Transaction": {
+            "type": "object",
+            "title": "Transaction Information",
+            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+            "properties": {
+                "dataSource": {
+                    "title": "Data Source",
+                    "description": "Used to point either to a corresponding Budget Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
+                    "type": ["string", "null"],
+                    "format": "uri"
+                },
+                "id":{ 
+                    "description": "An identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For the budget data package this is the id, for IATI, the transaction reference.",
+                    "type": ["string", "integer", "null"]
+                },
+                "date": {
+                    "description": "The date of the transaction",
+                    "type": ["string", "null"],
+                    "format": "date-time"
+                },
+                "amount": { 
+                    "description": "The value of the transaction.",
+                    "$ref": "#/definitions/Value"
+                },
+                "providerOrganization":{
+                    "description": "The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
+                    "$ref": "#/definitions/Organization"
+                },
+                "receiverOrganization":{
+                    "description": "The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
+                    "$ref": "#/definitions/Organization"
+                },
+                "uri":{
+                    "title":"Linked spending information",
+                    "description":"A URI pointing directly to a machine-readable record about this spending transaction.",
+                    "type":["string", "null"],
+                    "format":"uri"
                 }
             }
         }
