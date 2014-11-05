@@ -11,7 +11,7 @@
         },
         "id": {
             "title": "Release ID",
-            "description": "A unique identifier that identifies this release. A releaseID must be unique within a release-package and must not containt # or / characters.",
+            "description": "A unique identifier that identifies this release. A releaseID must be unique within a release-package and must not contain the # character.",
             "type": "string"
         },
         "date": {
@@ -34,7 +34,7 @@
         },
         "buyer": {
             "title": "Buyer",
-            "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the formation data.",
+            "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the tender data.",
             "$ref": "#/definitions/Organization"
         },
         "planning": { 
@@ -318,7 +318,7 @@
             "properties": {
                 "id": {
                     "title": "Tender ID",
-                    "description": "TenderID should always be the same as the OCID. It is included to make the flattened data structure more convenient.",
+                    "description": "An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.",
                     "type": "string"
                 },
                 "notice": { "$ref": "#/definitions/Notice" },
