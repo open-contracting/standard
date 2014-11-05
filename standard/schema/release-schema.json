@@ -82,25 +82,27 @@
         "Identifier": {
             "type": "object",
             "properties": {
-                "name": {
-                    "type": "string"
-                },
                 "scheme": {
-                    "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
+                    "description": "[Consult Codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier.",
                     "type": ["string", "null"],
                     "format": "uri"
                 },
-                "uid": {
-                    "description": "The unique ID for this entity under the given ID scheme.",
+                "id": {
+                    "description": "The identifier for the Thing under the given scheme.",
                     "type": ["string", "integer", "null"]
                 },
+                "description": {
+                    "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry.",
+                    "type": ["string", "null"]
+                },
                 "uri": {
+                    "description": "URI to identify the Thing under the given scheme.",
                     "type": ["string", "null"],
                     "format" : "uri"
                 }
             },
             "patternProperties": {
-                "^(name_[A-Za-z]{2})$": {
+                "^(description_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
             },
@@ -149,22 +151,15 @@
                     "description": "A description of the goods, services to be provided.",
                     "type": ["string", "null"]
                 },
-                "classificationScheme": {
-                    "description": "The classification scheme for the goods",
-                    "type": ["string", "null"],
-                    "enum": ["CPV", "GSIN", "UNSPSC", "Other", null]
+                "primaryClassification": {
+                    "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas.",
+                    "$ref": "#/definitions/Identifier"
                 },
-                "otherClassificationScheme": {
-                    "description": "If the classification schema was not in list, please specify",
-                    "type": ["string", "null"]
-                },
-                "classificationID": {
-                    "description": "The classification ID from the Scheme used",
-                    "type": ["string", "null"]
-                },
-                "classificationDescription": {
-                    "description": "A description of the goods, services to be provided.",
-                    "type": ["string", "null"]
+                "additionalClassification": {
+                    "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Identifier" },
+                    "uniqueItems": true
                 },
                 "unitOfMeasure": {
                     "description": "Description of the unit which the good comes in e.g. hours, kilograms",
@@ -181,9 +176,6 @@
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
-                    "type": ["string", "null"]
-                },
-                "^(classificationDescription_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
             }
