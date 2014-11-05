@@ -311,30 +311,7 @@
             "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
             "type": "object",
             "properties": {
-                "budget": {
-                    "type": "object",
-                    "title": "Budget",
-                    "description": "Information about the budget item that this procurement relates to.",
-                    "properties": {
-                        "dataPackageURI": {
-                            "description": "The link to the budget data package, as defined by http://github.com/openspending/budget-data-package",
-                            "type": ["string", "null"],
-                            "format": "uri"
-                        },
-                        "id": {
-                            "description": "The ID of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories",
-                            "type": ["string", "null"]
-                        },
-                        "amount": {
-                            "description": "The amount of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories. This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
-                            "type": ["number", "null"]
-                        }
-                    },
-                    "dependencies": {
-                        "id": ["dataPackageURI"],
-                        "amount": ["dataPackageURI"]
-                    }
-                },
+                "budget": { "$ref": "#/definitions/Budget" },
                 "rationale": {
                     "description": "The rationale for the procurement",
                     "type": ["string", "null"]
@@ -683,7 +660,7 @@
                 }
             }
         },
-        "budget": {
+        "Budget": {
             "type": "object",
             "title": "Budget Information",
             "description": "This section contain information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
