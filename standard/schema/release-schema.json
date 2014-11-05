@@ -290,10 +290,6 @@
                         "amount": ["dataPackageURI"]
                     }
                 },
-                "publicHearingNotice": {
-                    "description": "Public hearing notice for this contract",
-                    "$ref": "#/definitions/Notice"
-                },
                 "rationale": {
                     "description": "The rationale for the procurement",
                     "type": ["string", "null"]
@@ -302,6 +298,13 @@
                     "description": "A list of anticipated milestones for the contract.",
                     "type": "array",
                     "items": { "$ref": "#/definitions/Milestone" }
+                },
+                "documents": {
+                    "description": "A list of documents related to the planning process, including public hearing notices.",
+                    "type": "array",
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": {"idRef": "id"},
+                    "items": { "$ref": "#/definitions/Document" }
                 }
             },
             "patternProperties": {
@@ -575,6 +578,7 @@
             "type": "object",
             "title": "Document",
             "description": "Links to, or descriptions of, external documents can be attached at various locations within the standard. Documents may be supporting information, formal notices, downloadable forms, or any other kind of resource that should be made public as part of full open contracting.",
+            "required": ["id"],
             "properties": {
                 "id": {
                     "description": "A local identifier for this document. This field can be used to keep track of multiple revisions of a document, allowing a publisher to include multiple versions of the same document in a release, and allowing consuming applications to select the version of the document with the most recent modified date.",
