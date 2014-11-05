@@ -134,6 +134,32 @@
                 }
             }
         },
+        "ContactPoint": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": ["string", "null"]
+                },
+                "email":{
+                    "type": ["string", "null"]
+                },
+                "telephone": {
+                    "type": ["string", "null"]
+                },
+                "faxNumber": {
+                    "type": ["string", "null"]
+                },
+                "url": {
+                    "type": ["string", "null"],
+                    "format": "uri"
+                }
+            },
+            "patternProperties": {
+                "^(name_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                }
+            }
+        },
         "Organization": {
             "title": "Organization",
             "description": "An organization.",
@@ -154,7 +180,8 @@
                     "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here.",
                     "type": ["string", "null"]
                 },
-                "address": { "$ref": "#/definitions/Address" }
+                "address": { "$ref": "#/definitions/Address" },
+                "contactPoint": { "$ref": "#/definitions/ContactPoint" }
             },
             "patternProperties": {
                 "^(name_[A-Za-z]{2})$": {
