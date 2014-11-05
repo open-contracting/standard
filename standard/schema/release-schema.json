@@ -139,8 +139,27 @@
             "description": "An organization.",
             "type": "object",
             "properties": {
-                "id": { "$ref": "#/definitions/Identifier" },
+                "primaryID": { 
+                    "description": "[Consult codelist] The main identifier for the organization. Consult the codelist for the preferred schemas to use.",
+                    "$ref": "#/definitions/Identifier" 
+                },
+                "additionalID": { 
+                    "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use.",
+                    "type": "array",
+                    "mergeStrategy": "ocdsVersion",
+                    "items": { "$ref": "#/definitions/Identifier" },
+                    "uniqueItems": true
+                },
+                "name": {
+                    "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here.",
+                    "type": ["string", "null"]
+                },
                 "address": { "$ref": "#/definitions/Address" }
+            },
+            "patternProperties": {
+                "^(name_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                }
             }
         },
         "Item": {
