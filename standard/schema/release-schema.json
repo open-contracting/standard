@@ -267,29 +267,7 @@
                 "transactions": {
                     "description": "A list of the spending transactions made against this contract",
                     "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "dataPackageURI": {
-                                "description": "The link to the budget data package (called a budget data package, but includes budget and spending data), as defined by http://github.com/openspending/budget-data-package",
-                                "type": "string",
-                                "format": "uri"
-                            },
-                            "id": {
-                                "description": "The ID of the item in the budget data package, which this procurement is associated with. https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories",
-                                "type": "string"
-                            },
-                            "amount": {
-                                "description": "The amount of the transaction as described in the budget data package (https://github.com/openspending/budget-data-package/blob/master/specification.md#required-fields-all-categories). This provides some redundancy, but does not give full context such as the currency, date of transaction etc. which should be retrieved from the budget data pacakge.",
-                                "type": ["number", "null"]
-                            }
-                        },
-                        "required": ["dataPackageURI", "id"],
-                        "dependencies": {
-                            "id": ["dataPackageURI"],
-                            "amount": ["dataPackageURI"]
-                        }
-                    }
+                    "items": { "$ref": "#/definitions/Transaction" }
                 },
                 "milestones": {
                     "description": "As milestones are completed, milestone completions should be documented.",
