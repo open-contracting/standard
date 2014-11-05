@@ -139,11 +139,11 @@
             "description": "An organization.",
             "type": "object",
             "properties": {
-                "primaryID": { 
+                "identifier": { 
                     "description": "[Consult codelist] The main identifier for the organization. Consult the codelist for the preferred schemas to use.",
                     "$ref": "#/definitions/Identifier" 
                 },
-                "additionalID": { 
+                "additionalIdentifiers": { 
                     "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use.",
                     "type": "array",
                     "mergeStrategy": "ocdsVersion",
@@ -170,13 +170,14 @@
                     "description": "A description of the goods, services to be provided.",
                     "type": ["string", "null"]
                 },
-                "primaryClassification": {
+                "classification": {
                     "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas.",
                     "$ref": "#/definitions/Identifier"
                 },
-                "additionalClassification": {
+                "additionalClassifications": {
                     "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas.",
                     "type": "array",
+                    "mergeStrategy": "ocdsVersion",
                     "items": { "$ref": "#/definitions/Identifier" },
                     "uniqueItems": true
                 },
