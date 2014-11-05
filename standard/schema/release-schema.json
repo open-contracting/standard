@@ -53,7 +53,8 @@
             "description": "The activities undertaken in order to enter into a contract.",
             "$ref": "#/definitions/Tender"
         },
-        "awards": { "title": "Awards",
+        "awards": { 
+            "title": "Awards",
             "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "array",
             "mergeStrategy": "arrayMergeById",
@@ -61,7 +62,8 @@
             "items": { "$ref": "#/definitions/Award" },
             "uniqueItems": true
         },
-        "contracts": { "title": "Contracts",
+        "contracts": { 
+            "title": "Contracts",
             "description": "Information from the contract creation phase of the procurement process.",
             "type": "array",
             "mergeStrategy": "arrayMergeById",
@@ -88,7 +90,7 @@
                     "type": ["string", "null"],
                     "format": "uri"
                 },
-                    "uid": {
+                "uid": {
                     "description": "The unique ID for this entity under the given ID scheme.",
                     "type": ["string", "integer", "null"]
                 },
