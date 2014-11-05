@@ -410,7 +410,8 @@
                     "mergeOptions": {"idRef": "id"},
                     "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
-                }
+                },
+                "amendment": { "$ref": "#/definitions/Amendment" }
             },
             "patternProperties": {
                 "^(methodJustification_[A-Za-z]{2})$": {
@@ -467,7 +468,8 @@
                     "mergeOptions": {"idRef": "id"},
                     "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
-                }
+                },
+                "amendment": { "$ref": "#/definitions/Amendment" }
             }
         },
         "Contract": {
@@ -494,12 +496,6 @@
                     "description": "The total value of this contract.",
                     "$ref": "#/definitions/Value"
                 },
-                "isAmendment": {
-                    "title": "Is this an amendment to the contract?",
-                    "description": "If true, then amendment information should be provided.",
-                    "type": ["boolean", "null"]
-                },
-                "amendment": { "$ref": "#/definitions/Amendment" },
                 "items": {
                     "title": "Items Contracted",
                     "description": "(Optional) The goods, services, and any intangible outcomes in this contract. If the items are the same as the award do not repeat.",
@@ -520,7 +516,8 @@
                     "mergeOptions": {"idRef": "id"},
                     "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
-                }
+                },
+                "amendment": { "$ref": "#/definitions/Amendment" }
             }
         },
         "Amendment": {
@@ -532,13 +529,32 @@
                     "type": ["string", "null"],
                     "format": "date-time"
                 },
-                "fields": {
+                "changes": {
                     "title": "Amended fields",
                     "description": "Comma-seperated list of affected fields.",
-                    "type": ["string", "null"]
+                    "mergeStrategy": "ocdsVersion",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "property": {
+                                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. ",
+                                "type": "string"
+                            },
+                            "former_value": {
+                                "description": "The previous value of the changed property, in whatever type the property is.",
+                                "type": ["string", "number", "integer", "array", "object", "null"]
+                            }
+                        }
+                    }
                 },
-                "justification": {
-                    "description": "An explanation / justification for the amendment.",
+                "rationale": {
+                    "description": "An explanation for the amendment.",
+                    "type": ["string", "null"]
+                }
+            },
+            "patternProperties": {
+                "^(rationale_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
             }
