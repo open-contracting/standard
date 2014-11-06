@@ -319,11 +319,6 @@
                     "description": "The rationale for the procurement",
                     "type": ["string", "null"]
                 },
-                "anticipatedMilestones": {
-                    "description": "A list of anticipated milestones for the contract.",
-                    "type": "array",
-                    "items": { "$ref": "#/definitions/Milestone" }
-                },
                 "documents": {
                     "description": "A list of documents related to the planning process, including public hearing notices.",
                     "type": "array",
@@ -429,6 +424,11 @@
                     "mergeOptions": {"idRef": "id"},
                     "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
+                },
+                "milestones": {
+                    "description": "A list of milestones associated with the tender.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Milestone" }
                 },
                 "amendment": { "$ref": "#/definitions/Amendment" }
             },
