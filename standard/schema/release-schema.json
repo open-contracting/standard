@@ -375,6 +375,10 @@
                     "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 },
+                "minValue": {
+                    "description": "The minimum estimated value of the procurement.",
+                    "$ref": "#/definitions/Value"
+                },
                 "value": {
                     "description": "The total estimated value of the procurement.",
                     "$ref": "#/definitions/Value"
