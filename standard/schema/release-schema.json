@@ -188,6 +188,10 @@
             "type": "object",
             "description": "A good, service, or work to be contracted.",
             "properties": {
+                "id": {
+                    "description": "A local identifier to reference the items by",
+                    "type": ["string", "integer", "null"]
+                },
                 "description": {
                     "description": "A description of the goods, services to be provided.",
                     "type": ["string", "null"]
