@@ -230,19 +230,41 @@
         "Milestone": {
             "type": "object",
             "properties": {
+                "title": {
+                    "description": "Milestone title",
+                    "type": ["string", "null"]
+                },
                 "description": {
                     "description": "A description of the milestone.",
                     "type": ["string", "null"]
                 },
-                "date": {
-                    "description": "The date the milestone is either due or completed (as specified by dateType).",
-                    "type": ["string", "null"],
-                    "format": "date-time"
-                },
-                "dateType": {
-                    "description": "Specify whether the date field is referring to a due date or a completed date.",
-                    "type": ["string", "null"],
-                    "enum": ["due", "completed", null]
+                "progress": {
+                    "description": "A list that documents the progress of the milestone. As progress on the milestone continues, new items are added to the list to document the milestone's progress.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "date": {
+                                "description": "The date the new status was realized.",
+                                "type": ["string", "null"],
+                                "format": "date-time"
+                            },
+                            "status": {
+                                "description": "[consult codelist] The status that was realized on the date provided.",
+                                "type": ["string", "null"]
+                            },
+                            "notes": {
+                                "description": "Any notes or description of the new status.",
+                                "type": ["string", "null"]
+                            }
+                        },
+                        "patternProperties": {
+                            "^(notes_[A-Za-z]{2})$": {
+                                "type": ["string", "null"]
+                            }
+                        }
+                    }
+
                 },
                 "documents": {
                     "description": "List of documents associated with this milestone.",
@@ -254,6 +276,9 @@
                 }
             },
             "patternProperties": {
+                "^(title_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                },
                 "^(description_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
