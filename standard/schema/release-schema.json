@@ -410,6 +410,10 @@
                     "description": "A Yes/No field as to whether clarifications were issued. Would expect clarifications to appear as amendments.",
                     "type": ["boolean", "null"]
                 },
+                "eligibility": {
+                    "descritpion": "Description of eligibility criteria for potential suppliers.",
+                    "type": ["string", "null"]
+                },
                 "awardPeriod": {
                     "description": "The date or period on which an award is anticipated to be made.",
                     "$ref": "#/definitions/Period"
@@ -441,6 +445,9 @@
                     "type": ["string", "null"]
                 },
                 "^(submissionDetails_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                },
+                "^(eligibility_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
 
