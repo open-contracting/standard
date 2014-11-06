@@ -203,17 +203,28 @@
                     "items": { "$ref": "#/definitions/Identifier" },
                     "uniqueItems": true
                 },
-                "unitOfMeasure": {
+                "unit": {
                     "description": "Description of the unit which the good comes in e.g. hours, kilograms",
-                    "type": ["string", "null"]
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "description": "Name of the unit",
+                            "type": ["string", "null"]
+                        },
+                        "value": {
+                            "description": "The value of a single unity",
+                            "$ref": "$/definitions/Value"
+                        }
+                    },
+                    "patternProperties": {
+                        "^(name_[A-Za-z]{2})$": {
+                            "type": ["string", "null"]
+                        }
+                    }
                 },
                 "quantity": {
                     "description": "The number of units required",
                     "type": ["integer", "null"]
-                },
-                "valuePerUnit": {
-                    "description": "The value per unit of the item specified.",
-                    "$ref": "#/definitions/Value"
                 }
             },
             "patternProperties": {
