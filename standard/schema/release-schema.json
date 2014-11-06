@@ -70,11 +70,6 @@
             "mergeOptions": {"idRef": "id"},
             "items": {"$ref": "#/definitions/Contract" },
             "uniqueItems": true
-        },
-        "implementation": { 
-            "title": "Implementation",
-            "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.",
-            "$ref": "#/definitions/Implementation" 
         }
     },
     "required": ["ocid", "id", "date", "tag", "formationType"],
@@ -522,7 +517,12 @@
                     "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
                 },
-                "amendment": { "$ref": "#/definitions/Amendment" }
+                "amendment": { "$ref": "#/definitions/Amendment" },
+                "implementation": { 
+                    "title": "Implementation",
+                    "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.",
+                    "$ref": "#/definitions/Implementation" 
+                }
             }
         },
         "Amendment": {
