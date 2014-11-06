@@ -402,12 +402,12 @@
                     "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
                     "$ref": "#/definitions/Period"
                 },
-                "clarificationPeriod": {
-                    "description": "The period during which clarification requests may be made and will be answered.",
+                "enquiryPeriod": {
+                    "description": "The period during which enquiries may be made and answered.",
                     "$ref": "#/definitions/Period"
                 },
-                "clarifications": {
-                    "description": "A Yes/No field as to whether clarifications were issued. Would expect clarifications to appear as amendments.",
+                "hasEnquiries": {
+                    "description": "A Yes/No field as to whether enquiries were part of tender process.",
                     "type": ["boolean", "null"]
                 },
                 "eligibility": {
