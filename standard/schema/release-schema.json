@@ -407,12 +407,6 @@
                     "description": "The number of bids or submissions to the tender. In the case of an auction, the number of bids may differ from the numberOfBidders.",
                     "type": ["integer", "null"]
                 },
-                "bidders": {
-                    "description": "A list of all the companies who entered submissions for the tender.",
-                    "type": "array",
-                    "items": { "$ref": "#/definitions/Organization" },
-                    "uniqueItems": true
-                },
                 "procuringEntity": {
                     "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
                     "$ref": "#/definitions/Organization"
