@@ -42,9 +42,9 @@
             "description": "Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract for, when and how.",
             "$ref": "#/definitions/Planning"
         },
-        "formationType": {
-            "title": "Formation type",
-            "description": "String specifying the type of formation process used for this contract. Currently only tender is supported.",
+        "initiationType": {
+            "title": "Initiation type",
+            "description": "String specifying the type of initiation process used for this contract. Currently only tender is supported.",
             "type": "string",
             "enum": ["tender"]
         },
@@ -72,7 +72,7 @@
             "uniqueItems": true
         }
     },
-    "required": ["ocid", "id", "date", "tag", "formationType"],
+    "required": ["ocid", "id", "date", "tag", "initiationType"],
     "definitions": {
         "Identifier": {
             "type": "object",
