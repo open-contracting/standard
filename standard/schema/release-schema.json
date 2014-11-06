@@ -339,6 +339,11 @@
                     "description": "An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.",
                     "type": "string"
                 },
+                "status": {
+                    "title": "Tender Status",
+                    "description": "[consult codelist] The current status of the tender e.g. active, cancelled.",
+                    "type": "string"
+                },
                 "items": {
                     "title": "Items to be procured",
                     "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
@@ -437,6 +442,11 @@
                     "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
                 },
+                "status": {
+                    "title": "Award Status",
+                    "description": "[consult codelist] The current status of the award e.g. active, cancelled.",
+                    "type": "string"
+                },
                 "date": {
                     "title": "Award date",
                     "description": "The date of the contract award.",
@@ -487,6 +497,11 @@
                     "title": "Award ID",
                     "description": "The award.id against which this contract is being issued.",
                     "type": ["string", "null"]
+                },
+                "status": {
+                    "title": "Contract Status",
+                    "description": "[consult codelist] The current status of the contract e.g. active, cancelled.",
+                    "type": "string"
                 },
                 "period": {
                     "description": "The start and end date for the contract.",
