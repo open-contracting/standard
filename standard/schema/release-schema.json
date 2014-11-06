@@ -354,6 +354,14 @@
                     "description": "An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.",
                     "type": "string"
                 },
+                "title": {
+                    "description": "Tender title",
+                    "type": ["string", "null"]
+                },
+                "description": {
+                    "description": "Tender description",
+                    "type": ["string", "null"]
+                },
                 "status": {
                     "title": "Tender Status",
                     "description": "[consult codelist] The current status of the tender e.g. active, cancelled.",
@@ -438,6 +446,12 @@
                 "amendment": { "$ref": "#/definitions/Amendment" }
             },
             "patternProperties": {
+                "^(title_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                },
+                "^(description_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                },
                 "^(methodJustification_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 },
@@ -463,6 +477,14 @@
                     "title": "Award ID",
                     "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
+                },
+                "title": {
+                    "description": "Award title",
+                    "type": ["string", "null"]
+                },
+                "description": {
+                    "description": "Award description",
+                    "type": ["string", "null"]
                 },
                 "status": {
                     "title": "Award Status",
@@ -502,6 +524,14 @@
                     "uniqueItems": true
                 },
                 "amendment": { "$ref": "#/definitions/Amendment" }
+            },
+            "patternProperties": {
+                "^(title_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                },
+                "^(description_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                }
             }
         },
         "Contract": {
@@ -514,6 +544,14 @@
                     "title": "Contract ID",
                     "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have contractID 1 & contractID 2 and ocid DEF can also have contractID 1 & 2. But if it is a different contract, ocid cannot have contractID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
                     "type": "string"
+                },
+                "title": {
+                    "description": "Contract title",
+                    "type": ["string", "null"]
+                },
+                "description": {
+                    "description": "Contract description",
+                    "type": ["string", "null"]
                 },
                 "awardID": {
                     "title": "Award ID",
@@ -559,6 +597,14 @@
                     "title": "Implementation",
                     "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.",
                     "$ref": "#/definitions/Implementation" 
+                }
+            },
+            "patternProperties": {
+                "^(title_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
+                },
+                "^(description_[A-Za-z]{2})$": {
+                    "type": ["string", "null"]
                 }
             }
         },
