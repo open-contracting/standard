@@ -2651,7 +2651,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "classification": {
+                "language": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -2669,7 +2669,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] A classification of the document described. Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code."
+                                "description": "Specifies the language of the linked document using either two-digit [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of two-letter codes from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype."
                             }
                         }
                     }, 
@@ -2773,7 +2773,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "language": {
+                "documentType": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -2791,7 +2791,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Specifies the language of the linked document using either two-digit [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of two-letter codes from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype."
+                                "description": "[Consult codelist] A classification of the document described. Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code."
                             }
                         }
                     }, 
@@ -2823,28 +2823,11 @@
                     "type": "array"
                 }, 
                 "id": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "A local, unique identifier for this document. This field is used to keep track of multiple revisions of a document through the compilation from release to record mechanism."
-                            }
-                        }
-                    }, 
-                    "type": "array"
+                    "type": [
+                        "string", 
+                        "integer"
+                    ], 
+                    "description": "A local, unique identifier for this document. This field is used to keep track of multiple revisions of a document through the compilation from release to record mechanism."
                 }
             }
         }

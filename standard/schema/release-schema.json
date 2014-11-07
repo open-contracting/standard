@@ -507,10 +507,10 @@
             "properties": {
                 "id": {
                     "description": "A local, unique identifier for this document. This field is used to keep track of multiple revisions of a document through the compilation from release to record mechanism.",
-                    "type": ["string", "null"],
-                    "mergeStrategy": "ocdsVersion"
+                    "type": ["string", "integer"],
+                    "mergeStrategy": "overwrite"
                 },
-                "classification": {
+                "documentType": {
                     "description": "[Consult codelist] A classification of the document described. Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
@@ -555,10 +555,10 @@
                 }
             },
             "patternProperties": {
-                "^(description_[A-Za-z]{2})$": {
+                "^(title_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 },
-                "^(title_[A-Za-z]{2})$": {
+                "^(description_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
             }
