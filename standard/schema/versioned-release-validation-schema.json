@@ -14,12 +14,12 @@
             "type": "object", 
             "properties": {
                 "date": {
-                    "format": "date-time", 
+                    "title": "Amendment Date", 
                     "type": [
                         "string", 
                         "null"
                     ], 
-                    "title": "Amendment Date"
+                    "format": "date-time"
                 }, 
                 "changes": {
                     "items": {
@@ -303,7 +303,8 @@
             "description": "Information regarding the signed contract between the buyer and supplier(s).", 
             "title": "Contract", 
             "required": [
-                "id"
+                "id", 
+                "awardID"
             ], 
             "patternProperties": {
                 "^(title_[A-Za-z]{2})$": {
@@ -335,7 +336,10 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "type": "string", 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
                                 "description": "[Consult codelist] The current status of the contract e.g. active, cancelled.", 
                                 "title": "Contract Status"
                             }
@@ -344,24 +348,59 @@
                     "type": "array"
                 }, 
                 "amendment": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "$ref": "#/definitions/Amendment"
-                            }
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(rationale_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
                         }
                     }, 
-                    "type": "array"
+                    "type": "object", 
+                    "properties": {
+                        "date": {
+                            "title": "Amendment Date", 
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "format": "date-time"
+                        }, 
+                        "changes": {
+                            "items": {
+                                "type": "object", 
+                                "properties": {
+                                    "property": {
+                                        "type": "string", 
+                                        "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. "
+                                    }, 
+                                    "former_value": {
+                                        "type": [
+                                            "string", 
+                                            "number", 
+                                            "integer", 
+                                            "array", 
+                                            "object", 
+                                            "null"
+                                        ], 
+                                        "description": "The previous value of the changed property, in whatever type the property is."
+                                    }
+                                }
+                            }, 
+                            "type": "array", 
+                            "description": "Comma-seperated list of affected fields.", 
+                            "title": "Amended fields"
+                        }, 
+                        "rationale": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "An explanation for the amendment."
+                        }
+                    }, 
+                    "title": "Amendment information"
                 }, 
                 "documents": {
                     "description": "All documents and attachments related to the contract, including any notices.", 
@@ -466,73 +505,58 @@
                     "title": "Implementation"
                 }, 
                 "items": {
+                    "description": "The goods, services, and any intangible outcomes in this contract. Note: If the items are the same as the award do not repeat.", 
+                    "title": "Items Contracted", 
+                    "minItems": 1, 
                     "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "uniqueItems": true, 
-                                "description": "(Optional) The goods, services, and any intangible outcomes in this contract. If the items are the same as the award do not repeat.", 
-                                "title": "Items Contracted", 
-                                "minItems": 1, 
-                                "items": {
-                                    "$ref": "#/definitions/Item"
-                                }, 
-                                "type": "array"
-                            }
-                        }
+                        "$ref": "#/definitions/Item"
                     }, 
+                    "uniqueItems": true, 
                     "type": "array"
                 }, 
                 "period": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The start and end date for the contract.", 
-                                "$ref": "#/definitions/Period"
-                            }
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The state date for the period.", 
+                            "format": "date-time"
+                        }, 
+                        "endDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The end date for the period.", 
+                            "format": "date-time"
                         }
                     }, 
-                    "type": "array"
+                    "title": "Period"
                 }, 
                 "value": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The total value of this contract.", 
-                                "$ref": "#/definitions/Value"
-                            }
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The currency in 3-letter ISO 4217 format."
+                        }, 
+                        "amount": {
+                            "minimum": 0, 
+                            "type": [
+                                "number", 
+                                "null"
+                            ], 
+                            "description": "Amount as a number."
                         }
-                    }, 
-                    "type": "array"
+                    }
                 }, 
                 "dateSigned": {
                     "items": {
@@ -575,7 +599,7 @@
                             "value": {
                                 "type": [
                                     "string", 
-                                    "null"
+                                    "integer"
                                 ], 
                                 "description": "The award.id against which this contract is being issued.", 
                                 "title": "Award ID"
@@ -585,7 +609,10 @@
                     "type": "array"
                 }, 
                 "id": {
-                    "type": "string", 
+                    "type": [
+                        "string", 
+                        "integer"
+                    ], 
                     "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have contractID 1 & contractID 2 and ocid DEF can also have contractID 1 & 2. But if it is a different contract, ocid cannot have contractID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.", 
                     "title": "Contract ID"
                 }
@@ -946,12 +973,12 @@
                     "type": "object", 
                     "properties": {
                         "date": {
-                            "format": "date-time", 
+                            "title": "Amendment Date", 
                             "type": [
                                 "string", 
                                 "null"
                             ], 
-                            "title": "Amendment Date"
+                            "format": "date-time"
                         }, 
                         "changes": {
                             "items": {
@@ -1393,12 +1420,12 @@
                     "type": "object", 
                     "properties": {
                         "date": {
-                            "format": "date-time", 
+                            "title": "Amendment Date", 
                             "type": [
                                 "string", 
                                 "null"
                             ], 
-                            "title": "Amendment Date"
+                            "format": "date-time"
                         }, 
                         "changes": {
                             "items": {
@@ -2813,12 +2840,12 @@
                     "type": "object", 
                     "properties": {
                         "date": {
-                            "format": "date-time", 
+                            "title": "Amendment Date", 
                             "type": [
                                 "string", 
                                 "null"
                             ], 
-                            "title": "Amendment Date"
+                            "format": "date-time"
                         }, 
                         "changes": {
                             "items": {

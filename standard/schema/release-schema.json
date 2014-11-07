@@ -331,12 +331,19 @@
             "type": "object",
             "title": "Contract",
             "description": "Information regarding the signed contract between the buyer and supplier(s).",
-            "required": ["id"],
+            "required": ["id", "awardID"],
             "properties": {
                 "id": {
                     "title": "Contract ID",
                     "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have contractID 1 & contractID 2 and ocid DEF can also have contractID 1 & 2. But if it is a different contract, ocid cannot have contractID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
-                    "type": "string"
+                    "type": ["string", "integer"],
+                    "mergeStrategy": "overwrite"
+                },
+                "awardID": {
+                    "title": "Award ID",
+                    "description": "The award.id against which this contract is being issued.",
+                    "type": ["string", "integer"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "title": {
                     "description": "Contract title",
@@ -348,36 +355,29 @@
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
-                "awardID": {
-                    "title": "Award ID",
-                    "description": "The award.id against which this contract is being issued.",
-                    "type": ["string", "null"],
-                    "mergeStrategy": "ocdsVersion"
-                },
                 "status": {
                     "title": "Contract Status",
                     "description": "[Consult codelist] The current status of the contract e.g. active, cancelled.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "period": {
                     "description": "The start and end date for the contract.",
-                    "$ref": "#/definitions/Period",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Period"
                 },
                 "value": {
                     "description": "The total value of this contract.",
-                    "$ref": "#/definitions/Value",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Value"
                 },
                 "items": {
                     "title": "Items Contracted",
-                    "description": "(Optional) The goods, services, and any intangible outcomes in this contract. If the items are the same as the award do not repeat.",
+                    "description": "The goods, services, and any intangible outcomes in this contract. Note: If the items are the same as the award do not repeat.",
                     "type": "array",
                     "minItems": 1,
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Item" },
-                    "uniqueItems": true,
-                    "mergeStrategy": "ocdsVersion"
+                    "uniqueItems": true
                 },
                 "dateSigned": {
                     "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
@@ -389,13 +389,12 @@
                     "description": "All documents and attachments related to the contract, including any notices.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {"idRef": "id"},
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
                 },
                 "amendment": { 
-                    "$ref": "#/definitions/Amendment",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Amendment"
                 },
                 "implementation": { 
                     "title": "Implementation",
