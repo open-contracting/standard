@@ -2,7 +2,7 @@
 import json
 import csv
 import collections
-
+import markdown
 
 def make_definition_table(json,file_path,what="properties",section=""): 
     table = [['Field Name','Description','Format']]
@@ -22,13 +22,13 @@ def make_definition_table(json,file_path,what="properties",section=""):
 
         if types == "array":
            if block[prop].get('items').get("$ref"):
-               table.append([prop,block[prop].get('description','') + " See " + block[prop]['items']["$ref"].replace("#/definitions/","") + " section for further details.","Object Array"])
+               table.append([prop,markdown.markdown(block[prop].get('description','')) + " See " + block[prop]['items']["$ref"].replace("#/definitions/","") + " section for further details.","Object Array"])
            else:
-               table.append([prop,block[prop].get('description',''),"Array"])
+               table.append([prop,markdown.markdown(block[prop].get('description','')),"Array"])
         elif block[prop].get("$ref"):
           table.append([prop,"See " + block[prop]["$ref"].replace("#/definitions/",""),"Reference"])
         else:
-          table.append([prop,block[prop].get('description',''),block[prop].get('format','')])
+          table.append([prop,markdown.markdown(block[prop].get('description','')),block[prop].get('format','')])
           
         with open(file_path, 'wb') as f:
             writer = csv.writer(f)
