@@ -276,6 +276,7 @@
                     "title": "Award Status",
                     "description": "[Consult codelist] The current status of the award e.g. active, cancelled.",
                     "type": ["string", "null"],
+                    "enum": ["pending", "active", "cancelled", "unsuccessful"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "date": {
@@ -359,6 +360,7 @@
                     "title": "Contract Status",
                     "description": "[Consult codelist] The current status of the contract e.g. active, cancelled.",
                     "type": ["string", "null"],
+                    "enum": ["pending", "active", "cancelled", "terminated"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "period": {
