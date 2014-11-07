@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import json
 import csv
+import collections
 
 
 def make_definition_table(json,file_path,what="properties",section=""): 
@@ -41,17 +42,19 @@ if __name__ == "__main__":
     file_path = join(schema_dir,"../docs/field_definitions/")
     
     with open(join(schema_dir, 'release-schema.json'), 'rb') as f:
-        release = json.loads(f.read())
+        release = json.loads(f.read(),object_pairs_hook=collections.OrderedDict)
 
     with open(join(schema_dir, 'release-package-schema.json'), 'rb') as f:
-        releasePackage = json.loads(f.read())
+        releasePackage = json.loads(f.read(),object_pairs_hook=collections.OrderedDict)
 
     with open(join(schema_dir, 'record-package-schema.json'), 'rb') as f:
-        recordPackage = json.loads(f.read())
+        recordPackage = json.loads(f.read(),object_pairs_hook=collections.OrderedDict)
 
     make_definition_table(recordPackage,join(file_path,"record-package.csv"))
     
     make_definition_table(releasePackage,join(file_path,"release-package.csv"))
+    
+    make_definition_table(release,join(file_path,"release-toplevel.csv"))
     
     make_definition_table(release,join(file_path,"release-identifier.csv"),what="definitions",section="Identifier")
 

@@ -25,6 +25,8 @@ A release package, modelled on the [Data Package](http://dataprotocols.org/data-
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-package.csv" data-table-class="table table-striped schema-table"></div>
 
+#### Notes
+
 * The uri should unique identify this release package. Publishers should provide a [dereferenceable HTTP URI](http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier) wherever possible and should host the data package at this URI, enabling users to look-up and verify the contents of a release package from its original source. 
 
 * The [publishedDate](#date) on which this package was published. If a package is automatically generated and re-published on a regular basis, this date should reflect the date of the last change to the contents of the package. 
@@ -35,29 +37,17 @@ A release package, modelled on the [Data Package](http://dataprotocols.org/data-
 
 * See the [publication policy](../../implementation/publication_patterns#publication-policy) guidance for more details.
 
-### Top level fields
+### Top level
 
-#### OCID
+<div class="include-csv" data-src="standard/docs/field_definitions/release-toplevel.csv" data-table-class="table table-striped schema-table"></div>
 
-Providing each [contracting process](../../definitions#contracting-process) with a unique identifier is essential to enable data about contracts to be linked up across different releases.
+#### Notes
 
-Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process.
+* OCID - Providing each [contracting process](../../definitions#contracting-process) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](../../identifiers#ocid) for details of how to construct an OCID. 
 
-See the [Open Contracting Identifier guidance](../../identifiers#ocid) for details of how to construct an OCID. 
+* The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates.
 
-#### Release date
-
-The release [date](#date) should reflect the point in time at which the information in this release was disclosed. 
-
-A release package may contain release with different release dates.
-
-#### formationType (ToDo: check - should this be initiationType?)
-
-Contracts may be formed under a number of different processes. 
-
-Values must be drawn from the [formationType codelist](../codelists#formationType)
-
-Currently, only 'tender' is supported. 
+* Initation Type - Contracts may be formed under a number of different processes. Values must be drawn from the [formationType codelist](../codelists#formationType). Currently, only 'tender' is supported. 
 
 #### Tag (ToDo: Check Title)
 
