@@ -14,12 +14,12 @@
             "type": "object", 
             "properties": {
                 "date": {
-                    "title": "Amendment Date", 
+                    "format": "date-time", 
                     "type": [
                         "string", 
                         "null"
                     ], 
-                    "format": "date-time"
+                    "title": "Amendment Date"
                 }, 
                 "changes": {
                     "items": {
@@ -922,7 +922,10 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "type": "string", 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
                                 "description": "[Consult codelist] The current status of the award e.g. active, cancelled.", 
                                 "title": "Award Status"
                             }
@@ -931,24 +934,59 @@
                     "type": "array"
                 }, 
                 "amendment": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "$ref": "#/definitions/Amendment"
-                            }
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(rationale_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
                         }
                     }, 
-                    "type": "array"
+                    "type": "object", 
+                    "properties": {
+                        "date": {
+                            "format": "date-time", 
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "title": "Amendment Date"
+                        }, 
+                        "changes": {
+                            "items": {
+                                "type": "object", 
+                                "properties": {
+                                    "property": {
+                                        "type": "string", 
+                                        "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. "
+                                    }, 
+                                    "former_value": {
+                                        "type": [
+                                            "string", 
+                                            "number", 
+                                            "integer", 
+                                            "array", 
+                                            "object", 
+                                            "null"
+                                        ], 
+                                        "description": "The previous value of the changed property, in whatever type the property is."
+                                    }
+                                }
+                            }, 
+                            "type": "array", 
+                            "description": "Comma-seperated list of affected fields.", 
+                            "title": "Amended fields"
+                        }, 
+                        "rationale": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "An explanation for the amendment."
+                        }
+                    }, 
+                    "title": "Amendment information"
                 }, 
                 "documents": {
                     "description": "All documents and attachments related to the award, including any notices.", 
@@ -1007,30 +1045,13 @@
                     "type": "array"
                 }, 
                 "items": {
+                    "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.", 
+                    "title": "Items Awarded", 
+                    "minItems": 1, 
                     "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "uniqueItems": true, 
-                                "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.", 
-                                "title": "Items Awarded", 
-                                "minItems": 1, 
-                                "items": {
-                                    "$ref": "#/definitions/Item"
-                                }, 
-                                "type": "array"
-                            }
-                        }
+                        "$ref": "#/definitions/Item"
                     }, 
+                    "uniqueItems": true, 
                     "type": "array"
                 }, 
                 "suppliers": {
@@ -1072,8 +1093,7 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "description": "The total value of this award. There may be more than one award per procurement.", 
-                                "$ref": "#/definitions/Value"
+                                "description": "The total value of this award. There may be more than one award per procurement."
                             }
                         }
                     }, 
@@ -1106,7 +1126,10 @@
                     "type": "array"
                 }, 
                 "id": {
-                    "type": "string", 
+                    "type": [
+                        "string", 
+                        "integer"
+                    ], 
                     "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.", 
                     "title": "Award ID"
                 }
@@ -1370,12 +1393,12 @@
                     "type": "object", 
                     "properties": {
                         "date": {
-                            "title": "Amendment Date", 
+                            "format": "date-time", 
                             "type": [
                                 "string", 
                                 "null"
                             ], 
-                            "format": "date-time"
+                            "title": "Amendment Date"
                         }, 
                         "changes": {
                             "items": {
@@ -2790,12 +2813,12 @@
                     "type": "object", 
                     "properties": {
                         "date": {
-                            "title": "Amendment Date", 
+                            "format": "date-time", 
                             "type": [
                                 "string", 
                                 "null"
                             ], 
-                            "format": "date-time"
+                            "title": "Amendment Date"
                         }, 
                         "changes": {
                             "items": {

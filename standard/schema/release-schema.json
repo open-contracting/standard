@@ -259,7 +259,8 @@
                 "id": {
                     "title": "Award ID",
                     "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.",
-                    "type": "string"
+                    "type": ["string", "integer"],
+                    "mergeStrategy": "overwrite"
                 },
                 "title": {
                     "description": "Award title",
@@ -274,7 +275,7 @@
                 "status": {
                     "title": "Award Status",
                     "description": "[Consult codelist] The current status of the award e.g. active, cancelled.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "date": {
@@ -286,7 +287,6 @@
                 },
                 "value": {
                     "description": "The total value of this award. There may be more than one award per procurement.",
-                    "$ref": "#/definitions/Value",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "suppliers": {
@@ -301,21 +301,21 @@
                     "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
                     "type": "array",
                     "minItems": 1,
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Item" },
-                    "uniqueItems": true,
-                    "mergeStrategy": "ocdsVersion"
+                    "uniqueItems": true
                 },
                 "documents": {
                     "description": "All documents and attachments related to the award, including any notices.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {"idRef": "id"},
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
                 },
                 "amendment": { 
-                    "$ref": "#/definitions/Amendment",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Amendment"
                 }
             },
             "patternProperties": {
