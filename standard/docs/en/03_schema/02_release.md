@@ -1,2 +1,2 @@
 Schema:
-<script src="../../../../../static/docson/widget.js" data-schema="../../../release-schema.json"></script>
+<script src="../../../../../static/docson/widget.js" data-schema="{% url 'schema' release_name 'release-schema' %}"></script>
