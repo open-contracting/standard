@@ -634,14 +634,16 @@
                     "type": ["string", "integer"],
                     "mergeStrategy": "overwrite"
                 },
-                "dataSource": {
+                "source": {
                     "title": "Data Source",
                     "description": "Used to point either to a corresponding Budget Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
+                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
                     "format": "uri"
                 },
                 "date": {
                     "description": "The date of the transaction",
+                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
                     "format": "date-time"
                 },
@@ -660,11 +662,11 @@
                 "uri":{
                     "title":"Linked spending information",
                     "description":"A URI pointing directly to a machine-readable record about this spending transaction.",
+                    "mergeStrategy": "ocdsVersion",
                     "type":["string", "null"],
                     "format":"uri"
                 }
-            },
-            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned."
+            }
         },
         "Organization": {
             "title": "Organization",

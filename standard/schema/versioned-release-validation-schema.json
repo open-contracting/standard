@@ -57,13 +57,6 @@
             "title": "Amendment information"
         }, 
         "Transaction": {
-            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
-            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.", 
-            "title": "Transaction Information", 
-            "required": [
-                "id"
-            ], 
-            "type": "object", 
             "properties": {
                 "receiverOrganization": {
                     "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -230,35 +223,31 @@
                         }
                     }
                 }, 
-                "amount": {
-                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
-                    "type": "object", 
-                    "properties": {
-                        "currency": {
-                            "type": [
-                                "string", 
-                                "null"
-                            ], 
-                            "description": "The currency in 3-letter ISO 4217 format."
-                        }, 
-                        "amount": {
-                            "minimum": 0, 
-                            "type": [
-                                "number", 
-                                "null"
-                            ], 
-                            "description": "Amount as a number."
-                        }
-                    }
-                }, 
                 "uri": {
-                    "title": "Linked spending information", 
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "description": "A URI pointing directly to a machine-readable record about this spending transaction.", 
-                    "format": "uri"
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "title": "Linked spending information", 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "A URI pointing directly to a machine-readable record about this spending transaction.", 
+                                "format": "uri"
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }, 
                 "providerOrganization": {
                     "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -425,22 +414,77 @@
                         }
                     }
                 }, 
-                "dataSource": {
-                    "title": "Data Source", 
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "description": "Used to point either to a corresponding Budget Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.", 
-                    "format": "uri"
+                "source": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "title": "Data Source", 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Used to point either to a corresponding Budget Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.", 
+                                "format": "uri"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "amount": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The currency in 3-letter ISO 4217 format."
+                        }, 
+                        "amount": {
+                            "minimum": 0, 
+                            "type": [
+                                "number", 
+                                "null"
+                            ], 
+                            "description": "Amount as a number."
+                        }
+                    }
                 }, 
                 "date": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "description": "The date of the transaction", 
-                    "format": "date-time"
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "The date of the transaction", 
+                                "format": "date-time"
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }, 
                 "id": {
                     "type": [
@@ -449,7 +493,13 @@
                     ], 
                     "description": "A unique identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For the budget data package this is the id, for IATI, the transaction reference."
                 }
-            }
+            }, 
+            "required": [
+                "id"
+            ], 
+            "type": "object", 
+            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.", 
+            "title": "Transaction Information"
         }, 
         "Implementation": {
             "properties": {
