@@ -9,7 +9,7 @@ def format(text):
 
 def make_link(text):
     text = text.replace("#/definitions/","")
-    return "["+text+"]("+text.lower()+")"
+    return format("["+text+"]("+text.lower()+")")
 
 def make_definition_table(json,file_path,what="properties",section=""): 
     table = [['Field Name','Description','Format']]
