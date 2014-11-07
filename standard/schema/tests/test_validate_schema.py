@@ -8,7 +8,6 @@ DRAFT_SCHEMA_PATH = path(__file__).parent / 'json-schema-draft-4.json'
 RELEASE_SCHEMA_PATH = path(__file__).parent.parent / 'release-schema.json'
 RECORD_SCHEMA_PATH = path(__file__).parent.parent / 'record-package-schema.json'
 RELEASE_PACKAGE_SCHEMA_PATH = path(__file__).parent.parent / 'release-package-schema.json'
-VERSIONED_RELEASE_SCHEMA_PATH = path(__file__).parent.parent / 'versioned-release-schema.json'
 VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH = path(__file__).parent.parent / 'versioned-release-validation-schema.json'
 
 
@@ -31,10 +30,6 @@ def test_validate_record_schema():
 
 def test_validate_release_package_schema():
     validate_schema(RELEASE_PACKAGE_SCHEMA_PATH)
-
-
-def test_validate_versioned_release_schema():
-    validate_schema(VERSIONED_RELEASE_SCHEMA_PATH)
 
 
 def test_validate_versioned_release_validation_schema():

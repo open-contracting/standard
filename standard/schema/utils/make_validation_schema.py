@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     schema_dir = dirname(dirname(abspath(__file__)))
 
-    with open(join(schema_dir, 'versioned-release-schema.json'), 'rb') as f:
+    with open(join(schema_dir, 'release-schema.json'), 'rb') as f:
         vr = json.loads(f.read())
 
     new_validation_schema = get_versioned_validation_schema(vr)
