@@ -98,7 +98,7 @@
                     "description": "A list of documents related to the planning process, including public hearing notices.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {"idRef": "id"},
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Document" }
                 }
             },
@@ -117,7 +117,7 @@
                 "id": {
                     "title": "Tender ID",
                     "description": "An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.",
-                    "type": "string",
+                    "type": ["string", "integer"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "title": {
@@ -129,75 +129,71 @@
                     "description": "Tender description",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
-
                 },
                 "status": {
                     "title": "Tender Status",
                     "description": "[Consult codelist] The current status of the tender e.g. active, cancelled.",
-                    "type": "string",
+                    "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "items": {
                     "title": "Items to be procured",
                     "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
                     "type": "array",
+                    "mergeStrategy": "arrayMergeById",
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Item" },
-                    "uniqueItems": true,
-                    "mergeStrategy": "ocdsVersion"
+                    "uniqueItems": true
                 },
                 "minValue": {
                     "description": "The minimum estimated value of the procurement.",
-                    "$ref": "#/definitions/Value",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Value"
                 },
                 "value": {
                     "description": "The total estimated value of the procurement.",
-                    "$ref": "#/definitions/Value",
-                    "mergeStrategy": "ocdsVersion"
-
+                    "$ref": "#/definitions/Value"
                 },
-                "procurementMethod": {
-                    "description": "Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)",
+                "method": {
+                    "description": "[Consult codelist] Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)",
                     "type": ["string", "null"],
-                    "enum": ["Open", "Selective", "Limited", null],
+                    "enum": ["open", "selective", "limited", null],
                     "mergeStrategy": "ocdsVersion"
                 },
-                "methodJustification": {
-                    "description": "Justification of procurement method, especially in the case of Limited tendering.",
+                "methodRationale": {
+                    "description": "Rationale of procurement method, especially in the case of Limited tendering.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
-                "selectionCriteria": {
-                    "description": "Specify the selection criteria, by lowest cost, ",
+                "awardCriteria": {
+                    "description": "[Consult codelist] Specify the award criteria for the procurement.",
                     "type": ["string", "null"],
-                    "enum": ["Lowest Cost", "Best Proposal", "Best Value to Government", "Single bid only", null],
                     "mergeStrategy": "ocdsVersion"
                 },
-                "selectionDetails": {
+                "awardCriteriaDetails": {
                     "description": "Any detailed or further information on the selection criteria.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "submissionMethod": {
-                    "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction",
-                    "type": ["string", "null"],
-                    "enum": ["Electronic Auction", "Electronic Submission", "Written", "In Person", null],
+                    "description": "[Consult codelist] Specify the method by which bids must be submitted, in person, written, or electronic auction.",
+                    "type": ["array", "null"],
+                    "items": {
+                        "type": "string"
+                    },
                     "mergeStrategy": "ocdsVersion"
                 },
-                "submissionDetails" : {
+                "submissionMethodDetails" : {
                     "description": "Any detailed or further information on the submission method. This may include the address, e-mail address or online service to which bids should be submitted, and any special requirements to be followed for submissions.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "tenderPeriod": {
                     "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
-                    "$ref": "#/definitions/Period",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Period"
                 },
                 "enquiryPeriod": {
                     "description": "The period during which enquiries may be made and answered.",
-                    "$ref": "#/definitions/Period",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Period"
                 },
                 "hasEnquiries": {
                     "description": "A Yes/No field as to whether enquiries were part of tender process.",
@@ -211,32 +207,27 @@
                 },
                 "awardPeriod": {
                     "description": "The date or period on which an award is anticipated to be made.",
-                    "$ref": "#/definitions/Period",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Period"
                 },
                 "procuringEntity": {
                     "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
-                    "$ref": "#/definitions/Organization",
-                    "mergeStrategy": "ocdsVersion"
+                    "$ref": "#/definitions/Organization"
                 },
                 "documents": {
                     "description": "All documents and attachments related to the tender, including any notices.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {"idRef": "id"},
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Document" }
                 },
                 "milestones": {
                     "description": "A list of milestones associated with the tender.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {"idRef": "id"},
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Milestone" }
                 },
-                "amendment": { 
-                    "$ref": "#/definitions/Amendment",
-                    "mergeStrategy": "ocdsVersion"
-                }
+                "amendment": { "$ref": "#/definitions/Amendment" }
             },
             "patternProperties": {
                 "^(title_[A-Za-z]{2})$": {
@@ -245,19 +236,18 @@
                 "^(description_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 },
-                "^(methodJustification_[A-Za-z]{2})$": {
+                "^(methodRationale_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 },
-                "^(selectionMethod_[A-Za-z]{2})$": {
+                "^(awardCriteriaDetails_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 },
-                "^(submissionDetails_[A-Za-z]{2})$": {
+                "^(submissionMethodDetails_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 },
                 "^(eligibilityCriteria_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-
             }
         },
         "Award": {
@@ -703,10 +693,11 @@
         "Item": {
             "type": "object",
             "description": "A good, service, or work to be contracted.",
+            "required": ["id"],
             "properties": {
                 "id": {
-                    "description": "A local identifier to reference the items by",
-                    "type": ["string", "integer", "null"]
+                    "description": "A local identifier to reference and merge the items by. Must be unique within a given array of items.",
+                    "type": ["string", "integer"]
                 },
                 "description": {
                     "description": "A description of the goods, services to be provided.",
@@ -732,7 +723,7 @@
                         },
                         "value": {
                             "description": "The value of a single unity",
-                            "$ref": "$/definitions/Value"
+                            "$ref": "#/definitions/Value"
                         }
                     },
                     "patternProperties": {

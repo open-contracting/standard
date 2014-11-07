@@ -14,12 +14,12 @@
             "type": "object", 
             "properties": {
                 "date": {
-                    "format": "date-time", 
+                    "title": "Amendment Date", 
                     "type": [
                         "string", 
                         "null"
                     ], 
-                    "title": "Amendment Date"
+                    "format": "date-time"
                 }, 
                 "changes": {
                     "items": {
@@ -616,6 +616,10 @@
         }, 
         "Item": {
             "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
+            "description": "A good, service, or work to be contracted.", 
+            "required": [
+                "id"
+            ], 
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
                     "type": [
@@ -625,7 +629,6 @@
                 }
             }, 
             "type": "object", 
-            "description": "A good, service, or work to be contracted.", 
             "properties": {
                 "description": {
                     "type": [
@@ -635,8 +638,48 @@
                     "description": "A description of the goods, services to be provided."
                 }, 
                 "classification": {
-                    "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas.", 
-                    "$ref": "#/definitions/Identifier"
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(description_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "scheme": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                        }, 
+                        "id": {
+                            "type": [
+                                "string", 
+                                "integer", 
+                                "null"
+                            ], 
+                            "description": "The identifier for the Thing under the given scheme."
+                        }, 
+                        "uri": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "URI to identify the Thing under the given scheme.", 
+                            "format": "uri"
+                        }, 
+                        "description": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                        }
+                    }
                 }, 
                 "additionalClassifications": {
                     "uniqueItems": true, 
@@ -649,10 +692,9 @@
                 "id": {
                     "type": [
                         "string", 
-                        "integer", 
-                        "null"
+                        "integer"
                     ], 
-                    "description": "A local identifier to reference the items by"
+                    "description": "A local identifier to reference and merge the items by. Must be unique within a given array of items."
                 }, 
                 "unit": {
                     "patternProperties": {
@@ -674,8 +716,25 @@
                             "description": "Name of the unit"
                         }, 
                         "value": {
-                            "description": "The value of a single unity", 
-                            "$ref": "$/definitions/Value"
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "type": "object", 
+                            "properties": {
+                                "currency": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "The currency in 3-letter ISO 4217 format."
+                                }, 
+                                "amount": {
+                                    "minimum": 0, 
+                                    "type": [
+                                        "number", 
+                                        "null"
+                                    ], 
+                                    "description": "Amount as a number."
+                                }
+                            }
                         }
                     }
                 }, 
@@ -1259,7 +1318,7 @@
                 "id"
             ], 
             "patternProperties": {
-                "^(methodJustification_[A-Za-z]{2})$": {
+                "^(awardCriteriaDetails_[A-Za-z]{2})$": {
                     "type": [
                         "string", 
                         "null"
@@ -1277,19 +1336,19 @@
                         "null"
                     ]
                 }, 
+                "^(methodRationale_[A-Za-z]{2})$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
+                "^(submissionMethodDetails_[A-Za-z]{2})$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
                 "^(description_[A-Za-z]{2})$": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "^(selectionMethod_[A-Za-z]{2})$": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "^(submissionDetails_[A-Za-z]{2})$": {
                     "type": [
                         "string", 
                         "null"
@@ -1298,7 +1357,85 @@
             }, 
             "type": "object", 
             "properties": {
-                "procurementMethod": {
+                "amendment": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(rationale_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "date": {
+                            "title": "Amendment Date", 
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "format": "date-time"
+                        }, 
+                        "changes": {
+                            "items": {
+                                "type": "object", 
+                                "properties": {
+                                    "property": {
+                                        "type": "string", 
+                                        "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. "
+                                    }, 
+                                    "former_value": {
+                                        "type": [
+                                            "string", 
+                                            "number", 
+                                            "integer", 
+                                            "array", 
+                                            "object", 
+                                            "null"
+                                        ], 
+                                        "description": "The previous value of the changed property, in whatever type the property is."
+                                    }
+                                }
+                            }, 
+                            "type": "array", 
+                            "description": "Comma-seperated list of affected fields.", 
+                            "title": "Amended fields"
+                        }, 
+                        "rationale": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "An explanation for the amendment."
+                        }
+                    }, 
+                    "title": "Amendment information"
+                }, 
+                "awardPeriod": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The state date for the period.", 
+                            "format": "date-time"
+                        }, 
+                        "endDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The end date for the period.", 
+                            "format": "date-time"
+                        }
+                    }, 
+                    "title": "Period"
+                }, 
+                "awardCriteria": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -1312,180 +1449,80 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "enum": [
-                                    "Open", 
-                                    "Selective", 
-                                    "Limited", 
-                                    null
-                                ], 
                                 "type": [
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "amendment": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "$ref": "#/definitions/Amendment"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "awardPeriod": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The date or period on which an award is anticipated to be made.", 
-                                "$ref": "#/definitions/Period"
+                                "description": "[Consult codelist] Specify the award criteria for the procurement."
                             }
                         }
                     }, 
                     "type": "array"
                 }, 
                 "enquiryPeriod": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The period during which enquiries may be made and answered.", 
-                                "$ref": "#/definitions/Period"
-                            }
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The state date for the period.", 
+                            "format": "date-time"
+                        }, 
+                        "endDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The end date for the period.", 
+                            "format": "date-time"
                         }
                     }, 
-                    "type": "array"
+                    "title": "Period"
                 }, 
                 "minValue": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The minimum estimated value of the procurement.", 
-                                "$ref": "#/definitions/Value"
-                            }
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The currency in 3-letter ISO 4217 format."
+                        }, 
+                        "amount": {
+                            "minimum": 0, 
+                            "type": [
+                                "number", 
+                                "null"
+                            ], 
+                            "description": "Amount as a number."
                         }
-                    }, 
-                    "type": "array"
+                    }
                 }, 
-                "selectionCriteria": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "enum": [
-                                    "Lowest Cost", 
-                                    "Best Proposal", 
-                                    "Best Value to Government", 
-                                    "Single bid only", 
-                                    null
-                                ], 
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Specify the selection criteria, by lowest cost, "
-                            }
+                "value": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The currency in 3-letter ISO 4217 format."
+                        }, 
+                        "amount": {
+                            "minimum": 0, 
+                            "type": [
+                                "number", 
+                                "null"
+                            ], 
+                            "description": "Amount as a number."
                         }
-                    }, 
-                    "type": "array"
-                }, 
-                "procuringEntity": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.", 
-                                "$ref": "#/definitions/Organization"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "selectionDetails": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Any detailed or further information on the selection criteria."
-                            }
-                        }
-                    }, 
-                    "type": "array"
+                    }
                 }, 
                 "id": {
                     "items": {
@@ -1501,7 +1538,10 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "type": "string", 
+                                "type": [
+                                    "string", 
+                                    "integer"
+                                ], 
                                 "description": "An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.", 
                                 "title": "Tender ID"
                             }
@@ -1509,35 +1549,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "tenderPeriod": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.", 
-                                "$ref": "#/definitions/Period"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "documents": {
-                    "items": {
-                        "$ref": "#/definitions/Document"
-                    }, 
-                    "type": "array", 
-                    "description": "All documents and attachments related to the tender, including any notices."
-                }, 
-                "methodJustification": {
+                "description": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -1555,7 +1567,38 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Justification of procurement method, especially in the case of Limited tendering."
+                                "description": "Tender description"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "documents": {
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    }, 
+                    "type": "array", 
+                    "description": "All documents and attachments related to the tender, including any notices."
+                }, 
+                "methodRationale": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Rationale of procurement method, especially in the case of Limited tendering."
                             }
                         }
                     }, 
@@ -1585,7 +1628,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "submissionDetails": {
+                "method": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -1599,11 +1642,17 @@
                                 "type": "string"
                             }, 
                             "value": {
+                                "enum": [
+                                    "open", 
+                                    "selective", 
+                                    "limited", 
+                                    null
+                                ], 
                                 "type": [
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Any detailed or further information on the submission method. This may include the address, e-mail address or online service to which bids should be submitted, and any special requirements to be followed for submissions."
+                                "description": "[Consult codelist] Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)"
                             }
                         }
                     }, 
@@ -1623,7 +1672,10 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "type": "string", 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
                                 "description": "[Consult codelist] The current status of the tender e.g. active, cancelled.", 
                                 "title": "Tender Status"
                             }
@@ -1655,29 +1707,28 @@
                     }, 
                     "type": "array"
                 }, 
-                "description": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Tender description"
-                            }
+                "tenderPeriod": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The state date for the period.", 
+                            "format": "date-time"
+                        }, 
+                        "endDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The end date for the period.", 
+                            "format": "date-time"
                         }
                     }, 
-                    "type": "array"
+                    "title": "Period"
                 }, 
                 "submissionMethod": {
                     "items": {
@@ -1693,18 +1744,14 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "enum": [
-                                    "Electronic Auction", 
-                                    "Electronic Submission", 
-                                    "Written", 
-                                    "In Person", 
-                                    null
-                                ], 
+                                "items": {
+                                    "type": "string"
+                                }, 
                                 "type": [
-                                    "string", 
+                                    "array", 
                                     "null"
                                 ], 
-                                "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction"
+                                "description": "[Consult codelist] Specify the method by which bids must be submitted, in person, written, or electronic auction."
                             }
                         }
                     }, 
@@ -1717,7 +1764,7 @@
                     "type": "array", 
                     "description": "A list of milestones associated with the tender."
                 }, 
-                "items": {
+                "submissionMethodDetails": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -1731,19 +1778,26 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.", 
-                                "title": "Items to be procured", 
-                                "uniqueItems": true, 
-                                "items": {
-                                    "$ref": "#/definitions/Item"
-                                }, 
-                                "type": "array"
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Any detailed or further information on the submission method. This may include the address, e-mail address or online service to which bids should be submitted, and any special requirements to be followed for submissions."
                             }
                         }
                     }, 
                     "type": "array"
                 }, 
-                "value": {
+                "items": {
+                    "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.", 
+                    "title": "Items to be procured", 
+                    "uniqueItems": true, 
+                    "items": {
+                        "$ref": "#/definitions/Item"
+                    }, 
+                    "type": "array"
+                }, 
+                "awardCriteriaDetails": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -1757,8 +1811,11 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "description": "The total estimated value of the procurement.", 
-                                "$ref": "#/definitions/Value"
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Any detailed or further information on the selection criteria."
                             }
                         }
                     }, 
@@ -1787,6 +1844,171 @@
                         }
                     }, 
                     "type": "array"
+                }, 
+                "procuringEntity": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "description": "An organization.", 
+                    "title": "Organization", 
+                    "patternProperties": {
+                        "^(name_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "additionalIdentifiers": {
+                            "uniqueItems": true, 
+                            "items": {
+                                "$ref": "#/definitions/Identifier"
+                            }, 
+                            "type": "array", 
+                            "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                        }, 
+                        "contactPoint": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(name_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "properties": {
+                                "telephone": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "url": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "format": "uri"
+                                }, 
+                                "faxNumber": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "name": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "email": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }, 
+                        "identifier": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(description_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "properties": {
+                                "scheme": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                }, 
+                                "id": {
+                                    "type": [
+                                        "string", 
+                                        "integer", 
+                                        "null"
+                                    ], 
+                                    "description": "The identifier for the Thing under the given scheme."
+                                }, 
+                                "uri": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "URI to identify the Thing under the given scheme.", 
+                                    "format": "uri"
+                                }, 
+                                "description": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                }
+                            }
+                        }, 
+                        "name": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                        }, 
+                        "address": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(countryName_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "description": "An address", 
+                            "properties": {
+                                "postalCode": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "countryName": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "streetAddress": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "region": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "locality": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }, 
@@ -2513,7 +2735,7 @@
             "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.", 
             "title": "Tender", 
             "patternProperties": {
-                "^(methodJustification_[A-Za-z]{2})$": {
+                "^(awardCriteriaDetails_[A-Za-z]{2})$": {
                     "type": [
                         "string", 
                         "null"
@@ -2531,19 +2753,19 @@
                         "null"
                     ]
                 }, 
+                "^(methodRationale_[A-Za-z]{2})$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
+                "^(submissionMethodDetails_[A-Za-z]{2})$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
                 "^(description_[A-Za-z]{2})$": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "^(selectionMethod_[A-Za-z]{2})$": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "^(submissionDetails_[A-Za-z]{2})$": {
                     "type": [
                         "string", 
                         "null"
@@ -2555,7 +2777,85 @@
             ], 
             "type": "object", 
             "properties": {
-                "procurementMethod": {
+                "amendment": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(rationale_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "date": {
+                            "title": "Amendment Date", 
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "format": "date-time"
+                        }, 
+                        "changes": {
+                            "items": {
+                                "type": "object", 
+                                "properties": {
+                                    "property": {
+                                        "type": "string", 
+                                        "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. "
+                                    }, 
+                                    "former_value": {
+                                        "type": [
+                                            "string", 
+                                            "number", 
+                                            "integer", 
+                                            "array", 
+                                            "object", 
+                                            "null"
+                                        ], 
+                                        "description": "The previous value of the changed property, in whatever type the property is."
+                                    }
+                                }
+                            }, 
+                            "type": "array", 
+                            "description": "Comma-seperated list of affected fields.", 
+                            "title": "Amended fields"
+                        }, 
+                        "rationale": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "An explanation for the amendment."
+                        }
+                    }, 
+                    "title": "Amendment information"
+                }, 
+                "awardPeriod": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The state date for the period.", 
+                            "format": "date-time"
+                        }, 
+                        "endDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The end date for the period.", 
+                            "format": "date-time"
+                        }
+                    }, 
+                    "title": "Period"
+                }, 
+                "awardCriteria": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -2569,180 +2869,80 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "enum": [
-                                    "Open", 
-                                    "Selective", 
-                                    "Limited", 
-                                    null
-                                ], 
                                 "type": [
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "amendment": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "$ref": "#/definitions/Amendment"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "awardPeriod": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The date or period on which an award is anticipated to be made.", 
-                                "$ref": "#/definitions/Period"
+                                "description": "[Consult codelist] Specify the award criteria for the procurement."
                             }
                         }
                     }, 
                     "type": "array"
                 }, 
                 "enquiryPeriod": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The period during which enquiries may be made and answered.", 
-                                "$ref": "#/definitions/Period"
-                            }
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The state date for the period.", 
+                            "format": "date-time"
+                        }, 
+                        "endDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The end date for the period.", 
+                            "format": "date-time"
                         }
                     }, 
-                    "type": "array"
+                    "title": "Period"
                 }, 
                 "minValue": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The minimum estimated value of the procurement.", 
-                                "$ref": "#/definitions/Value"
-                            }
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The currency in 3-letter ISO 4217 format."
+                        }, 
+                        "amount": {
+                            "minimum": 0, 
+                            "type": [
+                                "number", 
+                                "null"
+                            ], 
+                            "description": "Amount as a number."
                         }
-                    }, 
-                    "type": "array"
+                    }
                 }, 
-                "selectionCriteria": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "enum": [
-                                    "Lowest Cost", 
-                                    "Best Proposal", 
-                                    "Best Value to Government", 
-                                    "Single bid only", 
-                                    null
-                                ], 
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Specify the selection criteria, by lowest cost, "
-                            }
+                "value": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The currency in 3-letter ISO 4217 format."
+                        }, 
+                        "amount": {
+                            "minimum": 0, 
+                            "type": [
+                                "number", 
+                                "null"
+                            ], 
+                            "description": "Amount as a number."
                         }
-                    }, 
-                    "type": "array"
-                }, 
-                "procuringEntity": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.", 
-                                "$ref": "#/definitions/Organization"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "selectionDetails": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Any detailed or further information on the selection criteria."
-                            }
-                        }
-                    }, 
-                    "type": "array"
+                    }
                 }, 
                 "id": {
                     "items": {
@@ -2758,7 +2958,10 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "type": "string", 
+                                "type": [
+                                    "string", 
+                                    "integer"
+                                ], 
                                 "description": "An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.", 
                                 "title": "Tender ID"
                             }
@@ -2766,35 +2969,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "tenderPeriod": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.", 
-                                "$ref": "#/definitions/Period"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
-                "documents": {
-                    "items": {
-                        "$ref": "#/definitions/Document"
-                    }, 
-                    "type": "array", 
-                    "description": "All documents and attachments related to the tender, including any notices."
-                }, 
-                "methodJustification": {
+                "description": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -2812,7 +2987,38 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Justification of procurement method, especially in the case of Limited tendering."
+                                "description": "Tender description"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "documents": {
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    }, 
+                    "type": "array", 
+                    "description": "All documents and attachments related to the tender, including any notices."
+                }, 
+                "methodRationale": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Rationale of procurement method, especially in the case of Limited tendering."
                             }
                         }
                     }, 
@@ -2842,7 +3048,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "submissionDetails": {
+                "method": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -2856,11 +3062,17 @@
                                 "type": "string"
                             }, 
                             "value": {
+                                "enum": [
+                                    "open", 
+                                    "selective", 
+                                    "limited", 
+                                    null
+                                ], 
                                 "type": [
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Any detailed or further information on the submission method. This may include the address, e-mail address or online service to which bids should be submitted, and any special requirements to be followed for submissions."
+                                "description": "[Consult codelist] Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)"
                             }
                         }
                     }, 
@@ -2880,7 +3092,10 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "type": "string", 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
                                 "description": "[Consult codelist] The current status of the tender e.g. active, cancelled.", 
                                 "title": "Tender Status"
                             }
@@ -2912,29 +3127,28 @@
                     }, 
                     "type": "array"
                 }, 
-                "description": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Tender description"
-                            }
+                "tenderPeriod": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The state date for the period.", 
+                            "format": "date-time"
+                        }, 
+                        "endDate": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The end date for the period.", 
+                            "format": "date-time"
                         }
                     }, 
-                    "type": "array"
+                    "title": "Period"
                 }, 
                 "submissionMethod": {
                     "items": {
@@ -2950,18 +3164,14 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "enum": [
-                                    "Electronic Auction", 
-                                    "Electronic Submission", 
-                                    "Written", 
-                                    "In Person", 
-                                    null
-                                ], 
+                                "items": {
+                                    "type": "string"
+                                }, 
                                 "type": [
-                                    "string", 
+                                    "array", 
                                     "null"
                                 ], 
-                                "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction"
+                                "description": "[Consult codelist] Specify the method by which bids must be submitted, in person, written, or electronic auction."
                             }
                         }
                     }, 
@@ -2974,7 +3184,7 @@
                     "type": "array", 
                     "description": "A list of milestones associated with the tender."
                 }, 
-                "items": {
+                "submissionMethodDetails": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -2988,19 +3198,26 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.", 
-                                "title": "Items to be procured", 
-                                "uniqueItems": true, 
-                                "items": {
-                                    "$ref": "#/definitions/Item"
-                                }, 
-                                "type": "array"
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Any detailed or further information on the submission method. This may include the address, e-mail address or online service to which bids should be submitted, and any special requirements to be followed for submissions."
                             }
                         }
                     }, 
                     "type": "array"
                 }, 
-                "value": {
+                "items": {
+                    "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.", 
+                    "title": "Items to be procured", 
+                    "uniqueItems": true, 
+                    "items": {
+                        "$ref": "#/definitions/Item"
+                    }, 
+                    "type": "array"
+                }, 
+                "awardCriteriaDetails": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -3014,8 +3231,11 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "description": "The total estimated value of the procurement.", 
-                                "$ref": "#/definitions/Value"
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Any detailed or further information on the selection criteria."
                             }
                         }
                     }, 
@@ -3044,6 +3264,171 @@
                         }
                     }, 
                     "type": "array"
+                }, 
+                "procuringEntity": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "description": "An organization.", 
+                    "title": "Organization", 
+                    "patternProperties": {
+                        "^(name_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "additionalIdentifiers": {
+                            "uniqueItems": true, 
+                            "items": {
+                                "$ref": "#/definitions/Identifier"
+                            }, 
+                            "type": "array", 
+                            "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                        }, 
+                        "contactPoint": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(name_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "properties": {
+                                "telephone": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "url": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "format": "uri"
+                                }, 
+                                "faxNumber": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "name": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "email": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }, 
+                        "identifier": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(description_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "properties": {
+                                "scheme": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                }, 
+                                "id": {
+                                    "type": [
+                                        "string", 
+                                        "integer", 
+                                        "null"
+                                    ], 
+                                    "description": "The identifier for the Thing under the given scheme."
+                                }, 
+                                "uri": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "URI to identify the Thing under the given scheme.", 
+                                    "format": "uri"
+                                }, 
+                                "description": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                }
+                            }
+                        }, 
+                        "name": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                        }, 
+                        "address": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(countryName_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "description": "An address", 
+                            "properties": {
+                                "postalCode": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "countryName": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "streetAddress": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "region": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "locality": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }, 
