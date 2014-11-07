@@ -7,6 +7,10 @@ import markdown
 def format(text):
     return markdown.markdown(text).replace("<p>","").replace("</p>","")
 
+def make_link(text):
+    text = text.replace("#/definitions/","")
+    return "["+text+"]("+text.lower()+")"
+
 def make_definition_table(json,file_path,what="properties",section=""): 
     table = [['Field Name','Description','Format']]
     if(section):
@@ -25,11 +29,11 @@ def make_definition_table(json,file_path,what="properties",section=""):
 
         if types == "array":
            if block[prop].get('items').get("$ref"):
-               table.append([prop,format(block[prop].get('description','')) + " See " + block[prop]['items']["$ref"].replace("#/definitions/","") + " section for further details.","Object Array"])
+               table.append([prop,format(block[prop].get('description','')) + " See " + make_link(block[prop]['items']["$ref"]) + " section for further details.","Object Array"])
            else:
                table.append([prop,format(block[prop].get('description','')),"Array"])
         elif block[prop].get("$ref"):
-          table.append([prop,format(block[prop].get('description','')) + " See " + block[prop]["$ref"].replace("#/definitions/",""),"Reference"])
+          table.append([prop,format(block[prop].get('description','')) + " See " + make_link(block[prop]["$ref"]),"Reference"])
         else:
           table.append([prop,format(block[prop].get('description','')),block[prop].get('format','') + " " + types])
           

@@ -1,13 +1,13 @@
 Field Name,Description,Format
-id,"The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have contractID 1 &amp; contractID 2 and ocid DEF can also have contractID 1 &amp; 2. But if it is a different contract, ocid cannot have contractID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled."," string, integer"
+id,"The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid). See the <a href=""http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/"">identifier guidance</a> for further details."," string, integer"
 awardID,The award.id against which this contract is being issued.," string, integer"
 title,Contract title, string
 description,Contract description, string
 status,"The current status of the contract. Drawn from the <a href=""http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#contract-status"">contractStatus codelist</a>", string
-period,The start and end date for the contract. See Period,Reference
-value,The total value of this contract. See Value,Reference
-items,"The goods, services, and any intangible outcomes in this contract. Note: If the items are the same as the award do not repeat. See Item section for further details.",Object Array
+period,The start and end date for the contract. See [Period](period),Reference
+value,The total value of this contract. See [Value](value),Reference
+items,"The goods, services, and any intangible outcomes in this contract. Note: If the items are the same as the award do not repeat. See [Item](item) section for further details.",Object Array
 dateSigned,"The date the contract was signed. In the case of multiple signatures, the date of the last signature.",date-time string
-documents,"All documents and attachments related to the contract, including any notices. See Document section for further details.",Object Array
-amendment, See Amendment,Reference
-implementation,Information related to the implementation of the contract in accordance with the obligations laid out therein. See Implementation,Reference
+documents,"All documents and attachments related to the contract, including any notices. See [Document](document) section for further details.",Object Array
+amendment, See [Amendment](amendment),Reference
+implementation,Information related to the implementation of the contract in accordance with the obligations laid out therein. See [Implementation](implementation),Reference
