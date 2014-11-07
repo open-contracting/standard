@@ -552,7 +552,7 @@
             "description": "This section contain information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.", 
             "title": "Budget Information", 
             "patternProperties": {
-                "^(budgetSource_[A-Za-z]{2})$": {
+                "^(source_[A-Za-z]{2})$": {
                     "type": [
                         "string", 
                         "null"
@@ -563,11 +563,26 @@
                         "string", 
                         "null"
                     ]
+                }, 
+                "^(description_[A-Za-z]{2})$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
                 }
             }, 
             "mergeStrategy": "ocdsVersion", 
             "type": "object", 
             "properties": {
+                "description": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ], 
+                    "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.", 
+                    "mergeStrategy": "ocdsVersion", 
+                    "title": "Budget Source"
+                }, 
                 "projectID": {
                     "type:": [
                         "string", 
@@ -575,6 +590,7 @@
                         "null"
                     ], 
                     "description": "An external identifier for the project that this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
+                    "mergeStrategy": "ocdsVersion", 
                     "title": "Project Identifier"
                 }, 
                 "uri": {
@@ -584,6 +600,7 @@
                         "null"
                     ], 
                     "description": "A URI pointing directly to a machine-readable record about the related budget for this project.", 
+                    "mergeStrategy": "ocdsVersion", 
                     "title": "Linked budget information"
                 }, 
                 "project": {
@@ -592,28 +609,22 @@
                         "null"
                     ], 
                     "description": "The name of the project that through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.", 
+                    "mergeStrategy": "ocdsVersion", 
                     "title": "Project Title"
                 }, 
-                "amount": {
-                    "description": "The value of the budget line item.", 
-                    "$ref": "#/definitions/Value"
-                }, 
-                "dataSource": {
+                "source": {
                     "format": "uri", 
                     "type": [
                         "string", 
                         "null"
                     ], 
                     "description": "Used to point either to a corresponding Budget Data Package, or to a machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.", 
+                    "mergeStrategy": "ocdsVersion", 
                     "title": "Data Source"
                 }, 
-                "budgetSource": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.", 
-                    "title": "Budget Source"
+                "amount": {
+                    "description": "The value of the budget line item.", 
+                    "$ref": "#/definitions/Value"
                 }, 
                 "id": {
                     "type": [
@@ -621,7 +632,8 @@
                         "integer", 
                         "null"
                     ], 
-                    "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source."
+                    "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source.", 
+                    "mergeStrategy": "ocdsVersion"
                 }
             }
         }, 
@@ -1126,7 +1138,7 @@
                                 "title": "Budget Information", 
                                 "type": "object", 
                                 "patternProperties": {
-                                    "^(budgetSource_[A-Za-z]{2})$": {
+                                    "^(source_[A-Za-z]{2})$": {
                                         "type": [
                                             "string", 
                                             "null"
@@ -1137,9 +1149,24 @@
                                             "string", 
                                             "null"
                                         ]
+                                    }, 
+                                    "^(description_[A-Za-z]{2})$": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ]
                                     }
                                 }, 
                                 "properties": {
+                                    "description": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.", 
+                                        "mergeStrategy": "ocdsVersion", 
+                                        "title": "Budget Source"
+                                    }, 
                                     "projectID": {
                                         "type:": [
                                             "string", 
@@ -1147,6 +1174,7 @@
                                             "null"
                                         ], 
                                         "description": "An external identifier for the project that this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
+                                        "mergeStrategy": "ocdsVersion", 
                                         "title": "Project Identifier"
                                     }, 
                                     "uri": {
@@ -1156,6 +1184,7 @@
                                             "null"
                                         ], 
                                         "description": "A URI pointing directly to a machine-readable record about the related budget for this project.", 
+                                        "mergeStrategy": "ocdsVersion", 
                                         "title": "Linked budget information"
                                     }, 
                                     "project": {
@@ -1164,28 +1193,22 @@
                                             "null"
                                         ], 
                                         "description": "The name of the project that through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.", 
+                                        "mergeStrategy": "ocdsVersion", 
                                         "title": "Project Title"
                                     }, 
-                                    "amount": {
-                                        "description": "The value of the budget line item.", 
-                                        "$ref": "#/definitions/Value"
-                                    }, 
-                                    "dataSource": {
+                                    "source": {
                                         "format": "uri", 
                                         "type": [
                                             "string", 
                                             "null"
                                         ], 
                                         "description": "Used to point either to a corresponding Budget Data Package, or to a machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.", 
+                                        "mergeStrategy": "ocdsVersion", 
                                         "title": "Data Source"
                                     }, 
-                                    "budgetSource": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.", 
-                                        "title": "Budget Source"
+                                    "amount": {
+                                        "description": "The value of the budget line item.", 
+                                        "$ref": "#/definitions/Value"
                                     }, 
                                     "id": {
                                         "type": [
@@ -1193,7 +1216,8 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source."
+                                        "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source.", 
+                                        "mergeStrategy": "ocdsVersion"
                                     }
                                 }
                             }
@@ -3835,7 +3859,7 @@
                                 "title": "Budget Information", 
                                 "type": "object", 
                                 "patternProperties": {
-                                    "^(budgetSource_[A-Za-z]{2})$": {
+                                    "^(source_[A-Za-z]{2})$": {
                                         "type": [
                                             "string", 
                                             "null"
@@ -3846,9 +3870,24 @@
                                             "string", 
                                             "null"
                                         ]
+                                    }, 
+                                    "^(description_[A-Za-z]{2})$": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ]
                                     }
                                 }, 
                                 "properties": {
+                                    "description": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.", 
+                                        "mergeStrategy": "ocdsVersion", 
+                                        "title": "Budget Source"
+                                    }, 
                                     "projectID": {
                                         "type:": [
                                             "string", 
@@ -3856,6 +3895,7 @@
                                             "null"
                                         ], 
                                         "description": "An external identifier for the project that this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
+                                        "mergeStrategy": "ocdsVersion", 
                                         "title": "Project Identifier"
                                     }, 
                                     "uri": {
@@ -3865,6 +3905,7 @@
                                             "null"
                                         ], 
                                         "description": "A URI pointing directly to a machine-readable record about the related budget for this project.", 
+                                        "mergeStrategy": "ocdsVersion", 
                                         "title": "Linked budget information"
                                     }, 
                                     "project": {
@@ -3873,28 +3914,22 @@
                                             "null"
                                         ], 
                                         "description": "The name of the project that through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.", 
+                                        "mergeStrategy": "ocdsVersion", 
                                         "title": "Project Title"
                                     }, 
-                                    "amount": {
-                                        "description": "The value of the budget line item.", 
-                                        "$ref": "#/definitions/Value"
-                                    }, 
-                                    "dataSource": {
+                                    "source": {
                                         "format": "uri", 
                                         "type": [
                                             "string", 
                                             "null"
                                         ], 
                                         "description": "Used to point either to a corresponding Budget Data Package, or to a machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.", 
+                                        "mergeStrategy": "ocdsVersion", 
                                         "title": "Data Source"
                                     }, 
-                                    "budgetSource": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.", 
-                                        "title": "Budget Source"
+                                    "amount": {
+                                        "description": "The value of the budget line item.", 
+                                        "$ref": "#/definitions/Value"
                                     }, 
                                     "id": {
                                         "type": [
@@ -3902,7 +3937,8 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source."
+                                        "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source.", 
+                                        "mergeStrategy": "ocdsVersion"
                                     }
                                 }
                             }
