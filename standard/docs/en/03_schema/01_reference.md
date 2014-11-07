@@ -61,10 +61,11 @@ Further details on each of the blocks contained within release are below.
 
 The planning section can be used to describe the background to a contracting process. This may include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
 
+#### Fields
 <div class="include-csv" data-src="standard/docs/field_definitions/release-planning.csv" data-table-class="table table-striped schema-table"></div>
 
-Apart from documents, the majority of information is held within the budget block:
-
+Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Budget Data Package](https://github.com/openspending/budget-data-package) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
+    
 <div class="include-csv" data-src="standard/docs/field_definitions/release-budget.csv" data-table-class="table table-striped schema-table"></div>
 
 
@@ -73,6 +74,8 @@ Apart from documents, the majority of information is held within the budget bloc
 The tender section includes details of the announcement that a organization intends to source some particular goods or services, and to establish one or more contract(s) for these.
 
 It may contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and may also be used to record details of how a completed tender process, including details of bids received. 
+
+#### Fields
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-tender.csv" data-table-class="table table-striped schema-table"></div>
 
@@ -101,12 +104,13 @@ Information on bidders against a contract will be handled by an extension during
 
 ### Award
 
+The award section is used to announce any awards issued for this tender. There may be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract, as it contains information on the suppliers. 
 
+<div class="include-csv" data-src="standard/docs/field_definitions/release-award.csv" data-table-class="table table-striped schema-table"></div>
 
 ### Contract
 
-
-### Implementation
+<div class="include-csv" data-src="standard/docs/field_definitions/release-contract.csv" data-table-class="table table-striped schema-table"></div>
 
 
 
