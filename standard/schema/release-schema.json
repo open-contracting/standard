@@ -444,11 +444,12 @@
         },
         "Milestone": {
             "type": "object",
+            "required": ["id"],
             "properties": {
                 "id": {
                     "description": "A local, unique identifier for this milestone. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism.",
-                    "type": ["string", "null"],
-                    "mergeStrategy": "ocdsVersion"
+                    "type": ["string", "integer"],
+                    "mergeStrategy": "overwrite"
                 },
                 "title": {
                     "description": "Milestone title",
@@ -460,40 +461,28 @@
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
-                "progress": {
-                    "description": "A list that documents the progress of the milestone. As progress on the milestone continues, new items are added to the list to document the milestone's progress.",
-                    "type": "array",
-                    "mergeStrategy": "ocdsVersion",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "date": {
-                                "description": "The date the new status was realized.",
-                                "type": ["string", "null"],
-                                "format": "date-time"
-                            },
-                            "status": {
-                                "description": "[Consult codelist] The status that was realized on the date provided.",
-                                "type": ["string", "null"]
-                            },
-                            "notes": {
-                                "description": "Any notes or description of the new status.",
-                                "type": ["string", "null"]
-                            }
-                        },
-                        "patternProperties": {
-                            "^(notes_[A-Za-z]{2})$": {
-                                "type": ["string", "null"]
-                            }
-                        }
-                    }
-
+                "dueDate": {
+                    "description": "The date the milestone is due.",
+                    "type": ["string", "null"],
+                    "format": "date-time",
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "status": {
+                    "description": "[Consult codelist] The status that was realized on the date provided.",
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "dateModified" : {
+                    "description": "The date the milestone was last reviewed or modified and the status was altered or confirmed to still be correct.",
+                    "type": ["string", "null"],
+                    "format": "date-time",
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "documents": {
                     "description": "List of documents associated with this milestone.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {"idRef": "id"},
+                    "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Document" },
                     "uniqueItems": true
                 }
@@ -545,7 +534,7 @@
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
-                "modified": {
+                "dateModified": {
                     "description": "Date that the document was last modified",
                     "type": ["string", "null"],
                     "format": "date-time",

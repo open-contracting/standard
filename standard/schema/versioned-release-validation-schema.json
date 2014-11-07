@@ -1532,9 +1532,12 @@
                     ]
                 }
             }, 
+            "required": [
+                "id"
+            ], 
             "type": "object", 
             "properties": {
-                "progress": {
+                "status": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -1548,47 +1551,23 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "items": {
-                                    "patternProperties": {
-                                        "^(notes_[A-Za-z]{2})$": {
-                                            "type": [
-                                                "string", 
-                                                "null"
-                                            ]
-                                        }
-                                    }, 
-                                    "type": "object", 
-                                    "properties": {
-                                        "date": {
-                                            "type": [
-                                                "string", 
-                                                "null"
-                                            ], 
-                                            "description": "The date the new status was realized.", 
-                                            "format": "date-time"
-                                        }, 
-                                        "status": {
-                                            "type": [
-                                                "string", 
-                                                "null"
-                                            ], 
-                                            "description": "[Consult codelist] The status that was realized on the date provided."
-                                        }, 
-                                        "notes": {
-                                            "type": [
-                                                "string", 
-                                                "null"
-                                            ], 
-                                            "description": "Any notes or description of the new status."
-                                        }
-                                    }
-                                }, 
-                                "type": "array", 
-                                "description": "A list that documents the progress of the milestone. As progress on the milestone continues, new items are added to the list to document the milestone's progress."
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "[Consult codelist] The status that was realized on the date provided."
                             }
                         }
                     }, 
                     "type": "array"
+                }, 
+                "documents": {
+                    "uniqueItems": true, 
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    }, 
+                    "type": "array", 
+                    "description": "List of documents associated with this milestone."
                 }, 
                 "description": {
                     "items": {
@@ -1614,38 +1593,6 @@
                     }, 
                     "type": "array"
                 }, 
-                "documents": {
-                    "uniqueItems": true, 
-                    "items": {
-                        "$ref": "#/definitions/Document"
-                    }, 
-                    "type": "array", 
-                    "description": "List of documents associated with this milestone."
-                }, 
-                "id": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "A local, unique identifier for this milestone. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism."
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
                 "title": {
                     "items": {
                         "properties": {
@@ -1665,6 +1612,63 @@
                                     "null"
                                 ], 
                                 "description": "Milestone title"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "dateModified": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "The date the milestone was last reviewed or modified and the status was altered or confirmed to still be correct.", 
+                                "format": "date-time"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "id": {
+                    "type": [
+                        "string", 
+                        "integer"
+                    ], 
+                    "description": "A local, unique identifier for this milestone. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism."
+                }, 
+                "dueDate": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "The date the milestone is due.", 
+                                "format": "date-time"
                             }
                         }
                     }, 
@@ -2726,31 +2730,6 @@
                     }, 
                     "type": "array"
                 }, 
-                "modified": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Date that the document was last modified", 
-                                "format": "date-time"
-                            }
-                        }
-                    }, 
-                    "type": "array"
-                }, 
                 "datePublished": {
                     "items": {
                         "properties": {
@@ -2795,6 +2774,31 @@
                                     "null"
                                 ], 
                                 "description": "Specifies the language of the linked document using either two-digit [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of two-letter codes from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype."
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "dateModified": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Date that the document was last modified", 
+                                "format": "date-time"
                             }
                         }
                     }, 
