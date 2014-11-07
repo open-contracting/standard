@@ -18,7 +18,7 @@ def make_definition_table(json,file_path,what="properties",section=""):
     for prop in block:
         types = block[prop].get('type','')
         if isinstance(types,list):
-            types = ", ".join(types)
+            types = ", ".join(types).replace(", null","").replace("null,","")
         else:
             types = types
             
@@ -31,7 +31,7 @@ def make_definition_table(json,file_path,what="properties",section=""):
         elif block[prop].get("$ref"):
           table.append([prop,format(block[prop].get('description','')) + " See " + block[prop]["$ref"].replace("#/definitions/",""),"Reference"])
         else:
-          table.append([prop,format(block[prop].get('description','')),block[prop].get('format','')])
+          table.append([prop,format(block[prop].get('description','')),block[prop].get('format','') + " " + types])
           
         with open(file_path, 'wb') as f:
             writer = csv.writer(f)

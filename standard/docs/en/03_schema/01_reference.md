@@ -63,6 +63,11 @@ The planning section can be used to describe the background to a contracting pro
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-planning.csv" data-table-class="table table-striped schema-table"></div>
 
+Apart from documents, the majority of information is held within the budget block:
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-budget.csv" data-table-class="table table-striped schema-table"></div>
+
+
 ### Tender
 
 The tender section includes details of the announcement that a organization intends to source some particular goods or services, and to establish one or more contract(s) for these.
@@ -70,10 +75,6 @@ The tender section includes details of the announcement that a organization inte
 It may contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and may also be used to record details of how a completed tender process, including details of bids received. 
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-tender.csv" data-table-class="table table-striped schema-table"></div>
-
-Apart from documents, the majority of information is held within the budget block:
-
-<div class="include-csv" data-src="standard/docs/field_definitions/release-budget.csv" data-table-class="table table-striped schema-table"></div>
 
 #### Notes 
 
