@@ -765,11 +765,13 @@
                 "date": {
                     "title": "Amendment Date",
                     "type": ["string", "null"],
-                    "format": "date-time"
+                    "format": "date-time",
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "changes": {
                     "title": "Amended fields",
                     "description": "Comma-seperated list of affected fields.",
+                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": {
                         "type": "object",
@@ -787,97 +789,108 @@
                 },
                 "rationale": {
                     "description": "An explanation for the amendment.",
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(rationale_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-            },
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier."
+            }
         },
         "Identifier": {
             "type": "object",
             "properties": {
                 "scheme": {
                     "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier.",
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "id": {
                     "description": "The identifier for the Thing under the given scheme.",
-                    "type": ["string", "integer", "null"]
+                    "type": ["string", "integer", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
                     "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry.",
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "uri": {
                     "description": "URI to identify the Thing under the given scheme.",
                     "type": ["string", "null"],
-                    "format" : "uri"
+                    "format" : "uri",
+                    "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-            },
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier."
+            }
         },
         "Address": {
             "description": "An address",
             "type": "object",
             "properties": {
                 "streetAddress": {
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "locality":{
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "region": {
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "postalCode": {
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "countryName": {
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(countryName_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-            },
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier."
+            }
         },
         "ContactPoint": {
             "type": "object",
             "properties": {
                 "name": {
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "email":{
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "telephone": {
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "faxNumber": {
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "url": {
                     "type": ["string", "null"],
-                    "format": "uri"
+                    "format": "uri",
+                    "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(name_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-            },
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier."
+            }
         },
         "Value": {
             "type": "object",
@@ -885,14 +898,15 @@
                 "amount": {
                     "description": "Amount as a number.",
                     "type": ["number", "null"],
-                    "minimum": 0
+                    "minimum": 0,
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "currency": {
                     "description": "The currency in 3-letter ISO 4217 format.",
-                    "type": ["string", "null"]
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
                 }
-            },
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier."
+            }
         },
         "Period": {
             "type": "object",
@@ -901,15 +915,16 @@
                 "startDate": { 
                     "description": "The state date for the period.",
                     "type": ["string", "null"],
-                    "format": "date-time"
+                    "format": "date-time",
+                    "mergeStrategy": "ocdsVersion"
                 },
                 "endDate": {
                     "description": "The end date for the period.",
                     "type": ["string", "null"],
-                    "format": "date-time"
+                    "format": "date-time",
+                    "mergeStrategy": "ocdsVersion"
                 }
-            },
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier."
+            }
         }
     }
 }
