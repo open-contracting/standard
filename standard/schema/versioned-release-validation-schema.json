@@ -58,36 +58,381 @@
         }, 
         "Transaction": {
             "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
+            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.", 
+            "title": "Transaction Information", 
+            "required": [
+                "id"
+            ], 
+            "type": "object", 
             "properties": {
                 "receiverOrganization": {
-                    "description": "The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.", 
-                    "$ref": "#/definitions/Organization"
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "description": "An organization.", 
+                    "title": "Organization", 
+                    "patternProperties": {
+                        "^(name_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "additionalIdentifiers": {
+                            "uniqueItems": true, 
+                            "items": {
+                                "$ref": "#/definitions/Identifier"
+                            }, 
+                            "type": "array", 
+                            "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                        }, 
+                        "contactPoint": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(name_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "properties": {
+                                "telephone": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "url": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "format": "uri"
+                                }, 
+                                "faxNumber": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "name": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "email": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }, 
+                        "identifier": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(description_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "properties": {
+                                "scheme": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                }, 
+                                "id": {
+                                    "type": [
+                                        "string", 
+                                        "integer", 
+                                        "null"
+                                    ], 
+                                    "description": "The identifier for the Thing under the given scheme."
+                                }, 
+                                "uri": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "URI to identify the Thing under the given scheme.", 
+                                    "format": "uri"
+                                }, 
+                                "description": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                }
+                            }
+                        }, 
+                        "name": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                        }, 
+                        "address": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(countryName_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "description": "An address", 
+                            "properties": {
+                                "postalCode": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "countryName": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "streetAddress": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "region": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "locality": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }
+                    }
                 }, 
                 "amount": {
-                    "description": "The value of the transaction.", 
-                    "$ref": "#/definitions/Value"
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The currency in 3-letter ISO 4217 format."
+                        }, 
+                        "amount": {
+                            "minimum": 0, 
+                            "type": [
+                                "number", 
+                                "null"
+                            ], 
+                            "description": "Amount as a number."
+                        }
+                    }
                 }, 
                 "uri": {
-                    "format": "uri", 
+                    "title": "Linked spending information", 
                     "type": [
                         "string", 
                         "null"
                     ], 
                     "description": "A URI pointing directly to a machine-readable record about this spending transaction.", 
-                    "title": "Linked spending information"
+                    "format": "uri"
                 }, 
                 "providerOrganization": {
-                    "description": "The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.", 
-                    "$ref": "#/definitions/Organization"
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "description": "An organization.", 
+                    "title": "Organization", 
+                    "patternProperties": {
+                        "^(name_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "additionalIdentifiers": {
+                            "uniqueItems": true, 
+                            "items": {
+                                "$ref": "#/definitions/Identifier"
+                            }, 
+                            "type": "array", 
+                            "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                        }, 
+                        "contactPoint": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(name_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "properties": {
+                                "telephone": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "url": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "format": "uri"
+                                }, 
+                                "faxNumber": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "name": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "email": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }, 
+                        "identifier": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(description_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "properties": {
+                                "scheme": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                }, 
+                                "id": {
+                                    "type": [
+                                        "string", 
+                                        "integer", 
+                                        "null"
+                                    ], 
+                                    "description": "The identifier for the Thing under the given scheme."
+                                }, 
+                                "uri": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "URI to identify the Thing under the given scheme.", 
+                                    "format": "uri"
+                                }, 
+                                "description": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ], 
+                                    "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                }
+                            }
+                        }, 
+                        "name": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                        }, 
+                        "address": {
+                            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                            "patternProperties": {
+                                "^(countryName_[A-Za-z]{2})$": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }, 
+                            "type": "object", 
+                            "description": "An address", 
+                            "properties": {
+                                "postalCode": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "countryName": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "streetAddress": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "region": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }, 
+                                "locality": {
+                                    "type": [
+                                        "string", 
+                                        "null"
+                                    ]
+                                }
+                            }
+                        }
+                    }
                 }, 
                 "dataSource": {
-                    "format": "uri", 
+                    "title": "Data Source", 
                     "type": [
                         "string", 
                         "null"
                     ], 
                     "description": "Used to point either to a corresponding Budget Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.", 
-                    "title": "Data Source"
+                    "format": "uri"
                 }, 
                 "date": {
                     "type": [
@@ -100,24 +445,21 @@
                 "id": {
                     "type": [
                         "string", 
-                        "integer", 
-                        "null"
+                        "integer"
                     ], 
-                    "description": "An identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For the budget data package this is the id, for IATI, the transaction reference."
+                    "description": "A unique identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For the budget data package this is the id, for IATI, the transaction reference."
                 }
-            }, 
-            "type": "object", 
-            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.", 
-            "title": "Transaction Information"
+            }
         }, 
         "Implementation": {
             "properties": {
                 "milestones": {
+                    "description": "As milestones are completed, milestone completions should be documented.", 
+                    "uniqueItems": true, 
                     "items": {
                         "$ref": "#/definitions/Milestone"
                     }, 
-                    "type": "array", 
-                    "description": "As milestones are completed, milestone completions should be documented."
+                    "type": "array"
                 }, 
                 "documents": {
                     "description": "Documents and reports that are part of the implementation phase e.g. audit and evaluation reports.", 
@@ -128,26 +470,10 @@
                     "type": "array"
                 }, 
                 "transactions": {
+                    "description": "A list of the spending transactions made against this contract", 
+                    "uniqueItems": true, 
                     "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "items": {
-                                    "$ref": "#/definitions/Transaction"
-                                }, 
-                                "type": "array", 
-                                "description": "A list of the spending transactions made against this contract"
-                            }
-                        }
+                        "$ref": "#/definitions/Transaction"
                     }, 
                     "type": "array"
                 }
@@ -463,11 +789,12 @@
                     "type": "object", 
                     "properties": {
                         "milestones": {
+                            "description": "As milestones are completed, milestone completions should be documented.", 
+                            "uniqueItems": true, 
                             "items": {
                                 "$ref": "#/definitions/Milestone"
                             }, 
-                            "type": "array", 
-                            "description": "As milestones are completed, milestone completions should be documented."
+                            "type": "array"
                         }, 
                         "documents": {
                             "description": "Documents and reports that are part of the implementation phase e.g. audit and evaluation reports.", 
@@ -478,26 +805,10 @@
                             "type": "array"
                         }, 
                         "transactions": {
+                            "description": "A list of the spending transactions made against this contract", 
+                            "uniqueItems": true, 
                             "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "items": {
-                                            "$ref": "#/definitions/Transaction"
-                                        }, 
-                                        "type": "array", 
-                                        "description": "A list of the spending transactions made against this contract"
-                                    }
-                                }
+                                "$ref": "#/definitions/Transaction"
                             }, 
                             "type": "array"
                         }
