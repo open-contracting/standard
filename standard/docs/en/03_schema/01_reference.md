@@ -135,7 +135,14 @@ As a result, [award](#award) and [contract](#contract) each contain an [items](#
 
 Contract blocks can contain nested implementation information. 
 
-ToDo:
+<div class="include-csv" data-src="standard/docs/field_definitions/release-implementation.csv" data-table-class="table table-striped schema-table"></div>
+
+
+#### Transaction
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-transaction.csv" data-table-class="table table-striped schema-table"></div>
+
+ToDo: Describe implementation better.
 
 ## Record structure
 
@@ -209,7 +216,12 @@ Publishers may chose to provide a copy of the record with, and without, this inf
 Third parties should also be able to use the information in the releases list to fetch source data, compile and verify their own version history for a contract.
 
 
-## Multi-language support (ToVerify)
+## Amendment
+
+ToDo: Details of amendment handling.
+
+
+## Language
 
 Many publishers need to be able to share key data in multiple languages. All free-text title and description fields in the Open Contracting Data Standard can be given in one or more languages.
 
@@ -219,13 +231,11 @@ E.g. ```title``` and ```title_es```
 
 In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the ```language``` field. 
 
-In order to allow users to identify all the other languages in a file, the language codes for any other included languages should be given in the ```languagesIncluded``` array. (ToDo: CHECK PROPERTY NAME)
-
 Languages should be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the two letter [ISO-639-1 two-digit language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, and should not assume that the users are able to distinguish between sub-tag variations (for example, OCDS publishers should strongly prefer 'en' over 'en_US' or 'en_GB'). 
 
 To include a language variation of a field, the field name should be suffixed with _ and the appropriate language tag. For example: ```title_es``` for Spanish.
 
-### Example
+### Worked example
 
 A contract is for ‘Software consultancy services’ may be published in a release with the default language sent to ‘en’ (the ISO-639-1 code for English). The following examples give the description of an item as English, French and Spanish.
 
@@ -251,16 +261,28 @@ The JSON Schema makes use of the JSON Scheme 0.4 [‘Pattern Properties](http://
 ## Field reference
 
 
-### Classification
+### Identifier
 
-ToDo:
+Identifiers are used in a number of ways where there is a need to declare a scheme from which identifiers or codes will be drawn, and to provide the code, along with some supporting descriptive information. This is used in OCDS to classify goods and services, and for [organization identifiers](../../key_concepts/identifiers/#organizations)
 
+<div class="include-csv" data-src="standard/docs/field_definitions/release-identifiers.csv" data-table-class="table table-striped schema-table"></div>
 
 ### Organization
 
 ToDo: Update once organisation contact details confirmed.
 
-### Attachment
+<div class="include-csv" data-src="standard/docs/field_definitions/release-organization.csv" data-table-class="table table-striped schema-table"></div>
+
+#### Address
+<div class="include-csv" data-src="standard/docs/field_definitions/release-address.csv" data-table-class="table table-striped schema-table"></div>
+
+#### Contact Point
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-contact-point.csv" data-table-class="table table-striped schema-table"></div>
+
+### Document
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-document.csv" data-table-class="table table-striped schema-table"></div>
 
 ### Date
 
@@ -290,6 +312,8 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 A period is an object consisting of a start date and end date, represented as date-times.
 
+<div class="include-csv" data-src="standard/docs/field_definitions/release-period.csv" data-table-class="table table-striped schema-table"></div>
+
 ### Item
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-item.csv" data-table-class="table table-striped schema-table"></div>
@@ -297,7 +321,6 @@ A period is an object consisting of a start date and end date, represented as da
 
 ### Milestone
 
-ToDo: Review once updated
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-milestone.csv" data-table-class="table table-striped schema-table"></div>
 

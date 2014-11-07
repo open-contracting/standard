@@ -74,16 +74,26 @@ if __name__ == "__main__":
 
     make_definition_table(release,join(file_path,"release-implementation.csv"),what="definitions",section="Implementation")    
 
+    make_definition_table(release,join(file_path,"release-transaction.csv"),what="definitions",section="Transaction")
+
     make_definition_table(release,join(file_path,"release-budget.csv"),what="definitions",section="Budget")
     
     make_definition_table(release,join(file_path,"release-identifier.csv"),what="definitions",section="Identifier")
 
     make_definition_table(release,join(file_path,"release-address.csv"),what="definitions",section="Address")
+    
+    make_definition_table(release,join(file_path,"release-contact-point.csv"),what="definitions",section="ContactPoint")
 
     make_definition_table(release,join(file_path,"release-organization.csv"),what="definitions",section="Organization")
 
     make_definition_table(release,join(file_path,"release-item.csv"),what="definitions",section="Item")
     
+    make_definition_table(release,join(file_path,"release-period.csv"),what="definitions",section="Period")
+    
     make_definition_table(release,join(file_path,"release-milestone.csv"),what="definitions",section="Milestone")
     
     make_definition_table(release,join(file_path,"release-value.csv"),what="definitions",section="Value")
+
+    make_definition_table(release,join(file_path,"release-identifier.csv"),what="definitions",section="Identifier")
+    
+    make_definition_table(release,join(file_path,"release-document.csv"),what="definitions",section="Document")
