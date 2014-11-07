@@ -1,11 +1,11 @@
 Field Name,Description,Format
-id,"The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 &amp; awardID 2 and ocid DEF can also have awardID 1 &amp; 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled."," string, integer"
+id,"The identifier for this award. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the <a href=""http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/"">identifier guidance</a> for further details."," string, integer"
 title,Award title, string
 description,Award description, string
-status,"[Consult codelist] The current status of the award e.g. active, cancelled.", string
+status,"The current status of the award drawn from the <a href=""http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#award-status"">awardStatus codelist</a>", string
 date,The date of the contract award.,date-time string
-value,The total value of this award. There may be more than one award per procurement., 
-suppliers,The suppliers awarded this award. See Organization section for further details.,Object Array
-items,"The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead. See Item section for further details.",Object Array
+value,"The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement.", 
+suppliers,"The suppliers awarded this award. If different suppliers have been awarded different items of values, these should be split into separate award blocks. See Organization section for further details.",Object Array
+items,"The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead. See Item section for further details.",Object Array
 documents,"All documents and attachments related to the award, including any notices. See Document section for further details.",Object Array
 amendment, See Amendment,Reference

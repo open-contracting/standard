@@ -68,7 +68,7 @@ if __name__ == "__main__":
     
     make_definition_table(release,join(file_path,"release-contract.csv"),what="definitions",section="Contract")    
 
-    make_definition_table(release,join(file_path,"release-contract.csv"),what="definitions",section="Contract")    
+    make_definition_table(release,join(file_path,"release-implementation.csv"),what="definitions",section="Implementation")    
 
     make_definition_table(release,join(file_path,"release-budget.csv"),what="definitions",section="Budget")
     
