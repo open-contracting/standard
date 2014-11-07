@@ -59,7 +59,9 @@ Further details on each of the blocks contained within release are below.
 
 ### Planning
 
-ToDo
+The planning section can be used to describe the background to a contracting process. This may include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-planning.csv" data-table-class="table table-striped schema-table"></div>
 
 ### Tender
 
