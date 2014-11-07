@@ -21,12 +21,13 @@ def make_definition_table(json,file_path,what="properties",section=""):
             
 
         if types == "array":
-            pass
-        if block[prop].get("$ref"):
-          #  table.append([prop,block[prop].get('title',''),"Reference","-","See " + block[prop]["$ref"].replace("#/definitions/","")])
+           if block[prop].get('items').get("$ref"):
+               table.append([prop,block[prop].get('description','') + " See " + block[prop]['items']["$ref"].replace("#/definitions/","") + " section for further details.","Object Array"])
+           else:
+               table.append([prop,block[prop].get('description',''),"Array"])
+        elif block[prop].get("$ref"):
           table.append([prop,"See " + block[prop]["$ref"].replace("#/definitions/",""),"Reference"])
         else:
-          #  table.append([prop,block[prop].get('title',''),types,block[prop].get('format',''),block[prop].get('description','')])
           table.append([prop,block[prop].get('description',''),block[prop].get('format','')])
           
         with open(file_path, 'wb') as f:

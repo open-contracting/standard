@@ -39,6 +39,8 @@ A release package, modelled on the [Data Package](http://dataprotocols.org/data-
 
 ### Top level
 
+A release consists of the following fields and objects:
+
 <div class="include-csv" data-src="standard/docs/field_definitions/release-toplevel.csv" data-table-class="table table-striped schema-table"></div>
 
 #### Notes
