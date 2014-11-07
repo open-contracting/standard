@@ -82,36 +82,40 @@
                     "oneOf": [
                         {
                             "title": "Linked releases",
-                            "description": "A list of objects that identify the releases associated with this Open Contracting ID.",
+                            "description": "A list of objects that identify the releases associated with this Open Contracting ID. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
                             "type": "array",
                             "items": {
                                 "description": "Information to uniquely identify the release.",
                                 "type": "object",
                                 "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "scheme": {
-                                        "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
-                                        "type": ["string", "null"],
-                                        "format": "uri"
-                                    },
-                                    "uid": {
-                                        "description": "The unique ID for this entity under the given ID scheme.",
-                                        "type": ["string", "null"]
-                                    },
-                                    "uri": {
+                                    "url": {
+                                        "description": "The url of the release which contains the url of the package with the releaseID appended using a fragment identifier e.g. http://ocds.open-contracting.org/demos/releases/12345.json#ocds-a2ef3d01-1594121/1",
                                         "type": ["string", "null"],
                                         "format" : "uri"
+                                    },
+                                    "date": {
+                                        "title": "Release Date",
+                                        "description": "The date of the release, should match `date` at the root level of the release. This is used to sort the releases in the list into date order.",
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "tag": {
+                                        "title": "Release Tag",
+                                        "description": "The tag should match the tag in the release. This provides additional context when reviewing a record to see what types of releases are included for this ocid.",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "enum": ["planning", "tender", "tenderAmendment", "tenderUpdate", "tenderCancellation", "award", "awardUpdate", "awardCancellation", "contract", "contractUpdate", "contractAmendment", "implementation", "implementationUpdate", "contractTermination", "compiled"]
+                                        }
                                     }
                                 },
-                                "required": ["name"]
+                                "required": ["url", "date"]
                             },
                             "minItems": 1
                         },
                         {
                             "title": "Embedded releases",
-                            "description": "A list of releases, with all the data",
+                            "description": "A list of releases, with all the data. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
                             "type": "array",
                             "items": {
                                 "$ref": "http://ocds.open-contracting.org/standard/r/standard/release-schema.json"
