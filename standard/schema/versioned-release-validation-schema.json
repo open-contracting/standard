@@ -1813,11 +1813,93 @@
                     "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
                 }, 
                 "contactPoint": {
-                    "$ref": "#/definitions/ContactPoint"
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(name_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "telephone": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "url": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "format": "uri"
+                        }, 
+                        "faxNumber": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "name": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "email": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }
                 }, 
                 "identifier": {
-                    "description": "[Consult codelist] The main identifier for the organization. Consult the codelist for the preferred schemas to use.", 
-                    "$ref": "#/definitions/Identifier"
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(description_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "scheme": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                        }, 
+                        "id": {
+                            "type": [
+                                "string", 
+                                "integer", 
+                                "null"
+                            ], 
+                            "description": "The identifier for the Thing under the given scheme."
+                        }, 
+                        "uri": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "URI to identify the Thing under the given scheme.", 
+                            "format": "uri"
+                        }, 
+                        "description": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                        }
+                    }
                 }, 
                 "name": {
                     "type": [
@@ -1827,7 +1909,49 @@
                     "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
                 }, 
                 "address": {
-                    "$ref": "#/definitions/Address"
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(countryName_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "description": "An address", 
+                    "properties": {
+                        "postalCode": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "countryName": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "streetAddress": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "region": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "locality": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }
                 }
             }
         }, 
@@ -2125,6 +2249,7 @@
         "ocid", 
         "id", 
         "date", 
+        "tag", 
         "initiationType"
     ], 
     "type": "object", 
@@ -2165,6 +2290,201 @@
             "type": "array"
         }, 
         "buyer": {
+            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+            "description": "An organization.", 
+            "title": "Organization", 
+            "patternProperties": {
+                "^(name_[A-Za-z]{2})$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }
+            }, 
+            "type": "object", 
+            "properties": {
+                "additionalIdentifiers": {
+                    "uniqueItems": true, 
+                    "items": {
+                        "$ref": "#/definitions/Identifier"
+                    }, 
+                    "type": "array", 
+                    "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                }, 
+                "contactPoint": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(name_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "telephone": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "url": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "format": "uri"
+                        }, 
+                        "faxNumber": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "name": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "email": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }
+                }, 
+                "identifier": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(description_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "properties": {
+                        "scheme": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                        }, 
+                        "id": {
+                            "type": [
+                                "string", 
+                                "integer", 
+                                "null"
+                            ], 
+                            "description": "The identifier for the Thing under the given scheme."
+                        }, 
+                        "uri": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "URI to identify the Thing under the given scheme.", 
+                            "format": "uri"
+                        }, 
+                        "description": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ], 
+                            "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                        }
+                    }
+                }, 
+                "name": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ], 
+                    "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                }, 
+                "address": {
+                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
+                    "patternProperties": {
+                        "^(countryName_[A-Za-z]{2})$": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }, 
+                    "type": "object", 
+                    "description": "An address", 
+                    "properties": {
+                        "postalCode": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "countryName": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "streetAddress": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "region": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }, 
+                        "locality": {
+                            "type": [
+                                "string", 
+                                "null"
+                            ]
+                        }
+                    }
+                }
+            }
+        }, 
+        "ocid": {
+            "type": "string", 
+            "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/0__3__2/#defining-a-unique-contracting-process", 
+            "title": "Open Contracting ID"
+        }, 
+        "tag": {
+            "items": {
+                "enum": [
+                    "planning", 
+                    "tender", 
+                    "tenderAmendment", 
+                    "tenderUpdate", 
+                    "tenderCancellation", 
+                    "award", 
+                    "awardUpdate", 
+                    "awardCancellation", 
+                    "contract", 
+                    "contractUpdate", 
+                    "contractAmendment", 
+                    "implementation", 
+                    "implementationUpdate", 
+                    "contractTermination", 
+                    "compiled"
+                ], 
+                "type": "string"
+            }, 
+            "type": "array", 
+            "description": "[Consult codelist] A tag that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for for advanced validation when certain kinds of releases should contain certain fields. See the codelist guidance for definitions of each tag.", 
+            "title": "Release Tag"
+        }, 
+        "initiationType": {
             "items": {
                 "properties": {
                     "releaseDate": {
@@ -2178,43 +2498,16 @@
                         "type": "string"
                     }, 
                     "value": {
-                        "__comment": "Note the whole buyer object gets versioned, so do not get more granular change information.", 
-                        "title": "Buyer", 
-                        "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the tender data.", 
-                        "$ref": "#/definitions/Organization"
+                        "enum": [
+                            "tender"
+                        ], 
+                        "type": "string", 
+                        "description": "String specifying the type of initiation process used for this contract. Currently only tender is supported.", 
+                        "title": "Initiation type"
                     }
                 }
             }, 
             "type": "array"
-        }, 
-        "ocid": {
-            "type": "string", 
-            "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/0__3__2/#defining-a-unique-contracting-process", 
-            "title": "Open Contracting ID"
-        }, 
-        "tag": {
-            "enum": [
-                "planning", 
-                "tenderNotice", 
-                "awardNotice", 
-                "contractSignature", 
-                "contractAmendment", 
-                "report", 
-                "spending", 
-                "terminationNotice", 
-                "compiled"
-            ], 
-            "type": "string", 
-            "description": "[Consult codelist] A tag that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for for advanced validation when certain kinds of releases should contain certain fields. See the codelist guidance for definitions of each tag.", 
-            "title": "Release Tag"
-        }, 
-        "initiationType": {
-            "enum": [
-                "tender"
-            ], 
-            "type": "string", 
-            "description": "String specifying the type of initiation process used for this contract. Currently only tender is supported.", 
-            "title": "Initiation type"
         }, 
         "tender": {
             "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.", 
