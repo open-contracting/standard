@@ -63,6 +63,8 @@ if __name__ == "__main__":
     make_definition_table(release,join(file_path,"release-tender.csv"),what="definitions",section="Tender")
     
     make_definition_table(release,join(file_path,"release-planning.csv"),what="definitions",section="Planning")
+
+    make_definition_table(release,join(file_path,"release-budget.csv"),what="definitions",section="Budget")
     
     make_definition_table(release,join(file_path,"release-identifier.csv"),what="definitions",section="Identifier")
 

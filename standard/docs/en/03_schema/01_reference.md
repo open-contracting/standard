@@ -71,6 +71,10 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-tender.csv" data-table-class="table table-striped schema-table"></div>
 
+Apart from documents, the majority of information is held within the budget block:
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-budget.csv" data-table-class="table table-striped schema-table"></div>
+
 #### Notes 
 
 * ```tender.id``` - see the [identifiers guidance](../../key_concepts/identifiers#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
