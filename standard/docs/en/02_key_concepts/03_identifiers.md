@@ -166,31 +166,21 @@ The release ID must be unique within the contracting process it is part of, **an
 
 I.e. within any data package, or for any given ocid, there should be no two release IDs that refer to different releases.
 
-#### Tender ID
+#### Tender, Award and Contract
 
-The tender ID must be unique within the contracting process it is part of. 
+The tender, award and contract IDs must be unique within the contracting process it is part of. 
 
-I.e. for any given ocid, there should be no two tender IDs that refer to different tender sections.
+I.e. for any given ocid, there should be no two tender, award or contract IDs that refer to different tender, award or contract sections respectively.
 
-#### Award ID
+Contracts should always cross-reference a related award (using the awardID property), as key information such as suppliers may be contained in the related award. There may be multiple contracts referring to a single award, as in the case of a framework contract, in which multiple contract are issued against a single award.
 
-The award ID must be unique within the contracting process it is part of.
+### Items, Documents and Milestones
 
-I.e. for any given ocid, there should be no two award IDs that refer to different awards.
-
-#### Contract ID
-
-The contract ID must be unique within the contracting process it is part of.
-
-I.e. for any given ocid, there should be no two contract IDs that refer to different contracts.
-
-Contracts should always cross-reference a related award (using the awardID property), as key information such as suppliers may be contained in the related award. It is possible to use the same value for the award id and contract id in these cases. 
-
-#### Item ID
-
-An item ID must be unique within a given array of items, and must be used consistently across all the releases in a contracting process. 
+An item, document or milestone ID must be unique within a given array of items, and must be used consistently across all the releases in a contracting process. 
 
 The same id may be re-used in another array of items within the same release, and no cross-reference between these identifiers is implied. 
+
+The use of an identifier means that subsequent releases can update prior identified items, documents or milestones, without needing to republish all the items, documents or milestones.
 
 For example:
 
@@ -203,8 +193,4 @@ In this situation, note that:
 
 * There is no implied relationship between the tender.item with id 3 and the award.item with id 3: these could be entirely different items
 * There is a relationship between the award.items with id 3 and 4 in the first release, and with award.id of 3 and 4 in the second release. The second release should be interpreted as updating items 3 and 4, and adding a new item, 5. 
-
-#### Document ID
-
-Document IDs should be treated the same as Item ID.
 

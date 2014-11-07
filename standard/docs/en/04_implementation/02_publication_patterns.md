@@ -24,8 +24,6 @@ Publication policy pages should include information about:
 
 Publishers may also wish to apply for, and include the results of, an [Open Data Certificate](https://certificates.theodi.org/), on their publication policy pages. 
 
-See [https://github.com/open-contracting/standard/issues/133](https://github.com/open-contracting/standard/issues/133) 
-
 ### Licensing
 
 

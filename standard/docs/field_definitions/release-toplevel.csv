@@ -2,11 +2,11 @@ Field Name,Description,Format
 ocid,"<p>A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the <a href=""http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/#ocid"">Open Contracting Identifier guidance</a></p>",
 id,<p>A unique identifier that identifies this release. A releaseID must be unique within a release-package and must not contain the # character.</p>,
 date,"<p>The date this information is released, it may well be the same as the parent publishedDate, it must not be later than the publishedDate from the parent package. It is used to determine merge order.</p>",date-time
-tag,"<p>[Consult codelist] A tag that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for for advanced validation when certain kinds of releases should contain certain fields. See the codelist guidance for definitions of each tag.</p>",Array
-initiationType,<p>String specifying the type of initiation process used for this contract. Currently only tender is supported.</p>,
-planning,See Planning,Reference
-tender,See Tender,Reference
-buyer,See Organization,Reference
+tag,"<p>A value from the <a href=""http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#release-tag"">releaseTag codelist</a> that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for for advanced validation when certain kinds of releases should contain certain fields.</p>",Array
+initiationType,"<p>String specifying the type of initiation process used for this contract, taken from the <a href=""http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#initiation-type"">initiationType</a> codelist. Currently only tender is supported.</p>",
+planning,"<p>Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract for, when and how.</p> See Planning",Reference
+tender,<p>The activities undertaken in order to enter into a contract.</p> See Tender,Reference
+buyer,<p>The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the tender data.</p> See Organization,Reference
 awards,"<p>Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.</p> See Award section for further details.",Object Array
 contracts,<p>Information from the contract creation phase of the procurement process.</p> See Contract section for further details.,Object Array
 language,"<p>Specifies the default language of the data using either two-digit ISO 639-1, or extended BCP47 language tags. The use of two-letter codes from ISO 639-1 is strongly recommended.</p>",

@@ -1,0 +1,23 @@
+Field Name,Description,Format
+id,"<p>An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.</p>",
+title,<p>Tender title</p>,
+description,<p>Tender description</p>,
+status,"<p>[Consult codelist] The current status of the tender e.g. active, cancelled.</p>",
+items,"<p>The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.</p> See Item section for further details.",Object Array
+minValue,<p>The minimum estimated value of the procurement.</p> See Value,Reference
+value,<p>The total estimated value of the procurement.</p> See Value,Reference
+method,"<p>[Consult codelist] Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)</p>",
+methodRationale,"<p>Rationale of procurement method, especially in the case of Limited tendering.</p>",
+awardCriteria,<p>[Consult codelist] Specify the award criteria for the procurement.</p>,
+awardCriteriaDetails,<p>Any detailed or further information on the selection criteria.</p>,
+submissionMethod,"<p>[Consult codelist] Specify the method by which bids must be submitted, in person, written, or electronic auction.</p>",
+submissionMethodDetails,"<p>Any detailed or further information on the submission method. This may include the address, e-mail address or online service to which bids should be submitted, and any special requirements to be followed for submissions.</p>",
+tenderPeriod,<p>The period when the tender is open for submissions. The end date is the closing date for tender submissions.</p> See Period,Reference
+enquiryPeriod,<p>The period during which enquiries may be made and answered.</p> See Period,Reference
+hasEnquiries,<p>A Yes/No field as to whether enquiries were part of tender process.</p>,
+eligibilityCriteria,<p>Description of eligibility criteria for potential suppliers.</p>,
+awardPeriod,<p>The date or period on which an award is anticipated to be made.</p> See Period,Reference
+procuringEntity,"<p>The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.</p> See Organization",Reference
+documents,"<p>All documents and attachments related to the tender, including any notices.</p> See Document section for further details.",Object Array
+milestones,<p>A list of milestones associated with the tender.</p> See Milestone section for further details.,Object Array
+amendment, See Amendment,Reference

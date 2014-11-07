@@ -49,22 +49,26 @@ ToDo: Description
 
 ## Release Tag
 
+A contracting process may result in a number of releases of information over time. These should be tagged to indicate the stage of the contracting process they relate to. 
+
 <div class="include-csv" data-src="standard/schema/codelists/releaseTag.csv" data-table-class="table table-striped schema-table"></div>
 
 ## Initiation Type
 
-ToDo: Description
-<div class="include-csv" data-src="standard/schema/codelists/initiationType.csv" data-table-class="table table-striped schema-table"></div>
+Contracting processes may be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard may support other Initiation Types. The initiation type may be provide information to consuming applications on the different blocks of data and releases they should expect from a contracting process.
 
+<div class="include-csv" data-src="standard/schema/codelists/initiationType.csv" data-table-class="table table-striped schema-table"></div>
 
 ## Tender Status
 
-ToDo: Description
+The ```tender.status``` field is used to indicate the current status of a tender process.
+
 <div class="include-csv" data-src="standard/schema/codelists/tenderStatus.csv" data-table-class="table table-striped schema-table"></div>
 
 ## Method
 
-ToDo: Description
+The method codelist is based upon the [GPA Definitions provided here](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
+
 <div class="include-csv" data-src="standard/schema/codelists/method.csv" data-table-class="table table-striped schema-table"></div>
 
 ## Award Status

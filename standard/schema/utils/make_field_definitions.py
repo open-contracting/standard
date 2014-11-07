@@ -26,7 +26,7 @@ def make_definition_table(json,file_path,what="properties",section=""):
            else:
                table.append([prop,markdown.markdown(block[prop].get('description','')),"Array"])
         elif block[prop].get("$ref"):
-          table.append([prop,"See " + block[prop]["$ref"].replace("#/definitions/",""),"Reference"])
+          table.append([prop,markdown.markdown(block[prop].get('description','')) + " See " + block[prop]["$ref"].replace("#/definitions/",""),"Reference"])
         else:
           table.append([prop,markdown.markdown(block[prop].get('description','')),block[prop].get('format','')])
           
@@ -56,6 +56,8 @@ if __name__ == "__main__":
     make_definition_table(releasePackage,join(file_path,"release-package.csv"))
     
     make_definition_table(release,join(file_path,"release-toplevel.csv"))
+
+    make_definition_table(release,join(file_path,"release-tender.csv"),what="definitions",section="Tender")
     
     make_definition_table(release,join(file_path,"release-identifier.csv"),what="definitions",section="Identifier")
 

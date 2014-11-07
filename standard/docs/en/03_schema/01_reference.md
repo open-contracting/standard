@@ -45,29 +45,21 @@ A release consists of the following fields and objects:
 
 #### Notes
 
-* OCID - Providing each [contracting process](../../definitions#contracting-process) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](../../identifiers#ocid) for details of how to construct an OCID. 
+* ```ocid``` - Providing each [contracting process](../../definitions#contracting-process) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](../../identifiers#ocid) for details of how to construct an OCID. 
 
-* The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates.
+* ```releaseTag``` - The release tag is used to identify the nature of the release being made. This can be used by consuming applications to filter releases, or may in future be used for advanced validation. A release which updates or amends previous data must always use the appropriate update or amendment release tag. Values must be drawn from the [releaseTag codelist](../codelists#release-tag).
 
-* Initation Type - Contracts may be formed under a number of different processes. Values must be drawn from the [formationType codelist](../codelists#formationType). Currently, only 'tender' is supported. 
+* ```date``` - The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates.
 
-#### Tag (ToDo: Check Title)
+* ```language``` - see the section on [multi-language support](#multi-language-support) for information on language handling.
 
-The release tag is used to identify the nature of the release being made. 
+* ```buyer``` - The buyer details are published using an [organization](#entity) block.
 
-This can be used by consuming applications to filter releases, or may in future be used for advanced validation.
+Further details on each of the blocks contained within release are below. 
 
-A release which updates or amends previous data must always use the appropriate update or amendment release tag. 
+### Planning
 
-Values must be drawn from the [releaseTag codelist](../codelists#releaseTag).
-
-#### Language
-
-See the section on [multi-language support](#multi-language-support) for details.
-
-#### Buyer
-
-Published using an [organization](#entity) block.
+ToDo
 
 ### Tender
 
@@ -75,38 +67,29 @@ The tender section includes details of the announcement that a organization inte
 
 It may contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and may also be used to record details of how a completed tender process, including details of bids received. 
 
-#### Tender ID
+<div class="include-csv" data-src="standard/docs/field_definitions/release-tender.csv" data-table-class="table table-striped schema-table"></div>
 
-#### Procuring Entity
+#### Notes 
 
-#### Attachments
+* ```tender.id``` - see the [identifiers guidance](../../key_concepts/identifiers#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
 
-#### Items
+* ```procuringEntity``` - in many cases the organization managing the procurement process will be different from the organization whose budget is being used for the procurement (the 'buyer' in OCDS terminology). If this is the case, then the details of this procuring organization should be provided here. 
 
-#### Value
+* ```title``` and ```description``` - tender title and description are optional. The details of items to be procured should always be provided in ```items```. Descriptions should not be used in place of providing structured data on items, dates and other details. Instead, title and description should be used to provide a brief overview of the tender. Publishers should consider adopting a 'tweet length' title, and should avoid ALL UPPERCASE titles, or titles containing code words or other artefacts from internal databases. The goal of these fields is to give users a clear idea of the nature of a tender. 
 
-#### Procurement Method
+* ```items``` - publishers should provide details of each of the items to be procured under this tender. 
 
-#### Selection Criteria
+* ```milestones``` - publishers should list any relevant milestones associated with the delivery of the goods and services covered by this tender. These are the milestones against which the whole contracting process will be evaluated. Publishers may include information about key milestones during the tender process itself, but should not use this in place of ```tenderPeriod```, ```enquiryPeriod``` or ```awardPeriod```.
 
-#### Selection Details
+* ```value``` and ```minValue``` - the total upper estimated value of a procurement should be given in ```value```. For publishers who also specify a estimate minimum value, this can be placed in ```minValue```.
 
-#### Submission Method
+*  ```method``` and ```methodRationale``` - tendering processes can use a variety of methods. Publishers should map their methods to one of the approved codes according to the [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of open, selective or limited. A free text explanation of why a given method was appropriate to this tender can be provided in ```methodRationale```. 
 
-#### Submission Details
+* ```awardCriteria``` and ```awardCriteriaDetails``` - The [award criteria code list](../codelists#award-criteria) describes the basis on which contract awards will be made. This is an open codelist, and so may be extended with new codes. Free text describing the basis on which bids will be judged, and made, can be provided in the ```awardCriteriaDetail``` field. Publishers wishing to provide more structured information about selection, shortlisting and award criteria should propose [extensions](../../key_concepts/conformance#extensions) for this. 
 
-#### Tender Period
+* ```documents``` - supporting documentation should be attached to the tender. This may include official legal notices of tender, as well as technical specifications, evaluation criteria, and, as a tender process progresses, clarifications, replies to queries and copies of bids submitted or listings of shortlisted firms. See the [attachments](#attachments) section for more details of how to include documents, and consult the [documentType codelist](../codelists#document-type) for suggested documents to include for basic, intermediate or advanced publication.
 
-#### Clarification Period
-
-#### Clarifications
-
-#### Award Period
-
-#### Bidders
-
-ToDo: Check if numberOfBidders and numberOfBids included
-
+Information on bidders against a contract will be handled by an extension during the period of the standard release candidate. Publishers wishing to provide detailed information on bidders should [contact support](../../standard/support).
 
 
 ### Award
@@ -268,6 +251,10 @@ Accurately including the time and timezone offsets is particular important for t
 In the event that the system from which data is drawn only includes dates, and does not include time information, publishers should consider sensible defaults for each field. For example, the startDate time of a clarification period may be set to '00:00:00Z' to indicate that clarifications can be requested from any time on the date stated, with the endDate time set to 23:23:59Z to indicate that clarifications can be sent up until the end of the endDate given. Alternatively, if clarification requests are only accepted in standard office hours, these values might be 09:00:00Z and 17:00:00Z respectively. 
 
 In the event that a date field is not bound to a specific time at all, publishers should choose a default time value of '23:23:59' and either 'Z' (for UTC) or the timezone of the publisher, indicating that the time refers to the end of the given date. 
+
+#### Period
+
+A period is an object consisting of a start date and end date, represented as date-times.
 
 ### Item
 
