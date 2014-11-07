@@ -1375,7 +1375,7 @@
                         "integer", 
                         "null"
                     ], 
-                    "description": "An external identifier for the project that this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
+                    "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
                     "mergeStrategy": "ocdsVersion", 
                     "title": "Project Identifier"
                 }, 
@@ -1385,7 +1385,7 @@
                         "string", 
                         "null"
                     ], 
-                    "description": "A URI pointing directly to a machine-readable record about the related budget for this project.", 
+                    "description": "A URI pointing directly to a machine-readable record about the related budget or projects for this contracting process.", 
                     "mergeStrategy": "ocdsVersion", 
                     "title": "Linked budget information"
                 }, 
@@ -1470,7 +1470,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] The current status of the contract e.g. active, cancelled.", 
+                                "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#contract-status)", 
                                 "title": "Contract Status"
                             }
                         }
@@ -2221,7 +2221,7 @@
                         "$ref": "#/definitions/Document"
                     }, 
                     "type": "array", 
-                    "description": "A list of documents related to the planning process, including public hearing notices."
+                    "description": "A list of documents related to the planning process."
                 }, 
                 "budget": {
                     "items": {
@@ -2276,7 +2276,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "An external identifier for the project that this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
+                                        "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
                                         "mergeStrategy": "ocdsVersion", 
                                         "title": "Project Identifier"
                                     }, 
@@ -2286,7 +2286,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "A URI pointing directly to a machine-readable record about the related budget for this project.", 
+                                        "description": "A URI pointing directly to a machine-readable record about the related budget or projects for this contracting process.", 
                                         "mergeStrategy": "ocdsVersion", 
                                         "title": "Linked budget information"
                                     }, 
@@ -2346,7 +2346,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "The rationale for the procurement"
+                                "description": "The rationale for the procurement provided in free text. More detail can be provided in an attached document."
                             }
                         }
                     }, 
@@ -2403,7 +2403,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] The current status of the award e.g. active, cancelled.", 
+                                "description": "The current status of the award drawn from the [awardStatus codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#award-status)", 
                                 "title": "Award Status"
                             }
                         }
@@ -2572,7 +2572,7 @@
                     "type": "array"
                 }, 
                 "items": {
-                    "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.", 
+                    "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.", 
                     "title": "Items Awarded", 
                     "minItems": 1, 
                     "items": {
@@ -2600,7 +2600,7 @@
                                     "$ref": "#/definitions/Organization"
                                 }, 
                                 "type": "array", 
-                                "description": "The suppliers awarded this award."
+                                "description": "The suppliers awarded this award. If different suppliers have been awarded different items of values, these should be split into separate award blocks."
                             }
                         }
                     }, 
@@ -2620,7 +2620,7 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "description": "The total value of this award. There may be more than one award per procurement."
+                                "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement."
                             }
                         }
                     }, 
@@ -2657,7 +2657,7 @@
                         "string", 
                         "integer"
                     ], 
-                    "description": "The identifier for this award. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid), it need not be unique in the package. e.g. ocid ABC can have awardID 1 & awardID 2 and ocid DEF can also have awardID 1 & 2. But if it is a different award, ocid cannot have awardID 1 and 1 otherwise that will cause the data to be overridden when the record is compiled.", 
+                    "description": "The identifier for this award. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/) for further details.", 
                     "title": "Award ID"
                 }
             }
@@ -3163,7 +3163,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] Specify the award criteria for the procurement."
+                                "description": "Specify the award criteria for the procurement, using the [award criteria codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#method)"
                             }
                         }
                     }, 
@@ -3387,7 +3387,7 @@
                         "$ref": "#/definitions/Document"
                     }, 
                     "type": "array", 
-                    "description": "All documents and attachments related to the tender, including any notices."
+                    "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#document-type) for details of potential documents to include."
                 }, 
                 "methodRationale": {
                     "items": {
@@ -3461,7 +3461,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)"
+                                "description": "Specify tendering method against the [method codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited"
                             }
                         }
                     }, 
@@ -3486,13 +3486,14 @@
                                     "active", 
                                     "cancelled", 
                                     "unsuccessful", 
+                                    "complete", 
                                     null
                                 ], 
                                 "type": [
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] The current status of the tender e.g. active, cancelled.", 
+                                "description": "The current status of the tender based on the [tenderStatus codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#tender-status)", 
                                 "title": "Tender Status"
                             }
                         }
@@ -3517,7 +3518,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Description of eligibility criteria for potential suppliers."
+                                "description": "A description of any eligibility criteria for potential suppliers."
                             }
                         }
                     }, 
@@ -3600,7 +3601,7 @@
                                     "array", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] Specify the method by which bids must be submitted, in person, written, or electronic auction."
+                                "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction. Using the [submission method codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#submission-method)"
                             }
                         }
                     }, 
@@ -3664,7 +3665,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Any detailed or further information on the selection criteria."
+                                "description": "Any detailed or further information on the award or selection criteria."
                             }
                         }
                     }, 
@@ -3688,7 +3689,7 @@
                                     "boolean", 
                                     "null"
                                 ], 
-                                "description": "A Yes/No field as to whether enquiries were part of tender process."
+                                "description": "A Yes/No field to indicate whether enquiries were part of tender process."
                             }
                         }
                     }, 
@@ -5423,7 +5424,7 @@
                 "type": "string"
             }, 
             "type": "array", 
-            "description": "[Consult codelist] A tag that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for for advanced validation when certain kinds of releases should contain certain fields. See the codelist guidance for definitions of each tag.", 
+            "description": "A value from the [releaseTag codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#release-tag) that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for for advanced validation when certain kinds of releases should contain certain fields.", 
             "title": "Release Tag"
         }, 
         "initiationType": {
@@ -5444,7 +5445,7 @@
                             "tender"
                         ], 
                         "type": "string", 
-                        "description": "String specifying the type of initiation process used for this contract. Currently only tender is supported.", 
+                        "description": "String specifying the type of initiation process used for this contract, taken from the [initiationType](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#initiation-type) codelist. Currently only tender is supported.", 
                         "title": "Initiation type"
                     }
                 }
@@ -5676,7 +5677,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] Specify the award criteria for the procurement."
+                                "description": "Specify the award criteria for the procurement, using the [award criteria codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#method)"
                             }
                         }
                     }, 
@@ -5900,7 +5901,7 @@
                         "$ref": "#/definitions/Document"
                     }, 
                     "type": "array", 
-                    "description": "All documents and attachments related to the tender, including any notices."
+                    "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#document-type) for details of potential documents to include."
                 }, 
                 "methodRationale": {
                     "items": {
@@ -5974,7 +5975,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] Specify tendering method as per GPA definitions of Open, Selective, Limited (http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm)"
+                                "description": "Specify tendering method against the [method codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited"
                             }
                         }
                     }, 
@@ -5999,13 +6000,14 @@
                                     "active", 
                                     "cancelled", 
                                     "unsuccessful", 
+                                    "complete", 
                                     null
                                 ], 
                                 "type": [
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] The current status of the tender e.g. active, cancelled.", 
+                                "description": "The current status of the tender based on the [tenderStatus codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#tender-status)", 
                                 "title": "Tender Status"
                             }
                         }
@@ -6030,7 +6032,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Description of eligibility criteria for potential suppliers."
+                                "description": "A description of any eligibility criteria for potential suppliers."
                             }
                         }
                     }, 
@@ -6113,7 +6115,7 @@
                                     "array", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] Specify the method by which bids must be submitted, in person, written, or electronic auction."
+                                "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction. Using the [submission method codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#submission-method)"
                             }
                         }
                     }, 
@@ -6177,7 +6179,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Any detailed or further information on the selection criteria."
+                                "description": "Any detailed or further information on the award or selection criteria."
                             }
                         }
                     }, 
@@ -6201,7 +6203,7 @@
                                     "boolean", 
                                     "null"
                                 ], 
-                                "description": "A Yes/No field as to whether enquiries were part of tender process."
+                                "description": "A Yes/No field to indicate whether enquiries were part of tender process."
                             }
                         }
                     }, 
@@ -6659,7 +6661,7 @@
                         "$ref": "#/definitions/Document"
                     }, 
                     "type": "array", 
-                    "description": "A list of documents related to the planning process, including public hearing notices."
+                    "description": "A list of documents related to the planning process."
                 }, 
                 "budget": {
                     "items": {
@@ -6714,7 +6716,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "An external identifier for the project that this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
+                                        "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.", 
                                         "mergeStrategy": "ocdsVersion", 
                                         "title": "Project Identifier"
                                     }, 
@@ -6724,7 +6726,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "A URI pointing directly to a machine-readable record about the related budget for this project.", 
+                                        "description": "A URI pointing directly to a machine-readable record about the related budget or projects for this contracting process.", 
                                         "mergeStrategy": "ocdsVersion", 
                                         "title": "Linked budget information"
                                     }, 
@@ -6784,7 +6786,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "The rationale for the procurement"
+                                "description": "The rationale for the procurement provided in free text. More detail can be provided in an attached document."
                             }
                         }
                     }, 
