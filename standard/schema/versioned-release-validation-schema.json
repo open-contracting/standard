@@ -1087,11 +1087,6 @@
             "title": "Period"
         }, 
         "Item": {
-            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned.", 
-            "description": "A good, service, or work to be contracted.", 
-            "required": [
-                "id"
-            ], 
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
                     "type": [
@@ -1100,14 +1095,35 @@
                     ]
                 }
             }, 
+            "required": [
+                "id"
+            ], 
             "type": "object", 
+            "description": "A good, service, or work to be contracted.", 
             "properties": {
                 "description": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "description": "A description of the goods, services to be provided."
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "A description of the goods, services to be provided."
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }, 
                 "classification": {
                     "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -1154,12 +1170,29 @@
                     }
                 }, 
                 "additionalClassifications": {
-                    "uniqueItems": true, 
                     "items": {
-                        "$ref": "#/definitions/Identifier"
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "uniqueItems": true, 
+                                "items": {
+                                    "$ref": "#/definitions/Identifier"
+                                }, 
+                                "type": "array", 
+                                "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas."
+                            }
+                        }
                     }, 
-                    "type": "array", 
-                    "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas."
+                    "type": "array"
                 }, 
                 "id": {
                     "type": [
@@ -1181,11 +1214,28 @@
                     "description": "Description of the unit which the good comes in e.g. hours, kilograms", 
                     "properties": {
                         "name": {
-                            "type": [
-                                "string", 
-                                "null"
-                            ], 
-                            "description": "Name of the unit"
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "Name of the unit"
+                                    }
+                                }
+                            }, 
+                            "type": "array"
                         }, 
                         "value": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -1211,11 +1261,29 @@
                     }
                 }, 
                 "quantity": {
-                    "type": [
-                        "integer", 
-                        "null"
-                    ], 
-                    "description": "The number of units required"
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "minimum": 0, 
+                                "type": [
+                                    "integer", 
+                                    "null"
+                                ], 
+                                "description": "The number of units required"
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }
             }
         }, 

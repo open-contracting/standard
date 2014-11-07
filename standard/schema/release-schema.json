@@ -705,10 +705,12 @@
             "properties": {
                 "id": {
                     "description": "A local identifier to reference and merge the items by. Must be unique within a given array of items.",
-                    "type": ["string", "integer"]
+                    "type": ["string", "integer"],
+                    "mergeStrategy": "overwrite"
                 },
                 "description": {
                     "description": "A description of the goods, services to be provided.",
+                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "classification": {
@@ -718,8 +720,15 @@
                 "additionalClassifications": {
                     "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas.",
                     "type": "array",
+                    "mergeStrategy": "ocdsVersion",
                     "items": { "$ref": "#/definitions/Identifier" },
                     "uniqueItems": true
+                },
+                "quantity": {
+                    "description": "The number of units required",
+                    "mergeStrategy": "ocdsVersion",
+                    "minimum": 0,
+                    "type": ["integer", "null"]
                 },
                 "unit": {
                     "description": "Description of the unit which the good comes in e.g. hours, kilograms",
@@ -727,10 +736,11 @@
                     "properties": {
                         "name": {
                             "description": "Name of the unit",
+                            "mergeStrategy": "ocdsVersion",
                             "type": ["string", "null"]
                         },
                         "value": {
-                            "description": "The value of a single unity",
+                            "description": "The monetary value of a single unity",
                             "$ref": "#/definitions/Value"
                         }
                     },
@@ -739,18 +749,13 @@
                             "type": ["string", "null"]
                         }
                     }
-                },
-                "quantity": {
-                    "description": "The number of units required",
-                    "type": ["integer", "null"]
                 }
             },
             "patternProperties": {
                 "^(description_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-            },
-            "__comment": "Does not have merge strategy fields as is always item in array, and array is versioned."
+            }
         },
         "Amendment": {
             "type": "object",
