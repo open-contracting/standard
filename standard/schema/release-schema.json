@@ -680,11 +680,13 @@
                 "additionalIdentifiers": { 
                     "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use.",
                     "type": "array",
+                    "mergeStrategy": "ocdsVersion",
                     "items": { "$ref": "#/definitions/Identifier" },
                     "uniqueItems": true
                 },
                 "name": {
                     "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here.",
+                    "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
                 "address": { "$ref": "#/definitions/Address" },
@@ -694,8 +696,7 @@
                 "^(name_[A-Za-z]{2})$": {
                     "type": ["string", "null"]
                 }
-            },
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier."
+            }
         },
         "Item": {
             "type": "object",

@@ -59,9 +59,6 @@
         "Transaction": {
             "properties": {
                 "receiverOrganization": {
-                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
-                    "description": "An organization.", 
-                    "title": "Organization", 
                     "patternProperties": {
                         "^(name_[A-Za-z]{2})$": {
                             "type": [
@@ -70,15 +67,33 @@
                             ]
                         }
                     }, 
+                    "description": "An organization.", 
                     "type": "object", 
                     "properties": {
                         "additionalIdentifiers": {
-                            "uniqueItems": true, 
                             "items": {
-                                "$ref": "#/definitions/Identifier"
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "uniqueItems": true, 
+                                        "items": {
+                                            "$ref": "#/definitions/Identifier"
+                                        }, 
+                                        "type": "array", 
+                                        "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                                    }
+                                }
                             }, 
-                            "type": "array", 
-                            "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                            "type": "array"
                         }, 
                         "contactPoint": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -170,11 +185,28 @@
                             }
                         }, 
                         "name": {
-                            "type": [
-                                "string", 
-                                "null"
-                            ], 
-                            "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                    }
+                                }
+                            }, 
+                            "type": "array"
                         }, 
                         "address": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -221,7 +253,8 @@
                                 }
                             }
                         }
-                    }
+                    }, 
+                    "title": "Organization"
                 }, 
                 "uri": {
                     "items": {
@@ -250,9 +283,6 @@
                     "type": "array"
                 }, 
                 "providerOrganization": {
-                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
-                    "description": "An organization.", 
-                    "title": "Organization", 
                     "patternProperties": {
                         "^(name_[A-Za-z]{2})$": {
                             "type": [
@@ -261,15 +291,33 @@
                             ]
                         }
                     }, 
+                    "description": "An organization.", 
                     "type": "object", 
                     "properties": {
                         "additionalIdentifiers": {
-                            "uniqueItems": true, 
                             "items": {
-                                "$ref": "#/definitions/Identifier"
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "uniqueItems": true, 
+                                        "items": {
+                                            "$ref": "#/definitions/Identifier"
+                                        }, 
+                                        "type": "array", 
+                                        "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                                    }
+                                }
                             }, 
-                            "type": "array", 
-                            "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                            "type": "array"
                         }, 
                         "contactPoint": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -361,11 +409,28 @@
                             }
                         }, 
                         "name": {
-                            "type": [
-                                "string", 
-                                "null"
-                            ], 
-                            "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                    }
+                                }
+                            }, 
+                            "type": "array"
                         }, 
                         "address": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -412,7 +477,8 @@
                                 }
                             }
                         }
-                    }
+                    }, 
+                    "title": "Organization"
                 }, 
                 "source": {
                     "items": {
@@ -2303,9 +2369,6 @@
                     "type": "array"
                 }, 
                 "procuringEntity": {
-                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
-                    "description": "An organization.", 
-                    "title": "Organization", 
                     "patternProperties": {
                         "^(name_[A-Za-z]{2})$": {
                             "type": [
@@ -2314,15 +2377,33 @@
                             ]
                         }
                     }, 
+                    "description": "An organization.", 
                     "type": "object", 
                     "properties": {
                         "additionalIdentifiers": {
-                            "uniqueItems": true, 
                             "items": {
-                                "$ref": "#/definitions/Identifier"
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "uniqueItems": true, 
+                                        "items": {
+                                            "$ref": "#/definitions/Identifier"
+                                        }, 
+                                        "type": "array", 
+                                        "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                                    }
+                                }
                             }, 
-                            "type": "array", 
-                            "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                            "type": "array"
                         }, 
                         "contactPoint": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -2414,11 +2495,28 @@
                             }
                         }, 
                         "name": {
-                            "type": [
-                                "string", 
-                                "null"
-                            ], 
-                            "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                    }
+                                }
+                            }, 
+                            "type": "array"
                         }, 
                         "address": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -2465,14 +2563,12 @@
                                 }
                             }
                         }
-                    }
+                    }, 
+                    "title": "Organization"
                 }
             }
         }, 
         "Organization": {
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
-            "description": "An organization.", 
-            "title": "Organization", 
             "patternProperties": {
                 "^(name_[A-Za-z]{2})$": {
                     "type": [
@@ -2481,15 +2577,31 @@
                     ]
                 }
             }, 
-            "type": "object", 
             "properties": {
                 "additionalIdentifiers": {
-                    "uniqueItems": true, 
                     "items": {
-                        "$ref": "#/definitions/Identifier"
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "uniqueItems": true, 
+                                "items": {
+                                    "$ref": "#/definitions/Identifier"
+                                }, 
+                                "type": "array", 
+                                "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                            }
+                        }
                     }, 
-                    "type": "array", 
-                    "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                    "type": "array"
                 }, 
                 "contactPoint": {
                     "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -2581,11 +2693,28 @@
                     }
                 }, 
                 "name": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }, 
                 "address": {
                     "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -2632,7 +2761,10 @@
                         }
                     }
                 }
-            }
+            }, 
+            "type": "object", 
+            "description": "An organization.", 
+            "title": "Organization"
         }, 
         "ContactPoint": {
             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -2952,9 +3084,6 @@
             "type": "array"
         }, 
         "buyer": {
-            "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
-            "description": "An organization.", 
-            "title": "Organization", 
             "patternProperties": {
                 "^(name_[A-Za-z]{2})$": {
                     "type": [
@@ -2963,15 +3092,33 @@
                     ]
                 }
             }, 
+            "description": "An organization.", 
             "type": "object", 
             "properties": {
                 "additionalIdentifiers": {
-                    "uniqueItems": true, 
                     "items": {
-                        "$ref": "#/definitions/Identifier"
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "uniqueItems": true, 
+                                "items": {
+                                    "$ref": "#/definitions/Identifier"
+                                }, 
+                                "type": "array", 
+                                "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                            }
+                        }
                     }, 
-                    "type": "array", 
-                    "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                    "type": "array"
                 }, 
                 "contactPoint": {
                     "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -3063,11 +3210,28 @@
                     }
                 }, 
                 "name": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ], 
-                    "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }, 
                 "address": {
                     "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -3114,7 +3278,8 @@
                         }
                     }
                 }
-            }
+            }, 
+            "title": "Organization"
         }, 
         "ocid": {
             "type": "string", 
@@ -3706,9 +3871,6 @@
                     "type": "array"
                 }, 
                 "procuringEntity": {
-                    "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
-                    "description": "An organization.", 
-                    "title": "Organization", 
                     "patternProperties": {
                         "^(name_[A-Za-z]{2})$": {
                             "type": [
@@ -3717,15 +3879,33 @@
                             ]
                         }
                     }, 
+                    "description": "An organization.", 
                     "type": "object", 
                     "properties": {
                         "additionalIdentifiers": {
-                            "uniqueItems": true, 
                             "items": {
-                                "$ref": "#/definitions/Identifier"
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "uniqueItems": true, 
+                                        "items": {
+                                            "$ref": "#/definitions/Identifier"
+                                        }, 
+                                        "type": "array", 
+                                        "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                                    }
+                                }
                             }, 
-                            "type": "array", 
-                            "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                            "type": "array"
                         }, 
                         "contactPoint": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -3817,11 +3997,28 @@
                             }
                         }, 
                         "name": {
-                            "type": [
-                                "string", 
-                                "null"
-                            ], 
-                            "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                    }
+                                }
+                            }, 
+                            "type": "array"
                         }, 
                         "address": {
                             "__comment": "No mergeStrategy - placed on higher level uses of identifier.", 
@@ -3868,7 +4065,8 @@
                                 }
                             }
                         }
-                    }
+                    }, 
+                    "title": "Organization"
                 }
             }
         }, 
