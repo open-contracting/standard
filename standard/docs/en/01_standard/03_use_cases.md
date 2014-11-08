@@ -1,5 +1,9 @@
 [TOC]
 
+# Built with a focus on users
+
+ToDo: Explain that the standard is not designed to cover all possible use cases, but rather to provide a common framework for open data on contracts.
+
 **ToDo: Add images**
 
 ## User demand and data requirements
