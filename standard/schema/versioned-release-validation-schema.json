@@ -2957,6 +2957,12 @@
                         "null"
                     ]
                 }, 
+                "^(procurementMethodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
                 "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
                         "string", 
@@ -2964,12 +2970,6 @@
                     ]
                 }, 
                 "^(awardCriteriaDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "^(methodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
                         "string", 
                         "null"
@@ -2984,6 +2984,36 @@
             }, 
             "type": "object", 
             "properties": {
+                "procurementMethod": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "open", 
+                                    "selective", 
+                                    "limited", 
+                                    null
+                                ], 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Specify tendering method against the [method codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "amendment": {
                     "patternProperties": {
                         "^(rationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
@@ -3358,29 +3388,61 @@
                     }, 
                     "type": "array"
                 }, 
-                "description": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
+                "tenderPeriod": {
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The state date for the period.", 
+                                        "format": "date-time"
+                                    }
+                                }
                             }, 
-                            "releaseID": {
-                                "type": "string"
+                            "type": "array"
+                        }, 
+                        "endDate": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The end date for the period.", 
+                                        "format": "date-time"
+                                    }
+                                }
                             }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Tender description"
-                            }
+                            "type": "array"
                         }
                     }, 
-                    "type": "array"
+                    "title": "Period"
                 }, 
                 "documents": {
                     "items": {
@@ -3388,30 +3450,6 @@
                     }, 
                     "type": "array", 
                     "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#document-type) for details of potential documents to include."
-                }, 
-                "methodRationale": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Rationale of procurement method, especially in the case of Limited tendering."
-                            }
-                        }
-                    }, 
-                    "type": "array"
                 }, 
                 "title": {
                     "items": {
@@ -3437,7 +3475,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "method": {
+                "procurementMethodRationale": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -3451,17 +3489,11 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "enum": [
-                                    "open", 
-                                    "selective", 
-                                    "limited", 
-                                    null
-                                ], 
                                 "type": [
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Specify tendering method against the [method codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited"
+                                "description": "Rationale of procurement method, especially in the case of Limited tendering."
                             }
                         }
                     }, 
@@ -3524,61 +3556,29 @@
                     }, 
                     "type": "array"
                 }, 
-                "tenderPeriod": {
-                    "type": "object", 
-                    "properties": {
-                        "startDate": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "description": "The state date for the period.", 
-                                        "format": "date-time"
-                                    }
-                                }
+                "description": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
                             }, 
-                            "type": "array"
-                        }, 
-                        "endDate": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "description": "The end date for the period.", 
-                                        "format": "date-time"
-                                    }
-                                }
+                            "releaseID": {
+                                "type": "string"
                             }, 
-                            "type": "array"
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Tender description"
+                            }
                         }
                     }, 
-                    "title": "Period"
+                    "type": "array"
                 }, 
                 "submissionMethod": {
                     "items": {
@@ -5468,6 +5468,12 @@
                         "null"
                     ]
                 }, 
+                "^(procurementMethodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }, 
                 "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
                         "string", 
@@ -5475,12 +5481,6 @@
                     ]
                 }, 
                 "^(awardCriteriaDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": [
-                        "string", 
-                        "null"
-                    ]
-                }, 
-                "^(methodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
                         "string", 
                         "null"
@@ -5498,6 +5498,36 @@
             ], 
             "type": "object", 
             "properties": {
+                "procurementMethod": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "enum": [
+                                    "open", 
+                                    "selective", 
+                                    "limited", 
+                                    null
+                                ], 
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Specify tendering method against the [method codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "amendment": {
                     "patternProperties": {
                         "^(rationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
@@ -5872,29 +5902,61 @@
                     }, 
                     "type": "array"
                 }, 
-                "description": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
+                "tenderPeriod": {
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The state date for the period.", 
+                                        "format": "date-time"
+                                    }
+                                }
                             }, 
-                            "releaseID": {
-                                "type": "string"
+                            "type": "array"
+                        }, 
+                        "endDate": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The end date for the period.", 
+                                        "format": "date-time"
+                                    }
+                                }
                             }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Tender description"
-                            }
+                            "type": "array"
                         }
                     }, 
-                    "type": "array"
+                    "title": "Period"
                 }, 
                 "documents": {
                     "items": {
@@ -5902,30 +5964,6 @@
                     }, 
                     "type": "array", 
                     "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#document-type) for details of potential documents to include."
-                }, 
-                "methodRationale": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
-                            "releaseID": {
-                                "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "description": "Rationale of procurement method, especially in the case of Limited tendering."
-                            }
-                        }
-                    }, 
-                    "type": "array"
                 }, 
                 "title": {
                     "items": {
@@ -5951,7 +5989,7 @@
                     }, 
                     "type": "array"
                 }, 
-                "method": {
+                "procurementMethodRationale": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -5965,17 +6003,11 @@
                                 "type": "string"
                             }, 
                             "value": {
-                                "enum": [
-                                    "open", 
-                                    "selective", 
-                                    "limited", 
-                                    null
-                                ], 
                                 "type": [
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "Specify tendering method against the [method codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited"
+                                "description": "Rationale of procurement method, especially in the case of Limited tendering."
                             }
                         }
                     }, 
@@ -6038,61 +6070,29 @@
                     }, 
                     "type": "array"
                 }, 
-                "tenderPeriod": {
-                    "type": "object", 
-                    "properties": {
-                        "startDate": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "description": "The state date for the period.", 
-                                        "format": "date-time"
-                                    }
-                                }
+                "description": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
                             }, 
-                            "type": "array"
-                        }, 
-                        "endDate": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "type": [
-                                            "string", 
-                                            "null"
-                                        ], 
-                                        "description": "The end date for the period.", 
-                                        "format": "date-time"
-                                    }
-                                }
+                            "releaseID": {
+                                "type": "string"
                             }, 
-                            "type": "array"
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "Tender description"
+                            }
                         }
                     }, 
-                    "title": "Period"
+                    "type": "array"
                 }, 
                 "submissionMethod": {
                     "items": {
