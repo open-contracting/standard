@@ -23,7 +23,7 @@ may not want to run this software themselves and provide the full record.
 The following sections describe how merging works should invididual parties 
 wish to implement merging or a merging library.
 
-## Things to be careful of when publishing to enable merging:
+### Things to be careful of when publishing to enable merging:
 
 The following all require unique identifiers (at least unique to the ocid):
 
