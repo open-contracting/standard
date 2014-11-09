@@ -20,7 +20,7 @@ Releases are cumulative. Over a contracting process releases may be provided to 
 
 Releases may originate from a single system, or may be published in a distributed way by different systems, but releases relating to the same contracting process are tied together by use of the same Open Contracting ID (OCID).
 
-You can think of releases as entries into a ledger: each new entry adds information, and repeats previous information that remains true. The **record** brings together a snapshot of the latest state of all the information.
+You can think of releases as entries into a ledger: each new entry adds information, and may repeat previous information that remains true. The **record** brings together a snapshot of the latest state of all the information.
 
 <div class="well">
 <p>In a complete OCDS implementation, each release would be published at its own URL, and kept online permanently. This may be difficult for some publishers to implement over the short term.
@@ -39,11 +39,16 @@ In these cases, where publishers are providing a single URI for fetching informa
 
 ## Records
 
-A contracting **record** provides a snapshot of all the key elements of a contracting process. It is updated as new information becomes available through releases and should provide **an at-a-glance view that accurately reflects the current state of the contract processes**. Contracting records can also contain a version history of key fields, showing how the contract has changed over time. 
+A contracting **record** provides a snapshot of the contracting process at a given point in time, bringing together all the releases into one place. It is updated as new information becomes available through releases.
 
-Contracting records may be published in full, or may contain a pointer to web-accessible releases in order to allow third-parties to assemble and verify a record of the whole contracting process.
+A record contains three key elements:
+* a list of all the releases that relate to that contracting process (required*)
+* a compiledRelease which is a release updated with the most up-to-date value for every field
+* a versionedRelease which contains a history of all the changes for every field
 
-The OCDS Schema defines a set of merge strategies to explain when to overwrite past data in the main body of the record, and when to append data.
+* At a minimum, this may be a list of pointers to web-accessible releases in order to allow third-parties to assemble and verify a record of the whole contracting process.
+
+The OCDS Schema defines a set of "merge strategies" that work with the jsonmerge library to enable the compiled and versioned releases to be made from just the raw release data. Put another way, publishers do not need to maintain or do any versioning themselves, they can simply publish all the releases that belong to a contracting process.
 
 (**ToDo:** Pull out merge strategies in some meaningful way to display in the documentation)
 
