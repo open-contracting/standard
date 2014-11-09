@@ -20,7 +20,7 @@ Releases are cumulative. Over a contracting process releases may be provided to 
 
 Releases may originate from a single system, or may be published in a distributed way by different systems, but releases relating to the same contracting process are tied together by use of the same Open Contracting ID (OCID).
 
-You can think of releases as entries into a ledger: each new entry adds information, and repeats previous information that remains true. The **record** brings together a snapshot of the latest state of all the information.
+You can think of releases as entries into a ledger: each new entry adds information, and may repeat previous information that remains true. The **record** brings together a snapshot of the latest state of all the information.
 
 <div class="well">
 <p>In a complete OCDS implementation, each release would be published at its own URL, and kept online permanently. This may be difficult for some publishers to implement over the short term.
