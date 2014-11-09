@@ -11,7 +11,8 @@ The basic format of a record is simple. There are three components:
 - Versioned Release: For each field in the release, the versioned release contains the history
   of all the changes to that field over all the releases.
 
-For full information on records and releases see: http://ocds.stage.aptivate.org/standard/r/master/en/key_concepts/releases_and_records/
+For full information on records and releases see: [http://ocds.stage.aptivate.org/standard/r/master/en/key_concepts/releases_and_records/](http://ocds.stage.aptivate.org/standard/r/master/en/key_concepts/releases_and_records/)
+
 
 ## Merging
 
@@ -23,21 +24,25 @@ The following sections describe how merging works should invididual parties
 wish to implement merging or a merging library.
 
 ## Things to be careful of when publishing to enable merging:
+
 The following all require unique identifiers (at least unique to the ocid):
-* awards
-* contracts
-* items
-* documents
-* transactions
-* milestones
+
+- awards
+- contracts
+- items
+- documents
+- transactions
+- milestones
 
 The following lists of things must be re-published in full for each release:
-* Award.suppliers
-* Organization.additionalIdentifiers
-* Item.additionalClassifications
-* Amendment.changes
+
+- Award.suppliers
+- Organization.additionalIdentifiers
+- Item.additionalClassifications
+- Amendment.changes
 
 ### Merge Strategies
+
 The OCDS merging is based on the open source jsonmerge library https://github.com/avian2/jsonmerge.
 
 But the principles could be re-implemented if desired.
@@ -51,8 +56,9 @@ basic strategies - consult the jsonmerge documentation.
 
 Most fields have the mergeStrategy ocdsVersion. The ocdsVersion strategy has two
 modes of operation:
-1 - when making a compiled record, the field is overridden with the latest value
-2 - when making a versioned record, the field history is documented.
+
+- when making a compiled record, the field is overridden with the latest value
+- when making a versioned record, the field history is documented.
 
 Here is a simple example.
 
@@ -129,12 +135,13 @@ We adopt two approaches to merging arrays:
 #### Merging lists - arrayMergeById
 
 The arrayMergeById applies to the following lists of objects within the release:
-* awards
-* contracts
-* items
-* documents
-* transactions
-* milestones
+
+- awards
+- contracts
+- items
+- documents
+- transactions
+- milestones
 
 Each of these objects has a required id field on it. When the merge is being performed, the
 item with the corresponding id is looked up for the before and after versions of the release and the
@@ -286,10 +293,10 @@ record_snippet = {
 
 The ocdsVersion strategy applies to the following lists:
 
-Award.suppliers
-Organization.additionalIdentifiers
-Item.additionalClassifications
-Amendment.changes
+-  Award.suppliers
+-  Organization.additionalIdentifiers
+-  Item.additionalClassifications
+-  Amendment.changes
 
 In this instance the entire list is treated as one single value and any change to any field will
 result in the whole list being updated and documented as changed.
@@ -432,6 +439,7 @@ record_snippet = {
 </pre>
 
 #### Merge strategies ocdsOmit
+
 There are a number of fields marked with the strategy ocdsOmit.
 
 This strategy returns nothing on merge, because to update the field wouldn't make sense.
@@ -440,6 +448,7 @@ For example, the field for `tag` should not be updated to the latest version,
 it should be updated to `compiled` for it to make sense.
 
 ### Implementing merging
+
 To merge releases into records, we use the jsonmerge library with its 
 add-ons to json schema that specify a mergeStrategy on each field.
 
