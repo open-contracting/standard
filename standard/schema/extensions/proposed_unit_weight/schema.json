@@ -1,0 +1,22 @@
+[
+    {
+        "op": "add",
+        "path": "release-schema.json/definitions/Item/unit/weight",
+        "value": {
+            "type": "object",
+            "title": "Weight",
+            "description": "Describes the weight of a unit",
+            "properties": {
+                "value": {
+                    "description": "The number of the weight for this unit. e.g. if the unit is pallet and its weight is 200kg, the value will be 200."
+                    "type": ["number", "integer"],
+                    "minimum": 0
+                },
+                "unit": {
+                    "description": "[Consult codelist] The SI unit for this weight e.g. if the unit is pallet and its weight is 200kg, the unit will be kg."
+                    "type": ["string"]
+                }
+            }
+        }
+    }
+]
