@@ -31,6 +31,7 @@
                                     "string", 
                                     "null"
                                 ], 
+                                "description": "The data of this amendment.", 
                                 "format": "date-time"
                             }
                         }
@@ -137,7 +138,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
                                     }
                                 }
                             }, 
@@ -162,7 +163,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The identifier for the Thing under the given scheme."
+                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
                                     }
                                 }
                             }, 
@@ -186,7 +187,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "URI to identify the Thing under the given scheme.", 
+                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                         "format": "uri"
                                     }
                                 }
@@ -211,7 +212,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
                                     }
                                 }
                             }, 
@@ -274,7 +275,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
                                     }
                                 }
                             }, 
@@ -299,7 +300,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The identifier for the Thing under the given scheme."
+                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
                                     }
                                 }
                             }, 
@@ -323,7 +324,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "URI to identify the Thing under the given scheme.", 
+                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                         "format": "uri"
                                     }
                                 }
@@ -348,7 +349,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
                                     }
                                 }
                             }, 
@@ -517,7 +518,7 @@
                 }
             }, 
             "type": "object", 
-            "description": "An address", 
+            "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.", 
             "properties": {
                 "postalCode": {
                     "items": {
@@ -536,7 +537,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The postal code. For example, 94043."
                             }
                         }
                     }, 
@@ -559,7 +561,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The country name. For example, United States."
                             }
                         }
                     }, 
@@ -582,7 +585,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The street address. For example, 1600 Amphitheatre Pkwy."
                             }
                         }
                     }, 
@@ -605,7 +609,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The region. For example, CA."
                             }
                         }
                     }, 
@@ -628,7 +633,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The locality. For example, Mountain View."
                             }
                         }
                     }, 
@@ -863,6 +869,7 @@
                                             "string", 
                                             "null"
                                         ], 
+                                        "description": "The data of this amendment.", 
                                         "format": "date-time"
                                     }
                                 }
@@ -1329,7 +1336,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
                                     }
                                 }
                             }, 
@@ -1354,7 +1361,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The identifier for the Thing under the given scheme."
+                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
                                     }
                                 }
                             }, 
@@ -1378,7 +1385,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "URI to identify the Thing under the given scheme.", 
+                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                         "format": "uri"
                                     }
                                 }
@@ -1403,7 +1410,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
                                     }
                                 }
                             }, 
@@ -1430,7 +1437,7 @@
                                     "$ref": "#/definitions/Identifier"
                                 }, 
                                 "type": "array", 
-                                "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas."
+                                "description": "An array of additional classifications for the item. See the [itemClassificationScheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#item-classification-scheme) codelist for common options to use in OCDS. This may also be used to present codes from an internal classification scheme."
                             }
                         }
                     }, 
@@ -1453,7 +1460,7 @@
                         }
                     }, 
                     "type": "object", 
-                    "description": "Description of the unit which the good comes in e.g. hours, kilograms", 
+                    "description": "Description of the unit which the good comes in e.g. hours, kilograms. Made up of a unit name, and the value of a single unit.", 
                     "properties": {
                         "name": {
                             "items": {
@@ -1796,6 +1803,7 @@
                                             "string", 
                                             "null"
                                         ], 
+                                        "description": "The data of this amendment.", 
                                         "format": "date-time"
                                     }
                                 }
@@ -2047,7 +2055,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
                             }
                         }
                     }, 
@@ -2072,7 +2080,7 @@
                                     "integer", 
                                     "null"
                                 ], 
-                                "description": "The identifier for the Thing under the given scheme."
+                                "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
                             }
                         }
                     }, 
@@ -2096,7 +2104,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "URI to identify the Thing under the given scheme.", 
+                                "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                 "format": "uri"
                             }
                         }
@@ -2121,7 +2129,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
                             }
                         }
                     }, 
@@ -2173,7 +2181,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] The status that was realized on the date provided."
+                                "description": "The status that was realized on the date provided in dateModified, drawn from the [milestoneStatus codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#milestone-status)."
                             }
                         }
                     }, 
@@ -2265,7 +2273,7 @@
                         "string", 
                         "integer"
                     ], 
-                    "description": "A local, unique identifier for this milestone. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism."
+                    "description": "A local identifier for this milestone, unique within this block. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism."
                 }, 
                 "dueDate": {
                     "items": {
@@ -2400,6 +2408,7 @@
                                             "string", 
                                             "null"
                                         ], 
+                                        "description": "The data of this amendment.", 
                                         "format": "date-time"
                                     }
                                 }
@@ -3082,7 +3091,7 @@
                                             "$ref": "#/definitions/Identifier"
                                         }, 
                                         "type": "array", 
-                                        "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                                        "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/#organization-identifiers). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
                                     }
                                 }
                             }, 
@@ -3098,6 +3107,7 @@
                                 }
                             }, 
                             "type": "object", 
+                            "description": "An person, contact point or department to contact in relation to this contracting process.", 
                             "properties": {
                                 "telephone": {
                                     "items": {
@@ -3116,7 +3126,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The telephone number of the contact point/person. This should include the international dialling code."
                                             }
                                         }
                                     }, 
@@ -3140,6 +3151,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
+                                                "description": "A web address for the contact point/person.", 
                                                 "format": "uri"
                                             }
                                         }
@@ -3163,7 +3175,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The fax number of the contact point/person. This should include the international dialling code."
                                             }
                                         }
                                     }, 
@@ -3186,7 +3199,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
                                             }
                                         }
                                     }, 
@@ -3209,7 +3223,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The e-mail address of the contact point/person."
                                             }
                                         }
                                     }, 
@@ -3246,7 +3261,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                                "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
                                             }
                                         }
                                     }, 
@@ -3271,7 +3286,7 @@
                                                     "integer", 
                                                     "null"
                                                 ], 
-                                                "description": "The identifier for the Thing under the given scheme."
+                                                "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
                                             }
                                         }
                                     }, 
@@ -3295,7 +3310,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "URI to identify the Thing under the given scheme.", 
+                                                "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                                 "format": "uri"
                                             }
                                         }
@@ -3320,7 +3335,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
                                             }
                                         }
                                     }, 
@@ -3346,7 +3361,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                        "description": "The common name of the organization. The ID property provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization is known. This field could also include details of the department or sub-unit involved in this contracting process."
                                     }
                                 }
                             }, 
@@ -3362,7 +3377,7 @@
                                 }
                             }, 
                             "type": "object", 
-                            "description": "An address", 
+                            "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.", 
                             "properties": {
                                 "postalCode": {
                                     "items": {
@@ -3381,7 +3396,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The postal code. For example, 94043."
                                             }
                                         }
                                     }, 
@@ -3404,7 +3420,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The country name. For example, United States."
                                             }
                                         }
                                     }, 
@@ -3427,7 +3444,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The street address. For example, 1600 Amphitheatre Pkwy."
                                             }
                                         }
                                     }, 
@@ -3450,7 +3468,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The region. For example, CA."
                                             }
                                         }
                                     }, 
@@ -3473,7 +3492,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The locality. For example, Mountain View."
                                             }
                                         }
                                     }, 
@@ -3515,7 +3535,7 @@
                                     "$ref": "#/definitions/Identifier"
                                 }, 
                                 "type": "array", 
-                                "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                                "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/#organization-identifiers). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
                             }
                         }
                     }, 
@@ -3531,6 +3551,7 @@
                         }
                     }, 
                     "type": "object", 
+                    "description": "An person, contact point or department to contact in relation to this contracting process.", 
                     "properties": {
                         "telephone": {
                             "items": {
@@ -3549,7 +3570,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The telephone number of the contact point/person. This should include the international dialling code."
                                     }
                                 }
                             }, 
@@ -3573,6 +3595,7 @@
                                             "string", 
                                             "null"
                                         ], 
+                                        "description": "A web address for the contact point/person.", 
                                         "format": "uri"
                                     }
                                 }
@@ -3596,7 +3619,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The fax number of the contact point/person. This should include the international dialling code."
                                     }
                                 }
                             }, 
@@ -3619,7 +3643,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
                                     }
                                 }
                             }, 
@@ -3642,7 +3667,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The e-mail address of the contact point/person."
                                     }
                                 }
                             }, 
@@ -3679,7 +3705,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
                                     }
                                 }
                             }, 
@@ -3704,7 +3730,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The identifier for the Thing under the given scheme."
+                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
                                     }
                                 }
                             }, 
@@ -3728,7 +3754,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "URI to identify the Thing under the given scheme.", 
+                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                         "format": "uri"
                                     }
                                 }
@@ -3753,7 +3779,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
                                     }
                                 }
                             }, 
@@ -3779,7 +3805,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                "description": "The common name of the organization. The ID property provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization is known. This field could also include details of the department or sub-unit involved in this contracting process."
                             }
                         }
                     }, 
@@ -3795,7 +3821,7 @@
                         }
                     }, 
                     "type": "object", 
-                    "description": "An address", 
+                    "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.", 
                     "properties": {
                         "postalCode": {
                             "items": {
@@ -3814,7 +3840,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The postal code. For example, 94043."
                                     }
                                 }
                             }, 
@@ -3837,7 +3864,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The country name. For example, United States."
                                     }
                                 }
                             }, 
@@ -3860,7 +3888,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The street address. For example, 1600 Amphitheatre Pkwy."
                                     }
                                 }
                             }, 
@@ -3883,7 +3912,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The region. For example, CA."
                                     }
                                 }
                             }, 
@@ -3906,7 +3936,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The locality. For example, Mountain View."
                                     }
                                 }
                             }, 
@@ -3929,6 +3960,7 @@
                 }
             }, 
             "type": "object", 
+            "description": "An person, contact point or department to contact in relation to this contracting process.", 
             "properties": {
                 "telephone": {
                     "items": {
@@ -3947,7 +3979,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The telephone number of the contact point/person. This should include the international dialling code."
                             }
                         }
                     }, 
@@ -3971,6 +4004,7 @@
                                     "string", 
                                     "null"
                                 ], 
+                                "description": "A web address for the contact point/person.", 
                                 "format": "uri"
                             }
                         }
@@ -3994,7 +4028,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The fax number of the contact point/person. This should include the international dialling code."
                             }
                         }
                     }, 
@@ -4017,7 +4052,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
                             }
                         }
                     }, 
@@ -4040,7 +4076,8 @@
                                 "type": [
                                     "string", 
                                     "null"
-                                ]
+                                ], 
+                                "description": "The e-mail address of the contact point/person."
                             }
                         }
                     }, 
@@ -4234,7 +4271,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "[Consult codelist] A classification of the document described. Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code."
+                                "description": "A classification of the document described taken from the [documentType codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code."
                             }
                         }
                     }, 
@@ -4351,7 +4388,7 @@
                                     "$ref": "#/definitions/Identifier"
                                 }, 
                                 "type": "array", 
-                                "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                                "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/#organization-identifiers). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
                             }
                         }
                     }, 
@@ -4367,6 +4404,7 @@
                         }
                     }, 
                     "type": "object", 
+                    "description": "An person, contact point or department to contact in relation to this contracting process.", 
                     "properties": {
                         "telephone": {
                             "items": {
@@ -4385,7 +4423,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The telephone number of the contact point/person. This should include the international dialling code."
                                     }
                                 }
                             }, 
@@ -4409,6 +4448,7 @@
                                             "string", 
                                             "null"
                                         ], 
+                                        "description": "A web address for the contact point/person.", 
                                         "format": "uri"
                                     }
                                 }
@@ -4432,7 +4472,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The fax number of the contact point/person. This should include the international dialling code."
                                     }
                                 }
                             }, 
@@ -4455,7 +4496,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
                                     }
                                 }
                             }, 
@@ -4478,7 +4520,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The e-mail address of the contact point/person."
                                     }
                                 }
                             }, 
@@ -4515,7 +4558,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
                                     }
                                 }
                             }, 
@@ -4540,7 +4583,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The identifier for the Thing under the given scheme."
+                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
                                     }
                                 }
                             }, 
@@ -4564,7 +4607,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "URI to identify the Thing under the given scheme.", 
+                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                         "format": "uri"
                                     }
                                 }
@@ -4589,7 +4632,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
                                     }
                                 }
                             }, 
@@ -4615,7 +4658,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                "description": "The common name of the organization. The ID property provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization is known. This field could also include details of the department or sub-unit involved in this contracting process."
                             }
                         }
                     }, 
@@ -4631,7 +4674,7 @@
                         }
                     }, 
                     "type": "object", 
-                    "description": "An address", 
+                    "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.", 
                     "properties": {
                         "postalCode": {
                             "items": {
@@ -4650,7 +4693,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The postal code. For example, 94043."
                                     }
                                 }
                             }, 
@@ -4673,7 +4717,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The country name. For example, United States."
                                     }
                                 }
                             }, 
@@ -4696,7 +4741,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The street address. For example, 1600 Amphitheatre Pkwy."
                                     }
                                 }
                             }, 
@@ -4719,7 +4765,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The region. For example, CA."
                                     }
                                 }
                             }, 
@@ -4742,7 +4789,8 @@
                                         "type": [
                                             "string", 
                                             "null"
-                                        ]
+                                        ], 
+                                        "description": "The locality. For example, Mountain View."
                                     }
                                 }
                             }, 
@@ -4914,6 +4962,7 @@
                                             "string", 
                                             "null"
                                         ], 
+                                        "description": "The data of this amendment.", 
                                         "format": "date-time"
                                     }
                                 }
@@ -5596,7 +5645,7 @@
                                             "$ref": "#/definitions/Identifier"
                                         }, 
                                         "type": "array", 
-                                        "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
+                                        "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/#organization-identifiers). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
                                     }
                                 }
                             }, 
@@ -5612,6 +5661,7 @@
                                 }
                             }, 
                             "type": "object", 
+                            "description": "An person, contact point or department to contact in relation to this contracting process.", 
                             "properties": {
                                 "telephone": {
                                     "items": {
@@ -5630,7 +5680,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The telephone number of the contact point/person. This should include the international dialling code."
                                             }
                                         }
                                     }, 
@@ -5654,6 +5705,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
+                                                "description": "A web address for the contact point/person.", 
                                                 "format": "uri"
                                             }
                                         }
@@ -5677,7 +5729,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The fax number of the contact point/person. This should include the international dialling code."
                                             }
                                         }
                                     }, 
@@ -5700,7 +5753,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
                                             }
                                         }
                                     }, 
@@ -5723,7 +5777,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The e-mail address of the contact point/person."
                                             }
                                         }
                                     }, 
@@ -5760,7 +5815,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
+                                                "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
                                             }
                                         }
                                     }, 
@@ -5785,7 +5840,7 @@
                                                     "integer", 
                                                     "null"
                                                 ], 
-                                                "description": "The identifier for the Thing under the given scheme."
+                                                "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
                                             }
                                         }
                                     }, 
@@ -5809,7 +5864,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "URI to identify the Thing under the given scheme.", 
+                                                "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                                 "format": "uri"
                                             }
                                         }
@@ -5834,7 +5889,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
                                             }
                                         }
                                     }, 
@@ -5860,7 +5915,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                        "description": "The common name of the organization. The ID property provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization is known. This field could also include details of the department or sub-unit involved in this contracting process."
                                     }
                                 }
                             }, 
@@ -5876,7 +5931,7 @@
                                 }
                             }, 
                             "type": "object", 
-                            "description": "An address", 
+                            "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.", 
                             "properties": {
                                 "postalCode": {
                                     "items": {
@@ -5895,7 +5950,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The postal code. For example, 94043."
                                             }
                                         }
                                     }, 
@@ -5918,7 +5974,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The country name. For example, United States."
                                             }
                                         }
                                     }, 
@@ -5941,7 +5998,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The street address. For example, 1600 Amphitheatre Pkwy."
                                             }
                                         }
                                     }, 
@@ -5964,7 +6022,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The region. For example, CA."
                                             }
                                         }
                                     }, 
@@ -5987,7 +6046,8 @@
                                                 "type": [
                                                     "string", 
                                                     "null"
-                                                ]
+                                                ], 
+                                                "description": "The locality. For example, Mountain View."
                                             }
                                         }
                                     }, 
