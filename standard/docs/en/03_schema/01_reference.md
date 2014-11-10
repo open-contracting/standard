@@ -300,8 +300,6 @@ The organization block can be used to provide a legal identifier for an organiza
 
 The identifier block provides a way to [identify the legal entities](../../key_concepts/identifiers/#organizations) involved in a contracting process.
 
-The identifier block consists of a scheme, id, description or title, and optional URI:
-
 <div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
 
 #### Address
@@ -363,11 +361,9 @@ The items block is used to list the line-items associated with a tender, award o
 
 * Items should be classified according to a established scheme of codes. A single ```primaryClassification``` and be given, although an array of ```additionalClassification``` can be provided.
 
-#### Classifications
+#### Classification
 
-The classification block consists of a scheme, id, description or title, and optional URI.
-
-<div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
+<div class="include-csv" data-src="standard/docs/field_definitions/release-classification.csv" data-table-class="table table-striped schema-table"></div>
 
 
 <!-- ToDo: Add example -->
