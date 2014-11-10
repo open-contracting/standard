@@ -450,7 +450,7 @@
             "required": ["id"],
             "properties": {
                 "id": {
-                    "description": "A local, unique identifier for this milestone. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism.",
+                    "description": "A local identifier for this milestone, unique within this block. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism.",
                     "type": ["string", "integer"],
                     "mergeStrategy": "overwrite"
                 },
@@ -470,16 +470,16 @@
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
-                "status": {
-                    "description": "[Consult codelist] The status that was realized on the date provided.",
-                    "type": ["string", "null"],
-                    "enum": ["met", "notMet", "partiallyMet", null],
-                    "mergeStrategy": "ocdsVersion"
-                },
                 "dateModified" : {
                     "description": "The date the milestone was last reviewed or modified and the status was altered or confirmed to still be correct.",
                     "type": ["string", "null"],
                     "format": "date-time",
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "status": {
+                    "description": "The status that was realized on the date provided in dateModified, drawn from the [milestoneStatus codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#milestone-status).",
+                    "type": ["string", "null"],
+                    "enum": ["met", "notMet", "partiallyMet", null],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "documents": {
@@ -512,7 +512,7 @@
                     "mergeStrategy": "overwrite"
                 },
                 "documentType": {
-                    "description": "[Consult codelist] A classification of the document described. Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+                    "description": "A classification of the document described taken from the [documentType codelist](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -675,18 +675,18 @@
             "type": "object",
             "properties": {
                 "identifier": { 
-                    "description": "[Consult codelist] The main identifier for the organization. Consult the codelist for the preferred schemas to use.",
+                    "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/#organization-identifiers) for the preferred scheme and identifier to use.",
                     "$ref": "#/definitions/Identifier" 
                 },
                 "additionalIdentifiers": { 
-                    "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use.",
+                    "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://ocds.open-contracting.org/standard/r/1__0__rc/en/key_concepts/identifiers/#organization-identifiers). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
                     "type": "array",
                     "mergeStrategy": "ocdsVersion",
                     "items": { "$ref": "#/definitions/Identifier" },
                     "uniqueItems": true
                 },
                 "name": {
-                    "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here.",
+                    "description": "The common name of the organization. The ID property provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization is known. This field could also include details of the department or sub-unit involved in this contracting process.",
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"]
                 },
@@ -715,11 +715,11 @@
                     "type": ["string", "null"]
                 },
                 "classification": {
-                    "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas.",
+                    "description": "The primary classification for the item. See the [itemClassificationScheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#item-classification-scheme) to identify preferred classification lists, including CPV and GSIN.",
                     "$ref": "#/definitions/Identifier"
                 },
                 "additionalClassifications": {
-                    "description": "[Consult codelist] The primary classification for the item. See the codelists to know which are preferred schemas.",
+                    "description": "An array of additional classifications for the item. See the [itemClassificationScheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#item-classification-scheme) codelist for common options to use in OCDS. This may also be used to present codes from an internal classification scheme.",
                     "type": "array",
                     "mergeStrategy": "ocdsVersion",
                     "items": { "$ref": "#/definitions/Identifier" },
@@ -732,7 +732,7 @@
                     "type": ["integer", "null"]
                 },
                 "unit": {
-                    "description": "Description of the unit which the good comes in e.g. hours, kilograms",
+                    "description": "Description of the unit which the good comes in e.g. hours, kilograms. Made up of a unit name, and the value of a single unit.",
                     "type": "object",
                     "properties": {
                         "name": {
@@ -764,6 +764,7 @@
             "properties": {
                 "date": {
                     "title": "Amendment Date",
+                    "description":"The data of this amendment.",
                     "type": ["string", "null"],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
@@ -803,22 +804,22 @@
             "type": "object",
             "properties": {
                 "scheme": {
-                    "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier.",
+                    "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) .",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "id": {
-                    "description": "The identifier for the Thing under the given scheme.",
+                    "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use.",
                     "type": ["string", "integer", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
-                    "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry.",
+                    "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "uri": {
-                    "description": "URI to identify the Thing under the given scheme.",
+                    "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.",
                     "type": ["string", "null"],
                     "format" : "uri",
                     "mergeStrategy": "ocdsVersion"
@@ -831,27 +832,32 @@
             }
         },
         "Address": {
-            "description": "An address",
+            "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
             "type": "object",
             "properties": {
                 "streetAddress": {
                     "type": ["string", "null"],
+                    "description": "The street address. For example, 1600 Amphitheatre Pkwy.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "locality":{
                     "type": ["string", "null"],
+                    "description": "The locality. For example, Mountain View.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "region": {
                     "type": ["string", "null"],
+                    "description":"The region. For example, CA.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "postalCode": {
                     "type": ["string", "null"],
+                    "description":"The postal code. For example, 94043.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "countryName": {
                     "type": ["string", "null"],
+                    "description":"The country name. For example, United States.",
                     "mergeStrategy": "ocdsVersion"
                 }
             },
@@ -863,25 +869,31 @@
         },
         "ContactPoint": {
             "type": "object",
+            "description": "An person, contact point or department to contact in relation to this contracting process.",
             "properties": {
                 "name": {
                     "type": ["string", "null"],
+                    "description":"The name of the contact person, department, or contact point, for correspondence relating to this contracting process.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "email":{
                     "type": ["string", "null"],
+                    "description":"The e-mail address of the contact point/person.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "telephone": {
                     "type": ["string", "null"],
+                    "description":"The telephone number of the contact point/person. This should include the international dialling code.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "faxNumber": {
                     "type": ["string", "null"],
+                    "description":"The fax number of the contact point/person. This should include the international dialling code.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "url": {
                     "type": ["string", "null"],
+                    "description":"A web address for the contact point/person.",
                     "format": "uri",
                     "mergeStrategy": "ocdsVersion"
                 }
