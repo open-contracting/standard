@@ -90,7 +90,7 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 
 * ```items``` - publishers should provide details of each of the items to be procured under this tender. 
 
-* ```milestones``` - publishers should list any relevant [milestones](#milestones) associated with the delivery of the goods and services covered by this tender. These are the milestones against which the whole contracting process will be evaluated. Publishers may include information about key milestones during the tender process itself, but should not use this in place of ```tenderPeriod```, ```enquiryPeriod``` or ```awardPeriod```.
+* ```milestones``` - publishers should list any relevant [milestones](#milestone) associated with the delivery of the goods and services covered by this tender. These are the milestones against which the whole contracting process will be evaluated. Publishers may include information about key milestones during the tender process itself, but should not use this in place of ```tenderPeriod```, ```enquiryPeriod``` or ```awardPeriod```.
 
 * ```value``` and ```minValue``` - the total upper estimated value of a procurement should be given in ```value```. For publishers who also specify a estimate minimum value, this can be placed in ```minValue```.
 
@@ -147,7 +147,7 @@ In most circumstances, the ```providerOrganization``` identifier should match th
 
 #### Milestones
 
-See [milestones](#milestones) reference below.
+See [milestone](#milestone) reference below.
 
 The implementation milestones should be updated to reflect when they are met. 
 
@@ -155,7 +155,7 @@ The implementation milestones should be updated to reflect when they are met.
 
 Documents related to contract implementation should be stored here. This may include subcontracts.
 
-See [documents](#documents) reference below. 
+See [document](#document) reference below. 
 
 ### Amendments
 
@@ -291,13 +291,15 @@ The JSON Schema makes use of the JSON Scheme 0.4 [‘Pattern Properties](http://
 
 ### Identifier
 
-Identifiers are used in a number of ways where there is a need to declare a scheme from which identifiers or codes will be drawn, and to provide the code, along with some supporting descriptive information. This is used in OCDS to classify goods and services, and for [organization identifiers](../../key_concepts/identifiers/#organizations)
+The identifier block provides a way to [identify organizations](../../key_concepts/identifiers/#organizations), and classify [line items](#items) by drawing on existing registries or codelists. 
+
+The identifier block consists of a scheme, id, description or title, and optional URI:
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
 
-
-
 ### Organization
+
+The organization block can be used to provide a legal identifier for an organization, and to give [address](#address) and [contact point](#contact-point) information.
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-organization.csv" data-table-class="table table-striped schema-table"></div>
 
@@ -309,6 +311,10 @@ Identifiers are used in a number of ways where there is a need to declare a sche
 <div class="include-csv" data-src="standard/docs/field_definitions/release-contact-point.csv" data-table-class="table table-striped schema-table"></div>
 
 ### Document
+
+Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and milestones. Each document block can consist of multiple documents, classified using the [documentType](../../codelists#document-type) codelist. 
+
+The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-document.csv" data-table-class="table table-striped schema-table"></div>
 
@@ -344,18 +350,40 @@ A period is an object consisting of a start date and end date, represented as da
 
 ### Item
 
+The items block is used to list the line-items associated with a tender, award or contract. 
+
 <div class="include-csv" data-src="standard/docs/field_definitions/release-item.csv" data-table-class="table table-striped schema-table"></div>
 
+#### Notes 
+
+* The [proposed location extension](https://github.com/open-contracting/standard/tree/master/standard/schema/extensions/proposed_location) can be attached to items, allowing the point of delivery for a given item to be indicated in both the tender, award and contract stage.
+
+* The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no code list for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
+
+<!-- ToDo: Add example -->
 
 ### Milestone
 
+Milestone information can be included in the [tender](#tender) and [contract implementation](#implementation) blocks. 
+
+In the context of a tender block, milestones describe the key deliverables of a contract, or key points during the lifetime of the contract. These may have associated documentation. 
+
+In the context of a contract implementation block, milestones are used to track progress towards those deliverables and key events set out in the tender. 
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-milestone.csv" data-table-class="table table-striped schema-table"></div>
 
+#### Notes
+
+* The ```dateModified``` field should be changed whenever the progress towards a milestone is reviewed, and the ```status``` either updated, or re-confirmed. 
+
+<!-- ToDo: Add example -->
+
 ### Value
+
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-value.csv" data-table-class="table table-striped schema-table"></div>
 
 ### Location
 
-The addition of location information is handled through an extension to the specification, with an integral location element considered for future versions of the specification.
+The addition of location information is currently handled through a [proposed extension](https://github.com/open-contracting/standard/tree/master/standard/schema/extensions/proposed_location) to the standard.
+
