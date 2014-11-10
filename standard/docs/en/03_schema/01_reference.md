@@ -293,7 +293,7 @@ The JSON Schema makes use of the JSON Scheme 0.4 [‘Pattern Properties](http://
 
 Identifiers are used in a number of ways where there is a need to declare a scheme from which identifiers or codes will be drawn, and to provide the code, along with some supporting descriptive information. This is used in OCDS to classify goods and services, and for [organization identifiers](../../key_concepts/identifiers/#organizations)
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-identifiers.csv" data-table-class="table table-striped schema-table"></div>
+<div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
 
 
 
