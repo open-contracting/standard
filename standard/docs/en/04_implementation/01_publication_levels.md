@@ -6,7 +6,7 @@
 
 <span class="lead">This section sets out a series of steps towards improving the content, and the technical openness, of contracting data.</lead>
 
-On the [publication patterns](../publication_patterns) page you will find further information to support you at each stage of implementation    
+On the [publication patterns](../publication_patterns) page you will find further information to support you at each stage of implementation. The [merging](../merging) page provides details of this key aspect of full OCDS implementation. 
 
 
 ## Content - what to include
@@ -73,7 +73,7 @@ Make each **release** and **record** describing a contracting process accessible
 
 Provide feeds that detail recently changed information, and that allow users to search for specific kinds of tenders, awards or contracts (for example, by the category of goods and services being procured). 
 
-Use the /.well-known/ protocol to let machines discover your data. 
+Use the [/.well-known/](../publication_patterns#well-known) protocol to let machines discover your data. 
 
 An example of publishing at this level might involve being able to look up URLs such as /oc/contractProcess/1234 to return a record in JSON format, and that record then detailing a list of releases, each with their own URIs such as /oc/release/1234-1 and /oc/release/1234-2 which detail the different moments in the life of the contracting process. Users interested in the contract could regularly check /oc/contractProcess/1234 to discover updates, or could use a search service at /oc/search/?initiation.item.classification=CPV:03451100-7 to lookup a feed of all the tenders for ‘Bedding Plants’. 
 

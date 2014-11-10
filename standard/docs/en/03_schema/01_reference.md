@@ -390,3 +390,12 @@ During the period of the 1.0 RC, if information on taxation related to a value i
 
 The addition of location information is currently handled through a [proposed extension](https://github.com/open-contracting/standard/tree/master/standard/schema/extensions/proposed_location) to the standard.
 
+## Release handling
+
+### Empty fields
+
+ToDo.
+
+### Emptying fields and values
+
+ToDo.

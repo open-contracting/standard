@@ -49,11 +49,13 @@ The [serialization section](../../standard/serialization#flat-format) provides i
 
 ### Release and record URIs
 
-ToDo: See [https://github.com/open-contracting/standard/issues/31](https://github.com/open-contracting/standard/issues/31) 
+To achieve [3 and 4 ☆](../publication_levels) ODCS publication, publishers should provide data in files following the full OCDS schema, and either with releases and records provided in bulk (3 ☆), or with each release at it's own unique URI (4 ☆). 
+
+<!--ToDo: Work up examples of this in future-->
 
 ### Provide full records
 
-ToDo:
+A basic OCDS record can list the releases related to a given contracting process. However, a full record will provide a compiled release, showing the current state of the contracting process.  
 
 ### User-friendly publication
 
@@ -95,7 +97,6 @@ If compressing data packages, publishers *should* use the zip file format.
 #### Serving files
 
 Publishers should ensure that the web server providing access to bulk files correctly reports the [HTTP Last-Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) header so that consuming applications only need to download updated files.
-
 
 
 ## Advanced
@@ -140,5 +141,6 @@ The data.json structure has been chosen to allow organisations following this ap
 
 ### Linking data
 
+For 5 ☆ publication of OCDS data, publishers should seek to use URIs in their datasets, linking to other machine-readable data sources at an entity-by-entity level.
 
 
