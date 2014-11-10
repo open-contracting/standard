@@ -716,13 +716,13 @@
                 },
                 "classification": {
                     "description": "The primary classification for the item. See the [itemClassificationScheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#item-classification-scheme) to identify preferred classification lists, including CPV and GSIN.",
-                    "$ref": "#/definitions/Identifier"
+                    "$ref": "#/definitions/Classification"
                 },
                 "additionalClassifications": {
                     "description": "An array of additional classifications for the item. See the [itemClassificationScheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#item-classification-scheme) codelist for common options to use in OCDS. This may also be used to present codes from an internal classification scheme.",
                     "type": "array",
                     "mergeStrategy": "ocdsVersion",
-                    "items": { "$ref": "#/definitions/Identifier" },
+                    "items": { "$ref": "#/definitions/Classification" },
                     "uniqueItems": true
                 },
                 "quantity": {
@@ -800,26 +800,26 @@
                 }
             }
         },
-        "Identifier": {
+        "Classification": {
             "type": "object",
             "properties": {
                 "scheme": {
-                    "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) .",
+                    "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) wherever possible.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "id": {
-                    "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use.",
+                    "description": "The classification code drawn from the selected scheme.",
                     "type": ["string", "integer", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
-                    "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used.",
+                    "description": "A textual description or title for the code.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "uri": {
-                    "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.",
+                    "description": "A URI to identify the code. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.",
                     "type": ["string", "null"],
                     "format" : "uri",
                     "mergeStrategy": "ocdsVersion"
@@ -827,6 +827,37 @@
             },
             "patternProperties": {
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                    "type": ["string", "null"]
+                }
+            }
+        },
+        "Identifier": {
+            "type": "object",
+            "properties": {
+                "scheme": {
+                    "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme).",
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "id": {
+                    "description": "The identifier of the organization in the selected scheme.",
+                    "type": ["string", "integer", "null"],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "legalName": {
+                    "description": "The legally registered name of the organization.",
+                    "type": ["string", "null"],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "uri": {
+                    "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.",
+                    "type": ["string", "null"],
+                    "format" : "uri",
+                    "mergeStrategy": "ocdsVersion"
+                }
+            },
+            "patternProperties": {
+                "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": ["string", "null"]
                 }
             }
