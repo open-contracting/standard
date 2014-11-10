@@ -22,7 +22,7 @@ The detailed fields that can be used to represent each of these items are descri
 <iframe src="https://docs.google.com/spreadsheets/d/12W3C3lHY2FW2MRuCGm-kV53bk03TGhXB_z223Rg8xUg/pubhtml?gid=428233391&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="500"></iframe>
 
 
-## How to publish
+## How to publish - 5 ☆ approach
 
 The open data movement has established good practices for publishing data on the web. Complementary to the basic, intermediate, advanced model, we have mapped OCDS against Tim Berners-Lee’s [Five Stars of Linked Open Data](http://www.w3.org/DesignIssues/LinkedData.html) approach, setting out how publishers can achieve 3 ☆ data and higher, in order to represent high quality open data publication.
 

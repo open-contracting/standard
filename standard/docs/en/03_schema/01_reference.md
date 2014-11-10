@@ -15,7 +15,7 @@ The majority of OCDS data is held within a structured [release](../release). Rel
 * [contract](#contract)
 * [implementation](#implementation)
 
-A release can only contain one set of tender information (as we define a unique [contracting process](../../definitions#contracting-process) by the initiation stage), but may contain multiple instances of awards, contracts and performance information.
+A release can only contain one set of tender information (as we define a unique [contracting process](../../key_concepts/definitions#contracting-process) by the initiation stage), but may contain multiple instances of awards, contracts and performance information.
 
 Releases are given a [tag](#release-tag) to indicate what stage of a contracting process they represent, but there are no formal restrictions on when information about a stage of the contracting process may be provided. For example, a publisher announcing the signing of a contract with a 'contract' tag, may also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 

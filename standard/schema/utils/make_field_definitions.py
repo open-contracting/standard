@@ -5,7 +5,7 @@ import collections
 import markdown
 
 def format(text):
-    return markdown.markdown(text).replace("<p>","").replace("</p>","")
+    return markdown.markdown(text.replace("date-time","[date-time](#date)")).replace("<p>","").replace("</p>","")
 
 def make_link(text):
     text = text.replace("#/definitions/","")
@@ -22,9 +22,9 @@ def make_definition_table(json,file_path,what="properties",section=""):
     for prop in block:
         types = block[prop].get('type','')
         if isinstance(types,list):
-            types = ", ".join(types).replace(", null","").replace("null,","")
+            types = format(", ".join(types).replace(", null","").replace("null,",""))
         else:
-            types = types
+            types = format(types)
             
 
         if types == "array":

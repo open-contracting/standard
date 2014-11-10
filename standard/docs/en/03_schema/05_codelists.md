@@ -16,17 +16,23 @@ Codes are case sensitive, and are generally provided as english language camelCa
 
 ## Item Classification Scheme
 
-ToDo: Description
+Items should be classified using existing gazetteers and codelists, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm). Open codelists are strongly preferred. 
 
 <div class="include-csv" data-src="standard/schema/codelists/itemClassificationScheme.csv" data-table-class="table table-striped schema-table"></div>
 
+This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../implementation/publication_patterns#publication_policy). 
+
 ## Organization Identifier Scheme
 
-ToDo: Description & Links
+The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). 
+
+<div class="include-csv" data-src="standard/schema/codelists/organizationIdentifierRegistrationAgency_iati.csv" data-table-class="table table-striped schema-table"></div>
+
+This list can be extended in consultation with IATI. 
 
 ## Document Type
 
-ToDo: Description & Links
+This list provides details of the documents that publishers may wish to provide at various points their contracting process.
 
 <div class="include-csv" data-src="standard/schema/codelists/documentType.csv" data-table-class="table table-striped schema-table"></div>
 
@@ -36,14 +42,15 @@ The award criteria code list describes the basis on which contract awards will b
 
 <div class="include-csv" data-src="standard/schema/codelists/awardCriteria.csv" data-table-class="table table-striped schema-table"></div>
 
-This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../implementation/publication_patterns#publication_guidance). 
+This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../implementation/publication_patterns#publication_policy). 
 
 ## Submission Method
 
-ToDo: Description
+The submission method codelist is used to identify the mechanism through which a submission may be made. 
 
 <div class="include-csv" data-src="standard/schema/codelists/submissionMethod.csv" data-table-class="table table-striped schema-table"></div>
 
+This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../implementation/publication_patterns#publication_policy). 
 
 # Closed Codelists 
 
@@ -81,13 +88,15 @@ The ```awardStatus``` field and code-list is used to indicate when a tender did 
 
 ## Contract Status
 
-ToDo: Description
+Contracts can move through multiple states. Releases over time may update the status of a contract.
+
 <div class="include-csv" data-src="standard/schema/codelists/contractStatus.csv" data-table-class="table table-striped schema-table"></div>
 
 ## Currency
 
-ToDo: Description & Links
+OCDS uses the ISO 3-letter currency codes maintained in [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217).
 
 ## Milestone Status
 
 <div class="include-csv" data-src="standard/schema/codelists/milestoneStatus.csv" data-table-class="table table-striped schema-table"></div>
+
