@@ -359,7 +359,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 * The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no code list for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
 
-* Items should be classified according to a established scheme of codes. A single ```primaryClassification``` and be given, although an array of ```additionalClassification``` can be provided.
+* Items should be classified according to a established scheme of codes. A single primary ```classification``` can be given, although an array of ```additionalClassification``` can be provided.
 
 #### Classification
 
