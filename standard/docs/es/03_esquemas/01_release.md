@@ -1,3 +1,1 @@
-<div class="schema-holder">
-	<script src="{{ STATIC_URL }}docson/widget.js" data-schema={% url 'schema' release_name 'release-schema' %}></script>
-</div>
+Translation of documentation and schemas has not yet taken place. Please see [this issue](https://github.com/open-contracting/standard/issues/77) for details and discussion.

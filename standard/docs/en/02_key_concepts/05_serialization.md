@@ -91,7 +91,9 @@ NOTE: This example is based on an earlier version of the schema, and does not sh
 <div class="include-csv" data-src="standard/example/flat/Identifier.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 <div class="tab-pane" id="award">
+    
 <div class="include-csv" data-src="standard/example/flat/Award.csv" data-table-class="table table-striped schema-table"></div>
+
 </div>
 <div class="tab-pane" id="contract">
 <div class="include-csv" data-src="standard/example/flat/Contract.csv" data-table-class="table table-striped schema-table"></div>
