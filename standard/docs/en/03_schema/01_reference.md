@@ -392,10 +392,30 @@ The addition of location information is currently handled through a [proposed ex
 
 ## Release handling
 
+The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
+
+Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice should be based on an understanding the [merging process](../../implementation/merging) that is used to generate a snapshot record of a full contracting process.
+
+This model also requires publishers to pay careful attention to null values and missing fields. 
+
 ### Empty fields
 
-ToDo.
+There is no requirement to include fields that are not being used in either flat or JSON serializations of OCDS.
+
+Fields that are not being used, or that have no value, can be excluded in their entirety (key and value) from a published file. 
+
+Only including fields which have values will keep versioned datasets cleaner. 
 
 ### Emptying fields and values
 
-ToDo.
+There may be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields should explicitly be set to null. 
+
+The following describes how null values will be handled in the compilation of a record:
+
+* If a field is included with a value in one release, and then set to ```null``` in a subsequent release, that field will be recorded as null in the compiled record (though past values of it should remain in the versioned section of the record).
+
+* If a field is set to null in one release, and is also set to ```null``` in a subsequent release, it will be recorded as null as per the original release, and the record will not show any change based on the subsequent release I.e. fields that are set to null are recorded as such and then only changed if the value is set.
+
+* If a field is set to ```null``` in one release, and then has a value in a subsequent release, it will first appear in the record, and the version section of the record as ```null``` and then with the subsequent value.
+
+* If a field does not appear in one release, and then appears with a value in a subsequent release, it will first appear in the record, and the version section of the record, when the first release that contains it is compiled into the record.

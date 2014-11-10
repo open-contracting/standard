@@ -4,6 +4,8 @@
 
 <span class="lead">The following section sets out a number of publication patterns that will increase the usability of data for users.</span>
 
+* * * *
+
 ## Basic
 
 ### Licensing
@@ -24,7 +26,9 @@ In structured data file you can embed a link to the license in the ```license```
 
 ### Publication policy
 
-Publishing Open Contracting data involves making a number of choices about what data and documents to include and how to classify and categorise different items. To allow users to understand the choices that a publisher has made, a publisher should provide a public web page or document that details the decisions they have made concerning the issues listed below. This document should also contain information about future plans for changes to the data and who to contact with enquiries about the data.
+<span class="lead">Publishing Open Contracting data involves making a number of choices about what data and documents to include and how to classify and categorise different items. To allow users to understand the choices that a publisher has made, a publisher should provide a public web page or document that details the decisions they have made concerning the issues listed below.</span> 
+
+This document should also contain information about future plans for changes to the data and who to contact with enquiries about the data.
 
 Publication policy pages should include information about:
 
@@ -44,6 +48,7 @@ Publishers may also wish to apply for, and include the results of, an [Open Data
 
 The [serialization section](../../standard/serialization#flat-format) provides information on publishing data as flat files.
 
+* * * *
 
 ## Intermediate
 
@@ -98,6 +103,7 @@ If compressing data packages, publishers *should* use the zip file format.
 
 Publishers should ensure that the web server providing access to bulk files correctly reports the [HTTP Last-Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) header so that consuming applications only need to download updated files.
 
+* * * *
 
 ## Advanced
 
