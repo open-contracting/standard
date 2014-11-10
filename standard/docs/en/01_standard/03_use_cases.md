@@ -39,7 +39,9 @@ Forward looking and timely information is particularly important for private sec
 
 ### Monitoring Service Delivery 
  
-<img src="/standard/r/master/assets/icon_user.png" width="150" align="right"/>This user wants to ensure that public contracting is delivering value to citizens in terms of quality of goods, works, and services. This involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground. Data concerning location and subcontracting is particularly useful for monitors. 
+<img src="/standard/r/master/assets/icon_user.png" width="150" align="right"/>This user wants to ensure that public contracting is delivering value to citizens in terms of quality of goods, works, and services. This involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground. 
+
+Data concerning location and subcontracting is particularly useful for those involved in contracting monitoring. 
  
 ## More information
 

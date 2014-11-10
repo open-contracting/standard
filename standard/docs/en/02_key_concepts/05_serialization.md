@@ -85,9 +85,7 @@ NOTE: This example is based on an earlier version of the schema, and does not sh
 <div class="tab-content">
     
 <div class="tab-pane active" id="release">
-    
 <div class="include-csv" data-src="standard/example/flat/release.csv" data-table-class="table table-striped schema-table"></div>
-
 </div>
 <div class="tab-pane" id="identifier">
 <div class="include-csv" data-src="standard/example/flat/Identifier.csv" data-table-class="table table-striped schema-table"></div>
@@ -108,7 +106,7 @@ NOTE: This example is based on an earlier version of the schema, and does not sh
 <div class="include-csv" data-src="standard/example/flat/Milestone.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 <div class="tab-pane" id="attachment">
-<div class="include-csv" data-src="standard/example/flat/Attachment.csv" data-table-class="table table-striped schema-table"></div>
+<div class="include-csv" data-src="standard/example/flat/Document.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 <div class="tab-pane" id="transaction">
 <div class="include-csv" data-src="standard/example/flat/Transaction.csv" data-table-class="table table-striped schema-table"></div>

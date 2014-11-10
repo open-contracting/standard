@@ -4,13 +4,11 @@
 
 ## Documents
 
-<span class="lead">Documents are a vital part of the Open Contracting Data Standard. Whilst releases and records provide a machine-readable summary of a contracting process, they should always be supported by links to well-managed documents.</span>
+<span class="lead">Documents are a vital part of the Open Contracting Data Standard. While releases and records provide a machine-readable summary of a contracting process, they should always be supported by links to well-managed documents.</span>
 
-A contracting process generates many documents - from procurement plans, to tender notices and calls for proposals, and the actual text of contracts. Wherever there is no legal or policy restriction on doing so, these should be placed online in a stable location, and linked to from within the relevant OCDS release and records. 
+A contracting process generates many documents - from needs assessment and market studies, to tender notices and calls for proposals, and the actual text of contracts. Wherever there is no legal or policy restriction on doing so, these should be placed online in a stable location, and linked to from within the relevant OCDS release and records. 
 
-See the [attachments](../../schema/reference#attachment) section of [schema reference](../../schema/reference) for more details of how to include documents in your data releases, and the [documentType code list](../../schema/codelists#document-type) for a list of common documents that may be included.
-
-ToDo: NOTE THAT DOCUMENTS CAN BE ATTACHED IN A RANGE OF PLACES.
+See the [document](../../schema/reference#document) section of [schema reference](../../schema/reference) for more details of how to include documents in your data releases, and the [documentType code list](../../schema/codelists#document-type) for a list of common documents that the OCDS recommends are included, and for details of where documents may be attached within the OCDS structure.
 
 ## Releases
 
@@ -18,7 +16,7 @@ To encourage the greatest possible openness of public contracting information, t
 
 Releases are cumulative. Over a contracting process releases may be provided to describe a tender, announce contract awards, detail a finalised contract, and provide updates on implementation. Once published, a release must not be changed. Updated information should be shared through a new release.
 
-Releases may originate from a single system, or may be published in a distributed way by different systems, but releases relating to the same contracting process are tied together by use of the same Open Contracting ID (OCID).
+Releases may originate from a single system, or may be published in a distributed way by different systems, but releases relating to the same contracting process can be compiled by use of the same Open Contracting ID (OCID).
 
 You can think of releases as entries into a ledger: each new entry adds information, and may repeat previous information that remains true. The **record** brings together a snapshot of the latest state of all the information.
 
@@ -79,7 +77,7 @@ If the record is complete with versioning information, then the versioning secti
 </p>
 </div>
 
-Publishers may not all be able to initially provide fully versioned releases, but should publish in such a way that third parties can create these fully versioned releases if they choose.
+Publishers may not all be able to initially provide fully versioned releases, but should publish in such a way that third parties can create these fully versioned releases if they so choose.
 
 ## Updates and amendments
 
@@ -89,11 +87,6 @@ The term amendment has a specific legal significance in many jurisdictions. The 
 
 When **records** are created by merging together **releases** then a version history that can be used to track changes to fields is created in the **record**, allowing users to look back and see the changes that have occured over the lifetime of a contracting process. 
 
-<div class="well">
-Some publishers may wish to make past data available without generating releases for each change that happened to the contract. Whilst the recommended approach is to generate releases, and compile these into a record, it is possible to follow the <strong>record schema</strong>, the guidance on merging, and the pattern for representing versioned information within of records, to generate a record directly from a database. 
-</div>
-
-ToDo: Review Amendment Information
 
 ## Notices
 

@@ -2,19 +2,17 @@
 
 # Identifiers
 
-<span class="lead">The use of consistent identifiers is vital to join up data on open contracting. This section introduces the Open Contracting ID (OCID), and other places identifiers can be used in OCDS data.</span>
+<span class="lead">The use of consistent identifiers is vital to join up data on open contracting. This section introduces the Open Contracting ID (OCID), and other places where identifiers can be used in OCDS data.</span>
 
-There are two kinds of identifier in OCDS: **Global unique identifiers** which should refer consistently to a single thing wherever they are used; and **local identifiers** which only need to unique within the scope of a particular block of data, and which provide a convenience mechanism to identify and cross-reference inside a particular data release or record. 
+There are two kinds of identifier in OCDS: **Global unique identifiers** which should refer consistently to a single thing wherever they are used; and **local identifiers** which only need to be unique within the scope of a particular block of data, and which provide a mechanism to identify specific elements in releases over time (e.g. to update the details of a particular document), or to make a link between elements within a data release or record (e.g. linking awards and contracts). 
 
 ## OCID
 
-<span class="lead">An Open Contracting ID (ocid) is a **globally unique identifier **for a** contracting process**.</span> 
+<span class="lead">An Open Contracting ID (OCID) is a **globally unique identifier **for a** contracting process**.</span> 
 
-<span class="lead">Publishers will need to have, or to create, a consistent internal identifier that applies across the initiation, implementation and closure phases of a contract. To generate a globally unique OCID this is appended onto a prefix that is asigned to the publisher.</span>
+<span class="lead">Publishers will need to have, or to create, a consistent internal identifier that applies across the initiation, implementation and closure phases of a contract.</span>
 
-Each publisher is responsible for **registering or selecting a prefix **and then using this to generate their own **ocid**s. Publishers must then using their OCIDs consistently in any release of data related to a specific contracting process. 
-
-Using a consistent identifier for a **contracting process** that can tie together related tenders, awards, contracts and updates is vital for true Open Contracting. Without this, users cannot understand how these different processes relate to one another. 
+Using a consistent identifier for a **contracting process** that can tie together related tenders, awards, contracts and updates is vital for true Open Contracting. Without this, users cannot understand how these different processes relate to one another. Without this, the data is siloed and users cannot understand a complete picture of a contracting process.  
 
 Some publishers may not currently have a consistent identifier used across the different stages of their contracting process, with different and non-linked identifiers for tenders, awards and contracts. In these cases, publishers will need to look at ways to either update their business processes to use a consistent identifier, or will need to develop a process to map existing different identifiers to a common contracting process identifier that can be used to generate an OCID.
 
@@ -22,21 +20,21 @@ The use of a **globally unique** OCID allows third-parties to refer to a contrac
 
 ### Construction
 
-An ocid is made up of four parts. The first three can generally be set as constant values in most systems:
+An OCID is made up of four parts. The first three can generally be set as constant values in most systems:
 
-* **A prefix agency **(characters 1 - 4) - currently only ‘ocds’ 
+* **A prefix agency **(characters 1 - 4) - currently only ‘ocp1’ (Open Contracting Partnership)
 
 * A - separator
 
 * **A registered prefix** (charachters 6 - 11)
 
-* **A local namespace **(charachters 12 - 14)
+* **A publisher namespace **(charachters 12 - 14) - for allow publishers to maintain separate series of local identifiers. 
 
 * A ‘-’ separator 
 
-* **A local identifier **(charachters 16 and above) - drawn from publishers existing systems
+* **An internal identifier **(charachters 16 and above) - drawn from publishers existing systems
 
-This allows publishers to hold the local identifier within their own systems, and simple to prepend the prefix and namespace to this when publishing data, making their local identifier into a globally unique identifier.
+This allows publishers to use an internal identifier from within their own systems, and simple to prepend the prefix and namespace to this when publishing data, making their local identifier into a globally unique identifier. 
 
 The OCID is case sensitive.
 
@@ -44,13 +42,13 @@ The OCID is case sensitive.
 
 The following are examples of valid OCIDs:	
 
-> ocds-a2ef3d01-1594121
+> ocp1-a2ef3d01-1594121
 
-> ocds-df4534dg-eu-192301-2009 
+> ocp1-df4534dg-eu-192301-2009 
 
 ### Prefix agency
 
-This defaults to ‘ocds’. During the current stage of OCDS development, Open Contracting is the only organisation issuing valid prefixes. In future, other organisations may be able to issue prefixes, and a codelist of approved prefix agencies will be incorporated into the standard. 
+This defaults to ‘ocp1’. During the current stage of OCDS development, the Open Contracting Partnership is the only organisation issuing valid prefixes. In future, other organisations may be able to issue prefixes, and a codelist of approved prefix agencies will be incorporated into the standard. 
 
 ### Registered prefix
 
@@ -64,30 +62,13 @@ A re-publisher, who has aggregated data from multiple original publishers, when 
 
 **ToDo: We need to establish some sort of registration system. Could be a simple Google Docs or Zoho Creator App in the short-term, but will need maintained infrastructure in the longer-term; and potentially a role for someone to ****verify**** the details registered through the open system. **
 
-**_Example of registration details_**
+### Publisher namespace
 
-<table>
-  <tr>
-    <td>Organisation</td>
-    <td>Prefix</td>
-    <td>Details</td>
-    <td>Verified?</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+The default value for local namespace is 01, but publishers are free to set this to any value in order to maintain unique OCIDs when publishing multiple sets of contracting data.
 
-### Local namespace
+The namespace is primarily relevant when a single publisher has multiple sets of **contracting process** that they wish to describe using OCDS. 
 
-The default value for local namespace is 01
-
-A single publisher may have multiple series of **contracting process** that they wish to describe using OCDS. For example, they may be publishing contracts from different departments, each of which use different systems, and have overlapping local identifiers. 
-
-The publisher can use the local namespace section of the OCID to distinguish between different series of contracting process. 
+For example, a publisher may wish to publish contracts from different departments, each of which use different computer systems, and both of which have different contracting processes with overlapping internal identifiers (e.g. both have a contracting process internally known as 123, but these are different processes). Without the namespace, simply appending these onto the publisher prefix would generate non-unique OCID, and so the publisher can use the local namespace section of the OCID to distinguish between different sets of contracting process. 
 
 ### Local identifier
 
@@ -96,14 +77,11 @@ Publishers can select the local identifier to use for identifying a unique **con
 Because a **contracting process** is defined by a unique initiation process (a unique tender in the procurement case), a common approach will be to use the identifier of the initiation process, and to ensure that award and contract and spending data systems also keep track of this identifier. 
 
 
-**BoxOut: Recommended characters for identifiers**
-ToDo: Address whether any characters should be considered illegal in identifiers.
-
 ## Organizations
 
 <span class="lead">Reliably identifying the legal entities involved in a contracting process is vital for transparency and accountabilty, and for carrying out analysis to improve procurement. 
 
-Publishers should collect and record the **legal identifier** from an official register of any organisations involved in a contracting process, and should include this in their OCDS files.</span>
+Publishers should seek to collect and record the **legal identifier** from an official register of any organisations involved in a contracting process (including procuring organisations, bidders and suppliers), and should include this in their OCDS files.</span>
 
 There are two parts to expressing an **organisation identifier** in open contracting data. 
 
