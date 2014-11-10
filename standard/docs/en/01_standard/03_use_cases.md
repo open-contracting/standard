@@ -17,13 +17,13 @@ Demand requirements were prioritized in accordance with their commonality amongs
 
 ### Value for money in procurement
 
-<img src="/standard/r/master/assets/icon_user.png" width="250" align="right"/>Open contracting data can help users to get good value for money on the goods and services in the procurement process, and can also help users to identify whether value for money has been achieved in concluded contracts. These users are interested to analyze trends in prices and supplier performance (in terms of quality and duration).
+<img src="/standard/r/master/assets/icon_user.png" width="150" align="right"/>Open contracting data can help users to get good value for money on the goods and services in the procurement process, and can also help users to identify whether value for money has been achieved in concluded contracts. These users are interested to analyze trends in prices and supplier performance (in terms of quality and duration).
 
 Comparable data using common codelists and the availability of unit prices is particularly important for value for money use cases.
 
 ### Detecting fraud and corruption
 
-<img src="/standard/r/master/assets/icon_user.png" width="250" align="right"/>All stakeholders (civil society, the private sector, government and donors) have an interest in identifying and combating corruption in public contracting. Open contracting data can be used to scrutinize procurement documents and data for ‘red flags’ that might indicate public monies are being mis-used. 
+<img src="/standard/r/master/assets/icon_user.png" width="150" align="right"/>All stakeholders (civil society, the private sector, government and donors) have an interest in identifying and combating corruption in public contracting. Open contracting data can be used to scrutinize procurement documents and data for ‘red flags’ that might indicate public monies are being mis-used. 
 
 There are two main approaches to fraud and corruption monitoring. A ‘micro’ approach closely scrutinizes individual procurements. A ‘systemic’ approach looks for suspcious patterns, and makes links between datasets to map out networks of funding, ownership and interests. 
 
@@ -31,7 +31,7 @@ Linkable data using globally unique identifiers for companies are particularly i
 
 ### Competing for public contracts
 
-<img src="/standard/r/master/assets/icon_user.png" width="250" align="right"/>Open contracting data can be used to track contracting opportunities. It is a core principle of open contracting that information should be made available at the early stages of a contracting process, including clear information on opportunities to tender for public contracts.
+<img src="/standard/r/master/assets/icon_user.png" width="150" align="right"/>Open contracting data can be used to track contracting opportunities. It is a core principle of open contracting that information should be made available at the early stages of a contracting process, including clear information on opportunities to tender for public contracts.
 
 Information on past contracts can allow firms to identify likely upcoming opportunities for re-contracting, and can support a more competitive marketplace, as transparency creates a level playing field with information on pricing, contract dates and key deliverables. 
 
@@ -39,7 +39,7 @@ Forward looking and timely information is particularly important for private sec
 
 ### Monitoring Service Delivery 
  
-<img src="/standard/r/master/assets/icon_user.png" width="250" align="right"/>This user wants to ensure that public contracting is delivering value to citizens in terms of quality of goods, works, and services. This involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground. Data concerning location and subcontracting is particularly useful for monitors. 
+<img src="/standard/r/master/assets/icon_user.png" width="150" align="right"/>This user wants to ensure that public contracting is delivering value to citizens in terms of quality of goods, works, and services. This involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground. Data concerning location and subcontracting is particularly useful for monitors. 
  
 ## More information
 

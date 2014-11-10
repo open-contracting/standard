@@ -1,7 +1,7 @@
 [TOC]
 
 # Introduction
-<span class="lead">Governments around the world spend an estimated US $9.5 trillion every single year through contracts. Yet, contracting information is often unavailable for public scrutiny. To change this, the Open Contracting Partnership (OCP) focuses on enhanced disclosure, and on ensuring all stakeholders participate in public contracting, at all stages of the contracting process, and for all types of contracts .</span>
+<img src="/standard/r/master/assets/release_record_compiled.png" width="150" align="right"/><span class="lead">Governments around the world spend an estimated US $9.5 trillion every single year through contracts. Yet, contracting information is often unavailable for public scrutiny. To change this, the Open Contracting Partnership (OCP) focuses on enhanced disclosure, and on ensuring all stakeholders participate in public contracting, at all stages of the contracting process, and for all types of contracts .</span>
 
 <span class="lead">The Open Contracting Data Standard (OCDS) describes how to publish accessible and structured releases of data _and_ documents at each stage of a contracting process.</span>
 
@@ -17,7 +17,6 @@ This initial version of the specification is designed for  contracts awarded thr
 </ul>
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="publishers">  
-### Publishers
 <ul>
   <li>Read more about the <a href="../history">origin, goals & development of the standard</a>;</li>
   <li>Review the check-list for data creators;</li>
@@ -26,8 +25,7 @@ This initial version of the specification is designed for  contracts awarded thr
   <li>Publish your data & let us know about it;</li>
 </ul>
 </div>
-<div role="tabpanel" class="tab-pane" id="users">
-### Users    
+<div role="tabpanel" class="tab-pane" id="users">   
 <ul>
  <li>Read more about the <a href="../history">origin, goals & development of the standard</a>;</li>
  <li>Explore different <a href="../use_cases">use cases for the standard</a>;</li>
@@ -39,6 +37,6 @@ This initial version of the specification is designed for  contracts awarded thr
 
 ## Credits
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.net) and the [World Bank](http://www.worldbank.org).
+<small>The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.net) and the [World Bank](http://www.worldbank.org).</small>
 
-Lead authors: Sarah Bird ([Aptivate](http://aptivate.org)) & [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). See [credits](../credits) page for details of all those involved.
+<small>Lead authors: Sarah Bird ([Aptivate](http://aptivate.org)) & [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). We extend our thanks to everyone else who has contributed during this project. See the [credits page](../credits) for details of all those involved.</small>
