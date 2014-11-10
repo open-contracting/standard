@@ -289,19 +289,20 @@ The JSON Schema makes use of the JSON Scheme 0.4 [‘Pattern Properties](http://
 
 ## Field reference
 
-### Identifier
-
-The identifier block provides a way to [identify organizations](../../key_concepts/identifiers/#organizations), and classify [line items](#items) by drawing on existing registries or codelists. 
-
-The identifier block consists of a scheme, id, description or title, and optional URI:
-
-<div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
 
 ### Organization
 
 The organization block can be used to provide a legal identifier for an organization, and to give [address](#address) and [contact point](#contact-point) information.
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-organization.csv" data-table-class="table table-striped schema-table"></div>
+
+#### Identifier
+
+The identifier block provides a way to [identify the legal entities](../../key_concepts/identifiers/#organizations) involved in a contracting process.
+
+The identifier block consists of a scheme, id, description or title, and optional URI:
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
 
 #### Address
 <div class="include-csv" data-src="standard/docs/field_definitions/release-address.csv" data-table-class="table table-striped schema-table"></div>
@@ -359,6 +360,15 @@ The items block is used to list the line-items associated with a tender, award o
 * The [proposed location extension](https://github.com/open-contracting/standard/tree/master/standard/schema/extensions/proposed_location) can be attached to items, allowing the point of delivery for a given item to be indicated in both the tender, award and contract stage.
 
 * The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no code list for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
+
+* Items should be classified according to a established scheme of codes. A single ```primaryClassification``` and be given, although an array of ```additionalClassification``` can be provided.
+
+#### Classifications
+
+The classification block consists of a scheme, id, description or title, and optional URI.
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
+
 
 <!-- ToDo: Add example -->
 

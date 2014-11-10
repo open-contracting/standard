@@ -24,7 +24,7 @@ This is an open codelist, and new values may be suggested outside of the main re
 
 ## Organization Identifier Scheme
 
-The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). 
+The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). See the identifiers section for [more information on organization identifiers](../../key_concepts/identifiers#organization-identifiers)
 
 <div class="include-csv" data-src="standard/schema/codelists/organizationIdentifierRegistrationAgency_iati.csv" data-table-class="table table-striped schema-table"></div>
 
