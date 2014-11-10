@@ -2,11 +2,11 @@
 
 ## Origin, goals and development
 
-<span class="lead">Countries and organizations signing up to the [Open Contracting Global Principles](http://www.open-contracting.org/global_principles) commit to share *"information related to the formation, performance, and completion of public contracts"* including data on all stages of contracting, including subcontracting arrangements.
+<span class="lead">The [Open Contracting Global Principles](http://www.open-contracting.org/global_principles) encourage publishers to proactively disclose information and data on all stages of public contracting.</span>
 
-The **Open Contracting Data Standard (OCDS)** has been developed to allow information providers to share as much of this information as possible as **structured, re-usable, standardised data**.</span>
+<span class="lead">The **Open Contracting Data Standard (OCDS)** has been developed to allow information providers to share as much of this information as possible as **structured, re-usable, standardised data**.</span>
 
-The OCDS specification details the technical components of enabling the widest possible range of stakeholders to use contracting data and documents to achieve value for money for the government, a competitive playing field for the private sector, and high quality goods, works, and services for citizens. 
+Publication of data to the OCDS specification can enable a wide range of stakeholders to use contracting data and documents to achieve value for money for the government, to create a competitive playing field for the private sector, and to secure high quality goods, works, and services for citizens. 
 
 ### Support and funding
 
@@ -16,33 +16,33 @@ Final adoption, and future development and support for the specification will be
 
 ### Development process
 
-The development of the 1.0 Release Candidate specification taken place through a year-long process of supply and demand-side research, and open consultation. This processes has included:
+The development of the 1.0 Release Candidate specification took place through a year-long process of supply and demand-side research, and open consultation. This processes has included:
 
 * **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the[ Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and[ Contracting Data Map](http://ocds.open-contracting.org/opendatacomparison/datamap/) which explore the fields of data available from a wide range of existing government contracting data portals around the world. 
 
-* **Exploring demand for data on contracting** - through field work, interviews and online engagement with different communities and individuals who many use of contract information. The information needs of users were catalogued, and fed into the requirements for the specification structure and fields. We have developed a series of priority use cases to guide implementation and adoption of the specification.
+* **Exploring demand for contracting data** - through field work, interviews and online engagement with different communities and individuals who many use of contract information. The information needs of users were catalogued, and fed into the requirements for the specification structure and fields. We have developed a series of priority use cases to guide implementation and adoption of the specification.
 
 * **Iterative, open development -** by maintaining a [public issue tracker](https://github.com/open-contracting/standard/issues) and releasing an [alpha](http://ocds.open-contracting.org/standard/r/0__1__0/) and [beta](http://ocds.open-contracting.org/standard/r/0__3__2/) iteration of the specification for comment, as well as carrying out outreach through mailing lists and other online spaces. Development sprints held at a series of conferences (PyCon Montreal and PyCon Europe 2014) also actively contributed to the development of the specification. 
 
-Over NNN people have provided comments, feedback and input into the specification over the year of initial development.
+Over [150 people](../credits) have provided comments, feedback and input into the specification over the year of initial development.
 
 The development process has been taken place with reference to the [Greentree Consensus Principles for Digital Development](http://ict4dprinciples.org/). 
 
 ### Development stages
 
-The specification has moved through a number of stages which are described below ([drawing on descriptions adapted from HXL](http://docs.hdx.rwlabs.org/the-humanitarian-exchange-language-reaches-alpha/))
+The specification has moved through a number of stages.
 
-* **research** (November 2013 - May 2014) - User requirements are gathered, and existing data supply is explored. Technical options for the specification are considered and consulted on.
+* **research** (November 2013 - May 2014) - User requirements gathered, and existing data supply explored. Technical options for the specification considered and consulted on.
 
 * **alpha** (June 2014) - An [outline data model was shared](http://ocds.open-contracting.org/standard/r/0__2__0/), and high-level concepts outlined for consultation. Design of individual field-level specifications began.
 
-* **beta **(September 2014) - A proposed schema, including field-level definitions was put forward, and opened for consultation. The schema is ready for early-adopters to pilot. Feedback has suggested a number of substantial changes.
+* **beta **(September 2014) - A proposed schema, including field-level definitions was put forward, and opened for consultation. The schema is ready for early-adopters to validate and pilot. Feedback suggested a number of substantial changes.
 
-* **release candidate **(November 2014) - The specification is close to its final form and out for final review. The only anticipated changes will be corrections of critical, previously-undetected errors, updates to codelists, or minor copyedits on the standards documents.
+* **release candidate **(November 2014) - The specification is close to its final form and out for final review. Changes will be minor, and any major proposals for change will be managed through [extensions](../../key_concepts/conformance) until the next version update process.
 
 * **release** (tbc) -  The initial version (1.0) specification is frozen and any future changes will occur to new versions, with a clear governance process for making revisions.
 
-At present, the OCDS specification is not submitted to any formal standards track, but this will be reviewed by the Open Contracting Partnership as part of future governance developments.  
+At present, the OCDS specification is not submitted to any formal standards body, but this will be reviewed by the Open Contracting Partnership as part of future governance developments. 
 
 ### Future development
 

@@ -4,7 +4,7 @@
 
 The basic format of a record is simple. There are three components:
 
-- Releaes: A list of all the releases in the record. Either provided as a list of links to
+- Releases: A list of all the releases in the record. Either provided as a list of links to
   identify the release, or the releases themselves can be embedded.
 - Compiled Release: A compiled release, this is the same format as a release but contains the
   most up-to-date information compiled from all the releases.

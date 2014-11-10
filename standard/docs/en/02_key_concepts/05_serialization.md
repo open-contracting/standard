@@ -36,7 +36,7 @@ JSON is based on a tree structure, with data elements nested inside one another.
 * **Simplified single table** - for cases where there are no one-to-many relationships in the data (e.g. each tender has only one award and contract, and each has only one line-item).
 * **Multi-table** - where more advanced structures are required, but where it is desirable to be able to work with data in spreadsheet-style layouts
 
-In each case, fields are identified by the path to their JSON equivalent. For example:
+In each case, fields are identified by the [pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For example:
 
 <div class="include-json" data-src="standard/example/serialization-flat.json"></div>
 
@@ -73,12 +73,14 @@ NOTE: This example is based on an earlier version of the schema, and does not sh
 <div class="tabbable">
 <ul class="nav nav-tabs">
   <li class="active"><a href="#release" data-toggle="tab">release</a></li>
+  <li><a href="#identifier" data-toggle="tab">identifier</a></li>
   <li><a href="#award" data-toggle="tab">award</a></li>
   <li><a href="#contract" data-toggle="tab">contract</a></li>
   <li><a href="#item" data-toggle="tab">item</a></li>
   <li><a href="#organization" data-toggle="tab">organization</a></li>
   <li><a href="#milestone" data-toggle="tab">milestone</a></li>
   <li><a href="#attachment" data-toggle="tab">attachment</a></li>  
+  <li><a href="#transaction" data-toggle="tab">transaction</a></li>  
 </ul>
 <div class="tab-content">
     
@@ -87,25 +89,29 @@ NOTE: This example is based on an earlier version of the schema, and does not sh
 <div class="include-csv" data-src="standard/example/flat/release.csv" data-table-class="table table-striped schema-table"></div>
 
 </div>
+<div class="tab-pane" id="identifier">
+<div class="include-csv" data-src="standard/example/flat/Identifier.csv" data-table-class="table table-striped schema-table"></div>
+</div>
 <div class="tab-pane" id="award">
-
-<div class="include-csv" data-src="standard/example/flat/award.csv" data-table-class="table table-striped schema-table"></div>
-
+<div class="include-csv" data-src="standard/example/flat/Award.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 <div class="tab-pane" id="contract">
-<div class="include-csv" data-src="standard/example/flat/contract.csv" data-table-class="table table-striped schema-table"></div>
+<div class="include-csv" data-src="standard/example/flat/Contract.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 <div class="tab-pane" id="item">
-<div class="include-csv" data-src="standard/example/flat/item.csv" data-table-class="table table-striped schema-table"></div>
+<div class="include-csv" data-src="standard/example/flat/Item.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 <div class="tab-pane" id="organization">
-<div class="include-csv" data-src="standard/example/flat/organization.csv" data-table-class="table table-striped schema-table"></div>
+<div class="include-csv" data-src="standard/example/flat/Organization.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 <div class="tab-pane" id="milestone">
-<div class="include-csv" data-src="standard/example/flat/milestone.csv" data-table-class="table table-striped schema-table"></div>
+<div class="include-csv" data-src="standard/example/flat/Milestone.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 <div class="tab-pane" id="attachment">
-<div class="include-csv" data-src="standard/example/flat/attachment.csv" data-table-class="table table-striped schema-table"></div>
+<div class="include-csv" data-src="standard/example/flat/Attachment.csv" data-table-class="table table-striped schema-table"></div>
+</div>
+<div class="tab-pane" id="transaction">
+<div class="include-csv" data-src="standard/example/flat/Transaction.csv" data-table-class="table table-striped schema-table"></div>
 </div>
 </div>
 </div>
@@ -116,3 +122,5 @@ NOTE: This example is based on an earlier version of the schema, and does not sh
 Whatever serialisation is used for Open Contracting Data, a single file may contain one or more release and records.
 
 The release and record data package schemas describe the key meta-data that must be supplied for any file providing Open Contracting Data. This includes the publishedDate, publisher, uri for accessing the file, and the licensing details for the file.
+
+

@@ -1,28 +1,29 @@
 [TOC]
 
-# Built with a focus on users
+# Use Cases
 
-ToDo: Explain that the standard is not designed to cover all possible use cases, but rather to provide a common framework for open data on contracts.
+<span class="lead">Open contracting data can be used in many different ways: and each user's objectives affect the exact fields of data they need to access.</span>
+ 
+In our consultations thus far with government, civil society, donors, journalists, auditors, and the private sector, four primary use cases emerged. These users are wishing to use open contracting data in order to:
 
-**ToDo: Add images**
-
-## User demand and data requirements
-
-<span class="lead">Open contracting data can be used in many different ways: and each users objectives affect the exact fields of data they need access to. We have identified **three priority use-cases** for open contracting data, along with their requirements for published datasets.
-
-All publishers should provide a **common core** of data about their contracting processes, and they should work towards meeting the needs of as wide a range of users as possible through improved publication of further fields. </span>
+* Achieve value for money for the government;
+* Strengthen the transparency, accountability and integrity of public contracting;
+* Enable the private sector to compete for public contracts; and
+* Monitor service delivery (from both aid and budget-executed projects) for effectiveness. 
+ 
+The current OCDS specification encourages all publishers to provide a [common core of data about their contracting processes](../../implementation/publication_levels) that speaks to the prioritized demand requirements of these use cases. The specification is also extensible, so that publishers can further tailor their publication of contracting data to meet a wider range of user needs.  
+ 
+Demand requirements were prioritized in accordance with their commonality amongst use cases as well as their feasibility of implementation given current 'supply side' publication practice. Demand requirements that were not captured in the current specification remain logged for further consideration or for publisher extension.
 
 ### Value for money in procurement
 
-Open contracting data can help users seeking to make purchases to get good value for money on the goods and services they procure. Backwards-looking data can also help auditors to assess whether value for money was achieved. 
+<img src="/standard/r/master/assets/icon_user.png" width="250" align="right"/>Open contracting data can help users to get good value for money on the goods and services in the procurement process, and can also help users to identify whether value for money has been achieved in concluded contracts. These users are interested to analyze trends in prices and supplier performance (in terms of quality and duration).
 
-In many ways, for a contract to have "value for money" we mean that it is implemented competently (in accordance with specifications), in a timely manner (achieving specified milestones by the specified dates), for a competitive price (at or below estimate). Open contracting data could be used to monitor specific procurement processes, or to search past processes for comparisons and insights when planning for a new contract. 
-
-Comparable data using common codelists is particularly important for value for money use cases.
+Comparable data using common codelists and the availability of unit prices is particularly important for value for money use cases.
 
 ### Detecting fraud and corruption
 
-All stakeholders (civil society, the private sector, government and donors) have an interest in identifying and combating corruption in public contracting. Open contracting data can be used to scrutinize procurement documents and data for ‘red flags’ that might indicate public monies are being mis-used. 
+<img src="/standard/r/master/assets/icon_user.png" width="250" align="right"/>All stakeholders (civil society, the private sector, government and donors) have an interest in identifying and combating corruption in public contracting. Open contracting data can be used to scrutinize procurement documents and data for ‘red flags’ that might indicate public monies are being mis-used. 
 
 There are two main approaches to fraud and corruption monitoring. A ‘micro’ approach closely scrutinizes individual procurements. A ‘systemic’ approach looks for suspcious patterns, and makes links between datasets to map out networks of funding, ownership and interests. 
 
@@ -30,8 +31,16 @@ Linkable data using globally unique identifiers for companies are particularly i
 
 ### Competing for public contracts
 
-Open contracting data can be used to track contracting opportunities. It is a core principle of open contracting that information should be made available at the early stages of a contracting process, including clear information on opportunities to tender for public contracts.
+<img src="/standard/r/master/assets/icon_user.png" width="250" align="right"/>Open contracting data can be used to track contracting opportunities. It is a core principle of open contracting that information should be made available at the early stages of a contracting process, including clear information on opportunities to tender for public contracts.
 
 Information on past contracts can allow firms to identify likely upcoming opportunities for re-contracting, and can support a more competitive marketplace, as transparency creates a level playing field with information on pricing, contract dates and key deliverables. 
 
-Forward looking and timely information is particularly important for private sector users.
+Forward looking and timely information is particularly important for private sector users, as well as being able to uniquely identify procuring entities, geographic locations, sectors, and that which is being procured. 
+
+### Monitoring Service Delivery 
+ 
+<img src="/standard/r/master/assets/icon_user.png" width="250" align="right"/>This user wants to ensure that public contracting is delivering value to citizens in terms of quality of goods, works, and services. This involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground. Data concerning location and subcontracting is particularly useful for monitors. 
+ 
+## More information
+
+More detail about our demand-side assessment can be found here [LINK] ToDo

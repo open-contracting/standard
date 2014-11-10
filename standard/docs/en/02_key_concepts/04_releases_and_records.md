@@ -85,7 +85,7 @@ Publishers may not all be able to initially provide fully versioned releases, bu
 
 When new information becomes available, it should be contained in a new release, and the contracting record should be updated to reflect this. 
 
-The term amendment has a specific legal significance in many jurisdictions. The ```releaseTag``` provides a way to indicate when a release is an amendment, and the schema includes space to provide details of changes, and justification for the amendment that is being made.
+The term amendment has a specific legal significance in many jurisdictions. The ```release.tag``` provides a way to indicate when a release is an amendment, and the schema includes space to provide details of changes, and justification for the amendment that is being made.
 
 When **records** are created by merging together **releases** then a version history that can be used to track changes to fields is created in the **record**, allowing users to look back and see the changes that have occured over the lifetime of a contracting process. 
 
