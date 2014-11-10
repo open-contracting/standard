@@ -15,7 +15,7 @@ The basic format of a record is simple. There are three components:
 - Versioned Release: For each field in the release, the versioned release contains the history
   of all the changes to that field over all the releases.
 
-For full information on records and releases see the [key concepts](../../key_concepts/releases_and_records/).
+For full information on records and releases see the [key concepts](../../key_concepts/releases_and_records/) and [schema reference](../../schema/reference).
 
 # Merging
 
@@ -55,11 +55,9 @@ This leads to a set of mergeStrategies which are included in the full schema.
 
 The OCDS merging has been based on the open source [jsonmerge library](https://github.com/avian2/jsonmerge), but can be implemented in other software as required. 
 
-Within the OCDS release schema, each field has a mergeStrategy property.
+Within the OCDS release schema, each field has a mergeStrategy property. This strategy describes how to merge that and child fields.
 
-This documents how to merge fields.
-
-We inhert the existing merge strategies from [jsonmerge](https://github.com/avian2/jsonmerge#merge-strategies) and add a number of specific strategies for OCDS, which are currently only available in the [OCDS fork of jsonmerge](https://github.com/open-contracting/jsonmerge) and which are described below:
+We inhert the existing merge strategies from [jsonmerge](https://github.com/avian2/jsonmerge#merge-strategies) and add a number of specific strategies for OCDS, which are currently only available in the [OCDS fork of jsonmerge](https://github.com/open-contracting/jsonmerge) and which are described below.
 
 ### ocdsVersion merge strategy
 
@@ -73,22 +71,24 @@ Here is a simple example:
 
 <div class="tabbable">
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#r1" data-toggle="tab">release 1</a></li>
-  <li><a href="#r2" data-toggle="tab">release 2</a></li>
-  <li><a href="#merged" data-toggle="tab">merged</a></li>
+  <li class="active"><a href="#ar1" data-toggle="tab">release 1</a></li>
+  <li><a href="#ar2" data-toggle="tab">release 2</a></li>
+  <li><a href="#amerged" data-toggle="tab">merged</a></li>
 </ul>
 <div class="tab-content">
     
-<div class="tab-pane active" id="r1">
+<div class="tab-pane active" id="ar1">
 <div class="include-json" data-src="standard/example/merge_r1.json"></div>
 </div>
-<div class="tab-pane" id="r2">
+<div class="tab-pane" id="ar2">
 <div class="include-json" data-src="standard/example/merge_r2.json"></div>
 </div>
-<div class="tab-pane" id="merged">
-<p>Other record fields are omitted for easy presentation.</p>
+<div class="tab-pane" id="amerged">
+<small>
 <p>Note that the compiledRelease not has 'procurementMethod' of 'open', reflecting the most recent value of this fields.</p>
 <p>As you can see in the versionedRelease, the field procurementMethod has changed from a value documenting the latest correct value, to a list of objects which document the value for each release in which it changed.</p>
+<p>(Other record fields are omitted for easy presentation.)</p>
+</small>
 <div class="include-json" data-src="standard/example/merge_r1_r2.json"></div>
 </div>
 </div>
@@ -118,19 +118,19 @@ An example of this strategy in action is shown below:
 
 <div class="tabbable">
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#r1" data-toggle="tab">release 1</a></li>
-  <li><a href="#r2" data-toggle="tab">release 2</a></li>
-  <li><a href="#merged" data-toggle="tab">merged</a></li>
+  <li class="active"><a href="#lr1" data-toggle="tab">release 1</a></li>
+  <li><a href="#lr2" data-toggle="tab">release 2</a></li>
+  <li><a href="#lmerged" data-toggle="tab">merged</a></li>
 </ul>
 <div class="tab-content">
     
-<div class="tab-pane active" id="r1">
+<div class="tab-pane active" id="lr1">
 <div class="include-json" data-src="standard/example/li_merge_r1.json"></div>
 </div>
-<div class="tab-pane" id="r2">
+<div class="tab-pane" id="lr2">
 <div class="include-json" data-src="standard/example/li_merge_r2.json"></div>
 </div>
-<div class="tab-pane" id="merged">
+<div class="tab-pane" id="lmerged">
 <div class="include-json" data-src="standard/example/li_merge_r1_r2.json"></div>
 </div>
 </div>
