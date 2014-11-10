@@ -1,4 +1,0 @@
-[TOC]
-
-# Implementation Guidance
-

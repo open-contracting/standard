@@ -380,8 +380,11 @@ In the context of a contract implementation block, milestones are used to track 
 
 ### Value
 
+Financial values should always be published with a currency attached. 
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-value.csv" data-table-class="table table-striped schema-table"></div>
+
+During the period of the 1.0 RC, if information on taxation related to a value is required, this may be handled by an extension. A [discussion of handling taxation can be found on GitHub](https://github.com/open-contracting/standard/issues/112).
 
 ### Location
 

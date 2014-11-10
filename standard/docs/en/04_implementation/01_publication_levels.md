@@ -6,6 +6,9 @@
 
 <span class="lead">This section sets out a series of steps towards improving the content, and the technical openness, of contracting data.</lead>
 
+On the [publication patterns](../publication_patterns) page you will find further information to support you at each stage of implementation    
+
+
 ## Content - what to include
 
 The table below shows the different categories of data that publishers should seek to collect, manage and publish as part of an open contracting process. These are divided into three levels:
@@ -21,7 +24,7 @@ The detailed fields that can be used to represent each of these items are descri
 
 ## How to publish
 
-The open data movement has established good practices for publishing data on the web. Building on Tim Berners-Lee’s [Five Stars of Linked Open Data](http://www.w3.org/DesignIssues/LinkedData.html) approach, we have set out a model that encourages publishers to strive for 3 ☆ and higher data publication. 
+The open data movement has established good practices for publishing data on the web. Complementary to the basic, intermediate, advanced model, we have mapped OCDS against Tim Berners-Lee’s [Five Stars of Linked Open Data](http://www.w3.org/DesignIssues/LinkedData.html) approach, setting out how publishers can achieve 3 ☆ data and higher, in order to represent high quality open data publication.
 
 Each level increase makes data more accessible, re-usable and valuable. 
 
@@ -40,7 +43,7 @@ Providing documents offers an initial level of transparency, but users have to d
 
 <span class="lead">Provide machine-readable datasets that contain key information recommended in the Open Contracting Data Standard.</span>
 
-An example of publication at this level would involve providing a downloadable CSV file of contract information extracted from an existing database, but not necessarily using all the field names and data structures recommended by OCDS.
+An example of publication at this level would involve providing a downloadable CSV file of contract information extracted from an existing database seeking to use field names and data structures recommended by OCDS wherever possible.
 
 The documentation on flat file serialization of the standard may be useful for those seeking to publish at this level.
 
