@@ -108,7 +108,7 @@ Publishers exposing individual records and releases, of regularly updated data p
 
 The link to the release or record should be provided via a <link> tag, and the updated date of the entry should reflect the updated date of that release or record. The <id> should reflect the release id for release, or the ocid for records.
     
-The releaseTag should be contained within a <category> element of the feed. 
+The release.tag should be contained within a <category> element of the feed. 
 
 Feeds requiring pagination should follow the approach set out in [RFC 5005](https://tools.ietf.org/html/rfc5005#section-3).
 
@@ -120,42 +120,3 @@ At present, such files can be hosted anywhere, and consuming applications pointe
 
 The data.json structure has been chosen to allow organisations following this approach to include tagged 'open-contracting-data' within their existing data discovery mechanisms, and given the availability of a plugin for the widely used CKAN which will also support exposure of data.json files. 
 
-
-~~~~
-
-#### Questions (Not part of documentation)
-
-##### Data.json
-Should we be using [JSON-LD DCAT instead](https://github.com/project-open-data/project-open-data.github.io/issues/23#issuecomment-17978611)? I opted for data.json as there are tools around to generate it, clear docs and schema, and assuming a JSON-LD context might be possible in future? 
-
-Would also give instant adoption from Socrata, and US Government Agencies, plus a CKAN Extension is available which can output this, all leading to reasonable chance of data discovery. 
-
-
-##### Atom category
-Should we define a scheme for the atom category used to provide the releaseTag
-
-Should we also define how to respond to querystrings against the atom (as per GData specification). E.g. allowing that feed.xml?category=contractAmendment should only return contract amendment tagged content. Or entry.updated-min=2014-10-31T00:00:00Z should only get releases updated after that date. 
-
-
-
-
-
-ToDo: Turn into proper documentation:
-
-Data providers need to be able to:
-
-* Declare where their records files are found;
-* Declare where their release files are found;
-
-Publishing approaches will differ between:
- - Bulk file (dcat) or data.json 
- - Feed (atom)
-
-
-tag: release
-tag: record
-
-Register the location of your data.json | feed.xml
-
-
-### Permanence 

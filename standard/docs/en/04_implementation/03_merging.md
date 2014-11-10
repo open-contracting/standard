@@ -105,13 +105,13 @@ record = {
                 {
                     "value": "Selective",
                     "releaseDate": "2014-01-01",
-                    "releaseTag": "tender",
+                    "tag": "tender",
                     "releaseID": "1"
                 },
                 {
                     "value": "Open",
                     "releaseDate": "2014-01-02",
-                    "releaseTag": "tender",
+                    "tag": "tender",
                     "releaseID": "2"
                 }
             ]
@@ -225,7 +225,7 @@ record_snippet = {
                         {
                             "value": "Item 1",
                             "releaseDate": "2014-01-01",
-                            "releaseTag": "tender",
+                            "tag": "tender",
                             "releaseID": "1"
                         }
                     ]
@@ -233,13 +233,13 @@ record_snippet = {
                         {
                             "value": 1,
                             "releaseDate": "2014-01-01",
-                            "releaseTag": "tender",
+                            "tag": "tender",
                             "releaseID": "1"
                         },
                         {
                             "value": 2,
                             "releaseDate": "2014-01-02",
-                            "releaseTag": "tender",
+                            "tag": "tender",
                             "releaseID": "2"
                         }
                     ]
@@ -250,7 +250,7 @@ record_snippet = {
                         {
                             "value": "Item 2",
                             "releaseDate": "2014-01-01",
-                            "releaseTag": "tender",
+                            "tag": "tender",
                             "releaseID": "1"
                         }
                     ],
@@ -258,7 +258,7 @@ record_snippet = {
                         {
                             "value": 1,
                             "releaseDate": "2014-01-01",
-                            "releaseTag": "tender",
+                            "tag": "tender",
                             "releaseID": "1"
                         },
                     ]
@@ -269,7 +269,7 @@ record_snippet = {
                         {
                             "value": "Item 3",
                             "releaseDate": "2014-01-02",
-                            "releaseTag": "tender",
+                            "tag": "tender",
                             "releaseID": "2"
                         }
                     ],
@@ -277,7 +277,7 @@ record_snippet = {
                         {
                             "value": 1,
                             "releaseDate": "2014-01-02",
-                            "releaseTag": "tender",
+                            "tag": "tender",
                             "releaseID": "2"
                         },
                     ]
@@ -409,7 +409,7 @@ record_snippet = {
                             }
                         ],
                         "releaseDate": "2014-01-01",
-                        "releaseTag": "award",
+                        "tag": "award",
                         "releaseID": "1"
                     },
                     {
@@ -428,7 +428,7 @@ record_snippet = {
                             }
                         ],
                         "releaseDate": "2014-01-02",
-                        "releaseTag": "award",
+                        "tag": "award",
                         "releaseID": "2"
                     }
                 ]
