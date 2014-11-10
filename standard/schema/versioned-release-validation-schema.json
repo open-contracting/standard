@@ -110,282 +110,16 @@
             "properties": {
                 "receiverOrganization": {
                     "patternProperties": {
-                        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                             "type": [
                                 "string", 
                                 "null"
                             ]
                         }
                     }, 
-                    "description": "An organization.", 
                     "type": "object", 
                     "properties": {
-                        "additionalIdentifiers": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "uniqueItems": true, 
-                                        "items": {
-                                            "$ref": "#/definitions/Identifier"
-                                        }, 
-                                        "type": "array", 
-                                        "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }, 
-                        "contactPoint": {
-                            "patternProperties": {
-                                "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                                    "type": [
-                                        "string", 
-                                        "null"
-                                    ]
-                                }
-                            }, 
-                            "type": "object", 
-                            "properties": {
-                                "telephone": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "url": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ], 
-                                                "format": "uri"
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "faxNumber": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "name": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "email": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }
-                            }
-                        }, 
-                        "identifier": {
-                            "patternProperties": {
-                                "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                                    "type": [
-                                        "string", 
-                                        "null"
-                                    ]
-                                }
-                            }, 
-                            "type": "object", 
-                            "properties": {
-                                "scheme": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ], 
-                                                "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "id": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "integer", 
-                                                    "null"
-                                                ], 
-                                                "description": "The identifier for the Thing under the given scheme."
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "uri": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ], 
-                                                "description": "URI to identify the Thing under the given scheme.", 
-                                                "format": "uri"
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "description": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ], 
-                                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }
-                            }
-                        }, 
-                        "name": {
+                        "scheme": {
                             "items": {
                                 "properties": {
                                     "releaseDate": {
@@ -403,143 +137,87 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                        "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
                                     }
                                 }
                             }, 
                             "type": "array"
                         }, 
-                        "address": {
-                            "patternProperties": {
-                                "^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                                    "type": [
-                                        "string", 
-                                        "null"
-                                    ]
+                        "id": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "integer", 
+                                            "null"
+                                        ], 
+                                        "description": "The identifier for the Thing under the given scheme."
+                                    }
                                 }
                             }, 
-                            "type": "object", 
-                            "description": "An address", 
-                            "properties": {
-                                "postalCode": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
+                            "type": "array"
+                        }, 
+                        "uri": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
                                     }, 
-                                    "type": "array"
-                                }, 
-                                "countryName": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
+                                    "releaseID": {
+                                        "type": "string"
                                     }, 
-                                    "type": "array"
-                                }, 
-                                "streetAddress": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
+                                    "releaseTag": {
+                                        "type": "string"
                                     }, 
-                                    "type": "array"
-                                }, 
-                                "region": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "locality": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "URI to identify the Thing under the given scheme.", 
+                                        "format": "uri"
+                                    }
                                 }
-                            }
+                            }, 
+                            "type": "array"
+                        }, 
+                        "description": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                    }
+                                }
+                            }, 
+                            "type": "array"
                         }
-                    }, 
-                    "title": "Organization"
+                    }
                 }, 
                 "uri": {
                     "items": {
@@ -569,282 +247,16 @@
                 }, 
                 "providerOrganization": {
                     "patternProperties": {
-                        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                             "type": [
                                 "string", 
                                 "null"
                             ]
                         }
                     }, 
-                    "description": "An organization.", 
                     "type": "object", 
                     "properties": {
-                        "additionalIdentifiers": {
-                            "items": {
-                                "properties": {
-                                    "releaseDate": {
-                                        "type": "string", 
-                                        "format": "date-time"
-                                    }, 
-                                    "releaseID": {
-                                        "type": "string"
-                                    }, 
-                                    "releaseTag": {
-                                        "type": "string"
-                                    }, 
-                                    "value": {
-                                        "uniqueItems": true, 
-                                        "items": {
-                                            "$ref": "#/definitions/Identifier"
-                                        }, 
-                                        "type": "array", 
-                                        "description": "[Consult codelist] A list of additional / supplemental identifiers for the organization. Consult the codelist for the preferred schemas to use."
-                                    }
-                                }
-                            }, 
-                            "type": "array"
-                        }, 
-                        "contactPoint": {
-                            "patternProperties": {
-                                "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                                    "type": [
-                                        "string", 
-                                        "null"
-                                    ]
-                                }
-                            }, 
-                            "type": "object", 
-                            "properties": {
-                                "telephone": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "url": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ], 
-                                                "format": "uri"
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "faxNumber": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "name": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "email": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }
-                            }
-                        }, 
-                        "identifier": {
-                            "patternProperties": {
-                                "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                                    "type": [
-                                        "string", 
-                                        "null"
-                                    ]
-                                }
-                            }, 
-                            "type": "object", 
-                            "properties": {
-                                "scheme": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ], 
-                                                "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "id": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "integer", 
-                                                    "null"
-                                                ], 
-                                                "description": "The identifier for the Thing under the given scheme."
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "uri": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ], 
-                                                "description": "URI to identify the Thing under the given scheme.", 
-                                                "format": "uri"
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "description": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ], 
-                                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }
-                            }
-                        }, 
-                        "name": {
+                        "scheme": {
                             "items": {
                                 "properties": {
                                     "releaseDate": {
@@ -862,143 +274,87 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The used name of the organization. The ID property does provide an additional space for formal legal name, if common name is desired here."
+                                        "description": "[Consult codelist] The scheme that holds the unique identifiers used to identify the item being identified. Consult the codelists first to check the standard schemes recommended for this identifier."
                                     }
                                 }
                             }, 
                             "type": "array"
                         }, 
-                        "address": {
-                            "patternProperties": {
-                                "^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                                    "type": [
-                                        "string", 
-                                        "null"
-                                    ]
+                        "id": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "integer", 
+                                            "null"
+                                        ], 
+                                        "description": "The identifier for the Thing under the given scheme."
+                                    }
                                 }
                             }, 
-                            "type": "object", 
-                            "description": "An address", 
-                            "properties": {
-                                "postalCode": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
+                            "type": "array"
+                        }, 
+                        "uri": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
                                     }, 
-                                    "type": "array"
-                                }, 
-                                "countryName": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
+                                    "releaseID": {
+                                        "type": "string"
                                     }, 
-                                    "type": "array"
-                                }, 
-                                "streetAddress": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
+                                    "releaseTag": {
+                                        "type": "string"
                                     }, 
-                                    "type": "array"
-                                }, 
-                                "region": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
-                                }, 
-                                "locality": {
-                                    "items": {
-                                        "properties": {
-                                            "releaseDate": {
-                                                "type": "string", 
-                                                "format": "date-time"
-                                            }, 
-                                            "releaseID": {
-                                                "type": "string"
-                                            }, 
-                                            "releaseTag": {
-                                                "type": "string"
-                                            }, 
-                                            "value": {
-                                                "type": [
-                                                    "string", 
-                                                    "null"
-                                                ]
-                                            }
-                                        }
-                                    }, 
-                                    "type": "array"
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "URI to identify the Thing under the given scheme.", 
+                                        "format": "uri"
+                                    }
                                 }
-                            }
+                            }, 
+                            "type": "array"
+                        }, 
+                        "description": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded by the used registry."
+                                    }
+                                }
+                            }, 
+                            "type": "array"
                         }
-                    }, 
-                    "title": "Organization"
+                    }
                 }, 
                 "source": {
                     "items": {
