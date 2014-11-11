@@ -22,17 +22,17 @@ The use of a **globally unique** OCID allows third-parties to refer to a contrac
 
 An OCID is made up of four parts. The first three can generally be set as constant values in most systems:
 
-* **A prefix agency **(characters 1 - 4) - currently only ‘ocp1’ (Open Contracting Partnership)
+* **A prefix agency**(characters 1 - 4) - currently only ‘ocds’ (Open Contracting Data Standard)
 
 * A - separator
 
-* **A registered prefix** (charachters 6 - 11)
+* **A registered prefix** (charachters 6 - 11) - a random alphanumeric string given to publishers
 
-* **A publisher namespace **(charachters 12 - 14) - for allow publishers to maintain separate series of local identifiers. 
+* **A publisher namespace **(charachters 12 - 13) - for allow publishers to maintain separate series of local identifiers. 
 
 * A ‘-’ separator 
 
-* **An internal identifier **(charachters 16 and above) - drawn from publishers existing systems
+* **An internal identifier **(charachters 15 and above) - drawn from publishers existing systems
 
 This allows publishers to use an internal identifier from within their own systems, and simple to prepend the prefix and namespace to this when publishing data, making their local identifier into a globally unique identifier. 
 
@@ -42,9 +42,9 @@ The OCID is case sensitive.
 
 The following are examples of valid OCIDs:	
 
-> ocp1-a2ef3d01-1594121
+> ocds-a2ef3d01-1594121
 
-> ocp1-df4534dg-eu-192301-2009 
+> ocds-df4534dg-eu-192301-2009 
 
 ### Prefix agency
 
@@ -60,7 +60,7 @@ You can find **a list of registered prefixes here (ToDo)** along with a registra
 
 A re-publisher, who has aggregated data from multiple original publishers, when those systems have not already defined their own OCIDs, should seek to identify (or register) a prefix for each source publisher where possible. 
 
-**ToDo: We need to establish some sort of registration system. Could be a simple Google Docs or Zoho Creator App in the short-term, but will need maintained infrastructure in the longer-term; and potentially a role for someone to ****verify**** the details registered through the open system. **
+See the [registration pages](../../implementation/registration) for details of how to obtain your OCID prefix. 
 
 ### Publisher namespace
 
