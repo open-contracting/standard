@@ -2,15 +2,16 @@
 
 # Progressive Publication
 
-<span class="lead">Increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement. Governments, platform providers and other organizations can all make progressive step-by-step changes to their practice to achieve the highest possible levels of open contracting data publication on the web.</span>
+<span class="lead">Increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement. Governments, platform providers and other organizations can all make progressive step-by-step changes to their disclosure practice to achieve the highest possible levels of open contracting data and document publication on the web.</span>
 
-<span class="lead">This section sets out a series of steps towards improving the content, and the technical openness, of contracting data.</lead>
+<span class="lead">This section sets out a series of steps towards improving the content, and the technical openness, of contracting data and.</lead>
 
 On the [publication patterns](../publication_patterns) page you will find further information to support you at each stage of implementation. The [merging](../merging) page provides details of this key aspect of full OCDS implementation. 
 
 
 ## Content - what to include
 
+### Structured data
 The table below shows the different categories of data that publishers should seek to collect, manage and publish as part of an open contracting process. These are divided into three levels:
 
 * **Basic** - these items are commonly held by organisations and provide a basic overview of a contracting process
@@ -21,6 +22,11 @@ The detailed fields that can be used to represent each of these items are descri
 
 <iframe src="https://docs.google.com/spreadsheets/d/12W3C3lHY2FW2MRuCGm-kV53bk03TGhXB_z223Rg8xUg/pubhtml?gid=428233391&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="500"></iframe>
 
+### Documents 
+
+The following list details the documents the priority documents that publishers should provide at different levels of publication. This list is non-exhaustive, and publishers should make other relevant documents available also.
+
+<iframe src="https://docs.google.com/spreadsheets/d/1i2XagfbBcwzQ5Zasz94fAfdeMwWImiJtfcZelveywr4/pubhtml?gid=172990428&amp;single=true&amp;widget=true&amp;headers=false" width="100%", height="500"></iframe>
 
 ## How to publish - 5 ☆ approach
 
@@ -43,23 +49,23 @@ Providing documents offers an initial level of transparency, but users have to d
 
 <span class="lead">Provide machine-readable datasets that contain key information recommended in the Open Contracting Data Standard.</span>
 
-An example of publication at this level would involve providing a downloadable CSV file of contract information extracted from an existing database seeking to use field names and data structures recommended by OCDS wherever possible.
+An example of publication at this level would involve providing a downloadable CSV file of contract information extracted from an existing database seeking to use, or map to, field names and data structures recommended by OCDS wherever possible.
 
-The documentation on flat file serialization of the standard may be useful for those seeking to publish at this level.
+The documentation on flat file serialization of the standard, and the [OCDS mapper](https://github.com/open-contracting/mapper), may be useful for those seeking to publish at this level.
 
 #### Stepping up
-Providing structured data will allow users to perform basic analysis, but until a common standard is used, it will be more difficult to join up contracting information across datasets and to analyse patterns across organisations or sectors. From structured data, the next step is to map this to the OCDS standard.
+Providing structured data will allow users to perform basic analysis, but until a common standard is used, it will be more difficult to join up contracting information across datasets and to analyze patterns across organizations or sectors. From structured data, the next step is to map this to the OCDS standard.
 
 
 ### ☆ ☆ ☆ Provide structured data using open standards
 
 <span class="lead">Using the Open Contracting Data Standard model to publish initiation, award, contract and implementation information for each contracting process.</span>
 
-OCDS provides guidance on the fields to include, and how to structure them so that third-parties can re-use your data effectively. 
+OCDS provides guidance on the fields to include, and how to structure them using [a JSON schema](../../schema/reference) so that third-parties can re-use your data effectively. 
 
 Fully compliant OCDS publication involves providing a release of data for every event or change that occurs in the life of a contracting process (e.g. when a tender is issued, an award made, and a contract signed), and then combining these into a summary record. This is important to enable tracking of change over time. However, there are different paths to take in moving towards this, and technical assistance from the community can be sought to identify the best approach.
 
-An example of good quality publication at this level might involve regularly generated releases and records published in bulk files for download and also be made available through query interfaces and APIs. 
+An example of good quality publication at this level might involve regularly generated releases and records published in bulk files for download and also made available through query interfaces and APIs. 
 
 #### Stepping up
 Using data at custom download locations, or through custom query interfaces, requires users to still manually discover and access data. 
@@ -69,22 +75,20 @@ Applying best practices for publishing on the web will allow automatic discovery
 
 ### ☆ ☆ ☆ ☆ Use best practices for data on the web
 
-Make each **release** and **record** describing a contracting process accessible at it’s own persistent URI (web address).
+Make each **release** and **record** describing a contracting process accessible at its own persistent URI (web address).
 
-Provide feeds that detail recently changed information, and that allow users to search for specific kinds of tenders, awards or contracts (for example, by the category of goods and services being procured). 
+Provide feeds that detail recently changed information, and that allow users to search for specific kinds of tenders, awards or contracts (for example, by the classification of goods and services being procured). 
 
-Use the [/.well-known/](../publication_patterns#well-known) protocol to let machines discover your data. 
+Use [established protocols](../publication_patterns#supporting-discovery) to support discovery of your data, and to provide atom feeds of recently updated data. At this level, publishers may also expose data through an API, following community established conventions for API operation.
 
-An example of publishing at this level might involve being able to look up URLs such as /oc/contractProcess/1234 to return a record in JSON format, and that record then detailing a list of releases, each with their own URIs such as /oc/release/1234-1 and /oc/release/1234-2 which detail the different moments in the life of the contracting process. Users interested in the contract could regularly check /oc/contractProcess/1234 to discover updates, or could use a search service at /oc/search/?initiation.item.classification=CPV:03451100-7 to lookup a feed of all the tenders for ‘Bedding Plants’. 
+The use of these protocols, and following API conventions, will allow aggregators and other analysts to integrate this open contracting data in minutes and hours or work, rather than days, weeks and months. 
 
-The /.well-known/ file will allow aggregators and other analysts to integrate this open contracting data in minutes and hours or work, rather than days, weeks and months. 
-
-In future OCDS may also have an RDF serialization to enable linked data publication at this level.
+In the future OCDS may also have an RDF serialization to enable linked data publication at this level.
 
 #### Stepping up
 Contracting data may contain many cross-references to other important datasets - from government budgets, to company registers and registers of public interest. If 4 or 5 ☆ data is published for any of these, then OCDS can be used to make links between these datasets. 
 
-This will allow users to follow the links to discover more about the context of the contracting processes they are exploring, and will allow big-data analysis linking in these different datasets. For example, following links to a company register to discover whether a company awarded a contract has been disolved, or following links to budget and spending information. 
+This will allow users to follow the links to discover more about the context of the contracting processes they are exploring, and will allow big-data analysis linking in these different datasets. For example, following links to a company register to discover whether a company awarded a contract has been dissolved, or following links to budget and spending information. 
 
 
 ### ☆ ☆ ☆ ☆ ☆ Make links to other datasets
@@ -93,12 +97,12 @@ This will allow users to follow the links to discover more about the context of 
 
 This level builds upon 4 ☆ publication, and helps to build a joined up web of data.
 
-An example of publication at this level would involve including organisation URIs to point to company registers, budget URIs to point to budget lines, and spending URIs to point to spending information.
+An example of publication at this level would involve including organization URIs to point to company registers, budget URIs to point to budget lines, and spending URIs to point to spending information (i.e. using web links to identify things, with those web links returning data on the things identified.).
 
 For simplicity, the OCDS does not yet include URI fields at all points of the standard, but these can be added as extensions in collaboration with 5 ☆ linked data publishers. 
 
 #### Stepping up
-Whatever level you are at - publishing data is only part of the process. It is important to also [engage with users](http://www.opendataimpacts.net/engagement/) and to think about how to build your open data back into your organisational processes, closing the feedback loop.
+Whatever level you are at - publishing data is only part of the process. It is important to also [engage with users](http://www.opendataimpacts.net/engagement/) and to think about how to build your open data back into your organizational processes, closing the feedback loop.
 
 ## Examples
 

@@ -96,4 +96,6 @@ if __name__ == "__main__":
 
     make_definition_table(release,join(file_path,"release-identifier.csv"),what="definitions",section="Identifier")
     
+    make_definition_table(release,join(file_path,"release-classification.csv"),what="definitions",section="Classification")
+    
     make_definition_table(release,join(file_path,"release-document.csv"),what="definitions",section="Document")
