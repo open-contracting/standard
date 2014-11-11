@@ -111,7 +111,7 @@
             "properties": {
                 "receiverOrganization": {
                     "patternProperties": {
-                        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                        "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                             "type": [
                                 "string", 
                                 "null"
@@ -138,7 +138,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
+                                        "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme)."
                                     }
                                 }
                             }, 
@@ -163,7 +163,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
+                                        "description": "The identifier of the organization in the selected scheme."
                                     }
                                 }
                             }, 
@@ -187,14 +187,14 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                        "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.", 
                                         "format": "uri"
                                     }
                                 }
                             }, 
                             "type": "array"
                         }, 
-                        "description": {
+                        "legalName": {
                             "items": {
                                 "properties": {
                                     "releaseDate": {
@@ -212,7 +212,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
+                                        "description": "The legally registered name of the organization."
                                     }
                                 }
                             }, 
@@ -248,7 +248,7 @@
                 }, 
                 "providerOrganization": {
                     "patternProperties": {
-                        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                        "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                             "type": [
                                 "string", 
                                 "null"
@@ -275,7 +275,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
+                                        "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme)."
                                     }
                                 }
                             }, 
@@ -300,7 +300,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
+                                        "description": "The identifier of the organization in the selected scheme."
                                     }
                                 }
                             }, 
@@ -324,14 +324,14 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                        "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.", 
                                         "format": "uri"
                                     }
                                 }
                             }, 
                             "type": "array"
                         }, 
-                        "description": {
+                        "legalName": {
                             "items": {
                                 "properties": {
                                     "releaseDate": {
@@ -349,7 +349,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
+                                        "description": "The legally registered name of the organization."
                                     }
                                 }
                             }, 
@@ -476,6 +476,117 @@
             "type": "object", 
             "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.", 
             "title": "Transaction Information"
+        }, 
+        "Classification": {
+            "patternProperties": {
+                "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                    "type": [
+                        "string", 
+                        "null"
+                    ]
+                }
+            }, 
+            "type": "object", 
+            "properties": {
+                "scheme": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) wherever possible."
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "id": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "integer", 
+                                    "null"
+                                ], 
+                                "description": "The classification code drawn from the selected scheme."
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "uri": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "A URI to identify the code. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                "format": "uri"
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
+                "description": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "type": [
+                                    "string", 
+                                    "null"
+                                ], 
+                                "description": "A textual description or title for the code."
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }
+            }
         }, 
         "Implementation": {
             "properties": {
@@ -1336,7 +1447,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
+                                        "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) wherever possible."
                                     }
                                 }
                             }, 
@@ -1361,7 +1472,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
+                                        "description": "The classification code drawn from the selected scheme."
                                     }
                                 }
                             }, 
@@ -1385,7 +1496,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                        "description": "A URI to identify the code. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
                                         "format": "uri"
                                     }
                                 }
@@ -1410,7 +1521,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
+                                        "description": "A textual description or title for the code."
                                     }
                                 }
                             }, 
@@ -1434,7 +1545,7 @@
                             "value": {
                                 "uniqueItems": true, 
                                 "items": {
-                                    "$ref": "#/definitions/Identifier"
+                                    "$ref": "#/definitions/Classification"
                                 }, 
                                 "type": "array", 
                                 "description": "An array of additional classifications for the item. See the [itemClassificationScheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists#item-classification-scheme) codelist for common options to use in OCDS. This may also be used to present codes from an internal classification scheme."
@@ -2028,7 +2139,7 @@
         }, 
         "Identifier": {
             "patternProperties": {
-                "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
                         "string", 
                         "null"
@@ -2055,7 +2166,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
+                                "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme)."
                             }
                         }
                     }, 
@@ -2080,7 +2191,7 @@
                                     "integer", 
                                     "null"
                                 ], 
-                                "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
+                                "description": "The identifier of the organization in the selected scheme."
                             }
                         }
                     }, 
@@ -2104,14 +2215,14 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.", 
                                 "format": "uri"
                             }
                         }
                     }, 
                     "type": "array"
                 }, 
-                "description": {
+                "legalName": {
                     "items": {
                         "properties": {
                             "releaseDate": {
@@ -2129,7 +2240,7 @@
                                     "string", 
                                     "null"
                                 ], 
-                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
+                                "description": "The legally registered name of the organization."
                             }
                         }
                     }, 
@@ -3234,7 +3345,7 @@
                         }, 
                         "identifier": {
                             "patternProperties": {
-                                "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                                "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                                     "type": [
                                         "string", 
                                         "null"
@@ -3261,7 +3372,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
+                                                "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme)."
                                             }
                                         }
                                     }, 
@@ -3286,7 +3397,7 @@
                                                     "integer", 
                                                     "null"
                                                 ], 
-                                                "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
+                                                "description": "The identifier of the organization in the selected scheme."
                                             }
                                         }
                                     }, 
@@ -3310,14 +3421,14 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                                "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.", 
                                                 "format": "uri"
                                             }
                                         }
                                     }, 
                                     "type": "array"
                                 }, 
-                                "description": {
+                                "legalName": {
                                     "items": {
                                         "properties": {
                                             "releaseDate": {
@@ -3335,7 +3446,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
+                                                "description": "The legally registered name of the organization."
                                             }
                                         }
                                     }, 
@@ -3678,7 +3789,7 @@
                 }, 
                 "identifier": {
                     "patternProperties": {
-                        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                        "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                             "type": [
                                 "string", 
                                 "null"
@@ -3705,7 +3816,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
+                                        "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme)."
                                     }
                                 }
                             }, 
@@ -3730,7 +3841,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
+                                        "description": "The identifier of the organization in the selected scheme."
                                     }
                                 }
                             }, 
@@ -3754,14 +3865,14 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                        "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.", 
                                         "format": "uri"
                                     }
                                 }
                             }, 
                             "type": "array"
                         }, 
-                        "description": {
+                        "legalName": {
                             "items": {
                                 "properties": {
                                     "releaseDate": {
@@ -3779,7 +3890,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
+                                        "description": "The legally registered name of the organization."
                                     }
                                 }
                             }, 
@@ -4531,7 +4642,7 @@
                 }, 
                 "identifier": {
                     "patternProperties": {
-                        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                        "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                             "type": [
                                 "string", 
                                 "null"
@@ -4558,7 +4669,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
+                                        "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme)."
                                     }
                                 }
                             }, 
@@ -4583,7 +4694,7 @@
                                             "integer", 
                                             "null"
                                         ], 
-                                        "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
+                                        "description": "The identifier of the organization in the selected scheme."
                                     }
                                 }
                             }, 
@@ -4607,14 +4718,14 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                        "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.", 
                                         "format": "uri"
                                     }
                                 }
                             }, 
                             "type": "array"
                         }, 
-                        "description": {
+                        "legalName": {
                             "items": {
                                 "properties": {
                                     "releaseDate": {
@@ -4632,7 +4743,7 @@
                                             "string", 
                                             "null"
                                         ], 
-                                        "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
+                                        "description": "The legally registered name of the organization."
                                     }
                                 }
                             }, 
@@ -5788,7 +5899,7 @@
                         }, 
                         "identifier": {
                             "patternProperties": {
-                                "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                                "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                                     "type": [
                                         "string", 
                                         "null"
@@ -5815,7 +5926,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "An identifier should be drawn from an existing identification scheme or established list of codes. This field is used to indicate the scheme or codelist in which the identifier will be found. For Organization Identifiers, this value should represent an [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme), and for item classifications, this value should represent an [Item Classification Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#item-classification-scheme) ."
+                                                "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://ocds.open-contracting.org/standard/r/1__0__rc/en/schema/codelists/#organization-identifier-scheme)."
                                             }
                                         }
                                     }, 
@@ -5840,7 +5951,7 @@
                                                     "integer", 
                                                     "null"
                                                 ], 
-                                                "description": "The value that identifies or classifies the parent entity, drawn from the identification scheme in use."
+                                                "description": "The identifier of the organization in the selected scheme."
                                             }
                                         }
                                     }, 
@@ -5864,14 +5975,14 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "A URI to identify the Thing under the given scheme. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.", 
+                                                "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.", 
                                                 "format": "uri"
                                             }
                                         }
                                     }, 
                                     "type": "array"
                                 }, 
-                                "description": {
+                                "legalName": {
                                     "items": {
                                         "properties": {
                                             "releaseDate": {
@@ -5889,7 +6000,7 @@
                                                     "string", 
                                                     "null"
                                                 ], 
-                                                "description": "The text-based description of the id, if provided by the scheme. In the case of a goods classification, this maybe the description of the code. In the case of an organzational identifier, this may be the legal name as recorded in the identification scheme used."
+                                                "description": "The legally registered name of the organization."
                                             }
                                         }
                                     }, 
