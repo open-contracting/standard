@@ -9,7 +9,15 @@ The Open Contracting Data Standards has been developed with the input of many pe
 Thanks to the following contributors who have shared code, feedback and other direct input into the development of the standard and the tools around it.
 
 <style><!-- 
-    .credit { width: 300px; }
+    .credit { 
+        width: 200px;
+        display: block;
+        float: left;
+    }
+    .credit > a > img {
+        clear:both;
+        
+    }
 --></style>
 <span class="credit"><a href="https://api.github.com/users/anabrandusescu">anabrandusescu<img border="0" width="75" src="https://avatars.githubusercontent.com/u/3058770?v=3"/></span>
 <span class="credit"><a href="https://api.github.com/users/arothenberg">arothenberg<img border="0" width="75" src="https://avatars.githubusercontent.com/u/1676642?v=3"/></span>
