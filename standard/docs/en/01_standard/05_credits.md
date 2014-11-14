@@ -2,10 +2,23 @@
 
 # Credits
 
-The Open Contracting Data Standards has been developed with the input of many people. Our thanks to all the following who have given feedback and input over the course of this project.
+<span class="lead">The Open Contracting Data Standards has been developed with the input of many people. We extend our thanks to all the following who have given feedback and input over the course of the initial development project.</span>
 
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.net) and the [World Bank](http://www.worldbank.org).
 
-## Online Contributors
+## Core team
+Lead authors: Sarah Bird ([Aptivate](http://aptivate.org)) & [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). 
+
+## Contributors
+
+Many more people have been involved in inputting to the standard. Below is a non-exhaustive list of some of those people. Inclusion here is to extend our thanks. It does not imply endorsement by any of those included of the standard. 
+
+### User research
+
+Coming soon.
+
+### GitHub contributions
+
 Thanks to the following contributors who have shared code, feedback and other direct input into the development of the standard and the tools around it.
 
 <style><!-- 
