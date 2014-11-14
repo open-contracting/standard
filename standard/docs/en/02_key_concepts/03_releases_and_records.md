@@ -6,13 +6,13 @@
 
 <span class="lead">Documents are a vital part of the Open Contracting Data Standard. While releases and records provide a machine-readable summary of a contracting process, they should always be supported by links to well-managed documents.</span>
 
-<img src="../../../green_documents.svg.png" width="150" align="right"/>A contracting process generates many documents - from needs assessment and market studies, to tender notices and calls for proposals, and the actual text of contracts. Wherever there is no legal or policy restriction on doing so, these should be placed online in a stable location, and linked to from within the relevant OCDS release and records. 
+<img src="../../../assets/green_documents.svg.png" width="150" align="right"/>A contracting process generates many documents - from needs assessment and market studies, to tender notices and calls for proposals, and the actual text of contracts. Wherever there is no legal or policy restriction on doing so, these should be placed online in a stable location, and linked to from within the relevant OCDS release and records. 
 
 See the [document](../../schema/reference#document) section of [schema reference](../../schema/reference) for more details of how to include documents in your data releases, and the [documentType code list](../../schema/codelists#document-type) for a list of common documents that the OCDS recommends are included, and for details of where documents may be attached within the OCDS structure.
 
 ## Releases
 
-<img src="../../../green_release.svg.png" width="150" align="right"/>To encourage the greatest possible openness of public contracting information, the Open Contracting Data Standard is designed to support **real-time publication of information**. At each stage of the contracting process, or at each point when changes, or amendments, are made to data about the contracting process, the standard allows publishers to provide a **release**.
+<img src="../../../assets/green_release.svg.png" width="150" align="right"/>To encourage the greatest possible openness of public contracting information, the Open Contracting Data Standard is designed to support **real-time publication of information**. At each stage of the contracting process, or at each point when changes, or amendments, are made to data about the contracting process, the standard allows publishers to provide a **release**.
 
 Releases are cumulative. Over a contracting process releases may be provided to describe a tender, announce contract awards, detail a finalised contract, and provide updates on implementation. Once published, a release must not be changed. Updated information should be shared through a new release.
 
@@ -35,7 +35,7 @@ In these cases, where publishers are providing a single URI for fetching informa
 
 ## Records
 
-<img src="../../../green_record.svg.png" width="150" align="right"/>A contracting **record** provides a snapshot of the contracting process at a given point in time, bringing together all the releases into one place. It is updated as new information becomes available through releases.
+<img src="../../../assets/green_record.svg.png" width="150" align="right"/>A contracting **record** provides a snapshot of the contracting process at a given point in time, bringing together all the releases into one place. It is updated as new information becomes available through releases.
 
 A record contains three key elements:
 * a list of all the releases that relate to that contracting process (required*)
@@ -46,7 +46,7 @@ At a minimum, this may be a list of pointers to web-accessible releases in order
 
 The OCDS Schema defines a set of "[merge strategies](../../implementation/merging)" that work with the jsonmerge library to enable the compiled and versioned releases to be made from just the raw release data. Put another way, publishers do not need to maintain or do any versioning themselves, they can simply publish all the releases that belong to a contracting process.
 
-<center><img src="../../../release_square.png" height="200"/></center>
+<center><img src="../../../assets/release_square.png" height="200"/></center>
 
 <div class="well">
 <p>
