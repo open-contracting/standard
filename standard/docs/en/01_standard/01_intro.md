@@ -1,13 +1,13 @@
 [TOC]
 
 # Introduction
-<img src="/standard/r/master/assets/release_record_compiled.png" width="150" align="right"/><span class="lead">Governments around the world spend an estimated US $9.5 trillion every single year through contracts. Yet, contracting information is often unavailable for public scrutiny. To change this, the Open Contracting Partnership (OCP) focuses on enhanced disclosure, and on ensuring all stakeholders participate in public contracting, at all stages of the contracting process, and for all types of contracts .</span>
+<img src="/standard/r/master/assets/release_record_compiled.png" width="150" align="right"/><span class="lead">Governments around the world spend an estimated US $9.5 trillion every single year through contracts. Yet, contracting information is often unavailable for public scrutiny. To change this, the Open Contracting Partnership (OCP) focuses on enhanced disclosure, and on ensuring all stakeholders participate in public contracting, at all stages of the contracting process, and for all types of contracts.</span>
 
 <span class="lead">The Open Contracting Data Standard (OCDS) describes how to publish accessible and structured releases of data _and_ documents at each stage of a contracting process.</span>
 
 It describes how to bring these releases of data and documents together in a contracting record that can be used to find out the current state, and history, of any contract.
 
-This initial version of the specification is designed for  contracts awarded through a classical procurement process (goods, services, works). However, the specification is flexible and, through specific extensions, can be used to describe other kinds of contracts, including contracts related to land and extractive industries.
+This initial version of the schema is designed around contracts awarded through classic procurement processes (goods, services, works). However, the standard is flexible and, through specific extensions, can be used to describe other kinds of contracts, including contracts related to land and extractive industries.
 
 ## Getting Started
 
