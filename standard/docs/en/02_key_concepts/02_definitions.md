@@ -8,7 +8,7 @@ In OCDS you must have a **unique contracting process, and associated Open Contra
 
 There can be multiple awards, contracts and implementation details as part of each open contracting process, but there should only ever be one tender in a process.  
 
-![The Contracting Process](../../../assets/assets/contracting_process_rc.png)
+![The Contracting Process](../../../assets/contracting_process_rc.png)
 
 The figure above describes common stages in a **procurement contracting process**. The OCDS can also be used to represent other kinds of contracting processes (e.g. direct contracting or direct negotiation). In these cases, there should be some other identifiable initiation process that can be used to define a unique contracting process.
 

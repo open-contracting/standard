@@ -7,7 +7,7 @@
 There are two kinds of identifier in OCDS: **Global unique identifiers** which should refer consistently to a single thing wherever they are used; and **local identifiers** which only need to be unique within the scope of a particular block of data, and which provide a mechanism to identify specific elements in releases over time (e.g. to update the details of a particular document), or to make a link between elements within a data release or record (e.g. linking awards and contracts). 
 
 ## OCID
-
+<img src="../../../assets/green_compilation.svg.png" width="150" align="right"/>
 <span class="lead">An Open Contracting ID (OCID) is a **globally unique identifier **for a** contracting process**.</span> 
 
 <span class="lead">Publishers will need to have, or to create, a consistent internal identifier that applies across the initiation, implementation and closure phases of a contract.</span>
@@ -56,7 +56,7 @@ Prefix are randomly generated lowercase alpha-numberic strings. A prefix is assi
 
 For example, a government publishing detail on their own contracting would register a single prefix, and would use this on all their OCIDs. 
 
-You can find **a list of registered prefixes here (ToDo)** along with a registration form for creating new prefixes. 
+You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../../implementation/registration). 
 
 A re-publisher, who has aggregated data from multiple original publishers, when those systems have not already defined their own OCIDs, should seek to identify (or register) a prefix for each source publisher where possible. 
 
@@ -78,7 +78,7 @@ Because a **contracting process** is defined by a unique initiation process (a u
 
 
 ## Organizations
-
+<img src="../../../assets/green_organisation.svg.png" width="150" align="right"/>
 <span class="lead">Reliably identifying the legal entities involved in a contracting process is vital for transparency and accountabilty, and for carrying out analysis to improve procurement. 
 
 Publishers should seek to collect and record the **legal identifier** from an official register of any organisations involved in a contracting process (including procuring organisations, bidders and suppliers), and should include this in their OCDS files.</span>

@@ -45,4 +45,4 @@ Data concerning location and subcontracting is particularly useful for those inv
  
 ## More information
 
-More detail about our demand-side assessment can be found here [LINK] ToDo
+More detail about our demand-side assessment can be found on the standard blog.
