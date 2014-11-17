@@ -23,5 +23,5 @@ e.g. schema_usecase_deliveryOfItems.json
 
 ## Extensions
 Accepted extensions have the proposed_ prefix removed from them and should be used
-if they satisfy a publishers requirements as per the [conformance](http://ocds.open-contracting.org/standard/r/master/en/key_concepts/conformance/)
+if they satisfy a publishers requirements as per the [conformance](http://ocds.open-contracting.org/standard/r/1__0__RC/en/key_concepts/conformance/)
 section of the standard.
