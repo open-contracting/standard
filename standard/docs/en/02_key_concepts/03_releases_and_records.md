@@ -75,8 +75,6 @@ If the record is complete with versioning information, then the versioning secti
 </p>
 </div>
 
-Publishers may not all be able to initially provide fully versioned releases, but should publish in such a way that third parties can create these fully versioned releases if they so choose.
-
 ## Updates and amendments
 
 When new information becomes available, it should be contained in a new release, and the contracting record should be updated to reflect this. 
