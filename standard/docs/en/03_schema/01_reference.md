@@ -2,13 +2,13 @@
 
 # Schema Reference
 
-<span class="lead">The [Release Schema](../release) provides a detailed specification of the fields and data structures to use when publishing data, with supplementary schemas showing how to combine release and records. This reference section works step-by-step through additional supporting information to assist publishers and users of the data.</span>
+<span class="lead">The [Release Schema](../release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas showing how to combine releases into data packages and how to compile releases into records. This reference section works step-by-step through additional supporting information to assist publishers and users of the data.</span>
 
-(Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence)
+**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence**
 
 ## Release structure
 
-The majority of OCDS data is held within a structured [release](../release). Releases must be published within a release package. Releases are made up of a number of blocks of data, including:
+The majority of OCDS data is held within a [release](../release). One ore more releases are published within a release package. Releases are made up of a number of blocks of data, including:
 
 * [planning](#planning)
 * [tender](#tender)
@@ -16,13 +16,15 @@ The majority of OCDS data is held within a structured [release](../release). Rel
 * [contract](#contract)
 * [implementation](#implementation)
 
-A release can only contain one set of tender information (as we define a unique [contracting process](../../key_concepts/definitions#contracting-process) by the initiation stage), but may contain multiple instances of awards, contracts and performance information.
+A release can only contain one set of tender information, as we define a unique [contracting process](../../key_concepts/definitions#contracting-process) by the unique initiation stage.
+
+But it may contain multiple awards, contracts and implementation information.
 
 Releases are given a [tag](#release-tag) to indicate what stage of a contracting process they represent, but there are no formal restrictions on when information about a stage of the contracting process may be provided. For example, a publisher announcing the signing of a contract with a 'contract' tag, may also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 
 ### Package Metadata
 
-Releases must be published within a release package container. This can online one or more releases. The release package, modelled on the [Data Package](http://dataprotocols.org/data-packages/) protocol, provides meta-data about release(s) it contains. 
+Releases must be published within a release package, which can contain one or more releases. The release package, modelled on the [Data Package](http://dataprotocols.org/data-packages/) protocol, provides meta-data about the release(s) it contains, the publisher, and data licensing information. 
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-package.csv" data-table-class="table table-striped schema-table"></div>
 
@@ -34,9 +36,9 @@ Releases must be published within a release package container. This can online o
 
 * The publisher should be identified using an Organisation block. See the [Organization/Entity](#organization) guidance for details.
 
-* ```license``` - See the [licensing guidance](../../implementation/publication_patterns#licensing) for more details on selecting and publishing license information. 
+* ````license```` - See the [licensing guidance](../../implementation/publication_patterns#licensing) for more details on selecting and publishing license information. 
 
-* ```publicationPolicy``` - See the [publication policy](../../implementation/publication_patterns#publication-policy) guidance for more details.
+* ````publicationPolicy```` - See the [publication policy](../../implementation/publication_patterns#publication-policy) guidance for more details.
 
 ### Release
 
