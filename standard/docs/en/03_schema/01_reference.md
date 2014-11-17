@@ -4,7 +4,7 @@
 
 <span class="lead">The [Release Schema](../release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas showing how to combine releases into data packages and how to compile releases into records. This reference section works step-by-step through additional supporting information to assist publishers and users of the data.</span>
 
-**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence**.
+**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence**
 
 ## Release structure
 

@@ -1,5 +1,5 @@
 {
-	"id": "http://ocds.open-contracting.org/standard/r/1__0__rc/record-package-schema.json",
+	"id": "http://ocds.open-contracting.org/standard/r/1__0__RC/record-package-schema.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Schema for an Open Contracting Record package",
 	"description": "The record package contains a list of records along with some publishing meta data. The records pull together all the releases under a single Open Contracting ID and compile them into the latest version of the information along with the history of any data changes.",
@@ -74,7 +74,7 @@
             "properties": {
                 "ocid": {
                     "title": "Open Contracting ID",
-                    "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/0__2__0/#defining-a-unique-contracting-process",
+                    "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: http://ocds.open-contracting.org/standard/r/1__0__RC/en/key_concepts/definitions/#contracting-process",
                     "type": "string"
                 },
                 "releases": {
@@ -118,7 +118,7 @@
                             "description": "A list of releases, with all the data. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
                             "type": "array",
                             "items": {
-                                "$ref": "http://ocds.open-contracting.org/standard/r/standard/release-schema.json"
+                                "$ref": "http://ocds.open-contracting.org/standard/r/1__0__RC/release-schema.json"
                             },
                             "minItems": 1
                         }
@@ -127,12 +127,12 @@
                 "compiledRelease": {
                     "title": "Compiled release",
                     "description": "This is the latest version of all the contracting data, it has the same schema as an open contracting release.",
-                    "$ref": "http://ocds.open-contracting.org/standard/r/standard/release-schema.json"
+                    "$ref": "http://ocds.open-contracting.org/standard/r/1__0__RC/release-schema.json"
                 },
                 "versionedRelease": {
                     "title": "Versioned release",
                     "description": "This contains the history of the data in the compiledRecord. With all versions of the information and the release they came from.",
-                    "$ref": "http://ocds.open-contracting.org/standard/r/master/versioned-release-validation-schema.json"
+                    "$ref": "http://ocds.open-contracting.org/standard/r/1__0__RC/versioned-release-validation-schema.json"
                 }
             },
             "required": ["ocid", "releases"]

@@ -6,13 +6,17 @@
 
 <span class="lead">The **Open Contracting Data Standard (OCDS)** has been developed to allow information providers to share as much of this information as possible as **structured, re-usable, standardised data**.</span>
 
-Publication of data to the OCDS specification can enable a wide range of stakeholders to use contracting data and documents to achieve value for money for the government, to create a competitive playing field for the private sector, and to secure high quality goods, works, and services for citizens. 
+Publication of data to the OCDS specification can enable a wide range of stakeholders to use contracting data and documents to:
+
+ * achieve value for money for the government; 
+ * create a competitive playing field for the private sector; and 
+ * secure high quality goods, works, and services for citizens. 
 
 ### Support and funding
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org). 
+The OCDS is a core product of the [Open Contracting Partnership](http://www.open-contracting.org). 
 
-The 1.0 Release Candidate of a data specification as part of the standard has been developed through a rapid prototyping process for the Open Contracting Partnership by the [World Wide Web Foundation](http://www.webfoundation.org) and [World Bank](http://www.worldbank.org), through a project supported by [The Omidyar Network](http://www.omidyar.com/) and the World Bank.
+The 1.0 Release Candidate of a data specification, as part of the standard, was developed through a rapid prototyping project. The project was undertaken by the by the [World Wide Web Foundation](http://www.webfoundation.org) and [World Bank](http://www.worldbank.org), and supported by [The Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org).
 
 Final adoption, and future development and support for the specification will be managed through the independent Open Contracting Partnership Secretariat, which will be operational in early 2015. 
 

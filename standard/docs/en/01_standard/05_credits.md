@@ -65,3 +65,4 @@ Thanks to the following contributors who have shared code, feedback and other di
 ### Communications team
 
 Felipe Estefan, Luis Alberto Velez, Dillon Mann and [Thwaites Communications](http://www.thwaitescommunications.net/)
+
