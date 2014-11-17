@@ -7,10 +7,9 @@
 The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.net) and the [World Bank](http://www.worldbank.org).
 
 ## Core team
-Lead authors: Sarah Bird ([Aptivate](http://aptivate.org)) & [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). 
+Lead authors: Sarah Bird ([Aptivate](http://aptivate.org)) & [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Stephen Davenport ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). 
 
 ## Contributors
-
 Many more people have been involved in inputting to the standard. Below is a non-exhaustive list of some of those people. Inclusion here is to extend our thanks. It does not imply endorsement by any of those included of the standard. 
 
 ### User research
@@ -62,3 +61,7 @@ Thanks to the following contributors who have shared code, feedback and other di
 <span class="credit"><a href="https://github.com/practicalparticipation">practicalparticipation<img border="0" width="75" src="https://avatars.githubusercontent.com/u/477172?v=3"/></span>
 <span class="credit"><a href="https://github.com/pyMike">pyMike<img border="0" width="75" src="https://avatars.githubusercontent.com/u/7292830?v=3"/></span>
 <span class="credit"><a href="https://github.com/qris">qris<img border="0" width="75" src="https://avatars.githubusercontent.com/u/754175?v=3"/></span>
+    
+### Communications team
+
+Felipe Estefan, Luis Alberto Velez, Dillon Mann and [Thwaites Communications](http://www.thwaitescommunications.net/)

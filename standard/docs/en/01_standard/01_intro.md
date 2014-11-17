@@ -19,7 +19,6 @@ This initial version of the schema is designed around contracts awarded through 
 <div role="tabpanel" class="tab-pane active" id="publishers">  
 <ul>
   <li>Read more about the <a href="../history_and_development">origin, goals & development of the standard</a>;</li>
-  <li>Review the check-list for data creators;</li>
   <li>Publish your own data using the <a href="../../schema/reference/">schema reference</a> and <a href="../../implementation/publication_patterns">publication patterns</a>;</li>
   <li>Test your data with the <a href="http://ocds.open-contracting.org/validator/validate/">validation tools</a>;</li>
   <li>Publish your data & <a href="../support">let us know about it</a>;</li>
@@ -39,4 +38,4 @@ This initial version of the schema is designed around contracts awarded through 
 
 <small>The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.net) and the [World Bank](http://www.worldbank.org).</small>
 
-<small>Lead authors: Sarah Bird ([Aptivate](http://aptivate.org)) & [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). We extend our thanks to everyone else who has contributed during this project. See the [credits page](../credits) for details of all those involved.</small>
+<small>Lead authors: Sarah Bird ([Aptivate](http://aptivate.org)) & [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Stephen Davenport ([World Bank](http://www.worldbank.org)),  Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). We extend our thanks to everyone else who has contributed during this project. See the [credits page](../credits) for details of all those involved.</small>
