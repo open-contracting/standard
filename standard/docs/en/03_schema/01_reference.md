@@ -10,6 +10,7 @@
 
 The majority of OCDS data is held within a structured [release](../release). Releases must be published within a release package. Releases are made up of a number of blocks of data, including:
 
+* [planning](#planning)
 * [tender](#tender)
 * [award](#award)
 * [contract](#contract)
