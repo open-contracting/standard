@@ -11,9 +11,9 @@ In our consultations thus far with government, civil society, donors, journalist
 * Enable the private sector to compete for public contracts; and
 * Monitor service delivery (from both aid and budget-executed projects) for effectiveness. 
  
-The current OCDS specification encourages all publishers to provide a [common core of data about their contracting processes](../../implementation/publication_levels) that speaks to the prioritized demand requirements of these use cases. The specification is also extensible, so that publishers can further tailor their publication of contracting data to meet a wider range of user needs.  
+We encourage all publishers to provide a [common core of data about their contracting processes](../../implementation/publication_levels) that speaks to the prioritized demand requirements of these use cases. The specification is also extensible, so that publishers can further tailor their publication of contracting data to meet a wider range of user needs. 
  
-Demand requirements were prioritized in accordance with their commonality amongst use cases as well as their feasibility of implementation given current 'supply side' publication practice. Demand requirements that were not captured in the current specification remain logged for further consideration or for publisher extension.
+Demand requirements were prioritized based on their prevalence amongst use cases as well as their feasibility of implementation (given our observations of current 'supply side' publication practice). Demand requirements that were not captured in the current specification have been identified and noted for further consideration, or for publisher extension, at a later date.
 
 ### Value for money in procurement
 
@@ -45,4 +45,4 @@ Data concerning location and subcontracting is particularly useful for those inv
  
 ## More information
 
-More detail about our demand-side assessment can be found on the standard blog.
+More detail about our demand-side assessment can be found on the standard blog, and in our [demand-side assessment document](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing).

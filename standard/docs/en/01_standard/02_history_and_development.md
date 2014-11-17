@@ -10,7 +10,9 @@ Publication of data to the OCDS specification can enable a wide range of stakeho
 
 ### Support and funding
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org). The 1.0 Release Candidate of a data specification as part of the standard has been developed through a rapid prototyping process for the Open Contracting Partnership by the [World Wide Web Foundation](http://www.webfoundation.org) and [World Bank](http://www.worldbank.org), through a project supported by [The Omidyar Network](http://www.omidyar.com/) and the World Bank.
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org). 
+
+The 1.0 Release Candidate of a data specification as part of the standard has been developed through a rapid prototyping process for the Open Contracting Partnership by the [World Wide Web Foundation](http://www.webfoundation.org) and [World Bank](http://www.worldbank.org), through a project supported by [The Omidyar Network](http://www.omidyar.com/) and the World Bank.
 
 Final adoption, and future development and support for the specification will be managed through the independent Open Contracting Partnership Secretariat, which will be operational in early 2015. 
 
@@ -18,11 +20,11 @@ Final adoption, and future development and support for the specification will be
 
 The development of the 1.0 Release Candidate specification took place through a year-long process of supply and demand-side research, and open consultation. This processes has included:
 
-* **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the[ Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and[ Contracting Data Map](http://ocds.open-contracting.org/opendatacomparison/datamap/) which explore the fields of data available from a wide range of existing government contracting data portals around the world. 
+* **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and [mapped](http://ocds.open-contracting.org/opendatacomparison/datamap/) the fields of data available from a wide range of existing government contracting data portals around the world. 
 
-* **Exploring demand for contracting data** - through field work, interviews and online engagement with different communities and individuals who many use of contract information. The information needs of users were catalogued, and fed into the requirements for the specification structure and fields. We have developed a series of priority use cases to guide implementation and adoption of the specification.
+* **Exploring demand for contracting data** - through field work, interviews and online engagement with different communities and individuals who many use of contract information. The information needs of users were catalogued, and fed into the requirements for the specification structure and fields. We developed a series of priority use cases to guide implementation and adoption of the specification. [Read the demand-side assessment](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing)
 
-* **Iterative, open development -** by maintaining a [public issue tracker](https://github.com/open-contracting/standard/issues) and releasing an [alpha](http://ocds.open-contracting.org/standard/r/0__1__0/) and [beta](http://ocds.open-contracting.org/standard/r/0__3__2/) iteration of the specification for comment, as well as carrying out outreach through mailing lists and other online spaces. Development sprints held at a series of conferences (PyCon Montreal and PyCon Europe 2014) also actively contributed to the development of the specification. 
+* **Iterative, open development** - we offered transperency, and gained broad feedback to improve the specification by offering early releases for comment ([alpha](http://ocds.open-contracting.org/standard/r/0__2__0/) and [beta](http://ocds.open-contracting.org/standard/r/0__3__2/)) and by maintaining a [public issue tracker](https://github.com/open-contracting/standard/issues). We enegaged contracting, open-data, and other stakeholders through mailing lists and other online spaces. Finally, development sprints held at PyCon Montreal and PyCon Europe 2014 also actively contributed to the development of the specification. 
 
 Over [150 people](../credits) have provided comments, feedback and input into the specification over the year of initial development.
 
@@ -36,9 +38,9 @@ The specification has moved through a number of stages.
 
 * **alpha** (June 2014) - An [outline data model was shared](http://ocds.open-contracting.org/standard/r/0__2__0/), and high-level concepts outlined for consultation. Design of individual field-level specifications began.
 
-* **beta **(September 2014) - A proposed schema, including field-level definitions was put forward, and opened for consultation. The schema is ready for early-adopters to validate and pilot. Feedback suggested a number of substantial changes.
+* **beta** (September 2014) - A proposed schema, including field-level definitions was put forward, and opened for consultation. The schema is ready for early-adopters to validate and pilot. Feedback suggested a number of substantial changes.
 
-* **release candidate **(November 2014) - The specification is close to its final form and out for final review. Changes will be minor, and any major proposals for change will be managed through [extensions](../../key_concepts/conformance) until the next version update process.
+* **release candidate** (November 2014) - The specification is close to its final form and out for final review. Changes will be minor, and any major proposals for change will be managed through [extensions](../../key_concepts/conformance) until the next version update process.
 
 * **release** (tbc) -  The initial version (1.0) specification is frozen and any future changes will occur to new versions, with a clear governance process for making revisions.
 
@@ -50,6 +52,6 @@ This is a living standard, and will continue to evolve based on the feedback of 
 
 Governance proposals for the future development of the Open Contracting Data Standard, including the technical specification and policies around its adoption, will be considered by the Open Contracting Partnership board in late 2014. Proposals for governance will draw upon the [Open Stand](http://open-stand.org/) ‘Modern Paradigm for Standards’ which calls for openness, transparency and clearly set out process for change management. 
 
-Between the launch of the 1.0 Release Candidate and any future versions of the specification, ongoing feedback can be provided through the [Standard Issue Trackers](https://github.com/open-contracting/standard/issues) on GitHub.
+Between the launch of the 1.0 Release Candidate and any future versions of the specification, ongoing feedback can be provided through the [issue trackers](https://github.com/open-contracting/standard/issues) on GitHub.
 
 Announcements about proposed updates to the specification, and periods for comment, will be made to the [public-ocds@webfoundation.org](mailto:public-ocds@webfoundation.org) mailing list.
