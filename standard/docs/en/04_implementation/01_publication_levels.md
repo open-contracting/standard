@@ -1,10 +1,10 @@
 [TOC]
 
-# Progressive Publication
+# Publication levels
 
 <span class="lead">Increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement. Governments, platform providers and other organizations can all make progressive step-by-step changes to their disclosure practice to achieve the highest possible levels of open contracting data and document publication on the web.</span>
 
-<span class="lead">This section sets out a series of steps towards improving the content, and the technical openness, of contracting data and.</lead>
+<span class="lead">This section sets out a series of steps towards improving the content, and the technical openness, of contracting data and.</span>
 
 On the [publication patterns](../publication_patterns) page you will find further information to support you at each stage of implementation. The [merging](../merging) page provides details of this key aspect of full OCDS implementation. 
 
@@ -36,7 +36,7 @@ Each level increase makes data more accessible, re-usable and valuable.
 
 ### ☆ Upload basic open contracting information to the web
 
-<span class="lead">Take information on contracting processes in whatever format it is currently available, and make sure it is available to citizens on the Web.</span>
+Take information on contracting processes in whatever format it is currently available, and make sure it is available to citizens on the Web.
 
 An example of publication at this level would involve uploading all the documents relating to a contract process to an agency website. Good practice would involve using common naming and filing conventions, so users can easily find all the documents related to a specific tender or contract. 
 
@@ -47,7 +47,7 @@ Providing documents offers an initial level of transparency, but users have to d
 
 ### ☆ ☆ Provide machine-readable data about contracts
 
-<span class="lead">Provide machine-readable datasets that contain key information recommended in the Open Contracting Data Standard.</span>
+Provide machine-readable datasets that contain key information recommended in the Open Contracting Data Standard.
 
 An example of publication at this level would involve providing a downloadable CSV file of contract information extracted from an existing database seeking to use, or map to, field names and data structures recommended by OCDS wherever possible.
 
@@ -59,7 +59,7 @@ Providing structured data will allow users to perform basic analysis, but until 
 
 ### ☆ ☆ ☆ Provide structured data using open standards
 
-<span class="lead">Using the Open Contracting Data Standard model to publish initiation, award, contract and implementation information for each contracting process.</span>
+Using the Open Contracting Data Standard model to publish initiation, award, contract and implementation information for each contracting process.
 
 OCDS provides guidance on the fields to include, and how to structure them using [a JSON schema](../../schema/reference) so that third-parties can re-use your data effectively. 
 
@@ -93,7 +93,7 @@ This will allow users to follow the links to discover more about the context of 
 
 ### ☆ ☆ ☆ ☆ ☆ Make links to other datasets
 
-<span class="lead">OCDS provides spaces to give URIs to identify key dataset elements. By drawing on data published on the web by other agencies, and maintaining integration between your systems, you can provide links to these other data points within your OCDS data. </span>
+OCDS provides spaces to give URIs to identify key dataset elements. By drawing on data published on the web by other agencies, and maintaining integration between your systems, you can provide links to these other data points within your OCDS data.
 
 This level builds upon 4 ☆ publication, and helps to build a joined up web of data.
 
