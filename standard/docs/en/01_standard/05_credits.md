@@ -34,7 +34,7 @@ Thanks to the following contributors who have shared code, feedback and other di
         display:block;
     }
 --></style>
-<div class="credit-block">
+<div class="credit-block clearfix">
     <span class="credit"><a href="https://github.com/anabrandusescu">anabrandusescu<img border="0" width="75" src="https://avatars.githubusercontent.com/u/3058770?v=3"/></span>
     <span class="credit"><a href="https://github.com/arothenberg">arothenberg<img border="0" width="75" src="https://avatars.githubusercontent.com/u/1676642?v=3"/></span>
     <span class="credit"><a href="https://github.com/avian2">avian2<img border="0" width="75" src="https://avatars.githubusercontent.com/u/1135442?v=3"/></span>
