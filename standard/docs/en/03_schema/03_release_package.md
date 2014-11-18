@@ -2,7 +2,7 @@
 
 # Release Package
 
-The release package schema describes the container document for publishing releases. The package contains important meta-data.
+<span class="lead">The release package schema describes the container document for publishing releases. The package contains important meta-data.</span>
 
 You can view an interactive version of the release schema below (requires javascript) or [download this version of the schema here]({% url 'schema' release_name 'release-package-schema' %}).
 
