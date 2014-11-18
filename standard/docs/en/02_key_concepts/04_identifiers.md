@@ -37,7 +37,7 @@ The following are examples of valid OCIDs:
 
 <style><!--
     blockquote {
-        margin: 0px;
+        margin: 0px 0px 24px 0px;
     }
 --></style>
 <blockquote>
