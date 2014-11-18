@@ -86,7 +86,7 @@ An award move through multiple states. Releases over time may update the status 
 
 The ```awardStatus``` field and code-list is used to indicate when a tender did not result in an award (through the ```"awardStatus":"unsuccessful"``` value)
 
-## Contract Status
+### Contract Status
 
 Contracts can move through multiple states. Releases over time may update the status of a contract.
 
