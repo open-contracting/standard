@@ -19,32 +19,29 @@ Some publishers may not currently have a consistent identifier used across the d
 The use of a **globally unique** OCID allows third-parties to refer to a contracting process with confidence, and means that when multiple open contracting datasets are brought together there is no risk of data about different contracting processes clashing or becoming confused. 
 
 ### Construction
-
 An OCID is made up of four parts. The first three can generally be set as constant values in most systems:
 
-* **A prefix agency**(characters 1 - 4) - currently only ‘ocds’ (Open Contracting Data Standard)
+* A prefix agency (characters 1 - 4) - currently only ‘ocds’ (Open Contracting Data Standard)
 * A - separator
-* **A registered prefix** (charachters 6 - 11) - a random alphanumeric string given to publishers
-* **A publisher namespace **(charachters 12 - 13) - for allow publishers to maintain separate series of local identifiers. 
+* A registered prefix (charachters 6 - 11) - a random alphanumeric string given to publishers
+* A publisher namespace (charachters 12 - 13) - for allow publishers to maintain separate series of local identifiers. 
 * A ‘-’ separator 
-* **An internal identifier **(charachters 15 and above) - drawn from publishers existing systems
+* An internal identifier (charachters 15 and above) - drawn from publishers existing systems
 
 This allows publishers to use an internal identifier from within their own systems, and simple to prepend the prefix and namespace to this when publishing data, making their local identifier into a globally unique identifier. 
 
 The OCID is case sensitive.
 
 ### Examples
-
 The following are examples of valid OCIDs:	
+
 > ocds-a2ef3d01-1594121
 > ocds-df4534dg-eu-192301-2009 
 
 ### Prefix agency
-
 This defaults to ‘ocp1’. During the current stage of OCDS development, the Open Contracting Partnership is the only organisation issuing valid prefixes. In future, other organisations may be able to issue prefixes, and a codelist of approved prefix agencies will be incorporated into the standard. 
 
 ### Registered prefix
-
 Prefix are randomly generated lowercase alpha-numberic strings. A prefix is assigned to each organisation that holds the existing internal identifier for a Contracting Processes. 
 
 For example, a government publishing detail on their own contracting would register a single prefix, and would use this on all their OCIDs. 
