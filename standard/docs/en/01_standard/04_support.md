@@ -2,7 +2,7 @@
 
 # Support
 
-If you are planning to implement or use the OCDS Specification you may find the [public-ocds mailing list](https://groups.google.com/a/webfoundation.org/forum/#!forum/public-ocds) to be a useful source of support.
+<span class="lead">If you are planning to implement or use the OCDS Specification you may find the [public-ocds mailing list](https://groups.google.com/a/webfoundation.org/forum/#!forum/public-ocds) to be a useful source of support.</span>
 
 ## Community support
 
