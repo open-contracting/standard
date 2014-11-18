@@ -76,7 +76,6 @@ NOTE: This example is based on an earlier version of the schema, and does not sh
         <li><a href="#item" data-toggle="tab">item</a></li>
         <li><a href="#organization" data-toggle="tab">organization</a></li>
         <li><a href="#milestone" data-toggle="tab">milestone</a></li>
-        <li><a href="#transaction" data-toggle="tab">transaction</a></li>  
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="release">
