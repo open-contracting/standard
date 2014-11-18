@@ -35,6 +35,11 @@ The OCID is case sensitive.
 ### Examples
 The following are examples of valid OCIDs:	
 
+<style><!--
+    blockquote {
+        margin: 0px;
+    }
+--></style>
 <blockquote>
 <p>ocds-a2ef3d01-1594121</p>
 <p>ocds-df4534dg-eu-192301-2009</p>
