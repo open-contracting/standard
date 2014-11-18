@@ -23,15 +23,10 @@ The use of a **globally unique** OCID allows third-parties to refer to a contrac
 An OCID is made up of four parts. The first three can generally be set as constant values in most systems:
 
 * **A prefix agency**(characters 1 - 4) - currently only ‘ocds’ (Open Contracting Data Standard)
-
 * A - separator
-
 * **A registered prefix** (charachters 6 - 11) - a random alphanumeric string given to publishers
-
 * **A publisher namespace **(charachters 12 - 13) - for allow publishers to maintain separate series of local identifiers. 
-
 * A ‘-’ separator 
-
 * **An internal identifier **(charachters 15 and above) - drawn from publishers existing systems
 
 This allows publishers to use an internal identifier from within their own systems, and simple to prepend the prefix and namespace to this when publishing data, making their local identifier into a globally unique identifier. 
@@ -41,9 +36,7 @@ The OCID is case sensitive.
 ### Examples
 
 The following are examples of valid OCIDs:	
-
 > ocds-a2ef3d01-1594121
-
 > ocds-df4534dg-eu-192301-2009 
 
 ### Prefix agency
@@ -86,8 +79,7 @@ Publishers should seek to collect and record the **legal identifier** from an of
 There are two parts to expressing an **organisation identifier** in open contracting data. 
 
 1. An **organization register prefix **identifying a **register** in which the organisation is identified
-
-2. The **existing organizational ID** provided in that public register
+1. The **existing organizational ID** provided in that public register
 
 
 ### Example
