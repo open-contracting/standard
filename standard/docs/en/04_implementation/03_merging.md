@@ -15,7 +15,7 @@ The basic format of a record is simple. There are three components:
 - Versioned Release: For each field in the release, the versioned release contains the history
   of all the changes to that field over all the releases.
 
-For full information on records and releases see the [key concepts](../../key_concepts/releases_and_records/) and [schema reference](../../schema/reference).
+For full information on records and releases see the [key concepts](../../key_concepts/components/) and [schema reference](../../schema/reference).
 
 ## Merging
 
