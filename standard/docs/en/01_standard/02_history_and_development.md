@@ -33,7 +33,7 @@ The specification has moved through a number of stages.
 * **research** (November 2013 - May 2014) - User requirements gathered, and existing data supply explored. Technical options for the specification considered and consulted on.
 * **alpha** (June 2014) - An [outline data model was shared](http://ocds.open-contracting.org/standard/r/0__2__0/), and high-level concepts outlined for consultation. Design of individual field-level specifications began.
 * **beta** (September 2014) - A proposed schema, including field-level definitions was put forward, and opened for consultation. The schema is ready for early-adopters to validate and pilot. Feedback suggested a number of substantial changes.
-* **release candidate** (November 2014) - The specification is close to its final form and out for final review. Changes will be minor, and any major proposals for change will be managed through [extensions](../../key_concepts/conformance) until the next version update process.
+* **release candidate** (November 2014) - The specification is close to its final form and out for final review. Changes will be minor, and any major proposals for change will be managed through [extensions](../../key_concepts/conformance_and_extensions) until the next version update process.
 * **release** (tbc) -  The initial version (1.0) specification is frozen and any future changes will occur to new versions, with a clear governance process for making revisions.
 
 At present, the OCDS specification is not submitted to any formal standards body, but this will be reviewed by the Open Contracting Partnership as part of future governance developments. 

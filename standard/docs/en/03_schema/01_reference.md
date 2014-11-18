@@ -81,10 +81,10 @@ Notes:
 * ```milestones``` - publishers should list any relevant [milestones](#milestone) associated with the delivery of the goods and services covered by this tender. These are the milestones against which the whole contracting process will be evaluated. Publishers may include information about key milestones during the tender process itself, but should not use this in place of ```tenderPeriod```, ```enquiryPeriod``` or ```awardPeriod```.
 * ```value``` and ```minValue``` - the total upper estimated value of a procurement should be given in ```value```. For publishers who also specify a estimate minimum value, this can be placed in ```minValue```.
 *  ```method``` and ```methodRationale``` - tendering processes can use a variety of methods. Publishers should map their methods to one of the approved codes according to the [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of open, selective or limited. A free text explanation of why a given method was appropriate to this tender can be provided in ```methodRationale```. 
-* ```awardCriteria``` and ```awardCriteriaDetails``` - The [award criteria code list](../codelists#award-criteria) describes the basis on which contract awards will be made. This is an open codelist, and so may be extended with new codes. Free text describing the basis on which bids will be judged, and made, can be provided in the ```awardCriteriaDetail``` field. Publishers wishing to provide more structured information about selection, shortlisting and award criteria should propose [extensions](../../key_concepts/conformance#extensions) for this. 
+* ```awardCriteria``` and ```awardCriteriaDetails``` - The [award criteria code list](../codelists#award-criteria) describes the basis on which contract awards will be made. This is an open codelist, and so may be extended with new codes. Free text describing the basis on which bids will be judged, and made, can be provided in the ```awardCriteriaDetail``` field. Publishers wishing to provide more structured information about selection, shortlisting and award criteria should propose [extensions](../../key_concepts/conformance_and_extensions#extensions) for this. 
 * ```documents``` - supporting documentation should be attached to the tender. This may include official legal notices of tender, as well as technical specifications, evaluation criteria, and, as a tender process progresses, clarifications, replies to queries and copies of bids submitted or listings of shortlisted firms. See the [attachments](#attachments) section for more details of how to include documents, and consult the [documentType codelist](../codelists#document-type) for suggested documents to include for basic, intermediate or advanced publication.
 
-Information on bidders against a contract will be handled by an [extension](../../key_concepts/conformance#extensions) during the period of the standard release candidate. Publishers wishing to provide detailed information on bidders should [contact support](../../standard/support).
+Information on bidders against a contract will be handled by an [extension](../../key_concepts/conformance_and_extensions#extensions) during the period of the standard release candidate. Publishers wishing to provide detailed information on bidders should [contact support](../../standard/support).
 
 
 ### Award
@@ -119,7 +119,7 @@ Implementation information can be updated over the course of a contract. It belo
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-implementation.csv" data-table-class="table table-striped schema-table"></div>
 
-Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](../../key_concepts/conformance#extensions)
+Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](../../key_concepts/conformance_and_extensions#extensions)
 
 #### Transaction
 

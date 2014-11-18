@@ -18,4 +18,4 @@ This section also covers
 1. How to identify **[organizations](../identifiers#organizations)** and other parties involved in a contracting process;
 1. Different **[serializations](../serlialization)** of the Open Contracting Data Standard;
 1. How to combine release and records together in **[data packages](../components#packages)**;
-1. Options for **[extending](../conformance)** the data standard;
+1. Options for **[extending](../conformance_and_extensions)** the data standard;
