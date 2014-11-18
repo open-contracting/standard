@@ -1,10 +1,9 @@
 [TOC]
 
-# Documents, Releases & Records
+# Components
+<span class="lead">There are a number of key components that make up open contracting data. In particular, releases and records are the backbone of the Open Contracting Data Standard. But documents play a vital role in the world of contracting and while releases and records provide a machine-readable summary of a contracting process, they should always be supported by links to well-managed documents.</span>
 
 ## Documents
-
-<span class="lead">Documents are a vital part of the Open Contracting Data Standard. While releases and records provide a machine-readable summary of a contracting process, they should always be supported by links to well-managed documents.</span>
 
 <img src="../../../assets/green_documents.svg.png" width="150" align="right"/>A contracting process generates many documents - from needs assessment and market studies, to tender notices and calls for proposals, and the actual text of contracts. Wherever there is no legal or policy restriction on doing so, these should be placed online in a stable location, and linked to from within the relevant OCDS release and records. 
 
@@ -94,7 +93,7 @@ A notice can be attached to a tender, award or contract within OCDS using the ``
 
 ## Packages
 
-<span class="lead">For the convenience of users, a collection of releases, or a collection of records, can be combined together in a release or record package.</span>
+For the convenience of users, a collection of releases, or a collection of records, can be combined together in a release or record package.
 
-View the [schema reference](../../schema) for more details. 
+View the [schema reference](../../schema/reference) for more details. 
 
