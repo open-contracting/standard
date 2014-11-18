@@ -18,3 +18,13 @@ cd standard/schema/utils
 ````
 
 The tests, which run automatically on every commit, check that this process has been done.
+
+## Docs guidelines
+
+The name of the file, becomes the name of the tab
+
+
+When writing docs, every page should have:
+
+1) an h1 header with the name of the page, that matches the title of the tab/file
+1) a consistent flow down always h2, then h3 etc. - don't start at h3
