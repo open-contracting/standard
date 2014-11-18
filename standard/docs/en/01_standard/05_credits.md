@@ -14,7 +14,7 @@ Many more people have been involved in inputting to the standard. Below is a non
 
 ### User research
 
-Coming soon.
+Many thanks to Antonio Acuna, Steve Addler, Ivan Begtin, Bibhusan Bista, Eduardo Bohórquez, Mathieu Carlier, Andrew Clarke, Kami Dar, Eva Vozárová,  Kami Dar, Daniel Dudis, Mihály Fazekas, Dustin Homer, John Jordan, Jeff Kaplan, Charles Kenny, Ian Makgill, Habibullah Muqbel, Seember Nyager, Meike Paetzold, Pascal Robichaud, Claire Schouten, Tom Sisti; Chris Taggart; as well as all those who participated in Open Contracting Data related events and meetings in Montreal, Washington, Berlin, Kathmandu, Mexico, and online; and all those who wished to remain anonymous; for their invaluable input and feedback into the demand assessment process.
 
 ### GitHub contributions
 
