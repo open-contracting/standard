@@ -1,6 +1,6 @@
 [TOC]
 
-# Schema Reference
+# Reference
 
 <span class="lead">The [Release Schema](../release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas showing how to combine releases into data packages and how to compile releases into records. This reference section works step-by-step through additional supporting information to assist publishers and users of the data.</span>
 
@@ -28,16 +28,12 @@ Releases must be published within a release package, which can contain one or mo
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-package.csv" data-table-class="table table-striped schema-table"></div>
 
-#### Notes
+Notes:
 
 * The uri should unique identify this release package. Publishers should provide a [dereferenceable HTTP URI](http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier) wherever possible and should host the data package at this URI, enabling users to look-up and verify the contents of a release package from its original source. 
-
 * The [publishedDate](#date) on which this package was published. If a package is automatically generated and re-published on a regular basis, this date should reflect the date of the last change to the contents of the package. 
-
 * The publisher should be identified using an Organisation block. See the [Organization/Entity](#organization) guidance for details.
-
 * ````license```` - See the [licensing guidance](../../implementation/publication_patterns#licensing) for more details on selecting and publishing license information. 
-
 * ````publicationPolicy```` - See the [publication policy](../../implementation/publication_patterns#publication-policy) guidance for more details.
 
 ### Release
@@ -46,16 +42,12 @@ The top level of a release consists of the following fields and objects:
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-toplevel.csv" data-table-class="table table-striped schema-table"></div>
 
-#### Notes
+Notes:
 
 * ```ocid``` - Providing each [contracting process](../../definitions#contracting-process) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](../../identifiers#ocid) for details of how to construct an OCID. 
-
 * ```tag``` - The release.tag is used to identify the nature of the release being made. This can be used by consuming applications to filter releases, or may in future be used for advanced validation. A release which updates or amends previous data must always use the appropriate update or amendment release tag. Values must be drawn from the [releaseTag codelist](../codelists#release-tag).
-
 * ```date``` - The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates. 
-
 * ```language``` - see the section on [multi-language support](#multi-language-support) for information on language handling.
-
 * ```buyer``` - The buyer details are published using an [organization](#entity) block.
 
 Further details on each of the blocks contained within release are below. 
@@ -64,7 +56,6 @@ Further details on each of the blocks contained within release are below.
 
 The planning section can be used to describe the background to a contracting process. This may include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
 
-#### Fields
 <div class="include-csv" data-src="standard/docs/field_definitions/release-planning.csv" data-table-class="table table-striped schema-table"></div>
 
 Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Budget Data Package](https://github.com/openspending/budget-data-package) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
@@ -79,28 +70,18 @@ The tender section includes details of the announcement that a organization inte
 
 It may contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and may also be used to record details of how a completed tender process, including details of bids received. 
 
-#### Fields
-
 <div class="include-csv" data-src="standard/docs/field_definitions/release-tender.csv" data-table-class="table table-striped schema-table"></div>
 
-#### Notes 
+Notes: 
 
 * ```tender.id``` - see the [identifiers guidance](../../key_concepts/identifiers#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
-
 * ```procuringEntity``` - in many cases the organization managing the procurement process will be different from the organization whose budget is being used for the procurement (the 'buyer' in OCDS terminology). If this is the case, then the details of this procuring organization should be provided here. 
-
 * ```title``` and ```description``` - tender title and description are optional. The details of items to be procured should always be provided in ```items```. Descriptions should not be used in place of providing structured data on items, dates and other details. Instead, title and description should be used to provide a brief overview of the tender. Publishers should consider adopting a 'tweet length' title, and should avoid ALL UPPERCASE titles, or titles containing code words or other artefacts from internal databases. The goal of these fields is to give users a clear idea of the nature of a tender. 
-
 * ```items``` - publishers should provide details of each of the items to be procured under this tender. 
-
 * ```milestones``` - publishers should list any relevant [milestones](#milestone) associated with the delivery of the goods and services covered by this tender. These are the milestones against which the whole contracting process will be evaluated. Publishers may include information about key milestones during the tender process itself, but should not use this in place of ```tenderPeriod```, ```enquiryPeriod``` or ```awardPeriod```.
-
 * ```value``` and ```minValue``` - the total upper estimated value of a procurement should be given in ```value```. For publishers who also specify a estimate minimum value, this can be placed in ```minValue```.
-
 *  ```method``` and ```methodRationale``` - tendering processes can use a variety of methods. Publishers should map their methods to one of the approved codes according to the [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of open, selective or limited. A free text explanation of why a given method was appropriate to this tender can be provided in ```methodRationale```. 
-
 * ```awardCriteria``` and ```awardCriteriaDetails``` - The [award criteria code list](../codelists#award-criteria) describes the basis on which contract awards will be made. This is an open codelist, and so may be extended with new codes. Free text describing the basis on which bids will be judged, and made, can be provided in the ```awardCriteriaDetail``` field. Publishers wishing to provide more structured information about selection, shortlisting and award criteria should propose [extensions](../../key_concepts/conformance#extensions) for this. 
-
 * ```documents``` - supporting documentation should be attached to the tender. This may include official legal notices of tender, as well as technical specifications, evaluation criteria, and, as a tender process progresses, clarifications, replies to queries and copies of bids submitted or listings of shortlisted firms. See the [attachments](#attachments) section for more details of how to include documents, and consult the [documentType codelist](../codelists#document-type) for suggested documents to include for basic, intermediate or advanced publication.
 
 Information on bidders against a contract will be handled by an [extension](../../key_concepts/conformance#extensions) during the period of the standard release candidate. Publishers wishing to provide detailed information on bidders should [contact support](../../standard/support).
@@ -112,7 +93,7 @@ The award section is used to announce any awards issued for this tender. There m
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-award.csv" data-table-class="table table-striped schema-table"></div>
 
-#### Notes
+Notes:
 
 
 ### Contract
@@ -176,9 +157,6 @@ Within each amendment block, publishers should provide an array of items that ha
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-changes.csv" data-table-class="table table-striped schema-table"></div>
 
-
-* * * *
-
 ## Record structure
 
 Whereas there can be multiple releases concerning a given contracting process, there is a single **contracting record** for each OCID, providing a summary of all the available data about this particular contracting process.
@@ -191,9 +169,6 @@ Releases **must** contain:
 Release **should** contain:
 
 * **compiledRelease** - the latest version of all open contracting process fields, represented using the release schema. For example, if a contractSignature release has been issued with with a contractValue of $100, and then a contractAmendment release has been issued with a contractValue updated to $200, the compiledRelease would have contract/contractValue of $200.
-
-and
-
 * **versionedRelease** - containing the history of the data in the compiledRecord, with all known past values of any field and the release that information came from.
 
 Records should be embedded within a record package.  
@@ -249,9 +224,6 @@ Publishers may chose to provide a copy of the record with, and without, this inf
 
 Third parties should also be able to use the information in the releases list to fetch source data, compile and verify their own version history for a contract.
 
-
-* * * * 
-
 ## Language
 
 Many publishers need to be able to share key data in multiple languages. All free-text title and description fields in the Open Contracting Data Standard can be given in one or more languages.
@@ -287,8 +259,6 @@ A contract is for ‘Software consultancy services’ may be published in a rele
 </div>
 
 The JSON Schema makes use of the JSON Scheme 0.4 [‘Pattern Properties](http://spacetelescope.github.io/understanding-json-schema/reference/object.html#pattern-properties)’ definition to allow validation of multi-language fields. 
-
-* * * *
 
 ## Field reference
 
@@ -356,12 +326,10 @@ The items block is used to list the line-items associated with a tender, award o
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-item.csv" data-table-class="table table-striped schema-table"></div>
 
-#### Notes 
+Notes: 
 
 * The [proposed location extension](https://github.com/open-contracting/standard/tree/master/standard/schema/extensions/proposed_location) can be attached to items, allowing the point of delivery for a given item to be indicated in both the tender, award and contract stage.
-
 * The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no code list for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
-
 * Items should be classified according to a established scheme of codes. A single primary ```classification``` can be given, although an array of ```additionalClassification``` can be provided.
 
 #### Classification
@@ -381,7 +349,7 @@ In the context of a contract implementation block, milestones are used to track 
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-milestone.csv" data-table-class="table table-striped schema-table"></div>
 
-#### Notes
+Notes:
 
 * The ```dateModified``` field should be changed whenever the progress towards a milestone is reviewed, and the ```status``` either updated, or re-confirmed. 
 
@@ -422,9 +390,6 @@ There may be cases where a publisher needs to remove, rather than update, a valu
 The following describes how null values will be handled in the compilation of a record:
 
 * If a field is included with a value in one release, and then set to ```null``` in a subsequent release, that field will be recorded as null in the compiled record (though past values of it should remain in the versioned section of the record).
-
 * If a field is set to null in one release, and is also set to ```null``` in a subsequent release, it will be recorded as null as per the original release, and the record will not show any change based on the subsequent release I.e. fields that are set to null are recorded as such and then only changed if the value is set.
-
 * If a field is set to ```null``` in one release, and then has a value in a subsequent release, it will first appear in the record, and the version section of the record as ```null``` and then with the subsequent value.
-
 * If a field does not appear in one release, and then appears with a value in a subsequent release, it will first appear in the record, and the version section of the record, when the first release that contains it is compiled into the record.
