@@ -8,8 +8,12 @@ def format(text):
     return markdown.markdown(text.replace("date-time","[date-time](#date)")).replace("<p>","").replace("</p>","")
 
 def make_link(text):
-    text = text.replace("#/definitions/","")
-    return format("["+text+"](#"+text.lower()+")")
+    if "http" in text:
+        return format("["+text.split("/")[-1]+"]("+text+")")
+    else:
+        text = text.replace("#/definitions/","")
+        return format("["+text+"](#"+text.lower()+")")
+        
 
 def make_definition_table(json,file_path,what="properties",section=""): 
     table = [['Field Name','Description','Format']]
