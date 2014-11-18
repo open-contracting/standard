@@ -1,6 +1,6 @@
 [TOC]
 
-# Merging: record creation
+# Merging
 
 <span class="lead">To create a full record from a series of OCDS releases related to an contracting process the releases should be merged. This section details the creation of records.</span>
 
@@ -17,13 +17,13 @@ The basic format of a record is simple. There are three components:
 
 For full information on records and releases see the [key concepts](../../key_concepts/releases_and_records/) and [schema reference](../../schema/reference).
 
-# Merging
+## Merging
 
 If a publisher provides releases and a record containing a list of the releases, then third party software should be able to create compiled and versioned releases. Publishers may or may not want to run this software themselves and provide the full record for download.
 
 The following sections describe how merging works should individual parties wish to implement merging or a merging library.
 
-## Requirements
+### Requirements
 
 For merging to work effectively, all the releases to be merged must share a common ```ocid``` and a number of other criteria must be met.
 
@@ -45,7 +45,7 @@ The following arrays of items must be re-published in full for each release:
 
 Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](../../schema/reference#emptying-fields-and-values).
 
-## Merge Strategies
+### Merge Strategies
 
 The purpose of merging releases is to create (a) a snapshot record of the current state of a contracting process; (b) a versioned history of the process. 
 
@@ -59,7 +59,7 @@ Within the OCDS release schema, each field has a mergeStrategy property. This st
 
 We inhert the existing merge strategies from [jsonmerge](https://github.com/avian2/jsonmerge#merge-strategies) and add a number of specific strategies for OCDS, which are currently only available in the [OCDS fork of jsonmerge](https://github.com/open-contracting/jsonmerge) and which are described below.
 
-### ocdsVersion merge strategy
+#### ocdsVersion merge strategy
 
 Most fields have the mergeStrategy ocdsVersion. The ocdsVersion strategy has two
 modes of operation:
@@ -70,28 +70,29 @@ modes of operation:
 Here is a simple example:
 
 <div class="tabbable">
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#ar1" data-toggle="tab">release 1</a></li>
-  <li><a href="#ar2" data-toggle="tab">release 2</a></li>
-  <li><a href="#amerged" data-toggle="tab">merged</a></li>
-</ul>
-<div class="tab-content">
-    
-<div class="tab-pane active" id="ar1">
-<div class="include-json" data-src="standard/example/merge_r1.json"></div>
-</div>
-<div class="tab-pane" id="ar2">
-<div class="include-json" data-src="standard/example/merge_r2.json"></div>
-</div>
-<div class="tab-pane" id="amerged">
-<small>
-<p>Note that the compiledRelease not has 'procurementMethod' of 'open', reflecting the most recent value of this fields.</p>
-<p>As you can see in the versionedRelease, the field procurementMethod has changed from a value documenting the latest correct value, to a list of objects which document the value for each release in which it changed.</p>
-<p>(Other record fields are omitted for easy presentation.)</p>
-</small>
-<div class="include-json" data-src="standard/example/merge_r1_r2.json"></div>
-</div>
-</div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#ar1" data-toggle="tab">release 1</a></li>
+        <li><a href="#ar2" data-toggle="tab">release 2</a></li>
+        <li><a href="#amerged" data-toggle="tab">merged</a></li>
+    </ul>
+    <div class="tab-content">
+        
+        <div class="tab-pane active" id="ar1">
+            <div class="include-json" data-src="standard/example/merge_r1.json"></div>
+        </div>
+        <div class="tab-pane" id="ar2">
+            <div class="include-json" data-src="standard/example/merge_r2.json"></div>
+        </div>
+        <div class="tab-pane" id="amerged">
+            <div class="include-json" data-src="standard/example/merge_r1_r2.json">
+            <small>
+            <p>Note that the compiledRelease not has 'procurementMethod' of 'open', reflecting the most recent value of this fields.</p>
+            <p>As you can see in the versionedRelease, the field procurementMethod has changed from a value documenting the latest correct value, to a list of objects which document the value for each release in which it changed.</p>
+            <p>(Other record fields are omitted for easy presentation.)</p>
+            </small>
+            </div>
+        </div>
+    </div>
 </div>
 
 #### ocdsVersion for lists
@@ -137,7 +138,7 @@ An example of this strategy in action is shown below:
 </div>
 
 
-### arrayMergeById merge strategy
+#### arrayMergeById merge strategy
 
 The arrayMergeById applies to the following lists of objects within the release:
 
@@ -177,7 +178,7 @@ To remove an entry it would have to have it's field values set to null, as per t
 </div>
 
 
-### ocdsOmit merge strategy
+#### ocdsOmit merge strategy
 
 There are a number of fields marked with the strategy ocdsOmit.
 
@@ -186,7 +187,7 @@ This strategy returns nothing on merge, because to update the field wouldn't mak
 For example, the field for `tag` should not be updated to the latest version, 
 it should be updated to `compiled` for it to make sense.
 
-## Implementing merging
+### Implementing merging
 
 To merge releases into records, we use the jsonmerge library with its add-ons to json schema that specify a mergeStrategy on each field.
 
