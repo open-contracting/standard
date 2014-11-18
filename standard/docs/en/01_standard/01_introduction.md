@@ -10,20 +10,17 @@ This website currently contains an initial version of the schema that has been d
 ## Getting Started
 
 Publishers:
-<ul>
-  <li>Read more about the <a href="../history_and_development">origin, goals & development of the standard</a>;</li>
-  <li>Publish your own data using the <a href="../../schema/reference/">schema reference</a> and <a href="../../implementation/publication_patterns">publication patterns</a>;</li>
-  <li>Test your data with the <a href="http://ocds.open-contracting.org/validator/validate/">validation tools</a>;</li>
-  <li>Publish your data & <a href="../support">let us know about it</a>;</li>
-</ul>
+
+* Read more about the <a href="../history_and_development">origin, goals & development of the standard</a>;
+* Publish your own data using the <a href="../../schema/reference/">schema reference</a> and <a href="../../implementation/publication_patterns">publication patterns</a>;
+* Test your data with the <a href="http://ocds.open-contracting.org/validator/validate/">validation tools</a>;
+* Publish your data & <a href="../support">let us know about it</a>;
 
 Users:
-<ul>
- <li>Read more about the <a href="../history_and_development">origin, goals & development of the standard</a>;</li>
- <li>Explore different <a href="../use_cases">use cases for the standard</a>;</li>
- <li>Understand how to process data using the <a href="../../schema/reference">schema reference</a>;</li>
- <li>Find <a href="../../implementation/user_guidance">tools and tips for dealing with data</a>;</li>
-</ul>
+* Read more about the <a href="../history_and_development">origin, goals & development of the standard</a>;
+* Explore different <a href="../use_cases">use cases for the standard</a>;
+* Understand how to process data using the <a href="../../schema/reference">schema reference</a>;
+* Find <a href="../../implementation/user_guidance">tools and tips for dealing with data</a>;
 
 ## Credits
 
