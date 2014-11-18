@@ -1,6 +1,6 @@
 [TOC]
 
-# Serializations
+# Serialization
 
 <span class="lead">The Open Contracting Data Standard provides a **structured data model** for capturing in-depth information about all stages of the contracting process.</span>
 
@@ -59,7 +59,6 @@ In cases where there are one-to-many relationships within a release, it will be 
 By including identifiers in the sub-tables that point to the ocid, releaseID and the id of the parent entity of the sub-table item, it is possible to:
 
 * Use [database joins](http://en.wikipedia.org/wiki/Join_%28SQL%29) or spreadsheet Vlookup ([Excel](http://office.microsoft.com/en-gb/excel-help/vlookup-HP005209335.aspx), [Google Docs](https://support.google.com/docs/answer/3093318?hl=en), [Open Office](https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_VLOOKUP_function)) to analyse the data;
-
 * Re-construct a structured data tree (e.g. in JSON) from the tabular data;
 
 The JSON re-uses common definitions regularly (e.g. for items, classifications, organizations etc.) and applications following the multi-table approach should generally seek to collect together items of each type in their own table, rather than creating different tables for each kind of item, organization and so-on.
@@ -68,52 +67,40 @@ A worked example of a multi-table template is shown below.
 
 NOTE: This example is based on an earlier version of the schema, and does not show all sub-tables. It should be understood as illustrative only.
 
-
-
 <div class="tabbable">
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#release" data-toggle="tab">release</a></li>
-  <li><a href="#identifier" data-toggle="tab">identifier</a></li>
-  <li><a href="#award" data-toggle="tab">award</a></li>
-  <li><a href="#contract" data-toggle="tab">contract</a></li>
-  <li><a href="#item" data-toggle="tab">item</a></li>
-  <li><a href="#organization" data-toggle="tab">organization</a></li>
-  <li><a href="#milestone" data-toggle="tab">milestone</a></li>
-  <li><a href="#attachment" data-toggle="tab">attachment</a></li>  
-  <li><a href="#transaction" data-toggle="tab">transaction</a></li>  
-</ul>
-<div class="tab-content">
-    
-<div class="tab-pane active" id="release">
-<div class="include-csv" data-src="standard/example/flat/release.csv" data-table-class="table table-striped schema-table"></div>
-</div>
-<div class="tab-pane" id="identifier">
-<div class="include-csv" data-src="standard/example/flat/Identifier.csv" data-table-class="table table-striped schema-table"></div>
-</div>
-<div class="tab-pane" id="award">
-    
-<div class="include-csv" data-src="standard/example/flat/Award.csv" data-table-class="table table-striped schema-table"></div>
-
-</div>
-<div class="tab-pane" id="contract">
-<div class="include-csv" data-src="standard/example/flat/Contract.csv" data-table-class="table table-striped schema-table"></div>
-</div>
-<div class="tab-pane" id="item">
-<div class="include-csv" data-src="standard/example/flat/Item.csv" data-table-class="table table-striped schema-table"></div>
-</div>
-<div class="tab-pane" id="organization">
-<div class="include-csv" data-src="standard/example/flat/Organization.csv" data-table-class="table table-striped schema-table"></div>
-</div>
-<div class="tab-pane" id="milestone">
-<div class="include-csv" data-src="standard/example/flat/Milestone.csv" data-table-class="table table-striped schema-table"></div>
-</div>
-<div class="tab-pane" id="attachment">
-<div class="include-csv" data-src="standard/example/flat/Document.csv" data-table-class="table table-striped schema-table"></div>
-</div>
-<div class="tab-pane" id="transaction">
-<div class="include-csv" data-src="standard/example/flat/Transaction.csv" data-table-class="table table-striped schema-table"></div>
-</div>
-</div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#release" data-toggle="tab">release</a></li>
+        <li><a href="#identifier" data-toggle="tab">identifier</a></li>
+        <li><a href="#award" data-toggle="tab">award</a></li>
+        <li><a href="#contract" data-toggle="tab">contract</a></li>
+        <li><a href="#item" data-toggle="tab">item</a></li>
+        <li><a href="#organization" data-toggle="tab">organization</a></li>
+        <li><a href="#milestone" data-toggle="tab">milestone</a></li>
+        <li><a href="#transaction" data-toggle="tab">transaction</a></li>  
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="release">
+            <div class="include-csv" data-src="standard/example/flat/release.csv" data-table-class="table table-striped schema-table"></div>
+        </div>
+        <div class="tab-pane" id="identifier">
+            <div class="include-csv" data-src="standard/example/flat/Identifier.csv" data-table-class="table table-striped schema-table"></div>
+        </div>
+        <div class="tab-pane" id="award">
+            <div class="include-csv" data-src="standard/example/flat/Award.csv" data-table-class="table table-striped schema-table"></div>
+        </div>
+        <div class="tab-pane" id="contract">
+            <div class="include-csv" data-src="standard/example/flat/Contract.csv" data-table-class="table table-striped schema-table"></div>
+        </div>
+        <div class="tab-pane" id="item">
+            <div class="include-csv" data-src="standard/example/flat/Item.csv" data-table-class="table table-striped schema-table"></div>
+        </div>
+        <div class="tab-pane" id="organization">
+            <div class="include-csv" data-src="standard/example/flat/Organization.csv" data-table-class="table table-striped schema-table"></div>
+        </div>
+        <div class="tab-pane" id="milestone">
+            <div class="include-csv" data-src="standard/example/flat/Milestone.csv" data-table-class="table table-striped schema-table"></div>
+        </div>
+    </div>
 </div>
 
 
