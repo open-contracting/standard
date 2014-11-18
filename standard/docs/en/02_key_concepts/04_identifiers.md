@@ -35,8 +35,10 @@ The OCID is case sensitive.
 ### Examples
 The following are examples of valid OCIDs:	
 
-> ocds-a2ef3d01-1594121
-> ocds-df4534dg-eu-192301-2009 
+<blockquote>
+<p>ocds-a2ef3d01-1594121</p>
+<p>ocds-df4534dg-eu-192301-2009</p>
+</blockquote>
 
 ### Prefix agency
 This defaults to ‘ocp1’. During the current stage of OCDS development, the Open Contracting Partnership is the only organisation issuing valid prefixes. In future, other organisations may be able to issue prefixes, and a codelist of approved prefix agencies will be incorporated into the standard. 
