@@ -61,8 +61,8 @@ Thanks to the following contributors who have shared code, feedback and other di
 <span class="credit"><a href="https://github.com/practicalparticipation">practicalparticipation<img border="0" width="75" src="https://avatars.githubusercontent.com/u/477172?v=3"/></span>
 <span class="credit"><a href="https://github.com/pyMike">pyMike<img border="0" width="75" src="https://avatars.githubusercontent.com/u/7292830?v=3"/></span>
 <span class="credit"><a href="https://github.com/qris">qris<img border="0" width="75" src="https://avatars.githubusercontent.com/u/754175?v=3"/></span>
+<div class="clearfix"></div>
     
 ### Communications team
 
 Felipe Estefan, Luis Alberto Velez, Dillon Mann and [Thwaites Communications](http://www.thwaitescommunications.net/)
-
