@@ -66,6 +66,7 @@ Thanks to the following contributors who have shared code, feedback and other di
     <span class="credit"><a href="https://github.com/pyMike">pyMike<img border="0" width="75" src="https://avatars.githubusercontent.com/u/7292830?v=3"/></span>
     <span class="credit"><a href="https://github.com/qris">qris<img border="0" width="75" src="https://avatars.githubusercontent.com/u/754175?v=3"/></span>
 </div>
+<div class="clearfix"></div>
     
 ### Communications team
 
