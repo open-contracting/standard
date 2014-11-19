@@ -1,6 +1,10 @@
 Open Contracting Data standard
 ==============================
 
+For view-only access to the standard and documentation please visit [http://ocds.open-contracting.org/standard/](http://ocds.open-contracting.org/standard/)
+
+## Working with the standard
+
 [![Build Status](https://travis-ci.org/open-contracting/standard.svg?branch=master)](https://travis-ci.org/open-contracting/standard)
 
 To run tests locally:
