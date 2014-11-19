@@ -84,16 +84,13 @@ Here is a simple example:
             <div class="include-json" data-src="standard/example/merge_r2.json"></div>
         </div>
         <div class="tab-pane" id="amerged">
-            <div class="include-json" data-src="standard/example/merge_r1_r2.json">
-            <small>
-            <p>Note that the compiledRelease not has 'procurementMethod' of 'open', reflecting the most recent value of this fields.</p>
-            <p>As you can see in the versionedRelease, the field procurementMethod has changed from a value documenting the latest correct value, to a list of objects which document the value for each release in which it changed.</p>
-            <p>(Other record fields are omitted for easy presentation.)</p>
-            </small>
-            </div>
+            <div class="include-json" data-src="standard/example/merge_r1_r2.json"></div>
         </div>
     </div>
 </div>
+<p>Note that the compiledRelease not has 'procurementMethod' of 'open', reflecting the most recent value of this fields.</p>
+<p>As you can see in the versionedRelease, the field procurementMethod has changed from a value documenting the latest correct value, to a list of objects which document the value for each release in which it changed.</p>
+<p>(Other record fields are omitted for easy presentation.)</p>
 
 #### ocdsVersion for lists
 
