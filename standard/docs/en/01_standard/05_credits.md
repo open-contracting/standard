@@ -12,9 +12,14 @@ Lead authors: [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http:/
 ## Contributors
 Many more people have been involved in inputting to the standard. Below is a non-exhaustive list of some of those people. Inclusion here is to extend our thanks. It does not imply endorsement by any of those included of the standard. 
 
+Standard website design and icons by Neontribe: with thanks to Harry Harold and Heydon Pickering.
+
+Thanks to Noé Domínguez , Oscar Montiel, Laura Serghi, Mathieu leduc-Hamel, Michael Lenczner, Isabel Munilla, John Hawkins, Laura Bacon and Owen Scott for inputs into technical and policy development.
+
 ### User research
 
 Many thanks to Antonio Acuna, Steve Addler, Ivan Begtin, Bibhusan Bista, Eduardo Bohórquez, Mathieu Carlier, Andrew Clarke, Kami Dar, Eva Vozárová,  Kami Dar, Daniel Dudis, Mihály Fazekas, Dustin Homer, John Jordan, Jeff Kaplan, Charles Kenny, Ian Makgill, Habibullah Muqbel, Seember Nyager, Meike Paetzold, Pascal Robichaud, Claire Schouten, Tom Sisti; Chris Taggart; as well as all those who participated in Open Contracting Data related events and meetings in Montreal, Washington, Berlin, Kathmandu, Mexico, and online; and all those who wished to remain anonymous; for their invaluable input and feedback into the demand assessment process.
+
 
 ### GitHub contributions
 
