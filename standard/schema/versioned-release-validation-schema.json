@@ -2082,24 +2082,58 @@
                     "type": "array"
                 }, 
                 "value": {
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
+                    "type": "object", 
+                    "properties": {
+                        "currency": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The currency in 3-letter ISO 4217 format."
+                                    }
+                                }
                             }, 
-                            "releaseID": {
-                                "type": "string"
+                            "type": "array"
+                        }, 
+                        "amount": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "minimum": 0, 
+                                        "type": [
+                                            "number", 
+                                            "null"
+                                        ], 
+                                        "description": "Amount as a number."
+                                    }
+                                }
                             }, 
-                            "releaseTag": {
-                                "type": "string"
-                            }, 
-                            "value": {
-                                "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement."
-                            }
+                            "type": "array"
                         }
-                    }, 
-                    "type": "array"
+                    }
                 }, 
                 "date": {
                     "items": {
