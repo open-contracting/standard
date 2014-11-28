@@ -2819,6 +2819,30 @@
                         }
                     }
                 }, 
+                "numberOfTenderers": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "definition": "The number of entities who submit a tender.", 
+                                "type": [
+                                    "integer", 
+                                    "null"
+                                ]
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "value": {
                     "type": "object", 
                     "properties": {
@@ -2872,6 +2896,31 @@
                             "type": "array"
                         }
                     }
+                }, 
+                "tenderers": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "uniqueItems": true, 
+                                "items": {
+                                    "$ref": "#/definitions/Organization"
+                                }, 
+                                "type": "array", 
+                                "description": "All entities who submit a tender."
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }, 
                 "id": {
                     "items": {
@@ -5373,6 +5422,30 @@
                         }
                     }
                 }, 
+                "numberOfTenderers": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "definition": "The number of entities who submit a tender.", 
+                                "type": [
+                                    "integer", 
+                                    "null"
+                                ]
+                            }
+                        }
+                    }, 
+                    "type": "array"
+                }, 
                 "value": {
                     "type": "object", 
                     "properties": {
@@ -5426,6 +5499,31 @@
                             "type": "array"
                         }
                     }
+                }, 
+                "tenderers": {
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "type": "string", 
+                                "format": "date-time"
+                            }, 
+                            "releaseID": {
+                                "type": "string"
+                            }, 
+                            "releaseTag": {
+                                "type": "string"
+                            }, 
+                            "value": {
+                                "uniqueItems": true, 
+                                "items": {
+                                    "$ref": "#/definitions/Organization"
+                                }, 
+                                "type": "array", 
+                                "description": "All entities who submit a tender."
+                            }
+                        }
+                    }, 
+                    "type": "array"
                 }, 
                 "id": {
                     "items": {
