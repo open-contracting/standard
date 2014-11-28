@@ -210,6 +210,18 @@
                     "description": "The date or period on which an award is anticipated to be made.",
                     "$ref": "#/definitions/Period"
                 },
+                "numberOfTenderers": {
+                    "definition": "The number of entities who submit a tender.",
+                    "type": ["integer", "null"],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "tenderers": {
+                    "description": "All entities who submit a tender.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Organization" },
+                    "uniqueItems": true,
+                    "mergeStrategy": "ocdsVersion"
+                },
                 "procuringEntity": {
                     "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
                     "$ref": "#/definitions/Organization"
