@@ -1,11 +1,11 @@
 {
-	"id": "http://ocds.open-contracting.org/standard/r/1__0__RC/release-package-schema.json",
-	"$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://ocds.open-contracting.org/standard/r/1__0__RC/release-package-schema.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Schema for an Open Contracting Release Package",
-	"description": "Note that all releases within a release package must have a unique releaseID within this release package.",
-	"type": "object",
-	"required": ["uri", "publisher", "publishedDate", "releases"],
-	"properties": {
+    "description": "Note that all releases within a release package must have a unique releaseID within this release package.",
+    "type": "object",
+    "required": ["uri", "publisher", "publishedDate", "releases"],
+    "properties": {
         "uri": {
             "title": "Package Identifier",
             "description": "The URI of this package that identifies it uniquely in the world.",
@@ -17,19 +17,19 @@
             "type": "string",
             "format": "date-time"
         },
-		"releases": {
-			"type": "array",
-			"minItems": 1,
-			"items": { "$ref": "http://ocds.open-contracting.org/standard/r/1__0__RC/release-schema.json" },
-			"uniqueItems": true
-		},
-		"publisher": { 
+        "releases": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "http://ocds.open-contracting.org/standard/r/1__0__RC/release-schema.json" },
+            "uniqueItems": true
+        },
+        "publisher": { 
             "description": "Information to uniquely identify the publisher of this package.",
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
-				},
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
                 "scheme": {
                     "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
                     "type": ["string", "null"],
@@ -39,12 +39,12 @@
                     "description": "The unique ID for this entity under the given ID scheme.",
                     "type": ["string", "null"]
                 },
-				"uri": {
-					"type": ["string", "null"],
-					"format" : "uri"
-				}
-			},
-			"required": ["name"]
+                "uri": {
+                    "type": ["string", "null"],
+                    "format" : "uri"
+                }
+            },
+            "required": ["name"]
         },
         "license": {
             "description": "A link to the license that applies to the data in this datapackage. A Public Domain Dedication or [Open Definition Conformant](http://opendefinition.org/licenses/) license is strongly recommended. The canonical URI of the license should be used. Documents linked from this file may be under other license conditions. ",
@@ -56,5 +56,5 @@
             "type": ["string", "null"],
             "format": "uri"
         }
-	}
+    }
 }
