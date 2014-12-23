@@ -377,7 +377,7 @@ This model also requires publishers to pay careful attention to null values and 
 
 ### Empty fields
 
-There is no requirement to include fields that are not being used in either flat or JSON serializations of OCDS.
+There is no requirement to include fields that are not being used in either [flat CSV](../../key_concepts/serialization/#flat-csv-formats) or [JSON](../../key_concepts/serialization/#json) serializations of OCDS.
 
 Fields that are not being used, or that have no value, can be excluded in their entirety (key and value) from a published file. 
 

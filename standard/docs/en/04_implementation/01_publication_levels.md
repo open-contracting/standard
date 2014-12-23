@@ -51,7 +51,7 @@ Provide machine-readable datasets that contain key information recommended in th
 
 An example of publication at this level would involve providing a downloadable CSV file of contract information extracted from an existing database seeking to use, or map to, field names and data structures recommended by OCDS wherever possible.
 
-The documentation on flat file serialization of the standard, and the [OCDS mapper](https://github.com/open-contracting/mapper), may be useful for those seeking to publish at this level.
+The documentation on [flat CSV file serialization](../../key_concepts/serialization/#flat-csv-formats) of the standard, and the [OCDS mapper](https://github.com/open-contracting/mapper), may be useful for those seeking to publish at this level.
 
 #### Stepping up
 Providing structured data will allow users to perform basic analysis, but until a common standard is used, it will be more difficult to join up contracting information across datasets and to analyze patterns across organizations or sectors. From structured data, the next step is to map this to the OCDS standard.

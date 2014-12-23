@@ -15,7 +15,7 @@ JSON stands for Javascript Object Notation, and is a format widely used for the 
 ### Generating JSON
 Most programming languages provide tools for output data as JSON. 
 
-The [OCDS Mapper](https://github.com/open-contracting/mapper) tool can convert from flat files to structured OCDS data based on a mapping template. 
+The [OCDS Mapper](https://github.com/open-contracting/mapper) tool can convert from flat CSV files to structured OCDS data based on a mapping template. 
 
 [A range of tools](http://json-schema.org/implementations.html) are available for working with [JSON-Schema](http://json-schema.org/), including validation and form generation tools. 
 
@@ -24,12 +24,12 @@ Most programming languages provide tools for reading JSON.
 
 A number of [JSON native databases](http://en.wikipedia.org/wiki/NoSQL) are available for working directly with large collections of JSON documents, and command line tools such as [jq](http://stedolan.github.io/jq/) support advanced query and data retrieval with JSON files.
 
-There are also a range of generic tools which can convert JSON into flat structures, including:
+There are also a range of generic tools which can convert JSON into flat CSV structures, including:
 
 * [JSON -> CSV](http://konklone.io/json/) - online tool for converting small documents.
 * [Open Refine](http://openrefine.org/) - desktop tool that can handle large documents, and supports advanced data manipulation.
 
-## Flat formats
+## Flat CSV formats
 
 JSON is based on a tree structure, with data elements nested inside one another. However, many people are more familiar working with tabular data, made up of columns and rows. There is no easy way to represent structured data in a single table. However, we propose two models for publishers to adopt. 
 
@@ -40,17 +40,17 @@ In each case, fields are identified by the [pointer](http://tools.ietf.org/html/
 
 <div class="include-json" data-src="standard/example/serialization-flat.json"></div>
 
-would be rendered in a flat format as:
+would be rendered in a flat CSV format as:
 
 <div class="include-csv" data-src="standard/example/serialization-flat.csv" data-table-class="table table-striped schema-table"></div>
 
-A set of prototype tools for generating flat OCDS templates are [available on GitHub](https://github.com/open-contracting/flattening-ocds).
+A set of prototype tools for generating flat CSV OCDS templates are [available on GitHub](https://github.com/open-contracting/flattening-ocds).
 
 ### Simplified single table 
 
 In cases where there are no one-to-many relationships within a release, a release can be represented in a single tabular row and stored as CSV. 
 
-Such cases are likely to be rare. Flat data models based upon repeated lines to handle one-to-many relationships should be avoided. 
+Such cases are likely to be rare. Flat CSV data models based upon repeated lines to handle one-to-many relationships should be avoided. 
 
 ### Multi-table
 

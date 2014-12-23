@@ -37,9 +37,9 @@ Publication policy pages should include information about:
 
 Publishers may also wish to apply for, and include the results of, an [Open Data Certificate](https://certificates.theodi.org/), on their publication policy pages. 
 
-### Flat file options
+### Flat CSV file options
 
-The [serialization section](../../standard/serialization#flat-format) provides information on publishing data as flat files.
+The [serialization section](../../key_concepts/serialization/#flat-csv-formats) provides information on publishing data as flat CSV files.
 
 * * * *
 
