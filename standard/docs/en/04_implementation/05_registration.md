@@ -6,7 +6,7 @@
 
 ## OCID Prefix
 
-We are in the process of establishing a self-service registration system for OCID prefixes. In the meantime, to request an OCID prefix please e-mail [tim.davies@webfoundation.org](tim.davies@webfoundation.org) with the name of your organization.
+We are in the process of establishing a self-service registration system for OCID prefixes. In the meantime, to request an OCID prefix please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with the name of your organization.
 
 ### Existing prefixes
 

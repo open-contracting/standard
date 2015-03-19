@@ -17,7 +17,7 @@ We can:
 
 Through funding from the Open Contracting Partnership, this support is provided free of charge.
 
-E-mail data@open-contracting.org with your questions, and a member of the help-desk team will be in touch with you soon.
+E-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the help-desk team will be in touch with you soon.
 
 ## Community support
 
