@@ -18,7 +18,10 @@ def make_link(text):
 def make_definition_table(json,file_path,what="properties",section=""): 
     table = [['Field Name','Description','Format']]
     if(section):
-        block = json[what][section]["properties"]
+        if "/" in section:
+            block = json[what][section.split("/")[0]]["properties"][section.split("/")[1]]["properties"]
+        else:
+            block = json[what][section]["properties"]
     else:
         block = json[what]
 
@@ -91,6 +94,8 @@ if __name__ == "__main__":
     make_definition_table(release,join(file_path,"release-organization.csv"),what="definitions",section="Organization")
 
     make_definition_table(release,join(file_path,"release-item.csv"),what="definitions",section="Item")
+    
+    make_definition_table(release,join(file_path,"release-item-unit.csv"),what="definitions",section="Item/unit")
     
     make_definition_table(release,join(file_path,"release-period.csv"),what="definitions",section="Period")
     
