@@ -46,4 +46,4 @@ Governance proposals for the future development of the Open Contracting Data Sta
 
 Between the launch of the 1.0 Release Candidate and any future versions of the specification, ongoing feedback can be provided through the [issue trackers](https://github.com/open-contracting/standard/issues) on GitHub.
 
-Announcements about proposed updates to the specification, and periods for comment, will be made to the [public-ocds@webfoundation.org](mailto:public-ocds@webfoundation.org) mailing list.
+Announcements about proposed updates to the specification, and periods for comment, will be made to the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) mailing list.
