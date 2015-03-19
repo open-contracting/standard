@@ -336,6 +336,9 @@ Notes:
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-classification.csv" data-table-class="table table-striped schema-table"></div>
 
+#### Unit
+
+<div class="include-csv" data-src="standard/docs/field_definitions/release-item-unit.csv" data-table-class="table table-striped schema-table"></div>
 
 <!-- ToDo: Add example -->
 

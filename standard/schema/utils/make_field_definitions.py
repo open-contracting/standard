@@ -41,6 +41,8 @@ def make_definition_table(json,file_path,what="properties",section=""):
                table.append([prop,format(block[prop].get('description','')),"Array"])
         elif block[prop].get("$ref"):
           table.append([prop,format(block[prop].get('description','')) + " See " + make_link(block[prop]["$ref"]),"Reference"])
+        elif "object" in types:
+            table.append([prop,format(block[prop].get('description','')) + " See " + make_link(prop),"Object"])
         else:
           table.append([prop,format(block[prop].get('description','')),block[prop].get('format','') + " " + types])
           
