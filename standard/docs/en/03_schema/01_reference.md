@@ -271,14 +271,14 @@ The organization block can be used to provide a legal identifier for an organiza
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../../key_concepts/identifiers/#organizations) involved in a contracting process.
+The identifier block provides a way to [identify the legal entities](../../key_concepts/identifiers/#organizations) involved in a contracting process. If a Contracting Process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
 
 #### Address
 <div class="include-csv" data-src="standard/docs/field_definitions/release-address.csv" data-table-class="table table-striped schema-table"></div>
 
-#### Contact Point
+#### ContactPoint
 
 <div class="include-csv" data-src="standard/docs/field_definitions/release-contact-point.csv" data-table-class="table table-striped schema-table"></div>
 
