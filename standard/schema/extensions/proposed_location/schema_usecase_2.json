@@ -1,0 +1,59 @@
+[
+    {
+        "op": "add",
+        "path": "release-schema.json/definitions/Item/activityLocation",
+        "value": {
+            "type": "object",
+            "title": "Activity Location",
+            "description": "The location where activity related to this tender, contract or license is to be carried out. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both.",
+            "properties": {
+                "description":{
+                    "description":"A name or description of this location. This might include the name(s) of the location(s), or might provide a human readable description of the location to be covered. This description may be used in a user-interface.",
+                    "type": ["string","null"]            
+                },
+                "geometry": {
+                    "type":"object",
+                    "description":"We follow the [GeoJSON standard](http://geojson.org/) to express basic location information, using latitude and longitude values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection.  A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used. ",
+                    "notes_for_guidance":"The guidance notes should describe when to use MultiPoint, and when to use multiple line-items each with their own locations",
+                    "properties": {
+                        "type": {
+                            "description": "The type of [geoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide latitude and longitude use 'point', and enter an array of [latitude,longitude] as the value of coordinates field: e.g. [37.42,-122.085]. Note the capitalisation of type values - set in order to maintain compatibility with geoJSON.",
+                            "type": ["string", "null"],
+                            "enum": ["Point","MultiPoint","LineString","MultiLineString","Polygon","MultiPolygon"]
+                        },
+                        "coordinates": {
+                            "description": "The relevant array of points, e.g. [latitude,longitude], or nested array, for the geoJSON geometry being described. The longitude and latitude MUST be expressed in decimal degrees in the WGS84 (EPSG:4326) projection",
+                            "type": ["array","null"],
+                            "items": [{ "type": ["number","array"] }, {"type": ["number","array"]}],
+                            "minItems": 2
+                        }
+                    }
+                },
+                "gazetteer": {
+                    "type": "object",
+                    "properties": {
+                        "scheme": {
+                            "description": "The entry of the selected gazetteer in the gazetteers codelist. The codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                            "type": ["string", "null"]
+                        },
+                        "identifiers": {
+                            "description": "An array of one or more codes drawn from the gazetteer indicated in scheme.",
+                            "type": ["array", "null"],
+                            "items": ["string","null"]
+                        }
+                    }
+                },
+                "uri": {
+                    "type":["string","null"],
+                    "description":"A URI to a further description of the activity location. This may be a human readable document with information on the location, or a machine-readable description of the location."
+                }
+            }
+        }
+    },
+    {
+        "op": "add",
+        "path": "release-schema.json/definitions/Item/deliveryAddress",
+        "value": { "$ref": "#/definitions/Address" }
+    }
+    
+]
