@@ -1,4 +1,4 @@
-There are a number of use cases that demand specifying a location for delivery of an item.
+There are a number of use cases that demand specifying a location for delivery of an item. Discussion can be found in [Issue 26](https://github.com/open-contracting/standard/issues/26)
 
 Use case 1
 ==========
