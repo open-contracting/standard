@@ -1,7 +1,7 @@
 [TOC]
 
 # Introduction
-<img src="../../../assets/release_record_compiled.png" width="150" align="right"/><span class="lead">Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. To change this, the [Open Contracting Partnership (OCP)](http://http://www.open-contracting.org/) is working to increase disclosure and participation in contracting.</span>
+<img src="../../../assets/release_record_compiled.png" width="150" align="right"/><span class="lead">Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. To change this, the [Open Contracting Partnership (OCP)](http://www.open-contracting.org/) is working to increase disclosure and participation in contracting.</span>
 
 <span class="lead">The Open Contracting Data Standard (OCDS) project exists to formalize how contracting data and documents can be published in an accessible, structured and repeatable way.</span>
 
