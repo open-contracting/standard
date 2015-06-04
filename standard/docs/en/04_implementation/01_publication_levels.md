@@ -4,7 +4,7 @@
 
 <span class="lead">Increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement. Governments, platform providers and other organizations can all make progressive step-by-step changes to their disclosure practice to achieve the highest possible levels of open contracting data and document publication on the web.</span>
 
-<span class="lead">This section sets out a series of steps towards improving the content, and the technical openness, of contracting data and.</span>
+<span class="lead">This section sets out a series of steps towards improving the content, and the technical openness, of contracting data.</span>
 
 On the [publication patterns](../publication_patterns) page you will find further information to support you at each stage of implementation. The [merging](../merging) page provides details of this key aspect of full OCDS implementation. 
 
