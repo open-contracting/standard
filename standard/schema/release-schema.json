@@ -320,6 +320,10 @@
                     "items": { "$ref": "#/definitions/Item" },
                     "uniqueItems": true
                 },
+                "contractPeriod": {
+                    "description": "The period for which the contract has been awarded.",
+                    "$ref": "#/definitions/Period"
+                },
                 "documents": {
                     "description": "All documents and attachments related to the award, including any notices.",
                     "type": "array",

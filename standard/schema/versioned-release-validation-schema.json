@@ -2168,6 +2168,62 @@
                     ], 
                     "description": "The identifier for this award. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://ocds.open-contracting.org/standard/r/1__0__RC/en/key_concepts/identifiers/) for further details.", 
                     "title": "Award ID"
+                }, 
+                "contractPeriod": {
+                    "type": "object", 
+                    "properties": {
+                        "startDate": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The state date for the period.", 
+                                        "format": "date-time"
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }, 
+                        "endDate": {
+                            "items": {
+                                "properties": {
+                                    "releaseDate": {
+                                        "type": "string", 
+                                        "format": "date-time"
+                                    }, 
+                                    "releaseID": {
+                                        "type": "string"
+                                    }, 
+                                    "releaseTag": {
+                                        "type": "string"
+                                    }, 
+                                    "value": {
+                                        "type": [
+                                            "string", 
+                                            "null"
+                                        ], 
+                                        "description": "The end date for the period.", 
+                                        "format": "date-time"
+                                    }
+                                }
+                            }, 
+                            "type": "array"
+                        }
+                    }, 
+                    "title": "Period"
                 }
             }
         }, 
