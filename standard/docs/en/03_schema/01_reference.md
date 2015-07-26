@@ -141,7 +141,7 @@ Documents related to contract implementation should be stored here. This may inc
 
 See [document](#document) reference below. 
 
-### Amendments
+### Amendment
 
 A release may amend properties from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for updates to a tender, award or contract to be explicitly declared. 
 
