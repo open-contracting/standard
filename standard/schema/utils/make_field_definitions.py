@@ -46,7 +46,7 @@ def make_definition_table(json,file_path,what="properties",section=""):
         else:
           table.append([prop,format(block[prop].get('description','')),block[prop].get('format','') + " " + types])
           
-        with open(file_path, 'wb') as f:
+        with open(file_path, 'w') as f:
             writer = csv.writer(f)
             for row in table:
                 writer.writerow(row)
@@ -58,13 +58,13 @@ if __name__ == "__main__":
     schema_dir = dirname(dirname(abspath(__file__)))
     file_path = join(schema_dir,"../docs/field_definitions/")
     
-    with open(join(schema_dir, 'release-schema.json'), 'rb') as f:
+    with open(join(schema_dir, 'release-schema.json'), 'r') as f:
         release = json.loads(f.read(),object_pairs_hook=collections.OrderedDict)
 
-    with open(join(schema_dir, 'release-package-schema.json'), 'rb') as f:
+    with open(join(schema_dir, 'release-package-schema.json'), 'r') as f:
         releasePackage = json.loads(f.read(),object_pairs_hook=collections.OrderedDict)
 
-    with open(join(schema_dir, 'record-package-schema.json'), 'rb') as f:
+    with open(join(schema_dir, 'record-package-schema.json'), 'r') as f:
         recordPackage = json.loads(f.read(),object_pairs_hook=collections.OrderedDict)
 
     make_definition_table(recordPackage,join(file_path,"record-package.csv"))
