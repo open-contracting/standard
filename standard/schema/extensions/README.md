@@ -2,7 +2,7 @@
 
 Some times you need to publish information within your Open Contracting Data Standard releases and records which is not covered by the core schema.
 
-Subject to the [conformance section](http://ocds.open-contracting.org/standard/r/1__0__RC/en/key_concepts/conformance_and_extensions/) of the standard documentation, you can include additional fields within your OCDS files to meet your local needs.
+Subject to the [conformance section](http://ocds.open-contracting.org/standard/r/1__0__0/en/key_concepts/conformance_and_extensions/) of the standard documentation, you can include additional fields within your OCDS files to meet your local needs.
 
 To enable:
 

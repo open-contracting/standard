@@ -191,7 +191,7 @@ To merge releases into records, we use the jsonmerge library with its add-ons to
 A customized version of the jsonmerge library is available at [https://github.com/open-contracting/jsonmerge](https://github.com/open-contracting/jsonmerge) using the ocds branch (set as default) as a
 reference implementation. As of 2014-11-08 it has not been rigorously tested against all our mergeStrategies.
 
-An example of merging releases into a record can be seen [in this ipython notebook](http://nbviewer.ipython.org/github/open-contracting/sample-data/blob/1__0__RC//buyandsell/processing/Demonstrate%20merging%20a%20release.ipynb)
+An example of merging releases into a record can be seen [in this ipython notebook](http://nbviewer.ipython.org/github/open-contracting/sample-data/blob/1__0__0/buyandsell/processing/Demonstrate%20merging%20a%20release.ipynb)
 
 To make a compiled release with jsonmerge replace mergeStrategy ocdsVersion with overwrite or objectMerge (the default jsonmerge strategies).
 
