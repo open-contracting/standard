@@ -328,7 +328,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 Notes: 
 
-* The [proposed location extension](https://github.com/open-contracting/standard/tree/master/standard/schema/extensions/proposed_location) can be attached to items, allowing the point of delivery for a given item to be indicated in both the tender, award and contract stage.
+* The [proposed location extension](https://github.com/open-contracting/implementation-and-extensions/tree/master/proposed_extensions/proposed_location) can be attached to items, allowing the point of delivery for a given item to be indicated in both the tender, award and contract stage.
 * Items should be classified according to a established scheme of codes. A single primary ```classification``` can be given, although an array of ```additionalClassification``` can be provided.
 
 #### Classification
@@ -368,7 +368,7 @@ During the period of the 1.0 RC, if information on taxation related to a value i
 
 ### Location
 
-The addition of location information is currently handled through a [proposed extension](https://github.com/open-contracting/standard/tree/master/standard/schema/extensions/proposed_location) to the standard.
+The addition of location information is currently handled through a [proposed extension](https://github.com/open-contracting/implementation-and-extensions/tree/master/proposed_extensions/proposed_location) to the standard.
 
 ## Release handling
 

@@ -22,6 +22,6 @@ Extensions to the standard can add new objects and properties to accommodate spe
 
 Extensions should be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard.
 
-You can find a list of proposed extensions in the [Standard GitHub Repository](https://github.com/open-contracting/standard/tree/1__0__0/standard/schema/extensions/).
+You can find a list of proposed extensions in the [Standard Implementation and Extensions GitHub Repository](https://github.com/open-contracting/implementation-and-extensions/tree/master/proposed_extensions/).
 
 The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields. 
