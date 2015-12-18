@@ -5,4 +5,12 @@ python:
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements.txt
 # command to run tests, e.g. python setup.py test
-script:  py.test
+script:
+  - py.test
+  - ./build_docs.sh
+deploy:
+  skip_cleanup: true # don't remove stuff we've built
+  provider: script
+  script: curl https://raw.githubusercontent.com/OpenDataServices/opendataservices-deploy/master/open-contracting-standard-deploy.sh | bash -
+  on:
+    all_branches: true
