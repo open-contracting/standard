@@ -1,8 +1,0 @@
-Field Name,Description,Format
-id,"A unique identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For the budget data package this is the id, for IATI, the transaction reference."," string, integer"
-source,"Used to point either to a corresponding Budget Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",uri string
-date,The date of the transaction,date-time string
-amount,"The value of the transaction. See <a href=""#value"">Value</a>",Reference
-providerOrganization,"The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist. See <a href=""#identifier"">Identifier</a>",Reference
-receiverOrganization,"The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist. See <a href=""#identifier"">Identifier</a>",Reference
-uri,A URI pointing directly to a machine-readable record about this spending transaction.,uri string

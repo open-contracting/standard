@@ -2,10 +2,10 @@
 import json
 import csv
 import collections
-import markdown
+import re
 
 def format(text):
-    return markdown.markdown(text.replace("date-time","[date-time](#date)")).replace("<p>","").replace("</p>","")
+    return re.sub(r'\[([^\[]+)\]\(([^\)]+)\)', r'`\1 <\2>`__', text.replace("date-time","[date-time](#date)"))
 
 def make_link(text):
     if "http" in text:

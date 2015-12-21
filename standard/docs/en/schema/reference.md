@@ -1,5 +1,3 @@
-[TOC]
-
 # Reference
 
 <span class="lead">The [Release Schema](../release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas showing how to combine releases into data packages and how to compile releases into records. This reference section works step-by-step through additional supporting information to assist publishers and users of the data.</span>
@@ -26,7 +24,11 @@ Releases are given a [tag](#release-tag) to indicate what stage of a contracting
 
 Releases must be published within a release package, which can contain one or more releases. The release package, modelled on the [Data Package](http://dataprotocols.org/data-packages/) protocol, provides meta-data about the release(s) it contains, the publisher, and data licensing information. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-package.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-package.csv
+```
 
 Notes:
 
@@ -40,7 +42,11 @@ Notes:
 
 The top level of a release consists of the following fields and objects:
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-toplevel.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-toplevel.csv
+```
 
 Notes:
 
@@ -56,12 +62,20 @@ Further details on each of the blocks contained within release are below.
 
 The planning section can be used to describe the background to a contracting process. This may include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-planning.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-planning.csv
+```
 
 Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Budget Data Package](https://github.com/openspending/budget-data-package) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 #### Budget 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-budget.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-budget.csv
+```
 
 
 ### Tender
@@ -70,7 +84,11 @@ The tender section includes details of the announcement that a organization inte
 
 It may contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and may also be used to record details of how a completed tender process, including details of bids received. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-tender.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-tender.csv
+```
 
 Notes: 
 
@@ -91,7 +109,11 @@ Information on bidders against a contract will be handled by an [extension](../.
 
 The award section is used to announce any awards issued for this tender. There may be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract, as it contains information on the suppliers. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-award.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-award.csv
+```
 
 Notes:
 
@@ -100,7 +122,11 @@ Notes:
 
 The contract section is used to provide details of contracts that have been entered into. Every contract needs to have a related award, linked via the ```awardID``` property. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-contract.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-contract.csv
+```
 
 #### Framework contracts
 
@@ -117,13 +143,21 @@ As a result, [award](#award) and [contract](#contract) each contain an [items](#
 
 Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to. Implementation blocks include the following elements:
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-implementation.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-implementation.csv
+```
 
 Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](../../key_concepts/conformance_and_extensions#extensions)
 
 #### Transaction
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-transaction.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-transaction.csv
+```
 
 The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organisations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party ```source``` of data, and can re-use identifiers from that source. 
 
@@ -147,7 +181,11 @@ A release may amend properties from a previous release. Whilst the release & rec
 
 The amendment block in each of tender, award and contract blocks provides the ability to explicitly declare changed fields, their former values, and to provide an explanation for the change. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-amendment.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-amendment.csv
+```
 
 Amendment information should not be included in compiled records, as it is not possible to indicate __all__ the former values of a field, only the most recent known value: whereas the version history of a full record can show all previous values.
 
@@ -155,7 +193,11 @@ Amendment information should not be included in compiled records, as it is not p
 
 Within each amendment block, publishers should provide an array of items that have changed, along with their former values. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-changes.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-changes.csv
+```
 
 ## Record structure
 
@@ -175,7 +217,11 @@ Records should be embedded within a record package.
 
 ### Package meta-data
 
-<div class="include-csv" data-src="standard/docs/field_definitions/record-package.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/record-package.csv
+```
 
 See the guidance on [package meta-data](#package-metadata) above. In addition, a record package includes:
 
@@ -267,20 +313,36 @@ The JSON Schema makes use of the JSON Scheme 0.4 [‘Pattern Properties](http://
 
 The organization block can be used to provide a legal identifier for an organization, and to give [address](#address) and [contact point](#contact-point) information.
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-organization.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-organization.csv
+```
 
 #### Identifier
 
 The identifier block provides a way to [identify the legal entities](../../key_concepts/identifiers/#organizations) involved in a contracting process. If a Contracting Process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-identifier.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-identifier.csv
+```
 
 #### Address
-<div class="include-csv" data-src="standard/docs/field_definitions/release-address.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-address.csv
+```
 
 #### ContactPoint
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-contact-point.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-contact-point.csv
+```
 
 ### Document
 
@@ -288,7 +350,11 @@ Documents may be attached at a number of points within the standard: to planning
 
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-document.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-document.csv
+```
 
 ### Date
 
@@ -318,13 +384,21 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 A period is an object consisting of a start date and end date, represented as date-times.
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-period.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-period.csv
+```
 
 ### Item
 
 The items block is used to list the line-items associated with a tender, award or contract. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-item.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-item.csv
+```
 
 Notes: 
 
@@ -333,13 +407,21 @@ Notes:
 
 #### Classification
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-classification.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-classification.csv
+```
 
 #### Unit
 
 The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no code list for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-item-unit.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-item-unit.csv
+```
 
 
 ### Milestone
@@ -350,7 +432,11 @@ In the context of a tender block, milestones describe the key deliverables of a 
 
 In the context of a contract implementation block, milestones are used to track progress towards those deliverables and key events set out in the tender. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-milestone.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-milestone.csv
+```
 
 Notes:
 
@@ -362,7 +448,11 @@ Notes:
 
 Financial values should always be published with a currency attached. 
 
-<div class="include-csv" data-src="standard/docs/field_definitions/release-value.csv" data-table-class="table table-striped schema-table"></div>
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/field_definitions/release-value.csv
+```
 
 During the period of the 1.0 RC, if information on taxation related to a value is required, this may be handled by an extension. A [discussion of handling taxation can be found on GitHub](https://github.com/open-contracting/standard/issues/112).
 
