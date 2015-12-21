@@ -47,7 +47,7 @@ Notes:
 * ```ocid``` - Providing each [contracting process](../../definitions#contracting-process) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](../../identifiers#ocid) for details of how to construct an OCID. 
 * ```tag``` - The release.tag is used to identify the nature of the release being made. This can be used by consuming applications to filter releases, or may in future be used for advanced validation. A release which updates or amends previous data must always use the appropriate update or amendment release tag. Values must be drawn from the [releaseTag codelist](../codelists#release-tag).
 * ```date``` - The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates. 
-* ```language``` - see the section on [multi-language support](#multi-language-support) for information on language handling.
+* ```language``` - see the section on [multi-language support](#language) for information on language handling.
 * ```buyer``` - The buyer details are published using an [organization](#entity) block.
 
 Further details on each of the blocks contained within release are below. 
@@ -284,7 +284,7 @@ The identifier block provides a way to [identify the legal entities](../../key_c
 
 ### Document
 
-Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and milestones. Each document block can consist of multiple documents, classified using the [documentType](../../codelists#document-type) codelist. 
+Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and milestones. Each document block can consist of multiple documents, classified using the [documentType](../codelists#document-type) codelist.
 
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
