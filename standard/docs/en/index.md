@@ -8,7 +8,10 @@ Contents:
    :maxdepth: 2
    :glob:
 
-   */*
+   standard/index
+   key_concepts/index
+   schema/index
+   implementation/index
 ```
 
 
