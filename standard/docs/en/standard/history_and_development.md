@@ -1,4 +1,4 @@
-[TOC]
+
 
 # History and development
 

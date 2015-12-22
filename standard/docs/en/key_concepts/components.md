@@ -1,4 +1,4 @@
-[TOC]
+
 
 # Components
 <span class="lead">There are a number of key components that make up open contracting data. In particular, releases and records are the backbone of the Open Contracting Data Standard. But documents play a vital role in the world of contracting and while releases and records provide a machine-readable summary of a contracting process, they should always be supported by links to well-managed documents.</span>
