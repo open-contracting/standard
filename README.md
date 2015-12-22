@@ -23,12 +23,30 @@ cd standard/schema/utils
 
 The tests, which run automatically on every commit, check that this process has been done.
 
-## Docs guidelines
+## Virtual Environment
 
-The name of the file, becomes the name of the tab
+```
+virtualenv -p /usr/local/bin/python3.4 .ve
+source .ve/bin/activate
+pip install -r requirements.txt
+```
+
+(update with the path to your python executable)
 
 
-When writing docs, every page should have:
+## Documentation
 
-1) an h1 header with the name of the page, that matches the title of the tab/file
-1) a consistent flow down always h2, then h3 etc. - don't start at h3
+Documentation is written in Markdown syntax with [recommonmark](https://recommonmark.readthedocs.org/en/latest/) building on [Commonmark](http://commonmark.org/)
+
+The documentation is built by sphinx from the ```build_docs.sh``` script. 
+
+Within the virtual environment run ```./build_docs.sh``` and the documentation will be available in the /build/ folder.
+
+To view, run a local web server. For example, from within /build/ run python -m SimpleHTTPServer
+
+### Auto-regenerating docs
+
+Sphinx does not watch directories for changes, but can be linked with other scripts to regenerate docs whenever anything changes. On a mac with fswatch installed:
+
+```fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh```
+
