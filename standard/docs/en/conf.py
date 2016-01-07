@@ -309,6 +309,7 @@ from docutils.parsers.rst import directives
 from docutils import nodes
 import json
 from jsonpointer import resolve_pointer
+from collections import OrderedDict
 
 class JSONInclude(LiteralInclude):
     option_spec = {
@@ -317,7 +318,7 @@ class JSONInclude(LiteralInclude):
 
     def run(self):
         with open(self.arguments[0]) as fp:
-            json_obj = json.load(fp)
+            json_obj = json.load(fp, object_pairs_hook=OrderedDict)
         pointed = resolve_pointer(json_obj, self.options['jsonpointer'])
         code = json.dumps(pointed, indent='    ')
         literal = nodes.literal_block(code, code)
