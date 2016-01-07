@@ -1,6 +1,6 @@
 ## The Contracting Process
 
-There are many different stages to a contracting process. OCDS provides a way to bring data together across all links of the contracting chain.
+There are many stages to a contracting process. OCDS brings data together across all links of the contracting chain.
 
 OCDS covers:
 
@@ -27,7 +27,7 @@ OCDS covers:
 * ![Implementation](../../../assets/green_implementation.svg.png)
 </div>  
 
-Not all contracting processes have all these stages. For example, direct contracting may start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case. 
+Not all contracting processes have all stages. For example, direct contracting may start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case. 
 
 You should aim to publish OCDS data close to real-time: releasing data as each stage of a contracting process takes place.
 
