@@ -29,10 +29,11 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 TODO: TABBED LIST OF EXAMPLES TO GO HERE...
 
 ```eval_rst
-.. literalinclude:: ../examples/planning.json
-	:language: json
-	:start-after: "releases":[
-	:end-before: }]
+
+.. jsoninclude:: docs/en/examples/planning.json
+   :jsonpointer: /releases
+   :expand: releases, planning, tag, documents
+ 
 ```
 
 #### Best practices
@@ -117,7 +118,23 @@ Consult the the release package and record package schemas (TODO - ADD LINKS) to
     .renderjson .object.syntax { color: lightseagreen; }
     .renderjson .array.syntax  { color: orange; }
   </style>
-  <script type="text/javascript" src="../../_static/renderjson.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" defer><!--
+  var module;(module||{}).exports=renderjson=function(){function n(i,c,f,y,_,d){var p=f?"":c,g=function(n,o,i,c,f){var _,d=a(c),g=function(){_||e(d.parentNode,_=r(f(),u(l.hide,"disclosure",function(){_.style.display="none",d.style.display="inline"}))),_.style.display="inline",d.style.display="none"};e(d,u(l.show,"disclosure",g),t(c+" syntax",n),u(o,null,g),t(c+" syntax",i));var h=e(a(),s(p.slice(0,-1)),d);return y>0&&g(),h};return null===i?t(null,p,"keyword","null"):void 0===i?t(null,p,"keyword","undefined"):"string"==typeof i&&i.length>_?g('"',i.substr(0,_)+" ...",'"',"string",function(){return e(a("string"),t(null,p,"string",JSON.stringify(i)))}):"object"!=typeof i?t(null,p,typeof i,JSON.stringify(i)):i.constructor==Array?0==i.length?t(null,p,"array syntax","[]"):g("["," ... ","]","array",function(){for(var r=e(a("array"),t("array syntax","[",null,"\n")),o=0;o<i.length;o++)e(r,n(i[o],c+"    ",!1,y-1,_,d),o!=i.length-1?t("syntax",","):[],s("\n"));return e(r,t(null,c,"array syntax","]")),r}):o(i)?t(null,p,"object syntax","{}"):g("{","...","}","object",function(){var r=e(a("object"),t("object syntax","{",null,"\n"));for(var o in i)var u=o;var f=Object.keys(i);d&&(f=f.sort());for(var p in f){var o=f[p];e(r,t(null,c+"    ","key",'"'+o+'"',"object syntax",": "),n(i[o],c+"    ",!0,l.default_open.indexOf(o)>-1?y+1:y-1,_,d),o!=u?t("syntax",","):[],s("\n"))}return e(r,t(null,c,"object syntax","}")),r})}var t=function(){for(var n=[];arguments.length;)n.push(e(a(Array.prototype.shift.call(arguments)),s(Array.prototype.shift.call(arguments))));return n},e=function(){for(var n=Array.prototype.shift.call(arguments),t=0;t<arguments.length;t++)arguments[t].constructor==Array?e.apply(this,[n].concat(arguments[t])):n.appendChild(arguments[t]);return n},r=function(n,t){return n.insertBefore(t,n.firstChild),n},o=function(n){for(var t in n)if(n.hasOwnProperty(t))return!1;return!0},s=function(n){return document.createTextNode(n)},a=function(n){var t=document.createElement("span");return n&&(t.className=n),t},u=function(n,t,e){var r=document.createElement("a");return t&&(r.className=t),r.appendChild(s(n)),r.href="#",r.onclick=function(){return e(),!1},r},l=function i(t){var r=e(document.createElement("pre"),n(t,"",!1,i.show_to_level,i.max_string_length,i.sort_objects));return r.className="renderjson",r};return l.set_icons=function(n,t){return l.show=n,l.hide=t,l},l.set_show_to_level=function(n){return l.show_to_level="string"==typeof n&&"all"===n.toLowerCase()?Number.MAX_VALUE:n,l},l.set_max_string_length=function(n){return l.max_string_length="string"==typeof n&&"none"===n.toLowerCase()?Number.MAX_VALUE:n,l},l.set_sort_objects=function(n){return l.sort_objects=n,l},l.set_show_by_default=function(n){return l.show_to_level=n?Number.MAX_VALUE:0,l},l.set_default_open=function(n){return l.default_open=n?n:[],l},l.set_icons("⊕","⊖"),l.set_show_by_default(!1),l.set_sort_objects(!1),l.set_max_string_length("none"),l.set_default_open([]),l}();
+  $( document ).ready(function() {
+      $(".highlight-json").each(function(){
+       classList = $(this).attr("class").split(/\s+/);
+       expand = []
+       $.each(classList, function(index, item) {
+         if (item.indexOf('expand') === 0) {
+           expand.push(item.replace('expand-',''))
+         }
+       });
+       $(this).html(renderjson.set_show_to_level(1).set_max_string_length(100).set_default_open(expand)(eval($(this).text())[0]))
+    });
+});
+--></script>
   
   
 
