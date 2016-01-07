@@ -304,6 +304,28 @@ gettext_compact = False     # optional.
 
 
 
+from sphinx.directives.code import LiteralInclude
+from docutils.parsers.rst import directives
+from docutils import nodes
+import json
+from jsonpointer import resolve_pointer
+
+class JSONInclude(LiteralInclude):
+    option_spec = {
+        'jsonpointer': directives.unchanged
+    }
+
+    def run(self):
+        with open(self.arguments[0]) as fp:
+            json_obj = json.load(fp)
+        pointed = resolve_pointer(json_obj, self.options['jsonpointer'])
+        code = json.dumps(pointed, indent='    ')
+        literal = nodes.literal_block(code, code)
+        literal['language'] = 'json' 
+        return [ literal ]
+
+directives.register_directive('jsoninclude', JSONInclude)
+
 
 # app setup hook
 def setup(app):
