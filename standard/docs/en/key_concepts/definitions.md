@@ -1,6 +1,6 @@
 
 
-#Definitions
+# Definitions
 
 <span class="lead">The Open Contracting Data Standard is used to describe unique **contracting processes**. The first step towards publishing open contracting data is to identify the contracting processes in your data. A contracting process ties together information about the different stages related to the lifespan of a contract, beginning with planning, progressing through initiation and implementation stages, and ending when a contract is completed or otherwise closed. </span>
 
