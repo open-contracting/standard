@@ -299,7 +299,7 @@ html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 
-locale_dirs = ['locale/']   # path is example but recommended.
+locale_dirs = ['../locale/']
 gettext_compact = False     # optional.
 
 

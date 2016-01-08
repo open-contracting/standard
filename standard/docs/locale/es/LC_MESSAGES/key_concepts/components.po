@@ -1,0 +1,196 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-08 15:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../standard/docs/en/key_concepts/components.md:0
+msgid "Components"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:4
+msgid ""
+"<span class=\"lead\">There are a number of key components that make up open "
+"contracting data. In particular, releases and records are the backbone of "
+"the Open Contracting Data Standard. But documents play a vital role in the "
+"world of contracting and while releases and records provide a machine-"
+"readable summary of a contracting process, they should always be supported "
+"by links to well-managed documents.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:0
+msgid "Documents"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:8
+msgid ""
+"<img src=\"../../../assets/green_documents.svg.png\" width=\"150\" "
+"align=\"right\"/>A contracting process generates many documents - from needs"
+" assessment and market studies, to tender notices and calls for proposals, "
+"and the actual text of contracts. Wherever there is no legal or policy "
+"restriction on doing so, these should be placed online in a stable location,"
+" and linked to from within the relevant OCDS release and records."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:10
+msgid ""
+"See the document section of schema reference for more details of how to "
+"include documents in your data releases, and the documentType code list for "
+"a list of common documents that the OCDS recommends are included, and for "
+"details of where documents may be attached within the OCDS structure."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:0
+msgid "Releases"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:14
+msgid ""
+"<img src=\"../../../assets/green_release.svg.png\" width=\"150\" "
+"align=\"right\"/>To encourage the greatest possible openness of public "
+"contracting information, the Open Contracting Data Standard is designed to "
+"support real-time publication of information. At each stage of the "
+"contracting process, or at each point when changes, or amendments, are made "
+"to data about the contracting process, the standard allows publishers to "
+"provide a release."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:16
+msgid ""
+"Releases are cumulative. Over a contracting process releases may be provided"
+" to describe a tender, announce contract awards, detail a finalised "
+"contract, and provide updates on implementation. Once published, a release "
+"must not be changed. Updated information should be shared through a new "
+"release."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:18
+msgid ""
+"Releases may originate from a single system, or may be published in a "
+"distributed way by different systems, but releases relating to the same "
+"contracting process can be compiled by use of the same Open Contracting ID "
+"(OCID)."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:20
+msgid ""
+"You can think of releases as entries into a ledger: each new entry adds "
+"information, and may repeat previous information that remains true. The "
+"record brings together a snapshot of the latest state of all the "
+"information."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:0
+msgid "Records"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:37
+msgid ""
+"<img src=\"../../../assets/green_record.svg.png\" width=\"150\" "
+"align=\"right\"/>A contracting record provides a snapshot of the contracting"
+" process at a given point in time, bringing together all the releases into "
+"one place. It is updated as new information becomes available through "
+"releases."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:39
+msgid "A record contains three key elements:"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:44
+msgid ""
+"At a minimum, this may be a list of pointers to web-accessible releases in "
+"order to allow third-parties to assemble and verify a record of the whole "
+"contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:46
+msgid ""
+"The OCDS Schema defines a set of \"merge strategies\" that work with the "
+"jsonmerge library to enable the compiled and versioned releases to be made "
+"from just the raw release data. Put another way, publishers do not need to "
+"maintain or do any versioning themselves, they can simply publish all the "
+"releases that belong to a contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:48
+msgid ""
+"<center><img src=\"../../../assets/release_square.png\" "
+"height=\"200\"/></center>"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:0
+msgid "Updates and amendments"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:79
+msgid ""
+"When new information becomes available, it should be contained in a new "
+"release, and the contracting record should be updated to reflect this."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:81
+msgid ""
+"The term amendment has a specific legal significance in many jurisdictions. "
+"The release.tag provides a way to indicate when a release is an amendment, "
+"and the schema includes space to provide details of changes, and "
+"justification for the amendment that is being made."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:83
+msgid ""
+"When records are created by merging together releases then a version history"
+" that can be used to track changes to fields is created in the record, "
+"allowing users to look back and see the changes that have occured over the "
+"lifetime of a contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:0
+msgid "Notices"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:88
+msgid ""
+"Good open contracting practice involves the widespread publication of key "
+"notices about different stages of the contracting process. Publishers should"
+" include details in their OCDS files of where tender, awards and contract "
+"notices were made available, both online and offline."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:90
+msgid ""
+"Users want to be able to know when notices were published, where they were "
+"published, and what they contained."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:92
+msgid ""
+"A notice can be attached to a tender, award or contract within OCDS using "
+"the documents property, and a documentType value of ‘notice’. If the notice "
+"is accessible online, then the URL to the notice can be given. If the notice"
+" was published in a printed publication, or posted in some other public "
+"venue, the document description field can be used to explain this, and the "
+"format can be set to ‘offline/print’. The publicationDate of the document "
+"should be the date the notice was made available."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:0
+msgid "Packages"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:96
+msgid ""
+"For the convenience of users, a collection of releases, or a collection of "
+"records, can be combined together in a release or record package."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/components.md:98
+msgid "View the schema reference for more details."
+msgstr ""

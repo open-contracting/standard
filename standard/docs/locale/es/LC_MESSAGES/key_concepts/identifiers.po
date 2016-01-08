@@ -1,0 +1,383 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-08 15:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Identifiers"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:5
+msgid ""
+"<span class=\"lead\">The use of consistent identifiers is vital to join up "
+"data on open contracting. This section introduces the Open Contracting ID "
+"(OCID), and other places where identifiers can be used in OCDS data.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:7
+msgid ""
+"There are two kinds of identifier in OCDS: Global unique identifiers which "
+"should refer consistently to a single thing wherever they are used; and "
+"local identifiers which only need to be unique within the scope of a "
+"particular block of data, and which provide a mechanism to identify specific"
+" elements in releases over time (e.g. to update the details of a particular "
+"document), or to make a link between elements within a data release or "
+"record (e.g. linking awards and contracts)."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "OCID"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:10
+msgid ""
+"<img src=\"../../../assets/green_compilation.svg.png\" width=\"150\" "
+"align=\"right\"/> <span class=\"lead\">An Open Contracting ID (OCID) is a "
+"globally unique identifier for a contracting process.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:13
+msgid ""
+"<span class=\"lead\">Publishers will need to have, or to create, a "
+"consistent internal identifier that applies across the initiation, "
+"implementation and closure phases of a contract.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:15
+msgid ""
+"Using a consistent identifier for a contracting process that can tie "
+"together related tenders, awards, contracts and updates is vital for true "
+"Open Contracting. Without this, users cannot understand how these different "
+"processes relate to one another. Without this, the data is siloed and users "
+"cannot understand a complete picture of a contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:17
+msgid ""
+"Some publishers may not currently have a consistent identifier used across "
+"the different stages of their contracting process, with different and non-"
+"linked identifiers for tenders, awards and contracts. In these cases, "
+"publishers will need to look at ways to either update their business "
+"processes to use a consistent identifier, or will need to develop a process "
+"to map existing different identifiers to a common contracting process "
+"identifier that can be used to generate an OCID."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:19
+msgid ""
+"The use of a globally unique OCID allows third-parties to refer to a "
+"contracting process with confidence, and means that when multiple open "
+"contracting datasets are brought together there is no risk of data about "
+"different contracting processes clashing or becoming confused."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Construction"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:22
+msgid ""
+"An OCID is made up of four parts. The first three can generally be set as "
+"constant values in most systems:"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:31
+msgid ""
+"This allows publishers to use an internal identifier from within their own "
+"systems, and simple to prepend the prefix and namespace to this when "
+"publishing data, making their local identifier into a globally unique "
+"identifier."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:33
+msgid "The OCID is case sensitive."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Examples"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:36
+msgid "The following are examples of valid OCIDs:"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Prefix agency"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:49
+msgid ""
+"This defaults to ‘ocp1’. During the current stage of OCDS development, the "
+"Open Contracting Partnership is the only organisation issuing valid "
+"prefixes. In future, other organisations may be able to issue prefixes, and "
+"a codelist of approved prefix agencies will be incorporated into the "
+"standard."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Registered prefix"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:52
+msgid ""
+"Prefix are randomly generated lowercase alpha-numberic strings. A prefix is "
+"assigned to each organisation that holds the existing internal identifier "
+"for a Contracting Processes."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:54
+msgid ""
+"For example, a government publishing detail on their own contracting would "
+"register a single prefix, and would use this on all their OCIDs."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:56
+msgid ""
+"You can find a list of registered prefixes here along with a registration "
+"form for creating new prefixes."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:58
+msgid ""
+"A re-publisher, who has aggregated data from multiple original publishers, "
+"when those systems have not already defined their own OCIDs, should seek to "
+"identify (or register) a prefix for each source publisher where possible."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:60
+msgid ""
+"See the registration pages for details of how to obtain your OCID prefix."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Publisher namespace"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:64
+msgid ""
+"The default value for local namespace is 01, but publishers are free to set "
+"this to any value in order to maintain unique OCIDs when publishing multiple"
+" sets of contracting data."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:66
+msgid ""
+"The namespace is primarily relevant when a single publisher has multiple "
+"sets of contracting process that they wish to describe using OCDS."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:68
+msgid ""
+"For example, a publisher may wish to publish contracts from different "
+"departments, each of which use different computer systems, and both of which"
+" have different contracting processes with overlapping internal identifiers "
+"(e.g. both have a contracting process internally known as 123, but these are"
+" different processes). Without the namespace, simply appending these onto "
+"the publisher prefix would generate non-unique OCID, and so the publisher "
+"can use the local namespace section of the OCID to distinguish between "
+"different sets of contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Local identifier"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:72
+msgid ""
+"Publishers can select the local identifier to use for identifying a unique "
+"contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:74
+msgid ""
+"Because a contracting process is defined by a unique initiation process (a "
+"unique tender in the procurement case), a common approach will be to use the"
+" identifier of the initiation process, and to ensure that award and contract"
+" and spending data systems also keep track of this identifier."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Organizations"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:78
+msgid ""
+"<img src=\"../../../assets/green_organisation.svg.png\" width=\"150\" "
+"align=\"right\"/> <span class=\"lead\">Reliably identifying the legal "
+"entities involved in a contracting process is vital for transparency and "
+"accountabilty, and for carrying out analysis to improve procurement."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:81
+msgid ""
+"Publishers should seek to collect and record the legal identifier from an "
+"official register of any organisations involved in a contracting process "
+"(including procuring organisations, bidders and suppliers), and should "
+"include this in their OCDS files.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:83
+msgid ""
+"There are two parts to expressing an organisation identifier in open "
+"contracting data."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Example"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:90
+msgid ""
+"For example, the organisation register prefix for UK Companies House is GB-"
+"COH. The organisation Development Initiatives has been assigned the company "
+"number ‘06368740’ by Companies House. The globally unique organisation "
+"identifier for Development Initiatives can then expressed as follows:"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:108
+msgid ""
+"In OCDS, the organization register prefix is included in the scheme field of"
+" an identifier block, with the existing organization id placed in the id "
+"field. If there is a recognized public URI that uniquely identifies this "
+"organization (for example, drawn from Open Corporates) this can also be "
+"given in the uri field."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Choosing an identifier"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:112
+msgid ""
+"The organisation register prefix is used to refer to a register from which "
+"the organisation identifier is drawn. There are a range of different kinds "
+"of organisation list:"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:122
+msgid ""
+"Local lists may commonly need to be used for identifying public bodies, as "
+"in many countries there is no official list of public agencies."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:124
+msgid ""
+"At present, the OCDS standard defers to the organisation list prefixes "
+"provided by the IATI Organisation Registration Agency codelist. If you "
+"require codes to be added to this list, please contact the Open Contracting "
+"Data Standard support and they will work to achieve this."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Local identifiers"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:129
+msgid ""
+"<span class=\"lead\">A single contracting process may result in multiple "
+"awards and contracts. In order to link together awards and contracts, and to"
+" support alternative serialisations of open contracting data, each tender, "
+"award and contract section of a release should have a locally unique "
+"identifier.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:131
+msgid ""
+"Unlike the OCID, which must be globally unique, the identifiers should be "
+"interpreted only in the scope of the contracting process they belong to. "
+"They must be used consistently across releases relating to the same "
+"contracting process. For example, if an award is labelled with an ID of ‘1’ "
+"in a release, any release that modifies this same award must also use ‘1’ as"
+" the ID."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:133
+msgid ""
+"A second set of local identifiers, for items, milestones and documents need "
+"only be unique in the arrays in which the appear."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "In detail"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Release ID"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:139
+msgid ""
+"The release ID must be unique within the contracting process it is part of, "
+"and within any given data package it is part of."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:141
+msgid ""
+"I.e. within any data package, or for any given ocid, there should be no two "
+"release IDs that refer to different releases."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Tender, Award and Contract"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:145
+msgid ""
+"The tender, award and contract IDs must be unique within the contracting "
+"process it is part of."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:147
+msgid ""
+"I.e. for any given ocid, there should be no two tender, award or contract "
+"IDs that refer to different tender, award or contract sections respectively."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:149
+msgid ""
+"Contracts should always cross-reference a related award (using the awardID "
+"property), as key information such as suppliers may be contained in the "
+"related award. There may be multiple contracts referring to a single award, "
+"as in the case of a framework contract, in which multiple contract are "
+"issued against a single award."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:0
+msgid "Items, Documents and Milestones"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:153
+msgid ""
+"An item, document or milestone ID must be unique within a given array of "
+"items, and must be used consistently across all the releases in a "
+"contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:155
+msgid ""
+"The same id may be re-used in another array of items within the same "
+"release, and no cross-reference between these identifiers is implied."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:157
+msgid ""
+"The use of an identifier means that subsequent releases can update prior "
+"identified items, documents or milestones, without needing to republish all "
+"the items, documents or milestones."
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:159
+msgid "For example:"
+msgstr ""
+
+#: ../../standard/docs/en/key_concepts/identifiers.md:166
+msgid "In this situation, note that:"
+msgstr ""

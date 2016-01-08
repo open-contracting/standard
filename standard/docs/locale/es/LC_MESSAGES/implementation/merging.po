@@ -1,0 +1,261 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-08 15:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../standard/docs/en/implementation/merging.md:0
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "Merging"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:37
+msgid ""
+"<span class=\"lead\">To create a full record from a series of OCDS releases "
+"related to an contracting process the releases should be merged. This "
+"section details the creation of records.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "Record recap"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:41
+msgid "The basic format of a record is simple. There are three components:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:50
+msgid ""
+"For full information on records and releases see the key concepts and schema"
+" reference."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:54
+msgid ""
+"If a publisher provides releases and a record containing a list of the "
+"releases, then third party software should be able to create compiled and "
+"versioned releases. Publishers may or may not want to run this software "
+"themselves and provide the full record for download."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:56
+msgid ""
+"The following sections describe how merging works should individual parties "
+"wish to implement merging or a merging library."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "Requirements"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:60
+msgid ""
+"For merging to work effectively, all the releases to be merged must share a "
+"common ocid and a number of other criteria must be met."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:62
+msgid ""
+"The following all require unique identifiers (at least unique within that "
+"ocid):"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:71
+msgid ""
+"The following arrays of items must be re-published in full for each release:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:78
+msgid ""
+"Other lists with .id properties do not need to be republished in full, but "
+"publishers should note the guidance on emptying fields and values."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "Merge Strategies"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:82
+msgid ""
+"The purpose of merging releases is to create (a) a snapshot record of the "
+"current state of a contracting process; (b) a versioned history of the "
+"process."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:84
+msgid ""
+"Different sections of the data structure need to be handled differently as "
+"releases are merged. For some lists, a new release should overwrite the "
+"previous list in fully. For example, if a later release updates the list of "
+"suppliers against an award, this new list in full should be taken as the "
+"latest authoritative information. For other lists, such as a list of "
+"contracts, a release may add a new contract to the list without needing to "
+"repeat all the previous contracts, or may amend a single award without "
+"repeating all the other awards."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:86
+msgid ""
+"This leads to a set of mergeStrategies which are included in the full "
+"schema."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:88
+msgid ""
+"The OCDS merging has been based on the open source jsonmerge library, but "
+"can be implemented in other software as required."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:90
+msgid ""
+"Within the OCDS release schema, each field has a mergeStrategy property. "
+"This strategy describes how to merge that and child fields."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:92
+msgid ""
+"We inhert the existing merge strategies from jsonmerge and add a number of "
+"specific strategies for OCDS, which are currently only available in the OCDS"
+" fork of jsonmerge and which are described below."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "ocdsVersion merge strategy"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:96
+msgid ""
+"Most fields have the mergeStrategy ocdsVersion. The ocdsVersion strategy has"
+" two modes of operation:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:102
+msgid "Here is a simple example:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "ocdsVersion for lists"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:129
+msgid "The ocdsVersion strategy also applies to the following lists:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:136
+msgid ""
+"In this instance the entire list is treated as one single value and any "
+"change to any field will result in the whole list being updated and "
+"documented as changed."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:139
+msgid ""
+"To keep the versioning as clean as possible, the list of objects should "
+"always be given in the same order in each release, so as not to mistakenly "
+"mark a change when actually only order has shifted."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:143
+msgid ""
+"This merging strategy has the advantage of not requiring unique identifiers "
+"on every object, but has the downside of requiring every release to publish "
+"the whole block of data, not just an incremental change."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:147
+msgid "An example of this strategy in action is shown below:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "arrayMergeById merge strategy"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:172
+msgid ""
+"The arrayMergeById applies to the following lists of objects within the "
+"release:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:181
+msgid ""
+"Each of these objects has a required id field on it. When the merge is being"
+" performed, the item with the corresponding id is looked up for the before "
+"and after versions of the release and the fields are then matched "
+"accordingly."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:185
+msgid ""
+"If a given entry is omitted (e.g. there is no information about a particular"
+" contract in a subsequent release), then the previous values carry forward."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:187
+msgid ""
+"To remove an entry it would have to have it's field values set to null, as "
+"per the guidance on emptying fields and values."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "ocdsOmit merge strategy"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:212
+msgid "There are a number of fields marked with the strategy ocdsOmit."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:214
+msgid ""
+"This strategy returns nothing on merge, because to update the field wouldn't"
+" make sense."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:216
+msgid ""
+"For example, the field for tag should not be updated to the latest version, "
+"it should be updated to compiled for it to make sense."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:0
+msgid "Implementing merging"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:221
+msgid ""
+"To merge releases into records, we use the jsonmerge library with its add-"
+"ons to json schema that specify a mergeStrategy on each field."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:223
+msgid ""
+"A customized version of the jsonmerge library is available at "
+"https://github.com/open-contracting/jsonmerge using the ocds branch (set as "
+"default) as a reference implementation. As of 2014-11-08 it has not been "
+"rigorously tested against all our mergeStrategies."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:226
+msgid ""
+"An example of merging releases into a record can be seen in this ipython "
+"notebook"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:228
+msgid ""
+"To make a compiled release with jsonmerge replace mergeStrategy ocdsVersion "
+"with overwrite or objectMerge (the default jsonmerge strategies)."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/merging.md:230
+msgid ""
+"There is a util that makes a validation schema for a versioned release based"
+" on the merge strategies. This schema is stored as versioned-release-"
+"validation-schema.json."
+msgstr ""
