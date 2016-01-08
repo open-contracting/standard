@@ -16,12 +16,12 @@ Each release must contain an OCID, a unique release ID, a release tag, and as mu
 
 For example: 
 
-* A ```planning``` release may provide information in the planning block about budgets and procurement intention, and the tender block about the proposed details for a future tender;
-* A ```tender``` release may provide information in the tender block about how to bid for the work, and may repeat ```planning``` information on the budget or project the tender is associated with;
-* A ```tenderUpdate``` release may provide an updated tender block with links to documents that answer questions asked during the enquiry period;
-* An ```award``` release may provide details of the supplier awarded the contract, and may provide repeated information about the how procurement took place in a tender block;
-* A ```contract``` release may provide the details of the signed contract in a contract block, matched with a related award block
-* An ```implementationUpdate``` release may repeat details of the contract, and provide information on milestones achieved and payments to the supplier, or may update the contract implementation block with links to newly published documents. 
+* A ```planning``` release may provide information in the planning section about budgets and procurement intention, and the tender section about the proposed details for a future tender;
+* A ```tender``` release may provide information in the tender section about how to bid for the work, and may repeat ```planning``` information on the budget or project the tender is associated with;
+* A ```tenderUpdate``` release may provide an updated tender section with links to documents that answer questions asked during the enquiry period;
+* An ```award``` release may provide details of the supplier awarded the contract in the award section, and may provide repeated information about the how procurement took place in the tender section;
+* A ```contract``` release may provide the details of the signed contract in a contract section, matched with a related award section;
+* An ```implementationUpdate``` release may repeat details of the contract, and provide information on milestones achieved and payments to the supplier, or may update the contract implementation section with links to newly published documents. 
 
 You can think of **releases** as entries into a ledger: each new entry adds information, and may also repeat the previous information that remains true. The **record** brings together a snapshot of the latest state of all the information.
 
