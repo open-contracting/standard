@@ -24,6 +24,7 @@ You can find [samples of OCDS data](ToDo), and [information on using OCDS](ToDo)
 
    use_cases
    contracting_process
+   building_blocks
    releases_and_records
    publication_patterns
    validation

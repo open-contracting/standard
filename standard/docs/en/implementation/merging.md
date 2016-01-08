@@ -1,5 +1,37 @@
 
 
+
+<div class="well">
+<p>
+<strong>Worked example - NEEDS WORK!!</strong>
+</p>
+<p>
+A publisher provides a tender release on 1st January, with a planned contract value of $1000.
+</p>
+<p>
+On 31st January, the publisher provides an amended tender release updating the planned contract value to $1500.
+</p>
+<p>
+After assessing bids, it is decided to award the contract in two lots.
+</p>
+<p>
+On 1st March, the publisher provides an award release, announcing Company A have been awarded a contract for $750.
+</p>
+<p>
+On 3rd March, the publisher provides an separate award release, announcing that company B have been awarded a contract for $750
+</p>
+<p>
+These independent releases each provide real-time information about what is happening in the contracting process. The record will combine them together. Using the same schema and structure as the releases, the main body of the record will contain a tender with contract value of $1500, and details of both awards.
+</p>
+<p>
+If the record is complete with versioning information, then the versioning section will reveal that the planned contract value changed from $1000 to $1500 on 31st January.
+</p>
+</div>
+
+
+
+
+
 # Merging
 
 <span class="lead">To create a full record from a series of OCDS releases related to an contracting process the releases should be merged. This section details the creation of records.</span>
