@@ -6,8 +6,9 @@ The publication of OCDS data can enable greater transparency in public contracti
 
 To get started publishing OCDS data:
 
-* Identify the key [users and use cases](use_cases.md) for your OCDS project
-* Map out the data and documents you will publish from your [contracting process](contracting_process.md)
+* Discuss the key [users and use cases](use_cases.md) for your OCDS project
+* Identify out the data and documents you will publish from your [contracting process](contracting_process.md)
+* Map your data against the OCDS [building blocks](building_blocks.md)
 * Present the data in [JSON releases and records](releases_and_records.md)
 * Publish your data on the web using the [publication patterns](publication_patterns.md)
 * Check the [validation of your data](validation.md)

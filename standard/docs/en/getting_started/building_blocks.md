@@ -75,5 +75,17 @@ Many of these fields make use of lightweight codelists provided by OCDS.
 
 ### Codelists
 
+OCDS defines two kinds of codelist:
+
+* **Closed codelists** provide a fixed list of values. When using a field with a closed codelist, publishers must use an option from the published lists. This supports the global comparability of OCDS data on key dimensions.
+
+* **Open codelists** provide recommended values. However, publishers can suggest amendments to these codelists, or provide their own extended values prefixed with x_
+
+TABLE OF CODELISTS
+
+
+Codelist values are case sensitive strings. OCDS publish labels for many codes in English and Spanish (TODO - CONFIRM). 
+
+Publishers should map their existing classification systems to OCDS codes wherever possible. Many closed codelist fields are paired with a detail field where more detailed classification information can be provided. 
 
 
