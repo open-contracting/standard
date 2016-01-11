@@ -26,7 +26,7 @@ For example:
 You can think of **releases** as entries into a ledger: each new entry adds information, and may also repeat the previous information that remains true. The **record** brings together a snapshot of the latest state of all the information.
 
 #### Examples
-TODO: TABBED LIST OF EXAMPLES TO GO HERE...
+
 
 ```eval_rst
 
@@ -40,15 +40,41 @@ TODO: TABBED LIST OF EXAMPLES TO GO HERE...
 
 .. jsoninclude:: docs/en/examples/tender.json
    :jsonpointer: /releases
-   :expand: releases, tender, tag, documents
+   :expand: releases, tender, items, tag, documents
 
 ```
 
 ```eval_rst
 
+.. jsoninclude:: docs/en/examples/tenderUpdate.json
+   :jsonpointer: /releases
+   :expand: releases, tender, tag, documents
+
+```
+
+
+```eval_rst
+
 .. jsoninclude:: docs/en/examples/award.json
    :jsonpointer: /releases
-   :expand: releases, awards, tag, documents
+   :expand: releases, awards, value, suppliers, items, contractPeriod, tag, documents
+
+```
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/contract.json
+   :jsonpointer: /releases
+   :expand: releases, contracts, period, value, items, tag, documents
+
+```
+
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/implementation.json
+   :jsonpointer: /releases
+   :expand: releases, contracts, implementation, transactions, tag, documents
 
 ```
 
@@ -87,8 +113,8 @@ TODO
 
 
 
-
 <style>
+    pre.renderjson { overflow: scroll; font-size:smaller; border: 1px solid grey;}
     .renderjson a { text-decoration: none; }
     .renderjson .disclosure { color: crimson; font-size: 150%; }
     .renderjson .syntax { color: grey; }
@@ -117,7 +143,7 @@ TODO
          }
        });
        $(this).html(renderjson.set_show_to_level(1).set_max_string_length(100).set_default_open(expand)(eval($(this).text())[0]))
-       if($(this).parent().attr("class") != 'selection-container') { // NEED TO FIX THE CODE HERE. MOVE THINGS INTO THE PARENT CLASS CORRECTLY!
+       if($(this).siblings(".selection-container").length === 0) { // NEED TO FIX THE CODE HERE. MOVE THINGS INTO THE PARENT CLASS CORRECTLY!
            id = Math.floor(5 * (Math.random() % 1));
            $(this).wrap("<div class='selection-container'></div>")
            $(this).parent().prepend(
@@ -126,9 +152,13 @@ TODO
                     $(this).siblings(".highlight-json").hide();
                     $(this).siblings("."+ $(this).val()).show();
                 }))
-       } else {
+           $(this).siblings("select").append($("<option></option>").attr("value",filename).text(filename.replace("file-",""))) 
+       } else {   
+           container = $(this).siblings(".selection-container")
+           $(this).detach().appendTo(container)
+           $(this).siblings("select").append($("<option></option>").attr("value",filename).text(filename.replace("file-",""))) 
+           $(this).hide()
        }
-       $(this).siblings("select").append($("<option></option>").attr("value",filename).text(filename.replace("file-",""))) 
     });
 });
 --></script>
