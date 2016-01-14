@@ -15,6 +15,15 @@ To get started publishing OCDS data:
 
 You can find [samples of OCDS data](ToDo), and [information on using OCDS](ToDo) in the implementation handbook. 
 
+When you are done you could be producing data that looks something like this, and which is compatible with a growing range of OCDS aware tools.
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/contract.json
+   :jsonpointer: /releases
+   :expand: releases, tender, awards, contracts, period, value, items, tag, documents
+
+```
 
 
 ```eval_rst

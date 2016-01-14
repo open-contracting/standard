@@ -1,6 +1,6 @@
 
 
-# Record Package
+# Record Package Schema
 
 <span class="lead">The record package schema describes the container document for publishing records. The contents of a record are based on the release schema. The package contains important meta-data.</span>
 

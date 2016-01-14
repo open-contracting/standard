@@ -1,25 +1,6 @@
 Open Contracting Data Standard: Documentation
 =============================================
 
-
-## Test
-
-```eval_rst
-
-.. jsoninclude:: example/ar_merge_r1.json
-   :jsonpointer: /tender
-
-
-
-```
-
-
-
-
-
-
-
-
 ## More
 
 Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. 
@@ -70,21 +51,28 @@ $('.bxslider').bxSlider({
 </div>
 
 
-Contents:
+
+
+## About
+
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 of the standard is being developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.net) and the [World Bank](http://www.worldbank.org).
+
+Lead authors: [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)) & Sarah Bird ([Aptivate](http://aptivate.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Stephen Davenport ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). We extend our thanks to everyone else who has contributed during this project. See the [credits page](../credits) for details of all those involved.
+
 
 ```eval_rst
 .. toctree::
    :maxdepth: 2
    :glob:
-   
+   :hidden:
+
    getting_started/index
-   standard/index
-   key_concepts/index
    schema/index
    implementation/index
+   evaluation/index
+   support/index
 
 ```
-
 
 
 Indices and tables

@@ -1,6 +1,6 @@
+# Evaluation
 
-
-# Publication levels
+TODO: Re-work section
 
 <span class="lead">Increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement. Governments, platform providers and other organizations can all make progressive step-by-step changes to their disclosure practice to achieve the highest possible levels of open contracting data and document publication on the web.</span>
 

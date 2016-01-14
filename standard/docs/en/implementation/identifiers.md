@@ -1,8 +1,6 @@
-
-
 # Identifiers
 
-<span class="lead">The use of consistent identifiers is vital to join up data on open contracting. This section introduces the Open Contracting ID (OCID), and other places where identifiers can be used in OCDS data.</span>
+The use of consistent identifiers is vital to join up data on open contracting. This section introduces the Open Contracting ID (OCID), and other places where identifiers can be used in OCDS data.
 
 There are two kinds of identifier in OCDS: **Global unique identifiers** which should refer consistently to a single thing wherever they are used; and **local identifiers** which only need to be unique within the scope of a particular block of data, and which provide a mechanism to identify specific elements in releases over time (e.g. to update the details of a particular document), or to make a link between elements within a data release or record (e.g. linking awards and contracts). 
 

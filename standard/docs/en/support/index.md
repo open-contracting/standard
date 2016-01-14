@@ -1,8 +1,6 @@
+# Support and governance
 
-
-# Support
-
-<span class="lead">The Open Contracting Data Standard help-desk is available to support you in implementing or using OCDS</span>
+The Open Contracting Data Standard help-desk is available to support you in implementing or using OCDS, and to assist in the ongoing development of the standard.
 
 ## Dedicated support
 
@@ -26,3 +24,15 @@ The Open Contracting community is also a good source of input and support. You c
 Announcements about proposed updates to the specification, and periods for comment, will be made to the mailing list.
 
 Developers, or those wishing to provide technical input on the standard, may wish to go straight to the [Github repository](https://github.com/open-contracting/standard).
+
+
+```eval_rst
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   :hidden:
+
+   credits
+   history_and_development
+
+```

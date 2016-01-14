@@ -1,5 +1,3 @@
-
-
 # Credits
 
 <span class="lead">The Open Contracting Data Standards has been developed with the input of many people. We extend our thanks to all the following who have given feedback and input over the course of the initial development project.</span>

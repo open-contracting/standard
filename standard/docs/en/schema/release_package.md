@@ -1,6 +1,6 @@
 
 
-# Release Package
+# Release Package Schema
 
 <span class="lead">The release package schema describes the container document for publishing releases. The package contains important meta-data.</span>
 

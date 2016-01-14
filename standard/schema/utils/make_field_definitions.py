@@ -73,6 +73,8 @@ if __name__ == "__main__":
     make_definition_table(recordPackage,join(file_path,"record-package.csv"))
     
     make_definition_table(releasePackage,join(file_path,"release-package.csv"))
+
+    make_definition_table(releasePackage,join(file_path,"publisher.csv"),what="properties",section="publisher")
     
     make_definition_table(release,join(file_path,"release-toplevel.csv"))
 
@@ -117,3 +119,4 @@ if __name__ == "__main__":
     make_definition_table(release,join(file_path,"release-amendment.csv"),what="definitions",section="Amendment")
 
     make_definition_table(release,join(file_path,"release-changes.csv"),what="definitions",section="Amendment/changes")
+    

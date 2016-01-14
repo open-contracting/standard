@@ -1,6 +1,4 @@
-
-
-# History and development
+# History of OCDS
 
 <span class="lead">The [Open Contracting Global Principles](http://www.open-contracting.org/global_principles) encourage publishers to proactively disclose information and data on all stages of public contracting.</span>
 

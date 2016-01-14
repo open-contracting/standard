@@ -1,16 +1,16 @@
-# Implementation
-
-The Open Contracting Data Standard
+# Implementation guidance
 
 ```eval_rst
 .. toctree::
    :maxdepth: 2
    :glob:
 
-   publication_levels
-   publication_patterns
+   definitions
+   identifiers
    merging
-   user_guidance
+   serialization
+   publication_patterns
    registration
+   licensing
 
 ```

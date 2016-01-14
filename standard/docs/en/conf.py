@@ -315,19 +315,24 @@ class JSONInclude(LiteralInclude):
     option_spec = {
         'jsonpointer': directives.unchanged,
         'expand': directives.unchanged,
+        'title': directives.unchanged,
     }
 
     def run(self):
         with open(self.arguments[0]) as fp:
             json_obj = json.load(fp, object_pairs_hook=OrderedDict)
         filename = str(self.arguments[0]).split("/")[-1].replace(".json","")
+        try:
+            title = self.options['title']
+        except KeyError as e:
+            title = filename
         pointed = resolve_pointer(json_obj, self.options['jsonpointer'])
         code = json.dumps(pointed, indent='    ')
         # Ideally we would add the below to a data-expand element, but I can't see how to do this, so using classes for now...
         class_list = self.options.get('class', [])
-        class_list.append('file-'+filename)
+        class_list.append('file-'+title)
         expand = str(self.options.get("expand","")).split(",")
-        class_list = class_list + ['expand-{0}'.format(s.strip()) for s in expand]
+        class_list = class_list + ['expandjson expand-{0}'.format(s.strip()) for s in expand]
         literal = nodes.literal_block(code, code, classes=class_list)
         literal['language'] = 'json' 
         literal['caption'] = 'TEST'

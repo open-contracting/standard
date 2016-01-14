@@ -6,11 +6,11 @@ OCDS covers:
 
 <table style="margin-bottom:2em;">
     <tr>
-        <td width="20%" align="center"><img src="../../_images/green_planning.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../_images/green_tendering.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../_images/green_awarded.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../_images/green_signed.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../_images/green_implementation.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../../assets/green_planning.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../../assets/green_tendering.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../../assets/green_awarded.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../../assets/green_signed.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../../assets/green_implementation.svg.png" width="80%"></td>
     </tr>
     <tr>
         <td align="center"><span style="font-size:10pt;"><p><strong>Planning</strong></p><em>Including:</em><br/>Budgets<br/>Project plans<br/>Procurement plans<br/>Market studies<br/>Public hearing info</span></td>
@@ -81,7 +81,7 @@ The ```ocid``` is case sensitive. Case should be used consistently whenever an `
 
 </div>
 
-### More that just procurement
+### More than just procurement
 
 Version 1.0 of the OCDS schema is optimised for procurement-type contracts. 
 
