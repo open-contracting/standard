@@ -292,11 +292,11 @@ source_parsers = {
     }
 
 
-import sphinx_rtd_theme
+import standard_theme
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "standard_theme"
 
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [standard_theme.get_html_theme_path()]
 
 
 locale_dirs = ['../locale/']
