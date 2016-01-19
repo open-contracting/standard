@@ -10,7 +10,7 @@ A **closed codelist** provides **mandatory codes** and publishers should only us
 
 Codes are case sensitive, and are generally provided as english language camelCase. Codes values should not be translated, through the OCDS team will work with publishers to provide alternative translations of code titles and definitions.
 
-# Open Codelists
+## Open Codelists
 
 ### Item Classification Scheme
 

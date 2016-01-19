@@ -1,0 +1,191 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-14 20:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../standard/docs/en/implementation/serialization.md:0
+msgid "Serialization"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:5
+msgid ""
+"<span class=\"lead\">The Open Contracting Data Standard provides a "
+"structured data model for capturing in-depth information about all stages of"
+" the contracting process.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:7
+msgid ""
+"<span class=\"lead\">The current canonical version of this data model is "
+"provided by a JSON Schema which describes field names, field definitions and"
+" structures for the data. The compliance of data with the Open Contracting "
+"Data Standard will be assessed against this schema.</span>"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:9
+msgid ""
+"However, there are many use cases where publishers and users will want to "
+"work with data serialized in other formats. For this reason, the current "
+"version of OCDS supports a number of secondary serializations which are "
+"based on the canonical schema."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:0
+msgid "JSON"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:13
+msgid ""
+"JSON stands for Javascript Object Notation, and is a format widely used for "
+"the exchange of data on the web. The JSON schema language provides "
+"validation tools for working with JSON data."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:0
+msgid "Generating JSON"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:16
+msgid "Most programming languages provide tools for output data as JSON."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:18
+msgid ""
+"The OCDS Mapper tool can convert from flat CSV files to structured OCDS data"
+" based on a mapping template."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:20
+msgid ""
+"A range of tools are available for working with JSON-Schema, including "
+"validation and form generation tools."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:0
+msgid "Consuming JSON"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:23
+msgid "Most programming languages provide tools for reading JSON."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:25
+msgid ""
+"A number of JSON native databases are available for working directly with "
+"large collections of JSON documents, and command line tools such as jq "
+"support advanced query and data retrieval with JSON files."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:27
+msgid ""
+"There are also a range of generic tools which can convert JSON into flat CSV"
+" structures, including:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:0
+msgid "Flat CSV formats"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:34
+msgid ""
+"JSON is based on a tree structure, with data elements nested inside one "
+"another. However, many people are more familiar working with tabular data, "
+"made up of columns and rows. There is no easy way to represent structured "
+"data in a single table. However, we propose two models for publishers to "
+"adopt."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:39
+msgid ""
+"In each case, fields are identified by the pointer to their JSON equivalent."
+" For example:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:43
+msgid "would be rendered in a flat CSV format as:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:47
+msgid ""
+"A set of prototype tools for generating flat CSV OCDS templates are "
+"available on GitHub."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:0
+msgid "Simplified single table"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:51
+msgid ""
+"In cases where there are no one-to-many relationships within a release, a "
+"release can be represented in a single tabular row and stored as CSV."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:53
+msgid ""
+"Such cases are likely to be rare. Flat CSV data models based upon repeated "
+"lines to handle one-to-many relationships should be avoided."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:0
+msgid "Multi-table"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:57
+msgid ""
+"In cases where there are one-to-many relationships within a release, it will"
+" be necessary to split the data into multiple tables. A set of tables can be"
+" presented as tabs in a spreadsheet, providing a familiar tool for data "
+"entry and analysis, or can be contained within a data package."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:59
+msgid ""
+"By including identifiers in the sub-tables that point to the ocid, releaseID"
+" and the id of the parent entity of the sub-table item, it is possible to:"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:64
+msgid ""
+"The JSON re-uses common definitions regularly (e.g. for items, "
+"classifications, organizations etc.) and applications following the multi-"
+"table approach should generally seek to collect together items of each type "
+"in their own table, rather than creating different tables for each kind of "
+"item, organization and so-on."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:66
+msgid "A worked example of a multi-table template is shown below."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:68
+msgid ""
+"NOTE: This example is based on an earlier version of the schema, and does "
+"not show all sub-tables. It should be understood as illustrative only."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:0
+msgid "Data packages"
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:108
+msgid ""
+"Whatever serialisation is used for Open Contracting Data, a single file may "
+"contain one or more release and records."
+msgstr ""
+
+#: ../../standard/docs/en/implementation/serialization.md:110
+msgid ""
+"The release and record data package schemas describe the key meta-data that "
+"must be supplied for any file providing Open Contracting Data. This includes"
+" the publishedDate, publisher, uri for accessing the file, and the licensing"
+" details for the file."
+msgstr ""

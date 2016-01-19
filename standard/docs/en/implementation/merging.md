@@ -1,61 +1,100 @@
+# Merging 
 
+In OCDS, merging involves combining individual [releases](../getting_started/releases_and_records.md) of data during a contracting process into a [record](../getting_started/releases_and_records.md) which provides an at-a-glance view of the current state and history of that process. 
 
+<div class="example hint" markdown=1>
 
-<div class="well">
-<p>
-<strong>Worked example - NEEDS WORK!!</strong>
-</p>
-<p>
+<p class="first admonition-title">Worked Example</p>
+
 A publisher provides a tender release on 1st January, with a planned contract value of $1000.
-</p>
-<p>
+
 On 31st January, the publisher provides an amended tender release updating the planned contract value to $1500.
-</p>
-<p>
+
 After assessing bids, it is decided to award the contract in two lots.
-</p>
-<p>
+
 On 1st March, the publisher provides an award release, announcing Company A have been awarded a contract for $750.
-</p>
-<p>
+
 On 3rd March, the publisher provides an separate award release, announcing that company B have been awarded a contract for $750
-</p>
-<p>
+
 These independent releases each provide real-time information about what is happening in the contracting process. The record will combine them together. Using the same schema and structure as the releases, the main body of the record will contain a tender with contract value of $1500, and details of both awards.
-</p>
-<p>
+
 If the record is complete with versioning information, then the versioning section will reveal that the planned contract value changed from $1000 to $1500 on 31st January.
-</p>
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/merging/merge-tender-1.json
+   :jsonpointer: /releases
+   :expand: releases, tender
+   :title: Tender
+
+```
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/merging/merge-tender-2.json
+   :jsonpointer: /releases
+   :expand: releases, tender
+   :title: Tender_update
+
+```
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/merging/merge-award-1.json
+   :jsonpointer: /releases
+   :expand: releases, award
+   :title: Award_One
+
+```
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/merging/merge-award-2.json
+   :jsonpointer: /releases
+   :expand: releases, award
+   :title: Award_Two
+
+```
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/merging/merged.json
+   :jsonpointer: 
+   :expand: releases, tender, award
+   :title: Merged
+
+```
+
 </div>
 
+## Merging rules
 
+The merging rules can be summarised as follows:
 
+1. All releases with the same ```ocid``` should be compiled together, processed by order of the release date, and starting with the oldest first. Compare each pair or releases in turn following the rules below. 
 
+2. For literal values, replace the older value with the newer value. You may remove fields which have been set to null. 
 
-# Merging
+TODO - EXAMPLE
 
-<span class="lead">To create a full record from a series of OCDS releases related to an contracting process the releases should be merged. This section details the creation of records.</span>
+3. For an array of objects, merge the array by the id of each object EXCEPT as noted in 4.
 
-## Record recap
+TODO - EXAMPLE
 
-The basic format of a record is simple. There are three components:
+4. For the following arrays, replace the entire array in the older release with the entire array from the newer release
 
-- Releases: A list of all the releases in the record. Either provided as a list of links to
-  identify the release, or the releases themselves can be embedded.
-- Compiled Release: A compiled release, this is the same format as a release but contains the
-  most up-to-date information compiled from all the releases.
-- Versioned Release: For each field in the release, the versioned release contains the history
-  of all the changes to that field over all the releases.
+- ```award.suppliers```
+- ```organization.additionalIdentifiers```
+- ```item.additionalClassifications```
+- ```amendment.changes```
 
-For full information on records and releases see the [key concepts](../../key_concepts/components/) and [schema reference](../../schema/reference).
+Note that this means releases must republish these arrays in full.
 
-## Merging
+5. When all releases are merged, remove the ```release.id``` and ```release.date``` from the resulting data structure, and add ```compiled``` to the list of ```release.tag``` values. 
 
-If a publisher provides releases and a record containing a list of the releases, then third party software should be able to create compiled and versioned releases. Publishers may or may not want to run this software themselves and provide the full record for download.
+A reference implementation of the merge routine in python [is available on GitHub](https://github.com/open-contracting/ocds-merge). 
 
-The following sections describe how merging works should individual parties wish to implement merging or a merging library.
-
-### Requirements
+## Requirements for merging
 
 For merging to work effectively, all the releases to be merged must share a common ```ocid``` and a number of other criteria must be met.
 
@@ -77,7 +116,39 @@ The following arrays of items must be re-published in full for each release:
 
 Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](../../schema/reference#emptying-fields-and-values).
 
-### Merge Strategies
+
+## Versioned data
+
+There are some situations in which it is important to be able to see how data about a contracting process has changed over time. For example, to identify how contract values have altered, or milestones moved through stages of implementation. 
+
+The versioned release schema provides a model for representing this data.
+
+In a versioned release, instead of over-writing past values when combining multiple releases, each field becomes an array of objects, indicating the:
+
+* The date, id and tag of the releases where a field-value pair was first encountered;
+* The value of the field-value pair at that point;
+
+As a result, the history of any field can be easily read from the data structure. 
+
+### Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/merging/versioned.json
+   :jsonpointer: /records/0/versionedRelease/tender/value
+   :expand: value, amount
+   :title: Versioned_Example
+
+
+```
+
+## Merge strategies in the schema
+
+Version 1.0 of the OCDS schema includes a series of ```mergeStrategy``` properties which were designed to indicate how releases should be compiled together. In initial implementation, we have found these can create some confusion, and so propose that future versions will omit all but the essential properties required to indicate the exceptions to the general rule in (4) above. 
+
+This information is maintained here for reference.
+
+### Merge strategy reference
 
 The purpose of merging releases is to create (a) a snapshot record of the current state of a contracting process; (b) a versioned history of the process. 
 
@@ -99,31 +170,6 @@ modes of operation:
 - when making a compiled record, the field is overridden with the latest value
 - when making a versioned record, the field history is documented.
 
-Here is a simple example:
-
-<div class="tabbable">
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#ar1" data-toggle="tab">release 1</a></li>
-        <li><a href="#ar2" data-toggle="tab">release 2</a></li>
-        <li><a href="#amerged" data-toggle="tab">merged</a></li>
-    </ul>
-    <div class="tab-content">
-        
-        <div class="tab-pane active" id="ar1">
-            <div class="include-json" data-src="standard/example/merge_r1.json"></div>
-        </div>
-        <div class="tab-pane" id="ar2">
-            <div class="include-json" data-src="standard/example/merge_r2.json"></div>
-        </div>
-        <div class="tab-pane" id="amerged">
-            <div class="include-json" data-src="standard/example/merge_r1_r2.json"></div>
-        </div>
-    </div>
-</div>
-<p>Note that the compiledRelease not has 'procurementMethod' of 'open', reflecting the most recent value of this fields.</p>
-<p>As you can see in the versionedRelease, the field procurementMethod has changed from a value documenting the latest correct value, to a list of objects which document the value for each release in which it changed.</p>
-<p>(Other record fields are omitted for easy presentation.)</p>
-
 #### ocdsVersion for lists
 
 The ocdsVersion strategy also applies to the following lists:
@@ -144,29 +190,6 @@ This merging strategy has the advantage of not requiring unique identifiers on
 every object, but has the downside of requiring every release to publish the 
 whole block of data, not just an incremental change.
 
-An example of this strategy in action is shown below:
-
-<div class="tabbable">
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#lr1" data-toggle="tab">release 1</a></li>
-  <li><a href="#lr2" data-toggle="tab">release 2</a></li>
-  <li><a href="#lmerged" data-toggle="tab">merged</a></li>
-</ul>
-<div class="tab-content">
-    
-<div class="tab-pane active" id="lr1">
-<div class="include-json" data-src="standard/example/li_merge_r1.json"></div>
-</div>
-<div class="tab-pane" id="lr2">
-<div class="include-json" data-src="standard/example/li_merge_r2.json"></div>
-</div>
-<div class="tab-pane" id="lmerged">
-<div class="include-json" data-src="standard/example/li_merge_r1_r2.json"></div>
-</div>
-</div>
-</div>
-
-
 #### arrayMergeById merge strategy
 
 The arrayMergeById applies to the following lists of objects within the release:
@@ -186,45 +209,10 @@ If a given entry is omitted (e.g. there is no information about a particular con
 
 To remove an entry it would have to have it's field values set to null, as per the [guidance on emptying fields and values](../../schema/reference#emptying-fields-and-values).
 
-<div class="tabbable">
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#r1" data-toggle="tab">release 1</a></li>
-  <li><a href="#r2" data-toggle="tab">release 2</a></li>
-  <li><a href="#merged" data-toggle="tab">merged</a></li>
-</ul>
-<div class="tab-content">
-    
-<div class="tab-pane active" id="r1">
-<div class="include-json" data-src="standard/example/ar_merge_r1.json"></div>
-</div>
-<div class="tab-pane" id="r2">
-<div class="include-json" data-src="standard/example/ar_merge_r2.json"></div>
-</div>
-<div class="tab-pane" id="merged">
-<div class="include-json" data-src="standard/example/ar_merge_r1_r2.json"></div>
-</div>
-</div>
-</div>
-
-
 #### ocdsOmit merge strategy
 
 There are a number of fields marked with the strategy ocdsOmit.
 
 This strategy returns nothing on merge, because to update the field wouldn't make sense.
 
-For example, the field for `tag` should not be updated to the latest version, 
-it should be updated to `compiled` for it to make sense.
-
-### Implementing merging
-
-To merge releases into records, we use the jsonmerge library with its add-ons to json schema that specify a mergeStrategy on each field.
-
-A customized version of the jsonmerge library is available at [https://github.com/open-contracting/jsonmerge](https://github.com/open-contracting/jsonmerge) using the ocds branch (set as default) as a
-reference implementation. As of 2014-11-08 it has not been rigorously tested against all our mergeStrategies.
-
-An example of merging releases into a record can be seen [in this ipython notebook](http://nbviewer.ipython.org/github/open-contracting/sample-data/blob/1__0__0/buyandsell/processing/Demonstrate%20merging%20a%20release.ipynb)
-
-To make a compiled release with jsonmerge replace mergeStrategy ocdsVersion with overwrite or objectMerge (the default jsonmerge strategies).
-
-There is a util that makes a validation schema for a versioned release based on the merge strategies. This schema is stored as versioned-release-validation-schema.json.
+For example, the field for `tag` should not be updated to the latest version, it should be updated to `compiled` for it to make sense.

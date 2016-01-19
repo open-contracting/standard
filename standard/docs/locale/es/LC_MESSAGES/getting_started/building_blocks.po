@@ -11,10 +11,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:0
-msgid "Building blocks: the data"
-msgstr ""
-
 #: ../../standard/docs/en/getting_started/building_blocks.md:3
 msgid ""
 "In mapping your data to OCDS, or using OCDS data, you will encounter a "
@@ -25,13 +21,13 @@ msgstr ""
 msgid "Sections and structure"
 msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:7
+#: ../../standard/docs/en/getting_started/building_blocks.md:17
 msgid ""
 "An OCDS document is made up of a number of sections. In the procurement "
 "case, the main sections are:"
 msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:17
+#: ../../standard/docs/en/getting_started/building_blocks.md:27
 msgid "These are represented in a JSON document as follows:"
 msgstr ""
 
@@ -39,21 +35,17 @@ msgstr ""
 msgid "Building blocks and fields"
 msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:49
+#: ../../standard/docs/en/getting_started/building_blocks.md:59
 msgid ""
 "The OCDS schema sets out the fields that should be included in each section,"
 " making use of simple re-usable building blocks to represent data."
 msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:51
+#: ../../standard/docs/en/getting_started/building_blocks.md:61
 msgid "For example, common building blocks are provided for:"
 msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:61
-msgid "TODO - ADD IN PREVIEW WIDGET FOR THESE BUILDING BLOCKS."
-msgstr ""
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:64
+#: ../../standard/docs/en/getting_started/building_blocks.md:128
 msgid ""
 "These building blocks may be used in various different sections. For "
 "example, items can occur in tender (to indicate the items that a buyer "
@@ -62,14 +54,14 @@ msgid ""
 " contract)."
 msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:66
+#: ../../standard/docs/en/getting_started/building_blocks.md:130
 msgid ""
 "In addition to these building blocks, the OCDS schema sets out the specific "
 "ways they can be used in each section, and describes a number of additional "
 "fields that can appear in specific section. For example, fields for:"
 msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:74
+#: ../../standard/docs/en/getting_started/building_blocks.md:138
 msgid ""
 "Many of these fields make use of lightweight codelists provided by OCDS."
 msgstr ""
@@ -77,3 +69,74 @@ msgstr ""
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Codelists"
 msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:0
+msgid "Building Blocks"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:0
+msgid "Examples"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:0
+msgid "Using building blocks"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:143
+msgid "OCDS defines two kinds of codelist:"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:153
+msgid "Open Codelists"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:164
+msgid "Closed Codelists"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:180
+msgid ""
+"Codelist values are case sensitive strings. OCDS publish labels for many "
+"codes in English and Spanish (TODO - CONFIRM)."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:182
+msgid ""
+"Publishers should map their existing classification systems to OCDS codes "
+"wherever possible. Many closed codelist fields are paired with a detail "
+"field where more detailed classification information can be provided."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:188
+msgid ""
+"In the EU, contracts can be initiated through a number of different "
+"procedures including:"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:196
+msgid ""
+"However, to support comparison across continents, the main OCDS procurement "
+"method code list is a closed codelist with three values based on GPA "
+"definitions:"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:202
+msgid ""
+"To publish OCDS data, an EU publisher with data categorised by EU procedures"
+" should map the longer list of procedures to the narrower OCDS codelist and "
+"provide the codelist value in the procurementMethod field. They can then "
+"provide the more detailed procedure type in an extended "
+"procurementMethodDetails field."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:204
+msgid ""
+"For an Open Procedure, when a free-text justification of why the procedure "
+"was chosen is available, this would end up as:"
+msgstr ""
+
+#~ msgid "Building blocks: the data"
+#~ msgstr ""
+
+#~ msgid "TODO - ADD IN PREVIEW WIDGET FOR THESE BUILDING BLOCKS."
+#~ msgstr ""

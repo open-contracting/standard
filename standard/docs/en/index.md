@@ -1,8 +1,6 @@
 Open Contracting Data Standard: Documentation
 =============================================
 
-## More
-
 Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. 
 
 The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting chain. 

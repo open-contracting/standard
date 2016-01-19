@@ -5,12 +5,14 @@
    :maxdepth: 2
    :glob:
 
-   definitions
+   levels
+   publication_patterns
    identifiers
    merging
    serialization
-   publication_patterns
-   registration
+   hosting
    licensing
-
+   publication_policy
+   registration
+   
 ```
