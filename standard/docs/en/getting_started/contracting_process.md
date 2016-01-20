@@ -20,7 +20,6 @@ OCDS covers:
         <td align="center"><span style="font-size:10pt;"><p><strong>Implementation</strong></p><em>Including:</em><br/>Payments<br/>Progress updates<br/>Extensions<br/>Amendments<br/>Termination info</span></td>
     </tr>
 </table><div style="display:none;">
-* 
 * ![Tender](../../../assets/green_tendering.svg.png)
 * ![Award](../../../assets/green_awarded.svg.png)
 * ![Contract](../../../assets/green_signed.svg.png)
@@ -49,7 +48,7 @@ Each unique contracting process should be assigned an ```ocid```. This is an ide
 
 To make sure the ```ocid```s assigned by two different publishers do not clash, publishers are encouraged to register a publisher prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process. 
 
-TODO: You can register your ocid prefix here. 
+You can [register your ocid prefix here](../../../implementation/registration/).
 
 <div class="example hint" markdown=1>
 

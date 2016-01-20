@@ -4,7 +4,7 @@ The Open Contracting Data Standard schema references a number of codelists in or
 
 An **open codelist** provides **suggested codes**, but publishers can extend these lists with new codes on the basis of consensus with other publishers, or by using a codes prefixed with 'x\_' to indicate that it is a local 'eXtensions' to the codelist. 
 
-For example, OCDS provide a list of the types of documents which may be attached to tenders, awards, contracts and milestones. However, a group of publishers may discover they have need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they should consult with the community through the [mailing list and GitHub platform](../../standard/support), and should suggest the code for formal incorporation into the codelists.
+For example, OCDS provide a list of the types of documents which may be attached to tenders, awards, contracts and milestones. However, a group of publishers may discover they have need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they should consult with the community through the [mailing list and GitHub platform](../../../support/), and should suggest the code for formal incorporation into the codelists.
 
 A **closed codelist** provides **mandatory codes** and publishers should only use values provided in the official list. Changes to closed codelists should take place through the governance and revision process for the schema. 
 
@@ -22,11 +22,11 @@ Items should be classified using existing gazetteers and codelists, such as the 
    :file: standard/schema/codelists/itemClassificationScheme.csv
 ```
 
-This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../implementation/publication_patterns#publication_policy). 
+This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../../implementation/publication_patterns#publication_policy). 
 
 ### Organization Identifier Scheme
 
-The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). See the identifiers section for [more information on organization identifiers](../../key_concepts/identifiers#organization-identifiers)
+The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). See the identifiers section for [more information on organization identifiers](../../identifiers/#organization-identifiers)
 
 
 ```eval_rst
@@ -57,7 +57,7 @@ The award criteria code list describes the basis on which contract awards will b
    :file: standard/schema/codelists/awardCriteria.csv
 ```
 
-This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../implementation/publication_patterns#publication_policy). 
+This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../../implementation/publication_policy). 
 
 ### Submission Method
 
@@ -69,7 +69,7 @@ The submission method codelist is used to identify the mechanism through which a
    :file: standard/schema/codelists/submissionMethod.csv
 ```
 
-This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../implementation/publication_patterns#publication_policy). 
+This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../../implementation/publication_policy). 
 
 ## Closed Codelists 
 

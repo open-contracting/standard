@@ -64,7 +64,7 @@ Publishers should consider how to [ensure URIs can remain stable](https://www.w3
 
 ## Flattened serializations
 
-The [serialization](serialization) page provides details of how to generate 'flat' versions of OCDS data for use in spreadsheet software.
+The [serialization](../../serialization/) page provides details of how to generate 'flat' versions of OCDS data for use in spreadsheet software.
 
 The same principles discussed for bulk files above should be applied to CSV or Excel downloads of data.
 

@@ -67,7 +67,7 @@ Lead authors: [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http:/
    getting_started/index
    schema/index
    implementation/index
-   evaluation/index
+   extensions/index
    support/index
 
 ```

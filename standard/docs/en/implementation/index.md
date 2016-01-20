@@ -6,13 +6,10 @@
    :glob:
 
    levels
-   publication_patterns
-   identifiers
-   merging
-   serialization
-   hosting
    licensing
    publication_policy
+   serialization
+   hosting
    registration
    
 ```

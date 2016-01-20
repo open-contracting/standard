@@ -12,7 +12,7 @@ The 1.0 Release Candidate of a data specification, as part of the standard, was 
 
 Final adoption, and future development and support for the specification will be managed through the independent Open Contracting Partnership Secretariat, which will be operational in early 2015. 
 
-## Development process
+### Development process
 
 The development of the 1.0 Release Candidate specification took place through a year-long process of supply and demand-side research, and open consultation. This processes has included:
 
@@ -32,16 +32,16 @@ The specification has moved through a number of stages.
 * **alpha** (June 2014) - An [outline data model was shared](http://ocds.open-contracting.org/standard/r/0__2__0/), and high-level concepts outlined for consultation. Design of individual field-level specifications began.
 * **beta** (September 2014) - A proposed schema, including field-level definitions was put forward, and opened for consultation. The schema is ready for early-adopters to validate and pilot. Feedback suggested a number of substantial changes.
 * **release candidate** (November 2014) - The specification is close to its final form and out for final review. Changes will be minor, and any major proposals for change will be managed through [extensions](../../key_concepts/conformance_and_extensions) until the next version update process.
-* **release** (tbc) -  The initial version (1.0) specification is frozen and any future changes will occur to new versions, with a clear governance process for making revisions.
+* **release** (July 2015) -  The initial version (1.0) was released with minor bug fixes.
 
 At present, the OCDS specification is not submitted to any formal standards body, but this will be reviewed by the Open Contracting Partnership as part of future governance developments. 
 
-## Future development
+### Future development
 
 This is a living standard, and will continue to evolve based on the feedback of publishers and users. 
 
-Governance proposals for the future development of the Open Contracting Data Standard, including the technical specification and policies around its adoption, will be considered by the Open Contracting Partnership board in late 2014. Proposals for governance will draw upon the [Open Stand](http://open-stand.org/) ‘Modern Paradigm for Standards’ which calls for openness, transparency and clearly set out process for change management. 
+Governance proposals for the future development of the Open Contracting Data Standard, including the technical specification and policies around its adoption are currently under development and proposals for governance will draw upon the [Open Stand](http://open-stand.org/) ‘Modern Paradigm for Standards’ which calls for openness, transparency and clearly set out process for change management. 
 
-Between the launch of the 1.0 Release Candidate and any future versions of the specification, ongoing feedback can be provided through the [issue trackers](https://github.com/open-contracting/standard/issues) on GitHub.
+Ongoing feedback and suggested improvements to OCDS can be provided through the [issue trackers](https://github.com/open-contracting/standard/issues) on GitHub.
 
 Announcements about proposed updates to the specification, and periods for comment, will be made to the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) mailing list.

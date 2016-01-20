@@ -1,6 +1,6 @@
 # Merging 
 
-In OCDS, merging involves combining individual [releases](../getting_started/releases_and_records.md) of data during a contracting process into a [record](../getting_started/releases_and_records.md) which provides an at-a-glance view of the current state and history of that process. 
+In OCDS, merging involves combining individual [releases](../../../getting_started/releases_and_records/) of data during a contracting process into a [record](../getting_started/releases_and_records/) which provides an at-a-glance view of the current state and history of that process. 
 
 <div class="example hint" markdown=1>
 
@@ -114,7 +114,7 @@ The following arrays of items must be re-published in full for each release:
 - Item.additionalClassifications
 - Amendment.changes
 
-Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](../../schema/reference#emptying-fields-and-values).
+Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](../../reference/#emptying-fields-and-values).
 
 
 ## Versioned data
@@ -193,7 +193,7 @@ whole block of data, not just an incremental change.
 #### arrayMergeById merge strategy
 
 The arrayMergeById applies to the following lists of objects within the release:
-
+ 
 - awards
 - contracts
 - items
@@ -207,7 +207,7 @@ fields are then matched accordingly.
 
 If a given entry is omitted (e.g. there is no information about a particular contract in a subsequent release), then the previous values carry forward. 
 
-To remove an entry it would have to have it's field values set to null, as per the [guidance on emptying fields and values](../../schema/reference#emptying-fields-and-values).
+To remove an entry it would have to have it's field values set to null, as per the [guidance on emptying fields and values](../../reference/#emptying-fields-and-values).
 
 #### ocdsOmit merge strategy
 

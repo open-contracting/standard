@@ -92,7 +92,7 @@ Prefix are randomly generated lowercase alpha-numberic strings. A prefix is assi
 
 Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organisations may be able to issue prefixes, each with their own prefix agency identifiers.
 
-You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../../implementation/registration). 
+You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../../../implementation/registration/). 
 
 The registered prefixes are dumb identifiers. They are not intended to carry any semantics, and their sole purpose is to turn internal identifiers into globally unique identifiers which can be cross-referenced between systems. 
 
