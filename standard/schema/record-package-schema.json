@@ -16,18 +16,23 @@
             "type": "object",
             "properties": {
                 "name": {
+                    "title":"Name",
+                    "description":"The name of the organisation or department responsible for publishing this data.",
                     "type": "string"
                 },
                 "scheme": {
+                    "title":"Scheme",
                     "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
-                    "type": ["string", "null"],
-                    "format": "uri"
+                    "type": ["string", "null"]
                 },
                 "uid": {
-                    "description": "The unique ID for this entity under the given ID scheme.",
+                    "title":"uid",
+                    "description": "The unique ID for this entity under the given ID scheme. Note the use of 'uid' rather than 'id'. See issue #245.",
                     "type": ["string", "null"]
                 },
                 "uri": {
+                    "title":"URI",
+                    "description":"A URI to identify the publisher.",
                     "type": ["string", "null"],
                     "format" : "uri"
                 }
