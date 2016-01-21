@@ -50,3 +50,25 @@ Sphinx does not watch directories for changes, but can be linked with other scri
 
 ```fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh```
 
+### Translations
+
+When a new version of the docs text is ready, a new transifex project needs to be made called eg. ocds-docs-1.0.0.  This is done on the transifex web interface.
+
+Make sure the build is run above, then run (making sure the poject name is the same as the one made above) 
+
+```sphinx-intl update-txconfig-resources --transifex-project-name ocds-docs-1.0.0 --pot-dir build/locale```
+
+This will update the .tx/config file and this file should be added to the git repository. This will only have to be run again if there is a new/deleted doc page or if a file name has changed name.
+
+In order to push any changes in text to transifex run:
+
+```tx push -s```
+
+When the translations are filled in transifex you need to run:
+
+```
+cd standard/docs/
+tx pull -a
+```
+
+After this the build script will need to be run again.
