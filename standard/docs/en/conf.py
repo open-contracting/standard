@@ -299,7 +299,7 @@ html_theme = "standard_theme"
 html_theme_path = [standard_theme.get_html_theme_path()]
 
 
-locale_dirs = ['../locale/']
+locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 gettext_compact = False     # optional.
 
 
