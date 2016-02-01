@@ -16,8 +16,8 @@ In mapping your data to OCDS, or using OCDS data, you will encounter a number of
 
 An OCDS document is made up of a number of sections. In the procurement case, the main sections are:
 
-* **Meta-data** - contextual information about each release of data;
-* **buyer** - information about the key contracting party;
+* **meta-data** - contextual information about each release of data;
+* **buyer** - information about the key public party;
 * **planning** - information about the goals, budgets and projects a contracting process relates to;
 * **tender** - information about how a tender will take place, or has taken place;
 * **awards** - information on awards made as part of a contracting process;
@@ -54,9 +54,9 @@ Awards and contracts are arrays of objects, whereas tender is an object. This is
 
 </div>
 
-### Building blocks and fields
+### Building blocks: fields
 
-The OCDS schema sets out the fields that should be included in each section, making use of simple re-usable building blocks to represent data. 
+The OCDS schema sets out the fields that should be included in each section, making use of simple re-usable building blocks (field structures) to represent data. 
 
 For example, common building blocks are provided for:
 
@@ -177,7 +177,7 @@ OCDS defines two kinds of codelist:
 </table>
 
 
-Codelist values are case sensitive strings. OCDS publish labels for many codes in English and Spanish (TODO - CONFIRM). 
+Codelist values are case sensitive strings. Canonical codelist labels are in English, but we are working towards providing translated labels. [Contact the helpdesk](support/index.md) for information on adding a new translation.
 
 Publishers should map their existing classification systems to OCDS codes wherever possible. Many closed codelist fields are paired with a detail field where more detailed classification information can be provided. 
 
@@ -195,9 +195,11 @@ In the EU, contracts can be initiated through a number of different procedures i
 
 However, to support comparison across continents, the main OCDS procurement method code list is a closed codelist with three values based on [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm):
 
-* open
-* selective
-* limited
+* **open** - a procurement method whereby all interested suppliers may submit a tender
+* **selective** - a procurement method whereby only qualified suppliers are invited by the procuring entity to submit a tender
+* **limited** - a procurement method whereby the procuring entity contacts a supplier or suppliers of its choice
+
+In our experience, most procedures can map to one of these categories. 
 
 To publish OCDS data, an EU publisher with data categorised by EU procedures should map the longer list of procedures to the narrower OCDS codelist and provide the codelist value in the ```procurementMethod``` field. They can then provide the more detailed procedure type in an extended ```procurementMethodDetails``` field.
 

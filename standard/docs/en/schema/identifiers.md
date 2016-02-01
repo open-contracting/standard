@@ -21,7 +21,7 @@ We create globally unique contracting process identifiers by adding a prefix to 
 
 <p class="first admonition-title">Worked Example</p>
 
-Two government publishers (Town A and Town B) of OCDS number their contracting processes from 0 upwards. 
+Two government publishers (Town A and Town B) number their contracting processes from 0 upwards. 
 
 Town A publishes information on a contracting process to build a new road. Internally they know this as contract 0005.
 
@@ -88,15 +88,15 @@ The OCDS prefix itself is made up of two parts: a prefix agency identifier (curr
 The OCID is case sensitive.
 
 ### Registered prefixes
+See the [registration pages](../implementation/registration.md) for details of how to obtain your OCID prefix. 
+
 Prefix are randomly generated lowercase alpha-numberic strings. A prefix is assigned to each organisation that holds the existing internal identifier for a Contracting Processes. 
 
 Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organisations may be able to issue prefixes, each with their own prefix agency identifiers.
 
-You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../../../implementation/registration/). 
+You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../implementation/registration.md). 
 
 The registered prefixes are dumb identifiers. They are not intended to carry any semantics, and their sole purpose is to turn internal identifiers into globally unique identifiers which can be cross-referenced between systems. 
-
-See the [registration pages](../../implementation/registration) for details of how to obtain your OCID prefix. 
 
 ### Publisher namespace
 
@@ -110,7 +110,7 @@ However, publishers are encouraged to consider whether there are any risks of cl
 ## Organisation IDs
 <img src="../../../assets/green_organisation.svg.png" width="150" align="right"/>
 
-Reliably identifying the legal entities involved in a contracting process is vital for transparency and accountabilty, and for carrying out analysis to improve procurement. 
+Reliably identifying the legal entities involved in a contracting process is vital for transparency and accountability, and for carrying out analysis to improve procurement and contract management.
 
 Publishers should seek to collect and record the **legal identifier** from an official register of any organisations involved in a contracting process (including procuring organisations, bidders and suppliers), and should include this in their OCDS files.
 
@@ -152,7 +152,7 @@ The **organisation register prefix** is used to refer to a register from which t
 
 Local lists may commonly need to be used for identifying public bodies, as in many countries there is no official list of public agencies. 
 
-At present, the OCDS standard defers to the organisation list prefixes provided by the [IATI Organisation Registration Agency codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). If you require codes to be added to this list, please contact the Open Contracting Data Standard support and they will work to achieve this.
+At present, the OCDS standard defers to the organisation list prefixes provided by the [IATI Organisation Registration Agency codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/) which cover a wide range of organization types. If you require codes to be added to this list, please contact the [Open Contracting Data Standard helpdesk](../support/index.md) and they will work to achieve this.
 
 
 ## Release ID

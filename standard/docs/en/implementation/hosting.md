@@ -95,9 +95,9 @@ In addition, the data.json document may contain one or more records with the key
 
 Publishers exposing individual records and releases, of regularly updated data packages in small sets, should provide one or more [atom feeds](http://en.wikipedia.org/wiki/Atom_%28standard%29) that index these, and provide an easy mechanism for users to discover recently published or updated release and records.
 
-The link to the release or record should be provided via a <link> tag, and the updated date of the entry should reflect the updated date of that release or record. The <id> should reflect the release id for release, or the ocid for records.
+The link to the release or record should be provided via a ```<link>``` tag, and the updated date of the entry should reflect the updated date of that release or record. The ```<id>``` should reflect the release id for release, or the ocid for records.
     
-The release.tag should be contained within a <category> element of the feed. 
+The release.tag should be contained within an ```<category>``` element of the feed. 
 
 Feeds requiring pagination should follow the approach set out in [RFC 5005](https://tools.ietf.org/html/rfc5005#section-3).
 

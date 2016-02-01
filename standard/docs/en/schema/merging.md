@@ -75,11 +75,11 @@ The merging rules can be summarised as follows:
 
 2. For literal values, replace the older value with the newer value. You may remove fields which have been set to null. 
 
-TODO - EXAMPLE
+<!--TODO - EXAMPLE-->
 
 3. For an array of objects, merge the array by the id of each object EXCEPT as noted in 4.
 
-TODO - EXAMPLE
+<!--TODO - EXAMPLE-->
 
 4. For the following arrays, replace the entire array in the older release with the entire array from the newer release
 
@@ -114,7 +114,7 @@ The following arrays of items must be re-published in full for each release:
 - Item.additionalClassifications
 - Amendment.changes
 
-Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](../../reference/#emptying-fields-and-values).
+Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](reference.md#emptying-fields-and-values).
 
 
 ## Versioned data
@@ -160,7 +160,7 @@ The OCDS merging has been based on the open source [jsonmerge library](https://g
 
 Within the OCDS release schema, each field has a mergeStrategy property. This strategy describes how to merge that and child fields.
 
-We inhert the existing merge strategies from [jsonmerge](https://github.com/avian2/jsonmerge#merge-strategies) and add a number of specific strategies for OCDS, which are currently only available in the [OCDS fork of jsonmerge](https://github.com/open-contracting/jsonmerge) and which are described below.
+We inherit the existing merge strategies from [jsonmerge](https://github.com/avian2/jsonmerge#merge-strategies) and add a number of specific strategies for OCDS, which are currently only available in the [OCDS fork of jsonmerge](https://github.com/open-contracting/jsonmerge) and which are described below.
 
 #### ocdsVersion merge strategy
 
@@ -207,7 +207,7 @@ fields are then matched accordingly.
 
 If a given entry is omitted (e.g. there is no information about a particular contract in a subsequent release), then the previous values carry forward. 
 
-To remove an entry it would have to have it's field values set to null, as per the [guidance on emptying fields and values](../../reference/#emptying-fields-and-values).
+To remove an entry it would have to have it's field values set to null, as per the [guidance on emptying fields and values](reference.md#emptying-fields-and-values).
 
 #### ocdsOmit merge strategy
 

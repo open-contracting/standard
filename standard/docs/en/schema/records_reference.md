@@ -29,7 +29,7 @@ Records should be embedded within a record package.
    :file: standard/docs/field_definitions/record-package.csv
 ```
 
-See the guidance on [package meta-data](../../reference/#package-metadata). In addition, a record package includes:
+See the guidance on [package meta-data](reference.md#package-metadata). In addition, a record package includes:
 
 * ```packages``` - which should provide links to all the release packages used to compile this record. 
 * ```records``` - one or more contracting process records, containing, at the very least, identifiers for the all the releases that relate to each contracting process.
@@ -55,7 +55,7 @@ Each record package contains an array of one or more records, consisting of the 
 
 ### Release list
 
-The releases that go to make up a contracting process can be provided in two ways:
+The releases that make up a contracting process can be provided in two ways:
 
 * URLs and meta-data for each release; or
 * Embedded copies of the release;

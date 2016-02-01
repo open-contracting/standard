@@ -1,12 +1,6 @@
-<style><!--
-    .wy-table-responsive table td, .wy-table-responsive table th {
-        white-space:wrap;
-    }
---></style>
-
 # Release Reference
 
-The [Release Schema](release.md) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas showing how to combine releases into data packages and how to compile releases into records. 
+The [Release Schema](release.md) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into data packages and how to compile releases into records. 
 
 This reference page provides key information on using the release schema.
 
@@ -22,7 +16,7 @@ The majority of OCDS data is held within a release structure. One or more releas
 * [contract](#contract)
 * [implementation](#implementation)
 
-A release can only contain one tender section, but may contain multiple award, contract and implementation sections. This is because each OCDS release relates to [a single contracting process](../../../getting_started/contracting_process/#defining-a-contracting-process), and we define contracting processes by their unique initiation (tender) stage.
+A release can only contain one tender section, but may contain multiple award, contract and implementation sections. This is because each OCDS release relates to [a single contracting process](../getting_started/contracting_process.md), and we define contracting processes by their unique initiation (tender) stage.
 
 Releases are given a [tag](#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process may be provided. 
 
@@ -40,11 +34,11 @@ Releases must be published within a [release package](release_package.md), which
 
 Notes:
 
-* The uri should unique identify this release package. Publishers should provide a [dereferenceable HTTP URI](http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier) wherever possible and should host the data package at this URI, enabling users to look-up and verify the contents of a release package from its original source. 
+* The uri should uniquely identify this release package. Publishers should provide a [dereferenceable HTTP URI](http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier) wherever possible and should host the data package at this URI, enabling users to look-up and verify the contents of a release package from its original source. 
 * The [publishedDate](#date) on which this package was published. If a package is automatically generated and re-published on a regular basis, this date should reflect the date of the last change to the contents of the package. 
 * The publisher [publisher](#publisher) block provides space for an organisation name and identifier.
-* ````license```` - See the [licensing guidance](../../../implementation/licensing/) for more details on selecting and publishing license information. 
-* ````publicationPolicy```` - See the [publication policy](../../../implementation/publication_policy/) guidance for more details.
+* ````license```` - See the [licensing guidance](../implementation/licensing.md) for more details on selecting and publishing license information. 
+* ````publicationPolicy```` - See the [publication policy](../implementation/publication_policy.md) guidance for more details.
 
 ### Release
 
@@ -58,7 +52,7 @@ The top level of a release consists of the following fields and objects:
 
 Notes:
 
-* ```ocid``` - Providing each [contracting process](../../../getting_started/contracting_process/#defining-a-contracting-process) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](../../identifiers/#ocid) for details of how to construct an OCID. 
+* ```ocid``` - Providing each [contracting process](../getting_started/contracting_process.md) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](identifiers.md) for details of how to construct an OCID. 
 * ```tag``` - The release tag is used to identify the nature of the release being made. This can be used by consuming applications to filter releases, or may in future be used for advanced validation. A release which updates or amends previous data must always use the appropriate update or amendment release tag. Values must be drawn from the [releaseTag codelist](codelists.md#release-tag).
 * ```date``` - The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates. 
 * ```language``` - see the section on [multi-language support](#language) for information on language handling.
@@ -87,7 +81,7 @@ Apart from documents, the majority of information is held within the budget bloc
 
 ### Tender
 
-The tender section includes details of the announcement that a organization intends to source some particular goods or services, and to establish one or more contract(s) for these.
+The tender section includes details of the announcement that an organization intends to source some particular goods, works or services, and to establish one or more contract(s) for these.
 
 It may contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and may also be used to record details of how a completed tender process, including details of bids received. 
 
@@ -99,17 +93,17 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 
 Notes: 
 
-* ```tender.id``` - see the [identifiers guidance](../../identifiers/#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
+* ```tender.id``` - see the [identifiers guidance](identifiers.md#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
 * ```procuringEntity``` - in some cases the organization managing the procurement process may be different from the organization whose budget is being used for the procurement (the 'buyer' in OCDS terminology). If this is the case, then the details of this procuring organization should be provided here. 
 * ```title``` and ```description``` - tender title and description are optional. The details of items to be procured should always be provided in ```items```. Descriptions should not be used in place of providing structured data on items, dates and other details. Instead, title and description should be used to provide a brief overview of the tender. Publishers should consider adopting a 'tweet length' title, and should avoid ALL UPPERCASE titles, or titles containing code words or other artefacts from internal databases. The goal of these fields is to give users a clear idea of the nature of a tender. 
 * ```items``` - publishers should provide details of each of the items to be procured under this tender. 
 * ```milestones``` - publishers should list any relevant [milestones](#milestone) associated with the delivery of the goods and services covered by this tender. These are the milestones against which the whole contracting process will be evaluated. Publishers may include information about key milestones during the tender process itself, but should not use this in place of ```tenderPeriod```, ```enquiryPeriod``` or ```awardPeriod```.
 * ```value``` and ```minValue``` - the total upper estimated value of a procurement should be given in ```value```. For publishers who also specify a estimate minimum value, this can be placed in ```minValue```.
 *  ```procurementMethod``` and ```procurementMethodRationale```. Tendering processes can use a variety of methods. Publishers should map their methods to one of the approved codes according to the [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of open, selective or limited. A free text explanation of why a given method was appropriate to this tender can be provided in ```procurementMethodRationale```. 
-* ```awardCriteria``` and ```awardCriteriaDetails``` - The [award criteria code list](../../codelists/#award-criteria) describes the basis on which contract awards will be made. This is an open codelist, and so may be extended with new codes. Free text describing the basis on which bids will be judged, and made, can be provided in the ```awardCriteriaDetail``` field. Publishers wishing to provide more structured information about selection, shortlisting and award criteria should propose [extensions](../../../implementation/conformance_and_extensions/#extensions) for this. 
-* ```documents``` - supporting documentation should be attached to the tender. This may include official legal notices of tender, as well as technical specifications, evaluation criteria, and, as a tender process progresses, clarifications, replies to queries and copies of bids submitted or listings of shortlisted firms. See the [attachments](#attachments) section for more details of how to include documents, and consult the [documentType codelist](../codelists/#document-type) for suggested documents to include for basic, intermediate or advanced publication.
+* ```awardCriteria``` and ```awardCriteriaDetails``` - The [award criteria code list](../../codelists/#award-criteria) describes the basis on which contract awards will be made. This is an open codelist, and so may be extended with new codes. Free text describing the basis on which bids will be judged, and made, can be provided in the ```awardCriteriaDetail``` field. Publishers wishing to provide more structured information about selection, shortlisting and award criteria should propose [extensions](../implementation/conformance_and_extensions.md) for this. 
+* ```documents``` - supporting documentation should be attached to the tender. This may include official legal notices of tender, as well as technical specifications, evaluation criteria, and, as a tender process progresses, clarifications, replies to queries and copies of bids submitted or listings of shortlisted firms. See the [attachments](#attachments) section for more details of how to include documents, and consult the [documentType codelist](codelists.md/#document-type) for suggested documents to include for basic, intermediate or advanced publication.
 
-Information on bidders against a contract will be handled by an [extension](../../../implementation/conformance_and_extensions/#extensions) during the period of the standard release candidate. Publishers wishing to provide detailed information on bidders should [contact support](../../../support/).
+Information on bidders against a contract will be handled by an [extension](../implementation/conformance_and_extensions.md) during the period of the standard release candidate. Publishers wishing to provide detailed information on bidders should [contact support](../support/index.md).
 
 ### Award
 
@@ -153,7 +147,7 @@ Implementation information can be updated over the course of a contract. It belo
    :file: standard/docs/field_definitions/release-implementation.csv
 ```
 
-Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](../../../implementation/conformance_and_extensions/#extensions)
+Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](../implementation/conformance_and_extensions.md)
 
 #### Transaction
 
@@ -181,9 +175,9 @@ See [document](#document) reference below.
 
 ### Amendment
 
-A release may amend properties from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for updates to a tender, award or contract to be explicitly declared. 
+A release may amend properties from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for changes to a tender, award or contract to be explicitly declared. 
 
-The amendment block in each of tender, award and contract blocks provides the ability to explicitly declare changed fields, their former values, and to provide an explanation for the change. 
+The amendment block in each of tender, award and contract blocks provides the ability to explicitly declare changed fields, their former values, to provide an explanation for the change, and attach or reference relevant documentation.
 
 ```eval_rst
 .. csv-table::
@@ -218,7 +212,7 @@ The organization block can be used to provide a legal identifier for an organiza
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../../identifiers/#organizations) involved in a contracting process. If a Contracting Process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
+The identifier block provides a way to [identify the legal entities](identifiers.md#organizations) involved in a contracting process. If a Contracting Process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
 ```eval_rst
 .. csv-table::
@@ -243,7 +237,7 @@ The identifier block provides a way to [identify the legal entities](../../ident
 
 ### Document
 
-Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and milestones. Each document block can consist of multiple documents, classified using the [documentType](../codelists/#document-type) codelist.
+Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and milestones. Each document block can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
 
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
@@ -299,8 +293,8 @@ The items block is used to list the line-items associated with a tender, award o
 
 Notes: 
 
-* The [proposed location extension](../../../extensions/location/) can be attached to items, allowing the point of delivery for a given item to be indicated in both the tender, award and contract stage.
-* Items should be classified according to a established scheme of codes. A single primary ```classification``` can be given, although an array of ```additionalClassification``` can be provided.
+* The [proposed location extension](../extensions/location.md) can be attached to items, allowing the point of delivery for a given item or the site of works to be completed to be indicated in both the tender, award and contract stage.
+* Items should be classified according to an established scheme of codes. A single primary ```classification``` can be given, although an array of ```additionalClassification``` can be provided.
 
 #### Classification
 
@@ -355,7 +349,7 @@ During the period of the 1.0 RC, if information on taxation related to a value i
 
 ### Location
 
-The addition of location information is currently handled through a [proposed extension](https://github.com/open-contracting/implementation-and-extensions/tree/master/proposed_extensions/proposed_location) to the standard.
+The addition of location information is currently handled through a [proposed extension](../extensions/location.md) to the standard.
 
 ### Publisher
 
@@ -407,7 +401,7 @@ A contract is for ‘Software consultancy services’ may be published in a rele
 
 The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
 
-Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice should be based on an understanding the [merging process](../../merging/) that is used to generate a snapshot record of a full contracting process.
+Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice should be based on an understanding the [merging process](merging.md) that is used to generate a snapshot record of a full contracting process.
 
 This model also requires publishers to pay careful attention to null values and missing fields. 
 

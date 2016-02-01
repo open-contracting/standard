@@ -10,7 +10,7 @@ The OCDS is a core product of the [Open Contracting Partnership](http://www.open
 
 The 1.0 Release Candidate of a data specification, as part of the standard, was developed through a rapid prototyping project. The project was undertaken by the by the [World Wide Web Foundation](http://www.webfoundation.org) and [World Bank](http://www.worldbank.org), and supported by [The Omidyar Network](http://www.omidyar.com/) and the [World Bank](http://www.worldbank.org).
 
-Final adoption, and future development and support for the specification will be managed through the independent Open Contracting Partnership Secretariat, which will be operational in early 2015. 
+Final adoption, and future development and support for the specification is managed through the independent Open Contracting Partnership.
 
 ### Development process
 
@@ -18,7 +18,7 @@ The development of the 1.0 Release Candidate specification took place through a 
 
 * **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and [mapped](http://ocds.open-contracting.org/opendatacomparison/datamap/) the fields of data available from a wide range of existing government contracting data portals around the world. 
 * **Exploring demand for contracting data** - through field work, interviews and online engagement with different communities and individuals who many use of contract information. The information needs of users were catalogued, and fed into the requirements for the specification structure and fields. We developed a series of priority use cases to guide implementation and adoption of the specification. [Read the demand-side assessment](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing)
-* **Iterative, open development** - we offered transperency, and gained broad feedback to improve the specification by offering early releases for comment ([alpha](http://ocds.open-contracting.org/standard/r/0__2__0/) and [beta](http://ocds.open-contracting.org/standard/r/0__3__2/)) and by maintaining a [public issue tracker](https://github.com/open-contracting/standard/issues). We enegaged contracting, open-data, and other stakeholders through mailing lists and other online spaces. Finally, development sprints held at PyCon Montreal and PyCon Europe 2014 also actively contributed to the development of the specification. 
+* **Iterative, open development** - we offered transparency, and gained broad feedback to improve the specification by offering early releases for comment ([alpha](http://ocds.open-contracting.org/standard/r/0__2__0/) and [beta](http://ocds.open-contracting.org/standard/r/0__3__2/)) and by maintaining a [public issue tracker](https://github.com/open-contracting/standard/issues). We engaged contracting, open-data, and other stakeholders through mailing lists and other online spaces. Finally, development sprints held at PyCon Montreal and PyCon Europe 2014 also actively contributed to the development of the specification. 
 
 Over [150 people](../credits) have provided comments, feedback and input into the specification over the year of initial development.
 

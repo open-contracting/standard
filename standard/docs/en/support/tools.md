@@ -4,8 +4,6 @@ There are a growing number of tools available to support implementation of OCDS.
 
 Tools developed by the core team will be available at [https://github.com/open-contracting/](https://github.com/open-contracting/).
 
-Consult the mailing list for details of other community generated tools.
-
 ## Core tools
 
 ### OCDS Validator

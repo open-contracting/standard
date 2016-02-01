@@ -8,14 +8,14 @@ There are two kinds of OCDS document:
         <td width="50%" align="center"><img src="../../../assets/green_compilation.svg.png" width="50%"></td>
     </tr>
     <tr>
-        <td valign="top" style="padding:10px;"><strong>Releases</strong> provide updates on each event in a contracting process, ideally in real=time. They can be used to notify users of new tenders, awards, contracts and other updates. One contracting process may have many releases.</td>
+        <td valign="top" style="padding:10px;"><strong>Releases</strong> provide updates on each event in a contracting process, ideally in real-time. They can be used to notify users of new tenders, awards, contracts and other updates. One contracting process may have many releases.</td>
         <td valign="top" style="padding:10px;"><strong>Records</strong> compile together all the information known about a contracting process, providing a snapshot view of it's current state. They can also contain a versioned history of changes over time. There should only be one record for each contracting process, created by merging together the releases.</td>
     </tr>
 </table>
 
 ### Releases
 
-Releases should be immutable documents, presenting information about a particular event in the lifetime of a contracting process. 
+Releases should be immutable objects, presenting information about a particular event in the lifetime of a contracting process. 
 
 Each release must contain an OCID, a unique release ID, a release tag, and as much information as can be provided for users to understand the event taking place.
 
@@ -107,10 +107,10 @@ However, to allow users to get a snapshot view the contracting process without i
 * a compiledRelease block, which follows the release schema, and is updated with the most up-to-date value for each field; and, optionally,
 * a versionedRelease, which contains a history of all the changes for each field.
 
-The OCDS merge strategies (TODO - LINK) set out how to combine multiple releases to create a single record for each contracting process. 
+The [OCDS merge strategies](schema/merging.md) set out how to combine multiple releases to create a single record for each contracting process. 
 
-#### Examples
+<!-- #### Examples
 
-TODO
+TODO-->
 
 <center><img src="../../../assets/release_square.png" height="200"/></center>

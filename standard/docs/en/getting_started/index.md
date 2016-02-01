@@ -1,8 +1,10 @@
 # Getting Started
 
-OCDS is an open data standard for publication of structured information on all stages of a contracting process: from initiation to implementation.
+OCDS is an open data standard for publication of structured information on all stages of a contracting process: from planning to implementation.
 
-The publication of OCDS data can enable greater transparency in public contracting, and can support accessible and in-depth analysis of how public resources are being used. 
+The publication of OCDS data can enable greater transparency in public contracting, and can support accessible and in-depth analysis of the efficiency, effectiveness, fairness, and integrity of public contracting systems. 
+
+OCDS was designed with a focus on public procurement of goods, works and services, but can be extended for use in other contexts. Extensions for Public Private Partnership (PPP) and Extractives concessions are under development.
 
 To get started publishing OCDS data:
 
@@ -12,10 +14,11 @@ To get started publishing OCDS data:
 * Present the data in [JSON releases and records](releases_and_records.md)
 * Publish your data on the web using the [publication patterns](publication_patterns.md)
 * Check the [validation of your data](validation.md)
+* Encourage and facilitate stakeholder use of the data
 
-You can find [samples of OCDS data](ToDo), and [information on using OCDS](ToDo) in the implementation handbook. 
+<!-- You can find [samples of OCDS data](ToDo), and [information on using OCDS](ToDo) in the implementation handbook. -->
 
-When you are done you could be producing data that looks something like this, and which is compatible with a growing range of OCDS aware tools.
+When you are done you could be producing data that looks something like the contract release below, which is compatible with a growing range of OCDS aware tools (you will encounter a range of different OCDS release types in the following pages).
 
 ```eval_rst
 

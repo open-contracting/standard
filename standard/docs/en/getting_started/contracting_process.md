@@ -1,6 +1,6 @@
 ## The Contracting Process
 
-There are many stages to a contracting process. OCDS brings data together across all links of the contracting chain.
+There are several stages to a contracting process. 
 
 OCDS covers:
 
@@ -16,8 +16,8 @@ OCDS covers:
         <td align="center"><span style="font-size:10pt;"><p><strong>Planning</strong></p><em>Including:</em><br/>Budgets<br/>Project plans<br/>Procurement plans<br/>Market studies<br/>Public hearing info</span></td>
         <td align="center"><span style="font-size:10pt;"><p><strong>Initiation (Tender)</strong></p><em>Including:</em><br/>Tender notices<br/>Specifications<br/>Line items<br/>Values<br/>Enquiries</span></td>
         <td align="center"><span style="font-size:10pt;"><p><strong>Award</strong></p><em>Including:</em><br/>Details of award<br/>Bidder information<br/>Bid evaluation<br/>Values</span></td>
-        <td align="center"><span style="font-size:10pt;"><p><strong>Contract</strong></p><em>Including:</em><br/>Final details<br/>Signed contract<br/>Amendments<br/>Subcontracts<br/>Values</span></td>
-        <td align="center"><span style="font-size:10pt;"><p><strong>Implementation</strong></p><em>Including:</em><br/>Payments<br/>Progress updates<br/>Extensions<br/>Amendments<br/>Termination info</span></td>
+        <td align="center"><span style="font-size:10pt;"><p><strong>Contract</strong></p><em>Including:</em><br/>Final details<br/>Signed contract<br/>Amendments<br/>Values</span></td>
+        <td align="center"><span style="font-size:10pt;"><p><strong>Implementation</strong></p><em>Including:</em><br/>Payments<br/>Progress updates<br/>Location<br/>Extensions<br/>Amendments<br/>Completion or Termination info</span></td>
     </tr>
 </table><div style="display:none;">
 * ![Tender](../../../assets/green_tendering.svg.png)
@@ -25,6 +25,7 @@ OCDS covers:
 * ![Contract](../../../assets/green_signed.svg.png)
 * ![Implementation](../../../assets/green_implementation.svg.png)
 </div>  
+
 
 Not all contracting processes have all stages. For example, direct contracting may start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case. 
 
@@ -36,19 +37,19 @@ This may involve generating output from a range of different systems. Data publi
 
 For public procurement OCDS defines a unique contracting process as:
 
-> All the planning, tendering information, awards and contracts related to a single initiation process.
+> All the planning, tendering information, awards, contracts and contract implementation information related to a single initiation process.
 
 An initiation process may be a tender, a direct contract award, or a call to award a concession. 
 
-TODO: Worked example/Diagram
+<!-- TODO: Worked example/Diagram -->
 
 ### The Open Contracting ID (ocid)
 
-Each unique contracting process should be assigned an ```ocid```. This is an identifier which can be used to join up data between stages and systems. 
+Each unique contracting process should be assigned an ```ocid```. This is an identifier which can be used to join up data between different stages (as often the data may be stored in different systems). 
 
 To make sure the ```ocid```s assigned by two different publishers do not clash, publishers are encouraged to register a publisher prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process. 
 
-You can [register your ocid prefix here](../../../implementation/registration/).
+You can [register your ocid prefix here](implementation/registration.md).
 
 <div class="example hint" markdown=1>
 
@@ -80,10 +81,10 @@ The ```ocid``` is case sensitive. Case should be used consistently whenever an `
 
 </div>
 
-### More than just procurement
+### Extending OCDS
 
 Version 1.0 of the OCDS schema is optimised for procurement-type contracts. 
 
 However, using extensions OCDS can also be used to model other kinds contracting process. 
 
-Work is underway to add formal support for concession contracts, and public-private partnership contracts.
+[Contact the helpdesk](support/index.md) for support to model your contracting processes using OCDS.
