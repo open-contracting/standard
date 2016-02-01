@@ -72,3 +72,11 @@ tx pull -a
 ```
 
 After this the build script will need to be run again.
+
+
+### Theme
+
+The OCDS Docs Theme files are held in a seperate GitHub repository. Consult [the README there](https://github.com/open-contracting/standard_theme#open-contracting-standard-sphinx-theme) for more information.
+
+The theme files are pulled into your virtual envronment during the `pip install -r requirements.txt` step. You will find them in the `.ve/src/standard-theme` directory (where .ve is the name of your virtual environment directory).
+
