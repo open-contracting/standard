@@ -48,8 +48,11 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'OCDS'
-copyright = '2015, OCDS'
+html_show_copyright = False
+copyright = ''
 author = 'OCDS'
+
+html_show_sphinx = False
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
