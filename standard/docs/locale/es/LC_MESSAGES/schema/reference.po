@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015, OCDS
+# Copyright (C)
 # This file is distributed under the same license as the OCDS package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-21 15:18+0000\n"
+"POT-Creation-Date: 2016-02-04 11:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,19 +21,19 @@ msgstr ""
 msgid "Release Reference"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:9
+#: ../../standard/docs/en/schema/reference.md:3
 msgid ""
 "The Release Schema provides a detailed specification of the fields and "
 "data structures to use when publishing contracting data. Supplementary "
-"schemas showing how to combine releases into data packages and how to "
+"schemas show how to combine releases into data packages and how to "
 "compile releases into records."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:11
+#: ../../standard/docs/en/schema/reference.md:5
 msgid "This reference page provides key information on using the release schema."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:13
+#: ../../standard/docs/en/schema/reference.md:7
 msgid ""
 "Note: If any conflicts are found between this text, and the text within "
 "the schema, the schema takes precedence"
@@ -43,37 +43,37 @@ msgstr ""
 msgid "Release structure"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:17
+#: ../../standard/docs/en/schema/reference.md:11
 msgid ""
 "The majority of OCDS data is held within a release structure. One or more"
 " releases can be published within a release package. Releases are made up"
 " of a number of sections, including:"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:19
+#: ../../standard/docs/en/schema/reference.md:13
 #: ../../standard/docs/field_definitions/release-toplevel.csv:1
 msgid "planning"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:20
+#: ../../standard/docs/en/schema/reference.md:14
 #: ../../standard/docs/field_definitions/release-toplevel.csv:1
 msgid "tender"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:21
+#: ../../standard/docs/en/schema/reference.md:15
 msgid "award"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:22
+#: ../../standard/docs/en/schema/reference.md:16
 msgid "contract"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:23
+#: ../../standard/docs/en/schema/reference.md:17
 #: ../../standard/docs/field_definitions/release-contract.csv:1
 msgid "implementation"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:25
+#: ../../standard/docs/en/schema/reference.md:19
 msgid ""
 "A release can only contain one tender section, but may contain multiple "
 "award, contract and implementation sections. This is because each OCDS "
@@ -81,14 +81,14 @@ msgid ""
 "contracting processes by their unique initiation (tender) stage."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:27
+#: ../../standard/docs/en/schema/reference.md:21
 msgid ""
 "Releases are given a tag to indicate the specific stage of a contracting "
 "process they represent. However, there are no formal restrictions on when"
 " information about a stage of the contracting process may be provided."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:29
+#: ../../standard/docs/en/schema/reference.md:23
 msgid ""
 "For example, a publisher announcing the signing of a contract with a "
 "'contract' tag, may also include information in the award and tender "
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Package Metadata"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:33
+#: ../../standard/docs/en/schema/reference.md:27
 msgid ""
 "Releases must be published within a release package, which can contain "
 "one or more releases. The release package, modelled on the Data Package "
@@ -297,23 +297,23 @@ msgid ""
 "/#publication-policy>`__."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:41
-#: ../../standard/docs/en/schema/reference.md:59
-#: ../../standard/docs/en/schema/reference.md:100
-#: ../../standard/docs/en/schema/reference.md:300
-#: ../../standard/docs/en/schema/reference.md:338
+#: ../../standard/docs/en/schema/reference.md:35
+#: ../../standard/docs/en/schema/reference.md:53
+#: ../../standard/docs/en/schema/reference.md:94
+#: ../../standard/docs/en/schema/reference.md:294
+#: ../../standard/docs/en/schema/reference.md:332
 msgid "Notes:"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:43
+#: ../../standard/docs/en/schema/reference.md:37
 msgid ""
-"The uri should unique identify this release package. Publishers should "
+"The uri should uniquely identify this release package. Publishers should "
 "provide a dereferenceable HTTP URI wherever possible and should host the "
 "data package at this URI, enabling users to look-up and verify the "
 "contents of a release package from its original source."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:44
+#: ../../standard/docs/en/schema/reference.md:38
 msgid ""
 "The publishedDate on which this package was published. If a package is "
 "automatically generated and re-published on a regular basis, this date "
@@ -321,19 +321,19 @@ msgid ""
 "package."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:45
+#: ../../standard/docs/en/schema/reference.md:39
 msgid ""
 "The publisher publisher block provides space for an organisation name and"
 " identifier."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:46
+#: ../../standard/docs/en/schema/reference.md:40
 msgid ""
 "license - See the licensing guidance for more details on selecting and "
 "publishing license information."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:47
+#: ../../standard/docs/en/schema/reference.md:41
 msgid "publicationPolicy - See the publication policy guidance for more details."
 msgstr ""
 
@@ -341,7 +341,7 @@ msgstr ""
 msgid "Release"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:51
+#: ../../standard/docs/en/schema/reference.md:45
 msgid "The top level of a release consists of the following fields and objects:"
 msgstr ""
 
@@ -516,7 +516,7 @@ msgid ""
 "ISO 639-1 is strongly recommended."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:61
+#: ../../standard/docs/en/schema/reference.md:55
 msgid ""
 "ocid - Providing each contracting process with a unique identifier is "
 "essential to enable data about contracts to be linked up across different"
@@ -527,7 +527,7 @@ msgid ""
 " Identifier guidance for details of how to construct an OCID."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:62
+#: ../../standard/docs/en/schema/reference.md:56
 msgid ""
 "tag - The release tag is used to identify the nature of the release being"
 " made. This can be used by consuming applications to filter releases, or "
@@ -536,24 +536,24 @@ msgid ""
 " release tag. Values must be drawn from the releaseTag codelist."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:63
+#: ../../standard/docs/en/schema/reference.md:57
 msgid ""
 "date - The release date should reflect the point in time at which the "
 "information in this release was disclosed. A release package may contain "
 "release with different release dates."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:64
+#: ../../standard/docs/en/schema/reference.md:58
 msgid ""
 "language - see the section on multi-language support for information on "
 "language handling."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:65
+#: ../../standard/docs/en/schema/reference.md:59
 msgid "buyer - The buyer details are published using an organization block."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:67
+#: ../../standard/docs/en/schema/reference.md:61
 msgid "Further details on each of the blocks contained within release are below."
 msgstr ""
 
@@ -561,7 +561,7 @@ msgstr ""
 msgid "Planning"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:71
+#: ../../standard/docs/en/schema/reference.md:65
 msgid ""
 "The planning section can be used to describe the background to a "
 "contracting process. This may include details of the budget from which "
@@ -604,7 +604,7 @@ msgid ""
 "<#document>`__ section for further details."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:79
+#: ../../standard/docs/en/schema/reference.md:73
 msgid ""
 "Apart from documents, the majority of information is held within the "
 "budget block. This is designed to allow both machine-readable linkable "
@@ -718,14 +718,14 @@ msgstr ""
 msgid "Tender"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:90
+#: ../../standard/docs/en/schema/reference.md:84
 msgid ""
-"The tender section includes details of the announcement that a "
-"organization intends to source some particular goods or services, and to "
-"establish one or more contract(s) for these."
+"The tender section includes details of the announcement that an "
+"organization intends to source some particular goods, works or services, "
+"and to establish one or more contract(s) for these."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:92
+#: ../../standard/docs/en/schema/reference.md:86
 msgid ""
 "It may contain details of a forthcoming process to receive and evaluate "
 "proposals to supply these goods and services, and may also be used to "
@@ -978,13 +978,13 @@ msgstr ""
 msgid "See `Amendment <#amendment>`__"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:102
+#: ../../standard/docs/en/schema/reference.md:96
 msgid ""
 "tender.id - see the identifiers guidance for further information on the "
 "tender identifier. In most cases this can be the same as the ocid."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:103
+#: ../../standard/docs/en/schema/reference.md:97
 msgid ""
 "procuringEntity - in some cases the organization managing the procurement"
 " process may be different from the organization whose budget is being "
@@ -993,7 +993,7 @@ msgid ""
 "provided here."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:104
+#: ../../standard/docs/en/schema/reference.md:98
 msgid ""
 "title and description - tender title and description are optional. The "
 "details of items to be procured should always be provided in items. "
@@ -1006,13 +1006,13 @@ msgid ""
 "nature of a tender."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:105
+#: ../../standard/docs/en/schema/reference.md:99
 msgid ""
 "items - publishers should provide details of each of the items to be "
 "procured under this tender."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:106
+#: ../../standard/docs/en/schema/reference.md:100
 msgid ""
 "milestones - publishers should list any relevant milestones associated "
 "with the delivery of the goods and services covered by this tender. These"
@@ -1022,14 +1022,14 @@ msgid ""
 "tenderPeriod, enquiryPeriod or awardPeriod."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:107
+#: ../../standard/docs/en/schema/reference.md:101
 msgid ""
 "value and minValue - the total upper estimated value of a procurement "
 "should be given in value. For publishers who also specify a estimate "
 "minimum value, this can be placed in minValue."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:108
+#: ../../standard/docs/en/schema/reference.md:102
 msgid ""
 "procurementMethod and procurementMethodRationale. Tendering processes can"
 " use a variety of methods. Publishers should map their methods to one of "
@@ -1038,7 +1038,7 @@ msgid ""
 "to this tender can be provided in procurementMethodRationale."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:109
+#: ../../standard/docs/en/schema/reference.md:103
 msgid ""
 "awardCriteria and awardCriteriaDetails - The award criteria code list "
 "describes the basis on which contract awards will be made. This is an "
@@ -1049,7 +1049,7 @@ msgid ""
 "criteria should propose extensions for this."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:110
+#: ../../standard/docs/en/schema/reference.md:104
 msgid ""
 "documents - supporting documentation should be attached to the tender. "
 "This may include official legal notices of tender, as well as technical "
@@ -1061,7 +1061,7 @@ msgid ""
 "advanced publication."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:112
+#: ../../standard/docs/en/schema/reference.md:106
 msgid ""
 "Information on bidders against a contract will be handled by an extension"
 " during the period of the standard release candidate. Publishers wishing "
@@ -1072,7 +1072,7 @@ msgstr ""
 msgid "Award"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:116
+#: ../../standard/docs/en/schema/reference.md:110
 msgid ""
 "The award section is used to announce any awards issued for this tender. "
 "There may be multiple awards made. Releases can contain all, or a subset,"
@@ -1157,7 +1157,7 @@ msgstr ""
 msgid "Contract"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:127
+#: ../../standard/docs/en/schema/reference.md:121
 msgid ""
 "The contract section is used to provide details of contracts that have "
 "been entered into. Every contract needs to have a related award, linked "
@@ -1245,13 +1245,13 @@ msgstr ""
 msgid "Framework contracts"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:137
+#: ../../standard/docs/en/schema/reference.md:131
 msgid ""
 "A framework is an agreement with suppliers to establish terms governing "
 "contracts that may be awarded during the life of the agreement*."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:139
+#: ../../standard/docs/en/schema/reference.md:133
 msgid ""
 "Framework agreements can be represented by awards, which would each "
 "detail a supplier participating in the framework, the line items that the"
@@ -1259,13 +1259,13 @@ msgid ""
 "agreement over time."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:141
+#: ../../standard/docs/en/schema/reference.md:135
 msgid ""
 "Each call-off purchase against a framework agreement would result in a "
 "contract, related to the framework agreement award via awardID."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:143
+#: ../../standard/docs/en/schema/reference.md:137
 msgid ""
 "As a result, award and contract each contain an items block, allowing the"
 " award to describe the possible goods and services that can be supplied, "
@@ -1277,7 +1277,7 @@ msgstr ""
 msgid "Implementation"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:148
+#: ../../standard/docs/en/schema/reference.md:142
 msgid ""
 "Implementation information can be updated over the course of a contract. "
 "It belongs nested within the contract it relates to. Implementation "
@@ -1307,7 +1307,7 @@ msgid ""
 "further details."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:156
+#: ../../standard/docs/en/schema/reference.md:150
 msgid ""
 "Information on subcontracts is not currently included in the release "
 "candidate schema, but may be handled by proposed extensions"
@@ -1370,7 +1370,7 @@ msgid ""
 "transaction."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:166
+#: ../../standard/docs/en/schema/reference.md:160
 msgid ""
 "The transaction block is modelled on the International Aid Transparency "
 "Initiative (IATI) transaction element, and can be used to represent "
@@ -1379,7 +1379,7 @@ msgid ""
 " party source of data, and can re-use identifiers from that source."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:168
+#: ../../standard/docs/en/schema/reference.md:162
 msgid ""
 "In most circumstances, the providerOrganization identifier should match "
 "that of the buyer, and the recieverOrganization identifier should match "
@@ -1390,11 +1390,11 @@ msgstr ""
 msgid "Milestones"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:172
+#: ../../standard/docs/en/schema/reference.md:166
 msgid "See milestone reference below."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:174
+#: ../../standard/docs/en/schema/reference.md:168
 msgid ""
 "The implementation milestones should be updated to reflect when they are "
 "met."
@@ -1404,13 +1404,13 @@ msgstr ""
 msgid "Documents"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:178
+#: ../../standard/docs/en/schema/reference.md:172
 msgid ""
 "Documents related to contract implementation should be stored here. This "
 "may include subcontracts."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:180
+#: ../../standard/docs/en/schema/reference.md:174
 msgid "See document reference below."
 msgstr ""
 
@@ -1418,19 +1418,20 @@ msgstr ""
 msgid "Amendment"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:184
+#: ../../standard/docs/en/schema/reference.md:178
 msgid ""
 "A release may amend properties from a previous release. Whilst the "
 "release & record model of OCDS offers the opportunity to keep a full "
-"versioned history of changes, in many cases it is important for updates "
+"versioned history of changes, in many cases it is important for changes "
 "to a tender, award or contract to be explicitly declared."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:186
+#: ../../standard/docs/en/schema/reference.md:180
 msgid ""
 "The amendment block in each of tender, award and contract blocks provides"
 " the ability to explicitly declare changed fields, their former values, "
-"and to provide an explanation for the change."
+"to provide an explanation for the change, and attach or reference "
+"relevant documentation."
 msgstr ""
 
 #: ../../standard/docs/field_definitions/release-amendment.csv:1
@@ -1449,7 +1450,7 @@ msgstr ""
 msgid "An explanation for the amendment."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:194
+#: ../../standard/docs/en/schema/reference.md:188
 msgid ""
 "Amendment information should not be included in compiled records, as it "
 "is not possible to indicate all the former values of a field, only the "
@@ -1461,7 +1462,7 @@ msgstr ""
 msgid "Changes"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:198
+#: ../../standard/docs/en/schema/reference.md:192
 msgid ""
 "Within each amendment block, publishers should provide an array of items "
 "that have changed, along with their former values."
@@ -1497,7 +1498,7 @@ msgstr ""
 msgid "Organization"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:211
+#: ../../standard/docs/en/schema/reference.md:205
 msgid ""
 "The organization block can be used to provide a legal identifier for an "
 "organization, and to give address and contact point information."
@@ -1568,7 +1569,7 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:221
+#: ../../standard/docs/en/schema/reference.md:215
 msgid ""
 "The identifier block provides a way to identify the legal entities "
 "involved in a contracting process. If a Contracting Process represents a "
@@ -1709,7 +1710,7 @@ msgstr ""
 msgid "Document"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:246
+#: ../../standard/docs/en/schema/reference.md:240
 msgid ""
 "Documents may be attached at a number of points within the standard: to "
 "planning, tenders, awards, contracts and milestones. Each document block "
@@ -1717,7 +1718,7 @@ msgid ""
 "codelist."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:248
+#: ../../standard/docs/en/schema/reference.md:242
 msgid ""
 "The document block is also used to link to legal notices, which should "
 "have a documentType of 'notice'."
@@ -1811,49 +1812,49 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:258
+#: ../../standard/docs/en/schema/reference.md:252
 msgid "OCDS makes use of ISO8601 date-times, following RFC3339 §5.6."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:260
+#: ../../standard/docs/en/schema/reference.md:254
 msgid "A time and timezone/offset MUST always be provided in a date-time."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:262
+#: ../../standard/docs/en/schema/reference.md:256
 msgid "The following are valid date-times:"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:264
+#: ../../standard/docs/en/schema/reference.md:258
 msgid "'2014-10-21T09:30:00Z' - 9:30 am on the 21st October 2014, UTC"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:265
+#: ../../standard/docs/en/schema/reference.md:259
 msgid ""
 "'2014-11-18T18:00:00-06:00' - 6pm on 18th November 2014 CST (Central "
 "Standard Time)"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:267
+#: ../../standard/docs/en/schema/reference.md:261
 msgid "The following are not valid:"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:269
+#: ../../standard/docs/en/schema/reference.md:263
 msgid "'2014-10-21' - Missing time portion"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:270
+#: ../../standard/docs/en/schema/reference.md:264
 msgid "'2014-10-21T18:00' - missing seconds in time portion."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:271
+#: ../../standard/docs/en/schema/reference.md:265
 msgid "'2014-11-18T18:00:00' - Missing timezone/offset portion"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:272
+#: ../../standard/docs/en/schema/reference.md:266
 msgid "'11/18/2014 18:00' - Not following the pattern at all!"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:274
+#: ../../standard/docs/en/schema/reference.md:268
 msgid ""
 "Accurately including the time and timezone offsets is particular "
 "important for tender deadlines and other dates which may have legal "
@@ -1863,7 +1864,7 @@ msgid ""
 " value '+/-hh:mm' UTC on the end of the date-time value."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:276
+#: ../../standard/docs/en/schema/reference.md:270
 msgid ""
 "In the event that the system from which data is drawn only includes "
 "dates, and does not include time information, publishers should consider "
@@ -1876,7 +1877,7 @@ msgid ""
 "values might be 09:00:00Z and 17:00:00Z respectively."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:278
+#: ../../standard/docs/en/schema/reference.md:272
 msgid ""
 "In the event that a date field is not bound to a specific time at all, "
 "publishers should choose a default time value of '23:23:59' and either "
@@ -1888,7 +1889,7 @@ msgstr ""
 msgid "Period"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:282
+#: ../../standard/docs/en/schema/reference.md:276
 msgid ""
 "A period is an object consisting of a start date and end date, "
 "represented as date-times."
@@ -1914,7 +1915,7 @@ msgstr ""
 msgid "Item"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:292
+#: ../../standard/docs/en/schema/reference.md:286
 msgid ""
 "The items block is used to list the line-items associated with a tender, "
 "award or contract."
@@ -1977,17 +1978,17 @@ msgid ""
 "<#unit>`__"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:302
+#: ../../standard/docs/en/schema/reference.md:296
 msgid ""
 "The proposed location extension can be attached to items, allowing the "
-"point of delivery for a given item to be indicated in both the tender, "
-"award and contract stage."
+"point of delivery for a given item or the site of works to be completed "
+"to be indicated in both the tender, award and contract stage."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:303
+#: ../../standard/docs/en/schema/reference.md:297
 msgid ""
-"Items should be classified according to a established scheme of codes. A "
-"single primary classification can be given, although an array of "
+"Items should be classified according to an established scheme of codes. A"
+" single primary classification can be given, although an array of "
 "additionalClassification can be provided."
 msgstr ""
 
@@ -2024,7 +2025,7 @@ msgstr ""
 msgid "Unit"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:315
+#: ../../standard/docs/en/schema/reference.md:309
 msgid ""
 "The unit block allows detailed specification of the parameters and price "
 "of units that make up a line-item. Although no code list for units has "
@@ -2047,20 +2048,20 @@ msgstr ""
 msgid "Milestone"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:326
+#: ../../standard/docs/en/schema/reference.md:320
 msgid ""
 "Milestone information can be included in the tender and contract "
 "implementation blocks."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:328
+#: ../../standard/docs/en/schema/reference.md:322
 msgid ""
 "In the context of a tender block, milestones describe the key "
 "deliverables of a contract, or key points during the lifetime of the "
 "contract. These may have associated documentation."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:330
+#: ../../standard/docs/en/schema/reference.md:324
 msgid ""
 "In the context of a contract implementation block, milestones are used to"
 " track progress towards those deliverables and key events set out in the "
@@ -2110,7 +2111,7 @@ msgid ""
 "<#document>`__ section for further details."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:340
+#: ../../standard/docs/en/schema/reference.md:334
 msgid ""
 "The dateModified field should be changed whenever the progress towards a "
 "milestone is reviewed, and the status either updated, or re-confirmed."
@@ -2120,7 +2121,7 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:346
+#: ../../standard/docs/en/schema/reference.md:340
 msgid "Financial values should always be published with a currency attached."
 msgstr ""
 
@@ -2140,7 +2141,7 @@ msgstr ""
 msgid "The currency in 3-letter ISO 4217 format."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:354
+#: ../../standard/docs/en/schema/reference.md:348
 msgid ""
 "During the period of the 1.0 RC, if information on taxation related to a "
 "value is required, this may be handled by an extension. A discussion of "
@@ -2151,7 +2152,7 @@ msgstr ""
 msgid "Location"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:358
+#: ../../standard/docs/en/schema/reference.md:352
 msgid ""
 "The addition of location information is currently handled through a "
 "proposed extension to the standard."
@@ -2161,7 +2162,7 @@ msgstr ""
 msgid "Publisher"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:362
+#: ../../standard/docs/en/schema/reference.md:356
 msgid ""
 "The publisher block is used in release and record packages to identify "
 "the source of a dataset."
@@ -2185,31 +2186,31 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:372
+#: ../../standard/docs/en/schema/reference.md:366
 msgid ""
 "Many publishers need to be able to share key data in multiple languages. "
 "All free-text title and description fields in the Open Contracting Data "
 "Standard can be given in one or more languages."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:374
+#: ../../standard/docs/en/schema/reference.md:368
 msgid ""
 "Language variations are included by a copy of multi-lingual fields, "
 "suffixed with a language code."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:376
+#: ../../standard/docs/en/schema/reference.md:370
 msgid "E.g. title and title_es"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:378
+#: ../../standard/docs/en/schema/reference.md:372
 msgid ""
 "In order to allow users to identify the language used in non-suffixed "
 "fields, OCDS release and records should declare the default language in "
 "the language field."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:380
+#: ../../standard/docs/en/schema/reference.md:374
 msgid ""
 "Languages should be identified using language tags taken from BCP47. The "
 "specification allows BCP47 values in order to accommodate variations in "
@@ -2220,7 +2221,7 @@ msgid ""
 "should strongly prefer 'en' over 'en_US' or 'en_GB')."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:382
+#: ../../standard/docs/en/schema/reference.md:376
 msgid ""
 "To include a language variation of a field, the field name should be "
 "suffixed with _ and the appropriate language tag. For example: title_es "
@@ -2231,7 +2232,7 @@ msgstr ""
 msgid "Worked example"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:386
+#: ../../standard/docs/en/schema/reference.md:380
 msgid ""
 "A contract is for ‘Software consultancy services’ may be published in a "
 "release with the default language sent to ‘en’ (the ISO-639-1 code for "
@@ -2239,11 +2240,11 @@ msgid ""
 "English, French and Spanish."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:388
+#: ../../standard/docs/en/schema/reference.md:382
 msgid "json"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:398
+#: ../../standard/docs/en/schema/reference.md:392
 msgid "csv"
 msgstr ""
 
@@ -2271,7 +2272,7 @@ msgstr ""
 msgid "Release handling"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:408
+#: ../../standard/docs/en/schema/reference.md:402
 msgid ""
 "The full OCDS data model is based on the idea of publishing a new release"
 " every time information about a contracting process changes. This way, "
@@ -2280,7 +2281,7 @@ msgid ""
 "progress of a contracting process."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:410
+#: ../../standard/docs/en/schema/reference.md:404
 msgid ""
 "Publishers will need to choose how to generate new releases, and whether "
 "to repeat information in each release, or just to provide changes. This "
@@ -2288,7 +2289,7 @@ msgid ""
 "used to generate a snapshot record of a full contracting process."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:412
+#: ../../standard/docs/en/schema/reference.md:406
 msgid ""
 "This model also requires publishers to pay careful attention to null "
 "values and missing fields."
@@ -2298,13 +2299,13 @@ msgstr ""
 msgid "Empty fields"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:416
+#: ../../standard/docs/en/schema/reference.md:410
 msgid ""
 "Fields that are not being used, or that have no value, can be excluded in"
 " their entirety (key and value) from a published file."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:418
+#: ../../standard/docs/en/schema/reference.md:412
 msgid ""
 "Only including fields which have values will keep versioned datasets "
 "cleaner."
@@ -2314,20 +2315,20 @@ msgstr ""
 msgid "Emptying fields and values"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:422
+#: ../../standard/docs/en/schema/reference.md:416
 msgid ""
 "There may be cases where a publisher needs to remove, rather than update,"
 " a value which was set in a previous release. In this case, the fields "
 "should explicitly be set to null."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:424
+#: ../../standard/docs/en/schema/reference.md:418
 msgid ""
 "The following describes how null values will be handled in the "
 "compilation of a record:"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:426
+#: ../../standard/docs/en/schema/reference.md:420
 msgid ""
 "If a field is included with a value in one release, and then set to null "
 "in a subsequent release, that field will be recorded as null in the "
@@ -2335,7 +2336,7 @@ msgid ""
 "section of the record)."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:427
+#: ../../standard/docs/en/schema/reference.md:421
 msgid ""
 "If a field is set to null in one release, and is also set to null in a "
 "subsequent release, it will be recorded as null as per the original "
@@ -2344,18 +2345,83 @@ msgid ""
 "only changed if the value is set."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:428
+#: ../../standard/docs/en/schema/reference.md:422
 msgid ""
 "If a field is set to null in one release, and then has a value in a "
 "subsequent release, it will first appear in the record, and the version "
 "section of the record as null and then with the subsequent value."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:429
+#: ../../standard/docs/en/schema/reference.md:423
 msgid ""
 "If a field does not appear in one release, and then appears with a value "
 "in a subsequent release, it will first appear in the record, and the "
 "version section of the record, when the first release that contains it is"
 " compiled into the record."
 msgstr ""
+
+#~ msgid ""
+#~ "The Release Schema provides a detailed"
+#~ " specification of the fields and data"
+#~ " structures to use when publishing "
+#~ "contracting data. Supplementary schemas "
+#~ "showing how to combine releases into "
+#~ "data packages and how to compile "
+#~ "releases into records."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The uri should unique identify this "
+#~ "release package. Publishers should provide "
+#~ "a dereferenceable HTTP URI wherever "
+#~ "possible and should host the data "
+#~ "package at this URI, enabling users "
+#~ "to look-up and verify the contents"
+#~ " of a release package from its "
+#~ "original source."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The tender section includes details of"
+#~ " the announcement that a organization "
+#~ "intends to source some particular goods"
+#~ " or services, and to establish one"
+#~ " or more contract(s) for these."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A release may amend properties from "
+#~ "a previous release. Whilst the release"
+#~ " & record model of OCDS offers "
+#~ "the opportunity to keep a full "
+#~ "versioned history of changes, in many"
+#~ " cases it is important for updates"
+#~ " to a tender, award or contract "
+#~ "to be explicitly declared."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The amendment block in each of "
+#~ "tender, award and contract blocks "
+#~ "provides the ability to explicitly "
+#~ "declare changed fields, their former "
+#~ "values, and to provide an explanation"
+#~ " for the change."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The proposed location extension can be"
+#~ " attached to items, allowing the "
+#~ "point of delivery for a given item"
+#~ " to be indicated in both the "
+#~ "tender, award and contract stage."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Items should be classified according to"
+#~ " a established scheme of codes. A "
+#~ "single primary classification can be "
+#~ "given, although an array of "
+#~ "additionalClassification can be provided."
+#~ msgstr ""
 
