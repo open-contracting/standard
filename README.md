@@ -48,7 +48,9 @@ To view, run a local web server. For example, from within /build/ run python -m 
 
 Sphinx does not watch directories for changes, but can be linked with other scripts to regenerate docs whenever anything changes. On a mac with fswatch installed:
 
-```fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh```
+```
+fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
+```
 
 ### Translations
 
@@ -56,22 +58,31 @@ When a new version of the docs text is ready, a new transifex project needs to b
 
 Make sure the build is run above, then run (making sure the poject name is the same as the one made above) 
 
-```sphinx-intl update-txconfig-resources --transifex-project-name ocds-docs-1.0.0 --pot-dir build/locale```
+```
+sphinx-intl update-txconfig-resources --transifex-project-name ocds-docs-1.0.0 --pot-dir build/locale --locale-dir standard/docs/locale
+```
 
 This will update the .tx/config file and this file should be added to the git repository. This will only have to be run again if there is a new/deleted doc page or if a file name has changed name.
 
 In order to push any changes in text to transifex run:
 
-```tx push -s```
+```
+tx push -s
+```
 
 When the translations are filled in transifex you need to run:
 
 ```
-cd standard/docs/
 tx pull -a
 ```
 
 After this the build script will need to be run again.
+
+If translations are added locally, these can also be pushed up to Transifex:
+
+```
+tx push -t --skip
+```
 
 
 ### Theme
