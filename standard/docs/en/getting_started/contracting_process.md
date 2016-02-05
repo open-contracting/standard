@@ -49,7 +49,7 @@ Each unique contracting process should be assigned an ```ocid```. This is an ide
 
 To make sure the ```ocid```s assigned by two different publishers do not clash, publishers are encouraged to register a publisher prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process. 
 
-You can [register your ocid prefix here](implementation/registration.md).
+You can [register your ocid prefix here](../implementation/registration.md).
 
 <div class="example hint" markdown=1>
 
@@ -87,4 +87,4 @@ Version 1.0 of the OCDS schema is optimised for procurement-type contracts.
 
 However, using extensions OCDS can also be used to model other kinds contracting process. 
 
-[Contact the helpdesk](support/index.md) for support to model your contracting processes using OCDS.
+[Contact the helpdesk](../support/index.md) for support to model your contracting processes using OCDS.

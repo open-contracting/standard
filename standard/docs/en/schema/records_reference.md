@@ -29,7 +29,7 @@ Records should be embedded within a record package.
    :file: standard/docs/field_definitions/record-package.csv
 ```
 
-See the guidance on [package meta-data](../../reference/#package-metadata). In addition, a record package includes:
+See the guidance on [package meta-data](reference.md#package-metadata). In addition, a record package includes:
 
 * ```packages``` - which should provide links to all the release packages used to compile this record. 
 * ```records``` - one or more contracting process records, containing, at the very least, identifiers for the all the releases that relate to each contracting process.
@@ -60,7 +60,7 @@ The releases that make up a contracting process can be provided in two ways:
 * URLs and meta-data for each release; or
 * Embedded copies of the release;
 
-If providing and array of URLs, it should be possible for a consuming application to look up each URL, retrieve a release package, and locate the release inside it. In order to locate the specific release inside a release package the releaseID of the release should be appended to the package URL using a fragment identifier.
+If providing an array of URLs, it should be possible for a consuming application to look up each URL, retrieve a release package, and locate the release inside it. In order to locate the specific release inside a release package the releaseID of the release should be appended to the package URL using a fragment identifier.
 
 An example releases section is given below. 
 
@@ -75,7 +75,7 @@ An example releases section is given below.
 
 ### Compiled Release
 
-The compiled release is latest version of all the data about this contracting process, and has the same schema as a release.
+The compiled release is the latest version of all the data about this contracting process, and has the same schema as a release.
 
 The process for creating a compiled release is described in the guidance on [merging](merging.md). 
 
@@ -83,7 +83,7 @@ A compiled release provides a snapshot of the current state of a contracting pro
 
 ### Versioned Release
 
-A versioned release contains the history of all the data in the compiled release, including which fields have changed, when they were changed, and the release that updated them.
+A versioned release contains the history of all the data in the compiled release, including which fields have changed, when they were changed, and the release which updated them.
 
 This versioned information is valuable for many use cases relating to contract monitoring. However, it can add substantially to file sizes, and so where publishers do generate this at source, they should consider publishing versioned and non-versioned copies of the records.
 
