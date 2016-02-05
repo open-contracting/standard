@@ -9,7 +9,7 @@ This reference page provides key information on using the release schema.
 ## Release structure
 
 The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, including:
-
+ƒ
 * [planning](#planning)
 * [tender](#tender)
 * [award](#award)
@@ -29,6 +29,7 @@ Releases must be published within a [release package](release_package.md), which
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-package.csv
 ```
 
@@ -47,13 +48,14 @@ The top level of a release consists of the following fields and objects:
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-toplevel.csv
 ```
 
 Notes:
 
 * ```ocid``` - Providing each [contracting process](../getting_started/contracting_process.md) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](identifiers.md) for details of how to construct an OCID. 
-* ```tag``` - The release tag is used to identify the nature of the release being made. This can be used by consuming applications to filter releases, or may in future be used for advanced validation. A release which updates or amends previous data must always use the appropriate update or amendment release tag. Values must be drawn from the [releaseTag codelist](codelists.md#release-tag).
+* ```tag``` - The release tag is used to identify the nature of the release being made. This can be used by consuming applications to filter releases, or may in future be used for advanced validation. A release which updates or amends previous data must always use the appropriate update or amendment release tag. Values must be drawn from the [releaseTag codelist](../../codelists/#release-tag).
 * ```date``` - The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates. 
 * ```language``` - see the section on [multi-language support](#language) for information on language handling.
 * ```buyer``` - The buyer details are published using an [organization](#entity) block.
@@ -67,6 +69,7 @@ The planning section can be used to describe the background to a contracting pro
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-planning.csv
 ```
 
@@ -76,6 +79,7 @@ Apart from documents, the majority of information is held within the budget bloc
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-budget.csv
 ```
 
@@ -88,12 +92,13 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-tender.csv
 ```
 
 Notes: 
 
-* ```tender.id``` - see the [identifiers guidance](identifiers.md#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
+* ```tender.id``` - see the [identifiers guidance](../../identifiers/#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
 * ```procuringEntity``` - in some cases the organization managing the procurement process may be different from the organization whose budget is being used for the procurement (the 'buyer' in OCDS terminology). If this is the case, then the details of this procuring organization should be provided here. 
 * ```title``` and ```description``` - tender title and description are optional. The details of items to be procured should always be provided in ```items```. Descriptions should not be used in place of providing structured data on items, dates and other details. Instead, title and description should be used to provide a brief overview of the tender. Publishers should consider adopting a 'tweet length' title, and should avoid ALL UPPERCASE titles, or titles containing code words or other artefacts from internal databases. The goal of these fields is to give users a clear idea of the nature of a tender. 
 * ```items``` - publishers should provide details of each of the items to be procured under this tender. 
@@ -112,6 +117,7 @@ The award section is used to announce any awards issued for this tender. There m
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-award.csv
 ```
 
@@ -123,6 +129,7 @@ The contract section is used to provide details of contracts that have been ente
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-contract.csv
 ```
 
@@ -144,6 +151,7 @@ Implementation information can be updated over the course of a contract. It belo
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-implementation.csv
 ```
 
@@ -154,6 +162,7 @@ Information on subcontracts is not currently included in the release candidate s
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-transaction.csv
 ```
 
@@ -182,6 +191,7 @@ The amendment block in each of tender, award and contract blocks provides the ab
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-amendment.csv
 ```
 
@@ -194,6 +204,7 @@ Within each amendment block, publishers should provide an array of items that ha
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-changes.csv
 ```
 
@@ -207,16 +218,18 @@ The organization block can be used to provide a legal identifier for an organiza
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-organization.csv
 ```
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](identifiers.md#organizations) involved in a contracting process. If a Contracting Process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
+The identifier block provides a way to [identify the legal entities](../../identifiers/#organizations) involved in a contracting process. If a Contracting Process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-identifier.csv
 ```
 
@@ -224,6 +237,7 @@ The identifier block provides a way to [identify the legal entities](identifiers
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-address.csv
 ```
 
@@ -232,18 +246,20 @@ The identifier block provides a way to [identify the legal entities](identifiers
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-contact-point.csv
 ```
 
 ### Document
 
-Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and milestones. Each document block can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
+Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and milestones. Each document block can consist of multiple documents, classified using the [documentType](../../codelists/#document-type) codelist.
 
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-document.csv
 ```
 
@@ -278,6 +294,7 @@ A period is an object consisting of a start date and end date, represented as da
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-period.csv
 ```
 
@@ -288,6 +305,7 @@ The items block is used to list the line-items associated with a tender, award o
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-item.csv
 ```
 
@@ -301,6 +319,7 @@ Notes:
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-classification.csv
 ```
 
@@ -311,6 +330,7 @@ The ```unit``` block allows detailed specification of the parameters and price o
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-item-unit.csv
 ```
 
@@ -326,6 +346,7 @@ In the context of a contract implementation block, milestones are used to track 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-milestone.csv
 ```
 
@@ -342,6 +363,7 @@ Financial values should always be published with a currency attached.
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/release-value.csv
 ```
 
@@ -358,6 +380,7 @@ The publisher block is used in release and record packages to identify the sourc
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/docs/field_definitions/publisher.csv
 ```
 
@@ -394,6 +417,7 @@ A contract is for ‘Software consultancy services’ may be published in a rele
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 65 15
    :file: standard/example/language.csv
 ```
 

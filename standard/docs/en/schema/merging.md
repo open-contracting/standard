@@ -114,7 +114,7 @@ The following arrays of items must be re-published in full for each release:
 - Item.additionalClassifications
 - Amendment.changes
 
-Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](reference.md#emptying-fields-and-values).
+Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](../../reference/#emptying-fields-and-values).
 
 
 ## Versioned data
@@ -207,7 +207,7 @@ fields are then matched accordingly.
 
 If a given entry is omitted (e.g. there is no information about a particular contract in a subsequent release), then the previous values carry forward. 
 
-To remove an entry it would have to have it's field values set to null, as per the [guidance on emptying fields and values](reference.md#emptying-fields-and-values).
+To remove an entry it would have to have it's field values set to null, as per the [guidance on emptying fields and values](../../reference/#emptying-fields-and-values).
 
 #### ocdsOmit merge strategy
 
