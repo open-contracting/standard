@@ -287,7 +287,7 @@
                 },
                 "status": {
                     "title": "Award Status",
-                    "description": "The current status of the award drawn from the [awardStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists//#award-status)",
+                    "description": "The current status of the award drawn from the [awardStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#award-status)",
                     "type": ["string", "null"],
                     "enum": ["pending", "active", "cancelled", "unsuccessful"],
                     "mergeStrategy": "ocdsVersion"
@@ -375,7 +375,7 @@
                 },
                 "status": {
                     "title": "Contract Status",
-                    "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists//#contract-status)",
+                    "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status)",
                     "type": ["string", "null"],
                     "enum": ["pending", "active", "cancelled", "terminated"],
                     "mergeStrategy": "ocdsVersion"
@@ -820,7 +820,7 @@
             "type": "object",
             "properties": {
                 "scheme": {
-                    "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://standard.open-contracting.org/latest/en/schema/codelists//#item-classification-scheme) wherever possible.",
+                    "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://standard.open-contracting.org/latest/en/schema/codelists/#item-classification-scheme) wherever possible.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -851,7 +851,7 @@
             "type": "object",
             "properties": {
                 "scheme": {
-                    "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/latest/en/schema/codelists//#organization-identifier-scheme).",
+                    "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/latest/en/schema/codelists/#organization-identifier-scheme).",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
