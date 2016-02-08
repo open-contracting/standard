@@ -2,10 +2,10 @@
 import json
 import csv
 import collections
-import markdown
+import re
 
 def format(text):
-    return markdown.markdown(text.replace("date-time","[date-time](#date)")).replace("<p>","").replace("</p>","")
+    return re.sub(r'\[([^\[]+)\]\(([^\)]+)\)', r'`\1 <\2>`__', text.replace("date-time","[date-time](#date)"))
 
 def make_link(text):
     if "http" in text:
@@ -19,7 +19,10 @@ def make_definition_table(json,file_path,what="properties",section=""):
     table = [['Field Name','Description','Format']]
     if(section):
         if "/" in section:
-            block = json[what][section.split("/")[0]]["properties"][section.split("/")[1]]["properties"]
+            try:
+                block = json[what][section.split("/")[0]]["properties"][section.split("/")[1]]["properties"]
+            except KeyError:
+                block = json[what][section.split("/")[0]]["properties"][section.split("/")[1]]["items"]["properties"]
         else:
             block = json[what][section]["properties"]
     else:
@@ -70,6 +73,8 @@ if __name__ == "__main__":
     make_definition_table(recordPackage,join(file_path,"record-package.csv"))
     
     make_definition_table(releasePackage,join(file_path,"release-package.csv"))
+
+    make_definition_table(releasePackage,join(file_path,"publisher.csv"),what="properties",section="publisher")
     
     make_definition_table(release,join(file_path,"release-toplevel.csv"))
 
@@ -110,3 +115,8 @@ if __name__ == "__main__":
     make_definition_table(release,join(file_path,"release-classification.csv"),what="definitions",section="Classification")
     
     make_definition_table(release,join(file_path,"release-document.csv"),what="definitions",section="Document")
+
+    make_definition_table(release,join(file_path,"release-amendment.csv"),what="definitions",section="Amendment")
+
+    make_definition_table(release,join(file_path,"release-changes.csv"),what="definitions",section="Amendment/changes")
+    

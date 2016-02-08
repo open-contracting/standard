@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, OCDS
+# This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-21 15:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.2.0\n"
+
+#: ../../standard/docs/en/extensions/location.md
+msgid "Location extension"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:3
+msgid ""
+"Communicating the location of proposed or executed contract delivery is "
+"important to make users of contracting data."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:5
+msgid ""
+"This extension proposes the addition of two properties to items to "
+"describe location:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:7
+msgid ""
+"deliveryAddress - a standard Address block which can be used to provide a"
+" postal address where services should be delivered."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:8
+msgid ""
+"deliveryLocation - a new block consisting of GeoJSON and Gazetteer "
+"entries to describe a wider range of locations to which the contract line"
+" item relates."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:10
+msgid "It also creates a new gazetteer codelist."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:12
+msgid "Advantages of this approach"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:14
+msgid ""
+"It captures a wide range of possible location specifications, including "
+"point locations, polygons and lines (useful for roads projects, "
+"extractives concessions etc.)"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:15
+msgid ""
+"Delivery Address information provides information that can be used for "
+"both geocoding, and for logistics fulfilment;"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:16
+msgid "It allows different locations to be specified for different line items;"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:18
+msgid "Disadvantages/limitations of this approach"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:20
+msgid ""
+"Locations are only specified for items, not at the overall tender, "
+"contract or award level. In some cases this may lead either to location "
+"data being duplicated across items, or ambiguity about which item the "
+"location information should apply to;"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:22
+msgid "Background"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:24
+msgid ""
+"There are a number of use cases that demand specifying a location for "
+"delivery of an item. Discussion can be found in Issue #26."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md
+msgid "Schema patch"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:29
+msgid ""
+"The JSON Patch to add location data to the schema can be found in "
+"schema_usecase_2.json."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md
+msgid "Example usage"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:34
+msgid "Below is an example of a geolocated item:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:78
+msgid ""
+"If the procurement related to the rebuilding of a road, then the item "
+"could also specify more complex geometries such as:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/location.md:95
+msgid ""
+"You can take the contents of the geometry object, excluding the geometry "
+"keyword, and plug this into any GeoJSON tool to see the shape that is "
+"described."
+msgstr ""
+

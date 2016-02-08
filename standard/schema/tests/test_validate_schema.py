@@ -17,7 +17,7 @@ def validate_schema(schema_to_validate_path):
     with open(schema_to_validate_path, 'r') as f:
         schema = json.loads(f.read())
     validate(schema, draft_schema)
-    print "SUCCESS: Schema is valid against JSON Schema Draft 4."
+    print("SUCCESS: Schema is valid against JSON Schema Draft 4.")
 
 
 def test_validate_release_schema():

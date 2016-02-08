@@ -1,0 +1,8 @@
+{% set css_files = css_files + ["_static/renderjson.css"] %}
+{% set script_files = script_files + ["_static/renderjson.js"] %}
+{% set script_files = script_files + ["_static/json-example-format.js"] %}
+
+{% extends "!layout.html" %}
+{% block extrahead %}
+    {{ super() }}
+{% endblock %}

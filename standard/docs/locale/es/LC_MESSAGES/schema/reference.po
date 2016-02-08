@@ -1,0 +1,2579 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-08 10:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.2.0\n"
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Release Reference"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:3
+msgid ""
+"The Release Schema provides a detailed specification of the fields and "
+"data structures to use when publishing contracting data. Supplementary "
+"schemas show how to combine releases into data packages and how to "
+"compile releases into records."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:5
+msgid "This reference page provides key information on using the release schema."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:7
+msgid ""
+"Note: If any conflicts are found between this text, and the text within "
+"the schema, the schema takes precedence"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Release structure"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:11
+msgid ""
+"The majority of OCDS data is held within a release structure. One or more"
+" releases can be published within a release package. Releases are made up"
+" of a number of sections, including: ƒ"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:13
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid "planning"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:14
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid "tender"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:15
+msgid "award"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:16
+msgid "contract"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:17
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "implementation"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:19
+msgid ""
+"A release can only contain one tender section, but may contain multiple "
+"award, contract and implementation sections. This is because each OCDS "
+"release relates to a single contracting process, and we define "
+"contracting processes by their unique initiation (tender) stage."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:21
+msgid ""
+"Releases are given a tag to indicate the specific stage of a contracting "
+"process they represent. However, there are no formal restrictions on when"
+" information about a stage of the contracting process may be provided."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:23
+msgid ""
+"For example, a publisher announcing the signing of a contract with a "
+"'contract' tag, may also include information in the award and tender "
+"blocks in order to provide a comprehensive picture of the contracting "
+"process to date which led to that contract being signed."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Package Metadata"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:27
+msgid ""
+"Releases must be published within a release package, which can contain "
+"one or more releases. The release package, modelled on the Data Package "
+"protocol, provides meta-data about the release(s) it contains, the "
+"publisher, and data licensing information."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-address.csv:1
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-period.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+#: ../../standard/docs/field_definitions/release-value.csv:1
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "Field Name"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-address.csv:1
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-period.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+#: ../../standard/docs/field_definitions/release-value.csv:1
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "Description"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-address.csv:1
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-period.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+#: ../../standard/docs/field_definitions/release-value.csv:1
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "Format"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "uri"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid "The URI of this package that identifies it uniquely in the world."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "uri string"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid "publishedDate"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid ""
+"The date that this package was published. Ideally this should be the "
+"latest date that there is release information in this package."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-period.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "date-time string"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid "releases"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid ""
+"See `release-schema.json <http://ocds.open-"
+"contracting.org/standard/r/1__0__0/release-schema.json>`__ section for "
+"further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "Object Array"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid "publisher"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid ""
+"Information to uniquely identify the publisher of this package. See "
+"`publisher <#publisher>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid "Object"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid "license"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid ""
+"A link to the license that applies to the data in this datapackage. A "
+"Public Domain Dedication or `Open Definition Conformant "
+"<http://opendefinition.org/licenses/>`__ license is strongly recommended."
+" The canonical URI of the license should be used. Documents linked from "
+"this file may be under other license conditions."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid "publicationPolicy"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-package.csv:1
+msgid ""
+"A link to a document describing the publishers `publication policy "
+"<http://standard.open-"
+"contracting.org/latest/en/implementation/publication_policy/>`__."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:36
+#: ../../standard/docs/en/schema/reference.md:55
+#: ../../standard/docs/en/schema/reference.md:99
+#: ../../standard/docs/en/schema/reference.md:312
+#: ../../standard/docs/en/schema/reference.md:353
+msgid "Notes:"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:38
+msgid ""
+"The uri should uniquely identify this release package. Publishers should "
+"provide a dereferenceable HTTP URI wherever possible and should host the "
+"data package at this URI, enabling users to look-up and verify the "
+"contents of a release package from its original source."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:39
+msgid ""
+"The publishedDate on which this package was published. If a package is "
+"automatically generated and re-published on a regular basis, this date "
+"should reflect the date of the last change to the contents of the "
+"package."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:40
+msgid ""
+"The publisher publisher block provides space for an organisation name and"
+" identifier."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:41
+msgid ""
+"license - See the licensing guidance for more details on selecting and "
+"publishing license information."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:42
+msgid "publicationPolicy - See the publication policy guidance for more details."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Release"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:46
+msgid "The top level of a release consists of the following fields and objects:"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid "ocid"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"A globally unique identifier for this Open Contracting Process. Composed "
+"of a publisher prefix and an identifier for the contracting process. For "
+"more information see the `Open Contracting Identifier guidance "
+"<http://standard.open-contracting.org/latest/en/schema/identifiers/>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-address.csv:1
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+#: ../../standard/docs/field_definitions/release-value.csv:1
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "id"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"A unique identifier that identifies this release. A releaseID must be "
+"unique within a release-package and must not contain the # character."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+msgid "date"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"The date this information is released, it may well be the same as the "
+"parent publishedDate, it must not be later than the publishedDate from "
+"the parent package. It is used to determine merge order."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid "tag"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"A value from the `releaseTag codelist <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#release-tag>`__ that "
+"identifies the nature of the release being made. Tags may be used to "
+"filter release, or, in future, for for advanced validation when certain "
+"kinds of releases should contain certain fields."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+msgid "Array"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid "initiationType"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"String specifying the type of initiation process used for this contract, "
+"taken from the `initiationType <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#initiation-type>`__ codelist."
+" Currently only tender is supported."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"Information from the planning phase of the contracting process. This "
+"includes information related to the process of deciding what to contract "
+"for, when and how. See `Planning <#planning>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+msgid "Reference"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"The activities undertaken in order to enter into a contract. See `Tender "
+"<#tender>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid "buyer"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"The buyer is the entity whose budget will be used to purchase the goods. "
+"This may be different from the procuring agency who may be specified in "
+"the tender data. See `Organization <#organization>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid "awards"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"Information from the award phase of the contracting process. There may be"
+" more than one award per contracting process e.g. because the contract is"
+" split amongst different providers, or because it is a standing offer. "
+"See `Award <#award>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid "contracts"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"Information from the contract creation phase of the procurement process. "
+"See `Contract <#contract>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid "language"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-toplevel.csv:1
+msgid ""
+"Specifies the default language of the data using either two-digit ISO "
+"639-1, or extended BCP47 language tags. The use of two-letter codes from "
+"ISO 639-1 is strongly recommended."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:57
+msgid ""
+"ocid - Providing each contracting process with a unique identifier is "
+"essential to enable data about contracts to be linked up across different"
+" releases. Open Contracting IDs are composed of a prefix assigned to each"
+" publisher, and a local identifier drawn from their internal systems that"
+" can be used to tie together tenders, awards, contracts and other key "
+"data points from a specific contracting process. See the Open Contracting"
+" Identifier guidance for details of how to construct an OCID."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:58
+msgid ""
+"tag - The release tag is used to identify the nature of the release being"
+" made. This can be used by consuming applications to filter releases, or "
+"may in future be used for advanced validation. A release which updates or"
+" amends previous data must always use the appropriate update or amendment"
+" release tag. Values must be drawn from the releaseTag codelist."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:59
+msgid ""
+"date - The release date should reflect the point in time at which the "
+"information in this release was disclosed. A release package may contain "
+"release with different release dates."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:60
+msgid ""
+"language - see the section on multi-language support for information on "
+"language handling."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:61
+msgid "buyer - The buyer details are published using an organization block."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:63
+msgid "Further details on each of the blocks contained within release are below."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Planning"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:67
+msgid ""
+"The planning section can be used to describe the background to a "
+"contracting process. This may include details of the budget from which "
+"funds are drawn, or related projects for this contracting process. "
+"Background documents such as a needs assessment, feasibility study and "
+"project plan can also be included in this section."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+msgid "budget"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+msgid "See `Budget <#budget>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+msgid "rationale"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+msgid ""
+"The rationale for the procurement provided in free text. More detail can "
+"be provided in an attached document."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "documents"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-planning.csv:1
+msgid ""
+"A list of documents related to the planning process. See `Document "
+"<#document>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:76
+msgid ""
+"Apart from documents, the majority of information is held within the "
+"budget block. This is designed to allow both machine-readable linkable "
+"data about budgets, cross-referencing to data held in other standards "
+"such as the Fiscal Data Package or International Aid Transparency "
+"Initiative Standard, and human readable description of the related "
+"budgets and projects, supporting users to understand the relationship of "
+"the contracting process to existing projects and budgets even where "
+"linked data is not available."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Budget"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid "source"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid ""
+"Used to point either to a corresponding Budget Data Package, or to a "
+"machine or human-readable source where users can find further information"
+" on the budget line item identifiers, or project identifiers, provided "
+"here."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid ""
+"An identifier for the budget line item which provides funds for this "
+"contracting process. This identifier should be possible to cross-"
+"reference against the provided data source."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "string, integer"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+#: ../../standard/example/language.csv:1
+msgid "description"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid ""
+"A short free text description of the budget source. May be used to "
+"provide the title of the budget line, or the programme used to fund this "
+"project."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+#: ../../standard/docs/field_definitions/release-value.csv:1
+msgid "amount"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid "The value of the budget line item. See `Value <#value>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid "project"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid ""
+"The name of the project that through which this contracting process is "
+"funded (if applicable). Some organizations maintain a registry of "
+"projects, and the data should use the name by which the project is known "
+"in that registry. No translation option is offered for this string, as "
+"translated values can be provided in third-party data, linked from the "
+"data source above."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid "projectID"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid ""
+"An external identifier for the project that this contracting process "
+"forms part of, or is funded via (if applicable). Some organizations "
+"maintain a registry of projects, and the data should use the identifier "
+"from the relevant registry of projects."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-budget.csv:1
+msgid ""
+"A URI pointing directly to a machine-readable record about the related "
+"budget or projects for this contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Tender"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:88
+msgid ""
+"The tender section includes details of the announcement that an "
+"organization intends to source some particular goods, works or services, "
+"and to establish one or more contract(s) for these."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:90
+msgid ""
+"It may contain details of a forthcoming process to receive and evaluate "
+"proposals to supply these goods and services, and may also be used to "
+"record details of how a completed tender process, including details of "
+"bids received."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"An identifier for this tender process. This may be the same as the ocid, "
+"or may be drawn from an internally held identifier for this tender."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "title"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "Tender title"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "Tender description"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "status"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"The current status of the tender based on the `tenderStatus codelist "
+"<http://standard.open-contracting.org/latest/en/schema/codelists/#tender-"
+"status>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "items"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"The goods and services to be purchased, broken into line items wherever "
+"possible. Items should not be duplicated, but a quantity of 2 specified "
+"instead. See `Item <#item>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "minValue"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "The minimum estimated value of the procurement. See `Value <#value>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+msgid "value"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "The total upper estimated value of the procurement. See `Value <#value>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "procurementMethod"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"Specify tendering method against the `method codelist <http://standard"
+".open-contracting.org/latest/en/schema/codelists/#method>`__ as per `GPA "
+"definitions <http://www.wto.org/english/docs_e/legal_e/rev-gpr-"
+"94_01_e.htm>`__ of Open, Selective, Limited"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "procurementMethodRationale"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"Rationale of procurement method, especially in the case of Limited "
+"tendering."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "awardCriteria"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"Specify the award criteria for the procurement, using the `award criteria"
+" codelist <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#award-criteria>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "awardCriteriaDetails"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "Any detailed or further information on the award or selection criteria."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "submissionMethod"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"Specify the method by which bids must be submitted, in person, written, "
+"or electronic auction. Using the `submission method codelist "
+"<http://standard.open-contracting.org/latest/en/schema/codelists"
+"/#submission-method>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "submissionMethodDetails"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"Any detailed or further information on the submission method. This may "
+"include the address, e-mail address or online service to which bids "
+"should be submitted, and any special requirements to be followed for "
+"submissions."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "tenderPeriod"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"The period when the tender is open for submissions. The end date is the "
+"closing date for tender submissions. See `Period <#period>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "enquiryPeriod"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"The period during which enquiries may be made and answered. See `Period "
+"<#period>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "hasEnquiries"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "A Yes/No field to indicate whether enquiries were part of tender process."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "eligibilityCriteria"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "A description of any eligibility criteria for potential suppliers."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "awardPeriod"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"The date or period on which an award is anticipated to be made. See "
+"`Period <#period>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "numberOfTenderers"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "tenderers"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"All entities who submit a tender. See `Organization <#organization>`__ "
+"section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid "procuringEntity"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"The entity managing the procurement, which may be different from the "
+"buyer who is paying / using the items being procured. See `Organization "
+"<#organization>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"All documents and attachments related to the tender, including any "
+"notices. See the `documentType codelist <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#document-type>`__ for details"
+" of potential documents to include. See `Document <#document>`__ section "
+"for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+msgid "milestones"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+msgid ""
+"A list of milestones associated with the tender. See `Milestone "
+"<#milestone>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "amendment"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-tender.csv:1
+#: ../../standard/docs/field_definitions/release-award.csv:1
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "See `Amendment <#amendment>`__"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:101
+msgid ""
+"tender.id - see the identifiers guidance for further information on the "
+"tender identifier. In most cases this can be the same as the ocid."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:102
+msgid ""
+"procuringEntity - in some cases the organization managing the procurement"
+" process may be different from the organization whose budget is being "
+"used for the procurement (the 'buyer' in OCDS terminology). If this is "
+"the case, then the details of this procuring organization should be "
+"provided here."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:103
+msgid ""
+"title and description - tender title and description are optional. The "
+"details of items to be procured should always be provided in items. "
+"Descriptions should not be used in place of providing structured data on "
+"items, dates and other details. Instead, title and description should be "
+"used to provide a brief overview of the tender. Publishers should "
+"consider adopting a 'tweet length' title, and should avoid ALL UPPERCASE "
+"titles, or titles containing code words or other artefacts from internal "
+"databases. The goal of these fields is to give users a clear idea of the "
+"nature of a tender."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:104
+msgid ""
+"items - publishers should provide details of each of the items to be "
+"procured under this tender."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:105
+msgid ""
+"milestones - publishers should list any relevant milestones associated "
+"with the delivery of the goods and services covered by this tender. These"
+" are the milestones against which the whole contracting process will be "
+"evaluated. Publishers may include information about key milestones during"
+" the tender process itself, but should not use this in place of "
+"tenderPeriod, enquiryPeriod or awardPeriod."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:106
+msgid ""
+"value and minValue - the total upper estimated value of a procurement "
+"should be given in value. For publishers who also specify a estimate "
+"minimum value, this can be placed in minValue."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:107
+msgid ""
+"procurementMethod and procurementMethodRationale. Tendering processes can"
+" use a variety of methods. Publishers should map their methods to one of "
+"the approved codes according to the GPA definitions of open, selective or"
+" limited. A free text explanation of why a given method was appropriate "
+"to this tender can be provided in procurementMethodRationale."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:108
+msgid ""
+"awardCriteria and awardCriteriaDetails - The award criteria code list "
+"describes the basis on which contract awards will be made. This is an "
+"open codelist, and so may be extended with new codes. Free text "
+"describing the basis on which bids will be judged, and made, can be "
+"provided in the awardCriteriaDetail field. Publishers wishing to provide "
+"more structured information about selection, shortlisting and award "
+"criteria should propose extensions for this."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:109
+msgid ""
+"documents - supporting documentation should be attached to the tender. "
+"This may include official legal notices of tender, as well as technical "
+"specifications, evaluation criteria, and, as a tender process progresses,"
+" clarifications, replies to queries and copies of bids submitted or "
+"listings of shortlisted firms. See the attachments section for more "
+"details of how to include documents, and consult the documentType "
+"codelist for suggested documents to include for basic, intermediate or "
+"advanced publication."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:111
+msgid ""
+"Information on bidders against a contract will be handled by an extension"
+" during the period of the standard release candidate. Publishers wishing "
+"to provide detailed information on bidders should contact support."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Award"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:115
+msgid ""
+"The award section is used to announce any awards issued for this tender. "
+"There may be multiple awards made. Releases can contain all, or a subset,"
+" of these awards. A related award block is required for every contract, "
+"as it contains information on the suppliers."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid ""
+"The identifier for this award. It must be unique and cannot change within"
+" the Open Contracting Process it is part of (defined by a single ocid). "
+"See the `identifier guidance <http://standard.open-"
+"contracting.org/latest/en/schema/identifiers/>`__ for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid "Award title"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid "Award description"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid ""
+"The current status of the award drawn from the `awardStatus codelist "
+"<http://standard.open-contracting.org/latest/en/schema/codelists/#award-"
+"status>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid ""
+"The date of the contract award. This is usually the date on which a "
+"decision to award was made."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid ""
+"The total value of this award. In the case of a framework contract this "
+"may be the total estimated lifetime value, or maximum value, of the "
+"agreement. There may be more than one award per procurement. See `Value "
+"<#value>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid "suppliers"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid ""
+"The suppliers awarded this award. If different suppliers have been "
+"awarded different items of values, these should be split into separate "
+"award blocks. See `Organization <#organization>`__ section for further "
+"details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid ""
+"The goods and services awarded in this award, broken into line items "
+"wherever possible. Items should not be duplicated, but the quantity "
+"specified instead. See `Item <#item>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid "contractPeriod"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid ""
+"The period for which the contract has been awarded. See `Period "
+"<#period>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-award.csv:1
+msgid ""
+"All documents and attachments related to the award, including any "
+"notices. See `Document <#document>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Contract"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:127
+msgid ""
+"The contract section is used to provide details of contracts that have "
+"been entered into. Every contract needs to have a related award, linked "
+"via the awardID property. This is because supplier information is "
+"contained within the 'award'. The framework contract details below help "
+"illustrate the reasons for this."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid ""
+"The identifier for this contract. It must be unique and cannot change "
+"within its Open Contracting Process (defined by a single ocid). See the "
+"`identifier guidance <http://standard.open-"
+"contracting.org/latest/en/schema/identifiers/>`__ for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "awardID"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "The award.id against which this contract is being issued."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "Contract title"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "Contract description"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid ""
+"The current status of the contract. Drawn from the `contractStatus "
+"codelist <http://standard.open-contracting.org/latest/en/schema/codelists"
+"/#contract-status>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "period"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "The start and end date for the contract. See `Period <#period>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "The total value of this contract. See `Value <#value>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid ""
+"The goods, services, and any intangible outcomes in this contract. Note: "
+"If the items are the same as the award do not repeat. See `Item "
+"<#item>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid "dateSigned"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid ""
+"The date the contract was signed. In the case of multiple signatures, the"
+" date of the last signature."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid ""
+"All documents and attachments related to the contract, including any "
+"notices. See `Document <#document>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contract.csv:1
+msgid ""
+"Information related to the implementation of the contract in accordance "
+"with the obligations laid out therein. See `Implementation "
+"<#implementation>`__"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Framework contracts"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:138
+msgid ""
+"A framework is an agreement with suppliers to establish terms governing "
+"contracts that may be awarded during the life of the agreement*."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:140
+msgid ""
+"Framework agreements can be represented by awards, which would each "
+"detail a supplier participating in the framework, the line items that the"
+" agreement covers with this supplier, and any maximum value for the "
+"agreement over time."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:142
+msgid ""
+"Each call-off purchase against a framework agreement would result in a "
+"contract, related to the framework agreement award via awardID."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:144
+msgid ""
+"As a result, award and contract each contain an items block, allowing the"
+" award to describe the possible goods and services that can be supplied, "
+"whilst the contract describes those that are to be supplied in any "
+"particular instance."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Implementation"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:149
+msgid ""
+"Implementation information can be updated over the course of a contract. "
+"It belongs nested within the contract it relates to. Implementation "
+"blocks include the following elements:"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+msgid "transactions"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+msgid ""
+"A list of the spending transactions made against this contract See "
+"`Transaction <#transaction>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+msgid ""
+"As milestones are completed, milestone completions should be documented. "
+"See `Milestone <#milestone>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-implementation.csv:1
+msgid ""
+"Documents and reports that are part of the implementation phase e.g. "
+"audit and evaluation reports. See `Document <#document>`__ section for "
+"further details."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:158
+msgid ""
+"Information on subcontracts is not currently included in the release "
+"candidate schema, but may be handled by proposed extensions"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Transaction"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid ""
+"A unique identifier for this transaction. This identifier should be "
+"possible to cross-reference against the provided data source. For the "
+"budget data package this is the id, for IATI, the transaction reference."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid ""
+"Used to point either to a corresponding Budget Data Package, IATI file, "
+"or machine or human-readable source where users can find further "
+"information on the budget line item identifiers, or project identifiers, "
+"provided here."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid "The date of the transaction"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid "The value of the transaction. See `Value <#value>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid "providerOrganization"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid ""
+"The Organization Identifier for the organization from which the funds in "
+"this transaction originate. Expressed following the Organizational "
+"Identifier standard - consult the documentation and the codelist. See "
+"`Identifier <#identifier>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid "receiverOrganization"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid ""
+"The Organization Identifier for the organization which receives the funds"
+" in this transaction. Expressed following the Organizational Identifier "
+"standard - consult the documentation and the codelist. See `Identifier "
+"<#identifier>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-transaction.csv:1
+msgid ""
+"A URI pointing directly to a machine-readable record about this spending "
+"transaction."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:169
+msgid ""
+"The transaction block is modelled on the International Aid Transparency "
+"Initiative (IATI) transaction element, and can be used to represent "
+"actual flows of money between organisations in relation to this contract."
+" As with the budget block, this may be used to cross-reference to a third"
+" party source of data, and can re-use identifiers from that source."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:171
+msgid ""
+"In most circumstances, the providerOrganization identifier should match "
+"that of the buyer, and the recieverOrganization identifier should match "
+"that of the supplier."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Milestones"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:175
+msgid "See milestone reference below."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:177
+msgid ""
+"The implementation milestones should be updated to reflect when they are "
+"met."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Documents"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:181
+msgid ""
+"Documents related to contract implementation should be stored here. This "
+"may include subcontracts."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:183
+msgid "See document reference below."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Amendment"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:187
+msgid ""
+"A release may amend properties from a previous release. Whilst the "
+"release & record model of OCDS offers the opportunity to keep a full "
+"versioned history of changes, in many cases it is important for changes "
+"to a tender, award or contract to be explicitly declared."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:189
+msgid ""
+"The amendment block in each of tender, award and contract blocks provides"
+" the ability to explicitly declare changed fields, their former values, "
+"to provide an explanation for the change, and attach or reference "
+"relevant documentation."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+msgid "The data of this amendment."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+msgid "changes"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+msgid "Comma-seperated list of affected fields."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-amendment.csv:1
+msgid "An explanation for the amendment."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:198
+msgid ""
+"Amendment information should not be included in compiled records, as it "
+"is not possible to indicate all the former values of a field, only the "
+"most recent known value: whereas the version history of a full record can"
+" show all previous values."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Changes"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:202
+msgid ""
+"Within each amendment block, publishers should provide an array of items "
+"that have changed, along with their former values."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+msgid "property"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+msgid ""
+"The property name that has been changed relative to the place the "
+"amendment is. For example if the contract value has changed, then the "
+"property under changes within the contract.amendment would be "
+"value.amount."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+msgid "former_value"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-changes.csv:1
+msgid ""
+"The previous value of the changed property, in whatever type the property"
+" is. See `former_value <#former_value>`__"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Field reference"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Organization"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:216
+msgid ""
+"The organization block can be used to provide a legal identifier for an "
+"organization, and to give address and contact point information."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid "identifier"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid ""
+"The primary identifier for this organization. Identifiers that uniquely "
+"pick out a legal entity should be preferred. Consult the `organization "
+"identifier guidance <http://standard.open-"
+"contracting.org/latest/en/schema/identifiers/>`__ for the preferred "
+"scheme and identifier to use. See `Identifier <#identifier>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid "additionalIdentifiers"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid ""
+"A list of additional / supplemental identifiers for the organization, "
+"using the `organization identifier guidance <http://standard.open-"
+"contracting.org/latest/en/schema/identifiers/>`__. This could be used to "
+"provide an internally used identifier for this organization in addition "
+"to the primary legal entity identifier. See `Identifier <#identifier>`__ "
+"section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid ""
+"The common name of the organization. The ID property provides an space "
+"for the formal legal name, and so this may either repeat that value, or "
+"could provide the common name by which this organization is known. This "
+"field could also include details of the department or sub-unit involved "
+"in this contracting process."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid "address"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid "See `Address <#address>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid "contactPoint"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-organization.csv:1
+msgid "See `ContactPoint <#contactpoint>`__"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Identifier"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:227
+msgid ""
+"The identifier block provides a way to identify the legal entities "
+"involved in a contracting process. If a Contracting Process represents a "
+"contract arranged by the department or branch of a larger organization, "
+"the legal entity (usually the registered organization) should be "
+"described in the identifier section, with details of the branch or "
+"department given in the name, address and contact point as relevant."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "scheme"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+msgid ""
+"Organization identifiers be drawn from an existing identification scheme."
+" This field is used to indicate the scheme or codelist in which the "
+"identifier will be found. This value should be drawn from the "
+"`Organization Identifier Scheme <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#organization-identifier-"
+"scheme>`__."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+msgid "The identifier of the organization in the selected scheme."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+msgid "legalName"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+msgid "The legally registered name of the organization."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-identifier.csv:1
+msgid ""
+"A URI to identify the organization, such as those provided by `Open "
+"Corporates <http://www.opencorporates.com>`__ or some other relevant URI "
+"provider. This is not for listing the website of the organization: that "
+"can be done through the url field of the Organization contact point."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Address"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "streetAddress"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "The street address. For example, 1600 Amphitheatre Pkwy."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "locality"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "The locality. For example, Mountain View."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "region"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "The region. For example, CA."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "postalCode"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "The postal code. For example, 94043."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "countryName"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-address.csv:1
+msgid "The country name. For example, United States."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "ContactPoint"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+msgid ""
+"The name of the contact person, department, or contact point, for "
+"correspondence relating to this contracting process."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+msgid "email"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+msgid "The e-mail address of the contact point/person."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+msgid "telephone"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+msgid ""
+"The telephone number of the contact point/person. This should include the"
+" international dialling code."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+msgid "faxNumber"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+msgid ""
+"The fax number of the contact point/person. This should include the "
+"international dialling code."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid "url"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-contact-point.csv:1
+msgid "A web address for the contact point/person."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Document"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:255
+msgid ""
+"Documents may be attached at a number of points within the standard: to "
+"planning, tenders, awards, contracts and milestones. Each document block "
+"can consist of multiple documents, classified using the documentType "
+"codelist."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:257
+msgid ""
+"The document block is also used to link to legal notices, which should "
+"have a documentType of 'notice'."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid ""
+"A local, unique identifier for this document. This field is used to keep "
+"track of multiple revisions of a document through the compilation from "
+"release to record mechanism."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid "documentType"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid ""
+"A classification of the document described taken from the `documentType "
+"codelist <http://standard.open-contracting.org/latest/en/schema/codelists"
+"/#document-type>`__. Values from the provided codelist should be used "
+"wherever possible, though extended values can be provided if the codelist"
+" does not have a relevant code."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid "The document title."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid ""
+"A short description of the document. We recommend descriptions do not "
+"exceed 250 words. In the event the document is not accessible online, the"
+" description field can be used to describe arrangements for obtaining a "
+"copy of the document."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid ""
+"direct link to the document or attachment. The server providing access to"
+" this document should be configured to correctly report the document mime"
+" type."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid "datePublished"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid ""
+"The date on which the document was first published. This is particularly "
+"important for legally important documents such as notices of a tender."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "dateModified"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid "Date that the document was last modified"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid "format"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid ""
+"The format of the document taken from the `IANA Media Types code list "
+"<http://www.iana.org/assignments/media-types/>`__, with the addition of "
+"one extra value for 'offline/print', used when this document entry is "
+"being used to describe the offline publication of a document. Use values "
+"from the template column. Links to web pages should be tagged "
+"'text/html'."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-document.csv:1
+msgid ""
+"Specifies the language of the linked document using either two-digit `ISO"
+" 639-1 <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__, or "
+"extended `BCP47 language tags <http://www.w3.org/International/articles"
+"/language-tags/>`__. The use of two-letter codes from `ISO 639-1 "
+"<https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__ is strongly "
+"recommended unless there is a clear user need for distinguishing the "
+"language subtype."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Date"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:268
+msgid "OCDS makes use of ISO8601 date-times, following RFC3339 §5.6."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:270
+msgid "A time and timezone/offset MUST always be provided in a date-time."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:272
+msgid "The following are valid date-times:"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:274
+msgid "'2014-10-21T09:30:00Z' - 9:30 am on the 21st October 2014, UTC"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:275
+msgid ""
+"'2014-11-18T18:00:00-06:00' - 6pm on 18th November 2014 CST (Central "
+"Standard Time)"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:277
+msgid "The following are not valid:"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:279
+msgid "'2014-10-21' - Missing time portion"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:280
+msgid "'2014-10-21T18:00' - missing seconds in time portion."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:281
+msgid "'2014-11-18T18:00:00' - Missing timezone/offset portion"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:282
+msgid "'11/18/2014 18:00' - Not following the pattern at all!"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:284
+msgid ""
+"Accurately including the time and timezone offsets is particular "
+"important for tender deadlines and other dates which may have legal "
+"significance, and where users of the data may be from different "
+"timezones. The character Z on the end of a date-time indicates the UTC "
+"(or Zero offset) timezone, whereas other timezones are indicated by their"
+" value '+/-hh:mm' UTC on the end of the date-time value."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:286
+msgid ""
+"In the event that the system from which data is drawn only includes "
+"dates, and does not include time information, publishers should consider "
+"sensible defaults for each field. For example, the startDate time of a "
+"clarification period may be set to '00:00:00Z' to indicate that "
+"clarifications can be requested from any time on the date stated, with "
+"the endDate time set to 23:23:59Z to indicate that clarifications can be "
+"sent up until the end of the endDate given. Alternatively, if "
+"clarification requests are only accepted in standard office hours, these "
+"values might be 09:00:00Z and 17:00:00Z respectively."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:288
+msgid ""
+"In the event that a date field is not bound to a specific time at all, "
+"publishers should choose a default time value of '23:23:59' and either "
+"'Z' (for UTC) or the timezone of the publisher, indicating that the time "
+"refers to the end of the given date."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Period"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:292
+msgid ""
+"A period is an object consisting of a start date and end date, "
+"represented as date-times."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-period.csv:1
+msgid "startDate"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-period.csv:1
+msgid "The start date for the period."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-period.csv:1
+msgid "endDate"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-period.csv:1
+msgid "The end date for the period."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Item"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:303
+msgid ""
+"The items block is used to list the line-items associated with a tender, "
+"award or contract."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid ""
+"A local identifier to reference and merge the items by. Must be unique "
+"within a given array of items."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid "A description of the goods, services to be provided."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid "classification"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid ""
+"The primary classification for the item. See the "
+"`itemClassificationScheme <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#item-classification-"
+"scheme>`__ to identify preferred classification lists, including CPV and "
+"GSIN. See `Classification <#classification>`__"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid "additionalClassifications"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid ""
+"An array of additional classifications for the item. See the "
+"`itemClassificationScheme <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#item-classification-"
+"scheme>`__ codelist for common options to use in OCDS. This may also be "
+"used to present codes from an internal classification scheme. See "
+"`Classification <#classification>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid "quantity"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid "The number of units required"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid "unit"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item.csv:1
+msgid ""
+"Description of the unit which the good comes in e.g. hours, kilograms. "
+"Made up of a unit name, and the value of a single unit. See `unit "
+"<#unit>`__"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:314
+msgid ""
+"The proposed location extension can be attached to items, allowing the "
+"point of delivery for a given item or the site of works to be completed "
+"to be indicated in both the tender, award and contract stage."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:315
+msgid ""
+"Items should be classified according to an established scheme of codes. A"
+" single primary classification can be given, although an array of "
+"additionalClassification can be provided."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Classification"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+msgid ""
+"An classification should be drawn from an existing scheme or list of "
+"codes. This field is used to indicate the scheme/codelist from which the "
+"classification is drawn. For line item classifications, this value should"
+" represent an known `Item Classification Scheme <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#item-classification-"
+"scheme>`__ wherever possible."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+msgid "The classification code drawn from the selected scheme."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+msgid "A textual description or title for the code."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-classification.csv:1
+msgid ""
+"A URI to identify the code. In the event individual URIs are not "
+"available for items in the identifier scheme this value should be left "
+"blank."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Unit"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:328
+msgid ""
+"The unit block allows detailed specification of the parameters and price "
+"of units that make up a line-item. Although no code list for units has "
+"been established in the current release of the standard, publishers may "
+"consider using the Units provided by the Quantities, Units, Dimensions "
+"and Data Types Ontologies in the unit.name field (drawing on the "
+"CamelCase unit names, such as SquareMile), in order to provide detailed "
+"information the cost per unit of a line-item."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+msgid "Name of the unit"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-item-unit.csv:1
+msgid "The monetary value of a single unit. See `Value <#value>`__"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Milestone"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:340
+msgid ""
+"Milestone information can be included in the tender and contract "
+"implementation blocks."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:342
+msgid ""
+"In the context of a tender block, milestones describe the key "
+"deliverables of a contract, or key points during the lifetime of the "
+"contract. These may have associated documentation."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:344
+msgid ""
+"In the context of a contract implementation block, milestones are used to"
+" track progress towards those deliverables and key events set out in the "
+"tender."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid ""
+"A local identifier for this milestone, unique within this block. This "
+"field is used to keep track of multiple revisions of a milestone through "
+"the compilation from release to record mechanism."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "Milestone title"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "A description of the milestone."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "dueDate"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid "The date the milestone is due."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid ""
+"The date the milestone was last reviewed or modified and the status was "
+"altered or confirmed to still be correct."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid ""
+"The status that was realized on the date provided in dateModified, drawn "
+"from the `milestoneStatus codelist <http://standard.open-"
+"contracting.org/latest/en/schema/codelists/#milestone-status>`__."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-milestone.csv:1
+msgid ""
+"List of documents associated with this milestone. See `Document "
+"<#document>`__ section for further details."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:355
+msgid ""
+"The dateModified field should be changed whenever the progress towards a "
+"milestone is reviewed, and the status either updated, or re-confirmed."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Value"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:361
+msgid "Financial values should always be published with a currency attached."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-value.csv:1
+msgid "Amount as a number."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-value.csv:1
+msgid "number"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-value.csv:1
+msgid "currency"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/release-value.csv:1
+msgid "The currency in 3-letter ISO 4217 format."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:370
+msgid ""
+"During the period of the 1.0 RC, if information on taxation related to a "
+"value is required, this may be handled by an extension. A discussion of "
+"handling taxation can be found on GitHub."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Location"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:374
+msgid ""
+"The addition of location information is currently handled through a "
+"proposed extension to the standard."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Publisher"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:378
+msgid ""
+"The publisher block is used in release and record packages to identify "
+"the source of a dataset."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid ""
+"The scheme that holds the unique identifiers used to identify the item "
+"being identified."
+msgstr ""
+
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "uid"
+msgstr ""
+
+#: ../../standard/docs/field_definitions/publisher.csv:1
+msgid "The unique ID for this entity under the given ID scheme."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Language"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:389
+msgid ""
+"Many publishers need to be able to share key data in multiple languages. "
+"All free-text title and description fields in the Open Contracting Data "
+"Standard can be given in one or more languages."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:391
+msgid ""
+"Language variations are included by a copy of multi-lingual fields, "
+"suffixed with a language code."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:393
+msgid "E.g. title and title_es"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:395
+msgid ""
+"In order to allow users to identify the language used in non-suffixed "
+"fields, OCDS release and records should declare the default language in "
+"the language field."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:397
+msgid ""
+"Languages should be identified using language tags taken from BCP47. The "
+"specification allows BCP47 values in order to accommodate variations in "
+"dialect where this is important. However, publishers should use the two "
+"letter ISO-639-1 two-digit language tags in the vast majority of "
+"circumstances, and should not assume that the users are able to "
+"distinguish between sub-tag variations (for example, OCDS publishers "
+"should strongly prefer 'en' over 'en_US' or 'en_GB')."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:399
+msgid ""
+"To include a language variation of a field, the field name should be "
+"suffixed with _ and the appropriate language tag. For example: title_es "
+"for Spanish."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Worked example"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:403
+msgid ""
+"A contract is for ‘Software consultancy services’ may be published in a "
+"release with the default language sent to ‘en’ (the ISO-639-1 code for "
+"English). The following examples give the description of an item as "
+"English, French and Spanish."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:405
+msgid "json"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:415
+msgid "csv"
+msgstr ""
+
+#: ../../standard/example/language.csv:1
+msgid "description_es"
+msgstr ""
+
+#: ../../standard/example/language.csv:1
+msgid "dscription_fr"
+msgstr ""
+
+#: ../../standard/example/language.csv:1
+msgid "Software consultancy services"
+msgstr ""
+
+#: ../../standard/example/language.csv:1
+msgid "Servicios de consultoria en software"
+msgstr ""
+
+#: ../../standard/example/language.csv:1
+msgid "Services de conseil en logiciels"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Release handling"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:426
+msgid ""
+"The full OCDS data model is based on the idea of publishing a new release"
+" every time information about a contracting process changes. This way, "
+"users can gain a full view of change over time, and third-parties can  "
+"understand what needs to be updated in any system that is tracking the "
+"progress of a contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:428
+msgid ""
+"Publishers will need to choose how to generate new releases, and whether "
+"to repeat information in each release, or just to provide changes. This "
+"choice should be based on an understanding the merging process that is "
+"used to generate a snapshot record of a full contracting process."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:430
+msgid ""
+"This model also requires publishers to pay careful attention to null "
+"values and missing fields."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Empty fields"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:434
+msgid ""
+"Fields that are not being used, or that have no value, can be excluded in"
+" their entirety (key and value) from a published file."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:436
+msgid ""
+"Only including fields which have values will keep versioned datasets "
+"cleaner."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md
+msgid "Emptying fields and values"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:440
+msgid ""
+"There may be cases where a publisher needs to remove, rather than update,"
+" a value which was set in a previous release. In this case, the fields "
+"should explicitly be set to null."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:442
+msgid ""
+"The following describes how null values will be handled in the "
+"compilation of a record:"
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:444
+msgid ""
+"If a field is included with a value in one release, and then set to null "
+"in a subsequent release, that field will be recorded as null in the "
+"compiled record (though past values of it should remain in the versioned "
+"section of the record)."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:445
+msgid ""
+"If a field is set to null in one release, and is also set to null in a "
+"subsequent release, it will be recorded as null as per the original "
+"release, and the record will not show any change based on the subsequent "
+"release I.e. fields that are set to null are recorded as such and then "
+"only changed if the value is set."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:446
+msgid ""
+"If a field is set to null in one release, and then has a value in a "
+"subsequent release, it will first appear in the record, and the version "
+"section of the record as null and then with the subsequent value."
+msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:447
+msgid ""
+"If a field does not appear in one release, and then appears with a value "
+"in a subsequent release, it will first appear in the record, and the "
+"version section of the record, when the first release that contains it is"
+" compiled into the record."
+msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The majority of OCDS data is held"
+#~ " within a release structure. One or"
+#~ " more releases can be published "
+#~ "within a release package. Releases are"
+#~ " made up of a number of "
+#~ "sections, including:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A link to a document describing "
+#~ "the publishers `publication policy "
+#~ "<http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/implementation/publication_patterns"
+#~ "/#publication-policy>`__."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A globally unique identifier for this"
+#~ " Open Contracting Process. Composed of "
+#~ "a publisher prefix and an identifier "
+#~ "for the contracting process. For more"
+#~ " information see the `Open Contracting "
+#~ "Identifier guidance <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/key_concepts/identifiers/#ocid>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A value from the `releaseTag codelist"
+#~ " <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists#release-"
+#~ "tag>`__ that identifies the nature of"
+#~ " the release being made. Tags may "
+#~ "be used to filter release, or, in"
+#~ " future, for for advanced validation "
+#~ "when certain kinds of releases should"
+#~ " contain certain fields."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "String specifying the type of initiation"
+#~ " process used for this contract, "
+#~ "taken from the `initiationType <http://ocds"
+#~ ".open-contracting.org/standard/r/1__0__0/en/schema/codelists"
+#~ "#initiation-type>`__ codelist. Currently only "
+#~ "tender is supported."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The current status of the tender "
+#~ "based on the `tenderStatus codelist "
+#~ "<http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists#tender-"
+#~ "status>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify tendering method against the "
+#~ "`method codelist <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists#method>`__ "
+#~ "as per `GPA definitions "
+#~ "<http://www.wto.org/english/docs_e/legal_e/rev-gpr-"
+#~ "94_01_e.htm>`__ of Open, Selective, Limited"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify the award criteria for the "
+#~ "procurement, using the `award criteria "
+#~ "codelist <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists#award-"
+#~ "criteria>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify the method by which bids "
+#~ "must be submitted, in person, written,"
+#~ " or electronic auction. Using the "
+#~ "`submission method codelist <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists#submission-"
+#~ "method>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All documents and attachments related to"
+#~ " the tender, including any notices. "
+#~ "See the `documentType codelist <http://ocds"
+#~ ".open-contracting.org/standard/r/1__0__0/en/schema/codelists"
+#~ "#document-type>`__ for details of potential"
+#~ " documents to include. See `Document "
+#~ "<#document>`__ section for further details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The identifier for this award. It "
+#~ "must be unique and cannot change "
+#~ "within the Open Contracting Process it"
+#~ " is part of (defined by a "
+#~ "single ocid). See the `identifier "
+#~ "guidance <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/key_concepts/identifiers/>`__"
+#~ " for further details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The current status of the award "
+#~ "drawn from the `awardStatus codelist "
+#~ "<http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists/#award-"
+#~ "status>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The identifier for this contract. It "
+#~ "must be unique and cannot change "
+#~ "within its Open Contracting Process "
+#~ "(defined by a single ocid). See "
+#~ "the `identifier guidance <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/key_concepts/identifiers/>`__"
+#~ " for further details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The current status of the contract. "
+#~ "Drawn from the `contractStatus codelist "
+#~ "<http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists/#contract-"
+#~ "status>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The primary identifier for this "
+#~ "organization. Identifiers that uniquely pick"
+#~ " out a legal entity should be "
+#~ "preferred. Consult the `organization "
+#~ "identifier guidance <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/key_concepts/identifiers"
+#~ "/#organization-identifiers>`__ for the preferred"
+#~ " scheme and identifier to use. See"
+#~ " `Identifier <#identifier>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A list of additional / supplemental "
+#~ "identifiers for the organization, using "
+#~ "the `organization identifier guidance "
+#~ "<http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/key_concepts/identifiers"
+#~ "/#organization-identifiers>`__. This could be "
+#~ "used to provide an internally used "
+#~ "identifier for this organization in "
+#~ "addition to the primary legal entity "
+#~ "identifier. See `Identifier <#identifier>`__ "
+#~ "section for further details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Organization identifiers be drawn from "
+#~ "an existing identification scheme. This "
+#~ "field is used to indicate the "
+#~ "scheme or codelist in which the "
+#~ "identifier will be found. This value "
+#~ "should be drawn from the `Organization"
+#~ " Identifier Scheme <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists"
+#~ "/#organization-identifier-scheme>`__."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A classification of the document "
+#~ "described taken from the `documentType "
+#~ "codelist <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists#document-"
+#~ "type>`__. Values from the provided "
+#~ "codelist should be used wherever "
+#~ "possible, though extended values can be"
+#~ " provided if the codelist does not"
+#~ " have a relevant code."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The primary classification for the item."
+#~ " See the `itemClassificationScheme <http://ocds"
+#~ ".open-contracting.org/standard/r/1__0__0/en/schema/codelists"
+#~ "#item-classification-scheme>`__ to identify "
+#~ "preferred classification lists, including CPV"
+#~ " and GSIN. See `Classification "
+#~ "<#classification>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An array of additional classifications "
+#~ "for the item. See the "
+#~ "`itemClassificationScheme <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists#item-"
+#~ "classification-scheme>`__ codelist for common "
+#~ "options to use in OCDS. This may"
+#~ " also be used to present codes "
+#~ "from an internal classification scheme. "
+#~ "See `Classification <#classification>`__ section "
+#~ "for further details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An classification should be drawn from"
+#~ " an existing scheme or list of "
+#~ "codes. This field is used to "
+#~ "indicate the scheme/codelist from which "
+#~ "the classification is drawn. For line"
+#~ " item classifications, this value should"
+#~ " represent an known `Item Classification"
+#~ " Scheme <http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists/#item-"
+#~ "classification-scheme>`__ wherever possible."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The status that was realized on "
+#~ "the date provided in dateModified, drawn"
+#~ " from the `milestoneStatus codelist "
+#~ "<http://ocds.open-"
+#~ "contracting.org/standard/r/1__0__0/en/schema/codelists#milestone-"
+#~ "status>`__."
+#~ msgstr ""
+
