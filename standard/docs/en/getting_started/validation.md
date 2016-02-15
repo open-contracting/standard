@@ -1,6 +1,6 @@
 ## Validation
 
-You can validate your OCDS documents at [standard.open-contracting.org/validate/](http://standard.open-contracting.org/validate/). 
+You can validate your OCDS documents at [standard.open-contracting.org/validate/](http://standard.open-contracting.org/validator/). 
 
 This tool will help you to check whether the JSON files you are producing are technically valid.
 
