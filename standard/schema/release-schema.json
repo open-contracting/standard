@@ -289,7 +289,7 @@
                     "title": "Award Status",
                     "description": "The current status of the award drawn from the [awardStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#award-status)",
                     "type": ["string", "null"],
-                    "enum": ["pending", "active", "cancelled", "unsuccessful"],
+                    "enum": ["pending", "active", "cancelled", "unsuccessful", null],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "date": {
@@ -377,7 +377,7 @@
                     "title": "Contract Status",
                     "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status)",
                     "type": ["string", "null"],
-                    "enum": ["pending", "active", "cancelled", "terminated"],
+                    "enum": ["pending", "active", "cancelled", "terminated", null],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "period": {
