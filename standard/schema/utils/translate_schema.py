@@ -1,6 +1,7 @@
 import gettext
 import sys
 import json
+import os
 from collections import OrderedDict
 
 languages = sys.argv[1:]
@@ -24,5 +25,8 @@ for language in languages:
     for name in file_names:
         data = json.load(open('standard/schema/' + name), object_pairs_hook=OrderedDict)
         translate_data(data)
-        json.dump(data, open('build/' + language + '/' + name, 'w+'), indent=2)
+        directory_name = 'build/' + language 
+        if not os.path.exists(directory_name):
+            os.makedirs(directory_name)
+        json.dump(data, open(directory_name + '/' + name, 'w+'), indent=2)
 
