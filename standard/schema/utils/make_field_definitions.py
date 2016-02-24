@@ -3,6 +3,7 @@ import json
 import csv
 import collections
 import re
+import os
 
 def format(text):
     return re.sub(r'\[([^\[]+)\]\(([^\)]+)\)', r'`\1 <\2>`__', text.replace("date-time","[date-time](#date)"))
@@ -60,6 +61,10 @@ if __name__ == "__main__":
 
     schema_dir = dirname(dirname(abspath(__file__)))
     file_path = join(schema_dir,"../docs/field_definitions/")
+    language = os.environ.get("SCHEMA_LANG")
+    if language:
+        schema_dir = join(schema_dir, "../../build", language)
+
     
     with open(join(schema_dir, 'release-schema.json'), 'r') as f:
         release = json.loads(f.read(),object_pairs_hook=collections.OrderedDict)
