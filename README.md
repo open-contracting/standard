@@ -54,9 +54,9 @@ fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
 
 ### Translations
 
-When a new version of the docs text is ready, a new transifex project needs to be made called eg. ocds-docs-1.0.0.  This is done on the transifex web interface.
+When a new major/minor version of the docs text is ready, a new transifex project needs to be made called eg. open-contracting-standard-x.y  This is done on the transifex web interface.
 
-Make sure the build is run above, then run (making sure the poject name is the same as the one made above) 
+Make sure the build is run above, then run (making sure the project name is the same as the one made above) 
 
 ```
 sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-1-0 --pot-dir build/locale --locale-dir standard/docs/locale
