@@ -9,7 +9,7 @@ This reference page provides key information on using the release schema.
 ## Release structure
 
 The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, including:
-ƒ
+
 * [planning](#planning)
 * [tender](#tender)
 * [award](#award)
