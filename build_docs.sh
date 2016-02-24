@@ -5,6 +5,7 @@ cd standard
 sphinx-build -b dirhtml docs/en ../build/en
 sphinx-build -b gettext docs/en ../build/locale
 pybabel extract -F .babel . -o ../build/locale/schema.pot
+pybabel compile -d docs/locale -D schema 
 sphinx-intl -c docs/en/conf.py update -p ../build/locale -l es
 
 cd ..
