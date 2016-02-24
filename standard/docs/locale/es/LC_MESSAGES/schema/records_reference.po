@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-04 11:07+0000\n"
+"POT-Creation-Date: 2016-02-24 18:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,24 +24,24 @@ msgstr ""
 #: ../../standard/docs/en/schema/records_reference.md:3
 msgid ""
 "Whereas there can be multiple releases concerning a given contracting "
-"process, there should be a single contracting record for each OCID, "
+"process, there should be a single **contracting record** for each OCID, "
 "providing a summary of all the available data about this particular "
 "contracting process."
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:5
-msgid "A record must contain:"
+msgid "A record **must** contain:"
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:7
-msgid "An OCID"
+msgid "An [OCID](../../identifiers/#ocid)"
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:8
 msgid ""
-"An array of releases related to this contracting process - either by "
-"providing a URL for where these releases can be found, or embedding a "
-"full copy of the release"
+"An array of **[releases](#release)** related to this contracting process "
+"- either by providing a URL for where these releases can be found, or "
+"embedding a full copy of the release"
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:10
@@ -51,22 +51,22 @@ msgid ""
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:12
-msgid "Records should contain:"
+msgid "Records **should** contain:"
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:14
 msgid ""
-"compiledRelease - the latest version of all open contracting process "
+"**compiledRelease** - the latest version of all open contracting process "
 "fields, represented using the release schema."
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:16
-msgid "Records may optionally contain:"
+msgid "Records **may** optionally contain:"
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:18
 msgid ""
-"versionedRelease - containing the history of the data in the "
+"**versionedRelease** - containing the history of the data in the "
 "compiledRecord, with all known past values of any field and the release "
 "that information came from."
 msgstr ""
@@ -187,20 +187,20 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:32
 msgid ""
-"See the guidance on package meta-data. In addition, a record package "
-"includes:"
+"See the guidance on [package meta-data](../../reference/#package-"
+"metadata). In addition, a record package includes:"
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:34
 msgid ""
-"packages - which should provide links to all the release packages used to"
-" compile this record."
+"```packages``` - which should provide links to all the release packages "
+"used to compile this record."
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:35
 msgid ""
-"records - one or more contracting process records, containing, at the "
-"very least, identifiers for the all the releases that relate to each "
+"```records``` - one or more contracting process records, containing, at "
+"the very least, identifiers for the all the releases that relate to each "
 "contracting process."
 msgstr ""
 
@@ -274,7 +274,7 @@ msgstr ""
 #: ../../standard/docs/en/schema/records_reference.md:80
 msgid ""
 "The process for creating a compiled release is described in the guidance "
-"on merging."
+"on [merging](merging.md)."
 msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:82
@@ -318,8 +318,86 @@ msgid ""
 msgstr ""
 
 #~ msgid ""
-#~ "The releases that go to make up"
-#~ " a contracting process can be "
-#~ "provided in two ways:"
+#~ msgstr ""
+
+#~ msgid "A record must contain:"
+#~ msgstr ""
+
+#~ msgid "An OCID"
+#~ msgstr ""
+
+#~ msgid "Records should contain:"
+#~ msgstr ""
+
+#~ msgid "Records may optionally contain:"
+#~ msgstr ""
+
+#~ msgid "A record **must** contain:"
+#~ msgstr ""
+
+#~ msgid "An [OCID](../../identifiers/#ocid)"
+#~ msgstr ""
+
+#~ msgid "Records **should** contain:"
+#~ msgstr ""
+
+#~ msgid "Records **may** optionally contain:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whereas there can be multiple releases"
+#~ " concerning a given contracting process,"
+#~ " there should be a single contracting"
+#~ " record for each OCID, providing a"
+#~ " summary of all the available data"
+#~ " about this particular contracting process."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An array of releases related to "
+#~ "this contracting process - either by "
+#~ "providing a URL for where these "
+#~ "releases can be found, or embedding "
+#~ "a full copy of the release"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "compiledRelease - the latest version of"
+#~ " all open contracting process fields, "
+#~ "represented using the release schema."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "versionedRelease - containing the history "
+#~ "of the data in the compiledRecord, "
+#~ "with all known past values of any"
+#~ " field and the release that "
+#~ "information came from."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See the guidance on package meta-"
+#~ "data. In addition, a record package "
+#~ "includes:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "packages - which should provide links"
+#~ " to all the release packages used "
+#~ "to compile this record."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "records - one or more contracting "
+#~ "process records, containing, at the very"
+#~ " least, identifiers for the all the"
+#~ " releases that relate to each "
+#~ "contracting process."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The process for creating a compiled "
+#~ "release is described in the guidance "
+#~ "on merging."
 #~ msgstr ""
 

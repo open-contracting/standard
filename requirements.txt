@@ -4,7 +4,8 @@ Jinja2==2.8
 Markdown==2.6.5
 MarkupSafe==0.23
 Pygments==2.1.1
-Sphinx==1.3.5
+# sphinx commit pinned from stable branch
+-e git+https://github.com/sphinx-doc/sphinx.git@95583428f5d2fd93c9def52bba028d2cefd930d5#egg=Sphinx
 alabaster==0.7.7
 click==6.3
 docutils==0.12
@@ -16,7 +17,8 @@ polib==1.0.7
 py==1.4.31
 pytest==2.8.7
 pytz==2015.7
--e git+https://github.com/OpenDataServices/recommonmark.git@1b19030dd33671affaa6f1a6168c1e4d0c6b984e#egg=recommonmark
+# recommonmark commit pinned from master branch
+-e git+https://github.com/rtfd/recommonmark.git@f8ef2c28434b2fe4ad2c8fd2912dab3753ef75ce#egg=recommonmark
 six==1.10.0
 snowballstemmer==1.2.1
 sphinx-intl==0.9.9

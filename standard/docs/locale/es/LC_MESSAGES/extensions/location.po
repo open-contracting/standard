@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015, OCDS
+# Copyright (C)
 # This file is distributed under the same license as the OCDS package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
-#, fuzzy
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: OCDS 1.0\n"
+"Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-21 15:18+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2016-02-24 18:05+0000\n"
+"PO-Revision-Date: 2016-02-24 18:06+0000\n"
+"Last-Translator: Ben Webb <ben.webb@opendataservices.coop>\n"
+"Language-Team: Spanish (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/es/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.2.0\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../standard/docs/en/extensions/location.md
+#: ../../standard/docs/en/extensions/location.md:0
 msgid "Location extension"
 msgstr ""
 
@@ -29,81 +29,88 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:5
 msgid ""
-"This extension proposes the addition of two properties to items to "
+"This extension proposes the addition of two properties to ```items``` to "
 "describe location:"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:7
 msgid ""
-"deliveryAddress - a standard Address block which can be used to provide a"
-" postal address where services should be delivered."
+"```deliveryAddress``` - a standard ```Address``` block which can be used to "
+"provide a postal address where services should be delivered."
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:8
 msgid ""
-"deliveryLocation - a new block consisting of GeoJSON and Gazetteer "
-"entries to describe a wider range of locations to which the contract line"
-" item relates."
+"```deliveryLocation``` - a new block consisting of GeoJSON and Gazetteer "
+"entries to describe a wider range of locations to which the contract line "
+"item relates."
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:10
-msgid "It also creates a new gazetteer codelist."
+msgid ""
+"It also creates a [new gazetteer codelist](https://github.com/open-"
+"contracting/implementation-and-"
+"extensions/blob/master/proposed_extensions/proposed_location/codelist_usecase2.csv)."
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:12
-msgid "Advantages of this approach"
+msgid "**Advantages of this approach**"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:14
 msgid ""
 "It captures a wide range of possible location specifications, including "
-"point locations, polygons and lines (useful for roads projects, "
-"extractives concessions etc.)"
+"point locations, polygons and lines (useful for roads projects, extractives "
+"concessions etc.)"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:15
 msgid ""
-"Delivery Address information provides information that can be used for "
-"both geocoding, and for logistics fulfilment;"
+"Delivery Address information provides information that can be used for both "
+"geocoding, and for logistics fulfilment;"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:16
-msgid "It allows different locations to be specified for different line items;"
+msgid ""
+"It allows different locations to be specified for different line items;"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:18
-msgid "Disadvantages/limitations of this approach"
+msgid "**Disadvantages/limitations of this approach**"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:20
 msgid ""
-"Locations are only specified for items, not at the overall tender, "
-"contract or award level. In some cases this may lead either to location "
-"data being duplicated across items, or ambiguity about which item the "
-"location information should apply to;"
+"Locations are only specified for ```items```, not at the overall tender, "
+"contract or award level. In some cases this may lead either to location data"
+" being duplicated across items, or ambiguity about which item the location "
+"information should apply to;"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:22
-msgid "Background"
+msgid "**Background**"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:24
 msgid ""
 "There are a number of use cases that demand specifying a location for "
-"delivery of an item. Discussion can be found in Issue #26."
+"delivery of an item. Discussion can be found in [Issue "
+"#26](https://github.com/open-contracting/standard/issues/26)."
 msgstr ""
 
-#: ../../standard/docs/en/extensions/location.md
+#: ../../standard/docs/en/extensions/location.md:0
 msgid "Schema patch"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:29
 msgid ""
 "The JSON Patch to add location data to the schema can be found in "
-"schema_usecase_2.json."
+"[schema_usecase_2.json](https://github.com/open-contracting/implementation-"
+"and-"
+"extensions/blob/master/proposed_extensions/proposed_location/schema_usecase_2.json)."
 msgstr ""
 
-#: ../../standard/docs/en/extensions/location.md
+#: ../../standard/docs/en/extensions/location.md:0
 msgid "Example usage"
 msgstr ""
 
@@ -113,14 +120,13 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:78
 msgid ""
-"If the procurement related to the rebuilding of a road, then the item "
-"could also specify more complex geometries such as:"
+"If the procurement related to the rebuilding of a road, then the item could "
+"also specify more complex geometries such as:"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:95
 msgid ""
-"You can take the contents of the geometry object, excluding the geometry "
-"keyword, and plug this into any GeoJSON tool to see the shape that is "
-"described."
+"You can take the contents of the geometry object, excluding the "
+"```geometry``` keyword, and plug this into any GeoJSON tool to see the shape"
+" that is described."
 msgstr ""
-
