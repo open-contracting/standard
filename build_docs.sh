@@ -2,10 +2,13 @@ set -e
 mkdir -p standard/docs/field_definitions
 python standard/schema/utils/make_field_definitions.py
 cd standard
+CODELIST_LANG=en python schema/utils/translate_codelists.py
 sphinx-build -b dirhtml docs/en ../build/en
 sphinx-build -b gettext docs/en ../build/locale
-pybabel extract -F .babel . -o ../build/locale/schema.pot
+pybabel extract -F .babel_schema . -o ../build/locale/schema.pot
+pybabel extract -F .babel_codelists . -o ../build/locale/codelists.pot
 pybabel compile -d docs/locale -D schema 
+pybabel compile -d docs/locale -D codelists
 
 cd ..
 cp -r standard/assets build
@@ -14,6 +17,7 @@ cp standard/schema/*.json build/en/
 python standard/schema/utils/translate_schema.py es
 
 cd standard
-# both these need to be run per language
+# all these need to be run per language
 SCHEMA_LANG=es python schema/utils/make_field_definitions.py
+CODELIST_LANG=es python schema/utils/translate_codelists.py
 sphinx-build -b dirhtml -D language='es' docs/en ../build/es
