@@ -28,5 +28,5 @@ for language in languages:
         directory_name = 'build/' + language 
         if not os.path.exists(directory_name):
             os.makedirs(directory_name)
-        json.dump(data, open(directory_name + '/' + name, 'w+'), indent=2)
+        json.dump(data, open(directory_name + '/' + name, 'w+'), indent=4, ensure_ascii=False)
 
