@@ -15,6 +15,9 @@ translator = gettext.translation('codelists', 'docs/locale', languages=[language
 codelists_dir = join(dirname(dirname(abspath(__file__))), 'codelists')
 codelists_output_dir = join(dirname(dirname(abspath(__file__))), 'codelists_translated')
 
+if not os.path.exists(codelists_output_dir):
+    os.makedirs(codelists_output_dir)
+
 directory_name = 'build/' + language 
 
 def convert_fieldname(name):
