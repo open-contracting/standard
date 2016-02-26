@@ -17,7 +17,7 @@ def make_link(text):
         
 
 def make_definition_table(json,file_path,what="properties",section=""): 
-    table = [['Field Name','Description','Format']]
+    table = [[_('Field Name'),_('Description'),_('Format')]]
     if(section):
         if "/" in section:
             try:
@@ -58,12 +58,22 @@ def make_definition_table(json,file_path,what="properties",section=""):
 
 if __name__ == "__main__":
     from os.path import abspath, dirname, join
+    import gettext
+
 
     schema_dir = dirname(dirname(abspath(__file__)))
     file_path = join(schema_dir,"../docs/field_definitions/")
     language = os.environ.get("SCHEMA_LANG")
     if language:
         schema_dir = join(schema_dir, "../../build", language)
+        fallback=False
+    else:
+        language = 'en'
+        fallback=True
+
+    translator = gettext.translation('schema', 'docs/locale', languages=[language], fallback=fallback)
+    global _ 
+    _ = translator.gettext
 
     
     with open(join(schema_dir, 'release-schema.json'), 'r') as f:

@@ -1,7 +1,7 @@
 set -e
 mkdir -p standard/docs/field_definitions
-python standard/schema/utils/make_field_definitions.py
 cd standard
+python schema/utils/make_field_definitions.py
 CODELIST_LANG=en python schema/utils/translate_codelists.py
 sphinx-build -b dirhtml docs/en ../build/en
 sphinx-build -b gettext docs/en ../build/locale
