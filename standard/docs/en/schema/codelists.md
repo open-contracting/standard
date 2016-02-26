@@ -19,7 +19,7 @@ Items should be classified using existing gazetteers and codelists, such as the 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/itemClassificationScheme.csv
+   :file: standard/schema/codelists_translated/itemClassificationScheme.csv
 ```
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../../implementation/publication_patterns#publication_policy). 
@@ -32,7 +32,7 @@ The Organization Identifier Scheme currently uses the codes from the Internation
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
+   :file: standard/schema/codelists_translated/organizationIdentifierRegistrationAgency_iati.csv
 ```
 
 This list can be extended in consultation with IATI. 
@@ -44,7 +44,7 @@ This list provides details of the documents that publishers may wish to provide 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/documentType.csv
+   :file: standard/schema/codelists_translated/documentType.csv
 ```
 
 ### Award Criteria
@@ -54,7 +54,7 @@ The award criteria code list describes the basis on which contract awards will b
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/awardCriteria.csv
+   :file: standard/schema/codelists_translated/awardCriteria.csv
 ```
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../../implementation/publication_policy). 
@@ -66,7 +66,7 @@ The submission method codelist is used to identify the mechanism through which a
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/submissionMethod.csv
+   :file: standard/schema/codelists_translated/submissionMethod.csv
 ```
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../../../implementation/publication_policy). 
@@ -80,7 +80,7 @@ A contracting process may result in a number of releases of information over tim
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/releaseTag.csv
+   :file: standard/schema/codelists_translated/releaseTag.csv
 ```
 
 ### Initiation Type
@@ -90,7 +90,7 @@ Contracting processes may be formed under a number of different processes. Curre
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/initiationType.csv
+   :file: standard/schema/codelists_translated/initiationType.csv
 ```
 
 ### Tender Status
@@ -100,7 +100,7 @@ The `tender.status` field is used to indicate the current status of a tender pro
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/tenderStatus.csv
+   :file: standard/schema/codelists_translated/tenderStatus.csv
 ```
 
 ### Method
@@ -110,7 +110,7 @@ The method codelist is based upon the [GPA Definitions provided here](http://www
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/method.csv
+   :file: standard/schema/codelists_translated/method.csv
 ```
 
 ### Award Status
@@ -120,7 +120,7 @@ An award move through multiple states. Releases over time may update the status 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/awardStatus.csv
+   :file: standard/schema/codelists_translated/awardStatus.csv
 ```
 
 The ```awardStatus``` field and code-list is used to indicate when a tender did not result in an award (through the ```"awardStatus":"unsuccessful"``` value)
@@ -132,7 +132,7 @@ Contracts can move through multiple states. Releases over time may update the st
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/contractStatus.csv
+   :file: standard/schema/codelists_translated/contractStatus.csv
 ```
 
 ### Currency
@@ -144,5 +144,5 @@ OCDS uses the ISO 3-letter currency codes maintained in [ISO 4217](http://en.wik
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists/milestoneStatus.csv
+   :file: standard/schema/codelists_translated/milestoneStatus.csv
 ```

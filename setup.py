@@ -7,5 +7,6 @@ setup(
         entry_points = """
         [babel.extractors]
         jsonschema_text = standard.schema.utils.jsonschema_extract:extract
+        codelists_text = standard.schema.utils.codelists_extract:extract
         """
 )
