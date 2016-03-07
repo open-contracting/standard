@@ -5,6 +5,13 @@ python schema/utils/make_field_definitions.py
 CODELIST_LANG=en python schema/utils/translate_codelists.py
 sphinx-build -b dirhtml docs/en ../build/en
 sphinx-build -b gettext docs/en ../build/locale
+# Remove messages from CSVs from Sphinx's own translations as we translate the
+# schema and codelists separately.
+msggrep -v -N '../../standard/docs/field_definitions/*.csv'  ../build/locale/schema/reference.pot > TMP
+mv TMP ../build/locale/schema/reference.pot
+msggrep -v -N '../../standard/schema/codelists_translated/*.csv'  ../build/locale/schema/codelists.pot > TMP
+mv TMP ../build/locale/schema/codelists.pot
+
 pybabel extract -F .babel_schema . -o ../build/locale/schema.pot
 pybabel extract -F .babel_codelists . -o ../build/locale/codelists.pot
 pybabel compile -d docs/locale -D schema 
