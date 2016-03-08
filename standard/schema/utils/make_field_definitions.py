@@ -40,13 +40,13 @@ def make_definition_table(json,file_path,what="properties",section=""):
 
         if types == "array":
            if block[prop].get('items').get("$ref"):
-               table.append([prop,format(block[prop].get('description','')) + " See " + make_link(block[prop]['items']["$ref"]) + " section for further details.","Object Array"])
+               table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(block[prop]['items']["$ref"]) + _(" section for further details."),"Object Array"])
            else:
                table.append([prop,format(block[prop].get('description','')),"Array"])
         elif block[prop].get("$ref"):
-          table.append([prop,format(block[prop].get('description','')) + " See " + make_link(block[prop]["$ref"]),"Reference"])
+          table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(block[prop]["$ref"]),"Reference"])
         elif "object" in types:
-            table.append([prop,format(block[prop].get('description','')) + " See " + make_link(prop),"Object"])
+            table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(prop),"Object"])
         else:
           table.append([prop,format(block[prop].get('description','')),block[prop].get('format','') + " " + types])
           
