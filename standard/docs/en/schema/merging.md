@@ -1,6 +1,6 @@
 # Merging 
 
-In OCDS, merging involves combining individual [releases](../../../getting_started/releases_and_records/) of data during a contracting process into a [record](../getting_started/releases_and_records/) which provides an at-a-glance view of the current state and history of that process. 
+In OCDS, merging involves combining individual [releases](../getting_started/releases_and_records.md) of data during a contracting process into a [record](../getting_started/releases_and_records.md) which provides an at-a-glance view of the current state and history of that process. 
 
 <div class="example hint" markdown=1>
 
