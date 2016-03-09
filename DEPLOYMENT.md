@@ -11,3 +11,11 @@ Before merge:
 After merge:
 - [ ] Copy the files from dev to live following the instructions at the top of https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls
 ```
+
+# Merging in schema changes
+
+```
+Checklist:
+
+- [ ] Run Cove's tests with it using the new schema
+```
