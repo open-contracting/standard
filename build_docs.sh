@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 mkdir -p standard/docs/field_definitions
 cd standard
@@ -7,10 +8,16 @@ sphinx-build -b dirhtml docs/en ../build/en
 sphinx-build -b gettext docs/en ../build/locale
 # Remove messages from CSVs from Sphinx's own translations as we translate the
 # schema and codelists separately.
-msggrep -v -N '../../standard/docs/field_definitions/*.csv'  ../build/locale/schema/reference.pot > TMP
-mv TMP ../build/locale/schema/reference.pot
+for name in reference records_reference; do
+    msggrep -v -N '../../standard/docs/field_definitions/*.csv'  ../build/locale/schema/${name}.pot > TMP
+    mv TMP ../build/locale/schema/${name}.pot
+done
 msggrep -v -N '../../standard/schema/codelists_translated/*.csv'  ../build/locale/schema/codelists.pot > TMP
 mv TMP ../build/locale/schema/codelists.pot
+msggrep -v -N '../../standard/docs/en/examples/*.csv'  ../build/locale/implementation/serialization.pot > TMP
+mv TMP ../build/locale/implementation/serialization.pot
+msggrep -v -N '../../standard/example/*.csv'  ../build/locale/schema/reference.pot > TMP
+mv TMP ../build/locale/schema/reference.pot
 
 pybabel extract -F .babel_schema . -o ../build/locale/schema.pot
 pybabel extract -F .babel_codelists . -o ../build/locale/codelists.pot
