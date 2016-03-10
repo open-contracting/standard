@@ -1,7 +1,17 @@
 Open Contracting Data standard
 ==============================
 
-For view-only access to the standard and documentation please visit [http://ocds.open-contracting.org/standard/](http://ocds.open-contracting.org/standard/)
+For view-only access to the standard and documentation please visit [http://standard.open-contracting.org](http://standard.open-contracting.org)
+
+## Versions
+
+The standard website is now versioned MAJOR.MINOR, whereas the schema uris are versioned MAJOR__MINOR__PATCH. e.g. http://standard.open-contracting.org/1.0/en/ vs http://standard.open-contracting.org/schema/1__0__1/release-schema.json. (Previously both were versioned as MAJOR__MINOR__PATCH).
+
+The standard website version corresponds to a [branch](https://github.com/open-contracting/standard/branches), whereas the schema uri version corresponds to a [release](https://github.com/open-contracting/standard/releases). This allows us to make updates the documentation without having to make a new patch release. On the other hand, there's a need for predictable machine consumption of the content at schema URIs, so we ensure this doesn't change.
+
+There are also one or more development branches, e.g. http://standard.open-contracting.org/1.0-dev/en/
+
+The default standard website is 'latest' - http://standard.open-contracting.org/latest/en/ - which corresponds to the latest released version of the standard. This makes it possible to construct urls to this that will track the latest version of the standard.
 
 ## Working with the standard
 
