@@ -107,10 +107,8 @@ However, to allow users to get a snapshot view the contracting process without i
 * a compiledRelease block, which follows the release schema, and is updated with the most up-to-date value for each field; and, optionally,
 * a versionedRelease, which contains a history of all the changes for each field.
 
-The [OCDS merge strategies](schema/merging.md) set out how to combine multiple releases to create a single record for each contracting process. 
+The [OCDS merge strategies](../schema/merging.md) set out how to combine multiple releases to create a single record for each contracting process. 
 
-<!-- #### Examples
-
-TODO-->
+<!-- #### Examples TODO-->
 
 <center><img src="../../../assets/release_square.png" height="200"/></center>
