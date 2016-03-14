@@ -15,7 +15,10 @@ After merge:
 # Merging in schema changes
 
 ```
-Checklist:
+Before merge:
+- [ ] Set up a dev instance of Cove using the new schema, and run tests against it
 
-- [ ] Run Cove's tests with it using the new schema
+After merge:
+- [ ] Update live Cove to use the new schema
+
 ```
