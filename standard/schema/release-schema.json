@@ -1,5 +1,5 @@
 {
-    "id": "http://ocds.open-contracting.org/standard/r/1__0__0/release-schema.json",
+    "id": "http://standard.open-contracting.org/schema/1__0__1/release-schema.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Schema for an Open Contracting Release",
     "type": "object",
@@ -12,7 +12,7 @@
         },
         "id": {
             "title": "Release ID",
-            "description": "A unique identifier that identifies this release. A releaseID must be unique within a release-package and must not contain the # character.",
+            "description": "A unique identifier that identifies this release. A release ID must be unique within a release-package and must not contain the # character.",
             "type": "string",
             "mergeStrategy": "ocdsOmit"
         },
@@ -289,7 +289,7 @@
                     "title": "Award Status",
                     "description": "The current status of the award drawn from the [awardStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#award-status)",
                     "type": ["string", "null"],
-                    "enum": ["pending", "active", "cancelled", "unsuccessful"],
+                    "enum": ["pending", "active", "cancelled", "unsuccessful", null],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "date": {
@@ -377,7 +377,7 @@
                     "title": "Contract Status",
                     "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status)",
                     "type": ["string", "null"],
-                    "enum": ["pending", "active", "cancelled", "terminated"],
+                    "enum": ["pending", "active", "cancelled", "terminated", null],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "period": {
@@ -584,7 +584,6 @@
             "type": "object",
             "title": "Budget Information",
             "description": "This section contain information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
-            "mergeStrategy": "ocdsVersion",
             "properties": {
                 "source": {
                     "title": "Data Source",

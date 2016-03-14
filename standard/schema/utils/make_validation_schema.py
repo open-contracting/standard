@@ -7,7 +7,7 @@ def get_versioned_validation_schema(versioned_release):
     merger = jsonmerge.Merger(versioned_release)
 
     versioned_validation_schema = merger.get_schema()
-    versioned_validation_schema["id"] = "http://ocds.open-contracting.org/standard/r/1__0__0/versioned-release-validation-schema.json"  # nopep8
+    versioned_validation_schema["id"] = "http://standard.open-contracting.org/schema/1__0__1/versioned-release-validation-schema.json"  # nopep8
     versioned_validation_schema["$schema"] = "http://json-schema.org/draft-04/schema#"  # nopep8
     versioned_validation_schema["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
 
