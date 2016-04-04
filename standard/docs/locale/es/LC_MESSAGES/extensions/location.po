@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the OCDS package.
 # 
 # Translators:
+# Oscar Montiel <miguel.montiel@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-24 18:05+0000\n"
-"PO-Revision-Date: 2016-02-24 18:06+0000\n"
-"Last-Translator: Ben Webb <ben.webb@opendataservices.coop>\n"
+"POT-Creation-Date: 2016-03-14 11:49+0000\n"
+"PO-Revision-Date: 2016-03-18 22:06+0000\n"
+"Last-Translator: Oscar Montiel <miguel.montiel@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,65 +20,65 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Location extension"
-msgstr ""
+msgstr "Extensión de ubicación"
 
 #: ../../standard/docs/en/extensions/location.md:3
 msgid ""
 "Communicating the location of proposed or executed contract delivery is "
 "important to make users of contracting data."
-msgstr ""
+msgstr "Comunicar la ubicación de la entrega de un contrato propuesto o ejecutado es importante para los usuarios de los datos de contrataciones. "
 
 #: ../../standard/docs/en/extensions/location.md:5
 msgid ""
 "This extension proposes the addition of two properties to ```items``` to "
 "describe location:"
-msgstr ""
+msgstr "Esta extensión propone agregar dos propiedades a los ```elementos``` para describir la ubicación:"
 
 #: ../../standard/docs/en/extensions/location.md:7
 msgid ""
 "```deliveryAddress``` - a standard ```Address``` block which can be used to "
 "provide a postal address where services should be delivered."
-msgstr ""
+msgstr "```deliveryAdress``` - un bloque estándar de ```Dirección``` que puede utilizarse para dar una dirección postal a donde los servicios deberían entregarse. "
 
 #: ../../standard/docs/en/extensions/location.md:8
 msgid ""
 "```deliveryLocation``` - a new block consisting of GeoJSON and Gazetteer "
 "entries to describe a wider range of locations to which the contract line "
 "item relates."
-msgstr ""
+msgstr "```deliveryLocation``` - un nuevo bloque que consite de entradas de GeoJSON y Gazetteer para describir una gama más amplia de ubicaciones con las que se relacionan los artículos enistados de un contrato."
 
 #: ../../standard/docs/en/extensions/location.md:10
 msgid ""
 "It also creates a [new gazetteer codelist](https://github.com/open-"
 "contracting/implementation-and-"
 "extensions/blob/master/proposed_extensions/proposed_location/codelist_usecase2.csv)."
-msgstr ""
+msgstr "También crea una [nueva lista de códigos de gazetteer](https://github.com/open-contracting/implementation-and-extensions/blob/master/proposed_extensions/proposed_location/codelist_usecase2.csv)."
 
 #: ../../standard/docs/en/extensions/location.md:12
 msgid "**Advantages of this approach**"
-msgstr ""
+msgstr "**Ventajas de este acercamiento**"
 
 #: ../../standard/docs/en/extensions/location.md:14
 msgid ""
 "It captures a wide range of possible location specifications, including "
 "point locations, polygons and lines (useful for roads projects, extractives "
 "concessions etc.)"
-msgstr ""
+msgstr "Captura una amplia gama de especificaciones de posibles ubicaciones, incluyendo puntos, polígonos y líneas (útil para proyectos de caminos, concesiones extractivas, etc.)"
 
 #: ../../standard/docs/en/extensions/location.md:15
 msgid ""
 "Delivery Address information provides information that can be used for both "
 "geocoding, and for logistics fulfilment;"
-msgstr ""
+msgstr "La información sobre la Dirección de Entrega provee información que puede usarse tanto para geo codificar como para cumplimiento logístico;"
 
 #: ../../standard/docs/en/extensions/location.md:16
 msgid ""
 "It allows different locations to be specified for different line items;"
-msgstr ""
+msgstr "Permite que se especifiquen distintas ubicacones para distintos artículos enlistados;"
 
 #: ../../standard/docs/en/extensions/location.md:18
 msgid "**Disadvantages/limitations of this approach**"
-msgstr ""
+msgstr "**Desventajas/limitaciones de este acercamiento**"
 
 #: ../../standard/docs/en/extensions/location.md:20
 msgid ""
@@ -85,22 +86,22 @@ msgid ""
 "contract or award level. In some cases this may lead either to location data"
 " being duplicated across items, or ambiguity about which item the location "
 "information should apply to;"
-msgstr ""
+msgstr "Las ubicaciones sólo se especifican para ```artículos```, no al nivel de toda la licitación, contrato o adjudicación. En algunos casos esto puede llevar a que los datos de localización se dupliquen en varios artículos o ambigüedad sobre para cuál artículo debe aplicar la información de ubicación;"
 
 #: ../../standard/docs/en/extensions/location.md:22
 msgid "**Background**"
-msgstr ""
+msgstr "**Antecedentes**"
 
 #: ../../standard/docs/en/extensions/location.md:24
 msgid ""
 "There are a number of use cases that demand specifying a location for "
 "delivery of an item. Discussion can be found in [Issue "
 "#26](https://github.com/open-contracting/standard/issues/26)."
-msgstr ""
+msgstr "Hay un número de casos que requieren especificar una ubicación para la entrega de un artículo. La discusión se puede encontrar en el [Issue #26](https://github.com/open-contracting/standard/issues/26)."
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Schema patch"
-msgstr ""
+msgstr "Parche del esquema"
 
 #: ../../standard/docs/en/extensions/location.md:29
 msgid ""
@@ -108,25 +109,25 @@ msgid ""
 "[schema_usecase_2.json](https://github.com/open-contracting/implementation-"
 "and-"
 "extensions/blob/master/proposed_extensions/proposed_location/schema_usecase_2.json)."
-msgstr ""
+msgstr "El parche de JSON para agregar datos de ubicación al esquema se pueden encontrar en [schema_usecase_2.json](https://github.com/open-contracting/implementation-and-extensions/blob/master/proposed_extensions/proposed_location/schema_usecase_2.json)."
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Example usage"
-msgstr ""
+msgstr "Ejemplo de uso"
 
 #: ../../standard/docs/en/extensions/location.md:34
 msgid "Below is an example of a geolocated item:"
-msgstr ""
+msgstr "Debajo se encuentra el ejemplo de un artículo geolocalizado:"
 
 #: ../../standard/docs/en/extensions/location.md:78
 msgid ""
 "If the procurement related to the rebuilding of a road, then the item could "
 "also specify more complex geometries such as:"
-msgstr ""
+msgstr "Si la licitación se relaciona con la reconstrucción de una carretera, entonces el artículo también podría especificar geometrías más complejas tales como:"
 
 #: ../../standard/docs/en/extensions/location.md:95
 msgid ""
 "You can take the contents of the geometry object, excluding the "
 "```geometry``` keyword, and plug this into any GeoJSON tool to see the shape"
 " that is described."
-msgstr ""
+msgstr "Puedes tomar los contenidos del objeto geométrico, excluyendo la palabra clave ```geometry``` y agregarlo a cualquier herramienta de GeoJSON para ver la forma que se describe. "
