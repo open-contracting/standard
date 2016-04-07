@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-14 11:49+0000\n"
-"PO-Revision-Date: 2016-04-02 00:52+0000\n"
+"PO-Revision-Date: 2016-04-07 05:17+0000\n"
 "Last-Translator: Oscar Montiel <miguel.montiel@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -66,14 +66,14 @@ msgid ""
 " Using the same schema and structure as the releases, the main body of the "
 "record will contain a tender with contract value of $1500, and details of "
 "both awards."
-msgstr "Estas entregas independientes proveen información en tiempo real sobre qué está pasando en el proceso de contratación. El registro las combinará. Usando el mismo esquema y estrutura como las entregas, el cuerpo principal del registro contrendrá una licitación con el valor del contrato de $1500 y detalles de ambas adjudicaciones. "
+msgstr "Estas entregas independientes proveen información en tiempo real sobre qué está pasando en el proceso de contratación. El registro las combinará. Usando el mismo esquema y estructura como las entregas, el cuerpo principal del registro contrendrá una licitación con el valor del contrato de $1500 y detalles de ambas adjudicaciones. "
 
 #: ../../standard/docs/en/schema/merging.md:21
 msgid ""
 "If the record is complete with versioning information, then the versioning "
 "section will reveal that the planned contract value changed from $1000 to "
 "$1500 on 31st January."
-msgstr "Si el registro se completa con información de versionamiento, entonces la sección de versiones revelará que el valor planeado del contrato cambió de $1000 a $1500 el 31 de enero."
+msgstr "Si el registro se completa con información de versiones, entonces la sección de versiones revelará que el valor planeado del contrato cambió de $1000 a $1500 el 31 de enero."
 
 #: ../../standard/docs/en/schema/merging.md:0
 msgid "Merging rules"
@@ -274,7 +274,7 @@ msgid ""
 "confusion, and so propose that future versions will omit all but the "
 "essential properties required to indicate the exceptions to the general rule"
 " in (4) above."
-msgstr "La versión 1.0 del esquema de OCDS inclue una serie de propiedades ```mergeStrategy``` que fueron diseñadas para indicar cómo se deben compilar las entregas. En la implementación inicial hemos visto que éstas pueden resultar confusas y tenemos la intención de que en futuras versiones se omitirán todas menos las propiedades esenciales que se requieren para indicar las excepciones a la regla general en (4)."
+msgstr "La versión 1.0 del esquema de OCDS incluye una serie de propiedades ```mergeStrategy``` que fueron diseñadas para indicar cómo se deben compilar las entregas. En la implementación inicial hemos visto que éstas pueden resultar confusas y tenemos la intención de que en futuras versiones se omitirán todas menos las propiedades esenciales que se requieren para indicar las excepciones a la regla general en (4)."
 
 #: ../../standard/docs/en/schema/merging.md:149
 msgid "This information is maintained here for reference."
@@ -301,7 +301,7 @@ msgid ""
 "contracts, a release may add a new contract to the list without needing to "
 "repeat all the previous contracts, or may amend a single award without "
 "repeating all the other awards."
-msgstr "Las distintas secciones de la estructura de los datos debe de manejarse de manera distinta conforma se fusionen las entergas. Para algunas listas una nueva entrega debería de sobreescribir a la anterior por completo. Por ejemplo, si una entrega posterior actualiza la lista de proveedores contra una adjudicación, esta nueva lista completa debería de tomarse como la información acreditada más actual. Para otras listas, como las de contratos, una entrega puede agregar un nuevo contrato a la lista sin necesidad de repetir todos los contratos previos, o puede modificar una sola entrega sin repetir todas las demás."
+msgstr "Las distintas secciones de la estructura de los datos debe de manejarse de manera distinta conforma se fusionen las entregas. Para algunas listas una nueva entrega debería de sobre-escribir a la anterior por completo. Por ejemplo, si una entrega posterior actualiza la lista de proveedores contra una adjudicación, esta nueva lista completa debería de tomarse como la información acreditada más actual. Para otras listas, como las de contratos, una entrega puede agregar un nuevo contrato a la lista sin necesidad de repetir todos los contratos previos, o puede modificar una sola entrega sin repetir todas las demás."
 
 #: ../../standard/docs/en/schema/merging.md:157
 msgid ""
@@ -370,7 +370,7 @@ msgid ""
 "To keep the versioning as clean as possible, the list of objects should  "
 "**always be given in the same order** in each release, so as not to "
 "mistakenly mark a change when actually only order has shifted."
-msgstr "Para mantener el versionamiento tan limpio como sea posible, la lista de objetos siempre debe de **proveerse en el mismo orden** en cada entrega para no marcar por equivocación un cambio cuando sólo ha habido un cambio de orden."
+msgstr "Para mantener el control de versiones tan limpio como sea posible, la lista de objetos siempre debe de **proveerse en el mismo orden** en cada entrega para no marcar por equivocación un cambio cuando sólo ha habido un cambio de orden."
 
 #: ../../standard/docs/en/schema/merging.md:189
 msgid ""
@@ -428,4 +428,4 @@ msgstr "Esta estrategia no devuelve nada en una fusión porque actualizar el cam
 msgid ""
 "For example, the field for `tag` should not be updated to the latest "
 "version, it should be updated to `compiled` for it to make sense."
-msgstr "Por ejemplo, el campo para `tag` no debe de actualizarse a la útilma versión, debe acualizarse a `compilado` para que tenga sentido."
+msgstr "Por ejemplo, el campo para `tag` no debe de actualizarse a la última versión, debe actualizarse a `compilado` para que tenga sentido."
