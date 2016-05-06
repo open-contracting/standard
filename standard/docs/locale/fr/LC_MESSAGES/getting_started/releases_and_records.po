@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the OCDS package.
+# 
+# Translators:
+# Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: open-contracting-standard-1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-14 11:49+0000\n"
+"PO-Revision-Date: 2016-04-24 16:57+0000\n"
+"Last-Translator: Louis Charbonneau <louis.charbonneau171@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Releases and Records"
+msgstr "Publications et Dossiers"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:3
+msgid "There are two kinds of OCDS document:"
+msgstr "Il y a deux types de documents OCDS"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Releases"
+msgstr "Publication"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:18
+msgid ""
+"Releases should be immutable objects, presenting information about a "
+"particular event in the lifetime of a contracting process."
+msgstr "La publication est un objet inaltérable qui donne des renseignements spécifiques à un évènement de la vie d'un processus de passation de marché public."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:20
+msgid ""
+"Each release must contain an OCID, a unique release ID, a release tag, and "
+"as much information as can be provided for users to understand the event "
+"taking place."
+msgstr "Chaque publication doit contenir un identifiant OCDI, un identifiant unique de publication, une étiquette de publication et tous les renseignements requis pour permettre aux utilisateurs d'interpréter correctement l'évènement en question."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:22
+msgid "For example:"
+msgstr "À titre d'exemple:"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:24
+msgid ""
+"A ```planning``` release may provide information in the planning section "
+"about budgets and procurement intention, and the tender section about the "
+"proposed details for a future tender;"
+msgstr "Une publication de type ```planning``` va donner des renseignements sur les budgets et les intentions du demandeur ainsi que des détails sur le futur appel d'offres"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:25
+msgid ""
+"A ```tender``` release may provide information in the tender section about "
+"how to bid for the work, and may repeat ```planning``` information on the "
+"budget or project the tender is associated with;"
+msgstr "Une publication de type ```Appel d'offres``` va donner des renseignements sur la façon de présenter la soumission et possiblement répéter des renseignements sur les budgets, les intentions du demandeur ainsi que des détails sur le projet faisant l'objet de l'appel d'offres"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:26
+msgid ""
+"A ```tenderUpdate``` release may provide an updated tender section with "
+"links to documents that answer questions asked during the enquiry period;"
+msgstr "Une publication de type ```Mise à jour d'appel d'offres``` va donner des liens à des documents qui répondent à des questions posées lors de la période d'enquête. "
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:27
+msgid ""
+"An ```award``` release may provide details of the supplier awarded the "
+"contract in the award section, and may provide repeated information about "
+"the how procurement took place in the tender section;"
+msgstr "Une publication de type ```adjudication``` va donner des renseignements sur le fournisseur adjudicataire et possiblement répéter des renseignements sur le processus d'adjudication."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:28
+msgid ""
+"A ```contract``` release may provide the details of the signed contract in a"
+" contract section, matched with a related award section;"
+msgstr "Une publication de type ```Contrat``` va donner des renseignements sur la signature du contrat possiblement répéter des renseignements sur le processus d'adjudication et l'adjudicataire."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:29
+msgid ""
+"An ```implementationUpdate``` release may repeat details of the contract, "
+"and provide information on milestones achieved and payments to the supplier,"
+" or may update the contract implementation section with links to newly "
+"published documents."
+msgstr "Une publication de type ```Mise à jour de la mise en oeuvre``` va donner des renseignements sur le contrat et les jalons de réalisation avec les paiements progressifs au fournisseur et possiblement des liens à de nouveaux documents concernant le projet."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:31
+msgid ""
+"You can think of **releases** as entries into a ledger: each new entry adds "
+"information, and may also repeat the previous information that remains true."
+msgstr "Une **publication** ressemble à une écriture comptable qui cumule au grand-livre général de nouveaux renseignements sur des évènements récurrents. "
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Examples"
+msgstr "À titre d'exemple:"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Best practices"
+msgstr "Pratiques optimales"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:88
+msgid ""
+"In some cases, releases will all come from the same backend system. In "
+"others, they will be generated by different systems. By ensuring all "
+"releases about a contracting process share an OCID, they can be tied "
+"together into a record."
+msgstr "Les publications peuvent provenir de différentes sources et de différents systèmes informatiques, il faut s'assurer que toutes les communications concernant un projet comporte l'identifiant OCID pour ainsi pouvoir les insérer dans le bon dossier. "
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:90
+msgid ""
+"In a complete OCDS implementation, each release would be published at its "
+"own persistent URL, and kept online permanently."
+msgstr "Dans une implantation complète du standard OCDS, chaque publication comporte sa propre adresse URL et est conservé en ligne en permanence."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:92
+msgid ""
+"In these cases, where publishers are providing a single URI for fetching "
+"information on a given contracting process, the releaseID and releaseDate "
+"must be modified whenever updated data is published. A suggested pattern is "
+"to append an incrementing number to the end of the OCID in order to generate"
+" a unique releaseID for every change. For example:"
+msgstr "Dans les cas, où l'éditeur offre un URL unique pour accéder aux renseignements d'un processus de passation de marché public donnée, l'identifiant de la publication \"releaseID\" et la date de la publication \"releaseDate\" doivent être mis à jour. Une méthode suggérée serait d'jouter un numéro croissant à la fin du OCID de façon a générer un numéro de publication unique \"releaseID\". À titre d'exemple:"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:94
+msgid "ocds-a2ef3d01-1594121/1"
+msgstr "ocds-a2ef3d01-1594121/1"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:95
+msgid "ocds-a2ef3d01-1594121/2"
+msgstr "ocds-a2ef3d01-1594121/2"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:96
+msgid "ocds-a2ef3d01-1594121/3"
+msgstr "ocds-a2ef3d01-1594121/3"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Records"
+msgstr "Dossiers"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:101
+msgid ""
+"An OCDS **record** provides a snapshot of the contracting process at a given"
+" point in time, bringing together all the information from the releases to "
+"date into one place. It is updated as new information becomes available."
+msgstr "Le dossier OCDS **record** rassemble toutes les publications concernant un processus de passation de marché public. Il offre une vue d'ensemble du projet et est continuellement mis à jour durant toute la vie du processus."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:103
+msgid ""
+"At a minimum, a record should exist for each contracting process to provide "
+"a list of all the releases that relate to that contracting process."
+msgstr "Un dossier doit exister pour chacun des processus de passation de marché public et au minimum montrer une liste de toutes les publications afférentes au processus."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:105
+msgid ""
+"However, to allow users to get a snapshot view the contracting process "
+"without individually looking up each release , a record should also contain:"
+msgstr "Cependant pour offrir à l'utilisateur une vue d'ensemble du processus de passation de marché public et ne pas devoir ouvrir chacune des publications, le \"dossier\" devrait aussi contenir:"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:107
+msgid ""
+"a compiledRelease block, which follows the release schema, and is updated "
+"with the most up-to-date value for each field; and, optionally,"
+msgstr "un bloc de renseignements compilés \"publicationCompilée\" selon le schéma requis et montrant la valeur la plus récente pour chacun des champs et optionnellement,"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:108
+msgid ""
+"a versionedRelease, which contains a history of all the changes for each "
+"field."
+msgstr "une \"publicationVersion\" contenant l'audit de chacun des champs."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:110
+msgid ""
+"The [OCDS merge strategies](../schema/merging.md) set out how to combine "
+"multiple releases to create a single record for each contracting process."
+msgstr "La stratégie de fusion  [OCDS merge strategies](../schema/merging.md) démontre comment combiner plusieurs publications en un seul dossier."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:114
+msgid ""
+"<center><img src=\"../../../assets/release_square.png\" "
+"height=\"200\"/></center>"
+msgstr "<center><img src=\"../../../assets/release_square.png\" height=\"200\"/></center>"
