@@ -6,7 +6,7 @@ This document sets out the revision processes for OCDS.
 
 ## Overview
 
-OCDS was initially developed through a year long iterative process, resulting in version 1.0 in November 2014. Over 2015 many organisations have been piloting use of the standard. 
+OCDS was initially developed through a year long iterative process, resulting in version 1.0 in November 2014. Over 2015/16 many organisations have been piloting use of the standard. 
 
 In 2016, we are working towards a first revised version of the standard. This is intended to fix a number of bugs identified through wider adoption of the standard over recent months, and will add a number of features which did not make it into 1.0. 
 
@@ -38,9 +38,9 @@ A lightweight **standard governance working group**, made up of representatives 
 
 ### Intellectual property
 
-The Open Contracting Data Standard is the Intellectual Property of the Open Contracting Partnership. The schema is currently provided under the **[Creative Commons Attribution-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nd/4.0/)** license (discussion about license is ongoing), with accompanying documentation under a **[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)**. 
+The Open Contracting Data Standard is the Intellectual Property of the Open Contracting Partnership. The schema is licensed under the **[Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0)** license, with accompanying documentation under a **[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)** where stated. 
 
-Contributors to the standard agree to transfer any copyright in their contributions to the Open Contracting Partnership (via it's fiscal sponsor), in order that it is held in trust as part of the standard.
+Contributors to the standard agree to transfer any copyright in their contributions to the Open Contracting Partnership (via it's fiscal sponsor) through a contributor agreement process, in order that those contributions are held in trust as part of the standard.
 
 No content infringing upon third-party Intellectual Property Rights will be included in the standard. 
 
@@ -76,7 +76,7 @@ Changes to the OCDS schema should be made periodically, with the version number 
 
 ### Versions
 
-Distinct **branches **of the standard will be maintained within Github for each version. 
+Distinct **branches** of the standard will be maintained within Github for each version. 
 
 Branches can be in one of two states:
 
