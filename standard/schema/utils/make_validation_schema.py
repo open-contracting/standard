@@ -29,15 +29,14 @@ def add_versions(schema, location=''):
         prop_type = value.get('type')
         value.pop("title", None)
         value.pop("description", None)
-        value.pop("mergeStrategy", None)
+        mergeStrategy = value.pop("mergeStrategy", None)
         value.pop("mergeOptions", None)
         value.pop("omitWhenMerged", None)
         value.pop("wholeListMerge", None)
         if not prop_type:
             continue
-        if key == 'id':
-            if location not in ("Budget", "Tender", "Classification", "Identifier"):
-                continue
+        if mergeStrategy == 'overwrite':
+            continue
         if prop_type == ["string", "null"] and "enum" not in value:
             new_value = {}
             format = value.get('format')
@@ -51,25 +50,14 @@ def add_versions(schema, location=''):
         elif prop_type == "array":
             version = copy.deepcopy(version_template)
             version_properties = version["items"]["properties"]
-            if key in ('tenderers', 'suppliers'):
-                version_properties["value"] = {"type": "array",
-                                               "items": {"$ref": "#/definitions/OrganizationUnversioned"},
-                                               "uniqueItems": True}
+            if mergeStrategy == 'ocdsVersion':
+                new_value = copy.deepcopy(value)
+                
+                if '$ref' in new_value['items']:
+                    new_value['items']["$ref"] = value['items']['$ref'] + "Unversioned"
+                version_properties["value"] =  new_value
                 schema['properties'][key] = version
-            if key == 'additionalIdentifiers':
-                version_properties["value"] = {"type": "array",
-                                               "items": {"$ref": "#/definitions/IdentifierUnversioned"},
-                                               "uniqueItems": True}
-                schema['properties'][key] = version
-            if key == 'additionalClassifications':
-                version_properties["value"] = {"type": "array",
-                                               "items": {"$ref": "#/definitions/ClassificationUnversioned"},
-                                               "uniqueItems": True}
-                schema['properties'][key] = version
-            if key == 'changes':
-                version_properties["value"] = {"type": "array",
-                                               "items": value["items"]}
-                schema['properties'][key] = version
+
             
         elif prop_type == "object":
             add_versions(value, key)
@@ -95,6 +83,13 @@ def add_string_definitions(schema):
             version_properties["value"]["format"] = format
         schema['definitions'][item] = version
 
+def unversion_refs(schema):
+    for key, value in schema.items():
+        if key == '$ref':
+            schema[key] = value + 'Unversioned' 
+        if isinstance(value, dict):
+            unversion_refs(value)
+
 
 def get_versioned_validation_schema(versioned_release):
     versioned_release["id"] = "http://standard.open-contracting.org/schema/1__0__2/versioned-release-validation-schema.json"  # nopep8
@@ -102,22 +97,13 @@ def get_versioned_validation_schema(versioned_release):
     versioned_release["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
 
     definitions = versioned_release['definitions']
-    for key, value in definitions.items():
-        value.pop("title", None)
-        value.pop("description", None)
-        for prop_value in value['properties'].values():
-            prop_value.pop("mergeStrategy", None)
-            prop_value.pop("mergeOptions", None)
-            prop_value.pop("title", None)
-            prop_value.pop("description", None)
-            prop_value.pop("omitWhenMerged", None)
-            prop_value.pop("wholeListMerge", None)
 
-    OrganizationUnversioned = copy.deepcopy(definitions['Organization'])
-    IdentifierUnversioned = copy.deepcopy(definitions['Identifier'])
-    ClassificationUnversioned = copy.deepcopy(definitions['Classification'])
-    AddressUnversioned = copy.deepcopy(definitions['Address'])
-    ContactPointUnversioned = copy.deepcopy(definitions['ContactPoint'])
+    new_definitions = {}
+    for key, value in copy.deepcopy(versioned_release['definitions']).items():
+        new_definitions[key + 'Unversioned'] = value
+
+    unversion_refs(new_definitions)
+
 
     ocid = versioned_release['properties'].pop("ocid")
     versioned_release['properties'].pop("date")
@@ -129,21 +115,31 @@ def get_versioned_validation_schema(versioned_release):
         "initiationType"
     ]
 
-    #types_count = Counter()
-    #get_types(versioned_release, types_count)
     add_versions(versioned_release)
 
     versioned_release['properties']["ocid"] = ocid
-    definitions['IdentifierUnversioned'] = IdentifierUnversioned
-    definitions['ClassificationUnversioned'] = ClassificationUnversioned
-    definitions['AddressUnversioned'] = AddressUnversioned
-    definitions['ContactPointUnversioned'] = ContactPointUnversioned
-    OrganizationUnversioned["properties"]["identifier"]["$ref"] = "#/definitions/IdentifierUnversioned"
-    OrganizationUnversioned["properties"]["additionalIdentifiers"]["items"]["$ref"] = "#/definitions/IdentifierUnversioned"
-    OrganizationUnversioned["properties"]["address"]["$ref"] = "#/definitions/AddressUnversioned"
-    OrganizationUnversioned["properties"]["contactPoint"]["$ref"] = "#/definitions/ContactPointUnversioned"
-    definitions['OrganizationUnversioned'] = OrganizationUnversioned
+
+    ### these can be deleted just here to maintain order as before
+    definitions['IdentifierUnversioned'] = new_definitions["IdentifierUnversioned"]
+    definitions['ClassificationUnversioned'] = new_definitions["ClassificationUnversioned"]
+    definitions['AddressUnversioned'] = new_definitions["AddressUnversioned"]
+    definitions['ContactPointUnversioned'] = new_definitions["ContactPointUnversioned"]
+    definitions['OrganizationUnversioned'] = new_definitions["OrganizationUnversioned"]
+    ### end block that can be deleted
+
+    definitions.update(new_definitions)
     add_string_definitions(versioned_release)
+
+    for key, value in definitions.items():
+        value.pop("title", None)
+        value.pop("description", None)
+        if not 'properties' in value:
+            continue
+        for prop_value in value['properties'].values():
+            prop_value.pop("mergeStrategy", None)
+            prop_value.pop("mergeOptions", None)
+            prop_value.pop("title", None)
+            prop_value.pop("description", None)
 
     return versioned_release
 
