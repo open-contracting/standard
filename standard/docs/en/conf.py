@@ -308,11 +308,18 @@ gettext_compact = False     # optional.
 
 
 from sphinx.directives.code import LiteralInclude
-from docutils.parsers.rst import directives
+from docutils.parsers.rst import directives, Directive
+from docutils.parsers.rst.roles import set_classes
 from docutils import nodes
 import json
 from jsonpointer import resolve_pointer
 from collections import OrderedDict
+import requests
+import collections
+from os.path import abspath, dirname, join
+
+
+current_dir = dirname(abspath(__file__))
 
 class JSONInclude(LiteralInclude):
     option_spec = {
@@ -341,7 +348,86 @@ class JSONInclude(LiteralInclude):
         literal['caption'] = 'TEST'
         return [ literal ]
 
+GIT_REF = "gh-pages"
+
+def fetch_json():
+    location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
+    return requests.get(location).json()
+
+class ExtensionList(Directive):
+    required_arguments = 1
+    final_argument_whitespace = True
+    has_content = True
+    option_spec = {'class': directives.class_option,
+                   'name': directives.unchanged,
+                   'list': directives.unchanged}
+
+
+    def run(self):
+        extension_list_name = self.options.pop('list', '')
+        set_classes(self.options)
+
+        admonition_node = nodes.admonition('', **self.options)
+        self.add_name(admonition_node)
+
+        title_text = self.arguments[0]
+
+        textnodes, _ = self.state.inline_text(title_text,
+                                              self.lineno)
+
+        title = nodes.title(title_text, '', *textnodes)
+        title.line = 0
+        title.source = 'extension_list_' + extension_list_name
+        admonition_node += title
+        if not 'classes' in self.options:
+            admonition_node['classes'] += ['admonition', 'note']
+
+        definition_list = nodes.definition_list()
+        definition_list.line = 0
+
+        extension_json = fetch_json()
+
+        for num, extension in enumerate(extension_json['extensions']):
+            if not extension.get('core'):
+                continue
+            category = extension.get('category')
+            if extension_list_name and category != extension_list_name:
+                continue
+
+            name = extension['name']['en']
+            description = extension['description']['en']
+
+            some_term, _ = self.state.inline_text(name,
+                                                  self.lineno)
+
+            some_def, _ = self.state.inline_text(description,
+                                                  self.lineno)
+
+            link = nodes.reference(name, '', *some_term)
+            path_split = self.state.document.attributes['source'].split('/')
+            root_path = "../" * (len(path_split) - path_split.index('docs') - 2)
+
+            link['refuri'] = root_path + 'extensions/' + extension.get('slug', '')
+            link['translatable'] = True
+            link.source = 'extension_list_' + extension_list_name
+            link.line = num + 1
+
+            term = nodes.term(name, '', link)
+
+            definition_list += term
+
+            text = nodes.paragraph(description, '', *some_def)
+            text.source = 'extension_list_' + extension_list_name
+            text.line = num + 1
+            definition_list += nodes.definition("somee def", text)
+
+        admonition_node += definition_list
+
+        return [admonition_node]
+
+
 directives.register_directive('jsoninclude', JSONInclude)
+directives.register_directive('extensionlist', ExtensionList)
 
 
 # app setup hook
