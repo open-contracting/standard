@@ -382,6 +382,9 @@ class ExtensionList(Directive):
         if not 'classes' in self.options:
             admonition_node['classes'] += ['admonition', 'note']
 
+        admonition_node['classes'] += ['extension_list']
+        admonition_node['ids'] += ['extensionlist-' + extension_list_name]
+
         definition_list = nodes.definition_list()
         definition_list.line = 0
 
@@ -419,9 +422,20 @@ class ExtensionList(Directive):
             text = nodes.paragraph(description, '', *some_def)
             text.source = 'extension_list_' + extension_list_name
             text.line = num + 1
-            definition_list += nodes.definition("somee def", text)
+            definition_list += nodes.definition(description, text)
 
         admonition_node += definition_list
+
+        community = "The following are community extensions and are not maintained by Open Contracting Partnership."
+        community_text, _ = self.state.inline_text(community,
+                                              self.lineno)
+
+        community_paragraph = nodes.paragraph(community, *community_text)
+        community_paragraph['classes'] += ['hide']
+        community_paragraph.source = 'extension_list_' + extension_list_name
+        community_paragraph.line = num + 2
+
+        admonition_node += community_paragraph
 
         return [admonition_node]
 
