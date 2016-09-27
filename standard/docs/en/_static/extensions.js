@@ -17,9 +17,9 @@ jQuery(function () {
         if (extension.core) {
           return
         }
-        //if (extension.category != category) {
-        //  return
-        //}
+        if (extension.category != category) {
+          return
+        }
         if (!anyExtensions) {
           anyExtensions = true
           $commuityExtensionList = $('<dl>').addClass("docutils")
