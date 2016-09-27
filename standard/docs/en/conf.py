@@ -321,6 +321,11 @@ from os.path import abspath, dirname, join
 
 current_dir = dirname(abspath(__file__))
 
+GIT_REF = "gh-pages"
+
+location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
+extension_json = requests.get(location).json()
+
 class JSONInclude(LiteralInclude):
     option_spec = {
         'jsonpointer': directives.unchanged,
@@ -348,11 +353,6 @@ class JSONInclude(LiteralInclude):
         literal['caption'] = 'TEST'
         return [ literal ]
 
-GIT_REF = "gh-pages"
-
-def fetch_json():
-    location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
-    return requests.get(location).json()
 
 class ExtensionList(Directive):
     required_arguments = 1
@@ -387,8 +387,6 @@ class ExtensionList(Directive):
 
         definition_list = nodes.definition_list()
         definition_list.line = 0
-
-        extension_json = fetch_json()
 
         for num, extension in enumerate(extension_json['extensions']):
             if not extension.get('core'):
