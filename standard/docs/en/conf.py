@@ -310,7 +310,11 @@ gettext_compact = False     # optional.
 from sphinx.directives.code import LiteralInclude
 from docutils.parsers.rst import directives, Directive
 from docutils.parsers.rst.roles import set_classes
-from docutils import nodes
+from docutils.parsers.rst.directives.tables import CSVTable
+from docutils import nodes, statemachine
+import io
+import re
+import csv
 import json
 from jsonpointer import resolve_pointer
 from collections import OrderedDict
@@ -352,6 +356,7 @@ class JSONInclude(LiteralInclude):
         literal['language'] = 'json' 
         literal['caption'] = 'TEST'
         return [ literal ]
+
 
 
 class ExtensionList(Directive):
@@ -437,9 +442,106 @@ class ExtensionList(Directive):
 
         return [admonition_node]
 
+def format(text):
+    return re.sub(r'\[([^\[]+)\]\(([^\)]+)\)', r'`\1 <\2>`__', text.replace("date-time","[date-time](#date)"))
+
+def gather_fields(json, path="", definition=""): 
+
+    definitions = json.get('definitions')
+    if definitions:
+        for key, value in definitions.items():
+            yield from gather_fields(value, definition=key)
+
+    properties = json.get('properties')
+    if properties:
+        for field_name, field_info in properties.items():
+            yield from gather_fields(field_info, path+'/'+field_name, definition=definition)
+            for key, value in field_info.items():
+                if isinstance(value, dict):
+                    yield from gather_fields(value, path+'/'+field_name, definition=definition)
+
+            types = field_info.get('type','')
+            if isinstance(types, list):
+                types = format(", ".join(types).replace(", null","").replace("null,",""))
+            else:
+                types = format(types)
+
+            description = field_info.get("description")
+            if description:
+                yield [(path+'/'+field_name).lstrip("/"), definition, format(description), types]
+
+
+
+class ExtensionTable(CSVTable):
+
+    option_spec = {'widths': directives.positive_int_list,
+                   'extension': directives.unchanged,
+                   'schema': directives.unchanged,
+                   'ignore_path': directives.unchanged,
+                  }
+
+    def get_csv_data(self):
+        extension = self.options.get('extension')
+        if not extension:
+            raise Exception("No extension configuration when using extensiontable directive") 
+
+        for num, extension_obj in enumerate(extension_json['extensions']):
+            if not extension_obj.get('core'):
+                continue
+            if extension_obj['slug'] == extension:
+                break
+        else:
+            raise Exception("Extension {} does not exist in the registry".format(extension)) 
+
+        extension_patch = requests.get(extension_obj['url'].rstrip("/") + "/" + "release-schema.json").json()
+        headings = ["Field", "Definition", "Description", "Type"]
+        data = []
+        for row in gather_fields(extension_patch):
+            data.append(row)
+
+        data.sort(key=lambda a: (a[1], tuple(a[0].split('/'))))
+        ignore_path = self.options.get('ignore_path')
+        if ignore_path:
+            for row in data:
+                row[0] = row[0].replace(ignore_path, "")
+
+        data.insert(0, headings)
+
+        output = io.StringIO()
+        output_csv = csv.writer(output)
+        for line in data:
+            output_csv.writerow(line)
+        self.options['header-rows'] = 1
+
+        return output.getvalue().splitlines(), "Extension {}".format(extension)
+
+    def parse_csv_data_into_rows(self, csv_data, dialect, source):
+        # csv.py doesn't do Unicode; encode temporarily as UTF-8
+        csv_reader = csv.reader([self.encode_for_csv(line + '\n')
+                                 for line in csv_data],
+                                dialect=dialect)
+        rows = []
+        max_cols = 0
+        for row_num, row in enumerate(csv_reader):
+            row_data = []
+            for cell_num, cell in enumerate(row):
+                if row_num == 0 or (cell_num != 0 and cell_num != 3):
+                    new_source = source
+                else:
+                    new_source = ""
+                # decode UTF-8 back to Unicode
+                cell_text = self.decode_from_csv(cell)
+                cell_data = (0, 0, 0, statemachine.StringList(
+                    cell_text.splitlines(), source=new_source))
+                row_data.append(cell_data)
+            rows.append(row_data)
+            max_cols = max(max_cols, len(row))
+        return rows, max_cols
+
 
 directives.register_directive('jsoninclude', JSONInclude)
 directives.register_directive('extensionlist', ExtensionList)
+directives.register_directive('extensiontable', ExtensionTable)
 
 
 # app setup hook
