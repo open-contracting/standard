@@ -216,7 +216,7 @@
                     "$ref": "#/definitions/Period"
                 },
                 "numberOfTenderers": {
-                    "definition": "The number of entities who submit a tender.",
+                    "description": "The number of entities who submit a tender.",
                     "type": ["integer", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -791,7 +791,7 @@
                 },
                 "changes": {
                     "title": "Amended fields",
-                    "description": "Comma-seperated list of affected fields.",
+                    "description": "An array change objects describing the fields changed, and their former values.",
                     "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": {

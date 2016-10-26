@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.2] - 2016-TBC
+
+### Changed
+
+### Fixed
+
+- Missing field ```procurementMethodDetails``` added to schema (#221)
+- Typo fix in releaseTag (#391)
+- Fixing links to Fiscal Data Package (#271)
+
+### Tidy up
+
+- Removed the old Spanish documentation translations folders from ```standard/docs/es```
+
 ## [1.0] - 2015-07-29
 
 ### Changed
