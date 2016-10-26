@@ -13,19 +13,19 @@ OCDS covers:
         <td width="20%" align="center"><img src="../../../assets/green_implementation.svg.png" width="80%"></td>
     </tr>
     <tr>
-        <td align="center"><span style="font-size:10pt;"><p><strong>Planning</strong></p><em>Including:</em><br/>Budgets<br/>Project plans<br/>Procurement plans<br/>Market studies<br/>Public hearing info</span></td>
+        <td align="center" markdown=1><span style="font-size:10pt;"><p><strong>Planning</strong></p><em>Including:</em><br/>Budgets<br/>Project plans<br/>Procurement plans<br/>Market studies<br/>Public hearing info</span></td>
         <td align="center"><span style="font-size:10pt;"><p><strong>Initiation (Tender)</strong></p><em>Including:</em><br/>Tender notices<br/>Specifications<br/>Line items<br/>Values<br/>Enquiries</span></td>
         <td align="center"><span style="font-size:10pt;"><p><strong>Award</strong></p><em>Including:</em><br/>Details of award<br/>Bidder information<br/>Bid evaluation<br/>Values</span></td>
         <td align="center"><span style="font-size:10pt;"><p><strong>Contract</strong></p><em>Including:</em><br/>Final details<br/>Signed contract<br/>Amendments<br/>Values</span></td>
         <td align="center"><span style="font-size:10pt;"><p><strong>Implementation</strong></p><em>Including:</em><br/>Payments<br/>Progress updates<br/>Location<br/>Extensions<br/>Amendments<br/>Completion or Termination info</span></td>
     </tr>
 </table><div style="display:none;">
+* ![Tender](../../../assets/green_planning.svg.png)
 * ![Tender](../../../assets/green_tendering.svg.png)
 * ![Award](../../../assets/green_awarded.svg.png)
 * ![Contract](../../../assets/green_signed.svg.png)
 * ![Implementation](../../../assets/green_implementation.svg.png)
 </div>  
-
 
 Not all contracting processes have all stages. For example, direct contracting may start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case. 
 
@@ -40,8 +40,6 @@ For public procurement OCDS defines a unique contracting process as:
 > All the planning, tendering information, awards, contracts and contract implementation information related to a single initiation process.
 
 An initiation process may be a tender, a direct contract award, or a call to award a concession. 
-
-<!-- TODO: Worked example/Diagram -->
 
 ### The Open Contracting ID (ocid)
 
@@ -80,6 +78,10 @@ All the award notices, contracts and transactions resulting from the tender with
 The ```ocid``` is case sensitive. Case should be used consistently whenever an ```ocid``` is presented.
 
 </div>
+
+### Mapping your systems
+
+The Open Contracting Data Standard helpdesk provide [a technical assessment template](http://www.open-contracting.org/resources/ocds-technical-assessment-template/) that can be used to identify the different systems involved in managing data on each stage of the contracting process.
 
 ### Extending OCDS
 
