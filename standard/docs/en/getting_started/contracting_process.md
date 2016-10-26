@@ -4,28 +4,85 @@ There are several stages to a contracting process.
 
 OCDS covers:
 
-<table style="margin-bottom:2em;">
-    <tr>
-        <td width="20%" align="center"><img src="../../../assets/green_planning.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../../assets/green_tendering.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../../assets/green_awarded.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../../assets/green_signed.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../../assets/green_implementation.svg.png" width="80%"></td>
-    </tr>
-    <tr>
-        <td align="center"><span style="font-size:10pt;"><p><strong>Planning</strong></p><em>Including:</em><br/>Budgets<br/>Project plans<br/>Procurement plans<br/>Market studies<br/>Public hearing info</span></td>
-        <td align="center"><span style="font-size:10pt;"><p><strong>Initiation (Tender)</strong></p><em>Including:</em><br/>Tender notices<br/>Specifications<br/>Line items<br/>Values<br/>Enquiries</span></td>
-        <td align="center"><span style="font-size:10pt;"><p><strong>Award</strong></p><em>Including:</em><br/>Details of award<br/>Bidder information<br/>Bid evaluation<br/>Values</span></td>
-        <td align="center"><span style="font-size:10pt;"><p><strong>Contract</strong></p><em>Including:</em><br/>Final details<br/>Signed contract<br/>Amendments<br/>Values</span></td>
-        <td align="center"><span style="font-size:10pt;"><p><strong>Implementation</strong></p><em>Including:</em><br/>Payments<br/>Progress updates<br/>Location<br/>Extensions<br/>Amendments<br/>Completion or Termination info</span></td>
-    </tr>
-</table><div style="display:none;">
-* ![Tender](../../../assets/green_planning.svg.png)
-* ![Tender](../../../assets/green_tendering.svg.png)
-* ![Award](../../../assets/green_awarded.svg.png)
-* ![Contract](../../../assets/green_signed.svg.png)
-* ![Implementation](../../../assets/green_implementation.svg.png)
-</div>  
+<style><!--
+.process-table { width:18%; float:left; font-size:10pt; }
+.process-table p { font-size:10pt; text-align: center; }
+.process-table img { width:80%; }
+--></style>
+
+<div style="width:100%">
+
+<div class="process-table" markdown=1>
+
+![Tender](../../../assets/green_planning.svg.png)
+
+**Planning**<br/>
+*Including:*<br/>
+Budgets<br/>
+Project plans<br/>
+Procurement plans<br/>
+Market studies<br/>
+Public hearing info<br/>
+
+</div>
+
+<div class="process-table" markdown=1>
+
+![Tender](../../../assets/green_tendering.svg.png)
+
+**Initiation (Tender)**<br/>
+*Including:*<br/>
+Tender notices<br/>
+Specifications<br/>
+Line items<br/>
+Values<br/>
+Enquiries
+
+</div>
+
+<div class="process-table" markdown=1>
+
+![Award](../../../assets/green_awarded.svg.png)
+
+**Award**<br/>
+*Including:*<br/>
+Details of award<br/>
+Bidder information<br/>
+Bid evaluation<br/>
+Values
+
+</div>
+
+<div class="process-table" markdown=1>
+
+![Contract](../../../assets/green_signed.svg.png)
+
+**Contract**<br/>
+*Including:*<br/>
+Final details<br/>
+Signed contract<br/>
+Amendments<br/>
+Values
+
+</div>
+
+<div class="process-table" markdown=1>
+
+![Implementation](../../../assets/green_implementation.svg.png)
+
+**Implementation**<br/>
+*Including:*<br/>
+Payments<br/>
+Progress updates<br/>
+Location<br/>
+Extensions<br/>
+Amendments<br/>
+Completion or Termination info
+
+</div>
+
+</div>
+<br clear="all"/>
 
 Not all contracting processes have all stages. For example, direct contracting may start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case. 
 
