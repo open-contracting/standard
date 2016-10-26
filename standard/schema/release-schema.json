@@ -588,7 +588,7 @@
         "Budget": {
             "type": "object",
             "title": "Budget Information",
-            "description": "This section contain information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+            "description": "This section contain information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Fiscal Data Package](http://fiscal.dataprotocols.org/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
             "properties": {
                 "source": {
                     "title": "Data Source",
@@ -647,7 +647,7 @@
         "Transaction": {
             "type": "object",
             "title": "Transaction Information",
-            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Budget Data Package](https://github.com/openspending/budget-data-package/blob/master/specification.md) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
             "required": ["id"],
             "properties": {
                 "id":{ 
