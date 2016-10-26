@@ -3,6 +3,7 @@ import json
 import csv
 import collections
 import re
+import os
 
 def format(text):
     return re.sub(r'\[([^\[]+)\]\(([^\)]+)\)', r'`\1 <\2>`__', text.replace("date-time","[date-time](#date)"))
@@ -16,7 +17,7 @@ def make_link(text):
         
 
 def make_definition_table(json,file_path,what="properties",section=""): 
-    table = [['Field Name','Description','Format']]
+    table = [[_('Field Name'),_('Description'),_('Format')]]
     if(section):
         if "/" in section:
             try:
@@ -39,13 +40,13 @@ def make_definition_table(json,file_path,what="properties",section=""):
 
         if types == "array":
            if block[prop].get('items').get("$ref"):
-               table.append([prop,format(block[prop].get('description','')) + " See " + make_link(block[prop]['items']["$ref"]) + " section for further details.","Object Array"])
+               table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(block[prop]['items']["$ref"]) + _(" section for further details."),"Object Array"])
            else:
                table.append([prop,format(block[prop].get('description','')),"Array"])
         elif block[prop].get("$ref"):
-          table.append([prop,format(block[prop].get('description','')) + " See " + make_link(block[prop]["$ref"]),"Reference"])
+          table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(block[prop]["$ref"]),"Reference"])
         elif "object" in types:
-            table.append([prop,format(block[prop].get('description','')) + " See " + make_link(prop),"Object"])
+            table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(prop),"Object"])
         else:
           table.append([prop,format(block[prop].get('description','')),block[prop].get('format','') + " " + types])
           
@@ -57,9 +58,23 @@ def make_definition_table(json,file_path,what="properties",section=""):
 
 if __name__ == "__main__":
     from os.path import abspath, dirname, join
+    import gettext
+
 
     schema_dir = dirname(dirname(abspath(__file__)))
     file_path = join(schema_dir,"../docs/field_definitions/")
+    language = os.environ.get("SCHEMA_LANG")
+    if language:
+        schema_dir = join(schema_dir, "../../build", language)
+        fallback=False
+    else:
+        language = 'en'
+        fallback=True
+
+    translator = gettext.translation('schema', 'docs/locale', languages=[language], fallback=fallback)
+    global _ 
+    _ = translator.gettext
+
     
     with open(join(schema_dir, 'release-schema.json'), 'r') as f:
         release = json.loads(f.read(),object_pairs_hook=collections.OrderedDict)

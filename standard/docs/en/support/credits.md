@@ -2,7 +2,7 @@
 
 The Open Contracting Data Standards has been developed with the input of many people. We extend our thanks to all the following who have given feedback and input over the course of the initial development project.
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 was developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.net) and the [World Bank](http://www.worldbank.org). Ongoing development is managed by [Open Data Services Co-operative](http://www.opendataservices.coop) under contract to the Open Contracting Partnership. 
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 was developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.com) and the [World Bank](http://www.worldbank.org). Ongoing development is managed by [Open Data Services Co-operative](http://www.opendataservices.coop) under contract to the Open Contracting Partnership. 
 
 ## Core team
 Core contributors (Version 1.0.1 onwards): Tim Davies, Lindsey Marchessault, Ben Webb, David Raznick, David Carpenter, Edafe Onerhime, Steven Flower.

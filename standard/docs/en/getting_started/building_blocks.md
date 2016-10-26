@@ -177,7 +177,7 @@ OCDS defines two kinds of codelist:
 </table>
 
 
-Codelist values are case sensitive strings. Canonical codelist labels are in English, but we are working towards providing translated labels. [Contact the helpdesk](support/index.md) for information on adding a new translation.
+Codelist values are case sensitive strings. Canonical codelist labels are in English, but we are working towards providing translated labels. [Contact the helpdesk](../support/index.md) for information on adding a new translation.
 
 Publishers should map their existing classification systems to OCDS codes wherever possible. Many closed codelist fields are paired with a detail field where more detailed classification information can be provided. 
 

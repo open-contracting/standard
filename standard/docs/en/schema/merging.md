@@ -1,6 +1,6 @@
 # Merging 
 
-In OCDS, merging involves combining individual [releases](../../../getting_started/releases_and_records/) of data during a contracting process into a [record](../getting_started/releases_and_records/) which provides an at-a-glance view of the current state and history of that process. 
+In OCDS, merging involves combining individual [releases](../getting_started/releases_and_records.md) of data during a contracting process into a [record](../getting_started/releases_and_records.md) which provides an at-a-glance view of the current state and history of that process. 
 
 <div class="example hint" markdown=1>
 
@@ -75,20 +75,20 @@ The merging rules can be summarised as follows:
 
 2. For literal values, replace the older value with the newer value. You may remove fields which have been set to null. 
 
-<!--TODO - EXAMPLE-->
+   <!--TODO - EXAMPLE-->
 
 3. For an array of objects, merge the array by the id of each object EXCEPT as noted in 4.
 
-<!--TODO - EXAMPLE-->
+   <!--TODO - EXAMPLE-->
 
 4. For the following arrays, replace the entire array in the older release with the entire array from the newer release
 
-- ```award.suppliers```
-- ```organization.additionalIdentifiers```
-- ```item.additionalClassifications```
-- ```amendment.changes```
+   - ```award.suppliers```
+   - ```organization.additionalIdentifiers```
+   - ```item.additionalClassifications```
+   - ```amendment.changes```
 
-Note that this means releases must republish these arrays in full.
+   Note that this means releases must republish these arrays in full.
 
 5. When all releases are merged, remove the ```release.id``` and ```release.date``` from the resulting data structure, and add ```compiled``` to the list of ```release.tag``` values. 
 

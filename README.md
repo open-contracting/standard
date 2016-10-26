@@ -1,7 +1,17 @@
 Open Contracting Data standard
 ==============================
 
-For view-only access to the standard and documentation please visit [http://ocds.open-contracting.org/standard/](http://ocds.open-contracting.org/standard/)
+For view-only access to the standard and documentation please visit [http://standard.open-contracting.org](http://standard.open-contracting.org)
+
+## Versions
+
+The standard website is now versioned MAJOR.MINOR, whereas the schema uris are versioned MAJOR__MINOR__PATCH. e.g. http://standard.open-contracting.org/1.0/en/ vs http://standard.open-contracting.org/schema/1__0__1/release-schema.json. (Previously both were versioned as MAJOR__MINOR__PATCH).
+
+The standard website version corresponds to a [branch](https://github.com/open-contracting/standard/branches), whereas the schema uri version corresponds to a [release](https://github.com/open-contracting/standard/releases). This allows us to make updates the documentation without having to make a new patch release. On the other hand, there's a need for predictable machine consumption of the content at schema URIs, so we ensure this doesn't change.
+
+There are also one or more development branches, e.g. http://standard.open-contracting.org/1.0-dev/en/
+
+The default standard website is 'latest' - http://standard.open-contracting.org/latest/en/ - which corresponds to the latest released version of the standard. This makes it possible to construct urls to this that will track the latest version of the standard.
 
 ## Working with the standard
 
@@ -54,12 +64,12 @@ fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
 
 ### Translations
 
-When a new version of the docs text is ready, a new transifex project needs to be made called eg. ocds-docs-1.0.0.  This is done on the transifex web interface.
+When a new major/minor version of the docs text is ready, a new transifex project needs to be made called eg. open-contracting-standard-x.y  This is done on the transifex web interface.
 
-Make sure the build is run above, then run (making sure the poject name is the same as the one made above) 
+Make sure the build is run above, then run (making sure the project name is the same as the one made above) 
 
 ```
-sphinx-intl update-txconfig-resources --transifex-project-name ocds-docs-1.0.0 --pot-dir build/locale --locale-dir standard/docs/locale
+sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-1-0 --pot-dir build/locale --locale-dir standard/docs/locale
 ```
 
 This will update the .tx/config file and this file should be added to the git repository. This will only have to be run again if there is a new/deleted doc page or if a file name has changed name.
@@ -83,6 +93,8 @@ If translations are added locally, these can also be pushed up to Transifex:
 ```
 tx push -t --skip
 ```
+
+Note that the [theme needs to be translated seperately](https://github.com/open-contracting/standard_theme#translations).
 
 
 ### Theme
