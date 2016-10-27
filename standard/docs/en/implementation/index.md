@@ -5,6 +5,7 @@
    :maxdepth: 2
    :glob:
 
+   ppp_framework
    levels
    licensing
    publication_policy

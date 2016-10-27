@@ -1,54 +1,34 @@
-Open Contracting Data Standard: Documentation
+Open Contracting Data Standard for Public-Private Partnerships (OCDS-PPP)
 =============================================
 
-Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. 
+<div style="width:30%; float:right" markdown=1>
 
-The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting process by defining a common data model. It was created to support organisations to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.
+![PPP Report Cover](../../../assets/ppp/ReportCover.png)
 
-The OCDS approach:
-
-* Publish early, and iterate: improving disclosure step-by-step
-* Simple and extensible JSON structure
-* Publish data for each step of the contracting process
-* Create summary records for an overall contracting process
-* Re-useable objects: organisations, tender information, line-items, amounts, milestones, documents etc.
-* Recommended data and documents at basic, intermediate & advanced levels
-* Common open data publication patterns 
-* Guidance on improving data collection and data quality
-* A growing community of users and range of open source tools
-
-
-
-<!-- Progressive enhancement for documentation slider above. Add a list of images in order that should be associated with the bullet points above. Uses bxSlider and some custom jQuery. Images also need to be in the hidden div block below in order to be copied across to the deployed docs correctly. -->
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css"/>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
-<script type="text/javascript"><!--
-images = ['test.png','contracting_process_rc.png'];
-$("ul.simple-REMOVE").each(function(key,value) { 
-    if($( this ).children("li").size() == 10) { 
-        $( this ).addClass("bxslider");
-        for (i = 0; i < images.length; i++) { 
-            $( this ).children("li:eq("+i+")").html('<img src="_images/'+images[i]+'" title="'+$( this ).children("li:eq("+i+")").html()+'">');
-        }
-    }
-});
-$('.bxslider').bxSlider({
-  mode: 'horizontal',
-  auto: true,
-  captions: true
-});
---></script>
-
-<div style="display:none;">
-![Test](../../assets/slider/test.png)
 </div>
 
+This implementation profile of the Open Contracting Data Standard (OCDS) is a companion resource to the publication: **[A Framework for Disclosure in Public-Private Partnerships: Technical Guidance for Systematic, Proactive Pre- and Post-Procurement Disclosure of Information in Public-Private Partnership Programmes](http://www.worldbank.org/en/topic/publicprivatepartnerships/brief/a-framework-for-disclosure-in-public-private-partnership-projects)**
 
+The [Framework](implementation/ppp_framework/) sets out the information that should be published at key stages of a Public-Private Partnership (PPP) programme. The OCDS for PPPs provides a technical specification for how this information can be provided as structured data.
+
+A structured data standard for PPP disclosures enables:
+
+* **Automated verification** of disclosures against the framework requirements;
+* Creation of **common tools** to present accessible information on PPPs;
+* **Aggregation** of information from different PPPs.
+
+The OCDS for PPPs profile is implemented as a set of extensions to the core Open Contracting Data Standard, along with customised documentation.
+
+You can find an overview of how to make disclosures with OCDS for PPPs in the [getting started](getting_started/) section.
+
+The [implementation guidance](implementation/) section describes practices for publishing OCDS for PPPs. 
+
+View the [schema reference](schema/) for detailed technical information on the data model.
 
 
 ## About
+
+The Public Private Partnerships implementation profile of the Open Contracting Data Standard has been developed in partnership with the Open Contracting Team and Public Private Partnership Team at the [World Bank](http://www.worldbank.org). 
 
 The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). 
 
