@@ -9,7 +9,7 @@ Notes: This can be disclosed at the pre-procurement stage with the exception of 
 
 ### I.1: Project name, location, sector
 
-REQUIRES EXTESION FOR TITLES & SECTOR
+TODO. 
 
 ### I.2: Sponsoring agency/department
 
@@ -20,6 +20,13 @@ REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
 The project value is the total amount invested into the project by both public and private parties.
 
 This can be entered into ```budget``` fields in the ```planning``` section of an OCDS release. The ```budget/description``` field can be used to provide a free text explanation of the way the project value has been calculated. 
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/full.json
+   :jsonpointer: /releases/0/planning/budget
+   :expand: amount
+```
 
 ```eval_rst
 .. csv-table::
