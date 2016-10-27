@@ -1,5 +1,9 @@
 #!/bin/bash
 set -e
+
+cp standard/schema/release-schema.json standard/schema/release-schema.json.backup
+python apply-extensions.py
+
 mkdir -p standard/docs/field_definitions
 cd standard
 python schema/utils/make_field_definitions.py
@@ -38,3 +42,7 @@ sphinx-build -b dirhtml docs/en ../build/en
 #   SCHEMA_LANG=es python schema/utils/make_field_definitions.py
 #   CODELIST_LANG=es python schema/utils/translate_codelists.py
 #   sphinx-build -b dirhtml -D language='es' docs/en ../build/es
+
+cd ..
+cp standard/schema/release-schema.json.backup standard/schema/release-schema.json
+rm standard/schema/release-schema.json.backup
