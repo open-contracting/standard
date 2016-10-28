@@ -23,7 +23,7 @@ As you start implementing OCDS, consider how you will engage with data users, an
 
 <span style="float:right">![Person](../../../assets/icon_user.png)</span>Open contracting data can help officials to get good value for money on the goods and services in the procurement process, and can also help in identifying whether value for money has been achieved in concluded contracts. 
 
-These users are want to analyze trends in prices and supplier performance, including in terms of quality and duration.
+These users want to analyze trends in prices and supplier performance, including in terms of quality and duration.
 
 Comparable data using common codelists and the availability of unit prices are particularly important for value for money use cases.
 
