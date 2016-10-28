@@ -47,7 +47,7 @@ Forward looking and timely information is particularly important for private sec
 
 #### Monitoring Service Delivery 
  
-<span style="float:right">![Person](../../../assets/icon_user.png)</span>Monitoring groups want to ensure that public contracting delivers value to citizens in terms of quality of goods, works, and services provided. The monitor contracting effectively involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground. 
+<span style="float:right">![Person](../../../assets/icon_user.png)</span>Monitoring groups want to ensure that public contracting delivers value to citizens in terms of quality of goods, works, and services provided. To monitor contracting effectively involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground. 
 
 Data concerning budgets, delivery location and subcontracting arrangements are particularly useful for those involved in contract monitoring. 
  
