@@ -31,9 +31,9 @@ sphinx-build -b dirhtml docs/en ../build/en
 #   pybabel compile -d docs/locale -D schema 
 #   pybabel compile -d docs/locale -D codelists
 #   
-#   cd ..
-#   cp -r standard/assets build
-#   cp standard/schema/*.json build/en/
+   cd ..
+   cp -r standard/assets build
+   cp standard/schema/*.json build/en/
 #   # can put multiple languages i.e translate_schema.py en fr
 #   python standard/schema/utils/translate_schema.py es
 #   
@@ -43,6 +43,6 @@ sphinx-build -b dirhtml docs/en ../build/en
 #   CODELIST_LANG=es python schema/utils/translate_codelists.py
 #   sphinx-build -b dirhtml -D language='es' docs/en ../build/es
 
-cd ..
+# cd ..
 cp standard/schema/release-schema.json.backup standard/schema/release-schema.json
 rm standard/schema/release-schema.json.backup
