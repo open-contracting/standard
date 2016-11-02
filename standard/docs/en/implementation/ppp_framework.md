@@ -48,17 +48,19 @@ USE DOCUMENTS
 
 ### I.6: High-level description of the services
 
-USE 
+USE tender.description
 
 ### I.7: Estimated demand to be served annually
 
-
+USE DOCUMENTS
 
 ### I.8: Project additionality
 
+(TODO: Clarify this section of the framework)
 
 ### I.9: Reason for selection of PPP mode and type in brief
 
+USE DOCUMENTS
 
 ### I.10: Dates of various approvals
 
@@ -66,28 +68,53 @@ PLANNING MILESTONES
 
 ### Contract Milestones (Estimated and Actual)
 
+USE tender.milestones
 
 #### I.11: Date of commercial close
 
+USE tender.milestones
+
 #### I.12: Date of financial close
+
+USE tender.milestones
 
 #### I.13: Date of commencement of construction or development
 
+USE tender.milestones
+
 #### I. 14: Date of completion of construction or development
+
+USE tender.milestones
 
 #### I.15: Date of commissioning
 
+USE tender.milestones
+
 #### I.16: Date of contract expiry
 
-### I.17: Links to all contract documents 
+USE tender.milestones
 
-### Parties to the contract with contact details    
+### I.17: Links to all contract documents
+
+USE DOCUMENTS
+
+### Parties to the contract with contact details
+
+REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
 
 #### I.18: Public authority: name of authority, name of representative, address, telephone, fax, e-mail
 
+REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+
 #### I.19: Private party: name of company or consortium, name of representative, address, telephone, fax, e-mail
 
+REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+
 #### I.20: Financiers: name of Lead FI, other FIs, name of representative of lead FI, address, telephone, fax, e-mail
+
+REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+
+(TODO: Draft proposed organisation roles codelist and raise github issue)
 
 ## Procurement Information
 
@@ -103,38 +130,45 @@ Dates and summary details, links to all procurement documents, final feasibility
 
 ### II.2. RFQ documents
 
+USE tender.documents
+
+(TODO: Include guidance on modelling related RFQ/RFP processes)
 
 ### II.3. Pre-qualification or shortlist
 
+USE two linked processes: RFQ and RFP - awards in the RFQ represent the shortlist/pre-qualified suppliers for the RFP process
 
 ### II.4. RFP documents
 
+Use tender.documents
 
 ### II.5. Evaluation criteria: brief description with weightage
 
+Use tender.documents (include note on requirements extension)
 
 ### II.6. Brief information on constitution of the evaluation committees
 
+Use tender.documents
 
-### II.7. Negotiation parameters: brief descrtiptoin of the parameters for ### 
+### II.7. Negotiation parameters: brief descrtiptoin of the parameters for negotiation with preferred proponent 
 
-negioation with prefereed proponent
-
+Use tender.documents
 
 ### II.8. Minutes of pre-bid meetings
 
+Use tender.documents
 
 ### II.9. Selection of preferred bidder
 
+Use award section
 
-##   Post commercial close
+##   Risk
 
 Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
 ### III.1. Individual risk allocation information
 
-(TODO: See table in framework)
-
+(TODO: model extension - see table in framework)
 
 ## Evaluation of PPP option
 
@@ -142,12 +176,20 @@ Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
 ### IV.1. Link to evaluation report (value for money or other)
 
+Use award.documents
+
 ### IV.2. Summary data
 •   State the rationale for doing the project as a PPP, including any qualitative or quantitative value-for-money, final feasibility studies (including cost-benefit analysis, if any) or other analysis that might have been used. If nonfinancial benefits have been quantified or considered, these could be stated.
 
+Use award.documents
+
 •   The discount rates used should be specified in the disclosure along with the risk premium used, if any, and an explanation for the rate of risk premium used, referring to guidance, if any, available in this regard or describing project-specific circumstances that justify the risk premium rate used.
 
+(ToDo: model extension for: discount rate + risk premium + explanation )
+
 •   Risk comparison of other financing mechanisms should be specified.
+
+Use award.documents
 
 ## Financial Information
 
@@ -155,34 +197,47 @@ Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
 ### V.1. Equity-debt ratio
 
+(ToDo: model extension - single field (= debt / debt + equity)? )
 
 ### V.2. Share capital
 
+(ToDo: model extension - single field (total value of share capital)? )
 
 ### V.3. Shareholders with proportion held and voting rights
 
+(ToDo: model extension - array of objects made up of an organizationReference + shareholding (%) + voting rights (codelist)? )
+
+REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
 
 ### V.4. Equity transfer caps
 
 Certain contracts provide for caps on equity transfer in different stages of the contract, especially during the construction stage and for a few years thereafter. Give details of any such provisions
 
+USE DOCUMENTS
 
 ### V.5. Lender and investor information
 
 Commercial lenders, institutional investors, bilateral or multilateral lenders, public issue of bonds, supplier credit, other
 
+REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+
+(Array of organizationReferences - should we capture role at this level too?)
 
 ### V.6. Categorize senior debit, mezzanine debit, other
 
+(ToDo: model extension - array of objects made up of id + amount + organizationReference (to funder) + debt type (codelist)? )
 
 ### V.7. Amount and tenor of each, fixed or floating rate
 
+(ToDo: model extension - array of objects made up of id + rate + period + id (of debt)? )
 
 ### V.8. Security and step in arrangements
 
+USE DOCUMENTS (contract)
 
 ### V.9. Forecast IRR
 
+(ToDo: model extension, single field?)
 
 ## Government Support
 
