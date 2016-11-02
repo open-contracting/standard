@@ -98,7 +98,6 @@ A value from the [milestone status codelist](../schema/codelists/#milestone-stat
 
 ### Contract Milestones (Estimated and Actual)
 
-(TODO: should *estimated* be a value on the milestone status codelist or is *scheduled* sufficient?)
 
 #### I.11: Date of commercial close
 
@@ -174,7 +173,7 @@ Details of the public authority should be provided in the ```parties``` section 
 
 The ```organization/roles``` field should be set to ```publicAuthority``` and the ```organization/contactPoint``` field can be used to provide details of a named representative.
 
-(TODO: are we renaming buyer? organization roles codelist)
+(TODO: [renaming buyer](https://github.com/open-contracting/public-private-partnerships/issues/4)? [organization roles codelist](https://github.com/open-contracting/public-private-partnerships/issues/26))
 
 #### I.19: Private party: name of company or consortium, name of representative, address, telephone, fax, e-mail
 
@@ -184,7 +183,7 @@ Details of the public authority should be provided in the ```parties``` section 
 
 The ```organization/roles``` field should be set to ```privateParty``` and the ```organization/contactPoint``` field can be used to provide details of a named representative.
 
-(TODO: are we renaming suppliers? organization roles codelist)
+(TODO: [renaming suppliers](https://github.com/open-contracting/public-private-partnerships/issues/4)? [organization roles codelist](https://github.com/open-contracting/public-private-partnerships/issues/26) add guidance on modelling consortia)
 
 #### I.20: Financiers: name of Lead FI, other FIs, name of representative of lead FI, address, telephone, fax, e-mail
 
@@ -198,29 +197,50 @@ The ```organization/roles``` field should be set to ```leadFinancier``` or ```fi
 
 ## Procurement Information
 
-Disclosure timing: According to milestones in the procurement process, evaluation and meeting minutes should be uploaded within 2-3 business days.
+**Disclosure timing:** According to milestones in the procurement process, evaluation and meeting minutes should be uploaded within 2-3 business days.
 
-This information can be disclosed in the public domain during the procurement stage. Disclosure in the public domain can be simultaneous with the availability of the documents to prospective bidders.
+*Note: This information can be disclosed in the public domain during the procurement stage. Disclosure in the public domain can be simultaneous with the availability of the documents to prospective bidders.*
 
 ### II.1. Timeline, final feasibility study, independent auditor's report
 
 (TODO: Clarify this section of framework)
 
-Dates and summary details, links to all procurement documents, final feasibility study, including land acquisition, social, environmental, and rehabilitation related information, reports of independent procurement  auditors (if any)
+*Dates and summary details, links to all procurement documents, final feasibility study, including land acquisition, social, environmental, and rehabilitation related information, reports of independent procurement  auditors (if any).*
+
+Key dates regarding the procurement process can be provided using the following fields in the ```tender``` section of an OCDS release:
+
+* The ```tenderPeriod``` field can be used to provide the period during which the tender is open for submissions, ```tenderPeriod.endDate``` should contain the closing date for tender submissions.
+* The ```enquiryPeriod```field can be used to provide the period during which enquiries may be made and answered.
+* The ```awardPeriod``` field can be used to provide the period during which an award is expected to be made.
+* The ```contractPeriod``` field can be used to provide the expected start and end dates for the contract.
+
+(TODO: Add guidance on processes with multiple enquiry periods [github issue](https://github.com/open-contracting/public-private-partnerships/issues/10))
+
+REQUIRES tender.contractPeriod extension
 
 ### II.2. RFQ documents
 
-USE tender.documents
+Links to RFQ documents can be provided using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 (TODO: Include guidance on modelling related RFQ/RFP processes)
 
 ### II.3. Pre-qualification or shortlist
 
-USE two linked processes: RFQ and RFP - awards in the RFQ represent the shortlist/pre-qualified suppliers for the RFP process
+Where the procurement process for a PPP includes a process prior to the RFP, such as an RFQ, pre-qualification or shortlisting stage, the prior process should be modelled as a separate contracting process in OCDS to main RFP.
+
+Information on pre-qualified or shortlisted bidders can be provided using the ```award``` section an OCDS release about the prior process.
+
+(TODO: add guidance on linking related processes)
+
+(TODO: draft relatedProcess extension)
 
 ### II.4. RFP documents
 
-Use tender.documents
+Links to RFP documents can be provided using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### II.5. Evaluation criteria: brief description with weightage
 
