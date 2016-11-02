@@ -2,9 +2,9 @@
 
 ## Basic Project Information
 
-Disclosure timing: Pre-procurement (as available)
+**Disclosure timing:** Pre-procurement (as available)
 
-Notes: This can be disclosed at the pre-procurement stage with the exception of information on the parties to the contract, which will be disclosed once it becomes available, that is, at the end of the procurement process. 
+*Note: This can be disclosed at the pre-procurement stage with the exception of information on the parties to the contract, which will be disclosed once it becomes available, that is, at the end of the procurement process.*
 
 
 ### I.1: Project name, location, sector
@@ -40,19 +40,39 @@ A detailed breakdown of sources of investment, and anticipated government expend
 
 ### I.4: Project need: benefits provided, economic and social (including specific information on the public interest aspect)
 
-USE DOCUMENTS
+This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+
+*Note: It is recommended in the PPP process to carry out a preliminary examination of the social and environmental aspects of the project and identify and disclose potential deal-breakers or challenges as early as possible.*
 
 ### I.5: Technical description of the physical infrastructure
 
-USE DOCUMENTS
+This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### I.6: High-level description of the services
 
-USE tender.description
+This information can be provided in in the ```tender``` section of an OCDS release. The ```tender/description``` field can be used to provide a free text description of the services covered by the PPP.
+
+More detailed information can also be provided in a document, or documents, using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### I.7: Estimated demand to be served annually
 
-USE DOCUMENTS
+This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### I.8: Project additionality
 
@@ -60,61 +80,121 @@ USE DOCUMENTS
 
 ### I.9: Reason for selection of PPP mode and type in brief
 
-USE DOCUMENTS
+This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### I.10: Dates of various approvals
 
-PLANNING MILESTONES
+This information can be provided using the ```milestones``` field in the relevant section of an OCDS release, for example information on approvals relating to the planning phase of a PPP should be provided in the ```planning/milestones``` field whilst information on approvals relating to the procurement phase should be provided in the ```tender/milestones``` field. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+
+A value from the [milestone type codelist](../schema/codelists/#milestone-type) should be entered into the ```milestone/milestoneType``` field to identify the type of milestone being disclosed, for example a milestone relating to the planning phase of a PPP should be of type ```planning```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+
+A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example an approval which has not yet taken place should have ```scheduled``` status whilst an approval which has been completed should have ```met``` status.
+
+(TODO: draft milestones extension + codelist + update codelists documentation)
 
 ### Contract Milestones (Estimated and Actual)
 
-USE tender.milestones
+(TODO: should *estimated* be a value on the milestone status codelist or is *scheduled* sufficient?)
 
 #### I.11: Date of commercial close
 
-USE tender.milestones
+This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+
+The ```milestone/milestoneType``` field should be set to ```???```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+
+A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+
+(TODO: see [github issue](https://github.com/open-contracting/public-private-partnerships/issues/25))
 
 #### I.12: Date of financial close
 
-USE tender.milestones
+This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+
+The ```milestone/milestoneType``` field should be set to ```???```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+
+A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+
+(TODO: see [github issue](https://github.com/open-contracting/public-private-partnerships/issues/25))
 
 #### I.13: Date of commencement of construction or development
 
-USE tender.milestones
+This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+
+The ```milestone/milestoneType``` field should be set to ```delivery```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+
+A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+
 
 #### I. 14: Date of completion of construction or development
 
-USE tender.milestones
+This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+
+The ```milestone/milestoneType``` field should be set to ```delivery```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+
+A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+
 
 #### I.15: Date of commissioning
 
-USE tender.milestones
+This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+
+The ```milestone/milestoneType``` field should be set to ```delivery```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+
+A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+
 
 #### I.16: Date of contract expiry
 
-USE tender.milestones
+This information can be provided using ```contractPeriod``` field in the ```tender``` section of an OCDS release. OCDS provides a [period building block](../schema/reference/#period) for disclosure of information on time periods.
+
+This expected date of contract expiry can be entered into the ```contractPeriod/endDate``` field.
+
+(TODO: draft tender.contractPeriod extension)
 
 ### I.17: Links to all contract documents
 
-USE DOCUMENTS
+Links to contract documents can be provided using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+
+(TODO: draft documents extension - access details field + add to documentation)
 
 ### Parties to the contract with contact details
 
-REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
 
 #### I.18: Public authority: name of authority, name of representative, address, telephone, fax, e-mail
 
-REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+This information can be provided using the ```buyer``` and ```parties``` sections of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles.
+
+Details of the public authority should be provided in the ```parties``` section and the ```buyer``` section should be used to reference the relevant organization in the ```parties``` section.
+
+The ```organization/roles``` field should be set to ```publicAuthority``` and the ```organization/contactPoint``` field can be used to provide details of a named representative.
+
+(TODO: are we renaming buyer? organization roles codelist)
 
 #### I.19: Private party: name of company or consortium, name of representative, address, telephone, fax, e-mail
 
-REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+This information can be provided using the ```award``` and ```parties``` sections of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles.
+
+Details of the public authority should be provided in the ```parties``` section and the ```award/suppliers``` field should be used to reference the relevant organization in the ```parties``` section.
+
+The ```organization/roles``` field should be set to ```privateParty``` and the ```organization/contactPoint``` field can be used to provide details of a named representative.
+
+(TODO: are we renaming suppliers? organization roles codelist)
 
 #### I.20: Financiers: name of Lead FI, other FIs, name of representative of lead FI, address, telephone, fax, e-mail
 
-REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+This information can be provided using the ```award``` and ```parties``` sections of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles.
 
-(TODO: Draft proposed organisation roles codelist and raise github issue)
+Details of the public authority should be provided in the ```parties``` section and the ```award/financiers``` field should be used to reference the relevant organizations in the ```parties``` section.
+
+The ```organization/roles``` field should be set to ```leadFinancier``` or ```financier``` as appropriate and the ```organization/contactPoint``` field can be used to provide details of a named representative.
+
+(TODO: Draft financiers extension)
 
 ## Procurement Information
 
