@@ -94,7 +94,7 @@ A value from the [milestone type codelist](../schema/codelists/#milestone-type) 
 
 A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example an approval which has not yet taken place should have ```scheduled``` status whilst an approval which has been completed should have ```met``` status.
 
-(TODO: draft milestones extension + codelist + update codelists documentation)
+(TODO: build ppp-schema with [milestones update](https://github.com/duncandewhurst/ocds-milestones-update) + update codelists documentation)
 
 ### Contract Milestones (Estimated and Actual)
 
@@ -193,7 +193,7 @@ Details of the public authority should be provided in the ```parties``` section 
 
 The ```organization/roles``` field should be set to ```leadFinancier``` or ```financier``` as appropriate and the ```organization/contactPoint``` field can be used to provide details of a named representative.
 
-(TODO: Draft financiers extension)
+(TODO: agree where this information should be located + draft financiers extension (see [#28](https://github.com/open-contracting/public-private-partnerships/issues/28))
 
 ## Procurement Information
 
@@ -244,29 +244,65 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 ### II.5. Evaluation criteria: brief description with weightage
 
-Use tender.documents (include note on requirements extension)
+This information can be provided in a document, or documents, using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+The ```document/documentType``` field should be set to ```evaluationCriteria``` (from the [document type codelist](../schema/codelists/#document-type)) to identify the type of document being disclosed.
+
+Structured information on evaluation criteria can also be provided using the ```criteria``` field in the ```tender``` section of an OCDS release. OCDS provides a [criteria, requirements, responses model](../schema/reference/#requirements) for disclosure of structured information on evaluation criteria and bidder responses. 
+
+(TODO: draft document type codelist extension (see [#27](https://github.com/open-contracting/public-private-partnerships/issues/27)), add weighting to requirements extension, update requirements extension terminology (buyer etc.))
 
 ### II.6. Brief information on constitution of the evaluation committees
 
-Use tender.documents
+This information can be provided in a document, or documents, using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+
+(TODO: Document type codelist (see [#27](https://github.com/open-contracting/public-private-partnerships/issues/27)))
 
 ### II.7. Negotiation parameters: brief descrtiptoin of the parameters for negotiation with preferred proponent 
 
-Use tender.documents
+This information can be provided in a document, or documents, using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+
+(TODO: Document type codelist (see [#27](https://github.com/open-contracting/public-private-partnerships/issues/27)))
 
 ### II.8. Minutes of pre-bid meetings
 
-Use tender.documents
+This information can be provided in a document, or documents, using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+
+(TODO: Document type codelist (see [#27](https://github.com/open-contracting/public-private-partnerships/issues/27)))
 
 ### II.9. Selection of preferred bidder
 
-Use award section
+This information can be provided using the ```award``` and ```parties``` sections of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles.
+
+Details of the preferred bidder should be provided in the ```parties``` section and the ```award/suppliers``` field should be used to reference the relevant organization in the ```parties``` section.
+
+```preferredBidder``` should be added to the list of roles for the organization in the ```organization/roles``` field.
+
+(TODO: see [orgnaization roles issue](https://github.com/open-contracting/public-private-partnerships/issues/26))
 
 ##   Risk
 
-Disclosure timing: Post commercial close, within 45-60 days of signing contract
+**Disclosure timing:** Post commercial close, within 45-60 days of signing contract
+
+*Risk allocation is an important determinant of cost to government and to the paying public/user. Inadequate or excessive transfer of risk is undesirable. Disclosure will provide evidence of proper or improper risk allocation and its effect on costs.*
 
 ### III.1. Individual risk allocation information
+
+*Note: Listing of risks with information on who bears the risk. The following table can be used. This is not an exhaustive listing. Countries, sectors, and individual projects may use different categorizations. Several risks can be further broken down into components or listed together. If within a large category of risk subcategories are allocated to different parties, it makes sense to show the subcategories clearly.*
 
 (TODO: model extension - see table in framework)
 
@@ -280,6 +316,8 @@ Use award.documents
 
 ### IV.2. Summary data
 •   State the rationale for doing the project as a PPP, including any qualitative or quantitative value-for-money, final feasibility studies (including cost-benefit analysis, if any) or other analysis that might have been used. If nonfinancial benefits have been quantified or considered, these could be stated.
+
+*Note: Choice of methodology affects the costs to the public and it is important to assure them that the PPP mode selected is the best possible in terms of cost, given equal standards of service in all modes tested.*
 
 Use award.documents
 
