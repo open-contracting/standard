@@ -304,34 +304,68 @@ Details of the preferred bidder should be provided in the ```parties``` section 
 
 *Note: Listing of risks with information on who bears the risk. The following table can be used. This is not an exhaustive listing. Countries, sectors, and individual projects may use different categorizations. Several risks can be further broken down into components or listed together. If within a large category of risk subcategories are allocated to different parties, it makes sense to show the subcategories clearly.*
 
-(TODO: model extension - see table in framework)
+Draft modelling:
+
+```json
+"riskAllocation": [
+	{
+		"id" = "1",
+		"type" = "demand",
+		"description" = "Actual toll revenues are less than those forecast.",
+		"allocation" = "publicAuthority",
+		"mitigation" = "The Department for Transport will provide an Additional Availability Support Grant in the event that actual toll revenues are less than those forecast."
+	},
+	{
+		"id" = "2",
+		"type" = "preConstruction",
+		"description" = "Planning permission for the project is not granted.",
+		"allocation" = "privateParty",
+		"mitigation" = "A planning strategy was agreed with the local planning authority and was shared with the bidders to mitigate planning risk to acceptable levels."
+	}
+]
+```
+
+(TODO: model extension + risk type codelist)
 
 ## Evaluation of PPP option
 
-Disclosure timing: Post commercial close, within 45-60 days of signing contract
+**Disclosure timing:** Post commercial close, within 45-60 days of signing contract
 
 ### IV.1. Link to evaluation report (value for money or other)
 
-Use award.documents
+This information can be provided in a document, or documents, using the ```documents``` field in the ```award``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### IV.2. Summary data
-•   State the rationale for doing the project as a PPP, including any qualitative or quantitative value-for-money, final feasibility studies (including cost-benefit analysis, if any) or other analysis that might have been used. If nonfinancial benefits have been quantified or considered, these could be stated.
+
+#### IV.2.1 State the rationale for doing the project as a PPP, including any qualitative or quantitative value-for-money, final feasibility studies (including cost-benefit analysis, if any) or other analysis that might have been used. If nonfinancial benefits have been quantified or considered, these could be stated.
 
 *Note: Choice of methodology affects the costs to the public and it is important to assure them that the PPP mode selected is the best possible in terms of cost, given equal standards of service in all modes tested.*
 
-Use award.documents
+This information can be provided in a document, or documents, using the ```documents``` field in the ```award``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
 
-•   The discount rates used should be specified in the disclosure along with the risk premium used, if any, and an explanation for the rate of risk premium used, referring to guidance, if any, available in this regard or describing project-specific circumstances that justify the risk premium rate used.
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+
+#### IV.2.2 The discount rates used should be specified in the disclosure along with the risk premium used, if any, and an explanation for the rate of risk premium used, referring to guidance, if any, available in this regard or describing project-specific circumstances that justify the risk premium rate used.
 
 (ToDo: model extension for: discount rate + risk premium + explanation )
 
-•   Risk comparison of other financing mechanisms should be specified.
+#### IV.2.3 Risk comparison of other financing mechanisms should be specified.
 
-Use award.documents
+This information can be provided in a document, or documents, using the ```documents``` field in the ```award``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ## Financial Information
 
-Disclosure timing: Post commercial close, within 45-60 days of signing contract
+**Disclosure timing:** Post commercial close, within 45-60 days of signing contract
 
 ### V.1. Equity-debt ratio
 
