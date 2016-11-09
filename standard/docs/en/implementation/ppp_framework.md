@@ -369,7 +369,9 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 ### V.1. Equity-debt ratio
 
-(ToDo: model extension - single field (= debt / debt + equity)? )
+(ToDo: model extension - single field (= debt / debt + equity)? In the [World Bank PPI Database](https://ppi.worldbank.org/data) debt-equity ratio values as given as a pair summing to 100, e.g. 60/40, 70/30 etc.)
+
+*Note: The [World Bank PPPIRC](https://ppp.worldbank.org/public-private-partnership/financing/issues-in-project-financed-transactions#debt) defines the debt equity ratio as the ```long term debt / shareholder equity``` of the project company.*
 
 ### V.2. Share capital
 
@@ -381,11 +383,81 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
 
+**Draft modelling**
+
+```json
+"shareholders": [
+	{
+		"id": "01",
+		"shareholder": {
+			"id": "GB-COH-12345678",
+			"name": "Mega Corp"
+		},
+		"shareholding": 0.75,
+		"votingRights":	ordinary,
+		"votingRightsDetails": ""
+	},
+	{
+		"id": "02",
+		"shareholder": {
+			"id": "GB-COH-99999999",
+			"name": "Mini Co"
+		},
+		"shareholding": 0.25,
+		"votingRights":	ordinary,
+		"votingRightsDetails": ""
+	}
+]
+```
+
+**Draft votingRights codelist**
+
+code | definition
+-----|-----------
+ordinary | The shareholder is entitled to a single vote per share in all circumstances
+none | The shareholder is not entitled to vote under any circumstances
+restricted | The shareholder is entitled to vote in specific circumstances only
+additional | The shareholder is entitled to more than one vote per share in all circumstances
+enhanced | The shareholder is entitled to more than one vote per share in specific circumstances only
+
+**Questions**
+* Are there any existing codelists we can defer to for shareholder voting rights?
+* For shares with additional voting rights should this be specified as semi-structured data using the votingRightsDetails field or is an additional field required (i.e. votesPerShare)?
+
+
 ### V.4. Equity transfer caps
 
-Certain contracts provide for caps on equity transfer in different stages of the contract, especially during the construction stage and for a few years thereafter. Give details of any such provisions
+*Note: Certain contracts provide for caps on equity transfer in different stages of the contract, especially during the construction stage and for a few years thereafter. Give details of any such provisions.*
 
-USE DOCUMENTS
+**Draft modelling**
+
+```json
+
+"equityTransferCaps": [
+	{
+		"id" : "01",
+		"title" : "Construction equity transfer cap",
+		"description" : "No equity transfer is permitted until construction is completed.",
+		"cap" : 0,
+		"milestone" : {
+			"id" : "contract-construction-001",
+			"title" : "Completion of construction"
+		}
+	},
+	{
+		"id" : "02",
+		"title" : "Initial equity transfer cap",
+		"description" : "No more than 20% equity may be transferred until the project has been in operation for 10 years.",
+		"cap" : 0.20,
+		"milestone" : {
+			"id" : "contract-operation-002",
+			"title" : "10 years of operation"
+		}
+	}
+]
+```
+
+(See [github issue](https://github.com/open-contracting/public-private-partnerships/issues/30))
 
 ### V.5. Lender and investor information
 
@@ -395,7 +467,8 @@ REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
 
 (Array of organizationReferences - should we capture role at this level too?)
 
-### V.6. Categorize senior debit, mezzanine debit, other
+
+### V.6. Categorize senior debt, mezzanine debt, other
 
 (ToDo: model extension - array of objects made up of id + amount + organizationReference (to funder) + debt type (codelist)? )
 
