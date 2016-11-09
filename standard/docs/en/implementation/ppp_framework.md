@@ -29,9 +29,10 @@ This can be entered into ```budget``` fields in the ```planning``` section of an
 ```
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :file: standard/docs/en/examples/ppp/I2value.csv
+.. jsoninclude-flat:: docs/en/examples/ppp/full.json
+   :recursive:
+   :jsonpointer: /releases/0/planning/budget
+   :ignore_path: /releases/0/
 ```
 
 A detailed breakdown of sources of investment, and anticipated government expenditure and income can be provided using the budget forecast block (TODO) as described in the [financial information](#financial-information) section below. 
