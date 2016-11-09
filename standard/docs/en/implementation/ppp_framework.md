@@ -9,7 +9,7 @@
 
 ### I.1: Project name, location, sector
 
-TODO. 
+TODO. https://github.com/open-contracting/public-private-partnerships/issues/22 
 
 ### I.2: Sponsoring agency/department
 
