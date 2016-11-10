@@ -6,7 +6,7 @@ import json
 import json_merge_patch
 from collections import OrderedDict
 
-extensions_to_merge = ['ppp','location','parties','requirements']
+extensions_to_merge = ['ppp','location','parties','requirements','budget','budget_project']
 
 GIT_REF = "gh-pages"
 location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
@@ -20,7 +20,7 @@ for extension in extension_json['extensions']:
         if extension['slug'] in extensions_to_merge:
             extension_patch = requests.get(extension['url'].rstrip("/") + "/" + "release-schema.json").json()
             schema = json_merge_patch.merge(schema, extension_patch)
-            print("Merging")
+            print("Merging " + extension['slug'] )
     except KeyError:
         print("Nothing")
         pass

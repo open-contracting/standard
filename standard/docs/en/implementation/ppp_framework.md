@@ -12,7 +12,138 @@
 
 ### I.1: Project name, location, sector
 
-TODO. https://github.com/open-contracting/public-private-partnerships/issues/22 
+#### Project name and description
+
+OCDS 1.1 includes a ```title``` and ```description``` field at the top level of each contracting process release. These titles and descriptions can be used by applications in summary lists, so should be kept concise and jargon free. 
+
+We recommend keeping descriptions to one paragraph or less.
+
+#### Sector classification
+
+Projects should be classified using the UN Classification of the Functions of Government Scheme (COFOG). 
+
+This can be cross-walked to most other PPP clasification schemes in use, and so provides a common framework for understanding the sectoral focus of investments. 
+
+Additional classificaiton schemes can also be provided, such as project classification against the Sustainable Development Goals (SDGs), or against national frameworks. 
+
+**Discussion:** See [#22](https://github.com/open-contracting/public-private-partnerships/issues/22) for further sector classification discussions.
+
+##### Representation
+
+The primary sector classification is provided using a [classification block](../../../schema/reference/#classification) at ```planning/project/sector```. 
+
+Any additional classifications can be provided in an array of [classification blocks](../../../schema/reference/#classification) at ```planning/project/additionalClassifications```. 
+
+The following scheme codes are recognised for ```sector```:
+
+* COFOG - [UN Classification of the Functions of Government](http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4) using the dotted numerical notation. (Note: set spreadsheet columns to 'text' to avoid the leading 0 being removed).
+
+#### Example
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/full.json
+   :jsonpointer: /releases/0/planning/project
+   :expand: sector
+```
+
+```eval_rst
+#.. jsoninclude-flat:: docs/en/examples/ppp/full.json
+#   :recursive:
+#   :jsonpointer: /releases/0/planning
+#   :ignore_path: 
+```
+
+
+
+#### Location
+
+The locations where a project is taking place can be specified using:
+
+* **A gazeteer entry**. For example, the GeoNames code of the administrative division where activity is taking place.
+* **A GeoJSON object**. Describing the boundary, or extent, of where activity will take place.
+
+There are a range of tools available to generate GeoJSON data, such as http://geojson.io/
+
+###### Representation
+
+Locations are represented using an array of ```location``` objects at ```planning/project/locations```. Each location can have a description, a gazeteer entry, and/or a GeoJSON object representing a location point or geometery. 
+
+See the location extension (ToDo: Add link) for further modelling details. 
+
+##### Example
+
+The example below uses a gazeteer and GeoJSON LineString to describe the location of a road project. 
+
+```json
+{ "releases": [{
+        "planning": {
+                "project": {
+                    "sector": "transport",
+                    "subSector": "roads",
+                    "locations": [
+                        {
+                            "description": "Local area and route of the Mersey Gateway Bridge",
+                            "gazetteer": {
+                                "scheme": "GEONAMES",
+                                "identifiers": "2647601.0"
+                            },
+                            "geometry": {
+                                "type": "LineString",
+                                "coordinates": [
+                                  [
+                                    -2.7485561370849605,
+                                    53.36141150911515
+                                  ],
+                                  [
+                                    -2.74383544921875,
+                                    53.36018219246915
+                                  ],
+                                  [
+                                    -2.741689682006836,
+                                    53.35900406407135
+                                  ],
+                                  [
+                                    -2.7359390258789062,
+                                    53.357774677973616
+                                  ],
+                                  [
+                                    -2.7240943908691406,
+                                    53.35782590310244
+                                  ],
+                                  [
+                                    -2.7213478088378906,
+                                    53.35710874569601
+                                  ],
+                                  [
+                                    -2.703065872192383,
+                                    53.348348206285024
+                                  ],
+                                  [
+                                    -2.7020359039306636,
+                                    53.34517142558946
+                                  ],
+                                  [
+                                    -2.702207565307617,
+                                    53.34158445320748
+                                  ],
+                                  [
+                                    -2.7028942108154297,
+                                    53.33943212493747
+                                  ]
+                                ]
+                              }
+                        }
+                    ]
+                }
+    }
+}]
+}
+
+```
+
+#### Example
+
+
 
 ### I.2: Sponsoring agency/department
 
@@ -24,19 +155,7 @@ The project value is the total amount invested into the project by both public a
 
 This can be entered into ```budget``` fields in the ```planning``` section of an OCDS release. The ```budget/description``` field can be used to provide a free text explanation of the way the project value has been calculated. 
 
-```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/full.json
-   :jsonpointer: /releases/0/planning/budget
-   :expand: amount
-```
-
-```eval_rst
-.. jsoninclude-flat:: docs/en/examples/ppp/full.json
-   :recursive:
-   :jsonpointer: /releases/0/planning/budget
-   :ignore_path: /releases/0/
-```
 
 A detailed breakdown of sources of investment, and anticipated government expenditure and income can be provided using the budget forecast block (TODO) as described in the [financial information](#financial-information) section below. 
 

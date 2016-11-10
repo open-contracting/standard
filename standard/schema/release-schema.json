@@ -29,7 +29,23 @@
             "type": "array",
             "items": {
                 "type": "string",
-                "enum": ["planning", "tender", "tenderAmendment", "tenderUpdate", "tenderCancellation", "award", "awardUpdate", "awardCancellation", "contract", "contractUpdate", "contractAmendment", "implementation", "implementationUpdate", "contractTermination", "compiled"]
+                "enum": [
+                    "planning",
+                    "tender",
+                    "tenderAmendment",
+                    "tenderUpdate",
+                    "tenderCancellation",
+                    "award",
+                    "awardUpdate",
+                    "awardCancellation",
+                    "contract",
+                    "contractUpdate",
+                    "contractAmendment",
+                    "implementation",
+                    "implementationUpdate",
+                    "contractTermination",
+                    "compiled"
+                ]
             },
             "mergeStrategy": "ocdsOmit"
         },
@@ -37,10 +53,12 @@
             "title": "Initiation type",
             "description": "String specifying the type of initiation process used for this contract, taken from the [initiationType](http://standard.open-contracting.org/latest/en/schema/codelists/#initiation-type) codelist. Currently only tender is supported.",
             "type": "string",
-            "enum": ["tender"],
+            "enum": [
+                "tender"
+            ],
             "mergeStrategy": "ocdsVersion"
         },
-        "planning": { 
+        "planning": {
             "title": "Planning",
             "description": "Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract for, when and how.",
             "$ref": "#/definitions/Planning"
@@ -53,60 +71,115 @@
         "buyer": {
             "title": "Buyer",
             "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the tender data.",
-            "$ref": "#/definitions/Organization"
+            "$ref": "#/definitions/OrganizationReference"
         },
-        "awards": { 
+        "awards": {
             "title": "Awards",
             "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "array",
             "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {"idRef": "id"},
-            "items": { "$ref": "#/definitions/Award" },
+            "mergeOptions": {
+                "idRef": "id"
+            },
+            "items": {
+                "$ref": "#/definitions/Award"
+            },
             "uniqueItems": true
         },
-        "contracts": { 
+        "contracts": {
             "title": "Contracts",
             "description": "Information from the contract creation phase of the procurement process.",
             "type": "array",
             "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {"idRef": "id"},
-            "items": {"$ref": "#/definitions/Contract" },
+            "mergeOptions": {
+                "idRef": "id"
+            },
+            "items": {
+                "$ref": "#/definitions/Contract"
+            },
             "uniqueItems": true
         },
         "language": {
             "title": "Release language",
             "description": "Specifies the default language of the data using either two-digit ISO 639-1, or extended BCP47 language tags. The use of two-letter codes from ISO 639-1 is strongly recommended.",
-            "type": ["string", "null"],
+            "type": [
+                "string",
+                "null"
+            ],
             "default": "en",
             "mergeStrategy": "ocdsVersion"
+        },
+        "parties": {
+            "description": "Information on the parties who are involved in the contracting process and their roles, e.g. buyer, procuring party, supplier etc. Organization references elsewhere in the schema refer to this list of parties.",
+            "title": "Parties",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Organization"
+            },
+            "mergeStrategy": "arrayMergeById",
+            "uniqueItems": true,
+            "mergeOptions": {
+                "idRef": "id"
+            }
+        },
+        "description": {
+            "description": "An optional description for the whole contracting process. If no process description is given, the tender, award or contract description may be used in interfaces.",
+            "title": "Description",
+            "type": "string"
+        },
+        "title": {
+            "description": "An optional title for the whole contracting process. If no process title is given, the tender, award or contract title field may be used in interfaces.",
+            "title": "Title",
+            "type": "string"
         }
     },
-    "required": ["ocid", "id", "date", "tag", "initiationType"],
+    "required": [
+        "ocid",
+        "id",
+        "date",
+        "tag",
+        "initiationType"
+    ],
     "definitions": {
         "Planning": {
             "title": "Planning",
             "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
             "type": "object",
             "properties": {
-                "budget": { "$ref": "#/definitions/Budget" },
+                "budget": {
+                    "$ref": "#/definitions/Budget"
+                },
                 "rationale": {
-                    "title":"Rationale",
+                    "title": "Rationale",
                     "description": "The rationale for the procurement provided in free text. More detail can be provided in an attached document.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "documents": {
-                    "title":"Documents",
+                    "title": "Documents",
                     "description": "A list of documents related to the planning process.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Document" }
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    }
+                },
+                "project": {
+                    "$ref": "#/definitions/Project"
                 }
             },
             "patternProperties": {
                 "^(rationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
@@ -114,31 +187,52 @@
             "title": "Tender",
             "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.",
             "type": "object",
-            "required": ["id"],
+            "required": [
+                "id"
+            ],
             "properties": {
                 "id": {
                     "title": "Tender ID",
                     "description": "An identifier for this tender process. This may be the same as the ocid, or may be drawn from an internally held identifier for this tender.",
-                    "type": ["string", "integer"],
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "title": {
-                    "title":"Tender Title",
+                    "title": "Tender Title",
                     "description": "Tender title",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
-                    "title":"Tender description",
+                    "title": "Tender description",
                     "description": "Tender description",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "status": {
                     "title": "Tender status",
                     "description": "The current status of the tender based on the [tenderStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#tender-status)",
-                    "type": ["string", "null"],
-                    "enum": ["planned", "active", "cancelled", "unsuccessful", "complete", null],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "enum": [
+                        "planned",
+                        "active",
+                        "cancelled",
+                        "unsuccessful",
+                        "complete",
+                        null
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "items": {
@@ -146,148 +240,220 @@
                     "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Item" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Item"
+                    },
                     "uniqueItems": true
                 },
                 "minValue": {
-                    "title":"Minimum value",
+                    "title": "Minimum value",
                     "description": "The minimum estimated value of the procurement.",
                     "$ref": "#/definitions/Value"
                 },
                 "value": {
-                    "title":"Value",
+                    "title": "Value",
                     "description": "The total upper estimated value of the procurement.",
                     "$ref": "#/definitions/Value"
                 },
                 "procurementMethod": {
-                    "title":"Procurement method",
+                    "title": "Procurement method",
                     "description": "Specify tendering method against the [method codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited",
-                    "type": ["string", "null"],
-                    "enum": ["open", "selective", "limited", null],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "enum": [
+                        "open",
+                        "selective",
+                        "limited",
+                        null
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "procurementMethodDetails": {
-                    "title":"Procurement method details",
+                    "title": "Procurement method details",
                     "description": "Additional detail on the procurement method used. This field may be used to provide the local name of the particular procurement method used.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "procurementMethodRationale": {
-                    "title":"Procurement method rationale",
+                    "title": "Procurement method rationale",
                     "description": "Rationale of procurement method, especially in the case of Limited tendering.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "awardCriteria": {
-                    "title":"Award criteria",
+                    "title": "Award criteria",
                     "description": "Specify the award criteria for the procurement, using the [award criteria codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#award-criteria)",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "awardCriteriaDetails": {
-                    "title":"Award criteria details",
+                    "title": "Award criteria details",
                     "description": "Any detailed or further information on the award or selection criteria.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "submissionMethod": {
-                    "title":"Submission method",
+                    "title": "Submission method",
                     "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction. Using the [submission method codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#submission-method)",
-                    "type": ["array", "null"],
+                    "type": [
+                        "array",
+                        "null"
+                    ],
                     "items": {
                         "type": "string"
                     },
                     "mergeStrategy": "ocdsVersion"
                 },
-                "submissionMethodDetails" : {
-                    "title":"Submission method details",
+                "submissionMethodDetails": {
+                    "title": "Submission method details",
                     "description": "Any detailed or further information on the submission method. This may include the address, e-mail address or online service to which bids should be submitted, and any special requirements to be followed for submissions.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "tenderPeriod": {
-                    "title":"Tender period",
+                    "title": "Tender period",
                     "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
                     "$ref": "#/definitions/Period"
                 },
                 "enquiryPeriod": {
-                    "title":"Enquiry period",
+                    "title": "Enquiry period",
                     "description": "The period during which enquiries may be made and answered.",
                     "$ref": "#/definitions/Period"
                 },
                 "hasEnquiries": {
-                    "title":"Has enquiries?",
+                    "title": "Has enquiries?",
                     "description": "A Yes/No field to indicate whether enquiries were part of tender process.",
-                    "type": ["boolean", "null"],
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "eligibilityCriteria": {
-                    "title":"Eligibility criteria",
+                    "title": "Eligibility criteria",
                     "description": "A description of any eligibility criteria for potential suppliers.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "awardPeriod": {
-                    "title":"Award period",
+                    "title": "Award period",
                     "description": "The date or period on which an award is anticipated to be made.",
                     "$ref": "#/definitions/Period"
                 },
                 "numberOfTenderers": {
-                    "title":"Number of tenderers",
+                    "title": "Number of tenderers",
                     "description": "The number of entities who submit a tender.",
-                    "type": ["integer", "null"],
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "tenderers": {
-                    "title":"Tenderers",
+                    "title": "Tenderers",
                     "description": "All entities who submit a tender.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/Organization" },
+                    "items": {
+                        "$ref": "#/definitions/OrganizationReference"
+                    },
                     "uniqueItems": true,
                     "mergeStrategy": "ocdsVersion"
                 },
                 "procuringEntity": {
-                    "title":"Procuring entity",
+                    "title": "Procuring entity",
                     "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
-                    "$ref": "#/definitions/Organization"
+                    "$ref": "#/definitions/OrganizationReference"
                 },
                 "documents": {
-                    "title":"Documents",
+                    "title": "Documents",
                     "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#document-type) for details of potential documents to include.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Document" }
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    }
                 },
                 "milestones": {
-                    "title":"Milestones",
+                    "title": "Milestones",
                     "description": "A list of milestones associated with the tender.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Milestone" }
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Milestone"
+                    }
                 },
-                "amendment": { "$ref": "#/definitions/Amendment" }
+                "amendment": {
+                    "$ref": "#/definitions/Amendment"
+                },
+                "criteria": {
+                    "$ref": "#/definitions/Criterion"
+                }
             },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(procurementMethodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(awardCriteriaDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(submissionMethodDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
@@ -295,50 +461,75 @@
             "title": "Award",
             "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "object",
-            "required": ["id"],
+            "required": [
+                "id"
+            ],
             "properties": {
                 "id": {
                     "title": "Award ID",
                     "description": "The identifier for this award. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for further details.",
-                    "type": ["string", "integer"],
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
                     "mergeStrategy": "overwrite"
                 },
                 "title": {
-                    "title":"Title",
+                    "title": "Title",
                     "description": "Award title",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
-                    "title":"Description",
+                    "title": "Description",
                     "description": "Award description",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "status": {
                     "title": "Award status",
                     "description": "The current status of the award drawn from the [awardStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#award-status)",
-                    "type": ["string", "null"],
-                    "enum": ["pending", "active", "cancelled", "unsuccessful", null],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "enum": [
+                        "pending",
+                        "active",
+                        "cancelled",
+                        "unsuccessful",
+                        null
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "date": {
                     "title": "Award date",
                     "description": "The date of the contract award. This is usually the date on which a decision to award was made.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "value": {
-                    "title":"Value",
+                    "title": "Value",
                     "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement.",
                     "$ref": "#/definitions/Value"
                 },
                 "suppliers": {
-                    "title":"Suppliers",
+                    "title": "Suppliers",
                     "description": "The suppliers awarded this award. If different suppliers have been awarded different items of values, these should be split into separate award blocks.",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/Organization" },
+                    "items": {
+                        "$ref": "#/definitions/OrganizationReference"
+                    },
                     "uniqueItems": true,
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -348,34 +539,59 @@
                     "type": "array",
                     "minItems": 1,
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Item" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Item"
+                    },
                     "uniqueItems": true
                 },
                 "contractPeriod": {
-                    "title":"Contract period",
+                    "title": "Contract period",
                     "description": "The period for which the contract has been awarded.",
                     "$ref": "#/definitions/Period"
                 },
                 "documents": {
-                    "title":"Documents",
+                    "title": "Documents",
                     "description": "All documents and attachments related to the award, including any notices.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Document" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    },
                     "uniqueItems": true
                 },
-                "amendment": { 
+                "amendment": {
                     "$ref": "#/definitions/Amendment"
+                },
+                "requirementResponses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RequirementResponse"
+                    },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "mergeStrategy": "arrayMergeById",
+                    "unqiueItems": true
                 }
             },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
@@ -383,45 +599,69 @@
             "type": "object",
             "title": "Contract",
             "description": "Information regarding the signed contract between the buyer and supplier(s).",
-            "required": ["id", "awardID"],
+            "required": [
+                "id",
+                "awardID"
+            ],
             "properties": {
                 "id": {
                     "title": "Contract ID",
                     "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for further details.",
-                    "type": ["string", "integer"],
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
                     "mergeStrategy": "overwrite"
                 },
                 "awardID": {
                     "title": "Award ID",
                     "description": "The award.id against which this contract is being issued.",
-                    "type": ["string", "integer"],
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "title": {
                     "description": "Contract title",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
-                    "title":"Contract description",
+                    "title": "Contract description",
                     "description": "Contract description",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "status": {
                     "title": "Contract status",
                     "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status)",
-                    "type": ["string", "null"],
-                    "enum": ["pending", "active", "cancelled", "terminated", null],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "enum": [
+                        "pending",
+                        "active",
+                        "cancelled",
+                        "terminated",
+                        null
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "period": {
-                    "title":"Period",
+                    "title": "Period",
                     "description": "The start and end date for the contract.",
                     "$ref": "#/definitions/Period"
                 },
                 "value": {
-                    "title":"Value",
+                    "title": "Value",
                     "description": "The total value of this contract.",
                     "$ref": "#/definitions/Value"
                 },
@@ -431,41 +671,69 @@
                     "type": "array",
                     "minItems": 1,
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Item" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Item"
+                    },
                     "uniqueItems": true
                 },
                 "dateSigned": {
-                    "title":"Date signed",
+                    "title": "Date signed",
                     "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "documents": {
-                    "title":"Documents",
+                    "title": "Documents",
                     "description": "All documents and attachments related to the contract, including any notices.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Document" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    },
                     "uniqueItems": true
                 },
-                "amendment": { 
+                "amendment": {
                     "$ref": "#/definitions/Amendment"
                 },
-                "implementation": { 
+                "implementation": {
                     "title": "Implementation",
                     "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.",
-                    "$ref": "#/definitions/Implementation" 
+                    "$ref": "#/definitions/Implementation"
+                },
+                "requirementResponses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RequirementResponse"
+                    },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "mergeStrategy": "arrayMergeById",
+                    "unqiueItems": true
                 }
             },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
@@ -475,94 +743,141 @@
             "description": "Information during the performance / implementation stage of the contract.",
             "properties": {
                 "transactions": {
-                    "title":"Transactions",
+                    "title": "Transactions",
                     "description": "A list of the spending transactions made against this contract",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Transaction" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Transaction"
+                    },
                     "uniqueItems": true
                 },
                 "milestones": {
-                    "title":"Milestones",
+                    "title": "Milestones",
                     "description": "As milestones are completed, milestone completions should be documented.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Milestone" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Milestone"
+                    },
                     "uniqueItems": true
                 },
-                "documents":{
-                    "title":"Documents",
+                "documents": {
+                    "title": "Documents",
                     "description": "Documents and reports that are part of the implementation phase e.g. audit and evaluation reports.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Document" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    },
                     "uniqueItems": true
                 }
             }
         },
         "Milestone": {
-            "title":"Milestone",
+            "title": "Milestone",
             "type": "object",
-            "required": ["id"],
+            "required": [
+                "id"
+            ],
             "properties": {
                 "id": {
-                    "title":"ID",
+                    "title": "ID",
                     "description": "A local identifier for this milestone, unique within this block. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism.",
-                    "type": ["string", "integer"],
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
                     "mergeStrategy": "overwrite"
                 },
                 "title": {
-                    "title":"Title",
+                    "title": "Title",
                     "description": "Milestone title",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
-                    "title":"Description",
+                    "title": "Description",
                     "description": "A description of the milestone.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "dueDate": {
-                    "title":"Due date",
+                    "title": "Due date",
                     "description": "The date the milestone is due.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
-                "dateModified" : {
-                    "title":"Date modified",
+                "dateModified": {
+                    "title": "Date modified",
                     "description": "The date the milestone was last reviewed or modified and the status was altered or confirmed to still be correct.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "status": {
-                    "title":"Status",
+                    "title": "Status",
                     "description": "The status that was realized on the date provided in dateModified, drawn from the [milestoneStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-status).",
-                    "type": ["string", "null"],
-                    "enum": ["met", "notMet", "partiallyMet", null],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "enum": [
+                        "met",
+                        "notMet",
+                        "partiallyMet",
+                        null
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "documents": {
-                    "title":"Documents",
+                    "title": "Documents",
                     "description": "List of documents associated with this milestone.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": { "idRef": "id" },
-                    "items": { "$ref": "#/definitions/Document" },
+                    "mergeOptions": {
+                        "idRef": "id"
+                    },
+                    "items": {
+                        "$ref": "#/definitions/Document"
+                    },
                     "uniqueItems": true
                 }
             },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
@@ -570,133 +885,175 @@
             "type": "object",
             "title": "Document",
             "description": "Links to, or descriptions of, external documents can be attached at various locations within the standard. Documents may be supporting information, formal notices, downloadable forms, or any other kind of resource that should be made public as part of full open contracting.",
-            "required": ["id"],
+            "required": [
+                "id"
+            ],
             "properties": {
                 "id": {
-                    "title":"ID",
+                    "title": "ID",
                     "description": "A local, unique identifier for this document. This field is used to keep track of multiple revisions of a document through the compilation from release to record mechanism.",
-                    "type": ["string", "integer"],
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
                     "mergeStrategy": "overwrite"
                 },
                 "documentType": {
-                    "title":"Document type",
+                    "title": "Document type",
                     "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "title": {
-                    "title":"Title",
+                    "title": "Title",
                     "description": "The document title.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
-                    "title":"Description",
+                    "title": "Description",
                     "description": "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "url": {
-                    "title":"URL",
+                    "title": "URL",
                     "description": " direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "uri",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "datePublished": {
-                    "title":"Date published",
+                    "title": "Date published",
                     "description": "The date on which the document was first published. This is particularly important for legally important documents such as notices of a tender.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "dateModified": {
-                    "title":"Date modified",
+                    "title": "Date modified",
                     "description": "Date that the document was last modified",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "format": {
-                    "title":"Format",
+                    "title": "Format",
                     "description": "The format of the document taken from the [IANA Media Types code list](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "language": {
-                    "title":"Language",
+                    "title": "Language",
                     "description": "Specifies the language of the linked document using either two-digit [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of two-letter codes from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "Budget": {
             "type": "object",
             "title": "Budget information",
-            "description": "This section contain information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Fiscal Data Package](http://fiscal.dataprotocols.org/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+            "description": "This section contains basic information about the budget estimated for, or allocated to, this contracting process at the present time. Further documentation and data about how budgets have been allocated to a contracting process should be published outside of OCDS data, according to the best available standards. ",
             "properties": {
-                "source": {
-                    "title": "Data Source",
-                    "description": "Used to point either to a corresponding Budget Data Package, or to a machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
-                    "type":["string", "null"],
+                "id": {
+                    "title": "ID",
+                    "description": "An identifier for the budget line item which provides funds for this contracting process. Wherever possible, this identifier should be possible to cross-reference against formal budget documents.",
                     "mergeStrategy": "ocdsVersion",
-                    "format": "uri"
-                },
-                "id":{ 
-                    "title":"ID",
-                    "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source.",
-                    "mergeStrategy": "ocdsVersion",
-                    "type":["string", "integer", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "description": {
                     "title": "Budget Source",
-                    "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.",
+                    "description": "A short free text description of the budget allocation for this contracting process. This may be used to provide human readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorisations given to the budget allocation). ",
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
-                "amount": { 
-                    "title":"Amount",
-                    "description": "The value of the budget line item.",
+                "amount": {
+                    "title": "Amount",
+                    "description": "The total value of budget allocations for this contracting process. The budget breakdown extension can be used to provide data for multiple budget sources, or to split the budget by years or other periods. ",
                     "$ref": "#/definitions/Value"
                 },
-                "project": {
-                    "title": "Project title",
-                    "description": "The name of the project that through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
-                },
-                "projectID": {
-                    "title": "Project identifier",
-                    "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.",
-                    "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "integer", "null"]
-                },
-                "uri":{
+                "uri": {
                     "title": "Linked budget information",
-                    "description": "A URI pointing directly to a machine-readable record about the related budget or projects for this contracting process.",
+                    "description": "A URI pointing directly to records about the related budget for this contracting process. Where possible this URI should return machine and human-readable representations of the data.",
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "uri"
+                },
+                "budgetBreakdown": {
+                    "description": "A detailed breakdown of the budget by period and/or participating funders.",
+                    "title": "Budget breakdown",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/BudgetBreakdown"
+                    }
                 }
             },
             "patternProperties": {
                 "^(source_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "^(project_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
@@ -704,49 +1061,63 @@
             "type": "object",
             "title": "Transaction information",
             "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
-            "required": ["id"],
+            "required": [
+                "id"
+            ],
             "properties": {
-                "id":{ 
-                    "title":"ID",
+                "id": {
+                    "title": "ID",
                     "description": "A unique identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For the budget data package this is the id, for IATI, the transaction reference.",
-                    "type": ["string", "integer"],
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
                     "mergeStrategy": "overwrite"
                 },
                 "source": {
                     "title": "Data source",
                     "description": "Used to point either to a corresponding Budget Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "uri"
                 },
                 "date": {
-                    "title":"Date",
+                    "title": "Date",
                     "description": "The date of the transaction",
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time"
                 },
-                "amount": { 
-                    "title":"Amount",
+                "amount": {
+                    "title": "Amount",
                     "description": "The value of the transaction.",
                     "$ref": "#/definitions/Value"
                 },
-                "providerOrganization":{
-                    "title":"Provider organization",
+                "providerOrganization": {
+                    "title": "Provider organization",
                     "description": "The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
                     "$ref": "#/definitions/Identifier"
                 },
-                "receiverOrganization":{
-                    "title":"Receiver organization",
+                "receiverOrganization": {
+                    "title": "Receiver organization",
                     "description": "The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
                     "$ref": "#/definitions/Identifier"
                 },
-                "uri":{
-                    "title":"Linked spending information",
-                    "description":"A URI pointing directly to a machine-readable record about this spending transaction.",
+                "uri": {
+                    "title": "Linked spending information",
+                    "description": "A URI pointing directly to a machine-readable record about this spending transaction.",
                     "mergeStrategy": "ocdsVersion",
-                    "type":["string", "null"],
-                    "format":"uri"
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "uri"
                 }
             }
         },
@@ -755,111 +1126,171 @@
             "description": "An organization.",
             "type": "object",
             "properties": {
-                "identifier": { 
-                    "title":"Primary identifier",
+                "identifier": {
+                    "title": "Primary identifier",
                     "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for the preferred scheme and identifier to use.",
-                    "$ref": "#/definitions/Identifier" 
+                    "$ref": "#/definitions/Identifier"
                 },
-                "additionalIdentifiers": { 
-                    "title":"Additional identifiers",
+                "additionalIdentifiers": {
+                    "title": "Additional identifiers",
                     "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
                     "type": "array",
                     "mergeStrategy": "ocdsVersion",
-                    "items": { "$ref": "#/definitions/Identifier" },
+                    "items": {
+                        "$ref": "#/definitions/Identifier"
+                    },
                     "uniqueItems": true
                 },
                 "name": {
-                    "title":"Common name",
+                    "title": "Common name",
                     "description": "The common name of the organization. The ID property provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization is known. This field could also include details of the department or sub-unit involved in this contracting process.",
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
-                "address": { "$ref": "#/definitions/Address" },
-                "contactPoint": { "$ref": "#/definitions/ContactPoint" }
+                "address": {
+                    "$ref": "#/definitions/Address"
+                },
+                "contactPoint": {
+                    "$ref": "#/definitions/ContactPoint"
+                },
+                "id": {
+                    "description": "The ID used for cross-referencing to the parties section. This field should be composed of {identifier.scheme}-{identifier.id}-{department-identifier}.",
+                    "title": "Entity ID",
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
+                    "mergeStrategy": "overwrite"
+                },
+                "roles": {
+                    "description": "The party's role(s) in the contracting process. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+                    "title": "Entity roles",
+                    "mergestrategy": "ocdsOmit",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
             },
             "patternProperties": {
                 "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "Item": {
-            "title":"Item",
+            "title": "Item",
             "type": "object",
             "description": "A good, service, or work to be contracted.",
-            "required": ["id"],
+            "required": [
+                "id"
+            ],
             "properties": {
                 "id": {
-                    "title":"ID",
+                    "title": "ID",
                     "description": "A local identifier to reference and merge the items by. Must be unique within a given array of items.",
-                    "type": ["string", "integer"],
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
                     "mergeStrategy": "overwrite"
                 },
                 "description": {
-                    "title":"Description",
+                    "title": "Description",
                     "description": "A description of the goods, services to be provided.",
                     "mergeStrategy": "ocdsVersion",
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "classification": {
-                    "title":"Classification",
+                    "title": "Classification",
                     "description": "The primary classification for the item. See the [itemClassificationScheme](http://standard.open-contracting.org/latest/en/schema/codelists/#item-classification-scheme) to identify preferred classification lists, including CPV and GSIN.",
                     "$ref": "#/definitions/Classification"
                 },
                 "additionalClassifications": {
-                    "title":"Additional classifications",
+                    "title": "Additional classifications",
                     "description": "An array of additional classifications for the item. See the [itemClassificationScheme](http://standard.open-contracting.org/latest/en/schema/codelists/#item-classification-scheme) codelist for common options to use in OCDS. This may also be used to present codes from an internal classification scheme.",
                     "type": "array",
                     "mergeStrategy": "ocdsVersion",
-                    "items": { "$ref": "#/definitions/Classification" },
+                    "items": {
+                        "$ref": "#/definitions/Classification"
+                    },
                     "uniqueItems": true
                 },
                 "quantity": {
-                    "title":"Quantity",
+                    "title": "Quantity",
                     "description": "The number of units required",
                     "mergeStrategy": "ocdsVersion",
                     "minimum": 0,
-                    "type": ["integer", "null"]
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
                 },
                 "unit": {
-                    "title":"Unit",
+                    "title": "Unit",
                     "description": "Description of the unit which the good comes in e.g. hours, kilograms. Made up of a unit name, and the value of a single unit.",
                     "type": "object",
                     "properties": {
                         "name": {
-                            "title":"Name",
+                            "title": "Name",
                             "description": "Name of the unit",
                             "mergeStrategy": "ocdsVersion",
-                            "type": ["string", "null"]
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         },
                         "value": {
-                            "title":"Value",
+                            "title": "Value",
                             "description": "The monetary value of a single unit.",
                             "$ref": "#/definitions/Value"
                         }
                     },
                     "patternProperties": {
                         "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                            "type": ["string", "null"]
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         }
                     }
+                },
+                "deliveryAddress": {
+                    "$ref": "#/definitions/Address"
+                },
+                "deliveryLocation": {
+                    "$ref": "#/definitions/Location"
                 }
             },
             "patternProperties": {
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "Amendment": {
-            "title":"Amendment",
-            "type": "object",
             "title": "Amendment information",
+            "type": "object",
             "properties": {
                 "date": {
                     "title": "Amendment date",
-                    "description":"The data of this amendment.",
-                    "type": ["string", "null"],
+                    "description": "The data of this amendment.",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -872,226 +1303,819 @@
                         "type": "object",
                         "properties": {
                             "property": {
-                                "title":"Property",
+                                "title": "Property",
                                 "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. ",
                                 "type": "string"
                             },
                             "former_value": {
-                                "title":"Former Value",
+                                "title": "Former Value",
                                 "description": "The previous value of the changed property, in whatever type the property is.",
-                                "type": ["string", "number", "integer", "array", "object", "null"]
+                                "type": [
+                                    "string",
+                                    "number",
+                                    "integer",
+                                    "array",
+                                    "object",
+                                    "null"
+                                ]
                             }
                         }
                     }
                 },
                 "rationale": {
-                    "title":"Rationale",
+                    "title": "Rationale",
                     "description": "An explanation for the amendment.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(rationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "Classification": {
-            "title":"Classification",
+            "title": "Classification",
             "type": "object",
             "properties": {
                 "scheme": {
-                    "title":"Scheme",
+                    "title": "Scheme",
                     "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://standard.open-contracting.org/latest/en/schema/codelists/#item-classification-scheme) wherever possible.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "id": {
-                    "title":"ID",
+                    "title": "ID",
                     "description": "The classification code drawn from the selected scheme.",
-                    "type": ["string", "integer", "null"],
+                    "type": [
+                        "string",
+                        "integer",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "description": {
-                    "title":"Description",
+                    "title": "Description",
                     "description": "A textual description or title for the code.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "uri": {
-                    "title":"URI",
+                    "title": "URI",
                     "description": "A URI to identify the code. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.",
-                    "type": ["string", "null"],
-                    "format" : "uri",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "uri",
                     "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "Identifier": {
-            "title":"Identifier",
+            "title": "Identifier",
             "type": "object",
             "properties": {
                 "scheme": {
-                    "title":"Scheme",
+                    "title": "Scheme",
                     "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/latest/en/schema/codelists/#organization-identifier-scheme).",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "id": {
-                    "title":"ID",
+                    "title": "ID",
                     "description": "The identifier of the organization in the selected scheme.",
-                    "type": ["string", "integer", "null"],
+                    "type": [
+                        "string",
+                        "integer",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "legalName": {
-                    "title":"Legal Name",
+                    "title": "Legal Name",
                     "description": "The legally registered name of the organization.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 },
                 "uri": {
-                    "title":"URI",
+                    "title": "URI",
                     "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.",
-                    "type": ["string", "null"],
-                    "format" : "uri",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "uri",
                     "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "Address": {
-            "title":"Address",
+            "title": "Address",
             "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
             "type": "object",
             "properties": {
                 "streetAddress": {
-                    "title":"Street address",
-                    "type": ["string", "null"],
+                    "title": "Street address",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "description": "The street address. For example, 1600 Amphitheatre Pkwy.",
                     "mergeStrategy": "ocdsVersion"
                 },
-                "locality":{
-                    "title":"Locality",
-                    "type": ["string", "null"],
+                "locality": {
+                    "title": "Locality",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "description": "The locality. For example, Mountain View.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "region": {
-                    "title":"Region",
-                    "type": ["string", "null"],
-                    "description":"The region. For example, CA.",
+                    "title": "Region",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The region. For example, CA.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "postalCode": {
-                    "title":"Postalcode",
-                    "type": ["string", "null"],
-                    "description":"The postal code. For example, 94043.",
+                    "title": "Postalcode",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The postal code. For example, 94043.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "countryName": {
-                    "title":"Country name",
-                    "type": ["string", "null"],
-                    "description":"The country name. For example, United States.",
+                    "title": "Country name",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The country name. For example, United States.",
                     "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "ContactPoint": {
-            "title":"Contact point",
+            "title": "Contact point",
             "type": "object",
             "description": "An person, contact point or department to contact in relation to this contracting process.",
             "properties": {
                 "name": {
-                    "title":"Name",
-                    "type": ["string", "null"],
-                    "description":"The name of the contact person, department, or contact point, for correspondence relating to this contracting process.",
+                    "title": "Name",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process.",
                     "mergeStrategy": "ocdsVersion"
                 },
-                "email":{
-                    "title":"Email",
-                    "type": ["string", "null"],
-                    "description":"The e-mail address of the contact point/person.",
+                "email": {
+                    "title": "Email",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The e-mail address of the contact point/person.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "telephone": {
-                    "title":"Telephone",
-                    "type": ["string", "null"],
-                    "description":"The telephone number of the contact point/person. This should include the international dialling code.",
+                    "title": "Telephone",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The telephone number of the contact point/person. This should include the international dialling code.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "faxNumber": {
-                    "title":"Fax number",
-                    "type": ["string", "null"],
-                    "description":"The fax number of the contact point/person. This should include the international dialling code.",
+                    "title": "Fax number",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The fax number of the contact point/person. This should include the international dialling code.",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "url": {
-                    "title":"URL",
-                    "type": ["string", "null"],
-                    "description":"A web address for the contact point/person.",
+                    "title": "URL",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "A web address for the contact point/person.",
                     "format": "uri",
                     "mergeStrategy": "ocdsVersion"
                 }
             },
             "patternProperties": {
                 "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": ["string", "null"]
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             }
         },
         "Value": {
-            "title":"Value",
+            "title": "Value",
             "type": "object",
             "properties": {
                 "amount": {
-                    "title":"Amount",
+                    "title": "Amount",
                     "description": "Amount as a number.",
-                    "type": ["number", "null"],
+                    "type": [
+                        "number",
+                        "null"
+                    ],
                     "minimum": 0,
                     "mergeStrategy": "ocdsVersion"
                 },
                 "currency": {
-                    "title":"Currency",
+                    "title": "Currency",
                     "description": "The currency in 3-letter ISO 4217 format.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "mergeStrategy": "ocdsVersion"
                 }
             }
         },
         "Period": {
-            "title":"Period",
+            "title": "Period",
             "type": "object",
             "properties": {
-                "startDate": { 
-                    "title":"Start date",
+                "startDate": {
+                    "title": "Start date",
                     "description": "The start date for the period.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 },
                 "endDate": {
-                    "title":"End date",
+                    "title": "End date",
                     "description": "The end date for the period.",
-                    "type": ["string", "null"],
+                    "type": [
+                        "string",
+                        "null"
+                    ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
                 }
             }
+        },
+        "BudgetBreakdown": {
+            "description": "This section allows a detailed budget breakdown to be expressed, covering multiple budget sources and multiple periods",
+            "title": "Detailed budget breakdown",
+            "properties": {
+                "description": {
+                    "mergeStrategy": "ocdsVersion",
+                    "description": "A short free text description of this budget entry.",
+                    "title": "Description",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "mergeStrategy": "ocdsVersion",
+                    "description": "An identifier for this particular budget entry.",
+                    "type": [
+                        "string",
+                        "integer",
+                        "null"
+                    ]
+                },
+                "amount": {
+                    "description": "The value of the budget line item.",
+                    "$ref": "#/definitions/Value"
+                },
+                "sourceParty": {
+                    "description": "The organisation or other party related to this budget entry. If the budget amount is positive, this indicates a flow of resources from the party to the contracting process. If the budget amount is negative, it indicates a payment from the contracting process to this party.",
+                    "title": "Source party",
+                    "$ref": "#/definitions/OrganizationReference"
+                },
+                "period": {
+                    "description": "The period covered by this budget entry.",
+                    "title": "Budget period",
+                    "$ref": "#/definitions/Period"
+                },
+                "uri": {
+                    "mergeStrategy": "ocdsVersion",
+                    "description": "A URI pointing directly to a machine-readable information about this budget entry.",
+                    "title": "Linked budget information",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "uri"
+                }
+            },
+            "type": "object"
+        },
+        "Project": {
+            "patternProperties": {
+                "^(project_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "^(source_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "description": "The project section can be used to describe the relationship between this contracting process and a project or programme of work.",
+            "title": "Project Information",
+            "properties": {
+                "description": {
+                    "mergeStrategy": "ocdsVersion",
+                    "description": "A short free text description of the project.",
+                    "title": "Project description",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "mergeStrategy": "ocdsVersion",
+                    "description": "An externally provided identifier for the project. This might be drawn from a projects register, or may be based on the canonical version of a project name. Project IDs should be unique to a publisher. URIs can be used. ",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "additionalSectors": {
+                    "description": "Additional sector classifications, using local vocabularies where required..",
+                    "title": "Additional sector classification",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Classification"
+                    }
+                },
+                "totalValue": {
+                    "description": "The total anticipated value of the project over it's lifetime. ",
+                    "$ref": "#/definitions/Value"
+                },
+                "sector": {
+                    "description": "A high-level categorisation of the main sector this procurement process relates to. Use of [UN COFOG codes](http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4&Lg=1), with 'COFOG' as the classification scheme, and the numerical COFOG code is recommended for the primary sector classification.",
+                    "title": "Project sector",
+                    "$ref": "#/definitions/Classification"
+                },
+                "locations": {
+                    "description": "Information about the location where a project is taking place.",
+                    "title": "Project location",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Location"
+                    }
+                },
+                "title": {
+                    "mergeStrategy": "ocdsVersion",
+                    "description": "The name of the project to which this contracting process relates. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. ",
+                    "title": "Project Title",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "uri": {
+                    "mergeStrategy": "ocdsVersion",
+                    "description": "A URI pointing to further information about this project.",
+                    "title": "Linked project information",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "uri"
+                }
+            },
+            "type": "object"
+        },
+        "Location": {
+            "description": "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both.",
+            "title": "Delivery Location",
+            "properties": {
+                "geometry": {
+                    "description": "We follow the [GeoJSON standard](http://geojson.org/) to express basic location information, using latitude and longitude values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection.  A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used. ",
+                    "properties": {
+                        "type": {
+                            "description": "The type of [geoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide latitude and longitude use 'point', and enter an array of [latitude,longitude] as the value of coordinates field: e.g. [37.42,-122.085]. Note the capitalisation of type values - set in order to maintain compatibility with geoJSON.",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "Point",
+                                "MultiPoint",
+                                "LineString",
+                                "MultiLineString",
+                                "Polygon",
+                                "MultiPolygon"
+                            ]
+                        },
+                        "coordinates": {
+                            "description": "The relevant array of points, e.g. [latitude,longitude], or nested array, for the geoJSON geometry being described. The longitude and latitude MUST be expressed in decimal degrees in the WGS84 (EPSG:4326) projection",
+                            "items": [
+                                {
+                                    "type": [
+                                        "number",
+                                        "array"
+                                    ]
+                                },
+                                {
+                                    "type": [
+                                        "number",
+                                        "array"
+                                    ]
+                                }
+                            ],
+                            "type": [
+                                "array",
+                                "null"
+                            ],
+                            "minItems": 2
+                        }
+                    },
+                    "type": "object",
+                    "notes_for_guidance": "The guidance notes should describe when to use MultiPoint, and when to use multiple line-items each with their own locations"
+                },
+                "description": {
+                    "description": "A name or description of this location. This might include the name(s) of the location(s), or might provide a human readable description of the location to be covered. This description may be used in a user-interface.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "gazetteer": {
+                    "properties": {
+                        "identifiers": {
+                            "description": "An array of one or more codes drawn from the gazetteer indicated in scheme.",
+                            "items": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "type": [
+                                "array",
+                                "null"
+                            ]
+                        },
+                        "scheme": {
+                            "description": "The entry of the selected gazetteer in the gazetteers codelist. The codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        }
+                    },
+                    "type": "object"
+                },
+                "uri": {
+                    "description": "A URI to a further description of the activity location. This may be a human readable document with information on the location, or a machine-readable description of the location.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "OrganizationReference": {
+            "patternProperties": {
+                "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
+            "title": "Organization reference",
+            "type": "object",
+            "required": [
+                "id",
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "description": "The id of the party being referenced. This must match the id of an party in the parties section",
+                    "title": "Organization ID",
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
+                    "mergeStrategy": "overwrite"
+                },
+                "name": {
+                    "description": "The name of the party being referenced. This must match the name of an party in the parties section",
+                    "title": "Organization name",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                }
+            }
+        },
+        "RequirementGroup": {
+            "required": [
+                "id"
+            ],
+            "description": "A requirement group is a set of requirements that must be fulfilled together to validate a criterion.",
+            "title": "Requirement group",
+            "properties": {
+                "description": {
+                    "description": "Requirement group description",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "id": {
+                    "description": "The identifier for this requirement group. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for further details.",
+                    "type": "string",
+                    "mergeStrategy": "overwrite"
+                },
+                "requirements": {
+                    "$ref": "#/definitions/Requirement"
+                }
+            },
+            "type": "object"
+        },
+        "RequirementResponse": {
+            "required": [
+                "id",
+                "requirement"
+            ],
+            "description": "An assertion that responds to a single requirement. A requirement response provides the value for the requirement and may provide the period to which it applies.",
+            "title": "Requirement Response",
+            "properties": {
+                "value": {
+                    "description": "Requirement response value. The value must be of the type defined in the requirement.dataType field",
+                    "type": [
+                        "string",
+                        "integer",
+                        "number",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "description": {
+                    "description": "Requirement response description",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "id": {
+                    "description": "The identifier for this requirement response. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for further details.",
+                    "type": "string",
+                    "mergeStrategy": "overwrite"
+                },
+                "requirement": {
+                    "description": "The id of the requirement which the response is applicable to",
+                    "type": "string",
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "title": {
+                    "description": "Requirement response title",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "period": {
+                    "description": "The period which the requirement response is applicable to",
+                    "%ref": "#/definitions/Period"
+                }
+            },
+            "type": "object"
+        },
+        "Criterion": {
+            "required": [
+                "id"
+            ],
+            "description": "A criterion on which either bidders or items will be judged, evaluated or assessed.",
+            "title": "Criterion",
+            "properties": {
+                "description": {
+                    "description": "Criterion description",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "id": {
+                    "description": "The identifier for this criterion. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for further details.",
+                    "type": [
+                        "string",
+                        "integer"
+                    ],
+                    "mergeStrategy": "overwrite"
+                },
+                "relatesTo": {
+                    "description": "The schema element that the criterion judges, evaluates or assesses. For example criterion may be defined against items or against bidders.",
+                    "type": "string",
+                    "mergeStrategy": "ocdsVersion",
+                    "enum": [
+                        "item",
+                        "tenderer"
+                    ]
+                },
+                "requirementGroups": {
+                    "description": "A list of requirement groups for this Criterion. A criterion is satisfied by one or more requirement groups being met. A requirement group is met when all requirements in the group are satisfied.",
+                    "title": "Requirement groups",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RequirementGroup"
+                    },
+                    "mergeStrategy": "arrayMergeById",
+                    "uniqueItems": true,
+                    "mergeOptions": {
+                        "idRef": "id"
+                    }
+                },
+                "relatedItem": {
+                    "description": "Where relatesTo = \"item\" this field must be populated with the id of the item the criterion relates to. Where relatesTo <> \"item\" this field should be omitted",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "title": {
+                    "description": "Criterion title",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "source": {
+                    "description": "Source of response to the requirements specificed in the criterion, for example responses may be submitted by tenderers or by an assessment committee at the procuringEntity.",
+                    "type": "string",
+                    "mergeStrategy": "ocdsVersion",
+                    "enum": [
+                        "tenderer",
+                        "buyer",
+                        "procuringEntity"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "Requirement": {
+            "required": [
+                "id"
+            ],
+            "description": "An atomic requirement. Requirements can specify the expected value that the response has to contain, or a range of threshold values within which the response has to fit in. The requirement may apply to a certain period of time",
+            "title": "Requirement",
+            "properties": {
+                "description": {
+                    "description": "Requirement description",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "id": {
+                    "description": "The identifier for this requirement. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for further details.",
+                    "type": "string",
+                    "mergeStrategy": "overwrite"
+                },
+                "minValue": {
+                    "description": "Used to state the lower bound of the requirement when the response must be within a certain range",
+                    "type": [
+                        "integer",
+                        "number",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "expectedValue": {
+                    "description": "Used to state the requirement when the response must be particular value",
+                    "type": [
+                        "string",
+                        "integer",
+                        "number",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "dataType": {
+                    "description": "Requirement description",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion",
+                    "enum": [
+                        "string",
+                        "date-time",
+                        "number",
+                        "integer"
+                    ]
+                },
+                "pattern": {
+                    "description": "A regular expression against which validate the requirement response",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "maxValue": {
+                    "description": "Used to state the upper bound of the requirement when the response must be within a certain range",
+                    "type": [
+                        "integer",
+                        "number",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "title": {
+                    "description": "Requirement title",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "mergeStrategy": "ocdsVersion"
+                },
+                "period": {
+                    "description": "Used to specify a particular period the requirement applies to, for example the bidder's turnover in a given year",
+                    "%ref": "#/definitions/Period"
+                }
+            },
+            "type": "object"
         }
     }
 }

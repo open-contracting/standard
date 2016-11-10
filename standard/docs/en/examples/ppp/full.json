@@ -2,23 +2,792 @@
     "releases": [
         {
             "language": "en",
-            "ocid": "ocds-eg0001-ppp-hmt:835",
-            "id": "ocds-eg0001-pf-hmt:835-planning-01",
+            "ocid": "ocds-eg0001-ppp-hmt-835-pqq",
+            "id": "ocds-eg0001-pf-hmt-835-pqq-planning-01",
             "initiationType": "ppp",
             "title": "Mersey Gateway",
             "tag": [
                 "planning"
             ],
             "planning": {
-                "sector": "transport",
-                "subSector": "roads",
+                "project": {
+                    "sector": "transport",
+                    "subSector": "roads",
+                    "locations": [
+                        {
+                            "description": "Local Authority Area: Halton Borough Council",
+                            "gazetteer": {
+                                "scheme": "GEONAMES",
+                                "identifiers": "2647601.0"
+                            }
+                        }
+                    ]
+                },
                 "budget": {
+                    "id": "capital-expenditure",
                     "description": "Total capital expenditure",
                     "amount": {
                         "amount": 589000000,
                         "currency": "GBP"
+                    },
+                    "budgetBreakdown": [
+                        {
+                            "id": "1.0",
+                            "description": "Development cost grant",
+                            "amount": {
+                                "amount": "86000000.0",
+                                "currency": "GBP"
+                            },
+                            "sourceParty": {
+                                "id": "GB-GOV",
+                                "name": "UK Government"
+                            },
+                            "uri": "http://www.merseygateway.co.uk/about-the-mersey-gateway-project/funding-of-the-mersey-gateway-projec/"
+                        }
+                    ]
+                },
+                "estimatedDemand": [
+                    {
+                        "quantity": "29200000.0",
+                        "unit": {
+                            "name": "Trips"
+                        },
+                        "dimensions": {
+                            "period": {
+                                "startDate": "2016-01-01T00:00:00Z",
+                                "endDate": "2016-12-31T23:59:59Z"
+                            },
+                            "vehicleType": "Cars"
+                        }
+                    },
+                    {
+                        "quantity": "300000.0",
+                        "unit": {
+                            "name": "Trips"
+                        },
+                        "dimensions": {
+                            "period": {
+                                "startDate": "2016-01-01T00:00:00Z",
+                                "endDate": "2016-12-31T23:59:59Z"
+                            },
+                            "vehicleType": "Trucks"
+                        }
+                    }
+                ]
+            },
+            "tender": {
+                "procurementMethod": "open"
+            },
+            "description": "The Mersey Gateway Project is a major civil engineering scheme to build a new six-lane cable-stayed toll bridge over the River Mersey and a 9.2 kilometre road network connecting the new bridge to the main motorway network in the north west of England. ",
+            "contract": {
+                "financialModel": [
+                    {
+                        "id": "1.0",
+                        "indicator": "Discount Rate",
+                        "indicatorCode": "discountRate",
+                        "indicatorValue": "0.035"
+                    }
+                ]
+            },
+            "entities": [
+                {
+                    "id": "XR-NUTS-UK00ET",
+                    "name": "Halton Borough Council",
+                    "role": "sponsor",
+                    "identifier": {
+                        "scheme": "XR-NUTS",
+                        "id": "UK00ET",
+                        "legalName": "Halton Borough Council"
                     }
                 }
+            ]
+        },
+        {
+            "language": "en",
+            "ocid": "ocds-eg0001-ppp-hmt-835-pqq",
+            "id": "ocds-eg0001-pf-hmt-835-pqq-qualification-01",
+            "initiationType": "ppp",
+            "title": "Mersey Gateway",
+            "tag": [
+                "tender"
+            ]
+        },
+        {
+            "language": "en",
+            "ocid": "ocds-eg0001-ppp-hmt-835-pqq",
+            "id": "ocds-eg0001-pf-hmt-835-pqq-award-01",
+            "initiationType": "ppp",
+            "title": "Mersey Gateway",
+            "tag": [
+                "award"
+            ],
+            "tender": {
+                "relatedProcesses": [
+                    {
+                        "id": "1.0",
+                        "title": "Mersey Gateway Competitive Dialogue",
+                        "relationship": "resultingProcess",
+                        "ocid": "ocds-eg0001-ppp-hmt-835",
+                        "uri": "http://example.open-contracting.org/records/ocds-eg0001-ppp-hmt-835"
+                    }
+                ]
+            },
+            "awards": [
+                {
+                    "id": "ocds-eg0001-ppp-hmt-835-pqq-bidders",
+                    "title": "Selection of shortlisted bidders",
+                    "description": "Selection of shortlisted bidders to engage in competitive dialogue process",
+                    "status": "active",
+                    "date": "2012-02-17T09:00:00Z",
+                    "suppliers": [
+                        {
+                            "id": "bbbtpep",
+                            "name": "Balfour Beatty, Bouygues Travaux Publics, Egis Projects Consortium"
+                        },
+                        {
+                            "id": "merseylink",
+                            "name": "Merseylink Consortium"
+                        },
+                        {
+                            "id": "mgl",
+                            "name": "MGL Consortium"
+                        }
+                    ]
+                }
+            ],
+            "entities": [
+                {
+                    "id": "bbbtpep",
+                    "name": "Balfour Beatty, Bouygues Travaux Publics, Egis Projects Consortium",
+                    "role": "qualifiedBidder",
+                    "shareholders": [
+                        {
+                            "id": "1.0",
+                            "shareholder": {
+                                "id": "GB-COH-395826",
+                                "name": "BALFOUR BEATTY PLC"
+                            }
+                        },
+                        {
+                            "id": "2.0",
+                            "shareholder": {
+                                "id": "FR-RCS-40798530800011",
+                                "name": "BOUYGUES TRAVAUX PUBLICS"
+                            }
+                        },
+                        {
+                            "id": "3.0",
+                            "shareholder": {
+                                "id": "FR-RCS-37889381200032",
+                                "name": "EGIS PROJECTS SA"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "merseylink",
+                    "name": "Merseylink Consortium",
+                    "role": "qualifiedBidder",
+                    "shareholders": [
+                        {
+                            "id": "1.0",
+                            "shareholder": {
+                                "id": "AU-ABN-54096705109",
+                                "name": "MACQUARIE CORPORATE HOLDINGS PTY LIMITED "
+                            }
+                        },
+                        {
+                            "id": "2.0",
+                            "shareholder": {
+                                "id": "GB-COH-4015826",
+                                "name": "BILFINGER BERGER PROJECT INVESTMENTS LIMITED"
+                            }
+                        },
+                        {
+                            "id": "3.0",
+                            "shareholder": {
+                                "id": "xES-SMR-83641332",
+                                "name": "VIALIA SOCIEDAD GESTORA DE CONCESIONES DE INFRAESTRUCTURAS SL "
+                            }
+                        },
+                        {
+                            "id": "4.0",
+                            "shareholder": {
+                                "id": "xES-BMR-A28854727",
+                                "name": "FCC CONSTRUCCION S A"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "mgl",
+                    "name": "MGL Consortium",
+                    "role": "qualifiedBidder",
+                    "shareholders": [
+                        {
+                            "id": "1.0",
+                            "shareholder": {
+                                "id": "GB-COH-5047034",
+                                "name": "GALLIFORD TRY INVESTMENTS LIMITED"
+                            }
+                        },
+                        {
+                            "id": "2.0",
+                            "shareholder": {
+                                "id": "xDE-HRB-Amtsgericht Essen 4727",
+                                "name": "HOCHTIEF PPP Solutions GmbH"
+                            }
+                        },
+                        {
+                            "id": "3.0",
+                            "shareholder": {
+                                "id": "xES-SMR-82452087",
+                                "name": "IRIDIUM CONCESIONES DE INFRAESTRUCTURAS SA"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "GB-COH-395826",
+                    "name": "BALFOUR BEATTY PLC",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "GB-COH",
+                        "id": "395826.0",
+                        "legalName": "BALFOUR BEATTY PLC",
+                        "uri": "https://opencorporates.com/companies/gb/00395826"
+                    },
+                    "address": {
+                        "streetAddress": "5 Churchill Place",
+                        "locality": "Canary Wharf",
+                        "region": "London",
+                        "postalCode": "E14 5HU",
+                        "countryName": "United Kingdom"
+                    }
+                },
+                {
+                    "id": "FR-RCS-40798530800011",
+                    "name": "BOUYGUES TRAVAUX PUBLICS",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "FR-RCS",
+                        "id": "40798530800011.0",
+                        "legalName": "BOUYGUES TRAVAUX PUBLICS"
+                    },
+                    "address": {
+                        "streetAddress": "1 AVENUE EUGENE FREYSSINET\n",
+                        "region": "Guyancourt",
+                        "postalCode": "78280.0",
+                        "countryName": "France"
+                    }
+                },
+                {
+                    "id": "FR-RCS-37889381200032",
+                    "name": "EGIS PROJECTS SA",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "FR-RCS",
+                        "id": "37889381200032.0",
+                        "legalName": "EGIS PROJECTS SA"
+                    },
+                    "address": {
+                        "streetAddress": "15 AVENUE DU CENTRE",
+                        "region": "Guyancourt",
+                        "postalCode": "78280.0",
+                        "countryName": "France"
+                    }
+                },
+                {
+                    "id": "AU-ABN-54096705109",
+                    "name": "MACQUARIE CORPORATE HOLDINGS PTY LIMITED ",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "AU-ABN",
+                        "id": "54096705109.0",
+                        "legalName": "MACQUARIE CORPORATE HOLDINGS PTY LIMITED ",
+                        "uri": "https://opencorporates.com/companies/au/096705109"
+                    },
+                    "address": {
+                        "locality": "SYDNEY",
+                        "region": "NSW",
+                        "postalCode": "2000.0",
+                        "countryName": "Australia"
+                    }
+                },
+                {
+                    "id": "GB-COH-4015826",
+                    "name": "BILFINGER BERGER PROJECT INVESTMENTS LIMITED",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "GB-COH",
+                        "id": "4015826.0",
+                        "legalName": "BILFINGER BERGER PROJECT INVESTMENTS LIMITED",
+                        "uri": "https://opencorporates.com/companies/gb/04015826"
+                    },
+                    "address": {
+                        "streetAddress": "Part First Floor\n1 Grenfell Road\n",
+                        "locality": "Maidenhead",
+                        "region": "Berkshire",
+                        "postalCode": "SL6 1HN",
+                        "countryName": "United Kingdom"
+                    }
+                },
+                {
+                    "id": "xES-SMR-83641332",
+                    "name": "VIALIA SOCIEDAD GESTORA DE CONCESIONES DE INFRAESTRUCTURAS SL ",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "xES-SMR",
+                        "id": "83641332.0",
+                        "legalName": "VIALIA SOCIEDAD GESTORA DE CONCESIONES DE INFRAESTRUCTURAS SL ",
+                        "uri": "https://opencorporates.com/companies/es/83641332"
+                    }
+                },
+                {
+                    "id": "xES-BMR-A28854727",
+                    "name": "FCC CONSTRUCCION S A",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "xES-BMR",
+                        "id": "A28854727",
+                        "legalName": "FCC CONSTRUCCION S A",
+                        "uri": "https://beta.companieshouse.gov.uk/company/FC031636"
+                    }
+                },
+                {
+                    "id": "GB-COH-5047034",
+                    "name": "GALLIFORD TRY INVESTMENTS LIMITED",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "GB-COH",
+                        "id": "5047034.0",
+                        "legalName": "GALLIFORD TRY INVESTMENTS LIMITED",
+                        "uri": "https://opencorporates.com/companies/gb/05047034"
+                    },
+                    "address": {
+                        "streetAddress": "Cowley Business Park\nCowley\n",
+                        "locality": "Uxbridge\n",
+                        "region": "Middlesex",
+                        "postalCode": "UB8 2AL",
+                        "countryName": "United Kingdom"
+                    }
+                },
+                {
+                    "id": "xDE-HRB-Amtsgericht Essen 4727",
+                    "name": "HOCHTIEF PPP Solutions GmbH",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "xDE-HRB",
+                        "id": "Amtsgericht Essen 4727",
+                        "legalName": "HOCHTIEF PPP Solutions GmbH"
+                    },
+                    "address": {
+                        "streetAddress": "Alfredstraße 236\n",
+                        "region": "Essen",
+                        "postalCode": "45133.0",
+                        "countryName": "Germany"
+                    }
+                },
+                {
+                    "id": "xES-SMR-82452087",
+                    "name": "IRIDIUM CONCESIONES DE INFRAESTRUCTURAS SA",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "xES-SMR",
+                        "id": "82452087.0",
+                        "legalName": "IRIDIUM CONCESIONES DE INFRAESTRUCTURAS SA"
+                    }
+                }
+            ]
+        },
+        {
+            "language": "en",
+            "ocid": "ocds-eg0001-ppp-hmt-835",
+            "id": "ocds-eg0001-pf-hmt-835-dialogue-01",
+            "initiationType": "ppp",
+            "title": "Mersey Gateway",
+            "tag": [
+                "tender"
+            ],
+            "tender": {
+                "procurementMethod": "selective",
+                "procurementMethodRationale": "HBC conducted a PQQ process to select bidders for the competitive dialogue process",
+                "relatedProcesses": [
+                    {
+                        "id": "1.0",
+                        "title": "Mersey Gateway Planning & PQQ",
+                        "relationship": "qualification",
+                        "ocid": "ocds-eg0001-ppp-hmt-835-pqq",
+                        "uri": "http://example.open-contracting.org/records/ocds-eg0001-ppp-hmt-835-pqq"
+                    }
+                ]
+            },
+            "entities": [
+                {
+                    "id": "bbbtpep",
+                    "name": "Balfour Beatty, Bouygues Travaux Publics, Egis Projects Consortium",
+                    "role": "qualifiedBidder",
+                    "shareholders": [
+                        {
+                            "id": "1.0",
+                            "shareholder": {
+                                "id": "GB-COH-395826",
+                                "name": "BALFOUR BEATTY PLC"
+                            }
+                        },
+                        {
+                            "id": "2.0",
+                            "shareholder": {
+                                "id": "FR-RCS-40798530800011",
+                                "name": "BOUYGUES TRAVAUX PUBLICS"
+                            }
+                        },
+                        {
+                            "id": "3.0",
+                            "shareholder": {
+                                "id": "FR-RCS-37889381200032",
+                                "name": "EGIS PROJECTS SA"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "merseylink",
+                    "name": "Merseylink Consortium",
+                    "role": "qualifiedBidder",
+                    "shareholders": [
+                        {
+                            "id": "1.0",
+                            "shareholder": {
+                                "id": "AU-ABN-54096705109",
+                                "name": "MACQUARIE CORPORATE HOLDINGS PTY LIMITED "
+                            }
+                        },
+                        {
+                            "id": "2.0",
+                            "shareholder": {
+                                "id": "GB-COH-4015826",
+                                "name": "BILFINGER BERGER PROJECT INVESTMENTS LIMITED"
+                            }
+                        },
+                        {
+                            "id": "3.0",
+                            "shareholder": {
+                                "id": "xES-SMR-83641332",
+                                "name": "VIALIA SOCIEDAD GESTORA DE CONCESIONES DE INFRAESTRUCTURAS SL "
+                            }
+                        },
+                        {
+                            "id": "4.0",
+                            "shareholder": {
+                                "id": "xES-BMR-A28854727",
+                                "name": "FCC CONSTRUCCION S A"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "mgl",
+                    "name": "MGL Consortium",
+                    "role": "qualifiedBidder",
+                    "shareholders": [
+                        {
+                            "id": "1.0",
+                            "shareholder": {
+                                "id": "GB-COH-5047034",
+                                "name": "GALLIFORD TRY INVESTMENTS LIMITED"
+                            }
+                        },
+                        {
+                            "id": "2.0",
+                            "shareholder": {
+                                "id": "xDE-HRB-Amtsgericht Essen 4727",
+                                "name": "HOCHTIEF PPP Solutions GmbH"
+                            }
+                        },
+                        {
+                            "id": "3.0",
+                            "shareholder": {
+                                "id": "xES-SMR-82452087",
+                                "name": "IRIDIUM CONCESIONES DE INFRAESTRUCTURAS SA"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "GB-COH-395826",
+                    "name": "BALFOUR BEATTY PLC",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "GB-COH",
+                        "id": "395826.0",
+                        "legalName": "BALFOUR BEATTY PLC",
+                        "uri": "https://opencorporates.com/companies/gb/00395826"
+                    },
+                    "address": {
+                        "streetAddress": "5 Churchill Place",
+                        "locality": "Canary Wharf",
+                        "region": "London",
+                        "postalCode": "E14 5HU",
+                        "countryName": "United Kingdom"
+                    }
+                },
+                {
+                    "id": "FR-RCS-40798530800011",
+                    "name": "BOUYGUES TRAVAUX PUBLICS",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "FR-RCS",
+                        "id": "40798530800011.0",
+                        "legalName": "BOUYGUES TRAVAUX PUBLICS"
+                    },
+                    "address": {
+                        "streetAddress": "1 AVENUE EUGENE FREYSSINET\n",
+                        "region": "Guyancourt",
+                        "postalCode": "78280.0",
+                        "countryName": "France"
+                    }
+                },
+                {
+                    "id": "FR-RCS-37889381200032",
+                    "name": "EGIS PROJECTS SA",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "FR-RCS",
+                        "id": "37889381200032.0",
+                        "legalName": "EGIS PROJECTS SA"
+                    },
+                    "address": {
+                        "streetAddress": "15 AVENUE DU CENTRE",
+                        "region": "Guyancourt",
+                        "postalCode": "78280.0",
+                        "countryName": "France"
+                    }
+                },
+                {
+                    "id": "AU-ABN-54096705109",
+                    "name": "MACQUARIE CORPORATE HOLDINGS PTY LIMITED ",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "AU-ABN",
+                        "id": "54096705109.0",
+                        "legalName": "MACQUARIE CORPORATE HOLDINGS PTY LIMITED ",
+                        "uri": "https://opencorporates.com/companies/au/096705109"
+                    },
+                    "address": {
+                        "locality": "SYDNEY",
+                        "region": "NSW",
+                        "postalCode": "2000.0",
+                        "countryName": "Australia"
+                    }
+                },
+                {
+                    "id": "GB-COH-4015826",
+                    "name": "BILFINGER BERGER PROJECT INVESTMENTS LIMITED",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "GB-COH",
+                        "id": "4015826.0",
+                        "legalName": "BILFINGER BERGER PROJECT INVESTMENTS LIMITED",
+                        "uri": "https://opencorporates.com/companies/gb/04015826"
+                    },
+                    "address": {
+                        "streetAddress": "Part First Floor\n1 Grenfell Road\n",
+                        "locality": "Maidenhead",
+                        "region": "Berkshire",
+                        "postalCode": "SL6 1HN",
+                        "countryName": "United Kingdom"
+                    }
+                },
+                {
+                    "id": "xES-SMR-83641332",
+                    "name": "VIALIA SOCIEDAD GESTORA DE CONCESIONES DE INFRAESTRUCTURAS SL ",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "xES-SMR",
+                        "id": "83641332.0",
+                        "legalName": "VIALIA SOCIEDAD GESTORA DE CONCESIONES DE INFRAESTRUCTURAS SL ",
+                        "uri": "https://opencorporates.com/companies/es/83641332"
+                    }
+                },
+                {
+                    "id": "xES-BMR-A28854727",
+                    "name": "FCC CONSTRUCCION S A",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "xES-BMR",
+                        "id": "A28854727",
+                        "legalName": "FCC CONSTRUCCION S A",
+                        "uri": "https://beta.companieshouse.gov.uk/company/FC031636"
+                    }
+                },
+                {
+                    "id": "GB-COH-5047034",
+                    "name": "GALLIFORD TRY INVESTMENTS LIMITED",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "GB-COH",
+                        "id": "5047034.0",
+                        "legalName": "GALLIFORD TRY INVESTMENTS LIMITED",
+                        "uri": "https://opencorporates.com/companies/gb/05047034"
+                    },
+                    "address": {
+                        "streetAddress": "Cowley Business Park\nCowley\n",
+                        "locality": "Uxbridge\n",
+                        "region": "Middlesex",
+                        "postalCode": "UB8 2AL",
+                        "countryName": "United Kingdom"
+                    }
+                },
+                {
+                    "id": "xDE-HRB-Amtsgericht Essen 4727",
+                    "name": "HOCHTIEF PPP Solutions GmbH",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "xDE-HRB",
+                        "id": "Amtsgericht Essen 4727",
+                        "legalName": "HOCHTIEF PPP Solutions GmbH"
+                    },
+                    "address": {
+                        "streetAddress": "Alfredstraße 236\n",
+                        "region": "Essen",
+                        "postalCode": "45133.0",
+                        "countryName": "Germany"
+                    }
+                },
+                {
+                    "id": "xES-SMR-82452087",
+                    "name": "IRIDIUM CONCESIONES DE INFRAESTRUCTURAS SA",
+                    "role": "consortiaMember",
+                    "identifier": {
+                        "scheme": "xES-SMR",
+                        "id": "82452087.0",
+                        "legalName": "IRIDIUM CONCESIONES DE INFRAESTRUCTURAS SA"
+                    }
+                }
+            ]
+        },
+        {
+            "language": "en",
+            "ocid": "ocds-eg0001-ppp-hmt-835",
+            "id": "ocds-eg0001-pf-hmt-835-rfp-01"
+        },
+        {
+            "language": "en",
+            "ocid": "ocds-eg0001-ppp-hmt-835",
+            "id": "ocds-eg0001-pf-hmt-835-award-01"
+        },
+        {
+            "language": "en",
+            "ocid": "ocds-eg0001-ppp-hmt-835",
+            "id": "ocds-eg0001-pf-hmt-835-contract-01",
+            "entities": [
+                {
+                    "id": "GB-COH-08780140",
+                    "name": "MERSEYLINK (HOLDINGS) LIMITED",
+                    "role": "bidder",
+                    "identifier": {
+                        "scheme": "GB-COH",
+                        "id": "08780140",
+                        "legalName": "MERSEYLINK (HOLDINGS) LIMITED",
+                        "uri": "https://opencorporates.com/companies/gb/08780140"
+                    },
+                    "address": {
+                        "streetAddress": "Forward Point\nTan House Lane",
+                        "locality": "Widnes\n",
+                        "region": "Cheshire",
+                        "postalCode": "WA8 0SL",
+                        "countryName": "United Kingdom"
+                    },
+                    "contactPoint": {
+                        "name": "Mersey Link Contact Centre",
+                        "email": "info@merseylink.com",
+                        "telephone": "+44 333 200 1164",
+                        "url": "http://www.merseygateway.co.uk/contact-merseylink/"
+                    },
+                    "shareholders": [
+                        {
+                            "id": "1.0",
+                            "shareholder": {
+                                "id": "GB-COH-08811246",
+                                "name": "FCC MERSEY GATEWAY LIMITED"
+                            },
+                            "shareholding": "0.25",
+                            "votingRights": "ordinary"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ocid": "ocds-eg0001-ppp-hmt-835",
+            "id": "ocds-eg0001-pf-hmt-835-pqq-planning-01",
+            "contract": {
+                "financialModel": [
+                    {
+                        "id": "2.0",
+                        "indicator": "Risk Premium",
+                        "indicatorCode": "riskPremium",
+                        "indicatorValue": "0.0"
+                    }
+                ]
+            }
+        },
+        {
+            "ocid": "ocds-eg0001-ppp-hmt-835",
+            "id": "ocds-eg0001-pf-hmt-835-pqq-contract-01",
+            "entities": [
+                {
+                    "id": "GB-COH-08780140",
+                    "name": "MERSEYLINK (HOLDINGS) LIMITED",
+                    "shareholders": [
+                        {
+                            "id": "2.0",
+                            "shareholder": {
+                                "id": "GB-COH-08766379",
+                                "name": "WIGG INVESTMENTS LIMITED"
+                            },
+                            "shareholding": "0.375",
+                            "votingRights": "ordinary"
+                        },
+                        {
+                            "id": "3.0",
+                            "shareholder": {
+                                "id": "GB-COH-08846885",
+                                "name": "MG BRIDGE INVESTMENTS LIMITED"
+                            },
+                            "shareholding": "0.375",
+                            "votingRights": "ordinary"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ocid": "ocds-eg0001-ppp-hmt:837",
+            "id": "ocds-eg0001-pf-hmt-835-pqq-planning-01",
+            "contract": {
+                "financialModel": [
+                    {
+                        "id": "3.0",
+                        "indicator": "Equity Debt Ratio",
+                        "indicatorCode": "equityDebtRatio",
+                        "indicatorValue": "0.6"
+                    }
+                ]
+            }
+        },
+        {
+            "ocid": "ocds-eg0001-ppp-hmt:838",
+            "id": "ocds-eg0001-pf-hmt-835-pqq-planning-01",
+            "contract": {
+                "financialModel": [
+                    {
+                        "id": "4.0",
+                        "indicator": "Share Capital",
+                        "indicatorCode": "shareCapital"
+                    }
+                ]
             }
         }
     ]
