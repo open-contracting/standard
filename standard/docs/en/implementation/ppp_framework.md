@@ -385,7 +385,7 @@ In releases about the RFP process the ```relatedProcess/ocid``` field should be 
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-pqq.json
-   :jsonpointer: /releases/0/tender/relatedProcesses/0/
+   :jsonpointer: /releases/0/tender/relatedProcesses/0
 ```
 
 **RFP process:**
@@ -393,7 +393,7 @@ In releases about the RFP process the ```relatedProcess/ocid``` field should be 
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835.json
-   :jsonpointer: /releases/0/tender/relatedProcesses/0/
+   :jsonpointer: /releases/0/tender/relatedProcesses/0
 ```
 
 Information on pre-qualified or shortlisted bidders should be provided using the ```award``` and ```entities``` sections of an OCDS release about the qualification process *and* in the ```entities``` section of the RFP process with role of 'qualifiedBidder'.
