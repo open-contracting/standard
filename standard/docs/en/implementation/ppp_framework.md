@@ -9,7 +9,6 @@
 
 *Note: This can be disclosed at the pre-procurement stage with the exception of information on the parties to the contract, which will be disclosed once it becomes available, that is, at the end of the procurement process.*
 
-
 ### I.1: Project name, location, sector
 
 #### Project name and description
@@ -45,15 +44,6 @@ The following scheme codes are recognised for ```sector```:
    :jsonpointer: /releases/0/planning/project
    :expand: sector
 ```
-
-```eval_rst
-#.. jsoninclude-flat:: docs/en/examples/ppp/full.json
-#   :recursive:
-#   :jsonpointer: /releases/0/planning
-#   :ignore_path: 
-```
-
-
 
 #### Location
 
@@ -141,33 +131,46 @@ The example below uses a gazeteer and GeoJSON LineString to describe the locatio
 
 ```
 
-#### Example
-
-
-
 ### I.2: Sponsoring agency/department
 
-REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+The sponsoring agency or department's details should be included in the ```parties``` section, with a role tag of 'sponsor'. 
+
+##### Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/sponsor.json
+   :jsonpointer: /releases/0/entities
+   :expand: entities,identifier,address,contactPoint
+```
+
+```eval_rst
+.. jsoninclude-flat:: docs/en/examples/ppp/sponsor.json
+   :recursive:
+   :jsonpointer: /releases/0/entities
+   :ignore_path: /releases/0/
+```
+
 
 ### I.3: Project value
 
-The project value is the total amount invested into the project by both public and private parties.
+The project value should be understood as the total amount project to be invested into the project by both public and private parties over the project lifetime.
 
-This can be entered into ```budget``` fields in the ```planning``` section of an OCDS release. The ```budget/description``` field can be used to provide a free text explanation of the way the project value has been calculated. 
+This can be entered into ```planning/project/totalValue``` object, and should consist of a single value and currency.
 
+Total budget allocations and a detailed breakdown by period, and contributing party, can be included in the ```planning/budget``` block using the budgetBreakdown extension.
 
-
-A detailed breakdown of sources of investment, and anticipated government expenditure and income can be provided using the budget forecast block (TODO) as described in the [financial information](#financial-information) section below. 
-
-(Discussion in [issue 23](https://github.com/open-contracting/public-private-partnerships/issues/23) to confirm definition)
+**Discussion** See [#23](https://github.com/open-contracting/public-private-partnerships/issues/23) for a discussion of the exact definition of project value. 
 
 ### I.4: Project need: benefits provided, economic and social (including specific information on the public interest aspect)
 
-This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+Information on the project need, benefits provided, and economic and social impact should be provided through:
 
-The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+* A short summary text
+* A link to one or more documents that provide additional information
 
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+These documents should be tagged with a ```documentType``` value of 'needsAssessment'.
+
 
 *Note: It is recommended in the PPP process to carry out a preliminary examination of the social and environmental aspects of the project and identify and disclose potential deal-breakers or challenges as early as possible.*
 

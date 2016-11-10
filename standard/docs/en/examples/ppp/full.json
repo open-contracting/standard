@@ -10,19 +10,6 @@
                 "planning"
             ],
             "planning": {
-                "project": {
-                    "sector": "transport",
-                    "subSector": "roads",
-                    "locations": [
-                        {
-                            "description": "Local Authority Area: Halton Borough Council",
-                            "gazetteer": {
-                                "scheme": "GEONAMES",
-                                "identifiers": "2647601.0"
-                            }
-                        }
-                    ]
-                },
                 "budget": {
                     "id": "capital-expenditure",
                     "description": "Total capital expenditure",
@@ -46,6 +33,39 @@
                         }
                     ]
                 },
+                "project": {
+                    "sector": {
+                        "scheme": "COFOG",
+                        "description": "Road transportation",
+                        "id": "04.5.1"
+                    },
+                    "locations": [
+                        {
+                            "description": "Local Authority Area: Halton Borough Council",
+                            "gazetteer": {
+                                "scheme": "GEONAMES",
+                                "identifiers": "2647601.0"
+                            }
+                        }
+                    ]
+                },
+                "documents": [
+                    {
+                        "documentType": "needsAssessment"
+                    },
+                    {
+                        "documentType": "technicalSpecifications"
+                    },
+                    {
+                        "documentType": "serviceDescription"
+                    },
+                    {
+                        "documentType": "estimatedDemand"
+                    },
+                    {
+                        "documentType": "pppModeRationale"
+                    }
+                ],
                 "estimatedDemand": [
                     {
                         "quantity": "29200000.0",
@@ -97,7 +117,20 @@
                     "identifier": {
                         "scheme": "XR-NUTS",
                         "id": "UK00ET",
-                        "legalName": "Halton Borough Council"
+                        "legalName": "Halton Borough Council",
+                        "uri": "https://en.wikipedia.org/wiki/Borough_of_Halton"
+                    },
+                    "address": {
+                        "streetAddress": "Municipal Buildings \nKingsway ",
+                        "locality": "Widnes",
+                        "region": "Cheshire",
+                        "postalCode": "WA8 7QF",
+                        "countryName": "United Kingdom"
+                    },
+                    "contactPoint": {
+                        "email": "hdl@halton.gov.uk",
+                        "telephone": "0303 333 4300",
+                        "url": "http://www.halton.gov.uk"
                     }
                 }
             ]
@@ -758,6 +791,88 @@
                             },
                             "shareholding": "0.375",
                             "votingRights": "ordinary"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "planning": {
+                "documents": [
+                    {
+                        "documentType": "feasibilityStudy"
+                    }
+                ]
+            }
+        },
+        {
+            "planning": {
+                "documents": [
+                    {
+                        "documentType": "environmentalImpact"
+                    }
+                ]
+            }
+        },
+        {
+            "planning": {
+                "documents": [
+                    {
+                        "documentType": "finalAudit"
+                    }
+                ]
+            }
+        },
+        {
+            "contracts": [
+                {
+                    "documents": [
+                        {
+                            "documentType": "contractSigned"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "contracts": [
+                {
+                    "documents": [
+                        {
+                            "documentType": "contractArrangements"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "contracts": [
+                {
+                    "documents": [
+                        {
+                            "documentType": "contractSchedule"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "contracts": [
+                {
+                    "documents": [
+                        {
+                            "documentType": "contractAnnexe"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "contracts": [
+                {
+                    "documents": [
+                        {
+                            "documentType": "contractGuarantees"
                         }
                     ]
                 }
