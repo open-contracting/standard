@@ -328,7 +328,12 @@ current_dir = dirname(abspath(__file__))
 GIT_REF = "gh-pages"
 
 location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
-extension_json = requests.get(location).json()
+try:
+    extension_json = requests.get(location, timeout=1).json()
+except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
+    print("**********  Internet connection not found *************") 
+    extension_json = {"extensions": []}
+
 
 class JSONInclude(LiteralInclude):
     option_spec = {
@@ -393,6 +398,7 @@ class ExtensionList(Directive):
         definition_list = nodes.definition_list()
         definition_list.line = 0
 
+        num = 0
         for num, extension in enumerate(extension_json['extensions']):
             if not extension.get('core'):
                 continue
@@ -481,9 +487,13 @@ class ExtensionTable(CSVTable):
                   }
 
     def get_csv_data(self):
+        headings = ["Field", "Definition", "Description", "Type"]
         extension = self.options.get('extension')
         if not extension:
             raise Exception("No extension configuration when using extensiontable directive") 
+
+        if not extension_json['extensions']:
+            return [",".join(headings)], "Extension {}".format(extension)
 
         for num, extension_obj in enumerate(extension_json['extensions']):
             if not extension_obj.get('core'):
@@ -494,7 +504,6 @@ class ExtensionTable(CSVTable):
             raise Exception("Extension {} does not exist in the registry".format(extension)) 
 
         extension_patch = requests.get(extension_obj['url'].rstrip("/") + "/" + "release-schema.json").json()
-        headings = ["Field", "Definition", "Description", "Type"]
         data = []
         for row in gather_fields(extension_patch):
             data.append(row)
