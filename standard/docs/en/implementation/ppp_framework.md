@@ -209,6 +209,12 @@ ToDo: Add estimatedDemand to the PPP extension
 
 ### I.8: Project additionality
 
+This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+
+The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+
+A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+
 (TODO: Clarify this section of the framework)
 
 ### I.9: Reason for selection of PPP mode and type in brief
@@ -349,6 +355,8 @@ Key dates regarding the procurement process can be provided using the following 
 
 (TODO: Add guidance on processes with multiple enquiry periods [github issue](https://github.com/open-contracting/public-private-partnerships/issues/10))
 
+(TODO: Add guidance on other fields in tender (e.g. submission method) also add guidance on using documents block for final feasibility study etc.)
+
 REQUIRES tender.contractPeriod extension
 
 ### II.2. RFQ documents
@@ -361,7 +369,7 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 ### II.3. Pre-qualification or shortlist
 
-Where the procurement process for a PPP includes a process prior to the RFP, such as an RFQ, pre-qualification or shortlisting stage, the prior process should be modelled as a separate contracting process in OCDS to main RFP.
+Where the procurement process for a PPP includes a process prior to the RFP, such as an RFQ, pre-qualification or shortlisting stage, the prior process should be modelled as a separate contracting process in OCDS to the main RFP.
 
 Information on pre-qualified or shortlisted bidders can be provided using the ```award``` section an OCDS release about the prior process. AND are put into the ```actors``` table of the primary process with role of 'qualifiedBidder'. 
 
@@ -459,6 +467,8 @@ Draft modelling:
 ```
 
 (TODO: model extension + risk type codelist)
+
+(TODO: compare codelists of risk types ([EIB](http://www.eib.org/epec/g2g/i-project-identification/12/122/index.htm), [PPPIRC](https://ppp.worldbank.org/public-private-partnership/financing/risk-allocation-mitigation))
 
 ## Evaluation of PPP option
 
