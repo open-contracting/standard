@@ -372,11 +372,60 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 ### II.3. Pre-qualification or shortlist
 
-Where the procurement process for a PPP includes a process prior to the RFP, such as an RFQ, pre-qualification or shortlisting stage, the prior process should be modelled as a separate contracting process in OCDS to the main RFP.
+Where the procurement process for a PPP includes a qualification process prior to the RFP, such as an RFQ, pre-qualification or shortlisting stage, the qualification process and RFP processes should be modelled as a separate contracting processes in OCDS.
 
-Information on pre-qualified or shortlisted bidders can be provided using the ```award``` section an OCDS release about the prior process. AND are put into the ```actors``` table of the primary process with role of 'qualifiedBidder'. 
+The qualification and RFP processes should be linked using the ```relatedProcesses``` field in the ```tender``` section of each OCDS release.
 
-(TODO: add guidance on linking related processes)
+In releases about the qualification process the ```relatedProcess/ocid``` field should be used to reference the OCID of the RFP process and the ```relatedProcess/relationship``` field should be set to ```resultingProcess```.
+
+In releases about the RFP process the ```relatedProcess/ocid``` field should be used to reference the OCID of the qualification process and the ```relatedProcess/relationship``` field should be set to ```qualificationProcess```.
+
+**Qualification process:**
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-pqq.json
+   :jsonpointer: /releases/0/tender/relatedProcesses/0/
+```
+
+**RFP process:**
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835.json
+   :jsonpointer: /releases/0/tender/relatedProcesses/0/
+```
+
+Information on pre-qualified or shortlisted bidders should be provided using the ```award``` and ```entities``` sections of an OCDS release about the qualification process *and* in the ```entities``` section of the RFP process with role of 'qualifiedBidder'.
+
+**Qualification process:**
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-pqq.json
+   :jsonpointer: /releases/0/awards
+   :expand: /suppliers
+```
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-pqq.json
+   :jsonpointer: /releases/0/entities
+   :expand: /0
+   :expand: /1
+   :expand: /2
+```
+
+**RFP process:**
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835.json
+   :jsonpointer: /releases/0/entities
+   :expand: /0/
+   :expand: /1/
+   :expand: /2/
+```
 
 (TODO: draft relatedProcess extension) - Updating proposal to include 'relatedProcess' 
 
