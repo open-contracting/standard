@@ -1,5 +1,8 @@
 # PPP Disclosure Framework
 
+
+
+
 ## Basic Project Information
 
 **Disclosure timing:** Pre-procurement (as available)
@@ -9,7 +12,7 @@
 
 ### I.1: Project name, location, sector
 
-TODO. 
+TODO. https://github.com/open-contracting/public-private-partnerships/issues/22 
 
 ### I.2: Sponsoring agency/department
 
@@ -49,6 +52,11 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 *Note: It is recommended in the PPP process to carry out a preliminary examination of the social and environmental aspects of the project and identify and disclose potential deal-breakers or challenges as early as possible.*
 
+ToDo: Add actual document code & example
+
+ToDo: Document extentension with pageStart / pageEnd 
+
+
 ### I.5: Technical description of the physical infrastructure
 
 This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
@@ -74,6 +82,11 @@ This information can be provided in a document, or documents, using the ```docum
 The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
 
 A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+
+See: https://github.com/open-contracting/public-private-partnerships/issues/27#issuecomment-258170651 
+
+ToDo: Adding to planning a 'measure' block as 'estimatedDemand'
+ToDo: Add estimatedDemand to the PPP extension
 
 ### I.8: Project additionality
 
@@ -239,11 +252,11 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 Where the procurement process for a PPP includes a process prior to the RFP, such as an RFQ, pre-qualification or shortlisting stage, the prior process should be modelled as a separate contracting process in OCDS to the main RFP.
 
-Information on pre-qualified or shortlisted bidders can be provided using the ```award``` section an OCDS release about the prior process.
+Information on pre-qualified or shortlisted bidders can be provided using the ```award``` section an OCDS release about the prior process. AND are put into the ```actors``` table of the primary process with role of 'qualifiedBidder'. 
 
 (TODO: add guidance on linking related processes)
 
-(TODO: draft relatedProcess extension)
+(TODO: draft relatedProcess extension) - Updating proposal to include 'relatedProcess' 
 
 ### II.4. RFP documents
 
@@ -273,7 +286,7 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 (TODO: Document type codelist (see [#27](https://github.com/open-contracting/public-private-partnerships/issues/27)))
 
-### II.7. Negotiation parameters: brief descrtiptoin of the parameters for negotiation with preferred proponent 
+### II.7. Negotiation parameters: brief descrtiption of the parameters for negotiation with preferred proponent 
 
 This information can be provided in a document, or documents, using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
 
@@ -365,6 +378,8 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 #### IV.2.2 The discount rates used should be specified in the disclosure along with the risk premium used, if any, and an explanation for the rate of risk premium used, referring to guidance, if any, available in this regard or describing project-specific circumstances that justify the risk premium rate used.
 
 (ToDo: model extension for: discount rate + risk premium + explanation )
+
+See: https://data.gov.uk/sib_knowledge_box/discount-rates-and-net-present-value - some discount rates can be staged over years. 
 
 #### IV.2.3 Risk comparison of other financing mechanisms should be specified.
 
@@ -486,6 +501,10 @@ REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
 ### V.7. Amount and tenor of each, fixed or floating rate
 
 (ToDo: model extension - array of objects made up of id + rate + period + id (of debt)? )
+
+TABLE OF FINANCING - 
+
+- Could be used to calculate debt-to-equity and total debt capital. 
 
 ### V.8. Security and step in arrangements
 
