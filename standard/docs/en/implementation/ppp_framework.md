@@ -507,32 +507,61 @@ Details of the preferred bidder should be provided in the ```parties``` section 
 
 ### III.1. Individual risk allocation information
 
-*Note: Listing of risks with information on who bears the risk. The following table can be used. This is not an exhaustive listing. Countries, sectors, and individual projects may use different categorizations. Several risks can be further broken down into components or listed together. If within a large category of risk subcategories are allocated to different parties, it makes sense to show the subcategories clearly.*
+The following information should be provided for each risk:
 
-Draft modelling:
+* Risk category
+* Description
+* Allocation
+* Likelihood
+* Fiscal impact
+* Mitigation
 
-```json
-"riskAllocation": [
-	{
-		"id" = "1",
-		"type" = "demand",
-		"description" = "Actual toll revenues are less than those forecast.",
-		"allocation" = "publicAuthority",
-		"mitigation" = "The Department for Transport will provide an Additional Availability Support Grant in the event that actual toll revenues are less than those forecast."
-	},
-	{
-		"id" = "2",
-		"type" = "preConstruction",
-		"description" = "Planning permission for the project is not granted.",
-		"allocation" = "privateParty",
-		"mitigation" = "A planning strategy was agreed with the local planning authority and was shared with the bidders to mitigate planning risk to acceptable levels."
-	}
-]
+Additional free text information on each risk allocation, for example the rationale for the allocation, can also be provided.
+
+Additional financial modelling for risks can also be linked to or provided in a document.
+
+#### Representation
+
+Risk allocations should be represented using an array of [risk blocks](../../../schema/reference/#organization) in the ```riskAllocation``` field of the ```contract``` section of an OCDS release.
+
+The risk category should be represented using the ```risk/category``` field. The following codes are defined for the [risk category codelist](../schema/codelists/#risk-category) based on the [World Bank Public Private Partnerships Fiscal Risk Assessment Model](http://www.worldbank.org/en/topic/publicprivatepartnerships/brief/ppp-tools#T2):
+
+* governance - Governance risks
+* construction - Construction risks
+* demand - Demand risks
+* operationPerformance - Operation and performance risks
+* financial - Financial risks
+* forcemajeure - Force majeure risks
+* governmentAction - Material adverse government actions (MAGA)
+* changeInLaw - Change in law
+* rebalancing - Rebalancing of financial equilibrium
+* renegotiation - Renegotiation risks
+* contractTermination - Contract termination risks
+
+The party retaining each risk should be represented using the ```risk/allocation``` field. The following codes are defined for the [risk allocation codelist](../schema/codelists/#risk-allocation):
+
+* publicAuthority - The risk is wholly or mostly retained by the public authority
+* privateParty - The risk is wholly or mostly retained by the private party
+* shared - The risk is shared between the public authority and the private party
+
+The likelihood and fiscal impact of the risk occuring should be represented using the ```risk/likelihood``` and ```risk/fiscalImpact``` fields respectively. The following codes are defined for these fields:
+
+* low
+* med
+* high
+
+The description of the risk should be provided as free text using the ```risk/description``` field and the mitigation for the risk should be provided as free text using the ```risk/mitigation``` field.
+
+Additional free text information on the risk can be provided using the ```risk/notes``` field.
+
+#### Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-contract-01.json
+   :jsonpointer: /releases/0/contracts/0/riskAllocation
+   
 ```
-
-(TODO: model extension + risk type codelist)
-
-(TODO: compare codelists of risk types ([EIB](http://www.eib.org/epec/g2g/i-project-identification/12/122/index.htm), [PPPIRC](https://ppp.worldbank.org/public-private-partnership/financing/risk-allocation-mitigation))
 
 ## Evaluation of PPP option
 
@@ -609,7 +638,7 @@ Shareholders are linked to the project company using an array of [shareholder bl
 
 The proportion of shares held by the shareholder should be represented as a number between 0 and 1 using the ```shareholder/shareholding``` field.
 
-The votings rights for the shareholder should be represented using the ```shareholder/votingRights``` field. The following codes are defined for the [voting rights codelist]((../schema/codelists/#voting-rights)):
+The votings rights for the shareholder should be represented using the ```shareholder/votingRights``` field. The following codes are defined for the [voting rights codelist](../schema/codelists/#voting-rights):
 
 * ordinary - The shareholder is entitled to a single vote per share in all circumstances
 * none - The shareholder is not entitled to vote under any circumstances
