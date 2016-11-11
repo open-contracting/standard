@@ -6,7 +6,7 @@ import json
 import json_merge_patch
 from collections import OrderedDict
 
-extensions_to_merge = ['ppp','location','parties','requirements','budget','budget_project']
+extensions_to_merge = ['ppp','location','parties','requirements','budget','budget_project','documentation_details']
 
 GIT_REF = "gh-pages"
 location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
