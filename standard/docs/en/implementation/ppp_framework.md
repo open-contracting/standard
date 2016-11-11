@@ -169,33 +169,41 @@ Information on the project need, benefits provided, and economic and social impa
 * A short summary text
 * A link to one or more documents that provide additional information
 
-These documents should be tagged with a ```documentType``` value of 'needsAssessment'.
+These documents should be tagged with a ```documentType``` value of 'needsAssessment' in the ```planning/documents``` array. 
 
+##### Example
 
-*Note: It is recommended in the PPP process to carry out a preliminary examination of the social and environmental aspects of the project and identify and disclose potential deal-breakers or challenges as early as possible.*
+```eval_rst
 
-ToDo: Add actual document code & example
+.. jsoninclude:: docs/en/examples/ppp/full.json
+   :jsonpointer: /releases/0/planning/documents/0
+   :expand: 
+```
 
-ToDo: Document extentension with pageStart / pageEnd 
-
+```eval_rst
+.. jsoninclude-flat:: docs/en/examples/ppp/full.json
+   :recursive:
+   :jsonpointer: /releases/0/planning/documents/0
+   :ignore_path: /releases/0/
+```
 
 ### I.5: Technical description of the physical infrastructure
 
-This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+A technical description of the physical infrastructure should be provided through:
 
-The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+* A short summary text
+* A link to one or more documents that provide additional information
 
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+These documents should be tagged with a ```documentType``` value of 'technicalSpecifications' in the ```tender/documents``` array. 
 
 ### I.6: High-level description of the services
 
-This information can be provided in in the ```tender``` section of an OCDS release. The ```tender/description``` field can be used to provide a free text description of the services covered by the PPP.
+A high-level description of the services should be provided through:
 
-More detailed information can also be provided in a document, or documents, using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+* A short summary text
+* A link to one or more documents that provide additional information
 
-The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
-
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+These documents should be tagged with a ```documentType``` value of 'serviceDescription' in the ```tender/documents``` array. 
 
 ### I.7: Estimated demand to be served annually
 
