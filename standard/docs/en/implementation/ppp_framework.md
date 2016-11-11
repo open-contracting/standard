@@ -588,51 +588,47 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 ### V.3. Shareholders with proportion held and voting rights
 
-(ToDo: model extension - array of objects made up of an organizationReference + shareholding (%) + voting rights (codelist)? )
+The following information should be provided for each shareholder:
 
-REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+* Name
+* Address
+* Identifier
+* Proportion of shares held
+* Voting rights
 
-**Draft modelling**
+The following information can also be provided:
 
-```json
-"shareholders": [
-	{
-		"id": "01",
-		"shareholder": {
-			"id": "GB-COH-12345678",
-			"name": "Mega Corp"
-		},
-		"shareholding": 0.75,
-		"votingRights":	ordinary,
-		"votingRightsDetails": ""
-	},
-	{
-		"id": "02",
-		"shareholder": {
-			"id": "GB-COH-99999999",
-			"name": "Mini Co"
-		},
-		"shareholding": 0.25,
-		"votingRights":	ordinary,
-		"votingRightsDetails": ""
-	}
-]
+* Additional identifiers
+* Contact details
+
+#### Representation
+
+Shareholders are represented using an array of [organization blocks](../../../schema/reference/#organization) in the ```parties``` section of an OCDS release.
+
+Shareholders are linked to the project company using an array of [shareholder blocks](../../../schema/reference/#shareholder) in the ```shareholders``` field of the [organization block](../../../schema/reference/#organization) describing the project company in the ```parties``` section of OCDS.
+
+The proportion of shares held by the shareholder should be represented as a number between 0 and 1 using the ```shareholder/shareholding``` field.
+
+The votings rights for the shareholder should be represented using the ```shareholder/votingRights``` field. The following codes are defined for the [voting rights codelist]((../schema/codelists/#voting-rights)):
+
+* ordinary - The shareholder is entitled to a single vote per share in all circumstances
+* none - The shareholder is not entitled to vote under any circumstances
+* restricted - The shareholder is entitled to vote in specific circumstances only
+* additional - The shareholder is entitled to more than one vote per share in all circumstances
+* enhanced - The shareholder is entitled to more than one vote per share in specific circumstances only
+
+(See [github issue](https://github.com/open-contracting/public-private-partnerships/issues/35))
+
+Where the shareholder has *restricted*, *additional* or *enhanced* voting rights the ```shareholder/votingRightsDetails``` field should be used to provide details of the shareholder's voting rights.
+
+#### Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-contract-01.json
+   :jsonpointer: /releases/0/entities
+   
 ```
-
-**Draft votingRights codelist**
-
-code | definition
------|-----------
-ordinary | The shareholder is entitled to a single vote per share in all circumstances
-none | The shareholder is not entitled to vote under any circumstances
-restricted | The shareholder is entitled to vote in specific circumstances only
-additional | The shareholder is entitled to more than one vote per share in all circumstances
-enhanced | The shareholder is entitled to more than one vote per share in specific circumstances only
-
-**Questions**
-* Are there any existing codelists we can defer to for shareholder voting rights?
-* For shares with additional voting rights should this be specified as semi-structured data using the votingRightsDetails field or is an additional field required (i.e. votesPerShare)?
-
 
 ### V.4. Equity transfer caps
 
