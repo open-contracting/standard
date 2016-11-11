@@ -427,6 +427,10 @@ Information on pre-qualified or shortlisted bidders should be provided using the
    :expand: /2/
 ```
 
+**Animated example:**
+
+<img src="../../../assets/ppp/relatedProcess.gif">
+
 (TODO: draft relatedProcess extension) - Updating proposal to include 'relatedProcess' 
 
 ### II.4. RFP documents
