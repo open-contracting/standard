@@ -1,3 +1,4 @@
+import requests
 ## This script should:
 
 # 1. Download the excel file below
@@ -7,3 +8,9 @@
 
 
 url = "https://docs.google.com/spreadsheets/d/1gvzLoImbnWvty7lfe5mx2h3v3cELj2rsJHBhj_Yo9Cs/pub?output=xlsx"
+
+
+resp = requests.get(url)
+output = open('standard/docs/en/examples/ppp/full.xlsx', 'wb')
+output.write(resp.content)
+output.close()
