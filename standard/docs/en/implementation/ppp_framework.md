@@ -663,32 +663,38 @@ Where the shareholder has *restricted*, *additional* or *enhanced* voting rights
 
 *Note: Certain contracts provide for caps on equity transfer in different stages of the contract, especially during the construction stage and for a few years thereafter. Give details of any such provisions.*
 
-**Draft modelling**
+#### Representation
 
-```json
+The equity transfer caps defined in the contract are represented using an array of [equity transfer cap blocks](../../../schema/reference/#equity-transfer-cap) in the ```contract``` section of an OCDS release.
 
-"equityTransferCaps": [
-	{
-		"id" : "01",
-		"title" : "Construction equity transfer cap",
-		"description" : "No equity transfer is permitted until construction is completed.",
-		"cap" : 0,
-		"milestone" : {
-			"id" : "contract-construction-001",
-			"title" : "Completion of construction"
-		}
-	},
-	{
-		"id" : "02",
-		"title" : "Initial equity transfer cap",
-		"description" : "No more than 20% equity may be transferred until the project has been in operation for 10 years.",
-		"cap" : 0.20,
-		"milestone" : {
-			"id" : "contract-operation-002",
-			"title" : "10 years of operation"
-		}
-	}
-]
+The proportion of equity in the project company which is permitted to be transferred under the cap should be represented as a number between 0 and 1 using the ```equityTransferCap/amount``` field.
+
+The period for which the cap applies should be represented by linking the equity transfer cap to a contract [milestone](../../../schema/reference/#milestone), using the ```equityTransferCap/milestone``` field.
+
+The ```equityTransferCap/milestone/id``` and ```equityTransferCap/milestone/title``` fields should match the ```id``` and ```title``` fields, respectively, of a milestone in the ```milestones``` field of the ```implementation``` section of OCDS.
+
+Where a milestone does not already exist to describe the end of the period during which the equity transfer cap applies, an appropriate milestone should be added to the ```milestones``` field of the ```implementation``` section of OCDS.
+
+A title and description for the equity transfer caps can be provided using the ```equityTransferCap/title``` and ```equityTransferCap/description``` fields respectively.
+
+#### Example
+
+**Equity Transfer Caps:**
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-contract-01.json
+   :jsonpointer: /releases/0/contracts/0/equityTransferCaps
+   
+```
+
+**Associated Milestones**
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-contract-01.json
+   :jsonpointer: /releases/0/contracts/0/implementation/milestones
+   
 ```
 
 (See [github issue](https://github.com/open-contracting/public-private-partnerships/issues/30))
