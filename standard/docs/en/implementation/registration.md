@@ -14,6 +14,8 @@ This list below shows currently registered prefixes.
 
 <iframe src="https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pubhtml?gid=506986894&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="500"></iframe>
 
+[CSV download](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pub?gid=506986894&single=true&output=csv)
+
 ## Register your data
 
 OCDS does not have a registry of datasets. The approach for data discovery is described in the [publication patterns](../../../implementation/hosting/) section of this documentation.

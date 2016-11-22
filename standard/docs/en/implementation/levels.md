@@ -64,7 +64,9 @@ At an advanced level the use of URIs alongside identifiers, to provide links to 
 
 The table below lists each of the fields in OCDS along with a check mark for whether this is Required (X) or Recommended (-) at basic, intermediate or advanced level. 
 
-<iframe src="https://docs.google.com/spreadsheets/d/1EhyC2pbG6Qxly9vMsZhk0tD8xV2mV4c6KeWkJKi5TMQ/pubhtml?gid=1312410321&single=true" width="100%", height="500"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1EhyC2pbG6Qxly9vMsZhk0tD8xV2mV4c6KeWkJKi5TMQ/pubhtml?gid=91538800&single=true" width="100%", height="500"></iframe>
+
+[Download CSV version](https://docs.google.com/spreadsheets/d/1EhyC2pbG6Qxly9vMsZhk0tD8xV2mV4c6KeWkJKi5TMQ/pub?gid=91538800&single=true&output=csv)
 
 
 ## Publication levels: documents
@@ -73,6 +75,7 @@ The following list details the documents the priority documents that publishers 
 
 <iframe src="https://docs.google.com/spreadsheets/d/1i2XagfbBcwzQ5Zasz94fAfdeMwWImiJtfcZelveywr4/pubhtml?gid=172990428&amp;single=true&amp;widget=true&amp;headers=false" width="100%", height="500"></iframe>
 
+[Download CSV version](https://docs.google.com/spreadsheets/d/1i2XagfbBcwzQ5Zasz94fAfdeMwWImiJtfcZelveywr4/pub?gid=172990428&single=true&output=csv)
 
 ## How to publish - 5 ☆ approach
 

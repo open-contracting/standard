@@ -1,4 +1,4 @@
-# Putting a dev branch live
+### Putting a dev branch live
 
 If the live branch doesn't exist, create it and push to github. 
 
@@ -12,13 +12,14 @@ After merge:
 - [ ] Copy the files from dev to live following the instructions at the top of https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls
 ```
 
-# Merging in schema changes
+### Merging in schema changes
 
 ```
 Before merge:
 - [ ] Set up a dev instance of Cove using the new schema, and run tests against it
 
 After merge:
+- [ ] Create x__y__z schema folder - https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls#L25
 - [ ] Update live Cove to use the new schema
 
 ```

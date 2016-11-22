@@ -36,7 +36,8 @@ def make_definition_table(json,file_path,what="properties",section=""):
             types = format(", ".join(types).replace(", null","").replace("null,",""))
         else:
             types = format(types)
-            
+
+        types = types.replace("Reference","Object").strip()
 
         if types == "array":
            if block[prop].get('items').get("$ref"):
@@ -44,12 +45,14 @@ def make_definition_table(json,file_path,what="properties",section=""):
            else:
                table.append([prop,format(block[prop].get('description','')),"Array"])
         elif block[prop].get("$ref"):
-          table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(block[prop]["$ref"]),"Reference"])
+          table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(block[prop]["$ref"]),"Object"])
         elif "object" in types:
             table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(prop),"Object"])
-        else:
+        elif(block[prop].get('format','')):
           table.append([prop,format(block[prop].get('description','')),block[prop].get('format','') + " " + types])
-          
+        else:
+          table.append([prop,format(block[prop].get('description','')),types])
+
         with open(file_path, 'w') as f:
             writer = csv.writer(f)
             for row in table:

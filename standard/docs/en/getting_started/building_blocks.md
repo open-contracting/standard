@@ -137,6 +137,9 @@ In addition to these building blocks, the OCDS schema sets out the specific ways
 
 Many of these fields make use of lightweight codelists provided by OCDS. 
 
+#### Field level mapping
+
+The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.  
 
 ### Codelists
 
@@ -215,3 +218,5 @@ For an Open Procedure, when a free-text justification of why the procedure was c
 ```
 
 </div>
+
+<!--ToDo: Add section on mapping - including links to mapping tools -->

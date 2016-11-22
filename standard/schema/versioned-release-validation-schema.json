@@ -1,1627 +1,1631 @@
 {
-    "id": "http://standard.open-contracting.org/schema/1__0__1/versioned-release-validation-schema.json", 
-    "$schema": "http://json-schema.org/draft-04/schema#", 
-    "title": "Schema for a compiled, versioned Open Contracting Release.", 
-    "type": "object", 
+    "id": "http://standard.open-contracting.org/schema/1__0__1/versioned-release-validation-schema.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Schema for a compiled, versioned Open Contracting Release.",
+    "type": "object",
     "properties": {
         "initiationType": {
             "items": {
                 "properties": {
-                    "releaseDate": {
-                        "type": "string", 
-                        "format": "date-time"
-                    }, 
                     "releaseID": {
                         "type": "string"
-                    }, 
-                    "releaseTag": {
-                        "items": {
-                            "type": "string"
-                        }, 
-                        "type": "array"
-                    }, 
+                    },
                     "value": {
-                        "type": "string", 
+                        "type": "string",
                         "enum": [
                             "tender"
                         ]
+                    },
+                    "releaseTag": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "releaseDate": {
+                        "type": "string",
+                        "format": "date-time"
                     }
                 }
-            }, 
+            },
             "type": "array"
-        }, 
+        },
         "planning": {
             "$ref": "#/definitions/Planning"
-        }, 
+        },
         "tender": {
             "$ref": "#/definitions/Tender"
-        }, 
+        },
         "buyer": {
             "$ref": "#/definitions/Organization"
-        }, 
+        },
         "awards": {
-            "type": "array", 
+            "type": "array",
             "items": {
                 "$ref": "#/definitions/Award"
-            }, 
+            },
             "uniqueItems": true
-        }, 
+        },
         "contracts": {
-            "type": "array", 
+            "type": "array",
             "items": {
                 "$ref": "#/definitions/Contract"
-            }, 
+            },
             "uniqueItems": true
-        }, 
+        },
         "language": {
             "$ref": "#/definitions/StringNullVersioned"
-        }, 
+        },
         "ocid": {
-            "title": "Open Contracting ID", 
-            "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/)", 
-            "type": "string", 
+            "title": "Open Contracting ID",
+            "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/)",
+            "type": "string",
             "mergeStrategy": "ocdsOmit"
         }
-    }, 
+    },
     "required": [
-        "ocid", 
+        "ocid",
         "initiationType"
-    ], 
+    ],
     "definitions": {
         "Planning": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "budget": {
                     "$ref": "#/definitions/Budget"
-                }, 
+                },
                 "rationale": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "documents": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Document"
                     }
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(rationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Tender": {
-            "type": "object", 
+            "type": "object",
             "required": [
                 "id"
-            ], 
+            ],
             "properties": {
                 "id": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "integer"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "integer"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "title": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "status": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "enum": [
+                                    "planned",
+                                    "active",
+                                    "cancelled",
+                                    "unsuccessful",
+                                    "complete",
+                                    null
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "enum": [
-                                    "planned", 
-                                    "active", 
-                                    "cancelled", 
-                                    "unsuccessful", 
-                                    "complete", 
-                                    null
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "items": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Item"
-                    }, 
+                    },
                     "uniqueItems": true
-                }, 
+                },
                 "minValue": {
                     "$ref": "#/definitions/Value"
-                }, 
+                },
                 "value": {
                     "$ref": "#/definitions/Value"
-                }, 
+                },
                 "procurementMethod": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "enum": [
+                                    "open",
+                                    "selective",
+                                    "limited",
+                                    null
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "enum": [
-                                    "open", 
-                                    "selective", 
-                                    "limited", 
-                                    null
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
+                "procurementMethodDetails": {
+                    "$ref": "#/definitions/StringNullVersioned"
+                },
                 "procurementMethodRationale": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "awardCriteria": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "awardCriteriaDetails": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "submissionMethod": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "items": {
-                                    "type": "string"
-                                }, 
-                                "type": "array"
-                            }, 
+                            },
                             "value": {
                                 "type": [
-                                    "array", 
+                                    "array",
                                     "null"
-                                ], 
+                                ],
                                 "items": {
                                     "type": "string"
                                 }
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "submissionMethodDetails": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "tenderPeriod": {
                     "$ref": "#/definitions/Period"
-                }, 
+                },
                 "enquiryPeriod": {
                     "$ref": "#/definitions/Period"
-                }, 
+                },
                 "hasEnquiries": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "boolean", 
-                                    "null"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "eligibilityCriteria": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "awardPeriod": {
                     "$ref": "#/definitions/Period"
-                }, 
+                },
                 "numberOfTenderers": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "definition": "The number of entities who submit a tender.", 
-                                "type": [
-                                    "integer", 
-                                    "null"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "tenderers": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "uniqueItems": true,
+                                "items": {
+                                    "$ref": "#/definitions/OrganizationUnversioned"
+                                },
+                                "type": "array"
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "uniqueItems": true, 
-                                "items": {
-                                    "$ref": "#/definitions/OrganizationUnversioned"
-                                }, 
-                                "type": "array"
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "procuringEntity": {
                     "$ref": "#/definitions/Organization"
-                }, 
+                },
                 "documents": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Document"
                     }
-                }, 
+                },
                 "milestones": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Milestone"
                     }
-                }, 
+                },
                 "amendment": {
                     "$ref": "#/definitions/Amendment"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(procurementMethodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(awardCriteriaDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(submissionMethodDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Award": {
-            "type": "object", 
+            "type": "object",
             "required": [
                 "id"
-            ], 
+            ],
             "properties": {
                 "id": {
                     "type": [
-                        "string", 
+                        "string",
                         "integer"
                     ]
-                }, 
+                },
                 "title": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "status": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "enum": [
+                                    "pending",
+                                    "active",
+                                    "cancelled",
+                                    "unsuccessful",
+                                    null
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "enum": [
-                                    "pending", 
-                                    "active", 
-                                    "cancelled", 
-                                    "unsuccessful", 
-                                    null
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "date": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "value": {
                     "$ref": "#/definitions/Value"
-                }, 
+                },
                 "suppliers": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "uniqueItems": true,
+                                "items": {
+                                    "$ref": "#/definitions/OrganizationUnversioned"
+                                },
+                                "type": "array"
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "uniqueItems": true, 
-                                "items": {
-                                    "$ref": "#/definitions/OrganizationUnversioned"
-                                }, 
-                                "type": "array"
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "items": {
-                    "type": "array", 
-                    "minItems": 1, 
+                    "type": "array",
+                    "minItems": 1,
                     "items": {
                         "$ref": "#/definitions/Item"
-                    }, 
+                    },
                     "uniqueItems": true
-                }, 
+                },
                 "contractPeriod": {
                     "$ref": "#/definitions/Period"
-                }, 
+                },
                 "documents": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Document"
-                    }, 
+                    },
                     "uniqueItems": true
-                }, 
+                },
                 "amendment": {
                     "$ref": "#/definitions/Amendment"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Contract": {
-            "type": "object", 
+            "type": "object",
             "required": [
-                "id", 
+                "id",
                 "awardID"
-            ], 
+            ],
             "properties": {
                 "id": {
                     "type": [
-                        "string", 
+                        "string",
                         "integer"
                     ]
-                }, 
+                },
                 "awardID": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "integer"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "integer"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "title": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "status": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "enum": [
+                                    "pending",
+                                    "active",
+                                    "cancelled",
+                                    "terminated",
+                                    null
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "enum": [
-                                    "pending", 
-                                    "active", 
-                                    "cancelled", 
-                                    "terminated", 
-                                    null
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "period": {
                     "$ref": "#/definitions/Period"
-                }, 
+                },
                 "value": {
                     "$ref": "#/definitions/Value"
-                }, 
+                },
                 "items": {
-                    "type": "array", 
-                    "minItems": 1, 
+                    "type": "array",
+                    "minItems": 1,
                     "items": {
                         "$ref": "#/definitions/Item"
-                    }, 
+                    },
                     "uniqueItems": true
-                }, 
+                },
                 "dateSigned": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "documents": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Document"
-                    }, 
+                    },
                     "uniqueItems": true
-                }, 
+                },
                 "amendment": {
                     "$ref": "#/definitions/Amendment"
-                }, 
+                },
                 "implementation": {
                     "$ref": "#/definitions/Implementation"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Implementation": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "transactions": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Transaction"
-                    }, 
+                    },
                     "uniqueItems": true
-                }, 
+                },
                 "milestones": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Milestone"
-                    }, 
+                    },
                     "uniqueItems": true
-                }, 
+                },
                 "documents": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Document"
-                    }, 
+                    },
                     "uniqueItems": true
                 }
             }
-        }, 
+        },
         "Milestone": {
-            "type": "object", 
+            "type": "object",
             "required": [
                 "id"
-            ], 
+            ],
             "properties": {
                 "id": {
                     "type": [
-                        "string", 
+                        "string",
                         "integer"
                     ]
-                }, 
+                },
                 "title": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "dueDate": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "dateModified": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "status": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "enum": [
+                                    "met",
+                                    "notMet",
+                                    "partiallyMet",
+                                    null
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "null"
-                                ], 
-                                "enum": [
-                                    "met", 
-                                    "notMet", 
-                                    "partiallyMet", 
-                                    null
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "documents": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/Document"
-                    }, 
+                    },
                     "uniqueItems": true
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Document": {
-            "type": "object", 
+            "type": "object",
             "required": [
                 "id"
-            ], 
+            ],
             "properties": {
                 "id": {
                     "type": [
-                        "string", 
+                        "string",
                         "integer"
                     ]
-                }, 
+                },
                 "documentType": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "title": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "url": {
                     "$ref": "#/definitions/StringNullUriVersioned"
-                }, 
+                },
                 "datePublished": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "dateModified": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "format": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "language": {
                     "$ref": "#/definitions/StringNullVersioned"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Budget": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "source": {
                     "$ref": "#/definitions/StringNullUriVersioned"
-                }, 
+                },
                 "id": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "integer",
+                                    "null"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "integer", 
-                                    "null"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "amount": {
                     "$ref": "#/definitions/Value"
-                }, 
+                },
                 "project": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "projectID": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "integer",
+                                    "null"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "integer", 
-                                    "null"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "uri": {
                     "$ref": "#/definitions/StringNullUriVersioned"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(source_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "^(project_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Transaction": {
-            "type": "object", 
+            "type": "object",
             "required": [
                 "id"
-            ], 
+            ],
             "properties": {
                 "id": {
                     "type": [
-                        "string", 
+                        "string",
                         "integer"
                     ]
-                }, 
+                },
                 "source": {
                     "$ref": "#/definitions/StringNullUriVersioned"
-                }, 
+                },
                 "date": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "amount": {
                     "$ref": "#/definitions/Value"
-                }, 
+                },
                 "providerOrganization": {
                     "$ref": "#/definitions/Identifier"
-                }, 
+                },
                 "receiverOrganization": {
                     "$ref": "#/definitions/Identifier"
-                }, 
+                },
                 "uri": {
                     "$ref": "#/definitions/StringNullUriVersioned"
                 }
             }
-        }, 
+        },
         "Organization": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "identifier": {
                     "$ref": "#/definitions/Identifier"
-                }, 
+                },
                 "additionalIdentifiers": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "uniqueItems": true,
+                                "items": {
+                                    "$ref": "#/definitions/IdentifierUnversioned"
+                                },
+                                "type": "array"
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "uniqueItems": true, 
-                                "items": {
-                                    "$ref": "#/definitions/IdentifierUnversioned"
-                                }, 
-                                "type": "array"
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "name": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "address": {
                     "$ref": "#/definitions/Address"
-                }, 
+                },
                 "contactPoint": {
                     "$ref": "#/definitions/ContactPoint"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Item": {
-            "type": "object", 
+            "type": "object",
             "required": [
                 "id"
-            ], 
+            ],
             "properties": {
                 "id": {
                     "type": [
-                        "string", 
+                        "string",
                         "integer"
                     ]
-                }, 
+                },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "classification": {
                     "$ref": "#/definitions/Classification"
-                }, 
+                },
                 "additionalClassifications": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "uniqueItems": true,
+                                "items": {
+                                    "$ref": "#/definitions/ClassificationUnversioned"
+                                },
+                                "type": "array"
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "uniqueItems": true, 
-                                "items": {
-                                    "$ref": "#/definitions/ClassificationUnversioned"
-                                }, 
-                                "type": "array"
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "quantity": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "minimum": 0,
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "minimum": 0, 
-                                "type": [
-                                    "integer", 
-                                    "null"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "unit": {
-                    "type": "object", 
+                    "type": "object",
                     "properties": {
                         "name": {
                             "$ref": "#/definitions/StringNullVersioned"
-                        }, 
+                        },
                         "value": {
                             "$ref": "#/definitions/Value"
                         }
-                    }, 
+                    },
                     "patternProperties": {
                         "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                             "type": [
-                                "string", 
+                                "string",
                                 "null"
                             ]
                         }
                     }
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Amendment": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "date": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "changes": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
-                            "releaseTag": {
-                                "items": {
-                                    "type": "string"
-                                }, 
-                                "type": "array"
-                            }, 
+                            },
                             "value": {
                                 "items": {
-                                    "type": "object", 
+                                    "type": "object",
                                     "properties": {
                                         "property": {
-                                            "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. ", 
+                                            "title": "Property",
+                                            "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. ",
                                             "type": "string"
-                                        }, 
+                                        },
                                         "former_value": {
-                                            "description": "The previous value of the changed property, in whatever type the property is.", 
+                                            "title": "Former Value",
+                                            "description": "The previous value of the changed property, in whatever type the property is.",
                                             "type": [
-                                                "string", 
-                                                "number", 
-                                                "integer", 
-                                                "array", 
-                                                "object", 
+                                                "string",
+                                                "number",
+                                                "integer",
+                                                "array",
+                                                "object",
                                                 "null"
                                             ]
                                         }
                                     }
-                                }, 
+                                },
                                 "type": "array"
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "rationale": {
                     "$ref": "#/definitions/StringNullVersioned"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(rationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Classification": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "scheme": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "id": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "integer",
+                                    "null"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "integer", 
-                                    "null"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "uri": {
                     "$ref": "#/definitions/StringNullUriVersioned"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Identifier": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "scheme": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "id": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "integer",
+                                    "null"
+                                ]
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "string", 
-                                    "integer", 
-                                    "null"
-                                ]
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "legalName": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "uri": {
                     "$ref": "#/definitions/StringNullUriVersioned"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Address": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "streetAddress": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "locality": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "region": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "postalCode": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "countryName": {
                     "$ref": "#/definitions/StringNullVersioned"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "ContactPoint": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "name": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "email": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "telephone": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "faxNumber": {
                     "$ref": "#/definitions/StringNullVersioned"
-                }, 
+                },
                 "url": {
                     "$ref": "#/definitions/StringNullUriVersioned"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "Value": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "amount": {
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "type": "string", 
-                                "format": "date-time"
-                            }, 
                             "releaseID": {
                                 "type": "string"
-                            }, 
+                            },
+                            "value": {
+                                "type": [
+                                    "number",
+                                    "null"
+                                ],
+                                "minimum": 0
+                            },
                             "releaseTag": {
                                 "items": {
                                     "type": "string"
-                                }, 
+                                },
                                 "type": "array"
-                            }, 
-                            "value": {
-                                "type": [
-                                    "number", 
-                                    "null"
-                                ], 
-                                "minimum": 0
+                            },
+                            "releaseDate": {
+                                "type": "string",
+                                "format": "date-time"
                             }
                         }
-                    }, 
+                    },
                     "type": "array"
-                }, 
+                },
                 "currency": {
                     "$ref": "#/definitions/StringNullVersioned"
                 }
             }
-        }, 
+        },
         "Period": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "startDate": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
-                }, 
+                },
                 "endDate": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
                 }
             }
-        }, 
+        },
         "IdentifierUnversioned": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "scheme": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "id": {
                     "type": [
-                        "string", 
-                        "integer", 
+                        "string",
+                        "integer",
                         "null"
                     ]
-                }, 
+                },
                 "legalName": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "uri": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
-                    ], 
+                    ],
                     "format": "uri"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "ClassificationUnversioned": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "scheme": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "id": {
                     "type": [
-                        "string", 
-                        "integer", 
+                        "string",
+                        "integer",
                         "null"
                     ]
-                }, 
+                },
                 "description": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "uri": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
-                    ], 
+                    ],
                     "format": "uri"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "AddressUnversioned": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "streetAddress": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "locality": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "region": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "postalCode": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "countryName": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "ContactPointUnversioned": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "name": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "email": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "telephone": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "faxNumber": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "url": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
-                    ], 
+                    ],
                     "format": "uri"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "OrganizationUnversioned": {
-            "type": "object", 
+            "type": "object",
             "properties": {
                 "identifier": {
                     "$ref": "#/definitions/IdentifierUnversioned"
-                }, 
+                },
                 "additionalIdentifiers": {
-                    "type": "array", 
+                    "type": "array",
                     "items": {
                         "$ref": "#/definitions/IdentifierUnversioned"
-                    }, 
+                    },
                     "uniqueItems": true
-                }, 
+                },
                 "name": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
-                }, 
+                },
                 "address": {
                     "$ref": "#/definitions/AddressUnversioned"
-                }, 
+                },
                 "contactPoint": {
                     "$ref": "#/definitions/ContactPointUnversioned"
                 }
-            }, 
+            },
             "patternProperties": {
                 "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
                     "type": [
-                        "string", 
+                        "string",
                         "null"
                     ]
                 }
             }
-        }, 
+        },
         "StringNullDateTimeVersioned": {
             "items": {
                 "properties": {
-                    "releaseDate": {
-                        "type": "string", 
-                        "format": "date-time"
-                    }, 
                     "releaseID": {
                         "type": "string"
-                    }, 
+                    },
+                    "value": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
                     "releaseTag": {
                         "items": {
                             "type": "string"
-                        }, 
+                        },
                         "type": "array"
-                    }, 
-                    "value": {
-                        "type": [
-                            "string", 
-                            "null"
-                        ], 
-                        "format": "date-time"
-                    }
-                }
-            }, 
-            "type": "array"
-        }, 
-        "StringNullUriVersioned": {
-            "items": {
-                "properties": {
+                    },
                     "releaseDate": {
-                        "type": "string", 
+                        "type": "string",
                         "format": "date-time"
-                    }, 
-                    "releaseID": {
-                        "type": "string"
-                    }, 
-                    "releaseTag": {
-                        "items": {
-                            "type": "string"
-                        }, 
-                        "type": "array"
-                    }, 
-                    "value": {
-                        "type": [
-                            "string", 
-                            "null"
-                        ], 
-                        "format": "uri"
                     }
                 }
-            }, 
+            },
             "type": "array"
-        }, 
+        },
         "StringNullVersioned": {
             "items": {
                 "properties": {
-                    "releaseDate": {
-                        "type": "string", 
-                        "format": "date-time"
-                    }, 
                     "releaseID": {
                         "type": "string"
-                    }, 
+                    },
+                    "value": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
                     "releaseTag": {
                         "items": {
                             "type": "string"
-                        }, 
+                        },
                         "type": "array"
-                    }, 
-                    "value": {
-                        "type": [
-                            "string", 
-                            "null"
-                        ]
+                    },
+                    "releaseDate": {
+                        "type": "string",
+                        "format": "date-time"
                     }
                 }
-            }, 
+            },
+            "type": "array"
+        },
+        "StringNullUriVersioned": {
+            "items": {
+                "properties": {
+                    "releaseID": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "uri"
+                    },
+                    "releaseTag": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "releaseDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            },
             "type": "array"
         }
     }
