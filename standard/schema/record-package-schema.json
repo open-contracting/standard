@@ -1,5 +1,5 @@
 {
-    "id": "http://standard.open-contracting.org/schema/1__0__1/record-package-schema.json",
+    "id": "http://standard.open-contracting.org/schema/1__0__2/record-package-schema.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Schema for an Open Contracting Record package",
     "description": "The record package contains a list of records along with some publishing meta data. The records pull together all the releases under a single Open Contracting ID and compile them into the latest version of the information along with the history of any data changes.",
@@ -123,7 +123,7 @@
                             "description": "A list of releases, with all the data. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
                             "type": "array",
                             "items": {
-                                "$ref": "http://standard.open-contracting.org/schema/1__0__1/release-schema.json"
+                                "$ref": "http://standard.open-contracting.org/schema/1__0__2/release-schema.json"
                             },
                             "minItems": 1
                         }
@@ -132,12 +132,12 @@
                 "compiledRelease": {
                     "title": "Compiled release",
                     "description": "This is the latest version of all the contracting data, it has the same schema as an open contracting release.",
-                    "$ref": "http://standard.open-contracting.org/schema/1__0__1/release-schema.json"
+                    "$ref": "http://standard.open-contracting.org/schema/1__0__2/release-schema.json"
                 },
                 "versionedRelease": {
                     "title": "Versioned release",
                     "description": "This contains the history of the data in the compiledRecord. With all versions of the information and the release they came from.",
-                    "$ref": "http://standard.open-contracting.org/schema/1__0__1/versioned-release-validation-schema.json"
+                    "$ref": "http://standard.open-contracting.org/schema/1__0__2/versioned-release-validation-schema.json"
                 }
             },
             "required": ["ocid", "releases"]
