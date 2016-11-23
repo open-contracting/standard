@@ -325,9 +325,9 @@ from os.path import abspath, dirname, join
 
 current_dir = dirname(abspath(__file__))
 
-GIT_REF = "gh-pages"
+GIT_REF = "master"
 
-location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
+location = "http://standard.open-contracting.org/extension_registry/{}/extensions.json".format(GIT_REF)
 try:
     extension_json = requests.get(location, timeout=1).json()
 except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):

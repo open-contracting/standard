@@ -2,7 +2,7 @@
 jQuery(function () {
   var language = location.pathname.split('/')[2]
   jQuery.ajax({
-    "url": "https://open-contracting.github.io/extension_registry/extensions.js", 
+    "url": "http://standard.open-contracting.org/extension_registry/master/extensions.js", 
     "jsonpCallback": "extensions_callback",
     "crossDomain": true,
     "dataType": "jsonp"
