@@ -6,10 +6,10 @@ import json
 import json_merge_patch
 from collections import OrderedDict
 
-extensions_to_merge = ['ppp','location','parties','requirements','budget','budget_project','documentation_details']
+extensions_to_merge = ['ppp','location','parties','requirements','budget','budget_project','documentation_details','metrics','risk_allocation','shareholders','related_process','equity_transfer_caps','finance']
 
-GIT_REF = "gh-pages"
-location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
+GIT_REF = "master"
+location = "http://standard.open-contracting.org/extension_registry/{}/extensions.json".format(GIT_REF)
 extension_json = requests.get(location).json()
 
 with open('standard/schema/release-schema.json') as schema_file:
@@ -18,9 +18,15 @@ with open('standard/schema/release-schema.json') as schema_file:
 for extension in extension_json['extensions']:
     try:
         if extension['slug'] in extensions_to_merge:
+            print("Merging " + extension['slug'] )
             extension_patch = requests.get(extension['url'].rstrip("/") + "/" + "release-schema.json").json()
             schema = json_merge_patch.merge(schema, extension_patch)
-            print("Merging " + extension['slug'] )
+
+
+            extension_readme = requests.get(extension['url'].rstrip("/") + "/" + "README.md")
+            with open('standard/docs/en/extensions/' + extension['slug'] + '.md','w') as readme:
+                readme.write(extension_readme.text)
+
     except KeyError:
         print("Nothing")
         pass

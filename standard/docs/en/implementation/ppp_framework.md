@@ -207,34 +207,44 @@ These documents should be tagged with a ```documentType``` value of 'serviceDesc
 
 ### I.7: Estimated demand to be served annually
 
-This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+Estimated demand can be provided using both structured data, and a document with the ```documentType``` of 'estimatedDemand'. 
 
-The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+Structured demand forecasts are provided through the ```planning/forecast``` building block.
 
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+This consists of an array of forecast metrics. A metric with the ```id``` 'demand' should be given, with a series of forecast ```observations``` that capture the estimated demand for a given period.
 
-See: https://github.com/open-contracting/public-private-partnerships/issues/27#issuecomment-258170651 
+These estimates can be disaggregated by any number of dimensions contained as simple fields within the ```observation/dimensions``` object. 
 
-ToDo: Adding to planning a 'measure' block as 'estimatedDemand'
-ToDo: Add estimatedDemand to the PPP extension
+#### Example 
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-planning-01.json
+   :jsonpointer: /releases/0/planning
+   :expand: forecasts, observations, period, dimensions, unit
+```
 
 ### I.8: Project additionality
 
-This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+Information on the project additionality should be provided through planning documents containing:
 
-The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+* A short summary text
+* A link to one or more documents that provide additional information
 
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+These documents should be tagged with a ```documentType``` value of 'additionality' in the ```planning/documents``` array. 
 
-(TODO: Clarify this section of the framework)
+(TODO: Clarify this section of the framework. See https://github.com/open-contracting/public-private-partnerships/issues/32)
 
-### I.9: Reason for selection of PPP mode and type in brief
+### I.9: Reason for selection of PPP mode and type
 
-This information can be provided in a document, or documents, using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+A short summary of the reason for the PPP selection mode can be provided in ```tender/procurementMethodRationale``` field. 
 
-The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
+If further information is available, this can be provided through using the documents block:
 
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+* A short summary text
+* A link to one or more documents that provide additional information
+
+These documents should be tagged with a ```documentType``` value of 'pppModeRationale' in the ```planning/documents``` array. 
 
 ### I.10: Dates of various approvals
 
@@ -246,8 +256,9 @@ A value from the [milestone status codelist](../schema/codelists/#milestone-stat
 
 (TODO: build ppp-schema with [milestones update](https://github.com/duncandewhurst/ocds-milestones-update) + update codelists documentation)
 
-### Contract Milestones (Estimated and Actual)
+TODO: Investigate proposal for Approvals building block https://github.com/open-contracting/standard/issues/403
 
+### Contract Milestones (Estimated and Actual)
 
 #### I.11: Date of commercial close
 
@@ -295,7 +306,6 @@ The ```milestone/milestoneType``` field should be set to ```delivery```. This en
 
 A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
 
-
 #### I.16: Date of contract expiry
 
 This information can be provided using ```contractPeriod``` field in the ```tender``` section of an OCDS release. OCDS provides a [period building block](../schema/reference/#period) for disclosure of information on time periods.
@@ -313,7 +323,6 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 (TODO: draft documents extension - access details field + add to documentation)
 
 ### Parties to the contract with contact details
-
 
 #### I.18: Public authority: name of authority, name of representative, address, telephone, fax, e-mail
 
@@ -392,7 +401,7 @@ In releases about the RFP process the ```relatedProcess/ocid``` field should be 
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-pqq.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-award-01.json
    :jsonpointer: /releases/0/tender/relatedProcesses/0
 ```
 
@@ -400,7 +409,7 @@ In releases about the RFP process the ```relatedProcess/ocid``` field should be 
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-planning-01.json
    :jsonpointer: /releases/0/tender/relatedProcesses/0
 ```
 
@@ -410,14 +419,14 @@ Information on pre-qualified or shortlisted bidders should be provided using the
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-pqq.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-award-01.json
    :jsonpointer: /releases/0/awards
    :expand: /suppliers
 ```
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-pqq.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-award-01.json
    :jsonpointer: /releases/0/entities
    :expand: /0
    :expand: /1
@@ -493,9 +502,7 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 This information can be provided using the ```award``` and ```parties``` sections of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles.
 
-Details of the preferred bidder should be provided in the ```parties``` section and the ```award/suppliers``` field should be used to reference the relevant organization in the ```parties``` section.
-
-```preferredBidder``` should be added to the list of roles for the organization in the ```organization/roles``` field.
+Details of the preferred bidder should be provided in the ```parties``` section and the ```award/suppliers``` field should be used to reference the relevant organization in the ```parties``` section. ```preferredBidder``` should be added to the list of roles for the organization in the ```organization/roles``` field.
 
 (TODO: see [orgnaization roles issue](https://github.com/open-contracting/public-private-partnerships/issues/26))
 
@@ -701,28 +708,39 @@ A title and description for the equity transfer caps can be provided using the `
 
 ### V.5. Lender and investor information
 
-Commercial lenders, institutional investors, bilateral or multilateral lenders, public issue of bonds, supplier credit, other
+The [finance extension](../../../extensions/finance/) should be used to capture details of:
 
-REQUIRES ORGANISATION EXTENSION APPLIED TO SCHEMA
+* Commercial lenders
+* Institutional investors
+* Bilateral or multilateral lenders
+* Public issue of bonds
+* Supplier credit
+* Other finance
 
-(Array of organizationReferences - should we capture role at this level too?)
+For all finance from identified organisations, the organisation should be included in the ```parties``` array, with a role of ```financeProvider```. 
 
+For other forms of finance a title and description can be given.
+
+ToDo: Check what codelists should be used here
 
 ### V.6. Categorize senior debt, mezzanine debt, other
 
-(ToDo: model extension - array of objects made up of id + amount + organizationReference (to funder) + debt type (codelist)? )
+The details of all debts should be captured using the [finance extension](../../../extensions/finance/) in ```contract/finance```.
 
 ### V.7. Amount and tenor of each, fixed or floating rate
 
-(ToDo: model extension - array of objects made up of id + rate + period + id (of debt)? )
-
-TABLE OF FINANCING - 
-
-- Could be used to calculate debt-to-equity and total debt capital. 
+The interest rates relating to each form of financing should be captured using the [finance extension](../../../extensions/finance/) in ```contract/finance```.
 
 ### V.8. Security and step in arrangements
 
-USE DOCUMENTS (contract)
+Brief information on security and step in arrangements for particular finance can be provided using the ```description``` field against each entry in the ```contract/finance``` block. 
+
+General information on the security and step in arrangements should be provided through:
+
+* A short summary text
+* A link to one or more documents that provide additional information
+
+These documents should be tagged with a ```documentType``` value of 'financeArrangements' in the ```contract/documents``` array. 
 
 ### V.9. Forecast IRR
 
@@ -785,17 +803,39 @@ Disclosure timing: Within 15-30 days of receipt of information
 
 ### X.1. Annual demand levels
 
+Reporting on annual demand levels can be provided using the [metrics extension](../../../extensions/metrics/) at ```contracts/implementation/metrics```. 
+
+The demand metric should be identified with an id of 'demand'.
 
 ### X.2. Annual revenues
 
+Aggregate reporting on annual revenues can be provided using the [metrics extension](../../../extensions/metrics/) at ```contracts/implementation/metrics```. 
+
+The demand metric should be identified with an id of 'revenue'.
 
 ### X.3. Actual IRR
 
+Reporting on the actual IRR can be provided using the [metrics extension](../../../extensions/metrics/) at ```contracts/implementation/metrics```. 
+
+The demand metric should be identified with an id of 'irr'.
+
+ToDo: Check how often this would be reported? How much does this vary? 
 
 ### X.4. Performance
 
+Reporting on performance against agreed metrics can be provided using the [metrics extension](../../../extensions/metrics/) at ```contracts/implementation/metrics```. 
+
+The agreed metrics and targets can be provided in ```contracts/agreedMetrics```. 
 
 ### X.5. Performance Failures
 
+ToDo: See table in framework
 
 ### X.6. Performance Assessments
+
+Performance assessment reports can be provided through documents using:
+
+* A short summary text
+* A link to one or more documents that provide additional information
+
+These documents should be tagged with a ```documentType``` value of 'performanceReport' in the ```planning/documents``` array. 
