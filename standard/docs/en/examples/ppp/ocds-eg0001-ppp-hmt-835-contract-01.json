@@ -110,7 +110,82 @@
                         "countryName": "United Kingdom"
                     }
                 }
-            ]
-        }
+            ],
+			"contracts": [
+				{
+					"id": "ocds-eg0001-pf-hmt-835-contract-01",
+					"title": "Mersey Gateway Bridge Project",
+					"riskallocation": [
+						{
+							"id": "1.0",
+							"category": "demand",
+							"description": "Actual toll revenues are less than those forecast",
+							"allocation": "publicAuthority",
+							"likelihood": "med",
+							"fiscalImpact": "med",
+							"mitigation": "The Department for Transport will provide an Additional Availability Support Grant in the event that actual toll revenues are less than those forecast."
+						},
+						{
+							"id": "2.0",
+							"category": "construction",
+							"description": "Planning permission for the project is not granted",
+							"allocation": "privateParty",
+							"likelihood": "low",
+							"fiscalImpact": "high",
+							"mitigation": "A planning strategy was agreed with the local planning authority and was shared with the bidders to mitigate planning risk to acceptable levels"
+						}
+					],
+					"equityTransferCaps": [
+
+						{
+							"id": "1.0",
+							"title": "Construction phase equity transfer cap",
+							"description": "No equity transfer is permitted until construction is completed",
+							"amount": "0.0",
+							"milestone": {
+								"id": "contract-construction-001",
+								"title": "Construction completed"
+							}
+						},
+						{
+							"id": "2.0",
+							"title": "Initial operation phase equity transfer cap",
+							"description": "No more than 20% equity may be transferred until the project has been in operation for 10 years",
+							"amount": "0.2",
+							"milestone": {
+								"id": "contract-operation-001",
+								"title": "10 years of operation"
+							}
+						}
+
+					],
+					"implementation": {
+
+						"milestones": [
+							{
+								"id": "contract-construction-001",
+								"type": "delivery",
+								"title": "Construction completed",
+								"description": "Construction of the project is completed and has been signed off by the project board",
+								"dueDate": "2017-11-01T09:00:00Z",
+								"status": "scheduled",
+								"dateModified": "2016-11-22T09:00:00Z"
+							},
+							{
+								"id": "contract-operation-001",
+								"type": "delivery",
+								"title": "10 years of operation",
+								"description": "The project has been in operation for 10 years",
+								"dueDate": "2027-11-01T09:00:00Z",
+								"status": "scheduled",
+								"dateModified": "2016-11-22T09:00:00Z"
+							}
+						]
+
+					}
+
+				}
+			]
+		}
 	]
 }
