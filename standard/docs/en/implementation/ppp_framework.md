@@ -376,8 +376,6 @@ Links to RFQ documents can be provided using the ```documents``` field in the ``
 
 A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
-(TODO: Include guidance on modelling related RFQ/RFP processes)
-
 ### II.3. Pre-qualification or shortlist
 
 Where the procurement process for a PPP includes a qualification process prior to the RFP, such as an RFQ, pre-qualification or shortlisting stage, the qualification process and RFP processes should be modelled as a separate contracting processes in OCDS.
@@ -547,7 +545,7 @@ The party retaining each risk should be represented using the ```risk/allocation
 The likelihood and fiscal impact of the risk occuring should be represented using the ```risk/likelihood``` and ```risk/fiscalImpact``` fields respectively. The following codes are defined for these fields:
 
 * low
-* med
+* medium
 * high
 
 The description of the risk should be provided as free text using the ```risk/description``` field and the mitigation for the risk should be provided as free text using the ```risk/mitigation``` field.
