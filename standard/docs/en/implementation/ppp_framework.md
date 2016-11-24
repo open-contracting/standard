@@ -139,13 +139,13 @@ The sponsoring agency or department's details should be included in the ```parti
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/sponsor.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-planning-01.json
    :jsonpointer: /releases/0/entities
    :expand: entities,identifier,address,contactPoint
 ```
 
 ```eval_rst
-.. jsoninclude-flat:: docs/en/examples/ppp/sponsor.json
+.. jsoninclude-flat:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-planning-01.json
    :recursive:
    :jsonpointer: /releases/0/entities
    :ignore_path: /releases/0/
@@ -435,7 +435,7 @@ Information on pre-qualified or shortlisted bidders should be provided using the
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835.json
    :jsonpointer: /releases/0/entities
    :expand: /0/
    :expand: /1/
@@ -563,7 +563,7 @@ Additional free text information on the risk can be provided using the ```risk/n
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-contract-01.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-contract-01.json
    :jsonpointer: /releases/0/contracts/0/riskAllocation
    
 ```
@@ -659,7 +659,7 @@ Where the shareholder has *restricted*, *additional* or *enhanced* voting rights
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-contract-01.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-contract-01.json
    :jsonpointer: /releases/0/entities
    
 ```
@@ -688,7 +688,7 @@ A title and description for the equity transfer caps can be provided using the `
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-contract-01.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-contract-01.json
    :jsonpointer: /releases/0/contracts/0/equityTransferCaps
    
 ```
@@ -697,7 +697,7 @@ A title and description for the equity transfer caps can be provided using the `
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-ppp-hmt-835-contract-01.json
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-contract-01.json
    :jsonpointer: /releases/0/contracts/0/implementation/milestones
    
 ```

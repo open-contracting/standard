@@ -33,11 +33,11 @@ with open('standard/docs/en/examples/ppp/full.json') as full_file:
     split_releases = collections.defaultdict(list)
 
     for release in full['releases']:
-        if 'ocid' not in release:
-            print('Warning, release without an ocid')
+        if 'id' not in release:
+            print('Warning, release without an id')
             print(json.dumps(release, indent=2))
             continue
-        split_releases[release['ocid']].append(release)
+        split_releases[release['id']].append(release)
 
     for key, value in split_releases.items():
         with open('standard/docs/en/examples/ppp/{}.json'.format(key), 'w+') as release_file:
