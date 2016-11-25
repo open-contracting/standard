@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the PROJECT project.
 # 
 # Translators:
+# Joel Gombin <joel.gombin@gmail.com>, 2016
 # Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
+# samgoeta <samgoeta@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-14 11:49+0000\n"
-"PO-Revision-Date: 2016-04-24 15:05+0000\n"
-"Last-Translator: Louis Charbonneau <louis.charbonneau171@gmail.com>\n"
+"POT-Creation-Date: 2016-11-12 14:48+0000\n"
+"PO-Revision-Date: 2016-11-22 14:18+0000\n"
+"Last-Translator: Joel Gombin <joel.gombin@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,51 +79,56 @@ msgstr "Moindre coût"
 #. Title_en
 #: schema/codelists/awardCriteria.csv:2
 msgid "Best Proposal"
-msgstr "Meilleure proposition"
+msgstr "Meilleure offre"
 
 #. Title_en
 #: schema/codelists/awardCriteria.csv:3
 msgid "Best Value to Government"
-msgstr "Meilleure valeur pour le Gouvernement"
+msgstr "Meilleur rapport qualité-prix"
 
 #. Title_en
 #: schema/codelists/awardCriteria.csv:4
 msgid "Single Bid Only"
-msgstr "Une seule offre"
+msgstr "Offre unique seulement"
+
+#. Title_en
+#: schema/codelists/awardStatus.csv:1 schema/codelists/contractStatus.csv:1
+msgid "Pending"
+msgstr "En attente"
 
 #. Description_en
 #: schema/codelists/awardStatus.csv:1
 msgid ""
 "This award has been proposed, but is not yet in force. This may be due to a "
 "cooling off period, or some other process."
-msgstr "Cette adjudication a été proposée mais pas encore effective, possiblement causé par un délai de rétractation ou autre processus."
-
-#. Title_en
-#: schema/codelists/awardStatus.csv:1 schema/codelists/contractStatus.csv:1
-msgid "Pending"
-msgstr "En suspens"
-
-#. Description_en
-#: schema/codelists/awardStatus.csv:2
-msgid "This award has been made, and is currently in force."
-msgstr "Adjudication confirmée et en vigueur"
+msgstr "Cette attribution a été proposée, mais n'est pas encore en vigueur. Cela peut être dû à un délai de rétractation ou tout autre processus."
 
 #. Title_en
 #: schema/codelists/awardStatus.csv:2 schema/codelists/contractStatus.csv:2
 #: schema/codelists/tenderStatus.csv:2
 msgid "Active"
-msgstr "Actif "
+msgstr "Active"
 
 #. Description_en
-#: schema/codelists/awardStatus.csv:3
-msgid "This award has been cancelled."
-msgstr "Adjudication annulée"
+#: schema/codelists/awardStatus.csv:2
+msgid "This award has been made, and is currently in force."
+msgstr "Cette attribution a été faite et est actuellement en vigueur."
 
 #. Title_en
 #: schema/codelists/awardStatus.csv:3 schema/codelists/contractStatus.csv:3
 #: schema/codelists/tenderStatus.csv:3
 msgid "Cancelled"
 msgstr "Annulée"
+
+#. Description_en
+#: schema/codelists/awardStatus.csv:3
+msgid "This award has been cancelled."
+msgstr "Cette attribution a été annulée. "
+
+#. Title_en
+#: schema/codelists/awardStatus.csv:4 schema/codelists/tenderStatus.csv:4
+msgid "Unsuccessful"
+msgstr "Infructeux"
 
 #. Description_en
 #: schema/codelists/awardStatus.csv:4
@@ -131,39 +138,26 @@ msgid ""
 "unsuccessful award (i.e. the award of noted items, or an award to the noted "
 "supplier, was unsuccessful, but there may be other successful awards for "
 "different items listed in the tender, or to different suppliers)."
-msgstr "Cette adjudication n'a pas abouti. If items or supplier details are included within the award section, then these narrow the scope of the unsuccessful award (i.e. the award of noted items, or an award to the noted supplier, was unsuccessful, but there may be other successful awards for different items listed in the tender, or to different suppliers)."
-
-#. Title_en
-#: schema/codelists/awardStatus.csv:4 schema/codelists/tenderStatus.csv:4
-msgid "Unsuccessful"
-msgstr "Infructueux"
+msgstr "Cette attribution n'a pas abouti. Si des détails sur les éléments du marché ou les fournisseurs sont inclus dans la section d'attribution, alors ceux-ci réduisent la portée de l'attribution sans succès (ie l'attribution des éléments mentionnés, ou une attribution au fournisseur mentionné, a échoué, mais il peut y avoir d'autres éléments de l'appel d'offres qui ont été attribués avec succès ou à différents fournisseurs)."
 
 #. Description_en
 #: schema/codelists/contractStatus.csv:1
 msgid ""
 "This contract has been proposed, but is not yet in force. It may be awaiting"
 " signature."
-msgstr "Ce contrat a été proposé mais pas encore en vigueur possiblement à cause de délai de signature."
+msgstr "Ce contrat a été proposé, mais n'est pas encore en vigueur. Il peut être en attente de signature."
 
 #. Description_en
 #: schema/codelists/contractStatus.csv:2
 msgid ""
 "This contract has been signed by all the parties, and is now legally in "
 "force."
-msgstr "Ce contrat a été signé par toutes les parties et est légalement en vigueur."
+msgstr "Ce contrat a été signé par toutes les parties et est maintenant légalement en vigueur."
 
 #. Description_en
 #: schema/codelists/contractStatus.csv:3
 msgid "This contract has been cancelled prior to being signed."
-msgstr "Ce contrat a été annulé avant signature"
-
-#. Description_en
-#: schema/codelists/contractStatus.csv:4
-msgid ""
-"This contract was signed and in force, and has now come to a close. This may"
-" be due to successful completion of the contract, or may be early "
-"termination due to some non-completion."
-msgstr "Ce contrat signé et en vigueur a atteint le stade: Clôturé. (Complété avec succès ou prématurément terminé)"
+msgstr "Ce contrat a été annulé avant d'être signé."
 
 #. Title_en
 #: schema/codelists/contractStatus.csv:4
@@ -171,12 +165,12 @@ msgid "Terminated "
 msgstr "Terminé"
 
 #. Description_en
-#: schema/codelists/documentType.csv:1
+#: schema/codelists/contractStatus.csv:4
 msgid ""
-"The formal notice that gives details of a tender. This may be a link to a "
-"downloadable document, to a web page, or to an official gazette in which the"
-" notice is contained. "
-msgstr "L'avis officiel qui donne les détails de l'appel d'offres. Ce peut être un lien à un document a télécharger, une page web ou une annonce dans une gazette officielle."
+"This contract was signed and in force, and has now come to a close. This may"
+" be due to successful completion of the contract, or may be early "
+"termination due to some non-completion."
+msgstr "Ce contrat a été signé et en vigueur, et est parvenu à son terme. Cela peut être dû à la réussite du contrat, ou peut provenir d'une résiliation anticipée en raison d'un non-achèvement."
 
 #. Title_en
 #: schema/codelists/documentType.csv:1
@@ -184,12 +178,12 @@ msgid "Tender Notice"
 msgstr "Avis d'appel d'offres"
 
 #. Description_en
-#: schema/codelists/documentType.csv:2
+#: schema/codelists/documentType.csv:1
 msgid ""
-"The formal notice that gives details of the contract award. This may be a "
-"link to a downloadable document, to a web page, or to an official gazette in"
-" which the notice is contained. "
-msgstr "L'avis officiel qui donne les détails de l'adjudication du contrat. Ce peut être un lien à un document a télécharger, une page web ou une annonce dans une gazette officielle."
+"The formal notice that gives details of a tender. This may be a link to a "
+"downloadable document, to a web page, or to an official gazette in which the"
+" notice is contained. "
+msgstr "L'avis formel qui donne les détails d'un appel d'offres. Cela peut être un lien vers un document téléchargeable, une page Web, ou une publication legale dans laquelle l'avis est contenu."
 
 #. Title_en
 #: schema/codelists/documentType.csv:2
@@ -197,54 +191,57 @@ msgid "Award Notice"
 msgstr "Avis d'adjudication"
 
 #. Description_en
-#: schema/codelists/documentType.csv:3
+#: schema/codelists/documentType.csv:2
 msgid ""
-"The formal notice that gives details of a contract being signed and valid to"
-" start implementation. This may be a link to a downloadable document, to a "
-"web page, or to an official gazette in which the notice is contained. "
-msgstr "L'avis formel qui donne les détails de signature du contrat et valide le début de la mise en oeuvre du projet. Ce peut être un lien à un document a télécharger, une page web ou une annonce dans une gazette officielle."
+"The formal notice that gives details of the contract award. This may be a "
+"link to a downloadable document, to a web page, or to an official gazette in"
+" which the notice is contained. "
+msgstr "L'avis officiel qui donne les détails de l'attribution du marché. Ce peut être un lien vers un document a télécharger, une page web ou une annonce dans une publication légale."
 
 #. Title_en
 #: schema/codelists/documentType.csv:3
 msgid "Contract Notice"
 msgstr "Avis de signature de contrat"
 
+#. Description_en
+#: schema/codelists/documentType.csv:3
+msgid ""
+"The formal notice that gives details of a contract being signed and valid to"
+" start implementation. This may be a link to a downloadable document, to a "
+"web page, or to an official gazette in which the notice is contained. "
+msgstr "L'avis officiel qui donne les détails du contrat en cours de signature et valide en vue de sa mise en exécution. Ce peut être un lien vers un document a télécharger, une page web ou une annonce dans une publication légale. "
+
 #. Title_en
 #: schema/codelists/documentType.csv:4
 msgid "Completion certificate"
-msgstr "Certificat d'achèvement"
+msgstr "Certificat de service fait "
 
 #. Title_en
 #: schema/codelists/documentType.csv:5
 msgid "Procurement Plan"
-msgstr "Plan d'approvisionnement"
+msgstr "Plan de commande publique"
+
+#. Title_en
+#: schema/codelists/documentType.csv:6
+msgid "Bidding Documents"
+msgstr "Dossier de réponse à l'appel d'offres"
 
 #. Description_en
 #: schema/codelists/documentType.csv:6
 msgid ""
 "Information for potential suppliers, describing the goals of the contract "
 "(e.g. goods and services to be procured), and the bidding process."
-msgstr "Renseignements pour de potentiel fournisseurs, décrivant les objectifs, les produits et services envisagés et la méthode d'appel d'offres retenue. "
-
-#. Title_en
-#: schema/codelists/documentType.csv:6
-msgid "Bidding Documents"
-msgstr "Documents d'appel d'offres"
-
-#. Description_en
-#: schema/codelists/documentType.csv:7
-msgid "Detailed technical information about goods or services to be provided."
-msgstr "Devis descriptifs et renseignements techniques concernant les biens et services requis "
+msgstr "Les informations pour les fournisseurs potentiels, décrivant les objectifs du contrat (par exemple, des biens et services à fournir), et le processus d'appel d'offres."
 
 #. Title_en
 #: schema/codelists/documentType.csv:7
 msgid "Technical Specifications"
-msgstr "Cahier des charges"
+msgstr "Spécifications techniques"
 
 #. Description_en
-#: schema/codelists/documentType.csv:8
-msgid "Information about how bids will be evaluated. "
-msgstr "Renseignements sur les critères d'évaluation de la proposition"
+#: schema/codelists/documentType.csv:7
+msgid "Detailed technical information about goods or services to be provided."
+msgstr "Des informations techniques détaillées sur les biens et services à fournir.  "
 
 #. Title_en
 #: schema/codelists/documentType.csv:8
@@ -252,16 +249,21 @@ msgid "Evaluation Criteria "
 msgstr "Critères d'évaluation"
 
 #. Description_en
-#: schema/codelists/documentType.csv:9
-msgid ""
-"Report on the evaluation of the bids and the application of the evaluation "
-"criteria, including the justification fo the award"
-msgstr "Rapport sur l'évaluation de la proposition avec la pondération des critères et arguments justifiant l'adjudication."
+#: schema/codelists/documentType.csv:8
+msgid "Information about how bids will be evaluated. "
+msgstr "Informations sur la manière dont les offres vont être évaluées. "
 
 #. Title_en
 #: schema/codelists/documentType.csv:9
 msgid "Evaluation report"
 msgstr "Rapport d'évaluation"
+
+#. Description_en
+#: schema/codelists/documentType.csv:9
+msgid ""
+"Report on the evaluation of the bids and the application of the evaluation "
+"criteria, including the justification fo the award"
+msgstr "Rapport sur l'évaluation des offres et  l'application des critères d'évaluation comprenant la justification de l'attribution."
 
 #. Title_en
 #: schema/codelists/documentType.csv:10
@@ -271,23 +273,28 @@ msgstr "Contrat signé"
 #. Title_en
 #: schema/codelists/documentType.csv:11
 msgid "Arrangements for ending contract"
-msgstr "Dispositions pour clôturer un contrat"
+msgstr "Clauses de fin de contrat"
 
 #. Title_en
 #: schema/codelists/documentType.csv:12
 msgid "Schedules and milestones"
-msgstr "Calendriers et jalons"
+msgstr "Calendrier et étapes"
+
+#. Title_en
+#: schema/codelists/documentType.csv:13
+msgid "Physical progress reports"
+msgstr "Rapport d'avancement physique"
 
 #. Description_en
 #: schema/codelists/documentType.csv:13
 msgid ""
 "A report on the status of implementation, usually against key milestones."
-msgstr "Un rapport sur le degré de réalisation du projet avec comparatif aux jalons."
+msgstr "Un rapport sur l'état de l'exécution du contrat, souvent par rapport aux étapes clés."
 
 #. Title_en
-#: schema/codelists/documentType.csv:13
-msgid "Physical progress reports"
-msgstr "État d'avancement du projet"
+#: schema/codelists/documentType.csv:14
+msgid "Financial progress reports"
+msgstr "Rapport de suivi financier"
 
 #. Description_en
 #: schema/codelists/documentType.csv:14
@@ -295,39 +302,29 @@ msgid ""
 "Dates and amounts of stage payments made (against total amount) and the "
 "source of those payments, including cost overruns, if any. Structured "
 "versions of this data can be provided through transactions. "
-msgstr "Dates, montants et source des paiements progressifs à l'encontre de la somme du contrat, incluant les dépassement de budget le cas échéant. Une version structurée de ces renseignements peut être fournie via les transactions. "
-
-#. Title_en
-#: schema/codelists/documentType.csv:14
-msgid "Financial progress reports"
-msgstr "États financiers d'avancement"
+msgstr "Les dates et les montants des paiements échelonnés effectués (par rapport au montant total) et la source de ces paiements, y compris les dépassements de coûts le cas échéant. Les versions structurées de ces données peuvent être fournies par des transactions."
 
 #. Title_en
 #: schema/codelists/documentType.csv:15
 msgid "Final Audit"
-msgstr "Audit Final"
-
-#. Description_en
-#: schema/codelists/documentType.csv:16
-msgid ""
-"Details of any public hearings that took place as part of the planning for "
-"this procurement."
-msgstr "Compte rendu des auditions publiques faisant parti de la planification du projet d'approvisionnement."
+msgstr "Audit final"
 
 #. Title_en
 #: schema/codelists/documentType.csv:16
 msgid "Public Hearing Notice"
 msgstr "Avis d'audition publique"
 
+#. Description_en
+#: schema/codelists/documentType.csv:16
+msgid ""
+"Details of any public hearings that took place as part of the planning for "
+"this procurement."
+msgstr "Les détails sur les auditions publiques qui ont eu lieu dans le cadre de la planification de ce marché. "
+
 #. Title_en
 #: schema/codelists/documentType.csv:17
 msgid "Market Studies"
-msgstr "Études de marché"
-
-#. Description_en
-#: schema/codelists/documentType.csv:18
-msgid "Detailed documents about the eligibility of bidders."
-msgstr "Document descriptif des soumissionnaires éligibles"
+msgstr "Etudes de marché"
 
 #. Title_en
 #: schema/codelists/documentType.csv:18
@@ -335,19 +332,24 @@ msgid "Eligibility Criteria"
 msgstr "Critères d'éligibilité"
 
 #. Description_en
-#: schema/codelists/documentType.csv:19
-msgid "Including replies to issues raised in pre-bid conferences."
-msgstr "Incluant les réponses aux questions soulevées lors des rencontres pré-soumissions"
+#: schema/codelists/documentType.csv:18
+msgid "Detailed documents about the eligibility of bidders."
+msgstr "Des documents détaillés sur l'éligibilité des candidats."
 
 #. Title_en
 #: schema/codelists/documentType.csv:19
 msgid "Clarifications to bidders questions"
-msgstr "Clarifications apportées aux questions des soumissionnaires"
+msgstr "Clarifications apportées aux questions des candidats"
+
+#. Description_en
+#: schema/codelists/documentType.csv:19
+msgid "Including replies to issues raised in pre-bid conferences."
+msgstr "Incluant les réponses aux questions soulevées lors des rencontres précédent la soumission de la candidature. "
 
 #. Title_en
 #: schema/codelists/documentType.csv:20
 msgid "Shortlisted Firms"
-msgstr "Soumissionnaires sélectionnés (courte liste)"
+msgstr "Entreprises préselectionnées"
 
 #. Title_en
 #: schema/codelists/documentType.csv:21
@@ -357,17 +359,17 @@ msgstr "Impact environnemental"
 #. Title_en
 #: schema/codelists/documentType.csv:22
 msgid "Assesment of government's assets and liabilities "
-msgstr "Évaluation des actifs et passifs gouvernementaux"
+msgstr "Evaluation des actifs et passifs du gouvernement"
 
 #. Title_en
 #: schema/codelists/documentType.csv:23
 msgid "Provisions for management of risks and liabilities"
-msgstr "Dispositions prises pour la gestion des risques et engagements"
+msgstr "Dispositions prises pour la gestion des risques et des responsabilités "
 
 #. Title_en
 #: schema/codelists/documentType.csv:24
 msgid "Winning Bid"
-msgstr "Soumission gagnante"
+msgstr "Offre gagnante"
 
 #. Title_en
 #: schema/codelists/documentType.csv:25
@@ -377,24 +379,24 @@ msgstr "Plaintes et décisions"
 #. Title_en
 #: schema/codelists/documentType.csv:26
 msgid "Annexes to the Contract"
-msgstr "Annexes aux contrats"
+msgstr "Les annexes au contrat"
 
 #. Title_en
 #: schema/codelists/documentType.csv:27
 msgid "Guarantees"
 msgstr "Garanties"
 
+#. Title_en
+#: schema/codelists/documentType.csv:28
+msgid "Subcontracts"
+msgstr "Sous-traitance"
+
 #. Description_en
 #: schema/codelists/documentType.csv:28
 msgid ""
 "A document detailing subcontracts, the subcontract itself, or a linked OCDS "
 "document describing a subcontract."
-msgstr "Un document descriptif de l'entente de sous-traitance, le contrat de sous-traitance, un lien OCDS au document décrivant l'entente de sous-traitance."
-
-#. Title_en
-#: schema/codelists/documentType.csv:28
-msgid "Subcontracts"
-msgstr "Contrats de sous-traitance"
+msgstr "Un document détaillant les sous-traitances, le contrat de sous-traitance lui-même ou un document OCDS lié décrivant la sous-traitance. "
 
 #. Title_en
 #: schema/codelists/documentType.csv:29
@@ -409,34 +411,39 @@ msgstr "Étude de faisabilité"
 #. Title_en
 #: schema/codelists/documentType.csv:31
 msgid "Project plan"
-msgstr "Plan du projet"
+msgstr "Plan de projet"
 
 #. Title_en
 #: schema/codelists/documentType.csv:32
 msgid "Bill Of Quantity"
-msgstr "Devis quantitatifs\nA description and a quantitative estimate of all materials, and/or supplies, which will be required for a proposed construction project or production of equipment (usually custom designed), provided to bidders for pricing purposes.\nUN definition"
+msgstr "Devis quantifiés"
+
+#. Title_en
+#: schema/codelists/documentType.csv:33
+msgid "Information on bidders"
+msgstr "Informations sur les candidats"
 
 #. Description_en
 #: schema/codelists/documentType.csv:33
 msgid ""
 "Information on bidders or participants, their validation documents and any "
 "procedural exemptions for which they qualify"
-msgstr "Collection de documents et de renseignements permettant de juger de la compétence d'un soumissionnaire et de corroborer ses qualifications."
-
-#. Title_en
-#: schema/codelists/documentType.csv:33
-msgid "Information on bidders"
-msgstr "Renseignements sur les soumissionnaires"
+msgstr "Information sur les candidats ou les participants, leurs documents de validation et les exemptions de procédure auxquelles ils ont droit"
 
 #. Title_en
 #: schema/codelists/documentType.csv:34
 msgid "conflicts of interest uncovered"
-msgstr "Divulgation des conflits d'intérêts"
+msgstr "Conflits d'intérêts découverts"
 
 #. Title_en
 #: schema/codelists/documentType.csv:35
 msgid "debarments issued"
 msgstr "Avis d'exclusion"
+
+#. Title_en
+#: schema/codelists/initiationType.csv:1 schema/codelists/releaseTag.csv:2
+msgid "Tender"
+msgstr "Appel d'offre"
 
 #. Description_en
 #: schema/codelists/initiationType.csv:1
@@ -444,12 +451,12 @@ msgid ""
 "An open competitive bidding or tendering to form contracts. The process "
 "generally involves publicly inviting prospective contractors to submit bids "
 "for evaluation and selecting a winner or winners."
-msgstr "Mode de passation de marché public. Le processus implique généralement une invitation publique aux entrepreneurs potentiels de soumettre des propositions pour la réalisation d'un projet donné."
+msgstr "Un appel d'offres ouvert et concurrentiel pour passer des marchés. Le processus implique généralement d'inviter publiquement les entreprises qui pourraient potentiellement soumettre des offres en vue de leur évaluation et de la sélection d'un ou des gagnant(s)."
 
 #. Title_en
-#: schema/codelists/initiationType.csv:1 schema/codelists/releaseTag.csv:2
-msgid "Tender"
-msgstr "Appel d'offres"
+#: schema/codelists/itemClassificationScheme.csv:1
+msgid "EC Common Procurement Vocabulary"
+msgstr "Vocabulaire commun de l'union européenne pour les marchés publics"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:1
@@ -462,12 +469,12 @@ msgid ""
 "(an 8 digit code plus a check digit) associated with a wording that "
 "describes the type of supplies, works or services forming the subject of the"
 " contract."
-msgstr "Nomenclature de biens et de services de l'union européenne, servant aux avis d'appels publics à la concurrence et pouvant également servir à la computation des seuils et plafonds. La nomenclature CPV (Common Procurement Vocabulary) permet de désigner, dans les avis d'appel publics à la concurrence, l'objet du marché quelle que soit la langue utilisée. Le standard OCDS désigne le vocabulaire principal par le code CPV.\n"
+msgstr "Le vocabulaire commun pour les marchés publics —Common Procurement Vocabulary - CPV — est une nomenclature européenne de classification uniformisée en matière de marchés publics permettant de standardiser, grâce à un vocabulaire principal, la définition de l'objet du contrat, ainsi qu'un vocabulaire supplémentaire pour ajouter des informations qualitatives complémentaires. Le vocabulaire principal, identifié dans OCDS par le code CPV, est fondé sur une structure en arborescence comprenant des codes allant jusqu'à 9 chiffres (un code en 8 chiffres plus un chiffre de vérification) associé avec un texte qui décrit le type de fournitures, de travaux et de services qui forment l'objet du contrat. "
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:1
-msgid "EC Common Procurement Vocabulary"
-msgstr "Vocabulaire commun de l'union européenne pour les marchés publics"
+#: schema/codelists/itemClassificationScheme.csv:2
+msgid "EC Common Procurement Vocabulary - Supplementary Codelists"
+msgstr "Vocabulaire commun de l'Union Européenne pour les marchés publics - nomenclature supplémentaire"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:2
@@ -479,12 +486,12 @@ msgid ""
 "by the code CPVS, is made up of an alphanumeric code with a corresponding "
 "wording allowing further details to be added regarding the specific nature "
 "or destination of the goods to be purchased."
-msgstr "Le vocabulaire commun pour les marchés publics, (CPV), est une nomenclature européenne de classification uniformisée en matière de marchés publics visant à standardiser les références utilisées pour décrire l'objet d'un marché par les pouvoirs adjudicateurs (Union européenne, États membres, collectivités publiques, etc.) et les entités adjudicatrices. Le CPV est composé d'un vocabulaire principal et d'un vocabulaire supplémentaire identifié dans le standard OCDS par le code CPVS. Le vocabulaire supplémentaire CPVS permet de préciser la nature ou la destination du bien requis."
+msgstr "Le vocabulaire commun pour les marchés publics —Common Procurement Vocabulary - CPV — est une nomenclature européenne de classification uniformisée en matière de marchés publics permettant de standardiser, grâce à un vocabulaire principal, la définition de l'objet du contrat, ainsi qu'un vocabulaire supplémentaire pour ajouter des informations qualitatives complémentaires. Le vocabulaire supplémentaire, identifié dans OCDS par le code CPVS, est fondé sur un code alphanumérique avec un libellé correspondant permettant d'ajouter des détails supplémentaires sur la nature ou la destination spécifiques des biens contractés. "
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:2
-msgid "EC Common Procurement Vocabulary - Supplementary Codelists"
-msgstr "UE Vocabulaire commun pour les marchés publics - Listes codifiées supplémentaires,"
+#: schema/codelists/itemClassificationScheme.csv:3
+msgid "Goods and Services Identification Number"
+msgstr "Numéro d'Identification des Biens et Services"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:3
@@ -492,12 +499,12 @@ msgid ""
 "The Canadia federal government uses Goods and Services Identification Number"
 " (GSIN) codes to identify generic product descriptions for its procurement "
 "activities. The full list is published and maintained at buyandsell.gc.ca"
-msgstr "Le gouvernement canadien se sert des codes du numéro d'identification des biens et services (NIBS) pour identifier les descriptions de produits génériques dans le cadre de ses activités d'approvisionnement. Sur le site Achatsetventes.gc.ca, les codes NIBS permettent de relier toute l'information liée aux achats, incluant les appels d'offres, les offres à commandes, les arrangements en matière d'approvisionnement et les contrats octroyés. En 2017, la classification United Nations Standard Products and Services Code (UNSPSC) remplacera les codes du NIBS."
+msgstr "Le gouvernement fédéral canadien utilise des Numéros d'Identification des Biens et Services (NIBS) pour identifier les descriptions de produits génériques pour ses activités de commande publique. La liste complète est publiée et maintenue à buyandsell.gc.ca"
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:3
-msgid "Goods and Services Identification Number"
-msgstr "Numéro d’identification des biens et services"
+#: schema/codelists/itemClassificationScheme.csv:4
+msgid "United Nations Standard Products and Services Code®"
+msgstr "Classification Universelle Normalisée des Produits et des Services"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:4
@@ -507,12 +514,12 @@ msgid ""
 "Machine readable meta-data for UNSPSC is not provided as open data: and so "
 "publishers should consider alternative classification shemes that do provide"
 " open data lookup tables wherever possible."
-msgstr "Le système de classification international des articles d'approvisionnement appelé « United Nations Standard Products and Services Code (UNSPSC) » est une nomenclature hiérarchique de classification des produits et services."
+msgstr "La  Classification Universelle Normalisée des Produits et des Services (UNSPSC) des Nations Unies est une convention hiérarchique utilisée pour classifier tous les produits et les services. Les méta-données lisibles par une machine pour l'UNSPSC ne sont pas fournies sous la forme de données ouvertes : par conséquent, les fournisseurs de données devraient envisager des schémas de classification alternatifs qui fournissent des tables de consultation des données ouvertes chaque fois que possible."
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:4
-msgid "United Nations Standard Products and Services Code®"
-msgstr "Le système de classification international des articles d'approvisionnement appelé « United Nations Standard Products and Services Code (UNSPSC) »"
+#: schema/codelists/locationGazeteer.csv:1
+msgid "EU Nomenclature of Territorial Units for Statistics "
+msgstr "Nomenclature des Unités Territoriales Statistiques (NUTS)"
 
 #. Description_en
 #: schema/codelists/locationGazeteer.csv:1
@@ -520,19 +527,7 @@ msgid ""
 "The Nomenclature of Territorial Units for Statistics (NUTS) was established "
 "by Eurostat in order to provide a single uniform breakdown of territorial "
 "units for the production of regional statistics for the European Union."
-msgstr "La nomenclature NUTS (Nomenclature des unités territoriales statistiques) est un système hiérarchique de découpage du territoire économique de l'UE qui sert de référence pour la collecte, le développement et l'harmonisation des statistiques régionales et pour les analyses socio-économiques des régions;"
-
-#. Title_en
-#: schema/codelists/locationGazeteer.csv:1
-msgid "EU Nomenclature of Territorial Units for Statistics "
-msgstr "Nomenclature des unités territoriales statistiques de l'Union Européenne"
-
-#. Description_en
-#: schema/codelists/method.csv:1
-msgid ""
-"Open tendering means a procurement  method whereby all interested suppliers "
-"may submit a tender."
-msgstr "Appel d'offres ouvert signifie que tous les fournisseurs intéressés peuvent soumettre une offre."
+msgstr "La Nomenclature des Unités Territoriales Statistiques (NUTS) a été établi par Eurostat dans le but de fournir une seule répartition uniforme des unités territoriales pour la production des statistiques régionales de l'Union européenne."
 
 #. Title_en
 #: schema/codelists/method.csv:1
@@ -540,11 +535,11 @@ msgid "Open"
 msgstr "Ouvert"
 
 #. Description_en
-#: schema/codelists/method.csv:2
+#: schema/codelists/method.csv:1
 msgid ""
-"Selective tendering means a procurement  method whereby only qualified "
-"suppliers are invited by the procuring entity to  submit a tender."
-msgstr "Un appel d'offres sélectif est une méthode d'approvisionnement public où seulement un certain nombre de fournisseur qualifiés sont invités à présenter une offre."
+"Open tendering means a procurement  method whereby all interested suppliers "
+"may submit a tender."
+msgstr "Un appel d'offres ouvert correspond à une méthode dans laquelle tous les fournisseurs intéressés peuvent soumettre une offre."
 
 #. Title_en
 #: schema/codelists/method.csv:2
@@ -552,31 +547,38 @@ msgid "Selective"
 msgstr "Sélectif"
 
 #. Description_en
-#: schema/codelists/method.csv:3
+#: schema/codelists/method.csv:2
 msgid ""
-"Limited  tendering means a procurement method whereby the procuring entity "
-"contacts a supplier or suppliers of its choice."
-msgstr "Un appel d'offres limité signifie une méthode d'approvisionnement où un ou des fournisseurs au choix de l'acheteur."
+"Selective tendering means a procurement  method whereby only qualified "
+"suppliers are invited by the procuring entity to  submit a tender."
+msgstr "Un appel d'offres sélectif signifie que seuls les fournisseurs qualifiés sont invités par l'entité acheteuse à présenter une soumission."
 
 #. Title_en
 #: schema/codelists/method.csv:3
 msgid "Limited"
 msgstr "Limité"
 
+#. Description_en
+#: schema/codelists/method.csv:3
+msgid ""
+"Limited  tendering means a procurement method whereby the procuring entity "
+"contacts a supplier or suppliers of its choice."
+msgstr "Un appel d'offres limité signifie que l'entité contractante s'adresse à un ou à des fournisseurs de son choix."
+
 #. Title_en
 #: schema/codelists/milestoneStatus.csv:1
 msgid "Met"
-msgstr "Répond"
+msgstr "Atteint"
 
 #. Title_en
 #: schema/codelists/milestoneStatus.csv:2
 msgid "Not Met"
-msgstr "Ne répond pas"
+msgstr "Pas atteint"
 
 #. Title_en
 #: schema/codelists/milestoneStatus.csv:3
 msgid "Partially Met"
-msgstr "Répond partiellement"
+msgstr "Partiellement atteint"
 
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
 msgid "code"
@@ -596,7 +598,7 @@ msgstr "catégorie"
 
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
 msgid "url"
-msgstr "url"
+msgstr "URL"
 
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
 msgid "public-database"
@@ -605,27 +607,27 @@ msgstr "base de données publique"
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:1
 msgid "Afghanistan Central Business Registry"
-msgstr "Registre centralisé des entreprises Afghanes"
+msgstr "Afghanistan Central Business Registry"
 
 #. description
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:1
 msgid "Website not yet searchable"
-msgstr "Site Web pas encore interrogeable"
+msgstr "Site pas encore consultable"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:2
 msgid "Ministry of Economy"
-msgstr "Ministre de l'économie"
+msgstr "Ministry of Economy"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:3
 msgid "Australian Business Register"
-msgstr "Registre des entreprises d'Australie"
+msgstr "Australian Business Register"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:4
 msgid "Australian Charities and Not-for-profits Commission"
-msgstr "Commission australienne des organismes sans but lucratif"
+msgstr "Australian Charities and Not-for-profits Commission"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:5
@@ -645,12 +647,12 @@ msgstr "Canadian Revenue Agency / Agence du revenu du Canada"
 #. description
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:7
 msgid "CRA_ACR is legal requirement for bilingual use"
-msgstr "Agence Canada Revenu - Bilinguisme obligatoire"
+msgstr "CRA_ACR est l'exigence légale de bilinguisme obligatoire"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:8
 msgid "Common Directory of Organizational Units and Offices - DIR3"
-msgstr "Répertoire commun des organisations et bureaux - DIR3"
+msgstr "Common Directory of Organizational Units and Offices - DIR3"
 
 #. description
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:8
@@ -658,35 +660,35 @@ msgstr "Répertoire commun des organisations et bureaux - DIR3"
 msgid ""
 "EXCEL Tables: "
 "http://administracionelectronica.gob.es/ctt/resources/Soluciones/238/Area%20descargas/Listado%20Oficinas%20AGE.xlsx?idIniciativa=238&idElemento=2745"
-msgstr "Tableau EXCEL: http://administracionelectronica.gob.es/ctt/resources/Soluciones/238/Area%20descargas/Listado%20Oficinas%20AGE.xlsx?idIniciativa=238&idElemento=2745"
+msgstr "Tableau EXCEL : http://administracionelectronica.gob.es/ctt/resources/Soluciones/238/Area%20descargas/Listado%20Oficinas%20AGE.xlsx?idIniciativa=238&idElemento=2745"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:9
 msgid "Ministry of Foreign Affairs"
-msgstr "Ministère des affaires extérieures"
+msgstr "Ministère des Affaires étrangères"
 
 #. description
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:9
 msgid ""
 "Charities are registered but no openly searchable database yet available."
-msgstr "Base de données des organismes de charité pas encore interrogeable"
+msgstr "La base de données des organismes de charité n'est pas encore interrogeable"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:10
 msgid "Finnish Patent and Registration office"
-msgstr "Brevet et Bureau d'enregistrement de Finlande"
+msgstr "Finnish Patent and Registration office"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:11
 msgid ""
 "Registre de Commerce et des Societies /Trade and Companies Register - "
 "Commercial Court Registry"
-msgstr "Registre de Commerce et des Societés /Trade and Companies Register - Commercial Court Registry"
+msgstr "Registre de Commerce et des Societies /Trade and Companies Register - Commercial Court Registry"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:12
 msgid "Charity Commission"
-msgstr "Commission des organismes de charité"
+msgstr "Charity Commission"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:13
@@ -701,12 +703,12 @@ msgstr "UK Government Departments Reference Numbers"
 #. description
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:14
 msgid "Codes for use by IATI for UK Government Departments."
-msgstr "Code IATI (International Aid Transparency Initiative) a utiliser par les départements du Royaume Uni"
+msgstr "Codes for use by IATI for UK Government Departments."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:15
 msgid "UK Government Departments, Agencies & Public Bodies"
-msgstr "Départements, Agences et organismes du Royaume Uni"
+msgstr "UK Government Departments, Agencies & Public Bodies"
 
 #. description
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:15
@@ -714,12 +716,12 @@ msgid ""
 "Use the final segment of the url (below /organisations) as the "
 "\"registration number\", converting all \"-\" to \"_\". Keep \"registration "
 "number\" portion all lowercase."
-msgstr "Utiliser le dernier segment du url (below /organisations) comme \"registration number\", en changeant tous les tirets \"-\" pour des soulignements   \"_\". Conserver lla partie du \"registration number\" en minuscules."
+msgstr "Utiliser le dernier segment de l'URL (après /organisations) comme \"registration number\", en changeant tous les tirets \"-\" pour des soulignements  \"_\". Conserver la partie \"registration number\" en minuscules."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:16
 msgid "The Charity Commission for Northern Ireland"
-msgstr "La Commission des Organismes de charité d'Ireland du nord"
+msgstr "The Charity Commission for Northern Ireland"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:17
@@ -729,7 +731,7 @@ msgstr "HM Revenue and Customs"
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:18
 msgid "Scottish Charity Register"
-msgstr "Registre des organismes de charité d'Écosse"
+msgstr "Scottish Charity Register"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:19
@@ -763,7 +765,7 @@ msgstr "Ministry of Justice & Human Rights/ Kementerian Hukum Dan Hak"
 msgid ""
 "Company registration is done through Ministry of Justice & Human Rights/ "
 "Kementerian Hukum Dan Hak"
-msgstr "L'enregistrement des entreprises se fait via le Ministry of Justice & Human Rights/ Kementerian Hukum Dan Hak"
+msgstr "Company registration is done through Ministry of Justice & Human Rights/ Kementerian Hukum Dan Hak"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:23
@@ -775,7 +777,7 @@ msgstr "Ministry of Foreign affairs/ Kementerian Luar Negeri"
 msgid ""
 "International NGO registration is done through Ministry of Foreign affairs/ "
 "Kementerian Luar Negeri"
-msgstr "L'enregistrement des organismes internationaux non gouvernementaux se fait via le Ministry of Foreign affairs/ Kementerian Luar Negeri"
+msgstr "International NGO registration is done through Ministry of Foreign affairs/ Kementerian Luar Negeri"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:24
@@ -788,7 +790,7 @@ msgid ""
 "Registration for NGO in Indonesia can be done at the provincial level. "
 "Because there is regional autonomy, each provincial has different "
 "requirements. Website is just one example"
-msgstr "L'enregistrement des ONG de l'Indonésie se fait au niveau provincial. Chaque province ayant des requis différents. Le site web est un exemple."
+msgstr "L'enregistrement des ONG de l'Indonésie se fait au niveau provincial. Du fait de l'autonomie des régions, chaque province a des obligations différentes. L'existence d'un site web n'est qu'un exemple."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:25
@@ -820,7 +822,7 @@ msgstr "Government of India, Minstry of Corporate Affairs"
 msgid ""
 "MCA regulates corporate affairs in India through the Companies Act, 1956, "
 "2013 and other allied Acts, Bills and Rules."
-msgstr "MCA regulates corporate affairs in India through the Companies Act, 1956, 2013 and other allied Acts, Bills and Rules."
+msgstr "MCA régule les affaires des entreprises en Inde par les Companies Act de 1956 et 2013 et d'autres lois connexes, projets de loi et règles."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:30
@@ -854,7 +856,7 @@ msgstr "Ministry of Home Affairs - Central Committee for the Registration and Su
 msgid ""
 "The MHA assigns a registration number to each NGO - this number is time "
 "limited, for example 4 years, after which the registration is reviewed."
-msgstr "The MHA assigne un numéro d'enregistrement à chaque ONG, ce numéro a une date de péremption de  4 ans après quoi l'enregistrement est révisé."
+msgstr "The MHA assigne un numéro d'enregistrement à chaque ONG, ce numéro a une durée de péremption, par exemple de 4 ans, après quoi l'enregistrement est révisé."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:35
@@ -876,7 +878,7 @@ msgstr "NGO Board of Malawi"
 msgid ""
 "There is a pdf file with a list of registered NGOs, but these do not appear "
 "to be registration numbers. New database is planned"
-msgstr "Il existe un fichier pdf de tous les ONG, mais il ne semble pas y avoir de numéro d'enregistrement. Une nouvelle base de données est en préparation."
+msgstr "Il existe un fichier pdf de tous les ONG enregistrées, mais il ne semble pas y avoir de numéro d'enregistrement. Une nouvelle base de données est prévue."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:38
@@ -901,7 +903,7 @@ msgstr "Brønnøysundregistrene"
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:42
 msgid "Company Registrar Office"
-msgstr "Bureau d'enregistrement des entreprises"
+msgstr "Company Registrar Office"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:43
@@ -921,7 +923,7 @@ msgid ""
 "initiative of its kind in South Asia; it involves the evaluation of a "
 "nonprofit organisation on standardised parameters of internal governance, "
 "financial management and programme delivery."
-msgstr "Au Pakistan le programme de certification PCP vise a promouvoir la transparence, la responsabilité et la bonne gouvernance des organismes de charité. C'est une première initiative den Asie du sud. Ce programme a établi des paramètres pour mesurer la gouvernance interne, les finances et les résultats."
+msgstr "Au Pakistan, le programme de certification PCP vise à promouvoir la transparence, la responsabilité et la bonne gouvernance des organismes de charité. C'est une première initiative de ce type en Asie du sud ; ce programme a établi des paramètres pour mesurer la gouvernance interne, les finances et les résultats des organisations non lucratives."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:45
@@ -940,7 +942,7 @@ msgid ""
 "of Interior for the Trade Register Of The Slovak Republic (Živnostensky "
 "Register Slovenskej Republiky) and are allocated a unique registration "
 "number"
-msgstr "La plupart des organisations (incluant le ONG) doivent être enregistrées avec le Ministère de l'intérieur de la Slovaquie (Živnostensky Register Slovenskej Republiky) Le Ministère attribue un numéro d'enregistrement unique."
+msgstr "La plupart des organisations (dont les ONG) doivent être enregistrées avec le Ministère de l'intérieur dans le registre du commerce de la République slovaque (Živnostensky Register Slovenskej Republiky) et se voient attribuer un numéro d'enregistrement unique"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:47
@@ -961,7 +963,7 @@ msgstr "Registration Services Bureau"
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:50
 msgid ""
 "Corporation registration is the responsibility of each state (see link)"
-msgstr "Corporation registration is the responsibility of each state (see link)"
+msgstr "L'enregistrement des entreprises est de la responsabilité de chaque état (voir le lien)"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:51
@@ -979,7 +981,7 @@ msgid ""
 "Use the final segment of the url (below /federal and excluding the "
 "extension) as the \"registration number\", converting all \"-\" to \"_\". "
 "Keep \"registration number\" portion all lowercase."
-msgstr "Utiliser le dernier segment du url (below /federal and excluding the extensions) comme \"registration number\", en changeant tous les tirets \"-\" pour des soulignements \"_\". Conserver la partie du \"registration number\" en minuscules."
+msgstr "Utiliser le dernier segment de l'URL (après /federal et en excluant l'extension) comme \"registration number\", en changeant tous les tirets \"-\" pour des soulignements  \"_\". Conserver la partie \"registration number\" en minuscules."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:53
@@ -992,12 +994,12 @@ msgid ""
 "XI-IATI is a list of organisation identifiers that is maintained by the IATI"
 " Secretariat. Any publisher may apply to the IATI Technical Team for an "
 "identifier to be generated."
-msgstr "XI-IATI est une liste d'identifiants des organisations maintenue par le secrétariat IATI Secretariat.  Tout éditeur peut demander un identifiant."
+msgstr "XI-IATI est une liste d'identifiants des organisations maintenue par le secrétariat IATI.  Tout fournisseur de données peut demander un identifiant à l'équipe technique de IATI."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:54
 msgid "OECD Development Assistance Committee"
-msgstr "OECD comité d'assistance au développement"
+msgstr "OECD Development Assistance Committee"
 
 #. description
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:54
@@ -1014,7 +1016,7 @@ msgstr "United Nations Office for the Coordination of Humanitarian Affairs"
 msgid ""
 "OCHA is the part of the United Nations Secretariat responsible for bringing "
 "together humanitarian actors to ensure a coherent response to emergencies."
-msgstr "OCHA est une entité du 'United Nations Secretariat'. OCHA est responsable de coordonner les efforts humanitaires pour répondre aux urgences."
+msgstr "OCHA est une entité du secrétariat des Nations Unies responsable de la coordination des acteurs humanitaires pour répondre de manière cohérente aux urgences."
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:56
@@ -1024,7 +1026,7 @@ msgstr "Companies and Intellectual Property Commission (CIPC)"
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:57
 msgid "Association for Non-Profit Organisations"
-msgstr "Association des organismes sans but lucratif"
+msgstr "Association for Non-Profit Organisations"
 
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:58
@@ -1049,19 +1051,24 @@ msgstr "Private Voluntary Organisations Council"
 #. name
 #: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:62
 msgid "Registrar of Deeds"
-msgstr "Greffier des actes"
+msgstr "Registrar of Deeds"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:1
 msgid "Planning"
-msgstr "Planification"
+msgstr "Planning"
 
 #. Description_en
 #: schema/codelists/releaseTag.csv:2
 msgid ""
 "Announcing a new tender (call for proposals) process. Tender release should "
 "contain details of the goods or services being sought."
-msgstr "L'annonce d'un nouvel appel d'offres doit donner les détails des biens et des services recherchés"
+msgstr "Annonce d'un nouveau processus d'appel d'offres (ou d'un appel à propositions). La livraison sur l'appel d'offres devrait contenir des détails sur les produits ou services recherchés."
+
+#. Title_en
+#: schema/codelists/releaseTag.csv:3
+msgid "Tender Amendment"
+msgstr "Avenant à l'appel d'offres"
 
 #. Description_en
 #: schema/codelists/releaseTag.csv:3
@@ -1070,12 +1077,12 @@ msgid ""
 "tender release with the same ocid, but an earlier releaseDate, before a "
 "tenderAmendment is published. The term amendment has legal meaning in many "
 "jurisdictions."
-msgstr "Amendement ou modifications au dossier d'appel d'offres.  Publier des modifications à un appel d'offres suppose qu'il existe une publication antérieur avec le même identifiant ocid. Le terme Amendement a un sens légal dans plusieurs juridictions.\n"
+msgstr "Un amendement à une livraison existante d'appel d'offres. Il devrait y avoir au moins une livraison d'appel d'offres avec le même `ocid`, mais avec une date `releaseDate` antérieure avant qu'un avenant `tenderAmendment` soit publié. Le terme avenant a une signification juridique dans de nombreuses juridictions."
 
 #. Title_en
-#: schema/codelists/releaseTag.csv:3
-msgid "Tender Amendment"
-msgstr "Modifications au dossier d'appel d'offres"
+#: schema/codelists/releaseTag.csv:4
+msgid "Tender Update"
+msgstr "Mise à jour de l'appel d'offres"
 
 #. Description_en
 #: schema/codelists/releaseTag.csv:4
@@ -1086,62 +1093,62 @@ msgid ""
 "corrections to prior published information. It should not be used for formal"
 " legal amendments to a tender, for which the tenderAmendment tag should be "
 "used. "
-msgstr "Mise à jour d'une édition antérieure. Publier une mise à jour à un appel d'offres suppose qu'il existe une publication antérieur avec le même identifiant ocid. Une mise à jour peut ajouter ou corriger des renseignements à une édition antérieure. La mise à jour ne doit pas être utilisée pour annoncer des amendements légaux et formels à un appel d'offres. Dans ce cas utiliser l'étiquette 'tenderAmendment'."
-
-#. Title_en
-#: schema/codelists/releaseTag.csv:4
-msgid "Tender Update"
-msgstr "Mise à jour d'Appel d'offres"
+msgstr "Une mise à jour pour une livraison existante d'appel d'offres. Il devrait y avoir au moins une livraison d'appel d'offres avec le même `ocid`, mais avec une date `releaseDate` antérieure avant la publication d'un `tenderUpdate`. Une mise à jour peut ajouter de nouvelles informations ou apporter des corrections à l'information publiée auparavant. Il ne devrait pas être utilisé pour des modifications juridiques formelles à un appel d'offres, pour lesquelles le tag `tenderAmendment` doit être utilisé."
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:5
 msgid "Tender Cancellation"
-msgstr "Annulation d'appel d'offres"
+msgstr "Annulation de l'appel d'offres"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:6
 msgid "Award"
-msgstr "Adjudication"
+msgstr "Attribution"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:7
 msgid "Award Update"
-msgstr "Mise à jour d'adjudication"
+msgstr "Mise à jour de l'attribution "
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:8
 msgid "Award Cancellation"
-msgstr "Annulation d'adjudication"
+msgstr "Annulation de l'attribution"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:9
 msgid "Contract"
-msgstr "Contrat"
+msgstr "Marché"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:10
 msgid "Contract Update"
-msgstr "Mise à jour de contrat"
+msgstr "Mise à jour du marché"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:11
 msgid "Contract Amendment"
-msgstr "Amendement de contrat"
+msgstr "Avenant au marché"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:12
 msgid "Implementation"
-msgstr "Mise en oeuvre"
+msgstr "Mise en œuvre"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:13
 msgid "Implementation Update"
-msgstr "Mise à jour de mise en oeuvre"
+msgstr "Mise à jour de la mise en œuvre"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:14
 msgid "Contract Termination"
-msgstr "Clôture de contrat"
+msgstr "Clôture du marché"
+
+#. Title_en
+#: schema/codelists/releaseTag.csv:15
+msgid "Compiled record"
+msgstr "Archive compilée"
 
 #. Description_en
 #: schema/codelists/releaseTag.csv:15
@@ -1149,12 +1156,7 @@ msgid ""
 "This tag is used only in compiled records, which have merged together "
 "multiple releases to provide a snapshot view of the contract, and a version "
 "history. "
-msgstr "L\"étiquette 'Dossier compilé' est utilisée lorsque plusieurs éditions ont été fusionnées pour offrir une vue d'ensemble du contrat et un historique des versions."
-
-#. Title_en
-#: schema/codelists/releaseTag.csv:15
-msgid "Compiled record"
-msgstr "Dossier compilé"
+msgstr "Ce tag est utilisé seulement dans des archives compilées qui ont fusionné plusieurs livraisons pour fournir un aperçu du contrat et de l'historique des versions. "
 
 #. Title_en
 #: schema/codelists/submissionMethod.csv:1
@@ -1176,37 +1178,37 @@ msgstr "Écrit"
 msgid "In Person"
 msgstr "En personne"
 
-#. Description_en
-#: schema/codelists/tenderStatus.csv:1
-msgid "This tender has been proposed, but is not yet taking place."
-msgstr "Cet appel d'offres a été proposé mais n'est pas encore en marche."
-
 #. Title_en
 #: schema/codelists/tenderStatus.csv:1
 msgid "Planned"
 msgstr "Planifié"
 
 #. Description_en
+#: schema/codelists/tenderStatus.csv:1
+msgid "This tender has been proposed, but is not yet taking place."
+msgstr "Cet appel d'offres a été proposé, mais n'a pas encore lieu."
+
+#. Description_en
 #: schema/codelists/tenderStatus.csv:2
 msgid "A tender process is currently taking place."
-msgstr "Un processus d'appel d'offres est présentement en marche."
+msgstr "Un processus d'appel d'offres est en cours."
 
 #. Description_en
 #: schema/codelists/tenderStatus.csv:3
 msgid "The tender process has been cancelled."
-msgstr "Le processus d'appel d'offres a été annulé"
+msgstr "Le processus d'appel d'offres a été annulé."
 
 #. Description_en
 #: schema/codelists/tenderStatus.csv:4
 msgid "The tender process as unsucessful."
 msgstr "Le processus d'appel d'offres n'a pas abouti."
 
-#. Description_en
-#: schema/codelists/tenderStatus.csv:5
-msgid "The tender process is complete."
-msgstr "Le processus d'appel d'offres est clôturé"
-
 #. Title_en
 #: schema/codelists/tenderStatus.csv:5
 msgid "Complete"
 msgstr "Clôturé"
+
+#. Description_en
+#: schema/codelists/tenderStatus.csv:5
+msgid "The tender process is complete."
+msgstr "Le processus d'appel d'offres est clôturé."

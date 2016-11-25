@@ -3,14 +3,17 @@
 # This file is distributed under the same license as the OCDS package.
 # 
 # Translators:
+# Colin Maudry <colin@maudry.com>, 2016
+# Joel Gombin <joel.gombin@gmail.com>, 2016
 # Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
+# samgoeta <samgoeta@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-14 11:49+0000\n"
-"PO-Revision-Date: 2016-05-01 14:12+0000\n"
-"Last-Translator: Louis Charbonneau <louis.charbonneau171@gmail.com>\n"
+"POT-Creation-Date: 2016-11-12 14:48+0000\n"
+"PO-Revision-Date: 2016-11-25 15:13+0000\n"
+"Last-Translator: Joel Gombin <joel.gombin@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +23,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Release Reference"
-msgstr "Publications"
+msgstr "Référence sur les livraisons"
 
 #: ../../standard/docs/en/schema/reference.md:3
 msgid ""
@@ -28,49 +31,49 @@ msgid ""
 "fields and data structures to use when publishing contracting data. "
 "Supplementary schemas show how to combine releases into data packages and "
 "how to compile releases into records."
-msgstr "Le schéma de publication [Release Schema](release.md) fournit une spécification détaillée des champs et des structures de données à utiliser lors de la publication des données de passation de marché. Des schémas complémentaires montrent comment combiner les publications en paquets de données et comment compiler les publications dans un dossiers."
+msgstr "Le [schéma des livraisons](release.md) fournit une spécification détaillée des champs et des structures de données à utiliser lors de la publication de données sur la commande publique. Des schémas complémentaires montrent comment combiner les livraisons en des packages de données et comment compiler les livraisons en archives."
 
 #: ../../standard/docs/en/schema/reference.md:5
 msgid ""
 "This reference page provides key information on using the release schema."
-msgstr "Cette page de référence fournit des informations clés sur l'utilisation du schéma de publication."
+msgstr "Cette page de référence fournit des informations clés sur l'utilisation du schéma des livraisons."
 
 #: ../../standard/docs/en/schema/reference.md:7
 msgid ""
 "**Note: If any conflicts are found between this text, and the text within "
 "the schema, the schema takes precedence**"
-msgstr "** Remarque: Tout conflit trouvé entre ce texte et le texte du schéma , le schéma est prioritaire **"
+msgstr "**Remarque: si un conflit est trouvé entre ce texte et celui du schéma, le schéma prévaut**"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Release structure"
-msgstr "Structure de la publication"
+msgstr "Structure de la livraison"
 
 #: ../../standard/docs/en/schema/reference.md:11
 msgid ""
 "The majority of OCDS data is held within a release structure. One or more "
 "releases can be published within a release package. Releases are made up of "
 "a number of sections, including:"
-msgstr "La majorité des données OCDS est maintenu dans une structure de publication. Une ou plusieurs publications peuvent être publiées en un paquet. Les publications sont constituées d'un certain nombre de sections , y compris :"
+msgstr "La majorité des données OCDS est organisée selon une structure de livraison. Une ou plusieurs livraisons peuvent être publiées au sein d'un package de livraisons. Les livraisons sont composées de plusieurs sections, dont :"
 
 #: ../../standard/docs/en/schema/reference.md:13
 msgid "[planning](#planning)"
-msgstr "La planification du projet d'approvisionnement - [planning](#planning)"
+msgstr "[la planification - `planning`](#planning)"
 
 #: ../../standard/docs/en/schema/reference.md:14
 msgid "[tender](#tender)"
-msgstr "L'appel d'offres - [tender](#tender)"
+msgstr "[l'appel d'offres - `tender`](#tender)"
 
 #: ../../standard/docs/en/schema/reference.md:15
 msgid "[award](#award)"
-msgstr "L'adjudication - [award](#award)"
+msgstr "[l'attribution - ````award````](#award)"
 
 #: ../../standard/docs/en/schema/reference.md:16
 msgid "[contract](#contract)"
-msgstr "Le contrat - [contract](#contract)"
+msgstr "[le marché - ````contract````](#contract)"
 
 #: ../../standard/docs/en/schema/reference.md:17
 msgid "[implementation](#implementation)"
-msgstr "La mise en oeuvre - [implementation](#implementation)"
+msgstr "[l'exécution - ````implementation````](#implementation)"
 
 #: ../../standard/docs/en/schema/reference.md:19
 msgid ""
@@ -79,7 +82,7 @@ msgid ""
 "release relates to [a single contracting "
 "process](../getting_started/contracting_process.md), and we define "
 "contracting processes by their unique initiation (tender) stage."
-msgstr "Une publication ne peut contenir qu'une section d'appel d'offres , mais peut contenir plusieurs sections d'adjudication, de contrats et de mise en œuvre . En effet, chaque publication au standard OCDS concerne un seul processus de passation de marché, et nous définissons ce processus de passation de marché par son étape initiale d'appel d'offres."
+msgstr "Une livraison ne peut contenir qu'une seule section sur l'appel d'offres mais peut contenir plusieurs sections sur l'attribution, le marché et l'exécution. Cela est du au fait que chaque livraison OCDS se réfère à  [un seul processus de passation de marché](../getting_started/contracting_process.md) et que nous définissons un processus de passation de marché par une seule étape unique de lancement de l'offre (`tender`)."
 
 #: ../../standard/docs/en/schema/reference.md:21
 msgid ""
@@ -87,7 +90,7 @@ msgid ""
 " contracting process they represent. However, there are no formal "
 "restrictions on when information about a stage of the contracting process "
 "may be provided."
-msgstr "Les publications ont une étiquette pour indiquer l'étape spécifique d'un processus de passation de marché qu'ils représentent. Cependant, il n'y a pas de restrictions formelles sur le moment où des informations sur une étape du processus de passation de marché peut être fourni."
+msgstr "Les livraisons reçoivent un [tag](#release-tag) pour indiquer à quelles étapes spécifiques du processus de passation de marché elles correspondent. Cependant, il n'y a pas de restriction formelle sur le moment où les informations sur une étape du processus de passation de marché peuvent être fournies. "
 
 #: ../../standard/docs/en/schema/reference.md:23
 msgid ""
@@ -95,11 +98,11 @@ msgid ""
 "'contract' tag, may also include information in the award and tender blocks "
 "in order to provide a comprehensive picture of the contracting process to "
 "date which led to that contract being signed."
-msgstr "Par exemple , un éditeur annonçant la signature d'un contrat avec une étiquette «contrat » , peut également inclure des informations dans les blocs d'adjudications  et d'appel d'offres afin de fournir une image complète du processus de passation de marché à ce jour qui a conduit à la signature du contrat."
+msgstr "Par exemple, un producteur de données qui annonce la signature d'un marché avec le tag `contract` peut aussi inclure des informations dans les blocs sur l'attribution et l'appel d'offre afin de fournir une image d'ensemble à date du processus de commande publique qui a mené à la signature du marché. "
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Package Metadata"
-msgstr "Métadonnées des paquets"
+msgstr "Métadonnées des packages"
 
 #: ../../standard/docs/en/schema/reference.md:27
 msgid ""
@@ -108,7 +111,7 @@ msgid ""
 " [Data Package](http://dataprotocols.org/data-packages/) protocol, provides "
 "meta-data about the release(s) it contains, the publisher, and data "
 "licensing information."
-msgstr "Les publications peuvent être publiées dans un paquet [release package](release_package.md), qui peut contenir une ou plusieurs versions. Le paquet de publications fournit les métadonnées sur les  publications qu'il contient, sur l'éditeur et sur les informations de licence de publication. [Data Package](http://dataprotocols.org/data-packages/"
+msgstr "Les livraisons doivent être publiées dans un [package de livraison](release_package.md) qui peut contenir une ou plusieurs livraisons. Le package de livraison, calqué sur le protocole [Data Package](http://dataprotocols.org/data-packages/), fournit des métadonnées sur le contenu de la ou des livraison(s), le fournisseur de données et des informations sur la licence des données. "
 
 #: ../../standard/docs/en/schema/reference.md:36
 #: ../../standard/docs/en/schema/reference.md:55
@@ -116,7 +119,7 @@ msgstr "Les publications peuvent être publiées dans un paquet [release package
 #: ../../standard/docs/en/schema/reference.md:312
 #: ../../standard/docs/en/schema/reference.md:353
 msgid "Notes:"
-msgstr "Remarques:"
+msgstr "Notes :"
 
 #: ../../standard/docs/en/schema/reference.md:38
 msgid ""
@@ -126,42 +129,42 @@ msgid ""
 " wherever possible and should host the data package at this URI, enabling "
 "users to look-up and verify the contents of a release package from its "
 "original source."
-msgstr "Le uri devrait identifier de manière unique ce paquet de publications. Les éditeurs doivent fournir un HTTP dereferenceable URI chaque fois que possible et devrait héberger l'ensemble des données à cet URI , permettant aux utilisateurs de regarder de vérifier le contenu d'un paquet de publication à partir de sa source d'origine. [dereferenceable HTTP URI](http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier) "
+msgstr "L'URI doit identifier ce package de livraison de manière unique. Les producteurs de données devraient fournir une [URI HTTP déréférençable](http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier) chaque fois que cela est possible et héberger le package de données à cette URI, afin de permettre aux usagers de chercher et de vérifier le contenu d'un package de livraisons depuis sa source originale."
 
 #: ../../standard/docs/en/schema/reference.md:39
 msgid ""
 "The [publishedDate](#date) on which this package was published. If a package"
 " is automatically generated and re-published on a regular basis, this date "
 "should reflect the date of the last change to the contents of the package."
-msgstr "La date de publication du paquet. [publishedDate](#date) Si un paquet est généré automatiquement et re-publié sur une base régulière, cette date doit refléter la date de la dernière modification du contenu du paquet."
+msgstr "La date de publication [publishedDate](#date) à laquelle le package a été publié. Si le package est généré automatiquement et republié régulièrement, cette date doit indiquer la date de la dernière mise à jour du contenu du package.  "
 
 #: ../../standard/docs/en/schema/reference.md:40
 msgid ""
 "The publisher [publisher](#publisher) block provides space for an "
 "organisation name and identifier."
-msgstr "Le bloc éditeur [publisher](#publisher)  offre un espace pour le nom et l'identifiant de l'organisation."
+msgstr "Le block sur le fournisseur [publisher](#publisher) permet d'indiquer un nom d'organisation et un identifiant.  "
 
 #: ../../standard/docs/en/schema/reference.md:41
 msgid ""
 "````license```` - See the [licensing "
 "guidance](../implementation/licensing.md) for more details on selecting and "
 "publishing license information."
-msgstr "La licence de publication voir les conseils pour plus de détails sur le choix et les renseignements sur la licence de publication .  [licensing guidance](../implementation/licensing.md) "
+msgstr "````license```` - Consultez les [indications sur la licence](../implementation/licensing.md) pour plus de détails sur la sélection et la publication des informations sur la licence."
 
 #: ../../standard/docs/en/schema/reference.md:42
 msgid ""
 "````publicationPolicy```` - See the [publication "
 "policy](../implementation/publication_policy.md) guidance for more details."
-msgstr "Politique de publication, voir les recommandations:  [publication policy](../implementation/publication_policy.md) "
+msgstr "````publicationPolicy```` - Consultez les indications sur la [politique de publication](../implementation/publication_policy.md) pour plus de détails."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Release"
-msgstr "Publication"
+msgstr "Livraison"
 
 #: ../../standard/docs/en/schema/reference.md:46
 msgid ""
 "The top level of a release consists of the following fields and objects:"
-msgstr "Le niveau supérieur d'une publication comprend les champs et les objets suivants :"
+msgstr "Le niveau supérieur d'une livraison contient les champs et les objets suivants :"
 
 #: ../../standard/docs/en/schema/reference.md:57
 msgid ""
@@ -174,7 +177,7 @@ msgid ""
 "data points from a specific contracting process. See the [Open Contracting "
 "Identifier guidance](identifiers.md) for details of how to construct an "
 "OCID."
-msgstr "```ocid``` - Fournir à chaque processus de passation des marchés un identifiant unique est essentiel pour permettre de relier les données sur les contrats à travers différentes versions. [contracting process](../getting_started/contracting_process.md) \nLes identifiants des entités contractantes sont composés d'un préfixe attribué à chaque éditeur, et un identifiant local tiré de leurs systèmes internes. Ces identifiants sont utilisés pour relier des offres , des prix , des contrats et d'autres points de données clés d'un processus de passation de marché spécifique. Voir le guide de création d'un ```ocid``` :  [Open Contracting Identifier guidance](identifiers.md) "
+msgstr "```ocid``` - Fournir un identifiant unique pour chaque [processus de commande publique](../getting_started/contracting_process.md) est essentiel pour permettre que les données à propos de la commande publique soient liées entre différentes livraisons. Les identifiants Open Contracting sont composés d'un préfixe assigné à chaque fournisseur de données et d'un identifiant local extrait des systèmes d'information internes qui peut être utilisé pour lier ensemble offre, attribution, contrat et d'autres données essentielles à propos d'un pro cessus de passation de marché. Consultez les  [indications sur les identifiants Open Contracting ](identifiers.md) pour des détails sur la manière de construire un identifiant OCID."
 
 #: ../../standard/docs/en/schema/reference.md:58
 msgid ""
@@ -184,31 +187,31 @@ msgid ""
 " amends previous data must always use the appropriate update or amendment "
 "release tag. Values must be drawn from the [releaseTag "
 "codelist](../../codelists/#release-tag)."
-msgstr "```Tag``` - L'étiquette de publication est utilisé pour identifier la nature de la publication. Elle peut être utilisée par des applications qui filtrent les publications. ou peut à l'avenir être utilisée pour la validation avancée . Une publication qui met à jour ou modifie les données précédentes doit toujours utiliser l'étiquette de publication appropriée. Les valeurs doivent être tirées de la liste codifiées des étiquettes.  [releaseTag codelist](../../codelists/#release-tag)."
+msgstr "```tag``` - Le tag de livraison est utilisé pour identifier la nature d'une livraison en cours de réalisation. Cela peut être utilisé par des applications qui filtrent les livraisons ou à des fins de validation avancée.  Une livraison qui met à jour ou modifie des données antérieures doit toujours utiliser le tag `update` ou `amendment` approprié. Les valeurs sont prises de la [nomenclature des `releaseTag`](../../codelists/#release-tag)."
 
 #: ../../standard/docs/en/schema/reference.md:59
 msgid ""
 "```date``` - The release [date](#date) should reflect the point in time at "
 "which the information in this release was disclosed. A release package may "
 "contain release with different release dates."
-msgstr "```Date``` - La date de publication devraient refléter le point dans le temps où les informations contenues dans cette publication a été divulguée . Un paquet de publications peut contenir plusieurs dates de publication."
+msgstr "```date``` - La [date](#date) de la livraison devrait indiquer le moment auquel l'information a été divulguée. Un package de livraisons peut contenir des livraisons avec différentes dates de publication. "
 
 #: ../../standard/docs/en/schema/reference.md:60
 msgid ""
 "```language``` - see the section on [multi-language support](#language) for "
 "information on language handling."
-msgstr "\n```language``` - voir la section sur le support multi-langue pour renseignements sur la langue de publication.  [multi-language support](#language)"
+msgstr "```language``` - voir la section sur [le support multi-langues](#language) pour les informations sur la gestion des langues."
 
 #: ../../standard/docs/en/schema/reference.md:61
 msgid ""
 "```buyer``` - The buyer details are published using an "
 "[organization](#entity) block."
-msgstr "```buyer``` -  Les détails de l'acheteur sont publiés en utilisant le bloc sur les organisations. [organization](#entity) block."
+msgstr "```buyer``` - Les détails sur l'acheteur sont publiés dans le bloc sur l'[organisation](#entity)."
 
 #: ../../standard/docs/en/schema/reference.md:63
 msgid ""
 "Further details on each of the blocks contained within release are below."
-msgstr "\nDe plus amples détails sur chacun des blocs contenus dans la publication sont ci-dessous."
+msgstr "Ci-dessous, plus de détails sur chacun des blocs contenus dans une livraison."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Planning"
@@ -221,7 +224,7 @@ msgid ""
 " or related projects for this contracting process. Background documents such"
 " as a needs assessment, feasibility study and project plan can also be "
 "included in this section."
-msgstr "\nLa section de planification peut être utilisé pour décrire le contexte d'un processus de passation de marché. Cela peut inclure des détails sur la provenance des fonds, ou des projets liés à ce processus de passation de marché. Les documents de base tels que l'évaluation des besoins , étude de faisabilité et un plan de projet peuvent également être inclus dans cette section."
+msgstr "La section sur la planification peut être utilisée pour décrire le contexte d'un processus de passation de marché. Cela peut inclure des détails sur le budget d'où sont tirés les fonds ou les projets reliés à ce processus de passation de marché. Les documents sur le contexte tels qu'une étude de besoins, une étude de faisabilité et un plan du projet peuvent être inclus dans cette section."
 
 #: ../../standard/docs/en/schema/reference.md:76
 msgid ""
@@ -233,7 +236,7 @@ msgid ""
 "human readable description of the related budgets and projects, supporting "
 "users to understand the relationship of the contracting process to existing "
 "projects and budgets even where linked data is not available."
-msgstr "Outre les documents , la majorité des informations sont conservées dans le bloc de budget. Ceci est conçu pour permettre à la fois des données lisibles par machine liées au budget, des renvois à des données détenues dans d'autres normes telles que le paquet de données financière [Fiscal Data Package](http://fiscal.dataprotocols.org/) ou la norme IATI.  [International Aid Transparency Initiative Standard](http://www.iatistandard.org)\nOffrir du soutien aux utilisateurs pour comprendre la relation entre le processus de passation de marché aux projets et aux budgets existants , même lorsque les données liées ne sont pas disponibles ."
+msgstr "Outre les documents, la majorité des informations sont contenues dans le bloc sur le budget. Celui-ci a été conçu avec un double impératif. D'une part, permettre la lisibilité des données par les machines et leur mise en lien avec des données publiées avec d'autres standards telles que le [Fiscal Data Package](http://fiscal.dataprotocols.org/) ou [International Aid Transparency Initiative Standard](http://www.iatistandard.org). D'autre part, fournir une description des budgets et des projets connexes qui soit intelligible par les humains afin d'aider les utilisateurs à comprendre le lien entre un processus de passation de marché et des projets et des budgets existants, même lorsque des données liées ne sont pas disponibles."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Budget"
@@ -248,7 +251,7 @@ msgid ""
 "The tender section includes details of the announcement that an organization"
 " intends to source some particular goods, works or services, and to "
 "establish one or more contract(s) for these."
-msgstr "\nLa section d'appel d'offres comprend les détails de l'annonce que l'organisation a l'intention de se procurer certains biens particuliers, travaux ou services, et d'établir un ou plusieurs contrat(s) pour ces derniers."
+msgstr "La section sur l'appel d'offres comprend des détails sur l'annonce faite par une organisation qu'elle a l'intention de se procurer certains biens, travaux ou services, et souhaite établir un ou plusieurs contrat(s) pour ces derniers."
 
 #: ../../standard/docs/en/schema/reference.md:90
 msgid ""
@@ -256,7 +259,7 @@ msgid ""
 "proposals to supply these goods and services, and may also be used to record"
 " details of how a completed tender process, including details of bids "
 "received."
-msgstr "Il peut contenir des détails d'un processus à venir pour recevoir et évaluer les propositions pour fournir ces biens et services, et peut également être utilisé pour enregistrer les détails de la façon dont un processus d'appel d'offres terminé, y compris les détails des offres reçues."
+msgstr "Elle peut contenir des détails sur un processus à venir afin de recevoir et évaluer les offres pour fournir ces biens et services et peut également être utilisée pour enregistrer les détails sur un processus d'appel d'offres terminé, y compris les détails des offres reçues."
 
 #: ../../standard/docs/en/schema/reference.md:101
 msgid ""
@@ -264,7 +267,7 @@ msgid ""
 "guidance](../../identifiers/#tender_award_and_contract) for further "
 "information on the tender identifier. In most cases this can be the same as "
 "the ocid."
-msgstr "```tender.id``` - Identifiant de l'appel d'offres, pour plus d'informations sur l'identifiant d'appel d'offres voir:  [identifiers guidance](../../identifiers/#tender_award_and_contract) Dans la plupart des cas, ce peut être l'identifiant ocid."
+msgstr "```tender.id``` - voir les [indications sur les identifiants] (../../identifiers/#tender_award_and_contract) pour plus d'informations sur l'identifiant d'appel d'offres. Dans la plupart des cas, cela peut être le même que l'identifiant ocid."
 
 #: ../../standard/docs/en/schema/reference.md:102
 msgid ""
@@ -273,7 +276,7 @@ msgid ""
 "being used for the procurement (the 'buyer' in OCDS terminology). If this is"
 " the case, then the details of this procuring organization should be "
 "provided here."
-msgstr "```procuringEntity``` - dans certains cas, l'organisme qui gère le processus d'approvisionnement peut  être différent de l'organisme qui finance le projet (l'acheteur dans la terminologie OCDS ) . Si tel est le cas, alors les détails de cette organisation qui gère le processus d'approvisionnement devraient être fournis ici."
+msgstr "```procuringEntity``` - dans certains cas, l'organisation en charge du processus de commande publique peut être différente de l'organisation dont le budget est utilisé pour le marché (l' « acheteur » dans la terminologie OCDS). Si tel est le cas, alors les détails de cette organisation adjudicatrice devraient être complétés ici."
 
 #: ../../standard/docs/en/schema/reference.md:103
 msgid ""
@@ -286,13 +289,13 @@ msgid ""
 " ALL UPPERCASE titles, or titles containing code words or other artefacts "
 "from internal databases. The goal of these fields is to give users a clear "
 "idea of the nature of a tender."
-msgstr "```title``` and ```description``` - Le titre de l' offre et la description sont facultatifs. Les détails des articles/items à acheter doivent toujours être fournis dans ``` items```. Les descriptions ne doivent pas être utilisés à la place de données structurées sur les articles/items, les dates et autres détails. Au lieu de cela , le titre et la description doivent être utilisés pour donner un bref aperçu de l'appel d'offres.  Les éditeurs devraient envisager d'adopter un titre de  «longueur tweet» , et éviter les titres tout en MAJUSCULES ou des titres contenant des mots de code ou d'autres objets de bases de données internes . Le but de ces champs est de donner aux utilisateurs une idée claire de la nature d'un appel d'offres."
+msgstr "```title``` et ```description``` - le titre et la description de l'appel d'offres sont facultatifs. Les détails des lots doivent toujours être fournis dans ```items```. Les descriptions ne doivent pas être utilisées pour remplacer des données structurées sur les lots, les dates et d'autres détails.Le titre et la description doivent plutôt être utilisés pour donner un bref aperçu de l'offre. Les fournisseurs de données devraient envisager de ne pas dépasser la longueur d'un tweet pour les titres, et d'éviter les titres en MAJUSCULES ou des titres contenant des noms de code ou des termes issus de référentiels internes. Ces champs doivent servir à donner aux utilisateurs une idée claire de la nature d'un appel d'offres."
 
 #: ../../standard/docs/en/schema/reference.md:104
 msgid ""
 "```items``` - publishers should provide details of each of the items to be "
 "procured under this tender."
-msgstr "```items``` - les éditeurs devraient fournir des détails sur chacun des articles/items/produits/services devant être fournis en vertu du présent appel d'offres."
+msgstr "```items``` - les fournisseurs de données devraient fournir des détails sur chacun des lots sur lesquels porte l'appel d'offres."
 
 #: ../../standard/docs/en/schema/reference.md:105
 msgid ""
@@ -303,14 +306,14 @@ msgid ""
 "information about key milestones during the tender process itself, but "
 "should not use this in place of ```tenderPeriod```, ```enquiryPeriod``` or "
 "```awardPeriod```."
-msgstr "```milestones```  - Les éditeurs devraient énumérer les jalons pertinents associés à la livraison des produits et services couverts par le présent appel d'offres . Le jalons  sont les étapes pertinentes contre lesquelles l'ensemble du processus de passation de marché sera évalué. Les éditeurs peuvent inclure des informations sur les jalons  clés au cours du processus d'appel d'offres lui-même, mais cette information ne remplace pas le  ```tenderPeriod```  le  ```enquiryPeriod``` ou le ```awardPeriod```."
+msgstr "```milestones``` - les éditeurs devraient énumérer toutes les [étapes](#milestone) associées à la fourniture des biens et services couverts par l'appel d'offres. C'est en partant de ces étapes que l'ensemble du processus de passation des marchés sera évalué. Les fournisseurs de données peuvent inclure des informations sur les étapes clés pendant le processus d'appel d'offres lui-même, mais ne devraient pas utiliser ce champ pour remplacer ```tenderPeriod```, ```enquiryPeriod``` ou ```awardPeriod```."
 
 #: ../../standard/docs/en/schema/reference.md:106
 msgid ""
 "```value``` and ```minValue``` - the total upper estimated value of a "
 "procurement should be given in ```value```. For publishers who also specify "
 "a estimate minimum value, this can be placed in ```minValue```."
-msgstr "```value``` and ```minValue``` - La valeur totale maximale estimée d'un marché public doit être donné dans ```value```.  Pour les éditeurs qui spécifient également une estimation minimale, cette valeur est donnée dans ```minValue```."
+msgstr "```value``` et ```minValue``` - la valeur totale maximale estimée d'un marché public doit être donné dans le champ ```value```. Pour les fournisseurs de données qui spécifient également une estimation minimale, cela peut être placé dans ```minValue```."
 
 #: ../../standard/docs/en/schema/reference.md:107
 msgid ""
@@ -321,7 +324,7 @@ msgid ""
 "of open, selective or limited. A free text explanation of why a given method"
 " was appropriate to this tender can be provided in "
 "```procurementMethodRationale```."
-msgstr "```procurementMethod``` and ```procurementMethodRationale```. - Les processus d'appel d'offres à la concurrence peuvent utiliser une variété de méthodes . Les éditeurs doivent cartographier leurs méthodes d'appel d'offres selon la liste codifiée des valeurs approuvées: ouvert, sélectif ou limité,  selon l'OMC: (https://www.wto.org/french/docs_f/legal_f/rev-gpr-94_01_f.htm) La justification du choix de cette méthode est fourni dans ```procurementMethodRationale```."
+msgstr "```procurementMethod``` et ```procurementMethodRationale```. Les processus d'appel d'offres peuvent utiliser des méthodes variées. Les fournisseurs de données doivent cartographier leurs méthodes par rapport aux codes approuvés par [l'Organisation Mondiale du Commerce](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) : ouvert, sélectif ou limité. Un texte libre justifiant le choix d'une méthode donnée peut être fourni dans le champ ```procurementMethodRationale```."
 
 #: ../../standard/docs/en/schema/reference.md:108
 msgid ""
@@ -333,7 +336,7 @@ msgid ""
 " Publishers wishing to provide more structured information about selection, "
 "shortlisting and award criteria should propose "
 "[extensions](conformance_and_extensions.md) for this."
-msgstr "```awardCriteria``` and ```awardCriteriaDetails``` - La liste codifiée des critères d'adjudication décrit la base sur laquelle l'attribution des contrats sera effectuée. C'est une liste codifiée ouverte, cette liste peut donc être étendue avec de nouveaux codes. [award criteria code list](../../codelists/#award-criteria)\nLe texte décrivant la base sur laquelle les soumissions seront jugées est fourni dans le champ ```awardCriteriaDetail```. Les éditeurs qui souhaitent fournir des informations plus structurées sur la sélection, la liste restreinte et les critères d'attribution devraient proposer des extensions. [extensions](conformance_and_extensions.md) "
+msgstr "```awardCriteria``` et ```awardCriteriaDetails``` - La [liste des codes sur les critères d'attribution](../../codelists/#award-criteria) décrit sur quelles bases l'attribution des contrats sera effectuée. C'est une liste ouverte de codes, elle peut donc être étendue avec de nouveaux codes. Du texte libre décrivant les bases sur lesquelles les offres seront jugées peut être ajouté dans le champ ```awardCriteriaDetail```. Les fournisseurs de données qui souhaitent fournir des informations plus structurées sur la présélection, la sélection et les critères d'attribution devront proposer des [extensions](conformance_and_extensions.md)."
 
 #: ../../standard/docs/en/schema/reference.md:109
 msgid ""
@@ -345,7 +348,7 @@ msgid ""
 "details of how to include documents, and consult the [documentType "
 "codelist](codelists.md/#document-type) for suggested documents to include "
 "for basic, intermediate or advanced publication."
-msgstr "```documents``` - Les documents à l'appui de l'appel d'offres doivent être joints à l'appel d'offres.  Ces documents comme les avis officiels juridiques, les spécifications techniques, les critères d'évaluation, et , comme un processus d'appel d'offres progresse, des éclaircissements , des réponses aux demandes de renseignements et des copies des soumissions ou des listes d'entreprises présélectionnées . Voir la section pièces jointes [attachments](#attachments) pour plus de détails sur la façon d'inclure les documents, et pour les documents proposés à inclure selon votre niveau de publication de base, intermédiaire ou avancé.  [documentType codelist](codelists.md/#document-type) "
+msgstr "```documents``` - les documents explicatifs doivent être joints à l'appel d'offres. Cela peut comprendre des avis officiels d'appels d'offres, ainsi que les spécifications techniques, les critères d'évaluation, et, au fur et à mesure de l'avancement de l'appel d'offres, des éclaircissements, des réponses aux demandes de renseignements et des copies des offres soumises ou des listes d'entreprises présélectionnées. Consultez la section sur les [pièces jointes](#attachments) pour plus de détails sur la manière dont des documents peuvent être inclus, et consultez la [nomenclature des `documentType](codelists.md/#document-type) pour comprendre quels documents il est suggéré d'inclure pour la publication de données OCDS aux niveaux basique, intermédiaire ou avancé."
 
 #: ../../standard/docs/en/schema/reference.md:111
 msgid ""
@@ -353,11 +356,11 @@ msgid ""
 "[extension](conformance_and_extensions.md) during the period of the standard"
 " release candidate. Publishers wishing to provide detailed information on "
 "bidders should [contact support](../support/index.md)."
-msgstr "L'information sur les soumissionnaires à un contrat sera traitée par une extension au standard pendant la période de maturation du standard. [extension](conformance_and_extensions.md) Les éditeurs qui souhaitent fournir des informations détaillées sur les soumissionnaires devraient contacter notre bureau d'assistance technique. [contact support](../support/index.md)."
+msgstr "Les informations sur les soumissionnaires à un marché seront gérées par une [extension](conformance_and_extensions.md) pendant la période de test d'une version candidate (release candidate) du standard. Les fournisseurs de données qui souhaiteraient fournir des informations détaillées sur les soumissionnaires doivent [contacter l'assistance technique](../support/index.md). "
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Award"
-msgstr "Adjudication"
+msgstr "Attribution"
 
 #: ../../standard/docs/en/schema/reference.md:115
 msgid ""
@@ -365,7 +368,7 @@ msgid ""
 "There may be multiple awards made. Releases can contain all, or a subset, of"
 " these awards. A related award block is required for every contract, as it "
 "contains information on the suppliers."
-msgstr "\nLa section d'adjudication est utilisée pour annoncer les soumissionnaires retenus pour cet appel d'offres. Il peut y avoir plusieurs soumissionnaires retenus. Les publications peuvent contenir toutes les adjudications, ou un sous-ensemble, de ces adjudications. Un bloc d'adjudications est requis pour chaque contrat, car il contient des informations sur les fournisseurs."
+msgstr "La section sur l'attribution — ```award``` — est utilisée pour annoncer les attributions de marché liées à cet appel d'offres. Plusieurs attributions peuvent être annoncées. Les livraisons peuvent contenir toutes les attributions ou un sous-ensemble. Un bloc d'attribution est exigé pour chaque contrat, car il contient des informations sur les fournisseurs."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Contract"
@@ -378,18 +381,18 @@ msgid ""
 "```awardID``` property. This is because supplier information is contained "
 "within the 'award'. The framework contract details below help illustrate the"
 " reasons for this."
-msgstr "La section de contrat est utilisé pour fournir des détails sur les contrats qui ont été conclus . Tout contrat doit avoir une adjudication connexe, liée par le champ ```awardID```. En effet, l'information sur les fournisseurs est contenue dans la section  «award» . Les détails du contrat-cadre ci-dessous permettent d'illustrer les raisons pour cela."
+msgstr "La section sur les contrats — ```contract``` — est utilisée pour fournir des détails sur les contrats qui ont été conclus. Tout contrat doit être lié à l'attributaire par la propriété ```awardID```. C'est du au fait que les informations sur les fournisseurs sont contenues dans la section sur l'attribution. Les détails sur les contrats-cadre qui figurent ci-dessous peuvent aider à illustrer les raisons pour cela."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Framework contracts"
-msgstr "Contrat-cadre"
+msgstr "Contrats-cadre"
 
 #: ../../standard/docs/en/schema/reference.md:138
 msgid ""
 "A framework is an agreement with suppliers to establish terms governing "
 "contracts that may be awarded during the life of the "
 "agreement[*](http://www.constructingexcellence.org.uk/tools/frameworkingtoolkit/whatis.jsp)."
-msgstr "Un contrat-cadre est un accord avec des fournisseurs pour établir les termes régissant les passations de commandes successives pendant la durée de l'accord [*](http://www.constructingexcellence.org.uk/tools/frameworkingtoolkit/whatis.jsp)."
+msgstr "Un contrat-cadre est un accord avec des fournisseurs pour établir les termes régissant les contrats qui peuvent être accordés pendant la durée de l'accord [*] (http://www.constructingexcellence.org.uk/tools/frameworkingtoolkit/whatis.jsp)."
 
 #: ../../standard/docs/en/schema/reference.md:140
 msgid ""
@@ -397,14 +400,14 @@ msgid ""
 " each detail a supplier participating in the framework, the line items that "
 "the agreement covers with this supplier, and any maximum value for the "
 "agreement over time."
-msgstr "Les contrats-cadre peuvent être présentés dans la section adjudication [awards](#award),  avec le détail de chaque de chaque fournisseur participant à l'entente, les articles/items adjugés à ce fournisseurs et la valeur maximale de son bloc d'articles/items pour la durée de l'entente."
+msgstr "Les **accords-cadre** peuvent être représentés dans la [section sur l'attribution](#award) avec le détail de chaque fournisseur participant à l'accord, les lignes de dépenses couvertes par l'accord et toute valeur maximale pour la durée de l'accord. "
 
 #: ../../standard/docs/en/schema/reference.md:142
 msgid ""
 "Each call-off purchase against a framework agreement would result in a "
 "[contract](#contract), related to the framework agreement [award](#award) "
 "via ```awardID```."
-msgstr "Chaque commande successive d'un contrat-cadre se traduit par une adjudication via ```awardID```."
+msgstr "Chaque achat par bon de commande dans un accord-cadre doit mener à un [contrat](#contract) lié à l'[attribution](#award) de l'accord-cadre via un ```awardID```. "
 
 #: ../../standard/docs/en/schema/reference.md:144
 msgid ""
@@ -412,25 +415,25 @@ msgid ""
 "[items](#items) block, allowing the award to describe the possible goods and"
 " services that can be supplied, whilst the contract describes those that are"
 " to be supplied in any particular instance."
-msgstr "Par conséquent, l'adjudication et le contrat contiennent chacun un bloc d'articles/items décrivant les produits et services à fournir, tandis que le contrat décrit ceux qui doivent être fournis dans un cas particulier."
+msgstr "Par conséquent, [l'attribution](#award) et [le contrat](#contract) contiennent chacun un bloc [élément](# items), permettant de décrire les produits et les services possibles qui peuvent être fournis dans l'attribution, tandis que le contrat décrit ceux qui doivent être fournis dans un cas particulier."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Implementation"
-msgstr "Mise en oeuvre"
+msgstr "Execution du marché"
 
 #: ../../standard/docs/en/schema/reference.md:149
 msgid ""
 "Implementation information can be updated over the course of a contract. It "
 "belongs nested within the contract it relates to. Implementation blocks "
 "include the following elements:"
-msgstr "Les renseignements de mise en œuvre sont mis à jour au cours d'un contrat. Le  blocs de mise en œuvre comprend les éléments suivants :"
+msgstr "Les informations sur l'exécution peuvent être mises à jour au cours d'un contrat. Elles sont imbriquées dans le contrat auxquelles elle se rapporte. Les blocs sur l'éxécution comprennent les éléments suivants :"
 
 #: ../../standard/docs/en/schema/reference.md:158
 msgid ""
 "Information on subcontracts is not currently included in the release "
 "candidate schema, but may be handled by [proposed "
 "extensions](conformance_and_extensions.md)"
-msgstr "Les renseignements sur la sous-traitance ne sont pas actuellement inclus dans le schéma en maturation, mais il peuvent être traités par des extensions. "
+msgstr "Des informations sur la sous-traitance ne sont à l'heure actuelle pas inclues dans la version du standard OCDS candidate à la publication mais peuvent être gérées par des [extensions](conformance_and_extensions.md). "
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Transaction"
@@ -445,28 +448,28 @@ msgid ""
 "contract. As with the [budget](#budget) block, this may be used to cross-"
 "reference to a third party ```source``` of data, and can re-use identifiers "
 "from that source."
-msgstr "\nLe bloc des transactions est calquée sur la norme IATI  et peut être utilisé pour représenter les flux d'argent entre les entités contractantes. Comme avec le bloc budget, le bloc des transaction peut être utilisé pour des références croisées à des sources de données provenant de tiers.  [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/)"
+msgstr "Le bloc sur les transactions est calqué sur les[éléments de transaction de l'Initiative Internationale de Transparence de l'Aide (IITA)] (http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) et peut être utilisé pour représenter les flux d'argent entre organisations dans le cadre d'un contrat. Comme avec le bloc sur le [budget](#budget), cela peut être utilisé pour croiser des données issues d'une tierce-partie et peut réutiliser les identifiants de cette source."
 
 #: ../../standard/docs/en/schema/reference.md:171
 msgid ""
 "In most circumstances, the ```providerOrganization``` identifier should "
 "match that of the ```buyer```, and the ```recieverOrganization``` identifier"
 " should match that of the ```supplier```."
-msgstr "Dans la plupart des cas , l'identifiant  ```providerOrganization``` doit correspondre à l'identifiant ```buyer``` , et l'identifiant ```recieverOrganization``` doit correspondre à celui de ```supplier```."
+msgstr "Dans la plupart des circonstances, l'identifiant ```providerOrganization``` doit correspondre aux identifiants de l'acheteur —```buyer```— et de l'organisation qui reçoit les fonds — ```receiverOrganization``` — doivent correspondre à celui du fournisseur ```supplier```. "
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Milestones"
-msgstr "Jalons"
+msgstr "Etapes"
 
 #: ../../standard/docs/en/schema/reference.md:175
 msgid "See [milestone](#milestone) reference below."
-msgstr "Voir la référence ci-dessous: - [milestone](#milestone) "
+msgstr "Voir ci-dessous [la référence sur les étapes](#milestone). "
 
 #: ../../standard/docs/en/schema/reference.md:177
 msgid ""
 "The implementation milestones should be updated to reflect when they are "
 "met."
-msgstr "\nLes jalons de mise en œuvre doivent être mis à jour pour refléter leur état d'avancement."
+msgstr "Les étapes de l'exécution du contrat doivent être mises à jour pour refléter leur état d'avancement."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Documents"
@@ -476,15 +479,15 @@ msgstr "Documents"
 msgid ""
 "Documents related to contract implementation should be stored here. This may"
 " include subcontracts."
-msgstr "Les documents relatifs à la mise en œuvre du contrat doivent être stockés ici . Cela peut inclure la sous-traitance."
+msgstr "Les documents relatifs à l'exécution du contrat doivent être stockés ici. Cela peut inclure la sous-traitance."
 
 #: ../../standard/docs/en/schema/reference.md:183
 msgid "See [document](#document) reference below."
-msgstr "Voir la référence sur les documents ci-dessous:  [document](#document)"
+msgstr "Voir la [référence sur les documents](#document) ci-dessous."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Amendment"
-msgstr "Amendement"
+msgstr "Avenant"
 
 #: ../../standard/docs/en/schema/reference.md:187
 msgid ""
@@ -492,7 +495,7 @@ msgid ""
 " record model of OCDS offers the opportunity to keep a full versioned "
 "history of changes, in many cases it is important for changes to a tender, "
 "award or contract to be explicitly declared."
-msgstr "Une nouvelle publication peut modifier les propriétés d'une version précédente . Alors que le modèle de Publication et de Dossier OCDS offre la possibilité de conserver un historique complet des changements versionnés , dans de nombreux cas, il est important que les modifications apportées à un appel d'offres, à l'adjudication ou au contrat soient explicitement déclarés."
+msgstr "Une livraison peut modifier les propriétés d'une livraison précédente. Alors que les modèles OCDS pour les livraisons et les archives offrent la possibilité de conserver un historique complet et versionné des changements, il est important dans de nombreux cas que les modifications apportées à un appel d'offres, l'attribution ou un contrat soient explicitement déclarées."
 
 #: ../../standard/docs/en/schema/reference.md:189
 msgid ""
@@ -500,7 +503,7 @@ msgid ""
 "the ability to explicitly declare changed fields, their former values, to "
 "provide an explanation for the change, and attach or reference relevant "
 "documentation."
-msgstr "Le bloc Amendement dans les appels d'offres, les adjudications et les contrats permet de déclarer explicitement les champs modifiés , leurs anciennes valeurs, de fournir une explication pour le changement et joindre en référence des documents pertinents."
+msgstr "Le bloc sur les avenants — ```amendment``` — à chacun des blocs sur les offres, l'attribution et le contrat permettent de déclarer explicitement les champs modifiés, leurs anciennes valeurs, de fournir une explication pour les changements apportés, et de joindre ou de référencer des documents pertinents."
 
 #: ../../standard/docs/en/schema/reference.md:198
 msgid ""
@@ -508,7 +511,7 @@ msgid ""
 "not possible to indicate __all__ the former values of a field, only the most"
 " recent known value: whereas the version history of a full record can show "
 "all previous values."
-msgstr "Les amendements ne doivent pas être inclus dans les dossiers compilés , car il est impossible d'indiquer toutes les anciennes valeurs d'un champ mais seule la dernière valeur connue, alors que l'historique complet d'un dossier peut afficher toutes les valeurs précédentes."
+msgstr "Les informations sur les avenants ne doivent pas être inclus dans les archives compilées, car il est impossible d'indiquer __toutes__ les anciennes valeurs d'un champ, seule la dernière valeur connue: alors que l'historique de version d'une archive complète peut afficher toutes les valeurs précédentes."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Changes"
@@ -518,11 +521,11 @@ msgstr "Changements"
 msgid ""
 "Within each amendment block, publishers should provide an array of items "
 "that have changed, along with their former values."
-msgstr "Dans chaque bloc d'amendement , les éditeurs doivent fournir un tableau d'éléments qui ont changés ainsi que leurs anciennes valeurs ."
+msgstr "Dans chaque bloc d'avenant, les fournisseurs de données doivent fournir un tableau des éléments qui ont changé, ainsi que leurs anciennes valeurs."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Field reference"
-msgstr "Champs de référence"
+msgstr "Référence des champs"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Organization"
@@ -533,7 +536,7 @@ msgid ""
 "The organization block can be used to provide a legal identifier for an "
 "organization, and to give [address](#address) and [contact point](#contact-"
 "point) information."
-msgstr "Le bloc d'organisation peut être utilisé pour fournir un identifiant juridique d'une organisation et de donner son adresse  [address](#address) et un point de contact. [contact point](#contact-point)"
+msgstr "Le bloc sur les organisations peut être utilisé pour fournir un identifiant juridique pour une organisation, de donner des informations sur l'[adresse](#address) et le [point de contact](#contact-point)."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Identifier"
@@ -549,7 +552,7 @@ msgid ""
 "[identifier](#identifier) section, with details of the branch or department "
 "given in the name, [address](#address) and [contact point](#contactpoint) as"
 " relevant."
-msgstr "Le bloc des identifiants fournit un moyen d'identifier les entités juridiques des organisations impliquées dans un processus de passation de marché.  [identify the legal entities](../../identifiers/#organizations) involved in a contracting process. \nSi un processus d'approvisionnement est géré par un département ou succursale d'une organisation plus importante , l'entité juridique maitresse doit être décrite dans la section des identifiants  [identifier](#identifier) et le cas échéant, les détails concernant le département ou succursale seront donnés dans la section nom, adresse et point de contact.  [address](#address) and [contact point](#contactpoint)"
+msgstr "Le bloc sur les identifiants fournit un moyen d'[identifier les entités juridiques](../../identifiers/#organizations) impliquées dans un processus de passation de marchés. Si un processus de passation de marché porte sur un contrat organisé par le département ou une entité d'une organisation plus importante, l'entité juridique (généralement l'organisation enregistrée) doivent être décrits dans la section [identifiant](#identifier), avec des détails sur la branche ou le département donné nommé, son [adresse] (#address) et son [point de contact](#ContactPoint) le cas échéant."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Address"
@@ -569,13 +572,13 @@ msgid ""
 "planning, tenders, awards, contracts and milestones. Each document block can"
 " consist of multiple documents, classified using the "
 "[documentType](../../codelists/#document-type) codelist."
-msgstr "Des documents peuvent être attachés à un certain nombre de points dans le standard OCDS: la planification, l'appel d'offres, l'adjudication, le contrat et les jalons. Chaque bloc de documents peut être constitué de plusieurs documents, classés en utilisant la liste codifiées des types de documents.   [documentType](../../codelists/#document-type) codelist."
+msgstr "Les documents peuvent être joints à un certain nombre d'éléments dans le standard : planification, appels d'offres, attributions, contrats et étapes. Chaque bloc sur les documents peut être constitué de plusieurs documents, classés en utilisant la liste de codes [documentType](../../codelists/#document-type)."
 
 #: ../../standard/docs/en/schema/reference.md:257
 msgid ""
 "The document block is also used to link to legal notices, which should have "
 "a documentType of 'notice'."
-msgstr "Le bloc de document est également utilisé pour créer un lien vers les avis légaux qui ont un type de document  'notice'."
+msgstr "Le bloc sur les documents est également utilisé pour lier vers les mentions légales, qui devraient avoir un attribut 'notice' dans le champ ```documentType```."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Date"
@@ -586,11 +589,11 @@ msgid ""
 "OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-"
 "times, following [RFC3339 "
 "§5.6](http://tools.ietf.org/html/rfc3339#section-5.6)."
-msgstr "Le standard OCDS fait usage de la norme de date:  [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) et [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339#section-5.6)."
+msgstr "OCDS utilise la norme de date et d'heure [ISO8601](http://en.wikipedia.org/wiki/ISO_8601), suivant la [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339#section-5.6)."
 
 #: ../../standard/docs/en/schema/reference.md:270
 msgid "A time and timezone/offset MUST always be provided in a date-time."
-msgstr "Un temps et le décalage de fuseau horaire doit toujours être donné dans une date-heure."
+msgstr "Un horaire et un fuseau horaire DOIVENT toujours être fournis dans une date-heure."
 
 #: ../../standard/docs/en/schema/reference.md:272
 msgid "The following are valid date-times:"
@@ -598,17 +601,17 @@ msgstr "Les date-heures suivantes sont valides:"
 
 #: ../../standard/docs/en/schema/reference.md:274
 msgid "'2014-10-21T09:30:00Z' - 9:30 am on the 21st October 2014, UTC"
-msgstr "'2014-10-21T09:30:00Z' - 9:30 am on the 21st October 2014, UTC"
+msgstr "'2014-10-21T09:30:00Z' - 9:30 le 21 octobre 2014, fuseau UTC"
 
 #: ../../standard/docs/en/schema/reference.md:275
 msgid ""
 "'2014-11-18T18:00:00-06:00' - 6pm on 18th November 2014 CST (Central "
 "Standard Time)"
-msgstr "'2014-11-18T18:00:00-06:00' - 6pm on 18th November 2014 CST (Central Standard Time)"
+msgstr "'2014-11-18T18:00:00-06:00' - 18h le 18 novembre 2014 fuseau CST (Central Standard Time)"
 
 #: ../../standard/docs/en/schema/reference.md:277
 msgid "The following are not valid:"
-msgstr "La date-heures suivantes ne sont pas valides:"
+msgstr "La date-heures suivantes ne sont pas valides :"
 
 #: ../../standard/docs/en/schema/reference.md:279
 msgid "'2014-10-21' - Missing time portion"
@@ -620,11 +623,11 @@ msgstr "'2014-10-21T18:00' - la portion secondes est manquante."
 
 #: ../../standard/docs/en/schema/reference.md:281
 msgid "'2014-11-18T18:00:00' - Missing timezone/offset portion"
-msgstr "'2014-11-18T18:00:00' - la portion décalage est manquante."
+msgstr "'2014-11-18T18:00:00' - la portion fuseau horaire est manquante."
 
 #: ../../standard/docs/en/schema/reference.md:282
 msgid "'11/18/2014 18:00' - Not following the pattern at all!"
-msgstr "'11/18/2014 18:00' - Non conforme au standard"
+msgstr "'11/18/2014 18:00' - ne suit absolument pas le modèle !"
 
 #: ../../standard/docs/en/schema/reference.md:284
 msgid ""
@@ -635,7 +638,7 @@ msgid ""
 "[UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero "
 "offset) timezone, whereas other timezones are indicated by their value "
 "'+/-hh:mm' UTC on the end of the date-time value."
-msgstr "Le temps et le décalage de fuseau horaire est particulièrement important pour les délais d'appel d'offres et d'autres dates qui peuvent avoir une portée juridique, et là où les utilisateurs des données peuvent être de différents fuseaux horaires. Le caractère Z sur la fin d'une date-heure indique le fuseau horaire, alors que d'autres fuseaux horaires sont indiqués par leur valeur ' +/- hh: mm UTC ' sur la fin de la date-heure.  [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset)"
+msgstr "Il est particulièrement important d'indiquer avec précision l'heure et le fuseau horaire pour les délais d'appel d'offres et d'autres dates qui peuvent avoir une portée juridique, et où les utilisateurs des données peuvent être de différents fuseaux horaires. Le caractère Z à la fin d'une date-heure indique le fuseau [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (ou zéro décalage), alors que d'autres fuseaux horaires sont indiqués par leur valeur '+/- hh: mm UTC ' à la fin de la valeur date-heure."
 
 #: ../../standard/docs/en/schema/reference.md:286
 msgid ""
@@ -648,7 +651,7 @@ msgid ""
 "the endDate given. Alternatively, if clarification requests are only "
 "accepted in standard office hours, these values might be 09:00:00Z and "
 "17:00:00Z respectively."
-msgstr "Dans le cas où le système à partir de duquel les données sont tirées ne comprend que les dates, et ne comprend pas les informations de temps, les éditeurs devraient envisager des valeurs par défaut raisonnables pour chacun des champs date-heures. Par exemple, le temps 'startDate, d'une période de clarification des devis peut être fixée à '00:00:00Z' pour indiquer que des précisions peuvent être demandées à tout moment à la date indiquée, avec le temps de 'endDate' fixé à 23:23:59Z pour indiquer que clarifications peuvent être envoyés jusqu'à la fin de la 'endDate' donnée. Par ailleurs, si les demandes de clarification ne sont acceptées que dans les heures de bureau standard, ces valeurs peuvent être 09:00:00Z et 17:00:00Z respectivement. "
+msgstr "Dans le cas où le système d'où les des données sont extraites n'inclut pas d'informations sur l'heure, les producteurs de données doivent considérer des valeurs par défaut raisonnables pour chaque champ. Par exemple, l'heure ```startDate``` de début d'une période de clarification peut être fixée à '00:00:00Z' pour indiquer que des précisions peuvent être demandées à tout moment à la date indiquée, avec le temps de ```endDate``` fixé à 23:23:59Z pour indiquer que les clarifications peuvent être envoyés jusqu'à la fin de la date de fin donnée. Par ailleurs, si les demandes de clarification ne sont acceptées qu'aux horaires classiques de bureau, ces valeurs peuvent être comprises entre 09:00:00Z et 17:00:00Z."
 
 #: ../../standard/docs/en/schema/reference.md:288
 msgid ""
@@ -656,7 +659,7 @@ msgid ""
 "publishers should choose a default time value of '23:23:59' and either 'Z' "
 "(for UTC) or the timezone of the publisher, indicating that the time refers "
 "to the end of the given date."
-msgstr "Dans le cas où un champ de date ne soit pas lié à un moment précis, les éditeurs doivent choisir une valeur de temps par défaut de '23:23:59' et soit 'Z' (pour UTC ) ou le fuseau horaire de l'éditeur , ce qui indique que le temps se réfère à la fin de la date donnée."
+msgstr "Dans le cas où un champ de date ne soit pas lié à un horaire précis, les producteurs de données OCDS doivent choisir une valeur de temps par défaut de '23:23:59' et soit 'Z' (pour le fuseau UTC) ou le fuseau horaire du producteur, ce qui en indiquant que le temps se réfère à la fin de la date donnée."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Period"
@@ -666,17 +669,17 @@ msgstr "Période"
 msgid ""
 "A period is an object consisting of a start date and end date, represented "
 "as date-times."
-msgstr "Une période est un objet constitué d'une date de début et de fin, représentées par des date-heures."
+msgstr "Une période est un objet constitué d'une date de début et de fin, représentée comme une date-heure."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Item"
-msgstr "Article/item"
+msgstr "Elements"
 
 #: ../../standard/docs/en/schema/reference.md:303
 msgid ""
 "The items block is used to list the line-items associated with a tender, "
 "award or contract."
-msgstr "Le bloc d'articles/items est utilisé pour lister les biens et services demandés dans un appel d'offres, une adjudication ou un contrat."
+msgstr "Le bloc sur les éléments  —```items```— est utilisé pour lister les postes de dépense associés à l'offre, l'attribution ou au contrat.  "
 
 #: ../../standard/docs/en/schema/reference.md:314
 msgid ""
@@ -684,14 +687,14 @@ msgid ""
 " to items, allowing the point of delivery for a given item or the site of "
 "works to be completed to be indicated in both the tender, award and contract"
 " stage."
-msgstr "L'extension proposée pour spécifier un emplacement peut être attaché à des articles/items, permettant de spécifier un point de livraison pour un article donné ou le site de travaux devant être réalisés, utilisable à la fois dans l'appel d'offres, l'adjudication et le contrat. [proposed location extension](../extensions/location.md) "
+msgstr "L' [extension proposée sur la localisation](../ extensions / location.md) peut être rattachée à des éléments, qui permettent d'indiquer dans les sections sur l'appel d'offres, l'attribution et le contrat les lieu dans lequel une prestation ou des travaux seront réalisés.  "
 
 #: ../../standard/docs/en/schema/reference.md:315
 msgid ""
 "Items should be classified according to an established scheme of codes. A "
 "single primary ```classification``` can be given, although an array of "
 "```additionalClassification``` can be provided."
-msgstr "Les articles/items doivent être classés selon une liste codifiée établie. Un seul classement primaire peut être donnée, ```primaryClassification``` même si un tableau de classements additionnels peut être fourni. ```additionalClassification```"
+msgstr "Les éléments doivent être classés selon un schéma établi de codes. Un seul ```classification``` primaire peut être donnée, même si un tableau de classification additionnelle ```additionalClassification``` peut être fourni."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Classification"
@@ -711,38 +714,38 @@ msgid ""
 "```unit.name``` field (drawing on the CamelCase unit names, such as "
 "SquareMile), in order to provide detailed information the cost per unit of a"
 " line-item."
-msgstr "Le bloc unité ```unit``` permet la spécification détaillée des paramètres et des prix des unités de mesure qui composent une ligne d'articles/items. Bien qu'aucune liste codifiée pour les unités de mesure n'a été établie dans la version actuelle de la norme, les éditeurs peuvent envisager d'utiliser les unités de mesure fournies par l'ontologie des unités de mesure de la NASA. Pour renseigner le champ ```unit.name```  utiliser la casse 'CamelCase' comme 'SquareMile'. "
+msgstr "Le bloc sur les unités —```unit```— permet la spécification détaillée des paramètres et des prix des unités qui composent un poste de dépense. Bien qu'aucune liste de codes pour les unités n'ait été établie dans la version actuelle du standard, les fournisseurs de données peuvent envisager d'utiliser les unités fournies par les [quantités, unités, dimensions et les ontologies de types de données](http://www.qudt.org/qudt/owl/1.0.0/unit/) dans le champ ```unit.name``` (conçu sur les noms des unités ChatMot comme SquareMile), afin de fournir des informations détaillées sur le coût par unité d'un poste de dépense."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Milestone"
-msgstr "Jalons"
+msgstr "Etape"
 
 #: ../../standard/docs/en/schema/reference.md:340
 msgid ""
 "Milestone information can be included in the [tender](#tender) and [contract"
 " implementation](#implementation) blocks."
-msgstr "\nLes renseignements sur les jalons peuvent être inclus dans le bloc d'appels d'offres [tender](#tender)  et le blocs de mise en oeuvre. [contract implementation](#implementation)"
+msgstr "Les informations sur les étapes peuvent être comprises dans les blocs sur les  [appel d'offre](#tender) and [l'éxécution du contrat](#implementation)."
 
 #: ../../standard/docs/en/schema/reference.md:342
 msgid ""
 "In the context of a tender block, milestones describe the key deliverables "
 "of a contract, or key points during the lifetime of the contract. These may "
 "have associated documentation."
-msgstr "Dans le contexte d'un bloc d'appel d'offres, les jalons décrivent les principaux biens livrables d'un contrat, ou des objectifs clés en cours de réalisation contrat. Les jalons  peuvent être associés à des documents."
+msgstr "Dans le contexte du bloc sur les appels d'offre, les étapes décrivent les principaux livrables d'un contrat ou les points essentiels de la réalisation du contrat. Ces étapes peuvent avoir une documentation associée. "
 
 #: ../../standard/docs/en/schema/reference.md:344
 msgid ""
 "In the context of a contract implementation block, milestones are used to "
 "track progress towards those deliverables and key events set out in the "
 "tender."
-msgstr "Dans le contexte du bloc de mise en oeuvre d'un contrat, les jalons décrivent les principaux biens livrables, ou des objectifs clés en cours de réalisation du contrat. Les jalons peuvent être associés à des documents."
+msgstr "Dans le contexte du bloc sur l'exécution d'un contrat, les étapes sont utilisés pour suivre les progrès vers les livrables et les événements clés énoncés dans l'offre."
 
 #: ../../standard/docs/en/schema/reference.md:355
 msgid ""
 "The ```dateModified``` field should be changed whenever the progress towards"
 " a milestone is reviewed, and the ```status``` either updated, or re-"
 "confirmed."
-msgstr "\nLe champ ```dateModified```doit être changé chaque fois que le progrès vers un jalon  est passée en revue, et l'état d'avancement ```status``` doit être mis à jour ou re- confirmé."
+msgstr "Le champ sur la date modifiée  ```dateModified``` doit être changé dès qu'un progrès vers une étape est revu que le statut ```status``` est soit mis à jour ou re-confirmé."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Value"
@@ -750,7 +753,7 @@ msgstr "Valeur"
 
 #: ../../standard/docs/en/schema/reference.md:361
 msgid "Financial values should always be published with a currency attached."
-msgstr "La devise doit toujours être indiquée pour toutes les valeurs financières publiées."
+msgstr "Les valeurs financières devraient toujours être associées à une devise."
 
 #: ../../standard/docs/en/schema/reference.md:370
 msgid ""
@@ -758,27 +761,27 @@ msgid ""
 "value is required, this may be handled by an extension. A [discussion of "
 "handling taxation can be found on GitHub](https://github.com/open-"
 "contracting/standard/issues/112)."
-msgstr "Au cours de la période de maturation du standard version 1.0 RC, les renseignements sur la fiscalité cevront faire l'objet d'une demande d'extension. Une discussion sur la fiscalité est présentement en cours sur GitHub: https://github.com/open-contracting/standard/issues/112 ) [discussion of handling taxation can be found on GitHub](https://github.com/open-contracting/standard/issues/112)."
+msgstr "Pendant la période de maturation du standard version 1.0 RC, si des informations sur la fiscalité d'une valeur sont nécessaires, elles devront être traitées par une extension. Une discussion sur la fiscalité est en cours sur [GitHub] (https://github.com/open-contracting/standard/issues/112)."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Location"
-msgstr "Emplacement"
+msgstr "Localisation"
 
 #: ../../standard/docs/en/schema/reference.md:374
 msgid ""
 "The addition of location information is currently handled through a "
 "[proposed extension](../extensions/location.md) to the standard."
-msgstr "Une proposition pour l'ajout à la norme OCDS d'informations de localisation est actuellement en discussion:  [proposed extension](../extensions/location.md) "
+msgstr "L'ajout d'informations de localisation est actuellement géré par une [extension proposée](../extensions/location.md) au standard."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Publisher"
-msgstr "Éditeur"
+msgstr "Fournisseur de données"
 
 #: ../../standard/docs/en/schema/reference.md:378
 msgid ""
 "The publisher block is used in release and record packages to identify the "
 "source of a dataset."
-msgstr "\nLe bloc éditeur est utilisé dans les paquets de publications et dossiers pour  identifier la source d'un ensemble de données."
+msgstr "Le bloc sur les fournisseur de données est utilisé dans les packages sur les livraisons et les archives pour identifier la source d'un jeu de données."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Language"
@@ -789,24 +792,24 @@ msgid ""
 "Many publishers need to be able to share key data in multiple languages. All"
 " free-text title and description fields in the Open Contracting Data "
 "Standard can be given in one or more languages."
-msgstr "De nombreux éditeurs doivent être en mesure de partager des données clés en plusieurs langues. Tous les titres et les descriptions des champs de texte du standard OCDS peuvent être donnés dans une ou plusieurs langues."
+msgstr "De nombreux fournisseurs de données doivent être en mesure de partager des données clés en plusieurs langues. Tous les titres et les descriptions des champs en texte libre dans le standard OCDS peuvent être donnés dans une ou plusieurs langues."
 
 #: ../../standard/docs/en/schema/reference.md:391
 msgid ""
 "Language variations are included by a copy of multi-lingual fields, suffixed"
 " with a language code."
-msgstr "Les traductions sont données dans des champs multilingues avec un code de langue ajouté en suffixe au nom du champ."
+msgstr "Les variations de la langue sont comprises dans des champs multilingues, avec pour suffixe un code de langue."
 
 #: ../../standard/docs/en/schema/reference.md:393
 msgid "E.g. ```title``` and ```title_es```"
-msgstr "À titre d'exemple: ```title``` and ```title_es```"
+msgstr "Pa exemple, ```title``` and ```title_es```"
 
 #: ../../standard/docs/en/schema/reference.md:395
 msgid ""
 "In order to allow users to identify the language used in non-suffixed "
 "fields, OCDS release and records should declare the default language in the "
 "```language``` field."
-msgstr "Afin de permettre aux utilisateurs d'identifier la langue utilisée dans les champs unilingues (non-suffixé), le standard OCDS demande de déclarer déclarer la langue par défaut dans le champ ```language```."
+msgstr "Afin de permettre aux utilisateurs d'identifier la langue utilisée dans les champs non-suffixés, les livraisons OCDS  et les archives doivent déclarer la langue par défaut dans le champ ```language```."
 
 #: ../../standard/docs/en/schema/reference.md:397
 msgid ""
@@ -818,18 +821,18 @@ msgid ""
 "in the vast majority of circumstances, and should not assume that the users "
 "are able to distinguish between sub-tag variations (for example, OCDS "
 "publishers should strongly prefer 'en' over 'en_US' or 'en_GB')."
-msgstr "Les langues devraient être identifiés en utilisant des étiquettes de langues prises à partir de [ BCP47 ] ( http://tools.ietf.org/html/bcp47 ) . La spécification permet des valeurs de BCP47 afin de tenir compte des variations dans le dialecte où cela est important . Cependant, les éditeurs devraient utiliser deux lettres dans la grande majorité des cas [ISO-639-1 two-digit language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) et ne devraient pas supposer que les utilisateurs sont en mesure de faire la distinction entre les sous étiquettes de langue, par exemple, les éditeurs OCDS devraient fortement préférer 'en' à 'en_US' ou à  'en_GB' ."
+msgstr "Les langues doivent être identifiées en utilisant des *tags* spécifiques de langues pris à partir de [BCP47](http://tools.ietf.org/html/bcp47). La spécification permet d'obtenir des valeurs de BCP47 afin de tenir compte des variations dans le dialecte là où c'est important. Cependant, les fournisseurs de données **devraient** utiliser des [tags ISO-639-1 à deux lettres] (http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) dans la grande majorité des cas, et ne devraient pas supposer que les utilisateurs sont en mesure de faire la distinction entre les variations de sous-tags  (par exemple, les éditeurs OCDS doivent fortement préférer 'en' à 'en_US' ou 'en_GB')."
 
 #: ../../standard/docs/en/schema/reference.md:399
 msgid ""
 "To include a language variation of a field, the field name should be "
 "suffixed with _ and the appropriate language tag. For example: "
 "```title_es``` for Spanish."
-msgstr "Pour rendre un champ multilingue, un nouveau champ est ajouté avec un suffixe composé du caractère de soulignement et de l'étiquette de langue appropriée. Par exemple : ```title_es``` pour l'espagnol."
+msgstr "Pour inclure une variation linguistique d'un champ, le champ du nom doit avoir _  et le *tag* de langue. Par exemple : ```title_es``` pour l'espagnol. "
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Worked example"
-msgstr "\nUn cas d'utilisation"
+msgstr "Un cas d'utilisation"
 
 #: ../../standard/docs/en/schema/reference.md:403
 msgid ""
@@ -837,7 +840,7 @@ msgid ""
 "release with the default language sent to ‘en’ (the ISO-639-1 code for "
 "English). The following examples give the description of an item as English,"
 " French and Spanish."
-msgstr "Un contrat est pour ' Services de conseil en logiciels » peut être publié en anglais, la langue par défaut:  ('en' ISO-639-1 code). Les exemples suivants donnent la description d'un élément en anglais, français et espagnol."
+msgstr "Un contrat pour des \"services de conseil en logiciels\" peut être publié en anglais avec ‘en’  comme langue par défaut ('le code ISO-639-1 pour l'anglais). Les exemples suivants donnent la description d'un élément en anglais, français et espagnol."
 
 #: ../../standard/docs/en/schema/reference.md:405
 msgid "**json**"
@@ -849,7 +852,7 @@ msgstr "**csv**"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Release handling"
-msgstr "Traitement des publications"
+msgstr "Traitement des livraions"
 
 #: ../../standard/docs/en/schema/reference.md:426
 msgid ""
@@ -858,7 +861,7 @@ msgid ""
 "can gain a full view of change over time, and third-parties can  understand "
 "what needs to be updated in any system that is tracking the progress of a "
 "contracting process."
-msgstr "Le standard OCDS est basé sur l'idée de publier une nouvelle version de renseignements toutes les fois qu'un changement se produit dans un processus de passation de marché. De cette façon, les utilisateurs peuvent obtenir une vue complète des changements au fil du temps, et des tiers peuvent comprendre ce qui doit être mis à jour dans leur système qui tente de suivre le déroulement du processus contractuel."
+msgstr "Tout le modèle de données OCDS est basé sur l'idée de publier une nouvelle livraison à chaque fois qu'on processus de passation de marché connait un changement. De cette façon, les usagers peuvent obtenir une vue complète des changements au fil du temps, et les tierces-parties peuvent comprendre ce qui doit être mis à jour dans tout lesystème qui suit le déroulement d'un processus contractuel."
 
 #: ../../standard/docs/en/schema/reference.md:428
 msgid ""
@@ -866,13 +869,13 @@ msgid ""
 "repeat information in each release, or just to provide changes. This choice "
 "should be based on an understanding the [merging process](merging.md) that "
 "is used to generate a snapshot record of a full contracting process."
-msgstr "Les éditeurs devront choisir comment générer de nouvelles publications, soit répéter toutes les informations ou tout simplement fournir les changements . Ce choix doit être basé sur une compréhension du processus de fusion qui est proposé pour générer un dossier complet qui donnera une vue d'ensemble du processus de passation de marché."
+msgstr "Les fournisseurs de données devront aussi choisir comment générer de nouvelles livraisons, et si les informations doivent être répétées dans chaque livraison, ou tout simplement pour fournir des changements. Ce choix doit être fondé sur une compréhension du [processus de fusion](merging.md) qui est utilisé pour produire un enregistrement instantané du processus complet de passation de marchés."
 
 #: ../../standard/docs/en/schema/reference.md:430
 msgid ""
 "This model also requires publishers to pay careful attention to null values "
 "and missing fields."
-msgstr "Ce modèle exige également les éditeurs à prêter une attention particulière aux valeurs nulles et aux champs manquants."
+msgstr "Ce modèle doit aussi permettre aux fournisseurs de données de prêter une attention particulière aux valeurs nulles et aux champs manquants."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Empty fields"
@@ -882,30 +885,30 @@ msgstr "Champs vides"
 msgid ""
 "Fields that are not being used, or that have no value, can be excluded in "
 "their entirety (key and value) from a published file."
-msgstr "Les champs qui ne sont pas utilisés ou qui n'ont pas de valeur, peuvent être entièrement exclus du fichier publié."
+msgstr "Les champs qui ne sont pas utilisés, ou qui ont pas de valeur, peuvent être exclus dans leur intégralité (clé et valeur) à partir d'un fichier publié."
 
 #: ../../standard/docs/en/schema/reference.md:436
 msgid ""
 "Only including fields which have values will keep versioned datasets "
 "cleaner."
-msgstr "Inclure seulement les champs dûment renseignés pour ne pas encombrer les jeux de données publiés."
+msgstr "Le fait d'inclure uniquement les champs qui ont des valeurs permettra de garder les jeux de données versionnés plus propre."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Emptying fields and values"
-msgstr "Champs vide et valeurs"
+msgstr "Champs vides et valeurs"
 
 #: ../../standard/docs/en/schema/reference.md:440
 msgid ""
 "There may be cases where a publisher needs to remove, rather than update, a "
 "value which was set in a previous release. In this case, the fields should "
 "explicitly be set to null."
-msgstr "Il peut y avoir des cas où un éditeur a besoin de supprimer, plutôt que de mettre à jour, une valeur qui a été créé dans une version précédente. Dans ce cas, les champs doivent être explicitement mis à la valeur nulle."
+msgstr "Il peut y avoir des cas où un fournisseur de données a besoin de supprimer, plutôt que de mettre à jour, une valeur qui a étée créé dans une version précédente. Dans ce cas, les champs doivent être explicitement définis sur ```null."
 
 #: ../../standard/docs/en/schema/reference.md:442
 msgid ""
 "The following describes how null values will be handled in the compilation "
 "of a record:"
-msgstr "Ce qui suit décrit comment les valeurs 'NULL' seront traitées dans la compilation d'un dossier :"
+msgstr "Ce qui suit décrit comment les valeurs NULL seront traitées dans la compilation d'une archive :"
 
 #: ../../standard/docs/en/schema/reference.md:444
 msgid ""
@@ -913,7 +916,7 @@ msgid ""
 "```null``` in a subsequent release, that field will be recorded as null in "
 "the compiled record (though past values of it should remain in the versioned"
 " section of the record)."
-msgstr "\nSi un champ est inclus avec une valeur dans une version, puis mis à ```null``` dans une version ultérieure, ce champ aura une valeur nulle dans le dossier compilé (mais ses valeurs antérieures existeront dans les publications versionnées du dossier)."
+msgstr "Si un champ est inclus avec une valeur dans une livraison, puis mis à ```null``` dans une livraison ultérieure, ce champ sera enregistré comme ```null``` dans l'archive compilée (bien que les valeurs passées de celui-ci doivent rester dans la section  versionnée de l'archive)."
 
 #: ../../standard/docs/en/schema/reference.md:445
 msgid ""
@@ -922,14 +925,14 @@ msgid ""
 "release, and the record will not show any change based on the subsequent "
 "release I.e. fields that are set to null are recorded as such and then only "
 "changed if the value is set."
-msgstr "Si un champ est défini à 'null' dans une version et est également mis à 'null'  dans une version ultérieure, le dossier ne montrera pas changement.  Le changement sera visible seulement si le champ prend une valeur non nulle."
+msgstr "Si un champ est défini sur null dans une livraison, et est également mis à ```null``` dans une livraison ultérieure, il sera enregistré comme nul selon la livraison originale et l'archive ne montrera pas tous les changement basés sur les champs des livraisons ultérieures. Les champs dont les valeurs sont définies sur ```null``` sont enregistrés en tant que tels et sont seulement changés si une valeur est définie."
 
 #: ../../standard/docs/en/schema/reference.md:446
 msgid ""
 "If a field is set to ```null``` in one release, and then has a value in a "
 "subsequent release, it will first appear in the record, and the version "
 "section of the record as ```null``` and then with the subsequent value."
-msgstr "Si un champ est réglé sur ```null```dans une version, puis à une autre valeur dans une version ultérieure, il apparaît d'abord dans le dossier avec la valeur ```null``` et subséquemment dans la publication versionnée avec sa nouvelle valeur."
+msgstr "Si un champ est fixé sur ```null``` dans une livraison, puis obtient une valeur dans une version ultérieure, cela apparaît d'abord dans l'archive et la section de version de l'archive en tant que` `` null``` puis avec la valeur ultérieure."
 
 #: ../../standard/docs/en/schema/reference.md:447
 msgid ""
@@ -937,4 +940,4 @@ msgid ""
 "a subsequent release, it will first appear in the record, and the version "
 "section of the record, when the first release that contains it is compiled "
 "into the record."
-msgstr "Si un champ ne figure pas dans une publication, puis apparaît avec une valeur dans une publication ultérieure, il apparaît d'abord dans le dossier, et la section de version de l'enregistrement, lorsque la première version qui le contient est compilé dans le dossier."
+msgstr "Si un champ ne figure pas dans une livraison, puis apparaît avec une valeur dans une livraison ultérieure, il apparaît d'abord dans l'archive et la section de version de l'archive, lorsque la première livraison qui le contient est compilée dans l'archive."

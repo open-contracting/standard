@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the OCDS package.
 # 
 # Translators:
+# Joel Gombin <joel.gombin@gmail.com>, 2016
 # Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-14 11:49+0000\n"
-"PO-Revision-Date: 2016-04-27 11:44+0000\n"
-"Last-Translator: Louis Charbonneau <louis.charbonneau171@gmail.com>\n"
+"POT-Creation-Date: 2016-11-12 14:48+0000\n"
+"PO-Revision-Date: 2016-11-12 14:52+0000\n"
+"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>\n"
 "Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +27,7 @@ msgstr "Sérialisation"
 msgid ""
 "The Open Contracting Data Standard provides a **structured data model** for "
 "capturing in-depth information about all stages of the contracting process."
-msgstr "Le standard OCDS propose un **modèle structuré de données** pour capter et divulguer des renseignements détaillés sur chacune des étapes du processus de passation de marché public."
+msgstr "Le standard OCDS fournit un **modèle de données structuré** permettant de saisir de l'information en profondeur concernant toutes les étapes d'un processus de commande publique."
 
 #: ../../standard/docs/en/implementation/serialization.md:5
 msgid ""
@@ -34,17 +35,17 @@ msgid ""
 "Schema](../../../schema/release)** which describes field names, field "
 "definitions and structures for the data. The compliance of data with the "
 "Open Contracting Data Standard will be assessed against this schema."
-msgstr "La version officielle de ce modèle structuré de données repose sur un schéma **[JSON Schema](../../../schema/release)** qui décrit les noms de champs, les définitions de champs et la structure des données. La conformité des données publiées au standard OCDS sera mesuré à l'aide de ce schéma JSON."
+msgstr "La version canonique actuelle de ce modèle de données est fournie par un schéma [JSON Schema](../../../schema/release) qui décrit des noms de champs, leur définition et les structures de données. La conformité des données avec le standard OCDS sera évaluée vis-à-vis de ce schéma."
 
 #: ../../standard/docs/en/implementation/serialization.md:7
 msgid ""
 "However, there are many use cases where publishers and users will want to "
 "work with data serialized in other formats. For this reason, the current "
 "version of OCDS supports a number of **secondary serializations** which are "
-"based on the canonical schema. There are not currently official components "
+"based on the canonical schema. These are not currently official components "
 "of the standard, but are designed to support implementers in providing "
 "accessible data to a range of different users."
-msgstr "Cependant, dans certains cas, des éditeurs voudraient utiliser une autre syntaxe. C'est pourquoi la version actuelle du standard OCDS accepte d'autres syntaxes dérivées de la version officielle. Ces autres syntaxes ne sont pas des composantes du standard OCDS, elles sont acceptées simplement pour faciliter la tâche des éditeurs."
+msgstr "Cependant, dans de nombreux cas d'usage, les producteurs et les usagers de données souhaiteront travailler avec des données sérialisées dans d'autres formats. Pour cette raison, la version actuelle du standard OCDS accepte un certain nombre de **sérialisations secondaires** basées sur le schéma canonique. Il ne s'agit pas, à l'heure actuelle, de composantes officielles du standard, mais ces sérialisations sont conçues pour permettre à ceux qui le mettent en œuvre de fournir des données accessibles à une vaste gamme d'usagers différents."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "JSON"
@@ -55,37 +56,37 @@ msgid ""
 "JSON stands for Javascript Object Notation, and is a format widely used for "
 "the exchange of data on the web. The JSON schema language provides "
 "validation tools for working with JSON data."
-msgstr "JSON (JavaScript Object Notation) est un format de données textuelles dérivé de la notation des objets du langage JavaScript. Il est largement utilisé pour l'échange de données sur le web. JSON offre des outils de validation de ses données."
+msgstr "JSON signifie Javascript Object Notation, et désigne un format largement utilisé pour l'échange de données sur le web. Le langage JSON Schema fournit des outils de validation pour travailler avec des données en JSON."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Generating JSON"
-msgstr "Générer des données JSON"
+msgstr "Générer du JSON"
 
 #: ../../standard/docs/en/implementation/serialization.md:15
 msgid "Most programming languages provide tools for output data as JSON."
-msgstr "Plusieurs langages de programmation offrent des outils pour publier des données conformes au schéma JSON."
+msgstr "La plupart des langages de programmation proposent des outils pour exporter des données en JSON."
 
 #: ../../standard/docs/en/implementation/serialization.md:17
 msgid ""
 "The [OCDS Mapper](https://github.com/open-contracting/mapper) tool can "
 "convert from flat CSV files to structured OCDS data based on a mapping "
 "template."
-msgstr "L'outil de mappage [OCDS Mapper](https://github.com/open-contracting/mapper) peut transformer des fichiers plat CSV en données structurées JSON."
+msgstr "L'outil [OCDS Mapper](https://github.com/open-contracting/mapper) permet de convertir des fichiers tabulaires en CSV en données OCDS structurées, à partir d'un schéma de correspondance."
 
 #: ../../standard/docs/en/implementation/serialization.md:19
 msgid ""
 "[A range of tools](http://json-schema.org/implementations.html) are "
 "available for working with [JSON-Schema](http://json-schema.org/), including"
 " validation and form generation tools."
-msgstr "[Une panoplie d'outils](http://json-schema.org/implementations.html) sont disponibles pour travailler avec le [JSON-Schema](http://json-schema.org/), comme des outils de validation et de génération de formulaires."
+msgstr "[Une série d'outils](http://json-schema.org/implementations.html) sont disponibles pour travailler avec le [JSON Schema](http://json-schema.org/), notamment des outils de validation et de génération automatique de formulaires."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Consuming JSON"
-msgstr "Lire le schéma JSON"
+msgstr "Utiliser du JSON"
 
 #: ../../standard/docs/en/implementation/serialization.md:23
 msgid "Most programming languages provide tools for reading JSON."
-msgstr "La plupart des langages de programmation peuvent lire le schéma JSON."
+msgstr "La plupart des langages de programmation proposent des outils pour lire du JSON."
 
 #: ../../standard/docs/en/implementation/serialization.md:25
 msgid ""
@@ -93,25 +94,25 @@ msgid ""
 "available for working directly with large collections of JSON documents, and"
 " command line tools such as [jq](http://stedolan.github.io/jq/) support "
 "advanced query and data retrieval with JSON files."
-msgstr "Des systèmes de base de données [JSON native databases](http://en.wikipedia.org/wiki/NoSQL) sont disponibles pour travailler directement sur de grandes collections de documents JSON. L'interface en ligne de commande comme [jq](http://stedolan.github.io/jq/) permett des requêtes évoluées sur les bases de données JSON."
+msgstr "Il existe un certain nombre de [bases de données nativement en JSON](http://en.wikipedia.org/wiki/NoSQL) pour travailler directement avec de grandes collections de documents JSON, et des outils en ligne de commande tels que [jq](http://stedolan.github.io/jq/) permettent de faire des requêtes complexes et de récupérer des données à partir de fichiers JSON."
 
 #: ../../standard/docs/en/implementation/serialization.md:27
 msgid ""
 "There are also a range of generic tools which can convert JSON into flat CSV"
 " structures, including:"
-msgstr "Une panoplie d'outils génériques peuvent convertir les documents JSON en structures CSV aplanies:"
+msgstr "Il y a également une palette d'outils généralistes qui peuvent convertir du JSON en structures CSV, notamment :"
 
 #: ../../standard/docs/en/implementation/serialization.md:29
 msgid ""
 "[JSON -> CSV](http://konklone.io/json/) - online tool for converting small "
 "documents."
-msgstr "Un outil en ligne pour les petits documents : [JSON -> CSV](http://konklone.io/json/) "
+msgstr "[JSON -> CSV](http://konklone.io/json/) - un outil en ligne pour convertir de petits documents."
 
 #: ../../standard/docs/en/implementation/serialization.md:30
 msgid ""
 "[Open Refine](http://openrefine.org/) - desktop tool that can handle large "
 "documents, and supports advanced data manipulation."
-msgstr "Un outil à télécharger sur votre ordinateur pour manipuler de gros document avec des facilités de manipulation de données avancées: [Open Refine](http://openrefine.org/) "
+msgstr "[Open Refine](http://openrefine.org/) - un outil à utiliser en local qui peut manier de gros documents, et permet une manipulation avancée des données."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "CSV"
@@ -124,27 +125,27 @@ msgid ""
 "made up of columns and rows. There is no easy way to represent structured "
 "data in a single table. However, we propose two models for publishers to "
 "adopt."
-msgstr "JSON est une structure arborescente, les éléments s'imbriquant l'un dans l'autre. Cependant plusieurs personnes sont plus familières avec les rangées et les colonnes des tableurs. Il n'y a pas de moyen facile de transformer une structure arborescente en une série de rangées et colonnes. Nous proposons deux modèles de solution à ce problème: "
+msgstr "Le JSON est fondé sur une structure en arborescence, avec des éléments de données emboîtées les unes dans les autres. Cependant, beaucoup de gens ont plus l'habitude de travailler avec des données tabulaires, faites de lignes et de colonnes. Il n'y a pas de manière facile de représenter des données structurées dans une seule table. Cependant, nous proposons aux producteurs de données deux modèles à utiliser."
 
 #: ../../standard/docs/en/implementation/serialization.md:36
 msgid ""
 "**Simplified single table** - for cases where there are no one-to-many "
 "relationships in the data (e.g. each tender has only one award and contract,"
 " and each has only one line-item)."
-msgstr "Pour les cas simples (un appel d'offres, une adjudication, un contrat, une ligne d'item/article) : **Simplified single table**"
+msgstr "Une **table simplifiée unique** - pour les cas où il n'y a pas de relations un-à-beaucoup dans les données (par exemple, chaque appel d'offre correspond à un seul attributaire et un seul marché, et chaque marché ne porte que sur un seul élément). "
 
 #: ../../standard/docs/en/implementation/serialization.md:37
 msgid ""
 "**Multi-table** - where more advanced structures are required, but where it "
 "is desirable to be able to work with data in spreadsheet-style layouts"
-msgstr "Pour les structures arborescentes plus élaborées que l'on veut transformées en rangées et colonnes à manipuler dans un tableur: **Multi-table** "
+msgstr "**Multi-table** - lorsque des structures plus complexes sont nécessaires, mais qu'il est souhaitable de travailler avec des données dans un tableur"
 
 #: ../../standard/docs/en/implementation/serialization.md:39
 msgid ""
 "In each case, fields are identified by the [json "
 "pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For "
 "example:"
-msgstr "Dans chacun des cas, le champ est identifié par un pointeur sur son équivalent JSON  [json pointer](http://tools.ietf.org/html/rfc6901) . À titre d'exemple:"
+msgstr "Dans tous les cas, les champs sont identifiées par le [pointeur JSON](http://tools.ietf.org/html/rfc6901) vers leur équivalent en JSON. Par exemple :"
 
 #: ../../standard/docs/en/implementation/serialization.md:41
 msgid "**JSON**"
@@ -156,28 +157,29 @@ msgstr "**CSV**"
 
 #: ../../standard/docs/en/implementation/serialization.md:61
 msgid ""
-"A set of prototype tools for generating flat CSV OCDS templates are "
-"[available on GitHub](https://github.com/open-contracting/flattening-ocds), "
-"and the OCDS validator includes an option to generate 'flattened' versions "
-"of JSON data."
-msgstr "Des outils prototypes pour générer des fichiers CSV aplanis au gabarit OCDS sont disponibles ici: [available on GitHub](https://github.com/open-contracting/flattening-ocds), et le validateur OCDS offre la possibilité de générer une version aplanie des données JSON."
+"[Beta open source tooling](http://flatten-tool.readthedocs.io/en/latest"
+"/usage-ocds/) exists for generating flat CSV OCDS templates, and converting "
+"in both directions between JSON spreadsheets following these templates. The "
+"OCDS validator incorporates this tooling and will offer to convert files "
+"uploaded to it."
+msgstr "Des [outils open source, en version beta](http://flatten-tool.readthedocs.io/en/latest/usage-ocds/), existent pour générer des modèles de CSV à plat du standard OCDS, et opérer des conversions dans les deux sens entre du JSON et des tableurs en suivant ces modèles. Le validateur de l'OCDS incorpore ces outils et proposera de convertir les fichiers qu'on y téléversera."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Simplified single table"
-msgstr "Simplified single table"
+msgstr "Une table unique simplifiée"
 
 #: ../../standard/docs/en/implementation/serialization.md:65
 msgid ""
 "It is possible to represent a full releases in a single flat CSV row by "
 "using full JSON pointers for each field as the headings."
-msgstr "Il est possible de représenter une publication complète en une seule rangée CSV en utilisant les pointeurs JSON pour chacune des colonnes."
+msgstr "Il est possible de représenter une livraison complète dans une seule ligne d'un fichier CSV en utilisant les pointeurs JSON de chaque champ comme noms de colonnes."
 
 #: ../../standard/docs/en/implementation/serialization.md:67
 msgid ""
 "This approach is generally only appropriate for data without one-to-many "
 "relationships (for example, only one item per tender, and one award and "
 "contract for each tender process)."
-msgstr "Cette approche n'est valable que lorsque la publication ne concerne qu'une ligne item/article d'un contrat, d'une adjudication, d'un appel d'offres."
+msgstr "Généralement, cette approche n'est pertinente que s'agissant de données ne comportant pas de relations un-à-plusieurs (par exemple, chaque appel d'offres ne porte que sur un élément, n'a qu'un attributaire et ne se traduit que par un seul marché signé)."
 
 #: ../../standard/docs/en/implementation/serialization.md:69
 msgid ""
@@ -186,23 +188,23 @@ msgid ""
 "headings. For arrays, this involves adding the array index to the path, such"
 " as ```tender/item/0/id``` and ```tender/item/1/id``` as separate columns to"
 " represent each of the items."
-msgstr "Il est théoriquement possible de représenter une publication complexe en une seule  ligne CSV en utilisant le pointeur intégral de JSON pour les entêtes des colonnes. Pour un ensemble d'items/articles, il faut ajouter autant de colonnes qu'il y a d'items/articles et indexer le titre de la colonne comme suit : ```tender/item/0/id``` , ```tender/item/1/id```"
+msgstr "Théoriquement, il est cependant possible de représenter une livraison complète dans une seule ligne de fichier CSV en utilisant les pointeurs JSON complet de chaque champ comme noms de colonne. Pour des listes, cela implique de rajouter l'index de la liste au chemin, de sorte que ```tender/item/0/id``` et ```tender/item/1/id``` constituent des colonnes distinctes, représentant chacun des éléments."
 
 #: ../../standard/docs/en/implementation/serialization.md:71
 msgid ""
 "For example, to represent a tender release with two items, the CSV file "
 "would include:"
-msgstr "À titre d'exemple, une publication avec deux lignes d'articles/items: "
+msgstr "Par exemple, pour représenter une livraison portant sur un appel d'offres avec deux éléments, le fichier CSV incluerait : "
 
 #: ../../standard/docs/en/implementation/serialization.md:81
 msgid "The JSON equivalent of this would be:"
-msgstr "La représentation JSON équivalente :"
+msgstr "L'équivalent en JSON serait :"
 
 #: ../../standard/docs/en/implementation/serialization.md:91
 msgid ""
 "Whilst this allows complex data to be expressed in flat CSV, users will need"
 " to rebuild the structure in order to analyse the data."
-msgstr "Présenter un ensemble complexe de données en format CSV aplani, présente des difficultés pour l'utilisateur qui devra refaire la structure de son tableau pour faire ses analyses."
+msgstr "Bien que cela permette à des données complexes d'être présentées dans des fichiers CSV plats, les usagers devront reconstruire la structure afin de pouvoir analyser les données."
 
 #: ../../standard/docs/en/implementation/serialization.md:93
 msgid ""
@@ -212,43 +214,47 @@ msgstr "À la place, pour représenter un ensemble complexe de données, on peut
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Multi-table"
-msgstr "Multi-Tables"
+msgstr "Multi-table"
 
 #: ../../standard/docs/en/implementation/serialization.md:97
 msgid ""
-"The multi-table serialization breaks key sections and building blocks of "
-"OCDS into their own tables. This supports complex data structures with one-"
-"to-many relationships, whilst allowing analysts to reconstruct the views of "
-"data they need to carry out analysis."
-msgstr "La sérialisation multi-tables assigne une table à chacune des sections clés et des composantes du standard OCDS. Cette façon de faire permet de représenter des ensembles complexes de données tout en permettant aux analystes de facilement reconstruire des vues répondant à leurs besoins."
+"The multi-table serialization separates  objects with many to one "
+"relationships (ie. arrays) into their own tables."
+msgstr "La sérialisation multi-table isole les objets avec des relations un-à-plusieurs (par exemple des listes) dans leurs propres tables."
 
 #: ../../standard/docs/en/implementation/serialization.md:99
 msgid ""
-"Multiple tables can be packaged together as the tabs of a spreadsheet, or "
-"using the Open Knowledge data package specification."
-msgstr "Les tables multiples peuvent devenir des onglets du tableur. On peut aussi utiliser les spécification de paquets du 'Open Knowledge Lab' "
+"Multiple tables can be packaged together as the tabs of a spreadsheet, or in"
+" a collection of CSV files."
+msgstr "Des tables multiples peuvent être rassemblées en tant qu'onglet d'un fichier de tableur, ou dans une collection de fichiers CSV."
 
 #: ../../standard/docs/en/implementation/serialization.md:101
 msgid ""
-"The OCDS approach to multi-table flat serializations is currently under "
-"review. Contact the [helpdesk](../../../support/) if you wish to make use of"
-" this."
-msgstr "L'approche OCDS de sérialisation multi-table aplanie fait présentement l'Objet d'une révision, contacter notre bureau d'assistance technique avant de l'utiliser :  [helpdesk](../../../support/)"
+"An example multi-table template can be found [in the sample data "
+"repository](https://github.com/open-contracting/sample-data/tree/master"
+"/flat-template)."
+msgstr "Un exemple de modèle multi-table est disponible dans le [dépôt de données d'exemples](https://github.com/open-contracting/sample-data/tree/master/flat-template)."
+
+#: ../../standard/docs/en/implementation/serialization.md:103
+msgid ""
+"For further information on multi-table serializations please see the "
+"[flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/)."
+msgstr "Pour plus d'informations sur la sérialisation multi-table, voir la [documentation de l'outil flatten](http://flatten-tool.readthedocs.io/en/latest/). "
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Packaging files with meta-data"
-msgstr "Paquets de fichiers avec meta-data"
+msgstr "Empaqueter des fichiers avec leurs méta-données"
 
-#: ../../standard/docs/en/implementation/serialization.md:105
+#: ../../standard/docs/en/implementation/serialization.md:109
 msgid ""
 "Whatever serialisation is used for Open Contracting Data, a single file may "
 "contain one or more release and records."
-msgstr "Peu importe la méthode de sérialisation retenue pour divulguer des renseignements sur les processus de passation de marché au standard OCDS, un seul fichier pourrait contenir plusieurs publications et plusieurs dossiers. "
+msgstr "Quelle que soit la sérialisation utilisées pour les données Open Contracting, un même fichier peut contenir une ou plusieurs livaisons et archives."
 
-#: ../../standard/docs/en/implementation/serialization.md:107
+#: ../../standard/docs/en/implementation/serialization.md:111
 msgid ""
 "The release and record data package schemas describe the key meta-data that "
 "must be supplied for any file providing Open Contracting Data. This includes"
 " the publishedDate, publisher, uri for accessing the file, and the licensing"
 " details for the file."
-msgstr "Le schéma pour un paquet de publication et de dossiers décrit les méta-données à fournir avec le fichier de divulgation, incluant date de publication 'publishedDate, éditeur 'publisher', le lien d'accès au fichier 'uri' , et les renseignement sur la licence d'utilisation."
+msgstr "Les schémas de paquets de données portant sur les livraisons et les archives décrivent les méta-données clés qui doivent être fournies pour tout fichier fournissant des données Open Contracting. On y toruve notamment la publishedDate, le publisher, l'URI à laquelle on peut accéder au fichier, et la licence sous laquelle est placé le fichier."
