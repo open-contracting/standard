@@ -1,5 +1,5 @@
 {
-    "id": "http://standard.open-contracting.org/schema/1__0__1/release-package-schema.json",
+    "id": "http://standard.open-contracting.org/schema/1__0__2/release-package-schema.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Schema for an Open Contracting Release Package",
     "description": "Note that all releases within a release package must have a unique releaseID within this release package.",
@@ -20,7 +20,7 @@
         "releases": {
             "type": "array",
             "minItems": 1,
-            "items": { "$ref": "http://standard.open-contracting.org/schema/1__0__1/release-schema.json" },
+            "items": { "$ref": "http://standard.open-contracting.org/schema/1__0__2/release-schema.json" },
             "uniqueItems": true
         },
         "publisher": { 

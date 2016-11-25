@@ -10,7 +10,9 @@ The Open Contracting Data Standard help-desk is available to support you in impl
 
    tools
    history_and_development
+   governance
    credits
+
 
 ```
 

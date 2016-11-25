@@ -4,7 +4,7 @@ The Open Contracting Data Standard provides a **structured data model** for capt
 
 The current canonical version of this data model is provided by a **[JSON Schema](../../../schema/release)** which describes field names, field definitions and structures for the data. The compliance of data with the Open Contracting Data Standard will be assessed against this schema.
 
-However, there are many use cases where publishers and users will want to work with data serialized in other formats. For this reason, the current version of OCDS supports a number of **secondary serializations** which are based on the canonical schema. There are not currently official components of the standard, but are designed to support implementers in providing accessible data to a range of different users.
+However, there are many use cases where publishers and users will want to work with data serialized in other formats. For this reason, the current version of OCDS supports a number of **secondary serializations** which are based on the canonical schema. These are not currently official components of the standard, but are designed to support implementers in providing accessible data to a range of different users.
 
 ## JSON 
 
@@ -58,7 +58,7 @@ In each case, fields are identified by the [json pointer](http://tools.ietf.org/
    
 ```
 
-A set of prototype tools for generating flat CSV OCDS templates are [available on GitHub](https://github.com/open-contracting/flattening-ocds), and the OCDS validator includes an option to generate 'flattened' versions of JSON data.
+[Beta open source tooling](http://flatten-tool.readthedocs.io/en/latest/usage-ocds/) exists for generating flat CSV OCDS templates, and converting in both directions between JSON spreadsheets following these templates. The OCDS validator incorporates this tooling and will offer to convert files uploaded to it.
 
 ### Simplified single table 
 
@@ -94,13 +94,17 @@ Instead, data with a one-to-many relationship can be represented using a multi-t
 
 ### Multi-table
 
-The multi-table serialization breaks key sections and building blocks of OCDS into their own tables. This supports complex data structures with one-to-many relationships, whilst allowing analysts to reconstruct the views of data they need to carry out analysis. 
+The multi-table serialization separates  objects with many to one relationships (ie. arrays) into their own tables. 
 
-Multiple tables can be packaged together as the tabs of a spreadsheet, or using the Open Knowledge data package specification. 
+Multiple tables can be packaged together as the tabs of a spreadsheet, or in a collection of CSV files.  
 
-The OCDS approach to multi-table flat serializations is currently under review. Contact the [helpdesk](../../../support/) if you wish to make use of this. 
+An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/master/flat-template).
 
-### Packaging files with meta-data
+For further information on multi-table serializations please see the [flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/).
+
+
+
+## Packaging files with meta-data
 
 Whatever serialisation is used for Open Contracting Data, a single file may contain one or more release and records.
 

@@ -8,8 +8,16 @@ There are two kinds of OCDS document:
         <td width="50%" align="center"><img src="../../../assets/green_compilation.svg.png" width="50%"></td>
     </tr>
     <tr>
-        <td valign="top" style="padding:10px;"><strong>Releases</strong> provide updates on each event in a contracting process, ideally in real-time. They can be used to notify users of new tenders, awards, contracts and other updates. One contracting process may have many releases.</td>
-        <td valign="top" style="padding:10px;"><strong>Records</strong> compile together all the information known about a contracting process, providing a snapshot view of it's current state. They can also contain a versioned history of changes over time. There should only be one record for each contracting process, created by merging together the releases.</td>
+<td valign="top" style="padding:10px;" markdown=1>
+
+**Releases** provide updates on each event in a contracting process, ideally in real-time. They can be used to notify users of new tenders, awards, contracts and other updates. One contracting process may have many releases.
+
+</td>
+<td valign="top" style="padding:10px;" markdown=1>
+
+**Records** compile together all the information known about a contracting process, providing a snapshot view of it's current state. They can also contain a versioned history of changes over time. There should only be one record for each contracting process, created by merging together the releases.
+
+</td>
     </tr>
 </table>
 
