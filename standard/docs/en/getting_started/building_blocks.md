@@ -50,6 +50,7 @@ These are represented in a JSON document as follows:
 <div class="example hint" markdown=1>
     
 <p class="first admonition-title">Note</p>
+
 Awards and contracts are arrays of objects, whereas tender is an object. This is because of a contracting process has a single initiation stage, but can result in multiple awards and contracts. 
 
 </div>
