@@ -1,0 +1,221 @@
+{
+  "releases": [
+    {
+      "language": "en",
+      "contracts": [
+        {
+          "implementation": {
+            "milestones": [
+              {
+                "dateModified": "2016-11-22T09:00:00Z",
+                "dueDate": "2017-11-01T09:00:00Z",
+                "status": "scheduled",
+                "description": "Construction of the project is completed and has been signed off by the project board",
+                "id": "contract-construction-001",
+                "title": "Construction completed",
+                "type": "delivery"
+              },
+              {
+                "dateModified": "2016-11-22T09:00:00Z",
+                "dueDate": "2027-11-01T09:00:00Z",
+                "status": "scheduled",
+                "description": "The project has been in operation for 10 years",
+                "id": "contract-operation-001",
+                "title": "10 years of operation",
+                "type": "delivery"
+              }
+            ]
+          },
+          "title": "Mersey Gateway Bridge Project",
+          "equityTransferCaps": [
+            {
+              "title": "Construction phase equity transfer cap",
+              "description": "No equity transfer is permitted until construction is completed",
+              "milestone": {
+                "title": "Construction completed",
+                "id": "contract-construction-001"
+              },
+              "amount": "0.0",
+              "id": "1.0"
+            },
+            {
+              "title": "Initial operation phase equity transfer cap",
+              "description": "No more than 20% equity may be transferred until the project has been in operation for 10 years",
+              "milestone": {
+                "title": "10 years of operation",
+                "id": "contract-operation-001"
+              },
+              "amount": "0.2",
+              "id": "2.0"
+            }
+          ],
+          "riskAllocation": [
+            {
+              "mitigation": "The Department for Transport will provide an Additional Availability Support Grant in the event that actual toll revenues are less than those forecast.",
+              "allocation": "publicAuthority",
+              "likelihood": "med",
+              "category": "demand",
+              "id": "1.0",
+              "description": "Actual toll revenues are less than those forecast",
+              "fiscalImpact": "med"
+            },
+            {
+              "mitigation": "A planning strategy was agreed with the local planning authority and was shared with the bidders to mitigate planning risk to acceptable levels",
+              "allocation": "privateParty",
+              "likelihood": "low",
+              "category": "construction",
+              "id": "2.0",
+              "description": "Planning permission for the project is not granted",
+              "fiscalImpact": "high"
+            }
+          ],
+          "id": "ocds-eg0001-pf-hmt-835-contract-01"
+        },
+        {
+          "finance": [
+            {
+              "interestRate": {
+                "rate": "0.01",
+                "base": "LIBOR",
+                "fixed": "False"
+              },
+              "financeType": "loan",
+              "period": {
+                "duration": "P2Y"
+              },
+              "value": {
+                "value": "100000.0",
+                "currency": "GBP"
+              },
+              "financingParty": {
+                "name": "GALLIFORD TRY INVESTMENTS LIMITED",
+                "id": "GB-COH-5047034"
+              },
+              "id": "ocds-eg0001-pf-hmt-835-contract-01"
+            }
+          ]
+        },
+        {
+          "finance": [
+            {
+              "interestRate": {
+                "rate": "0.035",
+                "fixed": "True"
+              },
+              "id": "ocds-eg0001-pf-hmt-835-contract-01"
+            }
+          ]
+        }
+      ],
+      "entities": [
+        {
+          "shareholders": [
+            {
+              "shareholding": "0.25",
+              "shareholder": {
+                "name": "FCC MERSEY GATEWAY LIMITED",
+                "id": "GB-COH-08811246"
+              },
+              "votingRights": "ordinary",
+              "id": "1.0"
+            },
+            {
+              "shareholding": "0.375",
+              "shareholder": {
+                "name": "WIGG INVESTMENTS LIMITED",
+                "id": "GB-COH-08766379"
+              },
+              "votingRights": "ordinary",
+              "id": "2.0"
+            },
+            {
+              "shareholding": "0.375",
+              "shareholder": {
+                "name": "MG BRIDGE INVESTMENTS LIMITED",
+                "id": "GB-COH-08846885"
+              },
+              "votingRights": "ordinary",
+              "id": "3.0"
+            }
+          ],
+          "name": "MERSEYLINK (HOLDINGS) LIMITED",
+          "id": "merseylink",
+          "contactPoint": {
+            "telephone": "+44 333 200 1164",
+            "url": "http://www.merseygateway.co.uk/contact-merseylink/",
+            "email": "info@merseylink.com",
+            "name": "Mersey Link Contact Centre"
+          },
+          "address": {
+            "countryName": "United Kingdom",
+            "postalCode": "WA8 0SL",
+            "locality": "Widnes\n",
+            "region": "Cheshire",
+            "streetAddress": "Forward Point\nTan House Lane"
+          },
+          "role": "bidder",
+          "identifier": {
+            "legalName": "MERSEYLINK (HOLDINGS) LIMITED",
+            "scheme": "GB-COH",
+            "uri": "https://opencorporates.com/companies/gb/08780140",
+            "id": "08780140"
+          }
+        },
+        {
+          "address": {
+            "countryName": "United Kingdom",
+            "postalCode": "W8 6SN",
+            "region": "London",
+            "streetAddress": "Fcc Construction\nFloor 2\n239 Kensington High Street\n"
+          },
+          "identifier": {
+            "legalName": "FCC MERSEY GATEWAY LIMITED",
+            "scheme": "GB-COH",
+            "uri": "https://opencorporates.com/companies/gb/08811246",
+            "id": "8811246.0"
+          },
+          "name": "FCC MERSEY GATEWAY LIMITED",
+          "role": "shareholder",
+          "id": "GB-COH-08811246"
+        },
+        {
+          "address": {
+            "countryName": "United Kingdom",
+            "postalCode": "SE1 3TQ",
+            "region": "London",
+            "streetAddress": "5 Market Yard Mews\n194-204 Bermondsey Street"
+          },
+          "identifier": {
+            "legalName": "WIGG INVESTMENTS LIMITED",
+            "scheme": "GB-COH",
+            "uri": "https://opencorporates.com/companies/gb/08766379",
+            "id": "8766379.0"
+          },
+          "name": "WIGG INVESTMENTS LIMITED",
+          "role": "shareholder",
+          "id": "GB-COH-08766379"
+        },
+        {
+          "address": {
+            "countryName": "United Kingdom",
+            "postalCode": "SL6 1HN",
+            "locality": "Maidenhead",
+            "region": "Berkshire",
+            "streetAddress": "1 Grenfell Road"
+          },
+          "identifier": {
+            "legalName": "MG BRIDGE INVESTMENTS LIMITED",
+            "scheme": "GB-COH",
+            "uri": "https://opencorporates.com/companies/gb/08846885",
+            "id": "8846885.0"
+          },
+          "name": "MG BRIDGE INVESTMENTS LIMITED",
+          "role": "shareholder",
+          "id": "GB-COH-08846885"
+        }
+      ],
+      "ocid": "ocds-eg0001-ppp-hmt-835",
+      "id": "ocds-eg0001-pf-hmt-835-contract-01"
+    }
+  ]
+}

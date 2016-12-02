@@ -1,10 +1,4 @@
-# Location extension
-
-
-```eval_rst
-.. extensiontable::
-   :extension: location
-```
+# Location Data
 
 Communicating the location of proposed or executed contract delivery is important to make users of contracting data. 
 
@@ -13,7 +7,7 @@ This extension proposes the addition of two properties to ```items``` to describ
 * ```deliveryAddress``` - a standard ```Address``` block which can be used to provide a postal address where services should be delivered.
 * ```deliveryLocation``` - a new block consisting of GeoJSON and Gazetteer entries to describe a wider range of locations to which the contract line item relates.
 
-It also creates a [new gazetteer codelist](https://github.com/open-contracting/implementation-and-extensions/blob/master/proposed_extensions/proposed_location/codelist_usecase2.csv).
+It also creates a new gazetteer codelist, currently contained in codelist_usecase2.csv.
 
 **Advantages of this approach**
 
@@ -24,18 +18,19 @@ It also creates a [new gazetteer codelist](https://github.com/open-contracting/i
 **Disadvantages/limitations of this approach**
 
 * Locations are only specified for ```items```, not at the overall tender, contract or award level. In some cases this may lead either to location data being duplicated across items, or ambiguity about which item the location information should apply to;
+* We have to maintain a codelist of recognised Gazetteers;
 
 **Background** 
 
-There are a number of use cases that demand specifying a location for delivery of an item. Discussion can be found in [Issue #26](https://github.com/open-contracting/standard/issues/26).
+There are a number of use cases that demand specifying a location for delivery of an item. Discussion can be found in [Issue 26](https://github.com/open-contracting/standard/issues/26).
 
-## Schema patch
+**Questions**
+
+* Should we allow location to also be attached to other elements aside from items? 
 
 
-The JSON Patch to add location data to the schema can be found in [schema_usecase_2.json](https://github.com/open-contracting/implementation-and-extensions/blob/master/proposed_extensions/proposed_location/schema_usecase_2.json).
-
-## Example usage
-
+Example usage
+=============
 
 Below is an example of a geolocated item:
 
@@ -76,7 +71,7 @@ Below is an example of a geolocated item:
                 "amount": 10000
             }
         },
-        "quantity": "10"
+        "quantity": 10
     }
 ]
 ```

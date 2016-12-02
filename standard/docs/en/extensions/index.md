@@ -2,9 +2,10 @@
 
 OCDS aims to provide a common core of [sections and building blocks](../../../getting_started/building_blocks.md) for describing contracting processes. 
 
-Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard. 
+This Public Private Partnership version of OCDS incorporates a number of extensions, designed to model additional requirements from the [World Bank Disclosure Framework for Public-Private Partnerships](http://www.worldbank.org/en/topic/publicprivatepartnerships/brief/a-framework-for-disclosure-in-public-private-partnership-projects). 
 
-Some extensions with wide adoption may be considered for inclusion as part of the core standard in future versions. Others may be maintained independently by particular communities that need to align the publication of particular additional information.
+You can find documentation for these extensions below. 
+
 
 ```eval_rst
 .. toctree::

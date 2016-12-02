@@ -4,9 +4,9 @@ You can validate your OCDS documents at [standard.open-contracting.org/validator
 
 This tool will help you to check whether the JSON files you are producing are technically valid.
 
-However, this is just one step of checking your data. 
+NOTE: The OCDS Validator currently only validates against the core schema. It does not check for additional OCDS for PPPs fields. 
 
-The OCDS helpdesk team can provide additional support to check the quality of the data you are producing, and to check for other common errors and omissions. 
+However, this is just one step of checking your data. 
 
 ###  Quality checks
 

@@ -1,7 +1,40 @@
+<style><!--
+h3 ~ div {
+margin-left:30px;
+}
+h3 ~ div > h4 {
+border:1px solid black;
+}
+.example-background {
+    background:lightGrey;
+    padding:5px;
+    margin:5px
+}
+.example-background h5 {
+   background:grey;
+   margin-bottom:5px  
+}
+--></style>
+<script><!--
+function defer(method) {
+if (window.jQuery)
+method();
+else
+setTimeout(function() { defer(method) }, 50);
+}
+defer(function() {
+$("h5").each(function() { $(this).html(">>" + $(this).html());});
+$("h5").click(function() { 
+$(this).siblings().toggle('slow');   
+});
+$("h5").siblings().toggle();   
+$("h5").parent().addClass("example-background");
+});
+--></script>
+
 # PPP Disclosure Framework
 
-
-
+<a href="#" onClick='$("h5").siblings().show()'>Show</a> / <a href="#" onClick='$("h5").siblings().hide()'>hide</a> implementation details and examples</a>
 
 ## Basic Project Information
 
@@ -37,7 +70,7 @@ The following scheme codes are recognised for ```sector```:
 
 * COFOG - [UN Classification of the Functions of Government](http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4) using the dotted numerical notation. (Note: set spreadsheet columns to 'text' to avoid the leading 0 being removed).
 
-#### Example
+##### Example
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/ppp/full.json
@@ -135,7 +168,9 @@ The example below uses a gazeteer and GeoJSON LineString to describe the locatio
 
 The sponsoring agency or department's details should be included in the ```parties``` section, with a role tag of 'sponsor'. 
 
-##### Example
+#### Examples
+
+###### JSON Example
 
 ```eval_rst
 
@@ -143,6 +178,8 @@ The sponsoring agency or department's details should be included in the ```parti
    :jsonpointer: /releases/0/entities
    :expand: entities,identifier,address,contactPoint
 ```
+
+###### Spreadsheet Example
 
 ```eval_rst
 .. jsoninclude-flat:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-planning-01.json

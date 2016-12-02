@@ -1,0 +1,1 @@
+This extension captures additional details about documentation, as identified in consultation for the OCDS PPP extension. 

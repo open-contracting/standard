@@ -1,8 +1,33 @@
 ## The Contracting Process
 
-There are several stages to a contracting process. 
+A Public Private Partnership **project** involves a number of different stages:
 
-OCDS covers:
+* Pre-procurement
+* Procurement
+* Award & contract
+* Implementation
+
+At each of these project stages, a number of different contracting process might take place. For example:
+
+* Contracting for feasability studies and preparatory reports;
+* A qualification stage for potential PPP partners/suppliers/operators;
+* A process to select the PPP partners/suppliers/operators;
+* Sub-contracting during project delivery;
+* Associated contracts for project management and oversight;
+
+![PPP process overview](../../../assets/ppp/process-overview.png)
+
+Each of these individual contracting processes have a number of stages, including their own planning, tender, award, contract and implementation. In the case of the main PPP contract award, the process and, in particular it's implementation phase, may last for many years, or even decades. 
+
+When producing OCDS data for a PPP project, it is important to identify the **primary contracting process** against which the majority of disclosures required by the PPP Disclosure Framework will be recorded. 
+
+This is the OCDS process which, when visualised, will give a clear picture of how the PPP was planned, procured and implemented. 
+
+Alongside this, any number of **suplementary contracting process** can be represented. 
+
+## Stages of a contracting process 
+
+OCDS has a number of sections, capturing information on different stages of a contracting process.
 
 <style><!--
 .process-table { width:18%; float:left; font-size:10pt; }
@@ -92,7 +117,7 @@ This may involve generating output from a range of different systems. Data publi
 
 ### Defining a contracting process
 
-For public procurement OCDS defines a unique contracting process as:
+For procurement OCDS defines a unique contracting process as:
 
 > All the planning, tendering information, awards, contracts and contract implementation information related to a single initiation process.
 
@@ -140,10 +165,3 @@ The ```ocid``` is case sensitive. Case should be used consistently whenever an `
 
 The Open Contracting Data Standard helpdesk provide [a technical assessment template](http://www.open-contracting.org/resources/ocds-technical-assessment-template/) that can be used to identify the different systems involved in managing data on each stage of the contracting process.
 
-### Extending OCDS
-
-Version 1.0 of the OCDS schema is optimised for procurement-type contracts. 
-
-However, using extensions OCDS can also be used to model other kinds contracting process. 
-
-[Contact the helpdesk](../support/index.md) for support to model your contracting processes using OCDS.
