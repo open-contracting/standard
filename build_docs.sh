@@ -28,10 +28,14 @@ cd ..
 cp -r standard/assets build
 cp standard/schema/*.json build/en/
 # can put multiple languages i.e translate_schema.py en fr
-python standard/schema/utils/translate_schema.py es
+python standard/schema/utils/translate_schema.py es fr
 
 cd standard
 # all these need to be run per language
 SCHEMA_LANG=es python schema/utils/make_field_definitions.py
 CODELIST_LANG=es python schema/utils/translate_codelists.py
 sphinx-build -b dirhtml -D language='es' docs/en ../build/es
+
+SCHEMA_LANG=fr python schema/utils/make_field_definitions.py
+CODELIST_LANG=fr python schema/utils/translate_codelists.py
+sphinx-build -b dirhtml -D language='fr' docs/en ../build/fr
