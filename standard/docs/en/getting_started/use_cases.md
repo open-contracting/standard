@@ -27,7 +27,7 @@ When planning your implementation of OCDS for PPPs, consider these use cases, an
 
 For example, for citizens to gain an understanding of a project, descriptions may need to be carefully and clearly written, and may need to be translated in local languages. 
 
-## OCDS Core 
+### OCDS Core 
 
 You can read about the use cases for the core OCDS [on the main standard documentation site](http://standard.open-contracting.org/latest/en/getting_started/use_cases/). 
  

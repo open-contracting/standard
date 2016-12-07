@@ -3,7 +3,7 @@ set -e
 
 cp standard/schema/release-schema.json standard/schema/release-schema.json.backup
 python apply-extensions.py
-python update_example.py
+# python update_example.py
 
 mkdir -p standard/docs/field_definitions
 cd standard

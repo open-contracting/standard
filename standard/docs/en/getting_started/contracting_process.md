@@ -19,7 +19,7 @@ At each of these project stages, a number of different contracting process might
 
 Each of these individual contracting processes have a number of stages, including their own planning, tender, award, contract and implementation. In the case of the main PPP contract award, the process and, in particular it's implementation phase, may last for many years, or even decades. 
 
-When producing OCDS data for a PPP project, it is important to identify the **primary contracting process** against which the majority of disclosures required by the PPP Disclosure Framework will be recorded. 
+When producing OCDS data for a PPP project, it is important to identify the **primary contracting process** against which the majority of disclosures required by the PPP Disclosure Framework will be recorded (in some cases, complex qualification processes may need be modelled using a ```relatedProcess```). 
 
 This is the OCDS process which, when visualised, will give a clear picture of how the PPP was planned, procured and implemented. 
 

@@ -14,6 +14,9 @@ border:1px solid black;
    background:grey;
    margin-bottom:5px  
 }
+.wy-table td, .rst-content table.docutils td, .rst-content table.field-list td {
+  vertical-align: top;
+}
 --></style>
 <script><!--
 function defer(method) {
@@ -91,7 +94,7 @@ There are a range of tools available to generate GeoJSON data, such as http://ge
 
 Locations are represented using an array of ```location``` objects at ```planning/project/locations```. Each location can have a description, a gazeteer entry, and/or a GeoJSON object representing a location point or geometery. 
 
-See the location extension (ToDo: Add link) for further modelling details. 
+See the [location extension](../../extensions/location/)  for further modelling details. 
 
 ##### Example
 
@@ -191,7 +194,7 @@ The sponsoring agency or department's details should be included in the ```parti
 
 ### I.3: Project value
 
-The project value should be understood as the total amount project to be invested into the project by both public and private parties over the project lifetime.
+The project value should be the total amount project to be invested into the project by both public and private parties over the project lifetime.
 
 This can be entered into ```planning/project/totalValue``` object, and should consist of a single value and currency.
 
@@ -208,7 +211,9 @@ Information on the project need, benefits provided, and economic and social impa
 
 These documents should be tagged with a ```documentType``` value of 'needsAssessment' in the ```planning/documents``` array. 
 
-##### Example
+#### Examples
+
+##### JSON Example
 
 ```eval_rst
 
@@ -216,6 +221,8 @@ These documents should be tagged with a ```documentType``` value of 'needsAssess
    :jsonpointer: /releases/0/planning/documents/0
    :expand: 
 ```
+
+##### Spreadsheet example
 
 ```eval_rst
 .. jsoninclude-flat:: docs/en/examples/ppp/full.json
@@ -254,6 +261,8 @@ These estimates can be disaggregated by any number of dimensions contained as si
 
 #### Example 
 
+##### JSON Example
+
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-planning-01.json
@@ -268,9 +277,14 @@ Information on the project additionality should be provided through planning doc
 * A short summary text
 * A link to one or more documents that provide additional information
 
-These documents should be tagged with a ```documentType``` value of 'additionality' in the ```planning/documents``` array. 
+Descriptions should be provided for both:
 
-(TODO: Clarify this section of the framework. See https://github.com/open-contracting/public-private-partnerships/issues/32)
+* The additionality of the project;
+* The additionality of the finance method used;
+
+These documents should be tagged with a ```documentType``` value of 'projectAdditionality' or 'financeAdditionality' in the ```planning/documents``` array. 
+
+**Discussion**: How should additionality be defined: https://github.com/open-contracting/public-private-partnerships/issues/32
 
 ### I.9: Reason for selection of PPP mode and type
 
@@ -285,63 +299,67 @@ These documents should be tagged with a ```documentType``` value of 'pppModeRati
 
 ### I.10: Dates of various approvals
 
-This information can be provided using the ```milestones``` field in the relevant section of an OCDS release, for example information on approvals relating to the planning phase of a PPP should be provided in the ```planning/milestones``` field whilst information on approvals relating to the procurement phase should be provided in the ```tender/milestones``` field. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+This information can be provided using the [milestones extension](../../extensions/milestones/).
 
-A value from the [milestone type codelist](../schema/codelists/#milestone-type) should be entered into the ```milestone/milestoneType``` field to identify the type of milestone being disclosed, for example a milestone relating to the planning phase of a PPP should be of type ```planning```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+Each approval during the planning stage should be included in the ```planning/milestones``` array with a ```type``` of 'approval', the date the approval is scheduled for (```dueDate```), the status of the approval (```scheduled``` or ```met```) and the date the approval was given (```dateMet```).
 
-A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example an approval which has not yet taken place should have ```scheduled``` status whilst an approval which has been completed should have ```met``` status.
-
-(TODO: build ppp-schema with [milestones update](https://github.com/duncandewhurst/ocds-milestones-update) + update codelists documentation)
-
-TODO: Investigate proposal for Approvals building block https://github.com/open-contracting/standard/issues/403
+Documentation associated with the approval can be given in the associated milestones documents block.
 
 ### Contract Milestones (Estimated and Actual)
 
 #### I.11: Date of commercial close
 
-This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+> In a financing, the point at which the commercial documentation has been executed but before conditions precedent have been satisfied or waived; before financial close. ([Source](https://pppknowledgelab.org/glossary#Commercial_Close))
 
-The ```milestone/milestoneType``` field should be set to ```???```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+This information can be provided using the [milestones extension](../../extensions/milestones/).
 
-A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+To indicate the date of commercial close, a milestone should be added to the ```contract/milestones``` (the contract may have a ```status``` of 'pending' up until it is signed). 
 
-(TODO: see [github issue](https://github.com/open-contracting/public-private-partnerships/issues/25))
+The milestone should have a ```type``` of 'financing', a ```code``` of 'commercialClose', the status of ```met``` and the date that commercial close took place in ```dateMet```.
+
+Additional documentation, or links to documentation, can be provided using the documents block for the milestone.
 
 #### I.12: Date of financial close
 
-This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+> In a financing, the point at which the documentation has been executed and conditions precedent have been satisfied or waived. Drawdowns become permissible after this point. ([Source](https://pppknowledgelab.org/glossary#Financial_Close))
 
-The ```milestone/milestoneType``` field should be set to ```???```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+This information can be provided using the [milestones extension](../../extensions/milestones/).
 
-A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+To indicate the date of commercial close, a milestone should be added to the ```contract/milestones``` (the contract may have a ```status``` of 'pending' up until it is signed). 
 
-(TODO: see [github issue](https://github.com/open-contracting/public-private-partnerships/issues/25))
+The milestone should have a ```type``` of 'financing', a ```code``` of 'financialClose'  the status of ```met``` and the date that commercial close took place in ```dateMet```.
+
+Additional documentation, or links to documentation, can be provided using the documents block for the milestone.
 
 #### I.13: Date of commencement of construction or development
 
-This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+This information can be provided using the [milestones extension](../../extensions/milestones/).
 
-The ```milestone/milestoneType``` field should be set to ```delivery```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+To indicate the date that construction starts, a milestone should be added to the ```contract/implementation/milestones```.
 
-A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+The milestone should have a ```type``` of 'delivery', a ```code``` of 'developmentStarted' or 'constructionStarted'  the status of ```met``` and the date that this milestone was achieved in ```dateMet```.
 
+Additional documentation, or links to documentation, can be provided using the documents block for the milestone.
 
 #### I. 14: Date of completion of construction or development
 
-This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+This information can be provided using the [milestones extension](../../extensions/milestones/).
 
-The ```milestone/milestoneType``` field should be set to ```delivery```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+To indicate the date that construction starts, a milestone should be added to the ```contract/implementation/milestones```.
 
-A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+The milestone should have a ```type``` of 'delivery', a ```code``` of 'developmentComplete' or 'constructionComplete' the status of either ```scheduled``` or ```met``` and either the date that this milestone was achieved in ```dateMet```, or the scheduled date in ```dueDate```.
 
+Additional documentation, or links to documentation, can be provided using the documents block for the milestone.
 
 #### I.15: Date of commissioning
 
-This information can be provided using the ```milestones``` field in the ```tender``` section of an OCDS release. OCDS provides a [milestones building block](../schema/reference/#milestone) for disclosure of information on milestones.
+This information can be provided using the [milestones extension](../../extensions/milestones/).
 
-The ```milestone/milestoneType``` field should be set to ```delivery```. This enables applications consuming OCDS data to distinguish between the different types of milestone, whichever section of OCDS the milestone appears in, and allows publishers to be clear about the type of milestone they are publishing.
+To indicate the date that construction starts, a milestone should be added to the ```contract/implementation/milestones```.
 
-A value from the [milestone status codelist](../schema/codelists/#milestone-status) should be entered into the ```milestone/status``` field to identify the status of the milestone, for example the expected date for the milestone should have ```scheduled``` status and once the milestone has been completed the status should be set to ```met```.
+The milestone should have a ```type``` of 'delivery', a ```code``` of 'commissioning' the status of either ```scheduled``` or ```met``` and either the date that this milestone was achieved in ```dateMet```, or the scheduled date in ```dueDate```.
+
+Additional documentation, or links to documentation, can be provided using the documents block for the milestone.
 
 #### I.16: Date of contract expiry
 
@@ -353,11 +371,9 @@ This expected date of contract expiry can be entered into the ```contractPeriod/
 
 ### I.17: Links to all contract documents
 
-Links to contract documents can be provided using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+Links to contract documents can be provided using the ```documents``` field in the ```planning``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents which has [a number of available extensions for PPP use cases](../../extensions/documentation_details/)
 
 A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
-
-(TODO: draft documents extension - access details field + add to documentation)
 
 ### Parties to the contract with contact details
 
