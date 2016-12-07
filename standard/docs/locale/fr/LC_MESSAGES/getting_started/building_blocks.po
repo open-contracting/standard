@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 20:28+0000\n"
-"PO-Revision-Date: 2016-11-30 12:17+0000\n"
-"Last-Translator: Colin Maudry <colin@maudry.com>\n"
+"POT-Creation-Date: 2016-12-01 14:15+0000\n"
+"PO-Revision-Date: 2016-12-07 11:40+0000\n"
+"Last-Translator: samgoeta <samgoeta@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +45,7 @@ msgstr "Un document OCDS est composé de plusieurs sections. Dans le cas des mar
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:19
 msgid "**meta-data** - contextual information about each release of data;"
-msgstr "**meta-data** - informations contextuelles sur chaque livraison de données publiées ;"
+msgstr "**meta-data** - informations contextuelles sur chaque instance de données ;"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:20
 msgid "**buyer** - information about the key public party;"
@@ -116,7 +116,7 @@ msgstr "**Amounts** - les montants"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:66
 msgid "**Items**"
-msgstr "**Items** - les objets"
+msgstr "**Items** - les livrables"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:67
 msgid "**Time periods**"
@@ -145,7 +145,7 @@ msgid ""
 "wishes to buy), in an award object (to indicate the items that an award has "
 "been made for) and in a contract object (to indicate the items listed in the"
 " contract)."
-msgstr "Ces composants essentiels peuvent être utilisés dans différentes sections. Par exemple, **items** peut être utilisé dans l'appel d'offres (pour indiquer les lots dont l'acheteur souhaite faire l'acquisition), dans l'avis d'attribution (pour indiquer les lots qui ont été attribués) et dans un contrat (pour indiquer les lots inclus dans le contrat). "
+msgstr "Ces composants essentiels peuvent être utilisés dans différentes sections. Par exemple, **items** peut être utilisé dans l'appel d'offres (pour indiquer les livrables dont l'acheteur souhaite faire l'acquisition), dans l'avis d'attribution (pour indiquer les livrables qui ont été attribués) et dans un contrat (pour indiquer les livrables inclus dans le contrat). "
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:131
 msgid ""
@@ -160,7 +160,7 @@ msgstr "```titles``` (titres) et ```descriptions```  des appels d'offres, des at
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:134
 msgid "```procurementMethod```"
-msgstr "```procurementMethod``` la méthode de passation de marché"
+msgstr "```procurementMethod``` la procédure de passation de marché"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:135
 msgid "```awardCriteria```"
@@ -181,7 +181,7 @@ msgstr "Plusieurs de ces champs utilisent une liste de codes fournie dans le sta
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Field level mapping"
-msgstr "Cartographie des champs"
+msgstr "Mapping des champs"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:143
 msgid ""
@@ -189,7 +189,7 @@ msgid ""
 "template](http://www.open-contracting.org/resources/ocds-field-level-"
 "mapping-template/) that can be used to cross-walk between your internal data"
 " systems and OCDS."
-msgstr "L'assistance technique OCDS fournit  [un modèle de cartographie des champs](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/') qui peut être utilisé pour aligner vos systèmes internes de gestion de données avec le standard OCDS."
+msgstr "L'assistance technique OCDS fournit  [un modèle de mapping des champs](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/') qui peut être utilisé pour aligner vos systèmes internes de gestion de données avec le standard OCDS."
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Codelists"
@@ -204,14 +204,14 @@ msgid ""
 "**Closed codelists** provide a fixed list of values. When using a field with"
 " a closed codelist, publishers must use an option from the published lists. "
 "This supports the global comparability of OCDS data on key dimensions."
-msgstr "**Les listes  de codes fermées**  sont des listes de valeurs fixes et non-extensibles. Lorsqu'ils utilisent un champ dans une liste de codes fermée, les fournisseurs de données doivent utiliser une des options parmi les listes publiées afin de s'assurer que les principales dimensions contenues dans les données OCDS puissent être comparées mondialement. "
+msgstr "**Les listes  de codes fermées**  sont des listes de valeurs fixes et non-extensibles. Lorsqu'ils utilisent un champ dans une liste de codes fermée, les producteurs de données doivent utiliser une des options parmi les listes publiées afin de s'assurer que les principales dimensions contenues dans les données OCDS puissent être comparées mondialement. "
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:151
 msgid ""
 "**Open codelists** provide recommended values. However, publishers can "
 "suggest amendments to these codelists, or provide their own extended values "
 "prefixed with x_."
-msgstr "**Les listes de codes ouvertes** proposent des valeurs recommandées. Les producteurs de données peuvent suggérer des modifications de ces listes, voire ajouter eux-mêmes leurs propres valeurs avec le préfixe x_."
+msgstr "**Les nomenclatures ouvertes** proposent des valeurs recommandées. Les producteurs de données peuvent suggérer des modifications de ces nomenclatures, voire ajouter eux-mêmes leurs propres valeurs avec le préfixe x_."
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:157
 msgid "**Open Codelists**"
@@ -243,7 +243,7 @@ msgstr "**Les listes de codes fermées**"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:170
 msgid "Release Tag"
-msgstr "Étape de livraison"
+msgstr "Tag d'instance"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:171
 msgid "Initiation Type"
@@ -286,7 +286,7 @@ msgid ""
 "Publishers should map their existing classification systems to OCDS codes "
 "wherever possible. Many closed codelist fields are paired with a detail "
 "field where more detailed classification information can be provided."
-msgstr "Si possible, les producteurs de données doivent cartographier leurs systèmes actuels de classification avec les codes OCDS. De nombreux champs dans les listes fermées de codes OCDS sont associés à un champ \"détail\" qui permet de préciser la valeur correspondante dans la classification existante.    "
+msgstr "Si possible, les producteurs de données doivent mapper leurs systèmes actuels de classification avec les codes OCDS. De nombreux champs dans les listes fermées de codes OCDS sont associés à un champ \"détail\" qui permet de préciser la valeur correspondante dans la classification existante.    "
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:192
 msgid ""
@@ -325,7 +325,7 @@ msgstr "Cependant, pour permettre la comparaison de données intercontinentales,
 msgid ""
 "**open** - a procurement method whereby all interested suppliers may submit "
 "a tender"
-msgstr "**open** (ouverte) - une procédure qui autorise tous les fournisseurs intéressés à soumettre une offre"
+msgstr "**open** (ouverte) - une procédure de passation de marchés qui autorise tous les fournisseurs intéressés à soumettre une offre"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:203
 msgid ""

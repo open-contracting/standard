@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-12-01 14:15+0000\n"
-"PO-Revision-Date: 2016-12-02 11:27+0000\n"
-"Last-Translator: Ben Webb <ben.webb@opendataservices.coop>\n"
+"PO-Revision-Date: 2016-12-04 18:21+0000\n"
+"Last-Translator: samgoeta <samgoeta@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +49,7 @@ msgstr "Les archives pour ce package de données."
 #. /properties/publicationPolicy/description
 #: schema/record-package-schema.json:1
 msgid "A link to a document describing the publishers publication policy."
-msgstr "Un lien vers un document décrivant la politique de publication du fournisseur des données."
+msgstr "Un lien vers un document décrivant la politique de publication du producteur des données."
 
 #. /properties/publisher/properties/name/title
 #. /definitions/Item/properties/unit/properties/name/title
@@ -104,7 +104,7 @@ msgstr "URI"
 #. /properties/publisher/properties/uri/description
 #: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "A URI to identify the publisher."
-msgstr "Un identifiant URI pour identifier le fournisseur des données."
+msgstr "Un identifiant URI pour identifier le producteur des données."
 
 #. /properties/publisher/description
 #: schema/record-package-schema.json:1 schema/release-package-schema.json:1
@@ -116,7 +116,7 @@ msgstr "Information pour identifier de manière unique le producteur du package.
 msgid ""
 "A list of URIs of all the release packages that were used to create this "
 "record package."
-msgstr "Une liste des URIs vers tous les packages de livraison qui ont été utilisés pour créer ce package d'archive."
+msgstr "Une liste des URIs vers tous les packages d'instance qui ont été utilisés pour créer ce package d'archive."
 
 #. /properties/uri/title
 #: schema/record-package-schema.json:1 schema/release-package-schema.json:1
@@ -138,12 +138,12 @@ msgstr "Compiled release"
 msgid ""
 "This is the latest version of all the contracting data, it has the same "
 "schema as an open contracting release."
-msgstr "La dernière version s'applique à toutes les données sur la commande publique, le schéma est le même pour toutes les livraisons sur la commande publique. "
+msgstr "La dernière version s'applique à toutes les données sur la commande publique, le schéma est le même pour toutes les instances sur la commande publique. "
 
 #. /definitions/record/properties/releases/description
 #: schema/record-package-schema.json:1
 msgid "An array of linking identifiers or releases"
-msgstr "Un tableau des identifiants pouvant être liés ou les livraisons"
+msgstr "Un tableau des identifiants pouvant être liés ou les instances"
 
 #. /definitions/record/properties/ocid/title
 #. /properties/ocid/title
@@ -170,7 +170,7 @@ msgstr "Versioned release"
 msgid ""
 "This contains the history of the data in the compiledRecord. With all "
 "versions of the information and the release they came from."
-msgstr "Ceci contient l'historique des données contenues dans une archive compilée ```compiledRecord``` avec toutes les versions de l'information et la livraison dont il provient."
+msgstr "Ceci contient l'historique des données contenues dans une archive compilée ```compiledRecord``` avec toutes les versions de l'information et l'instance dont il provient."
 
 #. /description
 #: schema/record-package-schema.json:1
@@ -179,7 +179,7 @@ msgid ""
 "meta data. The records pull together all the releases under a single Open "
 "Contracting ID and compile them into the latest version of the information "
 "along with the history of any data changes."
-msgstr "Le package d'archive contient une liste des archives accompagnées de métadonnées. Les archives rassemblent toutes les livraisons qui correspondent à un seul identifiant Open Contracting ID et les compile en  "
+msgstr "Le package d'archive contient une liste des archives accompagnées de métadonnées. Les archives rassemblent toutes les instances qui correspondent à un seul identifiant Open Contracting ID et les compile en  "
 
 #. /title
 #: schema/release-package-schema.json:1
@@ -209,19 +209,19 @@ msgid ""
 "A link to a document describing the publishers [publication "
 "policy](http://standard.open-"
 "contracting.org/latest/en/implementation/publication_policy/)."
-msgstr "Un lien vers un document décrivant la [politique de publication du fournisseur des données](http://standard.open-contracting.org/latest/en/implementation/publication_policy/)."
+msgstr "Un lien vers un document décrivant la [politique de publication du producteur des données](http://standard.open-contracting.org/latest/en/implementation/publication_policy/)."
 
 #. /description
 #: schema/release-package-schema.json:1
 msgid ""
 "Note that all releases within a release package must have a unique releaseID"
 " within this release package."
-msgstr "Notez que toutes les livraison dans un package de livraison doivent avoir un identifiant ```releaseID``` unique dans ce package de livraison."
+msgstr "Notez que toutes les instances dans un package d'instance doivent avoir un identifiant ```releaseID``` unique dans ce package d'instance."
 
 #. /title
 #: schema/release-schema.json:1
 msgid "Schema for an Open Contracting Release"
-msgstr "Schéma pour une livraison Open Contracting"
+msgstr "Schéma pour une instance Open Contracting"
 
 #. /properties/contracts/title
 #: schema/release-schema.json:1
@@ -257,7 +257,7 @@ msgstr "Release ID"
 msgid ""
 "A unique identifier that identifies this release. A release ID must be "
 "unique within a release-package and must not contain the # character."
-msgstr "Un identifiant unique qui identifie cette livraison. Un ID de livraison doit être unique dans un package de livraisons et ne doit pas contenir le caractère #."
+msgstr "Un identifiant unique qui identifie cette instance. Un ID d'instance doit être unique dans un package d'instances et ne doit pas contenir le caractère #."
 
 #. /properties/awards/title
 #: schema/release-schema.json:1
@@ -293,7 +293,7 @@ msgid ""
 "a publisher prefix and an identifier for the contracting process. For more "
 "information see the [Open Contracting Identifier guidance](http://standard"
 ".open-contracting.org/latest/en/schema/identifiers/)"
-msgstr "Un identifiant global unique pour ce processus Open Contracting. Composé d'un préfixe de fournisseur de données et d'un identifiant pour le processus de passation de marché. Pour plus d'informations, voir les [indications sur les identifiants OpenContracting](http://standard.open-contracting.org/latest/en/schema/identifiers/)"
+msgstr "Un identifiant global unique pour ce processus Open Contracting. Composé d'un préfixe de producteur de données et d'un identifiant pour le processus de passation de marché. Pour plus d'informations, voir les [indications sur les identifiants OpenContracting](http://standard.open-contracting.org/latest/en/schema/identifiers/)"
 
 #. /properties/tender/title
 #. /definitions/Tender/title
@@ -333,7 +333,7 @@ msgid ""
 " nature of the release being made. Tags may be used to filter release, or, "
 "in future, for advanced validation when certain kinds of releases should "
 "contain certain fields."
-msgstr "Valeur issue de la [liste de codes releaseTag](http://standard.open-contracting.org/latest/en/schema/codelists/#release-tag) qui identifie la nature de la livraison. Les tags peuvent être utilisées pour filtrer les livraisons ou, à l'avenir, pour la validation avancée lorsque certains types de livraisons devront contenir certains champs."
+msgstr "Valeur issue de la [liste de codes releaseTag](http://standard.open-contracting.org/latest/en/schema/codelists/#release-tag) qui identifie la nature de l'instance. Les tags peuvent être utilisées pour filtrer les instances ou, à l'avenir, pour la validation avancée lorsque certains types de instances devront contenir certains champs."
 
 #. /properties/buyer/title
 #: schema/release-schema.json:1
@@ -780,7 +780,7 @@ msgid ""
 "A local, unique identifier for this document. This field is used to keep "
 "track of multiple revisions of a document through the compilation from "
 "release to record mechanism."
-msgstr "Un identifiant unique local pour ce document. Ce champ est utilisé pour garder la trace de plusieurs révisions d'un document par la compilation des livraisons en archives."
+msgstr "Un identifiant unique local pour ce document. Ce champ est utilisé pour garder la trace de plusieurs révisions d'un document par la compilation des instances en archives."
 
 #. /definitions/Document/properties/format/title
 #: schema/release-schema.json:1 schema/utils/make_field_definitions.py:20
@@ -1010,7 +1010,7 @@ msgid ""
 "A local identifier for this milestone, unique within this block. This field "
 "is used to keep track of multiple revisions of a milestone through the "
 "compilation from release to record mechanism."
-msgstr "Un identifiant local pour cette étape, unique dans ce bloc. Ce champ est utilisé pour garder la trace de plusieurs révisions d'une étape par le mécanisme de compilation d'une livraison en archive."
+msgstr "Un identifiant local pour cette étape, unique dans ce bloc. Ce champ est utilisé pour garder la trace de plusieurs révisions d'une étape par le mécanisme de compilation d'une instance en archive."
 
 #. /definitions/Milestone/properties/dueDate/title
 #: schema/release-schema.json:1
@@ -1273,7 +1273,7 @@ msgid ""
 "many other fields may be filled in a planning release, in the appropriate "
 "fields in other schema sections, these would likely be estimates at this "
 "stage e.g. totalValue in tender"
-msgstr "Informations issues de la phase de planification du processus de passation des marchés. Notez que de nombreux autres champs peuvent être remplis dans une livraison de planification. Dans les champs appropriés dans d'autres sections du schéma, ceux-ci seraient probablement des estimations à ce stade comme par exemple totalValue dans un appel d'offres."
+msgstr "Informations issues de la phase de planification du processus de passation des marchés. Notez que de nombreux autres champs peuvent être remplis dans une instance de planification. Dans les champs appropriés dans d'autres sections du schéma, ceux-ci seraient probablement des estimations à ce stade comme par exemple totalValue dans un appel d'offres."
 
 #. /definitions/Tender/properties/title/title
 #: schema/release-schema.json:1
@@ -1658,7 +1658,7 @@ msgstr "Items contracted"
 msgid ""
 "The goods, services, and any intangible outcomes in this contract. Note: If "
 "the items are the same as the award do not repeat."
-msgstr "Les biens, services, et tous résultats intangibles dans ce contrat. Remarque : si ces éléments sont les mêmes que dans l'attribution, ne répétez pas."
+msgstr "Les biens, services, et tous résultats intangibles dans ce contrat. Remarque : si ces livrables sont les mêmes que dans l'attribution, ne le répétez pas."
 
 #. /definitions/Contract/properties/description/title
 #. /definitions/Contract/properties/description/description
@@ -1763,7 +1763,7 @@ msgstr "Une adresse. Cela peut être l'adresse légalement enregistrée de l'org
 #. /title
 #: schema/versioned-release-validation-schema.json:1
 msgid "Schema for a compiled, versioned Open Contracting Release."
-msgstr "Schéma pour une livraison Open Contracting versionnée et compilée"
+msgstr "Schéma pour une instance Open Contracting versionnée et compilée"
 
 #: schema/utils/make_field_definitions.py:20
 msgid "Field Name"

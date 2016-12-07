@@ -5,13 +5,14 @@
 # Translators:
 # Joel Gombin <joel.gombin@gmail.com>, 2016
 # Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
+# samgoeta <samgoeta@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 20:11+0000\n"
-"PO-Revision-Date: 2016-11-12 14:52+0000\n"
-"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>\n"
+"POT-Creation-Date: 2016-12-01 14:15+0000\n"
+"PO-Revision-Date: 2016-12-04 18:10+0000\n"
+"Last-Translator: samgoeta <samgoeta@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -172,7 +173,7 @@ msgstr "Une table unique simplifiée"
 msgid ""
 "It is possible to represent a full releases in a single flat CSV row by "
 "using full JSON pointers for each field as the headings."
-msgstr "Il est possible de représenter une livraison complète dans une seule ligne d'un fichier CSV en utilisant les pointeurs JSON de chaque champ comme noms de colonnes."
+msgstr "Il est possible de représenter une instance complète dans une seule ligne d'un fichier CSV en utilisant les pointeurs JSON de chaque champ comme noms de colonnes."
 
 #: ../../standard/docs/en/implementation/serialization.md:67
 msgid ""
@@ -188,13 +189,13 @@ msgid ""
 "headings. For arrays, this involves adding the array index to the path, such"
 " as ```tender/item/0/id``` and ```tender/item/1/id``` as separate columns to"
 " represent each of the items."
-msgstr "Théoriquement, il est cependant possible de représenter une livraison complète dans une seule ligne de fichier CSV en utilisant les pointeurs JSON complet de chaque champ comme noms de colonne. Pour des listes, cela implique de rajouter l'index de la liste au chemin, de sorte que ```tender/item/0/id``` et ```tender/item/1/id``` constituent des colonnes distinctes, représentant chacun des éléments."
+msgstr "Théoriquement, il est cependant possible de représenter une instance complète dans une seule ligne de fichier CSV en utilisant les pointeurs JSON complet de chaque champ comme noms de colonne. Pour des listes, cela implique de rajouter l'index de la liste au chemin, de sorte que ```tender/item/0/id``` et ```tender/item/1/id``` constituent des colonnes distinctes, représentant chacun des livrables."
 
 #: ../../standard/docs/en/implementation/serialization.md:71
 msgid ""
 "For example, to represent a tender release with two items, the CSV file "
 "would include:"
-msgstr "Par exemple, pour représenter une livraison portant sur un appel d'offres avec deux éléments, le fichier CSV incluerait : "
+msgstr "Par exemple, pour représenter une instance portant sur un appel d'offres avec deux livrables, le fichier CSV incluerait : "
 
 #: ../../standard/docs/en/implementation/serialization.md:81
 msgid "The JSON equivalent of this would be:"
@@ -257,4 +258,4 @@ msgid ""
 "must be supplied for any file providing Open Contracting Data. This includes"
 " the publishedDate, publisher, uri for accessing the file, and the licensing"
 " details for the file."
-msgstr "Les schémas de paquets de données portant sur les livraisons et les archives décrivent les méta-données clés qui doivent être fournies pour tout fichier fournissant des données Open Contracting. On y toruve notamment la publishedDate, le publisher, l'URI à laquelle on peut accéder au fichier, et la licence sous laquelle est placé le fichier."
+msgstr "Les schémas de paquets de données portant sur les instances et les archives décrivent les méta-données clés qui doivent être fournies pour tout fichier fournissant des données Open Contracting. On y toruve notamment la publishedDate, le publisher, l'URI à laquelle on peut accéder au fichier, et la licence sous laquelle est placé le fichier."

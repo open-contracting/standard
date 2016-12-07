@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the OCDS package.
 # 
 # Translators:
+# Colin Maudry <colin@maudry.com>, 2016
 # Joel Gombin <joel.gombin@gmail.com>, 2016
 # Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
 # samgoeta <samgoeta@gmail.com>, 2016
@@ -11,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 20:11+0000\n"
-"PO-Revision-Date: 2016-11-30 16:26+0000\n"
+"POT-Creation-Date: 2016-12-01 14:15+0000\n"
+"PO-Revision-Date: 2016-12-06 19:17+0000\n"
 "Last-Translator: Colin Maudry <colin@maudry.com>\n"
 "Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:0
 msgid "Releases and Records"
-msgstr "Livraisons et archives"
+msgstr "Instances et archives"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:3
 msgid "There are two kinds of OCDS document:"
@@ -34,7 +35,7 @@ msgid ""
 "**Releases** provide updates on each event in a contracting process, ideally"
 " in real-time. They can be used to notify users of new tenders, awards, "
 "contracts and other updates. One contracting process may have many releases."
-msgstr "Les **livraisons** fournissent des mises à jour sur chaque évènement dans le processus de passation de marché, idéalement en temps réel. Elles peuvent être utilisées pour notifier les utilisateurs de nouveaux appels d'offres, attributions, contrats et tout autre mise à jour. Un processus de passation de marché peut donner lieu à de nombreuses livraisons. "
+msgstr "Les **instances** fournissent des mises à jour sur chaque évènement dans le processus de passation de marché, idéalement en temps réel. Elles peuvent être utilisées pour notifier les utilisateurs de nouveaux appels d'offres, attributions, contrats et tout autre mise à jour. Un processus de passation de marché peut donner lieu à de nombreuses instances. "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:18
 msgid ""
@@ -43,24 +44,24 @@ msgid ""
 "contain a versioned history of changes over time. There should only be one "
 "record for each contracting process, created by merging together the "
 "releases."
-msgstr "Les **archives** rassemblent les informations connues décrivant un processus de passation de marché, fournissant ainsi un aperçu de son état actuel. Elles peuvent aussi contenir un historique versionné des changements à travers le temps. Il ne doit y avoir qu'une seule archive pour chaque processus de passation de marché. L'archive est générée en fusionnant toutes les livraisons traitant de la même procédure de passation. "
+msgstr "Les **archives** rassemblent les informations connues décrivant un processus de passation de marché, fournissant ainsi un aperçu de son état actuel. Elles peuvent aussi contenir un historique versionné des changements à travers le temps. Il ne doit y avoir qu'une seule archive pour chaque processus de passation de marché. L'archive est générée en fusionnant toutes les instances traitant de la même procédure de passation. "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:0
 msgid "Releases"
-msgstr "Livraisons"
+msgstr "Instances"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:26
 msgid ""
 "Releases should be immutable objects, presenting information about a "
 "particular event in the lifetime of a contracting process."
-msgstr "Les livraisons sont des objets immuables qui décrivent un évènement en particulier dans le processus de passation d'un marché public."
+msgstr "Les instances sont des objets immuables qui décrivent un évènement en particulier dans le processus de passation d'un marché public."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:28
 msgid ""
 "Each release must contain an OCID, a unique release ID, a release tag, and "
 "as much information as can be provided for users to understand the event "
 "taking place."
-msgstr "Chaque livraison doit contenir un identifiant OCID, un identifiant unique de livraison, un tag de livraison et toutes les informations nécessaires à une bonne compréhension de l'évènement en cours par les utilisateurs. "
+msgstr "Chaque instance doit contenir un identifiant OCID, un identifiant unique d'instance, un tag d'instance et toutes les informations nécessaires à une bonne compréhension de l'évènement en cours par les utilisateurs. "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:30
 msgid "For example:"
@@ -71,33 +72,33 @@ msgid ""
 "A ```planning``` release may provide information in the planning section "
 "about budgets and procurement intention, and the tender section about the "
 "proposed details for a future tender;"
-msgstr "Une livraison de type ```planning``` (planification) peut fournir des informations sur les budgets et les motivations de l'acheteur dans la section sur la planification. La section sur l'appel d'offres peut inclure des informations sur les détails envisagés pour un futur appel d'offres ; "
+msgstr "Une instance de type ```planning``` (planification) peut fournir des informations sur les budgets et les motivations de l'acheteur dans la section sur la planification. La section sur l'appel d'offres peut inclure des informations sur les détails envisagés pour un futur appel d'offres ; "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:33
 msgid ""
 "A ```tender``` release may provide information in the tender section about "
 "how to bid for the work, and may repeat ```planning``` information on the "
 "budget or project the tender is associated with;"
-msgstr "Une livraison de type ```tender```  (appel d'offres) peut fournir des informations dans la section appel d'offres sur la manière de candidater et peut répéter des informations de type ```planning``` (planification) sur le budget ou le projet auquel l'offre correspond ;"
+msgstr "Une instance de type ```tender```  (appel d'offres) peut fournir des informations dans la section appel d'offres sur la manière de soumettre une offre et peut répéter des informations de type ```planning``` (planification) sur le budget ou le projet auquel l'offre correspond ;"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:34
 msgid ""
 "A ```tenderUpdate``` release may provide an updated tender section with "
 "links to documents that answer questions asked during the enquiry period;"
-msgstr "Une livraison de type ```tenderUpdate``` (mise à jour de l'appel d'offres) peut fournir une mise à jour de la section sur l'appel d'offres avec des liens vers les documents qui répondent aux questions posées pendant la période de renseignements."
+msgstr "Une instance de type ```tenderUpdate``` (mise à jour de l'appel d'offres) peut fournir une mise à jour de la section sur l'appel d'offres avec des liens vers les documents qui répondent aux questions posées pendant la période de renseignements."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:35
 msgid ""
 "An ```award``` release may provide details of the supplier awarded the "
 "contract in the award section, and may provide repeated information about "
 "the how procurement took place in the tender section;"
-msgstr "Une livraison de type ```award``` (attribution) peut donner des détails sur le fournisseur titulaire du marché dans la section sur l'attribution et peut répéter des informations sur la manière dont le marché a été passé dans la section sur l'appel d'offres."
+msgstr "Une instance de type ```award``` (attribution) peut donner des détails sur le fournisseur titulaire du marché dans la section sur l'attribution et peut répéter des informations sur la manière dont le marché a été passé dans la section sur l'appel d'offres."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:36
 msgid ""
 "A ```contract``` release may provide the details of the signed contract in a"
 " contract section, matched with a related award section;"
-msgstr "Une livraison de type ```contract``` (contrat) peut fournir des détails sur le contrat signé dans la section sur le contrat, associée à une section sur l'attribution de ce marché ;"
+msgstr "Une instance de type ```contract``` (contrat) peut fournir des détails sur le contrat signé dans la section sur le contrat, associée à une section sur l'attribution de ce marché ;"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:37
 msgid ""
@@ -105,13 +106,13 @@ msgid ""
 "and provide information on milestones achieved and payments to the supplier,"
 " or may update the contract implementation section with links to newly "
 "published documents."
-msgstr "Une livraison de type ```implementationUpdate``` (mise à jour sur l'exécution) peut répéter des détails sur le contrat et fournir des informations sur les étapes du marché réalisées et les paiements au fournisseur. Elle peut également mettre à jour la section sur la mise en œuvre du contrat avec des liens avec de nouveaux documents. "
+msgstr "Une instance de type ```implementationUpdate``` (mise à jour sur l'exécution) peut répéter des détails sur le contrat et fournir des informations sur les étapes du marché réalisées et les paiements au fournisseur. Elle peut également mettre à jour la section sur la mise en œuvre du contrat avec des liens avec de nouveaux documents. "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:39
 msgid ""
 "You can think of **releases** as entries into a ledger: each new entry adds "
 "information, and may also repeat the previous information that remains true."
-msgstr "On peut assimiler une **livraison** à une écriture comptable dans un grand livre : chaque entrée ajoute de nouvelles informations et peut aussi répéter des informations précédentes qui restent vraies."
+msgstr "On peut assimiler une **instance** à une écriture comptable dans un grand livre : chaque entrée ajoute de nouvelles informations et peut aussi répéter des informations précédentes qui restent vraies."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:0
 msgid "Examples"
@@ -127,13 +128,13 @@ msgid ""
 "others, they will be generated by different systems. By ensuring all "
 "releases about a contracting process share an OCID, they can be tied "
 "together into a record."
-msgstr "Dans certains cas, les données des livraisons vont toutes venir du même système de gestion. Dans d'autres cas, elles vont être générées par des systèmes différents. En s'assurant que toutes les livraisons liées à un processus de passation de marché partagent un même identifiant OCID, elles peuvent être liées ensemble dans une archive."
+msgstr "Dans certains cas, les données des instances vont toutes venir du même système de gestion. Dans d'autres cas, elles vont être générées par des systèmes différents. En s'assurant que toutes les instances liées à un processus de passation de marché partagent un même identifiant OCID, elles peuvent être liées ensemble dans une archive."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:98
 msgid ""
 "In a complete OCDS implementation, each release would be published at its "
 "own persistent URL, and kept online permanently."
-msgstr "Dans une implémentation complète du standard OCDS, chaque livraison est publiée avec sa propre URL permanente et diffusée en ligne de manière permanente. "
+msgstr "Dans une implémentation complète du standard OCDS, chaque instance est publiée avec sa propre URL permanente et diffusée en ligne de manière permanente. "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:100
 msgid ""
@@ -165,37 +166,37 @@ msgid ""
 "An OCDS **record** provides a snapshot of the contracting process at a given"
 " point in time, bringing together all the information from the releases to "
 "date into one place. It is updated as new information becomes available."
-msgstr "Une **archive** propose un instantané du processus de passation de marché à un moment donné, rassemblant en un seul endroit toutes les informations issues des livraisons publiées à date. Elle est mise à jour dès que de nouvelles informations deviennent disponibles. "
+msgstr "Une **archive** propose un instantané du processus de passation de marché à un moment donné, rassemblant en un seul endroit toutes les informations issues des instances publiées à date. Elle est mise à jour dès que de nouvelles informations deviennent disponibles. "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:111
 msgid ""
 "At a minimum, a record should exist for each contracting process to provide "
 "a list of all the releases that relate to that contracting process."
-msgstr "Au minimum, chaque processus de passation de marché doit avoir une archive pour fournir une liste de toutes les livraisons qui concernent ce marché. "
+msgstr "Au minimum, chaque processus de passation de marché doit avoir une archive pour fournir une liste de toutes les instances qui concernent ce marché. "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:113
 msgid ""
 "However, to allow users to get a snapshot view the contracting process "
 "without individually looking up each release , a record should also contain:"
-msgstr "Cependant, pour permettre aux usagers d'avoir une vue instantanée sans avoir à consulter chaque livraison, une archive doit aussi contenir : "
+msgstr "Cependant, pour permettre aux usagers d'avoir une vue instantanée sans avoir à consulter chaque instance, une archive doit aussi contenir : "
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:115
 msgid ""
 "a compiledRelease block, which follows the release schema, and is updated "
 "with the most up-to-date value for each field; and, optionally,"
-msgstr "un bloc ```compiledRelease``` (livraison consolidée) qui respecte le schéma des livraisons et reprend les valeurs les plus à jour pour chaque champ ; et, de manière optionnelle,"
+msgstr "un bloc ```compiledRelease``` (instance consolidée) qui respecte le schéma des instances et reprend les valeurs les plus à jour pour chaque champ ; et, de manière optionnelle,"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:116
 msgid ""
 "a versionedRelease, which contains a history of all the changes for each "
 "field."
-msgstr "un bloc ```versionedRelease``` (livraison versionnée) qui comprend l'historique de tous les changements pour chaque champ."
+msgstr "un bloc ```versionedRelease``` (instance versionnée) qui comprend l'historique de tous les changements pour chaque champ."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:118
 msgid ""
 "The [OCDS merge strategies](../schema/merging.md) set out how to combine "
 "multiple releases to create a single record for each contracting process."
-msgstr "Les [stratégies de fusion OCDS](../schema/merging.md) définissent comment combiner plusieurs livraisons pour créer une seule archive pour chaque processus de passation de marché."
+msgstr "Les [stratégies de fusion OCDS](../schema/merging.md) définissent comment combiner plusieurs instances pour créer une seule archive pour chaque processus de passation de marché."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:122
 msgid ""
