@@ -325,9 +325,9 @@ from os.path import abspath, dirname, join
 
 current_dir = dirname(abspath(__file__))
 
-GIT_REF = "gh-pages"
+GIT_REF = "master"
 
-location = "https://raw.githubusercontent.com/open-contracting/extension_registry/{}/extensions.json".format(GIT_REF)
+location = "http://standard.open-contracting.org/extension_registry/{}/extensions.json".format(GIT_REF)
 extension_json = requests.get(location).json()
 
 class JSONInclude(LiteralInclude):
@@ -551,9 +551,7 @@ class ExtensionTable(CSVTable):
             raise Exception("No extension configuration when using extensiontable directive") 
 
         for num, extension_obj in enumerate(extension_json['extensions']):
-            if not extension_obj.get('core'):
-                continue
-            if extension_obj['slug'] == extension:
+            if extension_obj.get('slug') == extension:
                 break
         else:
             raise Exception("Extension {} does not exist in the registry".format(extension)) 
