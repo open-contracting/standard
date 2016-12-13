@@ -419,14 +419,29 @@ The ```organization/roles``` field should be set to ```leadFinancier``` or ```fi
 
 *Dates and summary details, links to all procurement documents, final feasibility study, including land acquisition, social, environmental, and rehabilitation related information, reports of independent procurement  auditors (if any).*
 
-Key dates regarding the procurement process can be provided using the following fields in the ```tender``` section of an OCDS release:
+Key dates regarding the procurement process can be provided using the ```qualification``` and ```tender``` sections of an OCDS release.
 
-* The ```tenderPeriod``` field can be used to provide the period during which the tender is open for submissions, ```tenderPeriod.endDate``` should contain the closing date for tender submissions.
-* The ```enquiryPeriod```field can be used to provide the period during which enquiries may be made and answered.
-* The ```awardPeriod``` field can be used to provide the period during which an award is expected to be made.
-* The ```contractPeriod``` field can be used to provide the expected start and end dates for the contract.
+The following information is applicable to processes with a [pre-qualification](https://pppknowledgelab.org/glossary#Pre-qualification) stage:
 
-(TODO: Add guidance on processes with multiple enquiry periods [github issue](https://github.com/open-contracting/public-private-partnerships/issues/10))
+* The ```qualification/tenderPeriod``` field can be used provide the period during which the qualification process is open for submissions, ```qualification/tenderPeriod/endDate``` should contain the closing date for qualification submissions.
+* The ```qualification/enquiryPeriod```field can be used to provide the period during which enquiries regarding the qualification process may be made and answered.
+* The ```qualification/awardPeriod``` field can be used to provide the period during which the shortlist of qualified suppliers is expected to be selected.
+
+The following information is applicable to all processes:
+
+* The ```tender/tenderPeriod``` field can be used to provide the period during which the tender is open for submissions, ```tenderPeriod.endDate``` should contain the closing date for tender submissions.
+* The ```tender/enquiryPeriod```field can be used to provide the period during which enquiries may be made and answered.
+* The ```tender/awardPeriod``` field can be used to provide the period during which an award is expected to be made.
+* The ```tender/contractPeriod``` field can be used to provide the expected start and end dates for the contract.
+
+#### Multiple enquiry periods
+
+Some PPP procurement processes have more than one enquiry period during the tender stage of the procurement. In such cases:
+
+* The ```tender/enquiryPeriod``` field should be used to provide the **next** period during which enquiries may be made and answered, if there are no further enquiry periods scheduled the field should be used to provide the **most recent** period during which enquiries may be made and answered. Where an OCDS release is published during an enquiry period the ```tender/enquiryPeriod``` field should be used to provide the start and end dates of the **current** enquiry period.
+* The ```tender/milestones``` block should be used to provide details of any subsequent enquiry periods beyond the next period during which enquiries may be made and answered.
+
+The above guidance should be followed for processes with multiple enquiry periods during the pre-qualification stage of the procurement, in such cases the same approach should be applied to the equivalent fields from the ```qualification``` section of an OCDS release.
 
 (TODO: Add guidance on other fields in tender (e.g. submission method) also add guidance on using documents block for final feasibility study etc.)
 
@@ -434,70 +449,19 @@ REQUIRES tender.contractPeriod extension
 
 ### II.2. RFQ documents
 
-Links to RFQ documents can be provided using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+Links to RFQ documents can be provided using the ```documents``` field in the ```qualification``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
 
 A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### II.3. Pre-qualification or shortlist
 
-Where the procurement process for a PPP includes a qualification process prior to the RFP, such as an RFQ, pre-qualification or shortlisting stage, the qualification process and RFP processes should be modelled as a separate contracting processes in OCDS.
+> The process whereby the number of qualified bidders is limited by reviewing each bidder’s qualifications against a set of criteria, generally involving experience in the relevant field, capitalisation, site country experience, identity of local partners and international reputation. ([Source](https://pppknowledgelab.org/glossary#Pre-qualification))
 
-The qualification and RFP processes should be linked using the ```relatedProcesses``` field in the ```tender``` section of each OCDS release.
+Information about the pre-qualified or shortlisted bidders should be provided using the ```parties``` section of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles:
 
-In releases about the qualification process the ```relatedProcess/ocid``` field should be used to reference the OCID of the RFP process and the ```relatedProcess/relationship``` field should be set to ```resultingProcess```.
+* (Optional) Information about the bidders which submitted a response to the pre-qualification process can be provided using an entry in the ```parties``` section with the ```organization/role``` field set to ```bidder```
+* Information about the bidders which have been shortlisted or invited to submit a proposal following the pre-qualification process should be provided using an entry in the ```parties``` section with the ```organization/role``` field set to ```qualifiedBidder```
 
-In releases about the RFP process the ```relatedProcess/ocid``` field should be used to reference the OCID of the qualification process and the ```relatedProcess/relationship``` field should be set to ```qualificationProcess```.
-
-**Qualification process:**
-
-```eval_rst
-
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-award-01.json
-   :jsonpointer: /releases/0/tender/relatedProcesses/0
-```
-
-**RFP process:**
-
-```eval_rst
-
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-planning-01.json
-   :jsonpointer: /releases/0/tender/relatedProcesses/0
-```
-
-Information on pre-qualified or shortlisted bidders should be provided using the ```award``` and ```entities``` sections of an OCDS release about the qualification process *and* in the ```entities``` section of the RFP process with role of 'qualifiedBidder'.
-
-**Qualification process:**
-
-```eval_rst
-
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-award-01.json
-   :jsonpointer: /releases/0/awards
-   :expand: /suppliers
-```
-
-```eval_rst
-
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-award-01.json
-   :jsonpointer: /releases/0/entities
-   :expand: /0
-   :expand: /1
-   :expand: /2
-```
-
-**RFP process:**
-
-```eval_rst
-
-.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835.json
-   :jsonpointer: /releases/0/entities
-   :expand: /0/
-   :expand: /1/
-   :expand: /2/
-```
-
-**Animated example:**
-
-<img src="../../../assets/ppp/relatedProcess.gif">
 
 (TODO: draft relatedProcess extension) - Updating proposal to include 'relatedProcess' 
 
