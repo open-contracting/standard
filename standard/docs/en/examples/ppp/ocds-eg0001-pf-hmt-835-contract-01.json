@@ -1,221 +1,427 @@
 {
   "releases": [
     {
+      "tag": "contract",
+      "id": "ocds-eg0001-pf-hmt-835-contract-01",
       "language": "en",
       "contracts": [
         {
+          "financialModel": [
+            {
+              "indicatorValue": "0.035",
+              "indicator": "Discount Rate",
+              "indicatorCode": "discountRate",
+              "id": "1.0"
+            },
+            {
+              "indicatorValue": "0.0",
+              "indicator": "Risk Premium",
+              "indicatorCode": "riskPremium",
+              "id": "2.0"
+            },
+            {
+              "indicatorValue": "0.6",
+              "indicator": "Equity Debt Ratio",
+              "indicatorCode": "equityDebtRatio",
+              "id": "3.0"
+            },
+            {
+              "indicator": "Share Capital",
+              "indicatorCode": "shareCapital",
+              "id": "4.0"
+            }
+          ],
+          "title": "Mersey Gateway Bridge Project",
+          "riskAllocation": [
+            {
+              "fiscalImpact": "medium",
+              "allocation": "publicAuthority",
+              "mitigation": "The Department for Transport will provide an Additional Availability Support Grant in the event that actual toll revenues are less than those forecast.",
+              "description": "Actual toll revenues are less than those forecast",
+              "id": "1.0",
+              "category": "demand",
+              "likelihood": "medium"
+            },
+            {
+              "fiscalImpact": "high",
+              "allocation": "privateParty",
+              "mitigation": "A planning strategy was agreed with the local planning authority and was shared with the bidders to mitigate planning risk to acceptable levels",
+              "description": "Planning permission for the project is not granted",
+              "id": "2.0",
+              "category": "construction",
+              "likelihood": "low"
+            }
+          ],
           "implementation": {
             "milestones": [
               {
-                "dateModified": "2016-11-22T09:00:00Z",
-                "dueDate": "2017-11-01T09:00:00Z",
-                "status": "scheduled",
-                "description": "Construction of the project is completed and has been signed off by the project board",
-                "id": "contract-construction-001",
                 "title": "Construction completed",
+                "status": "scheduled",
+                "id": "contract-construction-001",
+                "dueDate": "2017-11-01T09:00:00Z",
+                "description": "Construction of the project is completed and has been signed off by the project board",
+                "dateModified": "2016-11-22T09:00:00Z",
                 "type": "delivery"
               },
               {
-                "dateModified": "2016-11-22T09:00:00Z",
-                "dueDate": "2027-11-01T09:00:00Z",
-                "status": "scheduled",
-                "description": "The project has been in operation for 10 years",
-                "id": "contract-operation-001",
                 "title": "10 years of operation",
+                "status": "scheduled",
+                "id": "contract-operation-001",
+                "dueDate": "2027-11-01T09:00:00Z",
+                "description": "The project has been in operation for 10 years",
+                "dateModified": "2016-11-22T09:00:00Z",
                 "type": "delivery"
               }
             ]
           },
-          "title": "Mersey Gateway Bridge Project",
-          "equityTransferCaps": [
+          "id": "ocds-eg0001-pf-hmt-835-contract-01",
+          "tariffs": [
             {
-              "title": "Construction phase equity transfer cap",
-              "description": "No equity transfer is permitted until construction is completed",
-              "milestone": {
-                "title": "Construction completed",
-                "id": "contract-construction-001"
+              "title": "Standard Toll - Class 1 (Motorcycles, buses)",
+              "value": {
+                "currency": "GBP",
+                "amount": "0.0"
               },
-              "amount": "0.0",
+              "dimensions": {
+                "vehicleType": "Class 1",
+                "registration": "No registration"
+              },
               "id": "1.0"
             },
             {
-              "title": "Initial operation phase equity transfer cap",
-              "description": "No more than 20% equity may be transferred until the project has been in operation for 10 years",
-              "milestone": {
-                "title": "10 years of operation",
-                "id": "contract-operation-001"
+              "title": "Standard Toll - Class 2 (Cars and small vans (under 3.5 tonnes); Minibuses)",
+              "value": {
+                "currency": "GBP",
+                "amount": "2.0"
               },
-              "amount": "0.2",
+              "dimensions": {
+                "vehicleType": "Class 2",
+                "registration": "No registration"
+              },
               "id": "2.0"
-            }
-          ],
-          "riskAllocation": [
-            {
-              "mitigation": "The Department for Transport will provide an Additional Availability Support Grant in the event that actual toll revenues are less than those forecast.",
-              "allocation": "publicAuthority",
-              "likelihood": "med",
-              "category": "demand",
-              "id": "1.0",
-              "description": "Actual toll revenues are less than those forecast",
-              "fiscalImpact": "med"
             },
             {
-              "mitigation": "A planning strategy was agreed with the local planning authority and was shared with the bidders to mitigate planning risk to acceptable levels",
-              "allocation": "privateParty",
-              "likelihood": "low",
-              "category": "construction",
-              "id": "2.0",
-              "description": "Planning permission for the project is not granted",
-              "fiscalImpact": "high"
+              "title": "Standard Toll - Class 3 (Goods vehicles over 3.5 tonnes but less than 12 tonnes; Passenger-carrying vehicles with 9 or more seats weighing less than 5 tonnes)",
+              "value": {
+                "currency": "GBP",
+                "amount": "6.0"
+              },
+              "dimensions": {
+                "vehicleType": "Class 3",
+                "registration": "No registration"
+              },
+              "id": "3.0"
+            },
+            {
+              "title": "Standard Toll - Class 4 (Goods vehicles over 12 tonnes; Passenger-carrying vehicles with 9 or more seats weighing more than 5 tonnes)",
+              "value": {
+                "currency": "GBP",
+                "amount": "8.0"
+              },
+              "dimensions": {
+                "vehicleType": "Class 4",
+                "registration": "No registration"
+              },
+              "id": "4.0"
+            },
+            {
+              "title": "Video Registered - Class 1 (Motorcycles, buses)",
+              "value": {
+                "currency": "GBP",
+                "amount": "0.0"
+              },
+              "dimensions": {
+                "vehicleType": "Class 1",
+                "registration": "Video Registered"
+              },
+              "id": "5.0"
+            },
+            {
+              "title": "Video Registered - Class 2 (Cars and small vans (under 3.5 tonnes); Minibuses)",
+              "value": {
+                "currency": "GBP",
+                "amount": "1.9"
+              },
+              "dimensions": {
+                "vehicleType": "Class 2",
+                "registration": "Video Registered"
+              },
+              "id": "6.0"
+            },
+            {
+              "title": "Video Registered - Class 3 (Goods vehicles over 3.5 tonnes but less than 12 tonnes; Passenger-carrying vehicles with 9 or more seats weighing less than 5 tonnes)",
+              "value": {
+                "currency": "GBP",
+                "amount": "5.7"
+              },
+              "dimensions": {
+                "vehicleType": "Class 3",
+                "registration": "Video Registered"
+              },
+              "id": "7.0"
+            },
+            {
+              "title": "Video Registered - Class 4 (Goods vehicles over 12 tonnes; Passenger-carrying vehicles with 9 or more seats weighing more than 5 tonnes)",
+              "value": {
+                "currency": "GBP",
+                "amount": "7.6"
+              },
+              "dimensions": {
+                "vehicleType": "Class 4",
+                "registration": "Video Registered"
+              },
+              "id": "8.0"
+            },
+            {
+              "title": "Sticker Registered - Class 1 (Motorcycles, buses)",
+              "value": {
+                "currency": "GBP",
+                "amount": "0.0"
+              },
+              "dimensions": {
+                "vehicleType": "Class 1",
+                "registration": "Sticker-registered"
+              },
+              "id": "9.0"
+            },
+            {
+              "title": "Sticker Registered - Class 2 (Cars and small vans (under 3.5 tonnes); Minibuses)",
+              "value": {
+                "currency": "GBP",
+                "amount": "1.8"
+              },
+              "dimensions": {
+                "vehicleType": "Class 2",
+                "registration": "Sticker-registered"
+              },
+              "id": "10.0"
+            },
+            {
+              "title": "Sticker Registered - Class 3 (Goods vehicles over 3.5 tonnes but less than 12 tonnes; Passenger-carrying vehicles with 9 or more seats weighing less than 5 tonnes)",
+              "value": {
+                "currency": "GBP",
+                "amount": "5.4"
+              },
+              "dimensions": {
+                "vehicleType": "Class 3",
+                "registration": "Sticker-registered"
+              },
+              "id": "11.0"
+            },
+            {
+              "title": "Sticker Registered - Class 4 (Goods vehicles over 12 tonnes; Passenger-carrying vehicles with 9 or more seats weighing more than 5 tonnes)",
+              "value": {
+                "currency": "GBP",
+                "amount": "7.2"
+              },
+              "dimensions": {
+                "vehicleType": "Class 4",
+                "registration": "Sticker-registered"
+              },
+              "id": "12.0"
             }
           ],
-          "id": "ocds-eg0001-pf-hmt-835-contract-01"
-        },
-        {
           "finance": [
             {
-              "interestRate": {
-                "rate": "0.01",
-                "base": "LIBOR",
-                "fixed": "False"
-              },
-              "financeType": "loan",
               "period": {
                 "duration": "P2Y"
-              },
-              "value": {
-                "value": "100000.0",
-                "currency": "GBP"
               },
               "financingParty": {
                 "name": "GALLIFORD TRY INVESTMENTS LIMITED",
                 "id": "GB-COH-5047034"
               },
-              "id": "ocds-eg0001-pf-hmt-835-contract-01"
-            }
-          ]
-        },
-        {
-          "finance": [
+              "value": {
+                "currency": "GBP",
+                "value": "100000.0"
+              },
+              "financeType": "loan",
+              "interestRate": {
+                "base": "LIBOR",
+                "fixed": "False",
+                "rate": "0.01"
+              }
+            },
             {
               "interestRate": {
-                "rate": "0.035",
-                "fixed": "True"
+                "fixed": "True",
+                "rate": "0.035"
+              }
+            }
+          ],
+          "equityTransferCaps": [
+            {
+              "milestone": {
+                "title": "Construction completed",
+                "id": "contract-construction-001"
               },
-              "id": "ocds-eg0001-pf-hmt-835-contract-01"
+              "title": "Construction phase equity transfer cap",
+              "description": "No equity transfer is permitted until construction is completed",
+              "amount": "0.0",
+              "id": "1.0"
+            },
+            {
+              "milestone": {
+                "title": "10 years of operation",
+                "id": "contract-operation-001"
+              },
+              "title": "Initial operation phase equity transfer cap",
+              "description": "No more than 20% equity may be transferred until the project has been in operation for 10 years",
+              "amount": "0.2",
+              "id": "2.0"
+            }
+          ],
+          "documents": [
+            {
+              "documentType": "contractSigned"
+            },
+            {
+              "documentType": "contractArrangements"
+            },
+            {
+              "documentType": "contractSchedule"
+            },
+            {
+              "documentType": "contractAnnexe"
+            },
+            {
+              "documentType": "contractGuarantees"
+            }
+          ],
+          "milestones": [
+            {
+              "title": "Commercial Close Achieved",
+              "status": "met",
+              "type": "financial",
+              "code": "commercialClose",
+              "documents": [
+                {
+                  "title": "News article about selection of preferred bidder",
+                  "url": "http://www.merseygateway.co.uk/2013/06/merseylink-announced-as-mersey-gateway-project-preferred-bidder/",
+                  "format": "text/html",
+                  "datePublished": "2013-06-20T00:00:00Z",
+                  "id": "1.0"
+                }
+              ],
+              "dateMet": "2013-06-20T00:00:00Z"
+            },
+            {
+              "title": "Financial Close Achieved",
+              "dateMet": "2014-03-31T00:00:00Z",
+              "code": "financialClose",
+              "status": "met",
+              "type": "financial"
             }
           ]
         }
       ],
       "entities": [
         {
+          "contactPoint": {
+            "url": "http://www.merseygateway.co.uk/contact-merseylink/",
+            "name": "Mersey Link Contact Centre",
+            "email": "info@merseylink.com",
+            "telephone": "+44 333 200 1164"
+          },
+          "name": "MERSEYLINK (HOLDINGS) LIMITED",
           "shareholders": [
             {
               "shareholding": "0.25",
+              "votingRights": "ordinary",
               "shareholder": {
                 "name": "FCC MERSEY GATEWAY LIMITED",
                 "id": "GB-COH-08811246"
               },
-              "votingRights": "ordinary",
               "id": "1.0"
             },
             {
               "shareholding": "0.375",
+              "votingRights": "ordinary",
               "shareholder": {
                 "name": "WIGG INVESTMENTS LIMITED",
                 "id": "GB-COH-08766379"
               },
-              "votingRights": "ordinary",
               "id": "2.0"
             },
             {
               "shareholding": "0.375",
+              "votingRights": "ordinary",
               "shareholder": {
                 "name": "MG BRIDGE INVESTMENTS LIMITED",
                 "id": "GB-COH-08846885"
               },
-              "votingRights": "ordinary",
               "id": "3.0"
             }
           ],
-          "name": "MERSEYLINK (HOLDINGS) LIMITED",
-          "id": "merseylink",
-          "contactPoint": {
-            "telephone": "+44 333 200 1164",
-            "url": "http://www.merseygateway.co.uk/contact-merseylink/",
-            "email": "info@merseylink.com",
-            "name": "Mersey Link Contact Centre"
-          },
           "address": {
             "countryName": "United Kingdom",
-            "postalCode": "WA8 0SL",
+            "streetAddress": "Forward Point\nTan House Lane",
             "locality": "Widnes\n",
-            "region": "Cheshire",
-            "streetAddress": "Forward Point\nTan House Lane"
+            "postalCode": "WA8 0SL",
+            "region": "Cheshire"
           },
-          "role": "bidder",
+          "id": "MER",
           "identifier": {
             "legalName": "MERSEYLINK (HOLDINGS) LIMITED",
             "scheme": "GB-COH",
             "uri": "https://opencorporates.com/companies/gb/08780140",
             "id": "08780140"
-          }
+          },
+          "role": "privateParty"
         },
         {
-          "address": {
-            "countryName": "United Kingdom",
-            "postalCode": "W8 6SN",
-            "region": "London",
-            "streetAddress": "Fcc Construction\nFloor 2\n239 Kensington High Street\n"
-          },
           "identifier": {
             "legalName": "FCC MERSEY GATEWAY LIMITED",
             "scheme": "GB-COH",
             "uri": "https://opencorporates.com/companies/gb/08811246",
             "id": "8811246.0"
           },
-          "name": "FCC MERSEY GATEWAY LIMITED",
           "role": "shareholder",
+          "name": "FCC MERSEY GATEWAY LIMITED",
+          "address": {
+            "countryName": "United Kingdom",
+            "streetAddress": "Fcc Construction\nFloor 2\n239 Kensington High Street\n",
+            "postalCode": "W8 6SN",
+            "region": "London"
+          },
           "id": "GB-COH-08811246"
         },
         {
-          "address": {
-            "countryName": "United Kingdom",
-            "postalCode": "SE1 3TQ",
-            "region": "London",
-            "streetAddress": "5 Market Yard Mews\n194-204 Bermondsey Street"
-          },
           "identifier": {
             "legalName": "WIGG INVESTMENTS LIMITED",
             "scheme": "GB-COH",
             "uri": "https://opencorporates.com/companies/gb/08766379",
             "id": "8766379.0"
           },
-          "name": "WIGG INVESTMENTS LIMITED",
           "role": "shareholder",
+          "name": "WIGG INVESTMENTS LIMITED",
+          "address": {
+            "countryName": "United Kingdom",
+            "streetAddress": "5 Market Yard Mews\n194-204 Bermondsey Street",
+            "postalCode": "SE1 3TQ",
+            "region": "London"
+          },
           "id": "GB-COH-08766379"
         },
         {
-          "address": {
-            "countryName": "United Kingdom",
-            "postalCode": "SL6 1HN",
-            "locality": "Maidenhead",
-            "region": "Berkshire",
-            "streetAddress": "1 Grenfell Road"
-          },
           "identifier": {
             "legalName": "MG BRIDGE INVESTMENTS LIMITED",
             "scheme": "GB-COH",
             "uri": "https://opencorporates.com/companies/gb/08846885",
             "id": "8846885.0"
           },
-          "name": "MG BRIDGE INVESTMENTS LIMITED",
           "role": "shareholder",
+          "name": "MG BRIDGE INVESTMENTS LIMITED",
+          "address": {
+            "countryName": "United Kingdom",
+            "streetAddress": "1 Grenfell Road",
+            "locality": "Maidenhead",
+            "postalCode": "SL6 1HN",
+            "region": "Berkshire"
+          },
           "id": "GB-COH-08846885"
         }
       ],
-      "ocid": "ocds-eg0001-ppp-hmt-835",
-      "id": "ocds-eg0001-pf-hmt-835-contract-01"
+      "ocid": "ocds-eg0001-ppp-hmt-835"
     }
   ]
 }

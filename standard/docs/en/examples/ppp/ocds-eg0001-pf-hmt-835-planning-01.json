@@ -1,32 +1,44 @@
 {
   "releases": [
     {
-      "tender": {
-        "procurementMethodRationale": "HBC conducted a PQQ process to select bidders for the competitive dialogue process",
-        "procurementMethod": "selective",
-        "relatedProcesses": [
-          {
-            "title": "Mersey Gateway Planning & PQQ",
-            "relationship": "qualification",
-            "uri": "http://example.open-contracting.org/records/ocds-eg0001-ppp-hmt-835-pqq",
-            "ocid": "ocds-eg0001-ppp-hmt-835-pqq",
-            "id": "1.0"
-          }
-        ]
-      },
-      "tag": "planning",
-      "id": "ocds-eg0001-pf-hmt-835-planning-01",
-      "language": "en",
       "title": "Mersey Gateway",
       "initiationType": "ppp",
-      "ocid": "ocds-eg0001-ppp-hmt-835",
+      "date": "2011-01-31T00:00:00Z",
+      "entities": [
+        {
+          "contactPoint": {
+            "url": "http://www.halton.gov.uk",
+            "email": "hdl@halton.gov.uk",
+            "telephone": "0303 333 4300"
+          },
+          "name": "Halton Borough Council",
+          "address": {
+            "countryName": "United Kingdom",
+            "streetAddress": "Municipal Buildings \nKingsway ",
+            "locality": "Widnes",
+            "postalCode": "WA8 7QF",
+            "region": "Cheshire"
+          },
+          "id": "XR-NUTS-UK00ET",
+          "identifier": {
+            "legalName": "Halton Borough Council",
+            "scheme": "XR-NUTS",
+            "uri": "https://en.wikipedia.org/wiki/Borough_of_Halton",
+            "id": "UK00ET"
+          },
+          "role": "publicParty"
+        }
+      ],
+      "description": "The Mersey Gateway Project is a major civil engineering scheme to build a new six-lane cable-stayed toll bridge over the River Mersey and a 9.2 kilometre road network connecting the new bridge to the main motorway network in the north west of England. ",
+      "language": "en",
+      "id": "ocds-eg0001-pf-hmt-835-planning-01",
+      "tag": "planning",
       "planning": {
         "forecasts": [
           {
             "title": "Forecast Demand",
             "observations": [
               {
-                "quantity": "29200000.0",
                 "unit": {
                   "name": "Trips"
                 },
@@ -37,10 +49,10 @@
                 "dimensions": {
                   "vehicleType": "Cars"
                 },
+                "quantity": "29200000.0",
                 "id": "2016-cars"
               },
               {
-                "quantity": "300000.0",
                 "unit": {
                   "name": "Trips"
                 },
@@ -51,13 +63,107 @@
                 "dimensions": {
                   "vehicleType": "Trucks"
                 },
+                "quantity": "300000.0",
                 "id": "2016-trucks"
               }
             ],
             "id": "demand"
           }
-        ]
-      }
+        ],
+        "budget": {
+          "budgetBreakdown": [
+            {
+              "description": "Development cost grant",
+              "uri": "http://www.merseygateway.co.uk/about-the-mersey-gateway-project/funding-of-the-mersey-gateway-projec/",
+              "amount": {
+                "currency": "GBP",
+                "amount": "86000000.0"
+              },
+              "sourceParty": {
+                "name": "UK Government",
+                "id": "GB-GOV"
+              },
+              "id": "1.0"
+            }
+          ],
+          "description": "Total capital expenditure",
+          "amount": {
+            "currency": "GBP",
+            "amount": "589000000.0"
+          },
+          "id": "capital-expenditure"
+        },
+        "documents": [
+          {
+            "title": "The Mersey Gateway Project Environmental Statement",
+            "accessDetails": "Further copies of the ES (and associated documents) can be obtained on line at http://www.merseygateway.co.uk or from the Mersey Gateway Team at the details below:\nThe Mersey Gateway Team\nHalton Borough Council\nRutland House\n3rd Floor\nRutland House\nRuncorn\nWA7 2GW\nTel: 0151 9078300\nmersey.gateway@halton.gov.uk\n\nCopies of the ES (and associated documents) will also be displayed at the following location in the Borough:\na. Halton Direct Link, Church Street, Runcorn;\nb. Halton Lea Library, Runcorn;\nc. Halton Direct Link, Widnes Town Centre;\nd. Halton Direct Link, Ditton;\ne. Kingsway Learning Centre;\nf. Halton Lea Library;\ng. Runcorn Library, Edgeton Street, Runcorn Old Town;\nh. Members Room Municipal Building;\ni. Members Room Runcorn Town Hall; and\nj. Members Room, Rutland House. ",
+            "url": "http://www.merseygateway.co.uk/wp-content/uploads/2011/Documents/Environmental_Statement/chapter_1/chapter01intro.pdf#page=5",
+            "pageStart": "1.5",
+            "id": "1.0",
+            "pageEnd": "1.5",
+            "dateModified": "2011-01-01T00:00:00Z",
+            "datePublished": "2008-03-01T00:00:00Z",
+            "author": "Unknown",
+            "description": "The Mersey Gateway project will add additional capacity alongside the Silver Jubilee Bridge. \n\nThe SJB was opened in 1961 with two lanes of traffic and an opening year flow of less than 10,000 vehicles per day (vpd). When it was widened to four sub-standard lanes in 1977, the design capacity (measured using current maximum throughput standards) was increased to approximately 65,000 vpd. At present it regularly carries in excess of 80,000 vpd on weekdays and a figure of 91,000 vpd was recorded in 2007. These traffic flows, combined with the four sub-standard lanes and absence of any hard shoulder on the bridge, have inevitably led to regular service breakdowns on the SJB. \n\nThese include: \n\na. Routine Congestion during peak travel periods; \nb. Delays to local connecting roads due to queuing;\nc. Safety hazards;\nd. Poor regional road resilience to accidents and other incidents;\ne. Difficulties in maintenance; and\nf. Unreliable journey times.\n\nThese service failings have an adverse effect on travel within the Borough, undermine the City Region\u2019s connectivity with the rest of the United Kingdom\u2019s (UK) road transport links, and the local community surrounding the SJB suffers a degraded environment and quality of life. The breakdown in transport connectivity and access is widely accepted as a threat to the economic prosperity of the sub-region. This is manifest in the Project being identified as a key \u2018Transformational Project\u2019 in the North West Regional Economic Strategy (RES) by the Northwest Regional Development Agency. ",
+            "language": "en",
+            "documentType": "needsAssessment",
+            "format": "application/pdf"
+          },
+          {
+            "documentType": "serviceDescription",
+            "id": "3.0"
+          },
+          {
+            "documentType": "feasibilityStudy",
+            "id": "8.0"
+          },
+          {
+            "documentType": "environmentalImpact",
+            "id": "9.0"
+          },
+          {
+            "documentType": "technicalSpecifications",
+            "id": "2.0"
+          },
+          {
+            "documentType": "estimatedDemand",
+            "id": "4.0"
+          },
+          {
+            "documentType": "projectAdditionality",
+            "id": "5.0"
+          },
+          {
+            "documentType": "financeAdditionality",
+            "id": "6.0"
+          },
+          {
+            "documentType": "pppModeRationale",
+            "id": "7.0"
+          },
+          {
+            "documentType": "finalAudit",
+            "id": "10.0"
+          }
+        ],
+        "project": {
+          "sector": {
+            "description": "Road transportation",
+            "scheme": "COFOG",
+            "id": "04.5.1"
+          },
+          "locations": [
+            {
+              "description": "Local Authority Area: Halton Borough Council",
+              "gazetteer": {
+                "scheme": "GEONAMES",
+                "identifiers": "2647601.0"
+              }
+            }
+          ]
+        }
+      },
+      "ocid": "ocds-eg0001-ppp-hmt-835"
     }
   ]
 }
