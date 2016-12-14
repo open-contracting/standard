@@ -41,7 +41,7 @@ $("h5").parent().addClass("example-background");
 
 ## Basic Project Information
 
-**Disclosure timing:** Pre-procurement (as available)
+> Disclosure timing: Pre-procurement (as available)
 
 *Note: This can be disclosed at the pre-procurement stage with the exception of information on the parties to the contract, which will be disclosed once it becomes available, that is, at the end of the procurement process.*
 
@@ -127,7 +127,7 @@ The sponsoring agency or department's details should be included in the ```parti
 .. jsoninclude-flat:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-pqq-planning-01.json
    :recursive:
    :jsonpointer: /releases/0/entities
-   :ignore_path: /releases/0/
+   :ignore_path: /releases/0
 ```
 
 
@@ -167,7 +167,7 @@ These documents should be tagged with a ```documentType``` value of 'needsAssess
 .. jsoninclude-flat:: docs/en/examples/ppp/full.json
    :recursive:
    :jsonpointer: /releases/0/planning/documents/0
-   :ignore_path: /releases/0/
+   :ignore_path: /releases/0
 ```
 
 ### I.5: Technical description of the physical infrastructure
@@ -352,7 +352,7 @@ The ```organization/roles``` field should be set to ```leadFinancier``` or ```fi
 
 ## Procurement Information
 
-**Disclosure timing:** According to milestones in the procurement process, evaluation and meeting minutes should be uploaded within 2-3 business days.
+> Disclosure timing: According to milestones in the procurement process, evaluation and meeting minutes should be uploaded within 2-3 business days.
 
 *Note: This information can be disclosed in the public domain during the procurement stage. Disclosure in the public domain can be simultaneous with the availability of the documents to prospective bidders.*
 
@@ -393,7 +393,7 @@ Information on the eligibility criteria for bidders can be provided using the ``
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-qualification-01.json
-   :jsonpointer: /releases/0/tender/
+   :jsonpointer: /releases/0/tender
    :expand: 
 ```
 
@@ -432,7 +432,7 @@ Each document should be tagged with an appropriate ```documentType``` value from
 .. jsoninclude-flat:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-preferredBidder-01.json
    :recursive:
    :jsonpointer: /releases/0/tender/documents/0
-   :ignore_path: /releases/0/
+   :ignore_path: /releases/0
 ```
 
 ### II.2. RFQ documents
@@ -490,15 +490,6 @@ OCDS provides an [organization building block](../schema/reference/#organization
 .. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-shortlist-01.json
    :jsonpointer: /releases/0/entities
    :expand: entities
-```
-
-##### Spreadsheet Example
-
-```eval_rst
-.. jsoninclude-flat:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-shortlist-01.json
-   :recursive:
-   :jsonpointer: /releases/0/entities
-   :ignore_path: /releases/0/
 ```
 
 ### II.4. RFP documents
@@ -566,7 +557,7 @@ Details of the preferred bidder should be provided in the ```parties``` section 
 
 ##   Risk
 
-**Disclosure timing:** Post commercial close, within 45-60 days of signing contract
+> Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
 *Risk allocation is an important determinant of cost to government and to the paying public/user. Inadequate or excessive transfer of risk is undesirable. Disclosure will provide evidence of proper or improper risk allocation and its effect on costs.*
 
@@ -632,7 +623,7 @@ Additional free text information on the risk can be provided using the ```risk/n
 
 ## Evaluation of PPP option
 
-**Disclosure timing:** Post commercial close, within 45-60 days of signing contract
+> Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
 ### IV.1. Link to evaluation report (value for money or other)
 
@@ -671,7 +662,7 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 ## Financial Information
 
-**Disclosure timing:** Post commercial close, within 45-60 days of signing contract
+> Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
 ### V.1. Equity-debt ratio
 
@@ -813,26 +804,67 @@ If this forecast is updated later in the project, the new value should be substi
 
 ## Government Support
 
-Disclosure timing: Post commercial close, within 45-60 days of signing contract
+> Disclosure timing: Post commercial close, within 45-60 days of signing contract
+
+Structured information about government grants and guarantees can be provided in the [finance block](../../../extensions/finance/) under ```contract/finance```.
+
+Structured information about actual payments can be provided using the transactions block in ```contract/implementation/transactions```.
+
+Structured information about subsidy, service payment and lease milestones can be provided using entries in the ```contract/milestones``` array. 
+
+For all other disclosures required by the framework, documentation blocks should be provided.
 
 ### VI.1. Guarantees
 
-(ToDo: See table in disclosure framework)
+#### Guarantee details
+
+Details of the type and exact details of the guarantees provided should be included in a documentation block, covering both explicit and contingent guarantees—such as minimum revenue guarantee, exchange rate guarantee, debt repayment guarantee, and other guarantees. This should be captured through:
+
+* A short summary text
+* A link to one or more documents that provide additional information
+
+These documents should be tagged with a ```documentType``` value of 'contractGuarantees' in the ```contract/documents``` array. 
+
+#### Disclosure reports
+
+Document entries should also be provided for any fiscal commitments and contingent liabilities disclosure reports that exist. 
+
+These documents should be tagged with a ```documentType``` value of 'TODO (VALUE TBC)' in the ```contract/implementation/documents``` array. 
 
 ### VI.2. Grants
 
+Documents relating to grants agreed should be placed in the ```contract/documents``` array with a  ```documentType``` value of 'grants'. 
+
+Documents relating to the payment of grants and subsidies over the implementation of the project should be placed in the  ```contract/implementation/documents``` array with a  ```documentType``` value of 'grants'. 
+
+The information in these documents should cover:
+
+* Subsidy as a proportion of project value
+* Capital subsidies paid during construction with periodicity or
+milestones
+* Operating subsidies and their periodicity or milestones
+
+Subsidy a proportion of project value can be reported in the ```contract/financialModel``` block, with a code of 'subsidyRatio'. (TODO: CHECK THIS CODE)
 
 ### VI.3. Service payments
 
+Documents relating to service payments agreed should be placed in the ```contract/documents``` array with a  ```documentType``` value of 'servicePayments'. 
+
+Documents relating to the payment of service payments over the implementation of the project should be placed in the  ```contract/implementation/documents``` array with a  ```documentType``` value of 'servicePayments'. 
+
+Structure information about individual service payments can be included in ```contract/implementation/transactions```. 
 
 ### VI.4. Land leases, asset transfers
 
+Documents relating to leases and asset transfers agreed in the contract should be placed in the ```contract/documents``` array with a  ```documentType``` value of 'lease' or 'assetTransfer'. 
+
+Documents relating to leases and asset transfers in operation over the implementation of the project should be placed in the  ```contract/implementation/documents``` array with a  ```documentType``` value of 'lease' or 'assetTransfer'. 
 
 ### VI.5. Revenue-share, if any
 
 ## Tariffs
 
-Disclosure timing: Post commercial close, within 45-60 days of signing contract
+> Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
 The [tariffs extension](../../extensions/tariffs/) can be used to capture structured information about tariff levels. 
 
@@ -840,11 +872,51 @@ Documentation blocks are used to provide links to methodology, tariff regulation
 
 ### VII.1. Tariffs and pricing
 
+##### JSON Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-contract-01.json
+   :jsonpointer: /releases/0/contracts/0
+   :expand: tariffs, value, dimensions
+```
+
+##### Spreadsheet example
+
+```eval_rst
+.. jsoninclude-flat:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-contract-01.json
+   :recursive:
+   :jsonpointer: /releases/0/contracts/0/tariffs
+   :ignore_path: /releases/0
+```
+
+
 ### VII.2. Methodology for tariff setting/pricing
+
+Details of the methodology for tariff setting and pricing should be provided using a documentation block with:
+
+* A short summary text
+* A link to one or more documents that provide additional information
+
+These documents should be tagged with a ```documentType``` value of 'tariffMethod' in the ```contract/documents``` array. 
 
 ### VII.3. Scope for reviews of tariff, pricing, regulatory mechanisms
 
+Details of the methodology for tariff review should be provided using a documentation block with:
+
+* A short summary text
+* A link to one or more documents that provide additional information
+
+These documents should be tagged with a ```documentType``` value of 'tariffReview' in the ```contract/documents``` array. 
+
 ### VII.4. Links to graphs: tariff increases over time, consumer price index movement
+
+Links to graphs concerning tariffs over time should be provided in a documentation block with:
+
+* A short summary text
+* A link to one or more documents that provide additional information
+
+These documents should be tagged with a ```documentType``` value of 'tariffs' in the ```contract/implementation/documents``` array. 
 
 
 ## Contract Termination
@@ -857,7 +929,7 @@ Documentation blocks are used to provide links to methodology, tariff regulation
 
 ## Renegotiations
 
-Disclosure timing: Within 45-60 days of execution of renegotiated contract
+> Disclosure timing: Within 45-60 days of execution of renegotiated contract
 
 ### IX.1. Contract variation details 
 
@@ -865,7 +937,7 @@ State variations to contract, if any, after signing of the original contract det
 
 ## Performance Information
 
-Disclosure timing: Within 15-30 days of receipt of information
+> Disclosure timing: Within 15-30 days of receipt of information
 
 ### X.1. Annual demand levels
 
