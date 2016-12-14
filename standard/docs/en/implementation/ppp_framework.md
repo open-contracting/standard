@@ -227,9 +227,7 @@ These documents should be tagged with a ```documentType``` value of 'projectAddi
 
 ### I.9: Reason for selection of PPP mode and type
 
-A short summary of the reason for the PPP selection mode can be provided in ```tender/procurementMethodRationale``` field. 
-
-If further information is available, this can be provided through using the documents block:
+A short summary of the reason for the PPP selection mode should be provided through:
 
 * A short summary text
 * A link to one or more documents that provide additional information
@@ -284,7 +282,7 @@ Additional documentation, or links to documentation, can be provided using the d
 
 This information can be provided using the [milestones extension](../../extensions/milestones/).
 
-To indicate the date that construction starts, a milestone should be added to the ```contract/implementation/milestones```.
+To indicate the date that construction or development is completed, a milestone should be added to the ```contract/implementation/milestones```.
 
 The milestone should have a ```type``` of 'delivery', a ```code``` of 'developmentComplete' or 'constructionComplete' the status of either ```scheduled``` or ```met``` and either the date that this milestone was achieved in ```dateMet```, or the scheduled date in ```dueDate```.
 
@@ -292,9 +290,11 @@ Additional documentation, or links to documentation, can be provided using the d
 
 #### I.15: Date of commissioning
 
+> The testing and inspection of the completed works to verify that the works are ready for commercial operation. ([Source](https://pppknowledgelab.org/glossary#Commissioning))
+
 This information can be provided using the [milestones extension](../../extensions/milestones/).
 
-To indicate the date that construction starts, a milestone should be added to the ```contract/implementation/milestones```.
+To indicate the date of commissioning, a milestone should be added to the ```contract/implementation/milestones```.
 
 The milestone should have a ```type``` of 'delivery', a ```code``` of 'commissioning' the status of either ```scheduled``` or ```met``` and either the date that this milestone was achieved in ```dateMet```, or the scheduled date in ```dueDate```.
 
@@ -318,6 +318,8 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 #### I.18: Public authority: name of authority, name of representative, address, telephone, fax, e-mail
 
+> The unit/body/department within a government that is tendering and contracting the project. The public counterpart in the PPP contract. ([Source](https://ppp-certification.com/ppp-certification-guide/glossary))
+
 This information can be provided using the ```buyer``` and ```parties``` sections of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles.
 
 Details of the public authority should be provided in the ```parties``` section and the ```buyer``` section should be used to reference the relevant organization in the ```parties``` section.
@@ -327,6 +329,8 @@ The ```organization/roles``` field should be set to ```publicAuthority``` and th
 (TODO: [renaming buyer](https://github.com/open-contracting/public-private-partnerships/issues/4)? [organization roles codelist](https://github.com/open-contracting/public-private-partnerships/issues/26))
 
 #### I.19: Private party: name of company or consortium, name of representative, address, telephone, fax, e-mail
+
+> The counter party of the procuring authority in the PPP contract. A private entity which has been granted the contract to construct and operate a government asset, and which is usually created under the form of a Special Purpose Vehicle or SPV. ([Source](https://ppp-certification.com/ppp-certification-guide/glossary))
 
 This information can be provided using the ```award``` and ```parties``` sections of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles.
 
@@ -356,22 +360,42 @@ The ```organization/roles``` field should be set to ```leadFinancier``` or ```fi
 
 (TODO: Clarify this section of framework)
 
-*Dates and summary details, links to all procurement documents, final feasibility study, including land acquisition, social, environmental, and rehabilitation related information, reports of independent procurement  auditors (if any).*
+*Dates and summary details, links to all procurement documents, final feasibility study, including land acquisition, social, environmental, and rehabilitation related information, reports of independent procurement auditors (if any).*
 
-Key dates regarding the procurement process can be provided using the ```qualification``` and ```tender``` sections of an OCDS release.
+*Note: See section II.3 for guidance on processes with a pre-qualification stage*
 
-The following information is applicable to processes with a [pre-qualification](https://pppknowledgelab.org/glossary#Pre-qualification) stage:
+#### Dates & Summary details
 
-* The ```qualification/tenderPeriod``` field can be used provide the period during which the qualification process is open for submissions, ```qualification/tenderPeriod/endDate``` should contain the closing date for qualification submissions.
-* The ```qualification/enquiryPeriod```field can be used to provide the period during which enquiries regarding the qualification process may be made and answered.
-* The ```qualification/awardPeriod``` field can be used to provide the period during which the shortlist of qualified suppliers is expected to be selected.
-
-The following information is applicable to all processes:
+Key dates regarding the procurement process can be provided using the ```tender``` section of an OCDS release.
 
 * The ```tender/tenderPeriod``` field can be used to provide the period during which the tender is open for submissions, ```tenderPeriod.endDate``` should contain the closing date for tender submissions.
 * The ```tender/enquiryPeriod```field can be used to provide the period during which enquiries may be made and answered.
 * The ```tender/awardPeriod``` field can be used to provide the period during which an award is expected to be made.
 * The ```tender/contractPeriod``` field can be used to provide the expected start and end dates for the contract.
+
+Information on the procurement method used should be provided using the following fields in the ```tender``` section of an OCDS release:
+
+* ```procurementMethod```
+* ```procurementMethodDetails```
+* ```procurementMethodRationale```
+
+Information on the submission method for bids should be provided using the following fields in the ```tender``` section of an OCDS release:
+
+* ```submissionMethod```
+* ```submissionMethodDetails```
+
+Information on the eligibility criteria for bidders can be provided using the ```eligibilityCriteria``` field in the ```tender``` section of an OCDS release.
+
+(REQUIRES tender.contractPeriod extension)
+
+##### JSON Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-qualification-01.json
+   :jsonpointer: /releases/0/tender/
+   :expand: 
+```
 
 #### Multiple enquiry periods
 
@@ -380,15 +404,42 @@ Some PPP procurement processes have more than one enquiry period during the tend
 * The ```tender/enquiryPeriod``` field should be used to provide the **next** period during which enquiries may be made and answered, if there are no further enquiry periods scheduled the field should be used to provide the **most recent** period during which enquiries may be made and answered. Where an OCDS release is published during an enquiry period the ```tender/enquiryPeriod``` field should be used to provide the start and end dates of the **current** enquiry period.
 * The ```tender/milestones``` block should be used to provide details of any subsequent enquiry periods beyond the next period during which enquiries may be made and answered.
 
-The above guidance should be followed for processes with multiple enquiry periods during the pre-qualification stage of the procurement, in such cases the same approach should be applied to the equivalent fields from the ```qualification``` section of an OCDS release.
+The above guidance should also be followed for processes with multiple enquiry periods during the pre-qualification stage of the procurement, in such cases the same approach should be applied to the equivalent fields from the ```prequalification``` section of an OCDS release.
 
-(TODO: Add guidance on other fields in tender (e.g. submission method) also add guidance on using documents block for final feasibility study etc.)
+(TODO: Example/diagram)
 
-REQUIRES tender.contractPeriod extension
+
+#### Documents
+
+Links to procurement documents, feasibility studies, including land acquisition, social, environmental, and rehabilitation related information and reports of independent procurement auditors should be provided using the [document building block](../schema/reference/#document) in the ```tender/documents``` array. A short summary text for each document can also be provided using the ```document/description``` field.
+
+Each document should be tagged with an appropriate ```documentType``` value from the [document type codelist](../schema/codelists/#document-type).
+
+(TODO: Add codes to document type codelist: finalFeasibilityStudy)
+
+##### JSON Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-preferredBidder-01.json
+   :jsonpointer: /releases/0/tender/documents/0
+   :expand: 
+```
+
+##### Spreadsheet example
+
+```eval_rst
+.. jsoninclude-flat:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-preferredBidder-01.json
+   :recursive:
+   :jsonpointer: /releases/0/tender/documents/0
+   :ignore_path: /releases/0/
+```
 
 ### II.2. RFQ documents
 
-Links to RFQ documents can be provided using the ```documents``` field in the ```qualification``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
+> The set of documents issued by the procuring authority that constitute the basis of the qualification and potentially the pre-selection of candidates (the short list). Qualified (or short-listed candidates) will then be invited to submit a proposal (or to enter into a new phase prior to bid submission, such as a dialogue phase or interactive phase). ([Source](https://ppp-certification.com/ppp-certification-guide/glossary))
+
+Links to RFQ documents can be provided using the ```documents``` field in the ```prequalification``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
 
 A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
@@ -396,15 +447,68 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 > The process whereby the number of qualified bidders is limited by reviewing each bidder’s qualifications against a set of criteria, generally involving experience in the relevant field, capitalisation, site country experience, identity of local partners and international reputation. ([Source](https://pppknowledgelab.org/glossary#Pre-qualification))
 
-Information about the pre-qualified or shortlisted bidders should be provided using the ```parties``` section of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles:
+#### Dates & summary information
 
-* (Optional) Information about the bidders which submitted a response to the pre-qualification process can be provided using an entry in the ```parties``` section with the ```organization/role``` field set to ```bidder```
-* Information about the bidders which have been shortlisted or invited to submit a proposal following the pre-qualification process should be provided using an entry in the ```parties``` section with the ```organization/role``` field set to ```qualifiedBidder```
+Key dates regarding the pre-qualification process can be provided using the ```prequalification``` section of an OCDS release.
+
+* The ```prequalification/tenderPeriod``` field can be used provide the period during which the pre-qualification process is open for submissions, ```prequalification/tenderPeriod/endDate``` should contain the closing date for pre-qualification submissions.
+* The ```prequalification/enquiryPeriod```field can be used to provide the period during which enquiries regarding the pre-qualification process may be made and answered.
+* The ```prequalification/awardPeriod``` field can be used to provide the period during which the shortlist of qualified suppliers is expected to be selected.
+
+Information on the procurement method used should be provided using the following fields in the ```prequalification``` section of an OCDS release:
+
+* The ```prequalification/procurementMethod``` field should be used to specify the type of pre-qualification process used, the value of this field should be ```open``` if there are no restrictions on the parties that can submit a response to the request for pre-qualification.
+* The ```prequalification/procurementMethodDetails``` field can be used to provide additional detail on the type of pre-qualification process, for example the local name of the particular method used.
+* The ```prequalification/procurementMethodRationale``` field can be used to provide the rationale for the type of pre-qualification process used, this field should be completed where ```prequalification/procurementMethod``` is not ```open```.
+
+Information about the evaluation criteria for the pre-qualification process should be provided using the ```prequalification/awardCriteriaDetails``` field.
+
+Information about the submission method for responses to the pre-qualification process should be provided using the ```prequalification/submissionMethod``` field, the ```prequalification/submissionMethodDetails``` can be used to provide additional information on the submission method.
+
+##### JSON Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-qualification-01.json
+   :jsonpointer: /releases/0/qualification
+   :expand: 
+```
+
+#### Bidder information
+
+OCDS provides an [organization building block](../schema/reference/#organization) which can be used for disclosure of information about bidders and their roles:
+
+* Information about the bidders which have been shortlisted or invited to submit a proposal following the pre-qualification process should be provided using an entry in the ```parties``` section of an OCDS release with the ```organization/role``` field set to ```qualifiedBidder```.
+
+* Information about the bidders which were not shortlisted or invited to submit a proposal follow the pre-qualification process can be provided using an entry in the ```parties``` section of an OCDS release with the ```organization/role``` field set to ```bidder```.
 
 
-(TODO: draft relatedProcess extension) - Updating proposal to include 'relatedProcess' 
+##### JSON Example
+
+```eval_rst
+
+.. jsoninclude:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-shortlist-01.json
+   :jsonpointer: /releases/0/entities
+   :expand: entities
+```
+
+##### Spreadsheet Example
+
+```eval_rst
+.. jsoninclude-flat:: docs/en/examples/ppp/ocds-eg0001-pf-hmt-835-shortlist-01.json
+   :recursive:
+   :jsonpointer: /releases/0/entities
+   :ignore_path: /releases/0/
+```
 
 ### II.4. RFP documents
+
+> The set of documents issued by the procuring authority that set out:
+>
+> * The basis or requirements for submitting the proposal (which documents and in which format and contents the bidder has to submit)
+> * The basis of the evaluation criteria  for selecting the preferred bidder or awardee
+> * The PPP contract that will be signed with the successful bidder and other annexed information such as forms, templates, complementary information for reference purposes, and so on.
+< ([Source](https://ppp-certification.com/ppp-certification-guide/glossary))
 
 Links to RFP documents can be provided using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
 
@@ -467,6 +571,8 @@ Details of the preferred bidder should be provided in the ```parties``` section 
 *Risk allocation is an important determinant of cost to government and to the paying public/user. Inadequate or excessive transfer of risk is undesirable. Disclosure will provide evidence of proper or improper risk allocation and its effect on costs.*
 
 ### III.1. Individual risk allocation information
+
+> The allocation of the consequences of each risk to one of the parties in the contract, or agreeing to deal with the risk through a specified mechanism which may involve sharing the risk. ([Source](https://ppp-certification.com/ppp-certification-guide/glossary))
 
 The following information should be provided for each risk:
 
@@ -549,6 +655,7 @@ The ```document/description``` field can be used to provide a free text summary 
 A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 #### IV.2.2 The discount rates used should be specified in the disclosure along with the risk premium used, if any, and an explanation for the rate of risk premium used, referring to guidance, if any, available in this regard or describing project-specific circumstances that justify the risk premium rate used.
+
 
 (ToDo: model extension for: discount rate + risk premium + explanation )
 
@@ -671,7 +778,7 @@ The [finance extension](../../../extensions/finance/) should be used to capture 
 * Supplier credit
 * Other finance
 
-For all finance from identified organisations, the organisation should be included in the ```parties``` array, with a role of ```financeProvider```. 
+For all finance from identified organisations, the organisation should be included in the ```parties``` array, with a role of ```financier```. 
 
 For other forms of finance a title and description can be given.
 
