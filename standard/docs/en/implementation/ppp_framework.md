@@ -99,72 +99,11 @@ See the [location extension](../../extensions/location/)  for further modelling 
 ##### Example
 
 The example below uses a gazeteer and GeoJSON LineString to describe the location of a road project. 
+```eval_rst
 
-```json
-{ "releases": [{
-        "planning": {
-                "project": {
-                    "sector": "transport",
-                    "subSector": "roads",
-                    "locations": [
-                        {
-                            "description": "Local area and route of the Mersey Gateway Bridge",
-                            "gazetteer": {
-                                "scheme": "GEONAMES",
-                                "identifiers": "2647601.0"
-                            },
-                            "geometry": {
-                                "type": "LineString",
-                                "coordinates": [
-                                  [
-                                    -2.7485561370849605,
-                                    53.36141150911515
-                                  ],
-                                  [
-                                    -2.74383544921875,
-                                    53.36018219246915
-                                  ],
-                                  [
-                                    -2.741689682006836,
-                                    53.35900406407135
-                                  ],
-                                  [
-                                    -2.7359390258789062,
-                                    53.357774677973616
-                                  ],
-                                  [
-                                    -2.7240943908691406,
-                                    53.35782590310244
-                                  ],
-                                  [
-                                    -2.7213478088378906,
-                                    53.35710874569601
-                                  ],
-                                  [
-                                    -2.703065872192383,
-                                    53.348348206285024
-                                  ],
-                                  [
-                                    -2.7020359039306636,
-                                    53.34517142558946
-                                  ],
-                                  [
-                                    -2.702207565307617,
-                                    53.34158445320748
-                                  ],
-                                  [
-                                    -2.7028942108154297,
-                                    53.33943212493747
-                                  ]
-                                ]
-                              }
-                        }
-                    ]
-                }
-    }
-}]
-}
-
+.. jsoninclude:: docs/en/examples/ppp/geojson.json
+   :jsonpointer: /releases
+   :expand: planning, projects, locations, gazetteer, geometry, coordinates
 ```
 
 ### I.2: Sponsoring agency/department
@@ -795,7 +734,11 @@ These documents should be tagged with a ```documentType``` value of 'financeArra
 
 ### V.9. Forecast IRR
 
-(ToDo: model extension, single field?)
+The forecast IRR should captured under ```contract/financialModel``` with a code of 'forecastIRR'. 
+
+A single value should be given. 
+
+If this forecast is updated later in the project, the new value should be substituted in. 
 
 ## Government Support
 
@@ -820,14 +763,15 @@ Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
 Disclosure timing: Post commercial close, within 45-60 days of signing contract
 
-### VII.1. Tariffs and pricing
+The [tariffs extension](../../extensions/tariffs/) can be used to capture structured information about tariff levels. 
 
+Documentation blocks are used to provide links to methodology, tariff regulation information, and links to graphs.
+
+### VII.1. Tariffs and pricing
 
 ### VII.2. Methodology for tariff setting/pricing
 
-
 ### VII.3. Scope for reviews of tariff, pricing, regulatory mechanisms
-
 
 ### VII.4. Links to graphs: tariff increases over time, consumer price index movement
 

@@ -5,6 +5,8 @@ import shutil
 import flattentool
 import json
 import collections
+import openpyxl
+from openpyxl import load_workbook
 
 
 # 1. Download the excel file below
@@ -16,6 +18,23 @@ url = 'https://docs.google.com/spreadsheets/d/1gvzLoImbnWvty7lfe5mx2h3v3cELj2rsJ
 response = requests.get(url, stream=True)
 with open('download.xlsx', 'wb+') as out_file:
     shutil.copyfileobj(response.raw, out_file)
+
+
+## Check for a row with column paths within the first five rows (by checking for / in more than one of the first 10 columns)
+## WORK IN PROGRESS
+## wb = load_workbook('download.xlsx')
+## 
+## for sheet in wb.worksheets:
+##   for r in range(1,5):
+##     rowSlashCount = 0
+##     for c in range(1,10):
+##       if sheet.cell(row=r, column=c).value and "/" in str(sheet.cell(row=r, column=c).value): 
+##         rowSlashCount = rowSlashCount + 1
+##     if rowSlashCount > 2:
+##       print(sheet[1])
+##       sheet[1] = sheet[r]
+##       print("Remove rows before" + str(r) + "and escape")
+##       break
 
 
 flattentool.unflatten(

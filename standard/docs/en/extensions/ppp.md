@@ -1,38 +1,59 @@
-# OCDS for Public Private Partnerships (Work in Progress)
+## OCDS for Public Private Partnerships
 
-## Background
+The Open Contracting Data Standard for Public Private Partnerships release draws together a number of general extensions.
 
-The [Open Contracting Partnership (OCP)](http://www.open-contracting.org) was incubated within the World Bank from 2012 - 2015. During that time, the OCP led the development of the [Open Contracting Data Standard (OCDS)](http://standard.open-contracting.org). This provides a technical specification for the disclosure of open data, and key documents, about every stage of contracting processes. To date, OCDS has primarily been used by governments and civil society for disclosure and analysis of government procurement information. 
+This extension provides a number of fields and building blocks that are currenetly seen as specific to PPP disclosure against the World Bank PPP Disclosure Framework.
 
-Over 2016, the World Bank Open Contracting team, PPP team, Open Contracting Partnership, and Open Data Services, are working in partnership to extend OCDS to support proactive and comprehensive disclosure of structured data about Public Private Partnerships (PPPs).
 
-This work builds upon the document: ["A Framework for Disclosure in Public-Private Partnerships: technical guidance for systematic, proactive pre- & post-procurement disclosure of information in Public-Private Partnership programmes"](http://www.worldbank.org/en/topic/publicprivatepartnerships/brief/a-framework-for-disclosure-in-public-private-partnership-projects)
+### Project level information
 
-## Why a data standard?
+Building on the [Budget and Projects extension](https://github.com/open-contracting/ocds_budget_projects_extension) this adds to project with:
 
-The Framework for Disclosure sets out the key information that should be published in any PPP process. It answers the question: what should be disclosed?
+* Sector classifications - using the [UN Classifications of the Functions of Government](http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4)
+* Additional classifications - allowing arbitrary additional project categorisation
+* Project location - with options for gazetteer or point location
 
-A data standard describes how this information should be structured in data files so that disclosure from different sources can be more easily analysed, compared and evaluated. It provides one answer the question of: how should information be disclosed? 
-Publication of structured open data on PPPs should go alongside regular practices of providing information on PPPs through documents, reports and other public processes. If is a complementary process, and, when designed well, can be used to increase the accessibility of information on PPPs to a wide variety of audiences.
+An example is shown below:
 
-Open data is data that anyone has the right to access and reuse. Standards lower the barriers to re-use of this data. Some of the uses of Open Contracting data so far include:
+```json
+{
+    "releases":[
+        {
+            "planning": {
+                "project": {
+                                    "sector": {
+                                        "scheme": "COFOG",
+                                        "description": "Road transportation",
+                                        "id": "04.5.1"
+                                    },
+                                    "locations": [
+                                        {
+                                            "description": "Local Authority Area: Halton Borough Council",
+                                            "gazetteer": {
+                                                "scheme": "GEONAMES",
+                                                "identifiers": "2647601.0"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                  }
+        
+        ]
+}
 
-* Corruption prevention - performing analysis across large collections of data to look for red-flags;
-* Spend analysis - looking for inefficiencies or overpayment and securing a better deal for government;
-* Increasing competition - promoting contracting opportunities to SMEs and other firms;
-* Monitoring contract implementation - collating updates from contractors on physical progress of projects.
+```
 
-To take place efficiently and effectively, each different use relies on particular fields of structured data. The data standard makes sure that those making disclosures provide this data in a form which aids these many re-uses. 
+### Financial model information
 
-## The work ahead
-Over the course of this project we will need to develop a deeper understanding of:
+The PPP disclosure framework calls for a number of different financial indicators to be reported. Whilst some of these may be reported as metrics on an ongoing basis, some are simple single values.
 
-* Data supply: the current availability of structured data about PPPs;
-* Data demand: the particular use-cases for data on PPPs.
-* 
-By looking at both supply and demand (mirroring the process used to develop the original OCDS), we aim to identify:
+The ```contract/financialModel``` extension provides for an array of ```Indicator``` objects, each with an ```indicatorType``` code drawn from a codelist containing:
 
-* Where existing OCDS data structures can be used to capture information on PPPs;
-* Where additional or adapted fields are required to model important structured information about PPPs.
+* discountRate
+* riskPremium
+* equityDebtRatio
+* shareCapital
+* forecastIRR
 
-Over 2016, this repository will host discussion and development work towards the creation of OCDS extensions and adaptations for PPPs. 
+Each indicator can consist of a title, a code, a value and explanatory notes. 
