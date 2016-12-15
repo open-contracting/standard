@@ -415,8 +415,6 @@ Links to procurement documents, feasibility studies, including land acquisition,
 
 Each document should be tagged with an appropriate ```documentType``` value from the [document type codelist](../schema/codelists/#document-type).
 
-(TODO: Add codes to document type codelist: finalFeasibilityStudy)
-
 ##### JSON Example
 
 ```eval_rst
@@ -527,15 +525,13 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 (TODO: Document type codelist (see [#27](https://github.com/open-contracting/public-private-partnerships/issues/27)))
 
-### II.7. Negotiation parameters: brief descrtiption of the parameters for negotiation with preferred proponent 
+### II.7. Negotiation parameters: brief description of the parameters for negotiation with preferred proponent 
 
 This information can be provided in a document, or documents, using the ```documents``` field in the ```tender``` section of an OCDS release. OCDS provides a [document building block](../schema/reference/#document) for disclosure of documents.
 
 The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
 
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
-
-(TODO: Document type codelist (see [#27](https://github.com/open-contracting/public-private-partnerships/issues/27)))
+A value from the [document type codelist](../schema/codelists/#document-type) of ```negotiationParameters``` should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### II.8. Minutes of pre-bid meetings
 
@@ -543,17 +539,14 @@ This information can be provided in a document, or documents, using the ```docum
 
 The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
 
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+A value from the [document type codelist](../schema/codelists/#document-type) of ```minutes``` should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
-(TODO: Document type codelist (see [#27](https://github.com/open-contracting/public-private-partnerships/issues/27)))
 
 ### II.9. Selection of preferred bidder
 
 This information can be provided using the ```award``` and ```parties``` sections of an OCDS release. OCDS provides an [organization building block](../schema/reference/#organization) for disclosure of information about organizations and their roles.
 
 Details of the preferred bidder should be provided in the ```parties``` section and the ```award/suppliers``` field should be used to reference the relevant organization in the ```parties``` section. ```preferredBidder``` should be added to the list of roles for the organization in the ```organization/roles``` field.
-
-(TODO: see [orgnaization roles issue](https://github.com/open-contracting/public-private-partnerships/issues/26))
 
 ##   Risk
 
@@ -631,7 +624,7 @@ This information can be provided in a document, or documents, using the ```docum
 
 The ```document/description``` field can be used to provide a free text summary of the content of the document to enable this information to be displayed in applications consuming OCDS data.
 
-A value from the [document type codelist](../schema/codelists/#document-type) should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
+A value from the [document type codelist](../schema/codelists/#document-type) of ```evaluationReports``` should be entered into the ```document/documentType``` field to identify the type of document being disclosed.
 
 ### IV.2. Summary data
 
@@ -647,10 +640,13 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 #### IV.2.2 The discount rates used should be specified in the disclosure along with the risk premium used, if any, and an explanation for the rate of risk premium used, referring to guidance, if any, available in this regard or describing project-specific circumstances that justify the risk premium rate used.
 
+The discount rate should captured under ```contract/financialModel``` with a code of 'discountRate'. 
 
-(ToDo: model extension for: discount rate + risk premium + explanation )
+A single value should be given. 
 
-See: https://data.gov.uk/sib_knowledge_box/discount-rates-and-net-present-value - some discount rates can be staged over years. 
+Any risk premium should captured under ```contract/financialModel``` with a code of 'riskPremium'. 
+
+A single value should be given. 
 
 #### IV.2.3 Risk comparison of other financing mechanisms should be specified.
 
@@ -666,13 +662,15 @@ A value from the [document type codelist](../schema/codelists/#document-type) sh
 
 ### V.1. Equity-debt ratio
 
-(ToDo: model extension - single field (= debt / debt + equity)? In the [World Bank PPI Database](https://ppi.worldbank.org/data) debt-equity ratio values as given as a pair summing to 100, e.g. 60/40, 70/30 etc.)
+The discount rate should captured under ```contract/financialModel``` with a code of 'equityDebtRatio'. 
 
-*Note: The [World Bank PPPIRC](https://ppp.worldbank.org/public-private-partnership/financing/issues-in-project-financed-transactions#debt) defines the debt equity ratio as the ```long term debt / shareholder equity``` of the project company.*
+A single value should be given. 
 
 ### V.2. Share capital
 
-(ToDo: model extension - single field (total value of share capital)? )
+The discount rate should captured under ```contract/financialModel``` with a code of 'shareCapital'. 
+
+A single value should be given. 
 
 ### V.3. Shareholders with proportion held and voting rights
 
@@ -829,7 +827,7 @@ These documents should be tagged with a ```documentType``` value of 'contractGua
 
 Document entries should also be provided for any fiscal commitments and contingent liabilities disclosure reports that exist. 
 
-These documents should be tagged with a ```documentType``` value of 'TODO (VALUE TBC)' in the ```contract/implementation/documents``` array. 
+These documents should be tagged with a ```documentType``` value of 'guaranteeReports' in the ```contract/implementation/documents``` array. 
 
 ### VI.2. Grants
 
@@ -844,7 +842,7 @@ The information in these documents should cover:
 milestones
 * Operating subsidies and their periodicity or milestones
 
-Subsidy a proportion of project value can be reported in the ```contract/financialModel``` block, with a code of 'subsidyRatio'. (TODO: CHECK THIS CODE)
+Subsidy a proportion of project value can be reported in the ```contract/financialModel``` block, with a code of 'subsidyRatio'. 
 
 ### VI.3. Service payments
 
@@ -861,6 +859,10 @@ Documents relating to leases and asset transfers agreed in the contract should b
 Documents relating to leases and asset transfers in operation over the implementation of the project should be placed in the  ```contract/implementation/documents``` array with a  ```documentType``` value of 'lease' or 'assetTransfer'. 
 
 ### VI.5. Revenue-share, if any
+
+Documents relating to revenue share agreed in the contract should be placed in the ```contract/documents``` array with a  ```documentType``` value of 'revenueShare'. 
+
+Documents relating to revenue share in operation over the implementation of the project should be placed in the  ```contract/implementation/documents``` array with a  ```documentType``` value of 'revenueShare'. 
 
 ## Tariffs
 
@@ -923,9 +925,18 @@ These documents should be tagged with a ```documentType``` value of 'tariffs' in
 
 ### VIII.1. Events of default and termination payments
 
+TODO: Clarify whether this is reporting on actual events, or setting out the events provided for in the contract. 
 
 ### VIII.2. Handover
 
+Arrangements for handover set out in the contract should be included in ```contract/documents``` with the ```documentType``` of 'handover' and including: 
+
+* A short summary text
+* A link to one or more documents that provide additional information
+
+Information on handover taking place should be included in ```contract/implementation/documents``` with the ```documentType``` of 'handover' and should state details of hand over of assets back to state, condition of assets,
+and any other conditions relating to hand over. Include details of
+provisions for continuity of service.
 
 ## Renegotiations
 
@@ -963,7 +974,7 @@ ToDo: Check how often this would be reported? How much does this vary?
 
 Reporting on performance against agreed metrics can be provided using the [metrics extension](../../../extensions/metrics/) at ```contracts/implementation/metrics```. 
 
-The agreed metrics and targets can be provided in ```contracts/agreedMetrics```. 
+The agreed metrics and targets can be provided in ```contracts/agreedMetrics``. 
 
 ### X.5. Performance Failures
 
