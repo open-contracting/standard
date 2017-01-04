@@ -308,11 +308,32 @@ gettext_compact = False     # optional.
 
 
 from sphinx.directives.code import LiteralInclude
-from docutils.parsers.rst import directives
-from docutils import nodes
+from docutils.parsers.rst import directives, Directive
+from docutils.parsers.rst.roles import set_classes
+from docutils.parsers.rst.directives.tables import CSVTable
+from docutils import nodes, statemachine
+import io
+import re
+import csv
 import json
 from jsonpointer import resolve_pointer
 from collections import OrderedDict
+import requests
+import collections
+from os.path import abspath, dirname, join
+
+
+current_dir = dirname(abspath(__file__))
+
+GIT_REF = "master"
+
+location = "http://standard.open-contracting.org/extension_registry/{}/extensions.json".format(GIT_REF)
+try:
+    extension_json = requests.get(location, timeout=1).json()
+except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
+    print("**********  Internet connection not found *************") 
+    extension_json = {"extensions": []}
+
 
 class JSONInclude(LiteralInclude):
     option_spec = {
@@ -341,7 +362,195 @@ class JSONInclude(LiteralInclude):
         literal['caption'] = 'TEST'
         return [ literal ]
 
+
+
+class ExtensionList(Directive):
+    required_arguments = 1
+    final_argument_whitespace = True
+    has_content = True
+    option_spec = {'class': directives.class_option,
+                   'name': directives.unchanged,
+                   'list': directives.unchanged}
+
+
+    def run(self):
+        extension_list_name = self.options.pop('list', '')
+        set_classes(self.options)
+
+        admonition_node = nodes.admonition('', **self.options)
+        self.add_name(admonition_node)
+
+        title_text = self.arguments[0]
+
+        textnodes, _ = self.state.inline_text(title_text,
+                                              self.lineno)
+
+        title = nodes.title(title_text, '', *textnodes)
+        title.line = 0
+        title.source = 'extension_list_' + extension_list_name
+        admonition_node += title
+        if not 'classes' in self.options:
+            admonition_node['classes'] += ['admonition', 'note']
+
+        admonition_node['classes'] += ['extension_list']
+        admonition_node['ids'] += ['extensionlist-' + extension_list_name]
+
+        definition_list = nodes.definition_list()
+        definition_list.line = 0
+
+        num = 0
+        for num, extension in enumerate(extension_json['extensions']):
+            if not extension.get('core'):
+                continue
+            category = extension.get('category')
+            if extension_list_name and category != extension_list_name:
+                continue
+
+            name = extension['name']['en']
+            description = extension['description']['en']
+
+            some_term, _ = self.state.inline_text(name,
+                                                  self.lineno)
+
+            some_def, _ = self.state.inline_text(description,
+                                                  self.lineno)
+
+            link = nodes.reference(name, '', *some_term)
+            path_split = self.state.document.attributes['source'].split('/')
+            root_path = "../" * (len(path_split) - path_split.index('docs') - 2)
+
+            link['refuri'] = root_path + 'extensions/' + extension.get('slug', '')
+            link['translatable'] = True
+            link.source = 'extension_list_' + extension_list_name
+            link.line = num + 1
+
+            term = nodes.term(name, '', link)
+
+            definition_list += term
+
+            text = nodes.paragraph(description, '', *some_def)
+            text.source = 'extension_list_' + extension_list_name
+            text.line = num + 1
+            definition_list += nodes.definition(description, text)
+
+        admonition_node += definition_list
+
+        community = "The following are community extensions and are not maintained by Open Contracting Partnership."
+        community_text, _ = self.state.inline_text(community,
+                                              self.lineno)
+
+        community_paragraph = nodes.paragraph(community, *community_text)
+        community_paragraph['classes'] += ['hide']
+        community_paragraph.source = 'extension_list_' + extension_list_name
+        community_paragraph.line = num + 2
+
+        admonition_node += community_paragraph
+
+        return [admonition_node]
+
+def format(text):
+    return re.sub(r'\[([^\[]+)\]\(([^\)]+)\)', r'`\1 <\2>`__', text.replace("date-time","[date-time](#date)"))
+
+def gather_fields(json, path="", definition=""): 
+
+    definitions = json.get('definitions')
+    if definitions:
+        for key, value in definitions.items():
+            yield from gather_fields(value, definition=key)
+
+    properties = json.get('properties')
+    if properties:
+        for field_name, field_info in properties.items():
+            yield from gather_fields(field_info, path+'/'+field_name, definition=definition)
+            for key, value in field_info.items():
+                if isinstance(value, dict):
+                    yield from gather_fields(value, path+'/'+field_name, definition=definition)
+
+            types = field_info.get('type','')
+            if isinstance(types, list):
+                types = format(", ".join(types).replace(", null","").replace("null,",""))
+            else:
+                types = format(types)
+
+            description = field_info.get("description")
+            if description:
+                yield [(path+'/'+field_name).lstrip("/"), definition, format(description), types]
+
+
+
+class ExtensionTable(CSVTable):
+
+    option_spec = {'widths': directives.positive_int_list,
+                   'extension': directives.unchanged,
+                   'schema': directives.unchanged,
+                   'ignore_path': directives.unchanged,
+                  }
+
+    def get_csv_data(self):
+        headings = ["Field", "Definition", "Description", "Type"]
+        extension = self.options.get('extension')
+        if not extension:
+            raise Exception("No extension configuration when using extensiontable directive") 
+
+        if not extension_json['extensions']:
+            return [",".join(headings)], "Extension {}".format(extension)
+
+        for num, extension_obj in enumerate(extension_json['extensions']):
+            if not extension_obj.get('core'):
+                continue
+            if extension_obj['slug'] == extension:
+                break
+        else:
+            raise Exception("Extension {} does not exist in the registry".format(extension)) 
+
+        extension_patch = requests.get(extension_obj['url'].rstrip("/") + "/" + "release-schema.json").json()
+        data = []
+        for row in gather_fields(extension_patch):
+            data.append(row)
+
+        data.sort(key=lambda a: (a[1], tuple(a[0].split('/'))))
+        ignore_path = self.options.get('ignore_path')
+        if ignore_path:
+            for row in data:
+                row[0] = row[0].replace(ignore_path, "")
+
+        data.insert(0, headings)
+
+        output = io.StringIO()
+        output_csv = csv.writer(output)
+        for line in data:
+            output_csv.writerow(line)
+        self.options['header-rows'] = 1
+
+        return output.getvalue().splitlines(), "Extension {}".format(extension)
+
+    def parse_csv_data_into_rows(self, csv_data, dialect, source):
+        # csv.py doesn't do Unicode; encode temporarily as UTF-8
+        csv_reader = csv.reader([self.encode_for_csv(line + '\n')
+                                 for line in csv_data],
+                                dialect=dialect)
+        rows = []
+        max_cols = 0
+        for row_num, row in enumerate(csv_reader):
+            row_data = []
+            for cell_num, cell in enumerate(row):
+                if row_num == 0 or (cell_num != 0 and cell_num != 3):
+                    new_source = source
+                else:
+                    new_source = ""
+                # decode UTF-8 back to Unicode
+                cell_text = self.decode_from_csv(cell)
+                cell_data = (0, 0, 0, statemachine.StringList(
+                    cell_text.splitlines(), source=new_source))
+                row_data.append(cell_data)
+            rows.append(row_data)
+            max_cols = max(max_cols, len(row))
+        return rows, max_cols
+
+
 directives.register_directive('jsoninclude', JSONInclude)
+directives.register_directive('extensionlist', ExtensionList)
+directives.register_directive('extensiontable', ExtensionTable)
 
 
 # app setup hook

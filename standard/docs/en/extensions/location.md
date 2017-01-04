@@ -1,5 +1,11 @@
 # Location extension
 
+
+```eval_rst
+.. extensiontable::
+   :extension: location
+```
+
 Communicating the location of proposed or executed contract delivery is important to make users of contracting data. 
 
 This extension proposes the addition of two properties to ```items``` to describe location:
