@@ -64,7 +64,7 @@ fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
 
 ### Translations
 
-When a new major/minor version of the docs text is ready, a new transifex project needs to be made called eg. open-contracting-standard-x.y  This is done on the transifex web interface.
+When a new major/minor version of the docs text is ready, a new transifex project needs to be made called eg. open-contracting-standard-x.y  This is done on the transifex web interface. The ```.tx/config``` file also needs to be emptied.
 
 Make sure the build is run above, then run (making sure the project name is the same as the one made above) 
 
