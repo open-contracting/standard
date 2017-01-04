@@ -415,7 +415,7 @@ A contract for ‘Software consultancy services’ may be published in a release
 
 ```eval_rst
 
-.. jsoninclude:: example/language.json
+.. jsoninclude:: docs/en/examples/language.json
    :jsonpointer: 
    :expand: 
 
@@ -427,7 +427,7 @@ A contract for ‘Software consultancy services’ may be published in a release
 .. csv-table::
    :header-rows: 1
    :widths: 20 65 15
-   :file: standard/example/language.csv
+   :file: standard/docs/en/examples/language.csv
 ```
 
 ## Release handling
