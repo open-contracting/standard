@@ -152,12 +152,12 @@
                 },
                 "minValue": {
                     "title":"Minimum value",
-                    "description": "The minimum estimated value of the procurement.",
+                    "description": "The minimum estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
                     "$ref": "#/definitions/Value"
                 },
                 "value": {
                     "title":"Value",
-                    "description": "The total upper estimated value of the procurement.",
+                    "description": "The total upper estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
                     "$ref": "#/definitions/Value"
                 },
                 "procurementMethod": {
@@ -331,7 +331,7 @@
                 },
                 "value": {
                     "title":"Value",
-                    "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement.",
+                    "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts).",
                     "$ref": "#/definitions/Value"
                 },
                 "suppliers": {
@@ -422,7 +422,7 @@
                 },
                 "value": {
                     "title":"Value",
-                    "description": "The total value of this contract.",
+                    "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts).",
                     "$ref": "#/definitions/Value"
                 },
                 "items": {
@@ -665,7 +665,7 @@
                 },
                 "amount": { 
                     "title":"Amount",
-                    "description": "The value of the budget line item.",
+                    "description": "The value of the budget line item. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure.",
                     "$ref": "#/definitions/Value"
                 },
                 "project": {
@@ -728,7 +728,7 @@
                 },
                 "amount": { 
                     "title":"Amount",
-                    "description": "The value of the transaction.",
+                    "description": "The value of the transaction. A negative value indicates a refund or correction.",
                     "$ref": "#/definitions/Value"
                 },
                 "providerOrganization":{
@@ -818,7 +818,6 @@
                     "title":"Quantity",
                     "description": "The number of units required",
                     "mergeStrategy": "ocdsVersion",
-                    "minimum": 0,
                     "type": ["integer", "null"]
                 },
                 "unit": {
@@ -1062,7 +1061,6 @@
                     "title":"Amount",
                     "description": "Amount as a number.",
                     "type": ["number", "null"],
-                    "minimum": 0,
                     "mergeStrategy": "ocdsVersion"
                 },
                 "currency": {
