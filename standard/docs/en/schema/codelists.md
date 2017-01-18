@@ -95,7 +95,7 @@ Contracting processes may be formed under a number of different processes. Curre
 
 ### Tender Status
 
-The `tender.status` field is used to indicate the current status of a tender process.
+The `tender.status` field is used to indicate the current status of a tender process. The following options are available:
 
 ```eval_rst
 .. csv-table::
