@@ -137,7 +137,9 @@ Contracts can move through multiple states. Releases over time may update the st
 
 ### Currency
 
-OCDS uses the ISO 3-letter currency codes maintained in [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217).
+The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+
+A full list is available from the ISO. 
 
 ### Milestone Status
 
