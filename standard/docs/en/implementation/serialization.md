@@ -14,8 +14,6 @@ JSON stands for Javascript Object Notation, and is a format widely used for the 
 
 Most programming languages provide tools for output data as JSON. 
 
-The [OCDS Mapper](https://github.com/open-contracting/mapper) tool can convert from flat CSV files to structured OCDS data based on a mapping template. 
-
 [A range of tools](http://json-schema.org/implementations.html) are available for working with [JSON-Schema](http://json-schema.org/), including validation and form generation tools. 
 
 ### Consuming JSON
