@@ -110,6 +110,14 @@ Notes:
 
 Information on bidders against a contract will be handled by an [extension](conformance_and_extensions.md) during the period of the standard release candidate. Publishers wishing to provide detailed information on bidders should [contact support](../support/index.md).
 
+
+### Bids
+
+```eval_rst
+.. extensionlist:: The optional bids extension can be used to provide summary and detailed information about bids.
+   :list: bids
+```
+
 ### Award
 
 The award section is used to announce any awards issued for this tender. There may be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract, as it contains information on the suppliers. 
