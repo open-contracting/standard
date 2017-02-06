@@ -213,12 +213,12 @@
                 },
                 "enquiryPeriod": {
                     "title":"Enquiry period",
-                    "description": "The period during which enquiries may be made and answered.",
+                    "description": "The period during which potential bidders may submit questions and requests for clarification to the entity managing procurement. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
                     "$ref": "#/definitions/Period"
                 },
                 "hasEnquiries": {
                     "title":"Has enquiries?",
-                    "description": "A Yes/No field to indicate whether enquiries were part of tender process.",
+                    "description": "A true/false field to indicate whether any enquiries were received during the tender process. Structured information on enquiries that were received, and responses to them, can be provided using the enquiries extension.",
                     "type": ["boolean", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },

@@ -96,6 +96,11 @@ It may contain details of a forthcoming process to receive and evaluate proposal
    :file: standard/docs/field_definitions/release-tender.csv
 ```
 
+```eval_rst
+.. extensionlist:: The following extensions are available for the tender section
+   :list: tender
+```
+
 Notes: 
 
 * ```tender.id``` - see the [identifiers guidance](../../identifiers/#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
