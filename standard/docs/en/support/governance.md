@@ -174,7 +174,7 @@ Following **working group** approval, the revision branch can be set to live.
 
 See https://github.com/open-contracting/standard/issues/189
 
-If a term (a class or property) is scheduled to be renamed or removed from the specification as a result of the revision process, the next major release of the specification must [deprecate](https://en.wikipedia.org/wiki/Deprecation) the term within the schema, and the following major release must rename or remove the term from the schema, making the term obsolete. Implementations may use deprecated terms, but will receive warnings from the OCDS validator described below. Implementations may not use obsolete terms, and will receive errors from the OCDS validator.
+If a term (a class or property) is scheduled to be renamed or removed from the specification as a result of the revision process, the next minor release of the specification must [deprecate](https://en.wikipedia.org/wiki/Deprecation) the term within the schema, and the following major release must rename or remove the term from the schema, making the term obsolete. Implementations may use deprecated terms, but will receive warnings from the OCDS validator described below. Implementations may not use obsolete terms, and will receive errors from the OCDS validator.
 
 ## Support policy
 

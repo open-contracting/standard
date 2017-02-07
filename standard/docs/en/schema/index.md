@@ -25,6 +25,7 @@ The [release schema reference](reference.md) page provides guidance on using eac
    identifiers
    codelists
    conformance_and_extensions
+   deprecation
    changelog
 
 ```
