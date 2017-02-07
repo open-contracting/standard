@@ -397,7 +397,13 @@
                     "type": ["string", "integer"],
                     "mergeStrategy": "ocdsVersion"
                 },
+                "extendsContractID":{
+                    "title": "Extends contract ID",
+                    "description": "If this contract extends or amends a previously issued contract, then the contract.id value for the extended/amended contract can be provided here.",
+                    "type":["string"],
+                },
                 "title": {
+                    "title": "Contract title",
                     "description": "Contract title",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
