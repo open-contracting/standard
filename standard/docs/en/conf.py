@@ -453,11 +453,6 @@ def format(text):
 
 def gather_fields(json, path="", definition=""): 
 
-    definitions = json.get('definitions')
-    if definitions:
-        for key, value in definitions.items():
-            yield from gather_fields(value, definition=key)
-
     properties = json.get('properties')
     if properties:
         for field_name, field_info in properties.items():
@@ -476,6 +471,11 @@ def gather_fields(json, path="", definition=""):
             if description:
                 yield [(path+'/'+field_name).lstrip("/"), definition, format(description), types]
 
+    definitions = json.get('definitions')
+    if definitions:
+        for key, value in definitions.items():
+            yield from gather_fields(value, definition=key)
+
 
 
 class ExtensionTable(CSVTable):
@@ -484,6 +484,8 @@ class ExtensionTable(CSVTable):
                    'extension': directives.unchanged,
                    'schema': directives.unchanged,
                    'ignore_path': directives.unchanged,
+                   'definitions': directives.unchanged,
+                   'exclude_definitions': directives.unchanged,
                   }
 
     def get_csv_data(self):
@@ -503,16 +505,29 @@ class ExtensionTable(CSVTable):
         else:
             raise Exception("Extension {} does not exist in the registry".format(extension)) 
 
-        extension_patch = requests.get(extension_obj['url'].rstrip("/") + "/" + "release-schema.json").json()
+        extension_patch = json.loads(
+            requests.get(extension_obj['url'].rstrip("/") + "/" + "release-schema.json").text,
+            object_pairs_hook = OrderedDict
+        )
+
         data = []
         for row in gather_fields(extension_patch):
             data.append(row)
 
-        data.sort(key=lambda a: (a[1], tuple(a[0].split('/'))))
         ignore_path = self.options.get('ignore_path')
         if ignore_path:
             for row in data:
                 row[0] = row[0].replace(ignore_path, "")
+
+        definitions = self.options.get('definitions')
+        if definitions:
+            definitions = definitions.split()
+            data = [row for row in data if row[1] in definitions]
+
+        exclude_definitions = self.options.get('exclude_definitions')
+        if exclude_definitions:
+            exclude_definitions = exclude_definitions.split()
+            data = [row for row in data if row[1] not in exclude_definitions]
 
         data.insert(0, headings)
 
