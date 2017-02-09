@@ -105,20 +105,22 @@ Contracting processes may be formed under a number of different processes. Curre
 The `tender.status` field is used to indicate the current status of a tender process. The following options are available:
 
 ```eval_rst
-.. csv-table::
+.. csv-table:: 
    :header-rows: 1
    :file: standard/schema/codelists_translated/tenderStatus.csv
 ```
 
 ### Method
 
-The method codelist is based upon the [GPA Definitions provided here](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
+A contracting process aims to fulfil the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
    :file: standard/schema/codelists_translated/method.csv
 ```
+
+Note: The 'direct' code was introduced in Version 1.1. Publishers who completed a codelist mapping prior to 1.1 may have included direct procurement within limited, and may need to review their mappings.
 
 ### Award Status
 
