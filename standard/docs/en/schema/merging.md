@@ -114,7 +114,7 @@ The following arrays of items must be re-published in full for each release:
 - Item.additionalClassifications
 - Amendment.changes
 
-Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](reference.md#emptying-fields-and-values).
+Other lists with ```.id``` properties do not need to be republished in full, but publishers should note the [guidance on emptying fields and values](../../reference/#emptying-fields-and-values).
 
 
 ## Versioned data
