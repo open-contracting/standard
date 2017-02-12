@@ -182,7 +182,7 @@
                     }
                 },
                 "milestones": {
-                    "title":"Planning milestones",
+                    "title": "Planning milestones",
                     "description": "A list of milestones associated with the planning stage.",
                     "type": "array",
                     "items": {
@@ -375,8 +375,13 @@
                     "mergeStrategy": "ocdsVersion"
                 },
                 "awardPeriod": {
-                    "title": "Award period",
-                    "description": "The date or period on which an award is anticipated to be made.",
+                    "title": "Evaluation and award period",
+                    "description": "The period for adjudication and selection of the contract award. The end date should be the date on which an award is due to be finalised. The start date may be used to indicate the start of an evaluation period.",
+                    "$ref": "#/definitions/Period"
+                },
+                "contractPeriod": {
+                    "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
+                    "title": "Contract period",
                     "$ref": "#/definitions/Period"
                 },
                 "numberOfTenderers": {
@@ -730,12 +735,12 @@
                     "type": "array"
                 },
                 "milestones": {
-                    "title":"Contract milestones",
+                    "title": "Contract milestones",
                     "description": "A list of milestones associated with the finalisation of this contract.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Milestone"
-                    }                    
+                    }
                 }
             },
             "patternProperties": {
@@ -1765,6 +1770,23 @@
                     ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
+                },
+                "maxExtentDate": {
+                    "description": "The period cannot be extended beyond this date.",
+                    "format": "date-time",
+                    "title": "Maximum extent",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "durationInDays": {
+                    "description": "The maximum duration of this period in days. Where a start and end date are given, this field is optional, and should reflect the difference between those two days.",
+                    "title": "Duration (days)",
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
                 }
             }
         },
