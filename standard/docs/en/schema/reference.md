@@ -265,7 +265,7 @@ The identifier block provides a way to [identify the legal entities](../../ident
 
 ### Document
 
-Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and milestones. Each document block can consist of multiple documents, classified using the [documentType](../../codelists/#document-type) codelist.
+Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation Each document block can consist of multiple documents, classified using the [documentType](../../codelists/#document-type) codelist.
 
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
@@ -361,7 +361,7 @@ The ```unit``` block allows detailed specification of the parameters and price o
 
 Milestone information can be included in the [tender](#tender) and [contract implementation](#implementation) blocks. 
 
-In the context of a tender block, milestones describe the key deliverables of a contract, or key points during the lifetime of the contract. These may have associated documentation. 
+In the context of a tender block, milestones describe the key deliverables of a contract, or key points during the lifetime of the contract. 
 
 In the context of a contract implementation block, milestones are used to track progress towards those deliverables and key events set out in the tender. 
 
@@ -375,6 +375,11 @@ In the context of a contract implementation block, milestones are used to track 
 Notes:
 
 * The ```dateModified``` field should be changed whenever the progress towards a milestone is reviewed, and the ```status``` either updated, or re-confirmed. 
+
+```eval_rst
+.. extensionlist:: The following extensions to milestone are available
+   :list: milestones
+```
 
 <!-- ToDo: Add example -->
 

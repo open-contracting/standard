@@ -557,6 +557,10 @@
                     "title":"Documents",
                     "description": "List of documents associated with this milestone.",
                     "type": "array",
+                    "deprecated":{
+                        "deprecatedVersion":"1.1",
+                        "description":"Inclusion of documents at the milestone level is now deprecated. Documentation should be attached in the tender, award, contract or implementation sections, and titles and descriptions used to highlight the related milestone. Publishers who wish to continue to provide documents at the milestone level should explicitly declare this by using the milestone documents extension."
+                    },
                     "mergeStrategy": "arrayMergeById",
                     "mergeOptions": { "idRef": "id" },
                     "items": { "$ref": "#/definitions/Document" },
