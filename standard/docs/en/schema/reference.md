@@ -89,6 +89,10 @@ The following details can be provided for each party.
    :file: standard/docs/field_definitions/release-organization.csv
 ```
 
+#### Details 
+
+Detailed classification of parties can be provided using one or more [party detail extensions](../../../extensions/party_details/).
+
 ### Planning
 
 The planning section can be used to describe the background to a contracting process. This may include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
