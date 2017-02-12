@@ -654,13 +654,6 @@
             "title": "Budget information",
             "description": "This section contain information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Fiscal Data Package](http://fiscal.dataprotocols.org/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
             "properties": {
-                "source": {
-                    "title": "Data Source",
-                    "description": "Used to point either to a corresponding Budget Data Package, or to a machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
-                    "type":["string", "null"],
-                    "mergeStrategy": "ocdsVersion",
-                    "format": "uri"
-                },
                 "id":{ 
                     "title":"ID",
                     "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source.",
@@ -692,9 +685,20 @@
                 },
                 "uri":{
                     "title": "Linked budget information",
-                    "description": "A URI pointing directly to a machine-readable record about the related budget or projects for this contracting process.",
+                    "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that fund this contracting process. Information may be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
                     "mergeStrategy": "ocdsVersion",
                     "type": ["string", "null"],
+                    "format": "uri"
+                },
+                "source": {
+                    "title": "Data Source",
+                    "description": "Used to point either to a corresponding Budget Data Package, or to a machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
+                    "type":["string", "null"],
+                    "deprecated":{
+                        "deprecatedVersion":"1.1",
+                        "description":"The budget data source field was intended to link to machine-readable data about the budget for a contracting process, but has been widely mis-used to provide free-text descriptions of budget providers. As a result, it has been removed from version 1.1. budget/uri can be used to provide a link to machine-readable budget information, and budget/description can be used to provide human-readable information on the budget source."
+                    },
+                    "mergeStrategy": "ocdsVersion",
                     "format": "uri"
                 }
             },
