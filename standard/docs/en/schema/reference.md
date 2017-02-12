@@ -430,7 +430,13 @@ Financial values should always be published with a currency attached.
    :file: standard/docs/field_definitions/release-value.csv
 ```
 
-During the period of the 1.0 RC, if information on taxation related to a value is required, this may be handled by an extension. A [discussion of handling taxation can be found on GitHub](https://github.com/open-contracting/standard/issues/112).
+Support for exchange rates, and tax information, can be provided using extensions.
+
+```eval_rst
+.. extensionlist:: The following extensions for value are available
+   :list: value
+```
+
 
 ### Location
 
