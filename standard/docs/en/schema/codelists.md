@@ -89,6 +89,16 @@ The submission method codelist is used to identify the mechanism through which a
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
 
+### Related Process
+
+The related process block is used at the release level to point backwards to prior processes, such as planning, PQQ or framework establishment, and at the contract level to point onwards to sub-contracts, renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/relatedProcess.csv
+```
+
 ## Closed Codelists 
 
 ### Release Tag

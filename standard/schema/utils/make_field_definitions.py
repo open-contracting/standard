@@ -148,5 +148,6 @@ if __name__ == "__main__":
 
     make_definition_table(release,join(file_path,"release-changes.csv"),what="definitions",section="Amendment/changes")
 
+    make_definition_table(release,join(file_path,"related-process.csv"),what="definitions",section="RelatedProcess")
 
     

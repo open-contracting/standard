@@ -441,6 +441,36 @@ Support for exchange rates, and tax information, can be provided using extension
    :list: value
 ```
 
+### RelatedProcess
+
+In OCDS each contracting process can have only one planning and tender stage. There are a number of cases where it is important to know about related planning and tendering processes, including:
+
+* When one planning process results in many tenders;
+* What a contract is awarded following two or more invitation to tender processes, such as in some processes involving pre-qualification, of frameworks with mini-competitions;
+* When a contract results in the award of sub-contracts also tracked through OCDS data;
+* When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
+
+In all these cases, the ```relatedProcess``` block can be used to cross-reference between the relevant open contracting processes using their ```OCID```.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :widths: 20 65 15
+   :file: standard/docs/field_definitions/related-process.csv
+```
+
+A related process can be declared at two points in an OCDS release.
+
+**(1) At the release level** - used to point backwards to prior processes, such as planning, PQQ or framework establishment.
+
+**(2) At the contract level** - used to point onwards to sub-contracts, renewal or replacement processes that relate solely to the particular contract the property appears in.  
+
+As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant ```documents``` blocks. For example:
+
+* When recording a ```release/relatedProcess``` pointing to the ocid of the planning process that resulted in a tender, a ```tender/documents``` entry with a ```documentType``` of 'procurementPlan' and a link to web pages about the procurement plan could be provided;
+* When recording a ```contract/relatedProcess``` pointing to the ocid of a  sub-contracting process, a ```contract/documents``` entry with a ```documentType``` of 'subContract' and a title that describes it as the subcontracting process, could be provided;
+* When recording a ```contract/relatedProcess``` pointing to the ocid of a tender process to renew a given contract, a ```contract/documents``` entry with a ```documentType``` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
+
 
 ### Location
 
