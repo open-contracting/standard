@@ -58,6 +58,22 @@
             ],
             "mergeStrategy": "ocdsVersion"
         },
+        "title": {
+            "title": "Title",
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "A overall title for this contracting process or release."
+        },
+        "description": {
+            "title": "Title",
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "An overall description for this contracting process or release. This should not replace provision of a detailed breakdown of the objects of the contracting process in the planning, tender, award or contracts section."
+        },
         "parties": {
             "title": "Parties",
             "description": "Information on the parties (organisations, economic operators and other participants) who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
@@ -1221,7 +1237,7 @@
                         "$ref": "#/definitions/Identifier"
                     },
                     "uniqueItems": true
-                },                
+                },
                 "address": {
                     "$ref": "#/definitions/Address"
                 },
@@ -1235,8 +1251,8 @@
                     "items": {
                         "type": "string"
                     },
-                    "codelist":"partyRole.csv",
-                    "openCodelist":true
+                    "codelist": "partyRole.csv",
+                    "openCodelist": true
                 },
                 "details": {
                     "type": [
