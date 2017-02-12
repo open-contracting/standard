@@ -399,11 +399,7 @@ The ```unit``` block allows detailed specification of the parameters and price o
 
 ### Milestone
 
-Milestone information can be included in the [tender](#tender) and [contract implementation](#implementation) blocks. 
-
-In the context of a tender block, milestones describe the key deliverables of a contract, or key points during the lifetime of the contract. 
-
-In the context of a contract implementation block, milestones are used to track progress towards those deliverables and key events set out in the tender. 
+Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks. 
 
 ```eval_rst
 .. csv-table::

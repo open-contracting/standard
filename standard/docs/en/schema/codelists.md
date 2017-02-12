@@ -99,6 +99,17 @@ The related process block is used at the release level to point backwards to pri
    :file: standard/schema/codelists_translated/relatedProcess.csv
 ```
 
+### Milestone Type
+
+The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/milestoneType.csv
+```
+
+
 ## Closed Codelists 
 
 ### Release Tag

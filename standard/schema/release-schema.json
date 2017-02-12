@@ -180,6 +180,14 @@
                     "items": {
                         "$ref": "#/definitions/Document"
                     }
+                },
+                "milestones": {
+                    "title":"Planning milestones",
+                    "description": "A list of milestones associated with the planning stage.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Milestone"
+                    }
                 }
             },
             "patternProperties": {
@@ -720,6 +728,14 @@
                     "description": "If this process is followed by one or more contracting processes, represented under a separate open contracting identifier (ocid) then details of the related process can be provided here. This is commonly used to point to subcontracts, or to renewal and replacement processes for this contract.",
                     "title": "Related processes",
                     "type": "array"
+                },
+                "milestones": {
+                    "title":"Contract milestones",
+                    "description": "A list of milestones associated with the finalisation of this contract.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Milestone"
+                    }                    
                 }
             },
             "patternProperties": {
@@ -808,6 +824,24 @@
                     ],
                     "mergeStrategy": "ocdsVersion"
                 },
+                "type": {
+                    "title": "Milestone type",
+                    "description": "The type of milestone, drawn from an extended [milestoneType codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-type).",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "enum": [
+                        "preProcurement",
+                        "engagement",
+                        "approval",
+                        "assessment",
+                        "delivery",
+                        "reporting",
+                        "financing",
+                        null
+                    ]
+                },
                 "description": {
                     "title": "Description",
                     "description": "A description of the milestone.",
@@ -816,6 +850,14 @@
                         "null"
                     ],
                     "mergeStrategy": "ocdsVersion"
+                },
+                "code": {
+                    "title": "Milestone code",
+                    "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed amoungst data producers and the applications using that data.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "dueDate": {
                     "title": "Due date",
@@ -826,6 +868,15 @@
                     ],
                     "format": "date-time",
                     "mergeStrategy": "ocdsVersion"
+                },
+                "dateMet": {
+                    "format": "date-time",
+                    "title": "Date met",
+                    "description": "The date on which the milestone was met.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "dateModified": {
                     "title": "Date modified",
@@ -845,6 +896,7 @@
                         "null"
                     ],
                     "enum": [
+                        "scheduled",
                         "met",
                         "notMet",
                         "partiallyMet",
