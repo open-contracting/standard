@@ -344,7 +344,7 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
 
-From 1.1 periods may also include a ```maxExtentDate``` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended. 
+Periods may also include a ```maxExtentDate``` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended. 
 
 ```eval_rst
 .. csv-table::
