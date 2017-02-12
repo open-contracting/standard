@@ -10,6 +10,7 @@ This reference page provides key information on using the release schema.
 
 The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, including:
 
+* [parties](#parties)
 * [planning](#planning)
 * [tender](#tender)
 * [award](#award)
@@ -58,9 +59,35 @@ Notes:
 * ```tag``` - The release tag is used to identify the nature of the release being made. This can be used by consuming applications to filter releases, or may in future be used for advanced validation. A release which updates or amends previous data must always use the appropriate update or amendment release tag. Values must be drawn from the [releaseTag codelist](../../codelists/#release-tag).
 * ```date``` - The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates. 
 * ```language``` - see the section on [multi-language support](#language) for information on language handling.
-* ```buyer``` - The buyer details are published using an [organization](#entity) block.
+* ```buyer``` - The buyer should be recorded in the [parties](#parties) array with a 'buyer' role, and then cross-referenced by id here. 
 
 Further details on each of the blocks contained within release are below. 
+
+### Parties
+
+```eval_rst
+.. note:: 
+
+   Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points. 
+
+   This reduces repetition of information on parties who appear at multiple points in the contracting process, and supports publication of information about additional parties to the contracting process, including auditors, multiple buyers, and consortia partners of a winning bidder.
+
+   The old, embedded data, approach to organization data is deprecated in OCDS 1.1, and will be removed in version 2.0. 
+
+```
+
+Information on each of the organizations or other entities participating in this contracting process, and mentioned a given release, should be included in the parties section of that release.
+
+Each party should be assigned an identifier. This is used to cross-reference to this participant whenever it plays a role as a buyer, tenderer, supplier or in some other capacity.
+
+The following details can be provided for each party.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :widths: 20 65 15
+   :file: standard/docs/field_definitions/release-organization.csv
+```
 
 ### Planning
 
@@ -223,17 +250,26 @@ Within each amendment block, publishers should provide an array of items that ha
 
 ## Field reference
 
+### OrganizationReference
+
+```eval_rst
+.. note::
+
+The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
+
+```
+
+An organization reference consists of two main components:
+
+* An ```id``` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization or entity;
+* A ```name``` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
+
+The Organization Reference schema contains deprecated fields to prevent validation failures of OCDS 1.0 data. 
 
 ### Organization
 
-The organization block can be used to provide a legal identifier for an organization, and to give [address](#address) and [contact point](#contact-point) information.
+See the [parties](#parties) section
 
-```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-organization.csv
-```
 
 #### Identifier
 

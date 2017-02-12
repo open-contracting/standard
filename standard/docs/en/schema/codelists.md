@@ -12,6 +12,17 @@ Codes are case sensitive, and are generally provided as english language camelCa
 
 ## Open Codelists
 
+### Party Role
+
+The organisations, economic operators or other participants in a contracting process are listed in the [parties section](../../reference/#parties). A single party may have one or more roles in the contracting process. 
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/partyRole.csv
+```
+
+
 ### Item Classification Scheme
 
 Items should be classified using existing gazetteers and codelists, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm). Open codelists are strongly preferred. 

@@ -126,6 +126,8 @@ if __name__ == "__main__":
 
     make_definition_table(release,join(file_path,"release-organization.csv"),what="definitions",section="Organization")
 
+    make_definition_table(release,join(file_path,"release-organization-reference.csv"),what="definitions",section="OrganizationReference")
+
     make_definition_table(release,join(file_path,"release-item.csv"),what="definitions",section="Item")
     
     make_definition_table(release,join(file_path,"release-item-unit.csv"),what="definitions",section="Item/unit")
@@ -145,4 +147,6 @@ if __name__ == "__main__":
     make_definition_table(release,join(file_path,"release-amendment.csv"),what="definitions",section="Amendment")
 
     make_definition_table(release,join(file_path,"release-changes.csv"),what="definitions",section="Amendment/changes")
+
+
     
