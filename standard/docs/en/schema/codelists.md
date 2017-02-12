@@ -110,6 +110,11 @@ The `tender.status` field is used to indicate the current status of a tender pro
    :file: standard/schema/codelists_translated/tenderStatus.csv
 ```
 
+```eval_rst
+.. note:: 
+   The 'pipeline' status was introduced in version 1.1.
+```
+
 ### Method
 
 A contracting process aims to fulfil the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
