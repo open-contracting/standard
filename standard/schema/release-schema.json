@@ -1137,10 +1137,19 @@
                     "mergeStrategy": "overwrite",
                     "title": "Organization ID"
                 },
+                "identifier": {
+                    "title": "Primary identifier",
+                    "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for the preferred scheme and identifier to use.",
+                    "deprecated": {
+                        "deprecatedVersion": "1.1",
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                    },
+                    "$ref": "#/definitions/Identifier"
+                },
                 "address": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/Address",
                     "description": "(Deprecated outside the parties section)",
@@ -1150,7 +1159,7 @@
                     "type": "array",
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and additional identifiers for an organisation should be provided in the relevant cross-referenced entry parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and additional identifiers for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "items": {
                         "$ref": "#/definitions/Identifier"
@@ -1162,7 +1171,7 @@
                 "contactPoint": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and contact point information for an organisation should be provided in the relevant cross-referenced entry parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and contact point information for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/ContactPoint",
                     "description": "(Deprecated outside the parties section)",
