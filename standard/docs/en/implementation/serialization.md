@@ -92,17 +92,17 @@ Whilst this allows complex data to be expressed in flat CSV, users will need to 
 
 Instead, data with a one-to-many relationship can be represented using a multi-table serialization. 
 
+Note: OCDS CSV files MUST only be encoded in either UTF-8 or windows-1252 encodings. 
+
 ### Multi-table
 
 The multi-table serialization separates  objects with many to one relationships (ie. arrays) into their own tables. 
 
-Multiple tables can be packaged together as the tabs of a spreadsheet, or in a collection of CSV files.  
+Multiple tables can be packaged together as the tabs of an Excel spreadsheet, or in a collection of CSV files.  
 
 An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/master/flat-template).
 
 For further information on multi-table serializations please see the [flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/).
-
-
 
 ## Packaging files with meta-data
 
