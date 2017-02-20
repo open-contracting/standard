@@ -80,8 +80,16 @@ This is an open codelist, and additional entries can be included with a x\_ pref
 The award criteria code list describes the basis on which contract awards will be made. 
 
 ```eval_rst
+.. note:: 
+
+  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishes may need to review the mapping from their internal systems to this updated list of award criteria.
+
+```
+
+```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 20 50 10
    :file: standard/schema/codelists_translated/awardCriteria.csv
 ```
 
