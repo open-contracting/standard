@@ -5,30 +5,32 @@
     "type": "object",
     "properties": {
         "initiationType": {
-            "type": "array",
             "items": {
                 "properties": {
-                    "releaseDate": {
-                        "format": "date-time",
+                    "releaseID": {
                         "type": "string"
                     },
-                    "releaseTag": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "releaseID": {
+                    "releaseDate": {
+                        "format": "date-time",
                         "type": "string"
                     },
                     "value": {
                         "type": "string",
                         "enum": [
                             "tender"
-                        ]
+                        ],
+                        "codelist": "initiationType.csv",
+                        "openCodelist": false
+                    },
+                    "releaseTag": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
                     }
                 }
-            }
+            },
+            "type": "array"
         },
         "title": {
             "$ref": "#/definitions/StringNullVersioned"
@@ -79,8 +81,7 @@
         "ocid": {
             "title": "Open Contracting ID",
             "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/)",
-            "type": "string",
-            "mergeStrategy": "ocdsOmit"
+            "type": "string"
         }
     },
     "required": [
@@ -126,20 +127,13 @@
             ],
             "properties": {
                 "id": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -147,9 +141,16 @@
                                     "string",
                                     "integer"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "title": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -158,20 +159,13 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "status": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -186,10 +180,19 @@
                                     "unsuccessful",
                                     "complete",
                                     null
-                                ]
+                                ],
+                                "codelist": "tenderStatus.csv",
+                                "openCodelist": false
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "items": {
                     "type": "array",
@@ -205,20 +208,13 @@
                     "$ref": "#/definitions/Value"
                 },
                 "procurementMethod": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -231,15 +227,27 @@
                                     "selective",
                                     "limited",
                                     null
-                                ]
+                                ],
+                                "codelist": "method.csv",
+                                "openCodelist": false
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "procurementMethodDetails": {
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "procurementMethodRationale": {
+                    "$ref": "#/definitions/StringNullVersioned"
+                },
+                "procurementCategory": {
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "awardCriteria": {
@@ -249,20 +257,13 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "submissionMethod": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -272,10 +273,19 @@
                                 ],
                                 "items": {
                                     "type": "string"
-                                }
+                                },
+                                "codelist": "submissionMethod.csv",
+                                "openCodelist": true
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "submissionMethodDetails": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -287,20 +297,13 @@
                     "$ref": "#/definitions/Period"
                 },
                 "hasEnquiries": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -308,9 +311,16 @@
                                     "boolean",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "eligibilityCriteria": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -322,20 +332,13 @@
                     "$ref": "#/definitions/Period"
                 },
                 "numberOfTenderers": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -343,36 +346,43 @@
                                     "integer",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "tenderers": {
-                    "type": "array",
                     "items": {
                         "properties": {
+                            "releaseID": {
+                                "type": "string"
+                            },
                             "releaseDate": {
                                 "format": "date-time",
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
-                                "type": "string"
-                            },
                             "value": {
-                                "uniqueItems": true,
-                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/OrganizationUnversioned"
-                                }
+                                },
+                                "type": "array",
+                                "uniqueItems": true
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "procuringEntity": {
                     "$ref": "#/definitions/OrganizationReference"
@@ -389,8 +399,18 @@
                         "$ref": "#/definitions/Milestone"
                     }
                 },
+                "amendments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Amendment"
+                    }
+                },
                 "amendment": {
-                    "$ref": "#/definitions/Amendment"
+                    "$ref": "#/definitions/Amendment",
+                    "deprecated": {
+                        "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+                        "deprecatedVersion": "1.1"
+                    }
                 }
             },
             "patternProperties": {
@@ -451,20 +471,13 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "status": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -478,10 +491,19 @@
                                     "cancelled",
                                     "unsuccessful",
                                     null
-                                ]
+                                ],
+                                "codelist": "awardStatus.csv",
+                                "openCodelist": false
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "date": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
@@ -490,31 +512,31 @@
                     "$ref": "#/definitions/Value"
                 },
                 "suppliers": {
-                    "type": "array",
                     "items": {
                         "properties": {
+                            "releaseID": {
+                                "type": "string"
+                            },
                             "releaseDate": {
                                 "format": "date-time",
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
-                                "type": "string"
-                            },
                             "value": {
-                                "uniqueItems": true,
-                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/OrganizationUnversioned"
-                                }
+                                },
+                                "type": "array",
+                                "uniqueItems": true
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "items": {
                     "type": "array",
@@ -534,8 +556,18 @@
                     },
                     "uniqueItems": true
                 },
+                "amendments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Amendment"
+                    }
+                },
                 "amendment": {
-                    "$ref": "#/definitions/Amendment"
+                    "$ref": "#/definitions/Amendment",
+                    "deprecated": {
+                        "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+                        "deprecatedVersion": "1.1"
+                    }
                 }
             },
             "patternProperties": {
@@ -567,20 +599,13 @@
                     ]
                 },
                 "awardID": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -588,34 +613,41 @@
                                     "string",
                                     "integer"
                                 ]
-                            }
-                        }
-                    }
-                },
-                "extendsContractID": {
-                    "type": "array",
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
-                                "type": "string"
                             },
                             "releaseTag": {
-                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                }
-                            },
+                                },
+                                "type": "array"
+                            }
+                        }
+                    },
+                    "type": "array"
+                },
+                "extendsContractID": {
+                    "items": {
+                        "properties": {
                             "releaseID": {
+                                "type": "string"
+                            },
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
                                 "type": [
                                     "string"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "title": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -624,20 +656,13 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "status": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -651,10 +676,19 @@
                                     "cancelled",
                                     "terminated",
                                     null
-                                ]
+                                ],
+                                "codelist": "contractStatus.csv",
+                                "openCodelist": false
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "period": {
                     "$ref": "#/definitions/Period"
@@ -680,9 +714,6 @@
                     },
                     "uniqueItems": true
                 },
-                "amendment": {
-                    "$ref": "#/definitions/Amendment"
-                },
                 "implementation": {
                     "$ref": "#/definitions/Implementation"
                 },
@@ -697,6 +728,19 @@
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Milestone"
+                    }
+                },
+                "amendments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Amendment"
+                    }
+                },
+                "amendment": {
+                    "$ref": "#/definitions/Amendment",
+                    "deprecated": {
+                        "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+                        "deprecatedVersion": "1.1"
                     }
                 }
             },
@@ -757,20 +801,13 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "type": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -787,10 +824,19 @@
                                     "reporting",
                                     "financing",
                                     null
-                                ]
+                                ],
+                                "codelist": "milestoneType.csv",
+                                "opencodelist": true
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -808,20 +854,13 @@
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
                 },
                 "status": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -835,10 +874,19 @@
                                     "notMet",
                                     "partiallyMet",
                                     null
-                                ]
+                                ],
+                                "codelist": "milestoneStatus.csv",
+                                "openCodelist": false
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "documents": {
                     "type": "array",
@@ -923,20 +971,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -945,9 +986,16 @@
                                     "integer",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -959,20 +1007,13 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "projectID": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -981,9 +1022,16 @@
                                     "integer",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "uri": {
                     "$ref": "#/definitions/StringNullUriVersioned"
@@ -1031,17 +1079,38 @@
                 "date": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
                 },
-                "amount": {
+                "value": {
                     "$ref": "#/definitions/Value"
                 },
-                "providerOrganization": {
-                    "$ref": "#/definitions/Identifier"
+                "payer": {
+                    "$ref": "#/definitions/OrganizationReference"
                 },
-                "receiverOrganization": {
-                    "$ref": "#/definitions/Identifier"
+                "payee": {
+                    "$ref": "#/definitions/OrganizationReference"
                 },
                 "uri": {
                     "$ref": "#/definitions/StringNullUriVersioned"
+                },
+                "amount": {
+                    "$ref": "#/definitions/Value",
+                    "deprecated": {
+                        "description": "This field has been replaced by the ```transaction.value``` field for consistency with the use of value and amount elsewhere in the standard.",
+                        "deprecatedVersion": "1.1"
+                    }
+                },
+                "providerOrganization": {
+                    "$ref": "#/definitions/Identifier",
+                    "deprecated": {
+                        "description": "This field has been replaced by the ```transaction.payer``` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "deprecatedVersion": "1.1"
+                    }
+                },
+                "receiverOrganization": {
+                    "$ref": "#/definitions/Identifier",
+                    "deprecated": {
+                        "description": "This field has been replaced by the ```transaction.payee``` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "deprecatedVersion": "1.1"
+                    }
                 }
             }
         },
@@ -1071,31 +1140,31 @@
                     "$ref": "#/definitions/Address"
                 },
                 "additionalIdentifiers": {
-                    "type": "array",
                     "items": {
                         "properties": {
+                            "releaseID": {
+                                "type": "string"
+                            },
                             "releaseDate": {
                                 "format": "date-time",
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
-                                "type": "string"
-                            },
                             "value": {
-                                "uniqueItems": true,
-                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/IdentifierUnversioned"
-                                }
+                                },
+                                "type": "array",
+                                "uniqueItems": true
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "contactPoint": {
                     "deprecated": {
@@ -1126,31 +1195,31 @@
                     "$ref": "#/definitions/Identifier"
                 },
                 "additionalIdentifiers": {
-                    "type": "array",
                     "items": {
                         "properties": {
+                            "releaseID": {
+                                "type": "string"
+                            },
                             "releaseDate": {
                                 "format": "date-time",
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
-                                "type": "string"
-                            },
                             "value": {
-                                "uniqueItems": true,
-                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/IdentifierUnversioned"
-                                }
+                                },
+                                "type": "array",
+                                "uniqueItems": true
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "address": {
                     "$ref": "#/definitions/Address"
@@ -1167,20 +1236,13 @@
                     "openCodelist": true
                 },
                 "details": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -1188,9 +1250,16 @@
                                     "object",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 }
             },
             "patternProperties": {
@@ -1221,47 +1290,40 @@
                     "$ref": "#/definitions/Classification"
                 },
                 "additionalClassifications": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
-                                "uniqueItems": true,
-                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/ClassificationUnversioned"
-                                }
-                            }
-                        }
-                    }
-                },
-                "quantity": {
-                    "type": "array",
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
-                                "type": "string"
+                                },
+                                "type": "array",
+                                "uniqueItems": true
                             },
                             "releaseTag": {
-                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                }
-                            },
+                                },
+                                "type": "array"
+                            }
+                        }
+                    },
+                    "type": "array"
+                },
+                "quantity": {
+                    "items": {
+                        "properties": {
                             "releaseID": {
+                                "type": "string"
+                            },
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -1269,9 +1331,16 @@
                                     "number",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "unit": {
                     "type": "object",
@@ -1281,6 +1350,18 @@
                         },
                         "value": {
                             "$ref": "#/definitions/Value"
+                        },
+                        "scheme": {
+                            "$ref": "#/definitions/StringNullVersioned"
+                        },
+                        "id": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "uri": {
+                            "$ref": "#/definitions/StringNullUriVersioned"
                         }
                     },
                     "patternProperties": {
@@ -1303,30 +1384,43 @@
             }
         },
         "Amendment": {
-            "type": "object",
+            "type": [
+                "object",
+                "null"
+            ],
             "properties": {
                 "date": {
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
                 },
+                "rationale": {
+                    "$ref": "#/definitions/StringNullVersioned"
+                },
+                "id": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "description": {
+                    "$ref": "#/definitions/StringNullVersioned"
+                },
+                "amendsReleaseID": {
+                    "$ref": "#/definitions/StringNullVersioned"
+                },
+                "releaseID": {
+                    "$ref": "#/definitions/StringNullVersioned"
+                },
                 "changes": {
-                    "type": "array",
                     "items": {
                         "properties": {
+                            "releaseID": {
+                                "type": "string"
+                            },
                             "releaseDate": {
                                 "format": "date-time",
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
-                                "type": "string"
-                            },
                             "value": {
-                                "type": "array",
                                 "items": {
                                     "type": "object",
                                     "properties": {
@@ -1348,13 +1442,18 @@
                                             ]
                                         }
                                     }
-                                }
+                                },
+                                "type": "array"
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
-                },
-                "rationale": {
-                    "$ref": "#/definitions/StringNullVersioned"
+                    },
+                    "type": "array"
                 }
             },
             "patternProperties": {
@@ -1373,20 +1472,13 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "id": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -1395,9 +1487,16 @@
                                     "integer",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -1422,20 +1521,13 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "id": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -1444,9 +1536,16 @@
                                     "integer",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "legalName": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -1524,20 +1623,13 @@
             "type": "object",
             "properties": {
                 "amount": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -1545,9 +1637,16 @@
                                     "number",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "currency": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -1567,20 +1666,13 @@
                     "$ref": "#/definitions/StringNullDateTimeVersioned"
                 },
                 "durationInDays": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -1588,9 +1680,16 @@
                                     "integer",
                                     "null"
                                 ]
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 }
             }
         },
@@ -1609,20 +1708,13 @@
                     ]
                 },
                 "relationship": {
-                    "type": "array",
                     "items": {
                         "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
+                            "releaseID": {
                                 "type": "string"
                             },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "releaseID": {
+                            "releaseDate": {
+                                "format": "date-time",
                                 "type": "string"
                             },
                             "value": {
@@ -1632,10 +1724,19 @@
                                 "type": [
                                     "array",
                                     "null"
-                                ]
+                                ],
+                                "codelist": "relatedProcess.csv",
+                                "opencodelist": true
+                            },
+                            "releaseTag": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
                             }
                         }
-                    }
+                    },
+                    "type": "array"
                 },
                 "title": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -1649,7 +1750,9 @@
                     "type": [
                         "string",
                         "null"
-                    ]
+                    ],
+                    "codelist": "organizationIdentifierRegistrationAgency_iati.csv",
+                    "openCodelist": true
                 },
                 "id": {
                     "type": [
@@ -1688,7 +1791,9 @@
                     "type": [
                         "string",
                         "null"
-                    ]
+                    ],
+                    "codelist": "itemClassificationScheme.csv",
+                    "openCodelist": true
                 },
                 "id": {
                     "type": [
@@ -1861,21 +1966,41 @@
                 }
             }
         },
-        "StringNullUriVersioned": {
-            "type": "array",
+        "StringNullDateTimeVersioned": {
             "items": {
                 "properties": {
+                    "releaseID": {
+                        "type": "string"
+                    },
                     "releaseDate": {
                         "format": "date-time",
                         "type": "string"
                     },
+                    "value": {
+                        "format": "date-time",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
                     "releaseTag": {
-                        "type": "array",
                         "items": {
                             "type": "string"
-                        }
-                    },
+                        },
+                        "type": "array"
+                    }
+                }
+            },
+            "type": "array"
+        },
+        "StringNullUriVersioned": {
+            "items": {
+                "properties": {
                     "releaseID": {
+                        "type": "string"
+                    },
+                    "releaseDate": {
+                        "format": "date-time",
                         "type": "string"
                     },
                     "value": {
@@ -1884,25 +2009,25 @@
                             "string",
                             "null"
                         ]
+                    },
+                    "releaseTag": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
                     }
                 }
-            }
+            },
+            "type": "array"
         },
         "StringNullVersioned": {
-            "type": "array",
             "items": {
                 "properties": {
-                    "releaseDate": {
-                        "format": "date-time",
+                    "releaseID": {
                         "type": "string"
                     },
-                    "releaseTag": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "releaseID": {
+                    "releaseDate": {
+                        "format": "date-time",
                         "type": "string"
                     },
                     "value": {
@@ -1910,36 +2035,16 @@
                             "string",
                             "null"
                         ]
-                    }
-                }
-            }
-        },
-        "StringNullDateTimeVersioned": {
-            "type": "array",
-            "items": {
-                "properties": {
-                    "releaseDate": {
-                        "format": "date-time",
-                        "type": "string"
                     },
                     "releaseTag": {
-                        "type": "array",
                         "items": {
                             "type": "string"
-                        }
-                    },
-                    "releaseID": {
-                        "type": "string"
-                    },
-                    "value": {
-                        "format": "date-time",
-                        "type": [
-                            "string",
-                            "null"
-                        ]
+                        },
+                        "type": "array"
                     }
                 }
-            }
+            },
+            "type": "array"
         }
     }
 }
