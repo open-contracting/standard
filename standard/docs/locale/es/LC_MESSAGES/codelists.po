@@ -1,5 +1,5 @@
 # Translations template for PROJECT.
-# Copyright (C) 2016 ORGANIZATION
+# Copyright (C) 2017 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # 
 # Translators:
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-11-12 14:48+0000\n"
+"POT-Creation-Date: 2017-02-17 14:56+0000\n"
 "PO-Revision-Date: 2016-11-12 14:53+0000\n"
 "Last-Translator: Oscar Montiel <oscar.montiel@okfn.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/es/)\n"
@@ -89,11 +89,6 @@ msgstr "Mejor Retorno para Gobierno"
 msgid "Single Bid Only"
 msgstr "Sólo una oferta"
 
-#. Title_en
-#: schema/codelists/awardStatus.csv:1 schema/codelists/contractStatus.csv:1
-msgid "Pending"
-msgstr "Pendiente"
-
 #. Description_en
 #: schema/codelists/awardStatus.csv:1
 msgid ""
@@ -102,10 +97,9 @@ msgid ""
 msgstr "Esta adjudicación se ha propuesto pero aún no entra en vigor. Esto puede deberse a que se encuentra en período de resolución o algún otro proceso."
 
 #. Title_en
-#: schema/codelists/awardStatus.csv:2 schema/codelists/contractStatus.csv:2
-#: schema/codelists/tenderStatus.csv:2
-msgid "Active"
-msgstr "Activo"
+#: schema/codelists/awardStatus.csv:1 schema/codelists/contractStatus.csv:1
+msgid "Pending"
+msgstr "Pendiente"
 
 #. Description_en
 #: schema/codelists/awardStatus.csv:2
@@ -113,10 +107,10 @@ msgid "This award has been made, and is currently in force."
 msgstr "Esta adjudicación se ha realizado y se encuentra vigente. "
 
 #. Title_en
-#: schema/codelists/awardStatus.csv:3 schema/codelists/contractStatus.csv:3
-#: schema/codelists/tenderStatus.csv:3
-msgid "Cancelled"
-msgstr "Cancelado"
+#: schema/codelists/awardStatus.csv:2 schema/codelists/contractStatus.csv:2
+#: schema/codelists/tenderStatus.csv:2
+msgid "Active"
+msgstr "Activo"
 
 #. Description_en
 #: schema/codelists/awardStatus.csv:3
@@ -124,9 +118,10 @@ msgid "This award has been cancelled."
 msgstr "Esta adjudicación se ha cancelado."
 
 #. Title_en
-#: schema/codelists/awardStatus.csv:4 schema/codelists/tenderStatus.csv:4
-msgid "Unsuccessful"
-msgstr "Sin éxito"
+#: schema/codelists/awardStatus.csv:3 schema/codelists/contractStatus.csv:3
+#: schema/codelists/tenderStatus.csv:3
+msgid "Cancelled"
+msgstr "Cancelado"
 
 #. Description_en
 #: schema/codelists/awardStatus.csv:4
@@ -137,6 +132,11 @@ msgid ""
 "supplier, was unsuccessful, but there may be other successful awards for "
 "different items listed in the tender, or to different suppliers)."
 msgstr "Esta adjudicación no se pudo realizar exitosamente. Si se incluyen detalles de artículos o del proveedor en la sección de asignación, entonces disminuye la posibilidad de que la asignación no fuese exitosa (i.e. la asignación de dichos artículos o una asignación a dicho proveedor no ocurrió pero puede haber otras asignaciones exitosas para distintos artículos enlistados en la licitación o asignados a distintos proveedores)."
+
+#. Title_en
+#: schema/codelists/awardStatus.csv:4 schema/codelists/tenderStatus.csv:4
+msgid "Unsuccessful"
+msgstr "Sin éxito"
 
 #. Description_en
 #: schema/codelists/contractStatus.csv:1
@@ -157,11 +157,6 @@ msgstr "Este contrato ha sido firmado por todas las partes y está legalmente en
 msgid "This contract has been cancelled prior to being signed."
 msgstr "Este contrato ha sido cancelado antes de ser firmado."
 
-#. Title_en
-#: schema/codelists/contractStatus.csv:4
-msgid "Terminated "
-msgstr "Terminado"
-
 #. Description_en
 #: schema/codelists/contractStatus.csv:4
 msgid ""
@@ -171,9 +166,9 @@ msgid ""
 msgstr "Este contrato fue firmado y estuvo en vigor, ahora ha terminado. Esto puede deberse a que se concluyó exitosamente, o puede deberse a una terminación anticipada debido a que alguna parte no se completó."
 
 #. Title_en
-#: schema/codelists/documentType.csv:1
-msgid "Tender Notice"
-msgstr "Notificación de licitación. "
+#: schema/codelists/contractStatus.csv:4
+msgid "Terminated "
+msgstr "Terminado"
 
 #. Description_en
 #: schema/codelists/documentType.csv:1
@@ -184,9 +179,9 @@ msgid ""
 msgstr "La notificación formal que proporciona los detalles de una licitación. Este puede ser un enlace a algún documento descargable, un sitio web o alguna gaceta oficial en la que se encuentre el aviso."
 
 #. Title_en
-#: schema/codelists/documentType.csv:2
-msgid "Award Notice"
-msgstr "Notificación de adjudicación"
+#: schema/codelists/documentType.csv:1
+msgid "Tender Notice"
+msgstr "Notificación de licitación. "
 
 #. Description_en
 #: schema/codelists/documentType.csv:2
@@ -197,9 +192,9 @@ msgid ""
 msgstr "La notificación formal que proporciona detalles sobre la asignación del contrato. Este puede ser un enlace a un documento descargable, un sitio web o alguna gaceta oficial en la que se encuentre el aviso. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:3
-msgid "Contract Notice"
-msgstr "Notificación de contrato"
+#: schema/codelists/documentType.csv:2
+msgid "Award Notice"
+msgstr "Notificación de adjudicación"
 
 #. Description_en
 #: schema/codelists/documentType.csv:3
@@ -208,6 +203,11 @@ msgid ""
 " start implementation. This may be a link to a downloadable document, to a "
 "web page, or to an official gazette in which the notice is contained. "
 msgstr "La notificación formal que proporciona detalles sobre la firma del contrato y su validez para iniciar la implementación. Este puede ser un enlace a un documento descargable, un sitio web o alguna gaceta oficial en la que se encuentre el aviso. "
+
+#. Title_en
+#: schema/codelists/documentType.csv:3
+msgid "Contract Notice"
+msgstr "Notificación de contrato"
 
 #. Title_en
 #: schema/codelists/documentType.csv:4
@@ -219,11 +219,6 @@ msgstr "Notificación de término"
 msgid "Procurement Plan"
 msgstr "Plan de adquisición"
 
-#. Title_en
-#: schema/codelists/documentType.csv:6
-msgid "Bidding Documents"
-msgstr "Documentos de ofertas"
-
 #. Description_en
 #: schema/codelists/documentType.csv:6
 msgid ""
@@ -232,9 +227,9 @@ msgid ""
 msgstr "Información de proveedores potenciales, describiendo las metas del contrato (p.ej. bienes y servicios a contratar), y el proceso de ofertas."
 
 #. Title_en
-#: schema/codelists/documentType.csv:7
-msgid "Technical Specifications"
-msgstr "Especificaciones técnicas"
+#: schema/codelists/documentType.csv:6
+msgid "Bidding Documents"
+msgstr "Documentos de ofertas"
 
 #. Description_en
 #: schema/codelists/documentType.csv:7
@@ -242,9 +237,9 @@ msgid "Detailed technical information about goods or services to be provided."
 msgstr "Información técnica detallada sobre los bienes o servicios que se proveerán."
 
 #. Title_en
-#: schema/codelists/documentType.csv:8
-msgid "Evaluation Criteria "
-msgstr "Criterios de evaluación"
+#: schema/codelists/documentType.csv:7
+msgid "Technical Specifications"
+msgstr "Especificaciones técnicas"
 
 #. Description_en
 #: schema/codelists/documentType.csv:8
@@ -252,9 +247,9 @@ msgid "Information about how bids will be evaluated. "
 msgstr "Información sobre cómo se evaluarán las ofertas."
 
 #. Title_en
-#: schema/codelists/documentType.csv:9
-msgid "Evaluation report"
-msgstr "Reporte de evaluación"
+#: schema/codelists/documentType.csv:8
+msgid "Evaluation Criteria "
+msgstr "Criterios de evaluación"
 
 #. Description_en
 #: schema/codelists/documentType.csv:9
@@ -262,6 +257,11 @@ msgid ""
 "Report on the evaluation of the bids and the application of the evaluation "
 "criteria, including the justification fo the award"
 msgstr "Reporte sobre la evaluación de las ofertas y la aplicación de criterios de evaluación, incluyendo la justificación de la adjudicación"
+
+#. Title_en
+#: schema/codelists/documentType.csv:9
+msgid "Evaluation report"
+msgstr "Reporte de evaluación"
 
 #. Title_en
 #: schema/codelists/documentType.csv:10
@@ -278,11 +278,6 @@ msgstr "Acuerdos para término del contrato"
 msgid "Schedules and milestones"
 msgstr "Programa y metas"
 
-#. Title_en
-#: schema/codelists/documentType.csv:13
-msgid "Physical progress reports"
-msgstr "Reportes sobre progreso físico"
-
 #. Description_en
 #: schema/codelists/documentType.csv:13
 msgid ""
@@ -290,9 +285,9 @@ msgid ""
 msgstr "Un reporte sobre el estado de la implementación, generalmente comparado con las metas clave."
 
 #. Title_en
-#: schema/codelists/documentType.csv:14
-msgid "Financial progress reports"
-msgstr "Reportes de progreso financiero"
+#: schema/codelists/documentType.csv:13
+msgid "Physical progress reports"
+msgstr "Reportes sobre progreso físico"
 
 #. Description_en
 #: schema/codelists/documentType.csv:14
@@ -303,14 +298,14 @@ msgid ""
 msgstr "Fechas y montos de pagos por etapas (contra el monto total) y la fuente de esos pagos, incluyendo costos extra en caso de haberlos. Se pueden proveer versiones estructuradas de estos datos a través de las transacciones. "
 
 #. Title_en
+#: schema/codelists/documentType.csv:14
+msgid "Financial progress reports"
+msgstr "Reportes de progreso financiero"
+
+#. Title_en
 #: schema/codelists/documentType.csv:15
 msgid "Final Audit"
 msgstr "Auditoría final"
-
-#. Title_en
-#: schema/codelists/documentType.csv:16
-msgid "Public Hearing Notice"
-msgstr "Notificación de audiencia pública"
 
 #. Description_en
 #: schema/codelists/documentType.csv:16
@@ -320,14 +315,14 @@ msgid ""
 msgstr "Detalles de cualquier audiencia pública que haya ocurrido como parte de la planeación de esta licitación. "
 
 #. Title_en
+#: schema/codelists/documentType.csv:16
+msgid "Public Hearing Notice"
+msgstr "Notificación de audiencia pública"
+
+#. Title_en
 #: schema/codelists/documentType.csv:17
 msgid "Market Studies"
 msgstr "Estudios de mercado"
-
-#. Title_en
-#: schema/codelists/documentType.csv:18
-msgid "Eligibility Criteria"
-msgstr "Criterios de elegibilidad"
 
 #. Description_en
 #: schema/codelists/documentType.csv:18
@@ -335,14 +330,19 @@ msgid "Detailed documents about the eligibility of bidders."
 msgstr "Documentación detallada sobre indoneidad de los licitadores. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:19
-msgid "Clarifications to bidders questions"
-msgstr "Clarificaciones a las preguntas de los licitadores"
+#: schema/codelists/documentType.csv:18
+msgid "Eligibility Criteria"
+msgstr "Criterios de elegibilidad"
 
 #. Description_en
 #: schema/codelists/documentType.csv:19
 msgid "Including replies to issues raised in pre-bid conferences."
 msgstr "Incluye respuestas a cuestiones planteadas en reuniones previas a las ofertas."
+
+#. Title_en
+#: schema/codelists/documentType.csv:19
+msgid "Clarifications to bidders questions"
+msgstr "Clarificaciones a las preguntas de los licitadores"
 
 #. Title_en
 #: schema/codelists/documentType.csv:20
@@ -384,17 +384,17 @@ msgstr "Anexos del contrato"
 msgid "Guarantees"
 msgstr "Garantías"
 
-#. Title_en
-#: schema/codelists/documentType.csv:28
-msgid "Subcontracts"
-msgstr "Subcontratos"
-
 #. Description_en
 #: schema/codelists/documentType.csv:28
 msgid ""
 "A document detailing subcontracts, the subcontract itself, or a linked OCDS "
 "document describing a subcontract."
 msgstr "Un documento detallando los subcontratos, el subcontrato mismo, o algún enlace a un documento de OCDS describiendo un subcontrato."
+
+#. Title_en
+#: schema/codelists/documentType.csv:28
+msgid "Subcontracts"
+msgstr "Subcontratos"
 
 #. Title_en
 #: schema/codelists/documentType.csv:29
@@ -416,17 +416,17 @@ msgstr "Plan del proyecto"
 msgid "Bill Of Quantity"
 msgstr "Lista de cantidades"
 
-#. Title_en
-#: schema/codelists/documentType.csv:33
-msgid "Information on bidders"
-msgstr "Información sobre los licitadores"
-
 #. Description_en
 #: schema/codelists/documentType.csv:33
 msgid ""
 "Information on bidders or participants, their validation documents and any "
 "procedural exemptions for which they qualify"
 msgstr "Información sobre licitadores o participantes, sus documentos de validación y cualquier disposición del proceso por la cual están calificados"
+
+#. Title_en
+#: schema/codelists/documentType.csv:33
+msgid "Information on bidders"
+msgstr "Información sobre los licitadores"
 
 #. Title_en
 #: schema/codelists/documentType.csv:34
@@ -438,11 +438,6 @@ msgstr "Conflictos de interés encontrados"
 msgid "debarments issued"
 msgstr "Exclusiones emitidas"
 
-#. Title_en
-#: schema/codelists/initiationType.csv:1 schema/codelists/releaseTag.csv:2
-msgid "Tender"
-msgstr "Licitación"
-
 #. Description_en
 #: schema/codelists/initiationType.csv:1
 msgid ""
@@ -452,9 +447,9 @@ msgid ""
 msgstr "Una puja competitiva o licitación abierta para formar contratos. El proceso generalmente incluye invitar públicamente a contratistas potenciales a presentar ofertas para evaluación y seleccionar a un ganador de ganador o ganadores. "
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:1
-msgid "EC Common Procurement Vocabulary"
-msgstr "Vocabulario Común para las Compras Públicas de la CE"
+#: schema/codelists/initiationType.csv:1 schema/codelists/releaseTag.csv:2
+msgid "Tender"
+msgstr "Licitación"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:1
@@ -470,9 +465,9 @@ msgid ""
 msgstr "El Vocabulario Común para las Compras Públicas es un estándar adoptado por la Comisión de la Comunidad Europea y consiste de un vocabulario que define el sujeto de un contrato y vocabulario suplementario que agrega información cualitativa adicional. El vocabulario principal, identificado en OCDS por el código CPV se basa en una estructura de arbol que consta de códigos de hasta 9 dígitos (un código de 8 dígitos más un dígito verificador) asociado con un una expresión que describe el tipo de suministro, obra o servicio que forma el sujeto del contrato."
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:2
-msgid "EC Common Procurement Vocabulary - Supplementary Codelists"
-msgstr "Vocabulario Común para las Compras Públicas de la CE - Listas de Códigos Sumplementarias"
+#: schema/codelists/itemClassificationScheme.csv:1
+msgid "EC Common Procurement Vocabulary"
+msgstr "Vocabulario Común para las Compras Públicas de la CE"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:2
@@ -487,9 +482,9 @@ msgid ""
 msgstr "El Vocabulario Común para las Compras Públicas es un estándar adoptado por la Comisión de la Comunidad Europea y consiste de un vocabulario principal que define el sujeto de un contrato y un vocabulario suplementario que agrega información cualitativa adicional. El vocabulario suplementario, identificado en OCDS por el código CPVS se basa en código alfanumérico asociado con un una expresión que permite agregar más detalles sobre la naturaleza específica o el destino de los bienes que se van a adquirir. "
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:3
-msgid "Goods and Services Identification Number"
-msgstr "Goods and Services Identification Number"
+#: schema/codelists/itemClassificationScheme.csv:2
+msgid "EC Common Procurement Vocabulary - Supplementary Codelists"
+msgstr "Vocabulario Común para las Compras Públicas de la CE - Listas de Códigos Sumplementarias"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:3
@@ -500,9 +495,9 @@ msgid ""
 msgstr "El gobierno federal canadiense utiliza códigos del Goods and Services Identification Number (GSIN) para identificar descripciones de productos genéricos para sus actividades de compras públicas. La lista completa está publicada y mantenida en buyandsell.gc.ca"
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:4
-msgid "United Nations Standard Products and Services Code®"
-msgstr "United Nations Standard Products and Services Code®"
+#: schema/codelists/itemClassificationScheme.csv:3
+msgid "Goods and Services Identification Number"
+msgstr "Goods and Services Identification Number"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:4
@@ -515,9 +510,9 @@ msgid ""
 msgstr "La United Nations Standard Products and Services Code (UNSPSC) es una convención jerárquica que se utiliza para clasificar todos los productos y servicios. Los meta-datos legibles por computadora de UNSPSC no están disponibles como datos abiertos: y por lo tanto los publicadores deben considerar esquemas de clasificación alternativos que provean tablas de búsqueda de datos abiertos cuando sea posible."
 
 #. Title_en
-#: schema/codelists/locationGazeteer.csv:1
-msgid "EU Nomenclature of Territorial Units for Statistics "
-msgstr "EU Nomenclature of Territorial Units for Statistics "
+#: schema/codelists/itemClassificationScheme.csv:4
+msgid "United Nations Standard Products and Services Code®"
+msgstr "United Nations Standard Products and Services Code®"
 
 #. Description_en
 #: schema/codelists/locationGazeteer.csv:1
@@ -528,9 +523,9 @@ msgid ""
 msgstr "La  Nomenclature of Territorial Units for Statistics (NUTS) fue establecida por Eurostat para hacer disponible un único desglose de unidades territoriales para la producción de estadísticas regionales para la Unión Europea."
 
 #. Title_en
-#: schema/codelists/method.csv:1
-msgid "Open"
-msgstr "Abierta"
+#: schema/codelists/locationGazeteer.csv:1
+msgid "EU Nomenclature of Territorial Units for Statistics "
+msgstr "EU Nomenclature of Territorial Units for Statistics "
 
 #. Description_en
 #: schema/codelists/method.csv:1
@@ -540,9 +535,9 @@ msgid ""
 msgstr "Una licitación abierta es un método de adquisición en el cual todos los proveedores interesados pueden realizar una propuesta."
 
 #. Title_en
-#: schema/codelists/method.csv:2
-msgid "Selective"
-msgstr "Selectiva"
+#: schema/codelists/method.csv:1
+msgid "Open"
+msgstr "Abierta"
 
 #. Description_en
 #: schema/codelists/method.csv:2
@@ -552,9 +547,9 @@ msgid ""
 msgstr "Una licitación selectiva es un método de adquisición en el cual sólo los proveedores calificados son invitados por la entidad compradora para realizar una propuesta."
 
 #. Title_en
-#: schema/codelists/method.csv:3
-msgid "Limited"
-msgstr "Limitada"
+#: schema/codelists/method.csv:2
+msgid "Selective"
+msgstr "Selectiva"
 
 #. Description_en
 #: schema/codelists/method.csv:3
@@ -562,6 +557,11 @@ msgid ""
 "Limited  tendering means a procurement method whereby the procuring entity "
 "contacts a supplier or suppliers of its choice."
 msgstr "Una licitación limitada es un método de adquisición en el cual la entidad compradora contacta a uno o varios proveedores de su elección."
+
+#. Title_en
+#: schema/codelists/method.csv:3
+msgid "Limited"
+msgstr "Limitada"
 
 #. Title_en
 #: schema/codelists/milestoneStatus.csv:1
@@ -1063,11 +1063,6 @@ msgid ""
 "contain details of the goods or services being sought."
 msgstr "Anuncio de una nueva licitación (llamado a propuestas). La entrega de licitaciones debe contener detalles de los bienes o servicios que se buscan."
 
-#. Title_en
-#: schema/codelists/releaseTag.csv:3
-msgid "Tender Amendment"
-msgstr "Enmienta a una Licitación"
-
 #. Description_en
 #: schema/codelists/releaseTag.csv:3
 msgid ""
@@ -1078,9 +1073,9 @@ msgid ""
 msgstr "Una enmienda a una enterga de licitación existente. Debe haber por lo menos una entrega de licitación con el mismo ocid, pero una releaseDate previa, antes de publicar un tenderAmendment. El término enmienda tiene significado legal en varias jurisdicciones."
 
 #. Title_en
-#: schema/codelists/releaseTag.csv:4
-msgid "Tender Update"
-msgstr "Actualización de Licitación"
+#: schema/codelists/releaseTag.csv:3
+msgid "Tender Amendment"
+msgstr "Enmienta a una Licitación"
 
 #. Description_en
 #: schema/codelists/releaseTag.csv:4
@@ -1092,6 +1087,11 @@ msgid ""
 " legal amendments to a tender, for which the tenderAmendment tag should be "
 "used. "
 msgstr "Una actualización a una enterga de licitación existente. Debe haber por lo menos una entrega de licitación con el mismo ocid, pero una releaseDate previa, antes de publicar un tenderUpdate. No debe de usarse para enmiendas legales formales a una licitación. Para dichos casos se debe usar la etiqueda tenderAmendment."
+
+#. Title_en
+#: schema/codelists/releaseTag.csv:4
+msgid "Tender Update"
+msgstr "Actualización de Licitación"
 
 #. Title_en
 #: schema/codelists/releaseTag.csv:5
@@ -1143,11 +1143,6 @@ msgstr "Actualización de Implementación"
 msgid "Contract Termination"
 msgstr "Terminación de Contrato"
 
-#. Title_en
-#: schema/codelists/releaseTag.csv:15
-msgid "Compiled record"
-msgstr "Registro compilado"
-
 #. Description_en
 #: schema/codelists/releaseTag.csv:15
 msgid ""
@@ -1155,6 +1150,11 @@ msgid ""
 "multiple releases to provide a snapshot view of the contract, and a version "
 "history. "
 msgstr "Esta etiqueta se utiliza solamente en registros compilados, los cuales tienen que haber fusionado múltiples entregas para dar un panorama general del contrato y un histórico de versiones."
+
+#. Title_en
+#: schema/codelists/releaseTag.csv:15
+msgid "Compiled record"
+msgstr "Registro compilado"
 
 #. Title_en
 #: schema/codelists/submissionMethod.csv:1
@@ -1176,15 +1176,15 @@ msgstr "Escrita"
 msgid "In Person"
 msgstr "En Persona"
 
-#. Title_en
-#: schema/codelists/tenderStatus.csv:1
-msgid "Planned"
-msgstr "Planeada"
-
 #. Description_en
 #: schema/codelists/tenderStatus.csv:1
 msgid "This tender has been proposed, but is not yet taking place."
 msgstr "Esta licitación tiene propuestas, pero aún no entra en vigor."
+
+#. Title_en
+#: schema/codelists/tenderStatus.csv:1
+msgid "Planned"
+msgstr "Planeada"
 
 #. Description_en
 #: schema/codelists/tenderStatus.csv:2
@@ -1201,12 +1201,12 @@ msgstr "Se ha cancelado el proceso de licitación."
 msgid "The tender process as unsucessful."
 msgstr "El proceso de licitación no fue exitoso."
 
-#. Title_en
-#: schema/codelists/tenderStatus.csv:5
-msgid "Complete"
-msgstr "Completo"
-
 #. Description_en
 #: schema/codelists/tenderStatus.csv:5
 msgid "The tender process is complete."
 msgstr "Se completó el proceso de licitación."
+
+#. Title_en
+#: schema/codelists/tenderStatus.csv:5
+msgid "Complete"
+msgstr "Completo"
