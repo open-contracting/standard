@@ -1147,14 +1147,14 @@
         "Transaction": {
             "type": "object",
             "title": "Transaction information",
-            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Budget Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
             "required": [
                 "id"
             ],
             "properties": {
                 "id": {
                     "title": "ID",
-                    "description": "A unique identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For the budget data package this is the id, for IATI, the transaction reference.",
+                    "description": "A unique identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For IATI this is the transaction reference.",
                     "type": [
                         "string",
                         "integer"
@@ -1163,7 +1163,7 @@
                 },
                 "source": {
                     "title": "Data source",
-                    "description": "Used to point either to a corresponding Budget Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
+                    "description": "Used to point either to a corresponding Fiscal Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
                     "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
@@ -1181,22 +1181,22 @@
                     ],
                     "format": "date-time"
                 },
-                "amount": {
-                    "title": "Amount",
-                    "description": "The value of the transaction. A negative value indicates a refund or correction.",
-                    "$ref": "#/definitions/Value"
+                "value": {
+                    "$ref": "#/definitions/Value",
+                    "title": "Value",
+                    "description": "The value of the transaction."
                 },
-                "providerOrganization": {
-                    "title": "Provider organization",
-                    "description": "The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
-                    "$ref": "#/definitions/Identifier"
+                "payer": {
+                    "$ref": "#/definitions/OrganizationReference",
+                    "title": "Payer",
+                    "description": "An organization reference for the organization from which the funds in this transaction originate."
                 },
-                "receiverOrganization": {
-                    "title": "Receiver organization",
-                    "description": "The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
-                    "$ref": "#/definitions/Identifier"
+                "payee": {
+                    "$ref": "#/definitions/OrganizationReference",
+                    "title": "Payee",
+                    "description": "An organization reference for the organization which receives the funds in this transaction."
                 },
-                "uri": {
+                 "uri": {
                     "title": "Linked spending information",
                     "description": "A URI pointing directly to a machine-readable record about this spending transaction.",
                     "mergeStrategy": "ocdsVersion",
@@ -1205,6 +1205,33 @@
                         "null"
                     ],
                     "format": "uri"
+                },
+                "amount": {
+                    "title": "Amount",
+                    "description": "The value of the transaction. A negative value indicates a refund or correction.",
+                    "$ref": "#/definitions/Value",
+                    "deprecated": {
+                        "description": "This field has been replaced by the ```transaction.value``` field for consistency with the use of value and amount elsewhere in the standard.",
+                        "deprecatedVersion": "1.1"
+                    }
+                },
+                "providerOrganization": {
+                    "title": "Provider organization",
+                    "description": "The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
+                    "$ref": "#/definitions/Identifier",
+                    "deprecated": {
+                        "description": "This field has been replaced by the ```transaction.payer``` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "deprecatedVersion": "1.1"
+                    }
+                },
+                "receiverOrganization": {
+                    "title": "Receiver organization",
+                    "description": "The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
+                    "$ref": "#/definitions/Identifier",
+                    "deprecated": {
+                        "description": "This field has been replaced by the ```transaction.payee``` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "deprecatedVersion": "1.1"
+                    }
                 }
             }
         },
