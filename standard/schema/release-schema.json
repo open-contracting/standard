@@ -1436,7 +1436,7 @@
                 },
                 "unit": {
                     "title": "Unit",
-                    "description": "Description of the unit which the good comes in e.g. hours, kilograms. Made up of a unit name, and the value of a single unit.",
+                    "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price. For comparability, an established list of units can be used.  ",
                     "type": "object",
                     "properties": {
                         "name": {
@@ -1452,6 +1452,33 @@
                             "title": "Value",
                             "description": "The monetary value of a single unit.",
                             "$ref": "#/definitions/Value"
+                        },
+                        "scheme": {
+                            "title": "Scheme",
+                            "description": "The list from which units of measure identifiers are taken. This should be an entry in the [unitClassificationScheme](http://standard.open-contracting.org/latest/en/schema/codelists/#unit-classification-scheme) codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended.",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "codelist": "unitClassificationScheme.csv",
+                            "openCodelist": true
+                        },
+                        "id": {
+                            "title": "ID",
+                            "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure. ",
+                            "type": [
+                                "string",
+                                "null"
+                            ] 
+                        },
+                        "uri": {
+                            "title": "URI",
+                            "description": "If the scheme used provide a machine-readable URI for this unit of measure, this can be given.",
+                            "format": "uri",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
                         }
                     },
                     "patternProperties": {

@@ -35,6 +35,16 @@ Items should be classified using existing gazetteers and codelists, such as the 
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
 
+### Unit Classification Scheme
+
+Item quantities may be provided using an established codelist for units of measurement. Codelists may provide human-readable descriptions of units, or symbols for use in input and display interfaces.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/unitClassificationScheme.csv
+```
+
 ### Organization Identifier Scheme
 
 The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). See the identifiers section for [more information on organization identifiers](../../identifiers/#organization-identifiers)
