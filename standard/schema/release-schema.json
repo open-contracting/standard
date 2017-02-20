@@ -7,21 +7,18 @@
         "ocid": {
             "title": "Open Contracting ID",
             "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/)",
-            "type": "string",
-            "mergeStrategy": "ocdsOmit"
+            "type": "string"
         },
         "id": {
             "title": "Release ID",
             "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of it's related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
-            "type": "string",
-            "mergeStrategy": "ocdsOmit"
+            "type": "string"
         },
         "date": {
             "title": "Release Date",
             "description": "The date this information is released, it may well be the same as the parent publishedDate, it must not be later than the publishedDate from the parent package. It is used to determine merge order.",
             "type": "string",
-            "format": "date-time",
-            "mergeStrategy": "ocdsOmit"
+            "format": "date-time"
         },
         "tag": {
             "title": "Release Tag",
@@ -47,9 +44,8 @@
                     "compiled"
                 ]
             },
-            "mergeStrategy": "ocdsOmit",
             "codelist": "releaseTag.csv",
-            "openCodelist":false
+            "openCodelist": false
         },
         "initiationType": {
             "title": "Initiation type",
@@ -58,9 +54,8 @@
             "enum": [
                 "tender"
             ],
-            "mergeStrategy": "ocdsVersion",
             "codelist": "initiationType.csv",
-            "openCodelist":false
+            "openCodelist": false
         },
         "title": {
             "title": "Title",
@@ -106,10 +101,6 @@
             "title": "Awards",
             "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
             "type": "array",
-            "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {
-                "idRef": "id"
-            },
             "items": {
                 "$ref": "#/definitions/Award"
             },
@@ -119,10 +110,6 @@
             "title": "Contracts",
             "description": "Information from the contract creation phase of the procurement process.",
             "type": "array",
-            "mergeStrategy": "arrayMergeById",
-            "mergeOptions": {
-                "idRef": "id"
-            },
             "items": {
                 "$ref": "#/definitions/Contract"
             },
@@ -135,8 +122,7 @@
                 "string",
                 "null"
             ],
-            "default": "en",
-            "mergeStrategy": "ocdsVersion"
+            "default": "en"
         },
         "relatedProcesses": {
             "uniqueItems": true,
@@ -170,17 +156,12 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "documents": {
                     "title": "Documents",
                     "description": "A list of documents related to the planning process.",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Document"
                     }
@@ -217,8 +198,7 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "title": {
                     "title": "Tender Title",
@@ -226,8 +206,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "description": {
                     "title": "Tender description",
@@ -235,8 +214,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "status": {
                     "title": "Tender status",
@@ -253,18 +231,13 @@
                         "complete",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "tenderStatus.csv",
-                    "openCodelist":false
+                    "openCodelist": false
                 },
                 "items": {
                     "title": "Items to be procured",
                     "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Item"
                     },
@@ -293,9 +266,8 @@
                         "limited",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "method.csv",
-                    "openCodelist":false
+                    "openCodelist": false
                 },
                 "procurementMethodDetails": {
                     "title": "Procurement method details",
@@ -303,8 +275,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "procurementMethodRationale": {
                     "title": "Procurement method rationale",
@@ -312,8 +283,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "procurementCategory": {
                     "title": "Procurement category",
@@ -332,7 +302,6 @@
                         "string",
                         "null"
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "awardCriteria.csv",
                     "openCodelist": true
                 },
@@ -342,8 +311,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "submissionMethod": {
                     "title": "Submission method",
@@ -355,7 +323,6 @@
                     "items": {
                         "type": "string"
                     },
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "submissionMethod.csv",
                     "openCodelist": true
                 },
@@ -365,8 +332,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "tenderPeriod": {
                     "title": "Tender period",
@@ -384,8 +350,7 @@
                     "type": [
                         "boolean",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "eligibilityCriteria": {
                     "title": "Eligibility criteria",
@@ -393,8 +358,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "awardPeriod": {
                     "title": "Evaluation and award period",
@@ -412,8 +376,7 @@
                     "type": [
                         "integer",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "tenderers": {
                     "title": "Tenderers",
@@ -422,8 +385,7 @@
                     "items": {
                         "$ref": "#/definitions/OrganizationReference"
                     },
-                    "uniqueItems": true,
-                    "mergeStrategy": "ocdsVersion"
+                    "uniqueItems": true
                 },
                 "procuringEntity": {
                     "title": "Procuring entity",
@@ -434,10 +396,6 @@
                     "title": "Documents",
                     "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#document-type) for details of potential documents to include.",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Document"
                     }
@@ -446,10 +404,6 @@
                     "title": "Milestones",
                     "description": "A list of milestones associated with the tender.",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Milestone"
                     }
@@ -511,8 +465,7 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "mergeStrategy": "overwrite"
+                    ]
                 },
                 "title": {
                     "title": "Title",
@@ -520,8 +473,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "description": {
                     "title": "Description",
@@ -529,8 +481,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "status": {
                     "title": "Award status",
@@ -546,7 +497,6 @@
                         "unsuccessful",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "awardStatus.csv",
                     "openCodelist": false
                 },
@@ -557,8 +507,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "value": {
                     "title": "Value",
@@ -572,18 +521,13 @@
                     "items": {
                         "$ref": "#/definitions/OrganizationReference"
                     },
-                    "uniqueItems": true,
-                    "mergeStrategy": "ocdsVersion"
+                    "uniqueItems": true
                 },
                 "items": {
                     "title": "Items awarded",
                     "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
                     "type": "array",
                     "minItems": 1,
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Item"
                     },
@@ -598,10 +542,6 @@
                     "title": "Documents",
                     "description": "All documents and attachments related to the award, including any notices.",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Document"
                     },
@@ -641,8 +581,7 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "mergeStrategy": "overwrite"
+                    ]
                 },
                 "awardID": {
                     "title": "Award ID",
@@ -650,8 +589,7 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "extendsContractID": {
                     "title": "Extends contract ID",
@@ -666,8 +604,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "description": {
                     "title": "Contract description",
@@ -675,8 +612,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "status": {
                     "title": "Contract status",
@@ -692,7 +628,6 @@
                         "terminated",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "contractStatus.csv",
                     "openCodelist": false
                 },
@@ -711,10 +646,6 @@
                     "description": "The goods, services, and any intangible outcomes in this contract. Note: If the items are the same as the award do not repeat.",
                     "type": "array",
                     "minItems": 1,
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Item"
                     },
@@ -727,17 +658,12 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "documents": {
                     "title": "Documents",
                     "description": "All documents and attachments related to the contract, including any notices.",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Document"
                     },
@@ -793,10 +719,6 @@
                     "title": "Transactions",
                     "description": "A list of the spending transactions made against this contract",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Transaction"
                     },
@@ -806,10 +728,6 @@
                     "title": "Milestones",
                     "description": "As milestones are completed, milestone completions should be documented.",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Milestone"
                     },
@@ -819,10 +737,6 @@
                     "title": "Documents",
                     "description": "Documents and reports that are part of the implementation phase e.g. audit and evaluation reports.",
                     "type": "array",
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
-                    },
                     "items": {
                         "$ref": "#/definitions/Document"
                     },
@@ -843,8 +757,7 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "mergeStrategy": "overwrite"
+                    ]
                 },
                 "title": {
                     "title": "Title",
@@ -852,8 +765,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "type": {
                     "title": "Milestone type",
@@ -872,8 +784,8 @@
                         "financing",
                         null
                     ],
-                    "codelist":"milestoneType.csv",
-                    "opencodelist":true
+                    "codelist": "milestoneType.csv",
+                    "opencodelist": true
                 },
                 "description": {
                     "title": "Description",
@@ -881,8 +793,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "code": {
                     "title": "Milestone code",
@@ -899,8 +810,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "dateMet": {
                     "format": "date-time",
@@ -918,8 +828,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "status": {
                     "title": "Status",
@@ -935,7 +844,6 @@
                         "partiallyMet",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "milestoneStatus.csv",
                     "openCodelist": false
                 },
@@ -946,10 +854,6 @@
                     "deprecated": {
                         "deprecatedVersion": "1.1",
                         "description": "Inclusion of documents at the milestone level is now deprecated. Documentation should be attached in the tender, award, contract or implementation sections, and titles and descriptions used to highlight the related milestone. Publishers who wish to continue to provide documents at the milestone level should explicitly declare this by using the milestone documents extension."
-                    },
-                    "mergeStrategy": "arrayMergeById",
-                    "mergeOptions": {
-                        "idRef": "id"
                     },
                     "items": {
                         "$ref": "#/definitions/Document"
@@ -986,8 +890,7 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "mergeStrategy": "overwrite"
+                    ]
                 },
                 "documentType": {
                     "title": "Document type",
@@ -996,7 +899,6 @@
                         "string",
                         "null"
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "documentType.csv",
                     "openCodelist": true
                 },
@@ -1006,8 +908,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "description": {
                     "title": "Description",
@@ -1015,8 +916,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "url": {
                     "title": "URL",
@@ -1025,8 +925,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "uri",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "uri"
                 },
                 "datePublished": {
                     "title": "Date published",
@@ -1035,8 +934,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "dateModified": {
                     "title": "Date modified",
@@ -1045,8 +943,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "format": {
                     "title": "Format",
@@ -1054,8 +951,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "language": {
                     "title": "Language",
@@ -1063,8 +959,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 }
             },
             "patternProperties": {
@@ -1090,7 +985,6 @@
                 "id": {
                     "title": "ID",
                     "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "integer",
@@ -1100,7 +994,6 @@
                 "description": {
                     "title": "Budget Source",
                     "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "null"
@@ -1114,7 +1007,6 @@
                 "project": {
                     "title": "Project title",
                     "description": "The name of the project that through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "null"
@@ -1123,7 +1015,6 @@
                 "projectID": {
                     "title": "Project identifier",
                     "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "integer",
@@ -1133,7 +1024,6 @@
                 "uri": {
                     "title": "Linked budget information",
                     "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that fund this contracting process. Information may be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "null"
@@ -1151,7 +1041,6 @@
                         "deprecatedVersion": "1.1",
                         "description": "The budget data source field was intended to link to machine-readable data about the budget for a contracting process, but has been widely mis-used to provide free-text descriptions of budget providers. As a result, it has been removed from version 1.1. budget/uri can be used to provide a link to machine-readable budget information, and budget/description can be used to provide human-readable information on the budget source."
                     },
-                    "mergeStrategy": "ocdsVersion",
                     "format": "uri"
                 }
             },
@@ -1190,13 +1079,11 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "mergeStrategy": "overwrite"
+                    ]
                 },
                 "source": {
                     "title": "Data source",
                     "description": "Used to point either to a corresponding Fiscal Data Package, IATI file, or machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "null"
@@ -1206,7 +1093,6 @@
                 "date": {
                     "title": "Date",
                     "description": "The date of the transaction",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "null"
@@ -1231,7 +1117,6 @@
                 "uri": {
                     "title": "Linked spending information",
                     "description": "A URI pointing directly to a machine-readable record about this spending transaction.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "null"
@@ -1275,7 +1160,6 @@
                         "null"
                     ],
                     "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
-                    "mergeStrategy": "ocdsVersion",
                     "title": "Organization name"
                 },
                 "id": {
@@ -1284,7 +1168,6 @@
                         "integer"
                     ],
                     "description": "The id of the party being referenced. This must match the id of an entry in the parties section.",
-                    "mergeStrategy": "overwrite",
                     "title": "Organization ID"
                 },
                 "identifier": {
@@ -1344,7 +1227,6 @@
                 "name": {
                     "title": "Common name",
                     "description": "A common name for this organization or participant in the contracting process. The identifier object provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization is known. This field could also include details of the department or sub-unit involved in this contracting process.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "null"
@@ -1366,7 +1248,6 @@
                     "title": "Additional identifiers",
                     "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
                     "type": "array",
-                    "mergeStrategy": "ocdsVersion",
                     "items": {
                         "$ref": "#/definitions/Identifier"
                     },
@@ -1420,13 +1301,11 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "mergeStrategy": "overwrite"
+                    ]
                 },
                 "description": {
                     "title": "Description",
                     "description": "A description of the goods, services to be provided.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "string",
                         "null"
@@ -1441,7 +1320,6 @@
                     "title": "Additional classifications",
                     "description": "An array of additional classifications for the item. See the [itemClassificationScheme](http://standard.open-contracting.org/latest/en/schema/codelists/#item-classification-scheme) codelist for common options to use in OCDS. This may also be used to present codes from an internal classification scheme.",
                     "type": "array",
-                    "mergeStrategy": "ocdsVersion",
                     "items": {
                         "$ref": "#/definitions/Classification"
                     },
@@ -1450,7 +1328,6 @@
                 "quantity": {
                     "title": "Quantity",
                     "description": "The number of units required",
-                    "mergeStrategy": "ocdsVersion",
                     "type": [
                         "number",
                         "null"
@@ -1464,7 +1341,6 @@
                         "name": {
                             "title": "Name",
                             "description": "Name of the unit",
-                            "mergeStrategy": "ocdsVersion",
                             "type": [
                                 "string",
                                 "null"
@@ -1534,13 +1410,11 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "changes": {
                     "title": "Amended fields",
                     "description": "An array change objects describing the fields changed, and their former values.",
-                    "mergeStrategy": "ocdsVersion",
                     "type": "array",
                     "items": {
                         "type": "object",
@@ -1571,8 +1445,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 }
             },
             "patternProperties": {
@@ -1595,7 +1468,6 @@
                         "string",
                         "null"
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "itemClassificationScheme.csv",
                     "openCodelist": true
                 },
@@ -1606,8 +1478,7 @@
                         "string",
                         "integer",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "description": {
                     "title": "Description",
@@ -1615,8 +1486,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "uri": {
                     "title": "URI",
@@ -1625,8 +1495,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "uri",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "uri"
                 }
             },
             "patternProperties": {
@@ -1649,7 +1518,6 @@
                         "string",
                         "null"
                     ],
-                    "mergeStrategy": "ocdsVersion",
                     "codelist": "organizationIdentifierRegistrationAgency_iati.csv",
                     "openCodelist": true
                 },
@@ -1660,8 +1528,7 @@
                         "string",
                         "integer",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "legalName": {
                     "title": "Legal Name",
@@ -1669,8 +1536,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "uri": {
                     "title": "URI",
@@ -1679,8 +1545,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "uri",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "uri"
                 }
             },
             "patternProperties": {
@@ -1703,8 +1568,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The street address. For example, 1600 Amphitheatre Pkwy.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The street address. For example, 1600 Amphitheatre Pkwy."
                 },
                 "locality": {
                     "title": "Locality",
@@ -1712,8 +1576,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The locality. For example, Mountain View.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The locality. For example, Mountain View."
                 },
                 "region": {
                     "title": "Region",
@@ -1721,8 +1584,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The region. For example, CA.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The region. For example, CA."
                 },
                 "postalCode": {
                     "title": "Postalcode",
@@ -1730,8 +1592,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The postal code. For example, 94043.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The postal code. For example, 94043."
                 },
                 "countryName": {
                     "title": "Country name",
@@ -1739,8 +1600,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The country name. For example, United States.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The country name. For example, United States."
                 }
             },
             "patternProperties": {
@@ -1763,8 +1623,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
                 },
                 "email": {
                     "title": "Email",
@@ -1772,8 +1631,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The e-mail address of the contact point/person.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The e-mail address of the contact point/person."
                 },
                 "telephone": {
                     "title": "Telephone",
@@ -1781,8 +1639,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The telephone number of the contact point/person. This should include the international dialling code.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The telephone number of the contact point/person. This should include the international dialling code."
                 },
                 "faxNumber": {
                     "title": "Fax number",
@@ -1790,8 +1647,7 @@
                         "string",
                         "null"
                     ],
-                    "description": "The fax number of the contact point/person. This should include the international dialling code.",
-                    "mergeStrategy": "ocdsVersion"
+                    "description": "The fax number of the contact point/person. This should include the international dialling code."
                 },
                 "url": {
                     "title": "URL",
@@ -1800,8 +1656,7 @@
                         "null"
                     ],
                     "description": "A web address for the contact point/person.",
-                    "format": "uri",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "uri"
                 }
             },
             "patternProperties": {
@@ -1823,8 +1678,7 @@
                     "type": [
                         "number",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 },
                 "currency": {
                     "title": "Currency",
@@ -1832,8 +1686,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "mergeStrategy": "ocdsVersion"
+                    ]
                 }
             }
         },
@@ -1848,8 +1701,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "endDate": {
                     "title": "End date",
@@ -1858,8 +1710,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "date-time",
-                    "mergeStrategy": "ocdsVersion"
+                    "format": "date-time"
                 },
                 "maxExtentDate": {
                     "description": "The period cannot be extended beyond this date.",
@@ -1918,8 +1769,8 @@
                         "array",
                         "null"
                     ],
-                    "codelist":"relatedProcess.csv",
-                    "opencodelist":true
+                    "codelist": "relatedProcess.csv",
+                    "opencodelist": true
                 },
                 "title": {
                     "description": "The title of the related process, where possible this field should match the tender/title field in the related process.",
