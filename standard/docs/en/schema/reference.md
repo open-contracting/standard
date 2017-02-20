@@ -109,6 +109,11 @@ The planning section can be used to describe the background to a contracting pro
    :file: standard/docs/field_definitions/release-planning.csv
 ```
 
+```eval_rst
+.. extensionlist:: The following extensions are available for planning
+   :list: planning
+```
+
 Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](http://fiscal.dataprotocols.org/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 #### Budget 
@@ -117,6 +122,11 @@ Apart from documents, the majority of information is held within the budget bloc
    :header-rows: 1
    :widths: 20 65 15
    :file: standard/docs/field_definitions/release-budget.csv
+```
+
+```eval_rst
+.. extensionlist:: The following extensions are available for budget
+   :list: budget
 ```
 
 ### Tender
@@ -170,6 +180,10 @@ The award section is used to announce any awards issued for this tender. There m
    :file: standard/docs/field_definitions/release-award.csv
 ```
 
+```eval_rst
+.. extensionlist:: The following extensions are available for award
+   :list: award
+```
 
 ### Contract
 
@@ -180,6 +194,11 @@ The contract section is used to provide details of contracts that have been ente
    :header-rows: 1
    :widths: 20 65 15
    :file: standard/docs/field_definitions/release-contract.csv
+```
+
+```eval_rst
+.. extensionlist:: The following extensions are available for contracts
+   :list: contract
 ```
 
 #### Framework contracts
@@ -202,6 +221,11 @@ Implementation information can be updated over the course of a contract. It belo
    :header-rows: 1
    :widths: 20 65 15
    :file: standard/docs/field_definitions/release-implementation.csv
+```
+
+```eval_rst
+.. extensionlist:: The following extensions are available for implementation
+   :list: implementation
 ```
 
 Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](conformance_and_extensions.md)
@@ -315,6 +339,11 @@ The document block is also used to link to legal notices, which should have a do
    :file: standard/docs/field_definitions/release-document.csv
 ```
 
+```eval_rst
+.. extensionlist:: The following extensions are available for document
+   :list: document
+```
+
 ### Date
 
 OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339#section-5.6).
@@ -352,6 +381,11 @@ Periods may also include a ```maxExtentDate``` which indicates the latest possib
    :file: standard/docs/field_definitions/release-period.csv
 ```
 
+```eval_rst
+.. extensionlist:: The following extensions are available for period
+   :list: period
+```
+
 ### Item
 
 The items block is used to list the line-items associated with a tender, award or contract. 
@@ -362,8 +396,6 @@ The items block is used to list the line-items associated with a tender, award o
    :widths: 20 65 15
    :file: standard/docs/field_definitions/release-item.csv
 ```
-
-
 
 ```eval_rst
 .. extensionlist:: These are extensions related to Items.
@@ -396,7 +428,6 @@ The ```unit``` block allows detailed specification of the parameters and price o
    :widths: 20 65 15
    :file: standard/docs/field_definitions/release-item-unit.csv
 ```
-
 
 ### Milestone
 
