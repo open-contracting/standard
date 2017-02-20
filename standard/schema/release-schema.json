@@ -47,7 +47,9 @@
                     "compiled"
                 ]
             },
-            "mergeStrategy": "ocdsOmit"
+            "mergeStrategy": "ocdsOmit",
+            "codelist": "releaseTag.csv",
+            "openCodelist":false
         },
         "initiationType": {
             "title": "Initiation type",
@@ -56,7 +58,9 @@
             "enum": [
                 "tender"
             ],
-            "mergeStrategy": "ocdsVersion"
+            "mergeStrategy": "ocdsVersion",
+            "codelist": "initiationType.csv",
+            "openCodelist":false
         },
         "title": {
             "title": "Title",
@@ -249,7 +253,9 @@
                         "complete",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "tenderStatus.csv",
+                    "openCodelist":false
                 },
                 "items": {
                     "title": "Items to be procured",
@@ -287,7 +293,9 @@
                         "limited",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "method.csv",
+                    "openCodelist":false
                 },
                 "procurementMethodDetails": {
                     "title": "Procurement method details",
@@ -324,7 +332,9 @@
                         "string",
                         "null"
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "awardCriteria.csv",
+                    "openCodelist": true
                 },
                 "awardCriteriaDetails": {
                     "title": "Award criteria details",
@@ -345,7 +355,9 @@
                     "items": {
                         "type": "string"
                     },
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "submissionMethod.csv",
+                    "openCodelist": true
                 },
                 "submissionMethodDetails": {
                     "title": "Submission method details",
@@ -534,7 +546,9 @@
                         "unsuccessful",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "awardStatus.csv",
+                    "openCodelist": false
                 },
                 "date": {
                     "title": "Award date",
@@ -678,7 +692,9 @@
                         "terminated",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "contractStatus.csv",
+                    "openCodelist": false
                 },
                 "period": {
                     "title": "Period",
@@ -855,7 +871,9 @@
                         "reporting",
                         "financing",
                         null
-                    ]
+                    ],
+                    "codelist":"milestoneType.csv",
+                    "opencodelist":true
                 },
                 "description": {
                     "title": "Description",
@@ -917,7 +935,9 @@
                         "partiallyMet",
                         null
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "milestoneStatus.csv",
+                    "openCodelist": false
                 },
                 "documents": {
                     "title": "Documents",
@@ -976,7 +996,9 @@
                         "string",
                         "null"
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "documentType.csv",
+                    "openCodelist": true
                 },
                 "title": {
                     "title": "Title",
@@ -1465,11 +1487,11 @@
                         },
                         "id": {
                             "title": "ID",
-                            "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure. ",
+                            "description": "The identifier from the codelist referenced in the scheme property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure. ",
                             "type": [
                                 "string",
                                 "null"
-                            ] 
+                            ]
                         },
                         "uri": {
                             "title": "URI",
@@ -1573,7 +1595,9 @@
                         "string",
                         "null"
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "itemClassificationScheme.csv",
+                    "openCodelist": true
                 },
                 "id": {
                     "title": "ID",
@@ -1625,7 +1649,9 @@
                         "string",
                         "null"
                     ],
-                    "mergeStrategy": "ocdsVersion"
+                    "mergeStrategy": "ocdsVersion",
+                    "codelist": "organizationIdentifierRegistrationAgency_iati.csv",
+                    "openCodelist": true
                 },
                 "id": {
                     "title": "ID",
@@ -1891,7 +1917,9 @@
                     "type": [
                         "array",
                         "null"
-                    ]
+                    ],
+                    "codelist":"relatedProcess.csv",
+                    "opencodelist":true
                 },
                 "title": {
                     "description": "The title of the related process, where possible this field should match the tender/title field in the related process.",
