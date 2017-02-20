@@ -9,13 +9,14 @@
 # Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
 # samgoeta <samgoeta@gmail.com>, 2016
 # samgoeta <samgoeta@gmail.com>, 2016
+# Tim Davies <tim.davies@opendataservices.coop>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-01 14:15+0000\n"
-"PO-Revision-Date: 2016-12-07 11:40+0000\n"
-"Last-Translator: samgoeta <samgoeta@gmail.com>\n"
+"POT-Creation-Date: 2017-02-17 14:56+0000\n"
+"PO-Revision-Date: 2017-02-20 11:05+0000\n"
+"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>\n"
 "Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,11 +89,11 @@ msgstr "Une instance ne peut contenir qu'une seule section sur l'appel d'offres 
 
 #: ../../standard/docs/en/schema/reference.md:21
 msgid ""
-"Releases are given a [tag](#release-tag) to indicate the specific stage of a"
-" contracting process they represent. However, there are no formal "
-"restrictions on when information about a stage of the contracting process "
-"may be provided."
-msgstr "Les instances reçoivent un [tag](#release-tag) pour indiquer à quelle étape du processus de passation de marché elles correspondent. Cependant, il n'y a pas de restriction formelle sur le moment où les informations sur une étape du processus de passation de marché peuvent être fournies. "
+"Releases are given a [tag](../../codelists/#release-tag) to indicate the "
+"specific stage of a contracting process they represent. However, there are "
+"no formal restrictions on when information about a stage of the contracting "
+"process may be provided."
+msgstr "Les instances reçoivent un [tag](../../codelists/#release-tag) pour indiquer à quelle étape du processus de passation de marché elles correspondent. Cependant, il n'y a pas de restriction formelle sur le moment où les informations sur une étape du processus de passation de marché peuvent être fournies. "
 
 #: ../../standard/docs/en/schema/reference.md:23
 msgid ""
@@ -259,8 +260,7 @@ msgstr "La section sur l'appel d'offres comprend des détails sur l'annonce fait
 msgid ""
 "It may contain details of a forthcoming process to receive and evaluate "
 "proposals to supply these goods and services, and may also be used to record"
-" details of how a completed tender process, including details of bids "
-"received."
+" details of a completed tender process, including details of bids received."
 msgstr "Elle peut contenir des détails sur un processus à venir afin de recevoir et évaluer les offres de ces biens et services. Elle peut également être utilisée pour enregistrer les détails d'un processus d'appel d'offres terminé, y compris les détails des offres reçues."
 
 #: ../../standard/docs/en/schema/reference.md:101
@@ -649,7 +649,7 @@ msgid ""
 "defaults for each field. For example, the startDate time of a clarification "
 "period may be set to '00:00:00Z' to indicate that clarifications can be "
 "requested from any time on the date stated, with the endDate time set to "
-"23:23:59Z to indicate that clarifications can be sent up until the end of "
+"23:59:59Z to indicate that clarifications can be sent up until the end of "
 "the endDate given. Alternatively, if clarification requests are only "
 "accepted in standard office hours, these values might be 09:00:00Z and "
 "17:00:00Z respectively."
@@ -658,7 +658,7 @@ msgstr "Dans le cas où le système d'où les des données sont extraites n'incl
 #: ../../standard/docs/en/schema/reference.md:288
 msgid ""
 "In the event that a date field is not bound to a specific time at all, "
-"publishers should choose a default time value of '23:23:59' and either 'Z' "
+"publishers should choose a default time value of '23:59:59' and either 'Z' "
 "(for UTC) or the timezone of the publisher, indicating that the time refers "
 "to the end of the given date."
 msgstr "Dans le cas où un champ de date ne soit pas lié à un horaire précis, les producteurs de données OCDS doivent choisir une valeur de temps par défaut de '23:59:59' et soit 'Z' (pour le fuseau UTC) ou le fuseau horaire du producteur des données, indiquant ainsi que l'heure' se réfère à la fin de la date donnée."
@@ -838,10 +838,10 @@ msgstr "Exemple d'utilisation"
 
 #: ../../standard/docs/en/schema/reference.md:403
 msgid ""
-"A contract is for ‘Software consultancy services’ may be published in a "
-"release with the default language sent to ‘en’ (the ISO-639-1 code for "
-"English). The following examples give the description of an item as English,"
-" French and Spanish."
+"A contract for ‘Software consultancy services’ may be published in a release"
+" with the default language sent to ‘en’ (the ISO-639-1 code for English). "
+"The following examples give the description of an item as English, French "
+"and Spanish."
 msgstr "Un contrat pour des \"services de conseil en logiciels\" peut être publié avec l'anglais comme langue par défaut grâce au code ‘en’ ('le code ISO-639-1 pour l'anglais). Les exemples suivants donnent la description d'un livrable en anglais, français et espagnol."
 
 #: ../../standard/docs/en/schema/reference.md:405
