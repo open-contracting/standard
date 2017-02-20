@@ -235,7 +235,7 @@ See [document](#document) reference below.
 
 A release may amend properties from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for changes to a tender, award or contract to be explicitly declared. 
 
-The amendment block in each of tender, award and contract blocks provides the ability to explicitly declare changed fields, their former values, to provide an explanation for the change, and attach or reference relevant documentation.
+The amendment array in a tender, award or contract block provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
 
 ```eval_rst
 .. csv-table::
@@ -244,18 +244,12 @@ The amendment block in each of tender, award and contract blocks provides the ab
    :file: standard/docs/field_definitions/release-amendment.csv
 ```
 
-Amendment information should not be included in compiled records, as it is not possible to indicate __all__ the former values of a field, only the most recent known value: whereas the version history of a full record can show all previous values.
-
 #### Changes
 
-Within each amendment block, publishers should provide an array of items that have changed, along with their former values. 
+The changes array was deprecated in OCDS 1.1. Structured information on the former value of specific fields should be provided by:
 
-```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-changes.csv
-```
+* Including releases from **before** and **after** a change within a release package;
+* Using the amendment array in tender, contract or award to explicitly relate these releases to an amendment.
 
 ## Field reference
 

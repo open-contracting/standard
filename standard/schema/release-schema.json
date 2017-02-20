@@ -408,8 +408,22 @@
                         "$ref": "#/definitions/Milestone"
                     }
                 },
+                "amendments": {
+                    "description": "A tender amendment is a formal change to the tender, and generally involves the publication of a new tender notice/release. The rationale and a description of the changes made can be provided here.",
+                    "type": "array",
+                    "title": "Amendments",
+                    "items": {
+                        "$ref": "#/definitions/Amendment"
+                    }
+                },
                 "amendment": {
-                    "$ref": "#/definitions/Amendment"
+                    "title":"Amendment",
+                    "description":"The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+                    "$ref": "#/definitions/Amendment",
+                    "deprecated": {
+                        "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+                        "deprecatedVersion": "1.1"
+                    }
                 }
             },
             "patternProperties": {
@@ -547,8 +561,22 @@
                     },
                     "uniqueItems": true
                 },
+                "amendments": {
+                    "description": "An award amendment is a formal change to the details of the award, and generally involves the publication of a new award notice/release. The rationale and a description of the changes made can be provided here.",
+                    "type": "array",
+                    "title": "Amendments",
+                    "items": {
+                        "$ref": "#/definitions/Amendment"
+                    }
+                },
                 "amendment": {
-                    "$ref": "#/definitions/Amendment"
+                    "title":"Amendment",
+                    "description":"The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+                    "$ref": "#/definitions/Amendment",
+                    "deprecated": {
+                        "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+                        "deprecatedVersion": "1.1"
+                    }
                 }
             },
             "patternProperties": {
@@ -669,9 +697,6 @@
                     },
                     "uniqueItems": true
                 },
-                "amendment": {
-                    "$ref": "#/definitions/Amendment"
-                },
                 "implementation": {
                     "title": "Implementation",
                     "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.",
@@ -692,6 +717,23 @@
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Milestone"
+                    }
+                },
+                "amendments": {
+                    "description": "A contract amendment is a formal change to, or extension of, a contract, and generally involves the publication of a new contract notice/release, or some other documents detailing the change. The rationale and a description of the changes made can be provided here.",
+                    "type": "array",
+                    "title": "Amendments",
+                    "items": {
+                        "$ref": "#/definitions/Amendment"
+                    }
+                },
+                "amendment": {
+                    "title":"Amendment",
+                    "description":"The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+                    "$ref": "#/definitions/Amendment",
+                    "deprecated": {
+                        "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+                        "deprecatedVersion": "1.1"
                     }
                 }
             },
@@ -1400,17 +1442,60 @@
         },
         "Amendment": {
             "title": "Amendment",
-            "type": "object",
+            "type": [
+                "object",
+                "null"
+            ],
             "description": "Amendment information",
             "properties": {
                 "date": {
                     "title": "Amendment date",
-                    "description": "The data of this amendment.",
+                    "description": "The date of this amendment.",
                     "type": [
                         "string",
                         "null"
                     ],
                     "format": "date-time"
+                },
+                "rationale": {
+                    "title": "Rationale",
+                    "description": "An explanation for the amendment.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "An identifier for this amendment: often the amendment number",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "title": "ID"
+                },
+                "description": {
+                    "description": "A free text, or semi-structured, description of the changes made in this amendment.",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "title": "Description"
+                },
+                "amendsReleaseID": {
+                    "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "title": "Amended release (identifier)"
+                },
+                "releaseID": {
+                    "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "title": "Amending release (identifier)"
                 },
                 "changes": {
                     "title": "Amended fields",
@@ -1437,15 +1522,11 @@
                                 ]
                             }
                         }
+                    },
+                    "deprecated": {
+                        "description": "A free-text or semi-structured string describing the changes made in each amendment can be provided in the amendment.description field. To provide structured information on the fields that have changed, publishers should provide releases indicating the state of the contracting process before and after the amendment.  ",
+                        "deprecatedVersion": "1.1"
                     }
-                },
-                "rationale": {
-                    "title": "Rationale",
-                    "description": "An explanation for the amendment.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
                 }
             },
             "patternProperties": {

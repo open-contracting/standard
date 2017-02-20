@@ -69,6 +69,13 @@ If the record is complete with versioning information, then the versioning secti
 
 ## Merging rules
 
+```eval_rst
+.. warning::
+
+  There are updates to the schema information on merging in OCDS 1.1. The following information has not yet been updated.
+
+```
+
 The merging rules can be summarised as follows:
 
 1. All releases with the same ```ocid``` should be compiled together, processed by order of the release date, and starting with the oldest first. Compare each pair or releases in turn following the rules below. 
