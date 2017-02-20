@@ -89,6 +89,11 @@ The following details can be provided for each party.
    :file: standard/docs/field_definitions/release-organization.csv
 ```
 
+```eval_rst
+.. extensionlist:: The following extensions are available for parties
+   :list: parties
+```
+
 #### Details 
 
 Detailed classification of parties can be provided using one or more [party detail extensions](../../../extensions/party_details/).
