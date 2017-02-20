@@ -307,6 +307,16 @@
                     ],
                     "mergeStrategy": "ocdsVersion"
                 },
+                "procurementCategory": {
+                    "title": "Procurement category",
+                    "description": "The primary category describing the object of this contracting process from the [procurementCategory](http://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category) codelist (e.g. supplies, works, services, consultingServices or mixed).",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "codelist": "procurementCategory.csv",
+                    "openCodelist": false
+                },
                 "awardCriteria": {
                     "title": "Award criteria",
                     "description": "Specify the award criteria for the procurement, using the [award criteria codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#award-criteria)",
@@ -1196,7 +1206,7 @@
                     "title": "Payee",
                     "description": "An organization reference for the organization which receives the funds in this transaction."
                 },
-                 "uri": {
+                "uri": {
                     "title": "Linked spending information",
                     "description": "A URI pointing directly to a machine-readable record about this spending transaction.",
                     "mergeStrategy": "ocdsVersion",

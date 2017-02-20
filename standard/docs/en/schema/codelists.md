@@ -159,6 +159,24 @@ A contracting process aims to fulfil the requirements identified at the planning
 
 Note: The 'direct' code was introduced in Version 1.1. Publishers who completed a codelist mapping prior to 1.1 may have included direct procurement within limited, and may need to review their mappings.
 
+### Procurement Category
+
+The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers should either: 
+
+* (a) select the category that accounts for the greatest value; or 
+* (b) use the 'mixed' code;
+
+depending on the available data in source systems. 
+
+Where a publisher is using the code 'consultingServices', then the 'services' code should be used only for non-consulting services. However, users should note that not all publishers are able to make this distinction from their source data. 
+
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/procurementCategory.csv
+```
+
 ### Award Status
 
 An award move through multiple states. Releases over time may update the status of an award. 
