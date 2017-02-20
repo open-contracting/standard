@@ -27,7 +27,7 @@ jQuery(function () {
           $item.find('.hide').css({"display": "block"});
         }
         var $dt = $('<dt>')
-        $dta = $('<a>').attr({"href": extension.documentaion_url, "class": "reference external"}).text(extension.name[language] || extension.name["en"])
+        $dta = $('<a>').attr({"href": extension.documentation_url, "class": "reference external"}).text(extension.name[language] || extension.name["en"])
         $dt.append($dta)
         $commuityExtensionList.append($dt)
 
@@ -61,7 +61,7 @@ jQuery(function () {
               .text(extension.name[language] || extension.name["en"])
               .append(new_anchor);
       new_item.find(".description").text(extension.description[language] || extension.description.en)
-      new_item.find(".documentation").attr({"href": extension.documentaion_url}).text(documentation_text)
+      new_item.find(".documentation").attr({"href": extension.documentation_url}).text(documentation_text)
       new_item.find(".repository").attr({"href": extension.url}).text(repository_text)
 
       jQuery('#community-extensions').append(new_item)
