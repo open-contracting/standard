@@ -2,7 +2,7 @@
 
 ### ToDo
 
-* [ ] Update descriptions in schema
+* [X] Update descriptions in schema
 * [ ] Add codelist.csv file once extension mechanism agreed
 
 
@@ -15,9 +15,10 @@ The tariff extension allows a structured list of these charges to be set out.
 
 It also includes an additional codelist entries for the documentType codelist for:
 
+* tariffs
 * tariffMethod
-* tariffRegulation
-* tariffHistory
+* tariffReview
+* tariffIllustration
 
 ### Tariff modelling
 
@@ -87,6 +88,7 @@ The example below shows a very simply tariff table, without periods or units, bu
 
 The following document types are introduced by the tariff extension
 
+* tariffs - For providing tariff and pricing schedules.
 * tariffMethod - For summarising the method by which tariffs are set, and linking to detailed documentation of the methods for setting tariffs. This may include written documentation, and spreadsheets providing the models used to calculate tariffs. 
-* tariffRegulation - For summarising the arrangements for the review and regulation of tariffs, and linking to detailed documentation that covers how tariffs are regulated. This is important to explain to users why they are paying what they are paying, and the scope for changes to payment structures.
-* tariffHistory - For linking to graphs and reports on the change over time in tariff prices. Use the relevant image media type when linking to PNG, JPEG or GIF graphs to allow applications to directly display this content. 
+* tariffReview - For summarising the arrangements for the review and regulation of tariffs, and linking to detailed documentation that covers how tariffs are regulated. This is important to explain to users why they are paying what they are paying, and the scope for changes to payment structures.
+* tariffIllustration - For linking to graphs and reports on the change over time in tariff prices. Use the relevant image media type when linking to PNG, JPEG or GIF graphs to allow applications to directly display this content. 

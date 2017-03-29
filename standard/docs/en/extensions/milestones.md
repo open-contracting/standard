@@ -14,7 +14,7 @@ However, there are many other key dates that may be scheduled or monitored at va
 * **assessment** events, such as the meeting of a commmittee to review proposals, or the dates associated with a multi-step award process
 * **delivery** events, such as the predicated date for works to start, or to be finalised
 * **reporting** events, such as the deadline for performance reports
-* **financial** events, such as planned payments, or equity transfers
+* **financing** events, such as planned payments, or equity transfers
 
 These can all be modelled using the milestones extension.
 
