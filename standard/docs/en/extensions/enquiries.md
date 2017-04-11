@@ -23,7 +23,8 @@ Example:
       "description":"The tender specifies delivery of Item 1 by end of March 2017. Will alternative proposals for the timeline be considered?",
       "dateAnswered":"2017-02-05T09:00:00Z",
       "answer":"There is a hard deadline of 15th April 2017. All proposals must be for delivery of Item 1 by this date.",
-      "relatedItem":"1"
+      "relatedItem":"1",
+      "threadID":"1"
     }]
   }
 }
@@ -32,6 +33,8 @@ Example:
 Supporting documents with clarifications, or a full document containing answers to questions can be included in the ```tender/documents``` array with a ```documentType``` of 'clarifications'. 
 
 Where the answers to a question are only avaible in attached documents, an ```answer``` value such as 'Consult section N of "%document name%" in the documents section' may be entered to allow analysts of the data to identify that an answer to this question has been provided. 
+
+When a system allow a discussion format, where each answer can be followed by a further clarification question, the ```threadID``` property can be used to link together multiple entries in the ```enquiries``` array.
 
 ## Usage guidance
 
@@ -55,5 +58,4 @@ We recommend that publishers provide question answers as plain text, or with min
 ```eval_rst
 .. extensiontable::
    :extension: enquiries
-   :exclude_definitions: Tender
 ```
