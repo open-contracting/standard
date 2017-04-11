@@ -13,7 +13,7 @@ The OCDS bid extension introduces a new, flexible, top-level section to each con
 
 ### Bid Statistics
 
-The ```bids/bidStatistics``` array in a release can block can be used to represent key statistical information about the number of bids and bidders. Each entry in the array is a ```BidStatistic``` object containing at least:
+The ```bids/bidStatistics``` array can be used to represent key statistical information about the number of bids and bidders. Each entry in the array is a ```BidStatistic``` object containing at least:
 
 * An identifier;
 * A measure, from the bidStatistics codelist;
@@ -28,6 +28,10 @@ The ```bids/bidStatistics``` array in a release can block can be used to represe
 ```
 
 #### Bid Statistics Codelists
+
+This is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code. 
+
+For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets. 
 
 ```eval_rst
 .. csv-table::
