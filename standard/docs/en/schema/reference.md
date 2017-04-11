@@ -309,6 +309,15 @@ The items block is used to list the line-items associated with a tender, award o
    :file: standard/docs/field_definitions/release-item.csv
 ```
 
+
+
+```eval_rst
+.. extensionlist:: These are extensions related to Items.
+   :list: item
+```
+
+
+
 Notes: 
 
 * The [proposed location extension](../extensions/location.md) can be attached to items, allowing the point of delivery for a given item or the site of works to be completed to be indicated in both the tender, award and contract stage.
