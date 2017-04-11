@@ -3,28 +3,29 @@ Lots
 
 When a single tender is broken down into parts that can be bid upon, and awarded, separately, this is modelled using the **lots extension**.
 
-The lots extension maintains the overall structure of an OCDS release, with items, documents and milestones nested immediately within ```tender```, ```award``` and ```contract``` items, but it introduces an array of Lots in the ```tender``` section, and the ability to cross-reference the ```relatedLots``` for items, documents, milestones and awards. 
+The lots extension maintains the overall structure of an OCDS release, with items, documents and milestones nested immediately within ```tender```, ```award``` and ```contract``` items, but it introduces an array of Lots in the ```tender``` section, and the ability to cross-reference a specific ```relatedLot``` for each item, and an array of ```relatedLots``` for documents, milestones and awards. 
 
-Optional ```lotDetails``` and ```lotGroups``` section allow more complex conditions around the award of lots to be expressed, such as the maximum value of group of lots. 
+Optional ```lotDetails``` and ```lotGroups``` section allow more complex conditions around the award of lots to be expressed, such as the maximum value of a group of lots. 
 
 This means that systems which are not 'lot aware' can still understand the overall value of contracting taking place, key events, and relationships between buyers and suppliers. At the same time, 'lot aware' systems can make use of the cross-referenced information to present a lot-centric view on the information to users, or to analyse contracting lot by lot. 
 
 ## Related Lot
 
-The relatedLot property is available for:
+The ```relatedLot``` (singular) property is available for:
 
 * items 
+
+An array of ```relatedLots``` (plural) can be provided for each of:
+
 * documents
 * milestones
-* awards
+* awards 
 
-It is provided as an **array** of lot identifiers. 
-
-When lots are used, **all** items should have a ```relatedLots``` property.
+When lots are used, **all** items should have a ```relatedLot``` property.
 
 Documents and milestones can optionally have a ```relatedLots``` property. Those without this property should be interpreted as applicable to the tender as a whole. 
 
-The items within an award should each have a ```relatedLots``` property, but publishers may choose to also reference all the lots an award relates to at the award level. 
+The items within an award should each have a ```relatedLot``` property, but publishers may choose to also reference all the lots an award relates to at the award level using ```relatedLots```
 
 Where the bid extension is also in use, each bid can also declare its related lots. 
 
@@ -79,7 +80,7 @@ Although part of the same tender, the buyer is willing to award these different 
               "id": "71210000",
               "description": "Advisory architectural services"
             },
-            "relatedLot":["lot-1"]
+            "relatedLot":"lot-1"
            },
            {
             "id": "0002",
@@ -89,7 +90,7 @@ Although part of the same tender, the buyer is willing to award these different 
               "id": "71220000",
               "description": "Architectural design services"
             },
-            "relatedLot":["lot-1"]
+            "relatedLot":"lot-1"
            },
            {
             "id": "0003",
@@ -99,7 +100,7 @@ Although part of the same tender, the buyer is willing to award these different 
               "id": "71311000",
               "description": "Civil engineering consultancy services"
             },
-            "relatedLot":["lot-2"]
+            "relatedLot":"lot-2"
            },
            {
             "id": "0004",
@@ -109,7 +110,7 @@ Although part of the same tender, the buyer is willing to award these different 
               "id": "71312000",
               "description": "Structural engineering consultancy services"
             },
-            "relatedLot":["lot-1"]
+            "relatedLot":"lot-1"
            }
         ],
         "value": {
@@ -150,7 +151,7 @@ Although part of the same tender, the buyer is willing to award these different 
         ],
         "lotGroups":[{
             "id":"lot-group-1",
-            "relatedLot":["lot-2","lot-3"],
+            "relatedLots":["lot-2","lot-3"],
             "optionToCombine":true,
             "maximumValue":1000000
         }],
@@ -166,34 +167,8 @@ Although part of the same tender, the buyer is willing to award these different 
 
 ## Schema
 
-The extension introduces the following properties to existing sections.
-
 ```eval_rst
 .. extensiontable::
     :extension: lots
-    :exclude_definitions: Lot LotDetails LotGroup
-```
-
-Lots can be declared in the tender section:
-
-```eval_rst
-.. extensiontable::
-    :extension: lots
-    :exclude_definitions: Tender Document Item Award Milestone Bid LotDetails LotGroup
-```
-
-Lot details can be given in the tender section:
-
-```eval_rst
-.. extensiontable::
-    :extension: lots
-    :exclude_definitions: Tender Document Item Award Milestone Bid Lot LotGroup
-```
-
-Lot groups can be declared in the tender section:
-
-```eval_rst
-.. extensiontable::
-    :extension: lots
-    :exclude_definitions: Tender Document Item Award Milestone Bid Lot LotDetails 
+    :definitions: Lots
 ```
