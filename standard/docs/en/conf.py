@@ -16,6 +16,7 @@
 import sys
 import os
 import shlex
+import pathlib
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -416,10 +417,10 @@ class ExtensionList(Directive):
                                                   self.lineno)
 
             link = nodes.reference(name, '', *some_term)
-            path_split = self.state.document.attributes['source'].split('/')
-            root_path = "../" * (len(path_split) - path_split.index('docs') - 2)
+            path_split = pathlib.PurePath(self.state.document.attributes['source']).parts
+            root_path = pathlib.PurePath(*[".." for x in range(0, len(path_split) - path_split.index('docs') - 2)])
 
-            link['refuri'] = root_path + 'extensions/' + extension.get('slug', '')
+            link['refuri'] = str(pathlib.PurePath(root_path, 'extensions', extension.get('slug', '')))
             link['translatable'] = True
             link.source = 'extension_list_' + extension_list_name
             link.line = num + 1
