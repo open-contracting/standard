@@ -105,6 +105,13 @@ The locations where a project is taking place can be specified using:
 
 There are a range of tools available to generate GeoJSON data, such as http://geojson.io/
 
+```eval_rst
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :include: planning/project/locations
+
+```
+
 ###### Representation
 
 Locations are represented using an array of ```location``` objects at ```planning/project/locations```. Each location can have a description, a gazeteer entry, and/or a GeoJSON object representing a location point or geometery. 
