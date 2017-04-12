@@ -109,6 +109,7 @@ There are a range of tools available to generate GeoJSON data, such as http://ge
 
 .. jsonschema:: ../../../schema/release-schema.json
     :include: planning/project/locations
+    :collapse: planning/project/locations/0/geometry
 
 ```
 
