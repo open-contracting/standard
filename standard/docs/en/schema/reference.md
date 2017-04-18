@@ -53,6 +53,12 @@ The top level of a release consists of the following fields and objects:
    :file: standard/docs/field_definitions/release-toplevel.csv
 ```
 
+```eval_rst
+.. extensionlist:: The following extensions are available for parties
+   :list: release
+```
+
+
 Notes:
 
 * ```ocid``` - Providing each [contracting process](../getting_started/contracting_process.md) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](identifiers.md) for details of how to construct an OCID. 
