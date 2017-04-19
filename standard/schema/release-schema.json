@@ -1791,32 +1791,16 @@
             }
         },
         "RelatedProcess": {
-            "description": "A link to a related contracting process in OCDS and the type of relationship.",
+            "description": "A reference to a related contracting process: generally one preceeding or following on from the current process.",
             "type": "object",
             "title": "Related Process",
             "properties": {
-                "ocid": {
-                    "description": "The OCID of the related process.",
-                    "title": "Related process OCID",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                },
-                "uri": {
-                    "format": "uri",
-                    "description": "A URI pointing to an OCDS release or record for the related process. This should be a machine-readable release or record package containing the relevant ocid.",
-                    "title": "Related process URI",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                },
                 "id": {
+                    "title":"Relationship ID",
+                    "description": "A local identifier for this relationship, unique within this array.",
                     "type": [
                         "string"
-                    ],
-                    "description": "A local identifier for this relationship, unique within this array."
+                    ]
                 },
                 "relationship": {
                     "items": {
@@ -1832,8 +1816,38 @@
                     "opencodelist": true
                 },
                 "title": {
-                    "description": "The title of the related process, where possible this field should match the tender/title field in the related process.",
+                    "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
                     "title": "Related process title",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "scheme":{
+                    "title":"Scheme",
+                    "description":"The identification scheme used by this cross-reference. When cross-referencing information also published using OCDS, an Open Contracting ID (ocid) should be used.",
+                    "type":[
+                        "string",
+                        "null"
+                    ],
+                    "enum":[
+                        "ocid",
+                        "other",
+                        null
+                    ]
+                },
+                "identifier": {
+                    "description": "The identifier of the related process. When cross-referencing information also published using OCDS, this should be the Open Contracting ID (ocid).",
+                    "title": "Identifier",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "uri": {
+                    "format": "uri",
+                    "description": "A URI pointing to a machine-readble document, release or record package containing the identified related process.",
+                    "title": "Related process URI",
                     "type": [
                         "string",
                         "null"
