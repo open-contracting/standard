@@ -33,3 +33,5 @@ for extension in extension_json['extensions']:
 
 with open('standard/schema/release-schema.json','w') as schema_file:
     json.dump(schema,schema_file,indent=4)
+
+	
