@@ -95,7 +95,7 @@ The planning section can be used to describe the background to a contracting pro
    :header-rows: 1
    :widths: 20 65 15
    :file: standard/docs/field_definitions/release-planning.csv
-```
+```   
 
 ```eval_rst
 .. extensionlist:: The following extensions are available for planning
