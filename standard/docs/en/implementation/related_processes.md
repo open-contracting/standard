@@ -23,7 +23,7 @@ The ```relatedProcess``` block can be used in these cases to link together multi
 
 The table below provides a number of examples of when to use related process, and when to keep information within a single contracting process. 
 
-<table>
+<table class="docutils">
 <thead>
 <tr>
 <th>Framework type</th>
