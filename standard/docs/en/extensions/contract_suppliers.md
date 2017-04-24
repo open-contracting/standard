@@ -1,6 +1,21 @@
 Contract Suppliers
 ==================
 
+## Meta-data
+
+To use this extension, include it's URL in the ```extension``` array of your release or record package. 
+
+```json
+{
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_contract_suppliers_extension/master/extension.json"],
+    "releases":[]
+}
+```
+
+This extension is maintained at [https://github.com/open-contracting/ocds_contract_suppliers_extension](https://github.com/open-contracting/ocds_contract_suppliers_extension)
+
+## Documentation
+
 OCDS is designed around a contracting model in which:
 
 * One or more awards are made naming the selected suppliers;

@@ -1,10 +1,25 @@
 # Milestone Documents
 
+## Meta-data
+
+To use this extension, include it's URL in the ```extension``` array of your release or record package. 
+
+```json
+{
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_milestone_documents_extension/master/extension.json"],
+    "releases":[]
+}
+```
+
+This extension is maintained at [https://github.com/open-contracting/ocds_milestone_documents_extension](https://github.com/open-contracting/ocds_milestone_documents_extension)
+
+## Documentation
+
 In OCDS 1.1, core support for documents attached to individual milestones was removed from the milestones block to simplify the standard.
 
 This extension re-introduces the ```documents``` block to ```milestones```, providing fields to detail the documents related to each individual milestone.
 
-## Guidance
+### Guidance
 
 Publishers should consider that many consuming applications will only look at the ```tender/documents```, ```award/documents```, ```contracts/documents``` and ```contracts/implementation/documents``` section to access and display relevant documentation to users. 
 

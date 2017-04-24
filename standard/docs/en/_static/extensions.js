@@ -11,7 +11,7 @@ jQuery(function () {
       var $item = jQuery(item);
       var category = $item.attr('id').split("-")[1];
       var anyExtensions = false
-      var $commuityExtensionList
+      var $communityExtensionList
 
       jQuery.each(data.extensions, function (index, extension) {
         if (extension.core) {
@@ -22,24 +22,23 @@ jQuery(function () {
         }
         if (!anyExtensions) {
           anyExtensions = true
-          $commuityExtensionList = $('<dl>').addClass("docutils")
-          $item.append($commuityExtensionList)
+          $communityExtensionList = $('<dl>').addClass("docutils")
+          $item.append($communityExtensionList)
           $item.find('.hide').css({"display": "block"});
         }
         var $dt = $('<dt>')
         $dta = $('<a>').attr({"href": extension.documentation_url, "class": "reference external"}).text(extension.name[language] || extension.name["en"])
         $dt.append($dta)
-        $commuityExtensionList.append($dt)
+        $communityExtensionList.append($dt)
 
         var $dd = $('<dd>').text(extension.description[language] || extension.description.en)
-        $commuityExtensionList.append($dd)
+        $communityExtensionList.append($dd)
       })
     })
     template = '<div class="section" id="example">' + 
                '<h2></h2>' +
+               '<p><input class="extension extension_url" value="" READONLY/> <a class="documentation reference external"></a></p>' + 
                '<p class="description"></p>' +
-               '<p><a class="documentation reference external"></a> <br>' +
-               '<a class="repository reference external"></a></p>' + 
                '</div>'
     template_anchor = '<a class="headerlink" href="#example" title="Permalink to this headline">¶</a>'
 
@@ -62,7 +61,7 @@ jQuery(function () {
               .append(new_anchor);
       new_item.find(".description").text(extension.description[language] || extension.description.en)
       new_item.find(".documentation").attr({"href": extension.documentation_url}).text(documentation_text)
-      new_item.find(".repository").attr({"href": extension.url}).text(repository_text)
+      new_item.find(".extension_url").attr({"value": extension.url + "extension.json"})
 
       jQuery('#community-extensions').append(new_item)
     })
