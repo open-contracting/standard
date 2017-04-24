@@ -138,6 +138,16 @@ The milestone block can be used to represent a wide variety of events in the lif
    :file: standard/schema/codelists_translated/milestoneType.csv
 ```
 
+### Extended Procurement Category
+
+The extended procurement category codelist is used to provide additional detail about the focus of a contracting process. 
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/extendedProcurementCategory.csv
+```
+
 
 ## Closed Codelists 
 
@@ -190,15 +200,7 @@ Note: The 'direct' code was introduced in Version 1.1. Publishers who completed 
 
 ### Procurement Category
 
-The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers should either: 
-
-* (a) select the category that accounts for the greatest value; or 
-* (b) use the 'mixed' code;
-
-depending on the available data in source systems. 
-
-Where a publisher is using the code 'consultingServices', then the 'services' code should be used only for non-consulting services. However, users should note that not all publishers are able to make this distinction from their source data. 
-
+The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCateory](#extended-procurement-category) codelist.
 
 ```eval_rst
 .. csv-table::

@@ -244,12 +244,6 @@
                         "string",
                         "null"
                     ],
-                    "enum": [
-                        "open",
-                        "selective",
-                        "limited",
-                        null
-                    ],
                     "codelist": "method.csv",
                     "openCodelist": false
                 },
@@ -269,15 +263,25 @@
                         "null"
                     ]
                 },
-                "procurementCategory": {
-                    "title": "Procurement category",
-                    "description": "The primary category describing the object of this contracting process from the [procurementCategory](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#procurement-category) codelist (e.g. supplies, works, services, consultingServices or mixed).",
+                "mainProcurementCategory": {
+                    "title": "Main procurement category",
+                    "description": "The primary category describing the main object of this contracting process from the [procurementCategory](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#procurement-category) codelist (goods, works or services). This is a closed codelist. Local classifications should be mapped to this list.",
                     "type": [
                         "string",
                         "null"
                     ],
                     "codelist": "procurementCategory.csv",
                     "openCodelist": false
+                },
+                "additionalProcurementCategories":{
+                    "title":"Additional procurement categories",
+                    "description":"Any additional categories which describe the objects of this contracting process, from the [extendedProcurementCategory](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#extended-procurement-category) codelist. This is an open codelist. Local categories can be included in this list.",
+                    "type":["array","null"],
+                    "items":{
+                        "type":"string","null"
+                    },
+                    "codelist":"extendedProcurementCategory.csv",
+                    "openCodelist":true
                 },
                 "awardCriteria": {
                     "title": "Award criteria",
