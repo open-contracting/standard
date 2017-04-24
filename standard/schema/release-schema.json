@@ -16,13 +16,13 @@
         },
         "date": {
             "title": "Release Date",
-            "description": "The date this information is released, it may well be the same as the parent publishedDate, it must not be later than the publishedDate from the parent package. It is used to determine merge order.",
+            "description": "The date this information was first released, or published.",
             "type": "string",
             "format": "date-time"
         },
         "tag": {
             "title": "Release Tag",
-            "description": "A value from the [releaseTag codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#release-tag) that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for advanced validation when certain kinds of releases should contain certain fields.",
+            "description": "One or more values from the [releaseTag codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#release-tag). Tags may be used to filter release and the understand the kind of information that a release might contain.",
             "type": "array",
             "items": {
                 "type": "string",
@@ -66,6 +66,11 @@
             },
             "uniqueItems": true
         },
+        "buyer": {
+            "title": "Buyer",
+            "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the tender data.",
+            "$ref": "#/definitions/OrganizationReference"
+        },
         "planning": {
             "title": "Planning",
             "description": "Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract for, when and how.",
@@ -75,11 +80,6 @@
             "title": "Tender",
             "description": "The activities undertaken in order to enter into a contract.",
             "$ref": "#/definitions/Tender"
-        },
-        "buyer": {
-            "title": "Buyer",
-            "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the tender data.",
-            "$ref": "#/definitions/OrganizationReference"
         },
         "awards": {
             "title": "Awards",
@@ -356,7 +356,7 @@
                 },
                 "numberOfTenderers": {
                     "title": "Number of tenderers",
-                    "description": "The number of entities who submit a bid.",
+                    "description": "The number of parties who submit a bid.",
                     "type": [
                         "integer",
                         "null"
@@ -364,7 +364,7 @@
                 },
                 "tenderers": {
                     "title": "Tenderers",
-                    "description": "All entities who submit a bid on a tender. More detailed information on bids and the bidding organisation can be provided using the optional bid extension.",
+                    "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organisation can be provided using the optional bid extension.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/OrganizationReference"
@@ -1240,12 +1240,12 @@
         },
         "Organization": {
             "title": "Organization",
-            "description": "An organization.",
+            "description": "A party (organization)",
             "type": "object",
             "properties": {
                 "name": {
                     "title": "Common name",
-                    "description": "A common name for this organization or participant in the contracting process. The identifier object provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization is known. This field could also include details of the department or sub-unit involved in this contracting process.",
+                    "description": "A common name for this organization or other participant in the contracting process. The identifier object provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization or entity is known. This field could also include details of the department or sub-unit involved in this contracting process.",
                     "type": [
                         "string",
                         "null"
@@ -1260,12 +1260,12 @@
                 },
                 "identifier": {
                     "title": "Primary identifier",
-                    "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/1.1-dev/en/schema/identifiers/) for the preferred scheme and identifier to use.",
+                    "description": "The primary identifier for this organization or participant. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/1.1-dev/en/schema/identifiers/) for the preferred scheme and identifier to use.",
                     "$ref": "#/definitions/Identifier"
                 },
                 "additionalIdentifiers": {
                     "title": "Additional identifiers",
-                    "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://standard.open-contracting.org/1.1-dev/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
+                    "description": "A list of additional / supplemental identifiers for the organization or participant, using the [organization identifier guidance](http://standard.open-contracting.org/1.1-dev/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Identifier"
@@ -1279,7 +1279,7 @@
                     "$ref": "#/definitions/ContactPoint"
                 },
                 "roles": {
-                    "title": "Entity roles",
+                    "title": "Party roles",
                     "description": "The party's role(s) in the contracting process. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
                     "type": "array",
                     "items": {

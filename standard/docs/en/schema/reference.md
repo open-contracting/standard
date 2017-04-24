@@ -2,22 +2,20 @@
 
 The [Release Schema](release.md) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into data packages and how to compile releases into records. 
 
-This reference page provides key information on using the release schema.
-
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence**
 
 ## Release structure
 
-The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, including:
+The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, arranged in the following structure.
 
-* [parties](#parties)
-* [planning](#planning)
-* [tender](#tender)
-* [award](#award)
-* [contract](#contract)
-* [implementation](#implementation)
-
-A release can only contain one tender section, but may contain multiple award, contract and implementation sections. This is because each OCDS release relates to [a single contracting process](../getting_started/contracting_process.md), and we define contracting processes by their unique initiation (tender) stage.
+* [package](#package-metadata)
+  * [release](#release)
+    * [parties](#parties) 
+    * [planning](#planning)
+    * [tender](#tender) 
+    * [award](#award)
+    * [contract](#contract)
+      * [implementation](#implementation)
 
 Releases are given a [tag](../../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process may be provided. 
 
@@ -25,51 +23,40 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 ### Package Metadata
 
-Releases must be published within a [release package](release_package.md), which can contain one or more releases. The release package, modelled on the [Data Package](http://dataprotocols.org/data-packages/) protocol, provides meta-data about the release(s) it contains, the publisher, and data licensing information. 
+Releases must be published within a [release package](release_package.md). The release package provides meta-data about the release(s) that it contains. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-package.csv
+
+.. jsonschema:: ../../../schema/release-package-schema.json
+    :include: 
+    :collapse: releases,publisher
+
 ```
 
-Notes:
+See the [licensing guidance](../implementation/licensing.md) for more details on selecting a license, and publishing license information. 
 
-* The uri should uniquely identify this release package. Publishers should provide a [dereferenceable HTTP URI](http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier) wherever possible and should host the data package at this URI, enabling users to look-up and verify the contents of a release package from its original source. 
-* The [publishedDate](#date) on which this package was published. If a package is automatically generated and re-published on a regular basis, this date should reflect the date of the last change to the contents of the package. 
-* The publisher [publisher](#publisher) block provides space for an organisation name and identifier.
-* ````license```` - See the [licensing guidance](../implementation/licensing.md) for more details on selecting and publishing license information. 
-* ````publicationPolicy```` - See the [publication policy](../implementation/publication_policy.md) guidance for more details.
+See the [publication policy](../implementation/publication_policy.md) guidance for more details on what to include in a publication policy.
 
 ### Release
 
-The top level of a release consists of the following fields and objects:
+All new information about a contracting process is described within a release. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-toplevel.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :include: 
+    :collapse: planning,tender,award,contract,parties,buyer,relatedProcess
+
 ```
 
 ```eval_rst
-.. extensionlist:: The following extensions are available for parties
+.. extensionlist:: The following extensions are available for release
    :list: release
 ```
 
-
-Notes:
-
-* ```ocid``` - Providing each [contracting process](../getting_started/contracting_process.md) with a unique identifier is essential to enable data about contracts to be linked up across different releases. Open Contracting IDs are composed of a prefix assigned to each publisher, and a local identifier drawn from their internal systems that can be used to tie together tenders, awards, contracts and other key data points from a specific contracting process. See the [Open Contracting Identifier guidance](identifiers.md) for details of how to construct an OCID. 
-* ```tag``` - The release tag is used to identify the nature of the release being made. This can be used by consuming applications to filter releases, or may in future be used for advanced validation. A release which updates or amends previous data must always use the appropriate update or amendment release tag. Values must be drawn from the [releaseTag codelist](../../codelists/#release-tag).
-* ```date``` - The release [date](#date) should reflect the point in time at which the information in this release was disclosed. A release package may contain release with different release dates. 
-* ```language``` - see the section on [multi-language support](#language) for information on language handling.
-* ```buyer``` - The buyer should be recorded in the [parties](#parties) array with a 'buyer' role, and then cross-referenced by id here. 
-
-Further details on each of the blocks contained within release are below. 
-
 ### Parties
+
+Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
 
 ```eval_rst
 .. note:: 
@@ -82,27 +69,22 @@ Further details on each of the blocks contained within release are below.
 
 ```
 
-Information on each of the organizations or other entities participating in this contracting process, and mentioned a given release, should be included in the parties section of that release.
-
-Each party should be assigned an identifier. This is used to cross-reference to this participant whenever it plays a role as a buyer, tenderer, supplier or in some other capacity.
-
 The following details can be provided for each party.
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-organization.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :include: parties
+    :collapse: parties/identifier,parties/additionalIdentifiers,parties/address,parties/contactPoint
+
 ```
+
+Detailed classification of parties can be provided using one or more [party detail extensions](../../../extensions/party_details/).
 
 ```eval_rst
 .. extensionlist:: The following extensions are available for parties
    :list: parties
 ```
-
-#### Details 
-
-Detailed classification of parties can be provided using one or more [party detail extensions](../../../extensions/party_details/).
 
 ### Planning
 
@@ -123,6 +105,7 @@ The planning section can be used to describe the background to a contracting pro
 Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](http://fiscal.dataprotocols.org/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 #### Budget 
+
 ```eval_rst
 .. csv-table::
    :header-rows: 1
