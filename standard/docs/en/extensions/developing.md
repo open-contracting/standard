@@ -1,15 +1,22 @@
-# Developing an extension
+# Develop your own extension
 
-The development of an extension follows a number of stages.
+The core OCDS schema provides a set of sections, building blocks and fields for describing a wide range of different contracting processes. 
 
-- **Someone starts a discussion via the [standard issue tracker](https://github.com/open-contracting/standard/issues) describing the additional data they want to publish.** It is helpful when the initial post provides examples of the data.
+Data publishers or users may have additional data that they could publish, or that they need. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers and users to collaborate on the creation of extensions to the standard.
 
-- **Community members with similar data publishing needs are encouraged to discuss a potential data model**. This may involve identifying the sections or building blocks of OCDS that need to be extended to capture this additional data.
+This can result in two kinds of extension:
 
-- **A draft data model is proposed**. Usually through a mock-up example of some JSON.
+* **Core** extensions are documented as part of the standard and reviewed by the OCDS technical team with each version upgrade of OCDS. They are likely to be relevant to a large number of publishers and users.
 
-- **A schema patch and README file is developed** and [added to the extensions repository](https://github.com/open-contracting/implementation-and-extensions). The JSON patch can be applied to the main schema in order to create an updated OCDS schema for validating extended data. The README file explains the purpose of the extension, the design choices made, and gives an example.
+* **Community** extension are maintained by third-parties, or are maintained outside of the standard governance process. They may provide features required by only a small number of publishers or users.
 
-- **A documentation page is created** and made available here, allowing publishers and users to discover the available extensions. 
+Both kinds of extension provide documentation and schema that can be used to produce and validate extended OCDS data. 
 
-You can contact the help-desk for support creating an extension. 
+Core extensions are embedded directly within the OCDS reference documentation, and versioned along with the standard.
+
+Links to externally hosted local extensions may be included in the OCDS reference documentation, drawing on the [extensions registry](https://github.com/open-contracting/extension_registry). 
+
+## Extension template
+
+You can find the [extension template](https://github.com/open-contracting/standard_extension_template) on GitHub. It contains guidance on creating an extension.
+

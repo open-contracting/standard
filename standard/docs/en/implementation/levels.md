@@ -91,6 +91,8 @@ Take information on contracting processes in whatever format it is currently ava
 
 An example of publication at this level would involve uploading all the documents relating to a contract process to an agency website. Good practice would involve using common naming and filing conventions, so users can easily find all the documents related to a specific tender or contract. 
 
+As much information as possible should be accessible without registrations or log-in requirements.
+
 #### Stepping up
 
 Providing documents offers an initial level of transparency, but users have to dig through them to find the key information they need. That’s why providing machine-readable data that can be more easily searched and filtered is important. 

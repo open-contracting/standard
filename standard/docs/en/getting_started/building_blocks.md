@@ -47,21 +47,13 @@ These are represented in a JSON document as follows:
         }
 ```
 
-<div class="example hint" markdown=1>
-    
-<p class="first admonition-title">Note</p>
-
-Awards and contracts are arrays of objects, whereas tender is an object. This is because of a contracting process has a single initiation stage, but can result in multiple awards and contracts. 
-
-</div>
-
 ### Building blocks: fields
 
 The OCDS schema sets out the fields that should be included in each section, making use of simple re-usable building blocks (field structures) to represent data. 
 
 For example, common building blocks are provided for:
 
-* **Organizations** 
+* **Parties (Organizations)** 
 * **Amounts** 
 * **Items**
 * **Time periods**
@@ -137,6 +129,12 @@ In addition to these building blocks, the OCDS schema sets out the specific ways
 * etc.
 
 Many of these fields make use of lightweight codelists provided by OCDS. 
+
+#### Extensions
+
+In some cases, publishers or users need building blocks and fields which are not provided in the core OCDS schema. 
+
+We maintain a list of [extensions](../../../extensions/) that provide optional extra building blocks and fields.
 
 #### Field level mapping
 
