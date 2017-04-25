@@ -14,15 +14,15 @@ In mapping your data to OCDS, or using OCDS data, you will encounter a number of
 
 ### Sections and structure
 
-An OCDS document is made up of a number of sections. In the procurement case, the main sections are:
+An OCDS document is made up of a number of sections. These are:
 
-* **meta-data** - contextual information about each release of data;
-* **parties** - information about the organizations and other participants involved in the contracting process;
-* **planning** - information about the goals, budgets and projects a contracting process relates to;
-* **tender** - information about how a tender will take place, or has taken place;
-* **awards** - information on awards made as part of a contracting process;
-* **contract** - information on contracts signed as part of a contracting process;
-  * **implementation** - information on the progress of each contract towards completion.
+* **release meta-data** - contextual information about each release of data;
+  * **parties** - information about the organizations and other participants involved in the contracting process;
+  * **planning** - information about the goals, budgets and projects a contracting process relates to;
+  * **tender** - information about how a tender will take place, or has taken place;
+  * **awards** - information on awards made as part of a contracting process;
+  * **contract** - information on contracts signed as part of a contracting process;
+    * **implementation** - information on the progress of each contract towards  completion.
 
 These are represented in a JSON document as follows:
 
@@ -137,9 +137,13 @@ In some cases, publishers or users need building blocks and fields which are not
 
 We maintain a list of [extensions](../../../extensions/) that provide optional extra building blocks and fields.
 
-#### Field level mapping
+<div class="example hint" markdown=1>
+
+<p class="first admonition-title">Field level mapping</p>
 
 The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.  
+
+</div>
 
 ### Codelists
 
