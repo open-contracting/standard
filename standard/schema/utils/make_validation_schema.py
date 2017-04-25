@@ -31,6 +31,8 @@ def add_versions(schema, location=''):
         value.pop("description", None)
         value.pop("mergeStrategy", None)
         value.pop("mergeOptions", None)
+        value.pop("omitWhenMerged", None)
+        value.pop("wholeListMerge", None)
         if not prop_type:
             continue
         if key == 'id':
@@ -108,6 +110,8 @@ def get_versioned_validation_schema(versioned_release):
             prop_value.pop("mergeOptions", None)
             prop_value.pop("title", None)
             prop_value.pop("description", None)
+            prop_value.pop("omitWhenMerged", None)
+            prop_value.pop("wholeListMerge", None)
 
     OrganizationUnversioned = copy.deepcopy(definitions['Organization'])
     IdentifierUnversioned = copy.deepcopy(definitions['Identifier'])

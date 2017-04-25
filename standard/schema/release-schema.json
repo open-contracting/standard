@@ -12,13 +12,15 @@
         "id": {
             "title": "Release ID",
             "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of it's related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
-            "type": "string"
+            "type": "string",
+            "omitWhenMerged": true
         },
         "date": {
             "title": "Release Date",
             "description": "The date this information was first released, or published.",
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "omitWhenMerged": true
         },
         "tag": {
             "title": "Release Tag",
@@ -1222,6 +1224,7 @@
                     },
                     "title": "Additional identifiers",
                     "uniqueItems": true,
+                    "wholeListMerge": true,
                     "description": "(Deprecated outside the parties section) A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://standard.open-contracting.org/1.1-dev/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
                 },
                 "contactPoint": {
@@ -1274,7 +1277,8 @@
                     "items": {
                         "$ref": "#/definitions/Identifier"
                     },
-                    "uniqueItems": true
+                    "uniqueItems": true,
+                    "wholeListMerge": true
                 },
                 "address": {
                     "$ref": "#/definitions/Address"
@@ -1346,7 +1350,8 @@
                     "items": {
                         "$ref": "#/definitions/Classification"
                     },
-                    "uniqueItems": true
+                    "uniqueItems": true,
+                    "wholeListMerge": true
                 },
                 "quantity": {
                     "title": "Quantity",
