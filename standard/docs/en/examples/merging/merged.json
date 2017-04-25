@@ -3,10 +3,11 @@
       "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-award1",
       "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-award2",
       "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender",
-      "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-update"
+      "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-update",
+      "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-amendment",
+      "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender"
    ],
    "publishedDate": "2016-03-05T13:02:00Z",
-   "version":"1.1",
    "publisher": {
       "name": "Open Data Services Co-operative Limited",
       "scheme": "GB-COH",
@@ -68,12 +69,21 @@
                "compiled"
             ],
             "tender": {
+               "amendments": [
+                  {
+                     "amendsReleaseID": "ocds-213czf-000-00002-01-tender",
+                     "date": "2016-02-04T09:30:00Z",
+                     "id": "amendment-1",
+                     "rationale": "Based on feedback from potential bidders, the total budget was increased by \u00a3500, and the deadline extended",
+                     "releaseID": "ocds-213czf-000-00002-01-tender-amendment"
+                  }
+               ],
                "awardCriteria": "bestProposal",
                "awardPeriod": {
                   "endDate": "2016-06-01T23:59:59Z",
                   "startDate": "2016-04-01T00:00:00Z"
                },
-               "description": "Creation of a data merging tool.",
+               "description": "Creation of a data merging tool. The tool should by written in Python. Proposals should be submitted by e-mail.",
                "id": "ocds-213czf-000-00001-01-tender",
                "procurementMethod": "open",
                "status": "active",
@@ -81,12 +91,12 @@
                   "electronicSubmission"
                ],
                "tenderPeriod": {
-                  "endDate": "2016-02-15T18:00:00Z",
+                  "endDate": "2016-02-20T18:00:00Z",
                   "startDate": "2016-01-31T09:00:00Z"
                },
                "title": "Data merging tool",
                "value": {
-                  "amount": 1500,
+                  "amount": 2000,
                   "currency": "USD"
                }
             }
@@ -120,6 +130,20 @@
                   "tenderUpdate"
                ],
                "url": "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-update"
+            },
+            {
+               "date": "2016-02-05T10:30:00Z",
+               "tag": [
+                  "tenderAmendment"
+               ],
+               "url": "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-amendment"
+            },
+            {
+               "date": "2016-01-01T09:30:00Z",
+               "tag": [
+                  "tender"
+               ],
+               "url": "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender"
             }
          ]
       }
