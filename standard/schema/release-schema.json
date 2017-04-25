@@ -7,12 +7,14 @@
         "ocid": {
             "title": "Open Contracting ID",
             "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/1.1-dev/en/schema/identifiers/)",
-            "type": "string"
+            "type": "string",
+            "minLength": 1
         },
         "id": {
             "title": "Release ID",
             "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of it's related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
-            "type": "string"
+            "type": "string",
+            "minLength": 1
         },
         "date": {
             "title": "Release Date",
@@ -45,7 +47,8 @@
                 ]
             },
             "codelist": "releaseTag.csv",
-            "openCodelist": false
+            "openCodelist": false,
+            "minItems": 1
         },
         "initiationType": {
             "title": "Initiation type",
@@ -182,7 +185,8 @@
                     "type": [
                         "string",
                         "integer"
-                    ]
+                    ],
+                    "minLength": 1
                 },
                 "title": {
                     "title": "Tender Title",
@@ -273,15 +277,21 @@
                     "codelist": "procurementCategory.csv",
                     "openCodelist": false
                 },
-                "additionalProcurementCategories":{
-                    "title":"Additional procurement categories",
-                    "description":"Any additional categories which describe the objects of this contracting process, from the [extendedProcurementCategory](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#extended-procurement-category) codelist. This is an open codelist. Local categories can be included in this list.",
-                    "type":["array","null"],
-                    "items":{
-                        "type":["string","null"]
+                "additionalProcurementCategories": {
+                    "title": "Additional procurement categories",
+                    "description": "Any additional categories which describe the objects of this contracting process, from the [extendedProcurementCategory](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#extended-procurement-category) codelist. This is an open codelist. Local categories can be included in this list.",
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
-                    "codelist":"extendedProcurementCategory.csv",
-                    "openCodelist":true
+                    "codelist": "extendedProcurementCategory.csv",
+                    "openCodelist": true
                 },
                 "awardCriteria": {
                     "title": "Award criteria",
@@ -405,8 +415,8 @@
                     }
                 },
                 "amendment": {
-                    "title":"Amendment",
-                    "description":"The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+                    "title": "Amendment",
+                    "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
                     "$ref": "#/definitions/Amendment",
                     "deprecated": {
                         "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
@@ -467,7 +477,8 @@
                     "type": [
                         "string",
                         "integer"
-                    ]
+                    ],
+                    "minLength": 1
                 },
                 "title": {
                     "title": "Title",
@@ -558,8 +569,8 @@
                     }
                 },
                 "amendment": {
-                    "title":"Amendment",
-                    "description":"The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+                    "title": "Amendment",
+                    "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
                     "$ref": "#/definitions/Amendment",
                     "deprecated": {
                         "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
@@ -597,7 +608,8 @@
                     "type": [
                         "string",
                         "integer"
-                    ]
+                    ],
+                    "minLength": 1
                 },
                 "awardID": {
                     "title": "Award ID",
@@ -605,7 +617,8 @@
                     "type": [
                         "string",
                         "integer"
-                    ]
+                    ],
+                    "minLength": 1
                 },
                 "title": {
                     "title": "Contract title",
@@ -709,8 +722,8 @@
                     }
                 },
                 "amendment": {
-                    "title":"Amendment",
-                    "description":"The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+                    "title": "Amendment",
+                    "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
                     "$ref": "#/definitions/Amendment",
                     "deprecated": {
                         "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
@@ -780,7 +793,8 @@
                     "type": [
                         "string",
                         "integer"
-                    ]
+                    ],
+                    "minLength": 1
                 },
                 "title": {
                     "title": "Title",
@@ -913,7 +927,8 @@
                     "type": [
                         "string",
                         "integer"
-                    ]
+                    ],
+                    "minLength": 1
                 },
                 "documentType": {
                     "title": "Document type",
@@ -1102,7 +1117,8 @@
                     "type": [
                         "string",
                         "integer"
-                    ]
+                    ],
+                    "minLength": 1
                 },
                 "source": {
                     "title": "Data source",
@@ -1183,7 +1199,8 @@
                         "null"
                     ],
                     "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
-                    "title": "Organization name"
+                    "title": "Organization name",
+                    "minLength": 1
                 },
                 "id": {
                     "type": [
@@ -1191,7 +1208,8 @@
                         "integer"
                     ],
                     "description": "The id of the party being referenced. This must match the id of an entry in the parties section.",
-                    "title": "Organization ID"
+                    "title": "Organization ID",
+                    "minLength": 1
                 },
                 "identifier": {
                     "title": "Primary identifier",
@@ -1324,7 +1342,8 @@
                     "type": [
                         "string",
                         "integer"
-                    ]
+                    ],
+                    "minLength": 1
                 },
                 "description": {
                     "title": "Description",
@@ -1754,7 +1773,7 @@
         },
         "Period": {
             "title": "Period",
-            "description":"    ",
+            "description": "    ",
             "type": "object",
             "properties": {
                 "startDate": {
@@ -1800,7 +1819,7 @@
             "title": "Related Process",
             "properties": {
                 "id": {
-                    "title":"Relationship ID",
+                    "title": "Relationship ID",
                     "description": "A local identifier for this relationship, unique within this array.",
                     "type": [
                         "string"
@@ -1827,15 +1846,15 @@
                         "null"
                     ]
                 },
-                "scheme":{
-                    "title":"Scheme",
-                    "description":"The identification scheme used by this cross-reference from the [related process scheme codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#related-process-scheme) codelist. When cross-referencing information also published using OCDS, an Open Contracting ID (ocid) should be used.",
-                    "type":[
+                "scheme": {
+                    "title": "Scheme",
+                    "description": "The identification scheme used by this cross-reference from the [related process scheme codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#related-process-scheme) codelist. When cross-referencing information also published using OCDS, an Open Contracting ID (ocid) should be used.",
+                    "type": [
                         "string",
                         "null"
                     ],
-                    "codelist":"releatedProcessScheme.csv",
-                    "openCodelist":true
+                    "codelist": "releatedProcessScheme.csv",
+                    "openCodelist": true
                 },
                 "identifier": {
                     "description": "The identifier of the related process. When cross-referencing information also published using OCDS, this should be the Open Contracting ID (ocid).",
