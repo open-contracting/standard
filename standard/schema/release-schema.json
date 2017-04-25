@@ -136,9 +136,6 @@
             "description": "Information from the planning phase of the contracting process. Note that many other fields may be filled in a planning release, in the appropriate fields in other schema sections, these would likely be estimates at this stage e.g. totalValue in tender",
             "type": "object",
             "properties": {
-                "budget": {
-                    "$ref": "#/definitions/Budget"
-                },
                 "rationale": {
                     "title": "Rationale",
                     "description": "The rationale for the procurement provided in free text. More detail can be provided in an attached document.",
@@ -146,6 +143,9 @@
                         "string",
                         "null"
                     ]
+                },
+                "budget": {
+                    "$ref": "#/definitions/Budget"
                 },
                 "documents": {
                     "title": "Documents",
@@ -191,8 +191,8 @@
                     "minLength": 1
                 },
                 "title": {
-                    "title": "Tender Title",
-                    "description": "Tender title",
+                    "title": "Tender title",
+                    "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement.",
                     "type": [
                         "string",
                         "null"
@@ -200,7 +200,7 @@
                 },
                 "description": {
                     "title": "Tender description",
-                    "description": "Tender description",
+                    "description": "A summary description of the tender. This should complement structured information provided using the items array. Descriptions should be short and easy to read. Avoid using ALL CAPS. ",
                     "type": [
                         "string",
                         "null"
@@ -224,6 +224,11 @@
                     "codelist": "tenderStatus.csv",
                     "openCodelist": false
                 },
+                "procuringEntity": {
+                    "title": "Procuring entity",
+                    "description": "The entity managing the procurement. This may be different from the buyer who pays for, or uses, the items being procured.",
+                    "$ref": "#/definitions/OrganizationReference"
+                },
                 "items": {
                     "title": "Items to be procured",
                     "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but a quantity of 2 specified instead.",
@@ -233,19 +238,19 @@
                     },
                     "uniqueItems": true
                 },
-                "minValue": {
-                    "title": "Minimum value",
-                    "description": "The minimum estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
-                    "$ref": "#/definitions/Value"
-                },
                 "value": {
                     "title": "Value",
                     "description": "The total upper estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
                     "$ref": "#/definitions/Value"
                 },
+                "minValue": {
+                    "title": "Minimum value",
+                    "description": "The minimum estimated value of the procurement.  A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+                    "$ref": "#/definitions/Value"
+                },
                 "procurementMethod": {
                     "title": "Procurement method",
-                    "description": "Specify tendering method against the [method codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited",
+                    "description": "Specify tendering method using the [method codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#method). This is a closed codelist. Local method types should be mapped to this list.",
                     "type": [
                         "string",
                         "null"
@@ -263,7 +268,7 @@
                 },
                 "procurementMethodRationale": {
                     "title": "Procurement method rationale",
-                    "description": "Rationale of procurement method, especially in the case of Limited tendering.",
+                    "description": "Rationale for the chosen procurement method. This is especially important to provide a justification in the case of limited tenders or direct awards.",
                     "type": [
                         "string",
                         "null"
@@ -271,7 +276,7 @@
                 },
                 "mainProcurementCategory": {
                     "title": "Main procurement category",
-                    "description": "The primary category describing the main object of this contracting process from the [procurementCategory](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#procurement-category) codelist (goods, works or services). This is a closed codelist. Local classifications should be mapped to this list.",
+                    "description": "The primary category describing the main object of this contracting process from the [procurementCategory](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#procurement-category) codelist. This is a closed codelist. Local classifications should be mapped to this list.",
                     "type": [
                         "string",
                         "null"
@@ -387,14 +392,9 @@
                     },
                     "uniqueItems": true
                 },
-                "procuringEntity": {
-                    "title": "Procuring entity",
-                    "description": "The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",
-                    "$ref": "#/definitions/OrganizationReference"
-                },
                 "documents": {
                     "title": "Documents",
-                    "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#document-type) for details of potential documents to include.",
+                    "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#document-type) for details of potential documents to include. Common documents include official legal notices of tender, technical specifications, evaluation criteria, and, as a tender process progresses, clarifications and replies to queries.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Document"
@@ -1385,19 +1385,6 @@
                     "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price. For comparability, an established list of units can be used.  ",
                     "type": "object",
                     "properties": {
-                        "name": {
-                            "title": "Name",
-                            "description": "Name of the unit",
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        "value": {
-                            "title": "Value",
-                            "description": "The monetary value of a single unit.",
-                            "$ref": "#/definitions/Value"
-                        },
                         "scheme": {
                             "title": "Scheme",
                             "description": "The list from which units of measure identifiers are taken. This should be an entry from the options available in the [unitClassificationScheme](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#unit-classification-scheme) codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended, although other options are available.",
@@ -1415,6 +1402,19 @@
                                 "string",
                                 "null"
                             ]
+                        },
+                        "name": {
+                            "title": "Name",
+                            "description": "Name of the unit.",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "value": {
+                            "title": "Value",
+                            "description": "The monetary value of a single unit.",
+                            "$ref": "#/definitions/Value"
                         },
                         "uri": {
                             "title": "URI",
@@ -1447,10 +1447,7 @@
         },
         "Amendment": {
             "title": "Amendment",
-            "type": [
-                "object",
-                "null"
-            ],
+            "type": "object",
             "description": "Amendment information",
             "properties": {
                 "date": {

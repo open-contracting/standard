@@ -91,11 +91,12 @@ Detailed classification of parties can be provided using one or more [party deta
 The planning section can be used to describe the background to a contracting process. This may include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-planning.csv
-```   
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Planning
+    :collapse: budget,document,milestones
+
+```
 
 ```eval_rst
 .. extensionlist:: The following extensions are available for planning
@@ -107,10 +108,11 @@ Apart from documents, the majority of information is held within the budget bloc
 #### Budget 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-budget.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Budget
+    :collapse: amount
+
 ```
 
 ```eval_rst
@@ -125,31 +127,17 @@ The tender section includes details of the announcement that an organization int
 It may contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and may also be used to record details of a completed tender process, including details of bids received. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-tender.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Tender
+    :collapse: items,tenderPeriod,enquiryPeriod,awardPeriod,contractPeriod,tenderers,documents,milestones,amendment,amendments,minValue,value,procuringEntity
+
 ```
 
 ```eval_rst
 .. extensionlist:: The following extensions are available for the tender section
    :list: tender
 ```
-
-Notes: 
-
-* ```tender.id``` - see the [identifiers guidance](../../identifiers/#tender_award_and_contract) for further information on the tender identifier. In most cases this can be the same as the ocid.
-* ```procuringEntity``` - in some cases the organization managing the procurement process may be different from the organization whose budget is being used for the procurement (the 'buyer' in OCDS terminology). If this is the case, then the details of this procuring organization should be provided here. 
-* ```title``` and ```description``` - tender title and description are optional. The details of items to be procured should always be provided in ```items```. Descriptions should not be used in place of providing structured data on items, dates and other details. Instead, title and description should be used to provide a brief overview of the tender. Publishers should consider adopting a 'tweet length' title, and should avoid ALL UPPERCASE titles, or titles containing code words or other artefacts from internal databases. The goal of these fields is to give users a clear idea of the nature of a tender. 
-* ```items``` - publishers should provide details of each of the items to be procured under this tender. 
-* ```milestones``` - publishers should list any relevant [milestones](#milestone) associated with the delivery of the goods and services covered by this tender. These are the milestones against which the whole contracting process will be evaluated. Publishers may include information about key milestones during the tender process itself, but should not use this in place of ```tenderPeriod```, ```enquiryPeriod``` or ```awardPeriod```.
-* ```value``` and ```minValue``` - the total upper estimated value of a procurement should be given in ```value```. For publishers who also specify a estimate minimum value, this can be placed in ```minValue```.
-*  ```procurementMethod``` and ```procurementMethodRationale```. Tendering processes can use a variety of methods. Publishers should map their methods to one of the approved codes according to the [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of open, selective or limited. A free text explanation of why a given method was appropriate to this tender can be provided in ```procurementMethodRationale```. 
-* ```awardCriteria``` and ```awardCriteriaDetails``` - The [award criteria code list](../../codelists/#award-criteria) describes the basis on which contract awards will be made. This is an open codelist, and so may be extended with new codes. Free text describing the basis on which bids will be judged, and made, can be provided in the ```awardCriteriaDetail``` field. Publishers wishing to provide more structured information about selection, shortlisting and award criteria should propose [extensions](conformance_and_extensions.md) for this. 
-* ```documents``` - supporting documentation should be attached to the tender. This may include official legal notices of tender, as well as technical specifications, evaluation criteria, and, as a tender process progresses, clarifications, replies to queries and copies of bids submitted or listings of shortlisted firms. See the [attachments](#attachments) section for more details of how to include documents, and consult the [documentType codelist](codelists.md/#document-type) for suggested documents to include for basic, intermediate or advanced publication.
-
-Information on bidders against a contract will be handled by an [extension](conformance_and_extensions.md) during the period of the standard release candidate. Publishers wishing to provide detailed information on bidders should [contact support](../support/index.md).
-
 
 ### Bids
 
@@ -160,13 +148,14 @@ Information on bidders against a contract will be handled by an [extension](conf
 
 ### Award
 
-The award section is used to announce any awards issued for this tender. There may be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract, as it contains information on the suppliers. 
+The award section is used to announce any awards issued for this tender. There may be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required alongside every contract block, as the award contains information on the suppliers. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-award.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Award
+    :collapse: items,value,suppliers,contractPeriod,documents,amendment,amendments
+
 ```
 
 ```eval_rst
@@ -179,10 +168,11 @@ The award section is used to announce any awards issued for this tender. There m
 The contract section is used to provide details of contracts that have been entered into. Every contract needs to have a related award, linked via the ```awardID``` property. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-contract.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Contract
+    :collapse: period,value,items,documents,implementation,relatedProcess,milestones,amendment,amendments
+
 ```
 
 ```eval_rst
@@ -190,26 +180,16 @@ The contract section is used to provide details of contracts that have been ente
    :list: contract
 ```
 
-#### Framework contracts
-
-A framework is an agreement with suppliers to establish terms governing contracts that may be awarded during the life of the agreement[*](http://www.constructingexcellence.org.uk/tools/frameworkingtoolkit/whatis.jsp). 
-
-Framework **agreements** can be represented by [awards](#award), which would each detail a supplier participating in the framework, the line items that the agreement covers with this supplier, and any maximum value for the agreement over time.  
-
-Each call-off purchase against a framework agreement would result in a [contract](#contract), related to the framework agreement [award](#award) via ```awardID```. 
-
-As a result, [award](#award) and [contract](#contract) each contain an [items](#items) block, allowing the award to describe the possible goods and services that can be supplied, whilst the contract describes those that are to be supplied in any particular instance. 
-
-
 ### Implementation
 
 Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to. Implementation blocks include the following elements:
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-implementation.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Implementation
+    :collapse: transactions,milestones,documents
+
 ```
 
 ```eval_rst
@@ -222,15 +202,16 @@ Information on subcontracts is not currently included in the release candidate s
 #### Transaction
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-transaction.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Transaction
+    :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
+
 ```
 
 The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organisations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party ```source``` of data, and can re-use identifiers from that source. 
 
-In most circumstances, the ```providerOrganization``` identifier should match that of the ```buyer```, and the ```recieverOrganization``` identifier should match that of the ```supplier```. 
+In most circumstances, the ```payer``` identifier should match that of the ```buyer```, and the ```payee``` identifier should match that of the ```supplier```. 
 
 #### Milestones
 
@@ -251,10 +232,11 @@ A release may amend properties from a previous release. Whilst the release & rec
 The amendment array in a tender, award or contract block provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-amendment.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Amendment
+    :collapse: changes
+    
 ```
 
 #### Changes
@@ -264,7 +246,11 @@ The changes array was deprecated in OCDS 1.1. Structured information on the form
 * Including releases from **before** and **after** a change within a release package;
 * Using the amendment array in tender, contract or award to explicitly relate these releases to an amendment.
 
-## Field reference
+See the [amendment implementation guidance](../../../implementation/amendments/) for more details.
+
+## Building block reference
+
+The following building blocks are commonly re-used throughout the standard.
 
 ### OrganizationReference
 
@@ -286,35 +272,38 @@ The Organization Reference schema contains deprecated fields to prevent validati
 
 See the [parties](#parties) section
 
-
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../../identifiers/#organizations) involved in a contracting process. If a Contracting Process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
+The identifier block provides a way to [identify the legal entities](../../identifiers/#organizations) involved in a contracting process. 
+
+If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-identifier.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Identifier
+    :collapse: 
+    
 ```
 
 #### Address
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-address.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Address
+    :collapse: 
+    
 ```
 
 #### ContactPoint
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-contact-point.csv
-```
 
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/ContactPoint
+    :collapse: 
+    
+```
 ### Document
 
 Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation Each document block can consist of multiple documents, classified using the [documentType](../../codelists/#document-type) codelist.
@@ -322,10 +311,11 @@ Documents may be attached at a number of points within the standard: to planning
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-document.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Document
+    :collapse: 
+    
 ```
 
 ```eval_rst
@@ -364,10 +354,11 @@ A period has a start date, end date, and/or duration. Start and end dates are re
 Periods may also include a ```maxExtentDate``` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-period.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Period
+    :collapse: 
+    
 ```
 
 ```eval_rst
@@ -380,10 +371,11 @@ Periods may also include a ```maxExtentDate``` which indicates the latest possib
 The items block is used to list the line-items associated with a tender, award or contract. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-item.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Item
+    :collapse: classification,additionalClassifications,unit
+    
 ```
 
 ```eval_rst
@@ -392,30 +384,25 @@ The items block is used to list the line-items associated with a tender, award o
 ```
 
 
-
-Notes: 
-
-* The [proposed location extension](../extensions/location.md) can be attached to items, allowing the point of delivery for a given item or the site of works to be completed to be indicated in both the tender, award and contract stage.
-* Items should be classified according to an established scheme of codes. A single primary ```classification``` can be given, although an array of ```additionalClassification``` can be provided.
-
 #### Classification
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-classification.csv
-```
 
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Classification
+    :collapse: 
+    
+```
 #### Unit
 
 The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no code list for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-item-unit.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Item/properties/unit
+    :collapse: value
+    
 ```
 
 ### Milestone
@@ -423,10 +410,11 @@ The ```unit``` block allows detailed specification of the parameters and price o
 Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-milestone.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Milestone
+    :collapse: 
+    
 ```
 
 Notes:
@@ -445,10 +433,11 @@ Notes:
 Financial values should always be published with a currency attached. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/release-value.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Value
+    :collapse: 
+    
 ```
 
 Support for exchange rates, and tax information, can be provided using extensions.
@@ -470,10 +459,11 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 In all these cases, the ```relatedProcess``` block can be used to cross-reference between the relevant open contracting processes using their ```OCID```.
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/related-process.csv
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/RelatedProcess
+    :collapse: 
+    
 ```
 
 A related process can be declared at two points in an OCDS release.
@@ -498,10 +488,11 @@ The addition of location information is currently handled through a [proposed ex
 The publisher block is used in release and record packages to identify the source of a dataset. 
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: standard/docs/field_definitions/publisher.csv
+
+.. jsonschema:: ../../../schema/release-package-schema.json
+    :include: publisher
+    :collapse: 
+    
 ```
 
 ## Language

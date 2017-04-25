@@ -12,5 +12,6 @@
    hosting
    registration
    related_processes
+   amendments
    
 ```
