@@ -74,8 +74,8 @@ The following details can be provided for each party.
 ```eval_rst
 
 .. jsonschema:: ../../../schema/release-schema.json
-    :include: parties
-    :collapse: parties/identifier,parties/additionalIdentifiers,parties/address,parties/contactPoint
+    :pointer: /definitions/Organization
+    :collapse: identifier,additionalIdentifiers,address,contactPoint
 
 ```
 
