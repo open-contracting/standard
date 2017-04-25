@@ -128,9 +128,14 @@ The **organisation register prefix** for UK Companies House is GB-COH. The organ
 
 ```eval_rst
 
-.. jsoninclude:: ../standard/example/organization.json
-   :jsonpointer: 
-   :expand: 
+.. code:: json
+
+    {
+        "scheme":"GB-COH",
+        "id":"06368740",
+        "uri":"http://opencorporates.com/companies/gb/06368740",
+        "legalName":"Development Initiatives Poverty Research Limited"
+    }
 
 ```
 

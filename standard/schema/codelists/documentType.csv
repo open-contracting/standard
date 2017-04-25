@@ -1,36 +1,41 @@
-Category,Code,Title_en,Description_en,Source
-basic,tenderNotice,Tender Notice,"The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained. ",
-basic,awardNotice,Award Notice,"The formal notice that gives details of the contract award. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained. ",
-basic,contractNotice,Contract Notice,"The formal notice that gives details of a contract being signed and valid to start implementation. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained. ",
-basic,completionCertificate,Completion certificate,,
-basic,procurementPlan,Procurement Plan,,
-basic,biddingDocuments,Bidding Documents,"Information for potential suppliers, describing the goals of the contract (e.g. goods and services to be procured), and the bidding process.",
-basic,technicalSpecifications,Technical Specifications,Detailed technical information about goods or services to be provided.,
-basic,evaluationCriteria,Evaluation Criteria ,Information about how bids will be evaluated. ,
-intermediate,evaluationReports,Evaluation report,"Report on the evaluation of the bids and the application of the evaluation criteria, including the justification fo the award",
-intermediate,contractSigned,Signed Contract ,,
-intermediate,contractArrangements,Arrangements for ending contract,,
-intermediate,contractSchedule,Schedules and milestones,,
-intermediate,physicalProcessReport,Physical progress reports,"A report on the status of implementation, usually against key milestones.",
-intermediate,financialProgressReport,Financial progress reports,"Dates and amounts of stage payments made (against total amount) and the source of those payments, including cost overruns, if any. Structured versions of this data can be provided through transactions. ",
-intermediate,finalAudit,Final Audit,,
-intermediate,hearingNotice,Public Hearing Notice,Details of any public hearings that took place as part of the planning for this procurement.,
-intermediate,marketStudies,Market Studies,,
-intermediate,eligibilityCriteria,Eligibility Criteria,Detailed documents about the eligibility of bidders.,
-intermediate,clarifications,Clarifications to bidders questions,Including replies to issues raised in pre-bid conferences.,
-intermediate,shortlistedFirms,Shortlisted Firms,,
-advanced,environmentalImpact,Environmental Impact,,
-advanced,assetAndLiabilityAssessment,Assesment of government's assets and liabilities ,,
-advanced,riskProvisions,Provisions for management of risks and liabilities,,
-advanced,winningBid,Winning Bid,,
-advanced,complaints,Complaints and decisions,,
-advanced,contractAnnexe,Annexes to the Contract,,
-advanced,contractGuarantees,Guarantees,,
-advanced,subContract,Subcontracts,"A document detailing subcontracts, the subcontract itself, or a linked OCDS document describing a subcontract.",
-advanced,needsAssessment,Needs Assessment,,
-advanced,feasibilityStudy,Feasibility study,,
-advanced,projectPlan,Project plan,,
-advanced,billOfQuantity,Bill Of Quantity,,
-advanced,bidders,Information on bidders,"Information on bidders or participants, their validation documents and any procedural exemptions for which they qualify",
-advanced,conflictOfInterest,conflicts of interest uncovered,,
-advanced,debarments,debarments issued,,
+Category,Section,Code,Title_en,Description_en
+basic,tender,tenderNotice,Tender Notice,"The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained."
+basic,award,awardNotice,Award Notice,"The formal notice that gives details of the contract award. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained."
+basic,contract,contractNotice,Contract Notice,"The formal notice that gives details of a contract being signed and valid to start implementation. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained."
+basic,implementation,completionCertificate,Completion certificate,A completion certificate issued by a relevant authority providing evidence that works were completed to a certain level of quality. Completion certificates may only be relevant for particular kinds of contracting processes.
+basic,planning,procurementPlan,Procurement Plan,Documentation that sets out the basis for this particular contracting process.
+basic,tender,biddingDocuments,Bidding Documents,"Documentation for potential suppliers, describing the goals of the contract (e.g. goods and services to be procured), and the bidding process."
+basic,tender,technicalSpecifications,Technical Specifications,Detailed technical information about goods or services to be provided.
+basic,tender,evaluationCriteria,Evaluation Criteria,Documentation on how bids will be evaluated.
+intermediate,tender,evaluationReports,Evaluation report,"Documentation on the evaluation of the bids and the application of the evaluation criteria, including the justification fo the award"
+intermediate,"tender, award",contractDraft,Contract draft,A draft or pro-forma copy of the contract.
+intermediate,contract,contractSigned,Signed Contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required."
+intermediate,"tender, award, contract",contractArrangements,Arrangements for ending contract,Documentation of the arrangements for ending the contract(s).
+intermediate,"tender, award, contract",contractSchedule,Schedules and milestones,Documentation setting out key milestones and schedules. Structured versions of this information may be modelled using the milestones block.
+intermediate,implementation,physicalProgressReport,Physical progress reports,"Documentation on the status of implementation, usually against key milestones."
+intermediate,implementation,financialProgressReport,Financial progress reports,"Documentation providing dates and amounts of stage payments made (against total amount) and the source of those payments, including cost overruns, if any. Structured versions of this information can be provided through contract implementation transactions."
+intermediate,implementation,finalAudit,Final Audit,Documentation of a final audit carried out at the end of contract implementation.
+intermediate,tender,hearingNotice,Public Hearing Notice,Documentation of any public hearings that took place as part of the planning for this contracting process.
+intermediate,planning,marketStudies,Market Studies,Documentation of any market studies that took place as part of the planning for this contracting process.
+intermediate,tender,eligibilityCriteria,Eligibility Criteria,Detailed documents about the eligibility of bidders.
+intermediate,tender,clarifications,Clarifications to bidders questions,Documentation that provides replies to issues raised in pre-bid conferences or an enquiry processes.
+intermediate,tender,shortlistedFirms,Shortlisted Firms,Documentation providing information on shortlisted firms. Structured versions of this information can be provided using the bids extension.
+advanced,"planning, implementation",environmentalImpact,Environmental Impact,"Documentation of environmental impact assessments carried out before, during or after the contracting process."
+advanced,planning,assetAndLiabilityAssessment,Assesment of government's assets and liabilities,Documentation covering assessments of the government's assets and liabilities related to this contracting process.
+advanced,planning,riskProvisions,Provisions for management of risks and liabilities,Documentation covering how risks will be managed as part of this contracting process.
+advanced,award,winningBid,Winning Bid,"Documentation of the winning bid, including, wherever applicable, a full copy of the proposal receieved."
+advanced,"tender, award",complaints,Complaints and decisions,"Documentation of any complaints received, or decisions in response to complaints."
+advanced,contract,contractAnnexe,Annexes to the Contract,Copies of annexes and other supporting documentation related to the contract.
+advanced,"tender, contract",contractGuarantees,Guarantees,Documentation of guarantees relating to a contracting process or contract.
+advanced,contract,subContract,Subcontracts,"Documentation detailing subcontracts and/or providing a copy of subcontracts themselves. Where OCDS data on the subcontracts exists, this can be declared using the relatedProcess block."
+advanced,planning,needsAssessment,Needs Assessment,Documentation of the needs assessments carried out for this contracting process addressing demand for the project or investment from the affected communities or users.
+advanced,planning,feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process, providing information on net benefits or costs of the proposed goods, works or services."
+advanced,planning,projectPlan,Project plan,"Documentation of project planning for this contracting process, and, where applicable, a copy of the project plan document."
+advanced,tender,billOfQuantity,Bill Of Quantity,"Documentation that provides itemised information on materials, parts and labour, and the terms and conditions for their provision, providing information that would enable bidders to price work effectively. Structured versions of item and quantity information at each of tender, award and contract stage can be provided using units within the items building block."
+advanced,"tender, bidder",bidders,Information on bidders,"Documentation on bidders or participants, their validation documents and any procedural exemptions for which they qualify"
+advanced,"tender, award, contract, implementation",conflictOfInterest,Conflict of Interest,Documentation of conflicts of interest declared or uncovered.
+advanced,implementation,debarments,Debarments,Documentation of any debarments issued.
+advanced,"tender, bid, contract, implementation",illlustration,Illustrations,"Images intended to provide supporting information. The url for images should generally be directly to an image file which applications can display as part of a gallery of images. At the tender stage, images may be illustrations of goods, works or services required or for sale. At the implementation stage, images may be illlustrations or visual evidence of physical progress. "
+advanced,"bid, award, contract",submissionDocuments,Bid Submission Documents,Documentation submitted by a bidder as part of their proposal.
+advanced,contract,contractSummary,Contract Summary,Documentation providing an overview of the key terms and sections of the contract. Commonly used for large and complex contracts.
+advanced,"tender, award, contract, implementation",cancellationDetails,Cancellation Details,"Documentation the arrangements, or reasons, for cancellation of a contracting process, award or specific contract.  "
