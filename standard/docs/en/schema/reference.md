@@ -323,7 +323,26 @@ The document block is also used to link to legal notices, which should have a do
    :list: document
 ```
 
-### Date
+### Period
+
+A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
+
+Periods may also include a ```maxExtentDate``` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
+
+```eval_rst
+
+.. jsonschema:: ../../../schema/release-schema.json
+    :pointer: /definitions/Period
+    :collapse: 
+    
+```
+
+```eval_rst
+.. extensionlist:: The following extensions are available for period
+   :list: period
+```
+
+#### Date
 
 OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339#section-5.6).
 
@@ -346,25 +365,6 @@ Accurately including the time and timezone offsets is particular important for t
 In the event that the system from which data is drawn only includes dates, and does not include time information, publishers should consider sensible defaults for each field. For example, the startDate time of a clarification period may be set to '00:00:00Z' to indicate that clarifications can be requested from any time on the date stated, with the endDate time set to 23:59:59Z to indicate that clarifications can be sent up until the end of the endDate given. Alternatively, if clarification requests are only accepted in standard office hours, these values might be 09:00:00Z and 17:00:00Z respectively.
 
 In the event that a date field is not bound to a specific time at all, publishers should choose a default time value of '23:59:59' and either 'Z' (for UTC) or the timezone of the publisher, indicating that the time refers to the end of the given date. 
-
-#### Period
-
-A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
-
-Periods may also include a ```maxExtentDate``` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
-
-```eval_rst
-
-.. jsonschema:: ../../../schema/release-schema.json
-    :pointer: /definitions/Period
-    :collapse: 
-    
-```
-
-```eval_rst
-.. extensionlist:: The following extensions are available for period
-   :list: period
-```
 
 ### Item
 
