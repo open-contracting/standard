@@ -6,7 +6,7 @@ import json
 import json_merge_patch
 from collections import OrderedDict
 
-extensions_to_merge = ['ppp','process_title','location','requirements','budget','budget_project','documentation_details','metrics','risk_allocation','shareholders','related_process','finance','milestones','qualification','tariffs','performance-failures','signatories','charges','transaction_milestones','bids','milestone_documents']
+extensions_to_merge = ['ppp','process_title','location','requirements','budget','budget_project','documentation_details','metrics','risk_allocation','shareholders','finance','qualification','tariffs','performance-failures','signatories','charges','transaction_milestones','bids','milestone_documents']
 
 GIT_REF = "master"
 location = "http://standard.open-contracting.org/extension_registry/{}/extensions.json".format(GIT_REF)
