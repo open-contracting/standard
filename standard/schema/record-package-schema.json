@@ -66,7 +66,7 @@
       ]
     },
     "license": {
-      "title":"License",
+      "title": "License",
       "description": "A link to the license that applies to the data in this datapackage. [Open Definition Conformant](http://opendefinition.org/licenses/) licenses are strongly recommended. The canonical URI of the license should be used. Documents linked from this file may be under other license conditions.",
       "type": [
         "string",
@@ -75,7 +75,7 @@
       "format": "uri"
     },
     "publicationPolicy": {
-      "title":"Publication policy",
+      "title": "Publication policy",
       "description": "A link to a document describing the publishers publication policy.",
       "type": [
         "string",
@@ -84,13 +84,13 @@
       "format": "uri"
     },
     "publishedDate": {
-      "title":"Published date",
+      "title": "Published date",
       "description": "The date that this package was published. If this package is generated 'on demand', this date should reflect the date of the last change to the underlying contents of the package.",
       "type": "string",
       "format": "date-time"
     },
     "packages": {
-      "title":"Packages",
+      "title": "Packages",
       "description": "A list of URIs of all the release packages that were used to create this record package.",
       "type": "array",
       "minItems": 1,
@@ -101,7 +101,7 @@
       "uniqueItems": true
     },
     "records": {
-      "title":"Records",
+      "title": "Records",
       "description": "The records for this data package.",
       "type": "array",
       "minItems": 1,
@@ -120,7 +120,7 @@
   ],
   "definitions": {
     "record": {
-      "title":"Record",
+      "title": "Record",
       "type": "object",
       "properties": {
         "ocid": {
@@ -129,7 +129,7 @@
           "type": "string"
         },
         "releases": {
-          "title":"Releases",
+          "title": "Releases",
           "description": "An array of linking identifiers or releases",
           "oneOf": [
             {
@@ -192,7 +192,7 @@
               "description": "A list of releases, with all the data. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
               "type": "array",
               "items": {
-                "$ref": "http://standard.open-contracting.org/schema/1__1__0/release-schema.json"
+                "$ref": "http://standard.open-contracting.org/schema/1__0__2/release-schema.json"
               },
               "minItems": 1
             }
@@ -201,12 +201,12 @@
         "compiledRelease": {
           "title": "Compiled release",
           "description": "This is the latest version of all the contracting data, it has the same schema as an open contracting release.",
-          "$ref": "http://standard.open-contracting.org/schema/1__1__0/release-schema.json"
+          "$ref": "http://standard.open-contracting.org/schema/1__0__2/release-schema.json"
         },
         "versionedRelease": {
           "title": "Versioned release",
           "description": "This contains the history of the data in the compiledRecord. With all versions of the information and the release they came from.",
-          "$ref": "http://standard.open-contracting.org/schema/1__1__0/versioned-release-validation-schema.json"
+          "$ref": "http://standard.open-contracting.org/schema/1__0__2/versioned-release-validation-schema.json"
         }
       },
       "required": [

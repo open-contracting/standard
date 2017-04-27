@@ -24,9 +24,11 @@ The versioned release format is designed to support analysis of how data has cha
 Records should be embedded within a record package.  
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :file: standard/docs/field_definitions/record-package.csv
+
+.. jsonschema:: ../../../schema/record-package-schema.json
+    :include: 
+    :collapse: records
+
 ```
 
 See the guidance on [package meta-data](reference.md#package-metadata). In addition, a record package includes:
