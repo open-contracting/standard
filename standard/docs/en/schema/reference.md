@@ -413,7 +413,7 @@ Milestone information can be included in the [planning](#planning), [tender](#te
 
 .. jsonschema:: ../../../schema/release-schema.json
     :pointer: /definitions/Milestone
-    :collapse: 
+    :collapse: documents
     
 ```
 
@@ -518,7 +518,7 @@ A contract for ‘Software consultancy services’ may be published in a release
 
 .. jsoninclude:: docs/en/examples/language.json
    :jsonpointer: 
-   :expand: 
+   :expand: tender,item
 
 ```
 

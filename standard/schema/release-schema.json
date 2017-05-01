@@ -888,7 +888,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "List of documents associated with this milestone.",
+          "description": "List of documents associated with this milestone (Deprecated in 1.1).",
           "type": "array",
           "deprecated": {
             "deprecatedVersion": "1.1",
@@ -1072,7 +1072,7 @@
         },
         "source": {
           "title": "Data Source",
-          "description": "Used to point either to a corresponding Budget Data Package, or to a machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
+          "description": "(Deprecated in 1.1) Used to point either to a corresponding Budget Data Package, or to a machine or human-readable source where users can find further information on the budget line item identifiers, or project identifiers, provided here.",
           "type": [
             "string",
             "null"
@@ -1166,7 +1166,7 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value of the transaction. A negative value indicates a refund or correction.",
+          "description": "(Deprecated in 1.1. Use transaction.value instead) The value of the transaction. A negative value indicates a refund or correction.",
           "$ref": "#/definitions/Value",
           "deprecated": {
             "description": "This field has been replaced by the ```transaction.value``` field for consistency with the use of value and amount elsewhere in the standard.",
@@ -1175,7 +1175,7 @@
         },
         "providerOrganization": {
           "title": "Provider organization",
-          "description": "The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
+          "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
             "description": "This field has been replaced by the ```transaction.payer``` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
@@ -1184,7 +1184,7 @@
         },
         "receiverOrganization": {
           "title": "Receiver organization",
-          "description": "The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
+          "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
             "description": "This field has been replaced by the ```transaction.payee``` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
@@ -1501,19 +1501,19 @@
         },
         "changes": {
           "title": "Amended fields",
-          "description": "An array change objects describing the fields changed, and their former values.",
+          "description": "An array change objects describing the fields changed, and their former values. (Deprecated in 1.1)",
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
               "property": {
                 "title": "Property",
-                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. ",
+                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in 1.1)",
                 "type": "string"
               },
               "former_value": {
                 "title": "Former Value",
-                "description": "The previous value of the changed property, in whatever type the property is.",
+                "description": "The previous value of the changed property, in whatever type the property is. (Deprecated in 1.1)",
                 "type": [
                   "string",
                   "number",
