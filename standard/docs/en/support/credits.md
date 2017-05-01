@@ -20,7 +20,7 @@ Issue contributors:
 
 [@agm3dc](//github.com/agm3dc) (Andrew
 Mandelbaum), [@AlCollier](//github.com/AlCollier) (Al Collier), [@andrewlorien](//github.com/andrewlorien) (andrew lorien), [@Bjwebb](//github.com/Bjwebb) (Ben Webb), [@chriscrownagents](//github.com/chriscrownagents) (Chris Smith), [@ColinMaudry](//github.com/ColinMaudry) (Colin Maudry), [@duncandewhurst](//github.com/duncandewhurst) (Duncan Dewhurst), [@ec-mcs](//github.com/ec-mcs) (Marc Christopher Schmidt), [@edugomez](//github.com/edugomez) (Eduardo Gomez), [@ekoner](//github.com/ekoner) (Edafe Onerhime), [@hrdwm14](//github.com/hrdwm14), [@joshuacpowell](//github.com/joshuacpowell) (Joshua Powell), [@jskuhrovec](//github.com/jskuhrovec) (Jiri Skuhrovec), [@kindly](//github.com/kindly) (David Raznick), [@KrzysztofMadejski](//github.com/KrzysztofMadejski) (Krzysiek Madejski), [@LindseyAM](//github.com/LindseyAM) (Lindsey Marchessault), [@myroslav](//github.com/myroslav) (Myroslav Opyr), [@robredpath](//github.com/robredpath) (Rob Redpath), [@SamCCSI](//github.com/SamCCSI) (Sam
-Szoke-Burke, [@siwhitehouse](//github.com/siwhitehouse) (Simon Whitehouse) and [@woodbine](//github.com/woodbine)  (Ian Makgill).
+Szoke-Burke), [@siwhitehouse](//github.com/siwhitehouse) (Simon Whitehouse) and [@woodbine](//github.com/woodbine)  (Ian Makgill).
 
 Peer reviewers:
 
