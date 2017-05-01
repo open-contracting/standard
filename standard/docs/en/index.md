@@ -4,11 +4,7 @@ Open Contracting Data Standard: Documentation
 ```eval_rst
 .. warning:: 
 
-  This is a draft version of documentation for the OCDS version 1.1 upgrade. Not all sections of this documentation have yet been updated to reflect the revised standard.
-
-  Only the schema reference page is fully updated.
-
-  Examples and other guidance will be updated following the completion of a review of changes to the schema.
+  This is the release candidate for OCDS 1.1. It is currently undergoing final review, and we anticipate it being ready for full implementation by the end of May 2017. 
 
 ```
 
@@ -28,37 +24,6 @@ The OCDS approach:
 * Guidance on improving data collection and data quality
 * A growing community of users and range of open source tools
 
-
-
-<!-- Progressive enhancement for documentation slider above. Add a list of images in order that should be associated with the bullet points above. Uses bxSlider and some custom jQuery. Images also need to be in the hidden div block below in order to be copied across to the deployed docs correctly. -->
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css"/>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
-<script type="text/javascript"><!--
-images = ['test.png','contracting_process_rc.png'];
-$("ul.simple-REMOVE").each(function(key,value) { 
-    if($( this ).children("li").size() == 10) { 
-        $( this ).addClass("bxslider");
-        for (i = 0; i < images.length; i++) { 
-            $( this ).children("li:eq("+i+")").html('<img src="_images/'+images[i]+'" title="'+$( this ).children("li:eq("+i+")").html()+'">');
-        }
-    }
-});
-$('.bxslider').bxSlider({
-  mode: 'horizontal',
-  auto: true,
-  captions: true
-});
---></script>
-
-<div style="display:none;">
-![Test](../../assets/slider/test.png)
-</div>
-
-
-
-
 ## About
 
 The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). 
@@ -68,7 +33,6 @@ Version 1.0 of the standard was developed for the OCP by the [World Wide Web Fou
 ## Support
 
 A [free helpdesk service](support/index.md) is available to support implementation and use of OCDS.
-
 
 ```eval_rst
 .. toctree::
