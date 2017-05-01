@@ -28,10 +28,10 @@ Peer reviewers:
 * Mireille Raad, World Bank (USA)
 * Aura Martínez, Secretaría de Hacienda y Crédito Público (Mexico)
 * Andrew Mandelbaum & Mihai Postelnicu, Development Gateway (USA)
-* Patrick Enaholo, Budeshi (Nigeria)
-* Juan Pane, ILDA (Paraguay)
+* Patrick Enaholo, Pan Atlantic University - Lagos (Nigeria)
+* Juan Pane, Latin America Open Data Initiative  (Paraguay)
 * Jachym Hercher, European Commission (Belgium)
-* Irum Maqsood, Public Services and Procurement (Canada)
+* Irum Maqsood, Public Works and Government Services Canada (Canada)
 
 ### Version 1.0.0
 Standard website design and icons by Neontribe: with thanks to Harry Harold and Heydon Pickering.
