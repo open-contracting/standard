@@ -6,6 +6,8 @@ Open Contracting Data Standard: Documentation
 
   This is the release candidate for OCDS 1.1. It is currently undergoing final review, and we anticipate it being ready for full implementation by the end of May 2017. 
 
+  You can [test validation against the new schema here](http://dev.cove.opendataservices.coop/validator/).
+
 ```
 
 Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. 
