@@ -29,13 +29,12 @@ def add_versions(schema, location=''):
         prop_type = value.get('type')
         value.pop("title", None)
         value.pop("description", None)
-        mergeStrategy = value.pop("mergeStrategy", None)
-        value.pop("mergeOptions", None)
-        value.pop("omitWhenMerged", None)
-        value.pop("wholeListMerge", None)
+        omitWhenMerged = value.pop("omitWhenMerged", None)
+        wholeListMerge = value.pop("wholeListMerge", None)
+        versionId = value.pop("versionId", None)
         if not prop_type:
             continue
-        if mergeStrategy == 'overwrite':
+        if key == 'id' and not versionId:
             continue
         if prop_type == ["string", "null"] and "enum" not in value:
             new_value = OrderedDict()
@@ -50,7 +49,7 @@ def add_versions(schema, location=''):
         elif prop_type == "array":
             version = copy.deepcopy(version_template)
             version_properties = version["items"]["properties"]
-            if mergeStrategy == 'ocdsVersion':
+            if wholeListMerge:
                 new_value = copy.deepcopy(value)
                 
                 if '$ref' in new_value['items']:
@@ -128,10 +127,11 @@ def get_versioned_validation_schema(versioned_release):
         if not 'properties' in value:
             continue
         for prop_value in value['properties'].values():
-            prop_value.pop("mergeStrategy", None)
-            prop_value.pop("mergeOptions", None)
             prop_value.pop("title", None)
             prop_value.pop("description", None)
+            prop_value.pop("omitWhenMerged", None)
+            prop_value.pop("wholeListMerge", None)
+            prop_value.pop("versionId", None)
 
     return versioned_release
 
