@@ -124,14 +124,16 @@ A reference implementation of the merge routine in python [is available on GitHu
 
 There are some situations in which it is important to be able to see how data about a contracting process has changed over time. For example, to identify how contract values have altered, or milestones moved through stages of implementation. 
 
-The versioned release schema provides a model for representing this data.
+The [versioned release validation schema](../../versioned-release-validation-schema.json) provides a model for representing this data.
 
-In a versioned release, instead of over-writing past values when combining multiple releases, each field becomes an array of objects, indicating the:
+In a versioned release, instead of over-writing past values when combining multiple releases, each field (with the exception of the ```id``` property of objects within an array) becomes an array of objects, indicating the:
 
 * The date, id and tag of the releases where a field-value pair was first encountered;
 * The value of the field-value pair at that point;
 
-As a result, the history of any field can be easily read from the data structure. 
+As a result, the history of any field can be easily read from the data structure.
+
+The property ```"versionId":true``` is used to explicitly declare the cases where an ```id``` field **should** be versioned (i.e. within an object that is not within an array). 
 
 ### Example
 
@@ -140,8 +142,16 @@ As a result, the history of any field can be easily read from the data structure
 .. jsoninclude:: docs/en/examples/merging/versioned.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: value, amount
-   :title: versioned
+   :title: versioned_extract
+   
+```
 
+```eval_rst
 
+.. jsoninclude:: docs/en/examples/merging/versioned.json
+   :jsonpointer: 
+   :expand: 
+   :title: full_versioned_file
+   
 ```
 
