@@ -358,19 +358,22 @@ class JSONInclude(LiteralInclude):
         return [ literal ]
 
 def flatten_dict(obj, path, result, recursive=False):
-    for key, value in obj.items():
-        if isinstance(value, dict):
-            if recursive:
-                flatten_dict(value, path + '/' +key, result, recursive=recursive)
-        elif isinstance(value, list):
-            if isinstance(value[0], dict):
+    try:
+        for key, value in obj.items():
+            if isinstance(value, dict):
                 if recursive:
-                    for num, sub_value in enumerate(value):
-                        flatten_dict(value, path + '/' + key + '/' + str(num), result, recursive=recursive)
+                    flatten_dict(value, path + '/' +key, result, recursive=recursive)
+            elif isinstance(value, list):
+                if isinstance(value[0], dict):
+                    if recursive:
+                        for num, sub_value in enumerate(value):
+                            flatten_dict(value, path + '/' + key + '/' + str(num), result, recursive=recursive)
+                else:
+                    result[path + '/' + key] = ", ".join(value)
             else:
-                result[path + '/' + key] = ", ".join(value)
-        else:
-            result[path + '/' + key] = value
+                result[path + '/' + key] = value
+    except:
+        pass
 
 
 
