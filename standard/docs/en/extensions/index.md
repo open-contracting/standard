@@ -17,7 +17,6 @@ Some extensions with wide adoption may be considered for inclusion as part of th
 ```eval_rst
 .. toctree::
    :maxdepth: 2
-   :glob:
 
    developing
    community
@@ -31,6 +30,13 @@ Some extensions with wide adoption may be considered for inclusion as part of th
    :maxdepth: 1
    :glob:
 
-   *
+   bids
+   enquiries
+   location
+   lots
+   milestone_documents
+   participation_fee
+   party_details
+   process_title
 
 ```
