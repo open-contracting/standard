@@ -27,7 +27,7 @@ Releases must be published within a [release package](release_package.md). The r
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-package-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-package-schema.json
     :include: 
     :collapse: releases,publisher
 
@@ -43,7 +43,7 @@ All new information about a contracting process is described within a release.
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :include: 
     :collapse: planning,tender,award,contract,parties,buyer,relatedProcess
 
@@ -73,7 +73,7 @@ The following details can be provided for each party.
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Organization
     :collapse: identifier,additionalIdentifiers,address,contactPoint
 
@@ -92,7 +92,7 @@ The planning section can be used to describe the background to a contracting pro
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Planning
     :collapse: budget,document,milestones
 
@@ -109,7 +109,7 @@ Apart from documents, the majority of information is held within the budget bloc
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Budget
     :collapse: amount
 
@@ -128,7 +128,7 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Tender
     :collapse: items,tenderPeriod,enquiryPeriod,awardPeriod,contractPeriod,tenderers,documents,milestones,amendment,amendments,minValue,value,procuringEntity
 
@@ -152,7 +152,7 @@ The award section is used to announce any awards issued for this tender. There m
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Award
     :collapse: items,value,suppliers,contractPeriod,documents,amendment,amendments
 
@@ -169,7 +169,7 @@ The contract section is used to provide details of contracts that have been ente
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Contract
     :collapse: period,value,items,documents,implementation,relatedProcess,milestones,amendment,amendments
 
@@ -186,7 +186,7 @@ Implementation information can be updated over the course of a contract. It belo
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Implementation
     :collapse: transactions,milestones,documents
 
@@ -203,7 +203,7 @@ Information on subcontracts is not currently included in the release candidate s
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Transaction
     :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
 
@@ -233,7 +233,7 @@ The amendment array in a tender, award or contract block provides the ability to
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Amendment
     :collapse: changes
     
@@ -280,7 +280,7 @@ If a contracting process represents a contract arranged by the department or bra
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Identifier
     :collapse: 
     
@@ -289,7 +289,7 @@ If a contracting process represents a contract arranged by the department or bra
 #### Address
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Address
     :collapse: 
     
@@ -299,7 +299,7 @@ If a contracting process represents a contract arranged by the department or bra
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/ContactPoint
     :collapse: 
     
@@ -312,7 +312,7 @@ The document block is also used to link to legal notices, which should have a do
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Document
     :collapse: 
     
@@ -331,7 +331,7 @@ Periods may also include a ```maxExtentDate``` which indicates the latest possib
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Period
     :collapse: 
     
@@ -372,7 +372,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Item
     :collapse: classification,additionalClassifications,unit
     
@@ -388,7 +388,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Classification
     :collapse: 
     
@@ -399,7 +399,7 @@ The ```unit``` block allows detailed specification of the parameters and price o
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Item/properties/unit
     :collapse: value
     
@@ -411,7 +411,7 @@ Milestone information can be included in the [planning](#planning), [tender](#te
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Milestone
     :collapse: documents
     
@@ -434,7 +434,7 @@ Financial values should always be published with a currency attached.
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Value
     :collapse: 
     
@@ -460,7 +460,7 @@ In all these cases, the ```relatedProcess``` block can be used to cross-referenc
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/RelatedProcess
     :collapse: 
     
@@ -488,7 +488,7 @@ The publisher block is used in release and record packages to identify the sourc
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/release-package-schema.json
+.. jsonschema:: ../../../../build/current_lang/release-package-schema.json
     :include: publisher
     :collapse: 
     
