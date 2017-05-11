@@ -4,6 +4,14 @@ mkdir -p standard/docs/field_definitions
 cd standard
 python schema/utils/make_field_definitions.py
 CODELIST_LANG=en python schema/utils/translate_codelists.py
+
+mkdir -p ../build/en/ || true
+cp schema/*.json ../build/en/
+# Create a symlink for the current language, so we can reference the
+# translated JSON schema from Sphinx directives
+rm ../build/current_lang || true
+ln -s ../build/en ../build/current_lang
+
 sphinx-build -b dirhtml docs/en ../build/en
 sphinx-build -b gettext docs/en ../build/locale
 # Remove messages from CSVs from Sphinx's own translations as we translate the
@@ -26,16 +34,19 @@ pybabel compile -d docs/locale -D codelists
 
 cd ..
 cp -r standard/assets build
-cp standard/schema/*.json build/en/
 # can put multiple languages i.e translate_schema.py en fr
 python standard/schema/utils/translate_schema.py es fr
 
 cd standard
-# all these need to be run per language
-SCHEMA_LANG=es python schema/utils/make_field_definitions.py
-CODELIST_LANG=es python schema/utils/translate_codelists.py
-sphinx-build -b dirhtml -D language='es' docs/en ../build/es
+for lang in es fr; do
+    SCHEMA_LANG=$lang python schema/utils/make_field_definitions.py
+    CODELIST_LANG=$lang python schema/utils/translate_codelists.py
+    # Create a symlink for the current language, so we can reference the
+    # translated JSON schema from Sphinx directives
+    rm ../build/current_lang
+    ln -s ../build/$lang ../build/current_lang
+    sphinx-build -b dirhtml -D language="$lang" docs/en ../build/$lang
+done
 
-SCHEMA_LANG=fr python schema/utils/make_field_definitions.py
-CODELIST_LANG=fr python schema/utils/translate_codelists.py
-sphinx-build -b dirhtml -D language='fr' docs/en ../build/fr
+# Our deploy script doesn't like it if this still exists
+rm ../build/current_lang
