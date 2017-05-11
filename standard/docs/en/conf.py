@@ -564,14 +564,63 @@ class ExtensionTable(CSVTable):
         return rows, max_cols
 
 
+class ExtensionSelectorTable(CSVTable):
+    def get_csv_data(self):
+        headings = ['', 'Extension', 'Description', 'Category', '']
+        data = []
+
+        if not extension_json['extensions']:
+            return [','.join(headings)], 'Extensions'
+
+        for num, extension_obj in enumerate(extension_json['extensions']):
+            if not extension_obj.get('core'):
+                continue
+            row = ['', extension_obj['name']['en'], extension_obj['description']['en'],
+                   extension_obj['category'], '{}extension.json'.format(extension_obj['url'])]
+            data.append(row)
+
+        data.insert(0, headings)
+        output = io.StringIO()
+        output_csv = csv.writer(output)
+        for line in data:
+            output_csv.writerow(line)
+
+        self.options['header-rows'] = 1
+        self.options['class'] = ['extension-selector-table']
+        self.options['widths'] = [8, 30, 42, 15, 0]
+
+        return output.getvalue().splitlines(), None
+
+    def parse_csv_data_into_rows(self, csv_data, dialect, source):
+        # csv.py doesn't do Unicode; encode temporarily as UTF-8
+        csv_reader = csv.reader([self.encode_for_csv(line + '\n')
+                                 for line in csv_data],
+                                dialect=dialect)
+        rows = []
+        max_cols = 0
+        for row_num, row in enumerate(csv_reader):
+            row_data = []
+            for cell_num, cell in enumerate(row):
+                if row_num == 0 or (cell_num != 0 and cell_num != 3):
+                    new_source = source
+                else:
+                    new_source = ""
+                # decode UTF-8 back to Unicode
+                cell_text = self.decode_from_csv(cell)
+                cell_data = (0, 0, 0, statemachine.StringList(
+                    cell_text.splitlines(), source=new_source))
+                row_data.append(cell_data)
+            rows.append(row_data)
+            max_cols = max(max_cols, len(row))
+        return rows, max_cols
+
+
 directives.register_directive('jsoninclude', JSONInclude)
 directives.register_directive('extensionlist', ExtensionList)
 directives.register_directive('extensiontable', ExtensionTable)
+directives.register_directive('extensionselectortable', ExtensionSelectorTable)
 
 
 # app setup hook
 def setup(app):
     app.add_transform(AutoStructify)
-
-
-

@@ -6,3 +6,17 @@
 .extension_url {
     width:70%;
 }
+
+.extension-selector-table td:first-child {
+    cursor: pointer
+}
+
+.extension-selector-table td:first-child::after {
+    content: '[ ]';
+    color: #000;
+}
+
+.extension-selector-table td.extension-selected:first-child::after {
+    content: '[x]';
+    color: #000;
+}
