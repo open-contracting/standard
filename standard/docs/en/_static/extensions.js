@@ -67,6 +67,7 @@ jQuery(function () {
     })
   });
 
+  // ExtensionSelectorTable
   // last-child contains the url for the extension
   $('.extension-selector-table th:last-child').hide();
   $('.extension-selector-table td:last-child').hide();
@@ -75,15 +76,13 @@ jQuery(function () {
   $('.extension-selector-table td:first-child').click(function (){
       var $this = $(this);
       var extensions = $('.highlight-json pre span:nth-child(3)').next().text();
-      console.log(extensions.substring(1, extensions.length-1));
-      extensions = JSON.parse(extensions.substring(1, extensions.length-1))
-      var url = $this.parent().find('a').text()
+      extensions = JSON.parse(extensions.substring(1, extensions.length-1));
+      var url = $this.parent().find('a').text();
       var url_index = extensions.indexOf(url);
 
       if ($this.hasClass('extension-selected')) {
         extensions.splice(url_index, 1);
         $this.removeClass('extension-selected')
-        
       } else {
         extensions.push(url);
         $this.addClass('extension-selected')

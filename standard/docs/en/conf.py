@@ -69,7 +69,8 @@ release = '1.1.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = os.environ.get('SCHEMA_LANG', 'en')
+
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -589,8 +590,10 @@ class ExtensionSelectorTable(CSVTable):
             else:
                 if extension_obj.get('core'):
                     continue
-            row = ['', extension_obj['name']['en'], extension_obj['description']['en'],
-                   extension_obj['category'], '{}extension.json'.format(extension_obj['url'])]
+            extension_name = extension_obj['name'].get(language) or extension_obj['name'].get('en')
+            extension_description = extension_obj['description'].get(language) or extension_obj['description'].get('en')
+            row = ['', extension_name, extension_description, extension_obj['category'],
+                   '{}extension.json'.format(extension_obj['url'])]
             data.append(row)
 
         data.insert(0, headings)
@@ -602,31 +605,7 @@ class ExtensionSelectorTable(CSVTable):
         self.options['header-rows'] = 1
         self.options['class'] = ['extension-selector-table']
         self.options['widths'] = [8, 30, 42, 15, 0]
-
         return output.getvalue().splitlines(), None
-
-    def parse_csv_data_into_rows(self, csv_data, dialect, source):
-        # csv.py doesn't do Unicode; encode temporarily as UTF-8
-        csv_reader = csv.reader([self.encode_for_csv(line + '\n')
-                                 for line in csv_data],
-                                dialect=dialect)
-        rows = []
-        max_cols = 0
-        for row_num, row in enumerate(csv_reader):
-            row_data = []
-            for cell_num, cell in enumerate(row):
-                if row_num == 0 or (cell_num != 0 and cell_num != 3):
-                    new_source = source
-                else:
-                    new_source = ""
-                # decode UTF-8 back to Unicode
-                cell_text = self.decode_from_csv(cell)
-                cell_data = (0, 0, 0, statemachine.StringList(
-                    cell_text.splitlines(), source=new_source))
-                row_data.append(cell_data)
-            rows.append(row_data)
-            max_cols = max(max_cols, len(row))
-        return rows, max_cols
 
 
 directives.register_directive('jsoninclude', JSONInclude)

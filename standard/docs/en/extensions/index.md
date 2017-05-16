@@ -48,7 +48,6 @@ Extension are applied by adding their URLs to the ```extensions``` array in the 
 
    developing
    community
-   using
 
 ```
 

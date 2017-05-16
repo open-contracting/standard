@@ -34,8 +34,8 @@ cd standard
 # all these need to be run per language
 SCHEMA_LANG=es python schema/utils/make_field_definitions.py
 CODELIST_LANG=es python schema/utils/translate_codelists.py
-sphinx-build -b dirhtml -D language='es' docs/en ../build/es
+SCHEMA_LANG=es sphinx-build -b dirhtml -D language='es' docs/en ../build/es
 
 SCHEMA_LANG=fr python schema/utils/make_field_definitions.py
 CODELIST_LANG=fr python schema/utils/translate_codelists.py
-sphinx-build -b dirhtml -D language='fr' docs/en ../build/fr
+SCHEMA_LANG=fr sphinx-build -b dirhtml -D language='fr' docs/en ../build/fr
