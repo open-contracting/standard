@@ -69,7 +69,7 @@ release = '1.1.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = os.environ.get('SCHEMA_LANG', 'en')
+language = None
 
 
 # There are two options for replacing |today|: either, you set today to some
@@ -569,6 +569,8 @@ class ExtensionSelectorTable(CSVTable):
     option_spec = {'group': directives.unchanged}
 
     def get_csv_data(self):
+        env = self.state.document.settings.env
+
         data = []
         headings = ['', 'Extension', 'Description', 'Category', '']
         group = self.options.get('group')
@@ -590,8 +592,8 @@ class ExtensionSelectorTable(CSVTable):
             else:
                 if extension_obj.get('core'):
                     continue
-            extension_name = extension_obj['name'].get(language) or extension_obj['name'].get('en')
-            extension_description = extension_obj['description'].get(language) or extension_obj['description'].get('en')
+            extension_name = extension_obj['name'].get(env.config.language) or extension_obj['name'].get('en')
+            extension_description = extension_obj['description'].get(env.config.language) or extension_obj['description'].get('en')
             row = ['', extension_name, extension_description, extension_obj['category'],
                    '{}extension.json'.format(extension_obj['url'])]
             data.append(row)
