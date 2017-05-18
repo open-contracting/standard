@@ -593,6 +593,7 @@ class ExtensionSelectorTable(CSVTable):
                 if extension_obj.get('core'):
                     continue
             extension_name = extension_obj['name'].get(env.config.language) or extension_obj['name'].get('en')
+            extension_name = '{}::{}'.format(extension_name, extension_obj.get('documentation_url', ''))
             extension_description = extension_obj['description'].get(env.config.language) or extension_obj['description'].get('en')
             row = ['', extension_name, extension_description, extension_obj['category'],
                    '{}extension.json'.format(extension_obj['url'])]
@@ -606,7 +607,7 @@ class ExtensionSelectorTable(CSVTable):
 
         self.options['header-rows'] = 1
         self.options['class'] = ['extension-selector-table']
-        self.options['widths'] = [8, 30, 42, 15, 0]
+        self.options['widths'] = [8, 30, 42, 20, 0]
         return output.getvalue().splitlines(), None
 
 

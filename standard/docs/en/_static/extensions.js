@@ -68,16 +68,19 @@ jQuery(function () {
   });
 
   // ExtensionSelectorTable
-  // last-child contains the url for the extension
-  $('.extension-selector-table th:last-child').hide();
-  $('.extension-selector-table td:last-child').hide();
   $('.extension-selector-table td:first-child').addClass('extension-selector');
+  $('.extension-selector-table td:nth-child(2)').each(function() {
+    var $this = $(this);
+    var splitNameDocURL = $this.text().split('::');
+    var cellContent = '<a href="' + splitNameDocURL[1] + '">' + splitNameDocURL[0] + '</a>';
+    $this.html(cellContent);
+  });
 
   $('.extension-selector-table td:first-child').click(function (){
       var $this = $(this);
       var extensions = $('.highlight-json pre span:nth-child(3)').next().text();
       extensions = JSON.parse(extensions.substring(1, extensions.length-1));
-      var url = $this.parent().find('a').text();
+      var url = $this.parent().find('td:last-child a').text();
       var url_index = extensions.indexOf(url);
 
       if ($this.hasClass('extension-selected')) {
