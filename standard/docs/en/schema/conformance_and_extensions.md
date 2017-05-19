@@ -4,9 +4,9 @@
 
 <span class="lead">To maximise the interoperability of data published using the Open Contracting Data Standard we have set out key principles for **conforming** to the standard. These also create space for **extensions** of the standard where particular publisher or user needs require.</span>
 
-## Conformance
+## Conformance 
 
-To maximise the interoperability of data published using the Open Contracting Data Standard we have set out key principles for **conforming** to the standard, [based on the Popolo Project](http://www.popoloproject.com/specs/#conformance) approach. 
+### Publication conformance
 
 1. A conforming implementation *may* use only a subset of this specification's terms.
 1. It *must not* use terms from outside this specification's terms where this specification's terms would suffice.
@@ -16,12 +16,25 @@ To maximise the interoperability of data published using the Open Contracting Da
 
 Whenever using terms from outside the OCDS standard, we encourage the publisher or user responsible to consult with the community on the best approach to adopt. 
 
+(Our publication conformance section is [based on the Popolo Project](http://www.popoloproject.com/specs/#conformance) approach.)
+
+### Validator and application conformance
+
+As of version 1.1, release/record packages should contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless othewise instructed by the user.  
+
+An application should:
+
+* Report to the user when it encounters a version of the data it does not support.
+
+* Report to the user when it encounters extensions it does not support.
+
+
 ## Extensions
 
 Extensions to the standard can add new objects and properties to accommodate specific local requirements. An extension should only be created where it is not possible to model the required data using existing terms from the standard.
 
 Extensions should be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard.
 
-You can find a list of proposed extensions in the [Standard Implementation and Extensions GitHub Repository](https://github.com/open-contracting/implementation-and-extensions/tree/master/proposed_extensions/).
+The [extensions registry](../../extensions/) records details of known extensions. 
 
 The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields. 
