@@ -569,35 +569,30 @@ class ExtensionSelectorTable(CSVTable):
     option_spec = {'group': directives.unchanged}
 
     def get_csv_data(self):
-        env = self.state.document.settings.env
-
         data = []
-        headings = ['', 'Extension', 'Description', 'Category', '']
+        headings = ['', 'Extension', 'Description', 'Category', 'Extension URL']
         group = self.options.get('group')
 
         if group not in ('core', 'community'):
             raise Exception('Extension group must be either "core" or "community"')
+
         if group == 'core':
             extension_json = extension_json_current
+            if not extension_json.get('extensions'):
+                return [','.join(headings)], 'Extensions'
+
+            for num, extension_obj in enumerate(extension_json['extensions']):
+                if group == 'core':
+                    if not extension_obj.get('core'):
+                        continue
+                extension_name = extension_obj['name'].get('en')
+                extension_name = '{}::{}'.format(extension_name, extension_obj.get('documentation_url', ''))
+                extension_description = extension_obj['description'].get('en')
+                row = ['', extension_name, extension_description, extension_obj['category'],
+                       '{}extension.json'.format(extension_obj['url'])]
+                data.append(row)
         else:
-            extension_json = extension_json_master
-
-        if not extension_json['extensions']:
-            return [','.join(headings)], 'Extensions'
-
-        for num, extension_obj in enumerate(extension_json['extensions']):
-            if group == 'core':
-                if not extension_obj.get('core'):
-                    continue
-            else:
-                if extension_obj.get('core'):
-                    continue
-            extension_name = extension_obj['name'].get(env.config.language) or extension_obj['name'].get('en')
-            extension_name = '{}::{}'.format(extension_name, extension_obj.get('documentation_url', ''))
-            extension_description = extension_obj['description'].get(env.config.language) or extension_obj['description'].get('en')
-            row = ['', extension_name, extension_description, extension_obj['category'],
-                   '{}extension.json'.format(extension_obj['url'])]
-            data.append(row)
+            data = [['', '', '', '', '']]
 
         data.insert(0, headings)
         output = io.StringIO()

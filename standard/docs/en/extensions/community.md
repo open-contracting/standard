@@ -2,6 +2,10 @@
 
 These extensions are maintained outside the standard development cycle. They are [registered on github](https://github.com/open-contracting/extension_registry). If you think your extension belongs there please make a pull request to that repository.
 
-Documentation
 
-Repository
+**Community extensions**
+
+```eval_rst
+.. extensionselectortable::
+   :group: community
+```

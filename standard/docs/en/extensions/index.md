@@ -25,18 +25,18 @@ Extension are applied by adding their URLs to the ```extensions``` array in the 
 }
 ```
 
+**Core extensions**
+
+```eval_rst
+.. extensionselectortable::
+   :group: core
+```
 
 **Community extensions**
 
 ```eval_rst
 .. extensionselectortable::
    :group: community
-```
-**Core extensions**
-
-```eval_rst
-.. extensionselectortable::
-   :group: core
 ```
 
 
