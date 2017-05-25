@@ -1,15 +1,6 @@
 Open Contracting Data Standard: Documentation
 =============================================
 
-```eval_rst
-.. warning:: 
-
-  This is the release candidate for OCDS 1.1. It is currently undergoing final review, and we anticipate it being ready for full implementation by the end of May 2017. 
-
-  You can [test validation against the new schema here](http://dev.cove.opendataservices.coop/validator/).
-
-```
-
 Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. 
 
 The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting process by defining a common data model. It was created to support organisations to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.
@@ -25,6 +16,14 @@ The OCDS approach:
 * Common open data publication patterns 
 * Guidance on improving data collection and data quality
 * A growing community of users and range of open source tools
+
+```eval_rst
+.. note:: 
+
+  This is the 1.1 release of OCDS, published on 26th May 2017. [Version 1.0 can be found here](http://standard.open-contracting.org/1.0/en/). 
+
+  Full Spanish and French translations of version 1.1 are not yet available, but will be updated shortly. 
+```
 
 ## About
 

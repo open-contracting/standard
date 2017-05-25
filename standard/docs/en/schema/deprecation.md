@@ -24,7 +24,7 @@ For example:
 
 Validation tools **must** report use of deprecated properties to the user, and **should** report to the user the associated description of the reason for deprecation (which may provide guidance on how to replace the property).
 
-Consuming application targetting compatability with a particular version of the standard (e.g. 1.1) are encouraged to support properties deprecated in **that version**, but are not expected to support properties deprecated in earlier versions. 
+Consuming application targeting compatibility with a particular version of the standard (e.g. 1.1) are encouraged to support properties deprecated in **that decimal version**, but are not expected to support properties deprecated in earlier versions. 
 
 
 

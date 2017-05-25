@@ -28,6 +28,7 @@ An application should:
 
 * Report to the user when it encounters extensions it does not support.
 
+Validators **must** report a warning to the user when they encounter properties not covered by the version of the schema and extensions that they are validating against. 
 
 ## Extensions
 
