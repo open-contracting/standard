@@ -22,15 +22,19 @@ Whenever using terms from outside the OCDS standard, we encourage the publisher 
 
 As of version 1.1, release/record packages should contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless othewise instructed by the user.  
 
-An application should:
+Validators and applications should:
 
-* Report to the user when it encounters a version of the data it does not support.
+* Report to the user when it encounters a version of the data it does not support;
 
-* Report to the user when it encounters extensions it does not support.
+* Reject data from a higher integer version than it supports, unless otherwise instructed by the user; 
+
+* Report to the user when it encounters extensions it does not support;
 
 Validators **must** report a warning to the user when they encounter properties not covered by the version of the schema and extensions that they are validating against. 
 
 Applications **may** report a warning to use the user when they encounter properties they do not support, or **may** discard these properties.
+
+The handling of additional properties and deprecated properties is implementation defined.
 
 See also the [deprecation guidance](deprecation.md). 
 
