@@ -7,7 +7,7 @@ To use this extension, include it's URL in the ```extension``` array of your rel
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/master/extension.json"],
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1/extension.json"],
     "releases":[]
 }
 ```

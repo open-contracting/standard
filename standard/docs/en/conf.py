@@ -71,6 +71,7 @@ release = '1.1.0'
 # Usually you set "language" from the command line for these cases.
 language = None
 
+
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 #today = ''
@@ -326,14 +327,20 @@ from os.path import abspath, dirname, join
 
 current_dir = dirname(abspath(__file__))
 
-GIT_REF = "master"
+GIT_REF_MASTER = 'master'
+GIT_REF_CURRENT = 'v1.1'
+LOCATION = 'http://standard.open-contracting.org/extension_registry/{}/extensions.json'
 
-location = "http://standard.open-contracting.org/extension_registry/{}/extensions.json".format(GIT_REF)
+location_master = LOCATION.format(GIT_REF_MASTER)
+location_current = LOCATION.format(GIT_REF_CURRENT)
+
 try:
-    extension_json = requests.get(location, timeout=1).json()
+    extension_json_master = requests.get(location_master, timeout=1).json()
+    extension_json_current = requests.get(location_current, timeout=1).json()
 except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
-    print("**********  Internet connection not found *************") 
-    extension_json = {"extensions": []}
+    print("**********  Internet connection not found *************")
+    extension_json_master = {"extensions": []}
+    extension_json_current = {"extensions": []}
 
 
 class JSONInclude(LiteralInclude):
@@ -364,7 +371,6 @@ class JSONInclude(LiteralInclude):
         return [ literal ]
 
 
-
 class ExtensionList(Directive):
     required_arguments = 1
     final_argument_whitespace = True
@@ -372,7 +378,6 @@ class ExtensionList(Directive):
     option_spec = {'class': directives.class_option,
                    'name': directives.unchanged,
                    'list': directives.unchanged}
-
 
     def run(self):
         extension_list_name = self.options.pop('list', '')
@@ -390,7 +395,7 @@ class ExtensionList(Directive):
         title.line = 0
         title.source = 'extension_list_' + extension_list_name
         admonition_node += title
-        if not 'classes' in self.options:
+        if 'classes' not in self.options:
             admonition_node['classes'] += ['admonition', 'note']
 
         admonition_node['classes'] += ['extension_list']
@@ -400,7 +405,7 @@ class ExtensionList(Directive):
         definition_list.line = 0
 
         num = 0
-        for num, extension in enumerate(extension_json['extensions']):
+        for num, extension in enumerate(extension_json_current['extensions']):
             if not extension.get('core'):
                 continue
             category = extension.get('category')
@@ -410,11 +415,9 @@ class ExtensionList(Directive):
             name = extension['name']['en']
             description = extension['description']['en']
 
-            some_term, _ = self.state.inline_text(name,
-                                                  self.lineno)
+            some_term, _ = self.state.inline_text(name, self.lineno)
 
-            some_def, _ = self.state.inline_text(description,
-                                                  self.lineno)
+            some_def, _ = self.state.inline_text(description, self.lineno)
 
             link = nodes.reference(name, '', *some_term)
             path_split = pathlib.PurePath(self.state.document.attributes['source']).parts
@@ -437,8 +440,7 @@ class ExtensionList(Directive):
         admonition_node += definition_list
 
         community = "The following are community extensions and are not maintained by Open Contracting Partnership."
-        community_text, _ = self.state.inline_text(community,
-                                              self.lineno)
+        community_text, _ = self.state.inline_text(community, self.lineno)
 
         community_paragraph = nodes.paragraph(community, *community_text)
         community_paragraph['classes'] += ['hide']
@@ -449,8 +451,10 @@ class ExtensionList(Directive):
 
         return [admonition_node]
 
+
 def format(text):
     return re.sub(r'\[([^\[]+)\]\(([^\)]+)\)', r'`\1 <\2>`__', text.replace("date-time","[date-time](#date)"))
+
 
 def gather_fields(json, path="", definition=""): 
 
@@ -478,37 +482,34 @@ def gather_fields(json, path="", definition=""):
             yield from gather_fields(value, definition=key)
 
 
-
 class ExtensionTable(CSVTable):
-
     option_spec = {'widths': directives.positive_int_list,
                    'extension': directives.unchanged,
                    'schema': directives.unchanged,
                    'ignore_path': directives.unchanged,
                    'definitions': directives.unchanged,
-                   'exclude_definitions': directives.unchanged,
-                  }
+                   'exclude_definitions': directives.unchanged}
 
     def get_csv_data(self):
         headings = ["Field", "Definition", "Description", "Type"]
         extension = self.options.get('extension')
         if not extension:
-            raise Exception("No extension configuration when using extensiontable directive") 
+            raise Exception("No extension configuration when using extensiontable directive")
 
-        if not extension_json['extensions']:
+        if not extension_json_current['extensions']:
             return [",".join(headings)], "Extension {}".format(extension)
 
-        for num, extension_obj in enumerate(extension_json['extensions']):
+        for num, extension_obj in enumerate(extension_json_current['extensions']):
             if not extension_obj.get('core'):
                 continue
             if extension_obj['slug'] == extension:
                 break
         else:
-            raise Exception("Extension {} does not exist in the registry".format(extension)) 
+            raise Exception("Extension {} does not exist in the registry".format(extension))
 
         extension_patch = json.loads(
             requests.get(extension_obj['url'].rstrip("/") + "/" + "release-schema.json").text,
-            object_pairs_hook = OrderedDict
+            object_pairs_hook=OrderedDict
         )
 
         data = []
@@ -564,14 +565,75 @@ class ExtensionTable(CSVTable):
         return rows, max_cols
 
 
+class ExtensionSelectorTable(CSVTable):
+    option_spec = {'group': directives.unchanged}
+
+    def get_csv_data(self):
+        data = []
+        headings = ['', 'Extension', 'Description', 'Category', 'Extension URL']
+        group = self.options.get('group')
+
+        if group not in ('core', 'community'):
+            raise Exception('Extension group must be either "core" or "community"')
+
+        if group == 'core':
+            extension_json = extension_json_current
+            if not extension_json.get('extensions'):
+                return [','.join(headings)], 'Extensions'
+
+            for num, extension_obj in enumerate(extension_json['extensions']):
+                if group == 'core':
+                    if not extension_obj.get('core'):
+                        continue
+                extension_name = extension_obj['name'].get('en')
+                extension_name = '{}::{}'.format(extension_name, extension_obj.get('documentation_url', ''))
+                extension_description = extension_obj['description'].get('en')
+                row = ['', extension_name, extension_description, extension_obj['category'],
+                       '{}extension.json'.format(extension_obj['url'])]
+                data.append(row)
+        else:
+            data = [['', '', '', '', '']]
+
+        data.insert(0, headings)
+        output = io.StringIO()
+        output_csv = csv.writer(output)
+        for line in data:
+            output_csv.writerow(line)
+
+        self.options['header-rows'] = 1
+        self.options['class'] = ['extension-selector-table']
+        self.options['widths'] = [8, 30, 42, 20, 0]
+        return output.getvalue().splitlines(), None
+
+    def parse_csv_data_into_rows(self, csv_data, dialect, source):
+        # csv.py doesn't do Unicode; encode temporarily as UTF-8
+        csv_reader = csv.reader([self.encode_for_csv(line + '\n')
+                                 for line in csv_data], dialect=dialect)
+        rows = []
+        max_cols = 0
+        for row_num, row in enumerate(csv_reader):
+            row_data = []
+            for cell_num, cell in enumerate(row):
+                if row_num == 0 or cell_num != 3:
+                    new_source = source
+                else:
+                    new_source = ""
+                # decode UTF-8 back to Unicode
+                cell_text = self.decode_from_csv(cell)
+                cell_data = (0, 0, 0, statemachine.StringList(
+                    cell_text.splitlines(), source=new_source))
+                row_data.append(cell_data)
+            rows.append(row_data)
+            max_cols = max(max_cols, len(row))
+        return rows, max_cols
+
+
 directives.register_directive('jsoninclude', JSONInclude)
 directives.register_directive('extensionlist', ExtensionList)
 directives.register_directive('extensiontable', ExtensionTable)
+directives.register_directive('extensionselectortable', ExtensionSelectorTable)
 
 
 # app setup hook
 def setup(app):
     app.add_transform(AutoStructify)
-
-
-
