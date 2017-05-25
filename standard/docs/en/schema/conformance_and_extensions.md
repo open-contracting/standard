@@ -30,6 +30,10 @@ An application should:
 
 Validators **must** report a warning to the user when they encounter properties not covered by the version of the schema and extensions that they are validating against. 
 
+Applications **may** report a warning to use the user when they encounter properties they do not support, or **may** discard these properties.
+
+See also the [deprecation guidance](deprecation.md). 
+
 ## Extensions
 
 Extensions to the standard can add new objects and properties to accommodate specific local requirements. An extension should only be created where it is not possible to model the required data using existing terms from the standard.
