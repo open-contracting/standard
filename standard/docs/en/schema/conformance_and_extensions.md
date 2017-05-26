@@ -36,6 +36,8 @@ Applications **may** report a warning to use the user when they encounter proper
 
 The handling of additional properties and deprecated properties is implementation defined.
 
+For behaviours that are implementation defined, applications should clearly document their chosen approach. 
+
 See also the [deprecation guidance](deprecation.md). 
 
 ## Extensions
