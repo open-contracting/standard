@@ -7,6 +7,6 @@ Each of the entries in the [parties](../../../schema/reference/#parties) array c
 A list of available extensions (tagged as 'partyDetail') can be found below:
 
 ```eval_rst
-.. extensionlist:: The following extensions to milestone are available
+.. extensionlist:: The following party detail are available
    :list: partyDetail
 ```

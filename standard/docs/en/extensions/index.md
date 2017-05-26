@@ -17,6 +17,15 @@ Some extensions with wide adoption may be considered for inclusion as part of th
 
 Extension are applied by adding their URLs to the ```extensions``` array in the release or record package. To use one or more extensions, select them from the extension lists below and include the following in your release or record package meta-data:
 
+<style><!--
+#using-extensions div[class^='highlight'] pre {
+   white-space: pre-wrap;  
+   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+   white-space: -pre-wrap;      /* Opera 4-6 */
+   white-space: -o-pre-wrap;    /* Opera 7 */
+   word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+--></style> 
 
 ```json
 {
