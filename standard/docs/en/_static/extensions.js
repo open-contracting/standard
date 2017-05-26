@@ -4,6 +4,10 @@ $(function () {
   var isCommunityPage = window.location.pathname.indexOf('/extensions/community/') >= 0;
   var isSchemaReferencePage = window.location.pathname.indexOf('/schema/reference/') >= 0;
 
+  if (!isUsingExtensionsPage && !isCommunityPage && !isSchemaReferencePage) {
+    return
+  }
+
   // Core extensions only
   if (isUsingExtensionsPage) {
     $('.extension-selector-table td:nth-child(2)').each (function(){
