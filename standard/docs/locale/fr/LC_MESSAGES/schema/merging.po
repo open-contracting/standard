@@ -1,22 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C)
 # This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Colin Maudry <colin@maudry.com>, 2016
-# Joel Gombin <joel.gombin@gmail.com>, 2016
-# Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
-# samgoeta <samgoeta@gmail.com>, 2016
-# samgoeta <samgoeta@gmail.com>, 2016
-# Tim Davies <tim.davies@opendataservices.coop>, 2017
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: open-contracting-standard-1.0\n"
+"Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-17 14:56+0000\n"
-"PO-Revision-Date: 2017-02-20 10:59+0000\n"
-"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>\n"
-"Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
+"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +19,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:0
 msgid "Merging"
-msgstr "Fusion d'instances"
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:3
 msgid ""
@@ -33,36 +27,38 @@ msgid ""
 "[releases](../getting_started/releases_and_records.md) of data during a "
 "contracting process into a "
 "[record](../getting_started/releases_and_records.md) which provides an "
-"at-a-glance view of the current state and history of that process."
-msgstr "Dans OCDS, fusionner implique de combiner des [instances individuelles](../getting_started/releases_and_records.md) en une [archive](../getting_started/releases_and_records.md) qui fournit un aperçu de l'état actuel et de l'historique de ce processus de passation de marché."
+"overview of the current state of that process. Including a versioned release"
+" as part of the merged record provides structured information on the history"
+" of the process: showing when updates were made, or values were changed."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:9
 msgid ""
 "A publisher provides a tender release on 1st January, with a planned "
 "contract value of $1000."
-msgstr "Un producteur de données fournit une instance d'appel d'offres le 1er janvier avec une valeur du contrat planifiée à 1000$. "
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:11
 msgid ""
-"On 31st January, the publisher provides an amended tender release updating "
-"the planned contract value to $1500."
-msgstr "Le 31 janvier, le producteur de données fournit une instance sur l'appel d'offres mettant à jour la valeur planifiée du contrat à 1500$."
+"On 5th February, the publisher provides an amended tender release updating "
+"the planned contract value to $2000."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:13
 msgid "After assessing bids, it is decided to award the contract in two lots."
-msgstr "Après avoir évalué les offres, il est décidé d'attribuer le contrat en deux lots."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:15
 msgid ""
 "On 1st March, the publisher provides an award release, announcing Company A "
 "have been awarded a contract for $750."
-msgstr "Le 1er mars, le producteur de données fournit un avis d'attribution annonçant que l'entreprise A a obtenu un contrat de 750$. "
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:17
 msgid ""
 "On 3rd March, the publisher provides an separate award release, announcing "
 "that company B have been awarded a contract for $750"
-msgstr "Le 3 mars, le producteur de données fournit une instance distincte qui annonce que la société B a obtenu un contrat pour 750$."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:19
 msgid ""
@@ -71,366 +67,189 @@ msgid ""
 " Using the same schema and structure as the releases, the main body of the "
 "record will contain a tender with contract value of $1500, and details of "
 "both awards."
-msgstr "Ces instances indépendantes fournissent chacune des informations en temps réel sur les mises à jour qui interviennent dans le processus de passation des marchés. L'archive les combine ensemble. En utilisant le même schéma et la même structure que les instances, le corps principal de l'archive contiendra un appel d'offres avec une valeur de contrat de 1500$ et les détails des deux attributions."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:21
 msgid ""
 "If the record is complete with versioning information, then the versioning "
 "section will reveal that the planned contract value changed from $1000 to "
 "$1500 on 31st January."
-msgstr "Si l'archive est complète, notamment en ce qui concerne les informations de versions, la section des versions révèle que le contrat planifié a changé de 1000$ à 1500$ le 31 janvier. "
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:0
 msgid "Merging rules"
-msgstr "Règles de fusion"
+msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:72
-msgid "The merging rules can be summarised as follows:"
-msgstr "Les règles de fusion peuvent être résumées comme suit :"
-
-#: ../../standard/docs/en/schema/merging.md:74
+#: ../../standard/docs/en/schema/merging.md:81
 msgid ""
-"All releases with the same ```ocid``` should be compiled together, processed"
-" by order of the release date, and starting with the oldest first. Compare "
-"each pair or releases in turn following the rules below."
-msgstr "Toutes les instances avec le même ```ocid``` sont traitées par ordre de date de publication, en commençant par la plus ancienne. Comparez chaque paire d'instances à tour de rôle en suivant les règles ci-dessous."
-
-#: ../../standard/docs/en/schema/merging.md:76
-msgid ""
-"For literal values, replace the older value with the newer value. You may "
-"remove fields which have been set to null."
-msgstr "Pour les valeurs littérales, remplacez la valeur la plus ancienne avec la valeur plus récente. Vous pouvez supprimer des champs qui ont une valeur nulle."
-
-#: ../../standard/docs/en/schema/merging.md:80
-msgid ""
-"For an array of objects, merge the array by the id of each object EXCEPT as "
-"noted in 4."
-msgstr "Pour une liste d'objets, fusionnez à partir de l'identifiant de chaque objet, sauf indication contraire dans 4."
-
-#: ../../standard/docs/en/schema/merging.md:84
-msgid ""
-"For the following arrays, replace the entire array in the older release with"
-" the entire array from the newer release"
-msgstr "Pour les listes suivantes, remplacez l'ensemble du tableau dans la version la plus ancienne par l'instance la plus récente."
-
-#: ../../standard/docs/en/schema/merging.md:86
-msgid "```award.suppliers```"
-msgstr "```award.suppliers```"
-
-#: ../../standard/docs/en/schema/merging.md:87
-msgid "```organization.additionalIdentifiers```"
-msgstr "```organization.additionalIdentifiers```"
-
-#: ../../standard/docs/en/schema/merging.md:88
-msgid "```item.additionalClassifications```"
-msgstr "```item.additionalClassifications```"
-
-#: ../../standard/docs/en/schema/merging.md:89
-msgid "```amendment.changes```"
-msgstr "```amendment.changes```"
-
-#: ../../standard/docs/en/schema/merging.md:91
-msgid "Note that this means releases must republish these arrays in full."
-msgstr "Notez que cela signifie que les instances doivent republier ces tableaux dans leur intégralité."
-
-#: ../../standard/docs/en/schema/merging.md:93
-msgid ""
-"When all releases are merged, remove the ```release.id``` and "
-"```release.date``` from the resulting data structure, and add ```compiled```"
-" to the list of ```release.tag``` values."
-msgstr "Quand toutes les instances sont fusionnées, enlevez les ```release.id``` et les ```release.date``` de la structure de données qui résulte, et ajoutez```compiled``` à la liste des valeurs ```release.tag```."
-
-#: ../../standard/docs/en/schema/merging.md:95
-msgid ""
-"A reference implementation of the merge routine in python [is available on "
-"GitHub](https://github.com/open-contracting/ocds-merge)."
-msgstr "Une référence sur la routine de fusion en python est disponible sur [Github](https://github.com/open-contracting/ocds-merge)."
+"Order all the releases that share an ```ocid``` by their release ```date```."
+" Starting from the oldest release (old), compare it with the next oldest "
+"release (new), and apply the following rules."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:0
-msgid "Requirements for merging"
-msgstr "Pré-requis pour fusionner des instances"
+msgid "Objects"
+msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:99
-msgid ""
-"For merging to work effectively, all the releases to be merged must share a "
-"common ```ocid``` and a number of other criteria must be met."
-msgstr "Pour que la fusion se déroule correctement, toutes les instances à fusionner doivent partager un ```ocid``` commun et un certain nombre d'autres pré-requis doivent être respectés."
+#: ../../standard/docs/en/schema/merging.md:85
+msgid "In the compiled record, merge **new** into **old** by:"
+msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:101
+#: ../../standard/docs/en/schema/merging.md:87
 msgid ""
-"The following all require unique identifiers (at least unique within that "
-"ocid):"
-msgstr "Les éléments suivants nécessitent des identifiants uniques (au moins uniques pour un même ocid) :"
+"Overwriting all key that exist in both **old** and **new** with the values "
+"from **new**"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:88
+msgid "Add any key value pairs that exist in **new**, but not in **old**"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:89
+msgid ""
+"Remove any key that have their value explicitly set to ```null``` in **new**"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:90
+msgid "Retain any keys from **old** that are not mentioned in **new**"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:92
+msgid ""
+"If the value of key value pair is a list of strings, the entire list should "
+"be treated as a single value. When the list contains objects, the list merge"
+" rules below should be used."
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Lists"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:96
+msgid ""
+"There are two merge patterns for lists of objects. Identifier merge, and "
+"whole list merge."
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Identifier merge"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:100
+msgid "When a list contains objects with their own ```id``` field, then:"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:102
+msgid ""
+"Check for an object in **old** with the same ```id``` as an object in "
+"**new**, and, if so, follow the object merge rules as above"
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:103
-#: ../../standard/docs/en/schema/merging.md:197
-msgid "awards"
-msgstr "awards - attributions"
+msgid ""
+"If there is no object in **new** with the same ```id``` as an object in "
+"**old**, keep the object from **old** in the list"
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:104
-#: ../../standard/docs/en/schema/merging.md:198
-msgid "contracts"
-msgstr "contracts - contrats"
-
-#: ../../standard/docs/en/schema/merging.md:105
-#: ../../standard/docs/en/schema/merging.md:199
-msgid "items"
-msgstr "items - livrables"
+msgid ""
+"If there is an object in **new** with an ```id``` not found in **old** then "
+"add the object to the list"
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:106
-#: ../../standard/docs/en/schema/merging.md:200
-msgid "documents"
-msgstr "documents - documents"
+msgid ""
+"Note: to remove information from an old list entry its values must be "
+"explicitly set to null."
+msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:107
-#: ../../standard/docs/en/schema/merging.md:201
-msgid "transactions"
-msgstr "transactions - transactions"
-
-#: ../../standard/docs/en/schema/merging.md:108
-#: ../../standard/docs/en/schema/merging.md:202
-msgid "milestones"
-msgstr "milestones - étapes"
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Whole list merge"
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:110
 msgid ""
-"The following arrays of items must be re-published in full for each release:"
-msgstr "Les tableaux de livrables suivants doivent être republiés dans leur intégralité pour chaque instance :"
+"Where the objects contain no top level ```id``` values, or the schema "
+"specifies the ```\"wholeListMerge\": true``` for the array in question, then"
+" merging should take place by treating the entire list of objects as a "
+"single value."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:112
-#: ../../standard/docs/en/schema/merging.md:177
-msgid "Award.suppliers"
-msgstr "Award.suppliers - titulaires de l'attribution"
-
-#: ../../standard/docs/en/schema/merging.md:113
-#: ../../standard/docs/en/schema/merging.md:178
-msgid "Organization.additionalIdentifiers"
-msgstr "Organization.additionalIdentifiers - identifiants additionnels d'organisations "
-
-#: ../../standard/docs/en/schema/merging.md:114
-#: ../../standard/docs/en/schema/merging.md:179
-msgid "Item.additionalClassifications"
-msgstr "Item.additionalClassifications - classifications additionnelles de livrables"
-
-#: ../../standard/docs/en/schema/merging.md:115
-#: ../../standard/docs/en/schema/merging.md:180
-msgid "Amendment.changes"
-msgstr "Amendment.changes - modifications"
-
-#: ../../standard/docs/en/schema/merging.md:117
 msgid ""
-"Other lists with ```.id``` properties do not need to be republished in full,"
-" but publishers should note the [guidance on emptying fields and "
-"values](../../reference/#emptying-fields-and-values)."
-msgstr "D'autres listes avec des identifiants ```.id``` ne doivent pas être re-publiées dans leur intégralité, mais les éditeurs doivent noter les conseils sur les champs et les valeurs nulles. [guidance on emptying fields and values](../../reference/#emptying-fields-and-values)."
+"I.e. if the list exists in **new**, the entire list in **new** will "
+"overwrite the list in **old**."
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Omit when merged"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:116
+msgid ""
+"A few properties in the schema are marked with ```\"omitWhenMerged\": "
+"true```. These properties should be dropped from the merged record - as they"
+" only make sense in the context of a single release."
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Reference implementation"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:120
+msgid ""
+"A reference implementation of the merge routine in python [is available on "
+"GitHub](https://github.com/open-contracting/ocds-merge)."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:0
 msgid "Versioned data"
-msgstr "Données versionnées"
+msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:122
+#: ../../standard/docs/en/schema/merging.md:125
 msgid ""
 "There are some situations in which it is important to be able to see how "
 "data about a contracting process has changed over time. For example, to "
 "identify how contract values have altered, or milestones moved through "
 "stages of implementation."
-msgstr "Il est parfois important de voir comment les données d'un processus de passation des marchés ont changé au fil du temps. Par exemple, pour déterminer comment la valeur des contrats a évolué ou comment les étapes ont été déplacées lors de la mise en œuvre."
+msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:124
+#: ../../standard/docs/en/schema/merging.md:127
 msgid ""
-"The versioned release schema provides a model for representing this data."
-msgstr "Le schéma d'instance versionné fournit un modèle pour représenter ces données."
-
-#: ../../standard/docs/en/schema/merging.md:126
-msgid ""
-"In a versioned release, instead of over-writing past values when combining "
-"multiple releases, each field becomes an array of objects, indicating the:"
-msgstr "Dans une instance versionnée, au lieu d'écraser les valeurs ultérieures lors de la fusion de plusieurs instances, chaque champ devient une liste d'objets qui indique :"
-
-#: ../../standard/docs/en/schema/merging.md:128
-msgid ""
-"The date, id and tag of the releases where a field-value pair was first "
-"encountered;"
-msgstr "Les dates, identifiants et tags des instances où une paire de champs ou valeurs a été renseignée pour la première fois ; "
+"The [versioned release validation schema](../../versioned-release-"
+"validation-schema.json) provides a model for representing this data."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:129
-msgid "The value of the field-value pair at that point;"
-msgstr "La valeur qui correspond à la paire champ-valeurs au moment présent ; "
+msgid ""
+"In a versioned release, instead of over-writing past values when combining "
+"multiple releases, each field (with the exception of the ```id``` property "
+"of objects within an array) becomes an array of objects, indicating the:"
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:131
 msgid ""
+"The date, id and tag of the releases where a field-value pair was first "
+"encountered;"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:132
+msgid "The value of the field-value pair at that point;"
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:134
+msgid ""
 "As a result, the history of any field can be easily read from the data "
 "structure."
-msgstr "En conséquence, l'historique de tous les champs peut être facilement lu à partir de la structure de données."
+msgstr ""
+
+#: ../../standard/docs/en/schema/merging.md:136
+msgid ""
+"The property ```\"versionId\":true``` is used to explicitly declare the "
+"cases where an ```id``` field **should** be versioned (i.e. within an object"
+" that is not within an array)."
+msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:0
 msgid "Example"
-msgstr "Exemple"
-
-#: ../../standard/docs/en/schema/merging.md:0
-msgid "Merge strategies in the schema"
-msgstr "Stratégies de fusion dans le schéma"
-
-#: ../../standard/docs/en/schema/merging.md:147
-msgid ""
-"Version 1.0 of the OCDS schema includes a series of ```mergeStrategy``` "
-"properties which were designed to indicate how releases should be compiled "
-"together. In initial implementation, we have found these can create some "
-"confusion, and so propose that future versions will omit all but the "
-"essential properties required to indicate the exceptions to the general rule"
-" in (4) above."
-msgstr "La version 1.0 du schéma OCDS comprend une série de propriétés ```mergeStrategy``` qui ont été conçues pour indiquer comment les instances doivent être compilées ensemble. Dans la mise en œuvre initiale, nous avons trouvé que ces propriétés peuvent créer une certaine confusion et nous avons donc proposé que les futures versions les ignorent les toutes, sauf qui sont essentielles pour signaler les exceptions à la règle générale dans la section (4) ci-dessus."
-
-#: ../../standard/docs/en/schema/merging.md:149
-msgid "This information is maintained here for reference."
-msgstr "Ces informations sont conservées ici pour référence."
-
-#: ../../standard/docs/en/schema/merging.md:0
-msgid "Merge strategy reference"
-msgstr "Documentation sur les stratégies de fusion"
-
-#: ../../standard/docs/en/schema/merging.md:153
-msgid ""
-"The purpose of merging releases is to create (a) a snapshot record of the "
-"current state of a contracting process; (b) a versioned history of the "
-"process."
-msgstr "Le but de la fusion d'instances est de créer (a) une archive instantanée de l'état actuel d'un processus de passation des marchés ; (b) une histoire versionnée du processus."
-
-#: ../../standard/docs/en/schema/merging.md:155
-msgid ""
-"Different sections of the data structure need to be handled differently as "
-"releases are merged. For some lists, a new release should overwrite the "
-"previous list in fully. For example, if a later release updates the list of "
-"suppliers against an award, this new list in full should be taken as the "
-"latest authoritative information. For other lists, such as a list of "
-"contracts, a release may add a new contract to the list without needing to "
-"repeat all the previous contracts, or may amend a single award without "
-"repeating all the other awards."
-msgstr "Différentes sections de la structure des données doivent être traitées différemment dès lors que des instances sont fusionnées. Pour certaines listes, une nouvelle instance devrait écraser entièrement la liste précédente. Par exemple, si une nouvelle instance devait mettre à jour la liste précédente des fournisseurs suite à une attribution, cette nouvelle liste complète devrait être considérée comme la dernière des informations faisant autorité. Pour les autres listes, comme une liste de contrats, une instance peut ajouter un nouveau contrat à la liste sans avoir besoin de répéter tous les contrats antérieurs, ou peut modifier une seule attribution sans répéter toutes les autres attributions."
-
-#: ../../standard/docs/en/schema/merging.md:157
-msgid ""
-"This leads to a set of mergeStrategies which are included in the full "
-"schema."
-msgstr "Cela conduit à un ensemble de stratégies de fusion — mergeStrategies — qui sont inclues dans le schéma complet."
-
-#: ../../standard/docs/en/schema/merging.md:159
-msgid ""
-"The OCDS merging has been based on the open source [jsonmerge "
-"library](https://github.com/avian2/jsonmerge), but can be implemented in "
-"other software as required."
-msgstr "La fusion OCDS a été basée sur la [librairie open source jsonmerge](https://github.com/avian2/jsonmerge), mais peut être mise en œuvre avec d'autres logiciels selon les besoins."
-
-#: ../../standard/docs/en/schema/merging.md:161
-msgid ""
-"Within the OCDS release schema, each field has a mergeStrategy property. "
-"This strategy describes how to merge that and child fields."
-msgstr "Dans le schéma d'instance OCDS, chaque champ a une propriété intitulée mergeStrategy. Cette stratégie décrit comment fusionner les différents champs de l'instance."
-
-#: ../../standard/docs/en/schema/merging.md:163
-msgid ""
-"We inherit the existing merge strategies from "
-"[jsonmerge](https://github.com/avian2/jsonmerge#merge-strategies) and add a "
-"number of specific strategies for OCDS, which are currently only available "
-"in the [OCDS fork of jsonmerge](https://github.com/open-"
-"contracting/jsonmerge) and which are described below."
-msgstr "Nous partons des stratégies JsonMerge et ajoutons un certain nombre de stratégies spécifiques pour OCDS. Ces stratégies sont actuellement disponibles dans [le fork OCDS de jsonmerge](https://github.com/open-contracting/jsonmerge) et sont décrites ci-dessous."
-
-#: ../../standard/docs/en/schema/merging.md:0
-msgid "ocdsVersion merge strategy"
-msgstr "Stratégie de fusion ocdsVersion"
-
-#: ../../standard/docs/en/schema/merging.md:167
-msgid ""
-"Most fields have the mergeStrategy ocdsVersion. The ocdsVersion strategy has"
-" two modes of operation:"
-msgstr "La plupart des champs ont la stratégie de fusion —mergeStrategy— ocdsVersion. La stratégie ocdsVersion dispose de deux modes de fonctionnement :"
-
-#: ../../standard/docs/en/schema/merging.md:170
-msgid ""
-"when making a compiled record, the field is overridden with the latest value"
-msgstr "Lors de la compilation d'une archive compilée, la valeur du champ est écrasée avec la dernière valeur"
-
-#: ../../standard/docs/en/schema/merging.md:171
-msgid "when making a versioned record, the field history is documented."
-msgstr "Lors de la création d'une archive versionnée, l'historique du champ est documenté."
-
-#: ../../standard/docs/en/schema/merging.md:0
-msgid "ocdsVersion for lists"
-msgstr "ocdsVersion pour les listes"
-
-#: ../../standard/docs/en/schema/merging.md:175
-msgid "The ocdsVersion strategy also applies to the following lists:"
-msgstr "La stratégie ocdsVersion vaut également pour les listes suivantes :"
-
-#: ../../standard/docs/en/schema/merging.md:182
-msgid ""
-"In this instance the entire list is treated as one single value and any "
-"change to any field will result in the whole list being updated and "
-"documented as changed."
-msgstr "Dans ce cas, la liste entière est traitée comme une valeur unique et toute modification des champs se traduira par une mise à jour de toute la liste et une documentation des changements."
-
-#: ../../standard/docs/en/schema/merging.md:185
-msgid ""
-"To keep the versioning as clean as possible, the list of objects should  "
-"**always be given in the same order** in each release, so as not to "
-"mistakenly mark a change when actually only order has shifted."
-msgstr "Pour garder le versionnement aussi propre que possible, la liste des objets devrait **toujours être donnée dans le même ordre** dans chaque instance, afin de ne pas marquer à tort un changement alors que, en réalité, seul l'ordre a changé."
-
-#: ../../standard/docs/en/schema/merging.md:189
-msgid ""
-"This merging strategy has the advantage of not requiring unique identifiers "
-"on every object, but has the downside of requiring every release to publish "
-"the  whole block of data, not just an incremental change."
-msgstr "Cette stratégie de fusion a l'avantage de ne pas nécessiter des identifiants uniques sur chaque objet, mais il a l'inconvénient de nécessiter que chaque instance publie l'ensemble du bloc de données, pas seulement un changement incrémental."
-
-#: ../../standard/docs/en/schema/merging.md:0
-msgid "arrayMergeById merge strategy"
-msgstr "Stratégie de fusion arrayMergeById"
-
-#: ../../standard/docs/en/schema/merging.md:195
-msgid ""
-"The arrayMergeById applies to the following lists of objects within the "
-"release:"
-msgstr "Le arrayMergeById s'applique aux listes d'objets suivants dans l'instance :"
-
-#: ../../standard/docs/en/schema/merging.md:204
-msgid ""
-"Each of these objects has a required id field on it. When the merge is being"
-" performed, the item with the corresponding id is looked up for the before "
-"and after versions of the release and the fields are then matched "
-"accordingly."
-msgstr "Chacun de ces objets contient un champ d'identification requis. Lorsque la fusion est en cours d'exécution, le livrable avec l'id correspondant est recherché pour que les versions avant et après l'instance et les champs correspondent. "
-
-#: ../../standard/docs/en/schema/merging.md:208
-msgid ""
-"If a given entry is omitted (e.g. there is no information about a particular"
-" contract in a subsequent release), then the previous values carry forward."
-msgstr "Si une entrée est omise (par exemple, il n'y a pas d'informations sur un contrat particulier dans une instance ultérieure), les valeurs précédentes sont conservées."
-
-#: ../../standard/docs/en/schema/merging.md:210
-msgid ""
-"To remove an entry it would have to have its field values set to null, as "
-"per the [guidance on emptying fields and values](reference.md#emptying-"
-"fields-and-values)."
-msgstr "Pour supprimer une entrée, elle devrait avoir ses valeurs de champ définies à NULL, suivant les [indications sur l'effacement des champs et des valeurs](reference.md#emptying-fields-and-values)."
-
-#: ../../standard/docs/en/schema/merging.md:0
-msgid "ocdsOmit merge strategy"
-msgstr "Stratégie de fusion ocdsOmit"
-
-#: ../../standard/docs/en/schema/merging.md:214
-msgid "There are a number of fields marked with the strategy ocdsOmit."
-msgstr "La stratégie de fusion ocdsOmit couvre un certains nombre de champs :"
-
-#: ../../standard/docs/en/schema/merging.md:216
-msgid ""
-"This strategy returns nothing on merge, because to update the field wouldn't"
-" make sense."
-msgstr "Cette stratégie ne renvoie rien sur la fusion, parce que pour mettre à jour le champ ne serait pas logique."
-
-#: ../../standard/docs/en/schema/merging.md:218
-msgid ""
-"For example, the field for `tag` should not be updated to the latest "
-"version, it should be updated to `compiled` for it to make sense."
-msgstr "Par exemple, le champ `tag` ne doit pas être mis à jour dans la dernière version, il doit être mis à jour à `compiled` pour lui donner un sens."
+msgstr ""

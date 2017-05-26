@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Lots"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Meta-data"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:6
+msgid ""
+"To use this extension, include it's URL in the ```extension``` array of your"
+" release or record package."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:15
+msgid ""
+"This extension is maintained at [https://github.com/open-"
+"contracting/ocds_lots_extension](https://github.com/open-"
+"contracting/ocds_lots_extension)"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Documentation"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:19
+msgid ""
+"When a single tender is broken down into parts that can be bid upon, and "
+"awarded, separately, this is modelled using the **lots extension**."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:21
+msgid ""
+"The lots extension maintains the overall structure of an OCDS release, with "
+"items, documents and milestones nested immediately within ```tender```, "
+"```award``` and ```contract``` items, but it introduces an array of Lots in "
+"the ```tender``` section, and the ability to cross-reference a specific "
+"```relatedLot``` for each item, and an array of ```relatedLots``` for "
+"documents, milestones and awards."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:23
+msgid ""
+"Optional ```lotDetails``` and ```lotGroups``` section allow more complex "
+"conditions around the award of lots to be expressed, such as the maximum "
+"value of a group of lots."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:25
+msgid ""
+"This means that systems which are not 'lot aware' can still understand the "
+"overall value of contracting taking place, key events, and relationships "
+"between buyers and suppliers. At the same time, 'lot aware' systems can make"
+" use of the cross-referenced information to present a lot-centric view on "
+"the information to users, or to analyse contracting lot by lot."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Related Lot"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:29
+msgid "The ```relatedLot``` (singular) property is available for:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:31
+msgid "items"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:33
+msgid "An array of ```relatedLots``` (plural) can be provided for each of:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:35
+msgid "documents"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:36
+msgid "milestones"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:37
+msgid "awards"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:39
+msgid ""
+"When lots are used, **all** items should have a ```relatedLot``` property."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:41
+msgid ""
+"Documents and milestones can optionally have a ```relatedLots``` property. "
+"Those without this property should be interpreted as applicable to the "
+"tender as a whole."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:43
+msgid ""
+"The items within an award should each have a ```relatedLot``` property, but "
+"publishers may choose to also reference all the lots an award relates to at "
+"the award level using ```relatedLots```"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:45
+msgid ""
+"Where the bid extension is also in use, each bid can also declare its "
+"related lots."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Worked example"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:49
+msgid ""
+"A tender is issued for consultancy in the development of a new public "
+"building. This might include items for:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:51
+msgid "Architectural design"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:52
+msgid "Architectural advisory services"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:53
+msgid "Civil engineering consultancy"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:54
+msgid "Structural engineering consultancy"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:56
+msgid ""
+"Although part of the same tender, the buyer is willing to award these "
+"different items to different firms, and so divides the tender into three "
+"lots."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Schema reference"
+msgstr ""

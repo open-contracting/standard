@@ -1,19 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C)
 # This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2017
-# Katherine Wikrent <kwikrent@open-contracting.org>, 2016
-# Oscar Montiel <oscar.montiel@okfn.org>, 2016
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: open-contracting-standard-1.0\n"
+"Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-17 14:56+0000\n"
-"PO-Revision-Date: 2017-02-20 11:46+0000\n"
-"Last-Translator: Eduardo Gomez <eduardo.gomez@hotmail.co.uk>\n"
-"Language-Team: Spanish (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/es/)\n"
+"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,335 +19,407 @@ msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Building Blocks"
-msgstr "Bloques para armar"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:3
 msgid ""
 "In mapping your data to OCDS, or using OCDS data, you will encounter a "
 "number of common data structures."
-msgstr "Al mapear tus datos al OCDS o al utilizar datos de OCDS, encontrarás una serie de estructuras comunes de datos."
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Sections and structure"
-msgstr "Secciones y estructura"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:17
-msgid ""
-"An OCDS document is made up of a number of sections. In the procurement "
-"case, the main sections are:"
-msgstr "Un documento de OCDS está hecho de una serie de secciones. En el caso de una licitación las secciones principales son:"
+msgid "An OCDS document is made up of a number of sections. These are:"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:19
-msgid "**meta-data** - contextual information about each release of data;"
-msgstr "**meta datos** - información contextual sobre cada entrega de los datos;"
+msgid ""
+"**release meta-data** - contextual information about each release of data;"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:20
-msgid "**buyer** - information about the key public party;"
-msgstr "**comprador** - información sobre la parte pública clave;"
+msgid ""
+"**parties** - information about the organizations and other participants "
+"involved in the contracting process;"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:21
 msgid ""
 "**planning** - information about the goals, budgets and projects a "
 "contracting process relates to;"
-msgstr "**planeación** - información sobre las metas, presupuestos y proyectos con los que se relaciona un proceso de contratación;"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:22
 msgid ""
 "**tender** - information about how a tender will take place, or has taken "
 "place;"
-msgstr "**licitación** - información sobre cómo se llevará a cabo o se llevó a cabo una licitación "
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:23
 msgid ""
 "**awards** - information on awards made as part of a contracting process;"
-msgstr "**adjudicaciones** - información sobre adjudicaciones como parte de un proceso de contratación;"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:24
 msgid ""
 "**contract** - information on contracts signed as part of a contracting "
 "process;"
-msgstr "**contrato** - información sobre contratos firmados como parte de un proceso de contratación;"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:25
 msgid ""
-"**implementation** - information on the progress of each contract towards "
+"**implementation** - information on the progress of each contract towards  "
 "completion."
-msgstr "**implementación** - información sobre el progreso de cada contrato a su término."
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:27
 msgid "These are represented in a JSON document as follows:"
-msgstr "Estos se representan en un documento JSON de la siguiente manera:"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:54
-msgid ""
-"Awards and contracts are arrays of objects, whereas tender is an object. "
-"This is because of a contracting process has a single initiation stage, but "
-"can result in multiple awards and contracts."
-msgstr "Adjudicaciones y contratos son matrices de objectos, mientras que el licitador es un objeto. Esto se debe a que el proceso de contratación tiene una sola fase de iniciación pero puede resultar en múltiples adjudicaciones y contratos. "
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Building blocks: fields"
-msgstr "Bloques para armar: campos"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:60
+#: ../../standard/docs/en/getting_started/building_blocks.md:53
 msgid ""
 "The OCDS schema sets out the fields that should be included in each section,"
 " making use of simple re-usable building blocks (field structures) to "
 "represent data."
-msgstr "El esquema del OCDS presenta los campos que deberían incluirse en cada sección, utilizando bloques simples y reutilizables (estructuras de los campos) para representar los datos."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:55
+msgid "For example, common building blocks are provided for:"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:57
+msgid "**Parties (Organizations)**"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:58
+msgid "**Amounts**"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:59
+msgid "**Items**"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:60
+msgid "**Time periods**"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:61
+msgid "**Documents**"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:62
-msgid "For example, common building blocks are provided for:"
-msgstr "Por ejemplo, se presentan bloques comunes para:"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:64
-msgid "**Organizations**"
-msgstr "**Organizaciones**"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:65
-msgid "**Amounts**"
-msgstr "**Montos**"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:66
-msgid "**Items**"
-msgstr "**Artículos**"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:67
-msgid "**Time periods**"
-msgstr "**Períodos de tiempo**"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:68
-msgid "**Documents**"
-msgstr "**Documentos**"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:69
 msgid "**Milestones**"
-msgstr "**Hitos**"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Examples"
-msgstr "Ejemplos"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Using building blocks"
-msgstr "Utilizando los bloques"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:129
+#: ../../standard/docs/en/getting_started/building_blocks.md:122
 msgid ""
 "These building blocks may be used in various different sections. For "
 "example, **items** can occur in tender (to indicate the items that a buyer "
 "wishes to buy), in an award object (to indicate the items that an award has "
 "been made for) and in a contract object (to indicate the items listed in the"
 " contract)."
-msgstr "Estos bloques pueden utilizarse en distintas secciones. Por ejemplo, **artículos** puede ocurrir en la licitación (para indicar los artículos que un comprador quiere adquirir), en un objeto de adjudicación (para indicar los artículos para los que se ha hecho la adquisición) y en un objeto de contrato (para indicar los artíiculos enlistados en el contrato)."
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:131
+#: ../../standard/docs/en/getting_started/building_blocks.md:124
 msgid ""
 "In addition to these building blocks, the OCDS schema sets out the specific "
 "ways they can be used in each section, and describes a number of additional "
 "fields that can appear in specific section. For example, fields for:"
-msgstr "Adicional a estos bloques, el esquema de OCDS presenta las formas específicas que se pueden utilizar en cada sección y describe una cantidad de campos adicinoales que pueden aparecer en una sección específica. Por ejemplo, campos para:"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:133
+#: ../../standard/docs/en/getting_started/building_blocks.md:126
 msgid "```titles``` and ```descriptions``` of tenders, awards and contracts"
-msgstr "```titles``` y ```descriptions``` de licitaciones, adjudicaciones y contratos"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:134
+#: ../../standard/docs/en/getting_started/building_blocks.md:127
 msgid "```procurementMethod```"
-msgstr "```procurementMethod```"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:135
+#: ../../standard/docs/en/getting_started/building_blocks.md:128
 msgid "```awardCriteria```"
-msgstr "```awardCriteria```"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:136
+#: ../../standard/docs/en/getting_started/building_blocks.md:129
 msgid "```submissionMethod```"
-msgstr "```submissionMethod```"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:137
+#: ../../standard/docs/en/getting_started/building_blocks.md:130
 msgid "etc."
-msgstr "etc."
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:139
+#: ../../standard/docs/en/getting_started/building_blocks.md:132
 msgid ""
 "Many of these fields make use of lightweight codelists provided by OCDS."
-msgstr "Varios de estos campos utilizan listas de códigos ligeras provistas por el OCDS."
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
-msgid "Field level mapping"
-msgstr "mapeo sobre el terreno"
+msgid "Extensions"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:143
+#: ../../standard/docs/en/getting_started/building_blocks.md:136
+msgid ""
+"In some cases, publishers or users need building blocks and fields which are"
+" not provided in the core OCDS schema."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:138
+msgid ""
+"We maintain a list of [extensions](../../../extensions/) that provide "
+"optional extra building blocks and fields."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:144
 msgid ""
 "The Open Contracting Data Standard helpdesk maintain a [field-level mapping "
 "template](http://www.open-contracting.org/resources/ocds-field-level-"
 "mapping-template/) that can be used to cross-walk between your internal data"
 " systems and OCDS."
-msgstr "El soporte técnico del Estándar de Datos para las Contrataciones Abiertas mantiene un [modelo de mapeo sobre el terreno] (http://www.open-contracting.org/resources/ocds-field-level-mapping-template/)  que se puede usar para mapear sus sistemas de datos internos al OCDS."
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:0
 msgid "Codelists"
-msgstr "Listas de códigos"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:147
+#: ../../standard/docs/en/getting_started/building_blocks.md:150
 msgid "OCDS defines two kinds of codelist:"
-msgstr "El OCDS define dos tipos de listas de códigos:"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:149
+#: ../../standard/docs/en/getting_started/building_blocks.md:152
 msgid ""
 "**Closed codelists** provide a fixed list of values. When using a field with"
 " a closed codelist, publishers must use an option from the published lists. "
 "This supports the global comparability of OCDS data on key dimensions."
-msgstr "Las **Listas de código cerradas** proveen una lista fija de valores. Cuando se utiliza un campo con una lista de código cerrada, los publicadores deben utilizar una opción de las listas publicadas. Esto ayuda a la que los datos del OCDS sean comparables en dimensiones clave."
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:151
+#: ../../standard/docs/en/getting_started/building_blocks.md:154
 msgid ""
 "**Open codelists** provide recommended values. However, publishers can "
-"suggest amendments to these codelists, or provide their own extended values "
-"prefixed with x_."
-msgstr "Las **Listas de código abiertas** proveen valores recomendados. Sin embargo, los publicadores pueden sugerir correcciones a estas listas de códigos, o aportar sus propios valores extendidos precedidos por x_."
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:157
-msgid "**Open Codelists**"
-msgstr "**Listas de código abiertas**"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:159
-msgid "Item Classification Scheme"
-msgstr "Sistema de Clasificación de Artículos"
+"suggest amendments to these codelists, or provide their own extended values."
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:160
-msgid "Organization Identifier Scheme"
-msgstr "Sistema de Identificación de Organizaciones"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:161
-msgid "Document Type"
-msgstr "Tipo de Documento"
+msgid "**Open Codelists**"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:162
-msgid "Award Criteria"
-msgstr "Criterios de Adjudicación"
+msgid "Party Role"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:163
-msgid "Submission Method"
-msgstr "Método de Presentación"
+msgid "Item Classification Scheme"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:164
+msgid "Unit Classification Scheme"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:165
+msgid "Organization Identifier Scheme"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:166
+msgid "Document Type"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:167
+msgid "Award Criteria"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:168
-msgid "**Closed Codelists**"
-msgstr "**Listas de código cerradas**"
+msgid "Submission Method"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:169
+msgid "Related Process"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:170
-msgid "Release Tag"
-msgstr "Etiqueta de entrega"
+msgid "Related Process Scheme"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:171
-msgid "Initiation Type"
-msgstr "Tipo de Inicio"
+msgid "Milestone Type"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:172
-msgid "Method"
-msgstr "Método"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:173
-msgid "Tender Status"
-msgstr "Estado de la Licitación"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:174
-msgid "Award Status"
-msgstr "Estado de la Adjudicación"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:175
-msgid "Contract Status"
-msgstr "Estado del Contrato"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:176
-msgid "Milestone Status"
-msgstr "Estado de Momento Clave"
+msgid "Extended Procurement Category"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:177
-msgid "Currency"
-msgstr "Moneda"
+msgid "**Closed Codelists**"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:179
+msgid "Release Tag"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:180
+msgid "Initiation Type"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:181
+msgid "Tender Status"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:182
+msgid "Procurement Method"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:183
+msgid "Procurement Category"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:184
-msgid ""
-"Codelist values are case sensitive strings. Canonical codelist labels are in"
-" English, but we are working towards providing translated labels. [Contact "
-"the helpdesk](../support/index.md) for information on adding a new "
-"translation."
-msgstr "Los valores de las listas de códigos son cadenas de caracteres sensibles a mayúsculas y minúsculas. Las etiquetas de las listas de códigos canónicas están en inglés, pero estamos trabajando en tener disponibles etiquetas traducidas. [Contacta a soporte técnico](../support/index.md) para más información sobre cómo agregar una nueva traducción."
+msgid "Award Status"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:185
+msgid "Contract Status"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:186
+msgid "Currency"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:187
+msgid "Milestone Status"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:193
+msgid ""
+"Codelist values are case sensitive strings with associated labels, available"
+" in each language OCDS has been translated into."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:195
 msgid ""
 "Publishers should map their existing classification systems to OCDS codes "
 "wherever possible. Many closed codelist fields are paired with a detail "
 "field where more detailed classification information can be provided."
-msgstr "Los publicadores deberían mapear sus sistemas de clasificación a códigos de OCDS donde sea posible. Varios campos de listas de código cerradas tienen un campo de detalle donde hay más información detallada sobre la clasificación.   "
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:192
+#: ../../standard/docs/en/getting_started/building_blocks.md:201
 msgid ""
 "In the EU, contracts can be initiated through a number of different "
 "procedures including:"
-msgstr "En la UE, los contratos se pueden iniciar a través de una serie de procesos distintos, incluyendo:"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:194
-msgid "Open procedure;"
-msgstr "Procedimiento abierto;"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:195
-msgid "Restricted procedure;"
-msgstr "Procedimiento restringido;"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:196
-msgid "Competitive procedure with negotiation;"
-msgstr "Procedimiento competitivo con negociación;"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:197
-msgid "Competitive dialogue; and"
-msgstr "Diálogo competitivo; y"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:198
-msgid "Innovation partnership"
-msgstr "Asociación para la Innovación "
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:200
-msgid ""
-"However, to support comparison across continents, the main OCDS procurement "
-"method code list is a closed codelist with three values based on [GPA "
-"definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm):"
-msgstr "Sin embargo, para facilitar la comparación entre continentes, la lista de códigos del método principal de licitación es una lista cerrada con tres valores basados en las [definiciones de la ACP](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm):"
-
-#: ../../standard/docs/en/getting_started/building_blocks.md:202
-msgid ""
-"**open** - a procurement method whereby all interested suppliers may submit "
-"a tender"
-msgstr "**abierto** - un método de licitación donde todos los proveedores interesados pueden presentarse a licitar"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:203
-msgid ""
-"**selective** - a procurement method whereby only qualified suppliers are "
-"invited by the procuring entity to submit a tender"
-msgstr "**selectiva** - un método de licitación donde sólo proveedores calificados son invitados por la entidad contratante para presentarse a licitar"
+msgid "Open procedure;"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:204
-msgid ""
-"**limited** - a procurement method whereby the procuring entity contacts a "
-"supplier or suppliers of its choice"
-msgstr "**limitada** un método de licitación donde la entidad contratante contacta a un proveedor o proveedores de su elección"
+msgid "Restricted procedure;"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:205
+msgid "Competitive procedure with negotiation;"
+msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:206
-msgid "In our experience, most procedures can map to one of these categories."
-msgstr "En nuestra experiencia, la mayoría de los procedimientos pueden mapearse con una de estas categorías"
+msgid "Competitive dialogue; and"
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:208
+#: ../../standard/docs/en/getting_started/building_blocks.md:207
+msgid "Innovation partnership"
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:209
+msgid ""
+"However, to support comparison across continents, the main OCDS procurement "
+"method code list is a closed codelist with four values:"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "Code"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "Title"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "Description"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "open"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "Open"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "All interested suppliers may submit a tender."
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "selective"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "Selective"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "Only qualified suppliers are invited to submit a tender."
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "limited"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "Limited"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "The procuring entity contacts a number of suppliers of its choice."
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "direct"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "Direct"
+msgstr ""
+
+#: ../../standard/schema/codelists_translated/method.csv:1
+msgid "The contract is awarded to a single supplier without competition."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:217
+msgid "All procedures should be able to be mapped to one of these options."
+msgstr ""
+
+#: ../../standard/docs/en/getting_started/building_blocks.md:219
 msgid ""
 "To publish OCDS data, an EU publisher with data categorised by EU procedures"
 " should map the longer list of procedures to the narrower OCDS codelist and "
 "provide the codelist value in the ```procurementMethod``` field. They can "
 "then provide the more detailed procedure type in an extended "
 "```procurementMethodDetails``` field."
-msgstr "Para publicas datos del OCDS, un publicador de la UE con datos categorizados por procedimientos de la UE debería mapear la lista más larga de los procedimientos a la lista de códigos reducida de la OCDS y proveer el valor de la lista de códigos en el campo ```procurementMethod ```. Pueden proveer más detalles sobre el tipo de procedimiento en un campo de ```procurementMethodDetails ```."
+msgstr ""
 
-#: ../../standard/docs/en/getting_started/building_blocks.md:210
+#: ../../standard/docs/en/getting_started/building_blocks.md:221
 msgid ""
 "For an Open Procedure, when a free-text justification of why the procedure "
 "was chosen is available, this would end up as:"
-msgstr "Para una Licitación Abierta, cuando está disponible una justificación de texto libre de por qué se eligió dicho procedimiento, se mostraría así:"
+msgstr ""

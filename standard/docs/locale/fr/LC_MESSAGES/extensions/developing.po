@@ -1,20 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C)
 # This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Joel Gombin <joel.gombin@gmail.com>, 2016
-# Louis Charbonneau <louis.charbonneau171@gmail.com>, 2016
-# samgoeta <samgoeta@gmail.com>, 2016
-# Tim Davies <tim.davies@opendataservices.coop>, 2016-2017
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: open-contracting-standard-1.0\n"
+"Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-17 14:56+0000\n"
-"PO-Revision-Date: 2017-02-20 11:02+0000\n"
-"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>\n"
-"Language-Team: French (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/fr/)\n"
+"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,51 +18,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../standard/docs/en/extensions/developing.md:0
-msgid "Developing an extension"
-msgstr "Développer une extension"
+msgid "Develop your own extension"
+msgstr ""
 
 #: ../../standard/docs/en/extensions/developing.md:3
-msgid "The development of an extension follows a number of stages."
-msgstr "Le développement d'une extension suit un certain nombre d'étapes."
+msgid ""
+"The core OCDS schema provides a set of sections, building blocks and fields "
+"for describing a wide range of different contracting processes."
+msgstr ""
 
 #: ../../standard/docs/en/extensions/developing.md:5
 msgid ""
-"**Someone starts a discussion via the [standard issue "
-"tracker](https://github.com/open-contracting/standard/issues) describing the"
-" additional data they want to publish.** It is helpful when the initial post"
-" provides examples of the data."
-msgstr "**Quelqu'un initie une discussion via le [issue tracker du standard](https://github.com/open-contracting/standard/issues), en décrivant les données additionnelles qu'il ou elle souhaite publier**. Il est utile que le post initial fournisse des exemples des données."
+"Data publishers or users may have additional data that they could publish, "
+"or that they need. Instead of ignoring this data and leaving it unpublished,"
+" OCDS encourages publishers and users to collaborate on the creation of "
+"extensions to the standard."
+msgstr ""
 
 #: ../../standard/docs/en/extensions/developing.md:7
-msgid ""
-"**Community members with similar data publishing needs are encouraged to "
-"discuss a potential data model**. This may involve identifying the sections "
-"or building blocks of OCDS that need to be extended to capture this "
-"additional data."
-msgstr "**Les membres de la communauté qui ont besoin de publier des données comparables sont encouragés à discuter d'un modèle de données potentiel**. Cela peut impliquer d'identifier les sections ou composantes essentielles du standard OCDS qui nécessitent d'être étendues afin de pouvoir prendre en compte ces données additionnelles.  "
+msgid "This can result in two kinds of extension:"
+msgstr ""
 
 #: ../../standard/docs/en/extensions/developing.md:9
 msgid ""
-"**A draft data model is proposed**. Usually through a mock-up example of "
-"some JSON."
-msgstr "**Un brouillon de modèle est proposé**. Généralement, au moyen d'un exemple de données en JSON."
+"**Core** extensions are documented as part of the standard and reviewed by "
+"the OCDS technical team with each version upgrade of OCDS. They are likely "
+"to be relevant to a large number of publishers and users."
+msgstr ""
 
 #: ../../standard/docs/en/extensions/developing.md:11
 msgid ""
-"**A schema patch and README file is developed** and [added to the extensions"
-" repository](https://github.com/open-contracting/implementation-and-"
-"extensions). The JSON patch can be applied to the main schema in order to "
-"create an updated OCDS schema for validating extended data. The README file "
-"explains the purpose of the extension, the design choices made, and gives an"
-" example."
-msgstr "**Un patch au schéma ainsi qu'un fichier README sont développés** et [ajoutés au dépôt des extensions](https://github.com/open-contracting/implementation-and-extensions). Le patch JSON peut être appliqué au schéma principal afin de créer un schéma OCDS mis à jour pour valider les données étendues. Le fichier README explique l'objet de l'extension, les choix de conception qui ont été faits, et donne un exemple."
+"**Community** extension are maintained by third-parties, or are maintained "
+"outside of the standard governance process. They may provide features "
+"required by only a small number of publishers or users."
+msgstr ""
 
 #: ../../standard/docs/en/extensions/developing.md:13
 msgid ""
-"**A documentation page is created** and made available here, allowing "
-"publishers and users to discover the available extensions."
-msgstr "**Une page de documentation est créée** et rendue disponible ici, permettant aux producteurs de données et aux utilisateurs de découvrir les extensions disponibles."
+"Both kinds of extension provide documentation and schema that can be used to"
+" produce and validate extended OCDS data."
+msgstr ""
 
 #: ../../standard/docs/en/extensions/developing.md:15
-msgid "You can contact the help-desk for support creating an extension."
-msgstr "Vous pouvez contacter l'assistance technique pour obtenir du soutien dans la création d'une extension."
+msgid ""
+"Core extensions are embedded directly within the OCDS reference "
+"documentation, and versioned along with the standard."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/developing.md:17
+msgid ""
+"Links to externally hosted local extensions may be included in the OCDS "
+"reference documentation, drawing on the [extensions "
+"registry](https://github.com/open-contracting/extension_registry)."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/developing.md:0
+msgid "Extension template"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/developing.md:21
+msgid ""
+"You can find the [extension template](https://github.com/open-"
+"contracting/standard_extension_template) on GitHub. It contains guidance on "
+"creating an extension."
+msgstr ""
