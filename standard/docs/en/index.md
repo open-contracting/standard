@@ -17,36 +17,13 @@ The OCDS approach:
 * Guidance on improving data collection and data quality
 * A growing community of users and range of open source tools
 
+```eval_rst
+.. note:: 
 
+  This is the 1.1 release of OCDS, published on 26th May 2017. [Version 1.0 can be found here](http://standard.open-contracting.org/1.0/en/). 
 
-<!-- Progressive enhancement for documentation slider above. Add a list of images in order that should be associated with the bullet points above. Uses bxSlider and some custom jQuery. Images also need to be in the hidden div block below in order to be copied across to the deployed docs correctly. -->
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css"/>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
-<script type="text/javascript"><!--
-images = ['test.png','contracting_process_rc.png'];
-$("ul.simple-REMOVE").each(function(key,value) { 
-    if($( this ).children("li").size() == 10) { 
-        $( this ).addClass("bxslider");
-        for (i = 0; i < images.length; i++) { 
-            $( this ).children("li:eq("+i+")").html('<img src="_images/'+images[i]+'" title="'+$( this ).children("li:eq("+i+")").html()+'">');
-        }
-    }
-});
-$('.bxslider').bxSlider({
-  mode: 'horizontal',
-  auto: true,
-  captions: true
-});
---></script>
-
-<div style="display:none;">
-![Test](../../assets/slider/test.png)
-</div>
-
-
-
+  Full Spanish and French translations of version 1.1 are not yet available, but will be updated shortly. 
+```
 
 ## About
 
@@ -57,7 +34,6 @@ Version 1.0 of the standard was developed for the OCP by the [World Wide Web Fou
 ## Support
 
 A [free helpdesk service](support/index.md) is available to support implementation and use of OCDS.
-
 
 ```eval_rst
 .. toctree::

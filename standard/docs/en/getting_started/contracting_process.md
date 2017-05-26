@@ -139,11 +139,3 @@ The ```ocid``` is case sensitive. Case should be used consistently whenever an `
 ### Mapping your systems
 
 The Open Contracting Data Standard helpdesk provide [a technical assessment template](http://www.open-contracting.org/resources/ocds-technical-assessment-template/) that can be used to identify the different systems involved in managing data on each stage of the contracting process.
-
-### Extending OCDS
-
-Version 1.0 of the OCDS schema is optimised for procurement-type contracts. 
-
-However, using extensions OCDS can also be used to model other type of contracting process. 
-
-[Contact the helpdesk](../support/index.md) for support to model your contracting processes using OCDS.

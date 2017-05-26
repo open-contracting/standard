@@ -24,9 +24,11 @@ The versioned release format is designed to support analysis of how data has cha
 Records should be embedded within a record package.  
 
 ```eval_rst
-.. csv-table::
-   :header-rows: 1
-   :file: standard/docs/field_definitions/record-package.csv
+
+.. jsonschema:: ../../../schema/record-package-schema.json
+    :include: 
+    :collapse: records
+
 ```
 
 See the guidance on [package meta-data](reference.md#package-metadata). In addition, a record package includes:
@@ -38,7 +40,7 @@ You can see this in the full example of a record below.
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/versioned.json
+.. jsoninclude:: docs/en/examples/merging/versioned.json
    :jsonpointer: 
    :expand: packages, records
    :title: Full_record
@@ -66,7 +68,7 @@ An example releases section is given below.
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/versioned.json
+.. jsoninclude:: docs/en/examples/merging/versioned.json
    :jsonpointer: /records/0
    :expand: releases, tag
    :title: releases
@@ -93,7 +95,7 @@ An example extract of the versioned information for a tender value is shown belo
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/versioned.json
+.. jsoninclude:: docs/en/examples/merging/versioned.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: amount, releaseTag
    :title: versioned

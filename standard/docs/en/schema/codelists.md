@@ -12,6 +12,17 @@ Codes are case sensitive, and are generally provided as english language camelCa
 
 ## Open Codelists
 
+### Party Role
+
+The organisations, economic operators or other participants in a contracting process are listed in the [parties section](../../reference/#parties). A single party may have one or more roles in the contracting process. 
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/partyRole.csv
+```
+
+
 ### Item Classification Scheme
 
 Items should be classified using existing gazetteers and codelists, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm). Open codelists are strongly preferred. 
@@ -23,6 +34,16 @@ Items should be classified using existing gazetteers and codelists, such as the 
 ```
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
+
+### Unit Classification Scheme
+
+Item quantities may be provided using an established codelist for units of measurement. Codelists may provide human-readable descriptions of units, or symbols for use in input and display interfaces.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/unitClassificationScheme.csv
+```
 
 ### Organization Identifier Scheme
 
@@ -39,11 +60,18 @@ This list can be extended in consultation with IATI.
 
 ### Document Type
 
-This list provides details of the documents that publishers may wish to provide at various points their contracting process.
+The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates whether documents are considered 'basic', 'intermediate' or 'advanced', and the section of an OCDS release they are most likely to be applicable within. 
+
+The code descriptions are neccessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
+
+Implementers may wish to map their existing document codes to this list, or, if using this list within a user-interface, to re-write the codelist titles and descriptions apporiately for the context they are being used in. 
+
+This is an open codelist, and additional entries can be included with a x\_ prefix. 
 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 10 10 10 20 50
    :file: standard/schema/codelists_translated/documentType.csv
 ```
 
@@ -52,8 +80,16 @@ This list provides details of the documents that publishers may wish to provide 
 The award criteria code list describes the basis on which contract awards will be made. 
 
 ```eval_rst
+.. note:: 
+
+  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishes may need to review the mapping from their internal systems to this updated list of award criteria.
+
+```
+
+```eval_rst
 .. csv-table::
    :header-rows: 1
+   :widths: 20 20 50 10
    :file: standard/schema/codelists_translated/awardCriteria.csv
 ```
 
@@ -70,6 +106,48 @@ The submission method codelist is used to identify the mechanism through which a
 ```
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
+
+### Related Process
+
+The related process block is used at the release level to point backwards to prior processes, such as planning, PQQ or framework establishment, and at the contract level to point onwards to sub-contracts, renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/relatedProcess.csv
+```
+
+### Related Process Scheme
+
+The related process scheme describes the kind of identifier used to cross-reference another process. 
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/relatedProcessScheme.csv
+```
+
+
+### Milestone Type
+
+The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/milestoneType.csv
+```
+
+### Extended Procurement Category
+
+The extended procurement category codelist is used to provide additional detail about the focus of a contracting process. 
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/extendedProcurementCategory.csv
+```
+
 
 ## Closed Codelists 
 
@@ -95,22 +173,39 @@ Contracting processes may be formed under a number of different processes. Curre
 
 ### Tender Status
 
-The `tender.status` field is used to indicate the current status of a tender process.
+The `tender.status` field is used to indicate the current status of a tender process. The following options are available:
 
 ```eval_rst
-.. csv-table::
+.. csv-table:: 
    :header-rows: 1
    :file: standard/schema/codelists_translated/tenderStatus.csv
 ```
 
+```eval_rst
+.. note:: 
+   The 'pipeline' status was introduced in version 1.1.
+```
+
 ### Method
 
-The method codelist is based upon the [GPA Definitions provided here](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
+A contracting process aims to fulfil the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
    :file: standard/schema/codelists_translated/method.csv
+```
+
+Note: The 'direct' code was introduced in Version 1.1. Publishers who completed a codelist mapping prior to 1.1 may have included direct procurement within limited, and may need to review their mappings.
+
+### Procurement Category
+
+The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCateory](#extended-procurement-category) codelist.
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/schema/codelists_translated/procurementCategory.csv
 ```
 
 ### Award Status
@@ -137,7 +232,9 @@ Contracts can move through multiple states. Releases over time may update the st
 
 ### Currency
 
-OCDS uses the ISO 3-letter currency codes maintained in [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217).
+The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+
+A full list is available from the ISO. 
 
 ### Milestone Status
 

@@ -47,6 +47,8 @@ Consult the [release package](../../../schema/release_package/) and [record pack
 {
 "uri":"http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-01-planning.json",
 "publishedDate":"2009-03-15T14:45:00Z",
+"version":"1.1",
+"extensions":[],
 "publisher": {
         "scheme": "GB-COH",
         "uid": "09506232",

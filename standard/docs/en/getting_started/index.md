@@ -24,7 +24,7 @@ When you are done you could be producing data that looks something like the cont
 
 .. jsoninclude:: docs/en/examples/contract.json
    :jsonpointer: /releases
-   :expand: releases, tender, awards, contracts, period, value, items, tag, documents
+   :expand: releases, tender, awards, contracts, period, value, items, tag, parties, documents
 
 ```
 

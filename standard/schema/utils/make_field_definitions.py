@@ -39,19 +39,27 @@ def make_definition_table(json,file_path,what="properties",section=""):
 
         types = types.replace("Reference","Object").strip()
 
+        deprecated = " (DEPRECATED)" if "deprecated" in block[prop] else ""
+
+        title = ""
+        if "title" in block[prop]:
+            title = format(block[prop].get('title','')) + deprecated + ": "
+
+        description = title + format(block[prop].get('description',''))
+
         if types == "array":
            if block[prop].get('items').get("$ref"):
-               table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(block[prop]['items']["$ref"]) + _(" section for further details."),"Object Array"])
+               table.append([prop,description + _(" See ") + make_link(block[prop]['items']["$ref"]) + _(" section for further details."),"Object Array"])
            else:
-               table.append([prop,format(block[prop].get('description','')),"Array"])
+               table.append([prop,description,"Array"])
         elif block[prop].get("$ref"):
-          table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(block[prop]["$ref"]),"Object"])
+          table.append([prop,description + _(" See ") + make_link(block[prop]["$ref"]),"Object"])
         elif "object" in types:
-            table.append([prop,format(block[prop].get('description','')) + _(" See ") + make_link(prop),"Object"])
+            table.append([prop,description + _(" See ") + make_link(prop),"Object"])
         elif(block[prop].get('format','')):
-          table.append([prop,format(block[prop].get('description','')),block[prop].get('format','') + " " + types])
+          table.append([prop,description,block[prop].get('format','') + " " + types])
         else:
-          table.append([prop,format(block[prop].get('description','')),types])
+          table.append([prop,description,types])
 
         with open(file_path, 'w') as f:
             writer = csv.writer(f)
@@ -118,6 +126,8 @@ if __name__ == "__main__":
 
     make_definition_table(release,join(file_path,"release-organization.csv"),what="definitions",section="Organization")
 
+    make_definition_table(release,join(file_path,"release-organization-reference.csv"),what="definitions",section="OrganizationReference")
+
     make_definition_table(release,join(file_path,"release-item.csv"),what="definitions",section="Item")
     
     make_definition_table(release,join(file_path,"release-item-unit.csv"),what="definitions",section="Item/unit")
@@ -137,4 +147,7 @@ if __name__ == "__main__":
     make_definition_table(release,join(file_path,"release-amendment.csv"),what="definitions",section="Amendment")
 
     make_definition_table(release,join(file_path,"release-changes.csv"),what="definitions",section="Amendment/changes")
+
+    make_definition_table(release,join(file_path,"related-process.csv"),what="definitions",section="RelatedProcess")
+
     

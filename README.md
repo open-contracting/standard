@@ -64,12 +64,12 @@ fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
 
 ### Translations
 
-When a new major/minor version of the docs text is ready, a new transifex project needs to be made called eg. open-contracting-standard-x.y  This is done on the transifex web interface.
+When a new major/minor version of the docs text is ready, a new transifex project needs to be made called eg. open-contracting-standard-x.y  This is done on the transifex web interface. The ```.tx/config``` file also needs to be emptied.
 
 Make sure the build is run above, then run (making sure the project name is the same as the one made above) 
 
 ```
-sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-1-0 --pot-dir build/locale --locale-dir standard/docs/locale
+sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-1-1 --pot-dir build/locale --locale-dir standard/docs/locale
 ```
 
 This will update the .tx/config file and this file should be added to the git repository. This will only have to be run again if there is a new/deleted doc page or if a file name has changed name.

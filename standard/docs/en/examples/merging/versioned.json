@@ -3,7 +3,9 @@
       "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-award1",
       "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-award2",
       "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender",
-      "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-update"
+      "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-update",
+      "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-amendment",
+      "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender"
    ],
    "publishedDate": "2016-03-05T13:02:00Z",
    "publisher": {
@@ -40,12 +42,7 @@
                }
             ],
             "buyer": {
-               "identifier": {
-                  "id": "09506232",
-                  "legalName": "Open Data Services Co-operative",
-                  "scheme": "GB-COH",
-                  "uri": "https://opencorporates.com/companies/gb/09506232"
-               },
+               "id": "GB-COH-09506232",
                "name": "Open Data Services"
             },
             "date": "2016-03-03T09:30:00Z",
@@ -53,16 +50,40 @@
             "initiationType": "tender",
             "language": "en",
             "ocid": "ocds-213czf-000-00002",
+            "parties": [
+               {
+                  "id": "GB-COH-09506232",
+                  "identifier": {
+                     "id": "09506232",
+                     "legalName": "Open Data Services Co-operative",
+                     "scheme": "GB-COH",
+                     "uri": "https://opencorporates.com/companies/gb/09506232"
+                  },
+                  "name": "Open Data Services",
+                  "roles": [
+                     "buyer"
+                  ]
+               }
+            ],
             "tag": [
                "compiled"
             ],
             "tender": {
+               "amendments": [
+                  {
+                     "amendsReleaseID": "ocds-213czf-000-00002-01-tender",
+                     "date": "2016-02-04T09:30:00Z",
+                     "id": "amendment-1",
+                     "rationale": "Based on feedback from potential bidders, the total budget was increased by \u00a3500, and the deadline extended",
+                     "releaseID": "ocds-213czf-000-00002-01-tender-amendment"
+                  }
+               ],
                "awardCriteria": "bestProposal",
                "awardPeriod": {
                   "endDate": "2016-06-01T23:59:59Z",
                   "startDate": "2016-04-01T00:00:00Z"
                },
-               "description": "Creation of a data merging tool.",
+               "description": "Creation of a data merging tool. The tool should by written in Python. Proposals should be submitted by e-mail.",
                "id": "ocds-213czf-000-00001-01-tender",
                "procurementMethod": "open",
                "status": "active",
@@ -70,12 +91,12 @@
                   "electronicSubmission"
                ],
                "tenderPeriod": {
-                  "endDate": "2016-02-15T18:00:00Z",
+                  "endDate": "2016-02-20T18:00:00Z",
                   "startDate": "2016-01-31T09:00:00Z"
                },
                "title": "Data merging tool",
                "value": {
-                  "amount": 1500,
+                  "amount": 2000,
                   "currency": "USD"
                }
             }
@@ -109,9 +130,232 @@
                   "tenderUpdate"
                ],
                "url": "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-update"
+            },
+            {
+               "date": "2016-02-05T10:30:00Z",
+               "tag": [
+                  "tenderAmendment"
+               ],
+               "url": "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender-amendment"
+            },
+            {
+               "date": "2016-01-01T09:30:00Z",
+               "tag": [
+                  "tender"
+               ],
+               "url": "http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json#ocds-213czf-000-00002-01-tender"
             }
          ],
          "versionedRelease": {
+            "tender": {
+               "value": {
+                  "amount": [
+                     {
+                        "releaseDate": "2016-01-01T09:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender",
+                        "releaseTag": [
+                           "tender"
+                        ],
+                        "value": 1000
+                     },
+                     {
+                        "releaseDate": "2016-02-05T10:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender-amendment",
+                        "releaseTag": [
+                           "tenderAmendment"
+                        ],
+                        "value": 2000
+                     }
+                  ],
+                  "currency": [
+                     {
+                        "releaseDate": "2016-01-01T09:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender",
+                        "releaseTag": [
+                           "tender"
+                        ],
+                        "value": "USD"
+                     }
+                  ]
+               },
+               "amendments": [
+                  {
+                     "amendsReleaseID": [
+                        {
+                           "releaseDate": "2016-02-05T10:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender-amendment",
+                           "releaseTag": [
+                              "tenderAmendment"
+                           ],
+                           "value": "ocds-213czf-000-00002-01-tender"
+                        }
+                     ],
+                     "date": [
+                        {
+                           "releaseDate": "2016-02-05T10:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender-amendment",
+                           "releaseTag": [
+                              "tenderAmendment"
+                           ],
+                           "value": "2016-02-04T09:30:00Z"
+                        }
+                     ],
+                     "id": "amendment-1",
+                     "rationale": [
+                        {
+                           "releaseDate": "2016-02-05T10:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender-amendment",
+                           "releaseTag": [
+                              "tenderAmendment"
+                           ],
+                           "value": "Based on feedback from potential bidders, the total budget was increased by \u00a3500, and the deadline extended"
+                        }
+                     ],
+                     "releaseID": [
+                        {
+                           "releaseDate": "2016-02-05T10:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender-amendment",
+                           "releaseTag": [
+                              "tenderAmendment"
+                           ],
+                           "value": "ocds-213czf-000-00002-01-tender-amendment"
+                        }
+                     ]
+                  }
+               ],
+               "awardCriteria": [
+                  {
+                     "releaseDate": "2016-01-01T09:30:00Z",
+                     "releaseID": "ocds-213czf-000-00002-01-tender",
+                     "releaseTag": [
+                        "tender"
+                     ],
+                     "value": "bestProposal"
+                  }
+               ],
+               "awardPeriod": {
+                  "endDate": [
+                     {
+                        "releaseDate": "2016-01-01T09:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender",
+                        "releaseTag": [
+                           "tender"
+                        ],
+                        "value": "2016-06-01T23:59:59Z"
+                     }
+                  ],
+                  "startDate": [
+                     {
+                        "releaseDate": "2016-01-01T09:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender",
+                        "releaseTag": [
+                           "tender"
+                        ],
+                        "value": "2016-04-01T00:00:00Z"
+                     }
+                  ]
+               },
+               "description": [
+                  {
+                     "releaseDate": "2016-01-01T09:30:00Z",
+                     "releaseID": "ocds-213czf-000-00002-01-tender",
+                     "releaseTag": [
+                        "tender"
+                     ],
+                     "value": "Data merge tool."
+                  },
+                  {
+                     "releaseDate": "2016-01-31T09:30:00Z",
+                     "releaseID": "ocds-213czf-000-00002-01-tender-update",
+                     "releaseTag": [
+                        "tenderUpdate"
+                     ],
+                     "value": "Creation of a data merging tool. The tool should by written in Python. Proposals should be submitted by e-mail."
+                  }
+               ],
+               "id": [
+                  {
+                     "releaseDate": "2016-01-01T09:30:00Z",
+                     "releaseID": "ocds-213czf-000-00002-01-tender",
+                     "releaseTag": [
+                        "tender"
+                     ],
+                     "value": "ocds-213czf-000-00001-01-tender"
+                  }
+               ],
+               "procurementMethod": [
+                  {
+                     "releaseDate": "2016-01-01T09:30:00Z",
+                     "releaseID": "ocds-213czf-000-00002-01-tender",
+                     "releaseTag": [
+                        "tender"
+                     ],
+                     "value": "open"
+                  }
+               ],
+               "status": [
+                  {
+                     "releaseDate": "2016-01-01T09:30:00Z",
+                     "releaseID": "ocds-213czf-000-00002-01-tender",
+                     "releaseTag": [
+                        "tender"
+                     ],
+                     "value": "active"
+                  }
+               ],
+               "submissionMethod": [
+                  [
+                     {
+                        "releaseDate": "2016-01-01T09:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender",
+                        "releaseTag": [
+                           "tender"
+                        ],
+                        "value": "electronicSubmission"
+                     }
+                  ]
+               ],
+               "tenderPeriod": {
+                  "endDate": [
+                     {
+                        "releaseDate": "2016-01-01T09:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender",
+                        "releaseTag": [
+                           "tender"
+                        ],
+                        "value": "2016-02-15T18:00:00Z"
+                     },
+                     {
+                        "releaseDate": "2016-02-05T10:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender-amendment",
+                        "releaseTag": [
+                           "tenderAmendment"
+                        ],
+                        "value": "2016-02-20T18:00:00Z"
+                     }
+                  ],
+                  "startDate": [
+                     {
+                        "releaseDate": "2016-01-01T09:30:00Z",
+                        "releaseID": "ocds-213czf-000-00002-01-tender",
+                        "releaseTag": [
+                           "tender"
+                        ],
+                        "value": "2016-01-31T09:00:00Z"
+                     }
+                  ]
+               },
+               "title": [
+                  {
+                     "releaseDate": "2016-01-01T09:30:00Z",
+                     "releaseID": "ocds-213czf-000-00002-01-tender",
+                     "releaseTag": [
+                        "tender"
+                     ],
+                     "value": "Data merging tool"
+                  }
+               ]
+            },
             "award": [
                {
                   "date": [
@@ -245,48 +489,16 @@
                }
             ],
             "buyer": {
-               "identifier": {
-                  "id": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "09506232"
-                     }
-                  ],
-                  "legalName": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "Open Data Services Co-operative"
-                     }
-                  ],
-                  "scheme": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "GB-COH"
-                     }
-                  ],
-                  "uri": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "https://opencorporates.com/companies/gb/09506232"
-                     }
-                  ]
-               },
+               "id": [
+                  {
+                     "releaseDate": "2016-01-01T09:30:00Z",
+                     "releaseID": "ocds-213czf-000-00002-01-tender",
+                     "releaseTag": [
+                        "tender"
+                     ],
+                     "value": "GB-COH-09506232"
+                  }
+               ],
                "name": [
                   {
                      "releaseDate": "2016-01-01T09:30:00Z",
@@ -319,154 +531,75 @@
                }
             ],
             "ocid": "ocds-213czf-000-00002",
-            "tender": {
-               "awardCriteria": [
-                  {
-                     "releaseDate": "2016-01-01T09:30:00Z",
-                     "releaseID": "ocds-213czf-000-00002-01-tender",
-                     "releaseTag": [
-                        "tender"
+            "parties": [
+               {
+                  "id": "GB-COH-09506232",
+                  "identifier": {
+                     "id": [
+                        {
+                           "releaseDate": "2016-01-01T09:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender",
+                           "releaseTag": [
+                              "tender"
+                           ],
+                           "value": "09506232"
+                        }
                      ],
-                     "value": "bestProposal"
-                  }
-               ],
-               "awardPeriod": {
-                  "endDate": [
+                     "legalName": [
+                        {
+                           "releaseDate": "2016-01-01T09:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender",
+                           "releaseTag": [
+                              "tender"
+                           ],
+                           "value": "Open Data Services Co-operative"
+                        }
+                     ],
+                     "scheme": [
+                        {
+                           "releaseDate": "2016-01-01T09:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender",
+                           "releaseTag": [
+                              "tender"
+                           ],
+                           "value": "GB-COH"
+                        }
+                     ],
+                     "uri": [
+                        {
+                           "releaseDate": "2016-01-01T09:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender",
+                           "releaseTag": [
+                              "tender"
+                           ],
+                           "value": "https://opencorporates.com/companies/gb/09506232"
+                        }
+                     ]
+                  },
+                  "name": [
                      {
                         "releaseDate": "2016-01-01T09:30:00Z",
                         "releaseID": "ocds-213czf-000-00002-01-tender",
                         "releaseTag": [
                            "tender"
                         ],
-                        "value": "2016-06-01T23:59:59Z"
+                        "value": "Open Data Services"
                      }
                   ],
-                  "startDate": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "2016-04-01T00:00:00Z"
-                     }
-                  ]
-               },
-               "description": [
-                  {
-                     "releaseDate": "2016-01-01T09:30:00Z",
-                     "releaseID": "ocds-213czf-000-00002-01-tender",
-                     "releaseTag": [
-                        "tender"
-                     ],
-                     "value": "Creation of a data merging tool."
-                  }
-               ],
-               "id": [
-                  {
-                     "releaseDate": "2016-01-01T09:30:00Z",
-                     "releaseID": "ocds-213czf-000-00002-01-tender",
-                     "releaseTag": [
-                        "tender"
-                     ],
-                     "value": "ocds-213czf-000-00001-01-tender"
-                  }
-               ],
-               "procurementMethod": [
-                  {
-                     "releaseDate": "2016-01-01T09:30:00Z",
-                     "releaseID": "ocds-213czf-000-00002-01-tender",
-                     "releaseTag": [
-                        "tender"
-                     ],
-                     "value": "open"
-                  }
-               ],
-               "status": [
-                  {
-                     "releaseDate": "2016-01-01T09:30:00Z",
-                     "releaseID": "ocds-213czf-000-00002-01-tender",
-                     "releaseTag": [
-                        "tender"
-                     ],
-                     "value": "active"
-                  }
-               ],
-               "submissionMethod": [
-                  [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "electronicSubmission"
-                     }
-                  ]
-               ],
-               "tenderPeriod": {
-                  "endDate": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "2016-02-15T18:00:00Z"
-                     }
-                  ],
-                  "startDate": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "2016-01-31T09:00:00Z"
-                     }
-                  ]
-               },
-               "title": [
-                  {
-                     "releaseDate": "2016-01-01T09:30:00Z",
-                     "releaseID": "ocds-213czf-000-00002-01-tender",
-                     "releaseTag": [
-                        "tender"
-                     ],
-                     "value": "Data merging tool"
-                  }
-               ],
-               "value": {
-                  "amount": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": 1000
-                     },
-                     {
-                        "releaseDate": "2016-01-31T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender-update",
-                        "releaseTag": [
-                           "tenderUpdate"
-                        ],
-                        "value": 1500
-                     }
-                  ],
-                  "currency": [
-                     {
-                        "releaseDate": "2016-01-01T09:30:00Z",
-                        "releaseID": "ocds-213czf-000-00002-01-tender",
-                        "releaseTag": [
-                           "tender"
-                        ],
-                        "value": "USD"
-                     }
+                  "roles": [
+                     [
+                        {
+                           "releaseDate": "2016-01-01T09:30:00Z",
+                           "releaseID": "ocds-213czf-000-00002-01-tender",
+                           "releaseTag": [
+                              "tender"
+                           ],
+                           "value": "buyer"
+                        }
+                     ]
                   ]
                }
-            }
+            ]
          }
       }
    ],

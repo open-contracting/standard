@@ -1,0 +1,24 @@
+.hide {
+  display: None;
+  margin-bottom: 10px !important
+}
+  
+.extension_url {
+    width:70%;
+}
+
+.extension-selector-table td:first-child {
+    cursor: pointer
+}
+
+.extension-selector-table td.extension-selector:first-child::after {
+    content: url('../../assets/empty_checkbox.png');
+}
+
+.extension-selector-table td.extension-selector.extension-selected:first-child::after {
+    content: url('../../assets/checked_checkbox.png');
+}
+
+.extension-selector-table th:last-child, .extension-selector-table td:last-child{
+    display:none;
+}
