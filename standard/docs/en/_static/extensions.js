@@ -6,7 +6,7 @@ $(function () {
 
   // Core extensions only
   if (isUsingExtensionsPage) {
-    $('.extension-selector-table td:nth-child(2)').each(function() {
+    $('.extension-selector-table td:nth-child(2)').each (function(){
       var $this = $(this);
       var splitNameDocURL = $this.text().split('::');
       var cellContent = '<a href="' + splitNameDocURL[1] + '">' + splitNameDocURL[0] + '</a>';
@@ -14,11 +14,12 @@ $(function () {
     });
   }
 
-  // Schema reference -- extensions
+  // Schema reference -- extensions 
   if (isSchemaReferencePage) {
-    var $blankListEl = $($('.extension_list dl')[0]);
-    $blankListEl.find('a').attr('href', '').text('');
-    $blankListEl.find('dd').text('');
+    var blankListEl = '<dl><dt><a class="reference external" href=""></a></dt><dd></dd></dl>';
+    // append an empty list for community part of the section
+    $('.extension_list p.last').after('<br><dl class="docutils hide community-list"></dl>');
+    $('.extension_list p.last').wrap('<small></small>');
   }
 
   $.ajax({
@@ -26,21 +27,22 @@ $(function () {
     "jsonpCallback": "extensions_callback",
     "crossDomain": true,
     "dataType": "jsonp"
-  }).done(function(data) {
+  }).done(function (data){
       var extListId, $listElClone;
       var $table =isCommunityPage ? $($('.extension-selector-table')[0]) : $($('.extension-selector-table')[1]);
       var row  = $($table.find('.row-even')).detach();
       var isEven = true;
       var rowClass, $rowClone, extensionLink, extensionLinkText;
 
-      $.each(data.extensions, function (index, extension) {
+      $.each(data.extensions, function (index, extension){
         if (!extension.core) {
           if (isSchemaReferencePage) {
             extListId = '#extensionlist-' + extension.category;
-            $listElClone = $blankListEl.clone();
+            $listElClone = $(blankListEl);
             $listElClone.find('a').attr('href', extension.documentation_url).text(extension.name[language] || extension.name['en']);
             $listElClone.find('dd').text(extension.description[language] || extension.description['en']);
-            $(extListId).find('dl').parent().append($listElClone)
+            $(extListId).find('.community-list').append($listElClone.html()).removeClass('hide');
+            $(extListId).find('p.last').removeClass('hide');
           } else {
             rowClass = isEven ? 'row-even' : 'row-odd';
             $rowClone = $(row).clone();
@@ -64,6 +66,15 @@ $(function () {
           }
         }
       });
+      if (isSchemaReferencePage) {
+        // Remove empty extension containers in the schema reference page
+        $('.extension_list ').each(function(){
+          var $this = $(this);
+          if (!$this.find('a').attr('href')) {
+            $this.remove();
+          }
+        });
+      }
       if (isCommunityPage) {
         $table.removeClass('extension-selector-table');
         $table.find('tr th:first-child').remove();
