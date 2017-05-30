@@ -327,19 +327,11 @@ from os.path import abspath, dirname, join
 
 current_dir = dirname(abspath(__file__))
 
-GIT_REF_MASTER = 'master'
-GIT_REF_CURRENT = 'v1.1'
-LOCATION = 'http://standard.open-contracting.org/extension_registry/{}/extensions.json'
-
-location_master = LOCATION.format(GIT_REF_MASTER)
-location_current = LOCATION.format(GIT_REF_CURRENT)
-
+core_extensions_current = 'http://standard.open-contracting.org/extension_registry/v1.1/extensions.json'
 try:
-    extension_json_master = requests.get(location_master, timeout=1).json()
-    extension_json_current = requests.get(location_current, timeout=1).json()
+    extension_json_current = requests.get(core_extensions_current, timeout=1).json()
 except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
     print("**********  Internet connection not found *************")
-    extension_json_master = {"extensions": []}
     extension_json_current = {"extensions": []}
 
 
