@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Participation fees"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Meta-data"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:5
+msgid ""
+"To use this extension, include it's URL in the ```extension``` array of your"
+" release or record package."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:14
+msgid ""
+"This extension is maintained at [https://github.com/open-"
+"contracting/ocds_participationFee_extension](https://github.com/open-"
+"contracting/ocds_participationFee_extension)"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Documentation"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Background"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:20
+msgid ""
+"There are a number of cases where there may be costs to access documents "
+"for, or to participate within, a tender process."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:22
+msgid ""
+"Potential bidders will want to be aware of the fees that a process might "
+"involve."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:24
+msgid ""
+"Procurement monitors may wish to ensure that participation fees are within "
+"legal parameters (often set as a fixed maximum, or a percentage of total "
+"contract value), or to monitor how participation fees are being used."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Extension fields"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:28
+msgid ""
+"This extension adds a ```participationFees``` field to the ```tender``` "
+"section of OCDS and introduces a new ```participationFee``` building block."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:30
+msgid ""
+"The ```participationFees``` field is an array of ```participationFee``` "
+"building blocks."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:32
+msgid "The ```participationFee``` building block is made up of three fields:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:34
+msgid ""
+"```type``` - a value from the ```participationFeeType``` codelist, "
+"describing the type of the fee"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:35
+msgid "```value``` - the amount and currency of the fee"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:36
+msgid ""
+"```description``` - an optional field with more information on the fee "
+"requirements. For example, sometimes a document fee is only applicable to "
+"the hard copy of the documents."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Extension codelists"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:40
+msgid ""
+"This extension adds **closed** ```participationFeeType``` codelist with the "
+"following codes:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:42
+msgid "document - a fee payable for access to bidding documents"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:43
+msgid "deposit - a refundable fee payable for the submission of bids"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:44
+msgid "submission - a non-refundable fee payable for the submission of bids"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:45
+msgid "win - a fee payable by the winning bidder"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Example"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:49
+msgid ""
+"The following JSON snippet models a contracting process where fees are "
+"applicable for both access to documents and submission of bids:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Usage notes"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:78
+msgid ""
+"In some cases, a fee may be levied for 'official copies' of procurement "
+"documents (although copies may also be available freely online), and bidders"
+" required to prove they have paid for an official copy of the documents as "
+"part of their submission."
+msgstr ""
+
+#: ../../standard/docs/en/extensions/participation_fee.md:80
+msgid ""
+"In this case, the fee should be modelled as a **submission** fee, as "
+"submission is only possible when this document access fee has been paid."
+msgstr ""
