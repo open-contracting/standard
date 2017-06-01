@@ -18,13 +18,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 #### Schema validation updates 
 
-* [#329](https://github.com/open-contracting/standard/issues/329) **[Float for Item.quanity](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#item)** - Item quantities has been updated to 'number' to support decimal values (e.g 10.5 rather than just 10)
+* [#329](https://github.com/open-contracting/standard/issues/329) **[Float for Item.quantity](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#item)** - Item quantities has been updated to 'number' to support decimal values (e.g 10.5 rather than just 10)
 * [#253](https://github.com/open-contracting/standard/issues/253) **[Negative amounts](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#budget)** - We have added support for negative amounts in transactions
 * [#323](https://github.com/open-contracting/standard/issues/323) **[Standard should specify use of UTF-8 for encoding JSON](http://standard.open-contracting.org/1.1-dev/en/implementation/serialization/#json)** - We now recommend use of I-JSON and UTF-8 for JSON publication
 * [#166](https://github.com/open-contracting/standard/issues/166) **[Indicate encoding for CSV serializations](http://standard.open-contracting.org/1.1-dev/en/implementation/serialization/#multi-table)** - We have added information on CSV encoding to the implementation guidance to recommend UTF-8 or windows-1252.
 * [#336](https://github.com/open-contracting/standard/issues/336) **[Codelist properties in schema](https://github.com/open-contracting/standard/commit/ee1db256d7364ee70e3553f4384d9908bff604a6)** - We have included explicit references to the codelist files (CSV versions) in the schema. This will be used in future versions of the validator to support validation against codelists.
 * [#301](https://github.com/open-contracting/standard/issues/301) **[Specifying versions and extensions in package meta-data](http://standard.open-contracting.org/1.1-dev/en/schema/records_reference/#package-meta-data)** - We have updated the package schemas to require that version is declared, and to provide a means of declaring extensions in use. This will be used in future versions of the validator to support validation against extensions.
-* [#287](https://github.com/open-contracting/standard/issues/287) **[Remove all ocdsMerge stratagies](http://standard.open-contracting.org/1.1-dev/en/schema/merging/)** - We have remove all 'merge strategies' from the schema as these are no longer required, now that all objects in arrays contain an id element.
+* [#287](https://github.com/open-contracting/standard/issues/287) **[Remove all ocdsMerge strategies](http://standard.open-contracting.org/1.1-dev/en/schema/merging/)** - We have remove all 'merge strategies' from the schema as these are no longer required, now that all objects in arrays contain an id element.
 
 #### Schema definition updates 
 
