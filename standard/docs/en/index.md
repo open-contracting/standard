@@ -20,7 +20,7 @@ The OCDS approach:
 ```eval_rst
 .. note:: 
 
-  This is the 1.1 release of OCDS, published on 26th May 2017. Version 1.0 documentation is still available from the version switcher at the bottom left of the page. 
+  This is the 1.1 release of OCDS, published on 31st May 2017. Version 1.0 documentation is still available from the version switcher at the bottom left of the page. 
 
   Full Spanish and French translations of version 1.1 are not yet available, but will be updated shortly. 
 ```
