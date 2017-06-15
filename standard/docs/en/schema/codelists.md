@@ -183,7 +183,7 @@ The `tender.status` field is used to indicate the current status of a tender pro
 
 ```eval_rst
 .. note:: 
-   The 'pipeline' status was introduced in version 1.1.
+   The 'planning' status was introduced in version 1.1.
 ```
 
 ### Method
