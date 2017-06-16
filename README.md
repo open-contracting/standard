@@ -83,7 +83,7 @@ tx push -s
 When the translations are filled in transifex you need to run:
 
 ```
-tx pull -a
+tx pull -a -f
 ```
 
 After this the build script will need to be run again.
