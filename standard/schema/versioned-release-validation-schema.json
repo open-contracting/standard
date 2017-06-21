@@ -7,8 +7,7 @@
         "initiationType": {
             "type": "array",
             "items": {
-                "properties": {
-                    "releaseDate": {
+                "properties": { "releaseDate": {
                         "format": "date-time",
                         "type": "string"
                     },
@@ -1155,10 +1154,33 @@
                 "roles": {
                     "type": "array",
                     "items": {
-                        "type": "string"
-                    },
-                    "codelist": "partyRole.csv",
-                    "openCodelist": true
+                        "properties": {
+                            "releaseDate": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "releaseID": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "string"
+                                },
+                                "codelist": "partyRole.csv",
+                                "openCodelist": true
+                            },
+                            "releaseTag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
                 },
                 "details": {
                     "type": "array",
@@ -2545,7 +2567,10 @@
                     "$ref": "#/definitions/ContactPointUnversioned"
                 },
                 "roles": {
-                    "type": "array",
+                    "type": [
+                        "array",
+                        "null"
+                    ],
                     "items": {
                         "type": "string"
                     },
