@@ -49,9 +49,9 @@ This is an **open** codelist. Publishers can add their own codes to this list. W
 For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets. 
 
 ```eval_rst
-.. csv-table::
+.. csv-table-no-translate::
    :header-rows: 1
-   :file: codelists/bidStatistics.csv
+   :file: codelists_translated/bidStatistics.csv
 ```
 
 ### Bid details

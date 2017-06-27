@@ -620,10 +620,17 @@ class ExtensionSelectorTable(CSVTable):
         return rows, max_cols
 
 
+class CSVTableNoTranslate(CSVTable):
+    def get_csv_data(self):
+        lines, source = super().get_csv_data()
+        return lines, None
+
+
 directives.register_directive('jsoninclude', JSONInclude)
 directives.register_directive('extensionlist', ExtensionList)
 directives.register_directive('extensiontable', ExtensionTable)
 directives.register_directive('extensionselectortable', ExtensionSelectorTable)
+directives.register_directive('csv-table-no-translate', CSVTableNoTranslate)
 
 
 # app setup hook

@@ -1,6 +1,7 @@
 import gettext
 import glob
 import csv
+import sys
 import os
 from os.path import abspath, dirname, join
 
@@ -12,8 +13,8 @@ if language == 'en':
 
 translator = gettext.translation('codelists', 'docs/locale', languages=[language], fallback=fallback)
 
-codelists_dir = join(dirname(dirname(abspath(__file__))), 'codelists')
-codelists_output_dir = join(dirname(dirname(abspath(__file__))), 'codelists_translated')
+codelists_dir = join(sys.argv[1], 'codelists')
+codelists_output_dir = join(sys.argv[1], 'codelists_translated')
 
 if not os.path.exists(codelists_output_dir):
     os.makedirs(codelists_output_dir)

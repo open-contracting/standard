@@ -32,9 +32,9 @@ This extension introduces two properties at the ```items``` level to describe lo
 ### Gazeteer Codelist
 
 ```eval_rst
-.. csv-table::
+.. csv-table-no-translate::
    :header-rows: 1
-   :file: codelists/locationGazeteers.csv
+   :file: codelists_translated/locationGazeteers.csv
 ```
 
 ### Example

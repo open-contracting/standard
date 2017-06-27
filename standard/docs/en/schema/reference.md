@@ -525,7 +525,7 @@ A contract for ‘Software consultancy services’ may be published in a release
 **csv** 
 
 ```eval_rst
-.. csv-table::
+.. csv-table-no-translate::
    :header-rows: 1
    :widths: 20 65 15
    :file: ../examples/language.csv
