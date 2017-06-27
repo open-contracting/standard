@@ -54,7 +54,7 @@ In each case, fields are identified by the [json pointer](http://tools.ietf.org/
 
 .. csv-table::
    :header-rows: 1
-   :file: standard/docs/en/examples/serialization-flat.csv
+   :file: ../examples/serialization-flat.csv
    
 ```
 
@@ -74,7 +74,7 @@ For example, to represent a tender release with two items, the CSV file would in
 
 .. csv-table::
    :header-rows: 1
-   :file: standard/docs/en/examples/serialization-flat-two-items.csv
+   :file: ../examples/serialization-flat-two-items.csv
    
 ```
 

@@ -19,7 +19,7 @@ The organisations, economic operators or other participants in a contracting pro
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/partyRole.csv
+   :file: ../../../schema/codelists_translated/partyRole.csv
 ```
 
 
@@ -30,7 +30,7 @@ Items should be classified using existing gazetteers and codelists, such as the 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/itemClassificationScheme.csv
+   :file: ../../../schema/codelists_translated/itemClassificationScheme.csv
 ```
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
@@ -42,7 +42,7 @@ Item quantities may be provided using an established codelist for units of measu
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/unitClassificationScheme.csv
+   :file: ../../../schema/codelists_translated/unitClassificationScheme.csv
 ```
 
 ### Organization Identifier Scheme
@@ -53,7 +53,7 @@ The Organization Identifier Scheme currently uses the codes from the Internation
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/organizationIdentifierRegistrationAgency_iati.csv
+   :file: ../../../schema/codelists_translated/organizationIdentifierRegistrationAgency_iati.csv
 ```
 
 This list can be extended in consultation with IATI. 
@@ -72,7 +72,7 @@ This is an open codelist, and additional entries can be included with a x\_ pref
 .. csv-table::
    :header-rows: 1
    :widths: 10 10 10 20 50
-   :file: standard/schema/codelists_translated/documentType.csv
+   :file: ../../../schema/codelists_translated/documentType.csv
 ```
 
 ### Award Criteria
@@ -90,7 +90,7 @@ The award criteria code list describes the basis on which contract awards will b
 .. csv-table::
    :header-rows: 1
    :widths: 20 20 50 10
-   :file: standard/schema/codelists_translated/awardCriteria.csv
+   :file: ../../../schema/codelists_translated/awardCriteria.csv
 ```
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
@@ -102,7 +102,7 @@ The submission method codelist is used to identify the mechanism through which a
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/submissionMethod.csv
+   :file: ../../../schema/codelists_translated/submissionMethod.csv
 ```
 
 This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
@@ -114,7 +114,7 @@ The related process block is used at the release level to point backwards to pri
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/relatedProcess.csv
+   :file: ../../../schema/codelists_translated/relatedProcess.csv
 ```
 
 ### Related Process Scheme
@@ -124,7 +124,7 @@ The related process scheme describes the kind of identifier used to cross-refere
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/relatedProcessScheme.csv
+   :file: ../../../schema/codelists_translated/relatedProcessScheme.csv
 ```
 
 
@@ -135,7 +135,7 @@ The milestone block can be used to represent a wide variety of events in the lif
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/milestoneType.csv
+   :file: ../../../schema/codelists_translated/milestoneType.csv
 ```
 
 ### Extended Procurement Category
@@ -145,7 +145,7 @@ The extended procurement category codelist is used to provide additional detail 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/extendedProcurementCategory.csv
+   :file: ../../../schema/codelists_translated/extendedProcurementCategory.csv
 ```
 
 
@@ -158,7 +158,7 @@ A contracting process may result in a number of releases of information over tim
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/releaseTag.csv
+   :file: ../../../schema/codelists_translated/releaseTag.csv
 ```
 
 ### Initiation Type
@@ -168,7 +168,7 @@ Contracting processes may be formed under a number of different processes. Curre
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/initiationType.csv
+   :file: ../../../schema/codelists_translated/initiationType.csv
 ```
 
 ### Tender Status
@@ -178,7 +178,7 @@ The `tender.status` field is used to indicate the current status of a tender pro
 ```eval_rst
 .. csv-table:: 
    :header-rows: 1
-   :file: standard/schema/codelists_translated/tenderStatus.csv
+   :file: ../../../schema/codelists_translated/tenderStatus.csv
 ```
 
 ```eval_rst
@@ -193,7 +193,7 @@ A contracting process aims to fulfil the requirements identified at the planning
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/method.csv
+   :file: ../../../schema/codelists_translated/method.csv
 ```
 
 Note: The 'direct' code was introduced in Version 1.1. Publishers who completed a codelist mapping prior to 1.1 may have included direct procurement within limited, and may need to review their mappings.
@@ -205,7 +205,7 @@ The procurement category codelist is used to indicate the **primary** focus of a
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/procurementCategory.csv
+   :file: ../../../schema/codelists_translated/procurementCategory.csv
 ```
 
 ### Award Status
@@ -215,7 +215,7 @@ An award move through multiple states. Releases over time may update the status 
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/awardStatus.csv
+   :file: ../../../schema/codelists_translated/awardStatus.csv
 ```
 
 The ```awardStatus``` field and code-list is used to indicate when a tender did not result in an award (through the ```"awardStatus":"unsuccessful"``` value)
@@ -227,7 +227,7 @@ Contracts can move through multiple states. Releases over time may update the st
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/contractStatus.csv
+   :file: ../../../schema/codelists_translated/contractStatus.csv
 ```
 
 ### Currency
@@ -241,5 +241,5 @@ A full list is available from the ISO.
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/milestoneStatus.csv
+   :file: ../../../schema/codelists_translated/milestoneStatus.csv
 ```

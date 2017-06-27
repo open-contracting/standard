@@ -211,7 +211,7 @@ However, to support comparison across continents, the main OCDS procurement meth
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/method.csv
+   :file: ../../../schema/codelists_translated/method.csv
 ```
 
 All procedures should be able to be mapped to one of these options. 

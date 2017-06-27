@@ -51,7 +51,7 @@ For example, publishers may wish to add statistics on minority or women owned bu
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/docs/en/extensions/codelists/bidStatistics.csv
+   :file: codelists/bidStatistics.csv
 ```
 
 ### Bid details

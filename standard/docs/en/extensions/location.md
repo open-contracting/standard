@@ -34,7 +34,7 @@ This extension introduces two properties at the ```items``` level to describe lo
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/docs/en/extensions/codelists/locationGazeteers.csv
+   :file: codelists/locationGazeteers.csv
 ```
 
 ### Example
