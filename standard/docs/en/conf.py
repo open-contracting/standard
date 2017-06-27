@@ -595,7 +595,7 @@ class ExtensionSelectorTable(CSVTable):
         self.options['header-rows'] = 1
         self.options['class'] = ['extension-selector-table']
         self.options['widths'] = [8, 30, 42, 20, 0]
-        return output.getvalue().splitlines(), None
+        return output.getvalue().splitlines(), 'Extension registry'
 
     def parse_csv_data_into_rows(self, csv_data, dialect, source):
         # csv.py doesn't do Unicode; encode temporarily as UTF-8
