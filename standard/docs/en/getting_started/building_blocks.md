@@ -209,9 +209,9 @@ In the EU, contracts can be initiated through a number of different procedures i
 However, to support comparison across continents, the main OCDS procurement method code list is a closed codelist with four values:
 
 ```eval_rst
-.. csv-table::
+.. csv-table-no-translate::
    :header-rows: 1
-   :file: standard/schema/codelists_translated/method.csv
+   :file: ../../../schema/codelists_translated/method.csv
 ```
 
 All procedures should be able to be mapped to one of these options. 
