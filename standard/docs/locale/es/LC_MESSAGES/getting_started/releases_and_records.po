@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-06-30 16:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +20,11 @@ msgstr ""
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:0
 msgid "Releases and Records"
-msgstr ""
+msgstr "Entregas y Registros"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:3
 msgid "There are two kinds of OCDS document:"
-msgstr ""
+msgstr "Existen dos tipos de documentos OCDS:"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:13
 msgid ""
@@ -31,6 +32,10 @@ msgid ""
 " in real-time. They can be used to notify users of new tenders, awards, "
 "contracts and other updates. One contracting process may have many releases."
 msgstr ""
+"**Las Entregas** proporcionan actualizaciones sobre cada evento en un "
+"proceso de contratación, idealmente en tiempo real. Pueden ser utilizados "
+"para notificar a los usuarios de nuevas ofertas, premios, contratos y otras "
+"actualizaciones. Un proceso de contratación puede tener varias entregas."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:18
 msgid ""
@@ -40,16 +45,23 @@ msgid ""
 "record for each contracting process, created by merging together the "
 "releases."
 msgstr ""
+"**Los Registros** recopilan toda la información conocida sobre un proceso de"
+" contratación, proporcionando una vista instantánea de su estado actual. "
+"También pueden contener un historial versionado de los cambios en el tiempo."
+" Sólo debe haber un registro para cada proceso de contratación, creado "
+"mediante la fusión de las entregas."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:0
 msgid "Releases"
-msgstr ""
+msgstr "Entregas"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:26
 msgid ""
 "Releases should be immutable: presenting information about a particular "
 "event in the lifetime of a contracting process."
 msgstr ""
+"Las entregas deben ser inmutables: presentar información sobre un evento en "
+"particular durante la duración de un proceso de contratación."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:28
 msgid ""
@@ -57,10 +69,13 @@ msgid ""
 "release ```tag```, and as much information as can be provided for users to "
 "understand the event taking place."
 msgstr ""
+"Cada entrega debe contener un ```ocid```, un ``ìd``` único de entrega, "
+"un```tag``` de entrega, y toda la información que se pueda proporcionar para"
+" que los usuarios entiendan el evento que ocurre."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:30
 msgid "For example:"
-msgstr ""
+msgstr "Por ejemplo:"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:32
 msgid ""
@@ -68,6 +83,9 @@ msgid ""
 "about budgets and procurement intention, and the ```tender``` section about "
 "the proposed details for a future tender;"
 msgstr ""
+"Una entrega de planeación puede proporcionar información en la sección "
+"```planning``` sobre presupuestos e intención de compra, y la sección ``` "
+"tender``` sobre los detalles propuestos para una futura licitación;"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:33
 msgid ""
@@ -75,12 +93,19 @@ msgid ""
 " how to bid for the work, and may repeat ```planning``` section information "
 "on the budget or project the tender is associated with;"
 msgstr ""
+"Una entrega de licitación puede proporcionar información en la sección "
+"```tender``` sobre la forma de ofertar y puede repetir información de la "
+"sección ```planning```  sobre el presupuesto o el proyecto al que está "
+"asociada la licitación;"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:34
 msgid ""
 "A 'tenderUpdate' release may provide an updated ```tender``` section with "
 "links to documents that answer questions asked during the enquiry period;"
 msgstr ""
+"Una entrega de de \"tenderUpdate\" puede proporcionar una sección "
+"actualizada ```tender``` con enlaces a documentos que responden a preguntas "
+"hechas durante el período de consulta;"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:35
 msgid ""
@@ -88,12 +113,19 @@ msgid ""
 "in the ```award``` section, and may provide repeated information about the "
 "how procurement took place in the ```tender``` section;"
 msgstr ""
+"Una entrega de de \"award\" puede proporcionar detalles sobre el proveedor "
+"adjudicado en la sección ```award``` y puede proporcionar información "
+"repetida sobre la forma en que se llevó a cabo la adquisición en la sección "
+"```tender```;"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:36
 msgid ""
 "A 'contract' release may provide the details of the signed contract in a "
 "```contract``` section, matched with a related ```award``` section;"
 msgstr ""
+"Una entrega de \"contrato\" podrá proporcionar los detalles del contrato "
+"firmado en una sección```contract```, acompañada de una sección ``` award```"
+" relacionada."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:37
 msgid ""
@@ -102,6 +134,10 @@ msgid ""
 " or may update the contract ```implementation``` section with links to newly"
 " published documents."
 msgstr ""
+"Una entrega de 'implementationUpdate' puede repetir los detalles del "
+"```contrato``` y proporcionar información sobre los hitos logrados y los "
+"pagos al proveedor o actualizar la sección ```implementation``` del contrato"
+" con enlaces a documentos recién publicados."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:39
 msgid ""
@@ -109,14 +145,17 @@ msgid ""
 "information. Each entry may also repeat the previous information that "
 "remains true."
 msgstr ""
+"Se puede pensar en **entregas** como entradas en un libro de cuentas: cada "
+"entrada nueva añade información. Cada entrada también puede repetir la "
+"información anterior que sigue siendo verdadera."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:0
 msgid "Examples"
-msgstr ""
+msgstr "Ejemplos"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:0
 msgid "Best practices"
-msgstr ""
+msgstr "Mejores prácticas"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:96
 msgid ""
@@ -125,12 +164,18 @@ msgid ""
 "releases about a contracting process share an ```ocid```, they can be tied "
 "together into a record."
 msgstr ""
+"En algunos casos, las entregas provendrán del mismo sistema backend. En "
+"otros, serán generados por diferentes sistemas. Al garantizar que todas las "
+"versiones sobre un proceso de contratación comparten un ```ocid```, pueden "
+"ser enlazadas en un registro."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:98
 msgid ""
 "In a complete OCDS implementation, each release would be published at its "
 "own persistent URL, and kept online permanently."
 msgstr ""
+"En una implementación completa de OCDS, cada entrega se publicaría en su "
+"propia URL persistente y se mantendría en línea permanentemente."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:100
 msgid ""
@@ -140,22 +185,28 @@ msgid ""
 "to append an incrementing number to the end of the OCID in order to generate"
 " a unique releaseID for every change. For example:"
 msgstr ""
+"En estos casos, donde los editores están proporcionando un único URI para "
+"obtener información sobre un proceso de contratación determinado, el "
+"releaseID y releaseDate deben ser modificados cada vez que se publiquen "
+"datos actualizados. Un patrón sugerido es agregar un número de incremento al"
+" final de la OCID con el fin de generar un releaseID único para cada cambio."
+" Por ejemplo:"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:102
 msgid "ocds-a2ef3d01-1594121/1"
-msgstr ""
+msgstr "ocds-a2ef3d01-1594121/1"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:103
 msgid "ocds-a2ef3d01-1594121/2"
-msgstr ""
+msgstr "ocds-a2ef3d01-1594121/2"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:104
 msgid "ocds-a2ef3d01-1594121/3"
-msgstr ""
+msgstr "ocds-a2ef3d01-1594121/3"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:0
 msgid "Records"
-msgstr ""
+msgstr "Registros"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:109
 msgid ""
@@ -163,39 +214,58 @@ msgid ""
 " point in time, bringing together all the information from the releases to "
 "date into one place. It is updated as new information becomes available."
 msgstr ""
+"Un **registro** de OCDS proporciona una instantánea del proceso de "
+"contratación en un momento dado, reuniendo toda la información de los "
+"lanzamientos hasta la fecha en un solo lugar. Se actualiza a medida que se "
+"dispone de nueva información."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:111
 msgid ""
 "At a minimum, a record should exist for each contracting process to provide "
 "a list of all the releases that relate to that contracting process."
 msgstr ""
+"Como mínimo, debe existir un registro para cada proceso de contratación para"
+" proporcionar una lista de todas las entregas relacionadas con ese proceso "
+"de contratación."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:113
 msgid ""
 "However, to allow users to get a snapshot view the contracting process "
 "without individually looking up each release , a record should also contain:"
 msgstr ""
+"Sin embargo, para permitir a los usuarios obtener una vista instantánea del "
+"proceso de contratación sin buscar individualmente cada entrega, un registro"
+" también debe contener:"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:115
 msgid ""
 "a compiledRelease block, which follows the release schema, and is updated "
 "with the most up-to-date value for each field; and, optionally,"
 msgstr ""
+"un bloque compiledRelease, que sigue el esquema de entrega, y se actualiza "
+"con el valor más actualizado para cada campo; y opcionalmente,"
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:116
 msgid ""
 "a versionedRelease, which contains a history of all the changes for each "
 "field."
 msgstr ""
+"una versionedRelease, que contiene un historial de todos los cambios para "
+"cada campo."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:118
 msgid ""
 "The [OCDS merge strategies](../schema/merging.md) set out how to combine "
 "multiple releases to create a single record for each contracting process."
 msgstr ""
+"Las [estrategias de fusión de OCDS](../schema/merging.md) establecen cómo "
+"combinar varias versiones para crear un registro único para cada proceso de "
+"contratación."
 
 #: ../../standard/docs/en/getting_started/releases_and_records.md:128
 msgid ""
 "<center><img src=\"../../../assets/release_square.png\" "
 "height=\"200\"/></center>"
 msgstr ""
+"<center><img src=\"../../../assets/release_square.png\" "
+"height=\"200\"/></center>"
