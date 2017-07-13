@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-30 16:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Ben Webb <ben.webb@opendataservices.coop>, 2017\n"
+"Last-Translator: Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,10 +36,10 @@ msgstr ""
 "[entregas](../getting_started/releases_and_records.md) individuales de datos"
 " durante un proceso de contratación en un "
 "[registro](../getting_started/releases_and_records.md) que proporciona una "
-"visión general del estado actual de proceso. Incluir una entrega versionada "
-"como parte del registro combinado proporciona información estructurada sobre"
-" el historial del proceso: mostrar cuándo se realizaron actualizaciones o se"
-" cambiaron los valores."
+"visión general del estatus actual de proceso. Incluir una entrega versionada"
+" como parte del registro fusionado proporciona información estructurada "
+"sobre el historial del proceso: mostrando cuándo se realizaron "
+"actualizaciones o se cambiaron los valores."
 
 #: ../../standard/docs/en/schema/merging.md:9
 msgid ""
@@ -47,29 +47,29 @@ msgid ""
 "contract value of $1000."
 msgstr ""
 "Un publicador provee una entrega de una licitación el 1 de enero, con un "
-"valor de contrato de $1000."
+"valor de contrato planeado de $1000."
 
 #: ../../standard/docs/en/schema/merging.md:11
 msgid ""
 "On 5th February, the publisher provides an amended tender release updating "
 "the planned contract value to $2000."
 msgstr ""
-"El 5 de febrero, el editor ofrece una versión modificada de la licitación "
-"que actualiza el valor del contrato planeado a $ 2000."
+"El 5 de febrero, el publicador ofrece una versión modificada de la "
+"licitación que actualiza el valor del contrato planeado a $ 2000."
 
 #: ../../standard/docs/en/schema/merging.md:13
 msgid "After assessing bids, it is decided to award the contract in two lots."
 msgstr ""
 "Después de valorar las propuestas, se decide adjudicar el contrato en dos "
-"montos."
+"lotes,"
 
 #: ../../standard/docs/en/schema/merging.md:15
 msgid ""
 "On 1st March, the publisher provides an award release, announcing Company A "
 "have been awarded a contract for $750."
 msgstr ""
-"El 1 de marzo, el publicador provee una entrega de adjudicación, adnunciando"
-" que la Compañía A ha obtenido un contrato por $750."
+"El 1 de marzo, el publicador provee una entrega de adjudicación, anunciando "
+"que la Compañía A ha obtenido un contrato por $750."
 
 #: ../../standard/docs/en/schema/merging.md:17
 msgid ""
@@ -88,9 +88,9 @@ msgid ""
 "both awards."
 msgstr ""
 "Estas entregas independientes proveen información en tiempo real sobre qué "
-"está pasando en el proceso de contratación. El registro las combinará. "
+"está pasando en el proceso de contratación. El registro las fusionará. "
 "Usando el mismo esquema y estructura como las entregas, el cuerpo principal "
-"del registro contrendrá una licitación con el valor del contrato de $1500 y "
+"del registro contendrá una licitación con el valor del contrato de $1500 y "
 "detalles de ambas adjudicaciones. "
 
 #: ../../standard/docs/en/schema/merging.md:21
@@ -149,7 +149,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:90
 msgid "Retain any keys from **old** that are not mentioned in **new**"
-msgstr "Conserve las llaves de **old** que no se mencionan en **new**"
+msgstr "Conserve cualquier clave de **old** que no se mencionan en **new**"
 
 #: ../../standard/docs/en/schema/merging.md:92
 msgid ""
@@ -171,12 +171,12 @@ msgid ""
 "There are two merge patterns for lists of objects. Identifier merge, and "
 "whole list merge."
 msgstr ""
-"Hay dos patrones de combinación para las listas de objetos. Combinación de "
-"identificador y combinación de lista completa."
+"Hay dos patrones de fusión para las listas de objetos. Fusión de "
+"identificador y fusión de lista completa."
 
 #: ../../standard/docs/en/schema/merging.md:0
 msgid "Identifier merge"
-msgstr "Combinación de identificador"
+msgstr "Fusión de identificador"
 
 #: ../../standard/docs/en/schema/merging.md:100
 msgid "When a list contains objects with their own ```id``` field, then:"
@@ -189,8 +189,8 @@ msgid ""
 "**new**, and, if so, follow the object merge rules as above"
 msgstr ""
 "Compruebe si hay un objeto en **old** con el mismo ```id``` como un objeto "
-"en **new** y, si es así, siga las reglas de combinación de objetos como "
-"anteriormente"
+"en **new** y, si es así, siga las reglas de fusión de objetos como se "
+"mencionaron anteriormente"
 
 #: ../../standard/docs/en/schema/merging.md:103
 msgid ""
@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:0
 msgid "Whole list merge"
-msgstr "Combinar la lista completa"
+msgstr "Fusionar la lista completa"
 
 #: ../../standard/docs/en/schema/merging.md:110
 msgid ""
@@ -251,8 +251,8 @@ msgid ""
 " only make sense in the context of a single release."
 msgstr ""
 "Algunas propiedades del esquema están marcadas con ```'omitWhenMerged': "
-"true```. Estas propiedades deben eliminarse del registro combinado, ya que "
-"sólo tienen sentido en el contexto de una sola versión."
+"true```. Estas propiedades deben eliminarse del registro fusionado, ya que "
+"sólo tienen sentido en el contexto de una sola entrega."
 
 #: ../../standard/docs/en/schema/merging.md:0
 msgid "Reference implementation"
@@ -277,7 +277,7 @@ msgid ""
 "identify how contract values have altered, or milestones moved through "
 "stages of implementation."
 msgstr ""
-"Existes algunas situaciones en las que es importante poder ver cómo han "
+"Existen algunas situaciones en las que es importante poder ver cómo han "
 "cambiado los datos sobre un proceso de contratación a lo largo del tiempo. "
 "Por ejemplo, para identificar cómo se han ajustado los valores de un "
 "contrato o cómo se han conseguido los hitos a través de etapas de "
@@ -298,7 +298,7 @@ msgid ""
 "of objects within an array) becomes an array of objects, indicating the:"
 msgstr ""
 "En una entrega versionada, en lugar de sobrescribir los valores pasados ​​al"
-" combinar varias versiones, cada campo (con la excepción de la propiedad "
+" fusionar varias entregas, cada campo (con la excepción de la propiedad "
 "```id``` de objetos dentro de una matriz) se convierte en una matriz de "
 "objetos, indicando:"
 
@@ -312,7 +312,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:132
 msgid "The value of the field-value pair at that point;"
-msgstr "el valor de la pareja campo-valor en ese punto;"
+msgstr "el valor del par campo-valor en ese punto;"
 
 #: ../../standard/docs/en/schema/merging.md:134
 msgid ""
