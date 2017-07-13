@@ -356,6 +356,9 @@ class JSONInclude(LiteralInclude):
 directives.register_directive('jsoninclude', JSONInclude)
 
 
+extension_registry_git_ref = "v1.1"
+
+
 # app setup hook
 def setup(app):
     app.add_config_value('recommonmark_config', {
