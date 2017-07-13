@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-06-30 16:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,19 +20,23 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/deprecation.md:0
 msgid "Deprecation"
-msgstr ""
+msgstr "Descontinuación"
 
 #: ../../standard/docs/en/schema/deprecation.md:3
 msgid ""
 "From time to time fields and codelist values may be removed from the Open "
 "Contracting Data Standard."
 msgstr ""
+"De vez en cuando los campos y los valores de lista de códigos pueden ser "
+"eliminados del Estándar de Datos de Contrataciones Abiertas."
 
 #: ../../standard/docs/en/schema/deprecation.md:5
 msgid ""
 "This will be either due to limited use, or because they have been replaced "
 "by alternative fields or codelists."
 msgstr ""
+"Esto se debe a un uso limitado, o porque han sido reemplazados por campos o "
+"listas de códigos alternativos."
 
 #: ../../standard/docs/en/schema/deprecation.md:7
 msgid ""
@@ -40,6 +45,11 @@ msgid ""
 "take place, subject to the [governance](../../../support/governance"
 "/#deprecation-policy) process, in the next major version (e.g. 2.0)."
 msgstr ""
+"Antes de que se elimine un campo o un valor de una lista de códigos, primero"
+" se marcará como obsoleto en una versión mayor o menor (por ejemplo, en "
+"1.1), y la eliminación sólo se llevará a cabo, sujeto a la "
+"[gobernanza](../../../support/governance/#deprecation-policy), en la próxima"
+" versión principal (por ejemplo, 2.0)."
 
 #: ../../standard/docs/en/schema/deprecation.md:9
 msgid ""
@@ -48,10 +58,14 @@ msgid ""
 "which the property was first deprecated, and provides a description of the "
 "reason for this deprecation."
 msgstr ""
+"Las propiedades obsoletas se marcan en el esquema JSON con la presencia de "
+"una propiedad y un objeto ```deprecated``` que declara el número de versión "
+"en el que la propiedad fue descontinuada en primer lugar, y proporciona una "
+"descripción del motivo de esta descontinuación."
 
 #: ../../standard/docs/en/schema/deprecation.md:11
 msgid "For example:"
-msgstr ""
+msgstr "Por ejemplo:"
 
 #: ../../standard/docs/en/schema/deprecation.md:25
 msgid ""
@@ -59,6 +73,10 @@ msgid ""
 "and **should** report to the user the associated description of the reason "
 "for deprecation (which may provide guidance on how to replace the property)."
 msgstr ""
+"Las herramientas de validación **deben** informar el uso de las propiedades "
+"obsoletas al usuario, y **deben** informar al usuario la descripción "
+"asociada del motivo de la descontinuación (que puede proporcionar "
+"orientación sobre cómo reemplazar la propiedad)."
 
 #: ../../standard/docs/en/schema/deprecation.md:27
 msgid ""
@@ -67,3 +85,7 @@ msgid ""
 "that decimal version, and **may** support properties deprecated in earlier "
 "decimal versions."
 msgstr ""
+"Una aplicación de consumo que busque ser compatible con una versión "
+"particular del estándar (por ejemplo 1.1) **debe** soportar propiedades que "
+"se descontinuaron en esa versión decimal, y **puede** soportar propiedades "
+"obsoletas en versiones decimales anteriores."

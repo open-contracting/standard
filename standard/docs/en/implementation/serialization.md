@@ -52,9 +52,9 @@ In each case, fields are identified by the [json pointer](http://tools.ietf.org/
 
 ```eval_rst
 
-.. csv-table::
+.. csv-table-no-translate::
    :header-rows: 1
-   :file: standard/docs/en/examples/serialization-flat.csv
+   :file: ../examples/serialization-flat.csv
    
 ```
 
@@ -72,9 +72,9 @@ For example, to represent a tender release with two items, the CSV file would in
 
 ```eval_rst
 
-.. csv-table::
+.. csv-table-no-translate::
    :header-rows: 1
-   :file: standard/docs/en/examples/serialization-flat-two-items.csv
+   :file: ../examples/serialization-flat-two-items.csv
    
 ```
 

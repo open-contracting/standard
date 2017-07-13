@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-06-30 16:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ben Webb <ben.webb@opendataservices.coop>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,13 +20,16 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Serialization"
-msgstr ""
+msgstr "Serialización"
 
 #: ../../standard/docs/en/implementation/serialization.md:3
 msgid ""
 "The Open Contracting Data Standard provides a **structured data model** for "
 "capturing in-depth information about all stages of the contracting process."
 msgstr ""
+"El Estándar de Datos de Contrataciones Abiertas proporciona un **modelo de "
+"datos estructurados** para capturar información en profundidad sobre todas "
+"las etapas del proceso de contratación."
 
 #: ../../standard/docs/en/implementation/serialization.md:5
 msgid ""
@@ -34,6 +38,11 @@ msgid ""
 "definitions and structures for the data. The compliance of data with the "
 "Open Contracting Data Standard will be assessed against this schema."
 msgstr ""
+"La versión canónica actual de este modelo de datos es proporcionada por un "
+"**[Esquema JSON](../../../schema/release)** que describe nombres de campos, "
+"definiciones de campos y estructuras para los datos. El cumplimiento de los "
+"datos con el Estándar de Datos de Contrataciones Abiertas se evaluará en "
+"función de este esquema."
 
 #: ../../standard/docs/en/implementation/serialization.md:7
 msgid ""
@@ -44,10 +53,17 @@ msgid ""
 "of the standard, but are designed to support implementers in providing "
 "accessible data to a range of different users."
 msgstr ""
+"Sin embargo, hay muchos casos de uso en los que los publicadores y usuarios "
+"desearán trabajar con datos serializados en otros formatos. Por esta razón, "
+"la versión actual de OCDS soporta una serie de **serializaciones "
+"secundarias** que se basan en el esquema canónico. Estos no son actualmente "
+"componentes oficiales del estándar, pero están diseñados para apoyar a los "
+"implementadores en la provisión de datos accesibles a una gama de usuarios "
+"diferentes."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "JSON"
-msgstr ""
+msgstr "JSON"
 
 #: ../../standard/docs/en/implementation/serialization.md:11
 msgid ""
@@ -55,6 +71,9 @@ msgid ""
 "the exchange of data on the web. The JSON schema language provides "
 "validation tools for working with JSON data."
 msgstr ""
+"JSON significa Javascript Object Notation, y es un formato ampliamente "
+"utilizado para el intercambio de datos en la web. El lenguaje de esquema "
+"JSON proporciona herramientas de validación para trabajar con datos JSON."
 
 #: ../../standard/docs/en/implementation/serialization.md:13
 msgid ""
@@ -64,14 +83,21 @@ msgid ""
 "introduces a number of constrains and recommendations for handling numbers, "
 "objects and dates."
 msgstr ""
+"Las serializaciones JSON válidas de los datos OCDS DEBEN seguir la "
+"especificación [I-JSON (Internet JSON) de RFC7493] "
+"(https://tools.ietf.org/html/rfc7493) que requiere [Codificación "
+"UTF-8](https://en.wikipedia.org/wiki/UTF-8) e introduce una serie de "
+"restricciones y recomendaciones para el manejo de números, objetos y fechas."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Generating JSON"
-msgstr ""
+msgstr "Generando un archivo JSON"
 
 #: ../../standard/docs/en/implementation/serialization.md:17
 msgid "Most programming languages provide tools for output data as JSON."
 msgstr ""
+"La mayoría de los lenguajes de programación proporcionan herramientas para "
+"los datos de salida en un formato JSON."
 
 #: ../../standard/docs/en/implementation/serialization.md:19
 msgid ""
@@ -79,14 +105,19 @@ msgid ""
 "available for working with [JSON-Schema](http://json-schema.org/), including"
 " validation and form generation tools."
 msgstr ""
+"[Una gama de herramientas](http://json-schema.org/implementations.html) "
+"están disponibles para trabajar con [JSON-Schema](http://json-schema.org/), "
+"incluyendo herramientas de validación y generación de formularios ."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Consuming JSON"
-msgstr ""
+msgstr "Consumir JSON"
 
 #: ../../standard/docs/en/implementation/serialization.md:23
 msgid "Most programming languages provide tools for reading JSON."
 msgstr ""
+"La mayoría de los lenguajes de programación proporcionan herramientas para "
+"leer JSON."
 
 #: ../../standard/docs/en/implementation/serialization.md:25
 msgid ""
@@ -95,28 +126,39 @@ msgid ""
 " command line tools such as [jq](http://stedolan.github.io/jq/) support "
 "advanced query and data retrieval with JSON files."
 msgstr ""
+"Existen varias [bases de datos nativas "
+"JSON](http://en.wikipedia.org/wiki/NoSQL) disponibles para trabajar "
+"directamente con grandes colecciones de documentos JSON y herramientas de "
+"línea de comandos como [jq](http://stedolan.github.io/jq/) admiten consultas"
+" avanzadas y recuperación de datos con archivos JSON."
 
 #: ../../standard/docs/en/implementation/serialization.md:27
 msgid ""
 "There are also a range of generic tools which can convert JSON into flat CSV"
 " structures, including:"
 msgstr ""
+"También hay una gama de herramientas genéricas que pueden convertir JSON en "
+"estructuras CSV planas, incluyendo:"
 
 #: ../../standard/docs/en/implementation/serialization.md:29
 msgid ""
 "[JSON -> CSV](http://konklone.io/json/) - online tool for converting small "
 "documents."
 msgstr ""
+"[JSON -> CSV](http://konklone.io/json/) - herramienta en línea para "
+"convertir documentos pequeños."
 
 #: ../../standard/docs/en/implementation/serialization.md:30
 msgid ""
 "[Open Refine](http://openrefine.org/) - desktop tool that can handle large "
 "documents, and supports advanced data manipulation."
 msgstr ""
+"[Open Refine](http://openrefine.org/) - herramienta de escritorio que puede "
+"manejar documentos grandes y soporta manipulación avanzada de datos."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 #: ../../standard/docs/en/implementation/serialization.md:34
 msgid ""
@@ -126,6 +168,11 @@ msgid ""
 "data in a single table. However, we propose two models for publishers to "
 "adopt."
 msgstr ""
+"JSON se basa en una estructura de árbol, con elementos de datos anidados "
+"entre sí. Sin embargo, muchas personas están familiarizadas con datos "
+"tabulares, compuestos de columnas y filas. No existe una manera fácil de "
+"representar datos estructurados en una sola tabla. Sin embargo, proponemos "
+"dos modelos para que los publicadores adopten."
 
 #: ../../standard/docs/en/implementation/serialization.md:36
 msgid ""
@@ -133,12 +180,17 @@ msgid ""
 "relationships in the data (e.g. each tender has only one award and contract,"
 " and each has only one line-item)."
 msgstr ""
+"**Tabla sencilla simplificada** - para casos en los que no hay relaciones "
+"uno a muchos en los datos (por ejemplo, cada licitación tiene sólo una "
+"adjudicación y un contrato y cada uno tiene sólo una partida)."
 
 #: ../../standard/docs/en/implementation/serialization.md:37
 msgid ""
 "**Multi-table** - where more advanced structures are required, but where it "
 "is desirable to be able to work with data in spreadsheet-style layouts"
 msgstr ""
+"**Multi-tabla** - donde se requieren estructuras más avanzadas, pero donde "
+"es deseable poder trabajar con datos en diseños de hojas de cálculo"
 
 #: ../../standard/docs/en/implementation/serialization.md:39
 msgid ""
@@ -146,14 +198,17 @@ msgid ""
 "pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For "
 "example:"
 msgstr ""
+"En cada caso, los campos son identificados por el [json "
+"pointer](http://tools.ietf.org/html/rfc6901) a su equivalente JSON. Por "
+"ejemplo:"
 
 #: ../../standard/docs/en/implementation/serialization.md:41
 msgid "**JSON**"
-msgstr ""
+msgstr "**JSON**"
 
 #: ../../standard/docs/en/implementation/serialization.md:51
 msgid "**CSV**"
-msgstr ""
+msgstr "**CSV**"
 
 #: ../../standard/docs/en/implementation/serialization.md:61
 msgid ""
@@ -163,16 +218,24 @@ msgid ""
 "OCDS validator incorporates this tooling and will offer to convert files "
 "uploaded to it."
 msgstr ""
+"Existen [herramientas en beta de código abierto](http://flatten-"
+"tool.readthedocs.io/en/latest/usage-ocds/) para generar plantillas CSV "
+"planas y convertir en ambas direcciones entre hojas de cálculo JSON "
+"siguiendo estas plantillas. El validador OCDS incorpora esta herramienta y "
+"ofrecerá convertir archivos subidos a ella."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Simplified single table"
-msgstr ""
+msgstr "Tabla sencilla simplificada"
 
 #: ../../standard/docs/en/implementation/serialization.md:65
 msgid ""
 "It is possible to represent a full releases in a single flat CSV row by "
 "using full JSON pointers for each field as the headings."
 msgstr ""
+"Es posible representar una versión completa de entregas en una única fila "
+"plana de CSV utilizando punteros JSON completos para cada campo como "
+"encabezados."
 
 #: ../../standard/docs/en/implementation/serialization.md:67
 msgid ""
@@ -180,6 +243,9 @@ msgid ""
 "relationships (for example, only one item per tender, and one award and "
 "contract for each tender process)."
 msgstr ""
+"Este enfoque generalmente sólo es apropiado para datos sin relaciones "
+"uno-a-muchos (por ejemplo, sólo un artículo por licitación y un premio y un "
+"contrato para cada proceso de licitación)."
 
 #: ../../standard/docs/en/implementation/serialization.md:69
 msgid ""
@@ -189,48 +255,63 @@ msgid ""
 " as ```tender/item/0/id``` and ```tender/item/1/id``` as separate columns to"
 " represent each of the items."
 msgstr ""
+"Sin embargo, es teóricamente posible representar una versión completa de "
+"entregas en una única fila plana de CSV usando punteros JSON completos para "
+"cada campo como encabezados. Para matrices, esto implica añadir el índice de"
+" la matriz a la ruta, como ```tender/item/0/id``` y ```tender/item/1/id``` "
+"como columnas separadas para representar cada uno de las artículos."
 
 #: ../../standard/docs/en/implementation/serialization.md:71
 msgid ""
 "For example, to represent a tender release with two items, the CSV file "
 "would include:"
 msgstr ""
+"Por ejemplo, para representar una entrega de licitación con dos elementos, "
+"el archivo CSV incluiría:"
 
 #: ../../standard/docs/en/implementation/serialization.md:81
 msgid "The JSON equivalent of this would be:"
-msgstr ""
+msgstr "El equivalente JSON de esto sería:"
 
 #: ../../standard/docs/en/implementation/serialization.md:91
 msgid ""
 "Whilst this allows complex data to be expressed in flat CSV, users will need"
 " to rebuild the structure in order to analyse the data."
 msgstr ""
+"Aunque esto permite que los datos complejos se expresen en CSV plano, los "
+"usuarios necesitarán reconstruir la estructura para analizar los datos."
 
 #: ../../standard/docs/en/implementation/serialization.md:93
 msgid ""
 "Instead, data with a one-to-many relationship can be represented using a "
 "multi-table serialization."
 msgstr ""
+"En su lugar, los datos con una relación de uno a muchos se pueden "
+"representar mediante una serialización de varias tablas."
 
 #: ../../standard/docs/en/implementation/serialization.md:95
 msgid "Note: OCDS CSV files MUST only be encoded in either UTF-8"
-msgstr ""
+msgstr "Nota: Los archivos CSV de OCDS DEBEN ser codificados en UTF-8"
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Multi-table"
-msgstr ""
+msgstr "Multi-tabla"
 
 #: ../../standard/docs/en/implementation/serialization.md:99
 msgid ""
 "The multi-table serialization separates  objects with many to one "
 "relationships (ie. arrays) into their own tables."
 msgstr ""
+"La serialización de multi-tabla separa los objetos con relaciones de muchas "
+"a una (es decir, matrices) en sus propias tablas."
 
 #: ../../standard/docs/en/implementation/serialization.md:101
 msgid ""
 "Multiple tables can be packaged together as the tabs of an Excel "
 "spreadsheet, or in a collection of CSV files."
 msgstr ""
+"Tablas múltiples se pueden empaquetar juntas como las pestañas de una hoja "
+"de cálculo de Excel, o en una colección de archivos CSV."
 
 #: ../../standard/docs/en/implementation/serialization.md:103
 msgid ""
@@ -238,22 +319,30 @@ msgid ""
 "repository](https://github.com/open-contracting/sample-data/tree/master"
 "/flat-template)."
 msgstr ""
+"Se puede encontrar un ejemplo de plantilla de multi-tabla [en el repositorio"
+" de datos de muestra](https://github.com/open-contracting/sample-"
+"data/tree/master/flat-template)."
 
 #: ../../standard/docs/en/implementation/serialization.md:105
 msgid ""
 "For further information on multi-table serializations please see the "
 "[flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/)."
 msgstr ""
+"Para obtener más información sobre las serializaciones multi-tabla, consulte"
+" la [documentación de la herramienta de aplanamiento](http://flatten-"
+"tool.readthedocs.io/es/latest/)."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Packaging files with meta-data"
-msgstr ""
+msgstr "Empaquetado de archivos con metadatos"
 
 #: ../../standard/docs/en/implementation/serialization.md:109
 msgid ""
 "Whatever serialisation is used for Open Contracting Data, a single file may "
 "contain one or more release and records."
 msgstr ""
+"Cualquiera que sea la serialización utilizada para Datos de Contrataciones "
+"Abiertas, un solo archivo puede contener una o más entregas y registros."
 
 #: ../../standard/docs/en/implementation/serialization.md:111
 msgid ""
@@ -262,3 +351,8 @@ msgid ""
 " the publishedDate, publisher, uri for accessing the file, and the licensing"
 " details for the file."
 msgstr ""
+"Los esquemas de paquetes de datos de entrega y registro describen los "
+"metadatos clave que deben proporcionarse para cualquier archivo que "
+"proporcione Datos de Contrataciones Abiertas. Esto incluye la "
+"publicationDate, publicador, uri para acceder al archivo y los detalles de "
+"licencia para el archivo."

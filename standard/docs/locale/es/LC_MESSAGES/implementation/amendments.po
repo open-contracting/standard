@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-06-30 16:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ben Webb <ben.webb@opendataservices.coop>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,25 +20,31 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/amendments.md:0
 msgid "Amendments"
-msgstr ""
+msgstr "Enmiendas"
 
 #: ../../standard/docs/en/implementation/amendments.md:3
 msgid "Information about a contracting process will often change over time."
 msgstr ""
+"La información sobre un proceso de contratación a menudo cambiará con el "
+"tiempo."
 
 #: ../../standard/docs/en/implementation/amendments.md:5
 msgid "Each time information changes, a new OCDS release should be published."
 msgstr ""
+"Cada vez que cambie la información, debe publicarse una nueva entrega de "
+"OCDS."
 
 #: ../../standard/docs/en/implementation/amendments.md:7
 msgid "There are three kinds of changes:"
-msgstr ""
+msgstr "Hay tres tipos de cambios:"
 
 #: ../../standard/docs/en/implementation/amendments.md:9
 msgid ""
 "**New information**. For example, when information about the award of a "
 "contract is first released."
 msgstr ""
+"**Nueva información**. Por ejemplo, cuando la información sobre la "
+"adjudicación de un contrato se publica por primera vez."
 
 #: ../../standard/docs/en/implementation/amendments.md:10
 msgid ""
@@ -45,6 +52,9 @@ msgid ""
 "earlier releases, or to make minor adjustments to titles, descriptions or "
 "date."
 msgstr ""
+"**Actualizaciones a la información existente**. Por ejemplo, para corregir "
+"errores en versiones anteriores o para realizar ajustes menores en títulos, "
+"descripciones o fechas."
 
 #: ../../standard/docs/en/implementation/amendments.md:11
 msgid ""
@@ -53,10 +63,14 @@ msgid ""
 "publisher. Certain changes to a tender, award or contract may only be "
 "allowed as part of an amendment."
 msgstr ""
+"**Enmiendas**. Por ejemplo, cuando se cambia el valor o la duración de un "
+"contrato. El término enmienda a menudo tiene un significado legal específico"
+" para un publicador. Ciertos cambios en una licitación, adjudicación o "
+"contrato sólo pueden ser permitidos como parte de una enmienda."
 
 #: ../../standard/docs/en/implementation/amendments.md:13
 msgid "The nature of a change can be made explicit using:"
-msgstr ""
+msgstr "La naturaleza de un cambio se puede hacer explícito usando:"
 
 #: ../../standard/docs/en/implementation/amendments.md:15
 msgid ""
@@ -64,6 +78,10 @@ msgid ""
 "contract, use 'contract'. For an update to the award, use 'contractUpdate', "
 "and for an amendment to the contract, use 'contractAmendment'."
 msgstr ""
+"**La etiqueta de entrega** (```tag```). Por ejemplo, para una entrega con un"
+" nuevo contrato, use \"contract\". Para una actualización de la "
+"adjudicación, use 'contractUpdate', y para una enmienda al contrato, use "
+"'contractAmendment'."
 
 #: ../../standard/docs/en/implementation/amendments.md:17
 msgid ""
@@ -71,20 +89,25 @@ msgid ""
 "explanations, and clearly identify the releases that contain before and "
 "after values."
 msgstr ""
+"**El bloque Enmiendas**. Este puede contener una matriz de explicaciones de "
+"enmienda e identificar claramente las versiones que contienen valores antes "
+"y después."
 
 #: ../../standard/docs/en/implementation/amendments.md:0
 msgid "Worked example"
-msgstr ""
+msgstr "Ejemplo desarrollado"
 
 #: ../../standard/docs/en/implementation/amendments.md:21
 msgid "In the example below:"
-msgstr ""
+msgstr "En el siguiente ejemplo:"
 
 #: ../../standard/docs/en/implementation/amendments.md:23
 msgid ""
 "A tender is issued for a \"Data merge tool\" in a release with the ```tag```"
 " 'tender'."
 msgstr ""
+"Se emite una licitación para una \"herramienta de combinación de datos\" en "
+"una entrega con la ```tag``` 'tender'."
 
 #: ../../standard/docs/en/implementation/amendments.md:24
 msgid ""
@@ -93,6 +116,10 @@ msgid ""
 " a formal 'amendment' to the tender, so did not publish any amendment "
 "information."
 msgstr ""
+"Esta se actualiza en una entrega con la ```tag``` 'tenderUpdate' para "
+"proporcionar una descripción ampliada del elemento. El publicador no "
+"consideró que esto fuera una 'enmienda' formal a la licitación, por lo que "
+"no publicó ninguna información de enmienda."
 
 #: ../../standard/docs/en/implementation/amendments.md:25
 msgid ""
@@ -100,10 +127,13 @@ msgid ""
 "published in a release with the ```tag``` 'tenderAmendment', and an "
 "```ammendments``` block under ```tender```."
 msgstr ""
+"A continuación, la licitación se enmienda formalmente con un valor mayor. "
+"Esto se publica en una entrega con un ```tag``` 'tenderAmendment',  y un "
+"bloque ```amendments``` bajo ```tender```."
 
 #: ../../standard/docs/en/implementation/amendments.md:65
 msgid "Note in this example that:"
-msgstr ""
+msgstr "Tenga en cuenta en este ejemplo que:"
 
 #: ../../standard/docs/en/implementation/amendments.md:67
 msgid ""
@@ -114,6 +144,13 @@ msgid ""
 "publishers making structured information on the before and after values of a"
 " field more accessible to users."
 msgstr ""
+"** El publicador elige en la entrega de tenderAmendment repetir un fragmento"
+" de la entrega original de la oferta**, de modo que los valores antes y "
+"después de la licitación se pueden acceder en el archivo único. Esto no es "
+"necesario cuando se hace accesible un archivo completo de entregas, pero "
+"puede ser una forma conveniente de que los publicadores publiquen "
+"información estructurada sobre los valores antes y después de un campo más "
+"accesible para los usuarios."
 
 #: ../../standard/docs/en/implementation/amendments.md:69
 msgid ""
@@ -121,3 +158,7 @@ msgid ""
 "be used to lookup information in the ```versionedRelease``` section, to see "
 "where changes are explained by an amendment ```rationale```."
 msgstr ""
+"**En el registro combinado**, puede usarse la información de la matriz "
+"```amendments``` para buscar información en la sección "
+"```versionedRelease```, para ver donde se explican los cambios con un "
+"```rationale``` de enmienda."

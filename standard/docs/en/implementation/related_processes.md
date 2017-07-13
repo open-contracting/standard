@@ -26,30 +26,77 @@ The table below provides a number of examples of when to use related process, an
 <table class="docutils">
 <thead>
 <tr>
-<th>Framework type</th>
-<th>OCDS approach</th>
+<th>
+
+Framework type
+
+</th>
+<th>
+
+OCDS approach
+
+</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Single supplier with direct call-offs</td>
-<td><strong>A single contracting process</strong> using award(s) to represent the framework agreement and contract(s) to represent the call-offs.</td>
+<td>
+
+Single supplier with direct call-offs
+
+</td>
+<td>
+
+**A single contracting process** using award(s) to represent the framework agreement and contract(s) to represent the call-offs.
+
+</td>
 </tr>
 <tr>
-<td>Multiple suppliers with direct call offs</td>
-<td><strong>A single contracting process</strong> using award(s) to represent the framework agreement and contract(s) to represent the call-offs.</td>
+<td>
+
+Multiple suppliers with direct call offs
+
+</td>
+<td>
+
+**A single contracting process** using award(s) to represent the framework agreement and contract(s) to represent the call-offs.
+
+</td>
 </tr>
 <tr>
-<td>Multiple suppliers with mini-competitions for call-offs</td>
-<td><strong>Multiple contracting processes</strong>: One process using awards to represent suppliers on the framework agreement; Multiple selective or limited processes to represent the mini-competitions linked to the framework agreement via relatedProcess.</td>
+<td>
+
+Multiple suppliers with mini-competitions for call-offs
+
+</td>
+<td>
+
+**Multiple contracting processes**: One process using awards to represent suppliers on the framework agreement; Multiple selective or limited processes to represent the mini-competitions linked to the framework agreement via relatedProcess.
+
+</td>
 </tr>
 <tr>
-<td>Multiple suppliers with either direct call-offs or mini-competitions</td>
-<td><strong>Multiple contracting processes</strong>: One process using awards to represent suppliers on the framework agreement and contract(s) to represent the direct call-offs; Multiple selective or limited processes to represent the mini-competitions linked to the framework agreement via relatedProcess.</td>
+<td>
+
+Multiple suppliers with either direct call-offs or mini-competitions
+
+</td>
+<td>
+
+**Multiple contracting processes**: One process using awards to represent suppliers on the framework agreement and contract(s) to represent the direct call-offs; Multiple selective or limited processes to represent the mini-competitions linked to the framework agreement via relatedProcess.
+
+</td>
 </tr>
 <tr>
-<td>Dynamic Purchasing System</td>
-<td><strong>Multiple contracting processes</strong>: One process using awards to represent suppliers joining the DPS. <code>tender/status</code> should be active for the lifetime of the dynamic purchasing system with <code>tender/tenderPeriod</code> and <code>tender/awardPeriod</code> reflecting that suppliers can join the DPS at any time. Multiple selective or limited processes to represent competitions between suppliers on the DPS for individual contracts, linked to the DPS via relatedProcess.</td>
+<td>
+
+Dynamic Purchasing System
+
+</td>
+<td>
+
+**Multiple contracting processes**: One process using awards to represent suppliers joining the DPS. `tender/status` should be active for the lifetime of the dynamic purchasing system with `tender/tenderPeriod` and `tender/awardPeriod` reflecting that suppliers can join the DPS at any time. Multiple selective or limited processes to represent competitions between suppliers on the DPS for individual contracts, linked to the DPS via relatedProcess.</td>
+
 </tr>
 </tbody>
 </table>

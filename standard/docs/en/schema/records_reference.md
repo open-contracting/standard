@@ -25,7 +25,7 @@ Records should be embedded within a record package.
 
 ```eval_rst
 
-.. jsonschema:: ../../../schema/record-package-schema.json
+.. jsonschema:: ../../../../build/current_lang/record-package-schema.json
     :include: 
     :collapse: records
 

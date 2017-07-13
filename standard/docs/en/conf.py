@@ -595,7 +595,7 @@ class ExtensionSelectorTable(CSVTable):
         self.options['header-rows'] = 1
         self.options['class'] = ['extension-selector-table']
         self.options['widths'] = [8, 30, 42, 20, 0]
-        return output.getvalue().splitlines(), None
+        return output.getvalue().splitlines(), 'Extension registry'
 
     def parse_csv_data_into_rows(self, csv_data, dialect, source):
         # csv.py doesn't do Unicode; encode temporarily as UTF-8
@@ -620,12 +620,22 @@ class ExtensionSelectorTable(CSVTable):
         return rows, max_cols
 
 
+class CSVTableNoTranslate(CSVTable):
+    def get_csv_data(self):
+        lines, source = super().get_csv_data()
+        return lines, None
+
+
 directives.register_directive('jsoninclude', JSONInclude)
 directives.register_directive('extensionlist', ExtensionList)
 directives.register_directive('extensiontable', ExtensionTable)
 directives.register_directive('extensionselectortable', ExtensionSelectorTable)
+directives.register_directive('csv-table-no-translate', CSVTableNoTranslate)
 
 
 # app setup hook
 def setup(app):
+    app.add_config_value('recommonmark_config', {
+        'enable_eval_rst': True
+        }, True)
     app.add_transform(AutoStructify)
