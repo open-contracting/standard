@@ -359,9 +359,18 @@ directives.register_directive('jsoninclude', JSONInclude)
 extension_registry_git_ref = "v1.1"
 
 
+class AutoStructifyLowPriority(AutoStructify):
+    """
+    We need this low priority copy of AutoStructify to apply some transforms
+    after translations.
+    """
+    default_priority = 1000
+
+
 # app setup hook
 def setup(app):
     app.add_config_value('recommonmark_config', {
         'enable_eval_rst': True
         }, True)
     app.add_transform(AutoStructify)
+    app.add_transform(AutoStructifyLowPriority)
