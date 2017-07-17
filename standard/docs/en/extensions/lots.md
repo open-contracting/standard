@@ -3,7 +3,7 @@ Lots
 
 ## Meta-data
 
-To use this extension, include it's URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package. 
 
 ```json
 {
@@ -82,7 +82,7 @@ Although part of the same tender, the buyer is willing to award these different 
       },
       "tender": {
         "id": "ocds-213czf-lots-00001-01-tender",
-        "title": "Architecture and engineeering services",
+        "title": "Architecture and engineering services",
         "description": "The authority is seeking support to construct a new public building.",
         "procurementMethod": "open",
         "status": "active",

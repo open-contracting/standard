@@ -12,7 +12,7 @@
     },
     "id": {
       "title": "Release ID",
-      "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of it's related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
+      "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of its related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
@@ -419,10 +419,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -573,10 +573,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -726,10 +726,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -825,7 +825,7 @@
             null
           ],
           "codelist": "milestoneType.csv",
-          "opencodelist": true
+          "openCodelist": true
         },
         "description": {
           "title": "Description",
@@ -837,7 +837,7 @@
         },
         "code": {
           "title": "Milestone code",
-          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed amoungst data producers and the applications using that data.",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed amongst data producers and the applications using that data.",
           "type": [
             "string",
             "null"
@@ -1109,7 +1109,7 @@
     "Transaction": {
       "type": "object",
       "title": "Transaction information",
-      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transparency Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
       "required": [
         "id"
       ],
@@ -1672,7 +1672,7 @@
           "description": "The region. For example, CA."
         },
         "postalCode": {
-          "title": "Postalcode",
+          "title": "Postal code",
           "type": [
             "string",
             "null"
@@ -1808,7 +1808,7 @@
           ]
         },
         "durationInDays": {
-          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the diffence between startDate and maxExtentDate.",
+          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
           "type": [
             "integer",
@@ -1818,7 +1818,7 @@
       }
     },
     "RelatedProcess": {
-      "description": "A reference to a related contracting process: generally one preceeding or following on from the current process.",
+      "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
       "type": "object",
       "title": "Related Process",
       "properties": {
@@ -1840,7 +1840,7 @@
             "null"
           ],
           "codelist": "relatedProcess.csv",
-          "opencodelist": true
+          "openCodelist": true
         },
         "title": {
           "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
@@ -1870,7 +1870,7 @@
         },
         "uri": {
           "format": "uri",
-          "description": "A URI pointing to a machine-readble document, release or record package containing the identified related process.",
+          "description": "A URI pointing to a machine-readable document, release or record package containing the identified related process.",
           "title": "Related process URI",
           "type": [
             "string",

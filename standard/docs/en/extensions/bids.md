@@ -3,7 +3,7 @@ Bid statistics and details
 
 ## Meta-data
 
-To use this extension, include it's URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package. 
 
 ```json
 {
@@ -22,7 +22,7 @@ Information on bids submitted as part of a contracting process is important for 
 * Red flag analysis for understanding potential corruption risks; and
 * Value for money analysis;
 
-Regulatory regimes vary on the extent to which they allow information on bidding to be proactively published, and at what point in the procurement process. In some systems and processes, a list of invited bidders will be published at the start of tendering, and full details and documents on the bids recieved may be disclosed when evaluation is complete. In other systems, only summary statistics on the number of bids received may be made public.
+Regulatory regimes vary on the extent to which they allow information on bidding to be proactively published, and at what point in the procurement process. In some systems and processes, a list of invited bidders will be published at the start of tendering, and full details and documents on the bids received may be disclosed when evaluation is complete. In other systems, only summary statistics on the number of bids received may be made public.
 
 The OCDS bid extension introduces a new, flexible, top-level section to each contracting process to capture bidding information. Implementers will need to assess which fields are applicable to their local regulatory regime, and to local use-cases.
 

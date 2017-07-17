@@ -42,7 +42,7 @@ Following these approaches will avoid release and records 'jumping' between file
 
 ### Compression
 
-OCDS data packages may be compressed in order to save on diskspace and bandwidth. 
+OCDS data packages may be compressed in order to save on disk space and bandwidth. 
 
 If compressing data packages, publishers *should* use the zip file format.
 
@@ -52,7 +52,7 @@ Publishers should ensure that the web server providing access to bulk files corr
 
 ## Individual releases and records
 
-To achieve [4 ☆](levels.md) ODCS publication requires each release and record to be accessible at a permanent URI. This may be achieved by:
+To achieve [4 ☆](levels.md) OCDS publication requires each release and record to be accessible at a permanent URI. This may be achieved by:
 
 (a) Archiving a single-release release package for each release to a web accessible file system as it is created, and then regularly merging these releases to compile individual record files in the same file system. One approach may be to have a folder for each ```ocid``` and to place the releases and record related to that process into that folder. 
 

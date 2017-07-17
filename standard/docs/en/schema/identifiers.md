@@ -90,7 +90,7 @@ The OCID is case sensitive.
 ### Registered prefixes
 See the [registration pages](../implementation/registration.md) for details of how to obtain your OCID prefix. 
 
-Prefix are randomly generated lowercase alpha-numberic strings. A prefix is assigned to each organisation that holds the existing internal identifier for a Contracting Processes. 
+Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organisation that holds the existing internal identifier for a Contracting Processes. 
 
 Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organisations may be able to issue prefixes, each with their own prefix agency identifiers.
 
@@ -151,7 +151,7 @@ The **organisation register prefix** is used to refer to a register from which t
 
 * **Secondary registers** - which record a particular property of an organisation, such as being registered for VAT, or registered as an employer. An organisations identifier in such a registry might change without the organisation itself changing in nature. For example, in some jurisdictions, an organisation may de-register from VAT, and then re-register, gaining a new number in the process; or different branches of the same legal entity might register for different VAT numbers. 
 
-* **Third-party databases** - which compile a list of organisations, and sometimes their sub-units, on an on-demand basis. These databases do not confer any legal status or special properties on the organisations, but may record a mapping between their own identifiers and other primary or secondary register identifiers for the organisation. A common examples of a third-party database is the proprietary Dun&Bradstreet number. The OCDS organisational identifier scheme will recognise identifiers from third-party databases, but strongly prefers those drawn from non-propietary databases, which allow users to lookup identifier information. 
+* **Third-party databases** - which compile a list of organisations, and sometimes their sub-units, on an on-demand basis. These databases do not confer any legal status or special properties on the organisations, but may record a mapping between their own identifiers and other primary or secondary register identifiers for the organisation. A common examples of a third-party database is the proprietary Dun&Bradstreet number. The OCDS organisational identifier scheme will recognise identifiers from third-party databases, but strongly prefers those drawn from non-proprietary databases, which allow users to lookup identifier information. 
 
 * **Local lists** - Some publishers do not map their data to external identifiers, maintaining instead a local list of suppliers. In these cases, the publisher may use their internal identifiers, and should adopt their own **organisation list prefix** starting with X- to use. Where possible, the publisher should also provide their local list on the web, with as much additional data about each supplier as possible, in order to maximise the chance of data users matching their local list to some more authoritative register. 
 

@@ -11,7 +11,7 @@ The OCDS approach:
 * Simple and extensible JSON structure
 * Publish data for each step of the contracting process
 * Create summary records for an overall contracting process
-* Re-useable objects: organisations, tender information, line-items, amounts, milestones, documents etc.
+* Re-usable objects: organisations, tender information, line-items, amounts, milestones, documents etc.
 * Recommended data and documents at basic, intermediate & advanced levels
 * Common open data publication patterns 
 * Guidance on improving data collection and data quality

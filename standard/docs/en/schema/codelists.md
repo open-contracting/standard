@@ -8,7 +8,7 @@ For example, OCDS provide a list of the types of documents which may be attached
 
 A **closed codelist** provides **mandatory codes** and publishers should only use values provided in the official list. Changes to closed codelists should take place through the governance and revision process for the schema. 
 
-Codes are case sensitive, and are generally provided as english language camelCase. Codes values should not be translated, through the OCDS team will work with publishers to provide alternative translations of code titles and definitions.
+Codes are case sensitive, and are generally provided as English language camelCase. Codes values should not be translated, through the OCDS team will work with publishers to provide alternative translations of code titles and definitions.
 
 ## Open Codelists
 
@@ -62,9 +62,9 @@ This list can be extended in consultation with IATI.
 
 The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates whether documents are considered 'basic', 'intermediate' or 'advanced', and the section of an OCDS release they are most likely to be applicable within. 
 
-The code descriptions are neccessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
+The code descriptions are necessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
 
-Implementers may wish to map their existing document codes to this list, or, if using this list within a user-interface, to re-write the codelist titles and descriptions apporiately for the context they are being used in. 
+Implementers may wish to map their existing document codes to this list, or, if using this list within a user-interface, to re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
 This is an open codelist, and additional entries can be included with a x\_ prefix. 
 
@@ -200,7 +200,7 @@ Note: The 'direct' code was introduced in Version 1.1. Publishers who completed 
 
 ### Procurement Category
 
-The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCateory](#extended-procurement-category) codelist.
+The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
 
 ```eval_rst
 .. csv-table-no-translate::

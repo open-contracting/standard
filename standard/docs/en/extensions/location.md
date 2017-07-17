@@ -2,7 +2,7 @@
 
 ## Meta-data
 
-To use this extension, include it's URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package. 
 
 ```json
 {
@@ -29,7 +29,7 @@ This extension introduces two properties at the ```items``` level to describe lo
    :extension: location
 ```
 
-### Gazeteer Codelist
+### Gazetteer Codelist
 
 ```eval_rst
 .. csv-table-no-translate::

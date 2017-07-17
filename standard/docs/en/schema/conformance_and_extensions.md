@@ -20,7 +20,7 @@ Whenever using terms from outside the OCDS standard, we encourage the publisher 
 
 ### Validator and application conformance
 
-As of version 1.1, release/record packages should contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless othewise instructed by the user.  
+As of version 1.1, release/record packages should contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless otherwise instructed by the user.  
 
 Validators and applications should:
 
