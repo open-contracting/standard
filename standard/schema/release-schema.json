@@ -12,7 +12,7 @@
     },
     "id": {
       "title": "Release ID",
-      "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of it's related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
+      "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of its related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
@@ -26,7 +26,7 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the [releaseTag codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag). Tags may be used to filter release and the understand the kind of information that a release might contain.",
+      "description": "One or more values from the [releaseTag codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag). Tags may be used to filter release and to understand the kind of information that a release might contain.",
       "type": "array",
       "items": {
         "type": "string",
@@ -73,7 +73,7 @@
     },
     "buyer": {
       "title": "Buyer",
-      "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the tender data.",
+      "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring entity who may be specified in the tender data.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "planning": {
@@ -419,10 +419,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -573,10 +573,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -726,10 +726,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1160,7 +1160,7 @@
           "description": "(Deprecated in 1.1. Use transaction.value instead) The value of the transaction. A negative value indicates a refund or correction.",
           "$ref": "#/definitions/Value",
           "deprecated": {
-            "description": "This field has been replaced by the ```transaction.value``` field for consistency with the use of value and amount elsewhere in the standard.",
+            "description": "This field has been replaced by the `transaction.value` field for consistency with the use of value and amount elsewhere in the standard.",
             "deprecatedVersion": "1.1"
           }
         },
@@ -1169,7 +1169,7 @@
           "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the ```transaction.payer``` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         },
@@ -1178,7 +1178,7 @@
           "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the ```transaction.payee``` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1860,7 +1860,7 @@
         },
         "uri": {
           "format": "uri",
-          "description": "A URI pointing to a machine-readble document, release or record package containing the identified related process.",
+          "description": "A URI pointing to a machine-readable document, release or record package containing the identified related process.",
           "title": "Related process URI",
           "type": [
             "string",
