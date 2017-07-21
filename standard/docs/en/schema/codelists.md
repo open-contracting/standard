@@ -82,7 +82,7 @@ The award criteria code list describes the basis on which contract awards will b
 ```eval_rst
 .. note:: 
 
-  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishes may need to review the mapping from their internal systems to this updated list of award criteria.
+  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers may need to review the mapping from their internal systems to this updated list of award criteria.
 
 ```
 
@@ -200,7 +200,7 @@ Note: The 'direct' code was introduced in Version 1.1. Publishers who completed 
 
 ### Procurement Category
 
-The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCateory](#extended-procurement-category) codelist.
+The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
 
 ```eval_rst
 .. csv-table-no-translate::

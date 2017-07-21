@@ -197,7 +197,7 @@ Implementation information can be updated over the course of a contract. It belo
    :list: implementation
 ```
 
-Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](conformance_and_extensions.md)
+Information on subcontracts is not currently included in the core OCDS schema, but may be handled by [proposed extensions](conformance_and_extensions.md)
 
 #### Transaction
 
