@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+"""
+Validates release package, record package, release, and versioned release
+schemas against JSON Schema Draft 4, and ensures that the JSON contains no
+duplicate keys.
+"""
+
 import json
 from path import path
 from jsonschema import validate
