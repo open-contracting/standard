@@ -1588,13 +1588,11 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme).",
+          "description": "Organization identifiers should be drawn from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is drawn. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme) codelist.",
           "type": [
             "string",
             "null"
-          ],
-          "codelist": "organizationIdentifierRegistrationAgency_iati.csv",
-          "openCodelist": true
+          ]
         },
         "id": {
           "title": "ID",

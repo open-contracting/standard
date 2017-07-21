@@ -46,17 +46,20 @@ Item quantities may be provided using an established codelist for units of measu
 ```
 
 ### Organization Identifier Scheme
+<style><!--img[alt="org-id.guide"] {
+   width:200px;
+   float:right;
+}--></style>
 
-The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). See the identifiers section for [more information on organization identifiers](../../identifiers/#organization-identifiers)
+![org-id.guide](../../../assets/org-id-logo-full.png)
 
+The Organization Identifier Scheme currently uses the codes from [org-id.guide](http://www.org-id.guide). 
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../../schema/codelists_translated/organizationIdentifierRegistrationAgency_iati.csv
-```
+The latest version of the codelist can be [accessed at http://org-id.guide/download](http://org-id.guide/download) and can be explored through the [online list locator](http://org-id.guide/).
 
-This list can be extended in consultation with IATI. 
+For information on how to get new additions made to this list, see the [org-id.guide handbook](http://docs.org-id.guide/en/latest/contribute/)
+
+(**Update:** This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS docs as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1)
 
 ### Document Type
 
