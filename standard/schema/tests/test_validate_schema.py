@@ -4,11 +4,13 @@ from path import path
 from jsonschema import validate
 from collections import UserDict
 
+
 class RejectingDict(UserDict):
     """
     A dict that only allows a key to set once.
     Lets us raise an error on duplicate keys in JSON.
     """
+
     def __setitem__(self, k, v):
         if k in self.keys():
             raise ValueError("Duplicate key in JSON")
@@ -25,9 +27,12 @@ def object_pairs_hook(pairs):
 
 DRAFT_SCHEMA_PATH = path(__file__).parent / 'json-schema-draft-4.json'
 RELEASE_SCHEMA_PATH = path(__file__).parent.parent / 'release-schema.json'
-RECORD_SCHEMA_PATH = path(__file__).parent.parent / 'record-package-schema.json'
-RELEASE_PACKAGE_SCHEMA_PATH = path(__file__).parent.parent / 'release-package-schema.json'
-VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH = path(__file__).parent.parent / 'versioned-release-validation-schema.json'
+RECORD_SCHEMA_PATH = path(__file__).parent.parent / \
+    'record-package-schema.json'
+RELEASE_PACKAGE_SCHEMA_PATH = path(
+    __file__).parent.parent / 'release-package-schema.json'
+VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH = path(
+    __file__).parent.parent / 'versioned-release-validation-schema.json'
 
 
 def validate_schema(schema_to_validate_path):

@@ -15,7 +15,7 @@ for fname in sorted(os.listdir(".")):
         with open(fname, 'r') as jsonfile:
             package = json.load(jsonfile, object_pairs_hook=OrderedDict)
             for release in package['releases']:
-                packages.append( package['uri'] + '#' + release['id'])
+                packages.append(package['uri'] + '#' + release['id'])
                 releases.append({
                     'url': package['uri'] + '#' + release['id'],
                     'date': release['date'],

@@ -1,11 +1,13 @@
 import csv
 import io
 
+
 def convert_fieldname(name):
     for heading in ('Title', 'Description'):
         if heading in name:
             return heading
     return name
+
 
 def extract(fileobj, keywords, comment_tags, options):
     reader = csv.DictReader(io.StringIO(fileobj.read().decode()))

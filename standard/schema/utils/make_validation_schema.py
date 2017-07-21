@@ -21,8 +21,9 @@ version_template = OrderedDict([
                 ("items", {"type": "string"})
             ]))
         ]))
-   ]))
+    ]))
 ])
+
 
 def add_versions(schema, location=''):
     for key, value in list(schema['properties'].items()):
@@ -51,13 +52,13 @@ def add_versions(schema, location=''):
             version_properties = version["items"]["properties"]
             if wholeListMerge:
                 new_value = copy.deepcopy(value)
-                
+
                 if '$ref' in new_value['items']:
-                    new_value['items']["$ref"] = value['items']['$ref'] + "Unversioned"
-                version_properties["value"] =  new_value
+                    new_value['items']["$ref"] = value['items']['$ref'] + \
+                        "Unversioned"
+                version_properties["value"] = new_value
                 schema['properties'][key] = version
 
-            
         elif prop_type == "object":
             add_versions(value, key)
         else:
@@ -66,26 +67,27 @@ def add_versions(schema, location=''):
             version_properties["value"] = value
             schema['properties'][key] = version
 
-
     for key, value in schema.get('definitions', {}).items():
         add_versions(value, key)
 
-            
+
 def add_string_definitions(schema):
-    for item, format in [("StringNullUriVersioned", "uri"), 
+    for item, format in [("StringNullUriVersioned", "uri"),
                          ("StringNullDateTimeVersioned", "date-time"),
                          ("StringNullVersioned", None)]:
         version = copy.deepcopy(version_template)
         version_properties = version["items"]["properties"]
-        version_properties["value"] = OrderedDict([("type", ["string", "null"])])
+        version_properties["value"] = OrderedDict(
+            [("type", ["string", "null"])])
         if format:
             version_properties["value"]["format"] = format
         schema['definitions'][item] = version
 
+
 def unversion_refs(schema):
     for key, value in schema.items():
         if key == '$ref':
-            schema[key] = value + 'Unversioned' 
+            schema[key] = value + 'Unversioned'
         if isinstance(value, dict):
             unversion_refs(value)
 
@@ -102,7 +104,6 @@ def get_versioned_validation_schema(versioned_release):
         new_definitions[key + 'Unversioned'] = value
 
     unversion_refs(new_definitions)
-
 
     ocid = versioned_release['properties'].pop("ocid")
     versioned_release['properties'].pop("date")

@@ -14,7 +14,6 @@ def remove_keys(obj):
             remove_keys(value)
 
 
-
 schema_dir = dirname(dirname(abspath(__file__)))
 
 with open(join(schema_dir, 'release-schema.json'), 'r') as f:

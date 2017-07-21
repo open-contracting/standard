@@ -18,7 +18,6 @@ def process(obj):
                 field_info['$ref'] = "#/definitions/MultilingualString"
 
 
-
 schema_dir = dirname(dirname(abspath(__file__)))
 
 with open(join(schema_dir, 'release-schema.json'), 'r') as f:

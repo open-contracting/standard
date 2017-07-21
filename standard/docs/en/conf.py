@@ -211,25 +211,25 @@ htmlhelp_basename = 'OCDSdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+    # The paper size ('letterpaper' or 'a4paper').
+    #'papersize': 'letterpaper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
+    # Additional stuff for the LaTeX preamble.
+    #'preamble': '',
 
-# Latex figure (float) alignment
-#'figure_align': 'htbp',
+    # Latex figure (float) alignment
+    #'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'OCDS.tex', 'OCDS Documentation',
-   'OCDS', 'manual'),
+    (master_doc, 'OCDS.tex', 'OCDS Documentation',
+     'OCDS', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -272,9 +272,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'OCDS', 'OCDS Documentation',
-   author, 'OCDS', 'One line description of project.',
-   'Miscellaneous'),
+    (master_doc, 'OCDS', 'OCDS Documentation',
+     author, 'OCDS', 'One line description of project.',
+     'Miscellaneous'),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -294,7 +294,7 @@ from recommonmark.transform import AutoStructify
 
 source_parsers = {
     '.md': CommonMarkParser,
-    }
+}
 
 
 import standard_theme
@@ -304,9 +304,9 @@ html_theme = "standard_theme"
 html_theme_path = [standard_theme.get_html_theme_path()]
 
 
-locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+locale_dirs = ['../locale/',
+               os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 gettext_compact = False     # optional.
-
 
 
 from sphinx.directives.code import LiteralInclude
@@ -335,7 +335,7 @@ class JSONInclude(LiteralInclude):
     def run(self):
         with open(self.arguments[0]) as fp:
             json_obj = json.load(fp, object_pairs_hook=OrderedDict)
-        filename = str(self.arguments[0]).split("/")[-1].replace(".json","")
+        filename = str(self.arguments[0]).split("/")[-1].replace(".json", "")
         try:
             title = self.options['title']
         except KeyError as e:
@@ -344,13 +344,14 @@ class JSONInclude(LiteralInclude):
         code = json.dumps(pointed, indent='    ')
         # Ideally we would add the below to a data-expand element, but I can't see how to do this, so using classes for now...
         class_list = self.options.get('class', [])
-        class_list.append('file-'+title)
-        expand = str(self.options.get("expand","")).split(",")
-        class_list = class_list + ['expandjson expand-{0}'.format(s.strip()) for s in expand]
+        class_list.append('file-' + title)
+        expand = str(self.options.get("expand", "")).split(",")
+        class_list = class_list + \
+            ['expandjson expand-{0}'.format(s.strip()) for s in expand]
         literal = nodes.literal_block(code, code, classes=class_list)
-        literal['language'] = 'json' 
+        literal['language'] = 'json'
         literal['caption'] = 'TEST'
-        return [ literal ]
+        return [literal]
 
 
 directives.register_directive('jsoninclude', JSONInclude)
@@ -371,6 +372,6 @@ class AutoStructifyLowPriority(AutoStructify):
 def setup(app):
     app.add_config_value('recommonmark_config', {
         'enable_eval_rst': True
-        }, True)
+    }, True)
     app.add_transform(AutoStructify)
     app.add_transform(AutoStructifyLowPriority)

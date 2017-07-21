@@ -9,4 +9,3 @@ with open(join(schema_dir, 'release-schema.json'), 'r') as f:
 
 with open(join(schema_dir, 'release-schema.json'), 'w+') as f:
     json.dump(release_schema, f, indent=4, separators=(',', ': '))
-
