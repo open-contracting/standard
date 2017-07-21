@@ -4,7 +4,9 @@ codelist CSV files.
 
 Usage:
 
-    python translate_codelists.py <path> CODELIST_LANG=<language>
+    cd standard
+    python schema/utils/translate_codelists.py schema CODELIST_LANG=<language>
+    python schema/utils/translate_codelists.py docs/en/extensions CODELIST_LANG=<language>
 
 `path` is the path to the codelist CSV files.
 
