@@ -230,16 +230,20 @@ Contracts can move through multiple states. Releases over time may update the st
    :file: ../../../schema/codelists_translated/contractStatus.csv
 ```
 
-### Currency
-
-The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
-
-A full list is available from the ISO. 
-
 ### Milestone Status
 
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../../schema/codelists_translated/milestoneStatus.csv
+```
+
+### Currency
+
+The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :file: ../../../schema/codelists_translated/currency.csv
 ```
