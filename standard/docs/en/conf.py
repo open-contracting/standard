@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# flake8: noqa
 #
 # OCDS documentation build configuration file, created by
 # sphinx-quickstart on Fri Dec 11 15:07:47 2015.

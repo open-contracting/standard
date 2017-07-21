@@ -4,7 +4,6 @@ import pytest
 import os.path
 import json
 from jsonschema.validators import Draft4Validator as validator
-from jsonschema import FormatChecker
 
 schema_directory = os.path.join(
     os.path.dirname(os.path.realpath(__file__)), '..')

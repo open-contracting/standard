@@ -30,7 +30,7 @@ def add_versions(schema, location=''):
         prop_type = value.get('type')
         value.pop("title", None)
         value.pop("description", None)
-        omitWhenMerged = value.pop("omitWhenMerged", None)
+        value.pop("omitWhenMerged", None)
         wholeListMerge = value.pop("wholeListMerge", None)
         versionId = value.pop("versionId", None)
         if not prop_type:
@@ -125,7 +125,7 @@ def get_versioned_validation_schema(versioned_release):
     for key, value in definitions.items():
         value.pop("title", None)
         value.pop("description", None)
-        if not 'properties' in value:
+        if 'properties' not in value:
             continue
         for prop_value in value['properties'].values():
             prop_value.pop("title", None)

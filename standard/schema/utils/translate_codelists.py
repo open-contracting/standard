@@ -3,7 +3,7 @@ import glob
 import csv
 import sys
 import os
-from os.path import abspath, dirname, join
+from os.path import join
 
 
 language = os.environ.get("CODELIST_LANG")

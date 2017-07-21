@@ -2,7 +2,6 @@ import os
 import json
 import ocdsmerge
 from collections import OrderedDict
-from datetime import tzinfo, timedelta, datetime
 
 releases = []
 release_list = []
