@@ -1,3 +1,13 @@
+"""
+Translates the `title` and `description` fields of JSON Schema files.
+
+Usage:
+
+    python translate_schema.py <language> ...
+
+`language` is a two-letter lowercase ISO369-1 code or BCP47 language tag.
+"""
+
 import gettext
 import sys
 import json

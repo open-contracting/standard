@@ -1,3 +1,16 @@
+"""
+Translates the header row and the `Name`, `Title` and `Description` values of
+codelist CSV files.
+
+Usage:
+
+    python translate_codelists.py <path> CODELIST_LANG=<language>
+
+`path` is the path to the codelist CSV files.
+
+`language` is a two-letter lowercase ISO369-1 code or BCP47 language tag.
+"""
+
 import gettext
 import glob
 import csv

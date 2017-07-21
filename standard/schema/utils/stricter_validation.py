@@ -1,3 +1,9 @@
+"""
+Makes whitespace consistent in release-schema.json and, if a field is required,
+adds `minItems` if its `type` includes `array`, and adds `minLength` if its
+`type` includes `string` but the field has no `enum` or `format`.
+"""
+
 import json
 from collections import OrderedDict
 from os.path import abspath, dirname, join
