@@ -28,7 +28,7 @@ should be run whenever the schema is updated so that the documentation reflects 
 
 ### get_codelists.py
 
-At present, codelist contents is managed through a Google Spreadsheet.
+At present, codelist contents are managed through a Google Spreadsheet.
 
 The get_codelists.py script fetches each codelist, and stores it in the /schema/codelists directory as a CSV file. It also fetches the IATI Organisation Identifier codelist.
 

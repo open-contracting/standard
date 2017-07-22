@@ -1,9 +1,13 @@
 #!/usr/bin/env python
+
+"""
+See README for this script's documentation.
+"""
+
 import requests
 from xml.dom import minidom
 import StringIO
 import csv
-
 
 def fetch_codelist(name,url,lang="en"):
     output = []

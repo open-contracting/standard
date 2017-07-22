@@ -1,7 +1,11 @@
+"""
+Makes whitespace consistent in release-schema.json and removes the
+`mergeStrategy` and `mergeOptions` keys from any objects.
+"""
+
 import json
 from collections import OrderedDict
 from os.path import abspath, dirname, join
-
 
 def remove_keys(obj):
     if isinstance(obj, list):

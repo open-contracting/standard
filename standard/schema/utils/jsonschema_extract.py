@@ -1,3 +1,7 @@
+"""
+Babel extractor used in setup.py
+"""
+
 import json
 
 def gather_text(schema, current_path):
