@@ -104,8 +104,8 @@ An example multi-table template can be found [in the sample data repository](htt
 
 For further information on multi-table serializations please see the [flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/).
 
-## Packaging files with meta-data
+## Packaging files with metadata
 
 Whatever serialization is used for Open Contracting Data, a single file may contain one or more release and records.
 
-The release and record data package schemas describe the key meta-data that must be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.
+The release and record data package schemas describe the key metadata that must be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.

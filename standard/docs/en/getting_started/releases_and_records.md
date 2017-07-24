@@ -97,7 +97,7 @@ In some cases, releases will all come from the same backend system. In others, t
 
 In a complete OCDS implementation, each release would be published at its own persistent URL, and kept online permanently. 
 
-In these cases, where publishers are providing a single URI for fetching information on a given contracting process, the releaseID and releaseDate must be modified whenever updated data is published. A suggested pattern is to append an incrementing number to the end of the OCID in order to generate a unique releaseID for every change. For example:
+In these cases, where publishers are providing a single URI for fetching information on a given contracting process, the ```releaseID``` and ```releaseDate``` must be modified whenever updated data is published. A suggested pattern is to append an incrementing number to the end of the ```ocid``` in order to generate a unique ```releaseID``` for every change. For example:
 
 * ocds-a2ef3d01-1594121/1
 * ocds-a2ef3d01-1594121/2

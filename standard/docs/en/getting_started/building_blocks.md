@@ -16,7 +16,7 @@ In mapping your data to OCDS, or using OCDS data, you will encounter a number of
 
 An OCDS document is made up of a number of sections. These are:
 
-* **release meta-data** - contextual information about each release of data;
+* **release metadata** - contextual information about each release of data;
   * **parties** - information about the organizations and other participants involved in the contracting process;
   * **planning** - information about the goals, budgets and projects a contracting process relates to;
   * **tender** - information about how a tender will take place, or has taken place;
