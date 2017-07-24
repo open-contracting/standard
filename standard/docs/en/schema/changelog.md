@@ -3,7 +3,32 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.1.0.RC] - 2017-05-01
+## [1.1.1] - 2017-07-31
+
+### Bug fixes
+
+* [#482](https://github.com/open-contracting/standard/issues/482) **[Allow parties.role to be set to null](https://github.com/open-contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)** - required by the [merging approach](http://standard.open-contracting.org/1.1-dev/en/schema/merging/). 
+* [#422](https://github.com/open-contracting/standard/issues/422) **[Including currency codelist in documentation and schema](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#currency)** to support validation of currency values.
+* [#479](https://github.com/open-contracting/standard/issues/479) **[Fixing incorrect requirement to include releases in record-package-schema.json](http://standard.open-contracting.org/1.1-dev/en/schema/record_package/)** 
+* [#475](https://github.com/open-contracting/standard/issues/479) **Ensure all closed codelists have enum arrays in the schema** to support validation.
+
+### Minor revisions
+
+* [#471](https://github.com/open-contracting/standard/issues/471) **[Updating milestoneType codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#milestone-type)** replacing 'planning' with 'preProcurement' and 'adjudication' with 'assessment' and introducing codes for 'approval' and 'financing'. This is an open codelist, so previous codes remain valid, but publishers able to update to the new codes should do so. 
+* [#473](https://github.com/open-contracting/standard/issues/473) **[Updating definition of contractSchedules in documentType codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#document-type)**
+
+### Documentation improvements
+
+* **Fixing typographic errors throughout the documentation and codelist descriptions**
+* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) **[Updating basic, intermediate, advanced](http://standard.open-contracting.org/1.1-dev/en/implementation/levels/) publication guidance** - to ensure tables and text are aligned. 
+* [#489](https://github.com/open-contracting/standard/issues/489) **Listing the milestone documents extension as a core extension** - and removing it from the community extensions list. This extension is only needed by publishers with legacy data containing documents at the milestone level. 
+
+### Code and build process
+
+* [#506](https://github.com/open-contracting/standard/issues/506) **Removed make_field_definitions.py** from utility scripts as it is no longer required.
+* **Addition of docstrings to key scripts**
+
+## [1.1.0] - 2017-05-01
 
 ### Policy changes
 
