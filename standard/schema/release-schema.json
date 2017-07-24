@@ -32,6 +32,7 @@
         "type": "string",
         "enum": [
           "planning",
+          "planningUpdate",
           "tender",
           "tenderAmendment",
           "tenderUpdate",
@@ -214,16 +215,18 @@
             "string",
             "null"
           ],
+          "codelist": "tenderStatus.csv",
+          "openCodelist": false,
           "enum": [
+            "planning",
             "planned",
             "active",
             "cancelled",
             "unsuccessful",
             "complete",
+            "withdrawn",
             null
-          ],
-          "codelist": "tenderStatus.csv",
-          "openCodelist": false
+          ]
         },
         "procuringEntity": {
           "title": "Procuring entity",
@@ -815,7 +818,7 @@
             "null"
           ],
           "codelist": "milestoneType.csv",
-          "opencodelist": true
+          "openCodelist": true
         },
         "description": {
           "title": "Description",
@@ -1296,7 +1299,10 @@
         "roles": {
           "title": "Party roles",
           "description": "The party's role(s) in the contracting process. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
-          "type": ["array","null"],
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
             "type": "string"
           },
@@ -1759,7 +1765,7 @@
             "null"
           ],
           "codelist": "currency.csv",
-          "opencodelist": false
+          "openCodelist": false
         }
       }
     },
@@ -1828,7 +1834,7 @@
             "null"
           ],
           "codelist": "relatedProcess.csv",
-          "opencodelist": true
+          "openCodelist": true
         },
         "title": {
           "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
