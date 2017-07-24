@@ -59,8 +59,7 @@ def add_versions(schema, location=''):
                 new_value = copy.deepcopy(value)
 
                 if '$ref' in new_value['items']:
-                    new_value['items']["$ref"] = value['items']['$ref'] + \
-                        "Unversioned"
+                    new_value['items']["$ref"] = value['items']['$ref'] + "Unversioned"
                 version_properties["value"] = new_value
                 schema['properties'][key] = version
 
@@ -82,8 +81,7 @@ def add_string_definitions(schema):
                          ("StringNullVersioned", None)]:
         version = copy.deepcopy(version_template)
         version_properties = version["items"]["properties"]
-        version_properties["value"] = OrderedDict(
-            [("type", ["string", "null"])])
+        version_properties["value"] = OrderedDict([("type", ["string", "null"])])
         if format:
             version_properties["value"]["format"] = format
         schema['definitions'][item] = version

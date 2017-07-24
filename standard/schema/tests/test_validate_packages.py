@@ -9,21 +9,15 @@ import os.path
 import json
 from jsonschema.validators import Draft4Validator as validator
 
-schema_directory = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)), '..')
+schema_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
 
-release_package_schema = json.load(
-    open(os.path.join(schema_directory, 'release-package-schema.json')))
-record_package_schema = json.load(
-    open(os.path.join(schema_directory, 'record-package-schema.json')))
-release_schema = json.load(
-    open(os.path.join(schema_directory, 'release-schema.json')))
-versioned_release_schema = json.load(open(os.path.join(
-    schema_directory, 'versioned-release-validation-schema.json')))
+release_package_schema = json.load(open(os.path.join(schema_directory, 'release-package-schema.json')))
+record_package_schema = json.load(open(os.path.join(schema_directory, 'record-package-schema.json')))
+release_schema = json.load(open(os.path.join(schema_directory, 'release-schema.json')))
+versioned_release_schema = json.load(open(os.path.join(schema_directory, 'versioned-release-validation-schema.json')))
 
 ref_release_url = record_package_schema['definitions']['record']['properties']['compiledRelease']['$ref']
-ref_versioned_release_url = record_package_schema['definitions'][
-    'record']['properties']['versionedRelease']['$ref']
+ref_versioned_release_url = record_package_schema['definitions']['record']['properties']['versionedRelease']['$ref']
 
 
 def sample_url(extra_path):

@@ -26,8 +26,7 @@ fallback = False
 if language == 'en':
     fallback = True
 
-translator = gettext.translation(
-    'codelists', 'docs/locale', languages=[language], fallback=fallback)
+translator = gettext.translation('codelists', 'docs/locale', languages=[language], fallback=fallback)
 
 codelists_dir = join(sys.argv[1], 'codelists')
 codelists_output_dir = join(sys.argv[1], 'codelists_translated')
@@ -52,8 +51,7 @@ for file in glob.glob(codelists_dir + '/*.csv'):
     output_file = join(codelists_output_dir, file.split('/')[-1])
     with open(file) as csv_file, open(output_file, 'w+') as out_csv_file:
         dict_reader = csv.DictReader(csv_file)
-        fieldnames = [convert_fieldname(fieldname)
-                      for fieldname in dict_reader.fieldnames]
+        fieldnames = [convert_fieldname(fieldname) for fieldname in dict_reader.fieldnames]
         dict_writer = csv.DictWriter(out_csv_file, fieldnames)
         dict_writer.writeheader()
 

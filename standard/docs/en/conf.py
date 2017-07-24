@@ -305,8 +305,7 @@ html_theme = "standard_theme"
 html_theme_path = [standard_theme.get_html_theme_path()]
 
 
-locale_dirs = ['../locale/',
-               os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 gettext_compact = False     # optional.
 
 
@@ -347,8 +346,7 @@ class JSONInclude(LiteralInclude):
         class_list = self.options.get('class', [])
         class_list.append('file-' + title)
         expand = str(self.options.get("expand", "")).split(",")
-        class_list = class_list + \
-            ['expandjson expand-{0}'.format(s.strip()) for s in expand]
+        class_list = class_list + ['expandjson expand-{0}'.format(s.strip()) for s in expand]
         literal = nodes.literal_block(code, code, classes=class_list)
         literal['language'] = 'json'
         literal['caption'] = 'TEST'
