@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+
+"""
+See README for this script's documentation.
+"""
+
 import json
 from collections import OrderedDict
 import copy

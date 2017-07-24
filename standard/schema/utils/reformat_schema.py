@@ -1,3 +1,7 @@
+"""
+Makes whitespace consistent in release-schema.json.
+"""
+
 import json
 from collections import OrderedDict
 from os.path import abspath, dirname, join

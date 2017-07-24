@@ -1,3 +1,7 @@
+"""
+Ensures that sample data validates correctly.
+"""
+
 import requests
 import requests_mock
 import pytest

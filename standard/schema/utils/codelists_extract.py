@@ -1,3 +1,7 @@
+"""
+Babel extractor used in setup.py
+"""
+
 import csv
 import io
 

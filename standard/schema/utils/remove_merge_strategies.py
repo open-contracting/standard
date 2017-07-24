@@ -1,3 +1,10 @@
+"""
+Makes whitespace consistent in release-schema.json and removes the
+`mergeStrategy` and `mergeOptions` keys from any objects.
+
+Used as part of the 1.1 upgrade process.
+"""
+
 import json
 from collections import OrderedDict
 from os.path import abspath, dirname, join
