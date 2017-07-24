@@ -8,7 +8,7 @@ OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. E
 
 **☆ ☆ Provide machine-readable data**
 
->Providing data about your contracting processes in CSV files or other structured formats makes it easier for others to analyse. 
+>Providing data about your contracting processes in CSV files or other structured formats makes it easier for others to analyze. 
 >
 >*If you jump straight to 3 ☆ publication, you can generate flattened CSV versions of your data using the OCDS flatten tool.*
 

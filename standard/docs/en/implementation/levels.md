@@ -34,18 +34,18 @@ The **intermediate** level may require publishers to take extra steps to provide
 
 In addition to basic fields, intermediate publication involves providing: 
 
-* organisation identifiers for buyers and suppliers; 
+* organization identifiers for buyers and suppliers; 
 * detailed classification of line items in tender, award and contracts; 
 * planning information including budget details and associated documents; 
 * tender award criteria, anticipated values and submission information;
 * tender enquiry periods details;
-* details of the number of organisations submitting tenders and a list of their names; 
+* details of the number of organizations submitting tenders and a list of their names; 
 * contract documents;
 * the data of contract signature;
 * information and dates for contract implementation milestones;
 * documents related to implementation of the contract.
 
-At an intermediate level, publishing documents related to awards, and identifying information on each organisation submitting a tender, is also recommended
+At an intermediate level, publishing documents related to awards, and identifying information on each organization submitting a tender, is also recommended
 
 ### Advanced
 The **advanced level** incorporates fields which are important to connect open contracting data with other data sources, and with the real-world impacts of contracting. Publishing this data may require planning for additional data collection and management. 
@@ -55,7 +55,7 @@ In addition to basic and intermediate fields, advanced publication involves prov
 * structured information on project milestones at the tender stage;
 * regularly updated milestone information during contract implementation;
 * detailed unit, quantity and cost information for line items at tender, award and contract stages;
-* identifiers for each tendering organisation;
+* identifiers for each tendering organization;
 * information on spending transactions to suppliers during contract implementation;
 
 At an advanced level the use of URIs alongside identifiers, to provide links to other datasets, is also recommended.

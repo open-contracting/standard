@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 #### Structural updates 
 
-* [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organisation handling in OCDS](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#parties)** - We have updated the approach to include organization information in the standard from having embedded blocks of organization information, to using embedded cross-references to a top-level 'parties' array where full organisation details are stored. This change reduces duplication of organization information, and enables more flexible disclosure of information on all the parties to a contracting process, including multiple buyers.
+* [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#parties)** - We have updated the approach to include organization information in the standard from having embedded blocks of organization information, to using embedded cross-references to a top-level 'parties' array where full organization details are stored. This change reduces duplication of organization information, and enables more flexible disclosure of information on all the parties to a contracting process, including multiple buyers.
 * [#357](https://github.com/open-contracting/standard/issues/357) **[Amendment handling](http://standard.open-contracting.org/1.1-dev/en/implementation/amendments/)** - We have replace amendment with an array of amendments, and have updated schema and guidance to remove the option of providing semi-structured changes in an amendment object. Changes between amendments should now be provided using multiple releases, with the option to explicitly declare how releases relate to an amendment included in the new amendments array. 
 
 #### Schema validation updates 
@@ -72,7 +72,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Deprecated
 
 * [#355](https://github.com/open-contracting/standard/issues/355) **[Deprecating milestone documents](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#milestone)** - We have deprecated milestone documents from core, and added a milestone documents extension for those who wish to continue to use documents at the milestone level.
-* [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organisation handling in OCDS](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#parties)** - We have deprecated use of the full organisation block at points other than the parties array.
+* [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#parties)** - We have deprecated use of the full organization block at points other than the parties array.
 * [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#transaction) - receiverOrganization, providerOrganization and amount properties have been deprecated in favour or other terms.
 
 

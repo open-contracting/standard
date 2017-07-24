@@ -22,7 +22,7 @@ The lots extension maintains the overall structure of an OCDS release, with item
 
 Optional ```lotDetails``` and ```lotGroups``` section allow more complex conditions around the award of lots to be expressed, such as the maximum value of a group of lots. 
 
-This means that systems which are not 'lot aware' can still understand the overall value of contracting taking place, key events, and relationships between buyers and suppliers. At the same time, 'lot aware' systems can make use of the cross-referenced information to present a lot-centric view on the information to users, or to analyse contracting lot by lot. 
+This means that systems which are not 'lot aware' can still understand the overall value of contracting taking place, key events, and relationships between buyers and suppliers. At the same time, 'lot aware' systems can make use of the cross-referenced information to present a lot-centric view on the information to users, or to analyze contracting lot by lot. 
 
 ### Related Lot
 

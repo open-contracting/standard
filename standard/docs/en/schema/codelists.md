@@ -14,7 +14,7 @@ Codes are case sensitive, and are generally provided as English language camelCa
 
 ### Party Role
 
-The organisations, economic operators or other participants in a contracting process are listed in the [parties section](../../reference/#parties). A single party may have one or more roles in the contracting process. 
+The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../reference/#parties). A single party may have one or more roles in the contracting process. 
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -188,7 +188,7 @@ The `tender.status` field is used to indicate the current status of a tender pro
 
 ### Method
 
-A contracting process aims to fulfil the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
+A contracting process aims to fulfill the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
 
 ```eval_rst
 .. csv-table-no-translate::

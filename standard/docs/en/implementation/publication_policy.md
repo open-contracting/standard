@@ -1,6 +1,6 @@
 # Publication policies
 
-Publishing Open Contracting data involves making a number of choices about what data and documents to include and how to classify and categorise different items. To allow users to understand the choices that a publisher has made, a publisher should provide a public web page or document that details the decisions they have made concerning the issues listed below.
+Publishing Open Contracting data involves making a number of choices about what data and documents to include and how to classify and categorize different items. To allow users to understand the choices that a publisher has made, a publisher should provide a public web page or document that details the decisions they have made concerning the issues listed below.
 
 This document should also contain information about future plans for changes to the data and who to contact with enquiries about the data.
 

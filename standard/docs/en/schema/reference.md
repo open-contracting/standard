@@ -209,7 +209,7 @@ Information on subcontracts is not currently included in the release candidate s
 
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organisations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party ```source``` of data, and can re-use identifiers from that source. 
+The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party ```source``` of data, and can re-use identifiers from that source. 
 
 In most circumstances, the ```payer``` identifier should match that of the ```buyer```, and the ```payee``` identifier should match that of the ```supplier```. 
 

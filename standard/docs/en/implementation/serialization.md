@@ -88,7 +88,7 @@ The JSON equivalent of this would be:
 
 ```
 
-Whilst this allows complex data to be expressed in flat CSV, users will need to rebuild the structure in order to analyse the data.
+Whilst this allows complex data to be expressed in flat CSV, users will need to rebuild the structure in order to analyze the data.
 
 Instead, data with a one-to-many relationship can be represented using a multi-table serialization. 
 
@@ -106,6 +106,6 @@ For further information on multi-table serializations please see the [flatten to
 
 ## Packaging files with meta-data
 
-Whatever serialisation is used for Open Contracting Data, a single file may contain one or more release and records.
+Whatever serialization is used for Open Contracting Data, a single file may contain one or more release and records.
 
 The release and record data package schemas describe the key meta-data that must be supplied for any file providing Open Contracting Data. This includes the publishedDate, publisher, uri for accessing the file, and the licensing details for the file.

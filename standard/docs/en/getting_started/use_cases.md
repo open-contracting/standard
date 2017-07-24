@@ -4,14 +4,14 @@ Open data is a means, not an end in itself. The first stage of any work with OCD
 
 In designing OCDS, we explored a range of different user needs and use cases for data on contracting. 
 
-We focussed on four main groups of user need:
+We focused on four main groups of user need:
 
 * Achieving value for money for government
 * Strengthening the transparency, accountability and integrity of public contracting
 * Enabling the private sector to fairly compete for public contracts
 * Monitoring the effectiveness of service delivery
 
-Some user needs are served by direct access to bulk data. To meet other user needs will require tools built on top of OCDS data, providing interfaces, visualisation, and links to spaces where users can engage with contracting bodies and data publishers. 
+Some user needs are served by direct access to bulk data. To meet other user needs will require tools built on top of OCDS data, providing interfaces, visualization, and links to spaces where users can engage with contracting bodies and data publishers. 
 
 You can read more about how people around the world are using OCDS, and other contracting data, on the Open Contracting Partnership website. <!-- TODO: Add links -->
 

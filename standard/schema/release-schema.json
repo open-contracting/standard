@@ -64,7 +64,7 @@
     },
     "parties": {
       "title": "Parties",
-      "description": "Information on the parties (organisations, economic operators and other participants) who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
+      "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Organization"
@@ -368,7 +368,7 @@
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
-          "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalised. The start date is optional, and may be used to indicate the start of an evaluation period.",
+          "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalized. The start date is optional, and may be used to indicate the start of an evaluation period.",
           "$ref": "#/definitions/Period"
         },
         "contractPeriod": {
@@ -386,7 +386,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organisation can be provided using the optional bid extension.",
+          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the optional bid extension.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -710,7 +710,7 @@
         },
         "milestones": {
           "title": "Contract milestones",
-          "description": "A list of milestones associated with the finalisation of this contract.",
+          "description": "A list of milestones associated with the finalization of this contract.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
@@ -1219,14 +1219,14 @@
           "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/1.1/en/schema/identifiers/) for the preferred scheme and identifier to use.",
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/Identifier"
         },
         "address": {
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/Address",
           "description": "(Deprecated outside the parties section)",
@@ -1236,7 +1236,7 @@
           "type": "array",
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and additional identifiers for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "items": {
             "$ref": "#/definitions/Identifier"
@@ -1249,7 +1249,7 @@
         "contactPoint": {
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and contact point information for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/ContactPoint",
           "description": "(Deprecated outside the parties section)",
@@ -1724,7 +1724,7 @@
             "string",
             "null"
           ],
-          "description": "The telephone number of the contact point/person. This should include the international dialling code."
+          "description": "The telephone number of the contact point/person. This should include the international dialing code."
         },
         "faxNumber": {
           "title": "Fax number",
@@ -1732,7 +1732,7 @@
             "string",
             "null"
           ],
-          "description": "The fax number of the contact point/person. This should include the international dialling code."
+          "description": "The fax number of the contact point/person. This should include the international dialing code."
         },
         "url": {
           "title": "URL",
