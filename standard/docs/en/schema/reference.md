@@ -395,7 +395,7 @@ The items block is used to list the line-items associated with a tender, award o
 ```
 #### Unit
 
-The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no code list for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
+The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no codelist for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
 
 ```eval_rst
 
@@ -470,7 +470,7 @@ A related process can be declared at two points in an OCDS release.
 
 **(1) At the release level** - used to point backwards to prior processes, such as planning or framework establishment.
 
-**(2) At the contract level** - used to point onwards to sub-contracts, renewal or replacement processes that relate solely to the particular contract the property appears in.  
+**(2) At the contract level** - used to point onward to sub-contracts, renewal or replacement processes that relate solely to the particular contract the property appears in.  
 
 As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant ```documents``` blocks. For example:
 

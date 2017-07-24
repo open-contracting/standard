@@ -77,7 +77,7 @@ This is an open codelist, and additional entries can be included with a x\_ pref
 
 ### Award Criteria
 
-The award criteria code list describes the basis on which contract awards will be made. 
+The award criteria codelist describes the basis on which contract awards will be made. 
 
 ```eval_rst
 .. note:: 
@@ -109,7 +109,7 @@ This is an open codelist, and new values may be suggested outside of the main re
 
 ### Related Process
 
-The related process block is used at the release level to point backwards to prior processes, such as planning, PQQ or framework establishment, and at the contract level to point onwards to sub-contracts, renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
+The related process block is used at the release level to point backwards to prior processes, such as planning, PQQ or framework establishment, and at the contract level to point onward to sub-contracts, renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -218,7 +218,7 @@ An award move through multiple states. Releases over time may update the status 
    :file: ../../../schema/codelists_translated/awardStatus.csv
 ```
 
-The ```awardStatus``` field and code-list is used to indicate when a tender did not result in an award (through the ```"awardStatus":"unsuccessful"``` value)
+The ```awardStatus``` field and codelist is used to indicate when a tender did not result in an award (through the ```"awardStatus":"unsuccessful"``` value)
 
 ### Contract Status
 

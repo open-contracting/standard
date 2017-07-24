@@ -41,7 +41,7 @@ You can read more about the OCDS approach to identify organizations below.
 
 ### Local identifiers
 
-Not all the identifiers in OCDS need to be globally unique. Most only need to be unique amongst their 'sibling' records.
+Not all the identifiers in OCDS need to be globally unique. Most only need to be unique among their 'sibling' records.
 
 * A release ID must be unique within any release package it appears in;
 * A tender, award and contract ID must be unique within the contracting process it appears in;

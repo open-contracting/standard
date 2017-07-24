@@ -72,7 +72,7 @@ The revision process should ensure:
 
 * Changes are easy to identify and are transparent, and publishers, users and intermediaries have clear documentation to allow them to update their data and tools;
 
-Changes to the OCDS schema should be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a change-log maintained. 
+Changes to the OCDS schema should be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a changelog maintained. 
 
 ### Versions
 
@@ -146,7 +146,7 @@ At the point where all open issues are suitably addressed, the development branc
 
 ### Peer-review
 
-The updated schema, documentation along with a change log and narrative description of the changes will be released for peer-review.
+The updated schema, documentation along with a changelog and narrative description of the changes will be released for peer-review.
 
 A group of invited reviewers, representing different stakeholders, and including data publishers and users, will be asked to complete a full review of the changes, and to submit:
 

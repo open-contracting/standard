@@ -88,7 +88,7 @@
     },
     "awards": {
       "title": "Awards",
-      "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
+      "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Award"
@@ -468,7 +468,7 @@
     },
     "Award": {
       "title": "Award",
-      "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
+      "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
       "type": "object",
       "required": [
         "id"
@@ -837,7 +837,7 @@
         },
         "code": {
           "title": "Milestone code",
-          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed amongst data producers and the applications using that data.",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed among data producers and the applications using that data.",
           "type": [
             "string",
             "null"
@@ -988,7 +988,7 @@
         },
         "format": {
           "title": "Format",
-          "description": "The format of the document taken from the [IANA Media Types code list](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
+          "description": "The format of the document taken from the [IANA Media Types codelist](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
           "type": [
             "string",
             "null"
@@ -1625,7 +1625,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.",
+          "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.",
           "type": [
             "string",
             "null"

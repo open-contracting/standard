@@ -206,7 +206,7 @@ In the EU, contracts can be initiated through a number of different procedures i
 * Competitive dialogue; and
 * Innovation partnership
 
-However, to support comparison across continents, the main OCDS procurement method code list is a closed codelist with four values:
+However, to support comparison across continents, the main OCDS procurement method codelist is a closed codelist with four values:
 
 ```eval_rst
 .. csv-table-no-translate::
