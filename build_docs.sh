@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
-mkdir -p standard/docs/field_definitions
 cd standard
-python schema/utils/make_field_definitions.py
 CODELIST_LANG=en python schema/utils/translate_codelists.py schema
 CODELIST_LANG=en python schema/utils/translate_codelists.py docs/en/extensions
 
@@ -28,7 +26,6 @@ python standard/schema/utils/translate_schema.py es fr
 
 cd standard
 for lang in es fr; do
-    SCHEMA_LANG=$lang python schema/utils/make_field_definitions.py
     CODELIST_LANG=$lang python schema/utils/translate_codelists.py schema
     CODELIST_LANG=$lang python schema/utils/translate_codelists.py docs/en/extensions
     # Create a symlink for the current language, so we can reference the
