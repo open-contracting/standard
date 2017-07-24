@@ -65,7 +65,7 @@
     },
     "parties": {
       "title": "Parties",
-      "description": "Information on the parties (organisations, economic operators and other participants) who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
+      "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Organization"
@@ -89,7 +89,7 @@
     },
     "awards": {
       "title": "Awards",
-      "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
+      "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Award"
@@ -107,7 +107,7 @@
     },
     "language": {
       "title": "Release language",
-      "description": "Specifies the default language of the data using either two-digit [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended.",
+      "description": "Specifies the default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended.",
       "type": [
         "string",
         "null"
@@ -384,7 +384,7 @@
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
-          "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalised. The start date is optional, and may be used to indicate the start of an evaluation period.",
+          "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalized. The start date is optional, and may be used to indicate the start of an evaluation period.",
           "$ref": "#/definitions/Period"
         },
         "contractPeriod": {
@@ -402,7 +402,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organisation can be provided using the optional bid extension.",
+          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the optional bid extension.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -484,7 +484,7 @@
     },
     "Award": {
       "title": "Award",
-      "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
+      "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
       "type": "object",
       "required": [
         "id"
@@ -726,7 +726,7 @@
         },
         "milestones": {
           "title": "Contract milestones",
-          "description": "A list of milestones associated with the finalisation of this contract.",
+          "description": "A list of milestones associated with the finalization of this contract.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
@@ -843,7 +843,7 @@
         },
         "code": {
           "title": "Milestone code",
-          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed amoungst data producers and the applications using that data.",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed among data producers and the applications using that data.",
           "type": [
             "string",
             "null"
@@ -994,7 +994,7 @@
         },
         "format": {
           "title": "Format",
-          "description": "The format of the document taken from the [IANA Media Types code list](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
+          "description": "The format of the document taken from the [IANA Media Types codelist](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
           "type": [
             "string",
             "null"
@@ -1002,7 +1002,7 @@
         },
         "language": {
           "title": "Language",
-          "description": "Specifies the language of the linked document using either two-digit [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
+          "description": "Specifies the language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
           "type": [
             "string",
             "null"
@@ -1115,7 +1115,7 @@
     "Transaction": {
       "type": "object",
       "title": "Transaction information",
-      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transparency Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
       "required": [
         "id"
       ],
@@ -1224,14 +1224,14 @@
           "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/1.1/en/schema/identifiers/) for the preferred scheme and identifier to use.",
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/Identifier"
         },
         "address": {
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/Address",
           "description": "(Deprecated outside the parties section)",
@@ -1241,7 +1241,7 @@
           "type": "array",
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and additional identifiers for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "items": {
             "$ref": "#/definitions/Identifier"
@@ -1254,7 +1254,7 @@
         "contactPoint": {
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and contact point information for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/ContactPoint",
           "description": "(Deprecated outside the parties section)",
@@ -1630,7 +1630,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.",
+          "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.",
           "type": [
             "string",
             "null"
@@ -1677,7 +1677,7 @@
           "description": "The region. For example, CA."
         },
         "postalCode": {
-          "title": "Postalcode",
+          "title": "Postal code",
           "type": [
             "string",
             "null"
@@ -1729,7 +1729,7 @@
             "string",
             "null"
           ],
-          "description": "The telephone number of the contact point/person. This should include the international dialling code."
+          "description": "The telephone number of the contact point/person. This should include the international dialing code."
         },
         "faxNumber": {
           "title": "Fax number",
@@ -1737,7 +1737,7 @@
             "string",
             "null"
           ],
-          "description": "The fax number of the contact point/person. This should include the international dialling code."
+          "description": "The fax number of the contact point/person. This should include the international dialing code."
         },
         "url": {
           "title": "URL",
@@ -1987,7 +1987,7 @@
           ]
         },
         "durationInDays": {
-          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the diffence between startDate and maxExtentDate.",
+          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
           "type": [
             "integer",
@@ -1997,7 +1997,7 @@
       }
     },
     "RelatedProcess": {
-      "description": "A reference to a related contracting process: generally one preceeding or following on from the current process.",
+      "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
       "type": "object",
       "title": "Related Process",
       "properties": {

@@ -4,6 +4,7 @@ Babel extractor used in setup.py
 
 import json
 
+
 def gather_text(schema, current_path):
     for key, value in schema.items():
         if key in ('title', 'description') and isinstance(value, str):
@@ -18,5 +19,3 @@ def extract(fileobj, keywords, comment_tags, options):
         yield 1, '', text, [current_path]
 
 #    for lineno, funcname, messages, comments in results:
-
-

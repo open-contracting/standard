@@ -8,7 +8,7 @@ OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. E
 
 **☆ ☆ Provide machine-readable data**
 
->Providing data about your contracting processes in CSV files or other structured formats makes it easier for others to analyse. 
+>Providing data about your contracting processes in CSV files or other structured formats makes it easier for others to analyze. 
 >
 >*If you jump straight to 3 ☆ publication, you can generate flattened CSV versions of your data using the OCDS flatten tool.*
 
@@ -18,7 +18,7 @@ OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. E
 
 **☆ ☆ ☆ ☆ Provide API access to data**
 
->Providing each release and record at it's own persistent URI improves the usability of your data. Providing APIs helps users locate the information they are looking for quicker, and enables third-parties to build more advanced and responsive services on your data. 
+>Providing each release and record at its own persistent URI improves the usability of your data. Providing APIs helps users locate the information they are looking for quicker, and enables third-parties to build more advanced and responsive services on your data. 
 
 **☆ ☆ ☆ ☆ ☆ Provide joined-up data**
 
@@ -66,7 +66,7 @@ Consult the [release package](../../../schema/release_package/) and [record pack
 For 4 ☆ publication, you should:
 
 * Ensure all documents referenced in OCDS releases are available online;
-* Publish each release and record at it's own persistent URL;
+* Publish each release and record at its own persistent URL;
 * Additionally, produce bulk packages of releases and records for users to download;
 * Additionally, produce 'flat' versions of the data for users to access in CSV for Excel formats
 

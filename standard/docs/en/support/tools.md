@@ -28,4 +28,4 @@ In the meantime, please share suggestions for tools with the mailing list.
 
 ## Archived tools
 
-A number of older tools, created during the development of the standard, can be found in the [Open Contracting Archive github organization](https://github.com/open-contracting-archive).
+A number of older tools, created during the development of the standard, can be found in the [Open Contracting Archive GitHub organization](https://github.com/open-contracting-archive).

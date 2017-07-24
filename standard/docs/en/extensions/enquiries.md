@@ -55,7 +55,7 @@ When a system allow a discussion format, where each answer can be followed by a 
 
 Implementations may vary on the amount of enquiry information they provide, and when it is provided. 
 
-Some publishers may omit the identity of the question author to protect confidentiality of enquirers, or may anonymise this information (e.g. simply putting the author name as 'Organisation 1' or 'Organisation 2' so that it is possible to see questions from the same organisation, but not to know the identity of that organisation.)
+Some publishers may omit the identity of the question author to protect confidentiality of enquirers, or may anonymize this information (e.g. simply putting the author name as 'Organization 1' or 'Organization 2' so that it is possible to see questions from the same organization, but not to know the identity of that organization.)
 
 The ```relatedItem``` and ```relatedLot``` properties are available for use when questions can be asked in relation to a specific lot or item. 
 
