@@ -22,7 +22,7 @@ Basic level data includes:
 * buyer name and address; 
 * tender identifiers, titles, descriptions, status, procurement method, period, item descriptions and quantities,
 * documents associated with the tender; 
-* award identifiers, titles, descriptions, dates, values;
+* award identifiers, titles, descriptions, status, dates, values, item descriptions and quantities;
 * selected supplier names and addresses; 
 * contract identifiers, titles, status, period, values, item descriptions and quantities. 
 
@@ -36,23 +36,24 @@ In addition to basic fields, intermediate publication involves providing:
 
 * organisation identifiers for buyers and suppliers; 
 * detailed classification of line items in tender, award and contracts; 
-* planning information including budget details and associated documents; 
+* planning information including rationale, budget details and associated documents; 
 * tender award criteria, anticipated values and submission information;
 * tender enquiry periods details;
 * details of the number of organisations submitting tenders and a list of their names; 
 * contract documents;
-* the data of contract signature;
+* contracts linked to awards;
+* the date of contract signature;
 * information and dates for contract implementation milestones;
 * documents related to implementation of the contract.
 
-At an intermediate level, publishing documents related to awards, and identifying information on each organisation submitting a tender, is also recommended
+At an intermediate level, publishing documents related to planning, awards, and identifying information on each organisation submitting a tender, is also recommended
 
 ### Advanced
 The **advanced level** incorporates fields which are important to connect open contracting data with other data sources, and with the real-world impacts of contracting. Publishing this data may require planning for additional data collection and management. 
 
 In addition to basic and intermediate fields, advanced publication involves providing:
 
-* structured information on project milestones at the tender stage;
+* structured information on project milestones at the planning and tender stage;
 * regularly updated milestone information during contract implementation;
 * detailed unit, quantity and cost information for line items at tender, award and contract stages;
 * identifiers for each tendering organisation;
