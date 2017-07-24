@@ -2,7 +2,7 @@
 
 Consistent identifiers are essential to help join up open contracting data.
 
-* The Open Contracting ID (OCID) is a globally unique identifier used to join up data on all stages of a contracting process;
+* The Open Contracting ID (ocid) is a globally unique identifier used to join up data on all stages of a contracting process;
 * Organization identifiers are important to know who is involved in each contract;
 * Release, tender, award and contract identifiers are important to help cross-reference information.
 
@@ -49,10 +49,10 @@ Not all the identifiers in OCDS need to be globally unique. Most only need to be
 
 Local identifiers must be used consistently. For example, if an award is given the ID '22' in one release, then the same award must have the same ID (22) in any subsequent releases which contain it. 
 
-## Contracting Process Identifier (OCID)
+## Contracting Process Identifier (ocid)
 <img src="../../../assets/green_compilation.svg.png" width="150" align="right"/>
 
-An Open Contracting ID (OCID) is a **globally unique identifier** for a contracting process. Every OCDS release has an ```ocid```.
+An Open Contracting ID (ocid) is a **globally unique identifier** for a contracting process. Every OCDS release has an ```ocid```.
 
 It can be used to join up information published at different times, and in different places. 
 
@@ -83,12 +83,12 @@ Mexico City then registered a prefix with the OCDS helpdesk. They have been give
 
 </div>
 
-The OCDS prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data. 
+The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data. 
 
-The OCID is case sensitive.
+The ocid is case sensitive.
 
 ### Registered prefixes
-See the [registration pages](../implementation/registration.md) for details of how to obtain your OCID prefix. 
+See the [registration pages](../implementation/registration.md) for details of how to obtain your ocid prefix. 
 
 Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes. 
 
