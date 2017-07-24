@@ -46,17 +46,20 @@ Item quantities may be provided using an established codelist for units of measu
 ```
 
 ### Organization Identifier Scheme
+<style><!--img[alt="org-id.guide"] {
+   width:200px;
+   float:right;
+}--></style>
 
-The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). See the identifiers section for [more information on organization identifiers](../../identifiers/#organization-identifiers)
+![org-id.guide](../../../assets/org-id-logo-full.png)
 
+The Organization Identifier Scheme currently uses the codes from [org-id.guide](http://www.org-id.guide). 
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../../schema/codelists_translated/organizationIdentifierRegistrationAgency_iati.csv
-```
+The latest version of the codelist can be [accessed at http://org-id.guide/download](http://org-id.guide/download) and can be explored through the [online list locator](http://org-id.guide/).
 
-This list can be extended in consultation with IATI. 
+For information on how to get new additions made to this list, see the [org-id.guide handbook](http://docs.org-id.guide/en/latest/contribute/)
+
+(**Update:** This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS docs as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1)
 
 ### Document Type
 
@@ -82,7 +85,7 @@ The award criteria codelist describes the basis on which contract awards will be
 ```eval_rst
 .. note:: 
 
-  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishes may need to review the mapping from their internal systems to this updated list of award criteria.
+  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers may need to review the mapping from their internal systems to this updated list of award criteria.
 
 ```
 
@@ -230,16 +233,20 @@ Contracts can move through multiple states. Releases over time may update the st
    :file: ../../../schema/codelists_translated/contractStatus.csv
 ```
 
-### Currency
-
-The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
-
-A full list is available from the ISO. 
-
 ### Milestone Status
 
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../../schema/codelists_translated/milestoneStatus.csv
+```
+
+### Currency
+
+The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :file: ../../../schema/codelists_translated/currency.csv
 ```

@@ -12,9 +12,9 @@ On 5th February, the publisher provides an amended tender release updating the p
 
 After assessing bids, it is decided to award the contract in two lots.
 
-On 1st March, the publisher provides an award release, announcing Company A have been awarded a contract for $750.
+On 1st March, the publisher provides an award release, announcing Company A has been awarded a contract for $750.
 
-On 3rd March, the publisher provides an separate award release, announcing that company B have been awarded a contract for $750
+On 3rd March, the publisher provides an separate award release, announcing that company B has been awarded a contract for $750
 
 These independent releases each provide real-time information about what is happening in the contracting process. The record will combine them together. Using the same schema and structure as the releases, the main body of the record will contain a tender with contract value of $1500, and details of both awards.
 
