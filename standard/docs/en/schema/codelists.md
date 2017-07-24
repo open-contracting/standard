@@ -59,7 +59,7 @@ The latest version of the codelist can be [accessed at http://org-id.guide/downl
 
 For information on how to get new additions made to this list, see the [org-id.guide handbook](http://docs.org-id.guide/en/latest/contribute/)
 
-(**Update:** This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS docs as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1)
+(**Update:** This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS documentation as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1)
 
 ### Document Type
 
