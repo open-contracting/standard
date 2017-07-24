@@ -170,16 +170,18 @@
                                     "string",
                                     "null"
                                 ],
+                                "codelist": "tenderStatus.csv",
+                                "openCodelist": false,
                                 "enum": [
+                                    "planning",
                                     "planned",
                                     "active",
                                     "cancelled",
                                     "unsuccessful",
                                     "complete",
+                                    "withdrawn",
                                     null
-                                ],
-                                "codelist": "tenderStatus.csv",
-                                "openCodelist": false
+                                ]
                             },
                             "releaseTag": {
                                 "type": "array",
@@ -207,7 +209,39 @@
                     "$ref": "#/definitions/Value"
                 },
                 "procurementMethod": {
-                    "$ref": "#/definitions/StringNullVersioned"
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "releaseID": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "codelist": "method.csv",
+                                "openCodelist": false,
+                                "enum": [
+                                    "open",
+                                    "selective",
+                                    "limited",
+                                    "direct",
+                                    null
+                                ]
+                            },
+                            "releaseTag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
                 },
                 "procurementMethodDetails": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -216,7 +250,38 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "mainProcurementCategory": {
-                    "$ref": "#/definitions/StringNullVersioned"
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "releaseID": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "codelist": "procurementCategory.csv",
+                                "openCodelist": false,
+                                "enum": [
+                                    "goods",
+                                    "works",
+                                    "services",
+                                    null
+                                ]
+                            },
+                            "releaseTag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
                 },
                 "additionalProcurementCategories": {
                     "type": "array",
@@ -739,42 +804,7 @@
                     "$ref": "#/definitions/StringNullVersioned"
                 },
                 "type": {
-                    "type": "array",
-                    "items": {
-                        "properties": {
-                            "releaseDate": {
-                                "format": "date-time",
-                                "type": "string"
-                            },
-                            "releaseID": {
-                                "type": "string"
-                            },
-                            "value": {
-                                "type": [
-                                    "string",
-                                    "null"
-                                ],
-                                "enum": [
-                                    "preProcurement",
-                                    "engagement",
-                                    "approval",
-                                    "assessment",
-                                    "delivery",
-                                    "reporting",
-                                    "financing",
-                                    null
-                                ],
-                                "codelist": "milestoneType.csv",
-                                "openCodelist": true
-                            },
-                            "releaseTag": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
+                    "$ref": "#/definitions/StringNullVersioned"
                 },
                 "description": {
                     "$ref": "#/definitions/StringNullVersioned"
@@ -1014,21 +1044,21 @@
                 "amount": {
                     "$ref": "#/definitions/Value",
                     "deprecated": {
-                        "description": "This field has been replaced by the ```transaction.value``` field for consistency with the use of value and amount elsewhere in the standard.",
+                        "description": "This field has been replaced by the `transaction.value` field for consistency with the use of value and amount elsewhere in the standard.",
                         "deprecatedVersion": "1.1"
                     }
                 },
                 "providerOrganization": {
                     "$ref": "#/definitions/Identifier",
                     "deprecated": {
-                        "description": "This field has been replaced by the ```transaction.payer``` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
                         "deprecatedVersion": "1.1"
                     }
                 },
                 "receiverOrganization": {
                     "$ref": "#/definitions/Identifier",
                     "deprecated": {
-                        "description": "This field has been replaced by the ```transaction.payee``` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
                         "deprecatedVersion": "1.1"
                     }
                 }
@@ -1043,20 +1073,19 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "minLength": 1
+                    ]
                 },
                 "identifier": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/Identifier"
                 },
                 "address": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/Address"
                 },
@@ -1075,7 +1104,7 @@
                                 "type": "array",
                                 "deprecated": {
                                     "deprecatedVersion": "1.1",
-                                    "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                                    "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and additional identifiers for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                                 },
                                 "items": {
                                     "$ref": "#/definitions/IdentifierUnversioned"
@@ -1094,13 +1123,12 @@
                 "contactPoint": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and contact point information for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/ContactPoint"
                 }
             },
             "required": [
-                "id",
                 "name"
             ],
             "type": "object"
@@ -1155,10 +1183,33 @@
                 "roles": {
                     "type": "array",
                     "items": {
-                        "type": "string"
-                    },
-                    "codelist": "partyRole.csv",
-                    "openCodelist": true
+                        "properties": {
+                            "releaseDate": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "releaseID": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
+                                "items": {
+                                    "type": "string"
+                                },
+                                "codelist": "partyRole.csv",
+                                "openCodelist": true
+                            },
+                            "releaseTag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
                 },
                 "details": {
                     "type": "array",
@@ -1513,7 +1564,204 @@
                     }
                 },
                 "currency": {
-                    "$ref": "#/definitions/StringNullVersioned"
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "releaseDate": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "releaseID": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "codelist": "currency.csv",
+                                "openCodelist": false,
+                                "enum": [
+                                    "AED",
+                                    "AFN",
+                                    "ALL",
+                                    "AMD",
+                                    "ANG",
+                                    "AOA",
+                                    "ARS",
+                                    "AUD",
+                                    "AWG",
+                                    "AZN",
+                                    "BAM",
+                                    "BBD",
+                                    "BDT",
+                                    "BGN",
+                                    "BHD",
+                                    "BIF",
+                                    "BMD",
+                                    "BND",
+                                    "BOB",
+                                    "BOV",
+                                    "BRL",
+                                    "BSD",
+                                    "BTN",
+                                    "BWP",
+                                    "BYR",
+                                    "BZD",
+                                    "CAD",
+                                    "CDF",
+                                    "CHF",
+                                    "CLF",
+                                    "CLP",
+                                    "CNY",
+                                    "COP",
+                                    "COU",
+                                    "CRC",
+                                    "CUC",
+                                    "CUP",
+                                    "CVE",
+                                    "CZK",
+                                    "DJF",
+                                    "DKK",
+                                    "DOP",
+                                    "DZD",
+                                    "EEK",
+                                    "EGP",
+                                    "ERN",
+                                    "ETB",
+                                    "EUR",
+                                    "FJD",
+                                    "FKP",
+                                    "GBP",
+                                    "GEL",
+                                    "GHS",
+                                    "GIP",
+                                    "GMD",
+                                    "GNF",
+                                    "GTQ",
+                                    "GYD",
+                                    "HKD",
+                                    "HNL",
+                                    "HRK",
+                                    "HTG",
+                                    "HUF",
+                                    "IDR",
+                                    "ILS",
+                                    "INR",
+                                    "IQD",
+                                    "IRR",
+                                    "ISK",
+                                    "JMD",
+                                    "JOD",
+                                    "JPY",
+                                    "KES",
+                                    "KGS",
+                                    "KHR",
+                                    "KMF",
+                                    "KPW",
+                                    "KRW",
+                                    "KWD",
+                                    "KYD",
+                                    "KZT",
+                                    "LAK",
+                                    "LBP",
+                                    "LKR",
+                                    "LRD",
+                                    "LSL",
+                                    "LTL",
+                                    "LVL",
+                                    "LYD",
+                                    "MAD",
+                                    "MDL",
+                                    "MGA",
+                                    "MKD",
+                                    "MMK",
+                                    "MNT",
+                                    "MOP",
+                                    "MRO",
+                                    "MUR",
+                                    "MVR",
+                                    "MWK",
+                                    "MXN",
+                                    "MXV",
+                                    "MYR",
+                                    "MZN",
+                                    "NAD",
+                                    "NGN",
+                                    "NIO",
+                                    "NOK",
+                                    "NPR",
+                                    "NZD",
+                                    "OMR",
+                                    "PAB",
+                                    "PEN",
+                                    "PGK",
+                                    "PHP",
+                                    "PKR",
+                                    "PLN",
+                                    "PYG",
+                                    "QAR",
+                                    "RON",
+                                    "RSD",
+                                    "RUB",
+                                    "RWF",
+                                    "SAR",
+                                    "SBD",
+                                    "SCR",
+                                    "SDG",
+                                    "SEK",
+                                    "SGD",
+                                    "SHP",
+                                    "SLL",
+                                    "SOS",
+                                    "SSP",
+                                    "SRD",
+                                    "STD",
+                                    "SVC",
+                                    "SYP",
+                                    "SZL",
+                                    "THB",
+                                    "TJS",
+                                    "TMT",
+                                    "TND",
+                                    "TOP",
+                                    "TRY",
+                                    "TTD",
+                                    "TWD",
+                                    "TZS",
+                                    "UAH",
+                                    "UGX",
+                                    "USD",
+                                    "USN",
+                                    "USS",
+                                    "UYI",
+                                    "UYU",
+                                    "UZS",
+                                    "VEF",
+                                    "VND",
+                                    "VUV",
+                                    "WST",
+                                    "XAF",
+                                    "XBT",
+                                    "XCD",
+                                    "XDR",
+                                    "XOF",
+                                    "XPF",
+                                    "YER",
+                                    "ZAR",
+                                    "ZMK",
+                                    "ZWL",
+                                    null
+                                ]
+                            },
+                            "releaseTag": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -1674,16 +1922,18 @@
                         "string",
                         "null"
                     ],
+                    "codelist": "tenderStatus.csv",
+                    "openCodelist": false,
                     "enum": [
+                        "planning",
                         "planned",
                         "active",
                         "cancelled",
                         "unsuccessful",
                         "complete",
+                        "withdrawn",
                         null
-                    ],
-                    "codelist": "tenderStatus.csv",
-                    "openCodelist": false
+                    ]
                 },
                 "procuringEntity": {
                     "$ref": "#/definitions/OrganizationReferenceUnversioned"
@@ -1707,7 +1957,14 @@
                         "null"
                     ],
                     "codelist": "method.csv",
-                    "openCodelist": false
+                    "openCodelist": false,
+                    "enum": [
+                        "open",
+                        "selective",
+                        "limited",
+                        "direct",
+                        null
+                    ]
                 },
                 "procurementMethodDetails": {
                     "type": [
@@ -1727,7 +1984,13 @@
                         "null"
                     ],
                     "codelist": "procurementCategory.csv",
-                    "openCodelist": false
+                    "openCodelist": false,
+                    "enum": [
+                        "goods",
+                        "works",
+                        "services",
+                        null
+                    ]
                 },
                 "additionalProcurementCategories": {
                     "type": [
@@ -2151,16 +2414,6 @@
                         "string",
                         "null"
                     ],
-                    "enum": [
-                        "preProcurement",
-                        "engagement",
-                        "approval",
-                        "assessment",
-                        "delivery",
-                        "reporting",
-                        "financing",
-                        null
-                    ],
                     "codelist": "milestoneType.csv",
                     "openCodelist": true
                 },
@@ -2439,21 +2692,21 @@
                 "amount": {
                     "$ref": "#/definitions/ValueUnversioned",
                     "deprecated": {
-                        "description": "This field has been replaced by the ```transaction.value``` field for consistency with the use of value and amount elsewhere in the standard.",
+                        "description": "This field has been replaced by the `transaction.value` field for consistency with the use of value and amount elsewhere in the standard.",
                         "deprecatedVersion": "1.1"
                     }
                 },
                 "providerOrganization": {
                     "$ref": "#/definitions/IdentifierUnversioned",
                     "deprecated": {
-                        "description": "This field has been replaced by the ```transaction.payer``` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
                         "deprecatedVersion": "1.1"
                     }
                 },
                 "receiverOrganization": {
                     "$ref": "#/definitions/IdentifierUnversioned",
                     "deprecated": {
-                        "description": "This field has been replaced by the ```transaction.payee``` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
                         "deprecatedVersion": "1.1"
                     }
                 }
@@ -2472,20 +2725,19 @@
                     "type": [
                         "string",
                         "integer"
-                    ],
-                    "minLength": 1
+                    ]
                 },
                 "identifier": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/IdentifierUnversioned"
                 },
                 "address": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/AddressUnversioned"
                 },
@@ -2493,7 +2745,7 @@
                     "type": "array",
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and additional identifiers for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "items": {
                         "$ref": "#/definitions/IdentifierUnversioned"
@@ -2503,13 +2755,12 @@
                 "contactPoint": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and contact point information for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/ContactPointUnversioned"
                 }
             },
             "required": [
-                "id",
                 "name"
             ],
             "type": "object"
@@ -2545,7 +2796,10 @@
                     "$ref": "#/definitions/ContactPointUnversioned"
                 },
                 "roles": {
-                    "type": "array",
+                    "type": [
+                        "array",
+                        "null"
+                    ],
                     "items": {
                         "type": "string"
                     },
@@ -2794,9 +3048,7 @@
                     "type": [
                         "string",
                         "null"
-                    ],
-                    "codelist": "organizationIdentifierRegistrationAgency_iati.csv",
-                    "openCodelist": true
+                    ]
                 },
                 "id": {
                     "type": [
@@ -2928,6 +3180,180 @@
                     "type": [
                         "string",
                         "null"
+                    ],
+                    "codelist": "currency.csv",
+                    "openCodelist": false,
+                    "enum": [
+                        "AED",
+                        "AFN",
+                        "ALL",
+                        "AMD",
+                        "ANG",
+                        "AOA",
+                        "ARS",
+                        "AUD",
+                        "AWG",
+                        "AZN",
+                        "BAM",
+                        "BBD",
+                        "BDT",
+                        "BGN",
+                        "BHD",
+                        "BIF",
+                        "BMD",
+                        "BND",
+                        "BOB",
+                        "BOV",
+                        "BRL",
+                        "BSD",
+                        "BTN",
+                        "BWP",
+                        "BYR",
+                        "BZD",
+                        "CAD",
+                        "CDF",
+                        "CHF",
+                        "CLF",
+                        "CLP",
+                        "CNY",
+                        "COP",
+                        "COU",
+                        "CRC",
+                        "CUC",
+                        "CUP",
+                        "CVE",
+                        "CZK",
+                        "DJF",
+                        "DKK",
+                        "DOP",
+                        "DZD",
+                        "EEK",
+                        "EGP",
+                        "ERN",
+                        "ETB",
+                        "EUR",
+                        "FJD",
+                        "FKP",
+                        "GBP",
+                        "GEL",
+                        "GHS",
+                        "GIP",
+                        "GMD",
+                        "GNF",
+                        "GTQ",
+                        "GYD",
+                        "HKD",
+                        "HNL",
+                        "HRK",
+                        "HTG",
+                        "HUF",
+                        "IDR",
+                        "ILS",
+                        "INR",
+                        "IQD",
+                        "IRR",
+                        "ISK",
+                        "JMD",
+                        "JOD",
+                        "JPY",
+                        "KES",
+                        "KGS",
+                        "KHR",
+                        "KMF",
+                        "KPW",
+                        "KRW",
+                        "KWD",
+                        "KYD",
+                        "KZT",
+                        "LAK",
+                        "LBP",
+                        "LKR",
+                        "LRD",
+                        "LSL",
+                        "LTL",
+                        "LVL",
+                        "LYD",
+                        "MAD",
+                        "MDL",
+                        "MGA",
+                        "MKD",
+                        "MMK",
+                        "MNT",
+                        "MOP",
+                        "MRO",
+                        "MUR",
+                        "MVR",
+                        "MWK",
+                        "MXN",
+                        "MXV",
+                        "MYR",
+                        "MZN",
+                        "NAD",
+                        "NGN",
+                        "NIO",
+                        "NOK",
+                        "NPR",
+                        "NZD",
+                        "OMR",
+                        "PAB",
+                        "PEN",
+                        "PGK",
+                        "PHP",
+                        "PKR",
+                        "PLN",
+                        "PYG",
+                        "QAR",
+                        "RON",
+                        "RSD",
+                        "RUB",
+                        "RWF",
+                        "SAR",
+                        "SBD",
+                        "SCR",
+                        "SDG",
+                        "SEK",
+                        "SGD",
+                        "SHP",
+                        "SLL",
+                        "SOS",
+                        "SSP",
+                        "SRD",
+                        "STD",
+                        "SVC",
+                        "SYP",
+                        "SZL",
+                        "THB",
+                        "TJS",
+                        "TMT",
+                        "TND",
+                        "TOP",
+                        "TRY",
+                        "TTD",
+                        "TWD",
+                        "TZS",
+                        "UAH",
+                        "UGX",
+                        "USD",
+                        "USN",
+                        "USS",
+                        "UYI",
+                        "UYU",
+                        "UZS",
+                        "VEF",
+                        "VND",
+                        "VUV",
+                        "WST",
+                        "XAF",
+                        "XBT",
+                        "XCD",
+                        "XDR",
+                        "XOF",
+                        "XPF",
+                        "YER",
+                        "ZAR",
+                        "ZMK",
+                        "ZWL",
+                        null
                     ]
                 }
             }

@@ -13,7 +13,7 @@ A contracting process brings together, under a single identifier, the informatio
 In some cases, complex contracting processes cannot be represented under a single identifier because:
 
 * There are multiple initiation stages: for example, when a framework is setup, and then mini-competitions are used for purchases from the framework;
-* The procurement systems through which stages of the process are managed are managed by different bodies, and are not integrated;
+* The procurement systems through which stages of the process are managed by different bodies, and are not integrated;
 
 There are also cases when users want to know about related, but separate, contracting processes - such as the tender for renewal of a contract, or sub-contracting processes.
 

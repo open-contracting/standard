@@ -59,7 +59,7 @@ All new information about a contracting process is described within a release.
 Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
 
 ```eval_rst
-.. note:: 
+.. note:: Parties
 
    Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points. 
 
@@ -197,7 +197,7 @@ Implementation information can be updated over the course of a contract. It belo
    :list: implementation
 ```
 
-Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](conformance_and_extensions.md)
+Information on subcontracts is not currently included in the core OCDS schema, but may be handled by [proposed extensions](conformance_and_extensions.md)
 
 #### Transaction
 
@@ -255,7 +255,7 @@ The following building blocks are commonly re-used throughout the standard.
 ### OrganizationReference
 
 ```eval_rst
-.. note::
+.. note:: Organizations
 
 The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
 
