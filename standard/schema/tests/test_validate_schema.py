@@ -10,11 +10,13 @@ from path import path
 from jsonschema import validate
 from collections import UserDict
 
+
 class RejectingDict(UserDict):
     """
     A dict that only allows a key to set once.
     Lets us raise an error on duplicate keys in JSON.
     """
+
     def __setitem__(self, k, v):
         if k in self.keys():
             raise ValueError("Duplicate key in JSON")

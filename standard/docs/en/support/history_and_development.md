@@ -2,7 +2,7 @@
 
 <span class="lead">The [Open Contracting Global Principles](http://www.open-contracting.org/global_principles) encourage publishers to proactively disclose information and data on all stages of public contracting.</span>
 
-<span class="lead">The **Open Contracting Data Standard (OCDS)** has been developed to allow information providers to share as much of this information as possible as **structured, re-usable, standardised data**.</span>
+<span class="lead">The **Open Contracting Data Standard (OCDS)** has been developed to allow information providers to share as much of this information as possible as **structured, re-usable, standardized data**.</span>
 
 ## Support and funding
 

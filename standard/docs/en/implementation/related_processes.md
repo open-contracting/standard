@@ -1,4 +1,4 @@
-# Frameworks and related processses
+# Frameworks and related processes
 
 OCDS defines a contracting process as:
 

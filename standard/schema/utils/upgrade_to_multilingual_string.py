@@ -3,7 +3,7 @@ Used to convert the schema to use of language maps instead of pattern properties
 
 See https://github.com/open-contracting/standard/issues/229
 
-For testing use only until #229 has been resolved. 
+For testing use only until #229 has been resolved.
 """
 
 import json
@@ -24,6 +24,7 @@ def process(obj):
                 field_info = obj['properties'][field_name]
                 field_info.pop('type')
                 field_info['$ref'] = "#/definitions/MultilingualString"
+
 
 schema_dir = dirname(dirname(abspath(__file__)))
 

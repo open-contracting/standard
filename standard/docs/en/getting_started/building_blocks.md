@@ -206,7 +206,7 @@ In the EU, contracts can be initiated through a number of different procedures i
 * Competitive dialogue; and
 * Innovation partnership
 
-However, to support comparison across continents, the main OCDS procurement method code list is a closed codelist with four values:
+However, to support comparison across continents, the main OCDS procurement method codelist is a closed codelist with four values:
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -216,7 +216,7 @@ However, to support comparison across continents, the main OCDS procurement meth
 
 All procedures should be able to be mapped to one of these options. 
 
-To publish OCDS data, an EU publisher with data categorised by EU procedures should map the longer list of procedures to the narrower OCDS codelist and provide the codelist value in the ```procurementMethod``` field. They can then provide the more detailed procedure type in an extended ```procurementMethodDetails``` field.
+To publish OCDS data, an EU publisher with data categorized by EU procedures should map the longer list of procedures to the narrower OCDS codelist and provide the codelist value in the ```procurementMethod``` field. They can then provide the more detailed procedure type in an extended ```procurementMethodDetails``` field.
 
 For an Open Procedure, when a free-text justification of why the procedure was chosen is available, this would end up as:
 
@@ -224,7 +224,7 @@ For an Open Procedure, when a free-text justification of why the procedure was c
 {
     "procurementMethod":"open",
     "procurementMethodDetails":"Open Procedure",
-    "procurementMethodRationale":"To maximise competition."
+    "procurementMethodRationale":"To maximize competition."
     
 }
 ```

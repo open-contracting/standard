@@ -18,7 +18,7 @@ import glob
 import csv
 import sys
 import os
-from os.path import abspath, dirname, join
+from os.path import join
 
 
 language = os.environ.get("CODELIST_LANG")
@@ -34,13 +34,15 @@ codelists_output_dir = join(sys.argv[1], 'codelists_translated')
 if not os.path.exists(codelists_output_dir):
     os.makedirs(codelists_output_dir)
 
-directory_name = 'build/' + language 
+directory_name = 'build/' + language
+
 
 def convert_fieldname(name):
     for heading in ('Title', 'Description'):
         if heading in name:
             return translator.gettext(heading)
     return translator.gettext(name)
+
 
 if not os.path.exists(directory_name):
     os.makedirs(directory_name)
@@ -61,4 +63,3 @@ for file in glob.glob(codelists_dir + '/*.csv'):
                         value = translator.gettext(value)
                 new_row[convert_fieldname(key)] = value
             dict_writer.writerow(new_row)
-

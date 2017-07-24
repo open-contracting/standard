@@ -29,7 +29,7 @@ This extension introduces two properties at the ```items``` level to describe lo
    :extension: location
 ```
 
-### Gazeteer Codelist
+### Gazetteer Codelist
 
 ```eval_rst
 .. csv-table-no-translate::

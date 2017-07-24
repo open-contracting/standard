@@ -1,6 +1,6 @@
 # Licensing
 
-Publishing data under an open licenses is an important part of open contracting. Without this, restrictions on re-use may prevent many of the important [use cases](../../../getting_started/use_cases/) for open contracting information being realised.
+Publishing data under an open licenses is an important part of open contracting. Without this, restrictions on re-use may prevent many of the important [use cases](../../../getting_started/use_cases/) for open contracting information being realized.
 
 A license statement sets out the permission that users have to access, use and re-use the data. This can take the form of a [Public Domain Dedication or Certification](http://creativecommons.org/publicdomain/) which transfers a dataset into the public domain, or re-asserts that there are no existing copyrights or database rights inherent in the dataset (which is the case for government datasets in some jurisdictions), or the application of a license which sets out the terms under which a dataset may be re-used.
 
