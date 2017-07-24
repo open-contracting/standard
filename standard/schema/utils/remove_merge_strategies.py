@@ -9,6 +9,7 @@ import json
 from collections import OrderedDict
 from os.path import abspath, dirname, join
 
+
 def remove_keys(obj):
     if isinstance(obj, list):
         for item in obj:
@@ -18,7 +19,6 @@ def remove_keys(obj):
             if key in ('mergeStrategy', 'mergeOptions'):
                 obj.pop(key)
             remove_keys(value)
-
 
 
 schema_dir = dirname(dirname(abspath(__file__)))

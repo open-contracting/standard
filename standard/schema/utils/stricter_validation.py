@@ -22,14 +22,13 @@ def add_stricter(obj):
                 field_obj = obj['properties'][field]
                 if ("string" in field_obj['type'] and
                     'enum' not in field_obj and
-                    'format' not in field_obj):
+                        'format' not in field_obj):
                     field_obj['minLength'] = 1
                 elif "array" in field_obj['type']:
                     field_obj['minItems'] = 1
-                
+
         for key, value in list(obj.items()):
             add_stricter(value)
-
 
 
 schema_dir = dirname(dirname(abspath(__file__)))
