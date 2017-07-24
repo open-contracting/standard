@@ -23,7 +23,7 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 ### Package Metadata
 
-Releases must be published within a [release package](release_package.md). The release package provides meta-data about the release(s) that it contains. 
+Releases must be published within a [release package](release_package.md). The release package provides metadata about the release(s) that it contains. 
 
 ```eval_rst
 
@@ -456,7 +456,7 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 * When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
-In all these cases, the ```relatedProcess``` block can be used to cross-reference between the relevant open contracting processes using their ```OCID```.
+In all these cases, the ```relatedProcess``` block can be used to cross-reference between the relevant open contracting processes using their ```ocid```.
 
 ```eval_rst
 
