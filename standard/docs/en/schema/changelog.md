@@ -21,7 +21,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * **Fixing typographic errors throughout the documentation and codelist descriptions**
 * [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) **[Updating basic, intermediate, advanced](http://standard.open-contracting.org/1.1.1-dev/en/implementation/levels/) publication guidance** - to ensure tables and text are aligned. 
-* [#489](https://github.com/open-contracting/standard/issues/489) **Listing the milestone documents extension as a core extension** - and removing it from the community extensions list. This extension is only needed by publishers with legacy data containing documents at the milestone level. 
+* [#489](https://github.com/open-contracting/standard/issues/489) **Listing the milestone documents extension as a core extension** - and removing it from the community extensions list. This extension is only needed by publishers with legacy data containing documents at the milestone level.
+* [#493](https://github.com/open-contracting/standard/issues/493) **[Updating the description of the Organization Identifier Scheme codelist](http://standard.open-contracting.org/1.1.1-dev/en/schema/codelists/#organization-identifier-scheme)** to reflect that the codelist is now maintained by [org-id.guide](http://www.org-id.guide/).
 
 ### Code and build process
 
