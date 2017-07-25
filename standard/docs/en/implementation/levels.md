@@ -65,9 +65,9 @@ At an advanced level the use of URIs alongside identifiers, to provide links to 
 
 The table below lists each of the fields in OCDS along with a check mark for whether this is Required (X) or Recommended (-) at basic, intermediate or advanced level. 
 
-<iframe src="https://docs.google.com/spreadsheets/d/1EhyC2pbG6Qxly9vMsZhk0tD8xV2mV4c6KeWkJKi5TMQ/pubhtml?gid=91538800&single=true" width="100%", height="500"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/14Knf2WvPhcuOQWKjlNjkxKiBV0qtFuRyScjICF3EF_k/pubhtml?gid=1802887867&single=true" width="100%", height="500"></iframe>
 
-[Download CSV version](https://docs.google.com/spreadsheets/d/1EhyC2pbG6Qxly9vMsZhk0tD8xV2mV4c6KeWkJKi5TMQ/pub?gid=91538800&single=true&output=csv)
+[Download CSV version](https://docs.google.com/spreadsheets/d/14Knf2WvPhcuOQWKjlNjkxKiBV0qtFuRyScjICF3EF_k/pub?gid=1802887867&single=true&output=csv)
 
 
 ## Publication levels: documents
