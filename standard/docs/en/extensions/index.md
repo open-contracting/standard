@@ -50,7 +50,7 @@ Extensions are applied by adding their URLs to the ```extensions``` array in the
 ```
 
 
-**More information**
+## More information
 
 ```eval_rst
 .. toctree::
@@ -61,7 +61,7 @@ Extensions are applied by adding their URLs to the ```extensions``` array in the
 
 ```
 
-**Core extension documentation pages**
+### Core extension documentation pages
 
 ```eval_rst
 .. toctree::
