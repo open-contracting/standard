@@ -10,7 +10,7 @@ python standard/schema/utils/translate_schema.py en es fr
 # Create a symlink for the current language, so we can reference the
 # translated JSON schema from Sphinx directives
 rm build/current_lang || true
-ln -s build/en build/current_lang
+ln -s en build/current_lang
 
 cd standard
 sphinx-build -b dirhtml docs/en ../build/en
