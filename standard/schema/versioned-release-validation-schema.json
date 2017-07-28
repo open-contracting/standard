@@ -1078,14 +1078,14 @@
                 "identifier": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version {{version}}, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/Identifier"
                 },
                 "address": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version {{version}}, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/Address"
                 },
@@ -1104,7 +1104,7 @@
                                 "type": "array",
                                 "deprecated": {
                                     "deprecatedVersion": "1.1",
-                                    "description": "From version {{version}}, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                                    "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                                 },
                                 "items": {
                                     "$ref": "#/definitions/IdentifierUnversioned"
@@ -1123,7 +1123,7 @@
                 "contactPoint": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version {{version}}, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/ContactPoint"
                 }
@@ -1388,12 +1388,12 @@
                         "properties": {
                             "property": {
                                 "title": "Property",
-                                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in {{version}})",
+                                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in 1.1)",
                                 "type": "string"
                             },
                             "former_value": {
                                 "title": "Former Value",
-                                "description": "The previous value of the changed property, in whatever type the property is. (Deprecated in {{version}})",
+                                "description": "The previous value of the changed property, in whatever type the property is. (Deprecated in 1.1)",
                                 "type": [
                                     "string",
                                     "number",
@@ -2620,7 +2620,7 @@
                     ],
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "The budget data source field was intended to link to machine-readable data about the budget for a contracting process, but has been widely mis-used to provide free-text descriptions of budget providers. As a result, it has been removed from version {{version}}. budget/uri can be used to provide a link to machine-readable budget information, and budget/description can be used to provide human-readable information on the budget source."
+                        "description": "The budget data source field was intended to link to machine-readable data about the budget for a contracting process, but has been widely mis-used to provide free-text descriptions of budget providers. As a result, it has been removed from version 1.1. budget/uri can be used to provide a link to machine-readable budget information, and budget/description can be used to provide human-readable information on the budget source."
                     },
                     "format": "uri"
                 }
@@ -2730,14 +2730,14 @@
                 "identifier": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version {{version}}, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/IdentifierUnversioned"
                 },
                 "address": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version {{version}}, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/AddressUnversioned"
                 },
@@ -2745,7 +2745,7 @@
                     "type": "array",
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version {{version}}, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "items": {
                         "$ref": "#/definitions/IdentifierUnversioned"
@@ -2755,7 +2755,7 @@
                 "contactPoint": {
                     "deprecated": {
                         "deprecatedVersion": "1.1",
-                        "description": "From version {{version}}, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                        "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     },
                     "$ref": "#/definitions/ContactPointUnversioned"
                 }
@@ -2968,12 +2968,12 @@
                         "properties": {
                             "property": {
                                 "title": "Property",
-                                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in {{version}})",
+                                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in 1.1)",
                                 "type": "string"
                             },
                             "former_value": {
                                 "title": "Former Value",
-                                "description": "The previous value of the changed property, in whatever type the property is. (Deprecated in {{version}})",
+                                "description": "The previous value of the changed property, in whatever type the property is. (Deprecated in 1.1)",
                                 "type": [
                                     "string",
                                     "number",
