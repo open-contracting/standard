@@ -88,7 +88,7 @@ tx pull -a -f
 
 After this the build script will need to be run again.
 
-If translations are added locally, these can also be pushed up to Transifex:
+If translations are added locally, these can also be pushed up to Transifex. (Be aware that this will clobber edits made on Transifex since last time they were pulled):
 
 ```
 tx push -t --skip
