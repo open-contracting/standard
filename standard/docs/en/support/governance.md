@@ -6,7 +6,7 @@ This document sets out the revision processes for OCDS.
 
 ## Overview
 
-OCDS was initially developed through a year long iterative process, resulting in version 1.0 in November 2014. Over 2015/16 many organisations have been piloting use of the standard. 
+OCDS was initially developed through a year long iterative process, resulting in version 1.0 in November 2014. Over 2015/16 many organizations have been piloting use of the standard. 
 
 In 2016, we are working towards a first revised version of the standard. This is intended to fix a number of bugs identified through wider adoption of the standard over recent months, and will add a number of features which did not make it into 1.0. 
 
@@ -24,7 +24,7 @@ We welcome views on this approach of short-term self-managed revisions, followed
 
 The [Open Contracting Partnership (OCP)](http://www.open-contracting.org) was established as an independent non-profit in early 2015 and acts as the lead steward of the Open Contracting Data Standard. 
 
-OCP is led by an executive director, and is supported by a multi-stakeholder advisory board with representation from governments, multilateral organisations, academia, NGOs and business. 
+OCP is led by an executive director, and is supported by a multi-stakeholder advisory board with representation from governments, multilateral organizations, academia, NGOs and business. 
 
 As of February 2016, OCP is fiscally hosted by the [Fund for the City of New York](https://www.fcny.org/fcny/) (FCNY). Under the terms of this agreement, Intellectual Property is held by FCNY on behalf of OCP, but will transfer to any future legal entity hosting OCP. 
 
@@ -40,7 +40,7 @@ A lightweight **standard governance working group**, made up of representatives 
 
 The Open Contracting Data Standard is the Intellectual Property of the Open Contracting Partnership. The schema is licensed under the **[Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0)** license, with accompanying documentation under a **[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)** where stated. 
 
-Contributors to the standard agree to transfer any copyright in their contributions to the Open Contracting Partnership (via it's fiscal sponsor) through a contributor agreement process, in order that those contributions are held in trust as part of the standard.
+Contributors to the standard agree to transfer any copyright in their contributions to the Open Contracting Partnership (via its fiscal sponsor) through a contributor agreement process, in order that those contributions are held in trust as part of the standard.
 
 No content infringing upon third-party Intellectual Property Rights will be included in the standard. 
 
@@ -58,7 +58,7 @@ We are committed to the [Open Stand principles](https://open-stand.org/about-us/
 
 * **Openness.** The Open Contracting Data Standard processes are open to all interested and informed parties.
 
-In the future, the Open Contracting Data Standard may be submitted to a formal standardisation body, such as the World Wide Web Consortium, or OASIS. Before such a decision is made, a model of community-driven governance shall be established based on an open and consensus-based processes for updating the standard.
+In the future, the Open Contracting Data Standard may be submitted to a formal standardization body, such as the World Wide Web Consortium, or OASIS. Before such a decision is made, a model of community-driven governance shall be established based on an open and consensus-based processes for updating the standard.
 
 ## Versioning and upgrade process
 
@@ -72,11 +72,11 @@ The revision process should ensure:
 
 * Changes are easy to identify and are transparent, and publishers, users and intermediaries have clear documentation to allow them to update their data and tools;
 
-Changes to the OCDS schema should be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a change-log maintained. 
+Changes to the OCDS schema should be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a changelog maintained. 
 
 ### Versions
 
-Distinct **branches** of the standard will be maintained within Github for each version. 
+Distinct **branches** of the standard will be maintained within GitHub for each version. 
 
 Branches can be in one of two states:
 
@@ -124,13 +124,13 @@ Changes may be proposed as:
 
 If there are at least two parties interested in using an extension, and following discussion of the extension draft, then it may be displayed in the current version of the documentation as an ‘experimental feature’. 
 
-### Prioritisation
+### Prioritization
 
 The technical team, with reference to community views, identify change proposals and extensions which should be considered for adoption in the next version of the standard, assigning these to milestones in the issue tracker where they are open for discussion. 
 
-Periodically, at the start of a revision process a cut-off date for proposals will be announced  with at least two weeks notice. After that date a prioritised list of updates is produced. Any new proposed extensions or changes received after this period may not be considered until the next prioritisation phase. 
+Periodically, at the start of a revision process a cut-off date for proposals will be announced  with at least two weeks notice. After that date a prioritized list of updates is produced. Any new proposed extensions or changes received after this period may not be considered until the next prioritization phase. 
 
-### Prioritisation review
+### Prioritization review
 
 The list is shared for feedback, with at least a two-week window for discussion.
 
@@ -138,7 +138,7 @@ Based on discussions, a final list is then proposed by the technical team with a
 
 ### Development & docs
 
-The technical team, working with community members, will work on a development branch to prepare updates to the schema, documentation and codelists, according to the prioritised list. 
+The technical team, working with community members, will work on a development branch to prepare updates to the schema, documentation and codelists, according to the prioritized list. 
 
 This stage is likely to involve broad community engagement and discussion of specific decisions through GitHub issues. 
 
@@ -146,11 +146,11 @@ At the point where all open issues are suitably addressed, the development branc
 
 ### Peer-review
 
-The updated schema, documentation along with a change log and narrative description of the changes will be released for peer-review.
+The updated schema, documentation along with a changelog and narrative description of the changes will be released for peer-review.
 
 A group of invited reviewers, representing different stakeholders, and including data publishers and users, will be asked to complete a full review of the changes, and to submit:
 
-* A judgement on whether the overall upgrade, and/or specific changes should be **accepted**, **accepted with minor changes**, **substantially revised**, or **rejected**.
+* A judgment on whether the overall upgrade, and/or specific changes should be **accepted**, **accepted with minor changes**, **substantially revised**, or **rejected**.
 
 * Comments on each request for revisions or rejection.
 

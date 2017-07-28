@@ -18,13 +18,13 @@ Assessing how good your open contracting data is involves a number of elements:
 
 * **Conformance** involves a detailed check on whether OCDS terms are being used correctly. For example, are you following the field definitions and guidance when entering data, and mapping to the OCDS structure. Conformance involves a human check on how fields are being used, and which extensions to the schema you are using. 
 
-> The OCDS validator provides feedback that can be used to make an initial judgement on conformance. A full judgement requires expert input. 
+> The OCDS validator provides feedback that can be used to make an initial judgment on conformance. A full judgment requires expert input. 
 
-* **Completeness** involves checking which sections and building blocks of OCDS are being used. For example, are you publishing information from every contracting stage, or are you only providing tender or award data; and are you providing detailed identifiers for organisations, or just names. 
+* **Completeness** involves checking which sections and building blocks of OCDS are being used. For example, are you publishing information from every contracting stage, or are you only providing tender or award data; and are you providing detailed identifiers for organizations, or just names. 
 
 > Completeness can be evaluated against the Basic, Intermediate, Advanced framework for OCDS. 
 
-* **Utility** involves checking whether the data is fit for purpose. This involves considering the priority use cases for the data, and considering whether all feasible steps that could increase the re-usablility of the data have been taken. Quality involves considering questions of coherence (do the relationships in the data make sense, and is information logically structured?) and usefulness.
+* **Utility** involves checking whether the data is fit for purpose. This involves considering the priority use cases for the data, and considering whether all feasible steps that could increase the re-usability of the data have been taken. Quality involves considering questions of coherence (do the relationships in the data make sense, and is information logically structured?) and usefulness.
 
 > The best way to test the utility of the data is through its successful use for analysis, monitoring and increasing access to contracting information.
 

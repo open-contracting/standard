@@ -8,13 +8,13 @@ For example, OCDS provide a list of the types of documents which may be attached
 
 A **closed codelist** provides **mandatory codes** and publishers should only use values provided in the official list. Changes to closed codelists should take place through the governance and revision process for the schema. 
 
-Codes are case sensitive, and are generally provided as english language camelCase. Codes values should not be translated, through the OCDS team will work with publishers to provide alternative translations of code titles and definitions.
+Codes are case sensitive, and are generally provided as English language camelCase. Codes values should not be translated, through the OCDS team will work with publishers to provide alternative translations of code titles and definitions.
 
 ## Open Codelists
 
 ### Party Role
 
-The organisations, economic operators or other participants in a contracting process are listed in the [parties section](../../reference/#parties). A single party may have one or more roles in the contracting process. 
+The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../reference/#parties). A single party may have one or more roles in the contracting process. 
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -46,25 +46,28 @@ Item quantities may be provided using an established codelist for units of measu
 ```
 
 ### Organization Identifier Scheme
+<style><!--img[alt="org-id.guide"] {
+   width:200px;
+   float:right;
+}--></style>
 
-The Organization Identifier Scheme currently uses the codes from the International Aid Transparency Initiative ['Organisation Registration Agency' codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/). See the identifiers section for [more information on organization identifiers](../../identifiers/#organization-identifiers)
+![org-id.guide](../../../assets/org-id-logo-full.png)
 
+The Organization Identifier Scheme currently uses the codes from [org-id.guide](http://www.org-id.guide). 
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../../schema/codelists_translated/organizationIdentifierRegistrationAgency_iati.csv
-```
+The latest version of the codelist can be [accessed at http://org-id.guide/download](http://org-id.guide/download) and can be explored through the [online list locator](http://org-id.guide/).
 
-This list can be extended in consultation with IATI. 
+For information on how to get new additions made to this list, see the [org-id.guide handbook](http://docs.org-id.guide/en/latest/contribute/)
+
+(**Update:** This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS documentation as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1)
 
 ### Document Type
 
 The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates whether documents are considered 'basic', 'intermediate' or 'advanced', and the section of an OCDS release they are most likely to be applicable within. 
 
-The code descriptions are neccessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
+The code descriptions are necessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
 
-Implementers may wish to map their existing document codes to this list, or, if using this list within a user-interface, to re-write the codelist titles and descriptions apporiately for the context they are being used in. 
+Implementers may wish to map their existing document codes to this list, or, if using this list within a user-interface, to re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
 This is an open codelist, and additional entries can be included with a x\_ prefix. 
 
@@ -77,12 +80,12 @@ This is an open codelist, and additional entries can be included with a x\_ pref
 
 ### Award Criteria
 
-The award criteria code list describes the basis on which contract awards will be made. 
+The award criteria codelist describes the basis on which contract awards will be made. 
 
 ```eval_rst
 .. note:: 
 
-  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishes may need to review the mapping from their internal systems to this updated list of award criteria.
+  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers may need to review the mapping from their internal systems to this updated list of award criteria.
 
 ```
 
@@ -109,7 +112,7 @@ This is an open codelist, and new values may be suggested outside of the main re
 
 ### Related Process
 
-The related process block is used at the release level to point backwards to prior processes, such as planning, PQQ or framework establishment, and at the contract level to point onwards to sub-contracts, renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
+The related process block is used at the release level to point backwards to prior processes, such as planning, PQQ or framework establishment, and at the contract level to point onward to sub-contracts, renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -188,7 +191,7 @@ The `tender.status` field is used to indicate the current status of a tender pro
 
 ### Method
 
-A contracting process aims to fulfil the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
+A contracting process aims to fulfill the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -200,7 +203,7 @@ Note: The 'direct' code was introduced in Version 1.1. Publishers who completed 
 
 ### Procurement Category
 
-The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCateory](#extended-procurement-category) codelist.
+The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -218,7 +221,7 @@ An award move through multiple states. Releases over time may update the status 
    :file: ../../../schema/codelists_translated/awardStatus.csv
 ```
 
-The ```awardStatus``` field and code-list is used to indicate when a tender did not result in an award (through the ```"awardStatus":"unsuccessful"``` value)
+The ```awardStatus``` field and codelist is used to indicate when a tender did not result in an award (through the ```"awardStatus":"unsuccessful"``` value)
 
 ### Contract Status
 
@@ -230,16 +233,20 @@ Contracts can move through multiple states. Releases over time may update the st
    :file: ../../../schema/codelists_translated/contractStatus.csv
 ```
 
-### Currency
-
-The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
-
-A full list is available from the ISO. 
-
 ### Milestone Status
 
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../../schema/codelists_translated/milestoneStatus.csv
+```
+
+### Currency
+
+The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :file: ../../../schema/codelists_translated/currency.csv
 ```

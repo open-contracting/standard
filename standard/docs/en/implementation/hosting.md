@@ -15,7 +15,7 @@ Which formats are most important will depend on the priority use cases for each 
 
 The release and record data package containers (in JSON and CSV) offer a way to provide **bulk access** to a collection of contracting process release and records. 
 
-However, very large files can be difficult for users to download and process. The following section provides suggested good practices which will assist users in accessing data. These are not requirements of the standard, but are based on experiences of maximising the number of users able to work with datasets with their existing hardware and software.
+However, very large files can be difficult for users to download and process. The following section provides suggested good practices which will assist users in accessing data. These are not requirements of the standard, but are based on experiences of maximizing the number of users able to work with datasets with their existing hardware and software.
 
 ### File size limits
 
@@ -42,7 +42,7 @@ Following these approaches will avoid release and records 'jumping' between file
 
 ### Compression
 
-OCDS data packages may be compressed in order to save on diskspace and bandwidth. 
+OCDS data packages may be compressed in order to save on disk space and bandwidth. 
 
 If compressing data packages, publishers *should* use the zip file format.
 
@@ -52,7 +52,7 @@ Publishers should ensure that the web server providing access to bulk files corr
 
 ## Individual releases and records
 
-To achieve [4 ☆](levels.md) ODCS publication requires each release and record to be accessible at a permanent URI. This may be achieved by:
+To achieve [4 ☆](levels.md) OCDS publication requires each release and record to be accessible at a permanent URI. This may be achieved by:
 
 (a) Archiving a single-release release package for each release to a web accessible file system as it is created, and then regularly merging these releases to compile individual record files in the same file system. One approach may be to have a folder for each ```ocid``` and to place the releases and record related to that process into that folder. 
 
@@ -71,7 +71,7 @@ The same principles discussed for bulk files above should be applied to CSV or E
 
 ## Discovery and APIs
 
-There are many thousands of organisations who should be able to publish Open Contracting data. As a result, maintaining a central registry of all published data is impractical. Instead, OCDS proposes a common pattern for the discovery of Open Contracting data releases and records.
+There are many thousands of organizations who should be able to publish Open Contracting data. As a result, maintaining a central registry of all published data is impractical. Instead, OCDS proposes a common pattern for the discovery of Open Contracting data releases and records.
 
 For the discovery of bulk datasets, and the location of any data feeds, we propose use of a data.json file.
 
@@ -107,7 +107,7 @@ Future implementations of OCDS will explore use of the <a href="http://tools.iet
 
 At present, such files can be hosted anywhere, and consuming applications pointed towards them manually. 
 
-The data.json structure has been chosen to allow organisations following this approach to include tagged 'open-contracting-data' within their existing data discovery mechanisms, and given the availability of a plugin for the widely used CKAN which will also support exposure of data.json files. 
+The data.json structure has been chosen to allow organizations following this approach to include tagged 'open-contracting-data' within their existing data discovery mechanisms, and given the availability of a plugin for the widely used CKAN which will also support exposure of data.json files. 
 
 ## Linking data
 

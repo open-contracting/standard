@@ -37,6 +37,6 @@ The Open Contracting community is also a good source of input and support. You c
 
 Announcements about proposed updates to the specification, and periods for comment, will be made to the mailing list.
 
-Developers, or those wishing to provide technical input on the standard, may wish to go straight to the [Github repository](https://github.com/open-contracting/standard).
+Developers, or those wishing to provide technical input on the standard, may wish to go straight to the [GitHub repository](https://github.com/open-contracting/standard).
 
 </div>

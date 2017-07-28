@@ -3,7 +3,7 @@ Open Contracting Data Standard: Documentation
 
 Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. 
 
-The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting process by defining a common data model. It was created to support organisations to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.
+The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting process by defining a common data model. It was created to support organizations to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.
 
 The OCDS approach:
 
@@ -11,7 +11,7 @@ The OCDS approach:
 * Simple and extensible JSON structure
 * Publish data for each step of the contracting process
 * Create summary records for an overall contracting process
-* Re-useable objects: organisations, tender information, line-items, amounts, milestones, documents etc.
+* Re-usable objects: organizations, tender information, line-items, amounts, milestones, documents etc.
 * Recommended data and documents at basic, intermediate & advanced levels
 * Common open data publication patterns 
 * Guidance on improving data collection and data quality

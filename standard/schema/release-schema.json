@@ -1,5 +1,5 @@
 {
-  "id": "http://standard.open-contracting.org/schema/1__1__0/release-schema.json",
+  "id": "http://standard.open-contracting.org/schema/1__1__1/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
   "type": "object",
@@ -12,7 +12,7 @@
     },
     "id": {
       "title": "Release ID",
-      "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of it's related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
+      "description": "An identifier for this particular release of information. A release identifier must be unique within the scope of its related contracting process (defined by a common ocid), and unique within any release package it appears in. A release identifier must not contain the # character.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
@@ -26,12 +26,13 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the [releaseTag codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag). Tags may be used to filter release and the understand the kind of information that a release might contain.",
+      "description": "One or more values from the [releaseTag codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag). Tags may be used to filter release and to understand the kind of information that a release might contain.",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
           "planning",
+          "planningUpdate",
           "tender",
           "tenderAmendment",
           "tenderUpdate",
@@ -64,7 +65,7 @@
     },
     "parties": {
       "title": "Parties",
-      "description": "Information on the parties (organisations, economic operators and other participants) who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
+      "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Organization"
@@ -73,7 +74,7 @@
     },
     "buyer": {
       "title": "Buyer",
-      "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring agency who may be specified in the tender data.",
+      "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring entity who may be specified in the tender data.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "planning": {
@@ -88,7 +89,7 @@
     },
     "awards": {
       "title": "Awards",
-      "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
+      "description": "Information from the award phase of the contracting process. There may be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Award"
@@ -106,7 +107,7 @@
     },
     "language": {
       "title": "Release language",
-      "description": "Specifies the default language of the data using either two-digit [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended.",
+      "description": "Specifies the default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended.",
       "type": [
         "string",
         "null"
@@ -214,16 +215,18 @@
             "string",
             "null"
           ],
+          "codelist": "tenderStatus.csv",
+          "openCodelist": false,
           "enum": [
+            "planning",
             "planned",
             "active",
             "cancelled",
             "unsuccessful",
             "complete",
+            "withdrawn",
             null
-          ],
-          "codelist": "tenderStatus.csv",
-          "openCodelist": false
+          ]
         },
         "procuringEntity": {
           "title": "Procuring entity",
@@ -257,7 +260,14 @@
             "null"
           ],
           "codelist": "method.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "enum": [
+            "open",
+            "selective",
+            "limited",
+            "direct",
+            null
+          ]
         },
         "procurementMethodDetails": {
           "title": "Procurement method details",
@@ -283,7 +293,13 @@
             "null"
           ],
           "codelist": "procurementCategory.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "enum": [
+            "goods",
+            "works",
+            "services",
+            null
+          ]
         },
         "additionalProcurementCategories": {
           "title": "Additional procurement categories",
@@ -368,7 +384,7 @@
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
-          "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalised. The start date is optional, and may be used to indicate the start of an evaluation period.",
+          "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalized. The start date is optional, and may be used to indicate the start of an evaluation period.",
           "$ref": "#/definitions/Period"
         },
         "contractPeriod": {
@@ -386,7 +402,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organisation can be provided using the optional bid extension.",
+          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the optional bid extension.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -419,10 +435,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -468,7 +484,7 @@
     },
     "Award": {
       "title": "Award",
-      "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split amongst different providers, or because it is a standing offer.",
+      "description": "An award for the given procurement. There may be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
       "type": "object",
       "required": [
         "id"
@@ -573,10 +589,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -710,7 +726,7 @@
         },
         "milestones": {
           "title": "Contract milestones",
-          "description": "A list of milestones associated with the finalisation of this contract.",
+          "description": "A list of milestones associated with the finalization of this contract.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
@@ -726,10 +742,10 @@
         },
         "amendment": {
           "title": "Amendment",
-          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the ammendments array.",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an ammendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -814,18 +830,8 @@
             "string",
             "null"
           ],
-          "enum": [
-            "preProcurement",
-            "engagement",
-            "approval",
-            "assessment",
-            "delivery",
-            "reporting",
-            "financing",
-            null
-          ],
           "codelist": "milestoneType.csv",
-          "opencodelist": true
+          "openCodelist": true
         },
         "description": {
           "title": "Description",
@@ -837,7 +843,7 @@
         },
         "code": {
           "title": "Milestone code",
-          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed amoungst data producers and the applications using that data.",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed among data producers and the applications using that data.",
           "type": [
             "string",
             "null"
@@ -988,7 +994,7 @@
         },
         "format": {
           "title": "Format",
-          "description": "The format of the document taken from the [IANA Media Types code list](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
+          "description": "The format of the document taken from the [IANA Media Types codelist](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
           "type": [
             "string",
             "null"
@@ -996,7 +1002,7 @@
         },
         "language": {
           "title": "Language",
-          "description": "Specifies the language of the linked document using either two-digit [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
+          "description": "Specifies the language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
           "type": [
             "string",
             "null"
@@ -1042,7 +1048,7 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value of the budget line item. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure.",
+          "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources, the budget breakdown extension can be used.",
           "$ref": "#/definitions/Value"
         },
         "project": {
@@ -1109,7 +1115,7 @@
     "Transaction": {
       "type": "object",
       "title": "Transaction information",
-      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transpareny Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](http://fiscal.dataprotocols.org/) and the [International Aid Transparency Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
       "required": [
         "id"
       ],
@@ -1170,7 +1176,7 @@
           "description": "(Deprecated in 1.1. Use transaction.value instead) The value of the transaction. A negative value indicates a refund or correction.",
           "$ref": "#/definitions/Value",
           "deprecated": {
-            "description": "This field has been replaced by the ```transaction.value``` field for consistency with the use of value and amount elsewhere in the standard.",
+            "description": "This field has been replaced by the `transaction.value` field for consistency with the use of value and amount elsewhere in the standard.",
             "deprecatedVersion": "1.1"
           }
         },
@@ -1179,7 +1185,7 @@
           "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the ```transaction.payer``` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         },
@@ -1188,7 +1194,7 @@
           "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the ```transaction.payee``` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1211,22 +1217,21 @@
             "integer"
           ],
           "description": "The id of the party being referenced. This must match the id of an entry in the parties section.",
-          "title": "Organization ID",
-          "minLength": 1
+          "title": "Organization ID"
         },
         "identifier": {
           "title": "Primary identifier",
           "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/1.1/en/schema/identifiers/) for the preferred scheme and identifier to use.",
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/Identifier"
         },
         "address": {
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/Address",
           "description": "(Deprecated outside the parties section)",
@@ -1236,7 +1241,7 @@
           "type": "array",
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and additional identifiers for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "items": {
             "$ref": "#/definitions/Identifier"
@@ -1249,7 +1254,7 @@
         "contactPoint": {
           "deprecated": {
             "deprecatedVersion": "1.1",
-            "description": "From version 1.1, organisations should be referenced by their identifier and name in a document, and contact point information for an organisation should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           },
           "$ref": "#/definitions/ContactPoint",
           "description": "(Deprecated outside the parties section)",
@@ -1257,7 +1262,6 @@
         }
       },
       "required": [
-        "id",
         "name"
       ],
       "type": "object",
@@ -1308,7 +1312,10 @@
         "roles": {
           "title": "Party roles",
           "description": "The party's role(s) in the contracting process. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
-          "type": "array",
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
             "type": "string"
           },
@@ -1598,13 +1605,11 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme).",
+          "description": "Organization identifiers should be drawn from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is drawn. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme) codelist.",
           "type": [
             "string",
             "null"
-          ],
-          "codelist": "organizationIdentifierRegistrationAgency_iati.csv",
-          "openCodelist": true
+          ]
         },
         "id": {
           "title": "ID",
@@ -1625,7 +1630,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the url field of the Organization contact point.",
+          "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.",
           "type": [
             "string",
             "null"
@@ -1672,7 +1677,7 @@
           "description": "The region. For example, CA."
         },
         "postalCode": {
-          "title": "Postalcode",
+          "title": "Postal code",
           "type": [
             "string",
             "null"
@@ -1724,7 +1729,7 @@
             "string",
             "null"
           ],
-          "description": "The telephone number of the contact point/person. This should include the international dialling code."
+          "description": "The telephone number of the contact point/person. This should include the international dialing code."
         },
         "faxNumber": {
           "title": "Fax number",
@@ -1732,7 +1737,7 @@
             "string",
             "null"
           ],
-          "description": "The fax number of the contact point/person. This should include the international dialling code."
+          "description": "The fax number of the contact point/person. This should include the international dialing code."
         },
         "url": {
           "title": "URL",
@@ -1771,6 +1776,180 @@
           "type": [
             "string",
             "null"
+          ],
+          "codelist": "currency.csv",
+          "openCodelist": false,
+          "enum": [
+            "AED",
+            "AFN",
+            "ALL",
+            "AMD",
+            "ANG",
+            "AOA",
+            "ARS",
+            "AUD",
+            "AWG",
+            "AZN",
+            "BAM",
+            "BBD",
+            "BDT",
+            "BGN",
+            "BHD",
+            "BIF",
+            "BMD",
+            "BND",
+            "BOB",
+            "BOV",
+            "BRL",
+            "BSD",
+            "BTN",
+            "BWP",
+            "BYR",
+            "BZD",
+            "CAD",
+            "CDF",
+            "CHF",
+            "CLF",
+            "CLP",
+            "CNY",
+            "COP",
+            "COU",
+            "CRC",
+            "CUC",
+            "CUP",
+            "CVE",
+            "CZK",
+            "DJF",
+            "DKK",
+            "DOP",
+            "DZD",
+            "EEK",
+            "EGP",
+            "ERN",
+            "ETB",
+            "EUR",
+            "FJD",
+            "FKP",
+            "GBP",
+            "GEL",
+            "GHS",
+            "GIP",
+            "GMD",
+            "GNF",
+            "GTQ",
+            "GYD",
+            "HKD",
+            "HNL",
+            "HRK",
+            "HTG",
+            "HUF",
+            "IDR",
+            "ILS",
+            "INR",
+            "IQD",
+            "IRR",
+            "ISK",
+            "JMD",
+            "JOD",
+            "JPY",
+            "KES",
+            "KGS",
+            "KHR",
+            "KMF",
+            "KPW",
+            "KRW",
+            "KWD",
+            "KYD",
+            "KZT",
+            "LAK",
+            "LBP",
+            "LKR",
+            "LRD",
+            "LSL",
+            "LTL",
+            "LVL",
+            "LYD",
+            "MAD",
+            "MDL",
+            "MGA",
+            "MKD",
+            "MMK",
+            "MNT",
+            "MOP",
+            "MRO",
+            "MUR",
+            "MVR",
+            "MWK",
+            "MXN",
+            "MXV",
+            "MYR",
+            "MZN",
+            "NAD",
+            "NGN",
+            "NIO",
+            "NOK",
+            "NPR",
+            "NZD",
+            "OMR",
+            "PAB",
+            "PEN",
+            "PGK",
+            "PHP",
+            "PKR",
+            "PLN",
+            "PYG",
+            "QAR",
+            "RON",
+            "RSD",
+            "RUB",
+            "RWF",
+            "SAR",
+            "SBD",
+            "SCR",
+            "SDG",
+            "SEK",
+            "SGD",
+            "SHP",
+            "SLL",
+            "SOS",
+            "SSP",
+            "SRD",
+            "STD",
+            "SVC",
+            "SYP",
+            "SZL",
+            "THB",
+            "TJS",
+            "TMT",
+            "TND",
+            "TOP",
+            "TRY",
+            "TTD",
+            "TWD",
+            "TZS",
+            "UAH",
+            "UGX",
+            "USD",
+            "USN",
+            "USS",
+            "UYI",
+            "UYU",
+            "UZS",
+            "VEF",
+            "VND",
+            "VUV",
+            "WST",
+            "XAF",
+            "XBT",
+            "XCD",
+            "XDR",
+            "XOF",
+            "XPF",
+            "YER",
+            "ZAR",
+            "ZMK",
+            "ZWL",
+            null
           ]
         }
       }
@@ -1808,7 +1987,7 @@
           ]
         },
         "durationInDays": {
-          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the diffence between startDate and maxExtentDate.",
+          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
           "type": [
             "integer",
@@ -1818,7 +1997,7 @@
       }
     },
     "RelatedProcess": {
-      "description": "A reference to a related contracting process: generally one preceeding or following on from the current process.",
+      "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
       "type": "object",
       "title": "Related Process",
       "properties": {
@@ -1840,7 +2019,7 @@
             "null"
           ],
           "codelist": "relatedProcess.csv",
-          "opencodelist": true
+          "openCodelist": true
         },
         "title": {
           "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
@@ -1870,7 +2049,7 @@
         },
         "uri": {
           "format": "uri",
-          "description": "A URI pointing to a machine-readble document, release or record package containing the identified related process.",
+          "description": "A URI pointing to a machine-readable document, release or record package containing the identified related process.",
           "title": "Related process URI",
           "type": [
             "string",

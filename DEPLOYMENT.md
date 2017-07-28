@@ -1,13 +1,13 @@
 ### Putting a dev branch live
 
-If the live branch doesn't exist, create it and push to github. 
+If the live branch doesn't exist, create it and push to GitHub. 
 
 Create a pull request for the merge to x.y from x.y-dev (e.g. 1.0-dev to 1.0).
 
 ```
 Before merge:
-- [ ] [Push translations to transifex if any text has changed](https://github.com/open-contracting/standard#translations)
-- [ ] [Pull completed translations from transifex](https://github.com/open-contracting/standard#translations)
+- [ ] [Push translations to Transifex if any text has changed](https://github.com/open-contracting/standard#translations)
+- [ ] [Pull completed translations from Transifex](https://github.com/open-contracting/standard#translations)
 
 After merge:
 - [ ] Copy the files from dev to live following the instructions at the top of https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls
