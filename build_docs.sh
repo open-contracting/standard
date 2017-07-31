@@ -4,13 +4,15 @@ cd standard
 CODELIST_LANG=en python schema/utils/translate_codelists.py schema
 CODELIST_LANG=en python schema/utils/translate_codelists.py docs/en/extensions
 
-mkdir -p ../build/en/ || true
-cp schema/*.json ../build/en/
+cd ..
+python standard/schema/utils/translate_schema.py en es fr
+
 # Create a symlink for the current language, so we can reference the
 # translated JSON schema from Sphinx directives
-rm ../build/current_lang || true
-ln -s ../build/en ../build/current_lang
+rm build/current_lang || true
+ln -s en build/current_lang
 
+cd standard
 sphinx-build -b dirhtml docs/en ../build/en
 sphinx-build -b gettext docs/en ../build/locale
 
@@ -21,8 +23,6 @@ pybabel compile --use-fuzzy -d docs/locale -D codelists
 
 cd ..
 cp -r standard/assets build
-# can put multiple languages i.e translate_schema.py en fr
-python standard/schema/utils/translate_schema.py es fr
 
 cd standard
 for lang in es fr; do
