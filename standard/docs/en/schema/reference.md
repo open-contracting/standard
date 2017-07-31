@@ -274,7 +274,7 @@ See the [parties](#parties) section
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../../identifiers/#organizations) involved in a contracting process. 
+The identifier block provides a way to [identify the legal entities](../../identifiers/#organisation-ids) involved in a contracting process. 
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
