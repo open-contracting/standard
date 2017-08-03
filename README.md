@@ -19,14 +19,14 @@ The default standard website is 'latest' - http://standard.open-contracting.org/
 
 To run tests locally:
 
-````
+````shell
 pip install -r requirements.txt
 py.test
 ````
 
 **NOTE:** If you make a change to release-schema.json, you must update the versioned-release-validation-schema.json by:
 
-````
+````shell
 cd standard/schema/utils
 ./make_validation_schema.py
 ````
@@ -35,7 +35,7 @@ The tests, which run automatically on every commit, check that this process has 
 
 ## Virtual Environment
 
-```
+```shell
 virtualenv -p /usr/local/bin/python3.4 .ve
 source .ve/bin/activate
 pip install -r requirements.txt
@@ -58,7 +58,7 @@ To view, run a local web server. For example, from within /build/ run python -m 
 
 Sphinx does not watch directories for changes, but can be linked with other scripts to regenerate docs whenever anything changes. On a mac with fswatch installed:
 
-```
+```shell
 fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
 ```
 
@@ -76,13 +76,13 @@ This will update the .tx/config file and this file should be added to the git re
 
 In order to push any changes in text to Transifex run:
 
-```
+```shell
 tx push -s
 ```
 
 When the translations are filled in Transifex you need to run:
 
-```
+```shell
 tx pull -a -f
 ```
 
@@ -90,7 +90,7 @@ After this the build script will need to be run again.
 
 If translations are added locally, these can also be pushed up to Transifex:
 
-```
+```shell
 tx push -t --skip
 ```
 
