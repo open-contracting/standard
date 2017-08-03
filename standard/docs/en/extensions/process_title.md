@@ -1,5 +1,4 @@
-Process title
-=============
+# Process title
 
 ## Metadata
 

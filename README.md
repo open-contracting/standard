@@ -1,5 +1,4 @@
-Open Contracting Data standard
-==============================
+# Open Contracting Data Standard
 
 For view-only access to the standard and documentation please visit [http://standard.open-contracting.org](http://standard.open-contracting.org)
 

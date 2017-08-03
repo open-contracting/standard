@@ -1,5 +1,4 @@
-Bid statistics and details
-==========================
+# Bid statistics and details
 
 ## Metadata
 

@@ -1,5 +1,4 @@
-Open Contracting Data Standard: Documentation
-=============================================
+# Open Contracting Data Standard: Documentation
 
 Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. 
 
