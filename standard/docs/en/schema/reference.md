@@ -2,7 +2,7 @@
 
 The [Release Schema](release.md) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into data packages and how to compile releases into records. 
 
-**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence**
+**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
 ## Release structure
 
@@ -514,7 +514,7 @@ To include a language variation of a field, the field name should be suffixed wi
 
 A contract for ‘Software consultancy services’ may be published in a release with the default language sent to ‘en’ (the ISO639-1 code for English). The following examples give the description of an item as English, French and Spanish.
 
-**json**
+**JSON:**
 
 ```eval_rst
 
@@ -524,7 +524,7 @@ A contract for ‘Software consultancy services’ may be published in a release
 
 ```
 
-**csv** 
+**CSV:** 
 
 ```eval_rst
 .. csv-table-no-translate::

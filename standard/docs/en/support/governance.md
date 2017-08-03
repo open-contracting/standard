@@ -102,7 +102,7 @@ To release a new minor or major version upgrade will involve a number of stages 
 
 ![image alt text](../../../assets/upgrade_process_feb_2016.png)
 
-**General principles:**
+### General principles
 
 * **Publicity:** All stages of the revision process will be announced via the standard-discuss mailing list, and through GitHub issues. These are the formal channels for notification during the process.
 
@@ -188,10 +188,10 @@ Publishers should aim to move to a new **major** version within 18 months of its
 
 ## Definitions & procedures
 
-**Stakeholder**
+**Stakeholder:**
 
 Anyone who is a current or potential publisher or user of the standard can be considered a stakeholder. When engaging with stakeholders, attention should be paid to representation of both publishers and users; representation of public and private sectors and civil society; and broad geographical representation.
 
-**Consensus**
+**Consensus:**
 
 "The principle of consensus has its origins in the desire to achieve the general acceptance and application of a Standard within its intended sphere of influence. This entails trying to ensure that the interests of all those likely to be affected by it are taken into account, and that individual concerns are carefully and fairly balanced against the wider public interest." [BSI, 2012](http://www.bsigroup.com/Documents/about-bsi/NSB/BSI-pocket-guide-to-standards-development-UK-EN.pdf) 

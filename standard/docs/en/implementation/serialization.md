@@ -38,7 +38,7 @@ JSON is based on a tree structure, with data elements nested inside one another.
 
 In each case, fields are identified by the [JSON pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For example:
 
-**JSON**
+**JSON:**
 
 ```eval_rst
 
@@ -48,7 +48,7 @@ In each case, fields are identified by the [JSON pointer](http://tools.ietf.org/
 
 ```
 
-**CSV**
+**CSV:**
 
 ```eval_rst
 
