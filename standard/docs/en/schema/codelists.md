@@ -46,6 +46,7 @@ Item quantities may be provided using an established codelist for units of measu
 ```
 
 ### Organization Identifier Scheme
+
 <style><!--img[alt="org-id.guide"] {
    width:200px;
    float:right;

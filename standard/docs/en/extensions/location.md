@@ -38,6 +38,7 @@ This extension introduces two properties at the ```items``` level to describe lo
 ```
 
 ### Example
+
 Below is an example of a geolocated item:
 
 ```json

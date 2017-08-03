@@ -5,6 +5,7 @@ The Open Contracting Data Standards has been developed with the input of many pe
 The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 was developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.com) and the [World Bank](http://www.worldbank.org). Ongoing development is managed by [Open Data Services Co-operative](http://www.opendataservices.coop) under contract to the Open Contracting Partnership. 
 
 ## Core team
+
 Core contributors (Version 1.1.0): Tim Davies, Duncan Dewhurst, David Raznick, Lindsey Marchessault, Ben Webb, Edafe Onerhime.
 
 Core contributors (Version 1.0.1): Tim Davies, Lindsey Marchessault, Ben Webb, David Raznick, David Carpenter, Edafe Onerhime, Steven Flower.
@@ -12,6 +13,7 @@ Core contributors (Version 1.0.1): Tim Davies, Lindsey Marchessault, Ben Webb, D
 Lead authors (Version 1.0): [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)) & Sarah Bird ([Aptivate](http://aptivate.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Stephen Davenport ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). 
 
 ## Contributors
+
 Many more people have been involved in inputting to the standard. Below is a non-exhaustive list of some of those people. Inclusion here is to extend our thanks. It does not imply endorsement by any of those included of the standard. 
 
 ### Version 1.1.0
@@ -34,6 +36,7 @@ Peer reviewers:
 * Irum Maqsood, Public Works and Government Services Canada (Canada)
 
 ### Version 1.0.0
+
 Standard website design and icons by Neontribe: with thanks to Harry Harold and Heydon Pickering.
 
 Thanks to Noé Domínguez , Oscar Montiel, Laura Serghi, Mathieu Leduc-Hamel, Michael Lenczner, Isabel Munilla, John Hawkins, Laura Bacon and Owen Scott for inputs into technical and policy development.

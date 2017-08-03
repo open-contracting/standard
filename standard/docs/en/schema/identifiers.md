@@ -50,6 +50,7 @@ Not all the identifiers in OCDS need to be globally unique. Most only need to be
 Local identifiers must be used consistently. For example, if an award is given the ID '22' in one release, then the same award must have the same ID (22) in any subsequent releases which contain it. 
 
 ## Contracting Process Identifier (ocid)
+
 <img src="../../../assets/green_compilation.svg.png" width="150" align="right"/>
 
 An Open Contracting ID (ocid) is a **globally unique identifier** for a contracting process. Every OCDS release has an ```ocid```.
@@ -88,6 +89,7 @@ The ocid prefix itself is made up of two parts: a prefix agency identifier (curr
 The ocid is case sensitive.
 
 ### Registered prefixes
+
 See the [registration pages](../implementation/registration.md) for details of how to obtain your ocid prefix. 
 
 Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes. 
@@ -108,6 +110,7 @@ However, publishers are encouraged to consider whether there are any risks of cl
 
 
 ## Organization IDs
+
 <img src="../../../assets/green_organisation.svg.png" width="150" align="right"/>
 
 Reliably identifying the legal entities involved in a contracting process is vital for transparency and accountability, and for carrying out analysis to improve procurement and contract management.

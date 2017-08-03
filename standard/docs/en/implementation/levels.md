@@ -15,6 +15,7 @@ This supports step-by-step improvement of open contracting data and document dis
 The basic, intermediate and advanced levels provide guidance on the specific kinds of data governments should be able to publish.
 
 ### Basic
+
 The **basic** level captures data that should already be available in most contracting data systems, and that provides users with an overview of contracting processes.
 
 Basic level data includes: 
@@ -49,6 +50,7 @@ In addition to basic fields, intermediate publication involves providing:
 At an intermediate level, publishing documents related to planning, awards, and identifying information on each organization submitting a tender, is also recommended/
 
 ### Advanced
+
 The **advanced level** incorporates fields which are important to connect open contracting data with other data sources, and with the real-world impacts of contracting. Publishing this data may require planning for additional data collection and management. 
 
 In addition to basic and intermediate fields, advanced publication involves providing:
@@ -108,6 +110,7 @@ An example of publication at this level would involve providing a downloadable C
 The documentation on [flat CSV file serialization](../../../implementation/serialization/#csv) of the standard, and the [OCDS mapper](https://github.com/open-contracting/mapper), may be useful for those seeking to publish at this level.
 
 #### Stepping up
+
 Providing structured data will allow users to perform basic analysis, but until a common standard is used, it will be more difficult to join up contracting information across datasets and to analyze patterns across organizations or sectors. From structured data, the next step is to map this to the OCDS standard.
 
 
@@ -141,6 +144,7 @@ The use of these protocols, and following API conventions, will allow aggregator
 In the future OCDS may also have an RDF serialization to enable linked data publication at this level.
 
 #### Stepping up
+
 Contracting data may contain many cross-references to other important datasets - from government budgets, to company registers and registers of public interest. If 4 or 5 ☆ data is published for any of these, then OCDS can be used to make links between these datasets. 
 
 This will allow users to follow the links to discover more about the context of the contracting processes they are exploring, and will allow big-data analysis linking in these different datasets. For example, following links to a company register to discover whether a company awarded a contract has been dissolved, or following links to budget and spending information. 
@@ -157,4 +161,5 @@ An example of publication at this level would involve including organization URI
 For simplicity, the OCDS does not yet include URI fields at all points of the standard, but these can be added as extensions in collaboration with 5 ☆ linked data publishers. 
 
 #### Stepping up
+
 Whatever level you are at - publishing data is only part of the process. It is important to also [engage with users](http://www.opendataimpacts.net/engagement/) and to think about how to build your open data back into your organizational processes, closing the feedback loop.
