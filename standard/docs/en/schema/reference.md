@@ -385,7 +385,6 @@ The items block is used to list the line-items associated with a tender, award o
    :list: item
 ```
 
-
 #### Classification
 
 ```eval_rst

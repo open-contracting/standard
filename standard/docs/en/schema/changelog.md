@@ -74,7 +74,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#387](https://github.com/open-contracting/standard/issues/387) **[Codelist updates: Item Classification Scheme](http://standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme)** - New entries have been added to the itemClassificationScheme codelist
 * [#385](https://github.com/open-contracting/standard/issues/385) **[Codelist updates: awardCriteria](http://standard.open-contracting.org/1.1/en/schema/codelists/#award-criteria)** - Revising the awardCriteria codelist, with all existing codes deprecated and a new set of codes introduced. 
 
-
 ### Added
 
 * [#371](https://github.com/open-contracting/standard/issues/371) **[Linking related processes](http://standard.open-contracting.org/1.1/en/schema/reference/#relatedprocess)** - We have introduced a new RelatedProcess block at the release and contract level
@@ -101,7 +100,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#355](https://github.com/open-contracting/standard/issues/355) **[Deprecating milestone documents](http://standard.open-contracting.org/1.1/en/schema/reference/#milestone)** - We have deprecated milestone documents from core, and added a milestone documents extension for those who wish to continue to use documents at the milestone level.
 * [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](http://standard.open-contracting.org/1.1/en/schema/reference/#parties)** - We have deprecated use of the full organization block at points other than the parties array.
 * [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](http://standard.open-contracting.org/1.1/en/schema/reference/#transaction)** - receiverOrganization, providerOrganization and amount properties have been deprecated in favour or other terms.
-
 
 ## [1.0.2] - 2016
 

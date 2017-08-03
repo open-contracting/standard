@@ -68,7 +68,6 @@ The [serialization](../../serialization/) page provides details of how to genera
 
 The same principles discussed for bulk files above should be applied to CSV or Excel downloads of data.
 
-
 ## Discovery and APIs
 
 There are many thousands of organizations who should be able to publish Open Contracting data. As a result, maintaining a central registry of all published data is impractical. Instead, OCDS proposes a common pattern for the discovery of Open Contracting data releases and records.

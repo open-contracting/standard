@@ -2,7 +2,6 @@
 
 This page will be updated to display a series of worked examples, focusing in particular on the releases and records model.
 
-
 These will include:
 
 ## Pipeline projects 

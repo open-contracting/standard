@@ -42,7 +42,6 @@ pip install -r requirements.txt
 
 (update with the path to your python executable)
 
-
 ## Documentation
 
 Documentation is written in Markdown syntax with [recommonmark](https://recommonmark.readthedocs.org/en/latest/) building on [Commonmark](http://commonmark.org/)
@@ -94,7 +93,6 @@ tx push -t --skip
 ```
 
 Note that the [theme needs to be translated seperately](https://github.com/open-contracting/standard_theme#translations).
-
 
 ### Theme
 

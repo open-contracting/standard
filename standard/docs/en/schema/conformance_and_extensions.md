@@ -1,5 +1,3 @@
-
-
 # Conformance and extensions
 
 <span class="lead">To maximize the interoperability of data published using the Open Contracting Data Standard we have set out key principles for **conforming** to the standard. These also create space for **extensions** of the standard where particular publisher or user needs require.</span>

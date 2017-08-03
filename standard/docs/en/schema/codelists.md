@@ -22,7 +22,6 @@ The organizations, economic operators or other participants in a contracting pro
    :file: ../../../schema/codelists_translated/partyRole.csv
 ```
 
-
 ### Item Classification Scheme
 
 Items should be classified using existing gazetteers and codelists, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm). Open codelists are strongly preferred. 
@@ -131,7 +130,6 @@ The related process scheme describes the kind of identifier used to cross-refere
    :file: ../../../schema/codelists_translated/relatedProcessScheme.csv
 ```
 
-
 ### Milestone Type
 
 The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.
@@ -151,7 +149,6 @@ The extended procurement category codelist is used to provide additional detail 
    :header-rows: 1
    :file: ../../../schema/codelists_translated/extendedProcurementCategory.csv
 ```
-
 
 ## Closed Codelists 
 

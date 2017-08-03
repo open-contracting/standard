@@ -28,7 +28,6 @@ When you are done you could be producing data that looks something like the cont
 
 ```
 
-
 ```eval_rst
 .. toctree::
    :hidden:

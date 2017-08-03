@@ -40,7 +40,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ### Examples
 
-
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/planning.json
@@ -65,7 +64,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```
 
-
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/award.json
@@ -81,7 +79,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
    :expand: releases, contracts, period, value, items, tag, documents
 
 ```
-
 
 ```eval_rst
 
@@ -102,7 +99,6 @@ In these cases, where publishers are providing a single URI for fetching informa
 * ocds-a2ef3d01-1594121/1
 * ocds-a2ef3d01-1594121/2
 * ocds-a2ef3d01-1594121/3
-
 
 ## Records
 

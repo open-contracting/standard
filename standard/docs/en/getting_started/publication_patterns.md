@@ -24,7 +24,6 @@ OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. E
 
 >Adding links to your contracting data, connecting out to other datasets on project planning, public spending or company registrations, adds further value to your data, enabling new kinds of re-use. 
 
-
 ## Packaging releases and records
 
 When publishing releases and records, they must be provided within a release or record package. These act as an envelope for the data.

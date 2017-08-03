@@ -6,7 +6,6 @@ Consistent identifiers are essential to help join up open contracting data.
 * Organization identifiers are important to know who is involved in each contract;
 * Release, tender, award and contract identifiers are important to help cross-reference information.
 
-
 ## Types of identifiers 
 
 In OCDS there are two kinds of identifiers: globally unique and local. 
@@ -106,9 +105,6 @@ Earlier versions of this documentation imposed a stricter pattern on how interna
 
 However, publishers are encouraged to consider whether there are any risks of clashes in local identifiers (e.g. the possibility that two parts of the publishing body might use the same identifier for different contracting processes) and to plan to mitigate this when establishing their own patterns to generate their ```ocid```
 
-
-
-
 ## Organization IDs
 
 <img src="../../../assets/green_organisation.svg.png" width="150" align="right"/>
@@ -127,7 +123,6 @@ There are two parts to expressing an **organization identifier** in open contrac
 <p class="first admonition-title">Worked Example</p>
 
 The **organization register prefix** for UK Companies House is GB-COH. The organization **Development Initiatives** has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can then expressed as follows:
-
 
 ```eval_rst
 
@@ -161,7 +156,6 @@ The **organization register prefix** is used to refer to a register from which t
 Local lists may commonly need to be used for identifying public bodies, as in many countries there is no official list of public agencies. 
 
 At present, the OCDS standard defers to the organization list prefixes provided by the [IATI Organisation Registration Agency codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/) which cover a wide range of organization types. If you require codes to be added to this list, please contact the [Open Contracting Data Standard helpdesk](../support/index.md) and they will work to achieve this.
-
 
 ## Release ID
 

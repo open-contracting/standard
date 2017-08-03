@@ -4,9 +4,7 @@ Increasing the transparency, efficiency and effectiveness of public contracting 
 
 OCDS sets out three levels for disclosure (basic, intermediate and advanced), alongside a 5* framework for the technical approach to data publication for publishers to self-assess themselves against. 
 
-
 ![Levels](../../../assets/levels_en.png)
-
 
 This supports step-by-step improvement of open contracting data and document disclosure on the web.
 
@@ -71,7 +69,6 @@ The table below lists each of the fields in OCDS along with a check mark for whe
 
 [Download CSV version](https://docs.google.com/spreadsheets/d/14Knf2WvPhcuOQWKjlNjkxKiBV0qtFuRyScjICF3EF_k/pub?gid=1802887867&single=true&output=csv)
 
-
 ## Publication levels: documents
 
 The following list details the documents the priority documents that publishers should provide at different levels of publication. This list is non-exhaustive, and publishers should make other relevant documents available also.
@@ -100,7 +97,6 @@ As much information as possible should be accessible without registrations or lo
 
 Providing documents offers an initial level of transparency, but users have to dig through them to find the key information they need. That’s why providing machine-readable data that can be more easily searched and filtered is important. 
 
-
 ### ☆ ☆ Provide machine-readable data about contracts
 
 Provide machine-readable datasets that contain key information recommended in the Open Contracting Data Standard.
@@ -112,7 +108,6 @@ The documentation on [flat CSV file serialization](../../../implementation/seria
 #### Stepping up
 
 Providing structured data will allow users to perform basic analysis, but until a common standard is used, it will be more difficult to join up contracting information across datasets and to analyze patterns across organizations or sectors. From structured data, the next step is to map this to the OCDS standard.
-
 
 ### ☆ ☆ ☆ Provide structured data using open standards
 
@@ -129,7 +124,6 @@ An example of good quality publication at this level might involve regularly gen
 Publishing data at custom download locations, or through custom query interfaces, requires users to manually discover and access data. 
 
 Applying best practices for publishing on the web will allow automatic discovery of information, making contracting information more searchable for humans, easier to track and follow at a per-contract level, and more accessible for powerful big-data analysis that can make connections across many open contracting datasets. 
-
 
 ### ☆ ☆ ☆ ☆ Use best practices for data on the web
 
@@ -148,7 +142,6 @@ In the future OCDS may also have an RDF serialization to enable linked data publ
 Contracting data may contain many cross-references to other important datasets - from government budgets, to company registers and registers of public interest. If 4 or 5 ☆ data is published for any of these, then OCDS can be used to make links between these datasets. 
 
 This will allow users to follow the links to discover more about the context of the contracting processes they are exploring, and will allow big-data analysis linking in these different datasets. For example, following links to a company register to discover whether a company awarded a contract has been dissolved, or following links to budget and spending information. 
-
 
 ### ☆ ☆ ☆ ☆ ☆ Make links to other datasets
 

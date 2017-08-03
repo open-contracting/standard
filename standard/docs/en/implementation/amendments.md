@@ -24,7 +24,6 @@ In the example below:
 * This is updated in a release with the ```tag``` 'tenderUpdate' to provide an expanded description of the item. The publisher did not consider this to be a formal 'amendment' to the tender, so did not publish any amendment information.
 * The tender is then formally amended, with an increased value. This is published in a release with the ```tag``` 'tenderAmendment', and an ```amendments``` block under ```tender```.
 
-
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/merging/merge-tender-1.json
@@ -61,12 +60,8 @@ In the example below:
 
 ```
 
-
 Note in this example that:
 
 * **The publisher chooses in the tenderAmendment release to repeat a fragment of the original 'tender' release**, so that the before and after values of the tender can be accessed in the single file. This is not required when a full archive of releases is made accessible, but can be a convenient way of publishers making structured information on the before and after values of a field more accessible to users. 
 
 * **In the merged record**, the information in the ```amendments``` array can be used to lookup information in the ```versionedRelease``` section, to see where changes are explained by an amendment ```rationale```. 
-
-
-

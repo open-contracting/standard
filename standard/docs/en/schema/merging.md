@@ -119,7 +119,6 @@ A few properties in the schema are marked with ```"omitWhenMerged": true```. The
 
 A reference implementation of the merge routine in python [is available on GitHub](https://github.com/open-contracting/ocds-merge). 
 
-
 ## Versioned data
 
 There are some situations in which it is important to be able to see how data about a contracting process has changed over time. For example, to identify how contract values have altered, or milestones moved through stages of implementation. 
