@@ -65,7 +65,7 @@ At an advanced level the use of URIs alongside identifiers, to provide links to 
 
 The table below lists each of the fields in OCDS along with a check mark for whether this is Required (X) or Recommended (-) at basic, intermediate or advanced level. 
 
-<iframe src="https://docs.google.com/spreadsheets/d/14Knf2WvPhcuOQWKjlNjkxKiBV0qtFuRyScjICF3EF_k/pubhtml?gid=1802887867&single=true" width="100%", height="500"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/14Knf2WvPhcuOQWKjlNjkxKiBV0qtFuRyScjICF3EF_k/pubhtml?gid=1802887867&single=true" width="100%" height="500"></iframe>
 
 [Download CSV version](https://docs.google.com/spreadsheets/d/14Knf2WvPhcuOQWKjlNjkxKiBV0qtFuRyScjICF3EF_k/pub?gid=1802887867&single=true&output=csv)
 
@@ -73,7 +73,7 @@ The table below lists each of the fields in OCDS along with a check mark for whe
 
 The following list details the documents the priority documents that publishers should provide at different levels of publication. This list is non-exhaustive, and publishers should make other relevant documents available also.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1i2XagfbBcwzQ5Zasz94fAfdeMwWImiJtfcZelveywr4/pubhtml?gid=172990428&amp;single=true&amp;widget=true&amp;headers=false" width="100%", height="500"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1i2XagfbBcwzQ5Zasz94fAfdeMwWImiJtfcZelveywr4/pubhtml?gid=172990428&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="500"></iframe>
 
 [Download CSV version](https://docs.google.com/spreadsheets/d/1i2XagfbBcwzQ5Zasz94fAfdeMwWImiJtfcZelveywr4/pub?gid=172990428&single=true&output=csv)
 
