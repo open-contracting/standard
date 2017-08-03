@@ -2,7 +2,7 @@
 
 ## Putting a dev branch live
 
-If the live branch doesn't exist, create it and push to GitHub. 
+If the live branch doesn't exist, create it and push to GitHub.
 
 Create a pull request for the merge to x.y from x.y-dev (e.g. 1.0-dev to 1.0).
 

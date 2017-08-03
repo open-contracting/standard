@@ -2,7 +2,7 @@
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
@@ -19,6 +19,6 @@ In some cases it is important to provide an overall title and description for a 
 
 This extension provides ```release.title``` and ```release.description``` fields.
 
-These will often be used to provide a human-readable summary of information that is provided elsewhere in the OCDS document as structured data. 
+These will often be used to provide a human-readable summary of information that is provided elsewhere in the OCDS document as structured data.
 
-Publishers using these fields should be aware that not all applications will display their contents, and so key information for understanding the nature of the contracting process should generally **also** be provided using core OCDS fields. 
+Publishers using these fields should be aware that not all applications will display their contents, and so key information for understanding the nature of the contracting process should generally **also** be provided using core OCDS fields.

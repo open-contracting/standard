@@ -2,7 +2,7 @@
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
@@ -17,7 +17,7 @@ This extension is maintained at [https://github.com/open-contracting/ocds_partic
 
 ### Background
 
-There are a number of cases where there may be costs to access documents for, or to participate within, a tender process. 
+There are a number of cases where there may be costs to access documents for, or to participate within, a tender process.
 
 Potential bidders will want to be aware of the fees that a process might involve.
 
@@ -75,6 +75,6 @@ The following JSON snippet models a contracting process where fees are applicabl
 
 ### Usage notes
 
-In some cases, a fee may be levied for 'official copies' of procurement documents (although copies may also be available freely online), and bidders required to prove they have paid for an official copy of the documents as part of their submission. 
+In some cases, a fee may be levied for 'official copies' of procurement documents (although copies may also be available freely online), and bidders required to prove they have paid for an official copy of the documents as part of their submission.
 
-In this case, the fee should be modelled as a **submission** fee, as submission is only possible when this document access fee has been paid. 
+In this case, the fee should be modelled as a **submission** fee, as submission is only possible when this document access fee has been paid.

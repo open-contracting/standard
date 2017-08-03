@@ -7,21 +7,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Bug fixes
 
-* [#482](https://github.com/open-contracting/standard/issues/482) **[Allow parties.role to be set to null](https://github.com/open-contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)** - required by the [merging approach](http://standard.open-contracting.org/1.1-dev/en/schema/merging/). 
+* [#482](https://github.com/open-contracting/standard/issues/482) **[Allow parties.role to be set to null](https://github.com/open-contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)** - required by the [merging approach](http://standard.open-contracting.org/1.1-dev/en/schema/merging/).
 * [#422](https://github.com/open-contracting/standard/issues/422) **[Including currency codelist in documentation and schema](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#currency)** to support validation of currency values.
-* [#479](https://github.com/open-contracting/standard/issues/479) **[Fixing incorrect requirement to include releases in record-package-schema.json](http://standard.open-contracting.org/1.1-dev/en/schema/record_package/)** 
+* [#479](https://github.com/open-contracting/standard/issues/479) **[Fixing incorrect requirement to include releases in record-package-schema.json](http://standard.open-contracting.org/1.1-dev/en/schema/record_package/)**
 * [#475](https://github.com/open-contracting/standard/issues/479) **Adding enum arrays to all fields in the schema with a closed codelist** to support validation.
 
 ### Minor revisions
 
-* [#471](https://github.com/open-contracting/standard/issues/471) **[Updating milestoneType codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#milestone-type)** replacing 'planning' with 'preProcurement' and 'adjudication' with 'assessment' and introducing codes for 'approval' and 'financing'. This is an open codelist, so previous codes remain valid, but publishers able to update to the new codes should do so. 
+* [#471](https://github.com/open-contracting/standard/issues/471) **[Updating milestoneType codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#milestone-type)** replacing 'planning' with 'preProcurement' and 'adjudication' with 'assessment' and introducing codes for 'approval' and 'financing'. This is an open codelist, so previous codes remain valid, but publishers able to update to the new codes should do so.
 * [#473](https://github.com/open-contracting/standard/issues/473) **[Updating definition of contractSchedules in documentType codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#document-type)**
 
 ### Documentation improvements
 
 * **Fixing typographic errors throughout the documentation and codelist descriptions**
-* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) **[Updating basic, intermediate, advanced](http://standard.open-contracting.org/1.1-dev/en/implementation/levels/) publication guidance** - to ensure tables and text are aligned. 
-* [#489](https://github.com/open-contracting/standard/issues/489) **Listing the milestone documents extension as a core extension** - and removing it from the community extensions list. This extension is only needed by publishers with legacy data containing documents at the milestone level. 
+* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) **[Updating basic, intermediate, advanced](http://standard.open-contracting.org/1.1-dev/en/implementation/levels/) publication guidance** - to ensure tables and text are aligned.
+* [#489](https://github.com/open-contracting/standard/issues/489) **Listing the milestone documents extension as a core extension** - and removing it from the community extensions list. This extension is only needed by publishers with legacy data containing documents at the milestone level.
 
 ### Code and build process
 
@@ -36,12 +36,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-#### Structural updates 
+#### Structural updates
 
 * [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#parties)** - We have updated the approach to include organization information in the standard from having embedded blocks of organization information, to using embedded cross-references to a top-level 'parties' array where full organization details are stored. This change reduces duplication of organization information, and enables more flexible disclosure of information on all the parties to a contracting process, including multiple buyers.
-* [#357](https://github.com/open-contracting/standard/issues/357) **[Amendment handling](http://standard.open-contracting.org/1.1-dev/en/implementation/amendments/)** - We have replace amendment with an array of amendments, and have updated schema and guidance to remove the option of providing semi-structured changes in an amendment object. Changes between amendments should now be provided using multiple releases, with the option to explicitly declare how releases relate to an amendment included in the new amendments array. 
+* [#357](https://github.com/open-contracting/standard/issues/357) **[Amendment handling](http://standard.open-contracting.org/1.1-dev/en/implementation/amendments/)** - We have replace amendment with an array of amendments, and have updated schema and guidance to remove the option of providing semi-structured changes in an amendment object. Changes between amendments should now be provided using multiple releases, with the option to explicitly declare how releases relate to an amendment included in the new amendments array.
 
-#### Schema validation updates 
+#### Schema validation updates
 
 * [#329](https://github.com/open-contracting/standard/issues/329) **[Float for Item.quantity](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#item)** - Item quantities has been updated to 'number' to support decimal values (e.g 10.5 rather than just 10)
 * [#253](https://github.com/open-contracting/standard/issues/253) **[Negative amounts](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#budget)** - We have added support for negative amounts in transactions
@@ -51,7 +51,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#301](https://github.com/open-contracting/standard/issues/301) **[Specifying versions and extensions in package metadata](http://standard.open-contracting.org/1.1-dev/en/schema/records_reference/#package-metadata)** - We have updated the package schemas to require that version is declared, and to provide a means of declaring extensions in use. This will be used in future versions of the validator to support validation against extensions.
 * [#287](https://github.com/open-contracting/standard/issues/287) **[Remove all ocdsMerge strategies](http://standard.open-contracting.org/1.1-dev/en/schema/merging/)** - We have remove all 'merge strategies' from the schema as these are no longer required, now that all objects in arrays contain an id element.
 
-#### Schema definition updates 
+#### Schema definition updates
 
 * [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#transaction)** - We have replaced receiverOrganization and providerOrganization with payee and payer, to align with more familiar terminology, and have replaced 'amount' with 'value' for consistency with other areas of the standard.
 * [#378](https://github.com/open-contracting/standard/issues/378) **[Updates to core budget block](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#budget)** - We have updated references to the Fiscal Data Package in the schema.
@@ -71,7 +71,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#386](https://github.com/open-contracting/standard/issues/386) **[Document type](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#document-type)** - New codes have been added to the documentType codelist, and definitions of codes updated.
 * [#322](https://github.com/open-contracting/standard/issues/322) **[Submission Method Codelist](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#submission-method)** - The submissionMethod codelist has been updated
 * [#387](https://github.com/open-contracting/standard/issues/387) **[Codelist updates: Item Classification Scheme](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#item-classification-scheme)** - New entries have been added to the itemClassificationScheme codelist
-* [#385](https://github.com/open-contracting/standard/issues/385) **[Codelist updates: awardCriteria](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#award-criteria)** - Revising the awardCriteria codelist, with all existing codes deprecated and a new set of codes introduced. 
+* [#385](https://github.com/open-contracting/standard/issues/385) **[Codelist updates: awardCriteria](http://standard.open-contracting.org/1.1-dev/en/schema/codelists/#award-criteria)** - Revising the awardCriteria codelist, with all existing codes deprecated and a new set of codes introduced.
 
 
 ### Added
@@ -86,7 +86,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Extensions
 
 * [#335](https://github.com/open-contracting/standard/issues/335) **[Core and community extensions](http://standard.open-contracting.org/1.1-dev/en/extensions/developing/)** - We have introduced widespread use of extensions throughout the standard. An extension provides fields and data structures that are optional, either because   (a) they are only relevant in particular contexts or contracting processes; or   (b) they represent a 'stretch goal' for most data publishers, and so are not currently suitable for inclusion in the main standard.   We divide these extensions into 'core extensions' which have wide enough relevance, and technical maturity to be included in the main standard documentation (and which are versioned along with the standard documentation), and 'community extensions' which may have less technical maturity, or which might be versioned independently of the main standard.
-* [#259](https://github.com/open-contracting/standard/issues/259) **[Enquiries](http://standard.open-contracting.org/1.1-dev/en/extensions/enquiries/)** - We have introduced a core enquiries extension for providing information on enquiries received during the tender stage.  
+* [#259](https://github.com/open-contracting/standard/issues/259) **[Enquiries](http://standard.open-contracting.org/1.1-dev/en/extensions/enquiries/)** - We have introduced a core enquiries extension for providing information on enquiries received during the tender stage.
 * [#342](https://github.com/open-contracting/standard/issues/342) **[Overall contracting process description](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#release)** - We have introduced a new top-level title and description for the contracting process as a core extension.
 * [#274](https://github.com/open-contracting/standard/issues/274) **[New property of contract: extendsContractID](http://standard.open-contracting.org/1.1-dev/en/schema/reference/#contract)** - We have introduced a new field 'extendsContractID' to the Contract block to support contract cross-referencing between contracts.
 * [#381](https://github.com/open-contracting/standard/issues/381) **[Lots](http://standard.open-contracting.org/1.1-dev/en/extensions/lots/)** - We have introduced a core extension to provide a model for contracting processes which are divided into lots.

@@ -1,6 +1,6 @@
 # Schema Reference
 
-The Open Contracting Data Standard is maintained using JSON Schema. 
+The Open Contracting Data Standard is maintained using JSON Schema.
 
 The main sections and common objects used in the schema are [introduced in the getting started section](../getting_started/building_blocks.md).
 

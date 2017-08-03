@@ -8,21 +8,21 @@ OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. E
 
 **☆ ☆ Provide machine-readable data.**
 
->Providing data about your contracting processes in CSV files or other structured formats makes it easier for others to analyze. 
+>Providing data about your contracting processes in CSV files or other structured formats makes it easier for others to analyze.
 >
 >*If you jump straight to 3 ☆ publication, you can generate flattened CSV versions of your data using the OCDS flatten tool.*
 
 **☆ ☆ ☆ Use the OCDS standard.**
 
->Producing bulk releases and records packages using the OCDS standard makes your data easier to re-use and join-up with other contracting data. 
+>Producing bulk releases and records packages using the OCDS standard makes your data easier to re-use and join-up with other contracting data.
 
 **☆ ☆ ☆ ☆ Provide API access to data.**
 
->Providing each release and record at its own persistent URI improves the usability of your data. Providing APIs helps users locate the information they are looking for quicker, and enables third-parties to build more advanced and responsive services on your data. 
+>Providing each release and record at its own persistent URI improves the usability of your data. Providing APIs helps users locate the information they are looking for quicker, and enables third-parties to build more advanced and responsive services on your data.
 
 **☆ ☆ ☆ ☆ ☆ Provide joined-up data.**
 
->Adding links to your contracting data, connecting out to other datasets on project planning, public spending or company registrations, adds further value to your data, enabling new kinds of re-use. 
+>Adding links to your contracting data, connecting out to other datasets on project planning, public spending or company registrations, adds further value to your data, enabling new kinds of re-use.
 
 ## Packaging releases and records
 
@@ -38,7 +38,7 @@ A package provides information on:
 
 A package may contain a single release or record, or may be used to publish a collection of releases, or a collection of records.
 
-Consult the [release package](../../../schema/release_package/) and [record package](../../../schema/record_package/) schemas to package up your data. 
+Consult the [release package](../../../schema/release_package/) and [record package](../../../schema/record_package/) schemas to package up your data.
 
 ### Example release package
 
@@ -69,5 +69,5 @@ For 4 ☆ publication, you should:
 * Additionally, produce bulk packages of releases and records for users to download;
 * Additionally, produce 'flat' versions of the data for users to access in CSV for Excel formats
 
-You will need to make decisions about how to segment the data in bulk files, so that files are easy for users to work with. 
+You will need to make decisions about how to segment the data in bulk files, so that files are easy for users to work with.
 

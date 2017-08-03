@@ -1,6 +1,6 @@
 # Tools
 
-There are a growing number of tools available to support implementation of OCDS. 
+There are a growing number of tools available to support implementation of OCDS.
 
 Tools developed by the core team will be available at [https://github.com/open-contracting/](https://github.com/open-contracting/).
 
@@ -22,7 +22,7 @@ This python library provides functions to merge a list of OCDS Releases into eit
 
 ## Community tools
 
-We will be developing a list of community developed tools which consume or produce OCDS data here. 
+We will be developing a list of community developed tools which consume or produce OCDS data here.
 
 In the meantime, please share suggestions for tools with the mailing list.
 

@@ -36,7 +36,7 @@ This contributor agreement ("Agreement") documents the rights granted by contrib
 
 ### 2.2 Patent License
 
-[ Removed ] 
+[ Removed ]
 
 ### 2.3 Outbound License
 

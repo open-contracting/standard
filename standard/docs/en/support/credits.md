@@ -2,7 +2,7 @@
 
 The Open Contracting Data Standards has been developed with the input of many people. We extend our thanks to all the following who have given feedback and input over the course of the initial development project.
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 was developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.com) and the [World Bank](http://www.worldbank.org). Ongoing development is managed by [Open Data Services Co-operative](http://www.opendataservices.coop) under contract to the Open Contracting Partnership. 
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). Version 1.0 was developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.com) and the [World Bank](http://www.worldbank.org). Ongoing development is managed by [Open Data Services Co-operative](http://www.opendataservices.coop) under contract to the Open Contracting Partnership.
 
 ## Core team
 
@@ -10,11 +10,11 @@ Core contributors (Version 1.1.0): Tim Davies, Duncan Dewhurst, David Raznick, L
 
 Core contributors (Version 1.0.1): Tim Davies, Lindsey Marchessault, Ben Webb, David Raznick, David Carpenter, Edafe Onerhime, Steven Flower.
 
-Lead authors (Version 1.0): [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)) & Sarah Bird ([Aptivate](http://aptivate.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Stephen Davenport ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)). 
+Lead authors (Version 1.0): [Tim Davies](http://www.timdavies.org.uk) ([Web Foundation](http://www.webfoundation.org)) & Sarah Bird ([Aptivate](http://aptivate.org)), with core input from: James McKinney ([Open North](http://opennorth.ca/)), Lindsey Marchessault ([World Bank](http://www.worldbank.org)), Marcela Rozo ([World Bank](http://www.worldbank.org)), Stephen Davenport ([World Bank](http://www.worldbank.org)), Ana Brandusescu, Jose M. Alonso ([Web Foundation](http://www.webfoundation.org)) and Michael Roberts ([Web Foundation](http://www.webfoundation.org)).
 
 ## Contributors
 
-Many more people have been involved in inputting to the standard. Below is a non-exhaustive list of some of those people. Inclusion here is to extend our thanks. It does not imply endorsement by any of those included of the standard. 
+Many more people have been involved in inputting to the standard. Below is a non-exhaustive list of some of those people. Inclusion here is to extend our thanks. It does not imply endorsement by any of those included of the standard.
 
 ### Version 1.1.0
 

@@ -1,6 +1,6 @@
-# Merging 
+# Merging
 
-In OCDS, merging involves combining individual [releases](../getting_started/releases_and_records.md) of data during a contracting process into a [record](../getting_started/releases_and_records.md) which provides an overview of the current state of that process. Including a versioned release as part of the merged record provides structured information on the history of the process: showing when updates were made, or values were changed. 
+In OCDS, merging involves combining individual [releases](../getting_started/releases_and_records.md) of data during a contracting process into a [record](../getting_started/releases_and_records.md) which provides an overview of the current state of that process. Including a versioned release as part of the merged record provides structured information on the history of the process: showing when updates were made, or values were changed.
 
 <div class="example hint" markdown=1>
 
@@ -59,7 +59,7 @@ If the record is complete with versioning information, then the versioning secti
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/merging/merged.json
-   :jsonpointer: 
+   :jsonpointer:
    :expand: records, compiledRelease, tender, award, tag
    :title: record
 
@@ -68,7 +68,7 @@ If the record is complete with versioning information, then the versioning secti
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/merging/versioned.json
-   :jsonpointer: 
+   :jsonpointer:
    :expand: records,versionedRelease, tender, award, tag
    :title: versioned
 
@@ -93,7 +93,7 @@ If the value of key value pair is a list of strings, the entire list should be t
 
 ### Lists
 
-There are two merge patterns for lists of objects. Identifier merge, and whole list merge. 
+There are two merge patterns for lists of objects. Identifier merge, and whole list merge.
 
 #### Identifier merge
 
@@ -103,25 +103,25 @@ When a list contains objects with their own ```id``` field, then:
 * If there is no object in **new** with the same ```id``` as an object in **old**, keep the object from **old** in the list
 * If there is an object in **new** with an ```id``` not found in **old** then add the object to the list
 
-Note: to remove information from an old list entry its values must be explicitly set to null. 
+Note: to remove information from an old list entry its values must be explicitly set to null.
 
 #### Whole list merge
 
-Where the objects contain no top level ```id``` values, or the schema specifies the ```"wholeListMerge": true``` for the array in question, then merging should take place by treating the entire list of objects as a single value. 
+Where the objects contain no top level ```id``` values, or the schema specifies the ```"wholeListMerge": true``` for the array in question, then merging should take place by treating the entire list of objects as a single value.
 
-I.e. if the list exists in **new**, the entire list in **new** will overwrite the list in **old**. 
+I.e. if the list exists in **new**, the entire list in **new** will overwrite the list in **old**.
 
 ### Omit when merged
 
-A few properties in the schema are marked with ```"omitWhenMerged": true```. These properties should be dropped from the merged record - as they only make sense in the context of a single release. 
+A few properties in the schema are marked with ```"omitWhenMerged": true```. These properties should be dropped from the merged record - as they only make sense in the context of a single release.
 
 ### Reference implementation
 
-A reference implementation of the merge routine in python [is available on GitHub](https://github.com/open-contracting/ocds-merge). 
+A reference implementation of the merge routine in python [is available on GitHub](https://github.com/open-contracting/ocds-merge).
 
 ## Versioned data
 
-There are some situations in which it is important to be able to see how data about a contracting process has changed over time. For example, to identify how contract values have altered, or milestones moved through stages of implementation. 
+There are some situations in which it is important to be able to see how data about a contracting process has changed over time. For example, to identify how contract values have altered, or milestones moved through stages of implementation.
 
 The [versioned release validation schema](../../versioned-release-validation-schema.json) provides a model for representing this data.
 
@@ -132,7 +132,7 @@ In a versioned release, instead of over-writing past values when combining multi
 
 As a result, the history of any field can be easily read from the data structure.
 
-The property ```"versionId":true``` is used to explicitly declare the cases where an ```id``` field **should** be versioned (i.e. within an object that is not within an array). 
+The property ```"versionId":true``` is used to explicitly declare the cases where an ```id``` field **should** be versioned (i.e. within an object that is not within an array).
 
 ### Example
 
@@ -142,15 +142,13 @@ The property ```"versionId":true``` is used to explicitly declare the cases wher
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: value, amount
    :title: versioned_extract
-   
 ```
 
 ```eval_rst
 
 .. jsoninclude:: docs/en/examples/merging/versioned.json
-   :jsonpointer: 
-   :expand: 
+   :jsonpointer:
+   :expand:
    :title: full_versioned_file
-   
 ```
 

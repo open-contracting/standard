@@ -2,7 +2,7 @@
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
@@ -15,7 +15,7 @@ This extension is maintained at [https://github.com/open-contracting/ocds_locati
 
 ## Documentation
 
-Communicating the location of proposed or executed contract delivery is important to make users of contracting data. 
+Communicating the location of proposed or executed contract delivery is important to make users of contracting data.
 
 This extension introduces two properties at the ```items``` level to describe location:
 
@@ -104,4 +104,4 @@ If the procurement related to the rebuilding of a road, then the item could also
 }
 ```
 
-You can take the contents of the geometry object, excluding the ```geometry``` keyword, and plug this into any GeoJSON tool to see the shape that is described. 
+You can take the contents of the geometry object, excluding the ```geometry``` keyword, and plug this into any GeoJSON tool to see the shape that is described.

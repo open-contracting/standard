@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 Documentation is written in Markdown syntax with [recommonmark](https://recommonmark.readthedocs.org/en/latest/) building on [Commonmark](http://commonmark.org/)
 
-The documentation is built by sphinx from the ```build_docs.sh``` script. 
+The documentation is built by sphinx from the ```build_docs.sh``` script.
 
 Within the virtual environment run ```./build_docs.sh``` and the documentation will be available in the /build/ folder.
 
@@ -64,7 +64,7 @@ fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
 
 When a new major/minor version of the docs text is ready, a new Transifex project needs to be made called e.g. open-contracting-standard-x.y  This is done on the Transifex web interface. The ```.tx/config``` file also needs to be emptied.
 
-Make sure the build is run above, then run (making sure the project name is the same as the one made above) 
+Make sure the build is run above, then run (making sure the project name is the same as the one made above)
 
 ```shell
 sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-1-1 --pot-dir build/locale --locale-dir standard/docs/locale

@@ -1,8 +1,8 @@
 # What to publish
 
-Increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement. 
+Increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement.
 
-OCDS sets out three levels for disclosure (basic, intermediate and advanced), alongside a 5* framework for the technical approach to data publication for publishers to self-assess themselves against. 
+OCDS sets out three levels for disclosure (basic, intermediate and advanced), alongside a 5* framework for the technical approach to data publication for publishers to self-assess themselves against.
 
 ![Levels](../../../assets/levels_en.png)
 
@@ -16,29 +16,29 @@ The basic, intermediate and advanced levels provide guidance on the specific kin
 
 The **basic** level captures data that should already be available in most contracting data systems, and that provides users with an overview of contracting processes.
 
-Basic level data includes: 
+Basic level data includes:
 
-* buyer name and address; 
+* buyer name and address;
 * tender identifiers, titles, descriptions, status, procurement method, period, item descriptions and quantities,
-* documents associated with the tender; 
+* documents associated with the tender;
 * award identifiers, titles, descriptions, status, dates, values, item descriptions and quantities;
-* selected supplier names and addresses; 
-* contract identifiers, titles, status, period, values, item descriptions and quantities. 
+* selected supplier names and addresses;
+* contract identifiers, titles, status, period, values, item descriptions and quantities.
 
-At a basic level, the publication of contract documents and implementation information (milestones, documents and spending transactions) is also recommended. 
+At a basic level, the publication of contract documents and implementation information (milestones, documents and spending transactions) is also recommended.
 
 ### Intermediate
 
 The **intermediate** level may require publishers to take extra steps to provide identifiers that join up data between systems, and that enable users to see changes in contracting processes over time.
 
-In addition to basic fields, intermediate publication involves providing: 
+In addition to basic fields, intermediate publication involves providing:
 
-* organization identifiers for buyers and suppliers; 
-* detailed classification of line items in tender, award and contracts; 
-* planning information including rationale, budget details and associated documents; 
+* organization identifiers for buyers and suppliers;
+* detailed classification of line items in tender, award and contracts;
+* planning information including rationale, budget details and associated documents;
 * tender award criteria, anticipated values and submission information;
 * tender enquiry periods details;
-* details of the number of organizations submitting tenders and a list of their names; 
+* details of the number of organizations submitting tenders and a list of their names;
 * contract documents;
 * contracts linked to awards;
 * the date of contract signature;
@@ -49,7 +49,7 @@ At an intermediate level, publishing documents related to planning, awards, and 
 
 ### Advanced
 
-The **advanced level** incorporates fields which are important to connect open contracting data with other data sources, and with the real-world impacts of contracting. Publishing this data may require planning for additional data collection and management. 
+The **advanced level** incorporates fields which are important to connect open contracting data with other data sources, and with the real-world impacts of contracting. Publishing this data may require planning for additional data collection and management.
 
 In addition to basic and intermediate fields, advanced publication involves providing:
 
@@ -63,7 +63,7 @@ At an advanced level the use of URIs alongside identifiers, to provide links to 
 
 ### Summary
 
-The table below lists each of the fields in OCDS along with a check mark for whether this is Required (X) or Recommended (-) at basic, intermediate or advanced level. 
+The table below lists each of the fields in OCDS along with a check mark for whether this is Required (X) or Recommended (-) at basic, intermediate or advanced level.
 
 <iframe src="https://docs.google.com/spreadsheets/d/14Knf2WvPhcuOQWKjlNjkxKiBV0qtFuRyScjICF3EF_k/pubhtml?gid=1802887867&single=true" width="100%" height="500"></iframe>
 
@@ -79,23 +79,23 @@ The following list details the documents the priority documents that publishers 
 
 ## How to publish - 5 ☆ approach
 
-The open data movement has established good practices for publishing data on the web. 
+The open data movement has established good practices for publishing data on the web.
 
 Alongside the the basic, intermediate, advanced model, we have mapped OCDS against Tim Berners-Lee’s [Five Stars of Linked Open Data](http://www.w3.org/DesignIssues/LinkedData.html) approach and have set out how publishers can achieve 3 ☆ data and higher.
 
-Each level increase makes data more accessible, re-usable and valuable. 
+Each level increase makes data more accessible, re-usable and valuable.
 
 ### ☆ Upload basic open contracting information to the web
 
 Take information on contracting processes in whatever format it is currently available, and make sure it is available to citizens on the Web.
 
-An example of publication at this level would involve uploading all the documents relating to a contract process to an agency website. Good practice would involve using common naming and filing conventions, so users can easily find all the documents related to a specific tender or contract. 
+An example of publication at this level would involve uploading all the documents relating to a contract process to an agency website. Good practice would involve using common naming and filing conventions, so users can easily find all the documents related to a specific tender or contract.
 
 As much information as possible should be accessible without registrations or log-in requirements.
 
 #### Stepping up
 
-Providing documents offers an initial level of transparency, but users have to dig through them to find the key information they need. That’s why providing machine-readable data that can be more easily searched and filtered is important. 
+Providing documents offers an initial level of transparency, but users have to dig through them to find the key information they need. That’s why providing machine-readable data that can be more easily searched and filtered is important.
 
 ### ☆ ☆ Provide machine-readable data about contracts
 
@@ -113,35 +113,35 @@ Providing structured data will allow users to perform basic analysis, but until 
 
 Using the Open Contracting Data Standard model to publish initiation, award, contract and implementation information for each contracting process.
 
-OCDS provides guidance on the fields to include, and how to structure them using [a JSON schema](../../../schema/reference/) so that third-parties can re-use your data effectively. 
+OCDS provides guidance on the fields to include, and how to structure them using [a JSON schema](../../../schema/reference/) so that third-parties can re-use your data effectively.
 
 Fully compliant OCDS publication involves providing a release of data for every event or change that occurs in the life of a contracting process (e.g. when a tender is issued, an award made, and a contract signed), and then combining these into a summary record. This is important to enable tracking of change over time. However, there are different paths to take in moving towards this, and technical assistance from the community can be sought to identify the best approach.
 
-An example of good quality publication at this level might involve regularly generated releases and records published in bulk files for download and also made available through query interfaces and APIs. 
+An example of good quality publication at this level might involve regularly generated releases and records published in bulk files for download and also made available through query interfaces and APIs.
 
 #### Stepping up
 
-Publishing data at custom download locations, or through custom query interfaces, requires users to manually discover and access data. 
+Publishing data at custom download locations, or through custom query interfaces, requires users to manually discover and access data.
 
-Applying best practices for publishing on the web will allow automatic discovery of information, making contracting information more searchable for humans, easier to track and follow at a per-contract level, and more accessible for powerful big-data analysis that can make connections across many open contracting datasets. 
+Applying best practices for publishing on the web will allow automatic discovery of information, making contracting information more searchable for humans, easier to track and follow at a per-contract level, and more accessible for powerful big-data analysis that can make connections across many open contracting datasets.
 
 ### ☆ ☆ ☆ ☆ Use best practices for data on the web
 
 Make each **release** and **record** describing a contracting process accessible at its own persistent URI (web address).
 
-Provide feeds that detail recently changed information, and that allow users to search for specific kinds of tenders, awards or contracts (for example, by the classification of goods and services being procured). 
+Provide feeds that detail recently changed information, and that allow users to search for specific kinds of tenders, awards or contracts (for example, by the classification of goods and services being procured).
 
 Use [established protocols](../../hosting#discovery-and-apis) to support discovery of your data, and to provide atom feeds of recently updated data. At this level, publishers may also expose data through an API, following community established conventions for API operation.
 
-The use of these protocols, and following API conventions, will allow aggregators and other analysts to integrate this open contracting data in minutes and hours or work, rather than days, weeks and months. 
+The use of these protocols, and following API conventions, will allow aggregators and other analysts to integrate this open contracting data in minutes and hours or work, rather than days, weeks and months.
 
 In the future OCDS may also have an RDF serialization to enable linked data publication at this level.
 
 #### Stepping up
 
-Contracting data may contain many cross-references to other important datasets - from government budgets, to company registers and registers of public interest. If 4 or 5 ☆ data is published for any of these, then OCDS can be used to make links between these datasets. 
+Contracting data may contain many cross-references to other important datasets - from government budgets, to company registers and registers of public interest. If 4 or 5 ☆ data is published for any of these, then OCDS can be used to make links between these datasets.
 
-This will allow users to follow the links to discover more about the context of the contracting processes they are exploring, and will allow big-data analysis linking in these different datasets. For example, following links to a company register to discover whether a company awarded a contract has been dissolved, or following links to budget and spending information. 
+This will allow users to follow the links to discover more about the context of the contracting processes they are exploring, and will allow big-data analysis linking in these different datasets. For example, following links to a company register to discover whether a company awarded a contract has been dissolved, or following links to budget and spending information.
 
 ### ☆ ☆ ☆ ☆ ☆ Make links to other datasets
 
@@ -151,7 +151,7 @@ This level builds upon 4 ☆ publication, and helps to build a joined up web of 
 
 An example of publication at this level would involve including organization URIs to point to company registers, budget URIs to point to budget lines, and spending URIs to point to spending information (i.e. using web links to identify things, with those web links returning data on the things identified.).
 
-For simplicity, the OCDS does not yet include URI fields at all points of the standard, but these can be added as extensions in collaboration with 5 ☆ linked data publishers. 
+For simplicity, the OCDS does not yet include URI fields at all points of the standard, but these can be added as extensions in collaboration with 5 ☆ linked data publishers.
 
 #### Stepping up
 

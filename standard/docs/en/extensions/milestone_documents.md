@@ -2,7 +2,7 @@
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
@@ -21,11 +21,11 @@ This extension re-introduces the ```documents``` block to ```milestones```, prov
 
 ### Guidance
 
-Publishers should consider that many consuming applications will only look at the ```tender/documents```, ```award/documents```, ```contracts/documents``` and ```contracts/implementation/documents``` section to access and display relevant documentation to users. 
+Publishers should consider that many consuming applications will only look at the ```tender/documents```, ```award/documents```, ```contracts/documents``` and ```contracts/implementation/documents``` section to access and display relevant documentation to users.
 
 Document titles, document types, and descriptions can be used to indicate to human readers the particular nature of the documents and any milestones they relate to.
 
-However, in cases where it is important to track documents on a milestone-by-milestone basis this extension can be introduced. 
+However, in cases where it is important to track documents on a milestone-by-milestone basis this extension can be introduced.
 
-Depending on the nature of the documents, publishers should consider duplicating information in the parent sections documents block also. 
+Depending on the nature of the documents, publishers should consider duplicating information in the parent sections documents block also.
 
