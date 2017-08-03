@@ -59,7 +59,7 @@ It can be used to join up information published at different times, and in diffe
 Setting the ```ocid``` is usually a simple two step process:
 
 1. Identify the best **internal identifier** recorded against the contracting processes being disclosed;
-2. Register an ```ocid``` prefix to prepend to this internal identifier.
+1. Register an ```ocid``` prefix to prepend to this internal identifier.
 
 In some cases, you may need to consider changes to existing systems to ensure that different systems handling information about your contracting processes have a common internal identifier to draw upon. 
 
@@ -116,7 +116,7 @@ Publishers should seek to collect and record the **legal identifier** from an of
 There are two parts to expressing an **organization identifier** in open contracting data. 
 
 1. An **organization register prefix** identifying a **register** in which the organization is identified
-2. The **existing organizational ID** provided in that public register
+1. The **existing organizational ID** provided in that public register
 
 <div class="example hint" markdown=1>
 
