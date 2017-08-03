@@ -1,4 +1,6 @@
-### Putting a dev branch live
+# Deployment
+
+## Putting a dev branch live
 
 If the live branch doesn't exist, create it and push to GitHub. 
 
@@ -14,7 +16,7 @@ After merge:
 - [ ] For a new translation, edit http://standard.open-contracting.org/robots.txt
 ```
 
-### Merging in schema changes
+## Merging in schema changes
 
 (these are usually in addition to the above)
 

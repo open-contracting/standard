@@ -1,4 +1,4 @@
-## Building Blocks
+# Building Blocks
 
 In mapping your data to OCDS, or using OCDS data, you will encounter a number of common data structures.
 
@@ -12,7 +12,7 @@ In mapping your data to OCDS, or using OCDS data, you will encounter a number of
     </tr>
 </table>
 
-### Sections and structure
+## Sections and structure
 
 An OCDS document is made up of a number of sections. These are:
 
@@ -48,7 +48,7 @@ These are represented in a JSON document as follows:
         }
 ```
 
-### Building blocks: fields
+## Building blocks: fields
 
 The OCDS schema sets out the fields that should be included in each section, making use of simple re-usable building blocks (field structures) to represent data. 
 
@@ -61,7 +61,7 @@ For example, common building blocks are provided for:
 * **Documents** 
 * **Milestones**
 
-#### Examples
+### Examples
 
 ```eval_rst
 
@@ -117,7 +117,7 @@ For example, common building blocks are provided for:
 
 ```
 
-#### Using building blocks
+### Using building blocks
 
 These building blocks may be used in various different sections. For example, **items** can occur in tender (to indicate the items that a buyer wishes to buy), in an award object (to indicate the items that an award has been made for) and in a contract object (to indicate the items listed in the contract). 
 
@@ -131,7 +131,7 @@ In addition to these building blocks, the OCDS schema sets out the specific ways
 
 Many of these fields make use of lightweight codelists provided by OCDS. 
 
-#### Extensions
+### Extensions
 
 In some cases, publishers or users need building blocks and fields which are not provided in the core OCDS schema. 
 
@@ -145,7 +145,7 @@ The Open Contracting Data Standard helpdesk maintain a [field-level mapping temp
 
 </div>
 
-### Codelists
+## Codelists
 
 OCDS defines two kinds of codelist:
 

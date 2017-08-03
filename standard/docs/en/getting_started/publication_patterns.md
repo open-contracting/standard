@@ -1,4 +1,4 @@
-## Publication Patterns
+# Publication Patterns
 
 OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. Each step builds on the steps before.
 
@@ -25,7 +25,7 @@ OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. E
 >Adding links to your contracting data, connecting out to other datasets on project planning, public spending or company registrations, adds further value to your data, enabling new kinds of re-use. 
 
 
-### Packaging releases and records
+## Packaging releases and records
 
 When publishing releases and records, they must be provided within a release or record package. These act as an envelope for the data.
 
@@ -41,7 +41,7 @@ A package may contain a single release or record, or may be used to publish a co
 
 Consult the [release package](../../../schema/release_package/) and [record package](../../../schema/record_package/) schemas to package up your data. 
 
-#### Example release package
+### Example release package
 
 ```json
 {
@@ -61,7 +61,7 @@ Consult the [release package](../../../schema/release_package/) and [record pack
 }
 ```
 
-### Bulk and individual files
+## Bulk and individual files
 
 For 4 ☆ publication, you should:
 
