@@ -102,7 +102,7 @@ Feeds requiring pagination should follow the approach set out in [RFC 5005](http
 
 ### Well Known
 
-Future implementations of OCDS will explore use of the <a href="http://tools.ietf.org/html/rfc5785">/.well-known/</a> protocol to declare a location for storing a data.json file. 
+Future implementations of OCDS will explore use of the [/.well-known/](http://tools.ietf.org/html/rfc5785) protocol to declare a location for storing a data.json file. 
 
 At present, such files can be hosted anywhere, and consuming applications pointed towards them manually. 
 
