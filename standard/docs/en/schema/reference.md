@@ -287,6 +287,7 @@ If a contracting process represents a contract arranged by the department or bra
 ```
 
 #### Address
+
 ```eval_rst
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
@@ -304,6 +305,7 @@ If a contracting process represents a contract arranged by the department or bra
     :collapse: 
     
 ```
+
 ### Document
 
 Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation Each document block can consist of multiple documents, classified using the [documentType](../../codelists/#document-type) codelist.
@@ -393,6 +395,7 @@ The items block is used to list the line-items associated with a tender, award o
     :collapse: 
     
 ```
+
 #### Unit
 
 The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no codelist for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 

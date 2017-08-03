@@ -68,7 +68,7 @@ When a new major/minor version of the docs text is ready, a new Transifex projec
 
 Make sure the build is run above, then run (making sure the project name is the same as the one made above) 
 
-```
+```shell
 sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-1-1 --pot-dir build/locale --locale-dir standard/docs/locale
 ```
 
