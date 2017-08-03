@@ -81,9 +81,11 @@ Distinct **branches** of the standard will be maintained within GitHub for each 
 Branches can be in one of two states:
 
 * **Development** - indicated by a -dev suffix (e.g. 1.1-dev)
+
 Both schema and documentation on a development branch can be updated and should only be implemented on an experimental basis.
 
 * **Live** - with no suffix ( e.g. 1.0)
+
 Only documentation updates are permitted on a live branch. All documentation changes must be reviewed to ensure they do not make any changes to the meaning of the standard. 
 
 Semantic Versioning practices will be used to distinguish between:
