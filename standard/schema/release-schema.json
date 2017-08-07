@@ -1,5 +1,5 @@
 {
-    "id": "http://standard.open-contracting.org/schema/1__0__2/release-schema.json",
+    "id": "http://standard.open-contracting.org/schema/1__0__3/release-schema.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Schema for an Open Contracting Release",
     "type": "object",
@@ -819,7 +819,7 @@
                     "description": "The number of units required",
                     "mergeStrategy": "ocdsVersion",
                     "minimum": 0,
-                    "type": ["integer", "null"]
+                    "type": ["number", "null"]
                 },
                 "unit": {
                     "title":"Unit",
@@ -1062,7 +1062,6 @@
                     "title":"Amount",
                     "description": "Amount as a number.",
                     "type": ["number", "null"],
-                    "minimum": 0,
                     "mergeStrategy": "ocdsVersion"
                 },
                 "currency": {

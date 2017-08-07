@@ -2,7 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.0.2] - 2016-TBC
+## [1.0.3] - 2017-07-31
+
+### Fixed
+
+* [#329](https://github.com/open-contracting/standard/issues/329) - updated ```item.quantity``` to support decimal values (integer -> number)
+* [#253](https://github.com/open-contracting/standard/issues/253) - updated ```value.amount``` to support negative values
+
+## [1.0.2] - 2016
 
 ### Changed
 
