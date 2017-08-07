@@ -358,7 +358,7 @@ class JSONInclude(LiteralInclude):
 directives.register_directive('jsoninclude', JSONInclude)
 
 
-extension_registry_git_ref = "v1.1"
+extension_registry_git_ref = "v1.1.1"
 
 
 class AutoStructifyLowPriority(AutoStructify):
