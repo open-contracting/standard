@@ -6,11 +6,17 @@ addons:
   apt:
     packages:
     - lftp
+before_install:
+  - rvm default
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements.txt
+install:
+  - pip install -r requirements.txt
+  - gem install bundler
+  - bundle install --path vendor/bundle --binstubs
 # command to run tests, e.g. python setup.py test
 script:
   - flake8
+  - bin/mdl --style mdl.rb .
   - py.test
   - ./build_docs.sh
 deploy:
