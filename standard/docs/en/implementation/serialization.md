@@ -8,7 +8,7 @@ However, there are many use cases where publishers and users will want to work w
 
 ## JSON 
 
-JSON stands for Javascript Object Notation, and is a format widely used for the exchange of data on the web. The JSON schema language provides validation tools for working with JSON data.
+JSON stands for JavaScript Object Notation, and is a format widely used for the exchange of data on the web. The JSON schema language provides validation tools for working with JSON data.
 
 Valid JSON serializations of OCDS data MUST follow the [I-JSON (Internet JSON)specification from RFC7493](https://tools.ietf.org/html/rfc7493) which requires [UTF-8 encoding](https://en.wikipedia.org/wiki/UTF-8) and introduces a number of constrains and recommendations for handling numbers, objects and dates. 
 
@@ -36,7 +36,7 @@ JSON is based on a tree structure, with data elements nested inside one another.
 * **Simplified single table** - for cases where there are no one-to-many relationships in the data (e.g. each tender has only one award and contract, and each has only one line-item).
 * **Multi-table** - where more advanced structures are required, but where it is desirable to be able to work with data in spreadsheet-style layouts
 
-In each case, fields are identified by the [json pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For example:
+In each case, fields are identified by the [JSON pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For example:
 
 **JSON**
 
@@ -88,7 +88,7 @@ The JSON equivalent of this would be:
 
 ```
 
-Whilst this allows complex data to be expressed in flat CSV, users will need to rebuild the structure in order to analyse the data.
+Whilst this allows complex data to be expressed in flat CSV, users will need to rebuild the structure in order to analyze the data.
 
 Instead, data with a one-to-many relationship can be represented using a multi-table serialization. 
 
@@ -96,7 +96,7 @@ Note: OCDS CSV files MUST only be encoded in either UTF-8
 
 ### Multi-table
 
-The multi-table serialization separates  objects with many to one relationships (ie. arrays) into their own tables. 
+The multi-table serialization separates  objects with many to one relationships (i.e. arrays) into their own tables. 
 
 Multiple tables can be packaged together as the tabs of an Excel spreadsheet, or in a collection of CSV files.  
 
@@ -104,8 +104,8 @@ An example multi-table template can be found [in the sample data repository](htt
 
 For further information on multi-table serializations please see the [flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/).
 
-## Packaging files with meta-data
+## Packaging files with metadata
 
-Whatever serialisation is used for Open Contracting Data, a single file may contain one or more release and records.
+Whatever serialization is used for Open Contracting Data, a single file may contain one or more release and records.
 
-The release and record data package schemas describe the key meta-data that must be supplied for any file providing Open Contracting Data. This includes the publishedDate, publisher, uri for accessing the file, and the licensing details for the file.
+The release and record data package schemas describe the key metadata that must be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.

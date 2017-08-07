@@ -1,9 +1,9 @@
 Lots 
 ====
 
-## Meta-data
+## Metadata
 
-To use this extension, include it's URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package. 
 
 ```json
 {
@@ -22,7 +22,7 @@ The lots extension maintains the overall structure of an OCDS release, with item
 
 Optional ```lotDetails``` and ```lotGroups``` section allow more complex conditions around the award of lots to be expressed, such as the maximum value of a group of lots. 
 
-This means that systems which are not 'lot aware' can still understand the overall value of contracting taking place, key events, and relationships between buyers and suppliers. At the same time, 'lot aware' systems can make use of the cross-referenced information to present a lot-centric view on the information to users, or to analyse contracting lot by lot. 
+This means that systems which are not 'lot aware' can still understand the overall value of contracting taking place, key events, and relationships between buyers and suppliers. At the same time, 'lot aware' systems can make use of the cross-referenced information to present a lot-centric view on the information to users, or to analyze contracting lot by lot. 
 
 ### Related Lot
 
@@ -82,7 +82,7 @@ Although part of the same tender, the buyer is willing to award these different 
       },
       "tender": {
         "id": "ocds-213czf-lots-00001-01-tender",
-        "title": "Architecture and engineeering services",
+        "title": "Architecture and engineering services",
         "description": "The authority is seeking support to construct a new public building.",
         "procurementMethod": "open",
         "status": "active",
@@ -185,5 +185,4 @@ Although part of the same tender, the buyer is willing to award these different 
 ```eval_rst
 .. extensiontable::
     :extension: lots
-    :definitions: Lots
 ```

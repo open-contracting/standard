@@ -1,8 +1,8 @@
 ## Record Package Schema
 
-The record package schema describes the container structure for publishing records. The contents of a record are based on the release schema. The package contains important meta-data.
+The record package schema describes the container structure for publishing records. The contents of a record are based on the release schema. The package contains important metadata.
 
-You can view an interactive version of the record schema below (requires javascript) or [download this version of the schema here](../../../../record-package-schema.json).
+You can view an interactive version of the record schema below (requires JavaScript) or [download this version of the schema here](../../../../record-package-schema.json).
 
 A separate, auto-generated, [versioned release validation schema](../../../../versioned-release-validation-schema.json) is provided for validating releases within fully versioned records.
 

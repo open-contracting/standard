@@ -13,9 +13,10 @@ Extensions are divided into two types:
 Some extensions with wide adoption may be considered for inclusion as part of the core standard in future versions. Others may be maintained independently by particular communities that need to align the publication of particular additional information.
 
 
+
 ## Using extensions
 
-Extension are applied by adding their URLs to the ```extensions``` array in the release or record package. To use one or more extensions, select them from the extension lists below and include the following in your release or record package meta-data:
+Extensions are applied by adding their URLs to the ```extensions``` array in the release or record package. To use one or more extensions, select them from the extension lists below and include the following in your release or record package metadata:
 
 <style><!--
 #using-extensions div[class^='highlight'] pre {
@@ -34,14 +35,14 @@ Extension are applied by adding their URLs to the ```extensions``` array in the 
 }
 ```
 
-**Core extensions**
+## Core extensions
 
 ```eval_rst
 .. extensionselectortable::
    :group: core
 ```
 
-**Community extensions**
+## Community extensions
 
 ```eval_rst
 .. extensionselectortable::
@@ -49,7 +50,7 @@ Extension are applied by adding their URLs to the ```extensions``` array in the 
 ```
 
 
-## More about extensions
+## More information
 
 ```eval_rst
 .. toctree::
@@ -60,7 +61,7 @@ Extension are applied by adding their URLs to the ```extensions``` array in the 
 
 ```
 
-## Core extensions
+### Core extension documentation pages
 
 ```eval_rst
 .. toctree::
@@ -77,3 +78,4 @@ Extension are applied by adding their URLs to the ```extensions``` array in the 
    process_title
 
 ```
+

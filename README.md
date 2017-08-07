@@ -5,13 +5,13 @@ For view-only access to the standard and documentation please visit [http://stan
 
 ## Versions
 
-The standard website is now versioned MAJOR.MINOR, whereas the schema uris are versioned MAJOR__MINOR__PATCH. e.g. http://standard.open-contracting.org/1.0/en/ vs http://standard.open-contracting.org/schema/1__0__1/release-schema.json. (Previously both were versioned as MAJOR__MINOR__PATCH).
+The standard website is now versioned MAJOR.MINOR, whereas the schema URIs are versioned MAJOR__MINOR__PATCH. e.g. http://standard.open-contracting.org/1.0/en/ vs http://standard.open-contracting.org/schema/1__0__1/release-schema.json. (Previously both were versioned as MAJOR__MINOR__PATCH).
 
-The standard website version corresponds to a [branch](https://github.com/open-contracting/standard/branches), whereas the schema uri version corresponds to a [release](https://github.com/open-contracting/standard/releases). This allows us to make updates the documentation without having to make a new patch release. On the other hand, there's a need for predictable machine consumption of the content at schema URIs, so we ensure this doesn't change.
+The standard website version corresponds to a [branch](https://github.com/open-contracting/standard/branches), whereas the schema URI version corresponds to a [release](https://github.com/open-contracting/standard/releases). This allows us to make updates the documentation without having to make a new patch release. On the other hand, there's a need for predictable machine consumption of the content at schema URIs, so we ensure this doesn't change.
 
 There are also one or more development branches, e.g. http://standard.open-contracting.org/1.0-dev/en/
 
-The default standard website is 'latest' - http://standard.open-contracting.org/latest/en/ - which corresponds to the latest released version of the standard. This makes it possible to construct urls to this that will track the latest version of the standard.
+The default standard website is 'latest' - http://standard.open-contracting.org/latest/en/ - which corresponds to the latest released version of the standard. This makes it possible to construct URLs to this that will track the latest version of the standard.
 
 ## Working with the standard
 
@@ -64,7 +64,7 @@ fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
 
 ### Translations
 
-When a new major/minor version of the docs text is ready, a new transifex project needs to be made called eg. open-contracting-standard-x.y  This is done on the transifex web interface. The ```.tx/config``` file also needs to be emptied.
+When a new major/minor version of the docs text is ready, a new Transifex project needs to be made called e.g. open-contracting-standard-x.y  This is done on the Transifex web interface. The ```.tx/config``` file also needs to be emptied.
 
 Make sure the build is run above, then run (making sure the project name is the same as the one made above) 
 
@@ -74,13 +74,13 @@ sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-
 
 This will update the .tx/config file and this file should be added to the git repository. This will only have to be run again if there is a new/deleted doc page or if a file name has changed name.
 
-In order to push any changes in text to transifex run:
+In order to push any changes in text to Transifex run:
 
 ```
 tx push -s
 ```
 
-When the translations are filled in transifex you need to run:
+When the translations are filled in Transifex you need to run:
 
 ```
 tx pull -a -f
@@ -88,7 +88,7 @@ tx pull -a -f
 
 After this the build script will need to be run again.
 
-If translations are added locally, these can also be pushed up to Transifex:
+If translations are added locally, these can also be pushed up to Transifex. (Be aware that this will clobber edits made on Transifex since last time they were pulled):
 
 ```
 tx push -t --skip
@@ -99,7 +99,7 @@ Note that the [theme needs to be translated seperately](https://github.com/open-
 
 ### Theme
 
-The OCDS Docs Theme files are held in a seperate GitHub repository. Consult [the README there](https://github.com/open-contracting/standard_theme#open-contracting-standard-sphinx-theme) for more information.
+The OCDS Docs Theme files are held in a separate GitHub repository. Consult [the README there](https://github.com/open-contracting/standard_theme#open-contracting-standard-sphinx-theme) for more information.
 
-The theme files are pulled into your virtual envronment during the `pip install -r requirements.txt` step. You will find them in the `.ve/src/standard-theme` directory (where .ve is the name of your virtual environment directory).
+The theme files are pulled into your virtual environment during the `pip install -r requirements.txt` step. You will find them in the `.ve/src/standard-theme` directory (where .ve is the name of your virtual environment directory).
 

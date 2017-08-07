@@ -1,9 +1,9 @@
 Enquiries 
 ========================
 
-## Meta-data
+## Metadata
 
-To use this extension, include it's URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package. 
 
 ```json
 {
@@ -47,7 +47,7 @@ Example:
 
 Supporting documents with clarifications, or a full document containing answers to questions can be included in the ```tender/documents``` array with a ```documentType``` of 'clarifications'. 
 
-Where the answers to a question are only avaible in attached documents, an ```answer``` value such as 'Consult section N of "%document name%" in the documents section' may be entered to allow analysts of the data to identify that an answer to this question has been provided. 
+Where the answers to a question are only available in attached documents, an ```answer``` value such as 'Consult section N of "%document name%" in the documents section' may be entered to allow analysts of the data to identify that an answer to this question has been provided. 
 
 When a system allow a discussion format, where each answer can be followed by a further clarification question, the ```threadID``` property can be used to link together multiple entries in the ```enquiries``` array.
 
@@ -55,7 +55,7 @@ When a system allow a discussion format, where each answer can be followed by a 
 
 Implementations may vary on the amount of enquiry information they provide, and when it is provided. 
 
-Some publishers may omit the identity of the question author to protect confidentiality of enquirers, or may anonymise this information (e.g. simply putting the author name as 'Organisation 1' or 'Organisation 2' so that it is possible to see questions from the same organisation, but not to know the identity of that organisation.)
+Some publishers may omit the identity of the question author to protect confidentiality of enquirers, or may anonymize this information (e.g. simply putting the author name as 'Organization 1' or 'Organization 2' so that it is possible to see questions from the same organization, but not to know the identity of that organization.)
 
 The ```relatedItem``` and ```relatedLot``` properties are available for use when questions can be asked in relation to a specific lot or item. 
 
