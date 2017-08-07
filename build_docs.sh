@@ -4,6 +4,9 @@ cd standard
 CODELIST_LANG=en python schema/utils/translate_codelists.py schema
 CODELIST_LANG=en python schema/utils/translate_codelists.py docs/en/extensions
 
+pybabel compile --use-fuzzy -d docs/locale -D schema
+pybabel compile --use-fuzzy -d docs/locale -D codelists
+
 cd ..
 python standard/schema/utils/translate_schema.py en es fr
 
@@ -18,8 +21,6 @@ sphinx-build -b gettext docs/en ../build/locale
 
 pybabel extract -F .babel_schema . -o ../build/locale/schema.pot
 pybabel extract -F .babel_codelists . -o ../build/locale/codelists.pot
-pybabel compile --use-fuzzy -d docs/locale -D schema
-pybabel compile --use-fuzzy -d docs/locale -D codelists
 
 cd ..
 cp -r standard/assets build
