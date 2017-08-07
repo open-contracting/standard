@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-30 16:51+0100\n"
+"POT-Creation-Date: 2017-08-07 12:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Juan Pane <juanpane@idatosabiertos.org>, 2017\n"
+"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,6 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: docs/en/extensions/codelists/bidStatistics.csv
+#: docs/en/extensions/codelists/bidStatus.csv
 #: docs/en/extensions/codelists/locationGazeteers.csv
 #: schema/codelists/awardStatus.csv schema/codelists/contractStatus.csv
 #: schema/codelists/documentType.csv schema/codelists/initiationType.csv
@@ -29,9 +30,11 @@ msgid "Category"
 msgstr "Categoría"
 
 #: docs/en/extensions/codelists/bidStatistics.csv
+#: docs/en/extensions/codelists/bidStatus.csv
 #: docs/en/extensions/codelists/locationGazeteers.csv
 #: schema/codelists/awardCriteria.csv schema/codelists/awardStatus.csv
-#: schema/codelists/contractStatus.csv schema/codelists/documentType.csv
+#: schema/codelists/contractStatus.csv schema/codelists/currency.csv
+#: schema/codelists/documentType.csv
 #: schema/codelists/extendedProcurementCategory.csv
 #: schema/codelists/initiationType.csv
 #: schema/codelists/itemClassificationScheme.csv
@@ -46,6 +49,7 @@ msgid "Code"
 msgstr "Código"
 
 #: docs/en/extensions/codelists/bidStatistics.csv
+#: docs/en/extensions/codelists/bidStatus.csv
 #: docs/en/extensions/codelists/locationGazeteers.csv
 #: schema/codelists/awardCriteria.csv schema/codelists/awardStatus.csv
 #: schema/codelists/contractStatus.csv schema/codelists/documentType.csv
@@ -63,9 +67,11 @@ msgid "Title"
 msgstr "Título"
 
 #: docs/en/extensions/codelists/bidStatistics.csv
+#: docs/en/extensions/codelists/bidStatus.csv
 #: docs/en/extensions/codelists/locationGazeteers.csv
 #: schema/codelists/awardCriteria.csv schema/codelists/awardStatus.csv
-#: schema/codelists/contractStatus.csv schema/codelists/documentType.csv
+#: schema/codelists/contractStatus.csv schema/codelists/currency.csv
+#: schema/codelists/documentType.csv
 #: schema/codelists/extendedProcurementCategory.csv
 #: schema/codelists/initiationType.csv
 #: schema/codelists/itemClassificationScheme.csv
@@ -120,12 +126,12 @@ msgstr "Ofertas"
 msgid ""
 "The total number of unique bids received that were considered valid against "
 "relevant criteria (either of the bidder, or the bid submission itself). All "
-"valid bids should be consider during the tender evaluation stage. "
+"valid bids should be considered during the tender evaluation stage."
 msgstr ""
 "El número total de ofertas únicas recibidas que se consideraron válidas en "
 "función de los criterios pertinentes (del licitante o de la solicitud de "
 "oferta misma). Todas las ofertas válidas deben ser consideradas durante la "
-"etapa de evaluación de ofertas."
+"etapa de evaluación de la oferta."
 
 #. Title
 #: docs/en/extensions/codelists/bidStatistics.csv:3
@@ -135,7 +141,7 @@ msgstr "Ofertas Válidas"
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:4
 msgid ""
-"The total number of unique organiastions or consortia submitting bids  "
+"The total number of unique organizations or consortia submitting bids  "
 "(prior to any being discounted for not meeting essential criteria)."
 msgstr ""
 "El número total de organizaciones únicas o consorcios que presentan ofertas "
@@ -149,7 +155,7 @@ msgstr "Licitantes"
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:5
 msgid ""
-"The total number of unique organiastions or consortia passing the "
+"The total number of unique organizations or consortia passing the "
 "qualification stage of the evaluation process."
 msgstr ""
 "El número total de organizaciones únicas o consorcios que pasan la fase de "
@@ -163,7 +169,7 @@ msgstr "Licitantes Calificados"
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:6
 msgid ""
-"The total number of unique organiastions or consortia that did not pass the "
+"The total number of unique organizations or consortia that did not pass the "
 "qualification stage of the evaluation process."
 msgstr ""
 "El número total de organizaciones únicas o consorcios que no pasaron la "
@@ -230,7 +236,7 @@ msgid ""
 "The number of tenders excluded because they were abnormally low. Note that "
 "in some EU datasets this may have been converted from a boolean, such that a"
 " value of 1 would indicate '1 or more' tenders were excluded. Users should "
-"evalute and interpret data accordingly."
+"evaluate and interpret data accordingly."
 msgstr ""
 "El número de ofertas excluidas porque eran anormalmente bajas. Tenga en "
 "cuenta que en algunos conjuntos de datos de la UE esto pudo haber sido "
@@ -243,6 +249,34 @@ msgstr ""
 msgid "Tenders excluded because they were abnormally low"
 msgstr "Se excluyeron las ofertas porque eran anormalmente bajas"
 
+#. Title
+#: docs/en/extensions/codelists/bidStatus.csv:1
+msgid "Invited"
+msgstr "Invitado"
+
+#. Title
+#. Title_en
+#: docs/en/extensions/codelists/bidStatus.csv:2
+#: schema/codelists/awardStatus.csv:1 schema/codelists/contractStatus.csv:1
+msgid "Pending"
+msgstr "Pendiente"
+
+#. Title
+#: docs/en/extensions/codelists/bidStatus.csv:3
+msgid "Valid"
+msgstr "Válido"
+
+#. Title
+#: docs/en/extensions/codelists/bidStatus.csv:4
+msgid "Disqualified"
+msgstr "Descalificado"
+
+#. Title
+#: docs/en/extensions/codelists/bidStatus.csv:5
+#: schema/codelists/tenderStatus.csv:7
+msgid "Withdrawn"
+msgstr "Retirado"
+
 #: docs/en/extensions/codelists/locationGazeteers.csv
 #: schema/codelists/awardStatus.csv schema/codelists/contractStatus.csv
 #: schema/codelists/initiationType.csv
@@ -254,6 +288,13 @@ msgstr "Fuente"
 #: docs/en/extensions/codelists/locationGazeteers.csv
 msgid "URI_Pattern"
 msgstr "URI_Pattern"
+
+#. Title
+#. Title_en
+#: docs/en/extensions/codelists/locationGazeteers.csv:1
+#: schema/codelists/locationGazeteer.csv:1
+msgid "EU Nomenclature of Territorial Units for Statistics "
+msgstr "Nomenclatura de las Unidades Territoriales Estadísticas de la UE"
 
 #. Description
 #. Description_en
@@ -270,27 +311,25 @@ msgstr ""
 "regionales para la Unión Europea."
 
 #. Title
-#. Title_en
-#: docs/en/extensions/codelists/locationGazeteers.csv:1
-#: schema/codelists/locationGazeteer.csv:1
-msgid "EU Nomenclature of Territorial Units for Statistics "
-msgstr "Nomenclatura de las Unidades Territoriales Estadísticas de la UE"
-
-#. Description
-#: docs/en/extensions/codelists/locationGazeteers.csv:2
-msgid "ISO 2-Letter Country Codes"
-msgstr "Códigos de País de 2 dígitos ISO"
-
-#. Title
 #: docs/en/extensions/codelists/locationGazeteers.csv:2
 msgid "ISO Country Codes (3166-1 alpha-2)"
 msgstr "Códigos de Países ISO (3166-1 alpha-2)"
 
 #. Description
+#: docs/en/extensions/codelists/locationGazeteers.csv:2
+msgid "ISO 2-Digit Country Codes"
+msgstr "Códigos de País de 2 dígitos ISO"
+
+#. Title
+#: docs/en/extensions/codelists/locationGazeteers.csv:3
+msgid "GeoNames"
+msgstr "GeoNames"
+
+#. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:3
 msgid ""
 "GeoNames provides numerical identifiers for many points of interest around "
-"the world, including administrative divisions, poulated centres and other "
+"the world, including administrative divisions, populated centres and other "
 "locations, embedded within a structured tree of geographic relations."
 msgstr ""
 "GeoNames proporciona identificadores numéricos para muchos puntos de interés"
@@ -299,14 +338,14 @@ msgstr ""
 "geográficas."
 
 #. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:3
-msgid "GeoNames"
-msgstr "GeoNames"
+#: docs/en/extensions/codelists/locationGazeteers.csv:4
+msgid "OpenStreetMap Node"
+msgstr "Nodo de Open Street Map"
 
 #. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:4
 msgid ""
-"Open Street Map Nodes consist of a single point in space defined by a "
+"OpenStreetMap Nodes consist of a single point in space defined by a "
 "latitude, longitude and node ID. Nodes may have tags to indicate the "
 "particular geographic feature they represent."
 msgstr ""
@@ -316,40 +355,35 @@ msgstr ""
 "representan."
 
 #. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:4
-msgid "Open Street Map Node"
-msgstr "Nodo de Open Street Map"
+#: docs/en/extensions/codelists/locationGazeteers.csv:5
+msgid "OpenStreetMap Relation"
+msgstr "Relación de OpenStreetMap"
 
 #. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:5
 msgid ""
 "Relations are used to model logical (and usually local) or geographic "
 "relationships between objects. In practice, boundaries of geographic areas "
-"are available as Relations in Open Street Map."
+"are available as Relations in OpenStreetMap."
 msgstr ""
 "Las relaciones se usan para modelar relaciones lógicas (y generalmente "
 "locales) o geográficas entre objetos. En la práctica, los límites de áreas "
 "geográficas están disponibles como Relaciones de Open Street Map."
 
 #. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:5
-msgid "Open Street Map Relation"
-msgstr "Relación de Open Street Map"
+#: docs/en/extensions/codelists/locationGazeteers.csv:6
+msgid "OpenStreetMap Way"
+msgstr "Vía de Open Street Map"
 
 #. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:6
 msgid ""
-"An Open Street Map Way is an ordered list of Open Street Map nodes. May be "
-"used to describe fragments of roads or local boundaries and bounding boxes."
+"An OpenStreetMap Way is an ordered list of OpenStreetMap nodes. May be used "
+"to describe fragments of roads or local boundaries and bounding boxes."
 msgstr ""
 "Una Vía de Open Street Map es una lista ordenada de nodos Open Street Map. "
 "Puede ser usado para describir fragmentos de caminos o límites locales y "
 "cajas delimitadoras."
-
-#. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:6
-msgid "Open Street Map Way"
-msgstr "Vía de Open Street Map"
 
 #: schema/codelists/awardCriteria.csv
 msgid "Deprecated"
@@ -359,12 +393,11 @@ msgstr "Obsoleto"
 #: schema/codelists/awardCriteria.csv:1
 msgid "The award will be made to the qualified bid with the lowest price."
 msgstr ""
-"La adjudicación se otorgará a la propuesta calificada con el precio más "
-"bajo."
+"La adjudicación se otorgará a la oferta calificada con el precio más bajo."
 
 #. Title
 #: schema/codelists/awardCriteria.csv:1
-msgid "Price only"
+msgid "Price Only"
 msgstr "Sólo precio"
 
 #. Description
@@ -375,16 +408,16 @@ msgid ""
 " proposal, including the price paid to the supplier and the running costs, "
 "switching costs or other non-price costs of choosing a particular option."
 msgstr ""
-"La adjudicación se otorgará a la propuesta calificada que demuestre el costo"
-" más bajo en general. Una evaluación de costos puede cubrir todas las "
+"La adjudicación se otorgará a la oferta calificada que demuestre el costo "
+"más bajo en general. Una evaluación de costos puede cubrir todas las "
 "implicaciones monetarias de la propuesta, incluyendo el precio pagado al "
 "proveedor y los costos actuales, cambiando costos u otros costos que no "
 "tienen que ver con el precio al elegir una opción en particular."
 
 #. Title
 #: schema/codelists/awardCriteria.csv:2
-msgid "costOnly"
-msgstr "costOnly"
+msgid "Cost Only"
+msgstr "Sólo Costo"
 
 #. Description
 #: schema/codelists/awardCriteria.csv:3
@@ -393,9 +426,9 @@ msgid ""
 "quality against some assessment method. The price is either fixed, or with a"
 " maximum set and price factors not included in the evaluation."
 msgstr ""
-"La adjudicación se otorgará a la propuesta calificada que muestra la calidad"
-" más alta contra algún método de evaluación. El precio es fijo o con un fijo"
-" máximo y sin incluir factores de precio en la evaluación."
+"La adjudicación se otorgará a la oferta calificada que muestra la calidad "
+"más alta contra algún método de evaluación. El precio es fijo o con un fijo "
+"máximo y sin incluir factores de precio en la evaluación."
 
 #. Title
 #: schema/codelists/awardCriteria.csv:3
@@ -411,8 +444,8 @@ msgid ""
 "procurement). Structured information on individual qualifying criteria can "
 "be provided with the requirements extension."
 msgstr ""
-"La adjudicación se otorgará a la propuesta calificada que demuestre el valor"
-" más alto contra una serie de criterios como precio, costo y calidad "
+"La adjudicación se otorgará a la oferta calificada que demuestre el valor "
+"más alto contra una serie de criterios como precio, costo y calidad "
 "(incluyendo, por ejemplo, el impacto social y ambiental de la compra). Se "
 "puede proveer información estructurada sobre los criterios individuales de "
 "calificación con la extensión de requerimientos. "
@@ -456,12 +489,7 @@ msgstr "Mejor Valor al Gobierno"
 #. Title
 #: schema/codelists/awardCriteria.csv:8
 msgid "Single Bid Only"
-msgstr "Sólo Una Propuesta"
-
-#. Title_en
-#: schema/codelists/awardStatus.csv:1 schema/codelists/contractStatus.csv:1
-msgid "Pending"
-msgstr "Pendiente"
+msgstr "Sólo Una Oferta"
 
 #. Description_en
 #: schema/codelists/awardStatus.csv:1
@@ -556,6 +584,856 @@ msgstr ""
 "Este contrato se firmó y está en proceso y ahora se ha cerrado. Esto puede "
 "ser debido a que se completó exitosamente o se terminó antes debido a algún "
 "incumplimiento."
+
+#: schema/codelists/currency.csv
+msgid "Name"
+msgstr "Nombre"
+
+#. Name
+#: schema/codelists/currency.csv:1
+msgid "UAE Dirham"
+msgstr "Dirham de los Emiratos Árabes Unidos"
+
+#. Name
+#: schema/codelists/currency.csv:2
+msgid "Afghani"
+msgstr "Afgano"
+
+#. Name
+#: schema/codelists/currency.csv:3
+msgid "Lek"
+msgstr "Lek"
+
+#. Name
+#: schema/codelists/currency.csv:4
+msgid "Armenian Dram"
+msgstr "Dram Armenio"
+
+#. Name
+#: schema/codelists/currency.csv:5
+msgid "Netherlands Antillian Guilder"
+msgstr "Florín antillano de los Países Bajos"
+
+#. Name
+#: schema/codelists/currency.csv:6
+msgid "Kwanza"
+msgstr "Kwanza"
+
+#. Name
+#: schema/codelists/currency.csv:7
+msgid "Argentine Peso"
+msgstr "Peso argentino"
+
+#. Name
+#: schema/codelists/currency.csv:8
+msgid "Australian Dollar"
+msgstr "Dólar australiano"
+
+#. Name
+#: schema/codelists/currency.csv:9
+msgid "Aruban Guilder"
+msgstr "Florentina de Aruba"
+
+#. Name
+#: schema/codelists/currency.csv:10
+msgid "Azerbaijanian Manat"
+msgstr "Manat Azerbaiyano"
+
+#. Name
+#: schema/codelists/currency.csv:11
+msgid "Convertible Marks"
+msgstr "Marcas convertibles"
+
+#. Name
+#: schema/codelists/currency.csv:12
+msgid "Barbados Dollar"
+msgstr "Dólar de Barbados"
+
+#. Name
+#: schema/codelists/currency.csv:13
+msgid "Taka"
+msgstr "Taka"
+
+#. Name
+#: schema/codelists/currency.csv:14
+msgid "Bulgarian Lev"
+msgstr "Lev búlgaro"
+
+#. Name
+#: schema/codelists/currency.csv:15
+msgid "Bahraini Dinar"
+msgstr "Dinar de Bahrein"
+
+#. Name
+#: schema/codelists/currency.csv:16
+msgid "Burundi Franc"
+msgstr "Franco de Burundi"
+
+#. Name
+#: schema/codelists/currency.csv:17
+msgid "Bermudian Dollar"
+msgstr "Dólar bermudeño"
+
+#. Name
+#: schema/codelists/currency.csv:18
+msgid "Brunei Dollar"
+msgstr "Dólar de Brunei"
+
+#. Name
+#: schema/codelists/currency.csv:19
+msgid "Boliviano"
+msgstr "Boliviano"
+
+#. Name
+#: schema/codelists/currency.csv:20
+msgid "Mvdol"
+msgstr "Mvdol"
+
+#. Name
+#: schema/codelists/currency.csv:21
+msgid "Brazilian Real"
+msgstr "Real brasileño"
+
+#. Name
+#: schema/codelists/currency.csv:22
+msgid "Bahamian Dollar"
+msgstr "Dólar de Bahamas"
+
+#. Name
+#: schema/codelists/currency.csv:23
+msgid "Ngultrum"
+msgstr "Ngultrum"
+
+#. Name
+#: schema/codelists/currency.csv:24
+msgid "Pula"
+msgstr "Pula"
+
+#. Name
+#: schema/codelists/currency.csv:25
+msgid "Belarussian Ruble"
+msgstr "Rublo bielorruso"
+
+#. Name
+#: schema/codelists/currency.csv:26
+msgid "Belize Dollar"
+msgstr "Dólar de Belice"
+
+#. Name
+#: schema/codelists/currency.csv:27
+msgid "Canadian Dollar"
+msgstr "Dolar canadiense"
+
+#. Name
+#: schema/codelists/currency.csv:28
+msgid "Congolese Franc"
+msgstr "Franco Congolés"
+
+#. Name
+#: schema/codelists/currency.csv:29
+msgid "Swiss Franc"
+msgstr "Franco suizo"
+
+#. Name
+#: schema/codelists/currency.csv:30
+msgid "Unidades de fomento"
+msgstr "Unidades de fomento"
+
+#. Name
+#: schema/codelists/currency.csv:31
+msgid "Chilean Peso"
+msgstr "Peso chileno"
+
+#. Name
+#: schema/codelists/currency.csv:32
+msgid "Yuan Renminbi"
+msgstr "Yuan Renminbi"
+
+#. Name
+#: schema/codelists/currency.csv:33
+msgid "Colombian Peso"
+msgstr "Peso colombiano"
+
+#. Name
+#: schema/codelists/currency.csv:34
+msgid "Unidad de Valor Real"
+msgstr "Unidad de Valor Real"
+
+#. Name
+#: schema/codelists/currency.csv:35
+msgid "Costa Rican Colon"
+msgstr "Colón de Costa Rica"
+
+#. Name
+#: schema/codelists/currency.csv:36
+msgid "Peso Convertible"
+msgstr "Peso Convertible"
+
+#. Name
+#: schema/codelists/currency.csv:37
+msgid "Cuban Peso"
+msgstr "Peso cubano"
+
+#. Name
+#: schema/codelists/currency.csv:38
+msgid "Cape Verde Escudo"
+msgstr "Escudo de Cabo Verde"
+
+#. Name
+#: schema/codelists/currency.csv:39
+msgid "Czech Koruna"
+msgstr "Corona Checa"
+
+#. Name
+#: schema/codelists/currency.csv:40
+msgid "Djibouti Franc"
+msgstr "Franco de Djibouti"
+
+#. Name
+#: schema/codelists/currency.csv:41
+msgid "Danish Krone"
+msgstr "Corona danesa"
+
+#. Name
+#: schema/codelists/currency.csv:42
+msgid "Dominican Peso"
+msgstr "Peso Dominicano"
+
+#. Name
+#: schema/codelists/currency.csv:43
+msgid "Algerian Dinar"
+msgstr "Dinar argelino"
+
+#. Name
+#: schema/codelists/currency.csv:44
+msgid "Kroon"
+msgstr "Corona"
+
+#. Name
+#: schema/codelists/currency.csv:45
+msgid "Egyptian Pound"
+msgstr "Libra egipcia"
+
+#. Name
+#: schema/codelists/currency.csv:46
+msgid "Nakfa"
+msgstr "Nakfa"
+
+#. Name
+#: schema/codelists/currency.csv:47
+msgid "Ethiopian Birr"
+msgstr "Birr etíope"
+
+#. Name
+#: schema/codelists/currency.csv:48
+msgid "Euro"
+msgstr "Euro"
+
+#. Name
+#: schema/codelists/currency.csv:49
+msgid "Fiji Dollar"
+msgstr "Dólar de Fiji"
+
+#. Name
+#: schema/codelists/currency.csv:50
+msgid "Falkland Islands Pound"
+msgstr "Libra de las Islas Malvinas"
+
+#. Name
+#: schema/codelists/currency.csv:51
+msgid "Pound Sterling"
+msgstr "Libra esterlina"
+
+#. Name
+#: schema/codelists/currency.csv:52
+msgid "Lari"
+msgstr "Lari"
+
+#. Name
+#: schema/codelists/currency.csv:53
+msgid "Cedi"
+msgstr "Cedi"
+
+#. Name
+#: schema/codelists/currency.csv:54
+msgid "Gibraltar Pound"
+msgstr "Libra de Gibraltar"
+
+#. Name
+#: schema/codelists/currency.csv:55
+msgid "Dalasi"
+msgstr "Dalasi"
+
+#. Name
+#: schema/codelists/currency.csv:56
+msgid "Guinea Franc"
+msgstr "Franco de Guinea"
+
+#. Name
+#: schema/codelists/currency.csv:57
+msgid "Quetzal"
+msgstr "Quetzal"
+
+#. Name
+#: schema/codelists/currency.csv:58
+msgid "Guyana Dollar"
+msgstr "Dólar de Guyana"
+
+#. Name
+#: schema/codelists/currency.csv:59
+msgid "Hong Kong Dollar"
+msgstr "Dolar de Hong Kong"
+
+#. Name
+#: schema/codelists/currency.csv:60
+msgid "Lempira"
+msgstr "Lempira"
+
+#. Name
+#: schema/codelists/currency.csv:61
+msgid "Kuna"
+msgstr "Kuna"
+
+#. Name
+#: schema/codelists/currency.csv:62
+msgid "Gourde"
+msgstr "Gourde"
+
+#. Name
+#: schema/codelists/currency.csv:63
+msgid "Forint"
+msgstr "Forint"
+
+#. Name
+#: schema/codelists/currency.csv:64
+msgid "Rupiah"
+msgstr "Rupia"
+
+#. Name
+#: schema/codelists/currency.csv:65
+msgid "New Israeli Sheqel"
+msgstr "Nuevo shekel israelí"
+
+#. Name
+#: schema/codelists/currency.csv:66
+msgid "Indian Rupee"
+msgstr "Rupia india"
+
+#. Name
+#: schema/codelists/currency.csv:67
+msgid "Iraqi Dinar"
+msgstr "Dinar iraquí"
+
+#. Name
+#: schema/codelists/currency.csv:68
+msgid "Iranian Rial"
+msgstr "Rial iraní"
+
+#. Name
+#: schema/codelists/currency.csv:69
+msgid "Iceland Krona"
+msgstr "Corona de Islandia"
+
+#. Name
+#: schema/codelists/currency.csv:70
+msgid "Jamaican Dollar"
+msgstr "Dólar jamaicano"
+
+#. Name
+#: schema/codelists/currency.csv:71
+msgid "Jordanian Dinar"
+msgstr "Dinar jordano"
+
+#. Name
+#: schema/codelists/currency.csv:72
+msgid "Yen"
+msgstr "Yen"
+
+#. Name
+#: schema/codelists/currency.csv:73
+msgid "Kenyan Shilling"
+msgstr "Chelín de Kenia"
+
+#. Name
+#: schema/codelists/currency.csv:74
+msgid "Som"
+msgstr "Som"
+
+#. Name
+#: schema/codelists/currency.csv:75
+msgid "Riel"
+msgstr "Riel"
+
+#. Name
+#: schema/codelists/currency.csv:76
+msgid "Comoro Franc"
+msgstr "Comoro Franc"
+
+#. Name
+#: schema/codelists/currency.csv:77
+msgid "North Korean Won"
+msgstr "Won de Corea del Norte"
+
+#. Name
+#: schema/codelists/currency.csv:78
+msgid "Won"
+msgstr "Won"
+
+#. Name
+#: schema/codelists/currency.csv:79
+msgid "Kuwaiti Dinar"
+msgstr "Dinar kuwaití"
+
+#. Name
+#: schema/codelists/currency.csv:80
+msgid "Cayman Islands Dollar"
+msgstr "Dólar de las Islas Caimán"
+
+#. Name
+#: schema/codelists/currency.csv:81
+msgid "Tenge"
+msgstr "Tenge"
+
+#. Name
+#: schema/codelists/currency.csv:82
+msgid "Kip"
+msgstr "Kip"
+
+#. Name
+#: schema/codelists/currency.csv:83
+msgid "Lebanese Pound"
+msgstr "Libra libanesa"
+
+#. Name
+#: schema/codelists/currency.csv:84
+msgid "Sri Lanka Rupee"
+msgstr "Rupia de Sri Lanka"
+
+#. Name
+#: schema/codelists/currency.csv:85
+msgid "Liberian Dollar"
+msgstr "Dólar liberiano"
+
+#. Name
+#: schema/codelists/currency.csv:86
+msgid "Loti"
+msgstr "Loti"
+
+#. Name
+#: schema/codelists/currency.csv:87
+msgid "Lithuanian Litas"
+msgstr "Litas de Lituana"
+
+#. Name
+#: schema/codelists/currency.csv:88
+msgid "Latvian Lats"
+msgstr "Lats letón"
+
+#. Name
+#: schema/codelists/currency.csv:89
+msgid "Libyan Dinar"
+msgstr "Dinar libio"
+
+#. Name
+#: schema/codelists/currency.csv:90
+msgid "Moroccan Dirham"
+msgstr "Dirham marroquí"
+
+#. Name
+#: schema/codelists/currency.csv:91
+msgid "Moldovan Leu"
+msgstr "Leu moldavo"
+
+#. Name
+#: schema/codelists/currency.csv:92
+msgid "Malagasy Ariary"
+msgstr "Ariary malgache"
+
+#. Name
+#: schema/codelists/currency.csv:93
+msgid "Denar"
+msgstr "Denar"
+
+#. Name
+#: schema/codelists/currency.csv:94
+msgid "Kyat"
+msgstr "Kyat"
+
+#. Name
+#: schema/codelists/currency.csv:95
+msgid "Tugrik"
+msgstr "Tugrik"
+
+#. Name
+#: schema/codelists/currency.csv:96
+msgid "Pataca"
+msgstr "Pataca"
+
+#. Name
+#: schema/codelists/currency.csv:97
+msgid "Ouguiya"
+msgstr "Ouguiya"
+
+#. Name
+#: schema/codelists/currency.csv:98
+msgid "Mauritius Rupee"
+msgstr "Rupia de Mauricio"
+
+#. Name
+#: schema/codelists/currency.csv:99
+msgid "Rufiyaa"
+msgstr "Rufiyaa"
+
+#. Name
+#: schema/codelists/currency.csv:100
+msgid "Malawi Kwacha"
+msgstr "Malawi Kwacha"
+
+#. Name
+#: schema/codelists/currency.csv:101
+msgid "Mexican Peso"
+msgstr "Peso Mexicano"
+
+#. Name
+#: schema/codelists/currency.csv:102
+msgid "Mexican Unidad de Inversion (UDI)"
+msgstr "Unidad de Inversión Mexicana (UDI)"
+
+#. Name
+#: schema/codelists/currency.csv:103
+msgid "Malaysian Ringgit"
+msgstr "Ringgit malayo"
+
+#. Name
+#: schema/codelists/currency.csv:104
+msgid "Metical"
+msgstr "Metical"
+
+#. Name
+#: schema/codelists/currency.csv:105
+msgid "Namibia Dollar"
+msgstr "Dólar de Namibia"
+
+#. Name
+#: schema/codelists/currency.csv:106
+msgid "Naira"
+msgstr "Naira"
+
+#. Name
+#: schema/codelists/currency.csv:107
+msgid "Cordoba Oro"
+msgstr "Cordoba Oro"
+
+#. Name
+#: schema/codelists/currency.csv:108
+msgid "Norwegian Krone"
+msgstr "Corona noruega"
+
+#. Name
+#: schema/codelists/currency.csv:109
+msgid "Nepalese Rupee"
+msgstr "Rupia nepalí"
+
+#. Name
+#: schema/codelists/currency.csv:110
+msgid "New Zealand Dollar"
+msgstr "Dolar de Nueva Zelanda"
+
+#. Name
+#: schema/codelists/currency.csv:111
+msgid "Rial Omani"
+msgstr "Rial Omani"
+
+#. Name
+#: schema/codelists/currency.csv:112
+msgid "Balboa"
+msgstr "Balboa"
+
+#. Name
+#: schema/codelists/currency.csv:113
+msgid "Nuevo Sol"
+msgstr "Nuevo Sol"
+
+#. Name
+#: schema/codelists/currency.csv:114
+msgid "Kina"
+msgstr "Kina"
+
+#. Name
+#: schema/codelists/currency.csv:115
+msgid "Philippine Peso"
+msgstr "Peso filipino"
+
+#. Name
+#: schema/codelists/currency.csv:116
+msgid "Pakistan Rupee"
+msgstr "Rupia de Pakistán"
+
+#. Name
+#: schema/codelists/currency.csv:117
+msgid "Zloty"
+msgstr "Zloty"
+
+#. Name
+#: schema/codelists/currency.csv:118
+msgid "Guarani"
+msgstr "Guaraní"
+
+#. Name
+#: schema/codelists/currency.csv:119
+msgid "Qatari Rial"
+msgstr "Rial de Qatar"
+
+#. Name
+#: schema/codelists/currency.csv:120
+msgid "Romanian Leu"
+msgstr "Leu rumano"
+
+#. Name
+#: schema/codelists/currency.csv:121
+msgid "Serbian Dinar"
+msgstr "Dinar serbio"
+
+#. Name
+#: schema/codelists/currency.csv:122
+msgid "Russian Ruble"
+msgstr "Rublo ruso"
+
+#. Name
+#: schema/codelists/currency.csv:123
+msgid "Rwanda Franc"
+msgstr "Franco ruanda"
+
+#. Name
+#: schema/codelists/currency.csv:124
+msgid "Saudi Riyal"
+msgstr "Riyal saudita"
+
+#. Name
+#: schema/codelists/currency.csv:125
+msgid "Solomon Islands Dollar"
+msgstr "Dólar de las Islas Salomón"
+
+#. Name
+#: schema/codelists/currency.csv:126
+msgid "Seychelles Rupee"
+msgstr "Rupia de Seychelles"
+
+#. Name
+#: schema/codelists/currency.csv:127
+msgid "Sudanese Pound"
+msgstr "Libra sudanesa"
+
+#. Name
+#: schema/codelists/currency.csv:128
+msgid "Swedish Krona"
+msgstr "Corona sueca"
+
+#. Name
+#: schema/codelists/currency.csv:129
+msgid "Singapore Dollar"
+msgstr "Dolar de Singapur"
+
+#. Name
+#: schema/codelists/currency.csv:130
+msgid "Saint Helena Pound"
+msgstr "Libra de Santa Helena"
+
+#. Name
+#: schema/codelists/currency.csv:131
+msgid "Leone"
+msgstr "Leone"
+
+#. Name
+#: schema/codelists/currency.csv:132
+msgid "Somali Shilling"
+msgstr "Chelín somalí"
+
+#. Name
+#: schema/codelists/currency.csv:133
+msgid "South Sudanese Pound"
+msgstr "Libra sudanesa"
+
+#. Name
+#: schema/codelists/currency.csv:134
+msgid "Surinam Dollar"
+msgstr "Dólar de Surinam"
+
+#. Name
+#: schema/codelists/currency.csv:135
+msgid "Dobra"
+msgstr "Dobra"
+
+#. Name
+#: schema/codelists/currency.csv:136
+msgid "El Salvador Colon"
+msgstr "Colon de El Salvador"
+
+#. Name
+#: schema/codelists/currency.csv:137
+msgid "Syrian Pound"
+msgstr "Libra siria"
+
+#. Name
+#: schema/codelists/currency.csv:138
+msgid "Lilangeni"
+msgstr "Lilangeni"
+
+#. Name
+#: schema/codelists/currency.csv:139
+msgid "Baht"
+msgstr "Baht"
+
+#. Name
+#: schema/codelists/currency.csv:140
+msgid "Somoni"
+msgstr "Somoni"
+
+#. Name
+#: schema/codelists/currency.csv:141
+msgid "Manat"
+msgstr "Manat"
+
+#. Name
+#: schema/codelists/currency.csv:142
+msgid "Tunisian Dinar"
+msgstr "Dinar tunecino"
+
+#. Name
+#: schema/codelists/currency.csv:143
+msgid "Paanga"
+msgstr "Paanga"
+
+#. Name
+#: schema/codelists/currency.csv:144
+msgid "Turkish Lira"
+msgstr "Lira turca"
+
+#. Name
+#: schema/codelists/currency.csv:145
+msgid "Trinidad and Tobago Dollar"
+msgstr "Dólar de Trinidad y Tobago"
+
+#. Name
+#: schema/codelists/currency.csv:146
+msgid "New Taiwan Dollar"
+msgstr "Nuevo dólar de Taiwán"
+
+#. Name
+#: schema/codelists/currency.csv:147
+msgid "Tanzanian Shilling"
+msgstr "Chelín de Tanzania"
+
+#. Name
+#: schema/codelists/currency.csv:148
+msgid "Hryvnia"
+msgstr "Hryvnia"
+
+#. Name
+#: schema/codelists/currency.csv:149
+msgid "Uganda Shilling"
+msgstr "Chelín de Uganda"
+
+#. Name
+#: schema/codelists/currency.csv:150
+msgid "US Dollar"
+msgstr "Dólar estadounidense"
+
+#. Name
+#: schema/codelists/currency.csv:151
+msgid "US Dollar (Next day)"
+msgstr "Dólar estadounidense (día siguiente)"
+
+#. Name
+#: schema/codelists/currency.csv:152
+msgid "US Dollar (Same day)"
+msgstr "Dólar estadounidense (el mismo día)"
+
+#. Name
+#: schema/codelists/currency.csv:153
+msgid "Uruguay Peso en Unidades Indexadas"
+msgstr "Peso uruguayo en Unidades Indexadas"
+
+#. Name
+#: schema/codelists/currency.csv:154
+msgid "Peso Uruguayo"
+msgstr "Peso uruguayo"
+
+#. Name
+#: schema/codelists/currency.csv:155
+msgid "Uzbekistan Sum"
+msgstr "Suma de Uzbekistán"
+
+#. Name
+#: schema/codelists/currency.csv:156
+msgid "Bolivar"
+msgstr "Bolívar"
+
+#. Name
+#: schema/codelists/currency.csv:157
+msgid "Dong"
+msgstr "Dong"
+
+#. Name
+#: schema/codelists/currency.csv:158
+msgid "Vatu"
+msgstr "Vatu"
+
+#. Name
+#: schema/codelists/currency.csv:159
+msgid "Tala"
+msgstr "Tala"
+
+#. Name
+#: schema/codelists/currency.csv:160
+msgid "CFA Franc BEAC"
+msgstr "CFA Franc BEAC"
+
+#. Name
+#: schema/codelists/currency.csv:161
+msgid "Bitcoin"
+msgstr "Bitcoin"
+
+#. Name
+#: schema/codelists/currency.csv:162
+msgid "East Caribbean Dollar"
+msgstr "Dólar del Caribe Oriental"
+
+#. Name
+#: schema/codelists/currency.csv:163
+msgid "International Monetary Fund (IMF) Special Drawing Right (SDR)"
+msgstr ""
+" Derecho Especial de Retiro (SDR) del Fondo Monetario Internacional (FMI)"
+
+#. Name
+#: schema/codelists/currency.csv:164
+msgid "CFA Franc BCEAO"
+msgstr "CFA Franc BCEAO"
+
+#. Name
+#: schema/codelists/currency.csv:165
+msgid "CFP Franc"
+msgstr "Franco CFP"
+
+#. Name
+#: schema/codelists/currency.csv:166
+msgid "Yemeni Rial"
+msgstr "Rial yemení"
+
+#. Name
+#: schema/codelists/currency.csv:167
+msgid "Rand"
+msgstr "Rand"
+
+#. Name
+#: schema/codelists/currency.csv:168
+msgid "Zambian Kwacha"
+msgstr "Kwacha de Zambia"
+
+#. Name
+#: schema/codelists/currency.csv:169
+msgid "Zimbabwe Dollar"
+msgstr "Dólar de Zimbabwe"
 
 #: schema/codelists/documentType.csv
 msgid "Section"
@@ -675,7 +1553,7 @@ msgstr "Criterios de Evaluación"
 #. Description_en
 #: schema/codelists/documentType.csv:8
 msgid "Documentation on how bids will be evaluated."
-msgstr "Documentación sobre cómo se evaluarán las propuestas."
+msgstr "Documentación sobre cómo se evaluarán las ofertas."
 
 #. Title_en
 #: schema/codelists/documentType.csv:9
@@ -686,9 +1564,9 @@ msgstr "Reporte de evaluación"
 #: schema/codelists/documentType.csv:9
 msgid ""
 "Documentation on the evaluation of the bids and the application of the "
-"evaluation criteria, including the justification fo the award"
+"evaluation criteria, including the justification for the award"
 msgstr ""
-"Documentación sobre la evaluación de las propuestas y la aplicación de los "
+"Documentación sobre la evaluación de las ofertas y la aplicación de los "
 "criterios de evaluación, incluyendo la justificación para la adjudicación"
 
 #. Title_en
@@ -730,17 +1608,19 @@ msgstr "Documentación de los arreglos para terminar el contrato(s)."
 
 #. Title_en
 #: schema/codelists/documentType.csv:13
-msgid "Schedules and milestones"
-msgstr "Calendarios e hitos"
+msgid "Contract schedules"
+msgstr "Calendario del contrato"
 
 #. Description_en
 #: schema/codelists/documentType.csv:13
 msgid ""
-"Documentation setting out key milestones and schedules. Structured versions "
-"of this information may be modelled using the milestones block."
+"Any document which contains additional terms, obligations or information "
+"related to the contract, such as a schedule, appendix, annex, attachment or "
+"addendum."
 msgstr ""
-"Documentación que muestra calendarios e hitos clave. Se pueden modelar "
-"versiones estructuradas de esta información usando el bloque de hitos."
+"Cualquier documento que contenga términos adicionales, obligaciones o "
+"información relacionada con el contrato, tal como un calendario, apéndice, "
+"anexo, anexo o adición."
 
 #. Title_en
 #: schema/codelists/documentType.csv:14
@@ -838,7 +1718,7 @@ msgid ""
 "or an enquiry processes."
 msgstr ""
 "Documentación que provee las respuestas a las cuestiones apuntadas en "
-"reuniones pre-propuestas o procesos de preguntas."
+"reuniones pre-ofertas o procesos de preguntas."
 
 #. Title_en
 #: schema/codelists/documentType.csv:21
@@ -853,7 +1733,7 @@ msgid ""
 msgstr ""
 "Documentación que provee información sobre las firmas preseleccionadas. Se "
 "pueden proveer versiones estructuradas de esta información usando la "
-"extensión de propuestas."
+"extensión de ofertas."
 
 #. Title_en
 #: schema/codelists/documentType.csv:22
@@ -871,7 +1751,7 @@ msgstr ""
 
 #. Title_en
 #: schema/codelists/documentType.csv:23
-msgid "Assesment of government's assets and liabilities"
+msgid "Assessment of government's assets and liabilities"
 msgstr "Evaluación de los activos y responsabilidades del gobierno"
 
 #. Description_en
@@ -906,7 +1786,7 @@ msgstr "Oferta Ganadora"
 #: schema/codelists/documentType.csv:25
 msgid ""
 "Documentation of the winning bid, including, wherever applicable, a full "
-"copy of the proposal receieved."
+"copy of the proposal received."
 msgstr ""
 "Documentación de la oferta ganadora, incluyendo, cuando aplique, una copia "
 "completa de la oferta recibida."
@@ -1022,7 +1902,7 @@ msgstr "Especificación de Cantidades"
 #. Description_en
 #: schema/codelists/documentType.csv:33
 msgid ""
-"Documentation that provides itemised information on materials, parts and "
+"Documentation that provides itemized information on materials, parts and "
 "labour, and the terms and conditions for their provision, providing "
 "information that would enable bidders to price work effectively. Structured "
 "versions of item and quantity information at each of tender, award and "
@@ -1038,7 +1918,7 @@ msgstr ""
 #. Title_en
 #: schema/codelists/documentType.csv:34
 msgid "Information on bidders"
-msgstr "Información de Licitador"
+msgstr "Información de Licitante"
 
 #. Description_en
 #: schema/codelists/documentType.csv:34
@@ -1046,7 +1926,7 @@ msgid ""
 "Documentation on bidders or participants, their validation documents and any"
 " procedural exemptions for which they qualify"
 msgstr ""
-"Documentación sobre los licitadores o participantes, sus documentos de "
+"Documentación sobre los licitantes o participantes, sus documentos de "
 "validación y cualquier exención de procedimiento para la que califiquen"
 
 #. Title_en
@@ -1077,7 +1957,7 @@ msgstr "Ilustraciones"
 #. Description_en
 #: schema/codelists/documentType.csv:37
 msgid ""
-"Images intended to provide supporting information. The url for images should"
+"Images intended to provide supporting information. The URL for images should"
 " generally be directly to an image file which applications can display as "
 "part of a gallery of images. At the tender stage, images may be "
 "illustrations of goods, works or services required or for sale. At the "
@@ -1273,9 +2153,10 @@ msgstr "Goods and Services Identification Number"
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:3
 msgid ""
-"The Canadia federal government uses Goods and Services Identification Number"
-" (GSIN) codes to identify generic product descriptions for its procurement "
-"activities. The full list is published and maintained at buyandsell.gc.ca"
+"The Canadian federal government uses Goods and Services Identification "
+"Number (GSIN) codes to identify generic product descriptions for its "
+"procurement activities. The full list is published and maintained at "
+"buyandsell.gc.ca"
 msgstr ""
 "El gobierno de Canada usa códigos Goods and Services Identification Number "
 "(GSIN) para identificar descripciones genéricas de productos para sus "
@@ -1293,8 +2174,8 @@ msgid ""
 "The United Nations Standard Products and Services Code (UNSPSC) is a "
 "hierarchical convention that is used to classify all products and services. "
 "Machine readable metadata for UNSPSC is not provided as open data: and so "
-"publishers should consider alternative classification shemes that do provide"
-" open data lookup tables wherever possible."
+"publishers should consider alternative classification schemes that do "
+"provide open data lookup tables wherever possible."
 msgstr ""
 "La United Nations Standard Products and Services Code (UNSPSC) es una "
 "convención jerárquica que se usa para clasificar todos los productos y "
@@ -1349,8 +2230,8 @@ msgstr ""
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:7
 msgid ""
-"Part of the national standardisation system of the Russian Federation and "
-"based on harmonisation with the Statistical Classification of Products by "
+"Part of the national standardization system of the Russian Federation and "
+"based on harmonization with the Statistical Classification of Products by "
 "Activity in the European Economic Community, 2008. In use from January 1 "
 "2014"
 msgstr ""
@@ -1419,7 +2300,7 @@ msgstr "Programada"
 #. Description
 #: schema/codelists/milestoneStatus.csv:2
 msgid ""
-"This milestone has been achieved. The data on which it was met should be "
+"This milestone has been achieved. The date on which it was met should be "
 "placed in the milestone.dateMet field"
 msgstr ""
 "El hito se ha alcanzado. Los datos de qué se cumplió deben de agregarse en "
@@ -1460,37 +2341,54 @@ msgstr "Cumplido Parcialmente"
 
 #. Description
 #: schema/codelists/milestoneType.csv:1
-msgid "For events during the planning phase of a process."
-msgstr "Para eventos durante la fase de planeación de un proceso."
+msgid ""
+"For events during the planning or pre-procurement phase of a process, such "
+"as the preparation of key studies."
+msgstr ""
+"Para eventos durante la fase de planificación o pre-adquisición de un "
+"proceso, como la preparación de estudios clave."
 
 #. Title
 #: schema/codelists/milestoneType.csv:1
-msgid "Planning milesones"
-msgstr "Hitos de Planeación"
+msgid "Pre-procurement milestones"
+msgstr "Hitos previos a la contratación"
 
 #. Description
 #: schema/codelists/milestoneType.csv:2
+msgid "For events such as the sign-off of a contract or project. "
+msgstr "Para eventos como la firma de un contrato o proyecto."
+
+#. Title
+#: schema/codelists/milestoneType.csv:2
+msgid "Approval"
+msgstr "Aprobación"
+
+#. Description
+#: schema/codelists/milestoneType.csv:3
 msgid "For engagement milestones, such as a public hearing."
 msgstr "Para hitos de participación, tales como una audiencia pública"
 
 #. Title
-#: schema/codelists/milestoneType.csv:2
+#: schema/codelists/milestoneType.csv:3
 msgid "Engagement milestones"
 msgstr "Hitos de participación"
 
 #. Description
-#: schema/codelists/milestoneType.csv:3
-msgid "For adjudication milestones, such as the meeting date of a committee."
+#: schema/codelists/milestoneType.csv:4
+msgid ""
+"For assessment and adjudication milestones, such as the meeting date of a "
+"committee."
 msgstr ""
-"Para hitos de adjudicación, tales como la fecha de reunión de un comité."
+"Para hitos de evaluación y adjudicación, tales como la fecha de reunión de "
+"un comité."
 
 #. Title
-#: schema/codelists/milestoneType.csv:3
-msgid "Adjudication milestones"
-msgstr "Hitos de adjudicación"
+#: schema/codelists/milestoneType.csv:4
+msgid "Assessment milestones"
+msgstr "Hitos de la evaluación"
 
 #. Description
-#: schema/codelists/milestoneType.csv:4
+#: schema/codelists/milestoneType.csv:5
 msgid ""
 "For delivery milestones, such as the date when a good or service should be "
 "provided."
@@ -1499,539 +2397,35 @@ msgstr ""
 " de proveerse."
 
 #. Title
-#: schema/codelists/milestoneType.csv:4
+#: schema/codelists/milestoneType.csv:5
 msgid "Delivery milestones"
 msgstr "Hitos de entrega"
 
 #. Description
-#: schema/codelists/milestoneType.csv:5
+#: schema/codelists/milestoneType.csv:6
 msgid "For reporting milestones, such as when key reports should be provided."
 msgstr ""
 "Para hitos de reporte, tales como cuando los reportes clave deben de "
 "entregarse"
 
 #. Title
-#: schema/codelists/milestoneType.csv:5
+#: schema/codelists/milestoneType.csv:6
 msgid "Reporting milestones"
 msgstr "Hitos de reporte"
 
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
-msgid "code"
-msgstr "código"
-
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
-msgid "name"
-msgstr "nombre"
-
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
-msgid "description"
-msgstr "descripción"
-
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
-msgid "category"
-msgstr "categoría"
-
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
-msgid "url"
-msgstr "url"
-
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv
-msgid "public-database"
-msgstr "base de datos pública"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:1
-msgid "Website not yet searchable"
-msgstr "El sitio aún no se puede buscar"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:1
-msgid "Afghanistan Central Business Registry"
-msgstr "Afghanistan Central Business Registry"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:2
-msgid "Ministry of Economy"
-msgstr "Ministerio de Economía"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:3
-msgid "Australian Business Register"
-msgstr "Australian Business Register"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:4
-msgid "Australian Charities and Not-for-profits Commission"
-msgstr "Australian Charities and Not-for-profits Commission"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:5
-msgid "Bangladesh NGO Affairs Bureau"
-msgstr "Bangladesh NGO Affairs Bureau"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:6
-msgid "Banque Carrefour des entreprises / Kruispuntbank van ondernemingen"
-msgstr "Banque Carrefour des entreprises / Kruispuntbank van ondernemingen"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:7
-msgid "CRA_ACR is legal requirement for bilingual use"
-msgstr "CRA_ACR is legal requirement for bilingual use"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:7
-msgid "Canadian Revenue Agency / Agence du revenu du Canada"
-msgstr "Canadian Revenue Agency / Agence du revenu du Canada"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:8
-#, python-format
+#. Description
+#: schema/codelists/milestoneType.csv:7
 msgid ""
-"EXCEL Tables: "
-"http://administracionelectronica.gob.es/ctt/resources/Soluciones/238/Area%20descargas/Listado%20Oficinas%20AGE.xlsx?idIniciativa=238&idElemento=2745"
+"For events such as planned payments, or equity transfers in public private "
+"partnership projects."
 msgstr ""
-"EXCEL Tables: "
-"http://administracionelectronica.gob.es/ctt/resources/Soluciones/238/Area%20descargas/Listado%20Oficinas%20AGE.xlsx?idIniciativa=238&idElemento=2745"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:8
-msgid "Common Directory of Organizational Units and Offices - DIR3"
-msgstr "Common Directory of Organizational Units and Offices - DIR3"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:9
-msgid ""
-"Charities are registered but no openly searchable database yet available."
-msgstr ""
-"Las organizaciones de beneficiencia están registradas pero no hay disponible"
-" una base de datos abierta y que permita buscarlas"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:9
-msgid "Ministry of Foreign Affairs"
-msgstr "Ministry of Foreign Affairs"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:10
-msgid "Finnish Patent and Registration office"
-msgstr "Finnish Patent and Registration office"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:11
-msgid ""
-"Registre de Commerce et des Societies /Trade and Companies Register - "
-"Commercial Court Registry"
-msgstr ""
-"Registre de Commerce et des Societies /Trade and Companies Register - "
-"Commercial Court Registry"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:12
-msgid "Charity Commission"
-msgstr "Charity Commission"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:13
-msgid "Companies House"
-msgstr "Companies House"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:14
-msgid "Codes for use by IATI for UK Government Departments."
-msgstr "Codes for use by IATI for UK Government Departments."
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:14
-msgid "UK Government Departments Reference Numbers"
-msgstr "UK Government Departments Reference Numbers"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:15
-msgid ""
-"Use the final segment of the url (below /organisations) as the "
-"\"registration number\", converting all \"-\" to \"_\". Keep \"registration "
-"number\" portion all lowercase."
-msgstr ""
-"Utiliza el segmento final de la url (debajo de /organizaciones) como el "
-"\"número de registro\", convirtiendo todo \"-\" a \"_\". Manten la parte de "
-"\"registration number\" en minúsculas."
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:15
-msgid "UK Government Departments, Agencies & Public Bodies"
-msgstr "UK Government Departments, Agencies & Public Bodies"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:16
-msgid "The Charity Commission for Northern Ireland"
-msgstr "The Charity Commission for Northern Ireland"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:17
-msgid "HM Revenue and Customs"
-msgstr "HM Revenue and Customs"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:18
-msgid "Scottish Charity Register"
-msgstr "Scottish Charity Register"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:19
-msgid "UK Register of Learning Providers"
-msgstr "UK Register of Learning Providers"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:20
-msgid "Department of Social Welfare"
-msgstr "Department of Social Welfare"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:21
-msgid ""
-"NGO registration can also be done through Ministry Home affairs/ Kementerian"
-" Dalam Negeri"
-msgstr ""
-"NGO registration can also be done through Ministry Home affairs/ Kementerian"
-" Dalam Negeri"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:21
-msgid "Ministry Home affairs/ Kementerian Dalam Negeri"
-msgstr "Ministry Home affairs/ Kementerian Dalam Negeri"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:22
-msgid ""
-"Company registration is done through Ministry of Justice & Human Rights/ "
-"Kementerian Hukum Dan Hak"
-msgstr ""
-"Company registration is done through Ministry of Justice & Human Rights/ "
-"Kementerian Hukum Dan Hak"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:22
-msgid "Ministry of Justice & Human Rights/ Kementerian Hukum Dan Hak"
-msgstr "Ministry of Justice & Human Rights/ Kementerian Hukum Dan Hak"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:23
-msgid ""
-"International NGO registration is done through Ministry of Foreign affairs/ "
-"Kementerian Luar Negeri"
-msgstr ""
-"International NGO registration is done through Ministry of Foreign affairs/ "
-"Kementerian Luar Negeri"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:23
-msgid "Ministry of Foreign affairs/ Kementerian Luar Negeri"
-msgstr "Ministry of Foreign affairs/ Kementerian Luar Negeri"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:24
-msgid ""
-"Registration for NGO in Indonesia can be done at the provincial level. "
-"Because there is regional autonomy, each provincial has different "
-"requirements. Website is just one example"
-msgstr ""
-"El registro de ONG en Indonesia se puede hacer a nivel provincia. Como hay "
-"autonomía regional, cada provincia tiene requerimientos distintos. El sitio "
-"es sólo un ejemplo"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:24
-msgid "NGOs registered at Provinicial Level"
-msgstr "NGOs registered at Provinicial Level"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:25
-msgid "Irish Register of Charities"
-msgstr "Irish Register of Charities"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:26
-msgid "Irish CompaniesRegistration Office"
-msgstr "Irish CompaniesRegistration Office"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:27
-msgid "Isle of Man Companies Registry"
-msgstr "Isle of Man Companies Registry"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:28
-msgid "Isle of Man Index of Registered Charities"
-msgstr "Isle of Man Index of Registered Charities"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:29
-msgid ""
-"MCA regulates corporate affairs in India through the Companies Act, 1956, "
-"2013 and other allied Acts, Bills and Rules."
-msgstr ""
-"MCA regulates corporate affairs in India through the Companies Act, 1956, "
-"2013 and other allied Acts, Bills and Rules."
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:29
-msgid "Government of India, Minstry of Corporate Affairs"
-msgstr "Government of India, Minstry of Corporate Affairs"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:30
-msgid "NGO's Coordination Board"
-msgstr "NGO's Coordination Board"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:31
-msgid "Registar of Companies"
-msgstr "Registar of Companies"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:32
-msgid "Registrar of Societies"
-msgstr "Registrar of Societies"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:33
-msgid "Lesotho Council of Non Governmental Organisations"
-msgstr "Lesotho Council of Non Governmental Organisations"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:34
-msgid ""
-"The MHA assigns a registration number to each NGO - this number is time "
-"limited, for example 4 years, after which the registration is reviewed."
-msgstr ""
-"La MHA asigna un número de registro a cada ONG, este número tiene un límite "
-"de tiempo, por ejemplo 4 años, después del cual se analiza el registro."
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:34
-msgid ""
-"Ministry of Home Affairs - Central Committee for the Registration and "
-"Supervision of Organisations"
-msgstr ""
-"Ministry of Home Affairs - Central Committee for the Registration and "
-"Supervision of Organisations"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:35
-msgid "The Council for Non Governmental Organisations in Malawi"
-msgstr "The Council for Non Governmental Organisations in Malawi"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:36
-msgid "Malawi Revenue Authority"
-msgstr "Malawi Revenue Authority"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:37
-msgid ""
-"There is a pdf file with a list of registered NGOs, but these do not appear "
-"to be registration numbers. New database is planned"
-msgstr ""
-"Hay un PDF con una lista de las ONGs registradas pero no parece que sean los"
-" números de registro. Se planea una nueva base de datos"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:37
-msgid "NGO Board of Malawi"
-msgstr "NGO Board of Malawi"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:38
-msgid "Registrar General, Department of Justice"
-msgstr "Registrar General, Department of Justice"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:39
-msgid "Mozambique Ministry of Justice"
-msgstr "Mozambique Ministry of Justice"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:40
-msgid "Kamer van Koophandel"
-msgstr "Kamer van Koophandel"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:41
-msgid "Brønnøysundregistrene"
-msgstr "Brønnøysundregistrene"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:42
-msgid "Company Registrar Office"
-msgstr "Company Registrar Office"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:43
-msgid "NGO registration"
-msgstr "NGO registration"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:44
-msgid ""
-"The PCP Certification Programme seeks to bring transparency, accountability "
-"and good governance in the nonprofit sector in Pakistan. The first "
-"initiative of its kind in South Asia; it involves the evaluation of a "
-"nonprofit organisation on standardised parameters of internal governance, "
-"financial management and programme delivery."
-msgstr ""
-"El PCP Certification Programme busca llevar transparencia, rendición de "
-"cuentas y buena gobernanza al sector sin fines de lucro en Pakistán. La "
-"primera iniciativa en su tipo en el sur de Asia. Involucra la evaluación de "
-"una organización sin fines de lucro en parámetros estandarizados de "
-"gobernanza interna, manejo financiero y cumplimiento de programas."
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:44
-msgid "Pakistan Centre for Philanthropy"
-msgstr "Pakistan Centre for Philanthropy"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:45
-msgid "Bolagsverket / Swedish Companies Registration Office"
-msgstr "Bolagsverket / Swedish Companies Registration Office"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:46
-msgid ""
-"Most organisations (including NGOs) have to be registered with the Ministry "
-"of Interior for the Trade Register Of The Slovak Republic (Živnostensky "
-"Register Slovenskej Republiky) and are allocated a unique registration "
-"number"
-msgstr ""
-"La mayoría de las organizaciónes (incluyendo ONGs) deben registrarse con el "
-"Ministry of Interior for the Trade Register Of The Slovak Republic "
-"(Živnostensky Register Slovenskej Republiky) y se les otorga un número de "
-"registro único"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:46
-msgid "Slovakia Ministry Of Interior Trade Register"
-msgstr "Slovakia Ministry Of Interior Trade Register"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:47
-msgid "United State Register, Ukraine"
-msgstr "United State Register, Ukraine"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:48
-msgid "NGO Board, Ministry of Internal Affairs"
-msgstr "NGO Board, Ministry of Internal Affairs"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:49
-msgid "Registration Services Bureau"
-msgstr "Registration Services Bureau"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:50
-msgid ""
-"Corporation registration is the responsibility of each state (see link)"
-msgstr ""
-"El registro de corporaciones es responsabilidad de cada estado (ver enlace)"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:51
-msgid "Internal Revenue Service / Employer Identification Number"
-msgstr "Internal Revenue Service / Employer Identification Number"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:52
-msgid ""
-"Use the final segment of the url (below /federal and excluding the "
-"extension) as the \"registration number\", converting all \"-\" to \"_\". "
-"Keep \"registration number\" portion all lowercase."
-msgstr ""
-"Utiliza el segmento final de la url (debajo de /organizaciones) como el "
-"\"número de registro\", convirtiendo todo \"-\" a \"_\". Manten la parte de "
-"\"registration number\" en minúsculas."
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:52
-msgid "Index of U.S. Government Departments and Agencies"
-msgstr "Índice de U.S. Government Departments and Agencies"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:53
-msgid ""
-"XI-IATI is a list of organisation identifiers that is maintained by the IATI"
-" Secretariat. Any publisher may apply to the IATI Technical Team for an "
-"identifier to be generated."
-msgstr ""
-"XI-IATI es una lista de identificadores de organización mantenido por el "
-"Secretariado de IATI. Cualquier publicador puede aplicar con el Equipo "
-"Técnico de IATI para que generen un identificador."
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:53
-msgid "International Aid Transparency Initiative Organisation Identifier"
-msgstr "International Aid Transparency Initiative Organisation Identifier"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:54
-msgid "See Donor, Agency, and Delivery Channel codes"
-msgstr "Ver códigos de Donante, Agencia y Canal de Entrega"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:54
-msgid "OECD Development Assistance Committee"
-msgstr "OECD Development Assistance Committee"
-
-#. description
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:55
-msgid ""
-"OCHA is the part of the United Nations Secretariat responsible for bringing "
-"together humanitarian actors to ensure a coherent response to emergencies."
-msgstr ""
-"OCHA es la parte del Sectetariado de las Naciones Unidas responsable de "
-"reunir actores humanitarios para asegurar una respuesta coherente a "
-"emergencias."
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:55
-msgid "United Nations Office for the Coordination of Humanitarian Affairs"
-msgstr "United Nations Office for the Coordination of Humanitarian Affairs"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:56
-msgid "Companies and Intellectual Property Commission (CIPC)"
-msgstr "Companies and Intellectual Property Commission (CIPC)"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:57
-msgid "Association for Non-Profit Organisations"
-msgstr "Association for Non-Profit Organisations"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:58
-msgid "SA Revenue Service Tax Exemption Unit / Public Benefit Organisations"
-msgstr "SA Revenue Service Tax Exemption Unit / Public Benefit Organisations"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:59
-msgid "Non Governmental Organisation Registration Board"
-msgstr "Non Governmental Organisation Registration Board"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:60
-msgid "Patents and Companies Registration Agency"
-msgstr "Patents and Companies Registration Agency"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:61
-msgid "Private Voluntary Organisations Council"
-msgstr "Private Voluntary Organisations Council"
-
-#. name
-#: schema/codelists/organizationIdentifierRegistrationAgency_iati.csv:62
-msgid "Registrar of Deeds"
-msgstr "Registrar of Deeds"
+"Para eventos tales como pagos planificados o transferencias de capital en "
+"proyectos de asociación público-privada."
+
+#. Title
+#: schema/codelists/milestoneType.csv:7
+msgid "Financing milestones"
+msgstr "Hitos de financiamiento"
 
 #. Description
 #: schema/codelists/partyRole.csv:1
@@ -2277,8 +2671,8 @@ msgstr "Proceso de renovación"
 
 #. Description
 #: schema/codelists/relatedProcessScheme.csv:1
-msgid "An open contracting process identifier (OCID)"
-msgstr "Un identificador de proceso de contratación abierta (OCID)"
+msgid "An open contracting process identifier (ocid)"
+msgstr "Un identificador de proceso de contratación abierta (ocid)"
 
 #. Title
 #: schema/codelists/relatedProcessScheme.csv:1
@@ -2299,7 +2693,7 @@ msgstr ""
 "hay planes detallados para una licitación. "
 
 #. Title
-#: schema/codelists/releaseTag.csv:1
+#: schema/codelists/releaseTag.csv:1 schema/codelists/tenderStatus.csv:1
 msgid "Planning"
 msgstr "Planeación"
 
@@ -2544,10 +2938,10 @@ msgstr "Registro Compilado"
 
 #. Description
 #: schema/codelists/submissionMethod.csv:1
-msgid "Bids will be recieved through an electronic procurement platform."
+msgid "Bids will be received through an electronic procurement platform."
 msgstr ""
-"Las propuestas se recibirán a través de una plataforma electrónica de "
-"compra."
+"Las ofertas se recibirán a través de una plataforma electrónica de "
+"adquisiciones."
 
 #. Title
 #: schema/codelists/submissionMethod.csv:1
@@ -2558,8 +2952,7 @@ msgstr "Entrega Electrónica"
 #: schema/codelists/submissionMethod.csv:2
 msgid "Bids will be recieved through an electronic auction platform."
 msgstr ""
-"Las propuestas se recibirán a través de una plataforma electrónica de "
-"subasta"
+"Las ofertas se recibirán a través de una plataforma electrónica de subasta"
 
 #. Title
 #: schema/codelists/submissionMethod.csv:2
@@ -2569,10 +2962,10 @@ msgstr "Subasta Electrónica"
 #. Description
 #: schema/codelists/submissionMethod.csv:3
 msgid ""
-"Bids will be recieved via written documents, delivered as hard copies, via "
+"Bids will be received via written documents, delivered as hard copies, via "
 "generic e-mail systems, or some similar mechanism."
 msgstr ""
-"Las propuestas se recibirán via documentos escritos, entregados como copias "
+"Las ofertas se recibirán via documentos escritos, entregados como copias "
 "físicas, via sistemas de correo electrónico genérico o algún mecanismo "
 "similar."
 
@@ -2584,11 +2977,11 @@ msgstr "Escrita"
 #. Description
 #: schema/codelists/submissionMethod.csv:4
 msgid ""
-"Bids will only be recieved if they are hand delivered at the time and place "
+"Bids will only be received if they are hand delivered at the time and place "
 "specified in submissionMethodDetails or attached documentation."
 msgstr ""
-"Las propuestas sólo se recibirán si se entregan en persona en el tiempo y "
-"hora especificada en submissionMethodDetails o la documentación adjunta."
+"Las ofertas sólo se recibirán si se entregan en persona en el tiempo y hora "
+"especificada en submissionMethodDetails o la documentación adjunta."
 
 #. Title
 #: schema/codelists/submissionMethod.csv:4
@@ -2609,11 +3002,6 @@ msgstr ""
 "proceso con este estado puede proveer información sobre actividades "
 "iniciales u oportunidades de consulta, durante los cuales se puede dar forma"
 " a los detalles subsecuentes de la licitación."
-
-#. Title
-#: schema/codelists/tenderStatus.csv:1
-msgid "planning"
-msgstr "planning"
 
 #. Description
 #: schema/codelists/tenderStatus.csv:2
@@ -2642,7 +3030,7 @@ msgstr "El proceso de licitación ha sido cancelado."
 
 #. Description
 #: schema/codelists/tenderStatus.csv:5
-msgid "The tender process was unsucessful."
+msgid "The tender process was unsuccessful."
 msgstr "El proceso de licitación no fue exitoso."
 
 #. Description
@@ -2660,16 +3048,11 @@ msgstr "Completo"
 msgid "No further information on this process is available under this ocid."
 msgstr "No hay más información disponible sobre este proceso bajo este ocid."
 
-#. Title
-#: schema/codelists/tenderStatus.csv:7
-msgid "Withdrawn"
-msgstr "Retirado"
-
 #. Description
 #: schema/codelists/unitClassificationScheme.csv:1
 msgid ""
-"Use the commmon code from the latest version of the UN/CEFACT Recommendation"
-" 20 list of 'Codes for Units of Measure Used in International Trade'"
+"Use the common code from the latest version of the UN/CEFACT Recommendation "
+"20 list of 'Codes for Units of Measure Used in International Trade'"
 msgstr ""
 "Uso del código común de la última versión del la lista 'Codes for Units of "
 "Measure Used in International Trade' de UN/CEFACT Recommendation 20"

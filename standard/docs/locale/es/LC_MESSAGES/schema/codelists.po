@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-30 16:51+0100\n"
+"POT-Creation-Date: 2017-08-07 12:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2017\n"
+"Last-Translator: Oscar Montiel <oscar.montiel@okfn.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -78,7 +78,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/codelists.md:11
 msgid ""
-"Codes are case sensitive, and are generally provided as english language "
+"Codes are case sensitive, and are generally provided as English language "
 "camelCase. Codes values should not be translated, through the OCDS team will"
 " work with publishers to provide alternative translations of code titles and"
 " definitions."
@@ -99,7 +99,7 @@ msgstr "Rol de la Parte"
 
 #: ../../standard/docs/en/schema/codelists.md:17
 msgid ""
-"The organisations, economic operators or other participants in a contracting"
+"The organizations, economic operators or other participants in a contracting"
 " process are listed in the [parties section](../../reference/#parties). A "
 "single party may have one or more roles in the contracting process."
 msgstr ""
@@ -125,8 +125,8 @@ msgstr ""
 "cpv_en.htm). Son preferidas las listas de códigos abiertas."
 
 #: ../../standard/docs/en/schema/codelists.md:36
-#: ../../standard/docs/en/schema/codelists.md:96
-#: ../../standard/docs/en/schema/codelists.md:108
+#: ../../standard/docs/en/schema/codelists.md:99
+#: ../../standard/docs/en/schema/codelists.md:111
 msgid ""
 "This is an open codelist, and new values may be suggested outside of the "
 "main revision process for the standard, or local codes (prefixed by x\\_) "
@@ -160,31 +160,55 @@ msgstr ""
 msgid "Organization Identifier Scheme"
 msgstr "Esquema de Identificación de Organizaciones"
 
-#: ../../standard/docs/en/schema/codelists.md:50
-msgid ""
-"The Organization Identifier Scheme currently uses the codes from the "
-"International Aid Transparency Initiative ['Organisation Registration "
-"Agency' "
-"codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/)."
-" See the identifiers section for [more information on organization "
-"identifiers](../../identifiers/#organization-identifiers)"
-msgstr ""
-"Actualmente el Esquema de Identificación de Organizaciones utiliza los "
-"códigos de la lista de códigos de la  ['Organisation Registration "
-"Agency'](http://iatistandard.org/codelists/OrganisationRegistrationAgency/) "
-"presentada por la International Aid Transparency Initiative. Puede ver la "
-"sección de identificadores para tener más [información sobre identificadores"
-" de organización](../../identifiers/#organization-identifiers)"
+#: ../../standard/docs/en/schema/codelists.md:54
+msgid "![org-id.guide](../../../assets/org-id-logo-full.png)"
+msgstr "![org-id.guide](../../../assets/org-id-logo-full.png)"
 
-#: ../../standard/docs/en/schema/codelists.md:59
-msgid "This list can be extended in consultation with IATI."
-msgstr "Esta lista puede extenderse con el asesoramiento de la IATI."
+#: ../../standard/docs/en/schema/codelists.md:56
+msgid ""
+"The Organization Identifier Scheme currently uses the codes from [org-"
+"id.guide](http://www.org-id.guide)."
+msgstr ""
+"El esquema de identificador de organización utiliza actualmente los códigos "
+"de [org-id.guide](http://www.org-id.guide)."
+
+#: ../../standard/docs/en/schema/codelists.md:58
+msgid ""
+"The latest version of the codelist can be [accessed at http://org-"
+"id.guide/download](http://org-id.guide/download) and can be explored through"
+" the [online list locator](http://org-id.guide/)."
+msgstr ""
+"La última versión de la lista de códigos puede ser [vista en http://org-"
+"id.guide/download](http://org-id.guide/download) y puede ser explorada a "
+"través del [localizador de listas en línea](http://org-id.guide/)."
+
+#: ../../standard/docs/en/schema/codelists.md:60
+msgid ""
+"For information on how to get new additions made to this list, see the [org-"
+"id.guide handbook](http://docs.org-id.guide/en/latest/contribute/)"
+msgstr ""
+"Para obtener información sobre cómo obtener nuevas adiciones a esta lista, "
+"consulte el [manual de org-id.guide](http://docs.org-"
+"id.guide/en/latest/contribute/)"
+
+#: ../../standard/docs/en/schema/codelists.md:62
+msgid ""
+"(**Update:** This list was formerly maintained by the International Aid "
+"Transparency Initiative and contained in OCDS documentation as "
+"organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS "
+"1.1.1)"
+msgstr ""
+"(** Actualización: ** Esta lista era mantenida anteriormente por la "
+"Iniciativa de Transparencia de la Ayuda Internacional y contenida en la "
+"documentación del OCDS como "
+"organizationIdentifierRegistrationAgency_iati.csv Esto fue eliminado en OCDS"
+" 1.1.1)"
 
 #: ../../standard/docs/en/schema/codelists.md:0
 msgid "Document Type"
 msgstr "Tipo de Documento"
 
-#: ../../standard/docs/en/schema/codelists.md:63
+#: ../../standard/docs/en/schema/codelists.md:66
 msgid ""
 "The following list describes documents and documentation recommended for "
 "publication as part of an open contracting implementation. The codelist "
@@ -198,11 +222,11 @@ msgstr ""
 "«intermedios» o «avanzados» y la sección de una entrega de OCDS con la que "
 "es más probable que se apliquen."
 
-#: ../../standard/docs/en/schema/codelists.md:65
+#: ../../standard/docs/en/schema/codelists.md:68
 msgid ""
-"The code descriptions are neccessarily broad, to cover their usage in a "
-"range of contracting processes, including for goods, works and services, and"
-" in other contexts, such as public private partnerships, infrastructure or "
+"The code descriptions are necessarily broad, to cover their usage in a range"
+" of contracting processes, including for goods, works and services, and in "
+"other contexts, such as public private partnerships, infrastructure or "
 "concession contracts."
 msgstr ""
 "Las descripciones de los códigos son muy amplias, para cubrir su uso en una "
@@ -210,18 +234,18 @@ msgstr ""
 "en otros contextos, como las asociaciones público-privadas, la "
 "infraestructura o los contratos de concesión."
 
-#: ../../standard/docs/en/schema/codelists.md:67
+#: ../../standard/docs/en/schema/codelists.md:70
 msgid ""
 "Implementers may wish to map their existing document codes to this list, or,"
 " if using this list within a user-interface, to re-write the codelist titles"
-" and descriptions apporiately for the context they are being used in."
+" and descriptions appropriately for the context they are being used in."
 msgstr ""
 "Es posible que los implementadores deseen asignar sus códigos de documentos "
 "existentes a esta lista o, si utilizan esta lista dentro de una interfaz de "
 "usuario, volver a escribir los títulos y las descripciones de la lista de "
 "códigos apropiadas para el contexto en el que se están utilizando."
 
-#: ../../standard/docs/en/schema/codelists.md:69
+#: ../../standard/docs/en/schema/codelists.md:72
 msgid ""
 "This is an open codelist, and additional entries can be included with a x\\_"
 " prefix."
@@ -233,7 +257,7 @@ msgstr ""
 msgid "Award Criteria"
 msgstr "Criterios de Adjudicación"
 
-#: ../../standard/docs/en/schema/codelists.md:80
+#: ../../standard/docs/en/schema/codelists.md:83
 msgid ""
 "The award criteria codelist describes the basis on which contract awards "
 "will be made."
@@ -244,8 +268,8 @@ msgstr ""
 #: ../../standard/docs/en/schema/codelists.md:3
 msgid ""
 "This codelist was revised in OCDS 1.1, deprecating earlier codes and "
-"introducing a new set of codelist entries. Publishes may need to review the "
-"mapping from their internal systems to this updated list of award criteria."
+"introducing a new set of codelist entries. Publishers may need to review the"
+" mapping from their internal systems to this updated list of award criteria."
 msgstr ""
 "Esta lista de códigos se revisó en OCDS 1.1, descontinuando los códigos "
 "anteriores e introduciendo un nuevo conjunto de entradas. Los publicadores "
@@ -256,7 +280,7 @@ msgstr ""
 msgid "Submission Method"
 msgstr "Método de Presentación"
 
-#: ../../standard/docs/en/schema/codelists.md:100
+#: ../../standard/docs/en/schema/codelists.md:103
 msgid ""
 "The submission method codelist is used to identify the mechanism through "
 "which a submission may be made."
@@ -268,13 +292,13 @@ msgstr ""
 msgid "Related Process"
 msgstr "Proceso Relacionado"
 
-#: ../../standard/docs/en/schema/codelists.md:112
+#: ../../standard/docs/en/schema/codelists.md:115
 msgid ""
 "The related process block is used at the release level to point backwards to"
 " prior processes, such as planning, PQQ or framework establishment, and at "
-"the contract level to point onward to sub-contracts, renewal or replacement"
-" processes. The related process codelist determines the kind of relationship"
-" that is being described."
+"the contract level to point onward to sub-contracts, renewal or replacement "
+"processes. The related process codelist determines the kind of relationship "
+"that is being described."
 msgstr ""
 "El bloque de proceso relacionado se utiliza en el nivel de entrega para "
 "apuntar hacia atrás a procesos anteriores, tales como planificación, PQQ o "
@@ -287,7 +311,7 @@ msgstr ""
 msgid "Related Process Scheme"
 msgstr "Esquema de Proceso Relacionado"
 
-#: ../../standard/docs/en/schema/codelists.md:122
+#: ../../standard/docs/en/schema/codelists.md:125
 msgid ""
 "The related process scheme describes the kind of identifier used to cross-"
 "reference another process."
@@ -299,7 +323,7 @@ msgstr ""
 msgid "Milestone Type"
 msgstr "Tipo de Hito"
 
-#: ../../standard/docs/en/schema/codelists.md:133
+#: ../../standard/docs/en/schema/codelists.md:136
 msgid ""
 "The milestone block can be used to represent a wide variety of events in the"
 " lifetime of a contracting process. The milestone type codelist is used to "
@@ -313,7 +337,7 @@ msgstr ""
 msgid "Extended Procurement Category"
 msgstr "Categoría de Compra Ampliada"
 
-#: ../../standard/docs/en/schema/codelists.md:143
+#: ../../standard/docs/en/schema/codelists.md:146
 msgid ""
 "The extended procurement category codelist is used to provide additional "
 "detail about the focus of a contracting process."
@@ -330,7 +354,7 @@ msgstr "Listas de Códigos Cerradas"
 msgid "Release Tag"
 msgstr "Etiqueta de entrega"
 
-#: ../../standard/docs/en/schema/codelists.md:156
+#: ../../standard/docs/en/schema/codelists.md:159
 msgid ""
 "A contracting process may result in a number of releases of information over"
 " time. These should be tagged to indicate the stage of the contracting "
@@ -344,7 +368,7 @@ msgstr ""
 msgid "Initiation Type"
 msgstr "Tipo de Inicio"
 
-#: ../../standard/docs/en/schema/codelists.md:166
+#: ../../standard/docs/en/schema/codelists.md:169
 msgid ""
 "Contracting processes may be formed under a number of different processes. "
 "Currently, only 'tender' is supported in this codelist. Future versions of "
@@ -363,7 +387,7 @@ msgstr ""
 msgid "Tender Status"
 msgstr "Estatus de la Licitación"
 
-#: ../../standard/docs/en/schema/codelists.md:176
+#: ../../standard/docs/en/schema/codelists.md:179
 msgid ""
 "The `tender.status` field is used to indicate the current status of a tender"
 " process. The following options are available:"
@@ -379,7 +403,7 @@ msgstr "El estado de \"planning\" se introdujo en la versión 1.1."
 msgid "Method"
 msgstr "Método"
 
-#: ../../standard/docs/en/schema/codelists.md:191
+#: ../../standard/docs/en/schema/codelists.md:194
 msgid ""
 "A contracting process aims to fulfill the requirements identified at the "
 "planning stage. The procurement method is the procedure used to purchase the"
@@ -397,7 +421,7 @@ msgstr ""
 "OMC](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), y añade"
 " Un código \"directo\" adicional para premios sin competencia."
 
-#: ../../standard/docs/en/schema/codelists.md:199
+#: ../../standard/docs/en/schema/codelists.md:202
 msgid ""
 "Note: The 'direct' code was introduced in Version 1.1. Publishers who "
 "completed a codelist mapping prior to 1.1 may have included direct "
@@ -412,27 +436,27 @@ msgstr ""
 msgid "Procurement Category"
 msgstr "Categoría de Compra"
 
-#: ../../standard/docs/en/schema/codelists.md:203
+#: ../../standard/docs/en/schema/codelists.md:206
 msgid ""
 "The procurement category codelist is used to indicate the **primary** focus "
 "of a contracting process. Where a contracting process covers more than one "
 "of the options below, publishers can use the "
 "```additionalProcurementCategories``` field with an array of entries from "
-"the open [extendedProcurementCateory](#extended-procurement-category) "
+"the open [extendedProcurementCategory](#extended-procurement-category) "
 "codelist."
 msgstr ""
 "La lista de códigos de la categoría de compras se utiliza para indicar el "
 "enfoque **primario** de un proceso de contratación. Cuando un proceso de "
 "contratación cubre más de una de las opciones siguientes, los publicadores "
 "pueden utilizar el campo ```additionalProcurementCategories``` con una "
-"matriz de entradas de la lista de códigos [extendedProcurementCateory"
+"matriz de entradas de la lista de códigos [extendedProcurementCategory"
 "](#extended-procurement-category) abierta."
 
 #: ../../standard/docs/en/schema/codelists.md:0
 msgid "Award Status"
 msgstr "Estatus de la Adjudicación"
 
-#: ../../standard/docs/en/schema/codelists.md:213
+#: ../../standard/docs/en/schema/codelists.md:216
 msgid ""
 "An award move through multiple states. Releases over time may update the "
 "status of an award."
@@ -440,7 +464,7 @@ msgstr ""
 "Una adjudicación pasa por distintos estatus. Las entregas a lo largo del "
 "tiempo podrían actualizar el estatus de una adjudicación."
 
-#: ../../standard/docs/en/schema/codelists.md:221
+#: ../../standard/docs/en/schema/codelists.md:224
 msgid ""
 "The ```awardStatus``` field and codelist is used to indicate when a tender "
 "did not result in an award (through the "
@@ -454,7 +478,7 @@ msgstr ""
 msgid "Contract Status"
 msgstr "Estatus del Contrato"
 
-#: ../../standard/docs/en/schema/codelists.md:225
+#: ../../standard/docs/en/schema/codelists.md:228
 msgid ""
 "Contracts can move through multiple states. Releases over time may update "
 "the status of a contract."
@@ -463,10 +487,14 @@ msgstr ""
 "del tiempo pueden actualizar el estatus de un contrato."
 
 #: ../../standard/docs/en/schema/codelists.md:0
+msgid "Milestone Status"
+msgstr "Estatus de Hitos"
+
+#: ../../standard/docs/en/schema/codelists.md:0
 msgid "Currency"
 msgstr "Moneda"
 
-#: ../../standard/docs/en/schema/codelists.md:235
+#: ../../standard/docs/en/schema/codelists.md:246
 msgid ""
 "The currency for each amount should always be specified using the uppercase "
 "3-letter currency code from "
@@ -475,11 +503,3 @@ msgstr ""
 "La moneda para cada monto siempre se debe especificar usando el código de "
 "moneda de 3 letras mayúsculas de "
 "[ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm)."
-
-#: ../../standard/docs/en/schema/codelists.md:237
-msgid "A full list is available from the ISO."
-msgstr "La lista completa está disponible en la ISO."
-
-#: ../../standard/docs/en/schema/codelists.md:0
-msgid "Milestone Status"
-msgstr "Estatus de Hitos"
