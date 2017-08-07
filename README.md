@@ -64,6 +64,12 @@ fswatch -0 standard/docs/ | xargs -0 -n 1 -I {} ./build_docs.sh
 
 ### Translations
 
+If this is your first time using Transifex, run (replacing `USERNAME` and `PASSWORD`):
+
+```shell
+sphinx-intl create-transifexrc --transifex-username USERNAME --transifex-password PASSWORD
+```
+
 When a new major/minor version of the docs text is ready, a new Transifex project needs to be made called e.g. open-contracting-standard-x.y  This is done on the Transifex web interface. The ```.tx/config``` file also needs to be emptied.
 
 Make sure the build is run above, then run (making sure the project name is the same as the one made above) 
