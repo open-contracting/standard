@@ -1,12 +1,12 @@
 {
-    "id": "http://standard.open-contracting.org/schema/1__0__2/release-schema.json",
+    "id": "http://standard.open-contracting.org/schema/1__0__3/release-schema.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Schema for an Open Contracting Release",
     "type": "object",
     "properties": {
         "ocid": {
             "title": "Open Contracting ID",
-            "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/)",
+            "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/1.0/en/schema/identifiers/)",
             "type": "string",
             "mergeStrategy": "ocdsOmit"
         },
@@ -25,7 +25,7 @@
         },
         "tag": {
             "title": "Release Tag",
-            "description": "A value from the [releaseTag codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#release-tag) that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for advanced validation when certain kinds of releases should contain certain fields.",
+            "description": "A value from the [releaseTag codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#release-tag) that identifies the nature of the release being made. Tags may be used to filter release, or, in future, for advanced validation when certain kinds of releases should contain certain fields.",
             "type": "array",
             "items": {
                 "type": "string",
@@ -35,7 +35,7 @@
         },
         "initiationType": {
             "title": "Initiation type",
-            "description": "String specifying the type of initiation process used for this contract, taken from the [initiationType](http://standard.open-contracting.org/latest/en/schema/codelists/#initiation-type) codelist. Currently only tender is supported.",
+            "description": "String specifying the type of initiation process used for this contract, taken from the [initiationType](http://standard.open-contracting.org/1.0/en/schema/codelists/#initiation-type) codelist. Currently only tender is supported.",
             "type": "string",
             "enum": ["tender"],
             "mergeStrategy": "ocdsVersion"
@@ -136,7 +136,7 @@
                 },
                 "status": {
                     "title": "Tender status",
-                    "description": "The current status of the tender based on the [tenderStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#tender-status)",
+                    "description": "The current status of the tender based on the [tenderStatus codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#tender-status)",
                     "type": ["string", "null"],
                     "enum": ["planned", "active", "cancelled", "unsuccessful", "complete", null],
                     "mergeStrategy": "ocdsVersion"
@@ -162,7 +162,7 @@
                 },
                 "procurementMethod": {
                     "title":"Procurement method",
-                    "description": "Specify tendering method against the [method codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited",
+                    "description": "Specify tendering method against the [method codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#method) as per [GPA definitions](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) of Open, Selective, Limited",
                     "type": ["string", "null"],
                     "enum": ["open", "selective", "limited", null],
                     "mergeStrategy": "ocdsVersion"
@@ -181,7 +181,7 @@
                 },
                 "awardCriteria": {
                     "title":"Award criteria",
-                    "description": "Specify the award criteria for the procurement, using the [award criteria codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#award-criteria)",
+                    "description": "Specify the award criteria for the procurement, using the [award criteria codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#award-criteria)",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -193,7 +193,7 @@
                 },
                 "submissionMethod": {
                     "title":"Submission method",
-                    "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction. Using the [submission method codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#submission-method)",
+                    "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction. Using the [submission method codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#submission-method)",
                     "type": ["array", "null"],
                     "items": {
                         "type": "string"
@@ -254,7 +254,7 @@
                 },
                 "documents": {
                     "title":"Documents",
-                    "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#document-type) for details of potential documents to include.",
+                    "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#document-type) for details of potential documents to include.",
                     "type": "array",
                     "mergeStrategy": "arrayMergeById",
                     "mergeOptions": { "idRef": "id" },
@@ -299,7 +299,7 @@
             "properties": {
                 "id": {
                     "title": "Award ID",
-                    "description": "The identifier for this award. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for further details.",
+                    "description": "The identifier for this award. It must be unique and cannot change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/1.0/en/schema/identifiers/) for further details.",
                     "type": ["string", "integer"],
                     "mergeStrategy": "overwrite"
                 },
@@ -317,7 +317,7 @@
                 },
                 "status": {
                     "title": "Award status",
-                    "description": "The current status of the award drawn from the [awardStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#award-status)",
+                    "description": "The current status of the award drawn from the [awardStatus codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#award-status)",
                     "type": ["string", "null"],
                     "enum": ["pending", "active", "cancelled", "unsuccessful", null],
                     "mergeStrategy": "ocdsVersion"
@@ -387,7 +387,7 @@
             "properties": {
                 "id": {
                     "title": "Contract ID",
-                    "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for further details.",
+                    "description": "The identifier for this contract. It must be unique and cannot change within its Open Contracting Process (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/1.0/en/schema/identifiers/) for further details.",
                     "type": ["string", "integer"],
                     "mergeStrategy": "overwrite"
                 },
@@ -410,7 +410,7 @@
                 },
                 "status": {
                     "title": "Contract status",
-                    "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status)",
+                    "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#contract-status)",
                     "type": ["string", "null"],
                     "enum": ["pending", "active", "cancelled", "terminated", null],
                     "mergeStrategy": "ocdsVersion"
@@ -542,7 +542,7 @@
                 },
                 "status": {
                     "title":"Status",
-                    "description": "The status that was realized on the date provided in dateModified, drawn from the [milestoneStatus codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-status).",
+                    "description": "The status that was realized on the date provided in dateModified, drawn from the [milestoneStatus codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#milestone-status).",
                     "type": ["string", "null"],
                     "enum": ["met", "notMet", "partiallyMet", null],
                     "mergeStrategy": "ocdsVersion"
@@ -580,7 +580,7 @@
                 },
                 "documentType": {
                     "title":"Document type",
-                    "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+                    "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/1.0/en/schema/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -757,12 +757,12 @@
             "properties": {
                 "identifier": { 
                     "title":"Primary identifier",
-                    "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/) for the preferred scheme and identifier to use.",
+                    "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/1.0/en/schema/identifiers/) for the preferred scheme and identifier to use.",
                     "$ref": "#/definitions/Identifier" 
                 },
                 "additionalIdentifiers": { 
                     "title":"Additional identifiers",
-                    "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://standard.open-contracting.org/latest/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
+                    "description": "A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://standard.open-contracting.org/1.0/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
                     "type": "array",
                     "mergeStrategy": "ocdsVersion",
                     "items": { "$ref": "#/definitions/Identifier" },
@@ -803,12 +803,12 @@
                 },
                 "classification": {
                     "title":"Classification",
-                    "description": "The primary classification for the item. See the [itemClassificationScheme](http://standard.open-contracting.org/latest/en/schema/codelists/#item-classification-scheme) to identify preferred classification lists, including CPV and GSIN.",
+                    "description": "The primary classification for the item. See the [itemClassificationScheme](http://standard.open-contracting.org/1.0/en/schema/codelists/#item-classification-scheme) to identify preferred classification lists, including CPV and GSIN.",
                     "$ref": "#/definitions/Classification"
                 },
                 "additionalClassifications": {
                     "title":"Additional classifications",
-                    "description": "An array of additional classifications for the item. See the [itemClassificationScheme](http://standard.open-contracting.org/latest/en/schema/codelists/#item-classification-scheme) codelist for common options to use in OCDS. This may also be used to present codes from an internal classification scheme.",
+                    "description": "An array of additional classifications for the item. See the [itemClassificationScheme](http://standard.open-contracting.org/1.0/en/schema/codelists/#item-classification-scheme) codelist for common options to use in OCDS. This may also be used to present codes from an internal classification scheme.",
                     "type": "array",
                     "mergeStrategy": "ocdsVersion",
                     "items": { "$ref": "#/definitions/Classification" },
@@ -819,7 +819,7 @@
                     "description": "The number of units required",
                     "mergeStrategy": "ocdsVersion",
                     "minimum": 0,
-                    "type": ["integer", "null"]
+                    "type": ["number", "null"]
                 },
                 "unit": {
                     "title":"Unit",
@@ -903,7 +903,7 @@
             "properties": {
                 "scheme": {
                     "title":"Scheme",
-                    "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://standard.open-contracting.org/latest/en/schema/codelists/#item-classification-scheme) wherever possible.",
+                    "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://standard.open-contracting.org/1.0/en/schema/codelists/#item-classification-scheme) wherever possible.",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -939,7 +939,7 @@
             "properties": {
                 "scheme": {
                     "title":"Scheme",
-                    "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/latest/en/schema/codelists/#organization-identifier-scheme).",
+                    "description": "Organization identifiers be drawn from an existing identification scheme. This field is used to indicate the scheme or codelist in which the identifier will be found. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/1.0/en/schema/codelists/#organization-identifier-scheme).",
                     "type": ["string", "null"],
                     "mergeStrategy": "ocdsVersion"
                 },
@@ -1062,7 +1062,6 @@
                     "title":"Amount",
                     "description": "Amount as a number.",
                     "type": ["number", "null"],
-                    "minimum": 0,
                     "mergeStrategy": "ocdsVersion"
                 },
                 "currency": {
