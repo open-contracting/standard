@@ -347,10 +347,12 @@ class JSONInclude(LiteralInclude):
         class_list.append('file-' + title)
         expand = str(self.options.get("expand", "")).split(",")
         class_list = class_list + ['expandjson expand-{0}'.format(s.strip()) for s in expand]
-        literal = nodes.literal_block(code, code, classes=class_list)
+        literal = nodes.literal_block(code, code)
         literal['language'] = 'json'
         literal['caption'] = 'TEST'
-        return [literal]
+        container = nodes.container(classes=class_list)
+        container += literal
+        return [container]
 
 
 directives.register_directive('jsoninclude', JSONInclude)
