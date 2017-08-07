@@ -33,7 +33,7 @@ for language in languages:
     def translate_data(data):
         for key, value in list(data.items()):
             if key in ('title', 'description') and isinstance(value, str):
-                data[key] = translator.gettext(value.replace('{{version}}', version).replace('{{lang}}', language))
+                data[key] = translator.gettext(value).replace('{{version}}', version).replace('{{lang}}', language)
             if isinstance(value, dict):
                 translate_data(value)
 
