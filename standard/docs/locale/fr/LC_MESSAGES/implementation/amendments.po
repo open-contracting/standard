@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-08-08 09:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,25 +20,31 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/amendments.md:0
 msgid "Amendments"
-msgstr ""
+msgstr "Modifications"
 
 #: ../../standard/docs/en/implementation/amendments.md:3
 msgid "Information about a contracting process will often change over time."
 msgstr ""
+"L'information sur un processus de passation de marchés va souvent changer "
+"avec le temps."
 
 #: ../../standard/docs/en/implementation/amendments.md:5
 msgid "Each time information changes, a new OCDS release should be published."
 msgstr ""
+"Chaque fois que l'information change, une nouvelle instance OCDS devrait "
+"être publiée."
 
 #: ../../standard/docs/en/implementation/amendments.md:7
 msgid "There are three kinds of changes:"
-msgstr ""
+msgstr "Il existe trois types de changements:"
 
 #: ../../standard/docs/en/implementation/amendments.md:9
 msgid ""
 "**New information**. For example, when information about the award of a "
 "contract is first released."
 msgstr ""
+"**Nouvelle information**. Par exemple, lorsque des informations sur "
+"l'attribution d'un contrat sont publiées pour la première fois."
 
 #: ../../standard/docs/en/implementation/amendments.md:10
 msgid ""
@@ -45,6 +52,9 @@ msgid ""
 "earlier releases, or to make minor adjustments to titles, descriptions or "
 "date."
 msgstr ""
+"** Mises à jour des informations existantes **. Par exemple, pour corriger "
+"les erreurs dans les instances antérieures ou pour effectuer des ajustements"
+" mineurs aux titres, descriptions ou date."
 
 #: ../../standard/docs/en/implementation/amendments.md:11
 msgid ""
@@ -53,10 +63,15 @@ msgid ""
 "publisher. Certain changes to a tender, award or contract may only be "
 "allowed as part of an amendment."
 msgstr ""
+"** Modifications**. Par exemple, lorsque la valeur ou la durée d'un contrat "
+"est modifiée. Le terme modifications a souvent une signification juridique "
+"spécifique pour un producteur de données. Certaines modifications d'une "
+"offre, d'une attribution ou d'un contrat ne peuvent être admises que dans le"
+" cadre d'une modification."
 
 #: ../../standard/docs/en/implementation/amendments.md:13
 msgid "The nature of a change can be made explicit using:"
-msgstr ""
+msgstr "La nature d'un changement peut être explicitée en utilisant :"
 
 #: ../../standard/docs/en/implementation/amendments.md:15
 msgid ""
@@ -64,6 +79,10 @@ msgid ""
 "contract, use 'contract'. For an update to the award, use 'contractUpdate', "
 "and for an amendment to the contract, use 'contractAmendment'."
 msgstr ""
+"**Le tag instances** (```tag```). Par exemple, pour une instance avec un "
+"nouveau contrat, utilisez \"contract\". Pour une mise à jour de "
+"l'attribution, utilisez 'contractUpdate', et pour une modification du "
+"contrat, utilisez 'contractAmendment'."
 
 #: ../../standard/docs/en/implementation/amendments.md:17
 msgid ""
@@ -71,20 +90,25 @@ msgid ""
 "explanations, and clearly identify the releases that contain before and "
 "after values."
 msgstr ""
+"Le composant sur **les modifications**. Cela peut contenir une liste "
+"d'explications sur les modifications et identifier clairement les instances "
+"contenant des valeurs avant et après."
 
 #: ../../standard/docs/en/implementation/amendments.md:0
 msgid "Worked example"
-msgstr ""
+msgstr "Exemple d'utilisation"
 
 #: ../../standard/docs/en/implementation/amendments.md:21
 msgid "In the example below:"
-msgstr ""
+msgstr "Dans l'exemple ci-dessous :"
 
 #: ../../standard/docs/en/implementation/amendments.md:23
 msgid ""
 "A tender is issued for a \"Data merge tool\" in a release with the ```tag```"
 " 'tender'."
 msgstr ""
+"Une offre est émise pour un \"outil de fusion de données\" dans une instance"
+" avec le ```tag``` ''tender\"."
 
 #: ../../standard/docs/en/implementation/amendments.md:24
 msgid ""
@@ -93,6 +117,11 @@ msgid ""
 " a formal 'amendment' to the tender, so did not publish any amendment "
 "information."
 msgstr ""
+"Ceci est mis à jour dans une instance avec le ```tag``` 'tenderUpdate' pour "
+"fournir une description détaillée de l'élément. Le producteur de données n'a"
+" pas considéré qu'il s'agissait d'une modification formelle à l'appel "
+"d'offres, de sorte qu'il n'a pas publié d'informations sur les "
+"modifications."
 
 #: ../../standard/docs/en/implementation/amendments.md:25
 msgid ""
@@ -100,20 +129,31 @@ msgid ""
 "published in a release with the ```tag``` 'tenderAmendment', and an "
 "```amendments``` block under ```tender```."
 msgstr ""
+"L'offre est ensuite formellement modifiée, avec une valeur accrue. Ceci est "
+"publié dans une instance avec le ```tag``` 'tenderAmendment', et un bloc``` "
+"ammendment``` sous `` `tender```."
 
 #: ../../standard/docs/en/implementation/amendments.md:65
 msgid "Note in this example that:"
-msgstr ""
+msgstr "Notez dans cet exemple que :"
 
 #: ../../standard/docs/en/implementation/amendments.md:67
 msgid ""
-"**The publisher choses in the tenderAmendment release to repeat a fragment "
+"**The publisher chooses in the tenderAmendment release to repeat a fragment "
 "of the original 'tender' release**, so that the before and after values of "
 "the tender can be accessed in the single file. This is not required when a "
 "full archive of releases is made accessible, but can be a convenient way of "
 "publishers making structured information on the before and after values of a"
 " field more accessible to users."
 msgstr ""
+"** Le producteur de données choisit dans la version tenderAmendment de "
+"répéter un fragment de la version initiale** de l'appel d'offres, afin que "
+"les valeurs antérieures et ultérieures de l'appel d'offres soient "
+"accessibles dans le fichier unique. Ceci n'est pas nécessaire lorsqu'une "
+"archive complète des instances est rendue accessible, mais ce peut être un "
+"moyen pratique pour les producteurs de données de faire des informations "
+"structurées sur les valeurs antérieures et ultérieures à partir d'un champ "
+"plus accessible aux utilisateurs."
 
 #: ../../standard/docs/en/implementation/amendments.md:69
 msgid ""
@@ -121,3 +161,7 @@ msgid ""
 "be used to lookup information in the ```versionedRelease``` section, to see "
 "where changes are explained by an amendment ```rationale```."
 msgstr ""
+"** Dans l'enregistrement fusionné **, les informations dans la liste sur les"
+" modifications peuvent être utilisées pour rechercher des informations dans "
+"la section ```versionedRelease``` pour voir où les modifications sont "
+"expliqués par une modification ```rationale```."

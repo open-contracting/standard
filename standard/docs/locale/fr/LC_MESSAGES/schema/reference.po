@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-08-08 09:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Joel Gombin <joel.gombin@gmail.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Release Reference"
-msgstr ""
+msgstr "Documentation sur les instances"
 
 #: ../../standard/docs/en/schema/reference.md:3
 msgid ""
@@ -28,16 +29,23 @@ msgid ""
 "Supplementary schemas show how to combine releases into data packages and "
 "how to compile releases into records."
 msgstr ""
+"Le [schéma des instances](release.md) fournit une spécification détaillée "
+"des champs et des structures de données à utiliser lors de la publication de"
+" données de commande publique. Des schémas complémentaires démontrent "
+"comment combiner les instances en packages de données et comment compiler "
+"les instances en archives."
 
 #: ../../standard/docs/en/schema/reference.md:5
 msgid ""
 "**Note: If any conflicts are found between this text, and the text within "
 "the schema, the schema takes precedence**"
 msgstr ""
+"**Remarque : si un conflit est trouvé entre ce texte et celui du schéma, le "
+"texte du schéma prévaut**"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Release structure"
-msgstr ""
+msgstr "Structure de l'instance"
 
 #: ../../standard/docs/en/schema/reference.md:9
 msgid ""
@@ -45,38 +53,42 @@ msgid ""
 "releases can be published within a release package. Releases are made up of "
 "a number of sections, arranged in the following structure."
 msgstr ""
+"La majorité des données OCDS sont contenues dans une structure d'instance. "
+"Une ou plusieurs instances peuvent être publiées dans un package d'instance."
+" Les instances sont constituées d'un certain nombre de sections, disposées "
+"dans la structure suivante."
 
 #: ../../standard/docs/en/schema/reference.md:11
 msgid "[package](#package-metadata)"
-msgstr ""
+msgstr "[package](#package-metadata)"
 
 #: ../../standard/docs/en/schema/reference.md:12
 msgid "[release](#release)"
-msgstr ""
+msgstr "[instance](#release)"
 
 #: ../../standard/docs/en/schema/reference.md:13
 msgid "[parties](#parties)"
-msgstr ""
+msgstr "[parties](#parties)"
 
 #: ../../standard/docs/en/schema/reference.md:14
 msgid "[planning](#planning)"
-msgstr ""
+msgstr "[`planning` (planification)](#planning)"
 
 #: ../../standard/docs/en/schema/reference.md:15
 msgid "[tender](#tender)"
-msgstr ""
+msgstr "[`tender` (appel d'offres)](#tender)"
 
 #: ../../standard/docs/en/schema/reference.md:16
 msgid "[award](#award)"
-msgstr ""
+msgstr "[`award` (attribution)](#award)"
 
 #: ../../standard/docs/en/schema/reference.md:17
 msgid "[contract](#contract)"
-msgstr ""
+msgstr "[`contract` (contrat)](#contract)"
 
 #: ../../standard/docs/en/schema/reference.md:18
 msgid "[implementation](#implementation)"
-msgstr ""
+msgstr "[`implementation` (l'exécution)](#implementation)"
 
 #: ../../standard/docs/en/schema/reference.md:20
 msgid ""
@@ -85,6 +97,11 @@ msgid ""
 "no formal restrictions on when information about a stage of the contracting "
 "process may be provided."
 msgstr ""
+"Chaque instance reçoit un [tag](../../codelists/#release-tag) pour indiquer "
+"à quelle étape du processus de passation de marché elle correspond. "
+"Cependant, il n'y a pas de restriction formelle sur le moment où les "
+"informations sur une étape du processus de passation de marché sont "
+"publiées. "
 
 #: ../../standard/docs/en/schema/reference.md:22
 msgid ""
@@ -93,319 +110,200 @@ msgid ""
 "in order to provide a comprehensive picture of the contracting process to "
 "date which led to that contract being signed."
 msgstr ""
+"Par exemple, un producteur de données qui annonce la signature d'un marché "
+"avec le tag `contract` peut aussi inclure des informations dans les blocs "
+"sur l'attribution (`award`) et l'appel d'offre (`tender`) afin de fournir "
+"une vue d'ensemble du marché au moment de la signature du contrat. "
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Package Metadata"
-msgstr ""
+msgstr "Métadonnées des packages"
 
 #: ../../standard/docs/en/schema/reference.md:26
 msgid ""
 "Releases must be published within a [release package](release_package.md). "
-"The release package provides metadata about the release(s) that it "
-"contains."
+"The release package provides metadata about the release(s) that it contains."
 msgstr ""
+"Les instances doivent être publiées dans un [package "
+"d'instance](release_package.md). Le package d'instance fournit des "
+"métadonnées à propos de la ou des instance(s) qu'il contient."
 
-#: ../../standard/string:1
-msgid "string"
-msgstr ""
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+msgid "Title"
+msgstr "Titre"
 
-#: ../../standard/uri:1
-msgid "uri"
-msgstr ""
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+msgid "Description"
+msgstr "Description"
 
-#: ../../standard/Required:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+msgid "Type"
+msgstr "Type"
+
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+msgid "Format"
+msgstr "Format"
+
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
+#: ../../standard/sphinxcontrib-jsonschema:1
 msgid "Required"
-msgstr ""
-
-#: ../../standard/Package identifier:1
-msgid "Package identifier"
-msgstr ""
-
-#: ../../standard/The URI of this package that identifies it uniquely in the
-#: world. Recommended practice is to use a deferenceable URI, where persistent
-#: copy available.:1
-msgid ""
-"The URI of this package that identifies it uniquely in the world. "
-"Recommended practice is to use a deferenceable URI, where a persistent copy "
-"of this package is available."
-msgstr ""
-
-#: ../../standard/OCDS schema version:1
-msgid "OCDS schema version"
-msgstr ""
-
-#: ../../standard/The version of the OCDS schema used in this package,
-#: expressed as major.minor For example 1.0 or 1.1:1
-msgid ""
-"The version of the OCDS schema used in this package, expressed as "
-"major.minor For example: 1.0 or 1.1"
-msgstr ""
-
-#: ../../standard/array[string]:1
-msgid "array[string]"
-msgstr ""
-
-#: ../../standard/OCDS extensions:1
-msgid "OCDS extensions"
-msgstr ""
-
-#: ../../standard/An array of OCDS extensions used in this package. Each entry
-#: should be a url to the extension.json file for that extension.:1
-msgid ""
-"An array of OCDS extensions used in this package. Each entry should be a url"
-" to the extension.json file for that extension."
-msgstr ""
-
-#: ../../standard/date-time:1
-msgid "date-time"
-msgstr ""
-
-#: ../../standard/Published date:1
-msgid "Published date"
-msgstr ""
-
-#: ../../standard/The date that this package was published. If is generated
-#: 'on demand', should reflect the of last change to underlying contents
-#: package.:1
-msgid ""
-"The date that this package was published. If this package is generated 'on "
-"demand', this date should reflect the date of the last change to the "
-"underlying contents of the package."
-msgstr ""
-
-#: ../../standard/array[Schema for an Open Contracting Release]:1
-msgid "array[Schema for an Open Contracting Release]"
-msgstr ""
-
-#: ../../standard/Releases:1
-msgid "Releases"
-msgstr ""
-
-#: ../../standard/object:1
-msgid "object"
-msgstr ""
-
-#: ../../standard/Publisher:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Publisher"
-msgstr ""
-
-#: ../../standard/Information to uniquely identify the publisher of this
-#: package.:1
-msgid "Information to uniquely identify the publisher of this package."
-msgstr ""
-
-#: ../../standard/[string, null]:1
-msgid "[string, null]"
-msgstr ""
-
-#: ../../standard/License:1
-msgid "License"
-msgstr ""
-
-#: ../../standard/A link to the license that applies data in this package. A
-#: Public Domain Dedication or `Open Definition Conformant
-#: <http/opendefinition.org/licenses/>`__ is strongly recommended. The
-#: canonical URI of should be used. Documents linked from file may under other
-#: conditions.:1
-msgid ""
-"A link to the license that applies to the data in this package. A Public "
-"Domain Dedication or `Open Definition Conformant "
-"<http://opendefinition.org/licenses/>`__ license is strongly recommended. "
-"The canonical URI of the license should be used. Documents linked from this "
-"file may be under other license conditions."
-msgstr ""
-
-#: ../../standard/Publication policy:1
-msgid "Publication policy"
-msgstr ""
-
-#: ../../standard/A link to a document describing the publishers `publication
-#: policy
-#: <http:/standard.open-contracting.org/latest/en/implementation/publication_policy/>`__.:1
-msgid ""
-"A link to a document describing the publishers `publication policy "
-"<http://standard.open-"
-"contracting.org/latest/en/implementation/publication_policy/>`__."
-msgstr ""
+msgstr "Nécessaire"
 
 #: ../../standard/docs/en/schema/reference.md:36
 msgid ""
 "See the [licensing guidance](../implementation/licensing.md) for more "
 "details on selecting a license, and publishing license information."
 msgstr ""
+"Pour plus d'informations sur la sélection d'une licence et la publication "
+"d'informations sur les licences, reportez-vous aux [instructions de "
+"licence](../implementation/licensing.md)."
 
 #: ../../standard/docs/en/schema/reference.md:38
 msgid ""
 "See the [publication policy](../implementation/publication_policy.md) "
 "guidance for more details on what to include in a publication policy."
 msgstr ""
+"Pour plus de détails sur ce qu'il convient d'inclure dans une politique de "
+"publication, consultez la page [politique de "
+"publication](../implementation/publication_policy.md) ."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Release"
-msgstr ""
+msgstr "Instance"
 
 #: ../../standard/docs/en/schema/reference.md:42
 msgid ""
 "All new information about a contracting process is described within a "
 "release."
 msgstr ""
-
-#: ../../standard/Open Contracting ID:1
-msgid "Open Contracting ID"
-msgstr ""
-
-#: ../../standard/A globally unique identifier for this Open Contracting
-#: Process. Composed of a publisher prefix and an the contracting process. For
-#: more information see `Open Identifier guidance
-#: <http:/standard.open-contracting.org/1.1/en/schema/identifiers/>`__:1
-msgid ""
-"A globally unique identifier for this Open Contracting Process. Composed of "
-"a publisher prefix and an identifier for the contracting process. For more "
-"information see the `Open Contracting Identifier guidance <http://standard"
-".open-contracting.org/1.1/en/schema/identifiers/>`__"
-msgstr ""
-
-#: ../../standard/Release ID:1
-msgid "Release ID"
-msgstr ""
-
-#: ../../standard/An identifier for this particular release of information. A
-#: must be unique within the scope its related contracting process (defined
-#: by a common ocid), and any package it appears in. not contain #
-#: character.:1
-msgid ""
-"An identifier for this particular release of information. A release "
-"identifier must be unique within the scope of its related contracting "
-"process (defined by a common ocid), and unique within any release package it"
-" appears in. A release identifier must not contain the # character."
-msgstr ""
-
-#: ../../standard/Release Date:1
-msgid "Release Date"
-msgstr ""
-
-#: ../../standard/The date this information was first released, or
-#: published.:1
-msgid "The date this information was first released, or published."
-msgstr ""
-
-#: ../../standard/Release Tag:1
-msgid "Release Tag"
-msgstr ""
-
-#: ../../standard/One or more values from the `releaseTag codelist
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#release-tag>`__.
-#: Tags may be used to filter release and understand kind of information that
-#: a might contain.:1
-msgid ""
-"One or more values from the `releaseTag codelist <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#release-tag>`__. Tags may be used "
-"to filter release and the understand the kind of information that a release "
-"might contain."
-msgstr ""
-
-#: ../../standard/Initiation type:1
-msgid "Initiation type"
-msgstr ""
-
-#: ../../standard/String specifying the type of initiation process used for
-#: this contract, taken from `initiationType
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#initiation-type>`__
-#: codelist. Currently only tender is supported.:1
-msgid ""
-"String specifying the type of initiation process used for this contract, "
-"taken from the `initiationType <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#initiation-type>`__ codelist. "
-"Currently only tender is supported."
-msgstr ""
-
-#: ../../standard/array[Organization]:1
-msgid "array[Organization]"
-msgstr ""
-
-#: ../../standard/Parties:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Parties"
-msgstr ""
-
-#: ../../standard/Information on the parties (organisations, economic
-#: operators and other participants) who are involved in contracting process
-#: their roles, e.g. buyer, procuring entity, supplier etc. Organization
-#: references elsewhere schema used to refer back this entries list.:1
-msgid ""
-"Information on the parties (organisations, economic operators and other "
-"participants) who are involved in the contracting process and their roles, "
-"e.g. buyer, procuring entity, supplier etc. Organization references "
-"elsewhere in the schema are used to refer back to this entries in this list."
-msgstr ""
-
-#: ../../standard/Buyer:1
-msgid "Buyer"
-msgstr ""
-
-#: ../../standard/The buyer is the entity whose budget will be used to
-#: purchase goods. This may different from procuring agency who specified in
-#: tender data.:1
-msgid ""
-"The buyer is the entity whose budget will be used to purchase the goods. "
-"This may be different from the procuring agency who may be specified in the "
-"tender data."
-msgstr ""
-
-#: ../../standard/Planning:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Planning"
-msgstr ""
-
-#: ../../standard/Information from the planning phase of contracting process.
-#: This includes information related to process deciding what contract, when
-#: and how.:1
-msgid ""
-"Information from the planning phase of the contracting process. This "
-"includes information related to the process of deciding what to contract, "
-"when and how."
-msgstr ""
-
-#: ../../standard/Tender:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Tender"
-msgstr ""
-
-#: ../../standard/The activities undertaken in order to enter into a
-#: contract.:1
-msgid "The activities undertaken in order to enter into a contract."
-msgstr ""
-
-#: ../../standard/Release language:1
-msgid "Release language"
-msgstr ""
-
-#: ../../standard/Specifies the default language of data using either
-#: two-letter `ISO639-1
-#: <https/en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__, or extended
-#: `BCP47 tags <http/www.w3.org/International/articles/language-tags/>`__. The
-#: use lowercase two-letter codes from
-#: <https/en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__ is strongly
-#: recommended.:1
-msgid ""
-"Specifies the default language of the data using either two-letter `ISO639-1"
-" <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__, or extended "
-"`BCP47 language tags <http://www.w3.org/International/articles/language-"
-"tags/>`__. The use of lowercase two-letter codes from `ISO639-1 "
-"<https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__ is strongly "
-"recommended."
-msgstr ""
+"Toute nouvelle information concernant un processus de passation de marché "
+"est décrite dans une instance."
 
 #: ../../standard/extension_list_release:0
 msgid "The following extensions are available for release"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour les instances"
 
 #: ../../standard/extension_list_release:20
 msgid "Process level title and description"
-msgstr ""
+msgstr "Titre et description au niveau du processus"
 
 #: ../../standard/extension_list_release:20
 msgid ""
 "For providing overall process titles and descriptions, often to give a free-"
 "text summary of the contracting process as a whole."
 msgstr ""
+"Ils servent à fournir des titres et des descriptions généraux des processus,"
+" souvent pour donner un résumé en texte libre du processus de passation de "
+"marchés dans son ensemble."
 
 #: ../../standard/extension_list_release:28
 #: ../../standard/extension_list_parties:28
@@ -425,155 +323,81 @@ msgid ""
 "The following are community extensions and are not maintained by Open "
 "Contracting Partnership."
 msgstr ""
+"Les extensions suivantes sont communautaires et ne sont pas maintenues par "
+"l'Open Contracting Partnership."
+
+#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:1
+msgid "Parties"
+msgstr "Parties"
 
 #: ../../standard/docs/en/schema/reference.md:59
 msgid ""
 "Each of the parties (organizations or other participants) referenced in a "
 "release must be included in the parties section."
 msgstr ""
+"Chacune des parties (organisations ou autres participants) référencées dans "
+"une instance doit être incluse dans la section des parties."
+
+#: ../../standard/docs/en/schema/reference.md:3
+msgid ""
+"Version 1.1 of OCDS introduces a new approach to describing the buyers,  "
+"suppliers, economic operators, and other participants in a contracting "
+"process. Instead of embedding organization information at various points "
+"within an OCDS release, information on all the parties involved in a "
+"contracting process is collected together in a top-level section, and the "
+"parties indicated by a cross-reference to their id at other points."
+msgstr ""
+"La version 1.1 d'OCDS introduit une nouvelle approche pour décrire les "
+"acheteurs, les fournisseurs, les opérateurs économiques et les autres "
+"participants à un processus de passation de marché. Au lieu d'incorporer des"
+" informations sur l'organisation dans divers sections d'une instance, les "
+"informations sur toutes les parties impliquées dans un processus de "
+"passation de marché sont rassemblées dans une section à la racine de "
+"l'instance (`parties`). Ces parties sont ensuite référencées dans les autres"
+" sections de l'instance grâce à leur `id`."
+
+#: ../../standard/docs/en/schema/reference.md:5
+msgid ""
+"This reduces repetition of information on parties who appear at multiple "
+"points in the contracting process, and supports publication of information "
+"about additional parties to the contracting process, including auditors, "
+"multiple buyers, and consortia partners of a winning bidder."
+msgstr ""
+"Cette approche réduit la répétition des informations sur les parties qui "
+"apparaissent à plusieurs points dans le processus de passation de marchés et"
+" permet la publication d'informations sur des parties supplémentaires, "
+"telles que des auditeurs, des acheteurs multiples et les partenaires d'une "
+"offre gagnante."
+
+#: ../../standard/docs/en/schema/reference.md:7
+msgid ""
+"The old, embedded data, approach to organization data is deprecated in OCDS "
+"1.1, and will be removed in version 2.0."
+msgstr ""
+"L'ancienne approche, qui impliquait la duplication des d'organisation, est "
+"dépréciée dans la version 1.1 d'OCDS et sera supprimée dans la version 2.0."
 
 #: ../../standard/docs/en/schema/reference.md:72
 msgid "The following details can be provided for each party."
-msgstr ""
-
-#: ../../standard/Common name:1
-msgid "Common name"
-msgstr ""
-
-#: ../../standard/A common name for this organization or other participant in
-#: the contracting process. The identifier object provides an space formal
-#: legal name, and so may either repeat that value, could provide by which
-#: entity is known. This field also include details of department sub-unit
-#: involved process.:1
-msgid ""
-"A common name for this organization or other participant in the contracting "
-"process. The identifier object provides an space for the formal legal name, "
-"and so this may either repeat that value, or could provide the common name "
-"by which this organization or entity is known. This field may also include "
-"details of the department or sub-unit involved in this contracting process."
-msgstr ""
-
-#: ../../standard/[string]:1
-msgid "[string]"
-msgstr ""
-
-#: ../../standard/Entity ID:1
-msgid "Entity ID"
-msgstr ""
-
-#: ../../standard/The ID used for cross-referencing to this party from other
-#: sections of the release. This field may be built with following structure
-#: {identifier.scheme}-{identifier.id}(-{department-identifier}).:1
-msgid ""
-"The ID used for cross-referencing to this party from other sections of the "
-"release. This field may be built with the following structure "
-"{identifier.scheme}-{identifier.id}(-{department-identifier})."
-msgstr ""
-
-#: ../../standard/Primary identifier:1
-msgid "Primary identifier"
-msgstr ""
-
-#: ../../standard/The primary identifier for this organization or participant.
-#: Identifiers that uniquely pick out a legal entity should be preferred.
-#: Consult the `organization guidance
-#: <http/standard.open-contracting.org/1.1/en/schema/identifiers/>`__
-#: preferred scheme and to use.:1
-msgid ""
-"The primary identifier for this organization or participant. Identifiers "
-"that uniquely pick out a legal entity should be preferred. Consult the "
-"`organization identifier guidance <http://standard.open-"
-"contracting.org/1.1/en/schema/identifiers/>`__ for the preferred scheme and "
-"identifier to use."
-msgstr ""
-
-#: ../../standard/array[Identifier]:1
-msgid "array[Identifier]"
-msgstr ""
-
-#: ../../standard/Additional identifiers:1
-msgid "Additional identifiers"
-msgstr ""
-
-#: ../../standard/A list of additional / supplemental identifiers for the
-#: organization or participant, using `organization identifier guidance
-#: <http/standard.open-contracting.org/1.1/en/schema/identifiers/>`__. This
-#: could be used to provide an internally this in addition primary legal
-#: entity identifier.:1
-msgid ""
-"A list of additional / supplemental identifiers for the organization or "
-"participant, using the `organization identifier guidance <http://standard"
-".open-contracting.org/1.1/en/schema/identifiers/>`__. This could be used to "
-"provide an internally used identifier for this organization in addition to "
-"the primary legal entity identifier."
-msgstr ""
-
-#: ../../standard/Address:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Address"
-msgstr ""
-
-#: ../../standard/An address. This may be the legally registered address of
-#: organization, or a correspondence for this particular contracting
-#: process.:1
-msgid ""
-"An address. This may be the legally registered address of the organization, "
-"or may be a correspondence address for this particular contracting process."
-msgstr ""
-
-#: ../../standard/Contact point:1
-msgid "Contact point"
-msgstr ""
-
-#: ../../standard/An person, contact point or department to in relation this
-#: contracting process.:1
-msgid ""
-"An person, contact point or department to contact in relation to this "
-"contracting process."
-msgstr ""
-
-#: ../../standard/Party roles:1
-msgid "Party roles"
-msgstr ""
-
-#: ../../standard/The party's role(s) in the contracting process. Role(s)
-#: should be taken from `partyRole codelist
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#party-role>`__.
-#: Values provided used wherever possible, though extended values can if does
-#: not have a relevant code.:1
-msgid ""
-"The party's role(s) in the contracting process. Role(s) should be taken from"
-" the `partyRole codelist <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#party-role>`__. Values from the "
-"provided codelist should be used wherever possible, though extended values "
-"can be provided if the codelist does not have a relevant code."
-msgstr ""
-
-#: ../../standard/[object, null]:1
-msgid "[object, null]"
-msgstr ""
-
-#: ../../standard/Details:1
-msgid "Details"
-msgstr ""
-
-#: ../../standard/Additional classification information about parties can be
-#: provided using partyDetail extensions that define particular properties and
-#: schemes.:1
-msgid ""
-"Additional classification information about parties can be provided using "
-"partyDetail extensions that define particular properties and classification "
-"schemes."
-msgstr ""
+msgstr "Les détails suivants peuvent être fournis pour chaque partie."
 
 #: ../../standard/docs/en/schema/reference.md:82
 msgid ""
 "Detailed classification of parties can be provided using one or more [party "
 "detail extensions](../../../extensions/party_details/)."
 msgstr ""
+"La classification détaillée des parties peut être fournie en utilisant une "
+"ou plusieurs [extensions de détail des "
+"parties](../../../extensions/party_details/)."
 
 #: ../../standard/extension_list_parties:0
 msgid "The following extensions are available for parties"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour les parties"
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Planning"
+msgstr "Planification"
 
 #: ../../standard/docs/en/schema/reference.md:91
 msgid ""
@@ -583,55 +407,15 @@ msgid ""
 " as a needs assessment, feasibility study and project plan can also be "
 "included in this section."
 msgstr ""
-
-#: ../../standard/Rationale:1
-msgid "Rationale"
-msgstr ""
-
-#: ../../standard/The rationale for the procurement provided in free text.
-#: More detail can be an attached document.:1
-msgid ""
-"The rationale for the procurement provided in free text. More detail can be "
-"provided in an attached document."
-msgstr ""
-
-#: ../../standard/Budget information:1
-msgid "Budget information"
-msgstr ""
-
-#: ../../standard/This section contain information about the budget line, and
-#: associated projects, through which this contracting process is funded. It
-#: draws upon data model of `Fiscal Data Package
-#: <http/fiscal.dataprotocols.org/>`__, should be used to cross-reference more
-#: detailed held using a Budget Package, or, where no linked available,
-#: provide enough allow user manually or automatically with another published
-#: source project information.:1
-msgid ""
-"This section contain information about the budget line, and associated "
-"projects, through which this contracting process is funded. It draws upon "
-"data model of the `Fiscal Data Package "
-"<http://fiscal.dataprotocols.org/>`__, and should be used to cross-reference"
-" to more detailed information held using a Budget Data Package, or, where no"
-" linked Budget Data Package is available, to provide enough information to "
-"allow a user to manually or automatically cross-reference with another "
-"published source of budget and project information."
-msgstr ""
-
-#: ../../standard/array[Milestone]:1
-msgid "array[Milestone]"
-msgstr ""
-
-#: ../../standard/Planning milestones:1
-msgid "Planning milestones"
-msgstr ""
-
-#: ../../standard/A list of milestones associated with the planning stage.:1
-msgid "A list of milestones associated with the planning stage."
-msgstr ""
+"La section sur la planification décrit le contexte d'un processus de "
+"passation de marché. Elle peut inclure des détails sur le budget d'origine "
+"des fonds ou sur les projets reliés à ce processus de passation de marché. "
+"Les documents sur le contexte tels qu'une étude de besoins, une étude de "
+"faisabilité ou un plan du projet peuvent être inclus dans cette section."
 
 #: ../../standard/extension_list_planning:0
 msgid "The following extensions are available for planning"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour la planification"
 
 #: ../../standard/docs/en/schema/reference.md:106
 msgid ""
@@ -644,121 +428,29 @@ msgid ""
 "users to understand the relationship of the contracting process to existing "
 "projects and budgets even where linked data is not available."
 msgstr ""
+"À l'exception des documents, la majorité des informations est contenue dans "
+"le composant `budget`. Celui-ci a été conçu avec un double impératif. D'une "
+"part, permettre la lisibilité des données par les machines et leur liaison "
+"avec des données publiées avec d'autres standards telles que le [Fiscal Data"
+" Package](http://fiscal.dataprotocols.org/) ou [International Aid "
+"Transparency Initiative Standard](http://www.iatistandard.org). D'autre "
+"part, fournir une description des budgets et des projets connexes qui soit "
+"intelligible par les humains afin d'aider les utilisateurs à comprendre le "
+"lien entre un processus de passation de marché et des projets et budgets "
+"existants, même lorsque des données liées (Linked Data) ne sont pas "
+"disponibles."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Budget"
-msgstr ""
-
-#: ../../standard/[string, integer, null]:1
-msgid "[string, integer, null]"
-msgstr ""
-
-#: ../../standard/ID:1
-msgid "ID"
-msgstr ""
-
-#: ../../standard/An identifier for the budget line item which provides funds
-#: this contracting process. This should be possible to cross-reference
-#: against provided data source.:1
-msgid ""
-"An identifier for the budget line item which provides funds for this "
-"contracting process. This identifier should be possible to cross-reference "
-"against the provided data source."
-msgstr ""
-
-#: ../../standard/Budget Source:1
-msgid "Budget Source"
-msgstr ""
-
-#: ../../standard/A short free text description of the budget source. May be
-#: used to provide title line, or programme fund this project.:1
-msgid ""
-"A short free text description of the budget source. May be used to provide "
-"the title of the budget line, or the programme used to fund this project."
-msgstr ""
-
-#: ../../standard/Amount:1
-msgid "Amount"
-msgstr ""
-
-#: ../../standard/The value of the budget line item. A negative indicates
-#: anticipated income to as a result this contracting process, rather than
-#: expenditure.:1
-msgid ""
-"The value of the budget line item. A negative value indicates anticipated "
-"income to the budget as a result of this contracting process, rather than "
-"expenditure."
-msgstr ""
-
-#: ../../standard/Project title:1
-msgid "Project title"
-msgstr ""
-
-#: ../../standard/The name of the project that through which this contracting
-#: process is funded (if applicable). Some organizations maintain a registry
-#: projects, and data should use by known in registry. No translation option
-#: offered for string, as translated values can be provided third-party data,
-#: linked from source above.:1
-msgid ""
-"The name of the project that through which this contracting process is "
-"funded (if applicable). Some organizations maintain a registry of projects, "
-"and the data should use the name by which the project is known in that "
-"registry. No translation option is offered for this string, as translated "
-"values can be provided in third-party data, linked from the data source "
-"above."
-msgstr ""
-
-#: ../../standard/Project identifier:1
-msgid "Project identifier"
-msgstr ""
-
-#: ../../standard/An external identifier for the project that this contracting
-#: process forms part of, or is funded via (if applicable). Some organizations
-#: maintain a registry of projects, and data should use from relevant
-#: projects.:1
-msgid ""
-"An external identifier for the project that this contracting process forms "
-"part of, or is funded via (if applicable). Some organizations maintain a "
-"registry of projects, and the data should use the identifier from the "
-"relevant registry of projects."
-msgstr ""
-
-#: ../../standard/Linked budget information:1
-msgid "Linked budget information"
-msgstr ""
-
-#: ../../standard/A URI pointing directly to a machine-readable record about
-#: the budget line-item or line-items that fund this contracting process.
-#: Information may be provided in range of formats, including using IATI, Open
-#: Fiscal Data Standard any other standard which provides structured data on
-#: sources. Human readable documents can included planning.documents block.:1
-msgid ""
-"A URI pointing directly to a machine-readable record about the budget line-"
-"item or line-items that fund this contracting process. Information may be "
-"provided in a range of formats, including using IATI, the Open Fiscal Data "
-"Standard or any other standard which provides structured data on budget "
-"sources. Human readable documents can be included using the "
-"planning.documents block."
-msgstr ""
-
-#: ../../standard/Data Source:1
-msgid "Data Source"
-msgstr ""
-
-#: ../../standard/(Deprecated in 1.1) Used to point either a corresponding
-#: Budget Data Package, or machine human-readable source where users can find
-#: further information on the budget line item identifiers, project provided
-#: here.:1
-msgid ""
-"(Deprecated in 1.1) Used to point either to a corresponding Budget Data "
-"Package, or to a machine or human-readable source where users can find "
-"further information on the budget line item identifiers, or project "
-"identifiers, provided here."
-msgstr ""
+msgstr "Budget"
 
 #: ../../standard/extension_list_budget:0
 msgid "The following extensions are available for budget"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour le budget"
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Tender"
+msgstr "Appel d'offres"
 
 #: ../../standard/docs/en/schema/reference.md:125
 msgid ""
@@ -766,6 +458,10 @@ msgid ""
 " intends to source some particular goods, works or services, and to "
 "establish one or more contract(s) for these."
 msgstr ""
+"La section sur l'appel d'offres comprend des détails sur l'annonce faite par"
+" une organisation qu'elle a l'intention de se procurer certains biens, "
+"travaux ou services, et souhaite établir un ou plusieurs contrats pour ces "
+"derniers."
 
 #: ../../standard/docs/en/schema/reference.md:127
 msgid ""
@@ -773,423 +469,33 @@ msgid ""
 "proposals to supply these goods and services, and may also be used to record"
 " details of a completed tender process, including details of bids received."
 msgstr ""
-
-#: ../../standard/[string, integer]:1
-msgid "[string, integer]"
-msgstr ""
-
-#: ../../standard/Tender ID:1
-msgid "Tender ID"
-msgstr ""
-
-#: ../../standard/An identifier for this tender process. This may be the same
-#: as ocid, or drawn from an internally held tender.:1
-msgid ""
-"An identifier for this tender process. This may be the same as the ocid, or "
-"may be drawn from an internally held identifier for this tender."
-msgstr ""
-
-#: ../../standard/Tender title:1
-msgid "Tender title"
-msgstr ""
-
-#: ../../standard/A title for this tender. This will often be used by
-#: applications as a headline to attract interest, and help analysts
-#: understand the nature of procurement.:1
-msgid ""
-"A title for this tender. This will often be used by applications as a "
-"headline to attract interest, and to help analysts understand the nature of "
-"this procurement."
-msgstr ""
-
-#: ../../standard/Tender description:1
-msgid "Tender description"
-msgstr ""
-
-#: ../../standard/A summary description of the tender. This should complement
-#: structured information provided using items array. Descriptions be short
-#: and easy to read. Avoid ALL CAPS.:1
-msgid ""
-"A summary description of the tender. This should complement structured "
-"information provided using the items array. Descriptions should be short and"
-" easy to read. Avoid using ALL CAPS."
-msgstr ""
-
-#: ../../standard/Tender status:1
-msgid "Tender status"
-msgstr ""
-
-#: ../../standard/The current status of the tender based on `tenderStatus
-#: codelist
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#tender-status>`__:1
-msgid ""
-"The current status of the tender based on the `tenderStatus codelist "
-"<http://standard.open-contracting.org/1.1/en/schema/codelists/#tender-"
-"status>`__"
-msgstr ""
-
-#: ../../standard/Procuring entity:1
-msgid "Procuring entity"
-msgstr ""
-
-#: ../../standard/The entity managing the procurement. This may be different
-#: from buyer who pays for, or uses, items being procured.:1
-msgid ""
-"The entity managing the procurement. This may be different from the buyer "
-"who pays for, or uses, the items being procured."
-msgstr ""
-
-#: ../../standard/array[Item]:1
-msgid "array[Item]"
-msgstr ""
-
-#: ../../standard/Items to be procured:1
-msgid "Items to be procured"
-msgstr ""
-
-#: ../../standard/The goods and services to be purchased, broken into line
-#: items wherever possible. Items should not duplicated, but a quantity of 2
-#: specified instead.:1
-msgid ""
-"The goods and services to be purchased, broken into line items wherever "
-"possible. Items should not be duplicated, but a quantity of 2 specified "
-"instead."
-msgstr ""
-
-#: ../../standard/Value:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Value"
-msgstr ""
-
-#: ../../standard/The total upper estimated value of the procurement. A
-#: negative indicates that contracting process may involve payments from
-#: supplier to buyer (commonly used in concession contracts).:1
-msgid ""
-"The total upper estimated value of the procurement. A negative value "
-"indicates that the contracting process may involve payments from the "
-"supplier to the buyer (commonly used in concession contracts)."
-msgstr ""
-
-#: ../../standard/Minimum value:1
-msgid "Minimum value"
-msgstr ""
-
-#: ../../standard/The minimum estimated value of the procurement. A negative
-#: indicates that contracting process may involve payments from supplier to
-#: buyer (commonly used in concession contracts).:1
-msgid ""
-"The minimum estimated value of the procurement.  A negative value indicates "
-"that the contracting process may involve payments from the supplier to the "
-"buyer (commonly used in concession contracts)."
-msgstr ""
-
-#: ../../standard/Procurement method:1
-msgid "Procurement method"
-msgstr ""
-
-#: ../../standard/Specify tendering method using the `method codelist
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#method>`__.
-#: This is a closed codelist. Local types should be mapped to this list.:1
-msgid ""
-"Specify tendering method using the `method codelist <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#method>`__. This is a closed "
-"codelist. Local method types should be mapped to this list."
-msgstr ""
-
-#: ../../standard/Procurement method details:1
-msgid "Procurement method details"
-msgstr ""
-
-#: ../../standard/Additional detail on the procurement method used. This field
-#: may be used to provide local name of particular used.:1
-msgid ""
-"Additional detail on the procurement method used. This field may be used to "
-"provide the local name of the particular procurement method used."
-msgstr ""
-
-#: ../../standard/Procurement method rationale:1
-msgid "Procurement method rationale"
-msgstr ""
-
-#: ../../standard/Rationale for the chosen procurement method. This is
-#: especially important to provide a justification in case of limited tenders
-#: or direct awards.:1
-msgid ""
-"Rationale for the chosen procurement method. This is especially important to"
-" provide a justification in the case of limited tenders or direct awards."
-msgstr ""
-
-#: ../../standard/Main procurement category:1
-msgid "Main procurement category"
-msgstr ""
-
-#: ../../standard/The primary category describing the main object of this
-#: contracting process from `procurementCategory
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#procurement-category>`__
-#: codelist. This is a closed Local classifications should be mapped to
-#: list.:1
-msgid ""
-"The primary category describing the main object of this contracting process "
-"from the `procurementCategory <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#procurement-category>`__ codelist. "
-"This is a closed codelist. Local classifications should be mapped to this "
-"list."
-msgstr ""
-
-#: ../../standard/[array, null]:1
-msgid "[array, null]"
-msgstr ""
-
-#: ../../standard/Additional procurement categories:1
-msgid "Additional procurement categories"
-msgstr ""
-
-#: ../../standard/Any additional categories which describe the objects of this
-#: contracting process, from `extendedProcurementCategory
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#extended-procurement-category>`__
-#: codelist. This is an open Local can be included in list.:1
-msgid ""
-"Any additional categories which describe the objects of this contracting "
-"process, from the `extendedProcurementCategory <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#extended-procurement-category>`__ "
-"codelist. This is an open codelist. Local categories can be included in this"
-" list."
-msgstr ""
-
-#: ../../standard/Award criteria:1
-msgid "Award criteria"
-msgstr ""
-
-#: ../../standard/Specify the award criteria for procurement, using `award
-#: codelist
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#award-criteria>`__:1
-msgid ""
-"Specify the award criteria for the procurement, using the `award criteria "
-"codelist <http://standard.open-contracting.org/1.1/en/schema/codelists"
-"/#award-criteria>`__"
-msgstr ""
-
-#: ../../standard/Award criteria details:1
-msgid "Award criteria details"
-msgstr ""
-
-#: ../../standard/Any detailed or further information on the award selection
-#: criteria.:1
-msgid ""
-"Any detailed or further information on the award or selection criteria."
-msgstr ""
-
-#: ../../standard/Submission method:1
-msgid "Submission method"
-msgstr ""
-
-#: ../../standard/Specify the method by which bids must be submitted, in
-#: person, written, or electronic auction. Using `submission codelist
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#submission-method>`__:1
-msgid ""
-"Specify the method by which bids must be submitted, in person, written, or "
-"electronic auction. Using the `submission method codelist <http://standard"
-".open-contracting.org/1.1/en/schema/codelists/#submission-method>`__"
-msgstr ""
-
-#: ../../standard/Submission method details:1
-msgid "Submission method details"
-msgstr ""
-
-#: ../../standard/Any detailed or further information on the submission
-#: method. This may include address, e-mail address online service to which
-#: bids should be submitted, and any special requirements followed for
-#: submissions.:1
-msgid ""
-"Any detailed or further information on the submission method. This may "
-"include the address, e-mail address or online service to which bids should "
-"be submitted, and any special requirements to be followed for submissions."
-msgstr ""
-
-#: ../../standard/Tender period:1
-msgid "Tender period"
-msgstr ""
-
-#: ../../standard/The period when the tender is open for submissions. The end
-#: date closing submissions.:1
-msgid ""
-"The period when the tender is open for submissions. The end date is the "
-"closing date for tender submissions."
-msgstr ""
-
-#: ../../standard/Enquiry period:1
-msgid "Enquiry period"
-msgstr ""
-
-#: ../../standard/The period during which potential bidders may submit
-#: questions and requests for clarification to the entity managing
-#: procurement. Details of how enquiries should be provided in attached
-#: notices, or submissionMethodDetails. Structured dates when responses will
-#: made can using tender milestones.:1
-msgid ""
-"The period during which potential bidders may submit questions and requests "
-"for clarification to the entity managing procurement. Details of how to "
-"submit enquiries should be provided in attached notices, or in "
-"submissionMethodDetails. Structured dates for when responses to questions "
-"will be made can be provided using tender milestones."
-msgstr ""
-
-#: ../../standard/[boolean, null]:1
-msgid "[boolean, null]"
-msgstr ""
-
-#: ../../standard/Has enquiries?:1
-msgid "Has enquiries?"
-msgstr ""
-
-#: ../../standard/A true/false field to indicate whether any enquiries were
-#: received during the tender process. Structured information on that
-#: received, and responses them, can be provided using extension.:1
-msgid ""
-"A true/false field to indicate whether any enquiries were received during "
-"the tender process. Structured information on enquiries that were received, "
-"and responses to them, can be provided using the enquiries extension."
-msgstr ""
-
-#: ../../standard/Eligibility criteria:1
-msgid "Eligibility criteria"
-msgstr ""
-
-#: ../../standard/A description of any eligibility criteria for potential
-#: suppliers.:1
-msgid "A description of any eligibility criteria for potential suppliers."
-msgstr ""
-
-#: ../../standard/Evaluation and award period:1
-msgid "Evaluation and award period"
-msgstr ""
-
-#: ../../standard/The period for decision making regarding the contract award.
-#: The end date should be on which an award is due to finalised. start
-#: optional, and may used indicate of evaluation period.:1
-msgid ""
-"The period for decision making regarding the contract award. The end date "
-"should be the date on which an award decision is due to be finalised. The "
-"start date is optional, and may be used to indicate the start of an "
-"evaluation period."
-msgstr ""
-
-#: ../../standard/Contract period:1
-msgid "Contract period"
-msgstr ""
-
-#: ../../standard/The period over which the contract is estimated or required
-#: to be active. If tender does not specify explicit dates, duration field may
-#: used.:1
-msgid ""
-"The period over which the contract is estimated or required to be active. If"
-" the tender does not specify explicit dates, the duration field may be used."
-msgstr ""
-
-#: ../../standard/[integer, null]:1
-msgid "[integer, null]"
-msgstr ""
-
-#: ../../standard/Number of tenderers:1
-msgid "Number of tenderers"
-msgstr ""
-
-#: ../../standard/The number of parties who submit a bid.:1
-msgid "The number of parties who submit a bid."
-msgstr ""
-
-#: ../../standard/array[Organization reference]:1
-msgid "array[Organization reference]"
-msgstr ""
-
-#: ../../standard/Tenderers:1
-msgid "Tenderers"
-msgstr ""
-
-#: ../../standard/All parties who submit a bid on tender. More detailed
-#: information bids and the bidding organisation can be provided using
-#: optional extension.:1
-msgid ""
-"All parties who submit a bid on a tender. More detailed information on bids "
-"and the bidding organisation can be provided using the optional bid "
-"extension."
-msgstr ""
-
-#: ../../standard/array[Document]:1
-msgid "array[Document]"
-msgstr ""
-
-#: ../../standard/Documents:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Documents"
-msgstr ""
-
-#: ../../standard/All documents and attachments related to the tender,
-#: including any notices. See `documentType codelist
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#document-type>`__
-#: for details of potential include. Common include official legal notices
-#: technical specifications, evaluation criteria, and, as a tender process
-#: progresses, clarifications replies queries.:1
-msgid ""
-"All documents and attachments related to the tender, including any notices. "
-"See the `documentType codelist <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#document-type>`__ for details of "
-"potential documents to include. Common documents include official legal "
-"notices of tender, technical specifications, evaluation criteria, and, as a "
-"tender process progresses, clarifications and replies to queries."
-msgstr ""
-
-#: ../../standard/Milestones:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Milestones"
-msgstr ""
-
-#: ../../standard/A list of milestones associated with the tender.:1
-msgid "A list of milestones associated with the tender."
-msgstr ""
-
-#: ../../standard/array[Amendment]:1
-msgid "array[Amendment]"
-msgstr ""
-
-#: ../../standard/Amendments:1
-msgid "Amendments"
-msgstr ""
-
-#: ../../standard/A tender amendment is a formal change to the tender, and
-#: generally involves publication of new notice/release. The rationale
-#: description changes made can be provided here.:1
-msgid ""
-"A tender amendment is a formal change to the tender, and generally involves "
-"the publication of a new tender notice/release. The rationale and a "
-"description of the changes made can be provided here."
-msgstr ""
-
-#: ../../standard/Amendment:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Amendment"
-msgstr ""
-
-#: ../../standard/The use of individual amendment objects has been deprecated.
-#: From OCDS 1.1 information should be provided in the amendments array.:1
-msgid ""
-"The use of individual amendment objects has been deprecated. From OCDS 1.1 "
-"information should be provided in the amendments array."
-msgstr ""
+"Elle peut contenir des détails sur un processus à venir afin de recevoir et "
+"évaluer les offres de ces biens et services. Elle peut également être "
+"utilisée pour enregistrer les détails d'un processus d'appel d'offres "
+"terminé, y compris les détails des offres reçues."
 
 #: ../../standard/extension_list_tender:0
 msgid "The following extensions are available for the tender section"
 msgstr ""
+"Les extensions suivantes sont disponibles pour la section sur l'appel "
+"d'offres"
 
 #: ../../standard/extension_list_tender:9
 msgid "Enquiries"
-msgstr ""
+msgstr "Questions"
 
 #: ../../standard/extension_list_tender:9
 msgid ""
 "The enquiries extension can be used to record questions raised during a "
 "contracting process, and the answers provided."
 msgstr ""
+"L'extension questions peut être utilisée pour enregistrer les questions "
+"soulevées lors d'un processus de passation de marchés et les réponses "
+"fournies."
 
 #: ../../standard/extension_list_tender:13
 msgid "Lots"
-msgstr ""
+msgstr "Lots"
 
 #: ../../standard/extension_list_tender:13
 msgid ""
@@ -1199,10 +505,17 @@ msgid ""
 "relatedLot. Where no relatedLot identifier is given, the values should be "
 "interpreted as applicable to the whole tender."
 msgstr ""
+"Un processus d'appel d'offres peut être divisé en lots, où les candidats "
+"peuvent soumissionner sur un ou plusieurs lots. Les détails de chaque lot "
+"peuvent être fournis ici. Les biens ou services achetés, les documents et "
+"les autres caractéristiques peuvent ensuite faire référence au lot auxquels "
+"ils sont liés en utilisant `relatedLot`. Lorsque aucun identifiant "
+"`relatedLot` n'est donné, les valeurs doivent être interprétées comme "
+"applicables à l'ensemble de l'appel d'offres."
 
 #: ../../standard/extension_list_tender:16
 msgid "Participation Fees"
-msgstr ""
+msgstr "Frais de participation"
 
 #: ../../standard/extension_list_tender:16
 msgid ""
@@ -1210,29 +523,37 @@ msgid ""
 "a proposal, or be awarded a contract, this extension can be used to provide "
 "fee details."
 msgstr ""
+"Lorsqu'un processus d'appel d'offres implique le paiement de frais pour "
+"accéder aux documents, soumettre une proposition ou se voir attribuer un "
+"contrat, cette extension peut être utilisée pour fournir des détails sur les"
+" frais."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Bids"
-msgstr ""
+msgstr "Offres"
 
 #: ../../standard/extension_list_bids:0
 msgid ""
 "The optional bids extension can be used to provide summary and detailed "
 "information about bids."
 msgstr ""
+"L'extension optionnelle offres peut être utilisée pour fournir des "
+"informations résumées et détaillées sur les offres."
 
 #: ../../standard/extension_list_bids:2
 msgid "Bid statistics and details"
-msgstr ""
+msgstr "Statistiques et détails des offres"
 
 #: ../../standard/extension_list_bids:2
 msgid ""
 "Allowing bid statistics, and detailed bid information to be represented."
 msgstr ""
+"Permettre aux statistiques et aux informations détaillées sur les offres "
+"d'être représentées."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Award"
-msgstr ""
+msgstr "Attribution"
 
 #: ../../standard/docs/en/schema/reference.md:151
 msgid ""
@@ -1241,125 +562,19 @@ msgid ""
 " these awards. A related award block is required alongside every contract "
 "block, as the award contains information on the suppliers."
 msgstr ""
-
-#: ../../standard/Award ID:1
-msgid "Award ID"
-msgstr ""
-
-#: ../../standard/The identifier for this award. It must be unique and cannot
-#: change within the Open Contracting Process it is part of (defined by a
-#: single ocid). See `identifier guidance
-#: <http/standard.open-contracting.org/1.1/en/schema/identifiers/>`__ further
-#: details.:1
-msgid ""
-"The identifier for this award. It must be unique and cannot change within "
-"the Open Contracting Process it is part of (defined by a single ocid). See "
-"the `identifier guidance <http://standard.open-"
-"contracting.org/1.1/en/schema/identifiers/>`__ for further details."
-msgstr ""
-
-#: ../../standard/Title:1
-msgid "Title"
-msgstr ""
-
-#: ../../standard/Award title:1
-msgid "Award title"
-msgstr ""
-
-#: ../../standard/Description:1
-msgid "Description"
-msgstr ""
-
-#: ../../standard/Award description:1
-msgid "Award description"
-msgstr ""
-
-#: ../../standard/Award status:1
-msgid "Award status"
-msgstr ""
-
-#: ../../standard/The current status of the award drawn from `awardStatus
-#: codelist
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#award-status>`__:1
-msgid ""
-"The current status of the award drawn from the `awardStatus codelist "
-"<http://standard.open-contracting.org/1.1/en/schema/codelists/#award-"
-"status>`__"
-msgstr ""
-
-#: ../../standard/Award date:1
-msgid "Award date"
-msgstr ""
-
-#: ../../standard/The date of the contract award. This is usually on which a
-#: decision to award was made.:1
-msgid ""
-"The date of the contract award. This is usually the date on which a decision"
-" to award was made."
-msgstr ""
-
-#: ../../standard/The total value of this award. In the case a framework
-#: contract may be estimated lifetime value, or maximum agreement. There more
-#: than one award per procurement. A negative indicates that involve payments
-#: from supplier to buyer (commonly used in concession contracts).:1
-msgid ""
-"The total value of this award. In the case of a framework contract this may "
-"be the total estimated lifetime value, or maximum value, of the agreement. "
-"There may be more than one award per procurement. A negative value indicates"
-" that the award may involve payments from the supplier to the buyer "
-"(commonly used in concession contracts)."
-msgstr ""
-
-#: ../../standard/Suppliers:1
-msgid "Suppliers"
-msgstr ""
-
-#: ../../standard/The suppliers awarded this award. If different have been
-#: items of values, these should be split into separate award blocks.:1
-msgid ""
-"The suppliers awarded this award. If different suppliers have been awarded "
-"different items of values, these should be split into separate award blocks."
-msgstr ""
-
-#: ../../standard/Items awarded:1
-msgid "Items awarded"
-msgstr ""
-
-#: ../../standard/The goods and services awarded in this award, broken into
-#: line items wherever possible. Items should not be duplicated, but the
-#: quantity specified instead.:1
-msgid ""
-"The goods and services awarded in this award, broken into line items "
-"wherever possible. Items should not be duplicated, but the quantity "
-"specified instead."
-msgstr ""
-
-#: ../../standard/The period for which the contract has been awarded.:1
-msgid "The period for which the contract has been awarded."
-msgstr ""
-
-#: ../../standard/All documents and attachments related to the award,
-#: including any notices.:1
-msgid ""
-"All documents and attachments related to the award, including any notices."
-msgstr ""
-
-#: ../../standard/An award amendment is a formal change to the details of
-#: award, and generally involves publication new notice/release. The rationale
-#: description changes made can be provided here.:1
-msgid ""
-"An award amendment is a formal change to the details of the award, and "
-"generally involves the publication of a new award notice/release. The "
-"rationale and a description of the changes made can be provided here."
-msgstr ""
+"La section attribution sert à annoncer les attributions de marché effectuées"
+" pour cet appel d'offres. Il peut y avoir plusieurs attributions. Les "
+"instances peuvent contenir toutes ou certaines de ces attributions. Un bloc "
+"attribution connexe est requis à côté de chaque bloc de contrat, car "
+"l'attribution contient des informations sur les fournisseurs."
 
 #: ../../standard/extension_list_award:0
 msgid "The following extensions are available for award"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour l'attribution"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Contract"
-msgstr ""
+msgstr "Contrat"
 
 #: ../../standard/docs/en/schema/reference.md:168
 msgid ""
@@ -1369,130 +584,20 @@ msgid ""
 "within the 'award'. The framework contract details below help illustrate the"
 " reasons for this."
 msgstr ""
-
-#: ../../standard/Contract ID:1
-msgid "Contract ID"
-msgstr ""
-
-#: ../../standard/The identifier for this contract. It must be unique and
-#: cannot change within its Open Contracting Process (defined by a single
-#: ocid). See the `identifier guidance
-#: <http/standard.open-contracting.org/1.1/en/schema/identifiers/>`__ further
-#: details.:1
-msgid ""
-"The identifier for this contract. It must be unique and cannot change within"
-" its Open Contracting Process (defined by a single ocid). See the "
-"`identifier guidance <http://standard.open-"
-"contracting.org/1.1/en/schema/identifiers/>`__ for further details."
-msgstr ""
-
-#: ../../standard/The award.id against which this contract is being issued.:1
-msgid "The award.id against which this contract is being issued."
-msgstr ""
-
-#: ../../standard/Contract title:1
-msgid "Contract title"
-msgstr ""
-
-#: ../../standard/Contract description:1
-msgid "Contract description"
-msgstr ""
-
-#: ../../standard/Contract status:1
-msgid "Contract status"
-msgstr ""
-
-#: ../../standard/The current status of the contract. Drawn from
-#: `contractStatus codelist
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#contract-status>`__:1
-msgid ""
-"The current status of the contract. Drawn from the `contractStatus codelist "
-"<http://standard.open-contracting.org/1.1/en/schema/codelists/#contract-"
-"status>`__"
-msgstr ""
-
-#: ../../standard/Period:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Period"
-msgstr ""
-
-#: ../../standard/The start and end date for the contract.:1
-msgid "The start and end date for the contract."
-msgstr ""
-
-#: ../../standard/The total value of this contract. A negative indicates that
-#: the contract will involve payments from supplier to buyer (commonly used in
-#: concession contracts).:1
-msgid ""
-"The total value of this contract. A negative value indicates that the "
-"contract will involve payments from the supplier to the buyer (commonly used"
-" in concession contracts)."
-msgstr ""
-
-#: ../../standard/Items contracted:1
-msgid "Items contracted"
-msgstr ""
-
-#: ../../standard/The goods, services, and any intangible outcomes in this
-#: contract. Note If the items are same as award do not repeat.:1
-msgid ""
-"The goods, services, and any intangible outcomes in this contract. Note: If "
-"the items are the same as the award do not repeat."
-msgstr ""
-
-#: ../../standard/Date signed:1
-msgid "Date signed"
-msgstr ""
-
-#: ../../standard/The date the contract was signed. In case of multiple
-#: signatures, last signature.:1
-msgid ""
-"The date the contract was signed. In the case of multiple signatures, the "
-"date of the last signature."
-msgstr ""
-
-#: ../../standard/All documents and attachments related to the contract,
-#: including any notices.:1
-msgid ""
-"All documents and attachments related to the contract, including any "
-"notices."
-msgstr ""
-
-#: ../../standard/Implementation:1
-#: ../../standard/docs/en/schema/reference.md:0
-msgid "Implementation"
-msgstr ""
-
-#: ../../standard/Information related to the implementation of contract in
-#: accordance with obligations laid out therein.:1
-msgid ""
-"Information related to the implementation of the contract in accordance with"
-" the obligations laid out therein."
-msgstr ""
-
-#: ../../standard/Contract milestones:1
-msgid "Contract milestones"
-msgstr ""
-
-#: ../../standard/A list of milestones associated with the finalisation this
-#: contract.:1
-msgid ""
-"A list of milestones associated with the finalisation of this contract."
-msgstr ""
-
-#: ../../standard/A contract amendment is a formal change to, or extension of,
-#: contract, and generally involves the publication of new notice/release,
-#: some other documents detailing change. The rationale description changes
-#: made can be provided here.:1
-msgid ""
-"A contract amendment is a formal change to, or extension of, a contract, and"
-" generally involves the publication of a new contract notice/release, or "
-"some other documents detailing the change. The rationale and a description "
-"of the changes made can be provided here."
-msgstr ""
+"La section ```contract``` (contrat) est utilisée pour fournir des détails "
+"sur les marchés qui ont été conclus. Tout contrat doit être lié à une "
+"attribution via la propriété ```awardID``` (identifiant d'attribution). En "
+"effet, les informations sur les titulaires du marché sont contenues dans la "
+"section sur l'attribution. Les détails sur les contrats-cadre qui figurent "
+"ci-dessous peuvent aider à en illustrer les raisons."
 
 #: ../../standard/extension_list_contract:0
 msgid "The following extensions are available for contracts"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour les contrats"
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Implementation"
+msgstr "Exécution du marché"
 
 #: ../../standard/docs/en/schema/reference.md:185
 msgid ""
@@ -1500,162 +605,48 @@ msgid ""
 "belongs nested within the contract it relates to. Implementation blocks "
 "include the following elements:"
 msgstr ""
-
-#: ../../standard/array[Transaction information]:1
-msgid "array[Transaction information]"
-msgstr ""
-
-#: ../../standard/Transactions:1
-msgid "Transactions"
-msgstr ""
-
-#: ../../standard/A list of the spending transactions made against this
-#: contract:1
-msgid "A list of the spending transactions made against this contract"
-msgstr ""
-
-#: ../../standard/As milestones are completed, milestone completions should be
-#: documented.:1
-msgid ""
-"As milestones are completed, milestone completions should be documented."
-msgstr ""
-
-#: ../../standard/Documents and reports that are part of the implementation
-#: phase e.g. audit evaluation reports.:1
-msgid ""
-"Documents and reports that are part of the implementation phase e.g. audit "
-"and evaluation reports."
-msgstr ""
+"Les informations sur l'exécution peuvent être mises à jour au cours d'un "
+"contrat. Elles sont imbriquées dans le contrat auxquelles elles se "
+"rapportent. Les composants sur l'exécution comprennent les éléments suivants"
+" :"
 
 #: ../../standard/extension_list_implementation:0
 msgid "The following extensions are available for implementation"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour l'exécution du marché"
 
 #: ../../standard/docs/en/schema/reference.md:200
 msgid ""
-"Information on subcontracts is not currently included in the release "
-"candidate schema, but may be handled by [proposed "
+"Information on subcontracts is not currently included in the core OCDS "
+"schema, but may be handled by [proposed "
 "extensions](conformance_and_extensions.md)"
 msgstr ""
+"Les informations sur la sous-traitance ne sont à l'heure actuelle pas "
+"inclues dans le schéma OCDS de base, mais elles peuvent être gérées par des "
+"[extensions](conformance_and_extensions.md). "
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Transaction"
-msgstr ""
-
-#: ../../standard/A unique identifier for this transaction. This should be
-#: possible to cross-reference against the provided data source. For IATI is
-#: transaction reference.:1
-msgid ""
-"A unique identifier for this transaction. This identifier should be possible"
-" to cross-reference against the provided data source. For IATI this is the "
-"transaction reference."
-msgstr ""
-
-#: ../../standard/Data source:1
-msgid "Data source"
-msgstr ""
-
-#: ../../standard/Used to point either a corresponding Fiscal Data Package,
-#: IATI file, or machine human-readable source where users can find further
-#: information on the budget line item identifiers, project provided here.:1
-msgid ""
-"Used to point either to a corresponding Fiscal Data Package, IATI file, or "
-"machine or human-readable source where users can find further information on"
-" the budget line item identifiers, or project identifiers, provided here."
-msgstr ""
-
-#: ../../standard/Date:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Date"
-msgstr ""
-
-#: ../../standard/The date of the transaction:1
-msgid "The date of the transaction"
-msgstr ""
-
-#: ../../standard/The value of the transaction.:1
-msgid "The value of the transaction."
-msgstr ""
-
-#: ../../standard/Payer:1
-msgid "Payer"
-msgstr ""
-
-#: ../../standard/An organization reference for the from which funds in this
-#: transaction originate.:1
-msgid ""
-"An organization reference for the organization from which the funds in this "
-"transaction originate."
-msgstr ""
-
-#: ../../standard/Payee:1
-msgid "Payee"
-msgstr ""
-
-#: ../../standard/An organization reference for the which receives funds in
-#: this transaction.:1
-msgid ""
-"An organization reference for the organization which receives the funds in "
-"this transaction."
-msgstr ""
-
-#: ../../standard/Linked spending information:1
-msgid "Linked spending information"
-msgstr ""
-
-#: ../../standard/A URI pointing directly to a machine-readable record about
-#: this spending transaction.:1
-msgid ""
-"A URI pointing directly to a machine-readable record about this spending "
-"transaction."
-msgstr ""
-
-#: ../../standard/(Deprecated in 1.1. Use transaction.value instead) The value
-#: of the transaction. A negative indicates a refund or correction.:1
-msgid ""
-"(Deprecated in 1.1. Use transaction.value instead) The value of the "
-"transaction. A negative value indicates a refund or correction."
-msgstr ""
-
-#: ../../standard/Provider organization:1
-msgid "Provider organization"
-msgstr ""
-
-#: ../../standard/(Deprecated in 1.1. Use transaction.payer instead.) The
-#: Organization Identifier for the organization from which funds this
-#: transaction originate. Expressed following Organizational standard -
-#: consult documentation and codelist.:1
-msgid ""
-"(Deprecated in 1.1. Use transaction.payer instead.) The Organization "
-"Identifier for the organization from which the funds in this transaction "
-"originate. Expressed following the Organizational Identifier standard - "
-"consult the documentation and the codelist."
-msgstr ""
-
-#: ../../standard/Receiver organization:1
-msgid "Receiver organization"
-msgstr ""
-
-#: ../../standard/(Deprecated in 1.1. Use transaction.payee instead). The
-#: Organization Identifier for the organization which receives funds this
-#: transaction. Expressed following Organizational standard - consult
-#: documentation and codelist.:1
-msgid ""
-"(Deprecated in 1.1. Use transaction.payee instead). The Organization "
-"Identifier for the organization which receives the funds in this "
-"transaction. Expressed following the Organizational Identifier standard - "
-"consult the documentation and the codelist."
-msgstr ""
+msgstr "Transaction"
 
 #: ../../standard/docs/en/schema/reference.md:212
 msgid ""
 "The transaction block is modelled on the [International Aid Transparency "
 "Initiative (IATI) transaction element](http://iatistandard.org/activity-"
 "standard/iati-activities/iati-activity/transaction/), and can be used to "
-"represent actual flows of money between organisations in relation to this "
+"represent actual flows of money between organizations in relation to this "
 "contract. As with the [budget](#budget) block, this may be used to cross-"
 "reference to a third party ```source``` of data, and can re-use identifiers "
 "from that source."
 msgstr ""
+"Le composant sur les transactions est calqué sur les [éléments de "
+"transaction de l'Initiative Internationale de Transparence de l'Aide (IITA)]"
+" (http://iatistandard.org/activity-standard/iati-activities/iati-"
+"activity/transaction/) et peut être utilisé pour représenter les flux "
+"d'argent entre organisations dans le cadre d'un contrat. Comme avec le "
+"composant sur le [budget](#budget), ces données peuvent être utilisées pour "
+"croiser des données issues d'une ```source``` tierce. Les données de "
+"transactions peuvent également réutiliser les identifiants de cette "
+"```source```."
 
 #: ../../standard/docs/en/schema/reference.md:214
 msgid ""
@@ -1663,26 +654,46 @@ msgid ""
 "```buyer```, and the ```payee``` identifier should match that of the "
 "```supplier```."
 msgstr ""
+"Dans la plupart des cas, l'identifiant ```payer``` devrait correspondre à "
+"celui du ```buyer```, et l'identifiant ```payee``` doit correspondre à celui"
+" du ```supplier```."
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Milestones"
+msgstr "Étapes"
 
 #: ../../standard/docs/en/schema/reference.md:218
 msgid "See [milestone](#milestone) reference below."
-msgstr ""
+msgstr "Voir ci-dessous [la documentation sur les étapes](#milestone). "
 
 #: ../../standard/docs/en/schema/reference.md:220
 msgid ""
 "The implementation milestones should be updated to reflect when they are "
 "met."
 msgstr ""
+"Les étapes de l'exécution du contrat doivent être mises à jour pour refléter"
+" leur date de fin."
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Documents"
+msgstr "Documents"
 
 #: ../../standard/docs/en/schema/reference.md:224
 msgid ""
 "Documents related to contract implementation should be stored here. This may"
 " include subcontracts."
 msgstr ""
+"Les documents relatifs à l'exécution du contrat doivent être référencés dans"
+" ce composant. Les documents de sous-traitance peuvent également y être "
+"référencés."
 
 #: ../../standard/docs/en/schema/reference.md:226
 msgid "See [document](#document) reference below."
-msgstr ""
+msgstr "Voir la [documentation sur les documents](#document) ci-dessous."
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Amendment"
+msgstr "Modification"
 
 #: ../../standard/docs/en/schema/reference.md:230
 msgid ""
@@ -1691,6 +702,11 @@ msgid ""
 "history of changes, in many cases it is important for changes to a tender, "
 "award or contract to be explicitly declared."
 msgstr ""
+"Une instance peut modifier la valeur des propriétés d'une instance "
+"précédente. Le modèle OCDS pour les instances et les archives offre la "
+"possibilité de conserver un historique complet et versionné des changements,"
+" mails il est souvent important que les modifications apportées à un appel "
+"d'offres, l'attribution ou un contrat soient explicitement déclarées."
 
 #: ../../standard/docs/en/schema/reference.md:232
 msgid ""
@@ -1699,122 +715,95 @@ msgid ""
 " and free-text descriptions of the change, as well as to point to the "
 "releases that contain information from before and after the amendment."
 msgstr ""
-
-#: ../../standard/Amendment date:1
-msgid "Amendment date"
-msgstr ""
-
-#: ../../standard/The date of this amendment.:1
-msgid "The date of this amendment."
-msgstr ""
-
-#: ../../standard/An explanation for the amendment.:1
-msgid "An explanation for the amendment."
-msgstr ""
-
-#: ../../standard/An identifier for this amendment often the amendment
-#: number:1
-msgid "An identifier for this amendment: often the amendment number"
-msgstr ""
-
-#: ../../standard/A free text, or semi-structured, description of the changes
-#: made in this amendment.:1
-msgid ""
-"A free text, or semi-structured, description of the changes made in this "
-"amendment."
-msgstr ""
-
-#: ../../standard/Amended release (identifier):1
-msgid "Amended release (identifier)"
-msgstr ""
-
-#: ../../standard/Provide the identifier (release.id) of OCDS release (from
-#: this contracting process) that provides values for process --before--
-#: amendment was made.:1
-msgid ""
-"Provide the identifier (release.id) of the OCDS release (from this "
-"contracting process) that provides the values for this contracting process "
-"**before** the amendment was made."
-msgstr ""
-
-#: ../../standard/Amending release (identifier):1
-msgid "Amending release (identifier)"
-msgstr ""
-
-#: ../../standard/Provide the identifier (release.id) of OCDS release (from
-#: this contracting process) that provides values for process --after--
-#: amendment was made.:1
-msgid ""
-"Provide the identifier (release.id) of the OCDS release (from this "
-"contracting process) that provides the values for this contracting process "
-"**after** the amendment was made."
-msgstr ""
-
-#: ../../standard/array[object]:1
-msgid "array[object]"
-msgstr ""
-
-#: ../../standard/Amended fields:1
-msgid "Amended fields"
-msgstr ""
-
-#: ../../standard/An array change objects describing the fields changed, and
-#: their former values. (Deprecated in 1.1):1
-msgid ""
-"An array change objects describing the fields changed, and their former "
-"values. (Deprecated in 1.1)"
-msgstr ""
+"La liste des modifications dans un composant d'appel d'offres, d'attribution"
+" ou de contrat permet de détailler les modifications qui ont eu lieu. Chaque"
+" modification comprend la date, les raisons de la modification et une "
+"description en texte libre. Il est également possible d'indiquer les "
+"instances contenant des informations avant et après la modification."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Changes"
-msgstr ""
+msgstr "Changements"
 
 #: ../../standard/docs/en/schema/reference.md:244
 msgid ""
 "The changes array was deprecated in OCDS 1.1. Structured information on the "
 "former value of specific fields should be provided by:"
 msgstr ""
+"La liste des modifications a été dépréciée dans la version 1.1 d'OCDS. Les "
+"informations structurées sur la valeur précédente de champs spécifiques "
+"devraient être fournies par :"
 
 #: ../../standard/docs/en/schema/reference.md:246
 msgid ""
 "Including releases from **before** and **after** a change within a release "
 "package;"
 msgstr ""
+"L'inclusion des instances **avant** et **après** une modification au sein "
+"d'un package d'instances ;"
 
 #: ../../standard/docs/en/schema/reference.md:247
 msgid ""
 "Using the amendment array in tender, contract or award to explicitly relate "
 "these releases to an amendment."
 msgstr ""
+"L'utilisation de la liste de modifications dans l'appel d'offres, le contrat"
+" ou l'attribution pour relier explicitement ces instances à une "
+"modification."
 
 #: ../../standard/docs/en/schema/reference.md:249
 msgid ""
 "See the [amendment implementation "
 "guidance](../../../implementation/amendments/) for more details."
 msgstr ""
+"Voir le [guide sur les modifications de l'exécution du "
+"marché](../../../implementation/amendments/) pour plus de détails."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Building block reference"
-msgstr ""
+msgstr "Documentation sur les composants essentiels"
 
 #: ../../standard/docs/en/schema/reference.md:253
 msgid ""
 "The following building blocks are commonly re-used throughout the standard."
 msgstr ""
+"Les composants essentiels sont des composants couramment réutilisés dans le "
+"standard."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "OrganizationReference"
+msgstr "`OrganizationReference`"
+
+#: ../../standard/docs/en/schema/reference.md:1
+msgid "Organizations"
 msgstr ""
+
+#: ../../standard/docs/en/schema/reference.md:3
+msgid ""
+"The approach to including organizations information has changed in OCDS 1.1."
+" Instead of embedding all the details of an organization, publishers should "
+"use an organization reference to indicate the entry in the parties section "
+"that contains full details of this organization."
+msgstr ""
+"L'approche adoptée pour inclure les informations sur les organisations a "
+"changé dans la verison 1.1 du standard OCDS. Au lieu d'intégrer tous les "
+"détails d'une organisation, les producteurs de données devraient utiliser "
+"une référence d'organisation (`id`) pour indiquer l'entrée dans la section "
+"sur les parties qui contient les détails de cette organisation."
 
 #: ../../standard/docs/en/schema/reference.md:264
 msgid "An organization reference consists of two main components:"
 msgstr ""
+"Une référence d'organisation se compose de deux composantes principales :"
 
 #: ../../standard/docs/en/schema/reference.md:266
 msgid ""
 "An ```id``` used to cross-reference the entry in the [parties](#parties) "
 "section that contains full information on this organization or entity;"
 msgstr ""
+"Un ```id``` utilisé pour faire une référence croisée à l'entrée dans la "
+"section [parties](#parties) qui contient des informations complètes sur "
+"cette organisation ou cette entité ;"
 
 #: ../../standard/docs/en/schema/reference.md:267
 msgid ""
@@ -1822,31 +811,40 @@ msgid ""
 "section, provided for the convenience of users viewing the data, and to "
 "support detection of mistakes in cross-referencing."
 msgstr ""
+"Un champ ```name``` qui répète le nom donné dans la section "
+"[parties](#parties), fourni pour aider les utilisateurs qui regardent les "
+"données et pour permettre la détection des erreurs lors des références "
+"croisées."
 
 #: ../../standard/docs/en/schema/reference.md:269
 msgid ""
 "The Organization Reference schema contains deprecated fields to prevent "
 "validation failures of OCDS 1.0 data."
 msgstr ""
+"Le schéma de référence d'organisation contient des champs dépréciés pour "
+"éviter les erreurs de validation des données OCDS version 1.0."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Organization"
-msgstr ""
+msgstr "Organisation"
 
 #: ../../standard/docs/en/schema/reference.md:273
 msgid "See the [parties](#parties) section"
-msgstr ""
+msgstr "Voir la section [parties](#parties)"
 
-#: ../../standard/docs/en/schema/reference.md:0 ../../standard/Identifier:1
+#: ../../standard/docs/en/schema/reference.md:0
 msgid "Identifier"
-msgstr ""
+msgstr "Identifiant"
 
 #: ../../standard/docs/en/schema/reference.md:277
 msgid ""
 "The identifier block provides a way to [identify the legal "
-"entities](../../identifiers/#organizations) involved in a contracting "
+"entities](../../identifiers/#organisation-ids) involved in a contracting "
 "process."
 msgstr ""
+"Le bloc identifiant fournit un moyen d'[identifier les entités "
+"juridiques](../../ identifiers/#organizations) impliquées dans un processus "
+"de passation des marchés."
 
 #: ../../standard/docs/en/schema/reference.md:279
 msgid ""
@@ -1856,147 +854,24 @@ msgid ""
 "with details of the branch or department given in the name, "
 "[address](#address) and [contact point](#contactpoint) as relevant."
 msgstr ""
+"Si un processus de passation de marchés représente un contrat organisé par "
+"la direction ou la branche d'une organisation plus grande, l'entité "
+"juridique (habituellement l'organisation disposant d'une personnalité "
+"morale) doit être décrite dans la section [identifiant](#identifier), avec "
+"les détails de la direction ou de la branche donnés dans le nom, "
+"[l'adresse](#adress) et le [point de contact](#contactpoint), si besoin."
 
-#: ../../standard/Scheme:1
-msgid "Scheme"
-msgstr ""
-
-#: ../../standard/Organization identifiers be drawn from an existing
-#: identification scheme. This field is used to indicate the scheme or
-#: codelist in which identifier will found. value should `Organization
-#: Identifier Scheme
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme>`__.:1
-msgid ""
-"Organization identifiers be drawn from an existing identification scheme. "
-"This field is used to indicate the scheme or codelist in which the "
-"identifier will be found. This value should be drawn from the `Organization "
-"Identifier Scheme <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme>`__."
-msgstr ""
-
-#: ../../standard/The identifier of the organization in selected scheme.:1
-msgid "The identifier of the organization in the selected scheme."
-msgstr ""
-
-#: ../../standard/Legal Name:1
-msgid "Legal Name"
-msgstr ""
-
-#: ../../standard/The legally registered name of the organization.:1
-msgid "The legally registered name of the organization."
-msgstr ""
-
-#: ../../standard/URI:1
-msgid "URI"
-msgstr ""
-
-#: ../../standard/A URI to identify the organization, such as those provided
-#: by `Open Corporates <http/www.opencorporates.com>`__ or some other relevant
-#: provider. This is not for listing website of organization that can be done
-#: through url field Organization contact point.:1
-msgid ""
-"A URI to identify the organization, such as those provided by `Open "
-"Corporates <http://www.opencorporates.com>`__ or some other relevant URI "
-"provider. This is not for listing the website of the organization: that can "
-"be done through the url field of the Organization contact point."
-msgstr ""
-
-#: ../../standard/Street address:1
-msgid "Street address"
-msgstr ""
-
-#: ../../standard/The street address. For example, 1600 Amphitheatre Pkwy.:1
-msgid "The street address. For example, 1600 Amphitheatre Pkwy."
-msgstr ""
-
-#: ../../standard/Locality:1
-msgid "Locality"
-msgstr ""
-
-#: ../../standard/The locality. For example, Mountain View.:1
-msgid "The locality. For example, Mountain View."
-msgstr ""
-
-#: ../../standard/Region:1
-msgid "Region"
-msgstr ""
-
-#: ../../standard/The region. For example, CA.:1
-msgid "The region. For example, CA."
-msgstr ""
-
-#: ../../standard/Postalcode:1
-msgid "Postalcode"
-msgstr ""
-
-#: ../../standard/The postal code. For example, 94043.:1
-msgid "The postal code. For example, 94043."
-msgstr ""
-
-#: ../../standard/Country name:1
-msgid "Country name"
-msgstr ""
-
-#: ../../standard/The country name. For example, United States.:1
-msgid "The country name. For example, United States."
-msgstr ""
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Address"
+msgstr "Adresse"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "ContactPoint"
-msgstr ""
-
-#: ../../standard/Name:1
-msgid "Name"
-msgstr ""
-
-#: ../../standard/The name of the contact person, department, or point, for
-#: correspondence relating to this contracting process.:1
-msgid ""
-"The name of the contact person, department, or contact point, for "
-"correspondence relating to this contracting process."
-msgstr ""
-
-#: ../../standard/Email:1
-msgid "Email"
-msgstr ""
-
-#: ../../standard/The e-mail address of the contact point/person.:1
-msgid "The e-mail address of the contact point/person."
-msgstr ""
-
-#: ../../standard/Telephone:1
-msgid "Telephone"
-msgstr ""
-
-#: ../../standard/The telephone number of the contact point/person. This
-#: should include international dialing code.:1
-msgid ""
-"The telephone number of the contact point/person. This should include the "
-"international dialing code."
-msgstr ""
-
-#: ../../standard/Fax number:1
-msgid "Fax number"
-msgstr ""
-
-#: ../../standard/The fax number of the contact point/person. This should
-#: include international dialing code.:1
-msgid ""
-"The fax number of the contact point/person. This should include the "
-"international dialing code."
-msgstr ""
-
-#: ../../standard/URL:1
-msgid "URL"
-msgstr ""
-
-#: ../../standard/A web address for the contact point/person.:1
-msgid "A web address for the contact point/person."
-msgstr ""
+msgstr "Point de contact"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Document"
-msgstr ""
+msgstr "Document"
 
 #: ../../standard/docs/en/schema/reference.md:309
 msgid ""
@@ -2005,122 +880,27 @@ msgid ""
 "can consist of multiple documents, classified using the "
 "[documentType](../../codelists/#document-type) codelist."
 msgstr ""
+"Les documents peuvent être joints à un certain nombre d'étapes au sein du "
+"standard : lors de la planification, des appels d'offre, des attributions, "
+"des contrats et de l'exécution. Chaque composant documents peut être composé"
+" de plusieurs documents, classés à l'aide de la liste de codes "
+"[`documentType`](../../codelists/#document-type)."
 
 #: ../../standard/docs/en/schema/reference.md:311
 msgid ""
 "The document block is also used to link to legal notices, which should have "
 "a documentType of 'notice'."
 msgstr ""
-
-#: ../../standard/A local, unique identifier for this document. This field is
-#: used to keep track of multiple revisions a document through the compilation
-#: from release record mechanism.:1
-msgid ""
-"A local, unique identifier for this document. This field is used to keep "
-"track of multiple revisions of a document through the compilation from "
-"release to record mechanism."
-msgstr ""
-
-#: ../../standard/Document type:1
-msgid "Document type"
-msgstr ""
-
-#: ../../standard/A classification of the document described taken from
-#: `documentType codelist
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#document-type>`__.
-#: Values provided should be used wherever possible, though extended values
-#: can if does not have a relevant code.:1
-msgid ""
-"A classification of the document described taken from the `documentType "
-"codelist <http://standard.open-contracting.org/1.1/en/schema/codelists"
-"/#document-type>`__. Values from the provided codelist should be used "
-"wherever possible, though extended values can be provided if the codelist "
-"does not have a relevant code."
-msgstr ""
-
-#: ../../standard/The document title.:1
-msgid "The document title."
-msgstr ""
-
-#: ../../standard/A short description of the document. We recommend
-#: descriptions do not exceed 250 words. In event document is accessible
-#: online, field can be used to describe arrangements for obtaining a copy
-#: document.:1
-msgid ""
-"A short description of the document. We recommend descriptions do not exceed"
-" 250 words. In the event the document is not accessible online, the "
-"description field can be used to describe arrangements for obtaining a copy "
-"of the document."
-msgstr ""
-
-#: ../../standard/ direct link to the document or attachment. The server
-#: providing access this should be configured correctly report mime type.:1
-msgid ""
-"direct link to the document or attachment. The server providing access to "
-"this document should be configured to correctly report the document mime "
-"type."
-msgstr ""
-
-#: ../../standard/Date published:1
-msgid "Date published"
-msgstr ""
-
-#: ../../standard/The date on which the document was first published. This is
-#: particularly important for legally documents such as notices of a tender.:1
-msgid ""
-"The date on which the document was first published. This is particularly "
-"important for legally important documents such as notices of a tender."
-msgstr ""
-
-#: ../../standard/Date modified:1
-msgid "Date modified"
-msgstr ""
-
-#: ../../standard/Date that the document was last modified:1
-msgid "Date that the document was last modified"
-msgstr ""
-
-#: ../../standard/Format:1
-msgid "Format"
-msgstr ""
-
-#: ../../standard/The format of the document taken from `IANA Media Types code
-#: list <http/www.iana.org/assignments/media-types/>`__, with addition one
-#: extra value for 'offline/print', used when this entry is being to describe
-#: offline publication a document. Use values template column. Links web pages
-#: should be tagged 'text/html'.:1
-msgid ""
-"The format of the document taken from the `IANA Media Types codelist "
-"<http://www.iana.org/assignments/media-types/>`__, with the addition of one "
-"extra value for 'offline/print', used when this document entry is being used"
-" to describe the offline publication of a document. Use values from the "
-"template column. Links to web pages should be tagged 'text/html'."
-msgstr ""
-
-#: ../../standard/Language:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Language"
-msgstr ""
-
-#: ../../standard/Specifies the language of linked document using either
-#: two-letter `ISO639-1
-#: <https/en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__, or extended
-#: `BCP47 tags <http/www.w3.org/International/articles/language-tags/>`__. The
-#: use lowercase two-letter codes from
-#: <https/en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__ is strongly
-#: recommended unless there a clear user need for distinguishing subtype.:1
-msgid ""
-"Specifies the language of the linked document using either two-letter `ISO"
-"639-1 <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__, or "
-"extended `BCP47 language tags <http://www.w3.org/International/articles"
-"/language-tags/>`__. The use of lowercase two-letter codes from `ISO639-1 "
-"<https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`__ is strongly "
-"recommended unless there is a clear user need for distinguishing the "
-"language subtype."
-msgstr ""
+"Ce composant est également utilisé pour référencer les mentions légales, qui"
+" devraient avoir un ```documentType``` avec la valeur \"notice\"."
 
 #: ../../standard/extension_list_document:0
 msgid "The following extensions are available for document"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour les documents"
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Period"
+msgstr "Période"
 
 #: ../../standard/docs/en/schema/reference.md:328
 msgid ""
@@ -2128,6 +908,9 @@ msgid ""
 "are represented using date-times. Durations are represented as a number of "
 "days."
 msgstr ""
+"Une période a une date de début, une date de fin et/ou une durée. Les dates "
+"de début et de fin sont représentées à l'aide des dates-heures. Les durées "
+"sont représentées en nombre de jours."
 
 #: ../../standard/docs/en/schema/reference.md:330
 msgid ""
@@ -2135,65 +918,17 @@ msgid ""
 "possible end date of this period, or the latest date up until which the "
 "period could be extended without an amendment."
 msgstr ""
-
-#: ../../standard/Start date:1
-msgid "Start date"
-msgstr ""
-
-#: ../../standard/The start date for the period. When known, a precise must
-#: always be provided.:1
-msgid ""
-"The start date for the period. When known, a precise start date must always "
-"be provided."
-msgstr ""
-
-#: ../../standard/End date:1
-msgid "End date"
-msgstr ""
-
-#: ../../standard/The end date for the period. When known, a precise must
-#: always be provided.:1
-msgid ""
-"The end date for the period. When known, a precise end date must always be "
-"provided."
-msgstr ""
-
-#: ../../standard/Maximum extent:1
-msgid "Maximum extent"
-msgstr ""
-
-#: ../../standard/The period cannot be extended beyond this date. This field
-#: is optional, and can used to express the maximum available data for
-#: extension or renewal of period.:1
-msgid ""
-"The period cannot be extended beyond this date. This field is optional, and "
-"can be used to express the maximum available data for extension or renewal "
-"of this period."
-msgstr ""
-
-#: ../../standard/Duration (days):1
-msgid "Duration (days)"
-msgstr ""
-
-#: ../../standard/The maximum duration of this period in days. A user
-#: interface may wish to collect or display data months years as appropriate,
-#: but should convert it into days when completing field. This field can be
-#: used exact dates are not known. Where a startDate and endDate given, is
-#: optional, reflect the difference between those two maxExtentDate diffence
-#: maxExtentDate.:1
-msgid ""
-"The maximum duration of this period in days. A user interface may wish to "
-"collect or display this data in months or years as appropriate, but should "
-"convert it into days when completing this field. This field can be used when"
-" exact dates are not known.  Where a startDate and endDate are given, this "
-"field is optional, and should reflect the difference between those two days."
-" Where a startDate and maxExtentDate are given, this field is optional, and "
-"should reflect the diffence between startDate and maxExtentDate."
-msgstr ""
+"Les périodes peuvent également inclure une ```maxExtentDate``` qui indique "
+"la date de fin maximale de cette période ou la dernière date jusqu'à "
+"laquelle la période pourrait être prolongée, sans modification."
 
 #: ../../standard/extension_list_period:0
 msgid "The following extensions are available for period"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour la période"
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Date"
+msgstr "Date"
 
 #: ../../standard/docs/en/schema/reference.md:347
 msgid ""
@@ -2201,44 +936,53 @@ msgid ""
 "times, following [RFC3339 "
 "§5.6](http://tools.ietf.org/html/rfc3339#section-5.6)."
 msgstr ""
+"OCDS utilise la norme de date et d'heure "
+"[ISO8601](http://en.wikipedia.org/wiki/ISO_8601), suivant la [RFC3339 "
+"§5.6](http://tools.ietf.org/html/rfc3339#section-5.6)."
 
 #: ../../standard/docs/en/schema/reference.md:349
 msgid "A time and timezone/offset MUST always be provided in a date-time."
 msgstr ""
+"Une heure complète (heures, minutes, secondes) et un fuseau horaire DOIVENT "
+"toujours être fournis dans une date-heure."
 
 #: ../../standard/docs/en/schema/reference.md:351
 msgid "The following are valid date-times:"
-msgstr ""
+msgstr "Les date-heures suivantes sont valides:"
 
 #: ../../standard/docs/en/schema/reference.md:353
 msgid "'2014-10-21T09:30:00Z' - 9:30 am on the 21st October 2014, UTC"
 msgstr ""
+"'2014-10-21T09:30:00Z' - 9:30 le 21 octobre 2014, fuseau UTC (temps "
+"universel)"
 
 #: ../../standard/docs/en/schema/reference.md:354
 msgid ""
 "'2014-11-18T18:00:00-06:00' - 6pm on 18th November 2014 CST (Central "
 "Standard Time)"
 msgstr ""
+"'2014-11-18T18:00:00-06:00' - 18:00 le 18 novembre 2014 UTC -6h (fuseau CST,"
+" Central Standard Time)"
 
 #: ../../standard/docs/en/schema/reference.md:356
 msgid "The following are not valid:"
-msgstr ""
+msgstr "La date-heures suivantes ne sont pas valides :"
 
 #: ../../standard/docs/en/schema/reference.md:358
 msgid "'2014-10-21' - Missing time portion"
-msgstr ""
+msgstr "'2014-10-21' - Il manque l'heure."
 
 #: ../../standard/docs/en/schema/reference.md:359
 msgid "'2014-10-21T18:00' - missing seconds in time portion."
-msgstr ""
+msgstr "'2014-10-21T18:00' - il manque les secondes."
 
 #: ../../standard/docs/en/schema/reference.md:360
 msgid "'2014-11-18T18:00:00' - Missing timezone/offset portion"
-msgstr ""
+msgstr "'2014-11-18T18:00:00' - il manque le fuseau horaire."
 
 #: ../../standard/docs/en/schema/reference.md:361
 msgid "'11/18/2014 18:00' - Not following the pattern at all!"
-msgstr ""
+msgstr "'11/18/2014 18:00' - ne suit absolument pas le modèle !"
 
 #: ../../standard/docs/en/schema/reference.md:363
 msgid ""
@@ -2250,6 +994,14 @@ msgid ""
 "offset) timezone, whereas other timezones are indicated by their value "
 "'+/-hh:mm' UTC on the end of the date-time value."
 msgstr ""
+"Il est particulièrement important d'indiquer avec précision l'heure et le "
+"fuseau horaire pour les délais d'appel d'offres et les autres dates qui "
+"peuvent avoir une valeur juridique, les utilisateurs des données pouvant "
+"dépendre de fuseaux horaires différents. Le caractère Z à la fin d'une date-"
+"heure indique le fuseau "
+"[UTC](https://fr.wikipedia.org/wiki/Temps_universel_coordonn%C3%A9) (ou zéro"
+" décalage), tandis que les autres fuseaux horaires sont indiqués par leur "
+"valeur '+/- hh:mm UTC ' à la fin de la valeur date-heure."
 
 #: ../../standard/docs/en/schema/reference.md:365
 msgid ""
@@ -2263,6 +1015,16 @@ msgid ""
 "accepted in standard office hours, these values might be 09:00:00Z and "
 "17:00:00Z respectively."
 msgstr ""
+"Dans le cas où le système d'où les des données sont extraites n'inclut pas "
+"d'informations sur l'heure, les producteurs de données doivent réfléchir à "
+"une valeur par défaut pour chaque champ. Par exemple, l'heure "
+"```startDate``` de début d'une période de clarification peut être fixée à "
+"'00:00:00Z' pour indiquer que des précisions peuvent être demandées à tout "
+"moment à la date indiquée, avec le temps de ```endDate``` fixé à 23:23:59Z "
+"pour indiquer que les clarifications peuvent être envoyées jusqu'à la fin de"
+" la journée à la date de fin donnée. Par ailleurs, si les demandes de "
+"clarification ne sont acceptées qu'aux horaires classiques de bureau, ces "
+"valeurs peuvent être comprises entre 09:00:00Z et 17:00:00Z."
 
 #: ../../standard/docs/en/schema/reference.md:367
 msgid ""
@@ -2271,188 +1033,76 @@ msgid ""
 "(for UTC) or the timezone of the publisher, indicating that the time refers "
 "to the end of the given date."
 msgstr ""
+"Dans le cas où un champ de date n'est pas lié à un horaire précis, les "
+"producteurs de données OCDS doivent choisir une valeur de temps par défaut "
+"de '23:59:59' et soit 'Z' (pour le fuseau UTC) soit le fuseau horaire du "
+"producteur des données, indiquant ainsi que l'heure se réfère à la fin de la"
+" date donnée."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Item"
-msgstr ""
+msgstr "Biens et services"
 
 #: ../../standard/docs/en/schema/reference.md:371
 msgid ""
 "The items block is used to list the line-items associated with a tender, "
 "award or contract."
 msgstr ""
-
-#: ../../standard/A local identifier to reference and merge the items by. Must
-#: be unique within a given array of items.:1
-msgid ""
-"A local identifier to reference and merge the items by. Must be unique "
-"within a given array of items."
-msgstr ""
-
-#: ../../standard/A description of the goods, services to be provided.:1
-msgid "A description of the goods, services to be provided."
-msgstr ""
-
-#: ../../standard/Classification:1
-#: ../../standard/docs/en/schema/reference.md:0
-msgid "Classification"
-msgstr ""
-
-#: ../../standard/The primary classification for the item. See
-#: `itemClassificationScheme
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme>`__
-#: to identify preferred lists, including CPV and GSIN.:1
-msgid ""
-"The primary classification for the item. See the `itemClassificationScheme "
-"<http://standard.open-contracting.org/1.1/en/schema/codelists/#item-"
-"classification-scheme>`__ to identify preferred classification lists, "
-"including CPV and GSIN."
-msgstr ""
-
-#: ../../standard/array[Classification]:1
-msgid "array[Classification]"
-msgstr ""
-
-#: ../../standard/Additional classifications:1
-msgid "Additional classifications"
-msgstr ""
-
-#: ../../standard/An array of additional classifications for the item. See
-#: `itemClassificationScheme
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme>`__
-#: codelist common options to use in OCDS. This may also be used present codes
-#: from an internal classification scheme.:1
-msgid ""
-"An array of additional classifications for the item. See the "
-"`itemClassificationScheme <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#item-classification-scheme>`__ "
-"codelist for common options to use in OCDS. This may also be used to present"
-" codes from an internal classification scheme."
-msgstr ""
-
-#: ../../standard/[number, null]:1
-msgid "[number, null]"
-msgstr ""
-
-#: ../../standard/Quantity:1
-msgid "Quantity"
-msgstr ""
-
-#: ../../standard/The number of units required:1
-msgid "The number of units required"
-msgstr ""
-
-#: ../../standard/Unit:1 ../../standard/docs/en/schema/reference.md:0
-msgid "Unit"
-msgstr ""
-
-#: ../../standard/A description of the unit in which supplies, services or
-#: works are provided (e.g. hours, kilograms) and unit-price. For
-#: comparability, an established list units can be used.:1
-msgid ""
-"A description of the unit in which the supplies, services or works are "
-"provided (e.g. hours, kilograms) and the unit-price. For comparability, an "
-"established list of units can be used."
-msgstr ""
+"Le composant des biens et services —```items```— est utilisé pour lister les"
+" postes de dépense associés à l'offre (```tender```), l'attribution "
+"(```award```) ou au contrat (```contract```). "
 
 #: ../../standard/extension_list_item:0
 msgid "These are extensions related to Items."
-msgstr ""
+msgstr "Voici les extensions liées aux biens et services achetés."
 
 #: ../../standard/extension_list_item:12
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Location"
-msgstr ""
+msgstr "Localisation"
 
 #: ../../standard/extension_list_item:12
 msgid ""
 "Allow the point of delivery for a given item or the site of works to be "
 "completed to be indicated in both the tender, award and contract stage."
 msgstr ""
+"Permet d'indiquer le point de livraison d'un bien ou service donné (ou le "
+"site des travaux à compléter) à la fois dans l'étape de l'appel d'offres, "
+"dans celle de l'attribution et dans celle du contrat."
 
-#: ../../standard/An classification should be drawn from an existing scheme or
-#: list of codes. This field is used to indicate the scheme/codelist which
-#: drawn. For line item classifications, this value represent known `Item
-#: Classification Scheme
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme>`__
-#: wherever possible.:1
-msgid ""
-"An classification should be drawn from an existing scheme or list of codes. "
-"This field is used to indicate the scheme/codelist from which the "
-"classification is drawn. For line item classifications, this value should "
-"represent an known `Item Classification Scheme <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#item-classification-scheme>`__ "
-"wherever possible."
-msgstr ""
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Classification"
+msgstr "Classification"
 
-#: ../../standard/The classification code drawn from the selected scheme.:1
-msgid "The classification code drawn from the selected scheme."
-msgstr ""
-
-#: ../../standard/A textual description or title for the code.:1
-msgid "A textual description or title for the code."
-msgstr ""
-
-#: ../../standard/A URI to identify the code. In event individual URIs are not
-#: available for items in identifier scheme this value should be left blank.:1
-msgid ""
-"A URI to identify the code. In the event individual URIs are not available "
-"for items in the identifier scheme this value should be left blank."
-msgstr ""
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Unit"
+msgstr "Unité"
 
 #: ../../standard/docs/en/schema/reference.md:398
 msgid ""
 "The ```unit``` block allows detailed specification of the parameters and "
-"price of units that make up a line-item. Although no codelist for units has"
-" been established in the current release of the standard, publishers may "
+"price of units that make up a line-item. Although no codelist for units has "
+"been established in the current release of the standard, publishers may "
 "consider using the Units provided by the [Quantities, Units, Dimensions and "
 "Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the "
 "```unit.name``` field (drawing on the CamelCase unit names, such as "
 "SquareMile), in order to provide detailed information the cost per unit of a"
 " line-item."
 msgstr ""
-
-#: ../../standard/The list from which units of measure identifiers are taken.
-#: This should be an entry the options available in `unitClassificationScheme
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#unit-classification-scheme>`__
-#: codelist. Use scheme 'UNCEFACT' for UN/CEFACT Recommendation 20 'Codes
-#: Units Measure Used International Trade' is recommended, although other
-#: available.:1
-msgid ""
-"The list from which units of measure identifiers are taken. This should be "
-"an entry from the options available in the `unitClassificationScheme "
-"<http://standard.open-contracting.org/1.1/en/schema/codelists/#unit-"
-"classification-scheme>`__ codelist. Use of the scheme 'UNCEFACT' for the "
-"UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in "
-"International Trade' is recommended, although other options are available."
-msgstr ""
-
-#: ../../standard/The identifier from the codelist referenced in scheme
-#: property. Check for details of how to find and use identifiers use.:1
-msgid ""
-"The identifier from the codelist referenced in the scheme property. Check "
-"the codelist for details of how to find and use identifiers from the scheme "
-"in use."
-msgstr ""
-
-#: ../../standard/Name of the unit.:1
-msgid "Name of the unit."
-msgstr ""
-
-#: ../../standard/The monetary value of a single unit.:1
-msgid "The monetary value of a single unit."
-msgstr ""
-
-#: ../../standard/If the scheme used provide a machine-readable URI for this
-#: unit of measure, can be given.:1
-msgid ""
-"If the scheme used provide a machine-readable URI for this unit of measure, "
-"this can be given."
-msgstr ""
+"Le bloc des unités —```unit```— permet la spécification détaillée des "
+"paramètres et des prix des unités qui composent un poste de dépense. Bien "
+"qu'aucune liste de codes pour les unités n'ait été établie dans la version "
+"actuelle du standard, les producteurs de données peuvent envisager "
+"d'utiliser les unités fournies par les [Quantités, Unités, Dimensions et les"
+" ontologies de Types de données "
+"(QUDT)](http://www.qudt.org/qudt/owl/1.0.0/unit/) dans le champ "
+"```unit.name``` (basé sur des noms des unités en ChatMot, tel que "
+"MetricTon), afin de fournir des informations détaillées sur le coût par "
+"unité d'un poste de dépense."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Milestone"
-msgstr ""
+msgstr "Étape"
 
 #: ../../standard/docs/en/schema/reference.md:410
 msgid ""
@@ -2460,99 +1110,13 @@ msgid ""
 "[tender](#tender), [contract](#contract) and [contract "
 "implementation](#implementation) blocks."
 msgstr ""
-
-#: ../../standard/A local identifier for this milestone, unique within block.
-#: This field is used to keep track of multiple revisions a milestone through
-#: the compilation from release record mechanism.:1
-msgid ""
-"A local identifier for this milestone, unique within this block. This field "
-"is used to keep track of multiple revisions of a milestone through the "
-"compilation from release to record mechanism."
-msgstr ""
-
-#: ../../standard/Milestone title:1
-msgid "Milestone title"
-msgstr ""
-
-#: ../../standard/Milestone type:1
-msgid "Milestone type"
-msgstr ""
-
-#: ../../standard/The type of milestone, drawn from an extended `milestoneType
-#: codelist
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#milestone-type>`__.:1
-msgid ""
-"The type of milestone, drawn from an extended `milestoneType codelist "
-"<http://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-"
-"type>`__."
-msgstr ""
-
-#: ../../standard/A description of the milestone.:1
-msgid "A description of the milestone."
-msgstr ""
-
-#: ../../standard/Milestone code:1
-msgid "Milestone code"
-msgstr ""
-
-#: ../../standard/Milestone codes can be used to track specific events that
-#: take place for a particular kind of contracting process. For example, code
-#: 'approvalLetter' could allow applications understand this milestone
-#: represents the date an approvalLetter is due or signed. Milestone open
-#: codelist, and should agreed among data producers using data.:1
-msgid ""
-"Milestone codes can be used to track specific events that take place for a "
-"particular kind of contracting process. For example, a code of "
-"'approvalLetter' could be used to allow applications to understand this "
-"milestone represents the date an approvalLetter is due or signed. Milestone "
-"codes is an open codelist, and codes should be agreed among data "
-"producers and the applications using that data."
-msgstr ""
-
-#: ../../standard/Due date:1
-msgid "Due date"
-msgstr ""
-
-#: ../../standard/The date the milestone is due.:1
-msgid "The date the milestone is due."
-msgstr ""
-
-#: ../../standard/Date met:1
-msgid "Date met"
-msgstr ""
-
-#: ../../standard/The date on which the milestone was met.:1
-msgid "The date on which the milestone was met."
-msgstr ""
-
-#: ../../standard/The date the milestone was last reviewed or modified and
-#: status altered confirmed to still be correct.:1
-msgid ""
-"The date the milestone was last reviewed or modified and the status was "
-"altered or confirmed to still be correct."
-msgstr ""
-
-#: ../../standard/Status:1
-msgid "Status"
-msgstr ""
-
-#: ../../standard/The status that was realized on the date provided in
-#: dateModified, drawn from `milestoneStatus codelist
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status>`__.:1
-msgid ""
-"The status that was realized on the date provided in dateModified, drawn "
-"from the `milestoneStatus codelist <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#milestone-status>`__."
-msgstr ""
-
-#: ../../standard/List of documents associated with this milestone (Deprecated
-#: in 1.1).:1
-msgid "List of documents associated with this milestone (Deprecated in 1.1)."
-msgstr ""
+"Les informations sur une étape peuvent être incluses dans les blocs sur la "
+"[planification](#planning), l'[appel d'offres](#tender), le "
+"[contrat](#contract) et l'[exécution du marché](#implementation). "
 
 #: ../../standard/docs/en/schema/reference.md:420
 msgid "Notes:"
-msgstr ""
+msgstr "Notes :"
 
 #: ../../standard/docs/en/schema/reference.md:422
 msgid ""
@@ -2560,53 +1124,51 @@ msgid ""
 " a milestone is reviewed, and the ```status``` either updated, or re-"
 "confirmed."
 msgstr ""
+"Le champ ```dateModified``` (date de modification) doit être mis à jour lors"
+" de la révision de la progression d'un étape, et le champ ```status``` "
+"(statut) doit être soit mis à jour, soit confirmé."
 
 #: ../../standard/extension_list_milestones:0
 msgid "The following extensions to milestone are available"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour les étapes"
 
 #: ../../standard/extension_list_milestones:15
 msgid "Milestone documents"
-msgstr ""
+msgstr "Documents de l'étape"
 
 #: ../../standard/extension_list_milestones:15
 msgid ""
 "Documents at the milestone level were deprecated in OCDS 1.1. This extension"
 " re-introduces the ability to attach documents to each individual milestone."
 msgstr ""
+"La description de documents au niveau des étapes a été dépréciée dans la "
+"version 1.1 du standard OCDS. Cette extension ré-introduit la possibilité "
+"d'attacher des documents à chaque étape individuelle."
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Value"
+msgstr "Valeur"
 
 #: ../../standard/docs/en/schema/reference.md:433
 msgid "Financial values should always be published with a currency attached."
 msgstr ""
-
-#: ../../standard/Amount as a number.:1
-msgid "Amount as a number."
-msgstr ""
-
-#: ../../standard/Currency:1
-msgid "Currency"
-msgstr ""
-
-#: ../../standard/The currency for each amount should always be specified
-#: using the uppercase 3-letter code from ISO4217.:1
-msgid ""
-"The currency for each amount should always be specified using the uppercase "
-"3-letter currency code from ISO4217."
-msgstr ""
+"Les valeurs financières devraient toujours être associées à une devise."
 
 #: ../../standard/docs/en/schema/reference.md:443
 msgid ""
 "Support for exchange rates, and tax information, can be provided using "
 "extensions."
 msgstr ""
+"Il est possible d'inclure des taux de change et des informations fiscales en"
+" utilisant des extensions."
 
 #: ../../standard/extension_list_value:0
 msgid "The following extensions for value are available"
-msgstr ""
+msgstr "Les extensions suivantes sont disponibles pour la valeur du marché"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "RelatedProcess"
-msgstr ""
+msgstr "`RelatedProcess`"
 
 #: ../../standard/docs/en/schema/reference.md:452
 msgid ""
@@ -2614,10 +1176,15 @@ msgid ""
 "stage. There are a number of cases where it is important to know about "
 "related planning and tendering processes, including:"
 msgstr ""
+"Dans le standard OCDS, chaque processus de passation de marché ne peut avoir"
+" qu'une seule étape de planification et d'appel d'offres. Il existe un "
+"certain nombre de cas où il est important de connaître les processus de "
+"planification et d'appels d'offres connexes, y compris :"
 
 #: ../../standard/docs/en/schema/reference.md:454
 msgid "When one planning process results in many tenders;"
 msgstr ""
+"Lorsqu'un processus de planification aboutit à de nombreux appels d'offres ;"
 
 #: ../../standard/docs/en/schema/reference.md:455
 msgid ""
@@ -2625,101 +1192,50 @@ msgid ""
 "processes, such as in national frameworks with locally run mini-"
 "competitions;"
 msgstr ""
+"Quand un contrat est attribué à la suite de deux processus distincts (mais "
+"connexes) d'appels d'offres, tels que dans les contrats-cadres nationaux "
+"avec des mini-mises en concurrence locales;"
 
 #: ../../standard/docs/en/schema/reference.md:456
 msgid ""
 "When a contract results in the award of sub-contracts - and those sub-"
 "contracts are also tracked using OCDS;"
 msgstr ""
+"Lorsqu'un contrat aboutit à l'attribution de sous-contrats et que ces sous-"
+"contrats sont également suivis à l'aide du standard OCDS ;"
 
 #: ../../standard/docs/en/schema/reference.md:457
 msgid ""
 "When a contract is coming up for renewal or replacement, and there is a "
 "contracting process to award  the renewal/replacement contract;"
 msgstr ""
+"Lorsqu'un contrat prévoit son renouvellement ou son remplacement, et qu'il "
+"existe un processus de passation des marchés pour attribuer le contrat de "
+"renouvellement/remplacement;"
 
 #: ../../standard/docs/en/schema/reference.md:459
 msgid ""
 "In all these cases, the ```relatedProcess``` block can be used to cross-"
 "reference between the relevant open contracting processes using their "
-"```OCID```."
+"```ocid```."
 msgstr ""
-
-#: ../../standard/Relationship ID:1
-msgid "Relationship ID"
-msgstr ""
-
-#: ../../standard/A local identifier for this relationship, unique within
-#: array.:1
-msgid "A local identifier for this relationship, unique within this array."
-msgstr ""
-
-#: ../../standard/Relationship:1
-msgid "Relationship"
-msgstr ""
-
-#: ../../standard/Specify the type of relationship using `related process
-#: codelist
-#: <http:/standard.open-contracting.org/1.1/en/schema/codelists/#related-process>`__.:1
-msgid ""
-"Specify the type of relationship using the `related process codelist "
-"<http://standard.open-contracting.org/1.1/en/schema/codelists/#related-"
-"process>`__."
-msgstr ""
-
-#: ../../standard/Related process title:1
-msgid "Related process title"
-msgstr ""
-
-#: ../../standard/The title of the related process, where referencing an open
-#: contracting this field should match tender/title in process.:1
-msgid ""
-"The title of the related process, where referencing an open contracting "
-"process, this field should match the tender/title field in the related "
-"process."
-msgstr ""
-
-#: ../../standard/The identification scheme used by this cross-reference from
-#: the `related process codelist
-#: <http/standard.open-contracting.org/1.1/en/schema/codelists/#related-process-scheme>`__
-#: codelist. When cross-referencing information also published using OCDS, an
-#: Open Contracting ID (ocid) should be used.:1
-msgid ""
-"The identification scheme used by this cross-reference from the `related "
-"process scheme codelist <http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#related-process-scheme>`__ "
-"codelist. When cross-referencing information also published using OCDS, an "
-"Open Contracting ID (ocid) should be used."
-msgstr ""
-
-#: ../../standard/The identifier of the related process. When
-#: cross-referencing information also published using OCDS, this should be
-#: Open Contracting ID (ocid).:1
-msgid ""
-"The identifier of the related process. When cross-referencing information "
-"also published using OCDS, this should be the Open Contracting ID (ocid)."
-msgstr ""
-
-#: ../../standard/Related process URI:1
-msgid "Related process URI"
-msgstr ""
-
-#: ../../standard/A URI pointing to a machine-readble document, release or
-#: record package containing the identified related process.:1
-msgid ""
-"A URI pointing to a machine-readble document, release or record package "
-"containing the identified related process."
-msgstr ""
+"Dans tous ces cas, le bloc ```relatedProcess``` peut être utilisé pour faire"
+" un renvoi entre des processus de passation de marchés connexes en utilisant"
+" leur ```OCID```."
 
 #: ../../standard/docs/en/schema/reference.md:469
 msgid "A related process can be declared at two points in an OCDS release."
 msgstr ""
+"Un processus connexe peut être déclaré à deux endroits dans une instance "
+"OCDS."
 
 #: ../../standard/docs/en/schema/reference.md:471
 msgid ""
 "**(1) At the release level** - used to point backwards to prior processes, "
 "such as planning or framework establishment."
 msgstr ""
+"**(1) Au niveau de l'instance** - utilisé pour pointer vers des processus "
+"précédents, tels que la planification ou l'établissement d'un cadre."
 
 #: ../../standard/docs/en/schema/reference.md:473
 msgid ""
@@ -2727,6 +1243,9 @@ msgid ""
 "renewal or replacement processes that relate solely to the particular "
 "contract the property appears in."
 msgstr ""
+"**(2) Au niveau du contrat** - utilisé pour pointer vers des processus de "
+"sous-traitance, de renouvellement ou de remplacement qui concernent "
+"uniquement le contrat dans lequel apparaît la propriété `relatedProcess`."
 
 #: ../../standard/docs/en/schema/reference.md:475
 msgid ""
@@ -2734,6 +1253,9 @@ msgid ""
 "publishers may also provide links to human-readable documentation in the "
 "relevant ```documents``` blocks. For example:"
 msgstr ""
+"En plus de fournir ce lien lisible par une machine entre les processus, les "
+"éditeurs peuvent également fournir des liens vers une documentation lisible "
+"par un humain dans les composants ```documents``` adaptés. Par exemple :"
 
 #: ../../standard/docs/en/schema/reference.md:477
 msgid ""
@@ -2742,6 +1264,11 @@ msgid ""
 "with a ```documentType``` of 'procurementPlan' and a link to web pages about"
 " the procurement plan could be provided;"
 msgstr ""
+"Lors de l'enregistrement d'un ```release/relatedProcess``` pointant vers "
+"l'`ocid` du processus de planification qui a débouché sur un appel d'offres,"
+" une entrée ```tender\\documents` avec un ```documentType``` indiquant la "
+"valeur `procurementPlan` et un lien vers les pages Web relatives au plan "
+"d'achat public pourrait être renseignée dans le composant `documents` ;"
 
 #: ../../standard/docs/en/schema/reference.md:478
 msgid ""
@@ -2750,6 +1277,11 @@ msgid ""
 "```documentType``` of 'subContract' and a title that describes it as the "
 "subcontracting process, could be provided;"
 msgstr ""
+"Lors de l'enregistrement d'un ```contract/relatedProcess``` pointant vers "
+"l'`ocid` d'un processus de sous-traitance, une entrée "
+"```contract/documents``` avec un ```documentType``` indiquant la valeur "
+"`subContract` et un titre le décrivant dans le processus de sous-traitance "
+"pourrait être fourni dans le composant `documents`;"
 
 #: ../../standard/docs/en/schema/reference.md:479
 msgid ""
@@ -2758,47 +1290,35 @@ msgid ""
 "with a ```documentType``` of 'tenderNotice' and a title that describes it as"
 " the successor process, could be provided;"
 msgstr ""
+"Lors de l'enregistrement d'un ```contract/relatedProcess``` pointant vers "
+"l'`ocid` d'un processus d'appel d'offres pour renouveler un contrat donné, "
+"une entrée ```contract/documents``` avec un ```documentType``` indiquant la "
+"valeur `tenderNotice` et un titre le décrivant comme le processus lui "
+"succédant pourrait être fourni dans le composant `documents`;"
 
 #: ../../standard/docs/en/schema/reference.md:483
 msgid ""
 "The addition of location information is currently handled through a "
 "[proposed extension](../extensions/location.md) to the standard."
 msgstr ""
+"L'ajout d'informations de localisation est actuellement géré par une "
+"[extension suggérée au standard](../extensions/location.md)."
+
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Publisher"
+msgstr "Producteur de données"
 
 #: ../../standard/docs/en/schema/reference.md:487
 msgid ""
 "The publisher block is used in release and record packages to identify the "
 "source of a dataset."
 msgstr ""
+"Le composant du producteur des données est utilisé dans les packages "
+"d'instances et d'archives pour identifier la source d'un jeu de données."
 
-#: ../../standard/The name of the organisation or department responsible for
-#: publishing this data.:1
-msgid ""
-"The name of the organisation or department responsible for publishing this "
-"data."
-msgstr ""
-
-#: ../../standard/The scheme that holds the unique identifiers used to
-#: identify item being identified.:1
-msgid ""
-"The scheme that holds the unique identifiers used to identify the item being"
-" identified."
-msgstr ""
-
-#: ../../standard/uid:1
-msgid "uid"
-msgstr ""
-
-#: ../../standard/The unique ID for this entity under the given scheme. Note
-#: use of 'uid' rather than 'id'. See issue #245.:1
-msgid ""
-"The unique ID for this entity under the given ID scheme. Note the use of "
-"'uid' rather than 'id'. See issue #245."
-msgstr ""
-
-#: ../../standard/A URI to identify the publisher.:1
-msgid "A URI to identify the publisher."
-msgstr ""
+#: ../../standard/docs/en/schema/reference.md:0
+msgid "Language"
+msgstr "Langue"
 
 #: ../../standard/docs/en/schema/reference.md:499
 msgid ""
@@ -2806,16 +1326,22 @@ msgid ""
 " free-text title and description fields in the Open Contracting Data "
 "Standard can be given in one or more languages."
 msgstr ""
+"De nombreux producteurs de données doivent être en mesure de partager des "
+"données clés en plusieurs langues. Tous les titres et les descriptions des "
+"champs en texte libre dans le standard OCDS peuvent être renseignés dans une"
+" ou plusieurs langues."
 
 #: ../../standard/docs/en/schema/reference.md:501
 msgid ""
 "Language variations are included by a copy of multi-lingual fields, suffixed"
 " with a language code."
 msgstr ""
+"Les variations de la langue sont comprises dans des champs multilingues, "
+"avec pour suffixe un code de langue."
 
 #: ../../standard/docs/en/schema/reference.md:503
 msgid "E.g. ```title``` and ```title_es```"
-msgstr ""
+msgstr "Par exemple ```title``` et ```title_es```"
 
 #: ../../standard/docs/en/schema/reference.md:505
 msgid ""
@@ -2823,6 +1349,9 @@ msgid ""
 "fields, OCDS release and records should declare the default language in the "
 "```language``` field."
 msgstr ""
+"Afin de permettre aux utilisateurs d'identifier la langue utilisée dans les "
+"champs non-suffixés, les instances OCDS et les archives doivent déclarer la "
+"langue par défaut dans le champ ```language```."
 
 #: ../../standard/docs/en/schema/reference.md:507
 msgid ""
@@ -2835,6 +1364,16 @@ msgid ""
 "are able to distinguish between sub-tag variations (for example, OCDS "
 "publishers should strongly prefer 'en' over 'en_US' or 'en_GB')."
 msgstr ""
+"Les langues doivent être identifiées en utilisant les codes de langues "
+"telles que définies par [BCP47](http://tools.ietf.org/html/bcp47). OCDS "
+"autorise l'utilisation des codes proposés par BCP47 afin de tenir compte des"
+" variations de dialecte lorsque c'est justifié. Cependant, les producteurs "
+"de données **devraient** utiliser des [codes ISO-639-1 à deux lettres] "
+"(http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) dans la grande "
+"majorité des cas, et ne devraient pas supposer que les utilisateurs sont en "
+"mesure de faire la distinction entre les variations de codes associées au "
+"dialecte (par exemple, les producteurs de données OCDS sont fortement "
+"invités à utiliser 'fr' plutôt que 'fr_FR' ou 'fr_BE')."
 
 #: ../../standard/docs/en/schema/reference.md:509
 msgid ""
@@ -2842,54 +1381,37 @@ msgid ""
 "suffixed with _ and the appropriate language tag. For example: "
 "```title_es``` for Spanish."
 msgstr ""
+"Pour inclure une variation linguistique d'un champ, _ et le code de la "
+"langue doivent être ajoutés au nom du champ. Par exemple : ```title_es``` "
+"pour l'espagnol. "
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Worked example"
-msgstr ""
+msgstr "Exemple d'utilisation"
 
 #: ../../standard/docs/en/schema/reference.md:513
 msgid ""
 "A contract for ‘Software consultancy services’ may be published in a release"
-" with the default language sent to ‘en’ (the ISO639-1 code for English). "
-"The following examples give the description of an item as English, French "
-"and Spanish."
+" with the default language sent to ‘en’ (the ISO639-1 code for English). The"
+" following examples give the description of an item as English, French and "
+"Spanish."
 msgstr ""
+"Un contrat pour des \"services de conseil en logiciels\" peut être publié "
+"avec l'anglais comme langue par défaut grâce au code ‘en’ ('le code "
+"ISO-639-1 pour l'anglais). Les exemples suivants donnent la description d'un"
+" livrable en anglais, français et espagnol."
 
 #: ../../standard/docs/en/schema/reference.md:515
 msgid "**json**"
-msgstr ""
+msgstr "**json**"
 
 #: ../../standard/docs/en/schema/reference.md:525
 msgid "**csv**"
-msgstr ""
-
-#: ../../standard/docs/en/examples/language.csv:1
-msgid "description"
-msgstr ""
-
-#: ../../standard/docs/en/examples/language.csv:1
-msgid "description_es"
-msgstr ""
-
-#: ../../standard/docs/en/examples/language.csv:1
-msgid "dscription_fr"
-msgstr ""
-
-#: ../../standard/docs/en/examples/language.csv:1
-msgid "Software consultancy services"
-msgstr ""
-
-#: ../../standard/docs/en/examples/language.csv:1
-msgid "Servicios de consultoria en software"
-msgstr ""
-
-#: ../../standard/docs/en/examples/language.csv:1
-msgid "Services de conseil en logiciels"
-msgstr ""
+msgstr "**csv**"
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Release handling"
-msgstr ""
+msgstr "Traitement des livraisons"
 
 #: ../../standard/docs/en/schema/reference.md:536
 msgid ""
@@ -2899,6 +1421,12 @@ msgid ""
 "what needs to be updated in any system that is tracking the progress of a "
 "contracting process."
 msgstr ""
+"L'ensemble du modèle de données OCDS repose sur l'idée de publier une "
+"nouvelle instance à chaque fois qu'un processus de passation de marché subit"
+" un changement de quelque nature que ce soit. Ainsi, les usagers peuvent "
+"obtenir une vue complète des changements au fil du temps, et les tierces-"
+"parties peuvent comprendre ce qui doit être mis à jour dans tout système qui"
+" fait le suivi du déroulement d'un processus de passation de marché."
 
 #: ../../standard/docs/en/schema/reference.md:538
 msgid ""
@@ -2907,32 +1435,44 @@ msgid ""
 "should be based on an understanding the [merging process](merging.md) that "
 "is used to generate a snapshot record of a full contracting process."
 msgstr ""
+"Les producteurs de données devront aussi choisir comment générer de "
+"nouvelles instances, et si les informations doivent être répétées dans "
+"chaque instance, ou si seuls les changements doivent être indiqués. Ce choix"
+" doit être fondé sur une bonne compréhension du [processus de "
+"fusion](merging.md) qui est utilisé pour produire un instantané du processus"
+" complet de passation de marchés, sous la forme d'une archive."
 
 #: ../../standard/docs/en/schema/reference.md:540
 msgid ""
 "This model also requires publishers to pay careful attention to null values "
 "and missing fields."
 msgstr ""
+"Ce modèle impose également aux producteurs de données de prêter tout "
+"particulièrement attention aux valeurs nulles et aux champs manquants."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Empty fields"
-msgstr ""
+msgstr "Champs vides"
 
 #: ../../standard/docs/en/schema/reference.md:544
 msgid ""
 "Fields that are not being used, or that have no value, can be excluded in "
 "their entirety (key and value) from a published file."
 msgstr ""
+"Les champs qui ne sont pas utilisés, ou qui ont pas de valeur, peuvent être "
+"supprimés (clé et valeur) d'un fichier publié."
 
 #: ../../standard/docs/en/schema/reference.md:546
 msgid ""
 "Only including fields which have values will keep versioned datasets "
 "cleaner."
 msgstr ""
+"Le fait de n'inclure que les champs qui ont des valeurs permet de garder les"
+" jeux de données versionnés plus propre."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Emptying fields and values"
-msgstr ""
+msgstr "Champs vides et valeurs"
 
 #: ../../standard/docs/en/schema/reference.md:550
 msgid ""
@@ -2940,12 +1480,17 @@ msgid ""
 "value which was set in a previous release. In this case, the fields should "
 "explicitly be set to null."
 msgstr ""
+"Dans certains cas, un producteur de données doit supprimer, plutôt que de "
+"mettre à jour, une valeur qui a été créée dans une version précédente. Dans "
+"ce cas, les champs doivent être présents et la valeur doit être ```null```."
 
 #: ../../standard/docs/en/schema/reference.md:552
 msgid ""
 "The following describes how null values will be handled in the compilation "
 "of a record:"
 msgstr ""
+"Ce qui suit décrit comment les valeurs ```null``` seront traitées dans la "
+"compilation d'une archive :"
 
 #: ../../standard/docs/en/schema/reference.md:554
 msgid ""
@@ -2954,6 +1499,10 @@ msgid ""
 "the compiled record (though past values of it should remain in the versioned"
 " section of the record)."
 msgstr ""
+"Si un champ est inclus avec une valeur dans une instance, puis mis à "
+"```null``` dans une instance ultérieure, ce champ sera enregistré comme "
+"```null``` dans l'archive compilée (bien que les valeurs passées de celui-ci"
+" doivent rester dans la section versionnée de l'archive)."
 
 #: ../../standard/docs/en/schema/reference.md:555
 msgid ""
@@ -2963,6 +1512,12 @@ msgid ""
 "release I.e. fields that are set to null are recorded as such and then only "
 "changed if the value is set."
 msgstr ""
+"Si un champ est défini sur ```null``` dans une instance, et est également "
+"mis à ```null``` dans une instance ultérieure, il sera enregistré comme "
+"```null``` selon l'instance originale et l'archive ne montrera pas tous les "
+"changements basés sur les champs des instances ultérieures. Les champs dont "
+"les valeurs sont définies sur ```null``` sont enregistrés en tant que tel et"
+" sont seulement changés si une valeur est définie."
 
 #: ../../standard/docs/en/schema/reference.md:556
 msgid ""
@@ -2970,6 +1525,10 @@ msgid ""
 "subsequent release, it will first appear in the record, and the version "
 "section of the record as ```null``` and then with the subsequent value."
 msgstr ""
+"Si un champ est fixé sur ```null``` dans une instance, puis se voit "
+"attribuer une valeur dans une version ultérieure, cela apparaît d'abord dans"
+" l'archive et la section de version de l'archive en tant que` `` null```, "
+"puis avec la valeur ultérieure."
 
 #: ../../standard/docs/en/schema/reference.md:557
 msgid ""
@@ -2978,3 +1537,7 @@ msgid ""
 "section of the record, when the first release that contains it is compiled "
 "into the record."
 msgstr ""
+"Si un champ ne figure pas dans une instance, puis apparaît avec une valeur "
+"dans une instance ultérieure, il apparaît d'abord dans l'archive et la "
+"section de version de l'archive, lorsque la première instance qui le "
+"contient est compilée dans l'archive."
