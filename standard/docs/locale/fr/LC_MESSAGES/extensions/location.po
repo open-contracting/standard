@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-08-08 09:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Colin Maudry <colin@maudry.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,17 +20,19 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Location Data"
-msgstr ""
+msgstr "Données de localisation"
 
 #: ../../standard/docs/en/extensions/location.md:0
-msgid "Meta-data"
-msgstr ""
+msgid "Metadata"
+msgstr "Métadonnées"
 
 #: ../../standard/docs/en/extensions/location.md:5
 msgid ""
-"To use this extension, include it's URL in the ```extension``` array of your"
-" release or record package."
+"To use this extension, include its URL in the ```extension``` array of your "
+"release or record package."
 msgstr ""
+"Pour utiliser cette extension, ajouter son URL dans la liste ```extension```"
+" de votre package d'instance ou d'archive. "
 
 #: ../../standard/docs/en/extensions/location.md:14
 msgid ""
@@ -37,28 +40,39 @@ msgid ""
 "contracting/ocds_location_extension](https://github.com/open-"
 "contracting/ocds_location_extension)"
 msgstr ""
+"Cette extension est maintenue à l'adresse [https://github.com/open-"
+"contracting/ocds_location_extension](https://github.com/open-"
+"contracting/ocds_location_extension)"
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Documentation"
-msgstr ""
+msgstr "Documentation"
 
 #: ../../standard/docs/en/extensions/location.md:18
 msgid ""
 "Communicating the location of proposed or executed contract delivery is "
 "important to make users of contracting data."
 msgstr ""
+"Pouvoir communiquer la localisation (projetée ou effective) de l'exécution "
+"d'un marché est important pour accroître le nombre d'utilisateurs des "
+"données sur les marchés publics."
 
 #: ../../standard/docs/en/extensions/location.md:20
 msgid ""
 "This extension introduces two properties at the ```items``` level to "
 "describe location:"
 msgstr ""
+"Cette extension ajoute deux propriétés au niveau ``` items``` pour décrire "
+"la localisation :"
 
 #: ../../standard/docs/en/extensions/location.md:22
 msgid ""
 "```deliveryAddress``` - a standard ```Address``` block which can be used to "
 "provide a postal address where services should be delivered."
 msgstr ""
+"```deliveryAddress``` - une composante ```Address``` standard qui peut être "
+"utilisée pour fournir une adresse postale à laquelle les services devraient "
+"être livrés. "
 
 #: ../../standard/docs/en/extensions/location.md:23
 msgid ""
@@ -66,34 +80,36 @@ msgid ""
 "entries to describe a wider range of locations to which the contract line "
 "item relates."
 msgstr ""
+"```deliveryLocation``` - une nouvelle composante constituée de GeoJSON et "
+"d'entrées Gazetteer (index géographique) pour décrire un ensemble plus large"
+" de lieux auxquels l'élément du marché se rapporte."
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Schema reference"
-msgstr ""
+msgstr "Documentation du schéma"
 
 #: ../../standard/Extension location:1
 msgid "Field"
-msgstr ""
+msgstr "Champ"
 
 #: ../../standard/Extension location:1
 msgid "Definition"
-msgstr ""
+msgstr "Définition"
 
 #: ../../standard/Extension location:1
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: ../../standard/Extension location:1
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: ../../standard/Extension location:1 ../../standard/Extension location:1
 #: ../../standard/Extension location:1 ../../standard/Extension location:1
 #: ../../standard/Extension location:1 ../../standard/Extension location:1
 #: ../../standard/Extension location:1
 msgid "Location"
-msgstr ""
+msgstr "Localisation"
 
 #: ../../standard/Extension location:1
 msgid ""
@@ -101,6 +117,10 @@ msgid ""
 "the location(s), or might provide a human readable description of the "
 "location to be covered. This description may be used in a user-interface."
 msgstr ""
+"Un nom ou une description de cette localisation. Cela peut inclure le(s) "
+"nom(s) du / des emplacement(s) ou peut fournir une description lisible par "
+"l'utilisateur de l'emplacement à couvrir. Cette description peut être "
+"utilisée dans une interface utilisateur."
 
 #: ../../standard/Extension location:1
 msgid ""
@@ -110,6 +130,12 @@ msgid ""
 "coordinates field: e.g. [37.42,-122.085]. Note the capitalisation of type "
 "values - set in order to maintain compatibility with geoJSON."
 msgstr ""
+"Le type de 'GeoJSON Geometry Objects <http://geojson.org/geojson-spec.html"
+"#geometry-objects> `__ fourni. Pour fournir une latitude et une longitude, "
+"utilisez 'point', et entrez une liste de [latitude, longitude] comme champ "
+"dans la valeur des coordonnées: par ex. [37,42, -122,085]. Notez la "
+"capitalisation des valeurs de type pour maintenir la compatibilité avec "
+"geoJSON."
 
 #: ../../standard/Extension location:1
 msgid ""
@@ -117,6 +143,10 @@ msgid ""
 "for the geoJSON geometry being described. The longitude and latitude MUST be"
 " expressed in decimal degrees in the WGS84 (EPSG:4326) projection"
 msgstr ""
+"La liste pertinente de points, par ex. [latitude, longitude] ou une liste "
+"imbriquée, pour la géométrie GeoJSON décrite. La longitude et la latitude "
+"DOIVENT être exprimées en degrés décimaux dans la projection WGS84 (EPSG: "
+"4326)"
 
 #: ../../standard/Extension location:1
 msgid ""
@@ -128,6 +158,14 @@ msgid ""
 "location which is not contained in a known gazetteer, polygon and multi-"
 "polygon can be used."
 msgstr ""
+"Nous suivons le standard `GeoJSON <http://geojson.org/>` __ pour exprimer "
+"des informations de localisation de base, en utilisant les valeurs de "
+"latitude et de longitude dans la projection WGS84 "
+"<https://fr.wikipedia.org/wiki/WGS_84>` __ (EPSG: 4326). Un emplacement de "
+"point peut être identifié en géocodant une adresse de livraison. Pour les "
+"licences de concession ou d'autres contrats couvrant un emplacement de "
+"polygone qui n'est pas contenu dans une nomenclature connue, un polygone et "
+"un polygone multiples peuvent être utilisés."
 
 #: ../../standard/Extension location:1
 msgid ""
@@ -135,11 +173,17 @@ msgid ""
 " provides details of services, where available, that can resolve a gazetteer"
 " entry to provide location names."
 msgstr ""
+"L'entrée de la nomenclature géographique sélectionnée dans la liste de codes"
+" sur la nomenclature géographique. La liste de codes fournit des détails sur"
+" les services, le cas échéant, qui peuvent faire correspondre une entrée de "
+"nomenclature pour fournir des noms de localisation."
 
 #: ../../standard/Extension location:1
 msgid ""
 "An array of one or more codes drawn from the gazetteer indicated in scheme."
 msgstr ""
+"Une liste d'un ou plusieurs codes tirés du la nomenclature indiquée dans le "
+"schéma."
 
 #: ../../standard/Extension location:1
 msgid ""
@@ -147,182 +191,31 @@ msgid ""
 " readable document with information on the location, or a machine-readable "
 "description of the location."
 msgstr ""
+"Un URI vers une description plus détaillée de l'emplacement de l'activité. "
+"Il s'agit peut-être d'un document lisible par les humains avec des "
+"informations sur la localisation ou une description lisible par les machines"
+" de la localisation."
 
 #: ../../standard/docs/en/extensions/location.md:0
-msgid "Gazeteer Codelist"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Category"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Code"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Title"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Source"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "URI_Pattern"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Sub-National"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "NUTS"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "EU Nomenclature of Territorial Units for Statistics"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid ""
-"The Nomenclature of Territorial Units for Statistics (NUTS) was established "
-"by Eurostat in order to provide a single uniform breakdown of territorial "
-"units for the production of regional statistics for the European Union."
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://simap.europa.eu/codes-and-nomenclatures/codes-nuts/index_en.htm"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://nuts.psi.enakting.org/id/"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "National"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "ISO2"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "ISO Country Codes (3166-1 alpha-2)"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "ISO 2-Digit Country Codes"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://www.iso.org/iso/country_codes.htm"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Universal"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "GEONAMES"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "GeoNames"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid ""
-"GeoNames provides numerical identifiers for many points of interest around "
-"the world, including administrative divisions, poulated centres and other "
-"locations, embedded within a structured tree of geographic relations."
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://www.geonames.org/"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "OSMN"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Open Street Map Node"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid ""
-"Open Street Map Nodes consist of a single point in space defined by a "
-"latitude, longitude and node ID. Nodes may have tags to indicate the "
-"particular geographic feature they represent."
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://www.openstreetmap.org/node/"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "OSMR"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Open Street Map Relation"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid ""
-"Relations are used to model logical (and usually local) or geographic "
-"relationships between objects. In practice, boundaries of geographic areas "
-"are available as Relations in Open Street Map."
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://wiki.openstreetmap.org/wiki/Relation"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://www.openstreetmap.org/relation/"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "OSMW"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "Open Street Map Way"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid ""
-"An Open Street Map Way is an ordered list of Open Street Map nodes. May be "
-"used to describe fragments of roads or local boundaries and bounding boxes."
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://wiki.openstreetmap.org/wiki/Way"
-msgstr ""
-
-#: ../../standard/docs/en/extensions/codelists/locationGazeteers.csv:1
-msgid "http://www.openstreetmap.org/way/"
+msgid "Gazetteer Codelist"
 msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Example"
-msgstr ""
+msgstr "Exemple"
 
 #: ../../standard/docs/en/extensions/location.md:41
 msgid "Below is an example of a geolocated item:"
-msgstr ""
+msgstr "Voici ci-dessous un exemple d'élément géolocalisé :"
 
 #: ../../standard/docs/en/extensions/location.md:87
 msgid ""
 "If the procurement related to the rebuilding of a road, then the item could "
 "also specify more complex geometries such as:"
 msgstr ""
+"Si la commande publique portait sur la reconstruction d'une route, alors "
+"l'élément pourrait également spécifier des géométries plus complexes telles "
+"que :"
 
 #: ../../standard/docs/en/extensions/location.md:106
 msgid ""
@@ -330,3 +223,6 @@ msgid ""
 "```geometry``` keyword, and plug this into any GeoJSON tool to see the shape"
 " that is described."
 msgstr ""
+"Vous pouvez prendre le contenu de l'objet de géométrie, enlever le mot-clé "
+"```geometry``` et le donner à n'importe quel outil utilisant du GeoJSON pour"
+" voir la forme qui est décrite."

@@ -23,7 +23,7 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 ### Package Metadata
 
-Releases must be published within a [release package](release_package.md). The release package provides meta-data about the release(s) that it contains. 
+Releases must be published within a [release package](release_package.md). The release package provides metadata about the release(s) that it contains. 
 
 ```eval_rst
 
@@ -59,7 +59,7 @@ All new information about a contracting process is described within a release.
 Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
 
 ```eval_rst
-.. note:: 
+.. note:: Parties
 
    Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points. 
 
@@ -197,7 +197,7 @@ Implementation information can be updated over the course of a contract. It belo
    :list: implementation
 ```
 
-Information on subcontracts is not currently included in the release candidate schema, but may be handled by [proposed extensions](conformance_and_extensions.md)
+Information on subcontracts is not currently included in the core OCDS schema, but may be handled by [proposed extensions](conformance_and_extensions.md)
 
 #### Transaction
 
@@ -209,7 +209,7 @@ Information on subcontracts is not currently included in the release candidate s
 
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organisations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party ```source``` of data, and can re-use identifiers from that source. 
+The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party ```source``` of data, and can re-use identifiers from that source. 
 
 In most circumstances, the ```payer``` identifier should match that of the ```buyer```, and the ```payee``` identifier should match that of the ```supplier```. 
 
@@ -255,7 +255,7 @@ The following building blocks are commonly re-used throughout the standard.
 ### OrganizationReference
 
 ```eval_rst
-.. note::
+.. note:: Organizations
 
 The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
 
@@ -274,7 +274,7 @@ See the [parties](#parties) section
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../../identifiers/#organizations) involved in a contracting process. 
+The identifier block provides a way to [identify the legal entities](../../identifiers/#organisation-ids) involved in a contracting process. 
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
@@ -395,7 +395,7 @@ The items block is used to list the line-items associated with a tender, award o
 ```
 #### Unit
 
-The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no code list for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
+The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no codelist for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
 
 ```eval_rst
 
@@ -456,7 +456,7 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 * When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
-In all these cases, the ```relatedProcess``` block can be used to cross-reference between the relevant open contracting processes using their ```OCID```.
+In all these cases, the ```relatedProcess``` block can be used to cross-reference between the relevant open contracting processes using their ```ocid```.
 
 ```eval_rst
 
@@ -470,7 +470,7 @@ A related process can be declared at two points in an OCDS release.
 
 **(1) At the release level** - used to point backwards to prior processes, such as planning or framework establishment.
 
-**(2) At the contract level** - used to point onwards to sub-contracts, renewal or replacement processes that relate solely to the particular contract the property appears in.  
+**(2) At the contract level** - used to point onward to sub-contracts, renewal or replacement processes that relate solely to the particular contract the property appears in.  
 
 As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant ```documents``` blocks. For example:
 
@@ -504,13 +504,13 @@ E.g. ```title``` and ```title_es```
 
 In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the ```language``` field. 
 
-Languages should be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the two letter [ISO-639-1 two-digit language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, and should not assume that the users are able to distinguish between sub-tag variations (for example, OCDS publishers should strongly prefer 'en' over 'en_US' or 'en_GB'). 
+Languages should be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the two letter [ISO639-1 two-letter language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, and should not assume that the users are able to distinguish between sub-tag variations (for example, OCDS publishers should strongly prefer 'en' over 'en_US' or 'en_GB'). 
 
 To include a language variation of a field, the field name should be suffixed with _ and the appropriate language tag. For example: ```title_es``` for Spanish.
 
 ### Worked example
 
-A contract for ‘Software consultancy services’ may be published in a release with the default language sent to ‘en’ (the ISO-639-1 code for English). The following examples give the description of an item as English, French and Spanish.
+A contract for ‘Software consultancy services’ may be published in a release with the default language sent to ‘en’ (the ISO639-1 code for English). The following examples give the description of an item as English, French and Spanish.
 
 **json**
 

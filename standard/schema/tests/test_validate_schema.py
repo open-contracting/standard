@@ -1,14 +1,22 @@
 #!/usr/bin/env python
+"""
+Validates release package, record package, release, and versioned release
+schemas against JSON Schema Draft 4, and ensures that the JSON contains no
+duplicate keys.
+"""
+
 import json
 from path import path
 from jsonschema import validate
 from collections import UserDict
+
 
 class RejectingDict(UserDict):
     """
     A dict that only allows a key to set once.
     Lets us raise an error on duplicate keys in JSON.
     """
+
     def __setitem__(self, k, v):
         if k in self.keys():
             raise ValueError("Duplicate key in JSON")

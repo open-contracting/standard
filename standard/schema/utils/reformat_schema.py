@@ -1,3 +1,7 @@
+"""
+Makes whitespace consistent in release-schema.json.
+"""
+
 import json
 from collections import OrderedDict
 from os.path import abspath, dirname, join
@@ -9,4 +13,3 @@ with open(join(schema_dir, 'release-schema.json'), 'r') as f:
 
 with open(join(schema_dir, 'release-schema.json'), 'w+') as f:
     json.dump(release_schema, f, indent=4, separators=(',', ': '))
-

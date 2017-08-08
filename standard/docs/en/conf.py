@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# flake8: noqa
 #
 # OCDS documentation build configuration file, created by
 # sphinx-quickstart on Fri Dec 11 15:07:47 2015.
@@ -31,7 +32,7 @@ import pathlib
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinxcontrib.jsonschema']
+extensions = ['sphinxcontrib.jsonschema', 'ocds_sphinx_directives']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -211,25 +212,25 @@ htmlhelp_basename = 'OCDSdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+    # The paper size ('letterpaper' or 'a4paper').
+    #'papersize': 'letterpaper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
+    # Additional stuff for the LaTeX preamble.
+    #'preamble': '',
 
-# Latex figure (float) alignment
-#'figure_align': 'htbp',
+    # Latex figure (float) alignment
+    #'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'OCDS.tex', 'OCDS Documentation',
-   'OCDS', 'manual'),
+    (master_doc, 'OCDS.tex', 'OCDS Documentation',
+     'OCDS', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -272,9 +273,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'OCDS', 'OCDS Documentation',
-   author, 'OCDS', 'One line description of project.',
-   'Miscellaneous'),
+    (master_doc, 'OCDS', 'OCDS Documentation',
+     author, 'OCDS', 'One line description of project.',
+     'Miscellaneous'),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -294,7 +295,7 @@ from recommonmark.transform import AutoStructify
 
 source_parsers = {
     '.md': CommonMarkParser,
-    }
+}
 
 
 import standard_theme
@@ -306,7 +307,6 @@ html_theme_path = [standard_theme.get_html_theme_path()]
 
 locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 gettext_compact = False     # optional.
-
 
 
 from sphinx.directives.code import LiteralInclude
@@ -325,16 +325,6 @@ import collections
 from os.path import abspath, dirname, join
 
 
-current_dir = dirname(abspath(__file__))
-
-core_extensions_current = 'http://standard.open-contracting.org/extension_registry/v1.1/extensions.json'
-try:
-    extension_json_current = requests.get(core_extensions_current, timeout=1).json()
-except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
-    print("**********  Internet connection not found *************")
-    extension_json_current = {"extensions": []}
-
-
 class JSONInclude(LiteralInclude):
     option_spec = {
         'jsonpointer': directives.unchanged,
@@ -345,7 +335,7 @@ class JSONInclude(LiteralInclude):
     def run(self):
         with open(self.arguments[0]) as fp:
             json_obj = json.load(fp, object_pairs_hook=OrderedDict)
-        filename = str(self.arguments[0]).split("/")[-1].replace(".json","")
+        filename = str(self.arguments[0]).split("/")[-1].replace(".json", "")
         try:
             title = self.options['title']
         except KeyError as e:
@@ -354,283 +344,21 @@ class JSONInclude(LiteralInclude):
         code = json.dumps(pointed, indent='    ')
         # Ideally we would add the below to a data-expand element, but I can't see how to do this, so using classes for now...
         class_list = self.options.get('class', [])
-        class_list.append('file-'+title)
-        expand = str(self.options.get("expand","")).split(",")
+        class_list.append('file-' + title)
+        expand = str(self.options.get("expand", "")).split(",")
         class_list = class_list + ['expandjson expand-{0}'.format(s.strip()) for s in expand]
-        literal = nodes.literal_block(code, code, classes=class_list)
-        literal['language'] = 'json' 
+        literal = nodes.literal_block(code, code)
+        literal['language'] = 'json'
         literal['caption'] = 'TEST'
-        return [ literal ]
-
-
-class ExtensionList(Directive):
-    required_arguments = 1
-    final_argument_whitespace = True
-    has_content = True
-    option_spec = {'class': directives.class_option,
-                   'name': directives.unchanged,
-                   'list': directives.unchanged}
-
-    def run(self):
-        extension_list_name = self.options.pop('list', '')
-        set_classes(self.options)
-
-        admonition_node = nodes.admonition('', **self.options)
-        self.add_name(admonition_node)
-
-        title_text = self.arguments[0]
-
-        textnodes, _ = self.state.inline_text(title_text,
-                                              self.lineno)
-
-        title = nodes.title(title_text, '', *textnodes)
-        title.line = 0
-        title.source = 'extension_list_' + extension_list_name
-        admonition_node += title
-        if 'classes' not in self.options:
-            admonition_node['classes'] += ['admonition', 'note']
-
-        admonition_node['classes'] += ['extension_list']
-        admonition_node['ids'] += ['extensionlist-' + extension_list_name]
-
-        definition_list = nodes.definition_list()
-        definition_list.line = 0
-
-        num = 0
-        for num, extension in enumerate(extension_json_current['extensions']):
-            if not extension.get('core'):
-                continue
-            category = extension.get('category')
-            if extension_list_name and category != extension_list_name:
-                continue
-
-            name = extension['name']['en']
-            description = extension['description']['en']
-
-            some_term, _ = self.state.inline_text(name, self.lineno)
-
-            some_def, _ = self.state.inline_text(description, self.lineno)
-
-            link = nodes.reference(name, '', *some_term)
-            path_split = pathlib.PurePath(self.state.document.attributes['source']).parts
-            root_path = pathlib.PurePath(*[".." for x in range(0, len(path_split) - path_split.index('docs') - 2)])
-
-            link['refuri'] = str(pathlib.PurePath(root_path, 'extensions', extension.get('slug', '')))
-            link['translatable'] = True
-            link.source = 'extension_list_' + extension_list_name
-            link.line = num + 1
-
-            term = nodes.term(name, '', link)
-
-            definition_list += term
-
-            text = nodes.paragraph(description, '', *some_def)
-            text.source = 'extension_list_' + extension_list_name
-            text.line = num + 1
-            definition_list += nodes.definition(description, text)
-
-        admonition_node += definition_list
-
-        community = "The following are community extensions and are not maintained by Open Contracting Partnership."
-        community_text, _ = self.state.inline_text(community, self.lineno)
-
-        community_paragraph = nodes.paragraph(community, *community_text)
-        community_paragraph['classes'] += ['hide']
-        community_paragraph.source = 'extension_list_' + extension_list_name
-        community_paragraph.line = num + 2
-
-        admonition_node += community_paragraph
-
-        return [admonition_node]
-
-
-def format(text):
-    return re.sub(r'\[([^\[]+)\]\(([^\)]+)\)', r'`\1 <\2>`__', text.replace("date-time","[date-time](#date)"))
-
-
-def gather_fields(json, path="", definition=""): 
-
-    properties = json.get('properties')
-    if properties:
-        for field_name, field_info in properties.items():
-            yield from gather_fields(field_info, path+'/'+field_name, definition=definition)
-            for key, value in field_info.items():
-                if isinstance(value, dict):
-                    yield from gather_fields(value, path+'/'+field_name, definition=definition)
-
-            types = field_info.get('type','')
-            if isinstance(types, list):
-                types = format(", ".join(types).replace(", null","").replace("null,",""))
-            else:
-                types = format(types)
-
-            description = field_info.get("description")
-            if description:
-                yield [(path+'/'+field_name).lstrip("/"), definition, format(description), types]
-
-    definitions = json.get('definitions')
-    if definitions:
-        for key, value in definitions.items():
-            yield from gather_fields(value, definition=key)
-
-
-class ExtensionTable(CSVTable):
-    option_spec = {'widths': directives.positive_int_list,
-                   'extension': directives.unchanged,
-                   'schema': directives.unchanged,
-                   'ignore_path': directives.unchanged,
-                   'definitions': directives.unchanged,
-                   'exclude_definitions': directives.unchanged}
-
-    def get_csv_data(self):
-        headings = ["Field", "Definition", "Description", "Type"]
-        extension = self.options.get('extension')
-        if not extension:
-            raise Exception("No extension configuration when using extensiontable directive")
-
-        if not extension_json_current['extensions']:
-            return [",".join(headings)], "Extension {}".format(extension)
-
-        for num, extension_obj in enumerate(extension_json_current['extensions']):
-            if not extension_obj.get('core'):
-                continue
-            if extension_obj['slug'] == extension:
-                break
-        else:
-            raise Exception("Extension {} does not exist in the registry".format(extension))
-
-        extension_patch = json.loads(
-            requests.get(extension_obj['url'].rstrip("/") + "/" + "release-schema.json").text,
-            object_pairs_hook=OrderedDict
-        )
-
-        data = []
-        for row in gather_fields(extension_patch):
-            data.append(row)
-
-        ignore_path = self.options.get('ignore_path')
-        if ignore_path:
-            for row in data:
-                row[0] = row[0].replace(ignore_path, "")
-
-        definitions = self.options.get('definitions')
-        if definitions:
-            definitions = definitions.split()
-            data = [row for row in data if row[1] in definitions]
-
-        exclude_definitions = self.options.get('exclude_definitions')
-        if exclude_definitions:
-            exclude_definitions = exclude_definitions.split()
-            data = [row for row in data if row[1] not in exclude_definitions]
-
-        data.insert(0, headings)
-
-        output = io.StringIO()
-        output_csv = csv.writer(output)
-        for line in data:
-            output_csv.writerow(line)
-        self.options['header-rows'] = 1
-
-        return output.getvalue().splitlines(), "Extension {}".format(extension)
-
-    def parse_csv_data_into_rows(self, csv_data, dialect, source):
-        # csv.py doesn't do Unicode; encode temporarily as UTF-8
-        csv_reader = csv.reader([self.encode_for_csv(line + '\n')
-                                 for line in csv_data],
-                                dialect=dialect)
-        rows = []
-        max_cols = 0
-        for row_num, row in enumerate(csv_reader):
-            row_data = []
-            for cell_num, cell in enumerate(row):
-                if row_num == 0 or (cell_num != 0 and cell_num != 3):
-                    new_source = source
-                else:
-                    new_source = ""
-                # decode UTF-8 back to Unicode
-                cell_text = self.decode_from_csv(cell)
-                cell_data = (0, 0, 0, statemachine.StringList(
-                    cell_text.splitlines(), source=new_source))
-                row_data.append(cell_data)
-            rows.append(row_data)
-            max_cols = max(max_cols, len(row))
-        return rows, max_cols
-
-
-class ExtensionSelectorTable(CSVTable):
-    option_spec = {'group': directives.unchanged}
-
-    def get_csv_data(self):
-        data = []
-        headings = ['', 'Extension', 'Description', 'Category', 'Extension URL']
-        group = self.options.get('group')
-
-        if group not in ('core', 'community'):
-            raise Exception('Extension group must be either "core" or "community"')
-
-        if group == 'core':
-            extension_json = extension_json_current
-            if not extension_json.get('extensions'):
-                return [','.join(headings)], 'Extensions'
-
-            for num, extension_obj in enumerate(extension_json['extensions']):
-                if group == 'core':
-                    if not extension_obj.get('core'):
-                        continue
-                extension_name = extension_obj['name'].get('en')
-                extension_name = '{}::{}'.format(extension_name, extension_obj.get('documentation_url', ''))
-                extension_description = extension_obj['description'].get('en')
-                row = ['', extension_name, extension_description, extension_obj['category'],
-                       '{}extension.json'.format(extension_obj['url'])]
-                data.append(row)
-        else:
-            data = [['', '', '', '', '']]
-
-        data.insert(0, headings)
-        output = io.StringIO()
-        output_csv = csv.writer(output)
-        for line in data:
-            output_csv.writerow(line)
-
-        self.options['header-rows'] = 1
-        self.options['class'] = ['extension-selector-table']
-        self.options['widths'] = [8, 30, 42, 20, 0]
-        return output.getvalue().splitlines(), 'Extension registry'
-
-    def parse_csv_data_into_rows(self, csv_data, dialect, source):
-        # csv.py doesn't do Unicode; encode temporarily as UTF-8
-        csv_reader = csv.reader([self.encode_for_csv(line + '\n')
-                                 for line in csv_data], dialect=dialect)
-        rows = []
-        max_cols = 0
-        for row_num, row in enumerate(csv_reader):
-            row_data = []
-            for cell_num, cell in enumerate(row):
-                if row_num == 0 or cell_num != 3:
-                    new_source = source
-                else:
-                    new_source = ""
-                # decode UTF-8 back to Unicode
-                cell_text = self.decode_from_csv(cell)
-                cell_data = (0, 0, 0, statemachine.StringList(
-                    cell_text.splitlines(), source=new_source))
-                row_data.append(cell_data)
-            rows.append(row_data)
-            max_cols = max(max_cols, len(row))
-        return rows, max_cols
-
-
-class CSVTableNoTranslate(CSVTable):
-    def get_csv_data(self):
-        lines, source = super().get_csv_data()
-        return lines, None
+        container = nodes.container(classes=class_list)
+        container += literal
+        return [container]
 
 
 directives.register_directive('jsoninclude', JSONInclude)
-directives.register_directive('extensionlist', ExtensionList)
-directives.register_directive('extensiontable', ExtensionTable)
-directives.register_directive('extensionselectortable', ExtensionSelectorTable)
-directives.register_directive('csv-table-no-translate', CSVTableNoTranslate)
+
+
+extension_registry_git_ref = "v1.1.1"
 
 
 class AutoStructifyLowPriority(AutoStructify):
@@ -645,6 +373,6 @@ class AutoStructifyLowPriority(AutoStructify):
 def setup(app):
     app.add_config_value('recommonmark_config', {
         'enable_eval_rst': True
-        }, True)
+    }, True)
     app.add_transform(AutoStructify)
     app.add_transform(AutoStructifyLowPriority)

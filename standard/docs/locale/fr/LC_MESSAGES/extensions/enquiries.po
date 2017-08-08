@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-08-08 09:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Colin Maudry <colin@maudry.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,17 +20,19 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/enquiries.md:0
 msgid "Enquiries"
-msgstr ""
+msgstr "Echanges"
 
 #: ../../standard/docs/en/extensions/enquiries.md:0
-msgid "Meta-data"
-msgstr ""
+msgid "Metadata"
+msgstr "Métadonnées"
 
 #: ../../standard/docs/en/extensions/enquiries.md:6
 msgid ""
-"To use this extension, include it's URL in the ```extension``` array of your"
-" release or record package."
+"To use this extension, include its URL in the ```extension``` array of your "
+"release or record package."
 msgstr ""
+"Pour utiliser cette extension, ajouter son URL dans la liste ```extension```"
+" de votre package d'instance ou d'archive. "
 
 #: ../../standard/docs/en/extensions/enquiries.md:15
 msgid ""
@@ -37,30 +40,39 @@ msgid ""
 "contracting/ocds_enquiry_extension](https://github.com/open-"
 "contracting/ocds_enquiry_extension)"
 msgstr ""
+"Cette extension est maintenue à l'adresse [https://github.com/open-"
+"contracting/ocds_enquiry_extension](https://github.com/open-"
+"contracting/ocds_enquiry_extension)"
 
 #: ../../standard/docs/en/extensions/enquiries.md:0
 msgid "Documentation"
-msgstr ""
+msgstr "Documentation"
 
 #: ../../standard/docs/en/extensions/enquiries.md:19
 msgid ""
 "The enquiries extension can be used to record questions raised during a "
 "contracting process, and the answers provided."
 msgstr ""
+"L'extension sur les échanges peut être utilisée pour enregistrer les "
+"questions soulevées pendant le processus de passation de marché et les "
+"réponses qui leurs sont fournies. "
 
 #: ../../standard/docs/en/extensions/enquiries.md:0
 msgid "Structure"
-msgstr ""
+msgstr "Structure"
 
 #: ../../standard/docs/en/extensions/enquiries.md:23
 msgid ""
 "The extension adds an ```enquiries``` array to tender, consisting of one or "
 "more enquiry objects, each with fields for a question, and an answer."
 msgstr ""
+"Cette extension ajoute une liste ```enquiries``` au composant de l'appel "
+"d'offres (`tender`) comprenant un ou plusieurs objets d'échange, chacun "
+"comprenant des champs pour la question et d'autres pour la réponse. "
 
 #: ../../standard/docs/en/extensions/enquiries.md:25
 msgid "Example:"
-msgstr ""
+msgstr "Exemple :"
 
 #: ../../standard/docs/en/extensions/enquiries.md:48
 msgid ""
@@ -68,14 +80,23 @@ msgid ""
 "answers to questions can be included in the ```tender/documents``` array "
 "with a ```documentType``` of 'clarifications'."
 msgstr ""
+"Les documents qui apportent des clarifications ou un document entier "
+"comprenant les réponses aux questions peut être inclus dans la liste "
+"```tenders/documents``` avec un champ ```documentType``` de type "
+"\"clarifications\"."
 
 #: ../../standard/docs/en/extensions/enquiries.md:50
 msgid ""
-"Where the answers to a question are only avaible in attached documents, an "
-"```answer``` value such as 'Consult section N of \"%document name%\" in the "
-"documents section' may be entered to allow analysts of the data to identify "
-"that an answer to this question has been provided."
+"Where the answers to a question are only available in attached documents, an"
+" ```answer``` value such as 'Consult section N of \"%document name%\" in the"
+" documents section' may be entered to allow analysts of the data to identify"
+" that an answer to this question has been provided."
 msgstr ""
+"Là où les réponses à une question sont seulement disponibles dans les "
+"documents attachés, une valeur ```answer``` telle que \"Consult section N of"
+" \"%document name%\" in the documents section\" peut être entrée pour "
+"permettre aux analystes des données d'identifier que la réponse à la "
+"question a bien été fournie."
 
 #: ../../standard/docs/en/extensions/enquiries.md:52
 msgid ""
@@ -83,35 +104,50 @@ msgid ""
 "by a further clarification question, the ```threadID``` property can be used"
 " to link together multiple entries in the ```enquiries``` array."
 msgstr ""
+"Quand un système permet un format de discussion où chaque réponse peut être "
+"suivie de nouvelles questions pour clarifier le sujet, la propriété "
+"```threadID``` peut être utilisée pour lier entre elles plusieurs entrées de"
+" la liste ```enquiries```."
 
 #: ../../standard/docs/en/extensions/enquiries.md:0
 msgid "Usage guidance"
-msgstr ""
+msgstr "Conseils d'utilisation"
 
 #: ../../standard/docs/en/extensions/enquiries.md:56
 msgid ""
 "Implementations may vary on the amount of enquiry information they provide, "
 "and when it is provided."
 msgstr ""
+"Les mises en application de cette extension peuvent faire varier la quantité"
+" d'information qui sont fournies et quand elles sont fournies. "
 
 #: ../../standard/docs/en/extensions/enquiries.md:58
 msgid ""
 "Some publishers may omit the identity of the question author to protect "
-"confidentiality of enquirers, or may anonymise this information (e.g. simply"
-" putting the author name as 'Organisation 1' or 'Organisation 2' so that it "
-"is possible to see questions from the same organisation, but not to know the"
-" identity of that organisation.)"
+"confidentiality of enquirers, or may anonymize this information (e.g. simply"
+" putting the author name as 'Organization 1' or 'Organization 2' so that it "
+"is possible to see questions from the same organization, but not to know the"
+" identity of that organization.)"
 msgstr ""
+"Certains producteurs de données peuvent enlever l'identité de l'auteur de la"
+" question pour protéger la confidentialité des candidats ou peuvent "
+"anonymiser cette information (par exemple en indiquant \"organisation 1\" ou"
+" \"organisation 2\" comme nom d'auteur pour qu'il soit possible de voir les "
+"questions d'une seule organisation mais pas de connaître l'identité de cette"
+" organisation). "
 
 #: ../../standard/docs/en/extensions/enquiries.md:60
 msgid ""
 "The ```relatedItem``` and ```relatedLot``` properties are available for use "
 "when questions can be asked in relation to a specific lot or item."
 msgstr ""
+"Les propriétés ```relatedItem```et ```relatedLot``` peuvent être utilisées "
+"quand des questions peuvent être posées à propos d'un lot ou d'un objet "
+"spécifique."
 
 #: ../../standard/docs/en/extensions/enquiries.md:62
 msgid "Where possible, the recommended approach is to:"
-msgstr ""
+msgstr "Dès que possible, l'approche conseillée consiste à :"
 
 #: ../../standard/docs/en/extensions/enquiries.md:64
 msgid ""
@@ -119,6 +155,9 @@ msgid ""
 " batch of questions received, providing an enquiries array with each of the "
 "questions in;"
 msgstr ""
+"Produire une instance avec un tag ```tenderUpdate``` pour chaque nouvelle "
+"question ou ensemble de questions reçu fournissant une liste d'échanges qui "
+"comprend toutes les questions ;"
 
 #: ../../standard/docs/en/extensions/enquiries.md:65
 msgid ""
@@ -126,6 +165,10 @@ msgid ""
 " questions are provided, updating the earlier enquiries array so each entry "
 "now contains both a question and an answer;"
 msgstr ""
+"Produire une instance avec un tag ```tenderUpdate``` dès que les questions "
+"obtiennent une réponse afin de mettre à jour les précédentes listes sur les "
+"échanges pour que chaque entrée comprenne à la fois la question et la "
+"réponse ;"
 
 #: ../../standard/docs/en/extensions/enquiries.md:67
 msgid ""
@@ -133,6 +176,10 @@ msgid ""
 "that provide answers to questions, and will support procurement monitors in "
 "reviewing the way in which questions are being answered."
 msgstr ""
+"Cette approche peut permettre à des applications crées par des tiers de "
+"détecter les réponses aux questions et de permettre de surveiller la "
+"passation de marché pour comprendre quelles questions obtiennent des "
+"réponses."
 
 #: ../../standard/docs/en/extensions/enquiries.md:69
 msgid ""
@@ -141,34 +188,40 @@ msgid ""
 "applications parse text appropriately to format it for readability (e.g. "
 "replace line-breaks with paragraph breaks in HTML)."
 msgstr ""
+"Nous recommandons aux producteurs de données de fournir les réponses en "
+"texte brut ou avec un minimum de balises HTML (paragraphes et sauts de "
+"ligne) et en s'appuyant sur des applications qui parcourent (*parse*) le "
+"texte de manière appropriée pour que le texte soit lisible (par exemple, en "
+"replaçant les sauts de ligne avec des sauts de paragraphe en HTML)."
 
 #: ../../standard/docs/en/extensions/enquiries.md:0
 msgid "Schema reference"
-msgstr ""
+msgstr "Documentation du schéma"
 
 #: ../../standard/Extension enquiries:1
 msgid "Field"
-msgstr ""
+msgstr "Champ"
 
 #: ../../standard/Extension enquiries:1
 msgid "Definition"
-msgstr ""
+msgstr "Définition"
 
 #: ../../standard/Extension enquiries:1
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: ../../standard/Extension enquiries:1
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: ../../standard/Extension enquiries:1
 msgid "Tender"
-msgstr ""
+msgstr "Appel d'offre"
 
 #: ../../standard/Extension enquiries:1
 msgid "Questions sent to the procuring entity, and the answers given"
 msgstr ""
+"Questions envoyées aux entités adjudicatrices et les réponses données "
 
 #: ../../standard/Extension enquiries:1 ../../standard/Extension enquiries:1
 #: ../../standard/Extension enquiries:1 ../../standard/Extension enquiries:1
@@ -176,15 +229,15 @@ msgstr ""
 #: ../../standard/Extension enquiries:1 ../../standard/Extension enquiries:1
 #: ../../standard/Extension enquiries:1
 msgid "Enquiry"
-msgstr ""
+msgstr "Échanges"
 
 #: ../../standard/Extension enquiries:1
 msgid "A unique identifier for the enquiry."
-msgstr ""
+msgstr "Un identifiant unique pour l'échange."
 
 #: ../../standard/Extension enquiries:1
 msgid "The date the enquiry was received or processed."
-msgstr ""
+msgstr "La date à laquelle l'échange a été reçu ou traité."
 
 #: ../../standard/Extension enquiries:1
 msgid ""
@@ -193,31 +246,40 @@ msgid ""
 "policies vary on whether or not the identity of those asking questions "
 "should be disclosed, or at which stage this information may be disclosed."
 msgstr ""
+"L'identifiant ou le nom de la partie posant la question. Les auteurs des "
+"questions peuvent figurer dans la liste des parties avec un rôle "
+"\"enquirer\". Les politiques de passation de marché varient sur le fait que "
+"l'identité de ceux qui ont posé des questions doit être révélée ou à quelle "
+"étape cette information peut être révélée."
 
 #: ../../standard/Extension enquiries:1
 msgid "The subject line of the question."
-msgstr ""
+msgstr "La ligne d'objet de la question."
 
 #: ../../standard/Extension enquiries:1
 msgid "The body of the question."
-msgstr ""
+msgstr "Le corps de la question."
 
 #: ../../standard/Extension enquiries:1
 msgid "The answer to this question, when available."
-msgstr ""
+msgstr "La réponse à la question si elle est disponible."
 
 #: ../../standard/Extension enquiries:1
 msgid "The date the answer to the question was provided."
-msgstr ""
+msgstr "La date à laquelle la question a été posée."
 
 #: ../../standard/Extension enquiries:1
 msgid ""
 "If this question relates to a specific line-item, this field contains the "
 "line-item identifier."
 msgstr ""
+"Si la question est liée à un certain bien et service acheté, ce champ "
+"comprend l'identifiant du bien ou du service."
 
 #: ../../standard/Extension enquiries:1
 msgid ""
 "Where lots are used, if this question relates to a specific lot, this field "
 "contains the lot identifier."
 msgstr ""
+"Quand des lots sont utilisés, si cette question est liée à un lot "
+"spécifique, ce champ comprend l'identifiant du lot. "
