@@ -16,7 +16,7 @@ install:
 # command to run tests, e.g. python setup.py test
 script:
   - flake8
-  - bin/mdl --style mdl.rb .
+  - bin/mdl --style mdl.rb *.md standard
   - py.test
   - ./build_docs.sh
 deploy:
