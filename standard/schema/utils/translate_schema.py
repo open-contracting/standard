@@ -21,14 +21,19 @@ file_names = ['record-package-schema.json',
               'versioned-release-validation-schema.json',
               'release-schema.json']
 
+version = os.environ.get('TRAVIS_BRANCH', 'latest')
+
 for language in languages:
+    if language == 'en':
+        fallback = True
+
     print("Translating schema to language " + language)
-    translator = gettext.translation('schema', 'standard/docs/locale', languages=[language])
+    translator = gettext.translation('schema', 'standard/docs/locale', languages=[language], fallback=fallback)
 
     def translate_data(data):
         for key, value in list(data.items()):
             if key in ('title', 'description') and isinstance(value, str):
-                data[key] = translator.gettext(value)
+                data[key] = translator.gettext(value).replace('{{version}}', version).replace('{{lang}}', language)
             if isinstance(value, dict):
                 translate_data(value)
 
