@@ -15,7 +15,7 @@ install:
   - bundle install --path vendor/bundle --binstubs
 # command to run tests, e.g. python setup.py test
 script:
-  - flake8
+  - flake8 --max-line-length 119
   - bin/mdl --style mdl.rb *.md standard
   - py.test
   - ./build_docs.sh
