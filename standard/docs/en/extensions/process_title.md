@@ -1,20 +1,4 @@
-Process title
-=============
-
-## Metadata
-
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
-
-```json
-{
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1/extension.json"],
-    "releases":[]
-}
-```
-
-This extension is maintained at [https://github.com/open-contracting/ocds_process_title_extension](https://github.com/open-contracting/ocds_process_title_extension)
-
-## Documentation
+## Process title and description
 
 In some cases it is important to provide an overall title and description for a contracting process, distinct from the individual title and description fields contained within ```tender```, ```award``` and ```contract``` blocks.
 

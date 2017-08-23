@@ -1,24 +1,9 @@
 Enquiries 
 ========================
 
-## Metadata
-
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
-
-```json
-{
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_enquiry_extension/v1.1/extension.json"],
-    "releases":[]
-}
-```
-
-This extension is maintained at [https://github.com/open-contracting/ocds_enquiry_extension](https://github.com/open-contracting/ocds_enquiry_extension)
-
-## Documentation
-
 The enquiries extension can be used to record questions raised during a contracting process, and the answers provided.
 
-### Structure
+## Structure
 
 The extension adds an ```enquiries``` array to tender, consisting of one or more enquiry objects, each with fields for a question, and an answer.
 
@@ -51,7 +36,7 @@ Where the answers to a question are only available in attached documents, an ```
 
 When a system allow a discussion format, where each answer can be followed by a further clarification question, the ```threadID``` property can be used to link together multiple entries in the ```enquiries``` array.
 
-### Usage guidance
+## Usage guidance
 
 Implementations may vary on the amount of enquiry information they provide, and when it is provided. 
 
@@ -68,9 +53,10 @@ This approach will enable third-party applications to watch for releases that pr
 
 We recommend that publishers provide question answers as plain text, or with minimal HTML markup (paragraphs and line-breaks), and that consuming applications parse text appropriately to format it for readability (e.g. replace line-breaks with paragraph breaks in HTML).
 
-### Schema reference
+## Reference
 
 ```eval_rst
 .. extensiontable::
    :extension: enquiries
+   :exclude_definitions: Tender
 ```
