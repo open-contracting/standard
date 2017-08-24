@@ -4,6 +4,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from multiprocessing import Process
+from collections import OrderedDict
+import time
+import re
 
 
 BROWSER = os.environ.get('BROWSER', 'ChromeHeadless')
@@ -51,3 +54,16 @@ def server(request):
 def test_basic(browser, server, lang, text):
     browser.get('{}{}'.format(server, lang))
     assert text in browser.find_element_by_tag_name('body').text
+
+
+@pytest.mark.parametrize('lang,regex', [
+    ('en', 'found \d+ page\(s\) matching'),
+    ('es', 'encontró \d+ página\(s\) acorde'),
+    ('fr', '\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
+])
+def test_search(browser, server, lang, regex):
+    browser.get('{}{}'.format(server, lang))
+    search_box = browser.find_element_by_id('rtd-search-form').find_element_by_tag_name('input')
+    search_box.send_keys('tender\n')
+    time.sleep(1)
+    assert re.search(regex, browser.find_element_by_tag_name('body').text)
