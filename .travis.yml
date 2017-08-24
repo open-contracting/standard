@@ -14,8 +14,8 @@ install:
 # command to run tests, e.g. python setup.py test
 script:
   - flake8
-  - py.test
   - ./build_docs.sh
+  - py.test
 deploy:
   skip_cleanup: true # don't remove stuff we've built
   provider: script

@@ -43,6 +43,11 @@ def server(request):
     return 'http://{}:{}/'.format(host, port_number)
 
 
-@pytest.mark.parametrize('lang', ['en', 'es'])
-def test_test(browser, server, lang):
+@pytest.mark.parametrize('lang,text', [
+    ('en', 'Open Contracting Data Standard'),
+    ('es', 'Estándar de Datos de Contrataciones Abiertas'),
+    ('fr', 'Standard de Données sur la Commande Publique Ouverte'),
+])
+def test_basic(browser, server, lang, text):
     browser.get('{}{}'.format(server, lang))
+    assert text in browser.find_element_by_tag_name('body').text
