@@ -246,7 +246,7 @@ The changes array was deprecated in OCDS 1.1. Structured information on the form
 * Including releases from **before** and **after** a change within a release package;
 * Using the amendment array in tender, contract or award to explicitly relate these releases to an amendment.
 
-See the [amendment implementation guidance](../../../implementation/amendments/) for more details.
+See the [amendment implementation guidance](../../../../implementation/amendments/) for more details.
 
 ## Building block reference
 
