@@ -1,6 +1,21 @@
 Bid statistics and details
 ==========================
 
+## Metadata
+
+To use this extension, include its URL in the ```extension``` array of your release or record package.
+
+```json
+{
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_bid_extension/v1.1.1/extension.json"],
+    "releases":[]
+}
+```
+
+This extension is maintained at [https://github.com/open-contracting/ocds_bid_extension](https://github.com/open-contracting/ocds_bid_extension)
+
+## Documentation
+
 Information on bids submitted as part of a contracting process is important for many forms of analysis, including:
 
 * Market analysis for understanding the competitiveness of a given marketplace;

@@ -1,6 +1,21 @@
 Lots
 ====
 
+## Metadata
+
+To use this extension, include its URL in the ```extension``` array of your release or record package.
+
+```json
+{
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_lots_extension/v1.1.1/extension.json"],
+    "releases":[]
+}
+```
+
+This extension is maintained at [https://github.com/open-contracting/ocds_lots_extension](https://github.com/open-contracting/ocds_lots_extension)
+
+## Documentation
+
 When a single tender is broken down into parts that can be bid upon, and awarded, separately, this is modelled using the **lots extension**.
 
 The lots extension maintains the overall structure of an OCDS release, with items, documents and milestones nested immediately within ```tender```, ```award``` and ```contract``` items, but it introduces an array of Lots in the ```tender``` section, and the ability to cross-reference a specific ```relatedLot``` for each item, and an array of ```relatedLots``` for documents, milestones and awards.
@@ -9,7 +24,7 @@ Optional ```lotDetails``` and ```lotGroups``` section allow more complex conditi
 
 This means that systems which are not 'lot aware' can still understand the overall value of contracting taking place, key events, and relationships between buyers and suppliers. At the same time, 'lot aware' systems can make use of the cross-referenced information to present a lot-centric view on the information to users, or to analyze contracting lot by lot.
 
-## Related Lot
+### Related Lot
 
 The ```relatedLot``` (singular) property is available for:
 
@@ -29,7 +44,7 @@ The items within an award should each have a ```relatedLot``` property, but publ
 
 Where the bid extension is also in use, each bid can also declare its related lots.
 
-## Worked example
+### Worked example
 
 A tender is issued for consultancy in the development of a new public building. This might include items for:
 
@@ -171,7 +186,7 @@ Although part of the same tender, the buyer is willing to award these different 
 }
 ```
 
-## Schema
+### Schema
 
 ```eval_rst
 .. extensiontable::

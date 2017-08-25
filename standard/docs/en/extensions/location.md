@@ -1,5 +1,20 @@
 # Location Data
 
+## Metadata
+
+To use this extension, include its URL in the ```extension``` array of your release or record package.
+
+```json
+{
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_location_extension/v1.1.1/extension.json"],
+    "releases":[]
+}
+```
+
+This extension is maintained at [https://github.com/open-contracting/ocds_location_extension](https://github.com/open-contracting/ocds_location_extension)
+
+## Documentation
+
 Communicating the location of proposed or executed contract delivery is important to make users of contracting data. 
 
 This extension introduces two properties at the ```items``` level to describe location:
@@ -7,18 +22,18 @@ This extension introduces two properties at the ```items``` level to describe lo
 * ```deliveryAddress``` - a standard ```Address``` block which can be used to provide a postal address where services should be delivered.
 * ```deliveryLocation``` - a new block consisting of GeoJSON and Gazetteer entries to describe a wider range of locations to which the contract line item relates.
 
-## Schema reference
+### Schema reference
 
 ```eval_rst
 .. extensiontable::
    :extension: location
 ```
 
-## Gazetteer Codelist
+### Gazetteer Codelist
 
 See locationGazeteers.csv
 
-## Example
+### Example
 Below is an example of a geolocated item:
 
 ```json
