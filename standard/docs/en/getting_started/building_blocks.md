@@ -1,4 +1,4 @@
-## Building Blocks
+# Building Blocks
 
 In mapping your data to OCDS, or using OCDS data, you will encounter a number of common data structures.
 
@@ -12,7 +12,7 @@ In mapping your data to OCDS, or using OCDS data, you will encounter a number of
     </tr>
 </table>
 
-### Sections and structure
+## Sections and structure
 
 An OCDS document is made up of a number of sections. These are:
 
@@ -29,7 +29,7 @@ These are represented in a JSON document as follows:
 ```eval_rst
 .. code-block:: json
    :emphasize-lines: 8-13
-       
+
        {
             "language": "en",
             "ocid": "contracting-process-identifier",
@@ -48,20 +48,20 @@ These are represented in a JSON document as follows:
         }
 ```
 
-### Building blocks: fields
+## Building blocks: fields
 
-The OCDS schema sets out the fields that should be included in each section, making use of simple re-usable building blocks (field structures) to represent data. 
+The OCDS schema sets out the fields that should be included in each section, making use of simple re-usable building blocks (field structures) to represent data.
 
 For example, common building blocks are provided for:
 
-* **Parties (Organizations)** 
-* **Amounts** 
+* **Parties (Organizations)**
+* **Amounts**
 * **Items**
 * **Time periods**
-* **Documents** 
+* **Documents**
 * **Milestones**
 
-#### Examples
+### Examples
 
 ```eval_rst
 
@@ -76,7 +76,7 @@ For example, common building blocks are provided for:
 
 .. jsoninclude:: docs/en/examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/value
-   :expand: 
+   :expand:
    :title: amounts
 
 ```
@@ -94,7 +94,7 @@ For example, common building blocks are provided for:
 
 .. jsoninclude:: docs/en/examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/contractPeriod
-   :expand: 
+   :expand:
    :title: period
 
 ```
@@ -103,7 +103,7 @@ For example, common building blocks are provided for:
 
 .. jsoninclude:: docs/en/examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/documents
-   :expand: 
+   :expand:
    :title: documents
 
 ```
@@ -112,14 +112,14 @@ For example, common building blocks are provided for:
 
 .. jsoninclude:: docs/en/examples/record.json
    :jsonpointer: /records/0/compiledRelease/tender/milestones/0
-   :expand: 
+   :expand:
    :title: milestones
 
 ```
 
-#### Using building blocks
+### Using building blocks
 
-These building blocks may be used in various different sections. For example, **items** can occur in tender (to indicate the items that a buyer wishes to buy), in an award object (to indicate the items that an award has been made for) and in a contract object (to indicate the items listed in the contract). 
+These building blocks may be used in various different sections. For example, **items** can occur in tender (to indicate the items that a buyer wishes to buy), in an award object (to indicate the items that an award has been made for) and in a contract object (to indicate the items listed in the contract).
 
 In addition to these building blocks, the OCDS schema sets out the specific ways they can be used in each section, and describes a number of additional fields that can appear in specific section. For example, fields for:
 
@@ -129,11 +129,11 @@ In addition to these building blocks, the OCDS schema sets out the specific ways
 * ```submissionMethod```
 * etc.
 
-Many of these fields make use of lightweight codelists provided by OCDS. 
+Many of these fields make use of lightweight codelists provided by OCDS.
 
-#### Extensions
+### Extensions
 
-In some cases, publishers or users need building blocks and fields which are not provided in the core OCDS schema. 
+In some cases, publishers or users need building blocks and fields which are not provided in the core OCDS schema.
 
 We maintain a list of [extensions](../../../extensions/) that provide optional extra building blocks and fields.
 
@@ -141,11 +141,11 @@ We maintain a list of [extensions](../../../extensions/) that provide optional e
 
 <p class="first admonition-title">Field level mapping</p>
 
-The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.  
+The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.
 
 </div>
 
-### Codelists
+## Codelists
 
 OCDS defines two kinds of codelist:
 
@@ -190,9 +190,9 @@ OCDS defines two kinds of codelist:
 </tr>
 </table>
 
-Codelist values are case sensitive strings with associated labels, available in each language OCDS has been translated into. 
+Codelist values are case sensitive strings with associated labels, available in each language OCDS has been translated into.
 
-Publishers should map their existing classification systems to OCDS codes wherever possible. Many closed codelist fields are paired with a detail field where more detailed classification information can be provided. 
+Publishers should map their existing classification systems to OCDS codes wherever possible. Many closed codelist fields are paired with a detail field where more detailed classification information can be provided.
 
 <div class="example hint" markdown=1>
 
@@ -201,8 +201,8 @@ Publishers should map their existing classification systems to OCDS codes wherev
 In the EU, contracts can be initiated through a number of different procedures including:
 
 * Open procedure;
-* Restricted procedure; 
-* Competitive procedure with negotiation; 
+* Restricted procedure;
+* Competitive procedure with negotiation;
 * Competitive dialogue; and
 * Innovation partnership
 
@@ -214,7 +214,7 @@ However, to support comparison across continents, the main OCDS procurement meth
    :file: ../../../schema/codelists_translated/method.csv
 ```
 
-All procedures should be able to be mapped to one of these options. 
+All procedures should be able to be mapped to one of these options.
 
 To publish OCDS data, an EU publisher with data categorized by EU procedures should map the longer list of procedures to the narrower OCDS codelist and provide the codelist value in the ```procurementMethod``` field. They can then provide the more detailed procedure type in an extended ```procurementMethodDetails``` field.
 
@@ -225,7 +225,7 @@ For an Open Procedure, when a free-text justification of why the procedure was c
     "procurementMethod":"open",
     "procurementMethodDetails":"Open Procedure",
     "procurementMethodRationale":"To maximize competition."
-    
+
 }
 ```
 

@@ -1,10 +1,8 @@
-
-
 # Conformance and extensions
 
 <span class="lead">To maximize the interoperability of data published using the Open Contracting Data Standard we have set out key principles for **conforming** to the standard. These also create space for **extensions** of the standard where particular publisher or user needs require.</span>
 
-## Conformance 
+## Conformance
 
 ### Publication conformance
 
@@ -14,31 +12,31 @@
 1. It *may* use terms from outside this specification's terms where this specification's terms are insufficient.
 1. If an implementation serializes to JSON, its serializations *must* [validate](http://ocds.open-contracting.org/validator/) against this specification's JSON Schema.
 
-Whenever using terms from outside the OCDS standard, we encourage the publisher or user responsible to consult with the community on the best approach to adopt. 
+Whenever using terms from outside the OCDS standard, we encourage the publisher or user responsible to consult with the community on the best approach to adopt.
 
 (Our publication conformance section is [based on the Popolo Project](http://www.popoloproject.com/specs/#conformance) approach.)
 
 ### Validator and application conformance
 
-As of version 1.1, release/record packages should contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless otherwise instructed by the user.  
+As of version 1.1, release/record packages should contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless otherwise instructed by the user.
 
 Validators and applications should:
 
 * Report to the user when it encounters a version of the data it does not support;
 
-* Reject data from a higher integer version than it supports, unless otherwise instructed by the user; 
+* Reject data from a higher integer version than it supports, unless otherwise instructed by the user;
 
 * Report to the user when it encounters extensions it does not support;
 
-Validators **must** report a warning to the user when they encounter properties not covered by the version of the schema and extensions that they are validating against. 
+Validators **must** report a warning to the user when they encounter properties not covered by the version of the schema and extensions that they are validating against.
 
 Applications **may** report a warning to use the user when they encounter properties they do not support, or **may** discard these properties.
 
 The handling of additional properties and deprecated properties is implementation defined.
 
-For behaviours that are implementation defined, applications should clearly document their chosen approach. 
+For behaviours that are implementation defined, applications should clearly document their chosen approach.
 
-See also the [deprecation guidance](deprecation.md). 
+See also the [deprecation guidance](deprecation.md).
 
 ## Extensions
 
@@ -46,6 +44,6 @@ Extensions to the standard can add new objects and properties to accommodate spe
 
 Extensions should be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard.
 
-The [extensions registry](../../extensions/) records details of known extensions. 
+The [extensions registry](../../extensions/) records details of known extensions.
 
-The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields. 
+The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields.

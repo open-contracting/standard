@@ -1,8 +1,8 @@
 # Extensions
 
-OCDS provides a common core of [sections and building blocks](../getting_started/building_blocks.md) for describing contracting processes. 
+OCDS provides a common core of [sections and building blocks](../getting_started/building_blocks.md) for describing contracting processes.
 
-Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard. 
+Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard.
 
 Extensions are divided into two types:
 
@@ -12,21 +12,19 @@ Extensions are divided into two types:
 
 Some extensions with wide adoption may be considered for inclusion as part of the core standard in future versions. Others may be maintained independently by particular communities that need to align the publication of particular additional information.
 
-
-
 ## Using extensions
 
 Extensions are applied by adding their URLs to the ```extensions``` array in the release or record package. To use one or more extensions, select them from the extension lists below and include the following in your release or record package metadata:
 
 <style><!--
 #using-extensions div[class^='highlight'] pre {
-   white-space: pre-wrap;  
+   white-space: pre-wrap;
    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
    white-space: -pre-wrap;      /* Opera 4-6 */
    white-space: -o-pre-wrap;    /* Opera 7 */
    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
---></style> 
+--></style>
 
 ```json
 {
@@ -48,7 +46,6 @@ Extensions are applied by adding their URLs to the ```extensions``` array in the
 .. extensionselectortable::
    :group: community
 ```
-
 
 ## More information
 

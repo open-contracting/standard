@@ -1,31 +1,30 @@
-## Publication Patterns
+# Publication Patterns
 
 OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. Each step builds on the steps before.
 
-**☆ Upload basic contracting data and documents to web**
+**☆ Upload basic contracting data and documents to web.**
 
 > Whether or not you can adopt a common standard right now, you should make sure important notices and documents are freely accessible online.
 
-**☆ ☆ Provide machine-readable data**
+**☆ ☆ Provide machine-readable data.**
 
->Providing data about your contracting processes in CSV files or other structured formats makes it easier for others to analyze. 
+>Providing data about your contracting processes in CSV files or other structured formats makes it easier for others to analyze.
 >
 >*If you jump straight to 3 ☆ publication, you can generate flattened CSV versions of your data using the OCDS flatten tool.*
 
-**☆ ☆ ☆ Use the OCDS standard**
+**☆ ☆ ☆ Use the OCDS standard.**
 
->Producing bulk releases and records packages using the OCDS standard makes your data easier to re-use and join-up with other contracting data. 
+>Producing bulk releases and records packages using the OCDS standard makes your data easier to re-use and join-up with other contracting data.
 
-**☆ ☆ ☆ ☆ Provide API access to data**
+**☆ ☆ ☆ ☆ Provide API access to data.**
 
->Providing each release and record at its own persistent URI improves the usability of your data. Providing APIs helps users locate the information they are looking for quicker, and enables third-parties to build more advanced and responsive services on your data. 
+>Providing each release and record at its own persistent URI improves the usability of your data. Providing APIs helps users locate the information they are looking for quicker, and enables third-parties to build more advanced and responsive services on your data.
 
-**☆ ☆ ☆ ☆ ☆ Provide joined-up data**
+**☆ ☆ ☆ ☆ ☆ Provide joined-up data.**
 
->Adding links to your contracting data, connecting out to other datasets on project planning, public spending or company registrations, adds further value to your data, enabling new kinds of re-use. 
+>Adding links to your contracting data, connecting out to other datasets on project planning, public spending or company registrations, adds further value to your data, enabling new kinds of re-use.
 
-
-### Packaging releases and records
+## Packaging releases and records
 
 When publishing releases and records, they must be provided within a release or record package. These act as an envelope for the data.
 
@@ -39,9 +38,9 @@ A package provides information on:
 
 A package may contain a single release or record, or may be used to publish a collection of releases, or a collection of records.
 
-Consult the [release package](../../../schema/release_package/) and [record package](../../../schema/record_package/) schemas to package up your data. 
+Consult the [release package](../../../schema/release_package/) and [record package](../../../schema/record_package/) schemas to package up your data.
 
-#### Example release package
+### Example release package
 
 ```json
 {
@@ -61,7 +60,7 @@ Consult the [release package](../../../schema/release_package/) and [record pack
 }
 ```
 
-### Bulk and individual files
+## Bulk and individual files
 
 For 4 ☆ publication, you should:
 
@@ -70,5 +69,5 @@ For 4 ☆ publication, you should:
 * Additionally, produce bulk packages of releases and records for users to download;
 * Additionally, produce 'flat' versions of the data for users to access in CSV for Excel formats
 
-You will need to make decisions about how to segment the data in bulk files, so that files are easy for users to work with. 
+You will need to make decisions about how to segment the data in bulk files, so that files are easy for users to work with.
 

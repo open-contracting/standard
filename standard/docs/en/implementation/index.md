@@ -13,5 +13,4 @@
    registration
    related_processes
    amendments
-   
 ```

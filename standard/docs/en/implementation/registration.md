@@ -1,12 +1,10 @@
-
-
 # Registration
 
 <span class="lead">The identifiers section describes the composition of a globally unique open contracting identifier. On this page you can request an ocid prefix, and can submit details of your published data, as well as checking existing prefixes</span>
 
 ## OCID Prefix
 
-We are in the process of establishing a self-service registration system for ocid prefixes. In the meantime, to request an ocid prefix please e-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with the name of your organization.
+We are in the process of establishing a self-service registration system for ocid prefixes. In the meantime, to request an ocid prefix please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with the name of your organization.
 
 ### Existing prefixes
 

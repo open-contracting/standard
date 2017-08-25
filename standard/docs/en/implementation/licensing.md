@@ -16,7 +16,7 @@ In structured data file you can embed a link to the license in the ```license```
 ```eval_rst
 .. code-block:: json
    :emphasize-lines: 4
-     
+
      {
          "uri":"http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json",
          "publishedDate":"2010-03-01T09:30:00Z",

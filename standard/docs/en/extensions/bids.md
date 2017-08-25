@@ -1,9 +1,8 @@
-Bid statistics and details
-==========================
+# Bid statistics and details
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
@@ -14,7 +13,7 @@ To use this extension, include its URL in the ```extension``` array of your rele
 
 This extension is maintained at [https://github.com/open-contracting/ocds_bid_extension](https://github.com/open-contracting/ocds_bid_extension)
 
-## Documentation 
+## Documentation
 
 Information on bids submitted as part of a contracting process is important for many forms of analysis, including:
 
@@ -34,7 +33,7 @@ The ```bids/bidStatistics``` array can be used to represent key statistical info
 * A measure, from the bidStatistics codelist;
 * A value for that measure;
 
-#### Bid Statistics Schema 
+#### Bid Statistics Schema
 
 ```eval_rst
 .. extensiontable::
@@ -44,9 +43,9 @@ The ```bids/bidStatistics``` array can be used to represent key statistical info
 
 #### Bid Statistics Codelist
 
-This is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code. 
+This is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code.
 
-For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets. 
+For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets.
 
 ```eval_rst
 .. csv-table::
@@ -56,12 +55,12 @@ For example, publishers may wish to add statistics on minority or women owned bu
 
 ### Bid details
 
-The ```bids/details``` array is used to provide one or more ```Bid``` objects, each representing a unique bid received. 
+The ```bids/details``` array is used to provide one or more ```Bid``` objects, each representing a unique bid received.
 
 ```eval_rst
 .. extensiontable::
    :extension: bids
-   :exclude_definitions: statistics BidsStatistic 
+   :exclude_definitions: statistics BidsStatistic
 ```
 
 #### Bid Status Codelist

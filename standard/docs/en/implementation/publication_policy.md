@@ -8,10 +8,10 @@ Publication policy pages should include information about:
 
 * Who is responsible for providing this data - including appropriate contact details and locations of where to offer feedback.
 * How the data is generated, and how often - for example, a brief summary describing the systems the data is generated from, how often the source data is updated, and any processes that operate between the source data and the published open contracting data and documents.
-* Any exclusions from the data - such as information which is not disclosed for reasons of privacy and security. This may describe the fields which are excluded for a selection of records, and/or the policy applied to decide if any information should be withheld from a public OCDS release. 
-* Any custom codelists used - or custom codes added to existing codelists. 
+* Any exclusions from the data - such as information which is not disclosed for reasons of privacy and security. This may describe the fields which are excluded for a selection of records, and/or the policy applied to decide if any information should be withheld from a public OCDS release.
+* Any custom codelists used - or custom codes added to existing codelists.
 * Future development plans - brief notes on the future plans of the publisher to improve their data.
 
 Publishers may also wish to apply for, and include the results of, an [Open Data Certificate](https://certificates.theodi.org/), on their publication policy pages.
 
-A link to the publication policy can be embedded within the data package. 
+A link to the publication policy can be embedded within the data package.
