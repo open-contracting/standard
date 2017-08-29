@@ -45,8 +45,14 @@ for extension in extension_json['extensions']:
             heading = '\n'.join(lines[:header_rows])
             body = '\n'.join(lines[header_rows:])
             if extension['slug'] != 'bids':
-                # This is speical cased to match how the files were previously
+                # This is special cased to match how the files were previously
                 # Ideally we should decide to do or not do this for all files.
                 body = body.replace('\n##', '\n###')
+            if extension['slug'] == 'process_title':
+                # This is special cased to fix this heading for the 1.1.1 release
+                # It is also fixed on master:
+                # https://github.com/open-contracting/ocds_process_title_extension/commit/1e56501b265d5a9c2b97e1ca93bce28a8e95825a
+                # , so shouldn't be needed for future releases.
+                heading = heading.replace('##', '#')
             text = heading + metadata.format(extension['url'], github_repo_url, github_repo_url) + body
             readme.write(text)
