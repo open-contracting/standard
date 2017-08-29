@@ -2,11 +2,11 @@
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_location_extension/v1.1/extension.json"],
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_location_extension/v1.1.1/extension.json"],
     "releases":[]
 }
 ```
@@ -31,11 +31,7 @@ This extension introduces two properties at the ```items``` level to describe lo
 
 ### Gazetteer Codelist
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: codelists_translated/locationGazeteers.csv
-```
+See locationGazeteers.csv
 
 ### Example
 Below is an example of a geolocated item:
