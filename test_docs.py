@@ -76,6 +76,23 @@ def test_search(browser, server, lang, regex):
     assert re.search(regex, browser.find_element_by_tag_name('body').text)
 
 
+@pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
+def test_community_extensions(browser, server, lang):
+    browser.get('{}{}/extensions'.format(server, lang))
+    community_extensions = browser.find_element_by_id('community-extensions').find_element_by_tag_name('table')
+    # Currently community extensions aren't translated
+    link = community_extensions.find_element_by_link_text('Budget breakdown')
+    assert (link.get_attribute('href') ==
+            'https://github.com/open-contracting/ocds_budget_breakdown_extension/blob/master/README.md')
+    cells = link.find_elements_by_xpath('../../td')
+    assert cells[2].text == 'For providing a detailed budget breakdown.'
+    assert cells[3].text == 'ppp, 1.1'
+
+    assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
+    cells[0].click()
+    assert 'ocds_budget_breakdown_extension' in browser.find_element_by_id('using-extensions').text
+
+
 def test_language_switcher(browser, server):
     if 'localhost' in server:
         pytest.skip()
