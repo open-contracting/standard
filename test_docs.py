@@ -93,6 +93,22 @@ def test_community_extensions(browser, server, lang):
     assert 'ocds_budget_breakdown_extension' in browser.find_element_by_id('using-extensions').text
 
 
+@pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
+def test_examples(browser, server, lang):
+    browser.get('{}{}/getting_started/releases_and_records'.format(server, lang))
+    examples = browser.find_element_by_id('examples')
+    select = Select(examples.find_element_by_tag_name('select'))
+
+    assert 'ocds-213czf-000-00001-01-planning' in examples.text
+
+    select.select_by_visible_text('tender')
+    assert 'ocds-213czf-000-00001-02-tender' in examples.text
+    assert 'ocds-213czf-000-00001-01-planning' not in examples.text
+
+    # test collapse expand
+    # xs = examples.find_element_by_link_text('⊖')
+
+
 def test_language_switcher(browser, server):
     if 'localhost' in server:
         pytest.skip()
