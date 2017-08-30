@@ -3,11 +3,11 @@ Enquiries
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_enquiry_extension/v1.1/extension.json"],
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_enquiry_extension/v1.1.1/extension.json"],
     "releases":[]
 }
 ```
@@ -68,9 +68,10 @@ This approach will enable third-party applications to watch for releases that pr
 
 We recommend that publishers provide question answers as plain text, or with minimal HTML markup (paragraphs and line-breaks), and that consuming applications parse text appropriately to format it for readability (e.g. replace line-breaks with paragraph breaks in HTML).
 
-### Schema reference
+### Reference
 
 ```eval_rst
 .. extensiontable::
    :extension: enquiries
+   :exclude_definitions: Tender
 ```
