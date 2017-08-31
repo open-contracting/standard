@@ -3,18 +3,18 @@ Bid statistics and details
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_bid_extension/v1.1/extension.json"],
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_bid_extension/v1.1.1/extension.json"],
     "releases":[]
 }
 ```
 
 This extension is maintained at [https://github.com/open-contracting/ocds_bid_extension](https://github.com/open-contracting/ocds_bid_extension)
 
-## Documentation 
+## Documentation
 
 Information on bids submitted as part of a contracting process is important for many forms of analysis, including:
 
@@ -49,9 +49,9 @@ This is an **open** codelist. Publishers can add their own codes to this list. W
 For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets. 
 
 ```eval_rst
-.. csv-table::
+.. csv-table-no-translate::
    :header-rows: 1
-   :file: codelists/bidStatistics.csv
+   :file: codelists_translated/bidStatistics.csv
 ```
 
 ### Bid details
@@ -67,7 +67,11 @@ The ```bids/details``` array is used to provide one or more ```Bid``` objects, e
 #### Bid Status Codelist
 
 ```eval_rst
-.. csv-table::
+.. csv-table-no-translate::
    :header-rows: 1
-   :file: codelists/bidStatus.csv
+   :file: codelists_translated/bidStatus.csv
 ```
+
+### Example
+
+ToDo

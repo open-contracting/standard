@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-31 12:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
@@ -193,8 +193,8 @@ msgstr ""
 " de párrafo en HTML)."
 
 #: ../../standard/docs/en/extensions/enquiries.md:0
-msgid "Schema reference"
-msgstr "Referencia de esquema"
+msgid "Reference"
+msgstr "Referencia"
 
 #: ../../standard/Extension enquiries:1
 msgid "Field"
@@ -212,19 +212,11 @@ msgstr "Descripción"
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../standard/Extension enquiries:1
-msgid "Tender"
-msgstr "LIcitación"
-
-#: ../../standard/Extension enquiries:1
-msgid "Questions sent to the procuring entity, and the answers given"
-msgstr "Preguntas enviadas a la entidad contratante y las respuestas dadas"
-
 #: ../../standard/Extension enquiries:1 ../../standard/Extension enquiries:1
 #: ../../standard/Extension enquiries:1 ../../standard/Extension enquiries:1
 #: ../../standard/Extension enquiries:1 ../../standard/Extension enquiries:1
 #: ../../standard/Extension enquiries:1 ../../standard/Extension enquiries:1
-#: ../../standard/Extension enquiries:1
+#: ../../standard/Extension enquiries:1 ../../standard/Extension enquiries:1
 msgid "Enquiry"
 msgstr "Consulta"
 
@@ -241,13 +233,18 @@ msgid ""
 "The identifier and name of the party asking this question. Questioners may "
 "be listed in the parties array with a role of 'enquirer'. Procurement "
 "policies vary on whether or not the identity of those asking questions "
-"should be disclosed, or at which stage this information may be disclosed."
+"should be disclosed, or at which stage this information may be disclosed. "
+"When the identity of the questioner cannot be disclosed leave the author "
+"section blank. Display systems should interpret this as an anonymous "
+"question."
 msgstr ""
 "El identificador y el nombre de la parte involucrada que hace esta pregunta."
-" Los solicitantes pueden ser listados en la matriz de las partes con un rol "
-"de \"enquirer\". Las políticas de adquisición varían en cuanto a si la "
+" Los solicitantes pueden mostrarse en la lista de las partes con un rol de "
+"\"enquirer\". Las políticas de adquisición varían en cuanto a si la "
 "identidad de los que hacen preguntas debe ser divulgada, o en qué etapa se "
-"puede divulgar esta información."
+"puede divulgar esta información. Cuando no se pueda identificar al "
+"solicitante de la información, deje la sección de autor en blanco. Los "
+"sistemas deberían de interpretar esta como una pregunta anónima."
 
 #: ../../standard/Extension enquiries:1
 msgid "The subject line of the question."
@@ -280,3 +277,13 @@ msgid ""
 msgstr ""
 "Cuando se usan lotes, si esta pregunta se refiere a un lote específico, este"
 " campo contiene el identificador de lote."
+
+#: ../../standard/Extension enquiries:1
+msgid ""
+"If this question and answer forms part of a discussion thread (e.g. the "
+"question is a follow up to a previous answer) an optional thread identifier "
+"can be used to associate together multiple enquiries."
+msgstr ""
+"Si esta pregunta y respuesta forma parte de un hilo de discusión (por "
+"ejemplo, la pregunta es un seguimiento a una respuesta anterior), se puede "
+"usar un identificador de hilo opcional para asociar varias consultas."

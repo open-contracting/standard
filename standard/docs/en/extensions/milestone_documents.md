@@ -1,12 +1,13 @@
-# Milestone Documents
+Milestone Documents
+===================
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_milestone_documents_extension/v1.1/extension.json"],
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_milestone_documents_extension/v1.1.1/extension.json"],
     "releases":[]
 }
 ```

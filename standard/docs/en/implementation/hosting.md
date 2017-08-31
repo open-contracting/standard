@@ -33,8 +33,8 @@ When the suggested limits require publication of multiple files, publishers shou
 
 For releases, publishers may choose to:
 
-1. Segment by **releaseDate - **placing all the releases from a given day, month or year in the same file;
-1. Segment by **contracting process identifier **- placing all the releases related to a given set of contract process identifiers together in the same data package;
+1. Segment by **releaseDate** - placing all the releases from a given day, month or year in the same file;
+1. Segment by **contracting process identifier** - placing all the releases related to a given set of contract process identifiers together in the same data package;
 
 For records, publishers should segment either based on the first **releaseDate** associated with a contracting process, or by **contracting process identifier.**
 

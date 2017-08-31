@@ -5,8 +5,8 @@ codelist CSV files.
 Usage:
 
     cd standard
-    python schema/utils/translate_codelists.py schema CODELIST_LANG=<language>
-    python schema/utils/translate_codelists.py docs/en/extensions CODELIST_LANG=<language>
+    python schema/utils/translate_codelists.py schema <language>
+    python schema/utils/translate_codelists.py docs/en/extensions <language>
 
 `path` is the path to the codelist CSV files.
 
@@ -21,7 +21,9 @@ import os
 from os.path import join
 
 
-language = os.environ.get("CODELIST_LANG")
+language = os.environ.get('CODELIST_LANG')
+if not language:
+    language = sys.argv[2]
 fallback = False
 if language == 'en':
     fallback = True

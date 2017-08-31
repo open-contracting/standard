@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-29 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>, 2017\n"
+"Last-Translator: Colin Maudry <colin@maudry.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +32,7 @@ msgid ""
 "release or record package."
 msgstr ""
 "Pour utiliser cette extension, ajouter son URL dans la liste ```extension```"
-" de votre package d'instance ou d'archive. "
+" de votre paquet d'instance ou d'archive. "
 
 #: ../../standard/docs/en/extensions/lots.md:15
 msgid ""
@@ -54,7 +54,7 @@ msgid ""
 "awarded, separately, this is modelled using the **lots extension**."
 msgstr ""
 "Lorsqu'une offre unique est décomposée en parties pouvant être proposées et "
-"attribuées séparément, elle est modélisée à l'aide de l'extension **lots**."
+"attribuées séparément, elle est modélisée à l'aide de **l'extension lots**."
 
 #: ../../standard/docs/en/extensions/lots.md:21
 msgid ""
@@ -65,10 +65,10 @@ msgid ""
 "```relatedLot``` for each item, and an array of ```relatedLots``` for "
 "documents, milestones and awards."
 msgstr ""
-"L'extension sur les lots maintient la structure globale d'une publication "
+"L'extension sur les lots préserve la structure globale d'une publication "
 "OCDS, avec des éléments, des documents et des étapes imbriquées "
 "immédiatement dans les éléments ```tender```, ```award``` and ```contract```"
-"  mais il introduit une liste de lots dans la section ```tender``` et la "
+"  mais elle ajoute une liste de lots dans la section ```tender``` et la "
 "possibilité de renvoyer vers un ```relatedLot``` spécifique pour chaque "
 "élément et une liste ```relatedLots``` pour les documents, les étapes et les"
 " attributions."
@@ -79,9 +79,9 @@ msgid ""
 "conditions around the award of lots to be expressed, such as the maximum "
 "value of a group of lots."
 msgstr ""
-"Les sections ```lotDetails``` et ```lotGroups```  permettent d'expliquer des"
-" conditions plus complexes autour de l'attribution des lots, telle que la "
-"valeur maximale d'un groupe de lots."
+"Les sections ```lotDetails``` et ```lotGroups``` (optionnelles)  permettent "
+"d'expliquer des conditions plus complexes autour de l'attribution des lots, "
+"telle que la valeur maximale d'un groupe de lots."
 
 #: ../../standard/docs/en/extensions/lots.md:25
 msgid ""
@@ -92,46 +92,49 @@ msgid ""
 "the information to users, or to analyze contracting lot by lot."
 msgstr ""
 "Cela signifie que les systèmes qui ne sont pas adaptés aux lots peuvent "
-"encore comprendre la valeur globale de la passation de marché, les "
-"événements clés et les relations entre acheteurs et fournisseurs. Dans le "
-"même temps, les systèmes adaptés aux lots peuvent utiliser les informations "
-"référencées afin de présenter une vue centrée sur l'information aux "
+"comprendre la valeur globale de la passation de marché, les événements clés "
+"et les relations entre acheteurs et fournisseurs malgré l'extension. Dans le"
+" même temps, les systèmes adaptés aux lots peuvent utiliser les informations"
+" référencées afin de présenter une navigation centrée sur les lots aux "
 "utilisateurs ou d'analyser le marché lot par lot."
 
 #: ../../standard/docs/en/extensions/lots.md:0
 msgid "Related Lot"
-msgstr "Lot relié"
+msgstr "Lot lié"
 
 #: ../../standard/docs/en/extensions/lots.md:29
 msgid "The ```relatedLot``` (singular) property is available for:"
-msgstr "La propriété singulière ```relatedLot``` est disponible pour :"
+msgstr ""
+"La propriété  ```relatedLot``` (au singulier) est disponible pour chaque "
+"membre de la liste :"
 
 #: ../../standard/docs/en/extensions/lots.md:31
 msgid "items"
-msgstr "Elements"
+msgstr "`items` (biens et services)"
 
 #: ../../standard/docs/en/extensions/lots.md:33
 msgid "An array of ```relatedLots``` (plural) can be provided for each of:"
 msgstr ""
-"Une liste de  ```relatedLots``` (pluriel) peut être fournie pour chaque :"
+"Une liste de  ```relatedLots``` (pluriel) peut être fournie pour chaque "
+"membre des listes :"
 
 #: ../../standard/docs/en/extensions/lots.md:35
 msgid "documents"
-msgstr "Documents"
+msgstr "`documents` (documents)"
 
 #: ../../standard/docs/en/extensions/lots.md:36
 msgid "milestones"
-msgstr "Étapes"
+msgstr "`milestones` (étapes)"
 
 #: ../../standard/docs/en/extensions/lots.md:37
 msgid "awards"
-msgstr "Attributions"
+msgstr "`awards` (attributions)"
 
 #: ../../standard/docs/en/extensions/lots.md:39
 msgid ""
 "When lots are used, **all** items should have a ```relatedLot``` property."
 msgstr ""
-"Quand les lots sont utilisés, **tous** les éléments devraient avoir une "
+"Quand les lots sont utilisés, **tous** les `items` doivent avoir une "
 "propriété ```relatedLot```."
 
 #: ../../standard/docs/en/extensions/lots.md:41
@@ -140,9 +143,9 @@ msgid ""
 "Those without this property should be interpreted as applicable to the "
 "tender as a whole."
 msgstr ""
-"Les documents et les étapes peuvent éventuellement avoir une propriété "
-"```relatedLots````. Ceux sans cette propriété devraient être interprétés "
-"comme applicables à l'offre dans son ensemble."
+"Les `documents` et les `milestones` peuvent éventuellement avoir une "
+"propriété ```relatedLots````. Ceux sans cette propriété devraient être "
+"interprétés comme applicables à l'offre dans son ensemble."
 
 #: ../../standard/docs/en/extensions/lots.md:43
 msgid ""
@@ -150,10 +153,10 @@ msgid ""
 "publishers may choose to also reference all the lots an award relates to at "
 "the award level using ```relatedLots```"
 msgstr ""
-"Les éléments d'une attribution doivent chacun avoir une propriété "
-"```relatedLot```, mais les producteurs de données peuvent choisir de faire "
-"référence à tous les lots auxquels une attribution se rapporte au niveau de "
-"l'attribution à l'aide de ```relatedLots```"
+"Les `items` d'une d'une attribution (`award`) doivent chacun avoir une "
+"propriété ```relatedLot```, mais les producteurs de données peuvent choisir "
+"de faire référence à tous les lots auxquels une attribution se rapporte au "
+"niveau du composant `award` et à l'aide de ```relatedLots```"
 
 #: ../../standard/docs/en/extensions/lots.md:45
 msgid ""
@@ -202,166 +205,5 @@ msgstr ""
 "trois lots."
 
 #: ../../standard/docs/en/extensions/lots.md:0
-msgid "Schema reference"
-msgstr "Documentation du schéma"
-
-#: ../../standard/Extension lots:1
-msgid "Field"
-msgstr "Champ"
-
-#: ../../standard/Extension lots:1
-msgid "Definition"
-msgstr "Définition"
-
-#: ../../standard/Extension lots:1
-msgid "Description"
-msgstr "Description"
-
-#: ../../standard/Extension lots:1
-msgid "Type"
-msgstr "Type"
-
-#: ../../standard/Extension lots:1 ../../standard/Extension lots:1
-msgid "Tender"
-msgstr "Appel d'offre"
-
-#: ../../standard/Extension lots:1
-msgid ""
-"A tender process may be divided into lots, where bidders can bid on one or "
-"more lots. Details of each lot can be provided here. Items, documents and "
-"other features can then reference the lot they are related to using "
-"relatedLot. Where no relatedLots identifier is given, the values should be "
-"interpreted as applicable to the whole tender. Properties of tender can be "
-"overridden for a given Lot through their inclusion in the Lot object."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid ""
-"Where the buyer reserves the right to combine lots, or wishes to specify the"
-" total value for a group of lots, a lot group is used to capture this "
-"information."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "Document"
-msgstr "Document"
-
-#: ../../standard/Extension lots:1
-msgid ""
-"If this document relates to a particular lot, provide the identifier(s) of "
-"the related lot(s) here."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "Item"
-msgstr "Biens et services"
-
-#: ../../standard/Extension lots:1
-msgid ""
-"If this item belongs to a lot, provide the identifier of the related lot "
-"here. Each item may only belong to a single lot."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "Milestone"
-msgstr "Étape"
-
-#: ../../standard/Extension lots:1
-msgid ""
-"If this milestone relates to a particular lot, provide the identifier(s) of "
-"the related lot(s) here."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "Award"
-msgstr "Attribution"
-
-#: ../../standard/Extension lots:1
-msgid ""
-"If this award relates to one or more specific lots, provide the "
-"identifier(s) of the related lot(s) here."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "Bid"
-msgstr "Offre"
-
-#: ../../standard/Extension lots:1
-msgid ""
-"If this bid relates to one or more specific lots, provide the identifier(s) "
-"of the related lot(s) here."
-msgstr ""
-
-#: ../../standard/Extension lots:1 ../../standard/Extension lots:1
-#: ../../standard/Extension lots:1 ../../standard/Extension lots:1
-#: ../../standard/Extension lots:1
-msgid "Lot"
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid ""
-"A local identifier for this lot, such as a lot number. This is used in "
-"relatedLots references at the item, document and award level."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "A title for this lot."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "A description of this lot."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid ""
-"The current status of the process related to this lot based on the "
-"`tenderStatus codelist <http://ocds.open-"
-"contracting.org/standard/r/1__0__0/en/schema/codelists#tender-status>`__"
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "The maximum estimated value of this lot."
-msgstr ""
-
-#: ../../standard/Extension lots:1 ../../standard/Extension lots:1
-msgid "LotDetails"
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid ""
-"The maximum number of lots that one supplier may bid for as part of this "
-"contracting process."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid ""
-"The maximum number of lots that may be awarded to one supplier as part of "
-"this contracting process."
-msgstr ""
-
-#: ../../standard/Extension lots:1 ../../standard/Extension lots:1
-#: ../../standard/Extension lots:1 ../../standard/Extension lots:1
-msgid "LotGroup"
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid "A local identifier for this group of lots."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid ""
-"A list of the identifiers of the lots that form this group. Lots may appear "
-"in more than one group."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid ""
-"The buyer reserves the right to combine the lots in this group when awarding"
-" a contract."
-msgstr ""
-
-#: ../../standard/Extension lots:1
-msgid ""
-"The maximum estimated value of the lots in this group. This may be lower "
-"than the sum total of lot values"
-msgstr ""
+msgid "Schema"
+msgstr "Schéma"

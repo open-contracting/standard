@@ -124,7 +124,7 @@ A reference implementation of the merge routine in python [is available on GitHu
 
 There are some situations in which it is important to be able to see how data about a contracting process has changed over time. For example, to identify how contract values have altered, or milestones moved through stages of implementation. 
 
-The [versioned release validation schema](../../versioned-release-validation-schema.json) provides a model for representing this data.
+The [versioned release validation schema](../../../../versioned-release-validation-schema.json) provides a model for representing this data.
 
 In a versioned release, instead of over-writing past values when combining multiple releases, each field (with the exception of the ```id``` property of objects within an array) becomes an array of objects, indicating the:
 

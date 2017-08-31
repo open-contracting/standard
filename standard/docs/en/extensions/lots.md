@@ -1,13 +1,13 @@
-Lots 
+Lots
 ====
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_lots_extension/v1.1/extension.json"],
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_lots_extension/v1.1.1/extension.json"],
     "releases":[]
 }
 ```
@@ -18,31 +18,31 @@ This extension is maintained at [https://github.com/open-contracting/ocds_lots_e
 
 When a single tender is broken down into parts that can be bid upon, and awarded, separately, this is modelled using the **lots extension**.
 
-The lots extension maintains the overall structure of an OCDS release, with items, documents and milestones nested immediately within ```tender```, ```award``` and ```contract``` items, but it introduces an array of Lots in the ```tender``` section, and the ability to cross-reference a specific ```relatedLot``` for each item, and an array of ```relatedLots``` for documents, milestones and awards. 
+The lots extension maintains the overall structure of an OCDS release, with items, documents and milestones nested immediately within ```tender```, ```award``` and ```contract``` items, but it introduces an array of Lots in the ```tender``` section, and the ability to cross-reference a specific ```relatedLot``` for each item, and an array of ```relatedLots``` for documents, milestones and awards.
 
-Optional ```lotDetails``` and ```lotGroups``` section allow more complex conditions around the award of lots to be expressed, such as the maximum value of a group of lots. 
+Optional ```lotDetails``` and ```lotGroups``` section allow more complex conditions around the award of lots to be expressed, such as the maximum value of a group of lots.
 
-This means that systems which are not 'lot aware' can still understand the overall value of contracting taking place, key events, and relationships between buyers and suppliers. At the same time, 'lot aware' systems can make use of the cross-referenced information to present a lot-centric view on the information to users, or to analyze contracting lot by lot. 
+This means that systems which are not 'lot aware' can still understand the overall value of contracting taking place, key events, and relationships between buyers and suppliers. At the same time, 'lot aware' systems can make use of the cross-referenced information to present a lot-centric view on the information to users, or to analyze contracting lot by lot.
 
 ### Related Lot
 
 The ```relatedLot``` (singular) property is available for:
 
-* items 
+* items
 
 An array of ```relatedLots``` (plural) can be provided for each of:
 
 * documents
 * milestones
-* awards 
+* awards
 
 When lots are used, **all** items should have a ```relatedLot``` property.
 
-Documents and milestones can optionally have a ```relatedLots``` property. Those without this property should be interpreted as applicable to the tender as a whole. 
+Documents and milestones can optionally have a ```relatedLots``` property. Those without this property should be interpreted as applicable to the tender as a whole.
 
 The items within an award should each have a ```relatedLot``` property, but publishers may choose to also reference all the lots an award relates to at the award level using ```relatedLots```
 
-Where the bid extension is also in use, each bid can also declare its related lots. 
+Where the bid extension is also in use, each bid can also declare its related lots.
 
 ### Worked example
 
@@ -53,7 +53,7 @@ A tender is issued for consultancy in the development of a new public building. 
 * Civil engineering consultancy
 * Structural engineering consultancy
 
-Although part of the same tender, the buyer is willing to award these different items to different firms, and so divides the tender into three lots. 
+Although part of the same tender, the buyer is willing to award these different items to different firms, and so divides the tender into three lots.
 
 ```json
 {
@@ -66,6 +66,9 @@ Although part of the same tender, the buyer is willing to award these different 
   },
   "license": "http://opendatacommons.org/licenses/pddl/1.0/",
   "publicationPolicy": "https://github.com/open-contracting/sample-data/",
+  "uri": "https://github.com/open-contracting/ocds_lots_extension/blob/master/examples/lots.json",
+  "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_lots_extension/v1.1/extension.json"],
+  "version": "1.1",
   "releases": [
     {
       "language": "en",
@@ -168,7 +171,10 @@ Although part of the same tender, the buyer is willing to award these different 
             "id":"lot-group-1",
             "relatedLots":["lot-2","lot-3"],
             "optionToCombine":true,
-            "maximumValue":1000000
+            "maximumValue":{
+              "currency":"GBP",
+              "amount":1000000
+            }
         }],
         "lotDetails":{
             "maximumLotsBidPerSupplier":4,
@@ -180,9 +186,10 @@ Although part of the same tender, the buyer is willing to award these different 
 }
 ```
 
-### Schema reference
+### Schema
 
 ```eval_rst
 .. extensiontable::
     :extension: lots
+    :definitions: Lots
 ```

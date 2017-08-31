@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-31 12:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ben Webb <ben.webb@opendataservices.coop>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
@@ -143,10 +143,7 @@ msgstr "Campo"
 msgid "Definition"
 msgstr "Definición"
 
-#: ../../standard/Extension bids:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/Extension bids:1
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
+#: ../../standard/Extension bids:1 ../../standard/Extension bids:1
 msgid "Description"
 msgstr "Descripción"
 
@@ -163,6 +160,19 @@ msgstr ""
 "aplica, información de ofertas individuales."
 
 #: ../../standard/Extension bids:1 ../../standard/Extension bids:1
+msgid "Award"
+msgstr "Adjudicación"
+
+#: ../../standard/Extension bids:1 ../../standard/Extension bids:1
+msgid ""
+"Where bid details are used, a cross reference to the entry in the bids array"
+" to which this award relates. Provide the bid identifier here."
+msgstr ""
+"Cuando se usan los detalles de la oferta, una referencia cruzada a la "
+"entrada en la lista de ofertas a la que se refiere esta adjudicación. "
+"Proporcione el identificador de oferta aquí."
+
+#: ../../standard/Extension bids:1 ../../standard/Extension bids:1
 #: ../../standard/Extension bids:1 ../../standard/Extension bids:1
 #: ../../standard/Extension bids:1 ../../standard/Extension bids:1
 msgid "BidsStatistic"
@@ -174,8 +184,8 @@ msgstr "Un identificador interno para este elemento estadístico."
 
 #: ../../standard/Extension bids:1
 msgid ""
-"An item from the bidStatistics codelist for the statisic reported in value. "
-"This is an open codelist, and other statistics may also be included."
+"An item from the bidStatistics codelist for the statistic reported in value."
+" This is an open codelist, and other statistics may also be included."
 msgstr ""
 "Un elemento de la lista de códigos bidStatistics para la estadística "
 "informada en valor. Esta es una lista de códigos abierta, y también se "
@@ -186,7 +196,7 @@ msgid ""
 "The date when this statistic was last updated. This is often the closing "
 "date of the tender process. This field can be left blank unless either (a) "
 "the same statistic is provided from multiple points in time, or (b) there is"
-" a specific local requirement for the data when statistics were calculated "
+" a specific local requirement for the date when statistics were calculated "
 "to be provided."
 msgstr ""
 "La fecha en que se actualizó por última vez esta estadística. Esta es a "
@@ -244,229 +254,6 @@ msgstr ""
 "negocios pertenecientes a minorías o mujeres, u ofertas que cumplan ciertos "
 "estándares y metas ambientales."
 
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "Category"
-msgstr "Categoría"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "Code"
-msgstr "Código"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "Title"
-msgstr "Título"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Min"
-msgstr "Min"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Max"
-msgstr "Max"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Required by"
-msgstr "Requerido por"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "bids"
-msgstr "bids"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "requests"
-msgstr "requests"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Requests to Participate"
-msgstr "Solicitudes de participación"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "The total number of unique requests to participate received"
-msgstr "El número total de solicitudes únicas de participación recibidas"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "EU"
-msgstr "UE"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/Extension bids:1 ../../standard/Extension bids:1
-msgid "Bids"
-msgstr "Ofertas"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid ""
-"The total number of unique bids received (prior to any being discounted for "
-"not meeting essential criteria)."
-msgstr ""
-"El número total de ofertas únicas recibidas (antes de que se descarten por "
-"no cumplir los criterios esenciales)."
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "validBids"
-msgstr "validBids"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Valid Bids"
-msgstr "Ofertas Válidas"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid ""
-"The total number of unique bids received that were considered valid against "
-"relevant criteria (either of the bidder, or the bid submission itself). All "
-"valid bids should be considered during the tender evaluation stage."
-msgstr ""
-"El número total de ofertas únicas recibidas que se consideraron válidas en "
-"función de los criterios pertinentes (del licitante o de la solicitud de "
-"oferta misma). Todas las ofertas válidas deben ser consideradas durante la "
-"etapa de evaluación de la oferta."
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "bidders"
-msgstr "bidders"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Bidders"
-msgstr "Licitantes"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid ""
-"The total number of unique organizations or consortia submitting bids  "
-"(prior to any being discounted for not meeting essential criteria)."
-msgstr ""
-"El número total de organizaciones únicas o consorcios que presentan ofertas "
-"(antes de que se descarten por no cumplir los criterios esenciales)."
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "qualifiedBidders"
-msgstr "qualifiedBidders"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Qualified Bidders"
-msgstr "Licitantes Calificados"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid ""
-"The total number of unique organizations or consortia passing the "
-"qualification stage of the evaluation process."
-msgstr ""
-"El número total de organizaciones únicas o consorcios que pasan la fase de "
-"calificación del proceso de evaluación."
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "disqualifiedBidders"
-msgstr "disqualifiedBidders"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Disqualified Bidders"
-msgstr "Licitantes Descalificados"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid ""
-"The total number of unique organizations or consortia that did not pass the "
-"qualification stage of the evaluation process."
-msgstr ""
-"El número total de organizaciones únicas o consorcios que no pasaron la "
-"etapa de calificación del proceso de evaluación."
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "electronicBids"
-msgstr "electronicBids"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Electronic Bids"
-msgstr "Ofertas Electrónicas"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "The number of bids received by electronic means."
-msgstr "El número de ofertas recibidas por medios electrónicos."
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "smeBids"
-msgstr "smeBids"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Bids from SMEs"
-msgstr "Ofertas de PYMES"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "The number of bids received from Small and Medium Sized Enterprises"
-msgstr "El número de ofertas recibidas de pequeñas y medianas empresas"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "foreignBids"
-msgstr "foreignBids"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Bids from Foreign Firms"
-msgstr "Ofertas de Empresas Extranjeras"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid ""
-"The number of bids received from bidders from outside the country where the "
-"tender is issued."
-msgstr ""
-"El número de ofertas recibidas de licitantes de fuera del país donde se "
-"emite la oferta."
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "foreignBidsFromEU"
-msgstr "foreignBidsFromEU"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Bids from firms in other EU single market countries"
-msgstr "Ofertas de empresas de otros países miembros de la UE"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid ""
-"The number of bids received from bidders from outside the country where the "
-"tender is issued, but based within another EU country, Iceland, Norway,or "
-"Liechtenstein."
-msgstr ""
-"El número de ofertas recibidas de licitantes procedentes del exterior del "
-"país en el que se emite la oferta, pero con sede en otro país de la UE, "
-"Islandia, Noruega o Liechtenstein."
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "tendersAbnormallyLow"
-msgstr "tendersAbnormallyLow"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Tenders excluded because they were abnormally low"
-msgstr "Se excluyeron las ofertas porque eran anormalmente bajas"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatistics.csv:1
-msgid ""
-"The number of tenders excluded because they were abnormally low. Note that "
-"in some EU datasets this may have been converted from a boolean, such that a"
-" value of 1 would indicate '1 or more' tenders were excluded. Users should "
-"evaluate and interpret data accordingly."
-msgstr ""
-"El número de ofertas excluidas porque eran anormalmente bajas. Tenga en "
-"cuenta que en algunos conjuntos de datos de la UE esto pudo haber sido "
-"convertido de un booleano, de modo que un valor 1 indicaría \"1 o más\" "
-"ofertas fueron excluidas. Los usuarios deben evaluar e interpretar los datos"
-" según corresponda."
-
 #: ../../standard/docs/en/extensions/bids.md:0
 msgid "Bid details"
 msgstr "Detalles de la oferta"
@@ -478,6 +265,10 @@ msgid ""
 msgstr ""
 "La matriz ```bids/details``` se utiliza para proporcionar uno o más objetos "
 "``` Bid```, cada uno de los cuales representa una única oferta recibida."
+
+#: ../../standard/Extension bids:1 ../../standard/Extension bids:1
+msgid "Bids"
+msgstr "Ofertas"
 
 #: ../../standard/Extension bids:1
 msgid ""
@@ -552,42 +343,10 @@ msgstr ""
 msgid "Bid Status Codelist"
 msgstr "Listas de Códigos de Estado de Ofertas"
 
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "invited"
-msgstr "invitado"
+#: ../../standard/docs/en/extensions/bids.md:0
+msgid "Example"
+msgstr "Ejemplo"
 
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "Invited"
-msgstr "Invitado"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "pending"
-msgstr "pendiente"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "Pending"
-msgstr "Pendiente"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "valid"
-msgstr "válido"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "Valid"
-msgstr "Válido"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "disqualified"
-msgstr "descalificado"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "Disqualified"
-msgstr "Descalificado"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "withdrawn"
-msgstr "retirado"
-
-#: ../../standard/docs/en/extensions/codelists/bidStatus.csv:1
-msgid "Withdrawn"
-msgstr "Retirado"
+#: ../../standard/docs/en/extensions/bids.md:77
+msgid "ToDo"
+msgstr "ToDo"

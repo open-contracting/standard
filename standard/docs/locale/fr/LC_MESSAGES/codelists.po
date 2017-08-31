@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-29 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: samgoeta <samgoeta@gmail.com>, 2017\n"
+"Last-Translator: Joel Gombin <joel.gombin@gmail.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -52,7 +52,8 @@ msgstr "Code"
 #: docs/en/extensions/codelists/bidStatus.csv
 #: docs/en/extensions/codelists/locationGazeteers.csv
 #: schema/codelists/awardCriteria.csv schema/codelists/awardStatus.csv
-#: schema/codelists/contractStatus.csv schema/codelists/documentType.csv
+#: schema/codelists/contractStatus.csv schema/codelists/currency.csv
+#: schema/codelists/documentType.csv
 #: schema/codelists/extendedProcurementCategory.csv
 #: schema/codelists/initiationType.csv
 #: schema/codelists/itemClassificationScheme.csv
@@ -97,15 +98,20 @@ msgstr "Maximum"
 msgid "Required by"
 msgstr "Requis par"
 
+#. Title
+#: docs/en/extensions/codelists/bidStatistics.csv:1
+msgid "Requests to Participate"
+msgstr "Demandes de participation"
+
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:1
 msgid "The total number of unique requests to participate received"
 msgstr "Le nombre total de demandes uniques de participation reçues"
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:1
-msgid "Requests to Participate"
-msgstr "Demandes de participation"
+#: docs/en/extensions/codelists/bidStatistics.csv:2
+msgid "Bids"
+msgstr "Offres"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:2
@@ -118,9 +124,9 @@ msgstr ""
 "essentiel. "
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:2
-msgid "Bids"
-msgstr "Offres"
+#: docs/en/extensions/codelists/bidStatistics.csv:3
+msgid "Valid Bids"
+msgstr "Offres valides"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:3
@@ -135,9 +141,9 @@ msgstr ""
 "période d'évaluation."
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:3
-msgid "Valid Bids"
-msgstr "Offres valides"
+#: docs/en/extensions/codelists/bidStatistics.csv:4
+msgid "Bidders"
+msgstr "Candidats"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:4
@@ -150,9 +156,9 @@ msgstr ""
 "satisfaction d'un critère essentiel."
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:4
-msgid "Bidders"
-msgstr "Candidats"
+#: docs/en/extensions/codelists/bidStatistics.csv:5
+msgid "Qualified Bidders"
+msgstr "Candidats qualifiés"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:5
@@ -164,9 +170,9 @@ msgstr ""
 "l'étape de sélection dans le processus d'évaluation."
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:5
-msgid "Qualified Bidders"
-msgstr "Candidats qualifiés"
+#: docs/en/extensions/codelists/bidStatistics.csv:6
+msgid "Disqualified Bidders"
+msgstr "Candidats disqualifiés"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:6
@@ -178,9 +184,9 @@ msgstr ""
 "passé l'étape de sélection dans le processus d'évaluation. "
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:6
-msgid "Disqualified Bidders"
-msgstr "Candidats disqualifiés"
+#: docs/en/extensions/codelists/bidStatistics.csv:7
+msgid "Electronic Bids"
+msgstr "Offres dématérialisées"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:7
@@ -188,9 +194,9 @@ msgid "The number of bids received by electronic means."
 msgstr "Le nombre d'offres reçues par voie électronique. "
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:7
-msgid "Electronic Bids"
-msgstr "Offres dématérialisées"
+#: docs/en/extensions/codelists/bidStatistics.csv:8
+msgid "Bids from SMEs"
+msgstr "Offre de PME"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:8
@@ -199,9 +205,9 @@ msgstr ""
 "Le nombre d'offres reçues de la part de Petites et Moyennes Entreprises"
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:8
-msgid "Bids from SMEs"
-msgstr "Offre de PME"
+#: docs/en/extensions/codelists/bidStatistics.csv:9
+msgid "Bids from Foreign Firms"
+msgstr "Offres d'entreprises étrangères"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:9
@@ -213,9 +219,9 @@ msgstr ""
 "celui dont l'appel d'offres émane."
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:9
-msgid "Bids from Foreign Firms"
-msgstr "Offres d'entreprises étrangères"
+#: docs/en/extensions/codelists/bidStatistics.csv:10
+msgid "Bids from firms in other EU single market countries"
+msgstr "Offres provenant d'autres pays du marché unique de l'UE"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:10
@@ -229,9 +235,9 @@ msgstr ""
 "Européenne, en Islande, en Norvège ou au Liechtenstein. "
 
 #. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:10
-msgid "Bids from firms in other EU single market countries"
-msgstr "Offres provenant d'autres pays du marché unique de l'UE"
+#: docs/en/extensions/codelists/bidStatistics.csv:11
+msgid "Tenders excluded because they were abnormally low"
+msgstr "Offres exclues parce qu'elles étaient anormalement faibles"
 
 #. Description
 #: docs/en/extensions/codelists/bidStatistics.csv:11
@@ -241,21 +247,16 @@ msgid ""
 " value of 1 would indicate '1 or more' tenders were excluded. Users should "
 "evaluate and interpret data accordingly."
 msgstr ""
-"Le nombre d'offres exclues parce qu'elles étaient anormalement faibles. "
-"Notez que dans certains jeux de données de l'UE, cela a pu être converti à "
-"partir d'un booléen, tel qu'une valeur de 1 peut indiquer qu'au moins 1 "
-"offre a été exclue. Les utilisateurs doivent évaluer et interpréter les "
-"données en conséquence.  "
-
-#. Title
-#: docs/en/extensions/codelists/bidStatistics.csv:11
-msgid "Tenders excluded because they were abnormally low"
-msgstr "Offres exclues parce qu'elles étaient anormalement faibles"
+"Le nombre d'offres exclues parce qu'elles étaient anormalement basses. Notez"
+" que dans certains jeux de données de l'UE, cela a pu être converti à partir"
+" d'un booléen, tel qu'une valeur de 1 peut indiquer qu'au moins 1 offre a "
+"été exclue. Les utilisateurs doivent évaluer et interpréter les données en "
+"conséquence.  "
 
 #. Title
 #: docs/en/extensions/codelists/bidStatus.csv:1
 msgid "Invited"
-msgstr ""
+msgstr "Invité"
 
 #. Title
 #. Title_en
@@ -267,12 +268,12 @@ msgstr "En attente"
 #. Title
 #: docs/en/extensions/codelists/bidStatus.csv:3
 msgid "Valid"
-msgstr ""
+msgstr "Valide"
 
 #. Title
 #: docs/en/extensions/codelists/bidStatus.csv:4
 msgid "Disqualified"
-msgstr ""
+msgstr "Disqualifiée"
 
 #. Title
 #: docs/en/extensions/codelists/bidStatus.csv:5
@@ -292,6 +293,13 @@ msgstr "Source"
 msgid "URI_Pattern"
 msgstr "URI_Pattern"
 
+#. Title
+#. Title_en
+#: docs/en/extensions/codelists/locationGazeteers.csv:1
+#: schema/codelists/locationGazeteer.csv:1
+msgid "EU Nomenclature of Territorial Units for Statistics "
+msgstr "Nomenclature des Unités Territoriales Statistiques (NUTS)"
+
 #. Description
 #. Description_en
 #: docs/en/extensions/codelists/locationGazeteers.csv:1
@@ -307,11 +315,9 @@ msgstr ""
 "l'Union européenne."
 
 #. Title
-#. Title_en
-#: docs/en/extensions/codelists/locationGazeteers.csv:1
-#: schema/codelists/locationGazeteer.csv:1
-msgid "EU Nomenclature of Territorial Units for Statistics "
-msgstr "Nomenclature des Unités Territoriales Statistiques (NUTS)"
+#: docs/en/extensions/codelists/locationGazeteers.csv:2
+msgid "ISO Country Codes (3166-1 alpha-2)"
+msgstr "Codes ISO pour les pays (3166-1 alpha-2)"
 
 #. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:2
@@ -319,9 +325,9 @@ msgid "ISO 2-Digit Country Codes"
 msgstr "Codes ISO à deux lettres pour les pays"
 
 #. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:2
-msgid "ISO Country Codes (3166-1 alpha-2)"
-msgstr "Codes ISO pour les pays (3166-1 alpha-2)"
+#: docs/en/extensions/codelists/locationGazeteers.csv:3
+msgid "GeoNames"
+msgstr "GeoNames"
 
 #. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:3
@@ -336,9 +342,9 @@ msgstr ""
 " relations géographiques."
 
 #. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:3
-msgid "GeoNames"
-msgstr "GeoNames"
+#: docs/en/extensions/codelists/locationGazeteers.csv:4
+msgid "OpenStreetMap Node"
+msgstr "Nœud OpenStreetMap"
 
 #. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:4
@@ -347,15 +353,14 @@ msgid ""
 "latitude, longitude and node ID. Nodes may have tags to indicate the "
 "particular geographic feature they represent."
 msgstr ""
-"Les nœuds dans OpenStreetMap sont composés d'un seul point dans l'espace "
-"défini par une latitude, une longitude et un identifiant de nœud. Les nœuds "
-"peuvent avoir des tags qui indiquent l'objet géographique qu'ils "
-"représentent."
+"Les nœuds OpenStreetMap sont composés d'un seul point dans l'espace défini "
+"par une latitude, une longitude et un identifiant de nœud. Les nœuds peuvent"
+" avoir des tags qui indiquent l'objet géographique qu'ils représentent."
 
 #. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:4
-msgid "OpenStreetMap Node"
-msgstr "Nœud dans OpenStreetMap"
+#: docs/en/extensions/codelists/locationGazeteers.csv:5
+msgid "OpenStreetMap Relation"
+msgstr "Relation OpenStreetMap"
 
 #. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:5
@@ -370,9 +375,9 @@ msgstr ""
 "OpenStreetMap. "
 
 #. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:5
-msgid "OpenStreetMap Relation"
-msgstr "Relation dans OpenStreetMap"
+#: docs/en/extensions/codelists/locationGazeteers.csv:6
+msgid "OpenStreetMap Way"
+msgstr "Chemin OpenStreetMap"
 
 #. Description
 #: docs/en/extensions/codelists/locationGazeteers.csv:6
@@ -383,11 +388,6 @@ msgstr ""
 "Un chemin OpenStreetMap est une liste ordonnée de nœuds OpenStreetMap. Peut "
 "être utilisé pour décrire des fragments de routes ou des limites locales et "
 "leurs points de jonction."
-
-#. Title
-#: docs/en/extensions/codelists/locationGazeteers.csv:6
-msgid "OpenStreetMap Way"
-msgstr "Chemin OpenStreetMap"
 
 #: schema/codelists/awardCriteria.csv
 msgid "Deprecated"
@@ -402,13 +402,13 @@ msgstr "Prix seulement"
 #: schema/codelists/awardCriteria.csv:1
 msgid "The award will be made to the qualified bid with the lowest price."
 msgstr ""
-"L'attribution sera faite à l'offre qualifiée au prix le plus faible (moins "
+"L'attribution sera faite à l'offre qualifiée au prix le plus bas (moins "
 "disant)."
 
 #. Title
 #: schema/codelists/awardCriteria.csv:2
 msgid "Cost Only"
-msgstr ""
+msgstr "Coût seulement"
 
 #. Description
 #: schema/codelists/awardCriteria.csv:2
@@ -507,11 +507,6 @@ msgstr ""
 "Cette attribution a été proposée, mais n'est pas encore en vigueur. Cela "
 "peut être dû à un délai de rétractation ou tout autre processus."
 
-#. Description_en
-#: schema/codelists/awardStatus.csv:2
-msgid "This award has been made, and is currently in force."
-msgstr "Cette attribution a été faite et est actuellement en vigueur."
-
 #. Title_en
 #. Title
 #: schema/codelists/awardStatus.csv:2 schema/codelists/contractStatus.csv:2
@@ -520,9 +515,9 @@ msgid "Active"
 msgstr "Active"
 
 #. Description_en
-#: schema/codelists/awardStatus.csv:3
-msgid "This award has been cancelled."
-msgstr "Cette attribution a été annulée. "
+#: schema/codelists/awardStatus.csv:2
+msgid "This award has been made, and is currently in force."
+msgstr "Cette attribution a été faite et est actuellement en vigueur."
 
 #. Title_en
 #. Title
@@ -530,6 +525,17 @@ msgstr "Cette attribution a été annulée. "
 #: schema/codelists/tenderStatus.csv:4
 msgid "Cancelled"
 msgstr "Annulée"
+
+#. Description_en
+#: schema/codelists/awardStatus.csv:3
+msgid "This award has been cancelled."
+msgstr "Cette attribution a été annulée. "
+
+#. Title_en
+#. Title
+#: schema/codelists/awardStatus.csv:4 schema/codelists/tenderStatus.csv:5
+msgid "Unsuccessful"
+msgstr "Infructeux"
 
 #. Description_en
 #: schema/codelists/awardStatus.csv:4
@@ -546,12 +552,6 @@ msgstr ""
 "l'attribution des éléments mentionnés, ou une attribution au fournisseur "
 "mentionné, a échoué, mais il peut y avoir d'autres éléments de l'appel "
 "d'offres qui ont été attribués avec succès ou à des fournisseurs différents."
-
-#. Title_en
-#. Title
-#: schema/codelists/awardStatus.csv:4 schema/codelists/tenderStatus.csv:5
-msgid "Unsuccessful"
-msgstr "Infructeux"
 
 #. Description_en
 #: schema/codelists/contractStatus.csv:1
@@ -576,6 +576,11 @@ msgstr ""
 msgid "This contract has been cancelled prior to being signed."
 msgstr "Ce contrat a été annulé avant d'être signé."
 
+#. Title_en
+#: schema/codelists/contractStatus.csv:4
+msgid "Terminated "
+msgstr "Terminé"
+
 #. Description_en
 #: schema/codelists/contractStatus.csv:4
 msgid ""
@@ -587,863 +592,860 @@ msgstr ""
 "être dû à la réussite du contrat, ou peut provenir d'une résiliation "
 "anticipée en raison d'un non-achèvement."
 
-#. Title_en
-#: schema/codelists/contractStatus.csv:4
-msgid "Terminated "
-msgstr "Terminé"
-
-#: schema/codelists/currency.csv
-msgid "Name"
-msgstr "Nom"
-
-#. Name
+#. Title
 #: schema/codelists/currency.csv:1
 msgid "UAE Dirham"
-msgstr ""
+msgstr "Dirham des Émirats arabes unis"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:2
 msgid "Afghani"
-msgstr ""
+msgstr "Afghani"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:3
 msgid "Lek"
-msgstr ""
+msgstr "Lek"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:4
 msgid "Armenian Dram"
-msgstr ""
+msgstr "Dram arménien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:5
 msgid "Netherlands Antillian Guilder"
-msgstr ""
+msgstr "Florin des Antilles néerlandaises"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:6
 msgid "Kwanza"
-msgstr ""
+msgstr "Kwanza"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:7
 msgid "Argentine Peso"
-msgstr ""
+msgstr "Peso argentin"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:8
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Dollar australien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:9
 msgid "Aruban Guilder"
-msgstr ""
+msgstr "Florin arubais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:10
 msgid "Azerbaijanian Manat"
-msgstr ""
+msgstr "Manat azerbaïdjanais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:11
 msgid "Convertible Marks"
-msgstr ""
+msgstr "Mark convertible de Bosnie-Herzégovine"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:12
 msgid "Barbados Dollar"
-msgstr ""
+msgstr "Dollar de la Barbade"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:13
 msgid "Taka"
-msgstr ""
+msgstr "Taka"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:14
 msgid "Bulgarian Lev"
-msgstr ""
+msgstr "Lev bulgare"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:15
 msgid "Bahraini Dinar"
-msgstr ""
+msgstr "Dinar bahreïni"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:16
 msgid "Burundi Franc"
-msgstr ""
+msgstr "Franc burundais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:17
 msgid "Bermudian Dollar"
-msgstr ""
+msgstr "Dollar bermudien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:18
 msgid "Brunei Dollar"
-msgstr ""
+msgstr "Dollar de Brunei"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:19
 msgid "Boliviano"
-msgstr ""
+msgstr "Boliviano"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:20
 msgid "Mvdol"
-msgstr ""
+msgstr "Mvdol"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:21
 msgid "Brazilian Real"
-msgstr ""
+msgstr "Réal brésilien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:22
 msgid "Bahamian Dollar"
-msgstr ""
+msgstr "Dollar bahaméen"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:23
 msgid "Ngultrum"
-msgstr ""
+msgstr "Ngultrum"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:24
 msgid "Pula"
-msgstr ""
+msgstr "Pula"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:25
 msgid "Belarussian Ruble"
-msgstr ""
+msgstr "Rouble biélorusse"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:26
 msgid "Belize Dollar"
-msgstr ""
+msgstr "Dollar bélizien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:27
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "Dollar canadien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:28
 msgid "Congolese Franc"
-msgstr ""
+msgstr "Franc congolais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:29
 msgid "Swiss Franc"
-msgstr ""
+msgstr "Franc suisse"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:30
 msgid "Unidades de fomento"
-msgstr ""
+msgstr "Unidades de fomento"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:31
 msgid "Chilean Peso"
-msgstr ""
+msgstr "Peso chilien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:32
 msgid "Yuan Renminbi"
-msgstr ""
+msgstr "Yian Renminbi"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:33
 msgid "Colombian Peso"
-msgstr ""
+msgstr "Peso colombien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:34
 msgid "Unidad de Valor Real"
-msgstr ""
+msgstr "Unidad de Valor Real"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:35
 msgid "Costa Rican Colon"
-msgstr ""
+msgstr "Colon costaricain"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:36
 msgid "Peso Convertible"
-msgstr ""
+msgstr "Peso cubain convertible"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:37
 msgid "Cuban Peso"
-msgstr ""
+msgstr "Peso cubain"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:38
 msgid "Cape Verde Escudo"
-msgstr ""
+msgstr "Escudo cap-verdien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:39
 msgid "Czech Koruna"
-msgstr ""
+msgstr "Couronne tchèque"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:40
 msgid "Djibouti Franc"
-msgstr ""
+msgstr "Franc Djibouti"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:41
 msgid "Danish Krone"
-msgstr ""
+msgstr "Couronne danoise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:42
 msgid "Dominican Peso"
-msgstr ""
+msgstr "Peso dominicain"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:43
 msgid "Algerian Dinar"
-msgstr ""
+msgstr "Dinar algérien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:44
 msgid "Kroon"
-msgstr ""
+msgstr "Couronne estonienne"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:45
 msgid "Egyptian Pound"
-msgstr ""
+msgstr "Livre égyptienne"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:46
 msgid "Nakfa"
-msgstr ""
+msgstr "Nakfa"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:47
 msgid "Ethiopian Birr"
-msgstr ""
+msgstr "Birr éthiopien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:48
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:49
 msgid "Fiji Dollar"
-msgstr ""
+msgstr "Dollar de Fidji"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:50
 msgid "Falkland Islands Pound"
-msgstr ""
+msgstr "Livre des Îles Malouines"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:51
 msgid "Pound Sterling"
-msgstr ""
+msgstr "Livre sterling"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:52
 msgid "Lari"
-msgstr ""
+msgstr "Lari"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:53
 msgid "Cedi"
-msgstr ""
+msgstr "Cedi"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:54
 msgid "Gibraltar Pound"
-msgstr ""
+msgstr "Livre de Gibraltar"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:55
 msgid "Dalasi"
-msgstr ""
+msgstr "Dalasi"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:56
 msgid "Guinea Franc"
-msgstr ""
+msgstr "Franc guinéen"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:57
 msgid "Quetzal"
-msgstr ""
+msgstr "Quetzal"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:58
 msgid "Guyana Dollar"
-msgstr ""
+msgstr "Dollar guyanien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:59
 msgid "Hong Kong Dollar"
-msgstr ""
+msgstr "Dollar de Hong Kong"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:60
 msgid "Lempira"
-msgstr ""
+msgstr "Lempira"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:61
 msgid "Kuna"
-msgstr ""
+msgstr "Kuna croate"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:62
 msgid "Gourde"
-msgstr ""
+msgstr "Gourde"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:63
 msgid "Forint"
-msgstr ""
+msgstr "Forint"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:64
 msgid "Rupiah"
-msgstr ""
+msgstr "Roupie indonésienne"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:65
 msgid "New Israeli Sheqel"
-msgstr ""
+msgstr "Shekel"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:66
 msgid "Indian Rupee"
-msgstr ""
+msgstr "Roupie indienne"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:67
 msgid "Iraqi Dinar"
-msgstr ""
+msgstr "Dinar iraquien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:68
 msgid "Iranian Rial"
-msgstr ""
+msgstr "Rial iranien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:69
 msgid "Iceland Krona"
-msgstr ""
+msgstr "Couronne islandaise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:70
 msgid "Jamaican Dollar"
-msgstr ""
+msgstr "Dollar jamaïcain"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:71
 msgid "Jordanian Dinar"
-msgstr ""
+msgstr "Dinar jordanien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:72
 msgid "Yen"
-msgstr ""
+msgstr "Yen"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:73
 msgid "Kenyan Shilling"
-msgstr ""
+msgstr "Shilling kényan"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:74
 msgid "Som"
-msgstr ""
+msgstr "Sum"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:75
 msgid "Riel"
-msgstr ""
+msgstr "Riel"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:76
 msgid "Comoro Franc"
-msgstr ""
+msgstr "Franc comorien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:77
 msgid "North Korean Won"
-msgstr ""
+msgstr "Won nord-coréen"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:78
 msgid "Won"
-msgstr ""
+msgstr "Won sud-coréen"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:79
 msgid "Kuwaiti Dinar"
-msgstr ""
+msgstr "Dinar koweïtien\n"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:80
 msgid "Cayman Islands Dollar"
-msgstr ""
+msgstr "Dollar des Îles Caïman"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:81
 msgid "Tenge"
-msgstr ""
+msgstr "Tenge"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:82
 msgid "Kip"
-msgstr ""
+msgstr "Kip"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:83
 msgid "Lebanese Pound"
-msgstr ""
+msgstr "Livre libanaise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:84
 msgid "Sri Lanka Rupee"
-msgstr ""
+msgstr "Roupie srilankaise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:85
 msgid "Liberian Dollar"
-msgstr ""
+msgstr "Dollar libérien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:86
 msgid "Loti"
-msgstr ""
+msgstr "Loti"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:87
 msgid "Lithuanian Litas"
-msgstr ""
+msgstr "Litas lituanien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:88
 msgid "Latvian Lats"
-msgstr ""
+msgstr "Lats letton"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:89
 msgid "Libyan Dinar"
-msgstr ""
+msgstr "Dinar lybien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:90
 msgid "Moroccan Dirham"
-msgstr ""
+msgstr "Dirham marocain"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:91
 msgid "Moldovan Leu"
-msgstr ""
+msgstr "Leu moldave"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:92
 msgid "Malagasy Ariary"
-msgstr ""
+msgstr "Ariary malgache"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:93
 msgid "Denar"
-msgstr ""
+msgstr "Denar macédonien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:94
 msgid "Kyat"
-msgstr ""
+msgstr "Kyat"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:95
 msgid "Tugrik"
-msgstr ""
+msgstr "Tugrik"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:96
 msgid "Pataca"
-msgstr ""
+msgstr "Pataca"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:97
 msgid "Ouguiya"
-msgstr ""
+msgstr "Ouguiya"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:98
 msgid "Mauritius Rupee"
-msgstr ""
+msgstr "Roupie mauritienne"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:99
 msgid "Rufiyaa"
-msgstr ""
+msgstr "Rufiyaa"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:100
 msgid "Malawi Kwacha"
-msgstr ""
+msgstr "Kwacha malawien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:101
 msgid "Mexican Peso"
-msgstr ""
+msgstr "Peso mexicain"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:102
 msgid "Mexican Unidad de Inversion (UDI)"
-msgstr ""
+msgstr "Mexican Unidad de Inversion (UDI)"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:103
 msgid "Malaysian Ringgit"
-msgstr ""
+msgstr "Ringgit malais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:104
 msgid "Metical"
-msgstr ""
+msgstr "Metical"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:105
 msgid "Namibia Dollar"
-msgstr ""
+msgstr "Dollar namibien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:106
 msgid "Naira"
-msgstr ""
+msgstr "Naira"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:107
 msgid "Cordoba Oro"
-msgstr ""
+msgstr "Cordoba d'or"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:108
 msgid "Norwegian Krone"
-msgstr ""
+msgstr "Couronne norvégienne"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:109
 msgid "Nepalese Rupee"
-msgstr ""
+msgstr "Roupie népalaise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:110
 msgid "New Zealand Dollar"
-msgstr ""
+msgstr "Dollar néo-zélandais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:111
 msgid "Rial Omani"
-msgstr ""
+msgstr "Rial omanais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:112
 msgid "Balboa"
-msgstr ""
+msgstr "Balboa"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:113
 msgid "Nuevo Sol"
-msgstr ""
+msgstr "Nouveau sol"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:114
 msgid "Kina"
-msgstr ""
+msgstr "Kina"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:115
 msgid "Philippine Peso"
-msgstr ""
+msgstr "Peso philippin"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:116
 msgid "Pakistan Rupee"
-msgstr ""
+msgstr "Roupie pakistanaise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:117
 msgid "Zloty"
-msgstr ""
+msgstr "Złoty"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:118
 msgid "Guarani"
-msgstr ""
+msgstr "Guaraní"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:119
 msgid "Qatari Rial"
-msgstr ""
+msgstr "Riyal qatarien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:120
 msgid "Romanian Leu"
-msgstr ""
+msgstr "Leu roumain"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:121
 msgid "Serbian Dinar"
-msgstr ""
+msgstr "Dinar serbe"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:122
 msgid "Russian Ruble"
-msgstr ""
+msgstr "Rouble russe"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:123
 msgid "Rwanda Franc"
-msgstr ""
+msgstr "Franc rwandais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:124
 msgid "Saudi Riyal"
-msgstr ""
+msgstr "Riyal saoudien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:125
 msgid "Solomon Islands Dollar"
-msgstr ""
+msgstr "Dollar des Salomon"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:126
 msgid "Seychelles Rupee"
-msgstr ""
+msgstr "Roupie seychelloise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:127
 msgid "Sudanese Pound"
-msgstr ""
+msgstr "Livre soudanaise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:128
 msgid "Swedish Krona"
-msgstr ""
+msgstr "Couronne suédoise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:129
 msgid "Singapore Dollar"
-msgstr ""
+msgstr "Dollar de Singapour"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:130
 msgid "Saint Helena Pound"
-msgstr ""
+msgstr "Livre de Saint-Hélène"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:131
 msgid "Leone"
-msgstr ""
+msgstr "Leone"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:132
 msgid "Somali Shilling"
-msgstr ""
+msgstr "Shilling somalien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:133
 msgid "South Sudanese Pound"
-msgstr ""
+msgstr "Livre sud-soudanaise"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:134
 msgid "Surinam Dollar"
-msgstr ""
+msgstr "Dollar du Surinam"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:135
 msgid "Dobra"
-msgstr ""
+msgstr "Dobra"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:136
 msgid "El Salvador Colon"
-msgstr ""
+msgstr "Colon salvadorien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:137
 msgid "Syrian Pound"
-msgstr ""
+msgstr "Livre syrienne"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:138
 msgid "Lilangeni"
-msgstr ""
+msgstr "Lilangeni"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:139
 msgid "Baht"
-msgstr ""
+msgstr "Baht"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:140
 msgid "Somoni"
-msgstr ""
+msgstr "Somoni"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:141
 msgid "Manat"
-msgstr ""
+msgstr "Manat"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:142
 msgid "Tunisian Dinar"
-msgstr ""
+msgstr "Dinar tunisien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:143
 msgid "Paanga"
-msgstr ""
+msgstr "Pa'anga"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:144
 msgid "Turkish Lira"
-msgstr ""
+msgstr "Livre turque"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:145
 msgid "Trinidad and Tobago Dollar"
-msgstr ""
+msgstr "Dollar de Trinidad et Tobago"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:146
 msgid "New Taiwan Dollar"
-msgstr ""
+msgstr "Nouveau dollar de Taïwan"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:147
 msgid "Tanzanian Shilling"
-msgstr ""
+msgstr "Shilling tanzanien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:148
 msgid "Hryvnia"
-msgstr ""
+msgstr "Hryvnia"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:149
 msgid "Uganda Shilling"
-msgstr ""
+msgstr "Shilling ougandais"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:150
 msgid "US Dollar"
-msgstr ""
+msgstr "Dollar américain"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:151
 msgid "US Dollar (Next day)"
-msgstr ""
+msgstr "Dollar américain (lendemain)"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:152
 msgid "US Dollar (Same day)"
-msgstr ""
+msgstr "Dollar américain (même jour)"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:153
 msgid "Uruguay Peso en Unidades Indexadas"
-msgstr ""
+msgstr "Uruguay Peso en Unidades Indexadas"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:154
 msgid "Peso Uruguayo"
-msgstr ""
+msgstr "Peso uruguayen"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:155
 msgid "Uzbekistan Sum"
-msgstr ""
+msgstr "Sum ouzbek"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:156
 msgid "Bolivar"
-msgstr ""
+msgstr "Bolivar"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:157
 msgid "Dong"
-msgstr ""
+msgstr "Dong"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:158
 msgid "Vatu"
-msgstr ""
+msgstr "Vatu"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:159
 msgid "Tala"
-msgstr ""
+msgstr "Tala"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:160
 msgid "CFA Franc BEAC"
-msgstr ""
+msgstr "France CFA BEAC"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:161
 msgid "Bitcoin"
-msgstr ""
+msgstr "Bitcoin"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:162
 msgid "East Caribbean Dollar"
-msgstr ""
+msgstr "Dollar des Caraïbes orientales"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:163
 msgid "International Monetary Fund (IMF) Special Drawing Right (SDR)"
 msgstr ""
+"Droits de tirage spéciaux (DTS) du Fonds monétaire international (FMI)"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:164
 msgid "CFA Franc BCEAO"
-msgstr ""
+msgstr "Franc CFA BCEAO"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:165
 msgid "CFP Franc"
-msgstr ""
+msgstr "Franc CFP"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:166
 msgid "Yemeni Rial"
-msgstr ""
+msgstr "Riyal yéménite"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:167
 msgid "Rand"
-msgstr ""
+msgstr "Rand"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:168
 msgid "Zambian Kwacha"
-msgstr ""
+msgstr "Kwacha zambien"
 
-#. Name
+#. Title
 #: schema/codelists/currency.csv:169
 msgid "Zimbabwe Dollar"
-msgstr ""
+msgstr "Dollar du Zimbabwe"
 
 #: schema/codelists/documentType.csv
 msgid "Section"
 msgstr "Section"
+
+#. Title_en
+#: schema/codelists/documentType.csv:1
+msgid "Tender Notice"
+msgstr "Avis d'appel d'offres"
 
 #. Description_en
 #: schema/codelists/documentType.csv:1
@@ -1456,9 +1458,9 @@ msgstr ""
 " Cela peut être un lien vers un document téléchargeable, "
 
 #. Title_en
-#: schema/codelists/documentType.csv:1
-msgid "Tender Notice"
-msgstr "Avis d'appel d'offres"
+#: schema/codelists/documentType.csv:2
+msgid "Award Notice"
+msgstr "Avis d'attribution"
 
 #. Description_en
 #: schema/codelists/documentType.csv:2
@@ -1472,9 +1474,9 @@ msgstr ""
 "dans lequel l'avis est publié. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:2
-msgid "Award Notice"
-msgstr "Avis d'attribution"
+#: schema/codelists/documentType.csv:3
+msgid "Contract Notice"
+msgstr "Avis de signature de contrat"
 
 #. Description_en
 #: schema/codelists/documentType.csv:3
@@ -1488,9 +1490,9 @@ msgstr ""
 " téléchargeable, une page Web ou un journal officiel où l'avis est contenu. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:3
-msgid "Contract Notice"
-msgstr "Avis de signature de contrat"
+#: schema/codelists/documentType.csv:4
+msgid "Completion certificate"
+msgstr "Certificat de réalisation"
 
 #. Description_en
 #: schema/codelists/documentType.csv:4
@@ -1506,9 +1508,9 @@ msgstr ""
 "certains types de processus de passation de marché."
 
 #. Title_en
-#: schema/codelists/documentType.csv:4
-msgid "Completion certificate"
-msgstr "Certificat de réalisation"
+#: schema/codelists/documentType.csv:5
+msgid "Procurement Plan"
+msgstr "Plan de commande publique"
 
 #. Description_en
 #: schema/codelists/documentType.csv:5
@@ -1519,9 +1521,9 @@ msgstr ""
 "La document qui décrit les bases de ce processus de passation de marché. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:5
-msgid "Procurement Plan"
-msgstr "Plan de commande publique"
+#: schema/codelists/documentType.csv:6
+msgid "Bidding Documents"
+msgstr "Dossier de réponse à l'appel d'offres"
 
 #. Description_en
 #: schema/codelists/documentType.csv:6
@@ -1534,9 +1536,9 @@ msgstr ""
 "candidature."
 
 #. Title_en
-#: schema/codelists/documentType.csv:6
-msgid "Bidding Documents"
-msgstr "Dossier de réponse à l'appel d'offres"
+#: schema/codelists/documentType.csv:7
+msgid "Technical Specifications"
+msgstr "Spécifications techniques"
 
 #. Description_en
 #: schema/codelists/documentType.csv:7
@@ -1546,9 +1548,9 @@ msgstr ""
 "  "
 
 #. Title_en
-#: schema/codelists/documentType.csv:7
-msgid "Technical Specifications"
-msgstr "Spécifications techniques"
+#: schema/codelists/documentType.csv:8
+msgid "Evaluation Criteria"
+msgstr "Critères d'évaluation"
 
 #. Description_en
 #: schema/codelists/documentType.csv:8
@@ -1556,9 +1558,9 @@ msgid "Documentation on how bids will be evaluated."
 msgstr "Documentation sur la manière dont les offres seront évaluées"
 
 #. Title_en
-#: schema/codelists/documentType.csv:8
-msgid "Evaluation Criteria"
-msgstr "Critères d'évaluation"
+#: schema/codelists/documentType.csv:9
+msgid "Evaluation report"
+msgstr "Rapport d'évaluation"
 
 #. Description_en
 #: schema/codelists/documentType.csv:9
@@ -1570,9 +1572,9 @@ msgstr ""
 "d'évaluation, notamment les raisons de l'attribution. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:9
-msgid "Evaluation report"
-msgstr "Rapport d'évaluation"
+#: schema/codelists/documentType.csv:10
+msgid "Contract draft"
+msgstr "Brouillon du contrat"
 
 #. Description_en
 #: schema/codelists/documentType.csv:10
@@ -1581,9 +1583,9 @@ msgstr ""
 "Un brouillon, une version de travail, ou une copie pro forma du contrat. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:10
-msgid "Contract draft"
-msgstr "Brouillon du contrat"
+#: schema/codelists/documentType.csv:11
+msgid "Signed Contract"
+msgstr "Contrat signé"
 
 #. Description_en
 #: schema/codelists/documentType.csv:11
@@ -1598,9 +1600,9 @@ msgstr ""
 "quand c'est demandé.  "
 
 #. Title_en
-#: schema/codelists/documentType.csv:11
-msgid "Signed Contract"
-msgstr "Contrat signé"
+#: schema/codelists/documentType.csv:12
+msgid "Arrangements for ending contract"
+msgstr "Clauses de fin de contrat"
 
 #. Description_en
 #: schema/codelists/documentType.csv:12
@@ -1608,9 +1610,9 @@ msgid "Documentation of the arrangements for ending the contract(s)."
 msgstr "Documentation des dispositions pour terminer le(s) contrat(s). "
 
 #. Title_en
-#: schema/codelists/documentType.csv:12
-msgid "Arrangements for ending contract"
-msgstr "Clauses de fin de contrat"
+#: schema/codelists/documentType.csv:13
+msgid "Contract schedules"
+msgstr "Calendriers du marché"
 
 #. Description_en
 #: schema/codelists/documentType.csv:13
@@ -1619,11 +1621,14 @@ msgid ""
 "related to the contract, such as a schedule, appendix, annex, attachment or "
 "addendum."
 msgstr ""
+"Tout document contenant des termes additionnels, des obligations ou des "
+"informations liées au marché, tel qu'un calendrier, un appendice, une "
+"annexe, une pièce jointe ou un addendum."
 
 #. Title_en
-#: schema/codelists/documentType.csv:13
-msgid "Contract schedules"
-msgstr ""
+#: schema/codelists/documentType.csv:14
+msgid "Physical progress reports"
+msgstr "Rapport d'avancement physique"
 
 #. Description_en
 #: schema/codelists/documentType.csv:14
@@ -1635,9 +1640,9 @@ msgstr ""
 "étapes essentielles. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:14
-msgid "Physical progress reports"
-msgstr "Rapport d'avancement physique"
+#: schema/codelists/documentType.csv:15
+msgid "Financial progress reports"
+msgstr "Rapport de suivi financier"
 
 #. Description_en
 #: schema/codelists/documentType.csv:15
@@ -1654,9 +1659,9 @@ msgstr ""
 "transactions sur l'exécution du contrat.   "
 
 #. Title_en
-#: schema/codelists/documentType.csv:15
-msgid "Financial progress reports"
-msgstr "Rapport de suivi financier"
+#: schema/codelists/documentType.csv:16
+msgid "Final Audit"
+msgstr "Audit final"
 
 #. Description_en
 #: schema/codelists/documentType.csv:16
@@ -1667,9 +1672,9 @@ msgstr ""
 "Documentation de l'audit final réalisé à la fin de l'exécution du contrat. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:16
-msgid "Final Audit"
-msgstr "Audit final"
+#: schema/codelists/documentType.csv:17
+msgid "Public Hearing Notice"
+msgstr "Avis d'audition publique"
 
 #. Description_en
 #: schema/codelists/documentType.csv:17
@@ -1681,9 +1686,9 @@ msgstr ""
 " planification de ce processus de marché. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:17
-msgid "Public Hearing Notice"
-msgstr "Avis d'audition publique"
+#: schema/codelists/documentType.csv:18
+msgid "Market Studies"
+msgstr "Études de marché"
 
 #. Description_en
 #: schema/codelists/documentType.csv:18
@@ -1695,9 +1700,9 @@ msgstr ""
 " planification de ce processus de marché. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:18
-msgid "Market Studies"
-msgstr "Études de marché"
+#: schema/codelists/documentType.csv:19
+msgid "Eligibility Criteria"
+msgstr "Critères d'éligibilité"
 
 #. Description_en
 #: schema/codelists/documentType.csv:19
@@ -1705,9 +1710,9 @@ msgid "Detailed documents about the eligibility of bidders."
 msgstr "Des documents détaillés sur l'éligibilité des candidats."
 
 #. Title_en
-#: schema/codelists/documentType.csv:19
-msgid "Eligibility Criteria"
-msgstr "Critères d'éligibilité"
+#: schema/codelists/documentType.csv:20
+msgid "Clarifications to bidders questions"
+msgstr "Clarifications apportées aux questions des candidats"
 
 #. Description_en
 #: schema/codelists/documentType.csv:20
@@ -1719,9 +1724,9 @@ msgstr ""
 "discussions précédents les offres ou pendant le processus d'échange. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:20
-msgid "Clarifications to bidders questions"
-msgstr "Clarifications apportées aux questions des candidats"
+#: schema/codelists/documentType.csv:21
+msgid "Shortlisted Firms"
+msgstr "Entreprises préselectionnées"
 
 #. Description_en
 #: schema/codelists/documentType.csv:21
@@ -1734,9 +1739,9 @@ msgstr ""
 "fournies en utilisant l'extension sur les offres. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:21
-msgid "Shortlisted Firms"
-msgstr "Entreprises préselectionnées"
+#: schema/codelists/documentType.csv:22
+msgid "Environmental Impact"
+msgstr "Impact environnemental"
 
 #. Description_en
 #: schema/codelists/documentType.csv:22
@@ -1748,9 +1753,9 @@ msgstr ""
 "pendant ou après le processus de passation de marché. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:22
-msgid "Environmental Impact"
-msgstr "Impact environnemental"
+#: schema/codelists/documentType.csv:23
+msgid "Assessment of government's assets and liabilities"
+msgstr "Évaluation des actifs et des passifs du gouvernement"
 
 #. Description_en
 #: schema/codelists/documentType.csv:23
@@ -1762,9 +1767,10 @@ msgstr ""
 "gouvernement liés à ce processus de passation de marché. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:23
-msgid "Assessment of government's assets and liabilities"
-msgstr "Évaluation des actifs et des passifs du gouvernement"
+#: schema/codelists/documentType.csv:24
+msgid "Provisions for management of risks and liabilities"
+msgstr ""
+"Dispositions prises pour la gestion des risques et des responsabilités "
 
 #. Description_en
 #: schema/codelists/documentType.csv:24
@@ -1776,10 +1782,9 @@ msgstr ""
 "passation de marchés."
 
 #. Title_en
-#: schema/codelists/documentType.csv:24
-msgid "Provisions for management of risks and liabilities"
-msgstr ""
-"Dispositions prises pour la gestion des risques et des responsabilités "
+#: schema/codelists/documentType.csv:25
+msgid "Winning Bid"
+msgstr "Offre gagnante"
 
 #. Description_en
 #: schema/codelists/documentType.csv:25
@@ -1791,9 +1796,9 @@ msgstr ""
 "intégrale de la proposition reçue. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:25
-msgid "Winning Bid"
-msgstr "Offre gagnante"
+#: schema/codelists/documentType.csv:26
+msgid "Complaints and decisions"
+msgstr "Plaintes et décisions"
 
 #. Description_en
 #: schema/codelists/documentType.csv:26
@@ -1805,9 +1810,9 @@ msgstr ""
 " à ces réclamations. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:26
-msgid "Complaints and decisions"
-msgstr "Plaintes et décisions"
+#: schema/codelists/documentType.csv:27
+msgid "Annexes to the Contract"
+msgstr "Les annexes au contrat"
 
 #. Description_en
 #: schema/codelists/documentType.csv:27
@@ -1817,9 +1822,9 @@ msgid ""
 msgstr "Copie des annexes et de la documentation à l'appui du contrat. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:27
-msgid "Annexes to the Contract"
-msgstr "Les annexes au contrat"
+#: schema/codelists/documentType.csv:28
+msgid "Guarantees"
+msgstr "Garanties"
 
 #. Description_en
 #: schema/codelists/documentType.csv:28
@@ -1830,9 +1835,9 @@ msgstr ""
 "un contrat."
 
 #. Title_en
-#: schema/codelists/documentType.csv:28
-msgid "Guarantees"
-msgstr "Garanties"
+#: schema/codelists/documentType.csv:29
+msgid "Subcontracts"
+msgstr "Sous-traitance"
 
 #. Description_en
 #: schema/codelists/documentType.csv:29
@@ -1847,9 +1852,9 @@ msgstr ""
 "utilisant le composant relatedProcess."
 
 #. Title_en
-#: schema/codelists/documentType.csv:29
-msgid "Subcontracts"
-msgstr "Sous-traitance"
+#: schema/codelists/documentType.csv:30
+msgid "Needs Assessment"
+msgstr "Évaluation des besoins"
 
 #. Description_en
 #: schema/codelists/documentType.csv:30
@@ -1863,9 +1868,9 @@ msgstr ""
 "de la part des communautés affectées ou des usagers. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:30
-msgid "Needs Assessment"
-msgstr "Évaluation des besoins"
+#: schema/codelists/documentType.csv:31
+msgid "Feasibility study"
+msgstr "Étude de faisabilité"
 
 #. Description_en
 #: schema/codelists/documentType.csv:31
@@ -1879,9 +1884,9 @@ msgstr ""
 " les coûts des biens, travaux ou services proposés."
 
 #. Title_en
-#: schema/codelists/documentType.csv:31
-msgid "Feasibility study"
-msgstr "Étude de faisabilité"
+#: schema/codelists/documentType.csv:32
+msgid "Project plan"
+msgstr "Plan de projet"
 
 #. Description_en
 #: schema/codelists/documentType.csv:32
@@ -1893,9 +1898,9 @@ msgstr ""
 "de marché et, le cas échéant, une copie du document du plan du projet."
 
 #. Title_en
-#: schema/codelists/documentType.csv:32
-msgid "Project plan"
-msgstr "Plan de projet"
+#: schema/codelists/documentType.csv:33
+msgid "Bill Of Quantity"
+msgstr "Devis quantifiés"
 
 #. Description_en
 #: schema/codelists/documentType.csv:33
@@ -1915,9 +1920,9 @@ msgstr ""
 "composant sur les biens et services."
 
 #. Title_en
-#: schema/codelists/documentType.csv:33
-msgid "Bill Of Quantity"
-msgstr "Devis quantifiés"
+#: schema/codelists/documentType.csv:34
+msgid "Information on bidders"
+msgstr "Informations sur les candidats"
 
 #. Description_en
 #: schema/codelists/documentType.csv:34
@@ -1930,9 +1935,9 @@ msgstr ""
 "admissibles"
 
 #. Title_en
-#: schema/codelists/documentType.csv:34
-msgid "Information on bidders"
-msgstr "Informations sur les candidats"
+#: schema/codelists/documentType.csv:35
+msgid "Conflict of Interest"
+msgstr "Conflit d'intérêt"
 
 #. Description_en
 #: schema/codelists/documentType.csv:35
@@ -1940,9 +1945,9 @@ msgid "Documentation of conflicts of interest declared or uncovered."
 msgstr "Documentation sur les conflits d'intérêts déclarés ou non."
 
 #. Title_en
-#: schema/codelists/documentType.csv:35
-msgid "Conflict of Interest"
-msgstr "Conflit d'intérêt"
+#: schema/codelists/documentType.csv:36
+msgid "Debarments"
+msgstr "Exclusions"
 
 #. Description_en
 #: schema/codelists/documentType.csv:36
@@ -1950,9 +1955,9 @@ msgid "Documentation of any debarments issued."
 msgstr "Documentation sur les exclusions qui ont été prononcées."
 
 #. Title_en
-#: schema/codelists/documentType.csv:36
-msgid "Debarments"
-msgstr "Exclusions"
+#: schema/codelists/documentType.csv:37
+msgid "Illustrations"
+msgstr "Illustrations"
 
 #. Description_en
 #: schema/codelists/documentType.csv:37
@@ -1973,9 +1978,9 @@ msgstr ""
 "prestation."
 
 #. Title_en
-#: schema/codelists/documentType.csv:37
-msgid "Illustrations"
-msgstr "Illustrations"
+#: schema/codelists/documentType.csv:38
+msgid "Bid Submission Documents"
+msgstr "Documents joints à une offre"
 
 #. Description_en
 #: schema/codelists/documentType.csv:38
@@ -1984,9 +1989,9 @@ msgstr ""
 "Documentation soumise par un candidat dans le cadre de sa proposition."
 
 #. Title_en
-#: schema/codelists/documentType.csv:38
-msgid "Bid Submission Documents"
-msgstr "Documents joints à une offre"
+#: schema/codelists/documentType.csv:39
+msgid "Contract Summary"
+msgstr "Résumé du contrat"
 
 #. Description_en
 #: schema/codelists/documentType.csv:39
@@ -1999,9 +2004,9 @@ msgstr ""
 "longs et complexes. "
 
 #. Title_en
-#: schema/codelists/documentType.csv:39
-msgid "Contract Summary"
-msgstr "Résumé du contrat"
+#: schema/codelists/documentType.csv:40
+msgid "Cancellation Details"
+msgstr "Détails sur l'annulation"
 
 #. Description_en
 #: schema/codelists/documentType.csv:40
@@ -2012,11 +2017,6 @@ msgstr ""
 "Documentation sur les accords, ou les raisons, pour l'annulation d'un "
 "processus de passation de marchés, d'une attribution ou d'un contrat "
 "spécifique."
-
-#. Title_en
-#: schema/codelists/documentType.csv:40
-msgid "Cancellation Details"
-msgstr "Détails sur l'annulation"
 
 #. Title
 #: schema/codelists/extendedProcurementCategory.csv:1
@@ -2084,6 +2084,12 @@ msgstr ""
 "Ce processus de passation de marchés implique des services professionnels "
 "fournis sous la forme de conseil."
 
+#. Title_en
+#. Title
+#: schema/codelists/initiationType.csv:1 schema/codelists/releaseTag.csv:3
+msgid "Tender"
+msgstr "Appel d'offre"
+
 #. Description_en
 #: schema/codelists/initiationType.csv:1
 msgid ""
@@ -2097,10 +2103,9 @@ msgstr ""
 " de la sélection d'un ou des gagnant(s)."
 
 #. Title_en
-#. Title
-#: schema/codelists/initiationType.csv:1 schema/codelists/releaseTag.csv:3
-msgid "Tender"
-msgstr "Appel d'offre"
+#: schema/codelists/itemClassificationScheme.csv:1
+msgid "EC Common Procurement Vocabulary"
+msgstr "Vocabulaire commun de l'union européenne pour les marchés publics"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:1
@@ -2129,9 +2134,11 @@ msgstr ""
 "compte cela lors du traitement des données comprenant des codes CPV."
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:1
-msgid "EC Common Procurement Vocabulary"
-msgstr "Vocabulaire commun de l'union européenne pour les marchés publics"
+#: schema/codelists/itemClassificationScheme.csv:2
+msgid "EC Common Procurement Vocabulary - Supplementary Codelists"
+msgstr ""
+"Vocabulaire commun de l'Union Européenne pour les marchés publics - liste de"
+" codes supplémentaires"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:2
@@ -2155,11 +2162,9 @@ msgstr ""
 " ou la destination spécifiques des biens contractés. "
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:2
-msgid "EC Common Procurement Vocabulary - Supplementary Codelists"
-msgstr ""
-"Vocabulaire commun de l'Union Européenne pour les marchés publics - liste de"
-" codes supplémentaires"
+#: schema/codelists/itemClassificationScheme.csv:3
+msgid "Goods and Services Identification Number"
+msgstr "Numéro d'Identification des Biens et Services (NIBS/GSIN)"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:3
@@ -2175,9 +2180,9 @@ msgstr ""
 "publiée et maintenue sur [http://buyandsell.gc.ca](http://buyandsell.gc.ca)"
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:3
-msgid "Goods and Services Identification Number"
-msgstr "Numéro d'Identification des Biens et Services (NIBS/GSIN)"
+#: schema/codelists/itemClassificationScheme.csv:4
+msgid "United Nations Standard Products and Services Code"
+msgstr "Code des produits et services standard des Nations Unies"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:4
@@ -2197,9 +2202,9 @@ msgstr ""
 "consultation des données ouvertes chaque fois que possible."
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:4
-msgid "United Nations Standard Products and Services Code"
-msgstr "Code des produits et services standard des Nations Unies"
+#: schema/codelists/itemClassificationScheme.csv:5
+msgid "Central Product Classification"
+msgstr "Classification centrale des produits"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:5
@@ -2216,9 +2221,11 @@ msgstr ""
 "les échanges et les prix"
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:5
-msgid "Central Product Classification"
-msgstr "Classification centrale des produits"
+#: schema/codelists/itemClassificationScheme.csv:6
+msgid ""
+"Russian National Classification of Products by Economic Activity (1994)"
+msgstr ""
+"Classification nationale russe des produits par activité économique (1994)"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:6
@@ -2233,11 +2240,12 @@ msgstr ""
 "Remplacé par OKPD"
 
 #. Title_en
-#: schema/codelists/itemClassificationScheme.csv:6
+#: schema/codelists/itemClassificationScheme.csv:7
 msgid ""
-"Russian National Classification of Products by Economic Activity (1994)"
+"Russian National Classification of Products by Economic Activity (2014)"
 msgstr ""
-"Classification nationale russe des produits par activité économique (1994)"
+"Classification nationale russe des produits par activité économique (OKPD, "
+"2014)"
 
 #. Description_en
 #: schema/codelists/itemClassificationScheme.csv:7
@@ -2251,14 +2259,6 @@ msgstr ""
 "Fédération de Russie et est basée sur l'harmonisation avec la Classification"
 " statistique des produits par activité dans la Communauté économique "
 "européenne, 2008. En usage à partir du 1er janvier 2014"
-
-#. Title_en
-#: schema/codelists/itemClassificationScheme.csv:7
-msgid ""
-"Russian National Classification of Products by Economic Activity (2014)"
-msgstr ""
-"Classification nationale russe des produits par activité économique (OKPD, "
-"2014)"
 
 #. Title
 #: schema/codelists/method.csv:1
@@ -2363,7 +2363,7 @@ msgstr ""
 #. Title
 #: schema/codelists/milestoneType.csv:1
 msgid "Pre-procurement milestones"
-msgstr ""
+msgstr "Étapes préalables au processus de passation du marché"
 
 #. Description
 #: schema/codelists/milestoneType.csv:1
@@ -2371,16 +2371,18 @@ msgid ""
 "For events during the planning or pre-procurement phase of a process, such "
 "as the preparation of key studies."
 msgstr ""
+"Pour des événements durant la phase de planification ou antérieure à la "
+"commande publique du processus, tels que la préparation d'études clés."
 
 #. Title
 #: schema/codelists/milestoneType.csv:2
 msgid "Approval"
-msgstr ""
+msgstr "Approbation"
 
 #. Description
 #: schema/codelists/milestoneType.csv:2
 msgid "For events such as the sign-off of a contract or project. "
-msgstr ""
+msgstr "Pour des événements tels que la signature du marché ou du projet."
 
 #. Title
 #: schema/codelists/milestoneType.csv:3
@@ -2395,7 +2397,7 @@ msgstr "Pour les étapes de consultation, comme une audience publique."
 #. Title
 #: schema/codelists/milestoneType.csv:4
 msgid "Assessment milestones"
-msgstr ""
+msgstr "Étapes de l'évaluation"
 
 #. Description
 #: schema/codelists/milestoneType.csv:4
@@ -2434,7 +2436,7 @@ msgstr ""
 #. Title
 #: schema/codelists/milestoneType.csv:7
 msgid "Financing milestones"
-msgstr ""
+msgstr "Étapes du financement"
 
 #. Description
 #: schema/codelists/milestoneType.csv:7
@@ -2442,6 +2444,8 @@ msgid ""
 "For events such as planned payments, or equity transfers in public private "
 "partnership projects."
 msgstr ""
+"Pour des événements tels que des paiements planifiés, ou des transferts "
+"d'actifs dans le cadre de projets de partenariats public privé."
 
 #. Title
 #: schema/codelists/partyRole.csv:1
@@ -2693,7 +2697,7 @@ msgstr "Open Contracting ID"
 #. Description
 #: schema/codelists/relatedProcessScheme.csv:1
 msgid "An open contracting process identifier (ocid)"
-msgstr "Un identifiant de processus open contracting (OCID)"
+msgstr "Un identifiant de processus open contracting (ocid)"
 
 #. Title
 #: schema/codelists/releaseTag.csv:1 schema/codelists/tenderStatus.csv:1
@@ -2968,8 +2972,8 @@ msgstr "Soumission électronique"
 #: schema/codelists/submissionMethod.csv:1
 msgid "Bids will be received through an electronic procurement platform."
 msgstr ""
-"Les offres seront reçues via une plateforme électronique de commande "
-"publique."
+"Les offres seront reçues via une plateforme électronique de passation de "
+"marché."
 
 #. Title
 #: schema/codelists/submissionMethod.csv:2
@@ -3008,7 +3012,7 @@ msgid ""
 "specified in submissionMethodDetails or attached documentation."
 msgstr ""
 "Les offres ne seront reçues que si elles sont remises physiquement, en "
-"personne, et au lieu indiqué dans `submissionMethodDetails` ou la "
+"personne, et au lieu indiqué dans `submissionMethodDetails` ou dans la "
 "documentation jointe."
 
 #. Description
