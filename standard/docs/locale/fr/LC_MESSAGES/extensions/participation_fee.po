@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-29 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Colin Maudry <colin@maudry.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
@@ -32,7 +32,7 @@ msgid ""
 "release or record package."
 msgstr ""
 "Pour utiliser cette extension, ajouter son URL dans la liste ```extension```"
-" de votre package d'instance ou d'archive. "
+" de votre paquet d'instance ou d'archive. "
 
 #: ../../standard/docs/en/extensions/participation_fee.md:14
 msgid ""
@@ -66,7 +66,7 @@ msgid ""
 "Potential bidders will want to be aware of the fees that a process might "
 "involve."
 msgstr ""
-"Les candidats potentiels voudront connaitre les frais qu'un processus "
+"Les candidats potentiels voudront connaître les frais qu'un processus "
 "pourrait impliquer."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:24
@@ -91,7 +91,7 @@ msgid ""
 "section of OCDS and introduces a new ```participationFee``` building block."
 msgstr ""
 "Cette extension ajoute un champ ```participationFees``` à la section "
-"```tender``` d'OCDS et introduit un nouveau composant essentiel "
+"```tender``` d'OCDS et introduit un nouveau composant "
 "```participationFee```."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:30
@@ -116,7 +116,7 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/participation_fee.md:35
 msgid "```value``` - the amount and currency of the fee"
-msgstr "```value``` - le montant et la devise du frais"
+msgstr "```value``` - le montant et la devise des frais"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:36
 msgid ""
@@ -124,47 +124,60 @@ msgid ""
 "requirements. For example, sometimes a document fee is only applicable to "
 "the hard copy of the documents."
 msgstr ""
-"```Description``` - un champ optionnel avec plus d'informations sur les "
+"```description``` - un champ optionnel avec plus d'informations sur les "
 "frais requis. Par exemple, parfois, une taxe sur le document s'applique "
 "uniquement à la copie papier des documents."
+
+#: ../../standard/docs/en/extensions/participation_fee.md:37
+msgid ""
+"```methodOfPayment``` - an optional field providing information on methods "
+"of payment accepted for the documentation. This is currently an array of "
+"strings, but an open codelist may be introduced in future."
+msgstr ""
+"```methodOfPayment``` - un champ optionnel permettant de fournir des "
+"informations sur les méthodes de paiement acceptées pour acquérir la "
+"documentation. Pour l'instant, ce champ est une liste de chaînes de "
+"caractère, mais, à l'avenir une liste de codes sera peut-être créée."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Extension codelists"
 msgstr "Listes des codes de l'extension"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:40
+#: ../../standard/docs/en/extensions/participation_fee.md:41
 msgid ""
 "This extension adds **closed** ```participationFeeType``` codelist with the "
 "following codes:"
 msgstr ""
-"Cette extension ajoute la liste **fermée** de codes fermée "
+"Cette extension ajoute la liste de codes  **fermée** "
 "```participationFeeType``` avec les codes suivants :"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:42
+#: ../../standard/docs/en/extensions/participation_fee.md:43
 msgid "document - a fee payable for access to bidding documents"
 msgstr ""
-"document - des frais payables pour l'accès aux documents d'appel d'offres"
-
-#: ../../standard/docs/en/extensions/participation_fee.md:43
-msgid "deposit - a refundable fee payable for the submission of bids"
-msgstr ""
-"deposit - des frais remboursables à payer pour la soumission des offres"
+"**document** (document) - des frais payables pour l'accès aux documents "
+"d'appel d'offres"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:44
-msgid "submission - a non-refundable fee payable for the submission of bids"
+msgid "deposit - a refundable fee payable for the submission of bids"
 msgstr ""
-"submission - des frais non remboursables payables pour la soumission des "
-"offres"
+"**deposit** (caution) - des frais remboursables à payer pour la soumission "
+"des offres"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:45
+msgid "submission - a non-refundable fee payable for the submission of bids"
+msgstr ""
+"**submission** (soumission) - des frais non remboursables payables pour la "
+"soumission des offres"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:46
 msgid "win - a fee payable by the winning bidder"
-msgstr "win - des frais payables par le candidat retenu"
+msgstr "**win** (gagnant) - des frais payables par le candidat retenu"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Example"
 msgstr "Exemple"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:49
+#: ../../standard/docs/en/extensions/participation_fee.md:50
 msgid ""
 "The following JSON snippet models a contracting process where fees are "
 "applicable for both access to documents and submission of bids:"
@@ -177,7 +190,7 @@ msgstr ""
 msgid "Usage notes"
 msgstr "Notes d'utilisation"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:78
+#: ../../standard/docs/en/extensions/participation_fee.md:81
 msgid ""
 "In some cases, a fee may be levied for 'official copies' of procurement "
 "documents (although copies may also be available freely online), and bidders"
@@ -189,11 +202,23 @@ msgstr ""
 " être disponibles en ligne) et les candidats doivent prouver qu'ils ont payé"
 " une copie officielle des documents dans le cadre de leur soumission."
 
-#: ../../standard/docs/en/extensions/participation_fee.md:80
+#: ../../standard/docs/en/extensions/participation_fee.md:83
 msgid ""
 "In this case, the fee should be modelled as a **submission** fee, as "
 "submission is only possible when this document access fee has been paid."
 msgstr ""
-"Dans ce cas, les frais devront être modélisés en tant que frais de "
-"**soumission** car la soumission n'est possible que lorsque cette taxe "
+"Dans ce cas, les frais devront être modélisés en tant que frais de type "
+"\"submission\" car la soumission n'est possible que lorsque cette taxe "
 "d'accès au document a été payée."
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "To do"
+msgstr "ToDo"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:87
+msgid "participation / submission terminology"
+msgstr "terminologie participation / soumissions"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:88
+msgid "finalize codelist"
+msgstr "finaliser la liste de codes"
