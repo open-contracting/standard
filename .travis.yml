@@ -6,13 +6,16 @@ addons:
   apt:
     packages:
     - lftp
+  chrome: stable
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements.txt
+install:
+  - pip install -r requirements.txt
+  - "wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip; unzip chromedriver_linux64.zip -d chromedriver; export PATH=$PATH:`pwd`/chromedriver"
 # command to run tests, e.g. python setup.py test
 script:
   - flake8
-  - py.test
   - ./build_docs.sh
+  - py.test
 deploy:
   skip_cleanup: true # don't remove stuff we've built
   provider: script
