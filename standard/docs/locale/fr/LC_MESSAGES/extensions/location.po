@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-29 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Colin Maudry <colin@maudry.com>, 2017\n"
+"Last-Translator: samgoeta <samgoeta@gmail.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +32,7 @@ msgid ""
 "release or record package."
 msgstr ""
 "Pour utiliser cette extension, ajouter son URL dans la liste ```extension```"
-" de votre package d'instance ou d'archive. "
+" de votre paquet d'instance ou d'archive. "
 
 #: ../../standard/docs/en/extensions/location.md:14
 msgid ""
@@ -124,13 +124,13 @@ msgstr ""
 
 #: ../../standard/Extension location:1
 msgid ""
-"The type of `geoJSON Geometry Objects <http://geojson.org/geojson-spec.html"
+"The type of `GeoJSON Geometry Objects <http://geojson.org/geojson-spec.html"
 "#geometry-objects>`__ being provided. To provide latitude and longitude use "
 "'point', and enter an array of [latitude,longitude] as the value of "
-"coordinates field: e.g. [37.42,-122.085]. Note the capitalisation of type "
-"values - set in order to maintain compatibility with geoJSON."
+"coordinates field: e.g. [37.42,-122.085]. Note the capitalization of type "
+"values - set in order to maintain compatibility with GeoJSON."
 msgstr ""
-"Le type de 'GeoJSON Geometry Objects <http://geojson.org/geojson-spec.html"
+"Le type de `GeoJSON Geometry Objects <http://geojson.org/geojson-spec.html"
 "#geometry-objects> `__ fourni. Pour fournir une latitude et une longitude, "
 "utilisez 'point', et entrez une liste de [latitude, longitude] comme champ "
 "dans la valeur des coordonnées: par ex. [37,42, -122,085]. Notez la "
@@ -140,7 +140,7 @@ msgstr ""
 #: ../../standard/Extension location:1
 msgid ""
 "The relevant array of points, e.g. [latitude,longitude], or nested array, "
-"for the geoJSON geometry being described. The longitude and latitude MUST be"
+"for the GeoJSON geometry being described. The longitude and latitude MUST be"
 " expressed in decimal degrees in the WGS84 (EPSG:4326) projection"
 msgstr ""
 "La liste pertinente de points, par ex. [latitude, longitude] ou une liste "
@@ -165,7 +165,7 @@ msgstr ""
 "point peut être identifié en géocodant une adresse de livraison. Pour les "
 "licences de concession ou d'autres contrats couvrant un emplacement de "
 "polygone qui n'est pas contenu dans une nomenclature connue, un polygone et "
-"un polygone multiples peuvent être utilisés."
+"un polygone multiple peuvent être utilisés."
 
 #: ../../standard/Extension location:1
 msgid ""
@@ -182,7 +182,7 @@ msgstr ""
 msgid ""
 "An array of one or more codes drawn from the gazetteer indicated in scheme."
 msgstr ""
-"Une liste d'un ou plusieurs codes tirés du la nomenclature indiquée dans le "
+"Une liste d'un ou plusieurs codes tirés de la nomenclature indiquée dans le "
 "schéma."
 
 #: ../../standard/Extension location:1
@@ -198,17 +198,21 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Gazetteer Codelist"
-msgstr ""
+msgstr "Listes de codes de nomenclatures (*gazetteers*)"
+
+#: ../../standard/docs/en/extensions/location.md:34
+msgid "See locationGazeteers.csv"
+msgstr "Consulter locationGazeteers.csv"
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Example"
 msgstr "Exemple"
 
-#: ../../standard/docs/en/extensions/location.md:41
+#: ../../standard/docs/en/extensions/location.md:37
 msgid "Below is an example of a geolocated item:"
 msgstr "Voici ci-dessous un exemple d'élément géolocalisé :"
 
-#: ../../standard/docs/en/extensions/location.md:87
+#: ../../standard/docs/en/extensions/location.md:83
 msgid ""
 "If the procurement related to the rebuilding of a road, then the item could "
 "also specify more complex geometries such as:"
@@ -217,7 +221,7 @@ msgstr ""
 "l'élément pourrait également spécifier des géométries plus complexes telles "
 "que :"
 
-#: ../../standard/docs/en/extensions/location.md:106
+#: ../../standard/docs/en/extensions/location.md:102
 msgid ""
 "You can take the contents of the geometry object, excluding the "
 "```geometry``` keyword, and plug this into any GeoJSON tool to see the shape"
@@ -225,4 +229,4 @@ msgid ""
 msgstr ""
 "Vous pouvez prendre le contenu de l'objet de géométrie, enlever le mot-clé "
 "```geometry``` et le donner à n'importe quel outil utilisant du GeoJSON pour"
-" voir la forme qui est décrite."
+" visualiser la forme qui est décrite."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-31 12:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
@@ -125,11 +125,22 @@ msgstr ""
 "requisitos de la cuota. Por ejemplo, a veces una cuota de documento sólo es "
 "aplicable a la copia impresa de los documentos."
 
+#: ../../standard/docs/en/extensions/participation_fee.md:37
+msgid ""
+"```methodOfPayment``` - an optional field providing information on methods "
+"of payment accepted for the documentation. This is currently an array of "
+"strings, but an open codelist may be introduced in future."
+msgstr ""
+"```methodOfPayment``` - un campo opcional que proporciona información sobre "
+"los métodos de pago aceptados para la documentación. Actualmente se trata de"
+" una serie de cadenas, pero se podría introducir una lista de códigos "
+"abierta en el futuro."
+
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Extension codelists"
 msgstr "Listas de códigos de extensión"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:40
+#: ../../standard/docs/en/extensions/participation_fee.md:41
 msgid ""
 "This extension adds **closed** ```participationFeeType``` codelist with the "
 "following codes:"
@@ -137,23 +148,23 @@ msgstr ""
 "Esta extensión agrega una lista de códigos **cerrada** "
 "```participationFeeType``` con los siguientes códigos:"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:42
+#: ../../standard/docs/en/extensions/participation_fee.md:43
 msgid "document - a fee payable for access to bidding documents"
 msgstr ""
 "document - una cuota a pagar por el acceso a los documentos de licitación"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:43
+#: ../../standard/docs/en/extensions/participation_fee.md:44
 msgid "deposit - a refundable fee payable for the submission of bids"
 msgstr ""
 "deposit - una cuota reembolsable a pagar por la presentación de ofertas"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:44
+#: ../../standard/docs/en/extensions/participation_fee.md:45
 msgid "submission - a non-refundable fee payable for the submission of bids"
 msgstr ""
 "submission - una cuota no reembolsable a pagar por la presentación de "
 "ofertas"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:45
+#: ../../standard/docs/en/extensions/participation_fee.md:46
 msgid "win - a fee payable by the winning bidder"
 msgstr "win - una cuota a pagar por el ganador"
 
@@ -161,7 +172,7 @@ msgstr "win - una cuota a pagar por el ganador"
 msgid "Example"
 msgstr "Ejemplo"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:49
+#: ../../standard/docs/en/extensions/participation_fee.md:50
 msgid ""
 "The following JSON snippet models a contracting process where fees are "
 "applicable for both access to documents and submission of bids:"
@@ -174,7 +185,7 @@ msgstr ""
 msgid "Usage notes"
 msgstr "Notas de uso"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:78
+#: ../../standard/docs/en/extensions/participation_fee.md:81
 msgid ""
 "In some cases, a fee may be levied for 'official copies' of procurement "
 "documents (although copies may also be available freely online), and bidders"
@@ -186,7 +197,7 @@ msgstr ""
 "línea de forma gratuita) y los licitadores deben probar que han pagado una "
 "copia oficial de los documentos como parte de su presentación."
 
-#: ../../standard/docs/en/extensions/participation_fee.md:80
+#: ../../standard/docs/en/extensions/participation_fee.md:83
 msgid ""
 "In this case, the fee should be modelled as a **submission** fee, as "
 "submission is only possible when this document access fee has been paid."
@@ -194,3 +205,15 @@ msgstr ""
 "En este caso, la cuota debe ser modelada como un cargo de **oferta**, ya que"
 " la presentación sólo es posible cuando se ha pagado la cuota de acceso al "
 "documento."
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "To do"
+msgstr "Por hacer"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:87
+msgid "participation / submission terminology"
+msgstr "Terminología de participación / presentación"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:88
+msgid "finalize codelist"
+msgstr "finalizar lista de códigos"

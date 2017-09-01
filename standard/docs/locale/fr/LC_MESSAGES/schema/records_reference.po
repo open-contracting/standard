@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-29 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: samgoeta <samgoeta@gmail.com>, 2017\n"
+"Last-Translator: Joel Gombin <joel.gombin@gmail.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,6 +29,10 @@ msgid ""
 "providing a summary of all the available data about this particular "
 "contracting process."
 msgstr ""
+"Il peut y avoir plusieurs instances concernant un même processus de "
+"passation de marché, mais il  ne devrait y avoir qu'une seule **archive** "
+"pour chaque ocid, fournissant un résumé de toutes les données disponibles "
+"sur ce processus en particulier."
 
 #: ../../standard/docs/en/schema/records_reference.md:5
 msgid "A record **must** contain:"
@@ -36,7 +40,7 @@ msgstr "Une archive **doit** contenir :"
 
 #: ../../standard/docs/en/schema/records_reference.md:7
 msgid "An [ocid](../../identifiers/#ocid)"
-msgstr ""
+msgstr "Un [ocid](../../identifiers/#ocid)"
 
 #: ../../standard/docs/en/schema/records_reference.md:8
 msgid ""
@@ -94,11 +98,11 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:0
 msgid "Package metadata"
-msgstr ""
+msgstr "Métadonnées des packages"
 
 #: ../../standard/docs/en/schema/records_reference.md:24
 msgid "Records should be embedded within a record package."
-msgstr "Les archives devraient être intégrées dans un package d'archives."
+msgstr "Les archives devraient être intégrées dans un paquet d'archives."
 
 #: ../../standard/sphinxcontrib-jsonschema:1
 msgid "Title"
@@ -125,13 +129,15 @@ msgid ""
 "See the guidance on [package metadata](reference.md#package-metadata). In "
 "addition, a record package includes:"
 msgstr ""
+"Consultez les indications sur [les métadonnées des packages](reference.md"
+"#package-metadata). En outre, un package d'archives comprend :"
 
 #: ../../standard/docs/en/schema/records_reference.md:36
 msgid ""
 "```packages``` - which should provide links to all the release packages used"
 " to compile this record."
 msgstr ""
-"```packages``` - qui devrait fournir des liens vers tous les packages "
+"```packages``` - qui devrait fournir des liens vers tous les paquets "
 "d'instances utilisés pour compiler cette archive."
 
 #: ../../standard/docs/en/schema/records_reference.md:37
@@ -157,7 +163,7 @@ msgid ""
 "Each record package contains an array of one or more records, consisting of "
 "the following sections:"
 msgstr ""
-"Chaque package d'archives contient une liste d'une ou plusieurs archives, "
+"Chaque paquet d'archives contient une liste d'une ou plusieurs archives, "
 "chaque archive comprenant les sections suivantes :"
 
 #: ../../standard/docs/en/schema/records_reference.md:54
@@ -185,7 +191,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:62
 msgid "URLs and metadata for each release; or"
-msgstr ""
+msgstr "Des URLs et métadonnées pour chaque instance ; ou"
 
 #: ../../standard/docs/en/schema/records_reference.md:63
 msgid "Embedded copies of the release;"
@@ -200,11 +206,11 @@ msgid ""
 "using a fragment identifier."
 msgstr ""
 "Dans le cas d'une liste d'URL, il devrait être possible pour une application"
-" réutilisant les données de consulter chaque URL, de récupérer un package "
+" réutilisant les données de consulter chaque URL, de récupérer un paquet "
 "d'instances et de localiser l'instance à l'intérieur. Afin de localiser "
-"l'instance spécifique à l'intérieur d'un package d'instance, le releaseID de"
-" l'instance doit être ajouté à l'URL de package en utilisant un identifiant "
-"de fragment (#xxx)."
+"l'instance spécifique à l'intérieur d'un paquet d'instance, le releaseID de "
+"l'instance doit être ajouté à l'URL de paquet en utilisant un identifiant de"
+" fragment (#xxx)."
 
 #: ../../standard/docs/en/schema/records_reference.md:67
 msgid "An example releases section is given below."

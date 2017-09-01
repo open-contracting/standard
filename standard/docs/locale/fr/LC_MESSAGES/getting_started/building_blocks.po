@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-29 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: samgoeta <samgoeta@gmail.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
@@ -42,6 +42,8 @@ msgstr "Un document OCDS est composé de plusieurs sections. Celles-ci sont :"
 msgid ""
 "**release metadata** - contextual information about each release of data;"
 msgstr ""
+"**release metadata** - des informations contextuelles sur chaque instance de"
+" données ;"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:20
 msgid ""
@@ -78,15 +80,15 @@ msgid ""
 "process;"
 msgstr ""
 "**contract** - informations sur les contrats signés dans le cadre du "
-"processus de commande publique ;"
+"processus de passation de marché ;"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:25
 msgid ""
 "**implementation** - information on the progress of each contract towards  "
 "completion."
 msgstr ""
-"**implementation** - des informations sur l'avancement de chaque contrat "
-"vers son achèvement."
+"**implementation** - des informations sur l'exécution de chaque contrat "
+"jusqu'à sa conclusion."
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:27
 msgid "These are represented in a JSON document as follows:"
@@ -109,11 +111,11 @@ msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:55
 msgid "For example, common building blocks are provided for:"
-msgstr "Par exemple, des composants essentielles sont fournis pour :"
+msgstr "Par exemple, des composants essentiels sont fournis pour :"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:57
 msgid "**Parties (Organizations)**"
-msgstr "**Parties (organisations)**"
+msgstr "**parties** - les parties prenantes"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:58
 msgid "**Amounts**"
@@ -121,7 +123,7 @@ msgstr "**Amounts** - les montants"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:59
 msgid "**Items**"
-msgstr "**Items** - les livrables"
+msgstr "**Items** - les biens et services"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:60
 msgid "**Time periods**"
@@ -153,9 +155,10 @@ msgid ""
 msgstr ""
 "Ces composants essentiels peuvent être utilisés dans différentes sections. "
 "Par exemple, **items** peut être utilisé dans l'appel d'offres (pour "
-"indiquer les livrables dont l'acheteur souhaite faire l'acquisition), dans "
-"l'avis d'attribution (pour indiquer les livrables qui ont été attribués) et "
-"dans un contrat (pour indiquer les livrables inclus dans le contrat). "
+"indiquer les biens ou services dont l'acheteur souhaite faire "
+"l'acquisition), dans l'avis d'attribution (pour indiquer les livrables qui "
+"ont été attribués) et dans un contrat (pour indiquer les livrables inclus "
+"dans le contrat). "
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:124
 msgid ""
@@ -175,15 +178,16 @@ msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:127
 msgid "```procurementMethod```"
-msgstr "```procurementMethod``` la procédure de passation de marché"
+msgstr ""
+"```procurementMethod``` - la procédure de passation de marché utilisée"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:128
 msgid "```awardCriteria```"
-msgstr "```awardCriteria``` les critères d'attribution"
+msgstr "```awardCriteria``` - les critères d'attribution"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:129
 msgid "```submissionMethod```"
-msgstr "```submissionMethod``` la méthode de soumission des réponses"
+msgstr "```submissionMethod``` - la méthode de soumission des candidatures"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:130
 msgid "etc."
@@ -206,7 +210,7 @@ msgid ""
 " not provided in the core OCDS schema."
 msgstr ""
 "Dans certains cas, les producteurs ou les usagers des données ont besoin de "
-"composants essentiels qui ne sont pas fournis dans le coeur du schéma OCDS."
+"composants essentiels qui ne sont pas fournis dans le cœur du schéma OCDS."
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:138
 msgid ""
@@ -223,7 +227,7 @@ msgid ""
 "mapping-template/) that can be used to cross-walk between your internal data"
 " systems and OCDS."
 msgstr ""
-"L'assistance technique OCDS fournit  [un modèle de mapping des "
+"L'assistance technique OCDS fournit  [un modèle de mappage des "
 "champs](http://www.open-contracting.org/resources/ocds-field-level-mapping-"
 "template/') qui peut être utilisé pour aligner vos systèmes internes de "
 "gestion de données avec le standard OCDS."
@@ -253,9 +257,9 @@ msgid ""
 "**Open codelists** provide recommended values. However, publishers can "
 "suggest amendments to these codelists, or provide their own extended values."
 msgstr ""
-"**Les listes ouvertes de code** fournissent des valeurs recommandées. "
-"Cependant, les producteurs de données peuvent suggérer des ajouts à ceux "
-"listes de code ou fournissent leurs propres valeurs étendues. "
+"**Les listes de codes ouvertes** fournissent des valeurs recommandées. "
+"Cependant, les producteurs de données peuvent suggérer des modifications ou "
+"fournir leurs propres valeurs étendues. "
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:160
 msgid "**Open Codelists**"
@@ -263,7 +267,7 @@ msgstr "**Les listes ouvertes de codes**"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:162
 msgid "Party Role"
-msgstr "Role de chaque partie"
+msgstr "Rôle de chaque partie"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:163
 msgid "Item Classification Scheme"
@@ -279,7 +283,7 @@ msgstr "Schéma d'identification des organisations"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:166
 msgid "Document Type"
-msgstr "Type de documents"
+msgstr "Type de document"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:167
 msgid "Award Criteria"
@@ -291,11 +295,11 @@ msgstr "Méthode de soumission"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:169
 msgid "Related Process"
-msgstr "Processus relié"
+msgstr "Processus connexe"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:170
 msgid "Related Process Scheme"
-msgstr "Schéma du processus relié"
+msgstr "Schéma du processus connexe"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:171
 msgid "Milestone Type"
@@ -350,9 +354,9 @@ msgid ""
 "Codelist values are case sensitive strings with associated labels, available"
 " in each language OCDS has been translated into."
 msgstr ""
-"Les valeurs des listes de code sont des chaines de caractères sensibles à la"
-" casse avec des labels associés, disponibles dans chaque nouvelle langue "
-"dans laquelle le standard OCDS a été traduit."
+"Les valeurs des listes de codes sont des chaînes de caractères sensibles à "
+"la casse avec des labels associés. Ces labels sont disponibles dans chaque "
+"nouvelle langue dans laquelle le standard OCDS est traduit."
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:195
 msgid ""
@@ -375,34 +379,38 @@ msgstr ""
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:203
 msgid "Open procedure;"
-msgstr "Procédure ouverte ;"
+msgstr "Une procédure ouverte"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:204
 msgid "Restricted procedure;"
-msgstr "Procédure restreinte ;"
+msgstr "Une procédure restreinte"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:205
 msgid "Competitive procedure with negotiation;"
-msgstr "Procédure compétitive avec négociation ;"
+msgstr "Une procédure compétitive avec négociation"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:206
 msgid "Competitive dialogue; and"
-msgstr "Dialogue compétitif ;"
+msgstr "Un dialogue compétitif"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:207
 msgid "Innovation partnership"
-msgstr "Partenariat d'innovation."
+msgstr "Un partenariat d'innovation"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:209
 msgid ""
 "However, to support comparison across continents, the main OCDS procurement "
 "method codelist is a closed codelist with four values:"
 msgstr ""
+"Cependant, pour permettre la comparaison entre les continents, la liste de "
+"code OCDS sur les méthodes de passation de marché est une liste fermée avec "
+"quatre valeurs :"
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:217
 msgid "All procedures should be able to be mapped to one of these options."
 msgstr ""
-"Toutes les procédures doivent pouvoir correspondre à une de ces options."
+"Toutes les procédures de passation de marchés doivent pouvoir correspondre à"
+" une de ces options."
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:219
 msgid ""
@@ -412,6 +420,13 @@ msgid ""
 "then provide the more detailed procedure type in an extended "
 "```procurementMethodDetails``` field."
 msgstr ""
+"Pour publier des données OCDS, un producteur de données européen utilisant "
+"les procédures définies par l'Union Européenne doit faire correspondre sa "
+"liste des procédures avec celle, plus restreinte, des codes OCDS. Le code "
+"OCDS correspondant doit alors être renseigné dans le champ "
+"```procurementMethod```. Il peut enfin donner plus de détails sur le type de"
+" procédure de passation de marché dans le champ étendu "
+"```procurementMethodDetails```."
 
 #: ../../standard/docs/en/getting_started/building_blocks.md:221
 msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-29 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Joel Gombin <joel.gombin@gmail.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
@@ -32,8 +32,8 @@ msgstr ""
 "Le [schéma des instances](release.md) fournit une spécification détaillée "
 "des champs et des structures de données à utiliser lors de la publication de"
 " données de commande publique. Des schémas complémentaires démontrent "
-"comment combiner les instances en packages de données et comment compiler "
-"les instances en archives."
+"comment combiner les instances en paquets de données et comment compiler les"
+" instances en archives."
 
 #: ../../standard/docs/en/schema/reference.md:5
 msgid ""
@@ -54,13 +54,13 @@ msgid ""
 "a number of sections, arranged in the following structure."
 msgstr ""
 "La majorité des données OCDS sont contenues dans une structure d'instance. "
-"Une ou plusieurs instances peuvent être publiées dans un package d'instance."
-" Les instances sont constituées d'un certain nombre de sections, disposées "
+"Une ou plusieurs instances peuvent être publiées dans un paquet d'instance. "
+"Les instances sont constituées d'un certain nombre de sections, disposées "
 "dans la structure suivante."
 
 #: ../../standard/docs/en/schema/reference.md:11
 msgid "[package](#package-metadata)"
-msgstr "[package](#package-metadata)"
+msgstr "[paquet](#package-metadata)"
 
 #: ../../standard/docs/en/schema/reference.md:12
 msgid "[release](#release)"
@@ -117,15 +117,15 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Package Metadata"
-msgstr "Métadonnées des packages"
+msgstr "Métadonnées des paquets"
 
 #: ../../standard/docs/en/schema/reference.md:26
 msgid ""
 "Releases must be published within a [release package](release_package.md). "
 "The release package provides metadata about the release(s) that it contains."
 msgstr ""
-"Les instances doivent être publiées dans un [package "
-"d'instance](release_package.md). Le package d'instance fournit des "
+"Les instances doivent être publiées dans un [paquet "
+"d'instance](release_package.md). Le paquet d'instance fournit des "
 "métadonnées à propos de la ou des instance(s) qu'il contient."
 
 #: ../../standard/sphinxcontrib-jsonschema:1
@@ -639,8 +639,8 @@ msgid ""
 "from that source."
 msgstr ""
 "Le composant sur les transactions est calqué sur les [éléments de "
-"transaction de l'Initiative Internationale de Transparence de l'Aide (IITA)]"
-" (http://iatistandard.org/activity-standard/iati-activities/iati-"
+"transaction de l'Initiative Internationale de Transparence de l'Aide "
+"(IITA)](http://iatistandard.org/activity-standard/iati-activities/iati-"
 "activity/transaction/) et peut être utilisé pour représenter les flux "
 "d'argent entre organisations dans le cadre d'un contrat. Comme avec le "
 "composant sur le [budget](#budget), ces données peuvent être utilisées pour "
@@ -740,7 +740,7 @@ msgid ""
 "package;"
 msgstr ""
 "L'inclusion des instances **avant** et **après** une modification au sein "
-"d'un package d'instances ;"
+"d'un paquet d'instances ;"
 
 #: ../../standard/docs/en/schema/reference.md:247
 msgid ""
@@ -754,10 +754,10 @@ msgstr ""
 #: ../../standard/docs/en/schema/reference.md:249
 msgid ""
 "See the [amendment implementation "
-"guidance](../../../implementation/amendments/) for more details."
+"guidance](../../../../implementation/amendments/) for more details."
 msgstr ""
 "Voir le [guide sur les modifications de l'exécution du "
-"marché](../../../implementation/amendments/) pour plus de détails."
+"marché](../../../../implementation/amendments/) pour plus de détails."
 
 #: ../../standard/docs/en/schema/reference.md:0
 msgid "Building block reference"
@@ -776,7 +776,7 @@ msgstr "`OrganizationReference`"
 
 #: ../../standard/docs/en/schema/reference.md:1
 msgid "Organizations"
-msgstr ""
+msgstr "Organisations"
 
 #: ../../standard/docs/en/schema/reference.md:3
 msgid ""
@@ -843,8 +843,8 @@ msgid ""
 "process."
 msgstr ""
 "Le bloc identifiant fournit un moyen d'[identifier les entités "
-"juridiques](../../ identifiers/#organizations) impliquées dans un processus "
-"de passation des marchés."
+"juridiques](../../identifiers/#organisation-ids impliquées dans un processus"
+" de passation des marchés."
 
 #: ../../standard/docs/en/schema/reference.md:279
 msgid ""
@@ -1221,7 +1221,7 @@ msgid ""
 msgstr ""
 "Dans tous ces cas, le bloc ```relatedProcess``` peut être utilisé pour faire"
 " un renvoi entre des processus de passation de marchés connexes en utilisant"
-" leur ```OCID```."
+" leur ```ocid```."
 
 #: ../../standard/docs/en/schema/reference.md:469
 msgid "A related process can be declared at two points in an OCDS release."
@@ -1313,7 +1313,7 @@ msgid ""
 "The publisher block is used in release and record packages to identify the "
 "source of a dataset."
 msgstr ""
-"Le composant du producteur des données est utilisé dans les packages "
+"Le composant du producteur des données est utilisé dans les paquets "
 "d'instances et d'archives pour identifier la source d'un jeu de données."
 
 #: ../../standard/docs/en/schema/reference.md:0
@@ -1368,12 +1368,12 @@ msgstr ""
 "telles que définies par [BCP47](http://tools.ietf.org/html/bcp47). OCDS "
 "autorise l'utilisation des codes proposés par BCP47 afin de tenir compte des"
 " variations de dialecte lorsque c'est justifié. Cependant, les producteurs "
-"de données **devraient** utiliser des [codes ISO-639-1 à deux lettres] "
-"(http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) dans la grande "
-"majorité des cas, et ne devraient pas supposer que les utilisateurs sont en "
-"mesure de faire la distinction entre les variations de codes associées au "
-"dialecte (par exemple, les producteurs de données OCDS sont fortement "
-"invités à utiliser 'fr' plutôt que 'fr_FR' ou 'fr_BE')."
+"de données **devraient** utiliser des [codes ISO-639-1 à deux "
+"lettres](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) dans la "
+"grande majorité des cas, et ne devraient pas supposer que les utilisateurs "
+"sont en mesure de faire la distinction entre les variations de codes "
+"associées au dialecte (par exemple, les producteurs de données OCDS sont "
+"fortement invités à utiliser 'fr' plutôt que 'fr_FR' ou 'fr_BE')."
 
 #: ../../standard/docs/en/schema/reference.md:509
 msgid ""
@@ -1397,9 +1397,9 @@ msgid ""
 "Spanish."
 msgstr ""
 "Un contrat pour des \"services de conseil en logiciels\" peut être publié "
-"avec l'anglais comme langue par défaut grâce au code ‘en’ ('le code "
-"ISO-639-1 pour l'anglais). Les exemples suivants donnent la description d'un"
-" livrable en anglais, français et espagnol."
+"avec l'anglais comme langue par défaut grâce au code ‘en’ ('le code ISO "
+"639-1 pour l'anglais). Les exemples suivants donnent la description d'un "
+"livrable en anglais, français et espagnol."
 
 #: ../../standard/docs/en/schema/reference.md:515
 msgid "**json**"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 09:36+0100\n"
+"POT-Creation-Date: 2017-08-31 12:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
@@ -122,15 +122,15 @@ msgstr ""
 
 #: ../../standard/Extension location:1
 msgid ""
-"The type of `geoJSON Geometry Objects <http://geojson.org/geojson-spec.html"
+"The type of `GeoJSON Geometry Objects <http://geojson.org/geojson-spec.html"
 "#geometry-objects>`__ being provided. To provide latitude and longitude use "
 "'point', and enter an array of [latitude,longitude] as the value of "
-"coordinates field: e.g. [37.42,-122.085]. Note the capitalisation of type "
-"values - set in order to maintain compatibility with geoJSON."
+"coordinates field: e.g. [37.42,-122.085]. Note the capitalization of type "
+"values - set in order to maintain compatibility with GeoJSON."
 msgstr ""
-"Se proporciona el `tipo de geoJSON Geometry Objects <http://geojson.org"
-"/geojson-spec.html#geometry-objects> `__. Para proporcionar latitud y "
-"longitud, utilice 'point', e ingrese una matriz de [latitud, longitud] como "
+"Se proporciona el tipo de `geoJSON Geometry Objects <http://geojson.org"
+"/geojson-spec.html#geometry-objects>`__. Para proporcionar latitud y "
+"longitud, utilice 'point', e ingrese una lista de [latitud, longitud] como "
 "el valor del campo de coordenadas: p. [37,42, -122,085]. Tenga en cuenta la "
 "capitalización de los tipos de valores - establecidos para mantener la "
 "compatibilidad con geoJSON."
@@ -138,11 +138,11 @@ msgstr ""
 #: ../../standard/Extension location:1
 msgid ""
 "The relevant array of points, e.g. [latitude,longitude], or nested array, "
-"for the geoJSON geometry being described. The longitude and latitude MUST be"
+"for the GeoJSON geometry being described. The longitude and latitude MUST be"
 " expressed in decimal degrees in the WGS84 (EPSG:4326) projection"
 msgstr ""
-"La matriz relevante de puntos, p.e. [latitud, longitud] o matriz anidada, "
-"para la geometría geoJSON descrita. La longitud y la latitud DEBEN "
+"La lista relevante de puntos, p. ej [latitud, longitud] o lista anidada, "
+"para la geometría GeoJSON descrita. La longitud y la latitud DEBEN "
 "expresarse en grados decimales en la proyección WGS84 (EPSG: 4326)"
 
 #: ../../standard/Extension location:1
@@ -196,15 +196,19 @@ msgstr ""
 msgid "Gazetteer Codelist"
 msgstr "Lista de códigos de diccionario geográfico "
 
+#: ../../standard/docs/en/extensions/location.md:34
+msgid "See locationGazeteers.csv"
+msgstr "Ver locationGazeteers.csv"
+
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Example"
 msgstr "Ejemplo"
 
-#: ../../standard/docs/en/extensions/location.md:41
+#: ../../standard/docs/en/extensions/location.md:37
 msgid "Below is an example of a geolocated item:"
 msgstr "A continuación se muestra un ejemplo de un elemento geolocalizado:"
 
-#: ../../standard/docs/en/extensions/location.md:87
+#: ../../standard/docs/en/extensions/location.md:83
 msgid ""
 "If the procurement related to the rebuilding of a road, then the item could "
 "also specify more complex geometries such as:"
@@ -213,7 +217,7 @@ msgstr ""
 "entonces el elemento también podría especificar geometrías más complejas, "
 "tales como:"
 
-#: ../../standard/docs/en/extensions/location.md:106
+#: ../../standard/docs/en/extensions/location.md:102
 msgid ""
 "You can take the contents of the geometry object, excluding the "
 "```geometry``` keyword, and plug this into any GeoJSON tool to see the shape"
