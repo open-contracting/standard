@@ -2,9 +2,11 @@ import os
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from multiprocessing import Process
 from collections import OrderedDict
+import requests
 import time
 import re
 from selenium.webdriver.support.ui import Select
@@ -125,3 +127,20 @@ def test_language_switcher(browser, server):
         select.select_by_visible_text(lang_name)
         assert browser.current_url == '{}{}/'.format(server, lang)
         assert lang_basic_text[lang] in browser.find_element_by_tag_name('body').text
+
+
+def test_broken_links(browser, server):
+    browser.get('{}en'.format(server))
+    while True:
+        for link in browser.find_elements_by_partial_link_text(''):
+            href = link.get_attribute('href')
+            if '/validator/' in href or 'localhost' not in href:
+                continue
+            r = requests.get(href)
+            if r.status_code != 200:
+                print(browser.current_url, href)
+        try:
+            browser.find_element_by_link_text('Next').click()
+        except NoSuchElementException:
+            break
+    raise
