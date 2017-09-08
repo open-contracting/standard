@@ -6,6 +6,6 @@ The release schema is used to validate the contents of the ```releases``` array 
 
 ## Release schema
 
-Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section.
+Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section. Required fields are indicated in **bold**.
 
 <script src="../../_static/docson/widget.js" data-schema="../../release-schema.json"></script>
