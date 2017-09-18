@@ -15,7 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Minor revisions
 
 * [#471](https://github.com/open-contracting/standard/issues/471) **[Updating milestoneType codelist](http://standard.open-contracting.org/1.1.1-dev/en/schema/codelists/#milestone-type)** replacing 'planning' with 'preProcurement' and 'adjudication' with 'assessment' and introducing codes for 'approval' and 'financing'. This is an open codelist, so previous codes remain valid, but publishers able to update to the new codes should do so. 
-* [#473](https://github.com/open-contracting/standard/issues/473) **[Updating definition of contractSchedules in documentType codelist](http://standard.open-contracting.org/1.1.1-dev/en/schema/codelists/#document-type)**
+* [#473](https://github.com/open-contracting/standard/issues/473) **[Updating definition of contractSchedule in documentType codelist](http://standard.open-contracting.org/1.1.1-dev/en/schema/codelists/#document-type)**
 
 ### Documentation improvements
 

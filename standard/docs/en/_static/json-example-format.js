@@ -22,7 +22,7 @@
               $(this).parent().prepend(
                   $("<select name='select-"+id +"'></select>")
                   .change(function(){ 
-                       $(this).siblings(".highlight-json").hide();
+                       $(this).siblings(".expandjson").hide();
                        $(this).siblings("."+ $(this).val()).show();
                    }))
               $(this).siblings("select").append($("<option></option>").attr("value",filename).text(filename.replace("file-",""))) 

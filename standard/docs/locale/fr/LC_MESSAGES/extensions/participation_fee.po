@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-26 10:44+0200\n"
+"POT-Creation-Date: 2017-08-29 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Colin Maudry <colin@maudry.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,17 +20,19 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Participation fees"
-msgstr ""
+msgstr "Frais de participation"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Metadata"
-msgstr ""
+msgstr "Métadonnées"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:5
 msgid ""
-"To use this extension, include its URL in the ```extension``` array of your"
-" release or record package."
+"To use this extension, include its URL in the ```extension``` array of your "
+"release or record package."
 msgstr ""
+"Pour utiliser cette extension, ajouter son URL dans la liste ```extension```"
+" de votre paquet d'instance ou d'archive. "
 
 #: ../../standard/docs/en/extensions/participation_fee.md:14
 msgid ""
@@ -37,26 +40,34 @@ msgid ""
 "contracting/ocds_participationFee_extension](https://github.com/open-"
 "contracting/ocds_participationFee_extension)"
 msgstr ""
+"Cette extension est maintenue à l'adresse [https://github.com/open-"
+"contracting/ocds_participationFee_extension](https://github.com/open-"
+"contracting/ocds_participationFee_extension)"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Documentation"
-msgstr ""
+msgstr "Documentation"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Background"
-msgstr ""
+msgstr "Contexte"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:20
 msgid ""
 "There are a number of cases where there may be costs to access documents "
 "for, or to participate within, a tender process."
 msgstr ""
+"Il existe un certain nombre de cas où il peut y avoir des coûts pour accéder"
+" aux documents concernant un processus d'appel d'offres ou pour participer à"
+" cet appel d'offres."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:22
 msgid ""
 "Potential bidders will want to be aware of the fees that a process might "
 "involve."
 msgstr ""
+"Les candidats potentiels voudront connaître les frais qu'un processus "
+"pourrait impliquer."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:24
 msgid ""
@@ -64,36 +75,48 @@ msgid ""
 "legal parameters (often set as a fixed maximum, or a percentage of total "
 "contract value), or to monitor how participation fees are being used."
 msgstr ""
+"Les personnes qui contrôlent les appels d'offres peuvent souhaiter s'assurer"
+" que les frais de participation se situent dans des paramètres légaux "
+"(souvent définis comme un maximum fixe ou un pourcentage de la valeur totale"
+" du contrat) ou pour surveiller la manière dont les frais de participation "
+"sont utilisés."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Extension fields"
-msgstr ""
+msgstr "Champs d'extension"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:28
 msgid ""
 "This extension adds a ```participationFees``` field to the ```tender``` "
 "section of OCDS and introduces a new ```participationFee``` building block."
 msgstr ""
+"Cette extension ajoute un champ ```participationFees``` à la section "
+"```tender``` d'OCDS et introduit un nouveau composant "
+"```participationFee```."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:30
 msgid ""
 "The ```participationFees``` field is an array of ```participationFee``` "
 "building blocks."
 msgstr ""
+"Le champ ```participationFees``` est une liste de composants "
+"```participationFee```."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:32
 msgid "The ```participationFee``` building block is made up of three fields:"
-msgstr ""
+msgstr "Le composant ```participationFee``` est composé de trois champs :"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:34
 msgid ""
 "```type``` - a value from the ```participationFeeType``` codelist, "
 "describing the type of the fee"
 msgstr ""
+"```type``` - une valeur de la liste de codes ```participationFeeType``` "
+"décrivant le type de chaque frais"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:35
 msgid "```value``` - the amount and currency of the fee"
-msgstr ""
+msgstr "```value``` - le montant et la devise des frais"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:36
 msgid ""
@@ -101,57 +124,101 @@ msgid ""
 "requirements. For example, sometimes a document fee is only applicable to "
 "the hard copy of the documents."
 msgstr ""
+"```description``` - un champ optionnel avec plus d'informations sur les "
+"frais requis. Par exemple, parfois, une taxe sur le document s'applique "
+"uniquement à la copie papier des documents."
+
+#: ../../standard/docs/en/extensions/participation_fee.md:37
+msgid ""
+"```methodOfPayment``` - an optional field providing information on methods "
+"of payment accepted for the documentation. This is currently an array of "
+"strings, but an open codelist may be introduced in future."
+msgstr ""
+"```methodOfPayment``` - un champ optionnel permettant de fournir des "
+"informations sur les méthodes de paiement acceptées pour acquérir la "
+"documentation. Pour l'instant, ce champ est une liste de chaînes de "
+"caractère, mais, à l'avenir une liste de codes sera peut-être créée."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Extension codelists"
-msgstr ""
+msgstr "Listes des codes de l'extension"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:40
+#: ../../standard/docs/en/extensions/participation_fee.md:41
 msgid ""
 "This extension adds **closed** ```participationFeeType``` codelist with the "
 "following codes:"
 msgstr ""
-
-#: ../../standard/docs/en/extensions/participation_fee.md:42
-msgid "document - a fee payable for access to bidding documents"
-msgstr ""
+"Cette extension ajoute la liste de codes  **fermée** "
+"```participationFeeType``` avec les codes suivants :"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:43
-msgid "deposit - a refundable fee payable for the submission of bids"
+msgid "document - a fee payable for access to bidding documents"
 msgstr ""
+"**document** (document) - des frais payables pour l'accès aux documents "
+"d'appel d'offres"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:44
-msgid "submission - a non-refundable fee payable for the submission of bids"
+msgid "deposit - a refundable fee payable for the submission of bids"
 msgstr ""
+"**deposit** (caution) - des frais remboursables à payer pour la soumission "
+"des offres"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:45
-msgid "win - a fee payable by the winning bidder"
+msgid "submission - a non-refundable fee payable for the submission of bids"
 msgstr ""
+"**submission** (soumission) - des frais non remboursables payables pour la "
+"soumission des offres"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:46
+msgid "win - a fee payable by the winning bidder"
+msgstr "**win** (gagnant) - des frais payables par le candidat retenu"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Example"
-msgstr ""
+msgstr "Exemple"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:49
+#: ../../standard/docs/en/extensions/participation_fee.md:50
 msgid ""
 "The following JSON snippet models a contracting process where fees are "
 "applicable for both access to documents and submission of bids:"
 msgstr ""
+"L'extrait JSON suivant modélise un processus de passation de marchés où des "
+"frais sont applicables tant pour l'accès aux documents que pour la "
+"soumission des offres :"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
 msgid "Usage notes"
-msgstr ""
+msgstr "Notes d'utilisation"
 
-#: ../../standard/docs/en/extensions/participation_fee.md:78
+#: ../../standard/docs/en/extensions/participation_fee.md:81
 msgid ""
 "In some cases, a fee may be levied for 'official copies' of procurement "
 "documents (although copies may also be available freely online), and bidders"
 " required to prove they have paid for an official copy of the documents as "
 "part of their submission."
 msgstr ""
+"Dans certains cas, des frais peuvent être perçus pour les «copies "
+"officielles» des documents du marché (bien que des copies puissent également"
+" être disponibles en ligne) et les candidats doivent prouver qu'ils ont payé"
+" une copie officielle des documents dans le cadre de leur soumission."
 
-#: ../../standard/docs/en/extensions/participation_fee.md:80
+#: ../../standard/docs/en/extensions/participation_fee.md:83
 msgid ""
 "In this case, the fee should be modelled as a **submission** fee, as "
 "submission is only possible when this document access fee has been paid."
 msgstr ""
+"Dans ce cas, les frais devront être modélisés en tant que frais de type "
+"\"submission\" car la soumission n'est possible que lorsque cette taxe "
+"d'accès au document a été payée."
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "To do"
+msgstr "ToDo"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:87
+msgid "participation / submission terminology"
+msgstr "terminologie participation / soumissions"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:88
+msgid "finalize codelist"
+msgstr "finaliser la liste de codes"

@@ -2,11 +2,11 @@
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package. 
+To use this extension, include its URL in the ```extension``` array of your release or record package.
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_participationFee_extension/v1.1/extension.json"],
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_participationFee_extension/v1.1.1/extension.json"],
     "releases":[]
 }
 ```
@@ -34,6 +34,7 @@ The ```participationFee``` building block is made up of three fields:
 * ```type``` - a value from the ```participationFeeType``` codelist, describing the type of the fee
 * ```value``` - the amount and currency of the fee
 * ```description``` - an optional field with more information on the fee requirements. For example, sometimes a document fee is only applicable to the hard copy of the documents.
+* ```methodOfPayment``` - an optional field providing information on methods of payment accepted for the documentation. This is currently an array of strings, but an open codelist may be introduced in future. 
 
 ### Extension codelists
 
@@ -56,17 +57,19 @@ The following JSON snippet models a contracting process where fees are applicabl
         "type": "document",
         "value": {
           "currency": "GBP",
-          "amount": 8.00,
-          "description": "Fee payable for both soft and hard copies of documents. "
-        }
+          "amount": 8.00
+        },
+        "description": "Fee payable for both soft and hard copies of documents.",
+          "methodOfPayment":["electronic","cheque"]
       },
       {
-        "type": "submission",
+        "type": ["submission"],
         "value": {
           "currency": "GBP",
-          "amount": 10.00,
-          "description": "Fee payable within e-procurement system."
-        }
+          "amount": 10.00
+        },
+        "description": "Fee payable within e-procurement system.",
+        "methodOfPayment":["electronic"]
       }
     ]
   }
@@ -78,3 +81,8 @@ The following JSON snippet models a contracting process where fees are applicabl
 In some cases, a fee may be levied for 'official copies' of procurement documents (although copies may also be available freely online), and bidders required to prove they have paid for an official copy of the documents as part of their submission. 
 
 In this case, the fee should be modelled as a **submission** fee, as submission is only possible when this document access fee has been paid. 
+
+### To do
+
+* participation / submission terminology
+* finalize codelist
