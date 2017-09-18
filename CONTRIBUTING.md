@@ -64,7 +64,7 @@ You confirm that:
 
 (c) The grant of rights under Section 2 does not violate any grant of rights which You or Your Affiliates have made to third parties.
 
-(d) You have followed the instructions in §1, if You do not own the Copyright in the entire work of authorship Submitted.
+(d) You have followed the instructions in Section 1, if You do not own the Copyright in the entire work of authorship Submitted.
 
 ## 4. Disclaimer
 
