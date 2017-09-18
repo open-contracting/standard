@@ -89,6 +89,7 @@ def test_community_extensions(browser, server, lang):
     assert cells[3].text == 'ppp, 1.1'
 
     assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
+    browser.execute_script("arguments[0].scrollIntoView();", cells[0])
     cells[0].click()
     assert 'ocds_budget_breakdown_extension' in browser.find_element_by_id('using-extensions').text
 
