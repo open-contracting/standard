@@ -139,6 +139,8 @@ def test_broken_links(browser, server):
             r = requests.get(href)
             assert r.status_code == 200
         try:
-            browser.find_element_by_link_text('Next').click()
+            next = browser.find_element_by_link_text('Next')
+            browser.execute_script("arguments[0].scrollIntoView();", next)
+            next.click()
         except NoSuchElementException:
             break
