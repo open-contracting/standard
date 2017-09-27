@@ -137,10 +137,8 @@ def test_broken_links(browser, server):
             if '/validator/' in href or 'localhost' not in href:
                 continue
             r = requests.get(href)
-            if r.status_code != 200:
-                print(browser.current_url, href)
+            assert r.status_code == 200
         try:
             browser.find_element_by_link_text('Next').click()
         except NoSuchElementException:
             break
-    raise
