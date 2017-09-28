@@ -88,7 +88,7 @@ def test_community_extensions(browser, server, lang):
             'https://github.com/open-contracting/ocds_budget_breakdown_extension/blob/master/README.md')
     cells = link.find_elements_by_xpath('../../td')
     assert cells[2].text == 'For providing a detailed budget breakdown.'
-    assert cells[3].text == 'ppp, 1.1'
+    assert cells[3].text == 'ppp'
 
     assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
     browser.execute_script("arguments[0].scrollIntoView();", cells[0])
