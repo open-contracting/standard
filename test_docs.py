@@ -129,8 +129,9 @@ def test_language_switcher(browser, server):
         assert lang_basic_text[lang] in browser.find_element_by_tag_name('body').text
 
 
-def test_broken_links(browser, server):
-    browser.get('{}en'.format(server))
+@pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
+def test_broken_links(browser, server, lang):
+    browser.get('{}{}'.format(server, lang))
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
             href = link.get_attribute('href')

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-31 12:48+0100\n"
+"POT-Creation-Date: 2017-09-27 11:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Juan Pane <juanpane@idatosabiertos.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
@@ -390,6 +390,11 @@ msgstr "Vía de Open Street Map"
 msgid "Deprecated"
 msgstr "Obsoleto"
 
+#. Title
+#: schema/codelists/awardCriteria.csv:1
+msgid "Price Only"
+msgstr "Sólo precio"
+
 #. Description
 #: schema/codelists/awardCriteria.csv:1
 msgid "The award will be made to the qualified bid with the lowest price."
@@ -397,9 +402,9 @@ msgstr ""
 "La adjudicación se otorgará a la oferta calificada con el precio más bajo."
 
 #. Title
-#: schema/codelists/awardCriteria.csv:1
-msgid "Price Only"
-msgstr "Sólo precio"
+#: schema/codelists/awardCriteria.csv:2
+msgid "Cost Only"
+msgstr "Sólo Costo"
 
 #. Description
 #: schema/codelists/awardCriteria.csv:2
@@ -416,9 +421,9 @@ msgstr ""
 "tienen que ver con el precio al elegir una opción en particular."
 
 #. Title
-#: schema/codelists/awardCriteria.csv:2
-msgid "Cost Only"
-msgstr "Sólo Costo"
+#: schema/codelists/awardCriteria.csv:3
+msgid "Quality Only"
+msgstr "Sólo Calidad"
 
 #. Description
 #: schema/codelists/awardCriteria.csv:3
@@ -432,9 +437,9 @@ msgstr ""
 "máximo y sin incluir factores de precio en la evaluación."
 
 #. Title
-#: schema/codelists/awardCriteria.csv:3
-msgid "Quality Only"
-msgstr "Sólo Calidad"
+#: schema/codelists/awardCriteria.csv:4
+msgid "Rated Criteria"
+msgstr "Criterios Evaluados"
 
 #. Description
 #: schema/codelists/awardCriteria.csv:4
@@ -452,9 +457,9 @@ msgstr ""
 "calificación con la extensión de requerimientos. "
 
 #. Title
-#: schema/codelists/awardCriteria.csv:4
-msgid "Rated Criteria"
-msgstr "Criterios Evaluados"
+#: schema/codelists/awardCriteria.csv:5
+msgid "Lowest Cost"
+msgstr "Precio Más Bajo"
 
 #. Description
 #: schema/codelists/awardCriteria.csv:5 schema/codelists/awardCriteria.csv:6
@@ -464,14 +469,14 @@ msgid ""
 msgstr "Este código es obsoleto. Por favor elige alguno de los otros códigos."
 
 #. Title
-#: schema/codelists/awardCriteria.csv:5
-msgid "Lowest Cost"
-msgstr "Precio Más Bajo"
-
-#. Title
 #: schema/codelists/awardCriteria.csv:6
 msgid "Best Proposal"
 msgstr "Mejor Propuesta"
+
+#. Title
+#: schema/codelists/awardCriteria.csv:7
+msgid "Best Value to Government"
+msgstr "Mejor Valor al Gobierno"
 
 #. Description
 #: schema/codelists/awardCriteria.csv:7
@@ -481,11 +486,6 @@ msgid ""
 msgstr ""
 "Este código es obsoleto. 'Criterios de calificación' es una alternativa para"
 " la mayoría de los procesos previamente mapeados con este código."
-
-#. Title
-#: schema/codelists/awardCriteria.csv:7
-msgid "Best Value to Government"
-msgstr "Mejor Valor al Gobierno"
 
 #. Title
 #: schema/codelists/awardCriteria.csv:8
@@ -2006,6 +2006,12 @@ msgstr ""
 "Documentación de los acuerdos o razones para la cancelación de un proceso de"
 " contratación, adjudicación o contrato específico."
 
+#. Title
+#: schema/codelists/extendedProcurementCategory.csv:1
+#: schema/codelists/procurementCategory.csv:1
+msgid "Goods and supplies"
+msgstr "Bienes y provisiones"
+
 #. Description
 #: schema/codelists/extendedProcurementCategory.csv:1
 msgid ""
@@ -2015,10 +2021,10 @@ msgstr ""
 "provisiones"
 
 #. Title
-#: schema/codelists/extendedProcurementCategory.csv:1
-#: schema/codelists/procurementCategory.csv:1
-msgid "Goods and supplies"
-msgstr "Bienes y provisiones"
+#: schema/codelists/extendedProcurementCategory.csv:2
+#: schema/codelists/procurementCategory.csv:2
+msgid "Works"
+msgstr "Obras"
 
 #. Description
 #: schema/codelists/extendedProcurementCategory.csv:2
@@ -2031,10 +2037,10 @@ msgstr ""
 "infraestructura."
 
 #. Title
-#: schema/codelists/extendedProcurementCategory.csv:2
-#: schema/codelists/procurementCategory.csv:2
-msgid "Works"
-msgstr "Obras"
+#: schema/codelists/extendedProcurementCategory.csv:3
+#: schema/codelists/procurementCategory.csv:3
+msgid "Services"
+msgstr "Servicios"
 
 #. Description
 #: schema/codelists/extendedProcurementCategory.csv:3
@@ -2052,10 +2058,9 @@ msgstr ""
 "usarse para servicios no de consultoría."
 
 #. Title
-#: schema/codelists/extendedProcurementCategory.csv:3
-#: schema/codelists/procurementCategory.csv:3
-msgid "Services"
-msgstr "Servicios"
+#: schema/codelists/extendedProcurementCategory.csv:4
+msgid "Consulting Services"
+msgstr "Servicios de Consultoría"
 
 #. Description
 #: schema/codelists/extendedProcurementCategory.csv:4
@@ -2065,11 +2070,6 @@ msgid ""
 msgstr ""
 "Este proceso de contratación involucra servicios profesionales provistos "
 "como una consultoría."
-
-#. Title
-#: schema/codelists/extendedProcurementCategory.csv:4
-msgid "Consulting Services"
-msgstr "Servicios de Consultoría"
 
 #. Title_en
 #. Title
@@ -2237,15 +2237,20 @@ msgstr ""
 "Activity in the European Economic Community, 2008. En uso desde el 1 de "
 "enero de 2014"
 
+#. Title
+#: schema/codelists/method.csv:1
+msgid "Open"
+msgstr "Abierta"
+
 #. Description
 #: schema/codelists/method.csv:1
 msgid "All interested suppliers may submit a tender."
 msgstr "Todos los proveedores interesados pueden enviar una propuesta."
 
 #. Title
-#: schema/codelists/method.csv:1
-msgid "Open"
-msgstr "Abierta"
+#: schema/codelists/method.csv:2
+msgid "Selective"
+msgstr "Selectiva"
 
 #. Description
 #: schema/codelists/method.csv:2
@@ -2254,9 +2259,9 @@ msgstr ""
 "Sólo los proveedores calificados son invitados a enviar una propuesta."
 
 #. Title
-#: schema/codelists/method.csv:2
-msgid "Selective"
-msgstr "Selectiva"
+#: schema/codelists/method.csv:3
+msgid "Limited"
+msgstr "Limitada"
 
 #. Description
 #: schema/codelists/method.csv:3
@@ -2265,9 +2270,9 @@ msgstr ""
 "La entidad licitadora contacta a un número de proveedores de su elección."
 
 #. Title
-#: schema/codelists/method.csv:3
-msgid "Limited"
-msgstr "Limitada"
+#: schema/codelists/method.csv:4
+msgid "Direct"
+msgstr "Directa"
 
 #. Description
 #: schema/codelists/method.csv:4
@@ -2275,9 +2280,9 @@ msgid "The contract is awarded to a single supplier without competition."
 msgstr "El contrato se otorga a un solo proveedor sin competencia."
 
 #. Title
-#: schema/codelists/method.csv:4
-msgid "Direct"
-msgstr "Directa"
+#: schema/codelists/milestoneStatus.csv:1
+msgid "Scheduled"
+msgstr "Programada"
 
 #. Description
 #: schema/codelists/milestoneStatus.csv:1
@@ -2290,9 +2295,9 @@ msgstr ""
 "hacia el hito no ha sido evaluado con base en milestone.dateModified"
 
 #. Title
-#: schema/codelists/milestoneStatus.csv:1
-msgid "Scheduled"
-msgstr "Programada"
+#: schema/codelists/milestoneStatus.csv:2
+msgid "Met"
+msgstr "Cumplido"
 
 #. Description
 #: schema/codelists/milestoneStatus.csv:2
@@ -2304,9 +2309,9 @@ msgstr ""
 "el campo milestone.dateMet "
 
 #. Title
-#: schema/codelists/milestoneStatus.csv:2
-msgid "Met"
-msgstr "Cumplido"
+#: schema/codelists/milestoneStatus.csv:3
+msgid "Not Met"
+msgstr "No cumplido"
 
 #. Description
 #: schema/codelists/milestoneStatus.csv:3
@@ -2318,9 +2323,9 @@ msgstr ""
 "milestone.dateModified)."
 
 #. Title
-#: schema/codelists/milestoneStatus.csv:3
-msgid "Not Met"
-msgstr "No cumplido"
+#: schema/codelists/milestoneStatus.csv:4
+msgid "Partially Met"
+msgstr "Cumplido Parcialmente"
 
 #. Description
 #: schema/codelists/milestoneStatus.csv:4
@@ -2332,9 +2337,9 @@ msgstr ""
 "revisado por última vez (ver milestone.dateModified)"
 
 #. Title
-#: schema/codelists/milestoneStatus.csv:4
-msgid "Partially Met"
-msgstr "Cumplido Parcialmente"
+#: schema/codelists/milestoneType.csv:1
+msgid "Pre-procurement milestones"
+msgstr "Hitos previos a la contratación"
 
 #. Description
 #: schema/codelists/milestoneType.csv:1
@@ -2346,9 +2351,9 @@ msgstr ""
 "proceso, como la preparación de estudios clave."
 
 #. Title
-#: schema/codelists/milestoneType.csv:1
-msgid "Pre-procurement milestones"
-msgstr "Hitos previos a la contratación"
+#: schema/codelists/milestoneType.csv:2
+msgid "Approval"
+msgstr "Aprobación"
 
 #. Description
 #: schema/codelists/milestoneType.csv:2
@@ -2356,9 +2361,9 @@ msgid "For events such as the sign-off of a contract or project. "
 msgstr "Para eventos como la firma de un contrato o proyecto."
 
 #. Title
-#: schema/codelists/milestoneType.csv:2
-msgid "Approval"
-msgstr "Aprobación"
+#: schema/codelists/milestoneType.csv:3
+msgid "Engagement milestones"
+msgstr "Hitos de participación"
 
 #. Description
 #: schema/codelists/milestoneType.csv:3
@@ -2366,9 +2371,9 @@ msgid "For engagement milestones, such as a public hearing."
 msgstr "Para hitos de participación, tales como una audiencia pública"
 
 #. Title
-#: schema/codelists/milestoneType.csv:3
-msgid "Engagement milestones"
-msgstr "Hitos de participación"
+#: schema/codelists/milestoneType.csv:4
+msgid "Assessment milestones"
+msgstr "Hitos de la evaluación"
 
 #. Description
 #: schema/codelists/milestoneType.csv:4
@@ -2380,9 +2385,9 @@ msgstr ""
 "un comité."
 
 #. Title
-#: schema/codelists/milestoneType.csv:4
-msgid "Assessment milestones"
-msgstr "Hitos de la evaluación"
+#: schema/codelists/milestoneType.csv:5
+msgid "Delivery milestones"
+msgstr "Hitos de entrega"
 
 #. Description
 #: schema/codelists/milestoneType.csv:5
@@ -2394,9 +2399,9 @@ msgstr ""
 " de proveerse."
 
 #. Title
-#: schema/codelists/milestoneType.csv:5
-msgid "Delivery milestones"
-msgstr "Hitos de entrega"
+#: schema/codelists/milestoneType.csv:6
+msgid "Reporting milestones"
+msgstr "Hitos de reporte"
 
 #. Description
 #: schema/codelists/milestoneType.csv:6
@@ -2406,9 +2411,9 @@ msgstr ""
 "entregarse"
 
 #. Title
-#: schema/codelists/milestoneType.csv:6
-msgid "Reporting milestones"
-msgstr "Hitos de reporte"
+#: schema/codelists/milestoneType.csv:7
+msgid "Financing milestones"
+msgstr "Hitos de financiamiento"
 
 #. Description
 #: schema/codelists/milestoneType.csv:7
@@ -2420,9 +2425,9 @@ msgstr ""
 "proyectos de asociación público-privada."
 
 #. Title
-#: schema/codelists/milestoneType.csv:7
-msgid "Financing milestones"
-msgstr "Hitos de financiamiento"
+#: schema/codelists/partyRole.csv:1
+msgid "Buyer"
+msgstr "Comprador"
 
 #. Description
 #: schema/codelists/partyRole.csv:1
@@ -2433,9 +2438,9 @@ msgstr ""
 "bienes."
 
 #. Title
-#: schema/codelists/partyRole.csv:1
-msgid "Buyer"
-msgstr "Comprador"
+#: schema/codelists/partyRole.csv:2
+msgid "Procuring Entity"
+msgstr "Entidad contratante"
 
 #. Description
 #: schema/codelists/partyRole.csv:2
@@ -2447,9 +2452,9 @@ msgstr ""
 "que paga/usa los artículos adquiridos."
 
 #. Title
-#: schema/codelists/partyRole.csv:2
-msgid "Procuring Entity"
-msgstr "Entidad contratante"
+#: schema/codelists/partyRole.csv:3
+msgid "Supplier"
+msgstr "Proveedor"
 
 #. Description
 #: schema/codelists/partyRole.csv:3
@@ -2459,9 +2464,9 @@ msgstr ""
 "La entidad ganadora o contratada para proveer bienes, obras o servicios."
 
 #. Title
-#: schema/codelists/partyRole.csv:3
-msgid "Supplier"
-msgstr "Proveedor"
+#: schema/codelists/partyRole.csv:4
+msgid "Tenderer"
+msgstr "Licitante"
 
 #. Description
 #: schema/codelists/partyRole.csv:4
@@ -2469,9 +2474,9 @@ msgid "All entities who submit a tender"
 msgstr "Todas las entidades que presentan una propuesta"
 
 #. Title
-#: schema/codelists/partyRole.csv:4
-msgid "Tenderer"
-msgstr "Licitante"
+#: schema/codelists/partyRole.csv:5
+msgid "Funder"
+msgstr "Financiador"
 
 #. Description
 #: schema/codelists/partyRole.csv:5
@@ -2483,9 +2488,9 @@ msgstr ""
 "contratación."
 
 #. Title
-#: schema/codelists/partyRole.csv:5
-msgid "Funder"
-msgstr "Financiador"
+#: schema/codelists/partyRole.csv:6
+msgid "Enquirer"
+msgstr "Persona que solicita información"
 
 #. Description
 #: schema/codelists/partyRole.csv:6
@@ -2497,9 +2502,9 @@ msgstr ""
 "solicitudes de información de un proceso de contratación."
 
 #. Title
-#: schema/codelists/partyRole.csv:6
-msgid "Enquirer"
-msgstr "Persona que solicita información"
+#: schema/codelists/partyRole.csv:7
+msgid "Payer"
+msgstr "Pagador"
 
 #. Description
 #: schema/codelists/partyRole.csv:7
@@ -2507,9 +2512,9 @@ msgid "A party making a payment from a transaction"
 msgstr "Una parte que hace un pago de una transacción"
 
 #. Title
-#: schema/codelists/partyRole.csv:7
-msgid "Payer"
-msgstr "Pagador"
+#: schema/codelists/partyRole.csv:8
+msgid "Payee"
+msgstr "Beneficiario"
 
 #. Description
 #: schema/codelists/partyRole.csv:8
@@ -2517,9 +2522,9 @@ msgid "A party in receipt of a payment from a transaction"
 msgstr "Una parte que recibe un pago de una transacción"
 
 #. Title
-#: schema/codelists/partyRole.csv:8
-msgid "Payee"
-msgstr "Beneficiario"
+#: schema/codelists/partyRole.csv:9
+msgid "Review Body"
+msgstr "Comisión de Revisión"
 
 #. Description
 #: schema/codelists/partyRole.csv:9
@@ -2530,11 +2535,6 @@ msgstr ""
 "Una parte responsable de la revisión de este proceso de adquisición. Esta "
 "parte tiene a menudo un papel en cualquier cuestionamiento hecho a la "
 "adjudicación del contrato."
-
-#. Title
-#: schema/codelists/partyRole.csv:9
-msgid "Review Body"
-msgstr "Comisión de Revisión"
 
 #. Description
 #: schema/codelists/procurementCategory.csv:1
@@ -2567,6 +2567,11 @@ msgstr ""
 "profesionales de alguna manera, generalmente contratados en la forma de "
 "resultados medibles o entregables."
 
+#. Title
+#: schema/codelists/relatedProcess.csv:1
+msgid "Framework agreement procedure first stage"
+msgstr "Primera etapa de un acuerdo marco"
+
 #. Description
 #: schema/codelists/relatedProcess.csv:1
 msgid ""
@@ -2579,9 +2584,9 @@ msgstr ""
 "del proceso relacionado."
 
 #. Title
-#: schema/codelists/relatedProcess.csv:1
-msgid "Framework agreement procedure first stage"
-msgstr "Primera etapa de un acuerdo marco"
+#: schema/codelists/relatedProcess.csv:2
+msgid "Planning process"
+msgstr "Proceso de planeación"
 
 #. Description
 #: schema/codelists/relatedProcess.csv:2
@@ -2590,9 +2595,9 @@ msgstr ""
 "Este proceso de contratación sigue del proceso de planeación relacionado."
 
 #. Title
-#: schema/codelists/relatedProcess.csv:2
-msgid "Planning process"
-msgstr "Proceso de planeación"
+#: schema/codelists/relatedProcess.csv:3
+msgid "Parent contract (for sub-contracts)"
+msgstr "Contrato principal (para sub contratos)"
 
 #. Description
 #: schema/codelists/relatedProcess.csv:3
@@ -2604,9 +2609,9 @@ msgstr ""
 "relacionado."
 
 #. Title
-#: schema/codelists/relatedProcess.csv:3
-msgid "Parent contract (for sub-contracts)"
-msgstr "Contrato principal (para sub contratos)"
+#: schema/codelists/relatedProcess.csv:4
+msgid "Prior process"
+msgstr "Proceso previo"
 
 #. Description
 #: schema/codelists/relatedProcess.csv:4
@@ -2618,9 +2623,9 @@ msgstr ""
 "previo relacionado."
 
 #. Title
-#: schema/codelists/relatedProcess.csv:4
-msgid "Prior process"
-msgstr "Proceso previo"
+#: schema/codelists/relatedProcess.csv:5
+msgid "Unsuccessful process"
+msgstr "Proceso sin éxito"
 
 #. Description
 #: schema/codelists/relatedProcess.csv:5
@@ -2629,9 +2634,9 @@ msgid ""
 msgstr "Este proceso de contratación sigue un proceso previo sin éxito"
 
 #. Title
-#: schema/codelists/relatedProcess.csv:5
-msgid "Unsuccessful process"
-msgstr "Proceso sin éxito"
+#: schema/codelists/relatedProcess.csv:6
+msgid "Sub-contract"
+msgstr "Sub contrato"
 
 #. Description
 #: schema/codelists/relatedProcess.csv:6
@@ -2640,9 +2645,9 @@ msgstr ""
 "El proceso relacionado puede resultar en un sub contrato de este contrato."
 
 #. Title
-#: schema/codelists/relatedProcess.csv:6
-msgid "Sub-contract"
-msgstr "Sub contrato"
+#: schema/codelists/relatedProcess.csv:7
+msgid "Replacement process"
+msgstr "Proceso de reemplazo"
 
 #. Description
 #: schema/codelists/relatedProcess.csv:7
@@ -2651,9 +2656,9 @@ msgstr ""
 "El proceso relacionado puede resultar en el reemplazo de este contrato."
 
 #. Title
-#: schema/codelists/relatedProcess.csv:7
-msgid "Replacement process"
-msgstr "Proceso de reemplazo"
+#: schema/codelists/relatedProcess.csv:8
+msgid "Renewal process"
+msgstr "Proceso de renovación"
 
 #. Description
 #: schema/codelists/relatedProcess.csv:8
@@ -2662,9 +2667,9 @@ msgstr ""
 "El proceso relacionado puede resultar en la renovación de este contrato."
 
 #. Title
-#: schema/codelists/relatedProcess.csv:8
-msgid "Renewal process"
-msgstr "Proceso de renovación"
+#: schema/codelists/relatedProcessScheme.csv:1
+msgid "Open Contracting ID"
+msgstr "Open Contracting ID"
 
 #. Description
 #: schema/codelists/relatedProcessScheme.csv:1
@@ -2672,9 +2677,9 @@ msgid "An open contracting process identifier (ocid)"
 msgstr "Un identificador de proceso de contratación abierta (ocid)"
 
 #. Title
-#: schema/codelists/relatedProcessScheme.csv:1
-msgid "Open Contracting ID"
-msgstr "Open Contracting ID"
+#: schema/codelists/releaseTag.csv:1 schema/codelists/tenderStatus.csv:1
+msgid "Planning"
+msgstr "Planeación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:1
@@ -2690,9 +2695,9 @@ msgstr ""
 "hay planes detallados para una licitación. "
 
 #. Title
-#: schema/codelists/releaseTag.csv:1 schema/codelists/tenderStatus.csv:1
-msgid "Planning"
-msgstr "Planeación"
+#: schema/codelists/releaseTag.csv:2
+msgid "Planning Update"
+msgstr "Actualización de Planeación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:2
@@ -2709,11 +2714,6 @@ msgstr ""
 "proceso de contratación propuesto, o una actualización de tender.status para"
 " indicar que una propuesta de proyecto se ha retirado."
 
-#. Title
-#: schema/codelists/releaseTag.csv:2
-msgid "Planning Update"
-msgstr "Actualización de Planeación"
-
 #. Description
 #: schema/codelists/releaseTag.csv:3
 msgid ""
@@ -2723,6 +2723,11 @@ msgstr ""
 "Provee información sobre una nueva licitación (llamado a propuestas). La "
 "entrega de licitación debe contener detalles de los bienes o servicios que "
 "se buscan."
+
+#. Title
+#: schema/codelists/releaseTag.csv:4
+msgid "Tender Amendment"
+msgstr "Enmienda de Licitación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:4
@@ -2738,9 +2743,9 @@ msgstr ""
 "significado legal en varias jurisdicciones."
 
 #. Title
-#: schema/codelists/releaseTag.csv:4
-msgid "Tender Amendment"
-msgstr "Enmienda de Licitación"
+#: schema/codelists/releaseTag.csv:5
+msgid "Tender Update"
+msgstr "Actualización de Licitación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:5
@@ -2760,9 +2765,9 @@ msgstr ""
 " etiqueta tenderAmendment."
 
 #. Title
-#: schema/codelists/releaseTag.csv:5
-msgid "Tender Update"
-msgstr "Actualización de Licitación"
+#: schema/codelists/releaseTag.csv:6
+msgid "Tender Cancellation"
+msgstr "Cancelación de la Licitación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:6
@@ -2776,9 +2781,9 @@ msgstr ""
 "sobre la cancelación de la licitación."
 
 #. Title
-#: schema/codelists/releaseTag.csv:6
-msgid "Tender Cancellation"
-msgstr "Cancelación de la Licitación"
+#: schema/codelists/releaseTag.csv:7
+msgid "Award"
+msgstr "Adjudicación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:7
@@ -2792,9 +2797,9 @@ msgstr ""
 "adjudicación y una o más secciones de adjudicación se presentarán."
 
 #. Title
-#: schema/codelists/releaseTag.csv:7
-msgid "Award"
-msgstr "Adjudicación"
+#: schema/codelists/releaseTag.csv:8
+msgid "Award Update"
+msgstr "Actualización de Adjudicación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:8
@@ -2809,9 +2814,9 @@ msgstr ""
 "actualización puede agregar nueva información o hacer correcciones."
 
 #. Title
-#: schema/codelists/releaseTag.csv:8
-msgid "Award Update"
-msgstr "Actualización de Adjudicación"
+#: schema/codelists/releaseTag.csv:9
+msgid "Award Cancellation"
+msgstr "Cancelación de la Adjudicación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:9
@@ -2819,9 +2824,9 @@ msgid "Providing information about  the cancellation of an award. "
 msgstr "Provee información sobre la cancelación de una adjudicación."
 
 #. Title
-#: schema/codelists/releaseTag.csv:9
-msgid "Award Cancellation"
-msgstr "Cancelación de la Adjudicación"
+#: schema/codelists/releaseTag.csv:10
+msgid "Contract"
+msgstr "Contrato"
 
 #. Description
 #: schema/codelists/releaseTag.csv:10
@@ -2837,9 +2842,9 @@ msgstr ""
 "adjudicación con base en los cuales se firmará este contrato."
 
 #. Title
-#: schema/codelists/releaseTag.csv:10
-msgid "Contract"
-msgstr "Contrato"
+#: schema/codelists/releaseTag.csv:11
+msgid "Contract Update"
+msgstr "Actualización de Contrato"
 
 #. Description
 #: schema/codelists/releaseTag.csv:11
@@ -2859,9 +2864,9 @@ msgstr ""
 "se debe usar la etiqueta contractAmendment."
 
 #. Title
-#: schema/codelists/releaseTag.csv:11
-msgid "Contract Update"
-msgstr "Actualización de Contrato"
+#: schema/codelists/releaseTag.csv:12
+msgid "Contract Amendment"
+msgstr "Enmienda del Contrato"
 
 #. Description
 #: schema/codelists/releaseTag.csv:12
@@ -2877,9 +2882,9 @@ msgstr ""
 "tiene significado legal en varias jurisdicciones."
 
 #. Title
-#: schema/codelists/releaseTag.csv:12
-msgid "Contract Amendment"
-msgstr "Enmienda del Contrato"
+#: schema/codelists/releaseTag.csv:13
+msgid "Implementation"
+msgstr "Implementación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:13
@@ -2890,9 +2895,9 @@ msgstr ""
 "contratación"
 
 #. Title
-#: schema/codelists/releaseTag.csv:13
-msgid "Implementation"
-msgstr "Implementación"
+#: schema/codelists/releaseTag.csv:14
+msgid "Implementation Update"
+msgstr "Actualización de Implementación"
 
 #. Description
 #: schema/codelists/releaseTag.csv:14
@@ -2904,9 +2909,9 @@ msgstr ""
 "contratación."
 
 #. Title
-#: schema/codelists/releaseTag.csv:14
-msgid "Implementation Update"
-msgstr "Actualización de Implementación"
+#: schema/codelists/releaseTag.csv:15
+msgid "Contract Termination"
+msgstr "Terminación de Contrato"
 
 #. Description
 #: schema/codelists/releaseTag.csv:15
@@ -2914,9 +2919,9 @@ msgid "Providing information at the end of a contracting process."
 msgstr "Provee información al final de un proceso de contratación."
 
 #. Title
-#: schema/codelists/releaseTag.csv:15
-msgid "Contract Termination"
-msgstr "Terminación de Contrato"
+#: schema/codelists/releaseTag.csv:16
+msgid "Compiled record"
+msgstr "Registro Compilado"
 
 #. Description
 #: schema/codelists/releaseTag.csv:16
@@ -2929,9 +2934,9 @@ msgstr ""
 " entregas para proveer una captura del contrato y un historial de versiones."
 
 #. Title
-#: schema/codelists/releaseTag.csv:16
-msgid "Compiled record"
-msgstr "Registro Compilado"
+#: schema/codelists/submissionMethod.csv:1
+msgid "Electronic Submission"
+msgstr "Entrega Electrónica"
 
 #. Description
 #: schema/codelists/submissionMethod.csv:1
@@ -2941,9 +2946,9 @@ msgstr ""
 "adquisiciones."
 
 #. Title
-#: schema/codelists/submissionMethod.csv:1
-msgid "Electronic Submission"
-msgstr "Entrega Electrónica"
+#: schema/codelists/submissionMethod.csv:2
+msgid "Electronic Auction"
+msgstr "Subasta Electrónica"
 
 #. Description
 #: schema/codelists/submissionMethod.csv:2
@@ -2952,9 +2957,9 @@ msgstr ""
 "Las ofertas se recibirán a través de una plataforma electrónica de subasta"
 
 #. Title
-#: schema/codelists/submissionMethod.csv:2
-msgid "Electronic Auction"
-msgstr "Subasta Electrónica"
+#: schema/codelists/submissionMethod.csv:3
+msgid "Written"
+msgstr "Escrita"
 
 #. Description
 #: schema/codelists/submissionMethod.csv:3
@@ -2967,9 +2972,9 @@ msgstr ""
 "similar."
 
 #. Title
-#: schema/codelists/submissionMethod.csv:3
-msgid "Written"
-msgstr "Escrita"
+#: schema/codelists/submissionMethod.csv:4
+msgid "In Person"
+msgstr "En Persona"
 
 #. Description
 #: schema/codelists/submissionMethod.csv:4
@@ -2979,11 +2984,6 @@ msgid ""
 msgstr ""
 "Las ofertas sólo se recibirán si se entregan en persona en el tiempo y hora "
 "especificada en submissionMethodDetails o la documentación adjunta."
-
-#. Title
-#: schema/codelists/submissionMethod.csv:4
-msgid "In Person"
-msgstr "En Persona"
 
 #. Description
 #: schema/codelists/tenderStatus.csv:1
@@ -3000,6 +3000,11 @@ msgstr ""
 "iniciales u oportunidades de consulta, durante los cuales se puede dar forma"
 " a los detalles subsecuentes de la licitación."
 
+#. Title
+#: schema/codelists/tenderStatus.csv:2
+msgid "Planned"
+msgstr "Planeado"
+
 #. Description
 #: schema/codelists/tenderStatus.csv:2
 msgid ""
@@ -3009,11 +3014,6 @@ msgstr ""
 "Un proceso de contratación está planeado pero no está ocurriendo. Los "
 "detalles de las fechas anticipadas puede proveerse en el bloque de "
 "licitación."
-
-#. Title
-#: schema/codelists/tenderStatus.csv:2
-msgid "Planned"
-msgstr "Planeado"
 
 #. Description
 #: schema/codelists/tenderStatus.csv:3
@@ -3030,20 +3030,25 @@ msgstr "El proceso de licitación ha sido cancelado."
 msgid "The tender process was unsuccessful."
 msgstr "El proceso de licitación no fue exitoso."
 
-#. Description
-#: schema/codelists/tenderStatus.csv:6
-msgid "The tender process is complete. "
-msgstr "El proceso de licitación está completo."
-
 #. Title
 #: schema/codelists/tenderStatus.csv:6
 msgid "Complete"
 msgstr "Completo"
 
 #. Description
+#: schema/codelists/tenderStatus.csv:6
+msgid "The tender process is complete. "
+msgstr "El proceso de licitación está completo."
+
+#. Description
 #: schema/codelists/tenderStatus.csv:7
 msgid "No further information on this process is available under this ocid."
 msgstr "No hay más información disponible sobre este proceso bajo este ocid."
+
+#. Title
+#: schema/codelists/unitClassificationScheme.csv:1
+msgid "UN/CEFACT Recommendation 20"
+msgstr "UN/CEFACT Recommendation 20"
 
 #. Description
 #: schema/codelists/unitClassificationScheme.csv:1
@@ -3055,9 +3060,9 @@ msgstr ""
 "Measure Used in International Trade' de UN/CEFACT Recommendation 20"
 
 #. Title
-#: schema/codelists/unitClassificationScheme.csv:1
-msgid "UN/CEFACT Recommendation 20"
-msgstr "UN/CEFACT Recommendation 20"
+#: schema/codelists/unitClassificationScheme.csv:2
+msgid "Quantities, Units, Dimensions and Data Types Ontologies"
+msgstr "Ontologías de Cantidades, Unidades, Dimensiones y Tipos de Datos"
 
 #. Description
 #: schema/codelists/unitClassificationScheme.csv:2
@@ -3067,8 +3072,3 @@ msgid ""
 msgstr ""
 "Usa el valor del [QUDT "
 "Code](http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html)."
-
-#. Title
-#: schema/codelists/unitClassificationScheme.csv:2
-msgid "Quantities, Units, Dimensions and Data Types Ontologies"
-msgstr "Ontologías de Cantidades, Unidades, Dimensiones y Tipos de Datos"
