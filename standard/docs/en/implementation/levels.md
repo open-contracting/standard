@@ -5,7 +5,7 @@ Increasing the transparency, efficiency and effectiveness of public contracting 
 OCDS sets out three levels for disclosure (basic, intermediate and advanced), alongside a 5* framework for the technical approach to data publication for publishers to self-assess themselves against. 
 
 
-![Levels](../../../assets/levels_en.png)
+![Levels](../../../../assets/levels_en.png)
 
 
 This supports step-by-step improvement of open contracting data and document disclosure on the web.
@@ -105,7 +105,7 @@ Provide machine-readable datasets that contain key information recommended in th
 
 An example of publication at this level would involve providing a downloadable CSV file of contract information extracted from an existing database seeking to use, or map to, field names and data structures recommended by OCDS wherever possible.
 
-The documentation on [flat CSV file serialization](../../../implementation/serialization/#csv) of the standard, and the [OCDS mapper](https://github.com/open-contracting/mapper), may be useful for those seeking to publish at this level.
+The documentation on [flat CSV file serialization](../../../../implementation/serialization/#csv) of the standard, and the [OCDS mapper](https://github.com/open-contracting/mapper), may be useful for those seeking to publish at this level.
 
 #### Stepping up
 Providing structured data will allow users to perform basic analysis, but until a common standard is used, it will be more difficult to join up contracting information across datasets and to analyze patterns across organizations or sectors. From structured data, the next step is to map this to the OCDS standard.
@@ -115,7 +115,7 @@ Providing structured data will allow users to perform basic analysis, but until 
 
 Using the Open Contracting Data Standard model to publish initiation, award, contract and implementation information for each contracting process.
 
-OCDS provides guidance on the fields to include, and how to structure them using [a JSON schema](../../../schema/reference/) so that third-parties can re-use your data effectively. 
+OCDS provides guidance on the fields to include, and how to structure them using [a JSON schema](../../../../schema/reference/) so that third-parties can re-use your data effectively. 
 
 Fully compliant OCDS publication involves providing a release of data for every event or change that occurs in the life of a contracting process (e.g. when a tender is issued, an award made, and a contract signed), and then combining these into a summary record. This is important to enable tracking of change over time. However, there are different paths to take in moving towards this, and technical assistance from the community can be sought to identify the best approach.
 
@@ -134,7 +134,7 @@ Make each **release** and **record** describing a contracting process accessible
 
 Provide feeds that detail recently changed information, and that allow users to search for specific kinds of tenders, awards or contracts (for example, by the classification of goods and services being procured). 
 
-Use [established protocols](../../hosting#discovery-and-apis) to support discovery of your data, and to provide atom feeds of recently updated data. At this level, publishers may also expose data through an API, following community established conventions for API operation.
+Use [established protocols](../../../hosting#discovery-and-apis) to support discovery of your data, and to provide atom feeds of recently updated data. At this level, publishers may also expose data through an API, following community established conventions for API operation.
 
 The use of these protocols, and following API conventions, will allow aggregators and other analysts to integrate this open contracting data in minutes and hours or work, rather than days, weeks and months. 
 

@@ -17,7 +17,7 @@ The majority of OCDS data is held within a release structure. One or more releas
     * [contract](#contract)
       * [implementation](#implementation)
 
-Releases are given a [tag](../../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process may be provided. 
+Releases are given a [tag](../../../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process may be provided. 
 
 For example, a publisher announcing the signing of a contract with a 'contract' tag, may also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 
@@ -79,7 +79,7 @@ The following details can be provided for each party.
 
 ```
 
-Detailed classification of parties can be provided using one or more [party detail extensions](../../../extensions/party_details/).
+Detailed classification of parties can be provided using one or more [party detail extensions](../../../../extensions/party_details/).
 
 ```eval_rst
 .. extensionlist:: The following extensions are available for parties
@@ -274,7 +274,7 @@ See the [parties](#parties) section
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../../identifiers/#organisation-ids) involved in a contracting process. 
+The identifier block provides a way to [identify the legal entities](../../../identifiers/#organization-ids) involved in a contracting process. 
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
@@ -306,7 +306,7 @@ If a contracting process represents a contract arranged by the department or bra
 ```
 ### Document
 
-Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation Each document block can consist of multiple documents, classified using the [documentType](../../codelists/#document-type) codelist.
+Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
 
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 

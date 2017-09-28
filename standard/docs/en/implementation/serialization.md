@@ -2,7 +2,7 @@
 
 The Open Contracting Data Standard provides a **structured data model** for capturing in-depth information about all stages of the contracting process.
 
-The current canonical version of this data model is provided by a **[JSON Schema](../../../schema/release)** which describes field names, field definitions and structures for the data. The compliance of data with the Open Contracting Data Standard will be assessed against this schema.
+The current canonical version of this data model is provided by a **[JSON Schema](../../../../schema/release)** which describes field names, field definitions and structures for the data. The compliance of data with the Open Contracting Data Standard will be assessed against this schema.
 
 However, there are many use cases where publishers and users will want to work with data serialized in other formats. For this reason, the current version of OCDS supports a number of **secondary serializations** which are based on the canonical schema. These are not currently official components of the standard, but are designed to support implementers in providing accessible data to a range of different users.
 

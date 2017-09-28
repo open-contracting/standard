@@ -39,7 +39,7 @@ A package provides information on:
 
 A package may contain a single release or record, or may be used to publish a collection of releases, or a collection of records.
 
-Consult the [release package](../../../schema/release_package/) and [record package](../../../schema/record_package/) schemas to package up your data. 
+Consult the [release package](../../../../schema/release_package/) and [record package](../../../../schema/record_package/) schemas to package up your data. 
 
 #### Example release package
 
