@@ -46,6 +46,6 @@ Extensions to the standard can add new objects and properties to accommodate spe
 
 Extensions should be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard.
 
-The [extensions registry](../../extensions/) records details of known extensions. 
+The [extensions registry](../../../../extensions/) records details of known extensions. 
 
 The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields. 

@@ -18,6 +18,6 @@ This list below shows currently registered prefixes.
 
 ## Register your data
 
-OCDS does not have a registry of datasets. The approach for data discovery is described in the [publication patterns](../../../implementation/hosting/) section of this documentation.
+OCDS does not have a registry of datasets. The approach for data discovery is described in the [publication patterns](../../../../implementation/hosting/) section of this documentation.
 
-However, during this initial phase of OCDS we encourage publishers to share details of their data on the [mailing list](../../../support), and we will explore opportunities to work with the community on maintaining tools to support discovery of data.
+However, during this initial phase of OCDS we encourage publishers to share details of their data on the [mailing list](../../../../support), and we will explore opportunities to work with the community on maintaining tools to support discovery of data.

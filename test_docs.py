@@ -2,9 +2,11 @@ import os
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from multiprocessing import Process
 from collections import OrderedDict
+import requests
 import time
 import re
 from selenium.webdriver.support.ui import Select
@@ -86,7 +88,7 @@ def test_community_extensions(browser, server, lang):
             'https://github.com/open-contracting/ocds_budget_breakdown_extension/blob/master/README.md')
     cells = link.find_elements_by_xpath('../../td')
     assert cells[2].text == 'For providing a detailed budget breakdown.'
-    assert cells[3].text == 'ppp, 1.1'
+    assert cells[3].text == 'ppp'
 
     assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
     browser.execute_script("arguments[0].scrollIntoView();", cells[0])
@@ -125,3 +127,21 @@ def test_language_switcher(browser, server):
         select.select_by_visible_text(lang_name)
         assert browser.current_url == '{}{}/'.format(server, lang)
         assert lang_basic_text[lang] in browser.find_element_by_tag_name('body').text
+
+
+@pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
+def test_broken_links(browser, server, lang):
+    browser.get('{}{}'.format(server, lang))
+    while True:
+        for link in browser.find_elements_by_partial_link_text(''):
+            href = link.get_attribute('href')
+            if '/validator/' in href or 'localhost' not in href:
+                continue
+            r = requests.get(href)
+            assert r.status_code == 200
+        try:
+            next = browser.find_element_by_link_text('Next')
+            browser.execute_script("arguments[0].scrollIntoView();", next)
+            next.click()
+        except NoSuchElementException:
+            break

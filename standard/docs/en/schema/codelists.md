@@ -4,7 +4,7 @@ The Open Contracting Data Standard schema references a number of codelists in or
 
 An **open codelist** provides **suggested codes**, but publishers can extend these lists with new codes on the basis of consensus with other publishers, or by using a codes prefixed with 'x\_' to indicate that it is a local 'eXtensions' to the codelist. 
 
-For example, OCDS provide a list of the types of documents which may be attached to tenders, awards, contracts and milestones. However, a group of publishers may discover they have need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they should consult with the community through the [mailing list and GitHub platform](../../../support/), and should suggest the code for formal incorporation into the codelists.
+For example, OCDS provide a list of the types of documents which may be attached to tenders, awards, contracts and milestones. However, a group of publishers may discover they have need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they should consult with the community through the [mailing list and GitHub platform](../../../../support/), and should suggest the code for formal incorporation into the codelists.
 
 A **closed codelist** provides **mandatory codes** and publishers should only use values provided in the official list. Changes to closed codelists should take place through the governance and revision process for the schema. 
 
@@ -14,7 +14,7 @@ Codes are case sensitive, and are generally provided as English language camelCa
 
 ### Party Role
 
-The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../reference/#parties). A single party may have one or more roles in the contracting process. 
+The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../../reference/#parties). A single party may have one or more roles in the contracting process. 
 
 ```eval_rst
 .. csv-table-no-translate::

@@ -4,7 +4,7 @@ Whereas there can be multiple releases concerning a given contracting process, t
 
 A record **must** contain:
 
-* An [ocid](../../identifiers/#ocid)
+* An [ocid](../../../identifiers/#ocid)
 * An array of **[releases](#release)** related to this contracting process - either by providing a URL for where these releases can be found, or embedding a full copy of the release
 
 This allows the record to function as an index of all the releases related to a given contracting process.
@@ -31,7 +31,7 @@ Records should be embedded within a record package.
 
 ```
 
-See the guidance on [package metadata](reference.md#package-metadata). In addition, a record package includes:
+See the guidance on [package metadata](../../../reference#package-metadata). In addition, a record package includes:
 
 * ```packages``` - which should provide links to all the release packages used to compile this record. 
 * ```records``` - one or more contracting process records, containing, at the very least, identifiers for the all the releases that relate to each contracting process.
