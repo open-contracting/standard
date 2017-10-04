@@ -88,7 +88,7 @@ def test_community_extensions(browser, server, lang):
             'https://github.com/open-contracting/ocds_budget_breakdown_extension/blob/master/README.md')
     cells = link.find_elements_by_xpath('../../td')
     assert cells[2].text == 'For providing a detailed budget breakdown.'
-    assert cells[3].text == 'ppp, 1.1'
+    assert cells[3].text == 'ppp'
 
     assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
     browser.execute_script("arguments[0].scrollIntoView();", cells[0])
@@ -129,8 +129,9 @@ def test_language_switcher(browser, server):
         assert lang_basic_text[lang] in browser.find_element_by_tag_name('body').text
 
 
-def test_broken_links(browser, server):
-    browser.get('{}en'.format(server))
+@pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
+def test_broken_links(browser, server, lang):
+    browser.get('{}{}'.format(server, lang))
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
             href = link.get_attribute('href')
