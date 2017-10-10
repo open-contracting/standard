@@ -1,9 +1,5 @@
 # Changelog
 
-OCDS is currently in version 1.0. 
-
-In February 2016, updated documentation was released. This did not make any semantic changes to the standard. 
-
 ## [1.0.3] - 2017-07-31
 
 ### Fixed
@@ -11,7 +7,7 @@ In February 2016, updated documentation was released. This did not make any sema
 * [#329](https://github.com/open-contracting/standard/issues/329) - updated ```item.quantity``` to support decimal values (integer -> number)
 * [#253](https://github.com/open-contracting/standard/issues/253) - updated ```value.amount``` to support negative values
 
-## [1.0.2] - 2016
+## [1.0.2] - 2016-11-22
 
 ### Changed
 
@@ -30,6 +26,10 @@ In February 2016, updated documentation was released. This did not make any sema
 - Removed the old Spanish documentation translations folders from ```standard/docs/es```
 - Added CSV download links for registered OCIDs, and publication levels
 - Updated publication levels spreadsheet to reflect version 1.0.2
+
+## [1.0.1] - 2016-03-14
+
+Updated documentation was released. This did not make any semantic changes to the standard.
 
 ## [1.0] - 2015-07-29
 
