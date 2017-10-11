@@ -1,5 +1,5 @@
 # Open Contracting Data standard
 
-Visit [http://standard.open-contracting.org](http://standard.open-contracting.org) to read the standard's documentation.
+Visit [standard.open-contracting.org](http://standard.open-contracting.org) to read the standard's documentation.
 
-Visit [http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/] for developer documentation about the standard.
+Visit the [OCDS Standard Development Handbook](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/) for developer documentation about the standard.
