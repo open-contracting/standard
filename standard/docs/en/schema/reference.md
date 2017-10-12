@@ -45,7 +45,7 @@ All new information about a contracting process is described within a release.
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
     :include: 
-    :collapse: planning,tender,award,contract,parties,buyer,relatedProcess
+    :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcess
 
 ```
 
