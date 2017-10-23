@@ -2,7 +2,7 @@
 
 Different users have different needs when it comes to accessing OCDS data. 
 
-[Data on the Web Best Practice #15](https://www.w3.org/TR/dwbp/#dataFormats) suggests that "Data should be available in multiple data formats" in order to increases the number of different users, tools and applications that can process the data.
+[Data on the Web Best Practices](https://www.w3.org/TR/dwbp/#MultipleFormats) suggests that "Data should be available in multiple data formats" in order to increases the number of different users, tools and applications that can process the data.
 
 Which formats are most important will depend on the priority use cases for each OCDS implementation, but you should consider:
 
