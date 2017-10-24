@@ -4,6 +4,7 @@ Updates the currency codelist from ISO4217 files.
 
 import csv
 import json
+import re
 from collections import OrderedDict
 
 import requests
@@ -38,6 +39,8 @@ for node in tree.xpath('//HstrcCcyNtry'):
     code = node.xpath('./Ccy')[0].text
     title = node.xpath('./CcyNm')[0].text.strip()
     valid_until = node.xpath('./WthdrwlDt')[0].text
+    # Use ISO8601 interval notation.
+    valid_until = re.sub(r'^(\d{4})-(\d{4})$', r'\1/\2', valid_until.replace(' to ', '/'))
     if code not in current_codes:
         if code not in historic_codes:
             historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
@@ -47,7 +50,7 @@ for node in tree.xpath('//HstrcCcyNtry'):
 
 with open('standard/schema/codelists/currency.csv', 'w') as fp:
     writer = csv.writer(fp, lineterminator='\n')
-    writer.writerow(['Code', 'Title', 'Withdrawal Date'])
+    writer.writerow(['Code', 'Title', 'Valid Until'])
     for code in sorted(current_codes.keys()):
         writer.writerow([code, current_codes[code], None])
     for code in sorted(historic_codes.keys()):
