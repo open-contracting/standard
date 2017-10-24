@@ -17,20 +17,21 @@ heading_map = OrderedDict([
 req = requests.get('https://raw.githubusercontent.com/datasets/currency-codes/master/data/codes-all.csv')
 lines = req.text.split('\n')
 reader = csv.DictReader(lines)
-new_data = {}
+new_data = OrderedDict()
 
 for row in reader:
     if not row['AlphabeticCode']:
         continue
-    unique_fields = (row['AlphabeticCode'], row['Currency'])
-    if unique_fields not in new_data or row['WithdrawalDate'] < new_data[unique_fields]:
-        new_data[unique_fields] = row['WithdrawalDate']
+    if (row['AlphabeticCode'] not in new_data
+            or (
+                row['WithdrawalDate'] > new_data[row['AlphabeticCode']]['Withdrawal Date']
+                and new_data[row['AlphabeticCode']]['Withdrawal Date'] != ''
+            )):
+        new_data[row['AlphabeticCode']] = {
+            new_heading: row[old_heading] for new_heading, old_heading in heading_map.items()
+        }
 
-new_data = [{
-    'Code': code,
-    'Title': title,
-    'Withdrawal Date': withdrawal,
-} for (code, title), withdrawal in new_data.items()]
+new_data = list(new_data.values())
 new_data.sort(key=lambda row: (row['Withdrawal Date'] != '', row['Code']))
 
 with open('standard/schema/codelists/currency.csv', 'w') as fp:
