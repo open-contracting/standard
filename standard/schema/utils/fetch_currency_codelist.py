@@ -1,51 +1,62 @@
 """
-Fetches currency codelist from datahub core datasets, and picks/renames
-columns.
-
+Updates the currency codelist from ISO4217 files.
 """
 
 import csv
 import json
-import requests
 from collections import OrderedDict
 
-heading_map = OrderedDict([
-    ('Code', 'AlphabeticCode'),
-    ('Title', 'Currency'),
-    ('Withdrawal Date', 'WithdrawalDate'),
-])
+import requests
+from lxml import etree
 
-req = requests.get('https://raw.githubusercontent.com/datasets/currency-codes/master/data/codes-all.csv')
-lines = req.text.split('\n')
-reader = csv.DictReader(lines)
-new_data = OrderedDict()
 
-for row in reader:
-    if not row['AlphabeticCode']:
-        continue
-    if (row['AlphabeticCode'] not in new_data
-            or (
-                row['WithdrawalDate'] > new_data[row['AlphabeticCode']]['Withdrawal Date']
-                and new_data[row['AlphabeticCode']]['Withdrawal Date'] != ''
-            )):
-        new_data[row['AlphabeticCode']] = {
-            new_heading: row[old_heading] for new_heading, old_heading in heading_map.items()
-        }
+def get_and_parse_xml(url):
+    return etree.fromstring(requests.get(url).content)
 
-codes = list(sorted(new_data.keys()))
-new_data = list(new_data.values())
-new_data.sort(key=lambda row: (row['Withdrawal Date'] != '', row['Code']))
+
+# "List one: Current currency & funds code list"
+# https://www.currency-iso.org/en/home/tables/table-a1.html
+current_codes = {}
+tree = get_and_parse_xml('https://www.currency-iso.org/dam/downloads/lists/list_one.xml')
+for node in tree.xpath('//CcyNtry'):
+    match = node.xpath('./Ccy')
+    # Entries like Antarctica have no universal currency.
+    if match:
+        code = node.xpath('./Ccy')[0].text
+        title = node.xpath('./CcyNm')[0].text.strip()
+        if code not in current_codes:
+            current_codes[code] = title
+        # We should expect currency titles to be consistent across countries.
+        elif current_codes[code] != title:
+            raise Exception('expected {}, got {}'.format(current_codes[code], title))
+
+# "List three: List of codes for historic denominations of currencies & funds"
+# https://www.currency-iso.org/en/home/tables/table-a3.html
+historic_codes = {}
+tree = get_and_parse_xml('https://www.currency-iso.org/dam/downloads/lists/list_three.xml')
+for node in tree.xpath('//HstrcCcyNtry'):
+    code = node.xpath('./Ccy')[0].text
+    title = node.xpath('./CcyNm')[0].text.strip()
+    valid_until = node.xpath('./WthdrwlDt')[0].text
+    if code not in current_codes:
+        if code not in historic_codes:
+            historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
+        # If the code is historical, use the most recent title and valid date.
+        elif valid_until > historic_codes[code]['Valid Until']:
+            historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
 
 with open('standard/schema/codelists/currency.csv', 'w') as fp:
-    writer = csv.DictWriter(fp, fieldnames=heading_map.keys(), lineterminator='\n')
-    writer.writeheader()
-
-    for row in new_data:
-        writer.writerow(row)
+    writer = csv.writer(fp, lineterminator='\n')
+    writer.writerow(['Code', 'Title', 'Withdrawal Date'])
+    for code in sorted(current_codes.keys()):
+        writer.writerow([code, current_codes[code], None])
+    for code in sorted(historic_codes.keys()):
+        writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
 with open('standard/schema/release-schema.json') as fp:
     release_schema = json.load(fp, object_pairs_hook=OrderedDict)
 
+codes = sorted(list(current_codes.keys()) + list(historic_codes.keys()))
 release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
 
 with open('standard/schema/release-schema.json', 'w') as fp:
