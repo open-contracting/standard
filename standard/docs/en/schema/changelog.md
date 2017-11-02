@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+### [1.1.2] - 2017-11-10
+
+### Codelist updates
+
+* [554](https://github.com/open-contracting/standard/issues/482) - **Update currency codelist for ISO4217 amendment 163 (2017-06-09)**. Note: XBT (Bitcoin) is removed from the codelist as it is not part of ISO4217.
+
 ## [1.1.1] - 2017-07-31
 
 ### Bug fixes
