@@ -31,6 +31,7 @@ def object_pairs_hook(pairs):
 
 
 DRAFT_SCHEMA_PATH = path(__file__).parent / 'json-schema-draft-4.json'
+OCDS_METASCHEMA = path(__file__).parent.parent / 'meta-schema.json'
 RELEASE_SCHEMA_PATH = path(__file__).parent.parent / 'release-schema.json'
 RECORD_SCHEMA_PATH = path(__file__).parent.parent / 'record-package-schema.json'
 RELEASE_PACKAGE_SCHEMA_PATH = path(__file__).parent.parent / 'release-package-schema.json'
@@ -38,7 +39,7 @@ VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH = path(__file__).parent.parent / 'versi
 
 
 def validate_schema(schema_to_validate_path):
-    with open(DRAFT_SCHEMA_PATH, 'r') as f:
+    with open(OCDS_METASCHEMA, 'r') as f:
         draft_schema = json.loads(f.read())
     with open(schema_to_validate_path, 'r') as f:
         schema = json.loads(f.read(), object_pairs_hook=object_pairs_hook)
