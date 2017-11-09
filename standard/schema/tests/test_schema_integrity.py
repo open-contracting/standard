@@ -1,5 +1,5 @@
 """
-Ensures that `make_validation_schema.py` has been run.
+Ensures that `make_validation_schema.py` and `make_metaschema.py` has been run.
 """
 
 import json
@@ -10,6 +10,7 @@ from .test_validate_schema import (
 )
 
 from ..utils.make_validation_schema import get_versioned_validation_schema
+from ..utils.make_metaschema import make_metaschema, metaschema_path
 
 
 def test_versioned_release_validation_schema_is_in_sync():
@@ -23,3 +24,11 @@ def test_versioned_release_validation_schema_is_in_sync():
     expected = get_versioned_validation_schema(versioned_release)
 
     assert expected == actual
+
+
+def test_metaschema_is_in_sync():
+
+    with open(metaschema_path, "r") as f:
+        actual = json.loads(f.read())
+
+        assert actual == make_metaschema()
