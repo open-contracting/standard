@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-27 11:27+0100\n"
+"POT-Creation-Date: 2017-11-10 12:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Oscar Montiel <oscar.montiel@okfn.org>, 2017\n"
+"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -271,7 +271,7 @@ msgstr ""
 "de la adquisición, un número de licitación y el año."
 
 #: ../../standard/docs/en/schema/identifiers.md:74
-#: ../../standard/docs/en/schema/identifiers.md:185
+#: ../../standard/docs/en/schema/identifiers.md:182
 msgid "For example:"
 msgstr "Por ejemplo:"
 
@@ -587,35 +587,16 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/identifiers.md:158
 msgid ""
-"Local lists may commonly need to be used for identifying public bodies, as "
-"in many countries there is no official list of public agencies."
+"See [docs.org-id.guide](http://docs.org-id.guide) for more information."
 msgstr ""
-"Las listas locales pueden necesitarse para identificar organismos públicos, "
-"ya que en varios países no hay una lista oficial de agencias públicas."
-
-#: ../../standard/docs/en/schema/identifiers.md:160
-msgid ""
-"At present, the OCDS standard defers to the organization list prefixes "
-"provided by the [IATI Organisation Registration Agency "
-"codelist](http://iatistandard.org/codelists/OrganisationRegistrationAgency/)"
-" which cover a wide range of organization types. If you require codes to be "
-"added to this list, please contact the [Open Contracting Data Standard "
-"helpdesk](../support/index.md) and they will work to achieve this."
-msgstr ""
-"Actualmente, el estándar de OCDS difiere de la lista de prefijos de "
-"organización provisto por la [lista de códigos de la IATI Organisation "
-"Registration "
-"Agency](http://iatistandard.org/codelists/OrganisationRegistrationAgency/) "
-"las cuales cubren un amplio rango de tipos de organizaciones. Si requieres "
-"agregar códigos a esta lista por favor contacta al [equipo técnico del "
-"Estándar de Datos de Contrataciones Abiertas](../support/index.md) quienes "
-"se encargarán de lograr."
+"Consulte [docs.org-id.guide] (http://docs.org-id.guide) para obtener más "
+"información."
 
 #: ../../standard/docs/en/schema/identifiers.md:0
 msgid "Release ID"
 msgstr "ID de Entrega"
 
-#: ../../standard/docs/en/schema/identifiers.md:165
+#: ../../standard/docs/en/schema/identifiers.md:162
 msgid ""
 "The release ID must be unique within the contracting process it is part of, "
 "**and** within any given data package it is part of."
@@ -623,7 +604,7 @@ msgstr ""
 "El ID de entrega debe de ser único en el proceso de contratación del que es "
 "parte **y** dentro de cualquier paquete de datos del que sea parte."
 
-#: ../../standard/docs/en/schema/identifiers.md:167
+#: ../../standard/docs/en/schema/identifiers.md:164
 msgid ""
 "Within any release or record package **and** for any given ocid, there "
 "should be no two release IDs that refer to different releases."
@@ -636,7 +617,7 @@ msgstr ""
 msgid "Tender, Award and Contract"
 msgstr "Licitación, Adjudicación y Contrato"
 
-#: ../../standard/docs/en/schema/identifiers.md:171
+#: ../../standard/docs/en/schema/identifiers.md:168
 msgid ""
 "The tender, award and contract IDs must be unique within the contracting "
 "process it is part of."
@@ -644,7 +625,7 @@ msgstr ""
 "Los ID de licitación, adjudicación y contrato deben ser únicos dentro del "
 "proceso de contratación del que son parte. "
 
-#: ../../standard/docs/en/schema/identifiers.md:173
+#: ../../standard/docs/en/schema/identifiers.md:170
 msgid ""
 "For any given ocid, there should be no two tender, award or contract IDs "
 "that refer to different tender, award or contract sections respectively."
@@ -653,7 +634,7 @@ msgstr ""
 "contrato que hagan referencia a distintas secciones de licitación, "
 "adjudicación o contrato. "
 
-#: ../../standard/docs/en/schema/identifiers.md:175
+#: ../../standard/docs/en/schema/identifiers.md:172
 msgid ""
 "Contracts should always cross-reference a related award (using the awardID "
 "property), as key information such as suppliers may be contained in the "
@@ -672,7 +653,7 @@ msgstr ""
 msgid "Items, Documents and Milestones"
 msgstr "Artículos, Documentos e Hitos"
 
-#: ../../standard/docs/en/schema/identifiers.md:179
+#: ../../standard/docs/en/schema/identifiers.md:176
 msgid ""
 "An item, document or milestone ID must be unique within a given array of "
 "items, and must be used consistently across all the releases in a "
@@ -682,7 +663,7 @@ msgstr ""
 "de artículos y debe usarse consistentemente a lo largo de todas las entregas"
 " en un proceso de contratación. "
 
-#: ../../standard/docs/en/schema/identifiers.md:181
+#: ../../standard/docs/en/schema/identifiers.md:178
 msgid ""
 "The same id may be re-used in another array of items within the same "
 "release, and no cross-reference between these identifiers is implied."
@@ -691,7 +672,7 @@ msgstr ""
 "misma entrega y no es necesario que se haga una referencia cruzada entre "
 "estos identificadores."
 
-#: ../../standard/docs/en/schema/identifiers.md:183
+#: ../../standard/docs/en/schema/identifiers.md:180
 msgid ""
 "The use of an identifier means that subsequent releases can update prior "
 "identified items, documents or milestones, without needing to republish all "
@@ -701,25 +682,25 @@ msgstr ""
 "actualizar artículos, documentos o hitos identificados previos, sin "
 "necesidad de volver a publicar todos los artículos, documentos o hitos."
 
-#: ../../standard/docs/en/schema/identifiers.md:187
+#: ../../standard/docs/en/schema/identifiers.md:184
 msgid ""
 "A release may contain tender.items (Items tendered for) and award.items"
 msgstr ""
 "Una entrega puede contener tender.items (artículos que se licitaron) y "
 "award.items"
 
-#: ../../standard/docs/en/schema/identifiers.md:188
+#: ../../standard/docs/en/schema/identifiers.md:185
 msgid "tender.items may contain three items, with identifiers of: [1, 2, 3]"
 msgstr ""
 "Los tender.items pueden contener tres artículos con los identificadores: "
 "[1,2,3]"
 
-#: ../../standard/docs/en/schema/identifiers.md:189
+#: ../../standard/docs/en/schema/identifiers.md:186
 msgid "award.items may contain two items, with identifiers of: [3, 4]"
 msgstr ""
 "Los award.items pueden contener dos artículos con los identificadores: [3,4]"
 
-#: ../../standard/docs/en/schema/identifiers.md:190
+#: ../../standard/docs/en/schema/identifiers.md:187
 msgid ""
 "A second release is issued in which award.items contains six items: [3, 4, "
 "5]"
@@ -727,11 +708,11 @@ msgstr ""
 "Se realiza una segunda entrega en la cual los award.items contienen seis "
 "artículos: [3,4,5]"
 
-#: ../../standard/docs/en/schema/identifiers.md:192
+#: ../../standard/docs/en/schema/identifiers.md:189
 msgid "In this situation, note that:"
 msgstr "En esta situación, note que:"
 
-#: ../../standard/docs/en/schema/identifiers.md:194
+#: ../../standard/docs/en/schema/identifiers.md:191
 msgid ""
 "There is no implied relationship between the tender.item with id 3 and the "
 "award.item with id 3: these could be entirely different items"
@@ -739,7 +720,7 @@ msgstr ""
 "No hay una relación implícita entre el tender.item con el id 3 y el "
 "award.item con el id 3: pueden ser artículos completamente distintos."
 
-#: ../../standard/docs/en/schema/identifiers.md:195
+#: ../../standard/docs/en/schema/identifiers.md:192
 msgid ""
 "There is a relationship between the award.items with id 3 and 4 in the first"
 " release, and with award.id of 3 and 4 in the second release. The second "
