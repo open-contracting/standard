@@ -30,7 +30,6 @@ def object_pairs_hook(pairs):
     return rejecting_dict.data
 
 
-DRAFT_SCHEMA_PATH = path(__file__).parent / 'json-schema-draft-4.json'
 OCDS_METASCHEMA = path(__file__).parent.parent / 'meta-schema.json'
 RELEASE_SCHEMA_PATH = path(__file__).parent.parent / 'release-schema.json'
 RECORD_SCHEMA_PATH = path(__file__).parent.parent / 'record-package-schema.json'
