@@ -96,7 +96,7 @@ def unversion_refs(schema):
 
 
 def get_versioned_validation_schema(versioned_release):
-    versioned_release["id"] = "http://standard.open-contracting.org/schema/1__1__1/versioned-release-validation-schema.json"  # noqa nopep8
+    versioned_release["id"] = "http://standard.open-contracting.org/schema/1__1__2/versioned-release-validation-schema.json"  # noqa nopep8
     versioned_release["$schema"] = "http://json-schema.org/draft-04/schema#"  # nopep8
     versioned_release["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
 
