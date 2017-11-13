@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+### [1.1.2] - 2017-11-10
+
+### Codelist updates
+
+* [554](https://github.com/open-contracting/standard/issues/482) - **Update currency codelist for ISO4217 amendment 163 (2017-06-09)**. Note: XBT (Bitcoin) is removed from the codelist as it is not part of ISO4217.
+
 ## [1.1.1] - 2017-07-31
 
 ### Bug fixes
@@ -102,8 +108,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](http://standard.open-contracting.org/1.1/en/schema/reference/#parties)** - We have deprecated use of the full organization block at points other than the parties array.
 * [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](http://standard.open-contracting.org/1.1/en/schema/reference/#transaction)** - receiverOrganization, providerOrganization and amount properties have been deprecated in favour or other terms.
 
+## [1.0.3] - 2017-07-31
 
-## [1.0.2] - 2016
+### Fixed
+
+* [#329](https://github.com/open-contracting/standard/issues/329) - updated ```item.quantity``` to support decimal values (integer -> number)
+* [#253](https://github.com/open-contracting/standard/issues/253) - updated ```value.amount``` to support negative values
+
+## [1.0.2] - 2016-11-22
 
 ### Changed
 
@@ -122,6 +134,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Removed the old Spanish documentation translations folders from ```standard/docs/es```
 - Added CSV download links for registered ocids, and publication levels
 - Updated publication levels spreadsheet to reflect version 1.0.2
+
+## [1.0.1] - 2016-03-14
+
+Updated documentation was released. This did not make any semantic changes to the standard.
 
 ## [1.0] - 2015-07-29
 
