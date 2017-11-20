@@ -32,7 +32,7 @@ import pathlib
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinxcontrib.jsonschema', 'ocds_sphinx_directives']
+extensions = ['sphinxcontrib.jsonschema', 'ocds_sphinx_directives', 'sphinxcontrib.opendataservices']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -292,6 +292,7 @@ texinfo_documents = [
 
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
+from sphinxcontrib.opendataservices import AutoStructifyLowPriority
 
 source_parsers = {
     '.md': CommonMarkParser,
@@ -309,64 +310,7 @@ locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 
 gettext_compact = False     # optional.
 
 
-from sphinx.directives.code import LiteralInclude
-from docutils.parsers.rst import directives, Directive
-from docutils.parsers.rst.roles import set_classes
-from docutils.parsers.rst.directives.tables import CSVTable
-from docutils import nodes, statemachine
-import io
-import re
-import csv
-import json
-from jsonpointer import resolve_pointer
-from collections import OrderedDict
-import requests
-import collections
-from os.path import abspath, dirname, join
-
-
-class JSONInclude(LiteralInclude):
-    option_spec = {
-        'jsonpointer': directives.unchanged,
-        'expand': directives.unchanged,
-        'title': directives.unchanged,
-    }
-
-    def run(self):
-        with open(self.arguments[0]) as fp:
-            json_obj = json.load(fp, object_pairs_hook=OrderedDict)
-        filename = str(self.arguments[0]).split("/")[-1].replace(".json", "")
-        try:
-            title = self.options['title']
-        except KeyError as e:
-            title = filename
-        pointed = resolve_pointer(json_obj, self.options['jsonpointer'])
-        code = json.dumps(pointed, indent='    ')
-        # Ideally we would add the below to a data-expand element, but I can't see how to do this, so using classes for now...
-        class_list = self.options.get('class', [])
-        class_list.append('file-' + title)
-        expand = str(self.options.get("expand", "")).split(",")
-        class_list = class_list + ['expandjson expand-{0}'.format(s.strip()) for s in expand]
-        literal = nodes.literal_block(code, code)
-        literal['language'] = 'json'
-        literal['caption'] = 'TEST'
-        container = nodes.container(classes=class_list)
-        container += literal
-        return [container]
-
-
-directives.register_directive('jsoninclude', JSONInclude)
-
-
 extension_registry_git_ref = "v1.1.1"
-
-
-class AutoStructifyLowPriority(AutoStructify):
-    """
-    We need this low priority copy of AutoStructify to apply some transforms
-    after translations.
-    """
-    default_priority = 1000
 
 
 # app setup hook
