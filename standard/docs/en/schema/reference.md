@@ -94,7 +94,7 @@ The planning section can be used to describe the background to a contracting pro
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Planning
-    :collapse: budget,document,milestones
+    :collapse: budget,documents,milestones
 
 ```
 
