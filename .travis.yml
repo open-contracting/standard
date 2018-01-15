@@ -15,7 +15,7 @@ install:
 script:
   - flake8
   - ./build_docs.sh
-  - py.test
+  - py.test -rs --tb=line
 deploy:
   skip_cleanup: true # don't remove stuff we've built
   provider: script
