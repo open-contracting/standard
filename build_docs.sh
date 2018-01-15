@@ -19,8 +19,8 @@ cd standard
 sphinx-build -q -b dirhtml docs/en ../build/en
 sphinx-build -q -b gettext docs/en ../build/locale
 
-pybabel extract -q -F .babel_schema . -o ../build/locale/schema.pot
-pybabel extract -q -F .babel_codelists . -o ../build/locale/codelists.pot
+pybabel -q extract -F .babel_schema . -o ../build/locale/schema.pot
+pybabel -q extract -F .babel_codelists . -o ../build/locale/codelists.pot
 
 cd ..
 cp -r standard/assets build
