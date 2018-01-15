@@ -16,8 +16,8 @@ rm build/current_lang || true
 ln -s en build/current_lang
 
 cd standard
-sphinx-build -b dirhtml docs/en ../build/en
-sphinx-build -b gettext docs/en ../build/locale
+sphinx-build -q -b dirhtml docs/en ../build/en
+sphinx-build -q -b gettext docs/en ../build/locale
 
 pybabel extract -F .babel_schema . -o ../build/locale/schema.pot
 pybabel extract -F .babel_codelists . -o ../build/locale/codelists.pot
@@ -33,7 +33,7 @@ for lang in es fr; do
     # translated JSON schema from Sphinx directives
     rm ../build/current_lang
     ln -s ../build/$lang ../build/current_lang
-    sphinx-build -b dirhtml -D language="$lang" docs/en ../build/$lang
+    sphinx-build -q -b dirhtml -D language="$lang" docs/en ../build/$lang
 done
 
 # Our deploy script doesn't like it if this still exists
