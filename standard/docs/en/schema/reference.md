@@ -45,7 +45,7 @@ All new information about a contracting process is described within a release.
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
     :include: 
-    :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcess
+    :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
 
 ```
 
@@ -171,7 +171,7 @@ The contract section is used to provide details of contracts that have been ente
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Contract
-    :collapse: period,value,items,documents,implementation,relatedProcess,milestones,amendment,amendments
+    :collapse: period,value,items,documents,implementation,relatedProcesses,milestones,amendment,amendments
 
 ```
 
