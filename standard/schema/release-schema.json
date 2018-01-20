@@ -1,5 +1,5 @@
 {
-  "id": "http://standard.open-contracting.org/schema/1__1__2/release-schema.json",
+  "id": "http://standard.open-contracting.org/schema/1__1__3/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
   "description":"Each release provides data about a single contracting process at a particular point in time. Releases can be used to notify users of new tenders, awards, contracts and other updates. Releases may repeat or update information provided previously in this contracting process. One contracting process may have many releases. A 'record' of a contracting process follows the same structure as a release, but combines information from multiple points in time into a single summary.",
@@ -75,7 +75,7 @@
     },
     "buyer": {
       "title": "Buyer",
-      "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring entity who may be specified in the tender data.",
+      "description": "A buyer is an entity whose budget will be used to pay for goods, works or services related to a contract. This may be different from the procuring entity who may be specified in the tender data.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "planning": {
@@ -313,8 +313,7 @@
           ],
           "items": {
             "type": [
-              "string",
-              "null"
+              "string"
             ]
           },
           "codelist": "extendedProcurementCategory.csv",
@@ -1396,7 +1395,10 @@
         "unit": {
           "title": "Unit",
           "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price. For comparability, an established list of units can be used.  ",
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
             "scheme": {
               "title": "Scheme",

@@ -6,7 +6,7 @@ To use this extension, include its URL in the ```extension``` array of your rele
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_location_extension/v1.1.1/extension.json"],
+    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_location_extension/v1.1.3/extension.json"],
     "releases":[]
 }
 ```
@@ -31,7 +31,7 @@ This extension introduces two properties at the ```items``` level to describe lo
 
 ### Gazetteer Codelist
 
-See locationGazeteers.csv
+See locationGazetteers.csv
 
 ### Example
 Below is an example of a geolocated item:
