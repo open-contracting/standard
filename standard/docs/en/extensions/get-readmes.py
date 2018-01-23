@@ -15,7 +15,7 @@ metadata = '''
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package.
+To use this extension, include its URL in the `extension` array of your release or record package.
 
 ```json
 {{
