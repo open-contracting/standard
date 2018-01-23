@@ -33,11 +33,7 @@ This extension is maintained at [{}]({})
 for extension in extension_json['extensions']:
     if extension['core']:
         extension_readme = requests.get(extension['url'].rstrip("/") + "/" + "README.md")
-        with open(
-                    '/home/bjwebb/opendataservices/open-contracting/standard/standard/docs/en/extensions/'
-                    + extension['slug'] + '.md',
-                    'w'
-                ) as readme:
+        with open('standard/standard/docs/en/extensions/' + extension['slug'] + '.md', 'w') as readme:
             m = re.match('https://raw.githubusercontent.com/open-contracting/([^/]*)/', extension['url'])
             github_repo_url = 'https://github.com/open-contracting/{}'.format(m.group(1))
             lines = extension_readme.text.split('\n')
