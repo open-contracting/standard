@@ -3,7 +3,7 @@ import requests
 import re
 
 '''
-Download exetnsion README.md files and add them to this directory.
+Download extension README.md files and add them to this directory.
 Add an extra Metadata section to the top of each file.
 '''
 
