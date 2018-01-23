@@ -6,8 +6,8 @@ To use this extension, include its URL in the ```extension``` array of your rele
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_location_extension/v1.1.3/extension.json"],
-    "releases":[]
+    "extensions": ["https://raw.githubusercontent.com/open-contracting/ocds_location_extension/v1.1.3/extension.json"],
+    "releases": []
 }
 ```
 
@@ -15,12 +15,12 @@ This extension is maintained at [https://github.com/open-contracting/ocds_locati
 
 ## Documentation
 
-Communicating the location of proposed or executed contract delivery is important to make users of contracting data. 
+Communicating the location of proposed or executed contract delivery is important to make users of contracting data.
 
-This extension introduces two properties at the ```items``` level to describe location:
+This extension introduces two properties at the `items` level to describe location:
 
-* ```deliveryAddress``` - a standard ```Address``` block which can be used to provide a postal address where services should be delivered.
-* ```deliveryLocation``` - a new block consisting of GeoJSON and Gazetteer entries to describe a wider range of locations to which the contract line item relates.
+* `deliveryAddress` - a standard `Address` block which can be used to provide a postal address where services should be delivered.
+* `deliveryLocation` - a new block consisting of GeoJSON and Gazetteer entries to describe a wider range of locations to which the contract line item relates.
 
 ### Schema reference
 
@@ -34,6 +34,7 @@ This extension introduces two properties at the ```items``` level to describe lo
 See locationGazetteers.csv
 
 ### Example
+
 Below is an example of a geolocated item:
 
 ```json
@@ -99,4 +100,8 @@ If the procurement related to the rebuilding of a road, then the item could also
 }
 ```
 
-You can take the contents of the geometry object, excluding the ```geometry``` keyword, and plug this into any GeoJSON tool to see the shape that is described. 
+You can take the contents of the geometry object, excluding the `geometry` keyword, and plug this into any GeoJSON tool to see the shape that is described.
+
+### Issues
+
+Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
