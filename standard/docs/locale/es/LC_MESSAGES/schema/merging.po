@@ -109,12 +109,12 @@ msgstr "Reglas para fusionar"
 
 #: ../../standard/docs/en/schema/merging.md:81
 msgid ""
-"Order all the releases that share an ```ocid``` by their release ```date```."
+"Order all the releases that share an `ocid` by their release `date`."
 " Starting from the oldest release (old), compare it with the next oldest "
 "release (new), and apply the following rules."
 msgstr ""
-"Ordene todas las versiones que comparten una ```ocid``` mediante su "
-"```date``` fecha de entrega. Empezando por la entrega más antigua (old), "
+"Ordene todas las versiones que comparten una `ocid` mediante su "
+"`date` fecha de entrega. Empezando por la entrega más antigua (old), "
 "compárela con la siguiente versión más antigua (new) y aplique las "
 "siguientes reglas."
 
@@ -142,10 +142,10 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:89
 msgid ""
-"Remove any key that have their value explicitly set to ```null``` in **new**"
+"Remove any key that have their value explicitly set to `null` in **new**"
 msgstr ""
 "Quite cualquier clave que tenga su valor explícitamente establecido en "
-"```null``` en **new**"
+"`null` en **new**"
 
 #: ../../standard/docs/en/schema/merging.md:90
 msgid "Retain any keys from **old** that are not mentioned in **new**"
@@ -179,33 +179,33 @@ msgid "Identifier merge"
 msgstr "Fusión de identificador"
 
 #: ../../standard/docs/en/schema/merging.md:100
-msgid "When a list contains objects with their own ```id``` field, then:"
+msgid "When a list contains objects with their own `id` field, then:"
 msgstr ""
-"Cuando una lista contiene objetos con su propio campo ```id```, entonces:"
+"Cuando una lista contiene objetos con su propio campo `id`, entonces:"
 
 #: ../../standard/docs/en/schema/merging.md:102
 msgid ""
-"Check for an object in **old** with the same ```id``` as an object in "
+"Check for an object in **old** with the same `id` as an object in "
 "**new**, and, if so, follow the object merge rules as above"
 msgstr ""
-"Compruebe si hay un objeto en **old** con el mismo ```id``` como un objeto "
+"Compruebe si hay un objeto en **old** con el mismo `id` como un objeto "
 "en **new** y, si es así, siga las reglas de fusión de objetos como se "
 "mencionaron anteriormente"
 
 #: ../../standard/docs/en/schema/merging.md:103
 msgid ""
-"If there is no object in **new** with the same ```id``` as an object in "
+"If there is no object in **new** with the same `id` as an object in "
 "**old**, keep the object from **old** in the list"
 msgstr ""
-"Si no hay ningún objeto en **new** con el mismo ```id``` como un objeto en "
+"Si no hay ningún objeto en **new** con el mismo `id` como un objeto en "
 "**old**, mantenga el objeto de **old** en la lista"
 
 #: ../../standard/docs/en/schema/merging.md:104
 msgid ""
-"If there is an object in **new** with an ```id``` not found in **old** then "
+"If there is an object in **new** with an `id` not found in **old** then "
 "add the object to the list"
 msgstr ""
-"Si hay un objeto en **new** con un ```id``` no encontrado en **old** "
+"Si hay un objeto en **new** con un `id` no encontrado en **old** "
 "entonces agregue el objeto a la lista"
 
 #: ../../standard/docs/en/schema/merging.md:106
@@ -222,13 +222,13 @@ msgstr "Fusionar la lista completa"
 
 #: ../../standard/docs/en/schema/merging.md:110
 msgid ""
-"Where the objects contain no top level ```id``` values, or the schema "
-"specifies the ```\"wholeListMerge\": true``` for the array in question, then"
+"Where the objects contain no top level `id` values, or the schema "
+"specifies the `\"wholeListMerge\": true` for the array in question, then"
 " merging should take place by treating the entire list of objects as a "
 "single value."
 msgstr ""
-"Cuando los objetos no contienen valores ```id``` de nivel superior, o el "
-"esquema especifica ``\"wholeListMerge\": true```  para la matriz en "
+"Cuando los objetos no contienen valores `id` de nivel superior, o el "
+"esquema especifica `\"wholeListMerge\": true` para la matriz en "
 "cuestión, entonces la fusión debe tener lugar tratando la lista completa de "
 "objetos como un valor único."
 
@@ -246,12 +246,12 @@ msgstr "Omitir cuando se fusiona"
 
 #: ../../standard/docs/en/schema/merging.md:116
 msgid ""
-"A few properties in the schema are marked with ```\"omitWhenMerged\": "
-"true```. These properties should be dropped from the merged record - as they"
+"A few properties in the schema are marked with `\"omitWhenMerged\": "
+"true`. These properties should be dropped from the merged record - as they"
 " only make sense in the context of a single release."
 msgstr ""
-"Algunas propiedades del esquema están marcadas con ```'omitWhenMerged': "
-"true```. Estas propiedades deben eliminarse del registro fusionado, ya que "
+"Algunas propiedades del esquema están marcadas con `\"omitWhenMerged\": "
+"true`. Estas propiedades deben eliminarse del registro fusionado, ya que "
 "sólo tienen sentido en el contexto de una sola entrega."
 
 #: ../../standard/docs/en/schema/merging.md:0
@@ -294,12 +294,12 @@ msgstr ""
 #: ../../standard/docs/en/schema/merging.md:129
 msgid ""
 "In a versioned release, instead of over-writing past values when combining "
-"multiple releases, each field (with the exception of the ```id``` property "
+"multiple releases, each field (with the exception of the `id` property "
 "of objects within an array) becomes an array of objects, indicating the:"
 msgstr ""
 "En una entrega versionada, en lugar de sobrescribir los valores pasados ​​al"
 " fusionar varias entregas, cada campo (con la excepción de la propiedad "
-"```id``` de objetos dentro de una matriz) se convierte en una matriz de "
+"`id` de objetos dentro de una matriz) se convierte en una matriz de "
 "objetos, indicando:"
 
 #: ../../standard/docs/en/schema/merging.md:131
@@ -324,12 +324,12 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:136
 msgid ""
-"The property ```\"versionId\":true``` is used to explicitly declare the "
-"cases where an ```id``` field **should** be versioned (i.e. within an object"
+"The property `\"versionId\":true` is used to explicitly declare the "
+"cases where an `id` field **should** be versioned (i.e. within an object"
 " that is not within an array)."
 msgstr ""
-"La propiedad ```\"versionId\":true``` se utiliza para declarar "
-"explícitamente los casos en los que un campo ``` id``` **debe** ser "
+"La propiedad `\"versionId\":true` se utiliza para declarar "
+"explícitamente los casos en los que un campo ` id` **debe** ser "
 "versionado (es decir, dentro de un objeto que no está dentro de una matriz)."
 
 #: ../../standard/docs/en/schema/merging.md:0

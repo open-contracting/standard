@@ -33,8 +33,8 @@ Records should be embedded within a record package.
 
 See the guidance on [package metadata](../../../reference#package-metadata). In addition, a record package includes:
 
-* ```packages``` - which should provide links to all the release packages used to compile this record. 
-* ```records``` - one or more contracting process records, containing, at the very least, identifiers for the all the releases that relate to each contracting process.
+* `packages` - which should provide links to all the release packages used to compile this record. 
+* `records` - one or more contracting process records, containing, at the very least, identifiers for the all the releases that relate to each contracting process.
 
 You can see this in the full example of a record below.
 
