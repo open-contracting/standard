@@ -9,19 +9,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Update currency codelist for ISO4217 amendment 165 (2017-12-14).
 
-### Bug fixes 
+### Schema fixes 
 
-* Correcting use of "null" as type at various points in the schema
-* [#639](https://github.com/open-contracting/standard/issues/639) Removing requirement to have a 'name' field for OrganizationReference.
-* [#603](https://github.com/open-contracting/standard/issues/603), [#645](https://github.com/open-contracting/standard/issues/645) Missing definitions added to Release, Period, Milestone, Organization.address, Organization.contactPoint, Identifier, Classification and Value.
-* [#633](https://github.com/open-contracting/standard/issues/633) Updates to schema reference page to ensure Planning.documents is displayed.
-* record-package-schema.json now uses the extended 'codelist' property to reference the csv version of codelists used.
-* [#578](https://github.com/open-contracting/standard/issues/578) - Updating definition of buyer to cover goods, works and services, and multiple buyers.
-* [#634](https://github.com/open-contracting/standard/issues/634) - Clarifying definitions of core, community and local extensions.
+* [#646](https://github.com/open-contracting/standard/pull/646) Disallow use of `null` as an item in the array for `Tender.additionalProcurementCategories`.
+* [#639](https://github.com/open-contracting/standard/issues/639) Make `name` field optional for `OrganizationReference`.
+* [#630](https://github.com/open-contracting/standard/issues/630) Allow optional field `Item.unit` to be `null`.
+* [#603](https://github.com/open-contracting/standard/issues/603), [#645](https://github.com/open-contracting/standard/issues/645) Add definitions to Release, planning.budget, Milestone, Organization.address, Organization.contactPoint, Classification, Identifier, Value and Period.
+* Make `record-package-schema.json` use the `codelist` property to reference `releaseTag.csv`, and update the `enum` accordingly.
+* [#578](https://github.com/open-contracting/standard/issues/578) Update definition of `buyer` to cover goods, works and services, and multiple buyers.
+
+### Documentation fixes
+
+* [#633](https://github.com/open-contracting/standard/issues/633) Update schema reference page to display `Release.relatedProcesses`, `Planning.documents` and `Contract.relatedProcesses`.
+* [#634](https://github.com/open-contracting/standard/issues/634) Clarify definitions of core, community and local extensions.
 
 ### Extension fixes 
 
-* [#43](https://github.com/open-contracting/ocds-extensions/issues/43), [#47](https://github.com/open-contracting/ocds-extensions/issues/47), [#40](https://github.com/open-contracting/ocds-extensions/issues/40) - Adding missing codelist properties and definitions to location and lots extension.
+* [#40](https://github.com/open-contracting/ocds-extensions/issues/40), [#43](https://github.com/open-contracting/ocds-extensions/issues/43), [#47](https://github.com/open-contracting/ocds-extensions/issues/47) Add missing definitions, codelists and enums to core extensions, correct typos in codelist filenames, disallow use of `null` as an item in arrays, disallow required fields from being set to `null`, allow optional fields to be `null`, use `OrganizationReference` instead of `Organization`.
 
 Old and unused scripts have been removed from the documentation repository, and a number of script dependencies have been updated.
 
