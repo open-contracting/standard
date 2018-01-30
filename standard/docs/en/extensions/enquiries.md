@@ -72,7 +72,7 @@ We recommend that publishers provide question answers as plain text, or with min
 ```eval_rst
 .. extensiontable::
    :extension: enquiries
-   :exclude_definitions: Tender
+   :definitions: Enquiry
 ```
 
 ### Issues
