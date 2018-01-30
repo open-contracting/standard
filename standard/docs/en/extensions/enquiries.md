@@ -78,3 +78,14 @@ We recommend that publishers provide question answers as plain text, or with min
 ### Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+### Changelog
+
+#### v1.1.3
+
+* Use `OrganizationReference` instead of `Organization` for `Enquiry.author`
+* Correct name of +partyRole.csv codelist (was +partyRoles.csv)
+* Allow `Enquiry.date` to be null
+* List codelists in extension.json
+* Use Apache 2.0 License
+* Add tests and tidy code

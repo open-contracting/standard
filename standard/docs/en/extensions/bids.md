@@ -154,3 +154,17 @@ Below is an example of a bids extension:
 ### Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+### Changelog
+
+#### v1.1.3
+
+* Disallow required fields `BidsStatistic.id`, `BidsStatistic.measure`, `BidsStatistic.value` from being null
+* Disallow `Bids.statistics` from having null in its array of objects
+* Allow `Bids.statistics` to be null
+* Add enum to `BidsStatistic.status`
+* Move `BidsStatistic.requirementResponses` to requirements extension
+* Add descriptions to bidStatus.csv
+* List codelists in extension.json
+* Add example to documentation
+* Add tests and tidy code

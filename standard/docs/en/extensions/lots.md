@@ -196,3 +196,14 @@ Although part of the same tender, the buyer is willing to award these different 
 ### Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+### Changelog
+
+#### v1.1.3
+
+* Disallow `relatedLots` fields from having null in their arrays of strings
+* Add enum to `Lot.status`
+* Allow `relatedLots` fields to be null
+* Add title and description to `Tender.lotDetails`
+* Use Apache 2.0 License
+* Add tests and tidy code

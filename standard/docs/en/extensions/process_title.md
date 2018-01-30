@@ -26,3 +26,10 @@ Publishers using these fields should be aware that not all applications will dis
 ### Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+### Changelog
+
+#### v1.1.3
+
+* Use Apache 2.0 License
+* Add tests and tidy code

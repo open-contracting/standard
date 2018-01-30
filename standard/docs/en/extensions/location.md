@@ -105,3 +105,17 @@ You can take the contents of the geometry object, excluding the `geometry` keywo
 ### Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+### Changelog
+
+#### v1.1.3
+
+* Disallow `Location.geometry.coordinates` from having null in its array of coordinates
+* Disallow `Location.gazetteer.identifiers` from having null in its array of strings
+* Correct name of locationGazetteers.csv codelist (was locationGazeteers.csv)
+* Allow `Location.geometry` and `Location.gazetteer` to be null
+* Add title and description to `Location.gazetteer`
+* Add description to `Item.deliveryLocation`, `Item.deliveryAddress`
+* Add geometryType.csv codelist for `Location.geometry.type`
+* List codelists in extension.json
+* Add tests and tidy code

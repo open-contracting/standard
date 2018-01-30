@@ -82,11 +82,18 @@ In some cases, a fee may be levied for 'official copies' of procurement document
 
 In this case, the fee should be modelled as a **submission** fee, as submission is only possible when this document access fee has been paid.
 
-### To do
-
-* participation / submission terminology
-* finalize codelist
-
 ### Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+### Changelog
+
+#### v1.1.3
+
+* Disallow `ParticipationFee.type` from having null in its array of strings
+* Allow `ParticipationFee.description` to be null
+* Add `ParticipationFee.id` field
+* Add description to `ParticipationFee`
+* Add title and description to `ParticipationFee.value`
+* Add participationFeeType.csv codelist for `ParticipationFee.type`
+* Add tests and tidy code
