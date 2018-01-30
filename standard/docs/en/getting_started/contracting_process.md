@@ -88,7 +88,7 @@ Not all contracting processes have all stages. For example, direct contracting m
 
 You should aim to publish OCDS data close to real-time: releasing data as each stage of a contracting process takes place.
 
-This may involve generating output from a range of different systems. Data published from different systems can be tied together by use of a common Open Contracting ID (```ocid```).
+This may involve generating output from a range of different systems. Data published from different systems can be tied together by use of a common Open Contracting ID (`ocid`).
 
 ### Defining a contracting process
 
@@ -100,9 +100,9 @@ An initiation process may be a tender, a direct contract award, or a call to awa
 
 ### The Open Contracting ID (ocid)
 
-Each unique contracting process should be assigned an ```ocid```. This is an identifier which can be used to join up data between different stages (as often the data may be stored in different systems). 
+Each unique contracting process should be assigned an `ocid`. This is an identifier which can be used to join up data between different stages (as often the data may be stored in different systems). 
 
-To make sure the ```ocid```s assigned by two different publishers do not clash, publishers are encouraged to register a publisher prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process. 
+To make sure the `ocid`s assigned by two different publishers do not clash, publishers are encouraged to register a publisher prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process. 
 
 You can [register your ocid prefix here](../implementation/registration.md).
 
@@ -132,7 +132,7 @@ All the award notices, contracts and transactions resulting from the tender with
     
 <p class="first admonition-title">Note</p>
     
-The ```ocid``` is case sensitive. Case should be used consistently whenever an ```ocid``` is presented.
+The `ocid` is case sensitive. Case should be used consistently whenever an `ocid` is presented.
 
 </div>
 

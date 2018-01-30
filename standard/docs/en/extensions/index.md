@@ -14,7 +14,7 @@ All core and community extensions are listed in the [extensions registry](https:
 
 ## Using extensions
 
-Extensions are applied by adding their URLs to the ```extensions``` array in the release or record package. To use one or more extensions, select them from the extension lists below and include the following in your release or record package metadata:
+Extensions are applied by adding their URLs to the `extensions` array in the release or record package. To use one or more extensions, select them from the extension lists below and include the following in your release or record package metadata:
 
 <style><!--
 #using-extensions div[class^='highlight'] pre {

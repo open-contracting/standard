@@ -203,7 +203,7 @@ Note: The 'direct' code was introduced in Version 1.1. Publishers who completed 
 
 ### Procurement Category
 
-The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the ```additionalProcurementCategories``` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
+The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -221,7 +221,7 @@ An award move through multiple states. Releases over time may update the status 
    :file: ../../../schema/codelists_translated/awardStatus.csv
 ```
 
-The ```awardStatus``` field and codelist is used to indicate when a tender did not result in an award (through the ```"awardStatus":"unsuccessful"``` value)
+The `awardStatus` field and codelist is used to indicate when a tender did not result in an award (through the `"awardStatus":"unsuccessful"` value)
 
 ### Contract Status
 

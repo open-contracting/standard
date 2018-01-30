@@ -66,7 +66,7 @@ It is possible to represent a full releases in a single flat CSV row by using fu
 
 This approach is generally only appropriate for data without one-to-many relationships (for example, only one item per tender, and one award and contract for each tender process).
 
-It is, however, theoretically possible to represent a full releases in a single flat CSV row by using full JSON pointers for each field as the headings. For arrays, this involves adding the array index to the path, such as ```tender/item/0/id``` and ```tender/item/1/id``` as separate columns to represent each of the items. 
+It is, however, theoretically possible to represent a full releases in a single flat CSV row by using full JSON pointers for each field as the headings. For arrays, this involves adding the array index to the path, such as `tender/item/0/id` and `tender/item/1/id` as separate columns to represent each of the items. 
 
 For example, to represent a tender release with two items, the CSV file would include:
 

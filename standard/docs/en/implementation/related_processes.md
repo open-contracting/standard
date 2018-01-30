@@ -17,7 +17,7 @@ In some cases, complex contracting processes cannot be represented under a singl
 
 There are also cases when users want to know about related, but separate, contracting processes - such as the tender for renewal of a contract, or sub-contracting processes.
 
-The ```relatedProcess``` block can be used in these cases to link together multiple contracting processes. 
+The `relatedProcess` block can be used in these cases to link together multiple contracting processes. 
 
 ## Framework types 
 
