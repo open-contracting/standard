@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.1.3] - 2018-01-XX
 
+### Codelist updates
+
+* Update currency codelist for ISO4217 amendment 165 (2017-12-14).
+
 ### Bug fixes 
 
 * Correcting use of "null" as type at various points in the schema
