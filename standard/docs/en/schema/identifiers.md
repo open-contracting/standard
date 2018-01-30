@@ -128,7 +128,7 @@ The **organization register prefix** for UK Companies House is GB-COH. The organ
 
 ```eval_rst
 
-.. code:: json
+.. code-block:: json
 
     {
         "scheme":"GB-COH",
