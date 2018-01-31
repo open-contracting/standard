@@ -54,11 +54,7 @@ for extension in extension_json['extensions']:
             readme.write(text)
 
         extension_json = requests.get(extension['url'].rstrip('/') + '/' + 'extension.json').json()
-        try:
-            for codelist in extension_json['codelists']:
-                print(codelist)
-                codelist_csv = requests.get(extension['url'].rstrip('/') + '/codelists/' + codelist)
-                with open(os.path.join(path, 'codelists', codelist), 'w') as codelist_file:
-                    codelist_file.write(codelist_csv.text)
-        except Exception as e:
-            pass
+        for codelist in extension_json.get('codelists', []):
+            codelist_csv = requests.get(extension['url'].rstrip('/') + '/codelists/' + codelist)
+            with open(os.path.join(path, 'codelists', codelist), 'w') as codelist_file:
+                codelist_file.write(codelist_csv.text)
