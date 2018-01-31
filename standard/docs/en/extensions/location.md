@@ -27,6 +27,7 @@ This extension introduces two properties at the `items` level to describe locati
 ```eval_rst
 .. extensiontable::
    :extension: location
+   :definitions: Location
 ```
 
 ### Gazetteer Codelist

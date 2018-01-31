@@ -33,12 +33,10 @@ The `bids/bidStatistics` array can be used to represent key statistical informat
 * A measure, from the bidStatistics codelist;
 * A value for that measure;
 
-### Bid Statistics Schema
-
 ```eval_rst
 .. extensiontable::
    :extension: bids
-   :exclude_definitions: Bids Bid
+   :definitions: BidsStatistic
 ```
 
 ### Bid Statistics Codelist
@@ -53,14 +51,14 @@ For example, publishers may wish to add statistics on minority or women owned bu
    :file: codelists_translated/bidStatistics.csv
 ```
 
-## Bid details
+## Bid Details
 
 The `bids/details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
 
 ```eval_rst
 .. extensiontable::
    :extension: bids
-   :exclude_definitions: statistics BidsStatistic
+   :definitions: Bid
 ```
 
 ### Bid Status Codelist
