@@ -11,6 +11,7 @@ import copy
 version_template = OrderedDict([
     ("type", "array"),
     ("items", OrderedDict([
+        ("type", "object"),
         ("properties", OrderedDict([
             ("releaseDate", OrderedDict([
                 ("format", "date-time"),
