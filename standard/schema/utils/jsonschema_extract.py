@@ -5,17 +5,21 @@ Babel extractor used in setup.py
 import json
 
 
-def gather_text(schema, current_path):
-    for key, value in schema.items():
-        if key in ('title', 'description') and isinstance(value, str):
-            yield value, current_path + '/' + key
-        if isinstance(value, dict):
-            yield from gather_text(value, current_path + '/' + key)
+def gather_text(schema, pointer=''):
+    if isinstance(schema, list):
+        for index, item in enumerate(schema):
+            yield from gather_text(item, pointer='{}/{}'.format(pointer, index))
+    elif isinstance(schema, dict):
+        for key, value in schema.items():
+            if key in ('title', 'description') and isinstance(value, str):
+                yield value, '{}/{}'.format(pointer, key)
+            yield from gather_text(value, pointer='{}/{}'.format(pointer, key))
 
 
 def extract(fileobj, keywords, comment_tags, options):
+    """
+    Yields the values of "title" and "description" properties.
+    """
     schema = json.loads(fileobj.read().decode())
-    for text, current_path in gather_text(schema, ''):
-        yield 1, '', text, [current_path]
-
-#    for lineno, funcname, messages, comments in results:
+    for text, pointer in gather_text(schema):
+        yield 1, '', text, [pointer]
