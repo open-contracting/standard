@@ -4,9 +4,16 @@
 See README for this script's documentation.
 """
 
-import json
-from collections import OrderedDict
 import copy
+import json
+import os
+import sys
+from collections import OrderedDict
+
+docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en')
+sys.path.append(docs_path)
+
+from conf import release  # noqa
 
 version_template = OrderedDict([
     ("type", "array"),
@@ -96,7 +103,8 @@ def unversion_refs(schema):
 
 
 def get_versioned_validation_schema(versioned_release):
-    versioned_release["id"] = "http://standard.open-contracting.org/schema/1__1__3/versioned-release-validation-schema.json"  # noqa nopep8
+    release_with_underscores = release.replace('.', '__')
+    versioned_release["id"] = "http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json".format(release_with_underscores)  # noqa nopep8
     versioned_release["$schema"] = "http://json-schema.org/draft-04/schema#"  # nopep8
     versioned_release["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
 
