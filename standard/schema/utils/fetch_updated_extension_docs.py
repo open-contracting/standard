@@ -35,7 +35,7 @@ This extension is maintained at [{}]({})
 '''
 
 
-path = os.path.abspath(os.path.dirname(__file__))
+path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en', 'extensions')
 for extension in extension_json['extensions']:
     if extension['core']:
         extension_readme = requests.get(extension['url'].rstrip("/") + "/" + "README.md")
@@ -58,7 +58,7 @@ for extension in extension_json['extensions']:
             for codelist in extension_json['codelists']:
                 print(codelist)
                 codelist_csv = requests.get(extension['url'].rstrip('/') + '/codelists/' + codelist)
-                with open(os.path.join(path, 'codelists', codelist, 'w')) as codelist_file:
+                with open(os.path.join(path, 'codelists', codelist), 'w') as codelist_file:
                     codelist_file.write(codelist_csv.text)
         except Exception as e:
             pass
