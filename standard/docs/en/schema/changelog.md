@@ -3,7 +3,25 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-### [1.1.2] - 2017-11-10
+## [1.1.3] - 2018-01-XX
+
+### Bug fixes 
+
+* Correcting use of "null" as type at various points in the schema
+* [#639](https://github.com/open-contracting/standard/issues/639) Removing requirement to have a 'name' field for OrganizationReference.
+* [#603](https://github.com/open-contracting/standard/issues/603), [#645](https://github.com/open-contracting/standard/issues/645) Missing definitions added to Release, Period, Milestone, Organization.address, Organization.contactPoint, Identifier, Classification and Value.
+* [#633](https://github.com/open-contracting/standard/issues/633) Updates to schema reference page to ensure Planning.documents is displayed.
+* record-package-schema.json now uses the extended 'codelist' property to reference the csv version of codelists used.
+* [#578](https://github.com/open-contracting/standard/issues/578) - Updating definition of buyer to cover goods, works and services, and multiple buyers.
+* [#634](https://github.com/open-contracting/standard/issues/634) - Clarifying definitions of core, community and local extensions.
+
+### Extension fixes 
+
+* [#43](https://github.com/open-contracting/ocds-extensions/issues/43), [#47](https://github.com/open-contracting/ocds-extensions/issues/47), [#40](https://github.com/open-contracting/ocds-extensions/issues/40) - Adding missing codelist properties and definitions to location and lots extension.
+
+Old and unused scripts have been removed from the documentation repository, and a number of script dependencies have been updated.
+
+## [1.1.2] - 2017-11-10
 
 ### Codelist updates
 

@@ -310,7 +310,7 @@ locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 
 gettext_compact = False     # optional.
 
 
-extension_registry_git_ref = "v1.1.1"
+extension_registry_git_ref = "v1.1.3"
 
 
 # app setup hook

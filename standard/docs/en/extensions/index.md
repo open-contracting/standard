@@ -6,13 +6,11 @@ Many publishers will have additional data that they could publish. Instead of ig
 
 Extensions are divided into two types:
 
-* **Core** extensions are documented as part of the standard and reviewed by the OCDS technical team with each version upgrade of OCDS. They are likely to be relevant to a large number of publishers and users.
+* **Core** extensions are maintained as part of the standard governance process, documented as part of the standard and reviewed by the OCDS technical team with each version upgrade of OCDS. They are likely to be relevant to a large number of publishers and users.
 
-* **Community** extension are maintained by third-parties, or are maintained outside of the standard governance process. They may provide features required by only a small number of publishers or users.
+* **Community** and local extension are maintained by third-parties, or are maintained outside of the standard governance process. They may provide features required by only a small number of publishers or users, or may be used to document a publisher's additional fields or codelist values.
 
-Some extensions with wide adoption may be considered for inclusion as part of the core standard in future versions. Others may be maintained independently by particular communities that need to align the publication of particular additional information.
-
-
+All core and community extensions are listed in the [extensions registry](https://github.com/open-contracting/extension_registry) and in the documentation here. The [standard technical team](../support/governance.md) approves extensions for inclusion in the registry (distinguishing community from local extensions) and for inclusion in the governance process (distinguishing core from community extensions).
 
 ## Using extensions
 

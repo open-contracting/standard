@@ -1,7 +1,8 @@
 {
-  "id": "http://standard.open-contracting.org/schema/1__1__2/release-schema.json",
+  "id": "http://standard.open-contracting.org/schema/1__1__3/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
+  "description":"Each release provides data about a single contracting process at a particular point in time. Releases can be used to notify users of new tenders, awards, contracts and other updates. Releases may repeat or update information provided previously in this contracting process. One contracting process may have many releases. A 'record' of a contracting process follows the same structure as a release, but combines information from multiple points in time into a single summary.",
   "type": "object",
   "properties": {
     "ocid": {
@@ -74,7 +75,7 @@
     },
     "buyer": {
       "title": "Buyer",
-      "description": "The buyer is the entity whose budget will be used to purchase the goods. This may be different from the procuring entity who may be specified in the tender data.",
+      "description": "A buyer is an entity whose budget will be used to pay for goods, works or services related to a contract. This may be different from the procuring entity who may be specified in the tender data.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "planning": {
@@ -146,6 +147,8 @@
           ]
         },
         "budget": {
+          "title":"Budget",
+          "description":"Details of the budget that funds this contracting process.",
           "$ref": "#/definitions/Budget"
         },
         "documents": {
@@ -310,8 +313,7 @@
           ],
           "items": {
             "type": [
-              "string",
-              "null"
+              "string"
             ]
           },
           "codelist": "extendedProcurementCategory.csv",
@@ -548,7 +550,7 @@
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "The suppliers awarded this award. If different suppliers have been awarded different items of values, these should be split into separate award blocks.",
+          "description": "The suppliers awarded this award. If different suppliers have been awarded different items or values, these should be split into separate award blocks.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -801,6 +803,7 @@
     },
     "Milestone": {
       "title": "Milestone",
+      "description":"The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.",
       "type": "object",
       "required": [
         "id"
@@ -1261,9 +1264,6 @@
           "title": "Contact point"
         }
       },
-      "required": [
-        "name"
-      ],
       "type": "object",
       "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
       "title": "Organization reference"
@@ -1304,9 +1304,13 @@
           "wholeListMerge": true
         },
         "address": {
+          "title":"Address",
+          "description":"An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
           "$ref": "#/definitions/Address"
         },
         "contactPoint": {
+          "title":"Contact point",
+          "description":"Contact details that can be used for this party.",
           "$ref": "#/definitions/ContactPoint"
         },
         "roles": {
@@ -1391,7 +1395,10 @@
         "unit": {
           "title": "Unit",
           "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price. For comparability, an established list of units can be used.  ",
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
             "scheme": {
               "title": "Scheme",
@@ -1551,6 +1558,7 @@
     },
     "Classification": {
       "title": "Classification",
+      "description":"A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is drawn, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
       "type": "object",
       "properties": {
         "scheme": {
@@ -1601,6 +1609,7 @@
     },
     "Identifier": {
       "title": "Identifier",
+      "description":"A unique identifier for a party (organization).",
       "type": "object",
       "properties": {
         "scheme": {
@@ -1649,7 +1658,7 @@
     },
     "Address": {
       "title": "Address",
-      "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
+      "description": "An address.",
       "type": "object",
       "properties": {
         "streetAddress": {
@@ -1760,6 +1769,7 @@
     },
     "Value": {
       "title": "Value",
+      "description":"Financial values should always be published with a currency attached.",
       "type": "object",
       "properties": {
         "amount": {
@@ -2085,7 +2095,7 @@
     },
     "Period": {
       "title": "Period",
-      "description": "    ",
+      "description": "Key events during a contracting process may have a known state date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
       "type": "object",
       "properties": {
         "startDate": {
