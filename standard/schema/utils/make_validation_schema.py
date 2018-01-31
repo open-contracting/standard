@@ -18,6 +18,7 @@ from conf import release  # noqa
 version_template = OrderedDict([
     ("type", "array"),
     ("items", OrderedDict([
+        ("type", "object"),
         ("properties", OrderedDict([
             ("releaseDate", OrderedDict([
                 ("format", "date-time"),
