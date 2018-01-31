@@ -8,9 +8,9 @@ Whenever the release schema is updated, a versioned release schema has to be cre
 
 This can be created by running:
 
-````
-./make_validation_schema.py
-````
+```shell
+python make_validation_schema.py
+```
 
 There are tests set-up to ensure this has happened. 
 

@@ -12,7 +12,7 @@ There are three kinds of changes:
 
 The nature of a change can be made explicit using:
 
-* **The release tag** (```tag```). For example, for a release with a new contract, use 'contract'. For an update to the award, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'. 
+* **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the award, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'. 
 
 * **The amendments** building block. This can contain an array of amendment explanations, and clearly identify the releases that contain before and after values. 
 
@@ -20,9 +20,9 @@ The nature of a change can be made explicit using:
 
 In the example below:
 
-* A tender is issued for a "Data merge tool" in a release with the ```tag``` 'tender'. 
-* This is updated in a release with the ```tag``` 'tenderUpdate' to provide an expanded description of the item. The publisher did not consider this to be a formal 'amendment' to the tender, so did not publish any amendment information.
-* The tender is then formally amended, with an increased value. This is published in a release with the ```tag``` 'tenderAmendment', and an ```amendments``` block under ```tender```.
+* A tender is issued for a "Data merge tool" in a release with the `tag` 'tender'. 
+* This is updated in a release with the `tag` 'tenderUpdate' to provide an expanded description of the item. The publisher did not consider this to be a formal 'amendment' to the tender, so did not publish any amendment information.
+* The tender is then formally amended, with an increased value. This is published in a release with the `tag` 'tenderAmendment', and an `amendments` block under `tender`.
 
 
 ```eval_rst
@@ -66,7 +66,7 @@ Note in this example that:
 
 * **The publisher chooses in the tenderAmendment release to repeat a fragment of the original 'tender' release**, so that the before and after values of the tender can be accessed in the single file. This is not required when a full archive of releases is made accessible, but can be a convenient way of publishers making structured information on the before and after values of a field more accessible to users. 
 
-* **In the merged record**, the information in the ```amendments``` array can be used to lookup information in the ```versionedRelease``` section, to see where changes are explained by an amendment ```rationale```. 
+* **In the merged record**, the information in the `amendments` array can be used to lookup information in the `versionedRelease` section, to see where changes are explained by an amendment `rationale`. 
 
 
 

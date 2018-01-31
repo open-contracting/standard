@@ -45,7 +45,7 @@ All new information about a contracting process is described within a release.
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
     :include: 
-    :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcess
+    :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
 
 ```
 
@@ -94,7 +94,7 @@ The planning section can be used to describe the background to a contracting pro
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Planning
-    :collapse: budget,document,milestones
+    :collapse: budget,documents,milestones
 
 ```
 
@@ -165,13 +165,13 @@ The award section is used to announce any awards issued for this tender. There m
 
 ### Contract
 
-The contract section is used to provide details of contracts that have been entered into. Every contract needs to have a related award, linked via the ```awardID``` property. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
+The contract section is used to provide details of contracts that have been entered into. Every contract needs to have a related award, linked via the `awardID` property. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
 
 ```eval_rst
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
     :pointer: /definitions/Contract
-    :collapse: period,value,items,documents,implementation,relatedProcess,milestones,amendment,amendments
+    :collapse: period,value,items,documents,implementation,relatedProcesses,milestones,amendment,amendments
 
 ```
 
@@ -209,9 +209,9 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party ```source``` of data, and can re-use identifiers from that source. 
+The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party `source` of data, and can re-use identifiers from that source. 
 
-In most circumstances, the ```payer``` identifier should match that of the ```buyer```, and the ```payee``` identifier should match that of the ```supplier```. 
+In most circumstances, the `payer` identifier should match that of the `buyer`, and the `payee` identifier should match that of the `supplier`. 
 
 #### Milestones
 
@@ -263,8 +263,8 @@ The approach to including organizations information has changed in OCDS 1.1. Ins
 
 An organization reference consists of two main components:
 
-* An ```id``` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization or entity;
-* A ```name``` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
+* An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization or entity;
+* A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
 
 The Organization Reference schema contains deprecated fields to prevent validation failures of OCDS 1.0 data. 
 
@@ -327,7 +327,7 @@ The document block is also used to link to legal notices, which should have a do
 
 A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
 
-Periods may also include a ```maxExtentDate``` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
+Periods may also include a `maxExtentDate` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
 
 ```eval_rst
 
@@ -395,7 +395,7 @@ The items block is used to list the line-items associated with a tender, award o
 ```
 #### Unit
 
-The ```unit``` block allows detailed specification of the parameters and price of units that make up a line-item. Although no codelist for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the ```unit.name``` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
+The `unit` block allows detailed specification of the parameters and price of units that make up a line-item. Although no codelist for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the `unit.name` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
 
 ```eval_rst
 
@@ -419,7 +419,7 @@ Milestone information can be included in the [planning](#planning), [tender](#te
 
 Notes:
 
-* The ```dateModified``` field should be changed whenever the progress towards a milestone is reviewed, and the ```status``` either updated, or re-confirmed. 
+* The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
 ```eval_rst
 .. extensionlist:: The following extensions to milestone are available
@@ -456,7 +456,7 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 * When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
-In all these cases, the ```relatedProcess``` block can be used to cross-reference between the relevant open contracting processes using their ```ocid```.
+In all these cases, the `relatedProcess` block can be used to cross-reference between the relevant open contracting processes using their `ocid`.
 
 ```eval_rst
 
@@ -472,11 +472,11 @@ A related process can be declared at two points in an OCDS release.
 
 **(2) At the contract level** - used to point onward to sub-contracts, renewal or replacement processes that relate solely to the particular contract the property appears in.  
 
-As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant ```documents``` blocks. For example:
+As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` blocks. For example:
 
-* When recording a ```release/relatedProcess``` pointing to the ocid of the planning process that resulted in a tender, a ```tender/documents``` entry with a ```documentType``` of 'procurementPlan' and a link to web pages about the procurement plan could be provided;
-* When recording a ```contract/relatedProcess``` pointing to the ocid of a  sub-contracting process, a ```contract/documents``` entry with a ```documentType``` of 'subContract' and a title that describes it as the subcontracting process, could be provided;
-* When recording a ```contract/relatedProcess``` pointing to the ocid of a tender process to renew a given contract, a ```contract/documents``` entry with a ```documentType``` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
+* When recording a `release/relatedProcess` pointing to the ocid of the planning process that resulted in a tender, a `tender/documents` entry with a `documentType` of 'procurementPlan' and a link to web pages about the procurement plan could be provided;
+* When recording a `contract/relatedProcess` pointing to the ocid of a  sub-contracting process, a `contract/documents` entry with a `documentType` of 'subContract' and a title that describes it as the subcontracting process, could be provided;
+* When recording a `contract/relatedProcess` pointing to the ocid of a tender process to renew a given contract, a `contract/documents` entry with a `documentType` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
 
 ### Location
 
@@ -500,13 +500,13 @@ Many publishers need to be able to share key data in multiple languages. All fre
 
 Language variations are included by a copy of multi-lingual fields, suffixed with a language code.
 
-E.g. ```title``` and ```title_es```
+E.g. `title` and `title_es`
 
-In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the ```language``` field. 
+In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the `language` field. 
 
 Languages should be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the two letter [ISO639-1 two-letter language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, and should not assume that the users are able to distinguish between sub-tag variations (for example, OCDS publishers should strongly prefer 'en' over 'en_US' or 'en_GB'). 
 
-To include a language variation of a field, the field name should be suffixed with _ and the appropriate language tag. For example: ```title_es``` for Spanish.
+To include a language variation of a field, the field name should be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
 
 ### Worked example
 
@@ -551,7 +551,7 @@ There may be cases where a publisher needs to remove, rather than update, a valu
 
 The following describes how null values will be handled in the compilation of a record:
 
-* If a field is included with a value in one release, and then set to ```null``` in a subsequent release, that field will be recorded as null in the compiled record (though past values of it should remain in the versioned section of the record).
-* If a field is set to null in one release, and is also set to ```null``` in a subsequent release, it will be recorded as null as per the original release, and the record will not show any change based on the subsequent release I.e. fields that are set to null are recorded as such and then only changed if the value is set.
-* If a field is set to ```null``` in one release, and then has a value in a subsequent release, it will first appear in the record, and the version section of the record as ```null``` and then with the subsequent value.
+* If a field is included with a value in one release, and then set to `null` in a subsequent release, that field will be recorded as null in the compiled record (though past values of it should remain in the versioned section of the record).
+* If a field is set to null in one release, and is also set to `null` in a subsequent release, it will be recorded as null as per the original release, and the record will not show any change based on the subsequent release I.e. fields that are set to null are recorded as such and then only changed if the value is set.
+* If a field is set to `null` in one release, and then has a value in a subsequent release, it will first appear in the record, and the version section of the record as `null` and then with the subsequent value.
 * If a field does not appear in one release, and then appears with a value in a subsequent release, it will first appear in the record, and the version section of the record, when the first release that contains it is compiled into the record.
