@@ -190,7 +190,7 @@ Although part of the same tender, the buyer is willing to award these different 
 ```eval_rst
 .. extensiontable::
     :extension: lots
-    :definitions: Lots
+    :definitions: Lot LotDetails LotGroup
 ```
 
 ### Issues

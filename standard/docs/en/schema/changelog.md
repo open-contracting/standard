@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.1.3] - 2018-01-XX
 
+### Codelist updates
+
+* Update currency codelist for ISO4217 amendment 165 (2017-12-14).
+
 ### Schema fixes 
 
 * [#646](https://github.com/open-contracting/standard/pull/646) Disallow use of `null` as an item in the array for `Tender.additionalProcurementCategories`.

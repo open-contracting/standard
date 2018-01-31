@@ -12,7 +12,7 @@ python standard/schema/utils/translate_schema.py en es fr
 
 # Create a symlink for the current language, so we can reference the
 # translated JSON schema from Sphinx directives
-rm build/current_lang || true
+rm -f build/current_lang || true
 ln -s en build/current_lang
 
 cd standard
@@ -27,6 +27,7 @@ cp -r standard/assets build
 
 cd standard
 for lang in es fr; do
+    echo "Building $lang..."
     CODELIST_LANG=$lang python schema/utils/translate_codelists.py schema
     CODELIST_LANG=$lang python schema/utils/translate_codelists.py docs/en/extensions
     # Create a symlink for the current language, so we can reference the

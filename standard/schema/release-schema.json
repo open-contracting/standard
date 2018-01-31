@@ -2,7 +2,7 @@
   "id": "http://standard.open-contracting.org/schema/1__1__3/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
-  "description":"Each release provides data about a single contracting process at a particular point in time. Releases can be used to notify users of new tenders, awards, contracts and other updates. Releases may repeat or update information provided previously in this contracting process. One contracting process may have many releases. A 'record' of a contracting process follows the same structure as a release, but combines information from multiple points in time into a single summary.",
+  "description": "Each release provides data about a single contracting process at a particular point in time. Releases can be used to notify users of new tenders, awards, contracts and other updates. Releases may repeat or update information provided previously in this contracting process. One contracting process may have many releases. A 'record' of a contracting process follows the same structure as a release, but combines information from multiple points in time into a single summary.",
   "type": "object",
   "properties": {
     "ocid": {
@@ -147,8 +147,8 @@
           ]
         },
         "budget": {
-          "title":"Budget",
-          "description":"Details of the budget that funds this contracting process.",
+          "title": "Budget",
+          "description": "Details of the budget that funds this contracting process.",
           "$ref": "#/definitions/Budget"
         },
         "documents": {
@@ -803,7 +803,7 @@
     },
     "Milestone": {
       "title": "Milestone",
-      "description":"The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.",
+      "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.",
       "type": "object",
       "required": [
         "id"
@@ -1304,13 +1304,13 @@
           "wholeListMerge": true
         },
         "address": {
-          "title":"Address",
-          "description":"An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
+          "title": "Address",
+          "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
           "$ref": "#/definitions/Address"
         },
         "contactPoint": {
-          "title":"Contact point",
-          "description":"Contact details that can be used for this party.",
+          "title": "Contact point",
+          "description": "Contact details that can be used for this party.",
           "$ref": "#/definitions/ContactPoint"
         },
         "roles": {
@@ -1558,7 +1558,7 @@
     },
     "Classification": {
       "title": "Classification",
-      "description":"A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is drawn, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+      "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is drawn, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
       "type": "object",
       "properties": {
         "scheme": {
@@ -1609,7 +1609,7 @@
     },
     "Identifier": {
       "title": "Identifier",
-      "description":"A unique identifier for a party (organization).",
+      "description": "A unique identifier for a party (organization).",
       "type": "object",
       "properties": {
         "scheme": {
@@ -1769,7 +1769,7 @@
     },
     "Value": {
       "title": "Value",
-      "description":"Financial values should always be published with a currency attached.",
+      "description": "Financial values should always be published with a currency attached.",
       "type": "object",
       "properties": {
         "amount": {
@@ -1955,6 +1955,7 @@
             "MNT",
             "MOP",
             "MRO",
+            "MRU",
             "MTL",
             "MTP",
             "MUR",
@@ -2015,6 +2016,7 @@
             "SRG",
             "SSP",
             "STD",
+            "STN",
             "SUR",
             "SVC",
             "SYP",
