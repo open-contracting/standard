@@ -6,7 +6,7 @@ See README for this script's documentation.
 
 import copy
 import json
-import os
+import os.path
 import sys
 from collections import OrderedDict
 
@@ -149,13 +149,12 @@ def get_versioned_validation_schema(versioned_release):
 
 
 if __name__ == "__main__":
-    from os.path import abspath, dirname, join
-    schema_dir = dirname(dirname(abspath(__file__)))
+    schema_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    with open(join(schema_dir, 'release-schema.json'), 'r') as f:
-        release_schema = json.loads(f.read(), object_pairs_hook=OrderedDict)
+    with open(os.path.join(schema_dir, 'release-schema.json'), 'r') as f:
+        release_schema = json.load(f, object_pairs_hook=OrderedDict)
 
     new_validation_schema = get_versioned_validation_schema(release_schema)
 
-    with open(join(schema_dir, 'versioned-release-validation-schema.json'), 'w') as f:
-        f.write(json.dumps(new_validation_schema, indent=4))
+    with open(os.path.join(schema_dir, 'versioned-release-validation-schema.json'), 'w') as f:
+        json.dump(new_validation_schema, f, indent=2)
