@@ -34,7 +34,7 @@ for file in glob.glob(os.path.join(sys.argv[1], 'codelists', '*.csv')):
         reader = csv.DictReader(r)
         fieldnames = [translator.gettext(fieldname) for fieldname in reader.fieldnames]
 
-        writer = csv.DictWriter(w, fieldnames)
+        writer = csv.DictWriter(w, fieldnames, lineterminator='\n')
         writer.writeheader()
 
         for row in reader:
