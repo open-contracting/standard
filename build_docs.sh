@@ -8,14 +8,14 @@ pybabel compile --use-fuzzy -d standard/docs/locale -D schema
 
 echo "Building en..."
 
-# Create translated JSON Schema files in the root of the language's build directory, which will be referenced by
-# `jsonschema` directives.
-python standard/schema/utils/translate_schema.py standard/docs/locale en
-
 # Create translated codelist CSV files for the language, which will be referenced by `csv-table-no-translate`
 # directives.
 python standard/schema/utils/translate_codelists.py standard/schema standard/docs/locale en
 python standard/schema/utils/translate_codelists.py standard/docs/en/extensions standard/docs/locale en
+
+# Create translated JSON Schema files in the root of the language's build directory, which will be referenced by
+# `jsonschema` directives.
+python standard/schema/utils/translate_schema.py standard/docs/locale en
 
 # Create a symlink for the language, so that the references in `jsonschema` directives work.
 rm -f build/current_lang
@@ -30,21 +30,18 @@ echo "... done"
 # Copy the assets into the build directory.
 cp -r standard/assets build
 
+# Build the translations. (Same as English, but with a language configuration setting.)
 for lang in es fr; do
     echo "Building $lang..."
 
-    # Add JSON Schema files to the root of the language's build directory, which will be referenced by `jsonschema` directives.
-    python standard/schema/utils/translate_schema.py standard/docs/locale $lang
-
-    # Create codelist CSV files for the language, so they can be referenced by `csv-table-no-translate` directives.
     python standard/schema/utils/translate_codelists.py standard/schema standard/docs/locale $lang
     python standard/schema/utils/translate_codelists.py standard/docs/en/extensions standard/docs/locale $lang
 
-    # Create a symlink for the language, so its JSON Schema files can be referenced by `jsonschema` directives.
+    python standard/schema/utils/translate_schema.py standard/docs/locale $lang
+
     rm build/current_lang
     ln -s $lang build/current_lang
 
-    # Build the language's documentation.
     sphinx-build -q -a -E -b dirhtml -D language="$lang" standard/docs/en build/$lang
 
     echo "... done"
