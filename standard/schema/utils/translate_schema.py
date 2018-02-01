@@ -49,4 +49,4 @@ for language in languages:
         with open(os.path.join('standard', 'schema', name)) as r, open(os.path.join(build_dir, name), 'w') as w:
             data = json.load(r, object_pairs_hook=OrderedDict)
             translate_data(data)
-            json.dump(data, w, indent=2, ensure_ascii=False)
+            json.dump(data, w, indent=2, separators=(',', ': '), ensure_ascii=False)

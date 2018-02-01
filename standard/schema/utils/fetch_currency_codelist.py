@@ -49,7 +49,7 @@ for node in tree.xpath('//HstrcCcyNtry'):
             historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
 
 with open('standard/schema/codelists/currency.csv', 'w') as fp:
-    writer = csv.writer(fp)
+    writer = csv.writer(fp, lineterminator='\n')
     writer.writerow(['Code', 'Title', 'Valid Until'])
     for code in sorted(current_codes.keys()):
         writer.writerow([code, current_codes[code], None])
@@ -62,5 +62,5 @@ with open('standard/schema/release-schema.json') as fp:
 codes = sorted(list(current_codes.keys()) + list(historic_codes.keys()))
 release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
 
-with open('standard/schema/release-schema.json', 'w') as fp:
-    json.dump(release_schema, fp, indent='  ')
+with open('standard/schema/release-schema.json', 'w') as f:
+    json.dump(release_schema, f, indent=2, separators=(',', ': '))

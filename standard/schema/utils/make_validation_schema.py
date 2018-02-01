@@ -152,10 +152,10 @@ def get_versioned_validation_schema(versioned_release):
 if __name__ == "__main__":
     schema_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    with open(os.path.join(schema_dir, 'release-schema.json'), 'r') as f:
+    with open(os.path.join(schema_dir, 'release-schema.json')) as f:
         release_schema = json.load(f, object_pairs_hook=OrderedDict)
 
     new_validation_schema = get_versioned_validation_schema(release_schema)
 
     with open(os.path.join(schema_dir, 'versioned-release-validation-schema.json'), 'w') as f:
-        json.dump(new_validation_schema, f, indent=2)
+        json.dump(new_validation_schema, f, indent=2, separators=(',', ': '))

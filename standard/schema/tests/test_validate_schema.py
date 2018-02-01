@@ -38,10 +38,10 @@ VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH = path(__file__).parent.parent / 'versi
 
 
 def validate_schema(schema_to_validate_path):
-    with open(OCDS_METASCHEMA, 'r') as f:
-        draft_schema = json.loads(f.read())
-    with open(schema_to_validate_path, 'r') as f:
-        schema = json.loads(f.read(), object_pairs_hook=object_pairs_hook)
+    with open(OCDS_METASCHEMA) as f:
+        draft_schema = json.load(f)
+    with open(schema_to_validate_path) as f:
+        schema = json.load(f, object_pairs_hook=object_pairs_hook)
     validate(schema, draft_schema)
     print("SUCCESS: Schema is valid against JSON Schema Draft 4.")
 
