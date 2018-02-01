@@ -9,7 +9,7 @@ from io import StringIO
 
 def extract(fileobj, keywords, comment_tags, options):
     """
-    Yields each header, and the Title and Description values of a CSV file.
+    Yields each header, and the Title and Description values of a codelist CSV file.
     """
     reader = csv.DictReader(StringIO(fileobj.read().decode()))
     for header in reader.fieldnames:

@@ -42,7 +42,7 @@ In each case, fields are identified by the [JSON pointer](http://tools.ietf.org/
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/serialization-flat.json
+.. jsoninclude:: ../examples/serialization-flat.json
    :jsonpointer: 
    :expand: releases, tender, items
 
@@ -82,7 +82,7 @@ The JSON equivalent of this would be:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/serialization-flat-two-items.json
+.. jsoninclude:: ../examples/serialization-flat-two-items.json
    :jsonpointer: 
    :expand: releases, tender, items
 

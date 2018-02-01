@@ -1,14 +1,15 @@
 """
 Translates each header and the `Title` and `Description` values of codelist CSV files, creating new files in a
-`codelists_translated` directory.
+relative `codelists_translated` directory.
 
 Usage:
 
-    cd standard
-    python schema/utils/translate_codelists.py schema <language>
-    python schema/utils/translate_codelists.py docs/en/extensions <language>
+    python standard/schema/utils/translate_codelists.py directory localedir language [language ...]
 
-`path` is the path to the codelist CSV files.
+`directory` is the path to the directory that contains the `codelists` directory containing codelist CSV files, and in
+which a `codelists_translated` directory will be created.
+
+`localedir` is the path to the `locale` directory.
 
 `language` is a two-letter lowercase ISO369-1 code or BCP47 language tag.
 """
@@ -20,27 +21,32 @@ import sys
 import os
 
 
-language = sys.argv[2]
-translator = gettext.translation('codelists', 'docs/locale', languages=[language], fallback=language == 'en')
-codelists_output_dir = os.path.join(sys.argv[1], 'codelists_translated')
+directory = sys.argv[1]
+localedir = sys.argv[2]
+languages = sys.argv[3:]
+codelists_output_dir = os.path.join(directory, 'codelists_translated')
 
 if not os.path.exists(codelists_output_dir):
     os.makedirs(codelists_output_dir)
 
+for language in languages:
+    print('Translating codelists in {} to language {}'.format(directory, language))
 
-for file in glob.glob(os.path.join(sys.argv[1], 'codelists', '*.csv')):
-    new_file = os.path.join(codelists_output_dir, os.path.basename(file))
-    with open(file) as r, open(new_file, 'w') as w:
-        reader = csv.DictReader(r)
-        fieldnames = [translator.gettext(fieldname) for fieldname in reader.fieldnames]
+    translator = gettext.translation('codelists', localedir, languages=[language], fallback=language == 'en')
 
-        writer = csv.DictWriter(w, fieldnames, lineterminator='\n')
-        writer.writeheader()
+    for file in glob.glob(os.path.join(directory, 'codelists', '*.csv')):
+        new_file = os.path.join(codelists_output_dir, os.path.basename(file))
+        with open(file) as r, open(new_file, 'w') as w:
+            reader = csv.DictReader(r)
+            fieldnames = [translator.gettext(fieldname) for fieldname in reader.fieldnames]
 
-        for row in reader:
-            new_row = {}
-            for key, value in row.items():
-                if key in ('Title', 'Description') and value:
-                    value = translator.gettext(value)
-                new_row[translator.gettext(key)] = value
-            writer.writerow(new_row)
+            writer = csv.DictWriter(w, fieldnames, lineterminator='\n')
+            writer.writeheader()
+
+            for row in reader:
+                new_row = {}
+                for key, value in row.items():
+                    if key in ('Title', 'Description') and value:
+                        value = translator.gettext(value)
+                    new_row[translator.gettext(key)] = value
+                writer.writerow(new_row)

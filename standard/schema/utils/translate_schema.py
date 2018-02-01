@@ -1,10 +1,12 @@
 """
-Translates the values of `title` and `description` properties of JSON Schema files, creating new files in language's
-build directory.
+Translates the `title` and `description` values of JSON Schema files, creating new files in each language's build
+directory.
 
 Usage:
 
-    python standard/schema/utils/translate_schema.py language [language ...]
+    python standard/schema/utils/translate_schema.py localedir language [language ...]
+
+`localedir` is the path to the `locale` directory.
 
 `language` is a two-letter lowercase ISO369-1 code or BCP47 language tag.
 """
@@ -15,7 +17,8 @@ import json
 import os
 from collections import OrderedDict
 
-languages = sys.argv[1:]
+localedir = sys.argv[1]
+languages = sys.argv[2:]
 
 json_schema_files = [
     'record-package-schema.json',
@@ -39,7 +42,7 @@ for language in languages:
 
     print('Translating schema to language {}'.format(language))
 
-    translator = gettext.translation('schema', 'standard/docs/locale', languages=[language], fallback=language == 'en')
+    translator = gettext.translation('schema', localedir, languages=[language], fallback=language == 'en')
     build_dir = os.path.join('build', language)
 
     if not os.path.exists(build_dir):

@@ -18,7 +18,7 @@ def gather_text(data, pointer=''):
 
 def extract(fileobj, keywords, comment_tags, options):
     """
-    Yields the values of "title" and "description" properties of a JSON file.
+    Yields the "title" and "description" values of a JSON Schema file.
     """
     data = json.loads(fileobj.read().decode())
     for text, pointer in gather_text(data):
