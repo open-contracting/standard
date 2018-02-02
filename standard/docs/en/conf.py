@@ -56,6 +56,8 @@ author = 'OCDS'
 
 html_show_sphinx = False
 
+html_favicon = '../../assets/favicon-16x16.ico'
+
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
