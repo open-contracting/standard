@@ -5,10 +5,10 @@ duplicate keys.
 """
 
 import json
-from path import path
 from collections import UserDict
 
 from jsonschema import validate
+from path import path
 
 
 class RejectingDict(UserDict):
