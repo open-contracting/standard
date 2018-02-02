@@ -6,8 +6,9 @@ duplicate keys.
 
 import json
 from path import path
-from jsonschema import validate
 from collections import UserDict
+
+from jsonschema import validate
 
 
 class RejectingDict(UserDict):

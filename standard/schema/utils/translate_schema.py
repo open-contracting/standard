@@ -12,9 +12,9 @@ Usage:
 """
 
 import gettext
-import sys
 import json
 import os
+import sys
 from collections import OrderedDict
 
 localedir = sys.argv[1]

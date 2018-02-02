@@ -6,11 +6,11 @@ set -e
 pybabel compile --use-fuzzy -d standard/docs/locale -D codelists
 pybabel compile --use-fuzzy -d standard/docs/locale -D schema
 
-# Create codelist CSV files, referenced by `csv-table-no-translate` directives.
+# Create codelist CSV files, referenced by `csv-table-no-translate` directives, for `sphinx-build` to succeed.
 python standard/schema/utils/translate_codelists.py standard/schema standard/docs/locale en
 python standard/schema/utils/translate_codelists.py standard/docs/en/extensions standard/docs/locale en
 
-# Create JSON Schema files in the root of the source language's build directory, referenced by `jsonschema` directives.
+# Create JSON Schema files, referenced by `jsonschema` directives, for `sphinx-build` to succeed.
 python standard/schema/utils/translate_schema.py standard/docs/locale en
 
 # Create a symlink for the source language, so that the references in `jsonschema` directives work.

@@ -14,11 +14,11 @@ which a `codelists_translated` directory will be created.
 `language` is a two-letter lowercase ISO369-1 code or BCP47 language tag.
 """
 
+import csv
 import gettext
 import glob
-import csv
-import sys
 import os
+import sys
 
 
 directory = sys.argv[1]
