@@ -22,4 +22,4 @@ def extract(fileobj, keywords, comment_tags, options):
     """
     data = json.loads(fileobj.read().decode())
     for text, pointer in gather_text(data):
-        yield 1, '', text, [pointer]
+        yield 1, '', text.strip(), [pointer]
