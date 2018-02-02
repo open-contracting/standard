@@ -15,7 +15,7 @@ python standard/schema/utils/translate_codelists.py standard/docs/en/extensions 
 
 # Create translated JSON Schema files in the root of the language's build directory, which will be referenced by
 # `jsonschema` directives.
-python standard/schema/utils/translate_schema.py standard/docs/locale en
+python standard/schema/utils/translate_schema.py build standard/docs/locale en
 
 # Create a symlink for the language, so that the references in `jsonschema` directives work.
 rm -f build/current_lang
@@ -37,7 +37,7 @@ for lang in es fr; do
     python standard/schema/utils/translate_codelists.py standard/schema standard/docs/locale $lang
     python standard/schema/utils/translate_codelists.py standard/docs/en/extensions standard/docs/locale $lang
 
-    python standard/schema/utils/translate_schema.py standard/docs/locale $lang
+    python standard/schema/utils/translate_schema.py build standard/docs/locale $lang
 
     rm build/current_lang
     ln -s $lang build/current_lang
