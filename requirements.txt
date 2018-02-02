@@ -17,14 +17,14 @@ sphinx-intl==0.9.9
     Pygments==2.1.1
     requests==2.9.1
     snowballstemmer==1.2.1
-git+https://github.com/jpmckinney/sphinxcontrib-jsonschema.git@recommonmark#egg=sphinxcontrib-jsonschema
+-e git+https://github.com/jpmckinney/sphinxcontrib-jsonschema.git@recommonmark#egg=sphinxcontrib-jsonschema
   jsonpointer==1.10
   jsonref==0.1
-  git+https://github.com/rtfd/recommonmark.git@81d7c6f7b37981ac22571dd91a7cc9d24c3e66a1#egg=recommonmark
+  -e git+https://github.com/rtfd/recommonmark.git@81d7c6f7b37981ac22571dd91a7cc9d24c3e66a1#egg=recommonmark
     CommonMark==0.5.4
-git+https://github.com/open-contracting/ocds_sphinx_directives.git@199ad443e056b331ee489a59621eaeaf7a590340#egg=ocds_sphinx_directives
-git+https://github.com/jpmckinney/sphinxcontrib-opendataservices.git@relative#egg=sphinxcontrib-opendataservices
-git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
+-e git+https://github.com/open-contracting/ocds_sphinx_directives.git@199ad443e056b331ee489a59621eaeaf7a590340#egg=ocds_sphinx_directives
+-e git+https://github.com/jpmckinney/sphinxcontrib-opendataservices.git@relative#egg=sphinxcontrib-opendataservices
+-e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
 -e .
 
 # Transifex (not pinned, as not part of the build)
