@@ -19,6 +19,6 @@ script:
 deploy:
   skip_cleanup: true # don't remove stuff we've built
   provider: script
-  script: curl https://github.com/jpmckinney/opendataservices-deploy/blob/patch-1/open-contracting-standard-deploy.sh | bash -
+  script: curl https://raw.githubusercontent.com/jpmckinney/opendataservices-deploy/patch-1/open-contracting-standard-deploy.sh | bash -
   on:
     all_branches: true
