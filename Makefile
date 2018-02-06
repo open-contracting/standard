@@ -59,7 +59,7 @@ extract_markdown: prebuild.en
 	sphinx-build -q -b gettext $(DOCS_DIR) $(LOCALE_DIR)
 
 .PHONY: extract
-extract: extract_codelists extract_schema extract_markdown
+extract: extract_codelists extract_schema extract_markdown clean_current_lang
 
 ### Transifex
 
@@ -92,6 +92,7 @@ translate_schema.%: FORCE
 	python standard/schema/utils/translate_schema.py standard/schema $(BUILD_DIR) $(CATALOGS_DIR) $*
 
 # Create a symlink for the language, so that file paths in `jsonschema` directives resolve.
+# (Don't use clean_current_lang as a prerequisite, as then it won't run as a prerequisite later.)
 current_lang.%: FORCE
 	rm -f $(BUILD_DIR)/current_lang
 	rm -f $(BUILD_DIR)/codelists/current_lang
