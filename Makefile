@@ -134,7 +134,7 @@ compile:
 .PHONY: source
 source: assets | build_source clean_current_lang
 
-$(TRANSLATIONS:.%=%): %: | source compile build.% clean_current_lang
+$(TRANSLATIONS:.%=%): %: assets | build_source compile build.% clean_current_lang
 
 .PHONY: all
-all: | source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
+all: assets | build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
