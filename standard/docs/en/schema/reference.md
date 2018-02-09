@@ -257,7 +257,7 @@ The following building blocks are commonly re-used throughout the standard.
 ```eval_rst
 .. note:: Organizations
 
-The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
+    The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
 
 ```
 
