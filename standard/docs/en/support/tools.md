@@ -18,7 +18,7 @@ The OCDS validator can be found at [http://standard.open-contracting.org/validat
 
 This python library provides functions to merge a list of OCDS Releases into either a compiledRelease or a versionedRelease needed to create an OCDS record.
 
-```ocdsmerge``` is available as a python package, [or on GitHub](https://github.com/open-contracting/ocds-merge) along with usage instructions.
+`ocdsmerge` is available as a python package, [or on GitHub](https://github.com/open-contracting/ocds-merge) along with usage instructions.
 
 ## Community tools
 

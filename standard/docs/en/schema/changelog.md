@@ -3,7 +3,33 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-### [1.1.2] - 2017-11-10
+## [1.1.3] - 2018-01-XX
+
+### Codelist updates
+
+* Update currency codelist for ISO4217 amendment 165 (2017-12-14).
+
+### Schema fixes 
+
+* [#646](https://github.com/open-contracting/standard/pull/646) Disallow use of `null` as an item in the array for `Tender.additionalProcurementCategories`.
+* [#639](https://github.com/open-contracting/standard/issues/639) Make `name` field optional for `OrganizationReference`.
+* [#630](https://github.com/open-contracting/standard/issues/630) Allow optional field `Item.unit` to be `null`.
+* [#603](https://github.com/open-contracting/standard/issues/603), [#645](https://github.com/open-contracting/standard/issues/645) Add definitions to Release, planning.budget, Milestone, Organization.address, Organization.contactPoint, Classification, Identifier, Value and Period.
+* Make `record-package-schema.json` use the `codelist` property to reference `releaseTag.csv`, and update the `enum` accordingly.
+* [#578](https://github.com/open-contracting/standard/issues/578) Update definition of `buyer` to cover goods, works and services, and multiple buyers.
+
+### Documentation fixes
+
+* [#633](https://github.com/open-contracting/standard/issues/633) Update schema reference page to display `Release.relatedProcesses`, `Planning.documents` and `Contract.relatedProcesses`.
+* [#634](https://github.com/open-contracting/standard/issues/634) Clarify definitions of core, community and local extensions.
+
+### Extension fixes 
+
+* [#40](https://github.com/open-contracting/ocds-extensions/issues/40), [#43](https://github.com/open-contracting/ocds-extensions/issues/43), [#47](https://github.com/open-contracting/ocds-extensions/issues/47) Add missing definitions, codelists and enums to core extensions, correct typos in codelist filenames, disallow use of `null` as an item in arrays, disallow required fields from being set to `null`, allow optional fields to be `null`, use `OrganizationReference` instead of `Organization`.
+
+Old and unused scripts have been removed from the documentation repository, and a number of script dependencies have been updated.
+
+## [1.1.2] - 2017-11-10
 
 ### Codelist updates
 
@@ -112,8 +138,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
-* [#329](https://github.com/open-contracting/standard/issues/329) - updated ```item.quantity``` to support decimal values (integer -> number)
-* [#253](https://github.com/open-contracting/standard/issues/253) - updated ```value.amount``` to support negative values
+* [#329](https://github.com/open-contracting/standard/issues/329) - updated `item.quantity` to support decimal values (integer -> number)
+* [#253](https://github.com/open-contracting/standard/issues/253) - updated `value.amount` to support negative values
 
 ## [1.0.2] - 2016-11-22
 
@@ -122,16 +148,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - Added titles to all fields in the documentation (#362)
-- Missing field ```procurementMethodDetails``` added to schema (#221)
+- Missing field `procurementMethodDetails` added to schema (#221)
 - Typo fix in releaseTag (#391)
 - Fixing links to Fiscal Data Package (#271)
-- Description for ```numberOfTenderers``` (#314)
-- Fixed definition of ```changes``` (#244)
+- Description for `numberOfTenderers` (#314)
+- Fixed definition of `changes` (#244)
 - Updated documentation to refer to 'Object' not 'Reference' for fields (#228)
 
 ### Tidy up
 
-- Removed the old Spanish documentation translations folders from ```standard/docs/es```
+- Removed the old Spanish documentation translations folders from `standard/docs/es`
 - Added CSV download links for registered ocids, and publication levels
 - Updated publication levels spreadsheet to reflect version 1.0.2
 
@@ -143,7 +169,7 @@ Updated documentation was released. This did not make any semantic changes to th
 
 ### Changed
 
-- ```contractPeriod``` added to ```award``` to allow the anticipated period of a contract to be recorded, without requiring the creation of a contract block. Discussed in [#199](https://github.com/open-contracting/standard/issues/199)
+- `contractPeriod` added to `award` to allow the anticipated period of a contract to be recorded, without requiring the creation of a contract block. Discussed in [#199](https://github.com/open-contracting/standard/issues/199)
 
 - Updated codelists
 

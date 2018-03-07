@@ -212,18 +212,19 @@
             "type": "string"
         },
         "omitWhenMerged": {
-            "default": false,
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
         },
         "format": {
             "type": "string"
         },
         "deprecated": {
+            "type": "object",
+            "additionalProperties": false,
             "required": [
                 "deprecatedVersion",
                 "description"
             ],
-            "additionalProperties": false,
             "properties": {
                 "deprecatedVersion": {
                     "type": "string"
@@ -231,23 +232,22 @@
                 "description": {
                     "type": "string"
                 }
-            },
-            "type": "object"
+            }
         },
         "codelist": {
             "type": "string"
         },
         "openCodelist": {
-            "default": false,
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
         },
         "wholeListMerge": {
-            "default": false,
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
         },
         "versionId": {
-            "default": false,
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
         }
     },
     "dependencies": {

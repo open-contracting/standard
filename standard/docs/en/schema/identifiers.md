@@ -29,7 +29,7 @@ Town B publishes information on a contracting process to buy textbooks for a sch
 
 When they publish their OCDS data, each government adds a unique prefix onto their internal identifiers.
 
-Now Town A's contracting process has the ```ocid``` of 'ocds-fh349f-0005' and Town B's contracting process has the ```ocid``` of 'ocds-twb234-0005'. 
+Now Town A's contracting process has the `ocid` of 'ocds-fh349f-0005' and Town B's contracting process has the `ocid` of 'ocds-twb234-0005'. 
 
 There is now no chance of these getting mixed up in a system which imports data from both towns.
 
@@ -52,14 +52,14 @@ Local identifiers must be used consistently. For example, if an award is given t
 ## Contracting Process Identifier (ocid)
 <img src="../../../assets/green_compilation.svg.png" width="150" align="right"/>
 
-An Open Contracting ID (ocid) is a **globally unique identifier** for a contracting process. Every OCDS release has an ```ocid```.
+An Open Contracting ID (ocid) is a **globally unique identifier** for a contracting process. Every OCDS release has an `ocid`.
 
 It can be used to join up information published at different times, and in different places. 
 
-Setting the ```ocid``` is usually a simple two step process:
+Setting the `ocid` is usually a simple two step process:
 
 1. Identify the best **internal identifier** recorded against the contracting processes being disclosed;
-2. Register an ```ocid``` prefix to prepend to this internal identifier.
+2. Register an `ocid` prefix to prepend to this internal identifier.
 
 In some cases, you may need to consider changes to existing systems to ensure that different systems handling information about your contracting processes have a common internal identifier to draw upon. 
 
@@ -77,7 +77,7 @@ For example:
 
 This internal identifier can be exchanged with, and recorded in, any other systems which process information about this contracting process. For example, systems for reporting or recording spending transactions to suppliers.
 
-Mexico City then registered a prefix with the OCDS helpdesk. They have been given the prefix ‘ocds-87sd3t’ which can be added to their unique process identifiers to give a globally unique ```ocid```. E.g.
+Mexico City then registered a prefix with the OCDS helpdesk. They have been given the prefix ‘ocds-87sd3t’ which can be added to their unique process identifiers to give a globally unique `ocid`. E.g.
 
 > ocds-87sd3t-OM-DGRMSG-004-13
 
@@ -102,7 +102,7 @@ The registered prefixes are dumb identifiers. They are not intended to carry any
 
 Earlier versions of this documentation imposed a stricter pattern on how internal identifiers should be combined with the ocid prefix, including a requirement for local namespaces. This requirement has been relaxed in practice and should be considered deprecated. 
 
-However, publishers are encouraged to consider whether there are any risks of clashes in local identifiers (e.g. the possibility that two parts of the publishing body might use the same identifier for different contracting processes) and to plan to mitigate this when establishing their own patterns to generate their ```ocid```
+However, publishers are encouraged to consider whether there are any risks of clashes in local identifiers (e.g. the possibility that two parts of the publishing body might use the same identifier for different contracting processes) and to plan to mitigate this when establishing their own patterns to generate their `ocid`
 
 
 
@@ -128,7 +128,7 @@ The **organization register prefix** for UK Companies House is GB-COH. The organ
 
 ```eval_rst
 
-.. code:: json
+.. code-block:: json
 
     {
         "scheme":"GB-COH",
@@ -141,7 +141,7 @@ The **organization register prefix** for UK Companies House is GB-COH. The organ
 
 </div>
 
-In OCDS, the organization register prefix is included in the ```scheme``` field of an identifier block, with the existing organization id placed in the ```id``` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from [Open Corporates](https://opencorporates.com/)) this can also be given in the ```uri``` field. 
+In OCDS, the organization register prefix is included in the `scheme` field of an identifier block, with the existing organization id placed in the `id` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from [Open Corporates](https://opencorporates.com/)) this can also be given in the `uri` field. 
 
 ### Choosing an identifier
 

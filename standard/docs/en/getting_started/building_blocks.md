@@ -123,10 +123,10 @@ These building blocks may be used in various different sections. For example, **
 
 In addition to these building blocks, the OCDS schema sets out the specific ways they can be used in each section, and describes a number of additional fields that can appear in specific section. For example, fields for:
 
-* ```titles``` and ```descriptions``` of tenders, awards and contracts
-* ```procurementMethod```
-* ```awardCriteria```
-* ```submissionMethod```
+* `titles` and `descriptions` of tenders, awards and contracts
+* `procurementMethod`
+* `awardCriteria`
+* `submissionMethod`
 * etc.
 
 Many of these fields make use of lightweight codelists provided by OCDS. 
@@ -216,7 +216,7 @@ However, to support comparison across continents, the main OCDS procurement meth
 
 All procedures should be able to be mapped to one of these options. 
 
-To publish OCDS data, an EU publisher with data categorized by EU procedures should map the longer list of procedures to the narrower OCDS codelist and provide the codelist value in the ```procurementMethod``` field. They can then provide the more detailed procedure type in an extended ```procurementMethodDetails``` field.
+To publish OCDS data, an EU publisher with data categorized by EU procedures should map the longer list of procedures to the narrower OCDS codelist and provide the codelist value in the `procurementMethod` field. They can then provide the more detailed procedure type in an extended `procurementMethodDetails` field.
 
 For an Open Procedure, when a free-text justification of why the procedure was chosen is available, this would end up as:
 

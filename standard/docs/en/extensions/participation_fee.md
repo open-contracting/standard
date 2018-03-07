@@ -2,12 +2,12 @@
 
 ## Metadata
 
-To use this extension, include its URL in the ```extension``` array of your release or record package.
+To use this extension, include its URL in the `extension` array of your release or record package.
 
 ```json
 {
-    "extensions":["https://raw.githubusercontent.com/open-contracting/ocds_participationFee_extension/v1.1.1/extension.json"],
-    "releases":[]
+    "extensions": ["https://raw.githubusercontent.com/open-contracting/ocds_participationFee_extension/v1.1.3/extension.json"],
+    "releases": []
 }
 ```
 
@@ -17,7 +17,7 @@ This extension is maintained at [https://github.com/open-contracting/ocds_partic
 
 ### Background
 
-There are a number of cases where there may be costs to access documents for, or to participate within, a tender process. 
+There are a number of cases where there may be costs to access documents for, or to participate within, a tender process.
 
 Potential bidders will want to be aware of the fees that a process might involve.
 
@@ -25,20 +25,20 @@ Procurement monitors may wish to ensure that participation fees are within legal
 
 ### Extension fields
 
-This extension adds a ```participationFees``` field to the ```tender``` section of OCDS and introduces a new ```participationFee``` building block.
+This extension adds a `participationFees` field to the `tender` section of OCDS and introduces a new `participationFee` building block.
 
-The ```participationFees``` field is an array of ```participationFee``` building blocks.
+The `participationFees` field is an array of `participationFee` building blocks.
 
-The ```participationFee``` building block is made up of three fields:
+The `participationFee` building block is made up of three fields:
 
-* ```type``` - a value from the ```participationFeeType``` codelist, describing the type of the fee
-* ```value``` - the amount and currency of the fee
-* ```description``` - an optional field with more information on the fee requirements. For example, sometimes a document fee is only applicable to the hard copy of the documents.
-* ```methodOfPayment``` - an optional field providing information on methods of payment accepted for the documentation. This is currently an array of strings, but an open codelist may be introduced in future. 
+* `type` - a value from the `participationFeeType` codelist, describing the type of the fee
+* `value` - the amount and currency of the fee
+* `description` - an optional field with more information on the fee requirements. For example, sometimes a document fee is only applicable to the hard copy of the documents.
+* `methodOfPayment` - an optional field providing information on methods of payment accepted for the documentation. This is currently an array of strings, but an open codelist may be introduced in future.
 
 ### Extension codelists
 
-This extension adds **closed** ```participationFeeType``` codelist with the following codes:
+This extension adds **closed** `participationFeeType` codelist with the following codes:
 
 * document - a fee payable for access to bidding documents
 * deposit - a refundable fee payable for the submission of bids
@@ -78,11 +78,22 @@ The following JSON snippet models a contracting process where fees are applicabl
 
 ### Usage notes
 
-In some cases, a fee may be levied for 'official copies' of procurement documents (although copies may also be available freely online), and bidders required to prove they have paid for an official copy of the documents as part of their submission. 
+In some cases, a fee may be levied for 'official copies' of procurement documents (although copies may also be available freely online), and bidders required to prove they have paid for an official copy of the documents as part of their submission.
 
-In this case, the fee should be modelled as a **submission** fee, as submission is only possible when this document access fee has been paid. 
+In this case, the fee should be modelled as a **submission** fee, as submission is only possible when this document access fee has been paid.
 
-### To do
+### Issues
 
-* participation / submission terminology
-* finalize codelist
+Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+
+### Changelog
+
+#### v1.1.3
+
+* Disallow `ParticipationFee.type` from having null in its array of strings
+* Allow `ParticipationFee.description` to be null
+* Add `ParticipationFee.id` field
+* Add description to `ParticipationFee`
+* Add title and description to `ParticipationFee.value`
+* Add participationFeeType.csv codelist for `ParticipationFee.type`
+* Add tests and tidy code
