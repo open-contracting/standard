@@ -76,6 +76,18 @@ Changes to the OCDS schema should be made periodically, with the version number 
 
 ### Versions
 
+We use **version numbers** to indicate the nature of changes made to normative content, and to fit the governance process to each change.
+
+* **A MAJOR version (e.g. 1.0.0 -> 2.0.0)** makes backwards-incompatible changes. Systems written to input or output data with a previous major version may need substantial updates. Data that is valid against 1.X may not be valid against 2.X, for example.
+
+* **A MINOR version (e.g. 1.0.0 -> 1.1.0)** makes backward-compatible changes. Systems written to input or output data with a previous minor version should be reviewed to assess whether they can implement any concepts added in the new minor version. Data that is valid against 1.0 will be valid against 1.1, for example. The changes may apply a principle of progressive enhancement, such that updated systems can take advantage of the added concepts, while non-updated systems experience no substantive changes in behavior. 
+
+* **A PATCH version (e.g. 1.1.0 -> 1.1.1)** updates external codelists or makes backwards-compatible bug fixes or improvements to normative content. Users are advised to upgrade to the latest patch version. Unless they were affected by a fixed bug, they should not see any substantive changes after the upgrade. Data that is valid against 1.1.0 will be valid against 1.1.1, for example.
+
+MAJOR and MINOR updates to normative content trigger the governance process. PATCH updates to normative content have a short review period to give users an opportunity to confirm that changes are backwards-compatible and non-substantive.
+
+### Branches
+
 Distinct **branches** of the standard will be maintained within GitHub for each version. 
 
 Branches can be in one of two states:
@@ -85,14 +97,6 @@ Both schema and documentation on a development branch can be updated and should 
 
 * **Live** - with no suffix ( e.g. 1.0)
 Only documentation updates are permitted on a live branch. All documentation changes must be reviewed to ensure they do not make any changes to the meaning of the standard. 
-
-Semantic Versioning practices will be used to distinguish between:
-
-* **Major versions** which make backwards-incompatible API changes
-
-* **Minor** **versions** which add functionality in a backwards-compatible manner
-
-These are captured by a version number in the format MAJOR.MINOR
 
 ## Revision process
 
