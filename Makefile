@@ -55,7 +55,7 @@ extract_schema: $(LOCALE_DIR)
 # directives to succeed, but the contents of the files have no effect on the generated .pot files.
 # See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.gettext.MessageCatalogBuilder
 .PHONY: extract_markdown
-extract_markdown: prebuild.en
+extract_markdown: current_lang.en
 	sphinx-build -q -b gettext $(DOCS_DIR) $(LOCALE_DIR)
 
 .PHONY: extract
@@ -82,35 +82,24 @@ pull:
 
 ### Pre-build
 
-# Create translated codelist CSV files, referenced by `csv-table-no-translate` directives.
-translate_codelists.%: FORCE
-	python standard/schema/utils/translate_codelists.py standard/schema/codelists $(BUILD_DIR)/codelists $(CATALOGS_DIR) $*
-	python standard/schema/utils/translate_codelists.py $(DOCS_DIR)/extensions/codelists $(BUILD_DIR)/codelists $(CATALOGS_DIR) $*
-
-# Create translated JSON Schema files in the language's build directory, referenced by `jsonschema` directives.
-translate_schema.%: FORCE
-	python standard/schema/utils/translate_schema.py standard/schema $(BUILD_DIR) $(CATALOGS_DIR) $*
-
 # Create a symlink for the language, so that file paths in `jsonschema` directives resolve.
 # (Don't use clean_current_lang as a prerequisite, as then it won't run as a prerequisite later.)
-current_lang.%: FORCE
+$(LANGUAGES:.%=current_lang.%): current_lang.%: FORCE
 	rm -f $(BUILD_DIR)/current_lang
 	rm -f $(BUILD_DIR)/codelists/current_lang
 	ln -s $* $(BUILD_DIR)/current_lang
 	ln -s $* $(BUILD_DIR)/codelists/current_lang
-
-$(LANGUAGES:.%=prebuild.%): prebuild.%: translate_codelists.% translate_schema.% current_lang.%
 
 ### Build
 
 # Build the source documentation.
 # See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.html.DirectoryHTMLBuilder
 .PHONY: build_source
-build_source: prebuild.en
+build_source: current_lang.en
 	sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
 
 # Build the translated documentation. (Same as source, but with a language configuration setting.)
-$(TRANSLATIONS:.%=build.%): build.%: prebuild.%
+$(TRANSLATIONS:.%=build.%): build.%: current_lang.%
 	sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
 
 # Deploy script complains if current_lang is present.

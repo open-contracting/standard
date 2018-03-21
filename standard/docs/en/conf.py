@@ -26,7 +26,7 @@ import subprocess
 import standard_theme
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
-from sphinxcontrib.opendataservices import AutoStructifyLowPriority
+from sphinxcontrib.opendataservices import AutoStructifyLowPriority, translate_codelists, translate_schema
 
 # -- General configuration ------------------------------------------------
 
@@ -114,8 +114,8 @@ gettext_compact = False
 
 extension_registry_git_ref = 'v{}'.format(release)
 
-# Compile catalogs 'codelists.po' to 'codelists.mo' and 'schema.po' to 'schema.mo', so that translate_codelists.py and
-# translate_schema.py can succeed for translations.
+# Compile catalogs 'codelists.po' to 'codelists.mo' and 'schema.po' to 'schema.mo', so that translate_codelists and
+# translate_schema can succeed for translations.
 subprocess.run(['pybabel', 'compile', '--use-fuzzy', '-d', '../locale', '-D', 'codelists'])
 subprocess.run(['pybabel', 'compile', '--use-fuzzy', '-d', '../locale', '-D', 'schema'])
 
@@ -134,3 +134,18 @@ def setup(app):
     }, True)
     app.add_transform(AutoStructify)
     app.add_transform(AutoStructifyLowPriority)
+
+    basedir = os.path.join(os.path.dirname((os.path.realpath(__file__))), '..', '..', '..')
+    localedir = os.path.join(basedir, 'standard', 'docs', 'locale')
+
+    filenames = [
+        'record-package-schema.json',
+        'release-package-schema.json',
+        'release-schema.json',
+        'versioned-release-validation-schema.json',
+    ]
+
+    language = app.config.overrides.get('language', 'en')
+    translate_schema('schema', filenames, os.path.join(basedir, 'standard', 'schema'), os.path.join(basedir, 'build', language), localedir, language)  # noqa
+    for sourcedir in ('standard/schema', 'standard/docs/en/extensions'):
+        translate_codelists('codelists', os.path.join(basedir, sourcedir, 'codelists'), os.path.join(basedir, 'build', 'codelists', language), localedir, language)  # noqa
