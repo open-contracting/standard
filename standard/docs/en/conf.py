@@ -94,6 +94,7 @@ todo_include_todos = False
 #
 html_theme = 'standard_theme'
 html_theme_path = [standard_theme.get_html_theme_path()]
+html_favicon = '../../assets/favicon-16x16.ico'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
