@@ -85,7 +85,7 @@ pull:
 # Create translated codelist CSV files, referenced by `csv-table-no-translate` directives.
 translate_codelists.%: FORCE
 	python standard/schema/utils/translate_codelists.py standard/schema/codelists $(BUILD_DIR)/codelists $(CATALOGS_DIR) $*
-	python standard/schema/utils/translate_codelists.py standard/docs/en/extensions/codelists $(BUILD_DIR)/codelists $(CATALOGS_DIR) $*
+	python standard/schema/utils/translate_codelists.py $(DOCS_DIR)/extensions/codelists $(BUILD_DIR)/codelists $(CATALOGS_DIR) $*
 
 # Create translated JSON Schema files in the language's build directory, referenced by `jsonschema` directives.
 translate_schema.%: FORCE
@@ -125,17 +125,10 @@ assets:
 	mkdir -p $(BUILD_DIR)
 	cp -r standard/assets $(BUILD_DIR)
 
-# Compile catalogs 'codelists.po' to 'codelists.mo' and 'schema.po' to 'schema.mo', so that translate_codelists.py and
-# translate_schema.py can succeed for translations.
-.PHONY: compile
-compile:
-	pybabel compile --use-fuzzy -d $(CATALOGS_DIR) -D codelists
-	pybabel compile --use-fuzzy -d $(CATALOGS_DIR) -D schema
-
 .PHONY: source
 source: assets | build_source clean_current_lang
 
-$(TRANSLATIONS:.%=%): %: assets | build_source compile build.% clean_current_lang
+$(TRANSLATIONS:.%=%): %: assets | build_source build.% clean_current_lang
 
 .PHONY: all
-all: assets | build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
+all: assets | build_source $(TRANSLATIONS:.%=build.%) clean_current_lang
