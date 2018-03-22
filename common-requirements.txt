@@ -1,0 +1,14 @@
+# Update this file from a profile with:
+# curl https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/common-requirements.txt
+
+# The following lines are updated based on the `repos:dependencies` task in standard-maintenance-scripts.
+
+-e git+https://github.com/open-contracting/documentation-support.git@5ffe83d30c431ccf583ff94482eedcf8eca5dfbe#egg=ocds_documentation_support
+-e git+https://github.com/open-contracting/sphinxcontrib-opencontracting.git@f193169306956806653dee8fb1b40c720a6f61f1#egg=sphinxcontrib-opencontracting
+-e git+https://github.com/OpenDataServices/sphinxcontrib-jsonschema.git@e39a92f4238bf022db11e4e88ba92fdaff2b31c9#egg=sphinxcontrib-jsonschema
+-e git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices.git@fab0ff0167d32ec243d42f272e0e50766299c078#egg=sphinxcontrib-opendataservices
+
+# The following lines are stable and should follow the above lines to install the correct versions of dependencies.
+
+-e git+https://github.com/rtfd/recommonmark.git@81d7c6f7b37981ac22571dd91a7cc9d24c3e66a1#egg=recommonmark
+-e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme

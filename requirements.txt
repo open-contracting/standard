@@ -1,12 +1,4 @@
--e git+https://github.com/open-contracting/documentation-support.git@6d47375d493d3563327c062db83e1c79fea9f9b4#egg=ocds_documentation_support
-
-# Using `dependency_links` in `documentation-support` and running `pip install --process-dependency-links --upgrade
-# --force-reinstall -r requirements.txt` breaks the build (the paths for `csv-table-no-translate` are incorrect).
--e git+https://github.com/rtfd/recommonmark.git@81d7c6f7b37981ac22571dd91a7cc9d24c3e66a1#egg=recommonmark
--e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
--e git+https://github.com/open-contracting/ocds_sphinx_directives.git@41cb588bc2e1e7c929e3afbb8253dd7f87758831#egg=ocds_sphinx_directives
--e git+https://github.com/jpmckinney/sphinxcontrib-jsonschema.git@9c26c6da2b4091f0306c1bd2e5e4baed891157b1#egg=sphinxcontrib-jsonschema
--e git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices.git@fab0ff0167d32ec243d42f272e0e50766299c078#egg=sphinxcontrib-opendataservices
+-r common-requirements.txt
 
 # Add your own requirements below.
 
@@ -18,5 +10,4 @@ pytest==2.8.7
 selenium==3.5.0
 
 # Utils
-json-merge-patch
 lxml
