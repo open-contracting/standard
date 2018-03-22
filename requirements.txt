@@ -1,49 +1,22 @@
-# The dependency trees are determined by `pipdeptree -fl`
+-e git+https://github.com/open-contracting/documentation-support.git@6d47375d493d3563327c062db83e1c79fea9f9b4#egg=ocds_documentation_support
 
-# Sphinx
-
-sphinx-intl==0.9.9
-  Babel==2.2.0
-    pytz==2015.7
-  click==6.3
-  setuptools==38.4.0
-  six==1.10.0
-  Sphinx==1.5.1
-    alabaster==0.7.7
-    docutils==0.12
-    imagesize==0.7.1
-    Jinja2==2.8
-      MarkupSafe==0.23
-    Pygments==2.1.1
-    requests==2.9.1
-    snowballstemmer==1.2.1
--e git+https://github.com/OpenDataServices/sphinxcontrib-jsonschema.git@e39a92f4238bf022db11e4e88ba92fdaff2b31c9#egg=sphinxcontrib-jsonschema
-  jsonpointer==1.10
-  jsonref==0.1
-  -e git+https://github.com/rtfd/recommonmark.git@81d7c6f7b37981ac22571dd91a7cc9d24c3e66a1#egg=recommonmark
-    CommonMark==0.5.4
--e git+https://github.com/open-contracting/ocds_sphinx_directives.git@199ad443e056b331ee489a59621eaeaf7a590340#egg=ocds_sphinx_directives
--e git+https://github.com/jpmckinney/sphinxcontrib-opendataservices.git@e9b8fc0b7ad5e388dd9eb22816586ebff8b8a050#egg=sphinxcontrib-opendataservices
+# Using `dependency_links` in `documentation-support` and running `pip install --process-dependency-links --upgrade
+# --force-reinstall -r requirements.txt` breaks the build (the paths for `csv-table-no-translate` are incorrect).
+-e git+https://github.com/rtfd/recommonmark.git@81d7c6f7b37981ac22571dd91a7cc9d24c3e66a1#egg=recommonmark
 -e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
--e .
+-e git+https://github.com/open-contracting/ocds_sphinx_directives.git@41cb588bc2e1e7c929e3afbb8253dd7f87758831#egg=ocds_sphinx_directives
+-e git+https://github.com/jpmckinney/sphinxcontrib-jsonschema.git@9c26c6da2b4091f0306c1bd2e5e4baed891157b1#egg=sphinxcontrib-jsonschema
+-e git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices.git@fab0ff0167d32ec243d42f272e0e50766299c078#egg=sphinxcontrib-opendataservices
 
-# Transifex (not pinned, as not part of the build)
-
-transifex-client
-
-# Utils (not pinned, as not part of the build)
-
-json-merge-patch
-lxml
+# Add your own requirements below.
 
 # Tests
-
-flake8==3.3.0
-  mccabe==0.6.1
-  pycodestyle==2.3.1
-  pyflakes==1.5.0
 jsonschema==2.5.1
 path.py==8.1.2
 pytest==2.8.7
   py==1.4.31
 selenium==3.5.0
+
+# Utils
+json-merge-patch
+lxml

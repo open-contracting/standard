@@ -24,9 +24,10 @@ import os
 import subprocess
 
 import standard_theme
+from ocds_documentation_support import translate_codelists, translate_schema
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
-from sphinxcontrib.opendataservices import AutoStructifyLowPriority, translate_codelists, translate_schema
+from sphinxcontrib.opendataservices import AutoStructifyLowPriority
 
 # -- General configuration ------------------------------------------------
 
@@ -115,11 +116,6 @@ gettext_compact = False
 
 extension_registry_git_ref = 'v{}'.format(release)
 
-# Compile catalogs 'codelists.po' to 'codelists.mo' and 'schema.po' to 'schema.mo', so that translate_codelists and
-# translate_schema can succeed for translations.
-subprocess.run(['pybabel', 'compile', '--use-fuzzy', '-d', '../locale', '-D', 'codelists'])
-subprocess.run(['pybabel', 'compile', '--use-fuzzy', '-d', '../locale', '-D', 'schema'])
-
 # NOTE: The following two options may no longer be relevant.
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
@@ -133,11 +129,17 @@ def setup(app):
     app.add_config_value('recommonmark_config', {
         'enable_eval_rst': True
     }, True)
+
     app.add_transform(AutoStructify)
     app.add_transform(AutoStructifyLowPriority)
 
-    basedir = os.path.join(os.path.dirname((os.path.realpath(__file__))), '..', '..', '..')
+    basedir = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', '..'))
     localedir = os.path.join(basedir, 'standard', 'docs', 'locale')
+
+    # Compile catalogs 'codelists.po' to 'codelists.mo' and 'schema.po' to 'schema.mo', so that translate_codelists and
+    # translate_schema can succeed for translations.
+    subprocess.run(['pybabel', 'compile', '--use-fuzzy', '-d', localedir, '-D', 'codelists'])
+    subprocess.run(['pybabel', 'compile', '--use-fuzzy', '-d', localedir, '-D', 'schema'])
 
     filenames = [
         'record-package-schema.json',
