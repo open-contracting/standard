@@ -21,7 +21,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import os
-import subprocess
 
 import standard_theme
 from ocds_documentation_support import translate_codelists, translate_schema
@@ -38,7 +37,11 @@ from sphinxcontrib.opendataservices import AutoStructifyLowPriority
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinxcontrib.jsonschema', 'ocds_sphinx_directives', 'sphinxcontrib.opendataservices']
+extensions = [
+    'sphinxcontrib.jsonschema',
+    'sphinxcontrib.opencontracting',
+    'sphinxcontrib.opendataservices',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -117,10 +120,8 @@ gettext_compact = False
 extension_registry_git_ref = 'v{}'.format(release)
 
 # NOTE: The following two options may no longer be relevant.
-
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
-
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = False
 
@@ -135,11 +136,6 @@ def setup(app):
 
     basedir = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', '..'))
     localedir = os.path.join(basedir, 'standard', 'docs', 'locale')
-
-    # Compile catalogs 'codelists.po' to 'codelists.mo' and 'schema.po' to 'schema.mo', so that translate_codelists and
-    # translate_schema can succeed for translations.
-    subprocess.run(['pybabel', 'compile', '--use-fuzzy', '-d', localedir, '-D', 'codelists'])
-    subprocess.run(['pybabel', 'compile', '--use-fuzzy', '-d', localedir, '-D', 'schema'])
 
     filenames = [
         'record-package-schema.json',
