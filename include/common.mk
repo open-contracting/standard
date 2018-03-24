@@ -54,6 +54,11 @@ extract: extract_codelists extract_schema extract_markdown clean_current_lang
 
 ### Transifex
 
+.PHONY: clean_txconfig
+clean_txconfig:
+	rm -f .tx/config
+	sphinx-intl create-txconfig
+
 .PHONY: update_txconfig
 update_txconfig:
 	sphinx-intl update-txconfig-resources --transifex-project-name $(TRANSIFEX_PROJECT) --pot-dir $(POT_DIR) --locale-dir $(LOCALE_DIR)
