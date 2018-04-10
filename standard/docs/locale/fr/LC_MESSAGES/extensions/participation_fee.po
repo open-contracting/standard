@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-15 14:31+0000\n"
+"POT-Creation-Date: 2018-02-01 11:40-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Colin Maudry <colin@maudry.com>, 2017\n"
+"Last-Translator: Joel Gombin <joel.gombin@gmail.com>, 2018\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,8 +31,8 @@ msgid ""
 "To use this extension, include its URL in the `extension` array of your "
 "release or record package."
 msgstr ""
-"Pour utiliser cette extension, ajouter son URL dans la liste `extension`"
-" de votre paquet d'instance ou d'archive. "
+"Pour utiliser cette extension, ajouter son URL dans la liste `extension` de "
+"votre paquet d'instance ou d'archive. "
 
 #: ../../standard/docs/en/extensions/participation_fee.md:14
 msgid ""
@@ -87,20 +87,18 @@ msgstr "Champs d'extension"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:28
 msgid ""
-"This extension adds a `participationFees` field to the `tender` "
-"section of OCDS and introduces a new `participationFee` building block."
+"This extension adds a `participationFees` field to the `tender` section of "
+"OCDS and introduces a new `participationFee` building block."
 msgstr ""
-"Cette extension ajoute un champ `participationFees` à la section "
-"`tender` d'OCDS et introduit un nouveau composant "
-"`participationFee`."
+"Cette extension ajoute un champ `participationFees` à la section `tender` "
+"d'OCDS et introduit un nouveau composant `participationFee`."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:30
 msgid ""
-"The `participationFees` field is an array of `participationFee` "
-"building blocks."
+"The `participationFees` field is an array of `participationFee` building "
+"blocks."
 msgstr ""
-"Le champ `participationFees` est une liste de composants "
-"`participationFee`."
+"Le champ `participationFees` est une liste de composants `participationFee`."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:32
 msgid "The `participationFee` building block is made up of three fields:"
@@ -108,11 +106,11 @@ msgstr "Le composant `participationFee` est composé de trois champs :"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:34
 msgid ""
-"`type` - a value from the `participationFeeType` codelist, "
-"describing the type of the fee"
+"`type` - a value from the `participationFeeType` codelist, describing the "
+"type of the fee"
 msgstr ""
-"`type` - une valeur de la liste de codes `participationFeeType` "
-"décrivant le type de chaque frais"
+"`type` - une valeur de la liste de codes `participationFeeType` décrivant le"
+" type de chaque frais"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:35
 msgid "`value` - the amount and currency of the fee"
@@ -124,14 +122,14 @@ msgid ""
 "requirements. For example, sometimes a document fee is only applicable to "
 "the hard copy of the documents."
 msgstr ""
-"`description` - un champ optionnel avec plus d'informations sur les "
-"frais requis. Par exemple, parfois, une taxe sur le document s'applique "
-"uniquement à la copie papier des documents."
+"`description` - un champ optionnel avec plus d'informations sur les frais "
+"requis. Par exemple, parfois, une taxe sur le document s'applique uniquement"
+" à la copie papier des documents."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:37
 msgid ""
-"`methodOfPayment` - an optional field providing information on methods "
-"of payment accepted for the documentation. This is currently an array of "
+"`methodOfPayment` - an optional field providing information on methods of "
+"payment accepted for the documentation. This is currently an array of "
 "strings, but an open codelist may be introduced in future."
 msgstr ""
 "`methodOfPayment` - un champ optionnel permettant de fournir des "
@@ -148,8 +146,8 @@ msgid ""
 "This extension adds **closed** `participationFeeType` codelist with the "
 "following codes:"
 msgstr ""
-"Cette extension ajoute la liste de codes  **fermée** "
-"`participationFeeType` avec les codes suivants :"
+"Cette extension ajoute la liste de codes  **fermée** `participationFeeType` "
+"avec les codes suivants :"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:43
 msgid "document - a fee payable for access to bidding documents"
@@ -212,13 +210,56 @@ msgstr ""
 "d'accès au document a été payée."
 
 #: ../../standard/docs/en/extensions/participation_fee.md:0
-msgid "To do"
-msgstr "ToDo"
+msgid "Issues"
+msgstr "Problèmes"
 
 #: ../../standard/docs/en/extensions/participation_fee.md:87
-msgid "participation / submission terminology"
-msgstr "terminologie participation / soumissions"
+msgid ""
+"Report issues for this extension in the [ocds-extensions "
+"repository](https://github.com/open-contracting/ocds-extensions/issues), "
+"putting the extension's name in the issue's title."
+msgstr ""
+"Signalez les problèmes concernant cette extension dans le [répertoire "
+"ocds](https://github.com/open-contracting/ocds-extensions/issues), en "
+"mettant le nom de l'extension dans le titre du signalement."
 
-#: ../../standard/docs/en/extensions/participation_fee.md:88
-msgid "finalize codelist"
-msgstr "finaliser la liste de codes"
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "Changelog"
+msgstr "Journal des modifications"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:0
+msgid "v1.1.3"
+msgstr "v1.1.3"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:93
+msgid ""
+"Disallow `ParticipationFee.type` from having null in its array of strings"
+msgstr ""
+"Interdit au champ `ParticipationFee.type` d'avoir une valeur `null` dans sa "
+"liste de chaînes de caractère."
+
+#: ../../standard/docs/en/extensions/participation_fee.md:94
+msgid "Allow `ParticipationFee.description` to be null"
+msgstr "Autorise `ParticipationFee.description` à prendre la valeur `null`"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:95
+msgid "Add `ParticipationFee.id` field"
+msgstr "Ajoute un champ `ParticipationFee.id`"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:96
+msgid "Add description to `ParticipationFee`"
+msgstr "Ajoute une description à `ParticipationFee`"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:97
+msgid "Add title and description to `ParticipationFee.value`"
+msgstr "Ajoute un titre et une description à `ParticipationFee.value`"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:98
+msgid "Add participationFeeType.csv codelist for `ParticipationFee.type`"
+msgstr ""
+"Ajoute la nomenclature participationFeeType.csv pour le champ "
+"`ParticipationFee.type`"
+
+#: ../../standard/docs/en/extensions/participation_fee.md:99
+msgid "Add tests and tidy code"
+msgstr "Ajoute des tests et nettoie le code"

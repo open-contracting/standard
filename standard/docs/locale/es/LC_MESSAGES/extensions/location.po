@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCDS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-15 14:31+0000\n"
+"POT-Creation-Date: 2018-02-01 11:40-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2017\n"
+"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,28 +58,28 @@ msgstr ""
 
 #: ../../standard/docs/en/extensions/location.md:20
 msgid ""
-"This extension introduces two properties at the `items` level to "
-"describe location:"
+"This extension introduces two properties at the `items` level to describe "
+"location:"
 msgstr ""
-"Esta extensión introduce dos propiedades en el nivel `items` para "
-"describir la ubicación:"
+"Esta extensión introduce dos propiedades en el nivel `items` para describir "
+"la ubicación:"
 
 #: ../../standard/docs/en/extensions/location.md:22
 msgid ""
-"`deliveryAddress` - a standard `Address` block which can be used to "
-"provide a postal address where services should be delivered."
+"`deliveryAddress` - a standard `Address` block which can be used to provide "
+"a postal address where services should be delivered."
 msgstr ""
-"`deliveryAddress` - un bloque estándar `Address` que puede usarse "
-"para proporcionar una dirección postal donde deben entregarse los servicios."
+"`deliveryAddress` - un bloque estándar `Address` que puede usarse para "
+"proporcionar una dirección postal donde deben entregarse los servicios."
 
 #: ../../standard/docs/en/extensions/location.md:23
 msgid ""
-"`deliveryLocation` - a new block consisting of GeoJSON and Gazetteer "
-"entries to describe a wider range of locations to which the contract line "
-"item relates."
+"`deliveryLocation` - a new block consisting of GeoJSON and Gazetteer entries"
+" to describe a wider range of locations to which the contract line item "
+"relates."
 msgstr ""
-"`deliveryLocation` - un nuevo bloque que consta de entradas GeoJSON y de"
-" diccionario geográfico para describir una gama más amplia de ubicaciones a "
+"`deliveryLocation` - un nuevo bloque que consta de entradas GeoJSON y de "
+"diccionario geográfico para describir una gama más amplia de ubicaciones a "
 "las que se refiere la partida del contrato."
 
 #: ../../standard/docs/en/extensions/location.md:0
@@ -105,7 +105,7 @@ msgstr "Tipo"
 #: ../../standard/Extension location:1 ../../standard/Extension location:1
 #: ../../standard/Extension location:1 ../../standard/Extension location:1
 #: ../../standard/Extension location:1 ../../standard/Extension location:1
-#: ../../standard/Extension location:1
+#: ../../standard/Extension location:1 ../../standard/Extension location:1
 msgid "Location"
 msgstr "Ubicación"
 
@@ -184,6 +184,16 @@ msgstr ""
 
 #: ../../standard/Extension location:1
 msgid ""
+"A gazetteer is a geographical index or directory. The specific gazetteer "
+"used should be specified in scheme, and one or more codes from that "
+"gazetteer used in identifier."
+msgstr ""
+"Un diccionario geográfico es un índice o directorio geográfico. El "
+"diccionario específico utilizado debe especificarse en el esquema, y ​​se "
+"deben utilizar uno o más códigos de ese diccionario en el identificador."
+
+#: ../../standard/Extension location:1
+msgid ""
 "A URI to a further description of the activity location. This may be a human"
 " readable document with information on the location, or a machine-readable "
 "description of the location."
@@ -196,19 +206,19 @@ msgstr ""
 msgid "Gazetteer Codelist"
 msgstr "Lista de códigos de diccionario geográfico "
 
-#: ../../standard/docs/en/extensions/location.md:34
-msgid "See locationGazeteers.csv"
-msgstr "Ver locationGazeteers.csv"
+#: ../../standard/docs/en/extensions/location.md:35
+msgid "See locationGazetteers.csv"
+msgstr "Ver locationGazetteers.csv"
 
 #: ../../standard/docs/en/extensions/location.md:0
 msgid "Example"
 msgstr "Ejemplo"
 
-#: ../../standard/docs/en/extensions/location.md:37
+#: ../../standard/docs/en/extensions/location.md:39
 msgid "Below is an example of a geolocated item:"
 msgstr "A continuación se muestra un ejemplo de un elemento geolocalizado:"
 
-#: ../../standard/docs/en/extensions/location.md:83
+#: ../../standard/docs/en/extensions/location.md:85
 msgid ""
 "If the procurement related to the rebuilding of a road, then the item could "
 "also specify more complex geometries such as:"
@@ -217,12 +227,82 @@ msgstr ""
 "entonces el elemento también podría especificar geometrías más complejas, "
 "tales como:"
 
-#: ../../standard/docs/en/extensions/location.md:102
+#: ../../standard/docs/en/extensions/location.md:104
 msgid ""
-"You can take the contents of the geometry object, excluding the "
-"`geometry` keyword, and plug this into any GeoJSON tool to see the shape"
-" that is described."
+"You can take the contents of the geometry object, excluding the `geometry` "
+"keyword, and plug this into any GeoJSON tool to see the shape that is "
+"described."
 msgstr ""
 "Puede tomar el contenido del objeto geométrico, excluyendo la palabra clave "
 "`geometry`, y conectarlo a cualquier herramienta de GeoJSON para ver la "
 "forma en que se describe."
+
+#: ../../standard/docs/en/extensions/location.md:0
+msgid "Issues"
+msgstr "Issues"
+
+#: ../../standard/docs/en/extensions/location.md:108
+msgid ""
+"Report issues for this extension in the [ocds-extensions "
+"repository](https://github.com/open-contracting/ocds-extensions/issues), "
+"putting the extension's name in the issue's title."
+msgstr ""
+"Informe issues para esta extensión en el [repositorio de extensiones "
+"ocds](https://github.com/open-contracting/ocds-extensions/issues), poniendo "
+"el nombre de la extensión en el título del issue."
+
+#: ../../standard/docs/en/extensions/location.md:0
+msgid "Changelog"
+msgstr "Registro de cambios"
+
+#: ../../standard/docs/en/extensions/location.md:0
+msgid "v1.1.3"
+msgstr "v1.1.3"
+
+#: ../../standard/docs/en/extensions/location.md:114
+msgid ""
+"Disallow `Location.geometry.coordinates` from having null in its array of "
+"coordinates"
+msgstr ""
+"No permitir que `Location.geometry.coordinates` tenga null en su matriz de "
+"coordenadas"
+
+#: ../../standard/docs/en/extensions/location.md:115
+msgid ""
+"Disallow `Location.gazetteer.identifiers` from having null in its array of "
+"strings"
+msgstr ""
+"No permitir que `Location.gazetteer.identifiers` tenga null en su lista de "
+"strings"
+
+#: ../../standard/docs/en/extensions/location.md:116
+msgid ""
+"Correct name of locationGazetteers.csv codelist (was locationGazeteers.csv)"
+msgstr ""
+"Corregir el nombre de la lista de código locationGazetteers.csv (era "
+"locationGazeteers.csv)"
+
+#: ../../standard/docs/en/extensions/location.md:117
+msgid "Allow `Location.geometry` and `Location.gazetteer` to be null"
+msgstr "Permitir que `Location.geometry` y` Location.gazetteer` sean null"
+
+#: ../../standard/docs/en/extensions/location.md:118
+msgid "Add title and description to `Location.gazetteer`"
+msgstr "Agregar título y descripción a `Location.gazetteer`"
+
+#: ../../standard/docs/en/extensions/location.md:119
+msgid "Add description to `Item.deliveryLocation`, `Item.deliveryAddress`"
+msgstr "Agregar descripción a `Item.deliveryLocation`,` Item.deliveryAddress`"
+
+#: ../../standard/docs/en/extensions/location.md:120
+msgid "Add geometryType.csv codelist for `Location.geometry.type`"
+msgstr ""
+"Agregar la lista de código geometryType.csv para `Location.geometry.type`"
+
+#: ../../standard/docs/en/extensions/location.md:121
+msgid "List codelists in extension.json"
+msgstr "Enlista listas de códigos en extension.json"
+
+#: ../../standard/docs/en/extensions/location.md:122
+msgid "Add tests and tidy code"
+msgstr "Agregar pruebas y ordenar el código"
