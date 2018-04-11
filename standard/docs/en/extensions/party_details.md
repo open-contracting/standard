@@ -1,4 +1,4 @@
-# Organization details
+# Party details
 
 ## Documentation
 
