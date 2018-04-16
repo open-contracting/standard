@@ -4,13 +4,21 @@
 See README for this script's documentation.
 """
 
-import json
-from collections import OrderedDict
 import copy
+import json
+import os.path
+import sys
+from collections import OrderedDict
+
+docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en')
+sys.path.append(docs_path)
+
+from conf import release  # noqa
 
 version_template = OrderedDict([
     ("type", "array"),
     ("items", OrderedDict([
+        ("type", "object"),
         ("properties", OrderedDict([
             ("releaseDate", OrderedDict([
                 ("format", "date-time"),
@@ -96,7 +104,8 @@ def unversion_refs(schema):
 
 
 def get_versioned_validation_schema(versioned_release):
-    versioned_release["id"] = "http://standard.open-contracting.org/schema/1__1__2/versioned-release-validation-schema.json"  # noqa nopep8
+    release_with_underscores = release.replace('.', '__')
+    versioned_release["id"] = "http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json".format(release_with_underscores)  # noqa nopep8
     versioned_release["$schema"] = "http://json-schema.org/draft-04/schema#"  # nopep8
     versioned_release["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
 
@@ -141,13 +150,12 @@ def get_versioned_validation_schema(versioned_release):
 
 
 if __name__ == "__main__":
-    from os.path import abspath, dirname, join
-    schema_dir = dirname(dirname(abspath(__file__)))
+    schema_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    with open(join(schema_dir, 'release-schema.json'), 'r') as f:
-        release_schema = json.loads(f.read(), object_pairs_hook=OrderedDict)
+    with open(os.path.join(schema_dir, 'release-schema.json')) as f:
+        release_schema = json.load(f, object_pairs_hook=OrderedDict)
 
     new_validation_schema = get_versioned_validation_schema(release_schema)
 
-    with open(join(schema_dir, 'versioned-release-validation-schema.json'), 'w') as f:
-        f.write(json.dumps(new_validation_schema, indent=4))
+    with open(os.path.join(schema_dir, 'versioned-release-validation-schema.json'), 'w') as f:
+        json.dump(new_validation_schema, f, indent=2, separators=(',', ': '))

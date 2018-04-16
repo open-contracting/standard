@@ -54,7 +54,7 @@ Publishers should ensure that the web server providing access to bulk files corr
 
 To achieve [4 ☆](levels.md) OCDS publication requires each release and record to be accessible at a permanent URI. This may be achieved by:
 
-(a) Archiving a single-release release package for each release to a web accessible file system as it is created, and then regularly merging these releases to compile individual record files in the same file system. One approach may be to have a folder for each ```ocid``` and to place the releases and record related to that process into that folder. 
+(a) Archiving a single-release release package for each release to a web accessible file system as it is created, and then regularly merging these releases to compile individual record files in the same file system. One approach may be to have a folder for each `ocid` and to place the releases and record related to that process into that folder. 
 
 (b) Providing access to releases and records through an API.
 
@@ -95,9 +95,9 @@ In addition, the data.json document may contain one or more records with the key
 
 Publishers exposing individual records and releases, of regularly updated data packages in small sets, should provide one or more [atom feeds](http://en.wikipedia.org/wiki/Atom_%28standard%29) that index these, and provide an easy mechanism for users to discover recently published or updated release and records.
 
-The link to the release or record should be provided via a ```<link>``` tag, and the updated date of the entry should reflect the updated date of that release or record. The ```<id>``` should reflect the release id for release, or the ocid for records.
+The link to the release or record should be provided via a `<link>` tag, and the updated date of the entry should reflect the updated date of that release or record. The `<id>` should reflect the release id for release, or the ocid for records.
     
-The release.tag should be contained within an ```<category>``` element of the feed. 
+The release.tag should be contained within an `<category>` element of the feed. 
 
 Feeds requiring pagination should follow the approach set out in [RFC 5005](https://tools.ietf.org/html/rfc5005#section-3).
 

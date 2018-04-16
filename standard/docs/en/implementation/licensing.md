@@ -11,7 +11,7 @@ We recommend the use of either a public domain dedication/certification, or an a
 
 When using custom licenses, publishers are encouraged to check that they are [compliant with the Open Definition](http://opendefinition.org/licenses/).
 
-In structured data file you can embed a link to the license in the ```license``` field of the release or record package as indicated below:
+In structured data file you can embed a link to the license in the `license` field of the release or record package as indicated below:
 
 ```eval_rst
 .. code-block:: json
