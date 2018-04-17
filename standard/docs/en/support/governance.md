@@ -78,13 +78,15 @@ Changes to the OCDS schema should be made periodically, with the version number 
 
 We use **version numbers** to indicate the nature of changes made to normative content, and to fit the governance process to each change.
 
-* **A MAJOR version (e.g. 1.0.0 -> 2.0.0)** makes backwards-incompatible changes. Systems written to input or output data with a previous major version may need substantial updates. Data that is valid against 1.X may not be valid against 2.X, for example.
+* **A MAJOR version (e.g. 1.0.0 -> 2.0.0)** makes backwards-incompatible changes. Systems written to input or output data with a previous major version might need substantial updates. Data that is valid against 1.X might not be valid against 2.X, for example.
 
-* **A MINOR version (e.g. 1.0.0 -> 1.1.0)** makes backward-compatible changes. Systems written to input or output data with a previous minor version should be reviewed to assess whether they can implement any concepts added in the new minor version. Data that is valid against 1.0 will be valid against 1.1, for example. The changes may apply a principle of progressive enhancement, such that updated systems can take advantage of the added concepts, while non-updated systems experience no substantive changes in behavior. 
+* **A MINOR version (e.g. 1.0.0 -> 1.1.0)** makes backward-compatible changes. Systems written to input or output data with a previous minor version should be reviewed to assess whether they can implement any concepts added in the new minor version. Data that is valid against 1.0 will be valid against 1.1, for example. Where relevant, changes should apply a principle of progressive enhancement, such that updated systems can take advantage of the added concepts, while non-updated systems experience no substantive changes in behavior. 
 
-* **A PATCH version (e.g. 1.1.0 -> 1.1.1)** updates open codelists or external closed codelists, or makes backwards-compatible bug fixes or improvements to normative content. Users are advised to upgrade to the latest patch version. Unless they were affected by a fixed bug, they should not see any substantive changes after the upgrade. Data that is valid against 1.1.0 will be valid against 1.1.1, for example.
+* **A PATCH version (e.g. 1.1.0 -> 1.1.1)** updates open codelists or external closed codelists, or makes backwards-compatible bug fixes or improvements to normative content. Users are encouraged to upgrade to the latest patch version. Unless they were affected by a fixed bug, they should not see any substantive changes after the upgrade. Data that is valid against 1.1.0 will be valid against 1.1.1, for example.
 
 MAJOR and MINOR updates to normative content trigger the governance process. PATCH updates to normative content have a short review period to give users an opportunity to confirm that changes are backwards-compatible and non-substantive.
+
+Changes to non-normative content do not trigger the governance process. 
 
 ### Branches
 
