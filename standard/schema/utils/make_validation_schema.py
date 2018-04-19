@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 
-"""
-See README for this script's documentation.
-"""
-
 import copy
 import json
 import os.path

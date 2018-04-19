@@ -22,7 +22,7 @@ When you are done you could be producing data that looks something like the cont
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/contract.json
+.. jsoninclude:: ../examples/contract.json
    :jsonpointer: /releases
    :expand: releases, tender, awards, contracts, period, value, items, tag, parties, documents
 

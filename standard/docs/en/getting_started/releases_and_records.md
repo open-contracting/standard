@@ -43,7 +43,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/planning.json
+.. jsoninclude:: ../examples/planning.json
    :jsonpointer: /releases
    :expand: releases, planning, tag, documents
 
@@ -51,7 +51,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/tender.json
+.. jsoninclude:: ../examples/tender.json
    :jsonpointer: /releases
    :expand: releases, tender, items, tag, documents
 
@@ -59,7 +59,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/tenderUpdate.json
+.. jsoninclude:: ../examples/tenderUpdate.json
    :jsonpointer: /releases
    :expand: releases, tender, tag, documents
 
@@ -68,7 +68,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/award.json
+.. jsoninclude:: ../examples/award.json
    :jsonpointer: /releases
    :expand: releases, awards, value, suppliers, items, contractPeriod, tag, documents
 
@@ -76,7 +76,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/contract.json
+.. jsoninclude:: ../examples/contract.json
    :jsonpointer: /releases
    :expand: releases, contracts, period, value, items, tag, documents
 
@@ -85,7 +85,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/implementation.json
+.. jsoninclude:: ../examples/implementation.json
    :jsonpointer: /releases
    :expand: releases, contracts, implementation, transactions, tag, documents
 
@@ -119,7 +119,7 @@ The [OCDS merge strategies](../schema/merging.md) set out how to combine multipl
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/record.json
+.. jsoninclude:: ../examples/record.json
    :jsonpointer: 
    :expand: compiledRelease, tender, award, contracts, implementation, transactions, tag, documents
 
