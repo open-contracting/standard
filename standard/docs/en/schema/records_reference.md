@@ -40,7 +40,7 @@ You can see this in the full example of a record below.
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: 
    :expand: packages, records
    :title: Full_record
@@ -68,7 +68,7 @@ An example releases section is given below.
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0
    :expand: releases, tag
    :title: releases
@@ -95,7 +95,7 @@ An example extract of the versioned information for a tender value is shown belo
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: amount, releaseTag
    :title: versioned

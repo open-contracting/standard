@@ -4,7 +4,7 @@ Add an extra Metadata section to the top of each file.
 Download codelists used by documentation to extension /codelists/
 """
 
-import os
+import os.path
 import re
 import sys
 

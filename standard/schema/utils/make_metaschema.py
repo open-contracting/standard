@@ -1,7 +1,8 @@
-import json_merge_patch
 import json
 from collections import OrderedDict
 from os.path import abspath, dirname, join
+
+import json_merge_patch
 
 schema_dir = dirname(dirname(abspath(__file__)))
 metaschema_dir = join(schema_dir, 'metaschema')
