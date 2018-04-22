@@ -8,7 +8,7 @@ A contracting process brings together, under a single identifier, the informatio
 
 * Was a contract signed as a result of this tender?
 * What was the total value of spending that resulted from this award?
-* Was an renewal of this contract signed?
+* Was a renewal of this contract signed?
 
 In some cases, complex contracting processes cannot be represented under a single identifier because:
 
