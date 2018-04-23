@@ -166,7 +166,7 @@ A contracting process may result in a number of releases of information over tim
 
 ### Initiation Type
 
-Contracting processes may be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard may support other Initiation Types. The initiation type may be provide information to consuming applications on the different blocks of data and releases they should expect from a contracting process.
+Contracting processes may be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard may support other Initiation Types. The initiation type may be used to provide information to consuming applications on the different blocks of data and releases they should expect from a contracting process.
 
 ```eval_rst
 .. csv-table-no-translate::
