@@ -306,7 +306,7 @@ If a contracting process represents a contract arranged by the department or bra
 ```
 ### Document
 
-Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
+Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
 
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
