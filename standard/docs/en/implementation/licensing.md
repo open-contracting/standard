@@ -25,4 +25,4 @@ In structured data file you can embed a link to the license in the `license` fie
      }
 ```
 
-In individual CSV files or other models of publishing, it may not be possible to embed the license information. In these cases (and in the structured data case also) publishers should ensure that a clear statement is provided alongside files where they are provided for download linking to, and explaining, the license terms they are under. Particular attention should be paid to ensuring license information on any data catalogues where open contracting data is listed are accurate.
+In individual CSV files or other models of publishing, it may not be possible to embed the license information. In these cases (and in the structured data case also) publishers should ensure that a clear statement is provided alongside files where they are provided for download linking to, and explaining, the license terms they are published under. Particular attention should be paid to ensuring license information on any data catalogues where open contracting data is listed are accurate.
