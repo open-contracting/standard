@@ -535,7 +535,7 @@ A contract for ‘Software consultancy services’ may be published in a release
 
 The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
 
-Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice should be based on an understanding the [merging process](merging.md) that is used to generate a snapshot record of a full contracting process.
+Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice should be based on an understanding of the [merging process](merging.md) that is used to generate a snapshot record of a full contracting process.
 
 This model also requires publishers to pay careful attention to null values and missing fields. 
 
