@@ -213,7 +213,7 @@ The procurement category codelist is used to indicate the **primary** focus of a
 
 ### Award Status
 
-An award move through multiple states. Releases over time may update the status of an award. 
+An award moves through multiple states. Releases over time may update the status of an award. 
 
 ```eval_rst
 .. csv-table-no-translate::
