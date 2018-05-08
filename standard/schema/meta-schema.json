@@ -47,12 +47,10 @@
   "type": "object",
   "properties": {
     "id": {
-      "type": "string",
-      "format": "uri"
+      "type": "string"
     },
     "$schema": {
-      "type": "string",
-      "format": "uri"
+      "type": "string"
     },
     "title": {
       "type": "string"
@@ -196,6 +194,9 @@
         }
       ]
     },
+    "format": {
+      "type": "string"
+    },
     "allOf": {
       "$ref": "#/definitions/schemaArray"
     },
@@ -214,9 +215,6 @@
     "omitWhenMerged": {
       "type": "boolean",
       "default": false
-    },
-    "format": {
-      "type": "string"
     },
     "deprecated": {
       "type": "object",
