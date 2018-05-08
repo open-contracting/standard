@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the OCDS package.
 # 
 # Translators:
+# James McKinney <jmckinney@open-contracting.org>, 2018
 # Oscar Montiel <oscar.montiel@okfn.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: open-contracting-standard-1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-17 14:56+0000\n"
-"PO-Revision-Date: 2016-11-12 14:52+0000\n"
-"Last-Translator: Oscar Montiel <oscar.montiel@okfn.org>\n"
+"POT-Creation-Date: 2017-10-12 12:04+0100\n"
+"PO-Revision-Date: 2018-04-23 23:41+0000\n"
+"Last-Translator: James McKinney <jmckinney@open-contracting.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,12 +23,122 @@ msgstr ""
 msgid "Changelog"
 msgstr "Registro de cambios"
 
-#: ../../standard/docs/en/schema/changelog.md:3
-msgid "OCDS is currently in version 1.0."
-msgstr "Actualmente el OCDS se encuentra en la versión 1.0"
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "[1.0.3] - 2017-07-31"
+msgstr "[1.0.3] - 2017-07-31"
 
-#: ../../standard/docs/en/schema/changelog.md:5
+#: ../../standard/docs/en/schema/changelog.md:0
+#: ../../standard/docs/en/schema/changelog.md:0
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "Fixed"
+msgstr "Solucionados"
+
+#: ../../standard/docs/en/schema/changelog.md:7
 msgid ""
-"In February 2016, updated documentation was released. This did not make any "
-"semantic changes to the standard."
-msgstr "En febrero de 2016 se publicó documentación actualizada. Esto no realizó ningún cambio semántico en el estándar."
+"[#329](https://github.com/open-contracting/standard/issues/329) - updated "
+"```item.quantity``` to support decimal values (integer -> number)"
+msgstr "[#329](https://github.com/open-contracting/standard/issues/329) - actualizado `item.quantity` para soportar valores decimales (integer -> number)"
+
+#: ../../standard/docs/en/schema/changelog.md:8
+msgid ""
+"[#253](https://github.com/open-contracting/standard/issues/253) - updated "
+"```value.amount``` to support negative values"
+msgstr "[#253](https://github.com/open-contracting/standard/issues/253) - actualizado `value.amount` para soportar valores negativos. "
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "[1.0.2] - 2016-11-22"
+msgstr "[1.0.2] - 2016-11-22"
+
+#: ../../standard/docs/en/schema/changelog.md:0
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "Changed"
+msgstr "Cambiado"
+
+#: ../../standard/docs/en/schema/changelog.md:16
+msgid "Added titles to all fields in the documentation (#362)"
+msgstr "Se agregaron títulos a todos los campos de la documentación (#362)"
+
+#: ../../standard/docs/en/schema/changelog.md:17
+msgid "Missing field ```procurementMethodDetails``` added to schema (#221)"
+msgstr "El campo `procurementMethodDetails` añadido al esquema (# 221)"
+
+#: ../../standard/docs/en/schema/changelog.md:18
+msgid "Typo fix in releaseTag (#391)"
+msgstr "Corrección de errores en releaseTag (#391)"
+
+#: ../../standard/docs/en/schema/changelog.md:19
+msgid "Fixing links to Fiscal Data Package (#271)"
+msgstr "Fijación de enlaces al Paquete de Datos Fiscales (# 271)"
+
+#: ../../standard/docs/en/schema/changelog.md:20
+msgid "Description for ```numberOfTenderers``` (#314)"
+msgstr "Descripción para `numberOfTenderers` (#314)"
+
+#: ../../standard/docs/en/schema/changelog.md:21
+msgid "Fixed definition of ```changes``` (#244)"
+msgstr "Se arregló la definición de `changes` (#244)"
+
+#: ../../standard/docs/en/schema/changelog.md:22
+msgid ""
+"Updated documentation to refer to 'Object' not 'Reference' for fields (#228)"
+msgstr "Documentación actualizada para referirse a 'Object' no 'Reference' para campos (# 228)"
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "Tidy up"
+msgstr "Se ordenó"
+
+#: ../../standard/docs/en/schema/changelog.md:26
+msgid ""
+"Removed the old Spanish documentation translations folders from "
+"```standard/docs/es```"
+msgstr "Eliminación de las carpetas de traducción de documentación en español de `standard/docs/es`"
+
+#: ../../standard/docs/en/schema/changelog.md:27
+msgid "Added CSV download links for registered OCIDs, and publication levels"
+msgstr "Se han agregado enlaces de descarga CSV para los OCID registrados y los niveles de publicación"
+
+#: ../../standard/docs/en/schema/changelog.md:28
+msgid "Updated publication levels spreadsheet to reflect version 1.0.2"
+msgstr "Plantilla de niveles de publicación actualizada para reflejar la versión 1.0.2"
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "[1.0.1] - 2016-03-14"
+msgstr "[1.0.1] - 2016-03-14"
+
+#: ../../standard/docs/en/schema/changelog.md:32
+msgid ""
+"Updated documentation was released. This did not make any semantic changes "
+"to the standard."
+msgstr "Documentación actualizada ha sido publicada. Esto no ha hecho ningún cambio semántico en el estándar."
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "[1.0] - 2015-07-29"
+msgstr "[1.0] - 2015-07-29"
+
+#: ../../standard/docs/en/schema/changelog.md:38
+msgid ""
+"```contractPeriod``` added to ```award``` to allow the anticipated period of"
+" a contract to be recorded, without requiring the creation of a contract "
+"block. Discussed in [#199](https://github.com/open-"
+"contracting/standard/issues/199)"
+msgstr "Se añadió `contractPeriod` a ` award` para permitir que el período anticipado de un contrato sea registrado, sin requerir la creación de un bloque de contrato. Discutido en [#199](https://github.com/open-contracting/standard/issues/199)"
+
+#: ../../standard/docs/en/schema/changelog.md:40
+msgid "Updated codelists"
+msgstr "Listas de códigos actualizadas"
+
+#: ../../standard/docs/en/schema/changelog.md:44
+msgid "Minor documentation fixes."
+msgstr "Correcciones menores de documentación."
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "[1.0.RC] - 2014-11-18"
+msgstr "[1.0.RC] - 2014-11-18"
+
+#: ../../standard/docs/en/schema/changelog.md:48
+msgid ""
+"Changes prior to this point are not covered by this changelog. A non-"
+"exhaustive overview of changes between the beta release and 1.0.RC can be "
+"[found on the project blog](http://standard.open-contracting.org/release-of-"
+"data-standard/)."
+msgstr "Los cambios anteriores a este punto no están cubiertos por este registro de cambios. Un resumen no exhaustivo de los cambios entre la versión beta y 1.0.RC puede [encontrarse en el blog del proyecto](http://standard.open-contracting.org/release-of-data-standard/)."
