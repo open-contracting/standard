@@ -64,3 +64,4 @@ release_schema['definitions']['Value']['properties']['currency']['enum'] = codes
 
 with open('standard/schema/release-schema.json', 'w') as f:
     json.dump(release_schema, f, indent=2, separators=(',', ': '))
+    f.write('\n')
