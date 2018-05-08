@@ -155,3 +155,4 @@ if __name__ == "__main__":
 
     with open(os.path.join(schema_dir, 'versioned-release-validation-schema.json'), 'w') as f:
         json.dump(new_validation_schema, f, indent=2, separators=(',', ': '))
+        f.write('\n')
