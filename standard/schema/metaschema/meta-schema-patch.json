@@ -1,46 +1,43 @@
 {
-    "properties": {
-        "$ref": {
-            "type": "string"
-        },
-        "omitWhenMerged": {
-            "type": "boolean",
-            "default": false
-        },
-        "format": {
-            "type": "string"
-        },
-        "deprecated": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-                "deprecatedVersion",
-                "description"
-            ],
-            "properties": {
-                "deprecatedVersion": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                }
-            }
-        },
-        "codelist": {
-            "type": "string"
-        },
-        "openCodelist": {
-            "type": "boolean",
-            "default": false
-        },
-        "wholeListMerge": {
-            "type": "boolean",
-            "default": false
-        },
-        "versionId": {
-            "type": "boolean",
-            "default": false
-        }
+  "properties": {
+    "$ref": {
+      "type": "string"
     },
-    "additionalProperties": false
+    "omitWhenMerged": {
+      "type": "boolean",
+      "default": false
+    },
+    "deprecated": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deprecatedVersion",
+        "description"
+      ],
+      "properties": {
+        "deprecatedVersion": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "codelist": {
+      "type": "string"
+    },
+    "openCodelist": {
+      "type": "boolean",
+      "default": false
+    },
+    "wholeListMerge": {
+      "type": "boolean",
+      "default": false
+    },
+    "versionId": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
 }

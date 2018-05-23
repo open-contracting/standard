@@ -48,7 +48,7 @@ For example, publishers may wish to add statistics on minority or women owned bu
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: codelists_translated/bidStatistics.csv
+   :file: ../../../../build/codelists/current_lang/bidStatistics.csv
 ```
 
 ### Bid Details
@@ -66,7 +66,7 @@ The `bids/details` array is used to provide one or more `Bid` objects, each repr
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: codelists_translated/bidStatus.csv
+   :file: ../../../../build/codelists/current_lang/bidStatus.csv
 ```
 
 ### Example

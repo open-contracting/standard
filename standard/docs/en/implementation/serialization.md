@@ -36,13 +36,13 @@ JSON is based on a tree structure, with data elements nested inside one another.
 * **Simplified single table** - for cases where there are no one-to-many relationships in the data (e.g. each tender has only one award and contract, and each has only one line-item).
 * **Multi-table** - where more advanced structures are required, but where it is desirable to be able to work with data in spreadsheet-style layouts
 
-In each case, fields are identified by the [JSON pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For example:
+In each case, fields are identified in CSV headers by their [JSON Pointer](http://tools.ietf.org/html/rfc6901). For example:
 
 **JSON**
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/serialization-flat.json
+.. jsoninclude:: ../examples/serialization-flat.json
    :jsonpointer: 
    :expand: releases, tender, items
 
@@ -82,7 +82,7 @@ The JSON equivalent of this would be:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/serialization-flat-two-items.json
+.. jsoninclude:: ../examples/serialization-flat-two-items.json
    :jsonpointer: 
    :expand: releases, tender, items
 

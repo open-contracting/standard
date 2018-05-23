@@ -1,7 +1,8 @@
-import json_merge_patch
 import json
 from collections import OrderedDict
 from os.path import abspath, dirname, join
+
+import json_merge_patch
 
 schema_dir = dirname(dirname(abspath(__file__)))
 metaschema_dir = join(schema_dir, 'metaschema')
@@ -20,4 +21,5 @@ def make_metaschema():
 
 if __name__ == '__main__':
     with open(metaschema_path, 'w') as f:
-        json.dump(make_metaschema(), f, indent=4, separators=(',', ': '))
+        json.dump(make_metaschema(), f, indent=2, separators=(',', ': '))
+        f.write('\n')

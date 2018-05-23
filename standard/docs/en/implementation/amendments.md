@@ -27,7 +27,7 @@ In the example below:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-tender-1.json
+.. jsoninclude:: ../examples/merging/merge-tender-1.json
    :jsonpointer: 
    :expand: releases, tender, tag
    :title: tender
@@ -36,7 +36,7 @@ In the example below:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-tender-2.json
+.. jsoninclude:: ../examples/merging/merge-tender-2.json
    :jsonpointer: 
    :expand: releases, tender, tag
    :title: tenderUpdate
@@ -45,7 +45,7 @@ In the example below:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-tender-3.json
+.. jsoninclude:: ../examples/merging/merge-tender-3.json
    :jsonpointer: 
    :expand: releases, tender, tag, amendments
    :title: tenderAmendment
@@ -54,7 +54,7 @@ In the example below:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: 
    :expand: records, compiledRelease, tender, tag, versionedRelease, tender, value, amount, releaseTag, amendments
    :title: versionedRecord

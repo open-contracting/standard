@@ -516,7 +516,7 @@ A contract for ‘Software consultancy services’ may be published in a release
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/language.json
+.. jsoninclude:: ../examples/language.json
    :jsonpointer: 
    :expand: tender,item
 

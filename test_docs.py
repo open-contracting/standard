@@ -1,14 +1,15 @@
 import os
-import pytest
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.common.exceptions import NoSuchElementException
+import re
+import time
+from collections import OrderedDict
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from multiprocessing import Process
-from collections import OrderedDict
+
+import pytest
 import requests
-import time
-import re
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 
 
