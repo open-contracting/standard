@@ -3,10 +3,13 @@ Ensures that `make_validation_schema.py` and `make_metaschema.py` has been run.
 """
 
 import json
+from path import path
 
-from .test_validate_schema import RELEASE_SCHEMA_PATH, VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH
 from ..utils.make_validation_schema import get_versioned_validation_schema
 from ..utils.make_metaschema import make_metaschema, metaschema_path
+
+RELEASE_SCHEMA_PATH = path(__file__).parent.parent / 'release-schema.json'
+VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH = path(__file__).parent.parent / 'versioned-release-validation-schema.json'
 
 
 def test_versioned_release_validation_schema_is_in_sync():

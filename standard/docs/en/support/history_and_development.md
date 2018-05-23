@@ -22,7 +22,7 @@ The development of the 1.0 Release Candidate specification took place through a 
 
 Over [150 people](credits.md) have provided comments, feedback and input into the specification over the year of initial development.
 
-The development process has been taken place with reference to the [Greentree Consensus Principles for Digital Development](http://ict4dprinciples.org/). 
+The development process took place with reference to the [Greentree Consensus Principles for Digital Development](http://ict4dprinciples.org/). 
 
 ## Development stages
 
