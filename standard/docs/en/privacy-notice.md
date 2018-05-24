@@ -42,7 +42,7 @@ Data processors: Google Analytics, Open Data Services Co-operative Limited
 
 The data controller (Open Contracting Partnership) is based in the USA.
 
-Data is transferred to Google Analytics, we may transfer data to third countries (non-EEA).
+Data is transferred to Google Analytics, who may transfer data to third countries (non-EEA).
 
 The data is kept indefinitely, in pseudonymised form.
 
