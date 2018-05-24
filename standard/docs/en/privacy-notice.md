@@ -36,8 +36,6 @@ Personal data we collect:
 
 We do not use this data to personally identify individuals, but it is possible that it could be used to do so, particularly if combined with other datasets.
 
-You can opt out of this processing: If you have set your web browser to "I do not want to be tracked" (DoNotTrack is enabled) then Matomo will not track your visit.
-
 Data processors: Google Analytics, Open Data Services Co-operative Limited
 
 The data controller (Open Contracting Partnership) is based in the USA.
