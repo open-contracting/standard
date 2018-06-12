@@ -4,11 +4,8 @@ Add an extra Metadata section to the top of each file.
 Download codelists used by documentation to extension /codelists/
 """
 
-import csv
 import os.path
 import sys
-from io import StringIO
-from urllib.parse import urlparse
 
 import requests
 from ocdsextensionregistry import ExtensionRegistry
