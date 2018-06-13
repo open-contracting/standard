@@ -82,14 +82,16 @@ def test_search(browser, server, lang, regex):
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_community_extensions(browser, server, lang):
+    url = 'https://raw.githubusercontent.com/open-contracting/ocds_budget_breakdown_extension/master/extension.json'
+    extension = requests.get(url).json()
+
     browser.get('{}{}/extensions'.format(server, lang))
     community_extensions = browser.find_element_by_id('community-extensions').find_element_by_tag_name('table')
     # Currently community extensions aren't translated
-    link = community_extensions.find_element_by_link_text('Budget Breakdown')
-    assert (link.get_attribute('href') ==
-            'https://github.com/open-contracting/ocds_budget_breakdown_extension/blob/master/README.md')
+    link = community_extensions.find_element_by_link_text(extension['name']['en'])
+    assert (link.get_attribute('href') == extension['documentationUrl']['en'])
     cells = link.find_elements_by_xpath('../../td')
-    assert cells[2].text == 'For providing a detailed budget breakdown.'
+    assert cells[2].text == extension['description']['en']
     assert cells[3].text == 'ppp'
 
     assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
