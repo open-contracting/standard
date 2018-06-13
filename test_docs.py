@@ -85,7 +85,7 @@ def test_community_extensions(browser, server, lang):
     browser.get('{}{}/extensions'.format(server, lang))
     community_extensions = browser.find_element_by_id('community-extensions').find_element_by_tag_name('table')
     # Currently community extensions aren't translated
-    link = community_extensions.find_element_by_link_text('Budget breakdown')
+    link = community_extensions.find_element_by_link_text('Budget Breakdown')
     assert (link.get_attribute('href') ==
             'https://github.com/open-contracting/ocds_budget_breakdown_extension/blob/master/README.md')
     cells = link.find_elements_by_xpath('../../td')
