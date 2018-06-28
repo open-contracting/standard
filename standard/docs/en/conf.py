@@ -21,9 +21,10 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import os
+from collections import OrderedDict
 
 import standard_theme
-from ocds_documentation_support import translate_codelists, translate_schema
+from ocdsdocumentationsupport.translation import translate_codelists, translate_schema
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 from sphinxcontrib.opendataservices import AutoStructifyLowPriority
@@ -116,16 +117,19 @@ html_static_path = ['_static']
 
 locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 gettext_compact = False
+
+# List the extension identifiers and versions that should be part of the standard. The extensions must be available in
+# the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
 default_extension_version = 'v{}'.format(release)
-extension_versions = {
-    'bids': default_extension_version,
-    'enquiries': default_extension_version,
-    'location': default_extension_version,
-    'lots': default_extension_version,
-    'milestone_documents': default_extension_version,
-    'participation_fee': default_extension_version,
-    'process_title': default_extension_version,
-}
+extension_versions = OrderedDict([
+    ('bids', default_extension_version),
+    ('enquiries', default_extension_version),
+    ('location', default_extension_version),
+    ('lots', default_extension_version),
+    ('milestone_documents', default_extension_version),
+    ('participation_fee', default_extension_version),
+    ('process_title', default_extension_version),
+])
 
 # NOTE: The following two options may no longer be relevant.
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
@@ -143,17 +147,36 @@ def setup(app):
     app.add_transform(AutoStructify)
     app.add_transform(AutoStructifyLowPriority)
 
+    # The root of the repository.
     basedir = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', '..'))
+    # The `LOCALE_DIR` from `config.mk`.
     localedir = os.path.join(basedir, 'standard', 'docs', 'locale')
 
-    filenames = [
-        'record-package-schema.json',
-        'release-package-schema.json',
-        'release-schema.json',
-        'versioned-release-validation-schema.json',
-    ]
-
     language = app.config.overrides.get('language', 'en')
-    translate_schema('schema', filenames, os.path.join(basedir, 'standard', 'schema'), os.path.join(basedir, 'build', language), localedir, language)  # noqa
+
+    translate_schema(
+        # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
+        domain='schema',
+        # The filenames of schema files within the `sourcedir` that will be translated into the `builddir`. The
+        # glob pattern in `.babel_schema` should match the filenames.
+        filenames=[
+            'record-package-schema.json',
+            'release-package-schema.json',
+            'release-schema.json',
+            'versioned-release-validation-schema.json',
+        ],
+        sourcedir=os.path.join(basedir, 'standard', 'schema'),
+        builddir=os.path.join(basedir, 'build', language),
+        localedir=localedir,
+        language=language)
+
     for sourcedir in ('standard/schema', 'standard/docs/en/extensions'):
-        translate_codelists('codelists', os.path.join(basedir, sourcedir, 'codelists'), os.path.join(basedir, 'build', 'codelists', language), localedir, language)  # noqa
+        translate_codelists(
+            # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
+            domain='codelists',
+            # The directory containing source codelist files. Should match the glob patterns in `.babel_codelists`.
+            sourcedir=os.path.join(basedir, sourcedir, 'codelists'),
+            # The directory into which codelist files will be translated.
+            builddir=os.path.join(basedir, 'build', 'codelists', language),
+            localedir=localedir,
+            language=language)
