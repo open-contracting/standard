@@ -1,5 +1,5 @@
 # Compare this file to:
-# https://github.com/open-contracting/standard_profile_template/blob/master/config.mk
+# https://github.com/open-contracting/standard_profile_template/blob/master/include/config.mk
 
 # Edit these variables as appropriate.
 
@@ -14,8 +14,8 @@ DOCS_DIR=standard/docs/en
 LOCALE_DIR=standard/docs/locale
 # Directory in which to build documentation files.
 BUILD_DIR=build
-# Extra build files or directories.
-EXTRA_BUILD_FILES=
+# Extra build files or directories. (These should match paths in .gitignore.)
+EXTRA_BUILD_FILES=/chromedriver*
 # Files that are built and distributed (you may use Bash extended globbing).
 DIST_FILES=
 # Directory in which to build .pot files.
@@ -30,7 +30,7 @@ TRANSIFEX_PROJECT=open-contracting-standard-1-1
 # Compile PO files for codelists and schema to MO files, so that translate_codelists and translate_schema succeed.
 .PHONY: compile
 compile:
-	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D schema
-	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D codelists
+	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)schema
+	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)codelists
 
 # Put local targets below.

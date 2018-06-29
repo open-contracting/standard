@@ -7,7 +7,6 @@ Download codelists used by documentation to extension /codelists/
 import os.path
 import sys
 
-import requests
 from ocdsextensionregistry import ExtensionRegistry
 
 docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en')
@@ -48,8 +47,7 @@ for version in extension_registry.filter(core=True):
 
 for identifier, version in extension_versions.items():
     extension = extension_registry.get(id=identifier, version=version)
-    response = requests.get(extension.base_url + 'README.md')
-    lines = response.text.split('\n')
+    lines = extension.remote('README.md').split('\n')
     heading = '\n'.join(lines[:1])
     body = '\n'.join(lines[1:])
     body = body.replace('\n##', '\n###')
@@ -59,6 +57,5 @@ for identifier, version in extension_versions.items():
         f.write(text)
 
     for codelist in extension.metadata.get('codelists', []):
-        response = requests.get(extension.base_url + 'codelists/' + codelist)
         with open(os.path.join(extensions_path, 'codelists', codelist), 'w') as f:
-            f.write(response.text)
+            f.write(extension.remote('codelists/' + codelist))
