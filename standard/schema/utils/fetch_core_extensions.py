@@ -5,21 +5,17 @@ Download codelists used by documentation to extension /codelists/
 """
 
 import os.path
-import re
 import sys
 
 import requests
+from ocdsextensionregistry import ExtensionRegistry
 
 docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en')
 sys.path.append(docs_path)
 
-from conf import extension_registry_git_ref  # noqa
+from conf import extension_versions  # noqa
 
-
-url = 'http://standard.open-contracting.org/extension_registry/{}/extensions.json'
-extension_json = requests.get(url.format(extension_registry_git_ref)).json()
-
-metadata = '''
+metadata = """
 
 ## Metadata
 
@@ -32,30 +28,37 @@ To use this extension, include its URL in the `extension` array of your release 
 }}
 ```
 
-This extension is maintained at [{}]({})
+This extension is maintained at <{}>
 
 ## Documentation
-'''
+"""
 
 
-path = os.path.join(docs_path, 'extensions')
-for extension in extension_json['extensions']:
-    if extension['core']:
-        match = re.match('https://raw.githubusercontent.com/open-contracting/([^/]*)/', extension['url'])
-        repo_url = 'https://github.com/open-contracting/{}'.format(match.group(1))
+extensions_path = os.path.join(docs_path, 'extensions')
 
-        response = requests.get(extension['url'].rstrip('/') + '/' + 'README.md')
-        lines = response.text.split('\n')
-        heading = '\n'.join(lines[:1])
-        body = '\n'.join(lines[1:])
-        body = body.replace('\n##', '\n###')
-        text = heading + metadata.format(extension['url'], repo_url, repo_url) + body
+extensions_url = 'https://raw.githubusercontent.com/open-contracting/extension_registry/master/extensions.csv'
+extension_versions_url = 'https://raw.githubusercontent.com/open-contracting/extension_registry/master/extension_versions.csv'  # noqa
 
-        with open(os.path.join(path, extension['slug'] + '.md'), 'w') as f:
-            f.write(text)
+extension_registry = ExtensionRegistry(extension_versions_url, extensions_url)
 
-        extension_json = requests.get(extension['url'].rstrip('/') + '/' + 'extension.json').json()
-        for codelist in extension_json.get('codelists', []):
-            response = requests.get(extension['url'].rstrip('/') + '/codelists/' + codelist)
-            with open(os.path.join(path, 'codelists', codelist), 'w') as f:
-                f.write(response.text)
+# At present, all core extensions are included in the standard's documentation.
+for version in extension_registry.filter(core=True):
+    if version.id not in extension_versions:
+        raise Exception('{} is a core extension but is not included in the standard'.format(version.id))
+
+for identifier, version in extension_versions.items():
+    extension = extension_registry.get(id=identifier, version=version)
+    response = requests.get(extension.base_url + 'README.md')
+    lines = response.text.split('\n')
+    heading = '\n'.join(lines[:1])
+    body = '\n'.join(lines[1:])
+    body = body.replace('\n##', '\n###')
+    text = heading + metadata.format(extension.base_url, extension.repository_html_page) + body
+
+    with open(os.path.join(extensions_path, '{}.md'.format(extension.id)), 'w') as f:
+        f.write(text)
+
+    for codelist in extension.metadata.get('codelists', []):
+        response = requests.get(extension.base_url + 'codelists/' + codelist)
+        with open(os.path.join(extensions_path, 'codelists', codelist), 'w') as f:
+            f.write(response.text)

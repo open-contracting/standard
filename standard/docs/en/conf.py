@@ -116,8 +116,16 @@ html_static_path = ['_static']
 
 locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 gettext_compact = False
-
-extension_registry_git_ref = 'v{}'.format(release)
+default_extension_version = 'v{}'.format(release)
+extension_versions = {
+    'bids': default_extension_version,
+    'enquiries': default_extension_version,
+    'location': default_extension_version,
+    'lots': default_extension_version,
+    'milestone_documents': default_extension_version,
+    'participation_fee': default_extension_version,
+    'process_title': default_extension_version,
+}
 
 # NOTE: The following two options may no longer be relevant.
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
@@ -127,6 +135,7 @@ html_show_copyright = False
 
 
 def setup(app):
+    app.add_config_value('extension_versions', extension_versions, True)
     app.add_config_value('recommonmark_config', {
         'enable_eval_rst': True
     }, True)
