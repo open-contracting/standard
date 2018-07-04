@@ -115,7 +115,9 @@ html_static_path = ['_static']
 
 # -- Local configuration --------------------------------------------------
 
+# The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
 locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+
 gettext_compact = False
 
 # List the extension identifiers and versions that should be part of the standard. The extensions must be available in
