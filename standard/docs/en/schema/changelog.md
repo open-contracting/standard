@@ -106,7 +106,7 @@ Old and unused scripts have been removed from the documentation repository, and 
 
 #### Closed codelist updates
 
-* [#201](https://github.com/open-contracting/standard/issues/201) **[Tender status](http://standard.open-contracting.org/1.1/en/schema/codelists/#tender-status)** - New 'pipeline' and 'withdrawn' codes have been introduced to the tenderStatus codelist.
+* [#201](https://github.com/open-contracting/standard/issues/201) **[Tender status](http://standard.open-contracting.org/1.1/en/schema/codelists/#tender-status)** - New 'planning' and 'withdrawn' codes have been introduced to the tenderStatus codelist.
 * [#380](https://github.com/open-contracting/standard/issues/380) **[Procurement method](http://standard.open-contracting.org/1.1/en/schema/codelists/#method)** - A new code for 'direct' has been added the procurementMethod codelist
 * [#373](https://github.com/open-contracting/standard/issues/373) **[Milestone status](http://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status)** - We have updated the milestoneStatus codelist with a 'scheduled' entry and revised definitions
 * [#297](https://github.com/open-contracting/standard/issues/297) **[Currency codelist external link](http://standard.open-contracting.org/1.1/en/schema/codelists/#currency)** - We have fixed the external link for currency codelists to refer to the official ISO source.
