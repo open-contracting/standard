@@ -67,7 +67,7 @@ def add_versions(schema, location=''):
                 version_properties["value"] = new_value
                 schema['properties'][key] = version
 
-        elif prop_type == "object":
+        elif (prop_type == "object" or prop_type == ["object", "null"]) and "properties" in value:
             add_versions(value, key)
         else:
             version = copy.deepcopy(version_template)
