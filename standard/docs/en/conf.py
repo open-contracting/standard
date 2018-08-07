@@ -120,6 +120,9 @@ locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 
 
 gettext_compact = False
 
+# The `DOMAIN_PREFIX` from `config.mk`.
+gettext_domain_prefix = ''
+
 # List the extension identifiers and versions that should be part of the standard. The extensions must be available in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
 default_extension_version = 'v{}'.format(release)
@@ -158,7 +161,7 @@ def setup(app):
 
     translate_schema(
         # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
-        domain='schema',
+        domain='{}schema'.format(gettext_domain_prefix),
         # The filenames of schema files within the `sourcedir` that will be translated into the `builddir`. The
         # glob pattern in `.babel_schema` should match the filenames.
         filenames=[
@@ -175,7 +178,7 @@ def setup(app):
     for sourcedir in ('standard/schema', 'standard/docs/en/extensions'):
         translate_codelists(
             # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
-            domain='codelists',
+            domain='{}codelists'.format(gettext_domain_prefix),
             # The directory containing source codelist files. Should match the glob patterns in `.babel_codelists`.
             sourcedir=os.path.join(basedir, sourcedir, 'codelists'),
             # The directory into which codelist files will be translated.
