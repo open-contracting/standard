@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.X]
 
+### Advisories
+
+1.1.3 changed the merging and versioning behavior of the `unit` field of the `Item` object.
+
+* If you are using compiled releases, `unit` information can now be removed entirely in later releases by setting the field to `null`; previously, only its subfields could be set to `null` and removed.
+* If you are using versioned releases, `unit` information is now versioned as a whole; previously, its subfields were versioned individually.
+
 ### Schema fixes
 
 * [#712](https://github.com/open-contracting/standard/pull/712) Add missing titles for `publisher` and `url` and description for `record` in the record package schema, and missing description for `releases` in release package schema.
