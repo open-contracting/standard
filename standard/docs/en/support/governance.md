@@ -174,6 +174,10 @@ Following **working group** approval, the revision branch can be set to live.
 
 If a term (a class or property) is scheduled to be renamed or removed from the specification as a result of the revision process, the next minor release of the specification must [deprecate](https://en.wikipedia.org/wiki/Deprecation) the term within the schema, and the following major release must rename or remove the term from the schema, making the term obsolete. Implementations may use deprecated terms, but will receive warnings from the OCDS validator described below. Implementations may not use obsolete terms, and will receive errors from the OCDS validator.
 
+## Translation policy
+
+The standard is translated in line with the [latest version of the translation and localization policy](https://docs.google.com/document/d/1GLwWTpgDDkKmMr1hZE4D75LI8VQtFiD0VA7TF_FvY_Q/view). 
+
 ## Support policy
 
 Support will be offered for one prior version of the standard. Support for any earlier versions than this will be ended when a new version is released. 
