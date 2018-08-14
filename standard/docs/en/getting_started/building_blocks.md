@@ -65,7 +65,7 @@ For example, common building blocks are provided for:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/record.json
+.. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/parties/0
    :expand: identifier, address, contactPoint
    :title: party
@@ -74,7 +74,7 @@ For example, common building blocks are provided for:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/record.json
+.. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/value
    :expand: 
    :title: amounts
@@ -83,7 +83,7 @@ For example, common building blocks are provided for:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/record.json
+.. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/items
    :expand: classification, unit, additionalClassifications, value
    :title: items
@@ -92,7 +92,7 @@ For example, common building blocks are provided for:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/record.json
+.. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/contractPeriod
    :expand: 
    :title: period
@@ -101,7 +101,7 @@ For example, common building blocks are provided for:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/record.json
+.. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/documents
    :expand: 
    :title: documents
@@ -110,7 +110,7 @@ For example, common building blocks are provided for:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/record.json
+.. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/tender/milestones/0
    :expand: 
    :title: milestones
@@ -211,7 +211,7 @@ However, to support comparison across continents, the main OCDS procurement meth
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../../../schema/codelists_translated/method.csv
+   :file: ../../../../build/codelists/current_lang/method.csv
 ```
 
 All procedures should be able to be mapped to one of these options. 

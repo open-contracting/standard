@@ -1,7 +1,8 @@
-import os
 import json
-import ocdsmerge
+import os
 from collections import OrderedDict
+
+import ocdsmerge
 
 releases = []
 release_list = []
