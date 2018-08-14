@@ -22,7 +22,7 @@ If the record is complete with versioning information, then the versioning secti
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-tender-1.json
+.. jsoninclude:: ../examples/merging/merge-tender-1.json
    :jsonpointer: /releases
    :expand: releases, tender, tag
    :title: tender
@@ -31,7 +31,7 @@ If the record is complete with versioning information, then the versioning secti
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-tender-3.json
+.. jsoninclude:: ../examples/merging/merge-tender-3.json
    :jsonpointer: /releases
    :expand: releases, tender, tag
    :title: tenderAmendment
@@ -40,7 +40,7 @@ If the record is complete with versioning information, then the versioning secti
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-award-1.json
+.. jsoninclude:: ../examples/merging/merge-award-1.json
    :jsonpointer: /releases
    :expand: releases, award
    :title: awardOne
@@ -49,7 +49,7 @@ If the record is complete with versioning information, then the versioning secti
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-award-2.json
+.. jsoninclude:: ../examples/merging/merge-award-2.json
    :jsonpointer: /releases
    :expand: releases, award
    :title: awardTwo
@@ -58,7 +58,7 @@ If the record is complete with versioning information, then the versioning secti
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merged.json
+.. jsoninclude:: ../examples/merging/merged.json
    :jsonpointer: 
    :expand: records, compiledRelease, tender, award, tag
    :title: record
@@ -67,7 +67,7 @@ If the record is complete with versioning information, then the versioning secti
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: 
    :expand: records,versionedRelease, tender, award, tag
    :title: versioned
@@ -139,7 +139,7 @@ The property `"versionId":true` is used to explicitly declare the cases where an
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: value, amount
    :title: versioned_extract
@@ -148,7 +148,7 @@ The property `"versionId":true` is used to explicitly declare the cases where an
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: 
    :expand: 
    :title: full_versioned_file

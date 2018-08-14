@@ -32,7 +32,7 @@ The OCDS **technical team** work under contract to OCP, under the direction of t
 
 In the pursuit of a consensus and **community-driven process**, subscribers to the <a href="mailto:standard-discuss@open-contracting.org">standard-discuss@open-contracting.org</a> (Join by sending an email to <a href="mailto:standard-discuss+subscribe@open-contracting.org">standard-discuss+subscribe@open-contracting.org</a>) discussion list and those watching and engaging with the [standard GitHub repository](https://github.com/open-contracting/standard) should be kept informed at all stages about planned revisions to OCDS, and should be offered clear and timely opportunities to input and comment.
 
-To ensure the relevance, quality and effective implementation of proposed updates to the standard, new version releases will be subjected to a process of **peer review** with invited reviewers from publisher and user communities, and an open review process. 
+To ensure the relevance, quality and effective implementation of proposed updates to the standard, new version releases are subjected to a process of **peer review** with invited reviewers from publisher and user communities, and an open review process. 
 
 A lightweight **standard governance working group**, made up of representatives from OCP staff, the multi-stakeholder advisory board, and the technical team will be responsible for giving final approval to formal upgrades of the standard and ensuring the processes in this document have been properly carried out. 
 
