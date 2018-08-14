@@ -176,7 +176,7 @@ If a term (a class or property) is scheduled to be renamed or removed from the s
 
 ## Translation and localization policy
 
-The standard is translated in line with the [latest version of the translation and localization policy](https://docs.google.com/document/d/1GLwWTpgDDkKmMr1hZE4D75LI8VQtFiD0VA7TF_FvY_Q/view). 
+The standard is translated and localized in line with the [latest version of the translation and localization policy](https://docs.google.com/document/d/1GLwWTpgDDkKmMr1hZE4D75LI8VQtFiD0VA7TF_FvY_Q/view). 
 
 ## Support policy
 
