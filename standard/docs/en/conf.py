@@ -173,7 +173,8 @@ def setup(app):
         sourcedir=os.path.join(basedir, 'standard', 'schema'),
         builddir=os.path.join(basedir, 'build', language),
         localedir=localedir,
-        language=language)
+        language=language,
+        ocds_version=os.environ.get('TRAVIS_BRANCH', 'latest'))
 
     for sourcedir in ('standard/schema', 'standard/docs/en/extensions'):
         translate_codelists(
