@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.X]
 
+### Advisories
+
+* OCDS now has a [translation and localization policy](http://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
+
 ### Schema fixes
 
 * [#712](https://github.com/open-contracting/standard/pull/712) Add missing titles for `publisher` and `url` and description for `record` in the record package schema, and missing description for `releases` in release package schema.
