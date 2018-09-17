@@ -12,6 +12,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * If you are using compiled releases, `unit` information can now be removed entirely in later releases by setting the field to `null`; previously, only its subfields could be set to `null` and removed.
 * If you are using versioned releases, `unit` information is now versioned as a whole; previously, its subfields were versioned individually.
 
+OCDS now has a [translation and localization policy](http://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
+
 ### Schema fixes
 
 * [#712](https://github.com/open-contracting/standard/pull/712) Add missing titles for `publisher` and `url` and description for `record` in the record package schema, and missing description for `releases` in release package schema.
