@@ -3,7 +3,27 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.1.3] - 2018-01-XX
+## [1.1.4]
+
+### Advisories
+
+* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [translation and localization policy](http://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
+* [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a [privacy notice](http://standard.open-contracting.org/1.1/en/privacy-notice/).
+
+### Codelist updates
+
+* [#746](https://github.com/open-contracting/standard/pull/746) Update currency codelist for ISO4217 amendment 168 (2018-08-02).
+
+### Schema fixes
+
+* [#712](https://github.com/open-contracting/standard/pull/712) Add missing titles for `publisher` and `url` and description for `record` in the record package schema, and missing description for `releases` in release package schema.
+
+### Documentation fixes
+
+* Typos have been corrected [#692](https://github.com/open-contracting/standard/pull/692) [#713](https://github.com/open-contracting/standard/pull/713) [#719](https://github.com/open-contracting/standard/pull/719) [#726](https://github.com/open-contracting/standard/pull/726) [#732](https://github.com/open-contracting/standard/pull/732) [#752](https://github.com/open-contracting/standard/pull/752).
+* The process to build the documentation has been improved [#666](https://github.com/open-contracting/standard/pull/666) [#698](https://github.com/open-contracting/standard/pull/698) [#708](https://github.com/open-contracting/standard/pull/708) [#709](https://github.com/open-contracting/standard/pull/709) [#721](https://github.com/open-contracting/standard/pull/721) [#724](https://github.com/open-contracting/standard/pull/724) [#727](https://github.com/open-contracting/standard/pull/727) [#729](https://github.com/open-contracting/standard/pull/729) [#733](https://github.com/open-contracting/standard/pull/733) [#740](https://github.com/open-contracting/standard/pull/740) [#747](https://github.com/open-contracting/standard/pull/747) [#753](https://github.com/open-contracting/standard/pull/753).
+
+## [1.1.3] - 2018-04-16
 
 ### Codelist updates
 
@@ -39,22 +59,22 @@ Old and unused scripts have been removed from the documentation repository, and 
 
 ### Bug fixes
 
-* [#482](https://github.com/open-contracting/standard/issues/482) **[Allow parties.role to be set to null](https://github.com/open-contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)** - required by the [merging approach](http://standard.open-contracting.org/1.1.1-dev/en/schema/merging/). 
-* [#422](https://github.com/open-contracting/standard/issues/422) **[Including currency codelist in documentation and schema](http://standard.open-contracting.org/1.1.1-dev/en/schema/codelists/#currency)** to support validation of currency values.
-* [#479](https://github.com/open-contracting/standard/issues/479) **[Fixing incorrect requirement to include releases in record-package-schema.json](http://standard.open-contracting.org/1.1.1-dev/en/schema/record_package/)** 
+* [#482](https://github.com/open-contracting/standard/issues/482) **[Allow parties.role to be set to null](https://github.com/open-contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)** - required by the [merging approach](http://standard.open-contracting.org/1.1/en/schema/merging/). 
+* [#422](https://github.com/open-contracting/standard/issues/422) **[Including currency codelist in documentation and schema](http://standard.open-contracting.org/1.1/en/schema/codelists/#currency)** to support validation of currency values.
+* [#479](https://github.com/open-contracting/standard/issues/479) **[Fixing incorrect requirement to include releases in record-package-schema.json](http://standard.open-contracting.org/1.1/en/schema/record_package/)** 
 * [#475](https://github.com/open-contracting/standard/issues/475) **Adding enum arrays to all fields in the schema with a closed codelist** to support validation.
 
 ### Minor revisions
 
-* [#471](https://github.com/open-contracting/standard/issues/471) **[Updating milestoneType codelist](http://standard.open-contracting.org/1.1.1-dev/en/schema/codelists/#milestone-type)** replacing 'planning' with 'preProcurement' and 'adjudication' with 'assessment' and introducing codes for 'approval' and 'financing'. This is an open codelist, so previous codes remain valid, but publishers able to update to the new codes should do so. 
-* [#473](https://github.com/open-contracting/standard/issues/473) **[Updating definition of contractSchedule in documentType codelist](http://standard.open-contracting.org/1.1.1-dev/en/schema/codelists/#document-type)**
+* [#471](https://github.com/open-contracting/standard/issues/471) **[Updating milestoneType codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-type)** replacing 'planning' with 'preProcurement' and 'adjudication' with 'assessment' and introducing codes for 'approval' and 'financing'. This is an open codelist, so previous codes remain valid, but publishers able to update to the new codes should do so. 
+* [#473](https://github.com/open-contracting/standard/issues/473) **[Updating definition of contractSchedule in documentType codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#document-type)**
 
 ### Documentation improvements
 
 * **Fixing typographic errors throughout the documentation and codelist descriptions**
-* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) **[Updating basic, intermediate, advanced](http://standard.open-contracting.org/1.1.1-dev/en/implementation/levels/) publication guidance** - to ensure tables and text are aligned. 
+* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) **[Updating basic, intermediate, advanced](http://standard.open-contracting.org/1.1/en/implementation/levels/) publication guidance** - to ensure tables and text are aligned. 
 * [#489](https://github.com/open-contracting/standard/issues/489) **Listing the milestone documents extension as a core extension** - and removing it from the community extensions list. This extension is only needed by publishers with legacy data containing documents at the milestone level.
-* [#493](https://github.com/open-contracting/standard/issues/493) **[Updating the description of the Organization Identifier Scheme codelist](http://standard.open-contracting.org/1.1.1-dev/en/schema/codelists/#organization-identifier-scheme)** to reflect that the codelist is now maintained by [org-id.guide](http://www.org-id.guide/).
+* [#493](https://github.com/open-contracting/standard/issues/493) **[Updating the description of the Organization Identifier Scheme codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)** to reflect that the codelist is now maintained by [org-id.guide](http://www.org-id.guide/).
 
 ### Code and build process
 
@@ -79,7 +99,7 @@ Old and unused scripts have been removed from the documentation repository, and 
 * [#329](https://github.com/open-contracting/standard/issues/329) **[Float for Item.quantity](http://standard.open-contracting.org/1.1/en/schema/reference/#item)** - Item quantities has been updated to 'number' to support decimal values (e.g 10.5 rather than just 10)
 * [#253](https://github.com/open-contracting/standard/issues/253) **[Negative amounts](http://standard.open-contracting.org/1.1/en/schema/reference/#budget)** - We have added support for negative amounts in transactions
 * [#323](https://github.com/open-contracting/standard/issues/323) **[Standard should specify use of UTF-8 for encoding JSON](http://standard.open-contracting.org/1.1/en/implementation/serialization/#json)** - We now recommend use of I-JSON and UTF-8 for JSON publication
-* [#166](https://github.com/open-contracting/standard/issues/166) **[Indicate encoding for CSV serializations](http://standard.open-contracting.org/1.1/en/implementation/serialization/#multi-table)** - We have added information on CSV encoding to the implementation guidance to recommend UTF-8 or windows-1252.
+* [#166](https://github.com/open-contracting/standard/issues/166) **[Indicate encoding for CSV serializations](http://standard.open-contracting.org/1.1/en/implementation/serialization/#multi-table)** - We have added information on CSV encoding to the implementation guidance to recommend UTF-8 or Windows-1252.
 * [#336](https://github.com/open-contracting/standard/issues/336) **[Codelist properties in schema](https://github.com/open-contracting/standard/commit/ee1db256d7364ee70e3553f4384d9908bff604a6)** - We have included explicit references to the codelist files (CSV versions) in the schema. This will be used in future versions of the validator to support validation against codelists.
 * [#301](https://github.com/open-contracting/standard/issues/301) **[Specifying versions and extensions in package metadata](http://standard.open-contracting.org/1.1/en/schema/records_reference/#package-metadata)** - We have updated the package schemas to require that version is declared, and to provide a means of declaring extensions in use. This will be used in future versions of the validator to support validation against extensions.
 * [#287](https://github.com/open-contracting/standard/issues/287) **[Remove all ocdsMerge strategies](http://standard.open-contracting.org/1.1/en/schema/merging/)** - We have remove all 'merge strategies' from the schema as these are no longer required, now that all objects in arrays contain an id element.
@@ -94,7 +114,7 @@ Old and unused scripts have been removed from the documentation repository, and 
 
 #### Closed codelist updates
 
-* [#201](https://github.com/open-contracting/standard/issues/201) **[Tender status](http://standard.open-contracting.org/1.1/en/schema/codelists/#tender-status)** - New 'pipeline' and 'withdrawn' codes have been introduced to the tenderStatus codelist.
+* [#201](https://github.com/open-contracting/standard/issues/201) **[Tender status](http://standard.open-contracting.org/1.1/en/schema/codelists/#tender-status)** - New 'planning' and 'withdrawn' codes have been introduced to the tenderStatus codelist.
 * [#380](https://github.com/open-contracting/standard/issues/380) **[Procurement method](http://standard.open-contracting.org/1.1/en/schema/codelists/#method)** - A new code for 'direct' has been added the procurementMethod codelist
 * [#373](https://github.com/open-contracting/standard/issues/373) **[Milestone status](http://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status)** - We have updated the milestoneStatus codelist with a 'scheduled' entry and revised definitions
 * [#297](https://github.com/open-contracting/standard/issues/297) **[Currency codelist external link](http://standard.open-contracting.org/1.1/en/schema/codelists/#currency)** - We have fixed the external link for currency codelists to refer to the official ISO source.
@@ -179,4 +199,4 @@ Updated documentation was released. This did not make any semantic changes to th
 
 ## [1.0.RC] - 2014-11-18
 
-Changes prior to this point are not covered by this changelog. A non-exhaustive overview of changes between the beta release and 1.0.RC can be [found on the project blog](http://standard.open-contracting.org/release-of-data-standard/).
+Changes prior to this point are not covered by this changelog. A non-exhaustive overview of changes between the beta release and 1.0.RC can be [found on the project blog](https://www.open-contracting.org/2014/11/18/release-of-data-standard/).

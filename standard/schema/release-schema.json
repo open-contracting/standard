@@ -120,7 +120,7 @@
       "items": {
         "$ref": "#/definitions/RelatedProcess"
       },
-      "description": "If this process follows on from one or more prior process, represented under a separate open contracting identifier (ocid) then details of the related process can be provided here. This is commonly used to relate mini-competitions to their parent frameworks, full tenders to a pre-qualification phase, or individual tenders to a broad planning process.",
+      "description": "If this process follows on from one or more prior processes, represented under a separate open contracting identifier (ocid) then details of the related process can be provided here. This is commonly used to relate mini-competitions to their parent frameworks, full tenders to a pre-qualification phase, or individual tenders to a broad planning process.",
       "title": "Related processes",
       "type": "array"
     }
@@ -1030,7 +1030,7 @@
     "Budget": {
       "type": "object",
       "title": "Budget information",
-      "description": "This section contain information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Fiscal Data Package](http://fiscal.dataprotocols.org/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+      "description": "This section contains information about the budget line, and associated projects, through which this contracting process is funded. It draws upon data model of the [Fiscal Data Package](http://fiscal.dataprotocols.org/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
       "properties": {
         "id": {
           "title": "ID",
@@ -1056,7 +1056,7 @@
         },
         "project": {
           "title": "Project title",
-          "description": "The name of the project that through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
+          "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
           "type": [
             "string",
             "null"
@@ -1275,7 +1275,7 @@
       "properties": {
         "name": {
           "title": "Common name",
-          "description": "A common name for this organization or other participant in the contracting process. The identifier object provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+          "description": "A common name for this organization or other participant in the contracting process. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
           "type": [
             "string",
             "null"
@@ -1434,7 +1434,7 @@
             },
             "uri": {
               "title": "URI",
-              "description": "If the scheme used provide a machine-readable URI for this unit of measure, this can be given.",
+              "description": "If the scheme used provides a machine-readable URI for this unit of measure, this can be given.",
               "format": "uri",
               "type": [
                 "string",
@@ -1563,7 +1563,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent an known [Item Classification Scheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) wherever possible.",
+          "description": "A classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent a known [Item Classification Scheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) wherever possible.",
           "type": [
             "string",
             "null"
@@ -1714,7 +1714,7 @@
     "ContactPoint": {
       "title": "Contact point",
       "type": "object",
-      "description": "An person, contact point or department to contact in relation to this contracting process.",
+      "description": "A person, contact point or department to contact in relation to this contracting process.",
       "properties": {
         "name": {
           "title": "Name",
@@ -2049,6 +2049,7 @@
             "UZS",
             "VEB",
             "VEF",
+            "VES",
             "VNC",
             "VND",
             "VUV",

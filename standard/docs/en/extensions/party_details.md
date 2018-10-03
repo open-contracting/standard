@@ -7,6 +7,6 @@ Each of the entries in the [parties](../../../../schema/reference/#parties) arra
 A list of available extensions (tagged as 'partyDetail') can be found below:
 
 ```eval_rst
-.. extensionlist:: The following extensions are available for parties
-   :list: parties
+.. extensionlist:: The following extensions are available for party details
+   :list: partyDetail
 ```
