@@ -21,4 +21,5 @@ def make_metaschema():
 
 if __name__ == '__main__':
     with open(metaschema_path, 'w') as f:
-        json.dump(make_metaschema(), f, indent=4, separators=(',', ': '))
+        json.dump(make_metaschema(), f, indent=2, separators=(',', ': '))
+        f.write('\n')
