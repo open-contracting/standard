@@ -6,9 +6,9 @@ An **open codelist** provides **suggested codes**, but publishers can extend the
 
 For example, OCDS provide a list of the types of documents which may be attached to tenders, awards, contracts and milestones. However, a group of publishers may discover they have need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they should consult with the community through the [mailing list and GitHub platform](../../../../support/), and should suggest the code for formal incorporation into the codelists.
 
-A **closed codelist** provides **mandatory codes** and publishers should only use values provided in the official list. Changes to closed codelists should take place through the governance and revision process for the schema. 
+A **closed codelist** provides **mandatory codes** and publishers should only use values provided in the official list. Changes to closed codelists take place through the governance and revision process for the schema. 
 
-Codes are case sensitive, and are generally provided as English language camelCase. Codes values should not be translated, through the OCDS team will work with publishers to provide alternative translations of code titles and definitions.
+Codes are case sensitive, and are generally provided as English language camelCase. Codes values should not be translated, though the OCDS team will work with publishers to provide alternative translations of code titles and definitions.
 
 ## Open Codelists
 
@@ -166,7 +166,7 @@ A contracting process may result in a number of releases of information over tim
 
 ### Initiation Type
 
-Contracting processes may be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard may support other Initiation Types. The initiation type may be provide information to consuming applications on the different blocks of data and releases they should expect from a contracting process.
+Contracting processes may be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard may support other Initiation Types. The initiation type may be used to provide information to consuming applications on the different blocks of data and releases they should expect from a contracting process.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -213,7 +213,7 @@ The procurement category codelist is used to indicate the **primary** focus of a
 
 ### Award Status
 
-An award move through multiple states. Releases over time may update the status of an award. 
+An award moves through multiple states. Releases over time may update the status of an award. 
 
 ```eval_rst
 .. csv-table-no-translate::

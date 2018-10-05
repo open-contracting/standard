@@ -103,7 +103,7 @@ The planning section can be used to describe the background to a contracting pro
    :list: planning
 ```
 
-Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](http://fiscal.dataprotocols.org/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
+Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 #### Budget 
 
@@ -306,7 +306,7 @@ If a contracting process represents a contract arranged by the department or bra
 ```
 ### Document
 
-Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
+Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
 
 The document block is also used to link to legal notices, which should have a documentType of 'notice'.
 
@@ -535,7 +535,7 @@ A contract for ‘Software consultancy services’ may be published in a release
 
 The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
 
-Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice should be based on an understanding the [merging process](merging.md) that is used to generate a snapshot record of a full contracting process.
+Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice should be based on an understanding of the [merging process](merging.md) that is used to generate a snapshot record of a full contracting process.
 
 This model also requires publishers to pay careful attention to null values and missing fields. 
 
