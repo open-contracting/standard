@@ -9,7 +9,7 @@ sys.path.append(docs_path)
 
 from conf import release  # noqa
 
-version_template = OrderedDict([
+versioned_template = OrderedDict([
     ("type", "array"),
     ("items", OrderedDict([
         ("type", "object"),
@@ -34,7 +34,7 @@ version_template = OrderedDict([
 ])
 
 
-def add_versions(schema, location=''):
+def add_versioned(schema, location=''):
     for key, value in list(schema['properties'].items()):
         prop_type = value.get('type')
         value.pop("title", None)
@@ -57,26 +57,26 @@ def add_versions(schema, location=''):
                 new_value["$ref"] = "#/definitions/StringNullVersioned"
             schema['properties'][key] = new_value
         elif prop_type == "array":
-            version = copy.deepcopy(version_template)
-            version_properties = version["items"]["properties"]
+            versioned = copy.deepcopy(versioned_template)
+            properties = versioned["items"]["properties"]
             if wholeListMerge:
                 new_value = copy.deepcopy(value)
 
                 if '$ref' in new_value['items']:
                     new_value['items']["$ref"] = value['items']['$ref'] + "Unversioned"
-                version_properties["value"] = new_value
-                schema['properties'][key] = version
+                properties["value"] = new_value
+                schema['properties'][key] = versioned
 
         elif prop_type == "object":
-            add_versions(value, key)
+            add_versioned(value, key)
         else:
-            version = copy.deepcopy(version_template)
-            version_properties = version["items"]["properties"]
-            version_properties["value"] = value
-            schema['properties'][key] = version
+            versioned = copy.deepcopy(versioned_template)
+            properties = versioned["items"]["properties"]
+            properties["value"] = value
+            schema['properties'][key] = versioned
 
     for key, value in schema.get('definitions', {}).items():
-        add_versions(value, key)
+        add_versioned(value, key)
 
 
 def update_refs_to_unversioned_definitions(schema):
@@ -95,11 +95,11 @@ def get_versioned_release_schema(schema):
 
     definitions = schema['definitions']
 
-    new_definitions = OrderedDict()
+    unversioned_definitions = OrderedDict()
     for key, value in copy.deepcopy(schema['definitions']).items():
-        new_definitions[key + 'Unversioned'] = value
+        unversioned_definitions[key + 'Unversioned'] = value
 
-    update_refs_to_unversioned_definitions(new_definitions)
+    update_refs_to_unversioned_definitions(unversioned_definitions)
 
     ocid = schema['properties'].pop("ocid")
     schema['properties'].pop("date")
@@ -111,17 +111,17 @@ def get_versioned_release_schema(schema):
         "initiationType"
     ]
 
-    add_versions(schema)
+    add_versioned(schema)
 
     schema['properties']["ocid"] = ocid
 
-    definitions.update(new_definitions)
+    definitions.update(unversioned_definitions)
 
     # Add definitions for versioned strings.
     for key, format in [('StringNullUriVersioned', 'uri'),
                         ('StringNullDateTimeVersioned', 'date-time'),
                         ('StringNullVersioned', None)]:
-        schema['definitions'][key] = copy.deepcopy(version_template)
+        schema['definitions'][key] = copy.deepcopy(versioned_template)
         value = definition['items']['properties']['value']
         value['type'] = ['string', 'null']
         if format:
