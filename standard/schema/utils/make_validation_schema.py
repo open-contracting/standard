@@ -90,7 +90,6 @@ def update_refs_to_unversioned_definitions(schema):
 def get_versioned_release_schema(schema):
     release_with_underscores = release.replace('.', '__')
     schema["id"] = "http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json".format(release_with_underscores)  # noqa nopep8
-    schema["$schema"] = "http://json-schema.org/draft-04/schema#"  # nopep8
     schema["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
 
     definitions = schema['definitions']
