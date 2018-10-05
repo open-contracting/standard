@@ -18,23 +18,23 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 warnings.formatwarning = custom_warning_formatter
 
 versioned_template = OrderedDict([
-    ("type", "array"),
-    ("items", OrderedDict([
-        ("type", "object"),
-        ("properties", OrderedDict([
-            ("releaseDate", OrderedDict([
-                ("format", "date-time"),
-                ("type", "string"),
+    ('type', 'array'),
+    ('items', OrderedDict([
+        ('type', 'object'),
+        ('properties', OrderedDict([
+            ('releaseDate', OrderedDict([
+                ('format', 'date-time'),
+                ('type', 'string'),
             ])),
-            ("releaseID", OrderedDict([
-                ("type", "string"),
+            ('releaseID', OrderedDict([
+                ('type', 'string'),
             ])),
-            ("value", OrderedDict([
+            ('value', OrderedDict([
             ])),
-            ("releaseTag", OrderedDict([
-                ("type", "array"),
-                ("items", OrderedDict([
-                    ("type", "string"),
+            ('releaseTag', OrderedDict([
+                ('type', 'array'),
+                ('items', OrderedDict([
+                    ('type', 'string'),
                 ])),
             ])),
         ])),
@@ -53,8 +53,8 @@ def add_versioned(schema, pointer=''):
         # Remove `title`, `description` and merging properties.
         for k in ('title', 'description', 'omitWhenMerged'):
             value.pop(k, None)
-        wholeListMerge = value.pop("wholeListMerge", None)
-        versionId = value.pop("versionId", None)
+        wholeListMerge = value.pop('wholeListMerge', None)
+        versionId = value.pop('versionId', None)
 
         prop_type = value.get('type')
 
@@ -68,25 +68,25 @@ def add_versioned(schema, pointer=''):
             continue
 
         # If the string is nullable and isn't an `enum`, reference a versioned string definition.
-        if prop_type == ["string", "null"] and "enum" not in value:
+        if prop_type == ['string', 'null'] and 'enum' not in value:
             schema['properties'][key] = OrderedDict([
                 ('$ref', '#/definitions/' + versioned_string_definitions[value.get('format')]),
             ])
 
         # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
-        elif prop_type == "array":
+        elif prop_type == 'array':
             if wholeListMerge:
                 # If `items` contains `$ref`, update `$ref` to the unversioned definition.
                 new_value = copy.deepcopy(value)
                 if '$ref' in new_value['items']:
-                    new_value['items']["$ref"] = value['items']['$ref'] + "Unversioned"
+                    new_value['items']['$ref'] = value['items']['$ref'] + 'Unversioned'
 
                 versioned = copy.deepcopy(versioned_template)
                 versioned['items']['properties']['value'] = new_value
                 schema['properties'][key] = versioned
 
         # If the field is an object, iterate over its properties.
-        elif (prop_type == "object" or prop_type == ["object", "null"]) and "properties" in value:
+        elif (prop_type == 'object' or prop_type == ['object', 'null']) and 'properties' in value:
             add_versioned(value, pointer='{}/{}'.format(pointer, key))
 
         # If the field isn't any of the above, make it versioned.
@@ -127,7 +127,7 @@ def get_versioned_release_schema(schema):
         unversioned_definitions[key + 'Unversioned'] = copy.deepcopy(value)
     update_refs_to_unversioned_definitions(unversioned_definitions)
 
-    # Omit "ocid" from versioning.
+    # Omit `ocid` from versioning.
     ocid = schema['properties'].pop('ocid')
     add_versioned(schema)
     schema['properties']['ocid'] = ocid
@@ -157,7 +157,7 @@ def get_versioned_release_schema(schema):
     return schema
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     schema_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     with open(os.path.join(schema_dir, 'release-schema.json')) as f:
