@@ -88,50 +88,54 @@ def update_refs_to_unversioned_definitions(schema):
 
 
 def get_versioned_release_schema(schema):
-    release_with_underscores = release.replace('.', '__')
-    schema["id"] = "http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json".format(release_with_underscores)  # noqa nopep8
-    schema["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
-
     definitions = schema['definitions']
 
-    unversioned_definitions = OrderedDict()
-    for key, value in copy.deepcopy(schema['definitions']).items():
-        unversioned_definitions[key + 'Unversioned'] = value
+    # Update schema metadata.
+    release_with_underscores = release.replace('.', '__')
+    schema['id'] = 'http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json'.format(release_with_underscores)  # noqa
+    schema['title'] = 'Schema for a compiled, versioned Open Contracting Release.'
 
-    update_refs_to_unversioned_definitions(unversioned_definitions)
-
+    # Release IDs, dates and tags appear alongside values in the versioned release schema.
     fields_to_remove = ('id', 'date', 'tag')
     for key in fields_to_remove:
         del schema['properties'][key]
         schema['required'].remove(key)
 
-    ocid = schema['properties'].pop("ocid")
-    add_versioned(schema)
-    schema['properties']["ocid"] = ocid
+    # Create unversioned copies of all definitions.
+    unversioned_definitions = OrderedDict()
+    for key, value in schema['definitions'].items():
+        unversioned_definitions[key + 'Unversioned'] = copy.deepcopy(value)
+    update_refs_to_unversioned_definitions(unversioned_definitions)
 
+    # Omit "ocid" from versioning.
+    ocid = schema['properties'].pop('ocid')
+    add_versioned(schema)
+    schema['properties']['ocid'] = ocid
+
+    # Add the unversioned copies of all definitions.
     definitions.update(unversioned_definitions)
 
-    # Add definitions for versioned strings.
+    # Add the definitions for versioned strings.
     for key, format in [('StringNullUriVersioned', 'uri'),
                         ('StringNullDateTimeVersioned', 'date-time'),
                         ('StringNullVersioned', None)]:
-        schema['definitions'][key] = copy.deepcopy(versioned_template)
-        value = definition['items']['properties']['value']
+        versioned = copy.deepcopy(versioned_template)
+        value = versioned['items']['properties']['value']
         value['type'] = ['string', 'null']
         if format:
             value['format'] = format
+        schema['definitions'][key] = versioned
 
+    # Remove all remaining `title` and `description` properties.
     for key, value in definitions.items():
-        value.pop("title", None)
-        value.pop("description", None)
+        for key in ('title', 'description'):
+            value.pop(key, None)
         if 'properties' not in value:
             continue
+        # Remove all remaining merging properties.
         for prop_value in value['properties'].values():
-            prop_value.pop("title", None)
-            prop_value.pop("description", None)
-            prop_value.pop("omitWhenMerged", None)
-            prop_value.pop("wholeListMerge", None)
-            prop_value.pop("versionId", None)
+            for key in ('title', 'description', 'omitWhenMerged', 'wholeListMerge', 'versionId'):
+                prop_value.pop(key, None)
 
     return schema
 
