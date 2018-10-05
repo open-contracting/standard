@@ -2,12 +2,20 @@ import copy
 import json
 import os.path
 import sys
+import warnings
 from collections import OrderedDict
 
 docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en')
 sys.path.append(docs_path)
 
 from conf import release  # noqa
+
+
+def custom_warning_formatter(message, category, filename, lineno, line=None):
+    return str(message) + '\n'
+
+
+warnings.formatwarning = custom_warning_formatter
 
 versioned_template = OrderedDict([
     ("type", "array"),
@@ -33,50 +41,62 @@ versioned_template = OrderedDict([
     ])),
 ])
 
+versioned_string_definitions = OrderedDict([
+    ('uri', 'StringNullUriVersioned'),
+    ('date-time', 'StringNullDateTimeVersioned'),
+    (None, 'StringNullVersioned'),
+])
 
-def add_versioned(schema, location=''):
+
+def add_versioned(schema, pointer=''):
     for key, value in list(schema['properties'].items()):
-        prop_type = value.get('type')
-        value.pop("title", None)
-        value.pop("description", None)
-        value.pop("omitWhenMerged", None)
+        # Remove `title`, `description` and merging properties.
+        for k in ('title', 'description', 'omitWhenMerged'):
+            value.pop(k, None)
         wholeListMerge = value.pop("wholeListMerge", None)
         versionId = value.pop("versionId", None)
+
+        prop_type = value.get('type')
+
         if not prop_type:
+            if '$ref' not in value:
+                warnings.warn('{}/{} has no type or $ref - behavior is undefined'.format(pointer, key))
             continue
+
+        # See http://standard.open-contracting.org/latest/en/schema/merging/#versioned-data
         if key == 'id' and not versionId:
             continue
-        if prop_type == ["string", "null"] and "enum" not in value:
-            new_value = OrderedDict()
-            format = value.get('format')
-            if format == 'uri':
-                new_value["$ref"] = "#/definitions/StringNullUriVersioned"
-            elif format == 'date-time':
-                new_value["$ref"] = "#/definitions/StringNullDateTimeVersioned"
-            else:
-                new_value["$ref"] = "#/definitions/StringNullVersioned"
-            schema['properties'][key] = new_value
-        elif prop_type == "array":
-            versioned = copy.deepcopy(versioned_template)
-            properties = versioned["items"]["properties"]
-            if wholeListMerge:
-                new_value = copy.deepcopy(value)
 
+        # If the string is nullable and isn't an `enum`, reference a versioned string definition.
+        if prop_type == ["string", "null"] and "enum" not in value:
+            schema['properties'][key] = OrderedDict([
+                ('$ref', '#/definitions/' + versioned_string_definitions[value.get('format')]),
+            ])
+
+        # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
+        elif prop_type == "array":
+            if wholeListMerge:
+                # If `items` contains `$ref`, update `$ref` to the unversioned definition.
+                new_value = copy.deepcopy(value)
                 if '$ref' in new_value['items']:
                     new_value['items']["$ref"] = value['items']['$ref'] + "Unversioned"
-                properties["value"] = new_value
+
+                versioned = copy.deepcopy(versioned_template)
+                versioned['items']['properties']['value'] = new_value
                 schema['properties'][key] = versioned
 
+        # If the field is an object, iterate over its properties.
         elif prop_type == "object":
-            add_versioned(value, key)
+            add_versioned(value, pointer='{}/{}'.format(pointer, key))
+
+        # If the field isn't any of the above, make it versioned.
         else:
             versioned = copy.deepcopy(versioned_template)
-            properties = versioned["items"]["properties"]
-            properties["value"] = value
+            versioned['items']['properties']['value'] = value
             schema['properties'][key] = versioned
 
     for key, value in schema.get('definitions', {}).items():
-        add_versioned(value, key)
+        add_versioned(value, pointer='{}/{}'.format(pointer, key))
 
 
 def update_refs_to_unversioned_definitions(schema):
@@ -116,14 +136,11 @@ def get_versioned_release_schema(schema):
     definitions.update(unversioned_definitions)
 
     # Add the definitions for versioned strings.
-    for key, format in [('StringNullUriVersioned', 'uri'),
-                        ('StringNullDateTimeVersioned', 'date-time'),
-                        ('StringNullVersioned', None)]:
+    for format, key in versioned_string_definitions.items():
         versioned = copy.deepcopy(versioned_template)
-        value = versioned['items']['properties']['value']
-        value['type'] = ['string', 'null']
+        versioned['items']['properties']['value']['type'] = ['string', 'null']
         if format:
-            value['format'] = format
+            versioned['items']['properties']['value']['format'] = format
         schema['definitions'][key] = versioned
 
     # Remove all remaining `title` and `description` properties.
