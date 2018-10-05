@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import copy
 import json
 import os.path
@@ -18,19 +16,21 @@ version_template = OrderedDict([
         ("properties", OrderedDict([
             ("releaseDate", OrderedDict([
                 ("format", "date-time"),
-                ("type", "string")
+                ("type", "string"),
             ])),
-            ("releaseID", {
-                "type": "string"
-            }),
-            ("value", {
-            }),
+            ("releaseID", OrderedDict([
+                ("type", "string"),
+            ])),
+            ("value", OrderedDict([
+            ])),
             ("releaseTag", OrderedDict([
                 ("type", "array"),
-                ("items", {"type": "string"})
-            ]))
-        ]))
-    ]))
+                ("items", OrderedDict([
+                    ("type", "string"),
+                ])),
+            ])),
+        ])),
+    ])),
 ])
 
 
