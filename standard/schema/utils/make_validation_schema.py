@@ -79,18 +79,6 @@ def add_versions(schema, location=''):
         add_versions(value, key)
 
 
-def add_string_definitions(schema):
-    for item, format in [("StringNullUriVersioned", "uri"),
-                         ("StringNullDateTimeVersioned", "date-time"),
-                         ("StringNullVersioned", None)]:
-        version = copy.deepcopy(version_template)
-        version_properties = version["items"]["properties"]
-        version_properties["value"] = OrderedDict([("type", ["string", "null"])])
-        if format:
-            version_properties["value"]["format"] = format
-        schema['definitions'][item] = version
-
-
 def update_refs_to_unversioned_definitions(schema):
     for key, value in schema.items():
         if key == '$ref':
@@ -128,7 +116,16 @@ def get_versioned_release_schema(schema):
     schema['properties']["ocid"] = ocid
 
     definitions.update(new_definitions)
-    add_string_definitions(schema)
+
+    # Add definitions for versioned strings.
+    for key, format in [('StringNullUriVersioned', 'uri'),
+                        ('StringNullDateTimeVersioned', 'date-time'),
+                        ('StringNullVersioned', None)]:
+        schema['definitions'][key] = copy.deepcopy(version_template)
+        value = definition['items']['properties']['value']
+        value['type'] = ['string', 'null']
+        if format:
+            value['format'] = format
 
     for key, value in definitions.items():
         value.pop("title", None)
