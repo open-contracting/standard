@@ -91,44 +91,44 @@ def add_string_definitions(schema):
         schema['definitions'][item] = version
 
 
-def unversion_refs(schema):
+def update_refs_to_unversioned_definitions(schema):
     for key, value in schema.items():
         if key == '$ref':
             schema[key] = value + 'Unversioned'
         if isinstance(value, dict):
-            unversion_refs(value)
+            update_refs_to_unversioned_definitions(value)
 
 
-def get_versioned_validation_schema(versioned_release):
+def get_versioned_release_schema(schema):
     release_with_underscores = release.replace('.', '__')
-    versioned_release["id"] = "http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json".format(release_with_underscores)  # noqa nopep8
-    versioned_release["$schema"] = "http://json-schema.org/draft-04/schema#"  # nopep8
-    versioned_release["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
+    schema["id"] = "http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json".format(release_with_underscores)  # noqa nopep8
+    schema["$schema"] = "http://json-schema.org/draft-04/schema#"  # nopep8
+    schema["title"] = "Schema for a compiled, versioned Open Contracting Release."  # nopep8
 
-    definitions = versioned_release['definitions']
+    definitions = schema['definitions']
 
     new_definitions = OrderedDict()
-    for key, value in copy.deepcopy(versioned_release['definitions']).items():
+    for key, value in copy.deepcopy(schema['definitions']).items():
         new_definitions[key + 'Unversioned'] = value
 
-    unversion_refs(new_definitions)
+    update_refs_to_unversioned_definitions(new_definitions)
 
-    ocid = versioned_release['properties'].pop("ocid")
-    versioned_release['properties'].pop("date")
-    versioned_release['properties'].pop("id")
-    versioned_release['properties'].pop("tag")
+    ocid = schema['properties'].pop("ocid")
+    schema['properties'].pop("date")
+    schema['properties'].pop("id")
+    schema['properties'].pop("tag")
 
-    versioned_release['required'] = [
+    schema['required'] = [
         "ocid",
         "initiationType"
     ]
 
-    add_versions(versioned_release)
+    add_versions(schema)
 
-    versioned_release['properties']["ocid"] = ocid
+    schema['properties']["ocid"] = ocid
 
     definitions.update(new_definitions)
-    add_string_definitions(versioned_release)
+    add_string_definitions(schema)
 
     for key, value in definitions.items():
         value.pop("title", None)
@@ -142,7 +142,7 @@ def get_versioned_validation_schema(versioned_release):
             prop_value.pop("wholeListMerge", None)
             prop_value.pop("versionId", None)
 
-    return versioned_release
+    return schema
 
 
 if __name__ == "__main__":
@@ -151,8 +151,8 @@ if __name__ == "__main__":
     with open(os.path.join(schema_dir, 'release-schema.json')) as f:
         release_schema = json.load(f, object_pairs_hook=OrderedDict)
 
-    new_validation_schema = get_versioned_validation_schema(release_schema)
+    versioned_release_schema = get_versioned_release_schema(release_schema)
 
     with open(os.path.join(schema_dir, 'versioned-release-validation-schema.json'), 'w') as f:
-        json.dump(new_validation_schema, f, indent=2, separators=(',', ': '))
+        json.dump(versioned_release_schema, f, indent=2, separators=(',', ': '))
         f.write('\n')
