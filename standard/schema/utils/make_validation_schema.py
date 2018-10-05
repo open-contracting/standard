@@ -100,18 +100,13 @@ def get_versioned_release_schema(schema):
 
     update_refs_to_unversioned_definitions(unversioned_definitions)
 
+    fields_to_remove = ('id', 'date', 'tag')
+    for key in fields_to_remove:
+        del schema['properties'][key]
+        schema['required'].remove(key)
+
     ocid = schema['properties'].pop("ocid")
-    schema['properties'].pop("date")
-    schema['properties'].pop("id")
-    schema['properties'].pop("tag")
-
-    schema['required'] = [
-        "ocid",
-        "initiationType"
-    ]
-
     add_versioned(schema)
-
     schema['properties']["ocid"] = ocid
 
     definitions.update(unversioned_definitions)
