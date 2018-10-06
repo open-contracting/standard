@@ -120,13 +120,13 @@ def add_versioned(schema, pointer=''):
             ])
 
         # Iterate over object properties. If it has no properties like `Organization/details`, version it as a whole.
-        elif (prop_type in (['object'], ['object', 'null'])) and 'properties' in value:
+        elif prop_type == ['object'] and 'properties' in value:
             add_versioned(value, pointer=new_pointer)
 
         else:
             new_value = copy.deepcopy(value)
 
-            if prop_type in (['array'], ['array', 'null']):
+            if prop_type == ['array']:
                 items_type = value['items'].get('type', [])
                 if isinstance(items_type, str):
                     items_type = [items_type]
@@ -137,9 +137,6 @@ def add_versioned(schema, pointer=''):
                     if '$ref' in value['items']:
                         new_value['items']['$ref'] = value['items']['$ref'] + 'Unversioned'
                     # Otherwise, similarly, don't iterate over item properties.
-
-                    if 'null' in prop_type:
-                        warnings.warn('{} `wholeListMerge` is unexpected with type "null"'.format(new_pointer))
                 # See http://standard.open-contracting.org/latest/en/schema/merging/#lists
                 elif '$ref' in value['items']:
                     # Leave `$ref` to the versioned definition.
