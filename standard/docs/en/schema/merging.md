@@ -82,18 +82,18 @@ Order all the releases that share an `ocid` by their release `date`. Starting fr
 
 ### Objects
 
-In the compiled record, merge **new** into **old** by:
+In the compiled record, if an object can be set to `null` according to its `type`, it should be treated as a single value. Otherwise, merge the **new** object into the **old** object by:
 
-* Overwriting all key that exist in both **old** and **new** with the values from **new**
-* Add any key value pairs that exist in **new**, but not in **old**
+* Overwriting all keys that exist in both **old** and **new** with the values from **new**
+* Add any key-value pairs that exist in **new**, but not in **old**
 * Remove any key that have their value explicitly set to `null` in **new**
 * Retain any keys from **old** that are not mentioned in **new**
 
-If the value of key value pair is a list of strings, the entire list should be treated as a single value. When the list contains objects, the list merge rules below should be used.
+If the value of a key-value pair is a list of strings, the entire list should be treated as a single value. When the list contains objects, the list merge rules below should be used.
 
 ### Lists
 
-There are two merge patterns for lists of objects. Identifier merge, and whole list merge. 
+There are two merge patterns for lists of objects: identifier merge, and whole list merge. 
 
 #### Identifier merge
 
@@ -103,13 +103,13 @@ When a list contains objects with their own `id` field, then:
 * If there is no object in **new** with the same `id` as an object in **old**, keep the object from **old** in the list
 * If there is an object in **new** with an `id` not found in **old** then add the object to the list
 
-Note: to remove information from an old list entry its values must be explicitly set to null. 
+Note: To remove information from an old list entry its values must be explicitly set to `null`. 
 
 #### Whole list merge
 
 Where the objects contain no top level `id` values, or the schema specifies the `"wholeListMerge": true` for the array in question, then merging should take place by treating the entire list of objects as a single value. 
 
-I.e. if the list exists in **new**, the entire list in **new** will overwrite the list in **old**. 
+i.e. if the list exists in **new**, the entire list in **new** will overwrite the list in **old**. 
 
 ### Omit when merged
 
@@ -117,8 +117,7 @@ A few properties in the schema are marked with `"omitWhenMerged": true`. These p
 
 ### Reference implementation
 
-A reference implementation of the merge routine in python [is available on GitHub](https://github.com/open-contracting/ocds-merge). 
-
+A reference implementation of the merge routine in Python [is available on GitHub](https://github.com/open-contracting/ocds-merge). 
 
 ## Versioned data
 

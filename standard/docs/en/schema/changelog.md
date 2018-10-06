@@ -61,7 +61,7 @@ Old and unused scripts have been removed from the documentation repository, and 
 
 ### Bug fixes
 
-* [#482](https://github.com/open-contracting/standard/issues/482) **[Allow parties.role to be set to null](https://github.com/open-contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)** - required by the [merging approach](http://standard.open-contracting.org/1.1/en/schema/merging/). 
+* [#482](https://github.com/open-contracting/standard/issues/482) **[Allow parties.role to be set to `null`](https://github.com/open-contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)** - required by the [merging approach](http://standard.open-contracting.org/1.1/en/schema/merging/). 
 * [#422](https://github.com/open-contracting/standard/issues/422) **[Including currency codelist in documentation and schema](http://standard.open-contracting.org/1.1/en/schema/codelists/#currency)** to support validation of currency values.
 * [#479](https://github.com/open-contracting/standard/issues/479) **[Fixing incorrect requirement to include releases in record-package-schema.json](http://standard.open-contracting.org/1.1/en/schema/record_package/)** 
 * [#475](https://github.com/open-contracting/standard/issues/475) **Adding enum arrays to all fields in the schema with a closed codelist** to support validation.
