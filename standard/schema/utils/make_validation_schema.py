@@ -47,9 +47,50 @@ versioned_string_definitions = OrderedDict([
     (None, 'StringNullVersioned'),
 ])
 
+recognized_types = (
+    # Array
+    ['array'],
+    ['array', 'null'],
+
+    # Object
+    ['object', 'null'],
+
+    # String
+    ['string'],
+    ['string', 'null'],
+
+    # Literal
+    ['boolean', 'null'],
+    ['integer', 'null'],
+    ['number', 'null'],
+
+    # Mixed
+    ['string', 'integer'],
+    ['string', 'integer', 'null'],
+)
+
+
+keywords_to_remove = (
+    # Metadata keywords
+    # https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6
+    'title',
+    'description',
+    'default',
+
+    # Validation keywords
+    'minLength',
+
+    # Extended keywords
+    # http://os4d.opendataservices.coop/development/schema/#extended-json-schema
+    'deprecated',
+    'codelist',
+    'openCodelist',
+)
 
 def add_versioned(schema, pointer=''):
     for key, value in list(schema['properties'].items()):
+        new_pointer = '{}/{}'.format(pointer, key)
+
         # Remove `title`, `description` and merging properties.
         for k in ('title', 'description', 'omitWhenMerged'):
             value.pop(k, None)
@@ -57,42 +98,63 @@ def add_versioned(schema, pointer=''):
         versionId = value.pop('versionId', None)
 
         prop_type = value.get('type')
+        if isinstance(prop_type, str):
+            prop_type = [prop_type]
 
+        if '$ref' not in value and prop_type not in recognized_types:
+            warnings.warn('{} has unrecognized type {}'.format(new_pointer, prop_type))
+
+        # For example, if $ref is used.
         if not prop_type:
-            if '$ref' not in value:
-                warnings.warn('{}/{} has no type or $ref - behavior is undefined'.format(pointer, key))
             continue
 
         # See http://standard.open-contracting.org/latest/en/schema/merging/#versioned-data
         if key == 'id' and not versionId:
             continue
 
-        # If the string is nullable and isn't an `enum`, reference a versioned string definition.
-        if prop_type == ['string', 'null'] and 'enum' not in value:
+        # Reference a versioned string definition if possible, to limit the size of the schema.
+        if prop_type == ['string', 'null'] and all(k in ('type', 'format', *keywords_to_remove) for k in value):
+            # Raises an error if the `format` is unexpected.
             schema['properties'][key] = OrderedDict([
                 ('$ref', '#/definitions/' + versioned_string_definitions[value.get('format')]),
             ])
 
-        # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
-        elif prop_type == 'array':
-            if wholeListMerge:
-                # If `items` contains `$ref`, update `$ref` to the unversioned definition.
-                new_value = copy.deepcopy(value)
-                if '$ref' in new_value['items']:
-                    new_value['items']['$ref'] = value['items']['$ref'] + 'Unversioned'
+        # Iterate over object properties. If it has no properties like `Organization/details`, version it as a whole.
+        elif (prop_type in (['object'], ['object', 'null'])) and 'properties' in value:
+            add_versioned(value, pointer=new_pointer)
 
-                versioned = copy.deepcopy(versioned_template)
-                versioned['items']['properties']['value'] = new_value
-                schema['properties'][key] = versioned
-
-        # If the field is an object, iterate over its properties.
-        elif (prop_type == 'object' or prop_type == ['object', 'null']) and 'properties' in value:
-            add_versioned(value, pointer='{}/{}'.format(pointer, key))
-
-        # If the field isn't any of the above, make it versioned.
         else:
+            new_value = copy.deepcopy(value)
+
+            if prop_type in (['array'], ['array', 'null']):
+                items_type = value['items'].get('type', [])
+                if isinstance(items_type, str):
+                    items_type = [items_type]
+
+                # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
+                if wholeListMerge:
+                    # Update `$ref` to the unversioned definition.
+                    if '$ref' in value['items']:
+                        new_value['items']['$ref'] = value['items']['$ref'] + 'Unversioned'
+                    # Otherwise, similarly, don't iterate over item properties.
+
+                    if 'null' in prop_type:
+                        warnings.warn('{} `wholeListMerge` is unexpected with type "null"'.format(new_pointer))
+                # See http://standard.open-contracting.org/latest/en/schema/merging/#lists
+                elif '$ref' in value['items']:
+                    # Leave `$ref` to the versioned definition.
+                    continue
+                # Exceptional case for deprecated `Amendment/changes`.
+                elif items_type == ['object'] and new_pointer == '/Amendment/changes':
+                    continue
+                # Warn in case new combinations are added to the release schema.
+                elif items_type != ['string']:
+                    # Note: Versioning the properties of un-$ref'erenced objects in arrays isn't implemented. However,
+                    # this combination hasn't occurred, with the exception of `Amendment/changes`.
+                    warnings.warn("{}/items has unexpected type {}".format(new_pointer, items_type))
+
             versioned = copy.deepcopy(versioned_template)
-            versioned['items']['properties']['value'] = value
+            versioned['items']['properties']['value'] = new_value
             schema['properties'][key] = versioned
 
     for key, value in schema.get('definitions', {}).items():
