@@ -7,9 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Advisories
 
-* 1.1.3 changed the merging and versioning behavior of the `unit` field of the `Item` object.
-  * If you are using compiled releases, `unit` information can now be removed entirely in later releases by setting the field to `null`; previously, only its subfields could be set to `null` and removed.
-  * If you are using versioned releases, `unit` information is now versioned as a whole; previously, its subfields were versioned individually.
+* 1.1.3 changed the merging behavior of `Item.unit`. If you are using compiled releases, you can now set `unit` to `null` to remove it in later releases; previously, only its sub-fields could be set to `null` and removed.
+* 1.1.4 restores the versioning behavior of `Item.unit` in 1.1.2. If you are using versioned releases, `unit` is again versioned as a whole; in 1.1.3, its sub-fields were erroneously versioned individually.
 * [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [translation and localization policy](http://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
 * [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a [privacy notice](http://standard.open-contracting.org/1.1/en/privacy-notice/).
 
