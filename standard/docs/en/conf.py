@@ -22,9 +22,11 @@
 # sys.path.insert(0, os.path.abspath('.'))
 import os
 from collections import OrderedDict
+from glob import glob
+from pathlib import Path
 
 import standard_theme
-from ocdsdocumentationsupport.translation import translate_codelists, translate_schema
+from ocds_babel.translate import translate
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 from sphinxcontrib.opendataservices import AutoStructifyLowPriority
@@ -153,36 +155,25 @@ def setup(app):
     app.add_transform(AutoStructifyLowPriority)
 
     # The root of the repository.
-    basedir = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', '..'))
+    basedir = Path(os.path.realpath(__file__)).parents[3]
     # The `LOCALE_DIR` from `config.mk`.
-    localedir = os.path.join(basedir, 'standard', 'docs', 'locale')
+    localedir = basedir / 'standard' / 'docs' / 'locale'
 
     language = app.config.overrides.get('language', 'en')
 
-    translate_schema(
-        # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
-        domain='{}schema'.format(gettext_domain_prefix),
-        # The filenames of schema files within the `sourcedir` that will be translated into the `builddir`. The
-        # glob pattern in `.babel_schema` should match the filenames.
-        filenames=[
-            'record-package-schema.json',
-            'release-package-schema.json',
-            'release-schema.json',
-            'versioned-release-validation-schema.json',
-        ],
-        sourcedir=os.path.join(basedir, 'standard', 'schema'),
-        builddir=os.path.join(basedir, 'build', language),
-        localedir=localedir,
-        language=language,
-        ocds_version=os.environ.get('TRAVIS_BRANCH', 'latest'))
+    # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
+    schema_domain = '{}schema'.format(gettext_domain_prefix)
+    # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
+    codelists_domain = '{}codelists'.format(gettext_domain_prefix)
 
-    for sourcedir in ('standard/schema', 'standard/docs/en/extensions'):
-        translate_codelists(
-            # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
-            domain='{}codelists'.format(gettext_domain_prefix),
-            # The directory containing source codelist files. Should match the glob patterns in `.babel_codelists`.
-            sourcedir=os.path.join(basedir, sourcedir, 'codelists'),
-            # The directory into which codelist files will be translated.
-            builddir=os.path.join(basedir, 'build', 'codelists', language),
-            localedir=localedir,
-            language=language)
+    schema_dir = basedir / 'standard' / 'schema'
+    extensions_dir = basedir / 'standard' / 'docs' / 'en' / 'extensions'
+    build_dir = basedir / 'build'
+
+    translate([
+        # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
+        (glob(str(schema_dir / '*-schema.json')), build_dir / language, schema_domain),
+        # The glob patterns in `babel_ocds_codelist.cfg` should match these.
+        (glob(str(schema_dir / 'codelists' / '*.csv')), build_dir / 'codelists' / language, codelists_domain),
+        (glob(str(extensions_dir / 'codelists' / '*.csv')), build_dir / 'codelists' / language, codelists_domain),
+    ], localedir, language, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
