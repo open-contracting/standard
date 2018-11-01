@@ -68,9 +68,9 @@ def test_basic(browser, server, lang, text):
 
 
 @pytest.mark.parametrize('lang,regex', [
-    ('en', 'found \d+ page\(s\) matching'),
-    ('es', 'encontró \d+ página\(s\) acorde'),
-    ('fr', '\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
+    ('en', r'found \d+ page\(s\) matching'),
+    ('es', r'encontró \d+ página\(s\) acorde'),
+    ('fr', r'\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
 ])
 def test_search(browser, server, lang, regex):
     browser.get('{}{}'.format(server, lang))
