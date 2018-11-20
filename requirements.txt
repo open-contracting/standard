@@ -2,12 +2,10 @@
 
 # Add your own requirements below.
 
-# Tests
-jsonschema==2.5.1
-path.py==8.1.2
-pytest==2.8.7
-  py==1.4.31
-selenium==3.5.0
+-e git+https://github.com/open-contracting/sphinxcontrib-opencontracting.git@665ef3b2e0b03d196233ba26524bdb2ca5abe09e#egg=sphinxcontrib-opencontracting
+-e git+https://github.com/OpenDataServices/sphinxcontrib-jsonschema.git@fd053e4831982b6ad2c44884dad16c8cf7e0b8dc#egg=sphinxcontrib-jsonschema
+-e git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices.git@fab0ff0167d32ec243d42f272e0e50766299c078#egg=sphinxcontrib-opendataservices
 
-# Utils
+pytest==2.8.7
+selenium==3.5.0
 lxml
