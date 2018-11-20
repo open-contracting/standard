@@ -69,7 +69,6 @@ recognized_types = (
     ['string', 'integer', 'null'],
 )
 
-
 keywords_to_remove = (
     # Metadata keywords
     # https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6
@@ -86,6 +85,7 @@ keywords_to_remove = (
     'codelist',
     'openCodelist',
 )
+
 
 def add_versioned(schema, pointer=''):
     for key, value in list(schema['properties'].items()):

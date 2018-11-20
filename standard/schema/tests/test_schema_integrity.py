@@ -1,25 +1,25 @@
 """
-Ensures that `make_validation_schema.py` and `make_metaschema.py` has been run.
+Ensures that `make_versioned_release_schema.py` and `make_metaschema.py` has been run.
 """
 
 import json
 from pathlib import Path
 
-from ..utils.make_validation_schema import get_versioned_validation_schema
+from ..utils.make_versioned_release_schema import get_versioned_release_schema
 from ..utils.make_metaschema import make_metaschema, metaschema_path
 
 RELEASE_SCHEMA_PATH = Path(__file__).parents[1] / 'release-schema.json'
-VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH = Path(__file__).parents[1] / 'versioned-release-validation-schema.json'
+VERSIONED_RELEASE_SCHEMA_PATH = Path(__file__).parents[1] / 'versioned-release-validation-schema.json'
 
 
-def test_versioned_release_validation_schema_is_in_sync():
-    with open(VERSIONED_RELEASE_VALIDATION_SCHEMA_PATH) as f:
+def test_versioned_release_schema_is_in_sync():
+    with open(VERSIONED_RELEASE_SCHEMA_PATH) as f:
         actual = json.load(f)
 
     with open(RELEASE_SCHEMA_PATH) as f:
         release_schema = json.load(f)
 
-    assert actual == get_versioned_validation_schema(release_schema)
+    assert actual == get_versioned_release_schema(release_schema)
 
 
 def test_metaschema_is_in_sync():
