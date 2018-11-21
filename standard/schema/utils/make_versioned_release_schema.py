@@ -53,6 +53,7 @@ recognized_types = (
     ['array', 'null'],
 
     # Object
+    ['object'],
     ['object', 'null'],
 
     # String
@@ -119,7 +120,7 @@ def add_versioned(schema, pointer=''):
                 ('$ref', '#/definitions/' + versioned_string_definitions[value.get('format')]),
             ])
 
-        # Iterate over object properties. If it has no properties like `Organization/details`, version it as a whole.
+        # Iterate over object properties. If it has no properties, like `Organization/details`, version it as a whole.
         elif prop_type == ['object'] and 'properties' in value:
             add_versioned(value, pointer=new_pointer)
 
