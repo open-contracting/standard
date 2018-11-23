@@ -90,9 +90,9 @@ keywords_to_remove = (
 
     # Extended keywords
     # http://os4d.opendataservices.coop/development/schema/#extended-json-schema
-    'deprecated',
-    'codelist',
-    'openCodelist',
+    'omitWhenMerged',
+    'wholeListMerge',
+    'versionId',
 )
 
 
@@ -113,9 +113,6 @@ def add_versioned(schema, pointer=''):
     for key, value in list(schema['properties'].items()):
         new_pointer = '{}/{}'.format(pointer, key)
 
-        # Remove `title`, `description` and merging properties.
-        for k in ('title', 'description', 'omitWhenMerged'):
-            value.pop(k, None)
         wholeListMerge = value.pop('wholeListMerge', None)
         versionId = value.pop('versionId', None)
 
@@ -186,6 +183,19 @@ def update_refs_to_unversioned_definitions(schema):
             update_refs_to_unversioned_definitions(value)
 
 
+def remove_metadata_and_extended_keywords(data, pointer=''):
+    if isinstance(data, list):
+        for index, item in enumerate(data):
+            remove_metadata_and_extended_keywords(item, pointer='{}/{}'.format(pointer, index))
+    elif isinstance(data, dict):
+        parts = pointer.rsplit('/', 2)
+        if len(parts) == 3 and parts[-2] in ('definitions', 'properties'):
+            for key in keywords_to_remove:
+                data.pop(key, None)
+        for key, value in data.items():
+            remove_metadata_and_extended_keywords(value, pointer='{}/{}'.format(pointer, key))
+
+
 def get_versioned_release_schema(schema):
     definitions = schema['definitions']
 
@@ -222,16 +232,8 @@ def get_versioned_release_schema(schema):
                 versioned['items']['properties']['value'][keyword] = value
         schema['definitions'][definition] = versioned
 
-    # Remove all remaining `title` and `description` properties.
-    for key, value in definitions.items():
-        for key in ('title', 'description'):
-            value.pop(key, None)
-        if 'properties' not in value:
-            continue
-        # Remove all remaining merging properties.
-        for prop_value in value['properties'].values():
-            for key in ('title', 'description', 'omitWhenMerged', 'wholeListMerge', 'versionId'):
-                prop_value.pop(key, None)
+    # Remove all metadata and extended keywords.
+    remove_metadata_and_extended_keywords(schema)
 
     return schema
 
