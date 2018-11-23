@@ -17,29 +17,31 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 
 warnings.formatwarning = custom_warning_formatter
 
-versioned_template = OrderedDict([
-    ('type', 'array'),
-    ('items', OrderedDict([
-        ('type', 'object'),
-        ('properties', OrderedDict([
-            ('releaseDate', OrderedDict([
-                ('format', 'date-time'),
-                ('type', 'string'),
-            ])),
-            ('releaseID', OrderedDict([
-                ('type', 'string'),
-            ])),
-            ('value', OrderedDict([
-            ])),
-            ('releaseTag', OrderedDict([
-                ('type', 'array'),
-                ('items', OrderedDict([
-                    ('type', 'string'),
-                ])),
-            ])),
-        ])),
-    ])),
-])
+versioned_template_json = '''
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "releaseDate": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "releaseID": {
+        "type": "string"
+      },
+      "value": {},
+      "releaseTag": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+'''
+versioned_template = json.loads(versioned_template_json, object_pairs_hook=OrderedDict)
 
 versioned_string_definitions = OrderedDict([
     ('uri', 'StringNullUriVersioned'),
