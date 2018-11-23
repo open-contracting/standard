@@ -188,11 +188,11 @@ def remove_metadata_and_extended_keywords(data, pointer=''):
         for index, item in enumerate(data):
             remove_metadata_and_extended_keywords(item, pointer='{}/{}'.format(pointer, index))
     elif isinstance(data, dict):
-        parts = pointer.rsplit('/', 2)
-        if len(parts) == 3 and parts[-2] in ('definitions', 'properties'):
-            for key in keywords_to_remove:
-                data.pop(key, None)
         for key, value in data.items():
+            if key in ('definitions', 'properties'):
+                for v in value.values():
+                    for keyword in keywords_to_remove:
+                        v.pop(keyword, None)
             remove_metadata_and_extended_keywords(value, pointer='{}/{}'.format(pointer, key))
 
 
