@@ -128,14 +128,14 @@ msgstr "Dans l'archive compilée, fusionnez **new** dans **old** en : "
 
 #: ../../standard/docs/en/schema/merging.md:87
 msgid ""
-"Overwriting all key that exist in both **old** and **new** with the values "
+"Overwriting all keys that exist in both **old** and **new** with the values "
 "from **new**"
 msgstr ""
 "Remplaçant toute clé qui existe dans **old** et **new** par les valeurs de "
 "**new**"
 
 #: ../../standard/docs/en/schema/merging.md:88
-msgid "Add any key value pairs that exist in **new**, but not in **old**"
+msgid "Add any key-value pairs that exist in **new**, but not in **old**"
 msgstr ""
 "Ajoutant toute paire clé valeur qui existe dans **new**, mais pas dans "
 "**old**"
@@ -153,7 +153,7 @@ msgstr "Gardez toute clé de **old** qui n'est pas mentionnée dans **new**"
 
 #: ../../standard/docs/en/schema/merging.md:92
 msgid ""
-"If the value of key value pair is a list of strings, the entire list should "
+"If the value of a key-value pair is a list of strings, the entire list should "
 "be treated as a single value. When the list contains objects, the list merge"
 " rules below should be used."
 msgstr ""
@@ -168,7 +168,7 @@ msgstr "Listes"
 
 #: ../../standard/docs/en/schema/merging.md:96
 msgid ""
-"There are two merge patterns for lists of objects. Identifier merge, and "
+"There are two merge patterns for lists of objects: identifier merge, and "
 "whole list merge."
 msgstr ""
 "Il y a deux modèles de fusion pour des listes d'objets. La fusion par "
@@ -210,8 +210,8 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:106
 msgid ""
-"Note: to remove information from an old list entry its values must be "
-"explicitly set to null."
+"Note: To remove information from an old list entry its values must be "
+"explicitly set to `null`."
 msgstr ""
 "Remarque : pour supprimer les informations d'une ancienne entrée de liste, "
 "ses valeurs doivent être définies explicitement sur `null`."
@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:112
 msgid ""
-"I.e. if the list exists in **new**, the entire list in **new** will "
+"i.e. if the list exists in **new**, the entire list in **new** will "
 "overwrite the list in **old**."
 msgstr ""
 "C'est à dire que si la liste existe dans **new**, la liste entière dans "
@@ -259,7 +259,7 @@ msgstr "Implémentation de référence"
 
 #: ../../standard/docs/en/schema/merging.md:120
 msgid ""
-"A reference implementation of the merge routine in python [is available on "
+"A reference implementation of the merge routine in Python [is available on "
 "GitHub](https://github.com/open-contracting/ocds-merge)."
 msgstr ""
 "Une implémentation de référence (en Python) de ces règles de fusion est "

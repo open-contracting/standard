@@ -547,11 +547,11 @@ Only including fields which have values will keep versioned datasets cleaner.
 
 ### Emptying fields and values
 
-There may be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields should explicitly be set to null. 
+There may be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields should explicitly be set to `null`. 
 
 The following describes how null values will be handled in the compilation of a record:
 
-* If a field is included with a value in one release, and then set to `null` in a subsequent release, that field will be recorded as null in the compiled record (though past values of it should remain in the versioned section of the record).
-* If a field is set to null in one release, and is also set to `null` in a subsequent release, it will be recorded as null as per the original release, and the record will not show any change based on the subsequent release I.e. fields that are set to null are recorded as such and then only changed if the value is set.
+* If a field is included with a value in one release, and then set to `null` in a subsequent release, that field will be recorded as `null` in the compiled record (though past values of it should remain in the versioned section of the record).
+* If a field is set to `null` in one release, and is also set to `null` in a subsequent release, it will be recorded as `null` as per the original release, and the record will not show any change based on the subsequent release i.e. fields that are set to `null` are recorded as such and then only changed if the value is set.
 * If a field is set to `null` in one release, and then has a value in a subsequent release, it will first appear in the record, and the version section of the record as `null` and then with the subsequent value.
 * If a field does not appear in one release, and then appears with a value in a subsequent release, it will first appear in the record, and the version section of the record, when the first release that contains it is compiled into the record.
