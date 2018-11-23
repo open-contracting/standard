@@ -131,7 +131,7 @@ def add_versioned(schema, pointer=''):
         if key == 'id' and not versionId:
             continue
 
-        # Reference a versioned string definition if possible, to limit the size of the schema.
+        # Reference a common versioned definition if possible, to limit the size of the schema.
         ref = get_definition_ref(value)
         if ref:
             schema['properties'][key] = ref
@@ -224,7 +224,7 @@ def get_versioned_release_schema(schema):
     # Add the unversioned copies of all definitions.
     definitions.update(unversioned_definitions)
 
-    # Add the definitions for versioned strings.
+    # Add the common versioned definitions.
     for definition, keywords in common_versioned_definitions.items():
         versioned = copy.deepcopy(versioned_template)
         for keyword, value in keywords.items():
