@@ -43,10 +43,19 @@ versioned_template_json = '''
 '''
 versioned_template = json.loads(versioned_template_json, object_pairs_hook=OrderedDict)
 
-versioned_string_definitions = OrderedDict([
-    ('uri', 'StringNullUriVersioned'),
-    ('date-time', 'StringNullDateTimeVersioned'),
-    (None, 'StringNullVersioned'),
+common_versioned_definitions = OrderedDict([
+    ('StringNullUriVersioned', OrderedDict([
+        ('type', ['string', 'null']),
+        ('format', 'uri'),
+    ])),
+    ('StringNullDateTimeVersioned', OrderedDict([
+        ('type', ['string', 'null']),
+        ('format', 'date-time'),
+    ])),
+    ('StringNullVersioned', OrderedDict([
+        ('type', ['string', 'null']),
+        ('format', None),
+    ])),
 ])
 
 recognized_types = (
@@ -79,15 +88,25 @@ keywords_to_remove = (
     'description',
     'default',
 
-    # Validation keywords
-    'minLength',
-
     # Extended keywords
     # http://os4d.opendataservices.coop/development/schema/#extended-json-schema
     'deprecated',
     'codelist',
     'openCodelist',
 )
+
+
+def get_definition_ref(item):
+    for definition, keywords in common_versioned_definitions.items():
+        # If the item matches the definition.
+        if any(item.get(keyword) != value for keyword, value in keywords.items()):
+            continue
+        # And adds no keywords to the definition.
+        if any(keyword not in (*keywords, *keywords_to_remove) for keyword in item):
+            continue
+        return OrderedDict([
+            ('$ref', '#/definitions/' + definition),
+        ])
 
 
 def add_versioned(schema, pointer=''):
@@ -116,11 +135,9 @@ def add_versioned(schema, pointer=''):
             continue
 
         # Reference a versioned string definition if possible, to limit the size of the schema.
-        if prop_type == ['string', 'null'] and all(k in ('type', 'format', *keywords_to_remove) for k in value):
-            # Raises an error if the `format` is unexpected.
-            schema['properties'][key] = OrderedDict([
-                ('$ref', '#/definitions/' + versioned_string_definitions[value.get('format')]),
-            ])
+        ref = get_definition_ref(value)
+        if ref:
+            schema['properties'][key] = ref
 
         # Iterate over object properties. If it has no properties, like `Organization/details`, version it as a whole.
         elif prop_type == ['object'] and 'properties' in value:
@@ -198,12 +215,12 @@ def get_versioned_release_schema(schema):
     definitions.update(unversioned_definitions)
 
     # Add the definitions for versioned strings.
-    for format, key in versioned_string_definitions.items():
+    for definition, keywords in common_versioned_definitions.items():
         versioned = copy.deepcopy(versioned_template)
-        versioned['items']['properties']['value']['type'] = ['string', 'null']
-        if format:
-            versioned['items']['properties']['value']['format'] = format
-        schema['definitions'][key] = versioned
+        for keyword, value in keywords.items():
+            if value:
+                versioned['items']['properties']['value'][keyword] = value
+        schema['definitions'][definition] = versioned
 
     # Remove all remaining `title` and `description` properties.
     for key, value in definitions.items():

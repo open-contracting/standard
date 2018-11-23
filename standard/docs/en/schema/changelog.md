@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Bug fixes
 
 * 1.1.3 changed the merging and versioning behaviors of `Item.unit`, such that it could be removed by setting it to `null`, and such that it was versioned as a whole. 1.1.4 restores the behaviors from 1.1.2, such that only its sub-fields can be removed by setting them to `null`, and such that its sub-fields are versioned individually. If you are not using compiled releases or versioned releases, then this bug didn't affect you.
+* The versioned release schema now matches the release schema in having a `minLength` validation property for `OrganizationReference.name`.
 
 ### Codelist updates
 
