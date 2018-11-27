@@ -89,7 +89,7 @@ In the compiled record, if an object can be set to `null` according to its `type
 * Remove any key that have their value explicitly set to `null` in **new**
 * Retain any keys from **old** that are not mentioned in **new**
 
-If the value of a key-value pair is a list of strings, the entire list should be treated as a single value. When the list contains objects, the list merge rules below should be used.
+If the value of a key-value pair is a list of objects, the list merge rules below should be used; otherwise, a list should be treated as a single value.
 
 ### Lists
 
