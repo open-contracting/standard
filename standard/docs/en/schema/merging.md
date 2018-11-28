@@ -107,7 +107,7 @@ Note: To remove information from an old list entry its values must be explicitly
 
 #### Whole list merge
 
-Where the objects contain no top level `id` values, or the schema specifies the `"wholeListMerge": true` for the array in question, then merging should take place by treating the entire list of objects as a single value. 
+A list should be treated as a single value if: the list has `"wholeListMerge": true` in the schema; the objects in the list have no `id` field according to the schema; or the list can contain non-objects according to the schema.
 
 i.e. if the list exists in **new**, the entire list in **new** will overwrite the list in **old**. 
 
