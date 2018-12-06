@@ -108,7 +108,7 @@ To release a new minor or major version upgrade will involve a number of stages 
 
 The technical team are responsible for generating key documentation during the process, but should always be guided by community consensus, submitting all decisions for discussion. 
 
-* **Appeal:** Any party may appeal against decisions made during the process by writing to the standard governance working group, which can be reached through [Lindsey Marchessault](lmarchessault@open-contracting.org). The working group has the authority to reject proposed revisions on the standard in response to appeals. 
+* **Appeal:** Any party may appeal against decisions made during the process by writing to the standard governance working group, which can be reached through [Lindsey Marchessault](mailto:lmarchessault@open-contracting.org). The working group has the authority to reject proposed revisions on the standard in response to appeals. 
 
 ### Proposals
 
