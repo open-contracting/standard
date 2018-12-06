@@ -4,6 +4,7 @@ import time
 from collections import OrderedDict
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from multiprocessing import Process
+from urllib.parse import urlparse
 
 import pytest
 import requests
@@ -139,7 +140,8 @@ def test_broken_links(browser, server, lang):
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
             href = link.get_attribute('href')
-            if '/validator/' in href or 'localhost' not in href:
+            components = urlparse(href)
+            if components.scheme == 'mailto' or '/review/' in href or 'localhost' not in href:
                 continue
             r = requests.get(href)
             assert r.status_code == 200, href
