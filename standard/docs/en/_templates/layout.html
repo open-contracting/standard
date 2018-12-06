@@ -4,6 +4,12 @@
 
 {% extends "!layout.html" %}
 
+{% block extra_links %}
+<ul class="oc-extra-nav">
+   <li class="toctree-l1"><a class="reference internal" href="/review/">{%trans%}Validator{% endtrans %}</a></li>
+</ul>
+{% endblock %}
+
 {% block language_options %}
             <option>Language</option>
             <option value="en">English</option>
