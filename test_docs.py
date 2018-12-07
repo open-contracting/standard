@@ -139,10 +139,10 @@ def test_broken_links(browser, server, lang):
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
             href = link.get_attribute('href')
-            if '/validator/' in href or 'localhost' not in href:
+            if '/review/' in href or 'localhost' not in href:
                 continue
             r = requests.get(href)
-            assert r.status_code == 200
+            assert r.status_code == 200, 'expected 200, got {} for {}'.format(r.status_code, href)
         try:
             next = browser.find_element_by_link_text('Next')
             browser.execute_script("arguments[0].scrollIntoView();", next)
