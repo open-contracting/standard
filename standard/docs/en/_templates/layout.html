@@ -1,8 +1,24 @@
 {% set css_files = css_files + ["_static/renderjson.css", "_static/extensions.css", "_static/media.css"] %}
-{% set script_files = script_files + ["_static/renderjson.js", "_static/extensions.js"] %}
-{% set script_files = script_files + ["_static/json-example-format.js"] %}
-
+{% set script_files = script_files + ["_static/renderjson.js", "_static/extensions.js", "_static/json-example-format.js"] %}
 {% extends "!layout.html" %}
+
+{% block mobile_nav %}
+<i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+<a href="{{ pathto(master_doc) }}">{% trans %} Open Contracting {% endtrans %} {% trans %} Data Standard {% endtrans %} <small>v{{ version }}</small></a>
+{% endblock %}
+
+{% block sidebartitle %}
+<a title="v{{release}}" class="oc-logo" href="{{ pathto(master_doc) }}">
+  <svg>
+    <use xlink:href="#ocp-logo-only" />
+  </svg>
+  <div class="oc-heading">
+    <h2> {% trans %} Open Contracting {% endtrans %}</h2>
+    <h2> {% trans %} Data Standard {% endtrans %}</h2>
+  </div>
+  <span>v{{version}}</span>
+</a>
+{% endblock %}
 
 {% block extra_links %}
 <ul class="oc-extra-nav">
@@ -15,4 +31,8 @@
             <option value="en">English</option>
             <option value="es">Español</option>
             <option value="fr">Français</option>
+{% endblock %}
+
+{% block version_options %}
+<!--#include virtual="/includes/version-options.html" -->
 {% endblock %}

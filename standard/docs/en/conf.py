@@ -62,9 +62,9 @@ source_parsers = {
 master_doc = 'index'
 
 # General information about the project.
-project = 'OCDS'
-copyright = ''
-author = 'OCDS'
+project = 'Open Contracting Data Standard'
+copyright = 'Open Contracting Partnership'
+author = 'Open Contracting Partnership'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -117,6 +117,18 @@ html_static_path = ['_static']
 
 # -- Local configuration --------------------------------------------------
 
+repository_url = 'https://github.com/open-contracting/standard'
+
+html_theme_options = {
+    'display_version': True,
+    'root_url': '',
+    'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
+    'copyright': copyright,
+    'license_name': 'Apache License 2.0',
+    'license_url': '{}/blob/HEAD/LICENSE'.format(repository_url),
+    'repository_url': repository_url,
+}
+
 # The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
 locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 
@@ -137,12 +149,6 @@ extension_versions = OrderedDict([
     ('participation_fee', default_extension_version),
     ('process_title', default_extension_version),
 ])
-
-# NOTE: The following two options may no longer be relevant.
-# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-html_show_sphinx = False
-# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = False
 
 
 def setup(app):
