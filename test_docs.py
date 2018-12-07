@@ -142,7 +142,7 @@ def test_broken_links(browser, server, lang):
             if '/review/' in href or 'localhost' not in href:
                 continue
             r = requests.get(href)
-            assert r.status_code == 200, href
+            assert r.status_code == 200, 'expected 200, got {} for {}'.format(r.status_code, href)
         try:
             next = browser.find_element_by_link_text('Next')
             browser.execute_script("arguments[0].scrollIntoView();", next)
