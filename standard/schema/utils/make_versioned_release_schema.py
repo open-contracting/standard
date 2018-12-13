@@ -110,7 +110,7 @@ def get_definition_ref(item):
 
 
 def add_versioned(schema, pointer=''):
-    for key, value in list(schema['properties'].items()):
+    for key, value in schema['properties'].items():
         new_pointer = '{}/{}'.format(pointer, key)
 
         wholeListMerge = value.pop('wholeListMerge', None)
