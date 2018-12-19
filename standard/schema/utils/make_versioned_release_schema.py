@@ -96,6 +96,13 @@ keywords_to_remove = (
 )
 
 
+def coerce_to_list(data, key):
+    item = data.get(key, [])
+    if isinstance(item, str):
+        return [item]
+    return item
+
+
 def get_definition_ref(item):
     for definition, keywords in common_versioned_definitions.items():
         # If the item matches the definition.
@@ -112,13 +119,10 @@ def get_definition_ref(item):
 def add_versioned(schema, pointer=''):
     for key, value in schema['properties'].items():
         new_pointer = '{}/{}'.format(pointer, key)
+        prop_type = coerce_to_list(value, 'type')
 
         wholeListMerge = value.pop('wholeListMerge', None)
         versionId = value.pop('versionId', None)
-
-        prop_type = value.get('type')
-        if isinstance(prop_type, str):
-            prop_type = [prop_type]
 
         if '$ref' not in value and prop_type not in recognized_types:
             warnings.warn('{} has unrecognized type {}'.format(new_pointer, prop_type))
@@ -144,9 +148,7 @@ def add_versioned(schema, pointer=''):
             new_value = copy.deepcopy(value)
 
             if prop_type == ['array']:
-                items_type = value['items'].get('type', [])
-                if isinstance(items_type, str):
-                    items_type = [items_type]
+                items_type = coerce_to_list(value['items'], 'type')
 
                 # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
                 if wholeListMerge:
