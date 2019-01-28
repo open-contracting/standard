@@ -9,7 +9,12 @@
 
 {% block language_options %}
             <option>Language</option>
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
+            <optgroup label="Supported translations">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </optgroup>
+            <optgroup label="Community translations">
+                <option value="it">Italiano</option>
+            </optgroup>
 {% endblock %}

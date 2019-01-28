@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Alessio Dragoni <ad@sciamlab.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-22 20:01-0400\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Merging"
+msgstr "Unione"
+
+#: ../../standard/docs/en/schema/merging.md:3
+msgid ""
+"In OCDS, merging involves combining individual "
+"[releases](../getting_started/releases_and_records.md) of data during a "
+"contracting process into a "
+"[record](../getting_started/releases_and_records.md) which provides an "
+"overview of the current state of that process. Including a versioned release"
+" as part of the merged record provides structured information on the history"
+" of the process: showing when updates were made, or values were changed."
+msgstr ""
+"In OCDS, l'unione comporta la combinazione dei singoli "
+"[rilasci](../getting_started/releases_and_records.md) di dati durante un "
+"processo di appalto in un "
+"[descrittore](../getting_started/releases_and_records.md) in modo da fornire"
+" una panoramica dello stato attuale di quel processo. Includere un rilascio "
+"con tutte le versioni all'interno del descrittore fornisce le informazioni "
+"strutturate sulla cronologia del processo e mostra quando sono stati fatti "
+"gli aggiornamenti, o quando  i vari valori sono stati modificati."
+
+#: ../../standard/docs/en/schema/merging.md:9
+msgid ""
+"A publisher provides a tender release on 1st January, with a planned "
+"contract value of $1000."
+msgstr ""
+"Un editore fornisce un rilascio dell'offerta il 1 ° gennaio, con un valore "
+"contrattuale pianificato di $1000."
+
+#: ../../standard/docs/en/schema/merging.md:11
+msgid ""
+"On 5th February, the publisher provides an amended tender release updating "
+"the planned contract value to $2000."
+msgstr ""
+"Il 5 febbraio, l'editore fornisce una versione modificata della gara che "
+"aggiorna il valore del contratto pianificato a $2000."
+
+#: ../../standard/docs/en/schema/merging.md:13
+msgid "After assessing bids, it is decided to award the contract in two lots."
+msgstr ""
+"Dopo aver valutato le offerte, si decide di aggiudicare l'appalto in due "
+"lotti."
+
+#: ../../standard/docs/en/schema/merging.md:15
+msgid ""
+"On 1st March, the publisher provides an award release, announcing Company A "
+"has been awarded a contract for $750."
+msgstr ""
+"Il 1° di marzo, l'editore pubblica notizia di aggiudicazione, annunciando "
+"che la Società A ha ottenuto un contratto di $750."
+
+#: ../../standard/docs/en/schema/merging.md:17
+msgid ""
+"On 3rd March, the publisher provides an separate award release, announcing "
+"that company B has been awarded a contract for $750"
+msgstr ""
+"Il 3 di marzo, l'editore fornisce un separato avviso di aggiudicazione, "
+"annunciando che la società B ha ottenuto un contratto per $750"
+
+#: ../../standard/docs/en/schema/merging.md:19
+msgid ""
+"These independent releases each provide real-time information about what is "
+"happening in the contracting process. The record will combine them together."
+" Using the same schema and structure as the releases, the main body of the "
+"record will contain a tender with contract value of $1500, and details of "
+"both awards."
+msgstr ""
+"Queste versioni indipendenti forniscono ciascuna informazioni in tempo reale"
+" su ciò che sta accadendo nel processo di appalto. Il descrittore li "
+"combinerà insieme. Utilizzando lo stesso schema e la stessa struttura delle "
+"versioni, il corpo principale del descrittore conterrà un'offerta con valore"
+" contrattuale di $ 1500 e dettagli di entrambe le aggiudicazioni."
+
+#: ../../standard/docs/en/schema/merging.md:21
+msgid ""
+"If the record is complete with versioning information, then the versioning "
+"section will reveal that the planned contract value changed from $1000 to "
+"$1500 on 31st January."
+msgstr ""
+"Se il descrittore è completo delle informazioni sulla versione, la sezione "
+"sul controllo delle versioni rivelerà che il valore del contratto "
+"pianificato è cambiato da $1000 a $1500 il 31 gennaio."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Merging rules"
+msgstr "Regole di unione"
+
+#: ../../standard/docs/en/schema/merging.md:81
+msgid ""
+"Order all the releases that share an `ocid` by their release `date`. "
+"Starting from the oldest release (old), compare it with the next oldest "
+"release (new), and apply the following rules."
+msgstr ""
+"Ordina tutte le versioni che condividono un `ocid` con la propria `data` di "
+"rilascio. A partire dalla prima versione (precedente), confrontandola con la"
+" versione successiva (nuova) e applicando le seguenti regole."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Objects"
+msgstr "Oggetti"
+
+#: ../../standard/docs/en/schema/merging.md:85
+msgid "In the compiled record, merge **new** into **old** by:"
+msgstr "Nel descrittore compilato, si uniscono il **nuovo** nel **vecchio**:"
+
+#: ../../standard/docs/en/schema/merging.md:87
+msgid ""
+"Overwriting all key that exist in both **old** and **new** with the values "
+"from **new**"
+msgstr ""
+"Sovrascrivere tutte le chiavi esistenti sia nel **vecchio** che nel "
+"**nuovo** con i valori del **nuovo**"
+
+#: ../../standard/docs/en/schema/merging.md:88
+msgid "Add any key value pairs that exist in **new**, but not in **old**"
+msgstr ""
+"Aggiungi eventuali coppie di valori chiave esistenti nel **nuovo**, ma non "
+"nel **vecchio**"
+
+#: ../../standard/docs/en/schema/merging.md:89
+msgid ""
+"Remove any key that have their value explicitly set to `null` in **new**"
+msgstr ""
+"Rimuovi qualsiasi chiave con valore esplicitamente impostato su `null` nel "
+"**nuovo**"
+
+#: ../../standard/docs/en/schema/merging.md:90
+msgid "Retain any keys from **old** that are not mentioned in **new**"
+msgstr ""
+"Conserva tutte le chiavi dal **vecchio** che non sono menzionate nel "
+"**nuovo**"
+
+#: ../../standard/docs/en/schema/merging.md:92
+msgid ""
+"If the value of key value pair is a list of strings, the entire list should "
+"be treated as a single value. When the list contains objects, the list merge"
+" rules below should be used."
+msgstr ""
+"Se il valore della coppia chiave-valore è un elenco di stringhe, l'intero "
+"elenco deve essere considerato come un valore singolo. Quando l'elenco "
+"contiene oggetti, per essere unito è necessario utilizzare le seguenti "
+"regole."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Lists"
+msgstr "Elenchi"
+
+#: ../../standard/docs/en/schema/merging.md:96
+msgid ""
+"There are two merge patterns for lists of objects. Identifier merge, and "
+"whole list merge."
+msgstr ""
+"Esistono due modelli di unione per gli elenchi di oggetti. L'unione degli "
+"identificatori e l'unione dell'intera lista."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Identifier merge"
+msgstr "Unione degli identificatori"
+
+#: ../../standard/docs/en/schema/merging.md:100
+msgid "When a list contains objects with their own `id` field, then:"
+msgstr "Quando una lista contiene oggetti con il proprio campo `id`, allora:"
+
+#: ../../standard/docs/en/schema/merging.md:102
+msgid ""
+"Check for an object in **old** with the same `id` as an object in **new**, "
+"and, if so, follow the object merge rules as above"
+msgstr ""
+"controlla se un oggetto in **vecchio** ha lo stesso `id` di un oggetto in "
+"**nuovo**, e in tal caso, segui le regole di unione degli oggetti come sopra"
+
+#: ../../standard/docs/en/schema/merging.md:103
+msgid ""
+"If there is no object in **new** with the same `id` as an object in **old**,"
+" keep the object from **old** in the list"
+msgstr ""
+"Se non ci sono oggetti sul **nuovo** con lo stesso `id` di un oggetto in "
+"**vecchio**, mantieni l'oggetto **vecchio** nell'elenco"
+
+#: ../../standard/docs/en/schema/merging.md:104
+msgid ""
+"If there is an object in **new** with an `id` not found in **old** then add "
+"the object to the list"
+msgstr ""
+"Se c'è un oggetto sul **nuovo** con un `id` non trovato sul **vecchio**, "
+"aggiungi tale oggetto alla lista"
+
+#: ../../standard/docs/en/schema/merging.md:106
+msgid ""
+"Note: to remove information from an old list entry its values must be "
+"explicitly set to null."
+msgstr ""
+"Nota: per rimuovere le informazioni da una vecchia voce di lista i suoi "
+"valori devono essere esplicitamente impostati su null."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Whole list merge"
+msgstr "Unire il contenuto di tutto l'elenco"
+
+#: ../../standard/docs/en/schema/merging.md:110
+msgid ""
+"Where the objects contain no top level `id` values, or the schema specifies "
+"the `\"wholeListMerge\": true` for the array in question, then merging "
+"should take place by treating the entire list of objects as a single value."
+msgstr ""
+"Quando gli oggetti non contengono valori per l'`id` di primo livello, o lo "
+"schema specificato per l'elenco in questione è `\"wholeListMerge\": true` , "
+"allora l'unione dovrebbe avvenire trattando l'intero elenco di oggetti come "
+"un singolo valore."
+
+#: ../../standard/docs/en/schema/merging.md:112
+msgid ""
+"I.e. if the list exists in **new**, the entire list in **new** will "
+"overwrite the list in **old**."
+msgstr ""
+"Cioè se l'elenco esiste in **nuovo**, l'intero **nuovo** elenco "
+"sovrascriverà il **vecchio** elenco."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Omit when merged"
+msgstr "Ometti quando uniti"
+
+#: ../../standard/docs/en/schema/merging.md:116
+msgid ""
+"A few properties in the schema are marked with `\"omitWhenMerged\": true`. "
+"These properties should be dropped from the merged record - as they only "
+"make sense in the context of a single release."
+msgstr ""
+"Alcune proprietà nello schema sono contrassegnate con "
+"`\"omitWhenMerged\":true`. Queste proprietà dovrebbero essere eliminate dal "
+"descrittore una volta unito, poiché hanno senso solo nel contesto di una "
+"singola versione."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Reference implementation"
+msgstr "Implementazione di riferimento"
+
+#: ../../standard/docs/en/schema/merging.md:120
+msgid ""
+"A reference implementation of the merge routine in python [is available on "
+"GitHub](https://github.com/open-contracting/ocds-merge)."
+msgstr ""
+"Un'implementazione di riferimento della routine di unione in python [è "
+"disponibile su GitHub](https://github.com/open-contracting/ocds-merge)."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Versioned data"
+msgstr "Dati con versione"
+
+#: ../../standard/docs/en/schema/merging.md:125
+msgid ""
+"There are some situations in which it is important to be able to see how "
+"data about a contracting process has changed over time. For example, to "
+"identify how contract values have altered, or milestones moved through "
+"stages of implementation."
+msgstr ""
+"Ci sono alcune situazioni in cui è importante essere in grado di vedere come"
+" i dati durante un processo di contrattazione sono cambiati nel tempo. Ad "
+"esempio, per identificare come i valori del contratto sono stati modificati "
+"o quali fasi intermedie sono state attraversate durante la fase di "
+"attuazione."
+
+#: ../../standard/docs/en/schema/merging.md:127
+msgid ""
+"The [versioned release validation schema](../../../../versioned-release-"
+"validation-schema.json) provides a model for representing this data."
+msgstr ""
+"Lo [schema di convalida del rilascio versionato](../../../../versioned-"
+"release-validation-schema.json) fornisce un modello per la rappresentazione "
+"di questi dati."
+
+#: ../../standard/docs/en/schema/merging.md:129
+msgid ""
+"In a versioned release, instead of over-writing past values when combining "
+"multiple releases, each field (with the exception of the `id` property of "
+"objects within an array) becomes an array of objects, indicating the:"
+msgstr ""
+"In un rilascio versionato, quando si combinano più versioni,  invece di "
+"sovrascrivere i valori assunti nelle versioni precedenti  ogni campo (con "
+"l'eccezione della proprietà `id` degli oggetti all'interno di un elenco) "
+"diventa una lista di oggetti, che indicano:"
+
+#: ../../standard/docs/en/schema/merging.md:131
+msgid ""
+"The date, id and tag of the releases where a field-value pair was first "
+"encountered;"
+msgstr ""
+"La data, l'id e l'etichetta delle versioni in cui è stata rilevata per la "
+"prima volta una coppia valore-campo;"
+
+#: ../../standard/docs/en/schema/merging.md:132
+msgid "The value of the field-value pair at that point;"
+msgstr "Il valore della coppia campo-valore in quel punto;"
+
+#: ../../standard/docs/en/schema/merging.md:134
+msgid ""
+"As a result, the history of any field can be easily read from the data "
+"structure."
+msgstr ""
+"Di conseguenza, la cronologia di qualsiasi campo può essere facilmente letta"
+" dalla struttura dei dati."
+
+#: ../../standard/docs/en/schema/merging.md:136
+msgid ""
+"The property `\"versionId\":true` is used to explicitly declare the cases "
+"where an `id` field **should** be versioned (i.e. within an object that is "
+"not within an array)."
+msgstr ""
+"La proprietà `\"versionId\":true` è usata per dichiarare esplicitamente i "
+"casi in cui un campo` id` **dovrebbe** essere versionato (cioè all'interno "
+"di un oggetto che non è all'interno di un array)."
+
+#: ../../standard/docs/en/schema/merging.md:0
+msgid "Example"
+msgstr "Esempio"
