@@ -18,8 +18,8 @@ fi
 # ssh -i id_rsa ocds-docs@dev3.default.opendataservices.uk0.bigv.io
 
 echo "Copy the built files to the remote server..."
-# The arguments to mirror are -R for recursive and -e to delete old files
-$LFTP -c "set sftp:connect-program \"ssh -i id_rsa\"; connect sftp://ocds-docs:xxx@dev3.default.opendataservices.uk0.bigv.io; mirror -eR build web/$TRAVIS_BRANCH"
+# See http://lftp.yar.ru/lftp-man.html
+$LFTP -c "set sftp:connect-program \"ssh -i id_rsa\"; connect sftp://ocds-docs:xxx@dev3.default.opendataservices.uk0.bigv.io; mirror -eRv build web/$TRAVIS_BRANCH"
 
 echo "Update the search index..."
 curl "www.standard-search.default.opendataservices.uk0.bigv.io/v1/index_ocds?secret=${SEARCH_SECRET}&version=${TRAVIS_BRANCH}"
