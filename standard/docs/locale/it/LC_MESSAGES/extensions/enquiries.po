@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Alessio Dragoni <ad@sciamlab.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-22 20:01-0400\n"
+"PO-Revision-Date: 2017-04-24 10:46+0000\n"
+"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "Enquiries"
+msgstr "Domande"
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "Metadata"
+msgstr "Metadati"
+
+#: ../../standard/docs/en/extensions/enquiries.md:5
+msgid ""
+"To use this extension, include its URL in the `extension` array of your "
+"release or record package."
+msgstr ""
+"Per utilizzare questa estensione, includi l'URL nella matrice `extension` "
+"della tua pacchetto di rilascio o del descrittore."
+
+#: ../../standard/docs/en/extensions/enquiries.md:14
+msgid ""
+"This extension is maintained at [https://github.com/open-"
+"contracting/ocds_enquiry_extension](https://github.com/open-"
+"contracting/ocds_enquiry_extension)"
+msgstr ""
+"Questa estensione è mantenuta su [https://github.com/open-"
+"contracting/ocds_enquiry_extension](https://github.com/open-"
+"contracting/ocds_enquiry_extension)"
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "Documentation"
+msgstr "Documentazione"
+
+#: ../../standard/docs/en/extensions/enquiries.md:18
+msgid ""
+"The enquiries extension can be used to record questions raised during a "
+"contracting process, and the answers provided."
+msgstr ""
+"L'estensione per le richieste di informazioni può essere utilizzata per "
+"registrare le domande sollevate durante una procedura di appalto e le "
+"risposte fornite."
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "Structure"
+msgstr "Struttura"
+
+#: ../../standard/docs/en/extensions/enquiries.md:22
+msgid ""
+"The extension adds an `enquiries` array to tender, consisting of one or more"
+" enquiry objects, each with fields for a question, and an answer."
+msgstr ""
+"L'estensione aggiunge una serie di 'enquiries` alla gara, costituite da uno "
+"o più oggetti di indagine, ciascuno con campi per una domanda e una "
+"risposta."
+
+#: ../../standard/docs/en/extensions/enquiries.md:24
+msgid "Example:"
+msgstr "Esempio:"
+
+#: ../../standard/docs/en/extensions/enquiries.md:47
+msgid ""
+"Supporting documents with clarifications, or a full document containing "
+"answers to questions can be included in the `tender/documents` array with a "
+"`documentType` of 'clarifications'."
+msgstr ""
+"I documenti giustificativi con chiarimenti o un documento completo "
+"contenente le risposte alle domande possono essere inclusi nella matrice "
+"`gara/documenti` con un `documentType` di 'clarifications'."
+
+#: ../../standard/docs/en/extensions/enquiries.md:49
+msgid ""
+"Where the answers to a question are only available in attached documents, an"
+" `answer` value such as 'Consult section N of \"%document name%\" in the "
+"documents section' may be entered to allow analysts of the data to identify "
+"that an answer to this question has been provided."
+msgstr ""
+"Se le risposte a una domanda sono disponibili solo in documenti allegati, è "
+"possibile inserire un valore `answer` come 'Consultare la sezione N di "
+"\"%dnome di documento%\" nella sezione documenti' per consentire agli "
+"analisti dei dati di identificare se una risposta a questa domanda è stata "
+"fornita."
+
+#: ../../standard/docs/en/extensions/enquiries.md:51
+msgid ""
+"When a system allow a discussion format, where each answer can be followed "
+"by a further clarification question, the `threadID` property can be used to "
+"link together multiple entries in the `enquiries` array."
+msgstr ""
+"Quando un sistema consente un formato per la discussione, in cui ogni "
+"risposta può essere seguita da un'ulteriore domanda di chiarimento, la "
+"proprietà `threadID` può essere utilizzata per collegare insieme più voci "
+"nella matrice  `enquiries`."
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "Usage guidance"
+msgstr "Guida all'uso"
+
+#: ../../standard/docs/en/extensions/enquiries.md:55
+msgid ""
+"Implementations may vary on the amount of enquiry information they provide, "
+"and when it is provided."
+msgstr ""
+"Le implementazioni possono variare in base alla quantità di informazioni "
+"richieste che forniscono e quando vengono fornite."
+
+#: ../../standard/docs/en/extensions/enquiries.md:57
+msgid ""
+"Some publishers may omit the identity of the question author to protect "
+"confidentiality of enquirers, or may anonymize this information (e.g. simply"
+" putting the author name as 'Organization 1' or 'Organization 2' so that it "
+"is possible to see questions from the same organization, but not to know the"
+" identity of that organization.)"
+msgstr ""
+"Alcune organizzazioni che pubblicano dati possono omettere l'identità "
+"dell'autore della domanda per proteggere la riservatezza dei richiedenti o "
+"possono rendere anonime tali informazioni (ad esempio semplicemente "
+"inserendo il nome dell'autore come \"Organizzazione 1\" o \"Organizzazione "
+"2\" in modo che sia possibile visualizzare le domande della stessa "
+"organizzazione , ma non conoscere l'identità di quell'organizzazione.)"
+
+#: ../../standard/docs/en/extensions/enquiries.md:59
+msgid ""
+"The `relatedItem` and `relatedLot` properties are available for use when "
+"questions can be asked in relation to a specific lot or item."
+msgstr ""
+"Le proprietà `relatedItem` e `relatedLot` sono disponibili per l'uso quando "
+"è possibile porre domande in relazione a un lotto o elemento specifico."
+
+#: ../../standard/docs/en/extensions/enquiries.md:61
+msgid "Where possible, the recommended approach is to:"
+msgstr "Ove possibile, l'approccio raccomandato è:"
+
+#: ../../standard/docs/en/extensions/enquiries.md:63
+msgid ""
+"Make release with a `tenderUpdate` release tag for every new question or "
+"batch of questions received, providing an enquiries array with each of the "
+"questions in;"
+msgstr ""
+"Rilasciare un tag di versione `tenderUpdate` per ogni nuova domanda o gruppo"
+" di domande ricevute, fornendo un blocco di domande contenente tutte le "
+"domande ricevute;"
+
+#: ../../standard/docs/en/extensions/enquiries.md:64
+msgid ""
+"Make a release with a `tenderUpdate` release tag when the answers to the "
+"questions are provided, updating the earlier enquiries array so each entry "
+"now contains both a question and an answer;"
+msgstr ""
+"Rilasciare un tag di rilascio `tenderUpdate` quando vengono fornite le "
+"risposte alle domande, aggiornando l'array di richieste precedenti in modo "
+"che ogni voce contenga sia una domanda sia una risposta;"
+
+#: ../../standard/docs/en/extensions/enquiries.md:66
+msgid ""
+"This approach will enable third-party applications to watch for releases "
+"that provide answers to questions, and will support procurement monitors in "
+"reviewing the way in which questions are being answered."
+msgstr ""
+"Questo approccio consentirà alle applicazioni di terze parti di tenere sotto"
+" controllo le versioni che forniscono risposte alle domande e supporterà i "
+"responsabili degli appalti nel rivedere il modo in cui le domande ricevono "
+"risposta."
+
+#: ../../standard/docs/en/extensions/enquiries.md:68
+msgid ""
+"We recommend that publishers provide question answers as plain text, or with"
+" minimal HTML markup (paragraphs and line-breaks), and that consuming "
+"applications parse text appropriately to format it for readability (e.g. "
+"replace line-breaks with paragraph breaks in HTML)."
+msgstr ""
+"Raccomandiamo alle organizzazioni che pubblicano dati di fornire risposte a "
+"domande come testo semplice, o con markup HTML minimo (paragrafi e "
+"interruzioni di riga) e che le applicazioni che li consumano, analizzino il "
+"testo in modo appropriato per formattarlo e renderlo leggibile (ad esempio, "
+"sostituire interruzioni di riga con interruzioni di paragrafo in HTML)."
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "Reference"
+msgstr "Riferimento"
+
+#: ../../Extension enquiries:1
+msgid "Field"
+msgstr "Campo"
+
+#: ../../Extension enquiries:1
+msgid "Definition"
+msgstr "Definizione"
+
+#: ../../Extension enquiries:1
+msgid "Description"
+msgstr "Descrizione"
+
+#: ../../Extension enquiries:1
+msgid "Type"
+msgstr "Tipo"
+
+#: ../../Extension enquiries:1 ../../Extension enquiries:1 ../../Extension
+#: enquiries:1 ../../Extension enquiries:1 ../../Extension enquiries:1
+#: ../../Extension enquiries:1 ../../Extension enquiries:1 ../../Extension
+#: enquiries:1 ../../Extension enquiries:1 ../../Extension enquiries:1
+msgid "Enquiry"
+msgstr "Domanda"
+
+#: ../../Extension enquiries:1
+msgid "A unique identifier for the enquiry."
+msgstr "Un identificativo univoco per la richiesta."
+
+#: ../../Extension enquiries:1
+msgid "The date the enquiry was received or processed."
+msgstr "La data in cui la richiesta è stata ricevuta o elaborata."
+
+#: ../../Extension enquiries:1
+msgid ""
+"The identifier and name of the party asking this question. Questioners may "
+"be listed in the parties array with a role of 'enquirer'. Procurement "
+"policies vary on whether or not the identity of those asking questions "
+"should be disclosed, or at which stage this information may be disclosed. "
+"When the identity of the questioner cannot be disclosed leave the author "
+"section blank. Display systems should interpret this as an anonymous "
+"question."
+msgstr ""
+"L'identificativo e il nome del soggetto che fa questa domanda. Gli "
+"interlocutori possono essere elencati nell'elenco degli interessati  con un "
+"ruolo di \"richiedente\". Le politiche di approvvigionamento variano a "
+"prescindere dal fatto che l'identità di coloro che fanno domande debba "
+"essere divulgata o in quale fase questa informazione possa essere divulgata."
+" Quando l'identità dell'interrogante non può essere rivelata, lascia vuota "
+"la sezione autore. I sistemi di visualizzazione dovrebbero interpretarlo "
+"come una domanda anonima."
+
+#: ../../Extension enquiries:1
+msgid "The subject line of the question."
+msgstr "L'oggetto della domanda."
+
+#: ../../Extension enquiries:1
+msgid "The body of the question."
+msgstr "Il corpo della domanda."
+
+#: ../../Extension enquiries:1
+msgid "The answer to this question, when available."
+msgstr "La risposta a questa domanda, se disponibile."
+
+#: ../../Extension enquiries:1
+msgid "The date the answer to the question was provided."
+msgstr "La data in cui è stata fornita la risposta alla domanda."
+
+#: ../../Extension enquiries:1
+msgid ""
+"If this question relates to a specific line-item, this field contains the "
+"line-item identifier."
+msgstr ""
+"Se questa domanda si riferisce a uno specifico elemento o lotto, allora "
+"questo campo contiene l'identificativo di tale elemento"
+
+#: ../../Extension enquiries:1
+msgid ""
+"Where lots are used, if this question relates to a specific lot, this field "
+"contains the lot identifier."
+msgstr ""
+"Dove vengono utilizzati i lotti, se questa domanda si riferisce a un lotto "
+"specifico, questo campo contiene l'identificatore del lotto."
+
+#: ../../Extension enquiries:1
+msgid ""
+"If this question and answer forms part of a discussion thread (e.g. the "
+"question is a follow up to a previous answer) an optional thread identifier "
+"can be used to associate together multiple enquiries."
+msgstr ""
+"Se questa domanda e risposta fa parte di un thread di discussione (ad "
+"esempio la domanda è un seguito di una risposta precedente) è possibile "
+"utilizzare un identificatore di thread facoltativo per associare più "
+"richieste."
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "Issues"
+msgstr "Problemi (issues)"
+
+#: ../../standard/docs/en/extensions/enquiries.md:80
+msgid ""
+"Report issues for this extension in the [ocds-extensions "
+"repository](https://github.com/open-contracting/ocds-extensions/issues), "
+"putting the extension's name in the issue's title."
+msgstr ""
+"Segnala i problemi per questa estensione nel [repository ocds-"
+"extensions](https://github.com/open-contracting/ocds-extensions/issues), "
+"inserendo il nome dell'estensione nel titolo del problema."
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "Changelog"
+msgstr "Storico delle modifiche"
+
+#: ../../standard/docs/en/extensions/enquiries.md:0
+msgid "v1.1.3"
+msgstr "v1.1.3"
+
+#: ../../standard/docs/en/extensions/enquiries.md:86
+msgid ""
+"Use `OrganizationReference` instead of `Organization` for `Enquiry.author`"
+msgstr ""
+"Utilizzare `OrganizationReference` invece di` Organization` per "
+"`Enquiry.author`"
+
+#: ../../standard/docs/en/extensions/enquiries.md:87
+msgid "Correct name of +partyRole.csv codelist (was +partyRoles.csv)"
+msgstr ""
+"Il nome corretto dell'elenco di valori del vocabolario controllato "
+"+partyRole.csv (era + partyRoles.csv)"
+
+#: ../../standard/docs/en/extensions/enquiries.md:88
+msgid "Allow `Enquiry.date` to be null"
+msgstr "Permetti che `Enquiry.date` sia nullo"
+
+#: ../../standard/docs/en/extensions/enquiries.md:89
+msgid "List codelists in extension.json"
+msgstr ""
+"Elenca i valori ammissibili del vocabolari controllati in extension.json"
+
+#: ../../standard/docs/en/extensions/enquiries.md:90
+msgid "Use Apache 2.0 License"
+msgstr "Utilizzare la licenza di Apache 2.0"
+
+#: ../../standard/docs/en/extensions/enquiries.md:91
+msgid "Add tests and tidy code"
+msgstr "Aggiungi test e codice ordinato"

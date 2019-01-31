@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Alessio Dragoni <ad@sciamlab.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-22 20:01-0400\n"
+"PO-Revision-Date: 2017-04-24 10:47+0000\n"
+"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Lots"
+msgstr "Lotti"
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Metadata"
+msgstr "Metadati"
+
+#: ../../standard/docs/en/extensions/lots.md:5
+msgid ""
+"To use this extension, include its URL in the `extension` array of your "
+"release or record package."
+msgstr ""
+"Per utilizzare questa estensione, includi l'URL nella matrice `extension` "
+"della tua pacchetto di rilascio o del descrittore."
+
+#: ../../standard/docs/en/extensions/lots.md:14
+msgid ""
+"This extension is maintained at [https://github.com/open-"
+"contracting/ocds_lots_extension](https://github.com/open-"
+"contracting/ocds_lots_extension)"
+msgstr ""
+"Questa estensione è mantenuta su [https://github.com/open-"
+"contracting/ocds_lots_extension](https://github.com/open-"
+"contracting/ocds_lots_extension)"
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Documentation"
+msgstr "Documentazione"
+
+#: ../../standard/docs/en/extensions/lots.md:18
+msgid ""
+"When a single tender is broken down into parts that can be bid upon, and "
+"awarded, separately, this is modelled using the **lots extension**."
+msgstr ""
+"Quando una singola gara viene suddivisa in lotti per i quali possono essere "
+"fatte distinte offerte e aggiudicate separatamente, questa viene modellata "
+"utilizzando **l'estensione per i lotti**"
+
+#: ../../standard/docs/en/extensions/lots.md:20
+msgid ""
+"The lots extension maintains the overall structure of an OCDS release, with "
+"items, documents and milestones nested immediately within `tender`, `award` "
+"and `contract` items, but it introduces an array of Lots in the `tender` "
+"section, and the ability to cross-reference a specific `relatedLot` for each"
+" item, and an array of `relatedLots` for documents, milestones and awards."
+msgstr ""
+"L'estensione per i lotti mantiene la struttura generale di un rilascio di "
+"OCDS, con articoli, documenti e fasi annidati immediatamente all'interno "
+"degli oggetti `tender`,`award` e `contract`, ma introduce un array di lotti "
+"nella sezione `tender`, e la possibilità di collegarli a uno specifico "
+"`relatedLot` per ciascun elemento dell'array di` relatedLots` per i "
+"documenti, fasi e aggiudicazioni."
+
+#: ../../standard/docs/en/extensions/lots.md:22
+msgid ""
+"Optional `lotDetails` and `lotGroups` section allow more complex conditions "
+"around the award of lots to be expressed, such as the maximum value of a "
+"group of lots."
+msgstr ""
+"La sezione facoltativa `lotDetails` e` lotGroups` consente di esprimere "
+"condizioni più complesse intorno all'aggiudicazione dei lotti, come il "
+"valore massimo che un gruppo di lotti può avere."
+
+#: ../../standard/docs/en/extensions/lots.md:24
+msgid ""
+"This means that systems which are not 'lot aware' can still understand the "
+"overall value of contracting taking place, key events, and relationships "
+"between buyers and suppliers. At the same time, 'lot aware' systems can make"
+" use of the cross-referenced information to present a lot-centric view on "
+"the information to users, or to analyze contracting lot by lot."
+msgstr ""
+"Ciò significa che i sistemi che 'non sono in grado di gestire i lotti' "
+"possono ancora comprendere il valore complessivo della contrattazione, degli"
+" eventi chiave e delle relazioni tra acquirenti e fornitori. Allo stesso "
+"tempo, i sistemi 'che riescono ad elaborare i dati dei lotti' possono "
+"utilizzare le informazioni incrociate per presentare una visione molto "
+"approfondita sull'informazione di dettaglio dei singoli lotti delle gare o "
+"per analizzare i lotti di un contratto."
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Related Lot"
+msgstr "Lotto correlato"
+
+#: ../../standard/docs/en/extensions/lots.md:28
+msgid "The `relatedLot` (singular) property is available for:"
+msgstr "La proprietà `relatedLot` (singolo lotto) è disponibile per:"
+
+#: ../../standard/docs/en/extensions/lots.md:30
+msgid "items"
+msgstr "elementi"
+
+#: ../../standard/docs/en/extensions/lots.md:32
+msgid "An array of `relatedLots` (plural) can be provided for each of:"
+msgstr ""
+"Un array di `relatedLots` (più lotti) può essere fornito per ognuno di:"
+
+#: ../../standard/docs/en/extensions/lots.md:34
+msgid "documents"
+msgstr "documenti"
+
+#: ../../standard/docs/en/extensions/lots.md:35
+msgid "milestones"
+msgstr "fasi principali"
+
+#: ../../standard/docs/en/extensions/lots.md:36
+msgid "awards"
+msgstr "aggiudicazioni"
+
+#: ../../standard/docs/en/extensions/lots.md:38
+msgid "When lots are used, **all** items should have a `relatedLot` property."
+msgstr ""
+"Quando vengono utilizzati i lotti, **tutti gli elementi** devono avere una "
+"proprietà `relatedLot` per specificare a quale lotto si riferiscono"
+
+#: ../../standard/docs/en/extensions/lots.md:40
+msgid ""
+"Documents and milestones can optionally have a `relatedLots` property. Those"
+" without this property should be interpreted as applicable to the tender as "
+"a whole."
+msgstr ""
+"I documenti e le fasi principali possono opzionalmente avere una proprietà "
+"`relatedLots`. Quelli senza questa proprietà dovrebbero essere interpretati "
+"come applicabili alla gara nel suo insieme."
+
+#: ../../standard/docs/en/extensions/lots.md:42
+msgid ""
+"The items within an award should each have a `relatedLot` property, but "
+"publishers may choose to also reference all the lots an award relates to at "
+"the award level using `relatedLots`."
+msgstr ""
+"Gli elementi all'interno di una aggiudicazione dovrebbero avere ciascuno una"
+" proprietà `relatedLot`, ma gli editori possono scegliere di fare "
+"riferimento a tutti i lotti a cui si riferisce una aggiudicazione usando "
+"`relatedLots` (come array) e riferendolo a tutti i lotti rilevanti "
+"all'interno dell'aggiudicazione stessa."
+
+#: ../../standard/docs/en/extensions/lots.md:44
+msgid ""
+"Where the bid extension is also in use, each bid can also declare its "
+"related lots."
+msgstr ""
+"Quando viene utilizzata anche l'estensione dell'offerta, ciascuna offerta "
+"può dichiarare anche i relativi lotti."
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Worked example"
+msgstr "Esempio elaborato"
+
+#: ../../standard/docs/en/extensions/lots.md:48
+msgid ""
+"A tender is issued for consultancy in the development of a new public "
+"building. This might include items for:"
+msgstr ""
+"Viene rilasciata una gara d'appalto per la consulenza nello sviluppo di un "
+"nuovo edificio pubblico. Questo potrebbe includere articoli per:"
+
+#: ../../standard/docs/en/extensions/lots.md:50
+msgid "Architectural design"
+msgstr "Progettazione architettonica"
+
+#: ../../standard/docs/en/extensions/lots.md:51
+msgid "Architectural advisory services"
+msgstr "Servizi di consulenza architettonica"
+
+#: ../../standard/docs/en/extensions/lots.md:52
+msgid "Civil engineering consultancy"
+msgstr "Consulenza di ingegneria civile"
+
+#: ../../standard/docs/en/extensions/lots.md:53
+msgid "Structural engineering consultancy"
+msgstr "Consulenza di ingegneria strutturale"
+
+#: ../../standard/docs/en/extensions/lots.md:55
+msgid ""
+"Although part of the same tender, the buyer is willing to award these "
+"different items to different firms, and so divides the tender into three "
+"lots."
+msgstr ""
+"Anche se fa parte della stessa gara, l'acquirente è disposto a concedere "
+"questi diversi articoli a diverse ditte e divide così l'offerta in tre "
+"lotti."
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Schema"
+msgstr "Schema"
+
+#: ../../Extension lots:1
+msgid "Field"
+msgstr "Campo"
+
+#: ../../Extension lots:1
+msgid "Definition"
+msgstr "Definizione"
+
+#: ../../Extension lots:1
+msgid "Description"
+msgstr "Descrizione"
+
+#: ../../Extension lots:1
+msgid "Type"
+msgstr "Tipo"
+
+#: ../../Extension lots:1 ../../Extension lots:1 ../../Extension lots:1
+#: ../../Extension lots:1 ../../Extension lots:1
+msgid "Lot"
+msgstr "Lotto"
+
+#: ../../Extension lots:1
+msgid ""
+"A local identifier for this lot, such as a lot number. This is used in "
+"relatedLots references at the item, document and award level."
+msgstr ""
+"Un identificativo locale per questo lotto, ad esempio un numero di lotto. "
+"Questo è usato nei riferimenti relativi ai lotti a livello di articolo, "
+"documento e aggiudicazione."
+
+#: ../../Extension lots:1
+msgid "A title for this lot."
+msgstr "Un titolo per questo lotto."
+
+#: ../../Extension lots:1
+msgid "A description of this lot."
+msgstr "Una descrizione di questo lotto."
+
+#: ../../Extension lots:1
+msgid ""
+"The current status of the process related to this lot based on the "
+"`tenderStatus codelist <http://ocds.open-"
+"contracting.org/standard/r/1__0__0/en/schema/codelists#tender-status>`__"
+msgstr ""
+"Lo stato corrente del processo relativo a questo lotto in base al listener "
+"`tenderStatus <http://ocds.open-"
+"contracting.org/standard/r/1__0__0/en/schema/codelists#tender-status>` __"
+
+#: ../../Extension lots:1
+msgid "The maximum estimated value of this lot."
+msgstr "Il valore massimo stimato di questo lotto."
+
+#: ../../Extension lots:1 ../../Extension lots:1
+msgid "LotDetails"
+msgstr "LotDetails"
+
+#: ../../Extension lots:1
+msgid ""
+"The maximum number of lots that one supplier may bid for as part of this "
+"contracting process."
+msgstr ""
+"Il numero massimo di lotti per i quali un fornitore può fare un'offerta come"
+" parte di questa procedura di aggiudicazione."
+
+#: ../../Extension lots:1
+msgid ""
+"The maximum number of lots that may be awarded to one supplier as part of "
+"this contracting process."
+msgstr ""
+"Il numero massimo di lotti che possono essere aggiudicati a un fornitore "
+"nell'ambito di questa procedura di aggiudicazione."
+
+#: ../../Extension lots:1 ../../Extension lots:1 ../../Extension lots:1
+#: ../../Extension lots:1
+msgid "LotGroup"
+msgstr "LotGroup"
+
+#: ../../Extension lots:1
+msgid "A local identifier for this group of lots."
+msgstr "Un identificatore locale per questo gruppo di lotti."
+
+#: ../../Extension lots:1
+msgid ""
+"A list of the identifiers of the lots that form this group. Lots may appear "
+"in more than one group."
+msgstr ""
+"Un elenco di identificatori dei lotti che formano questo gruppo. I lotti "
+"possono apparire in più di un gruppo."
+
+#: ../../Extension lots:1
+msgid ""
+"The buyer reserves the right to combine the lots in this group when awarding"
+" a contract."
+msgstr ""
+"L'acquirente si riserva il diritto di unire i lotti di questo gruppo quando "
+"si aggiudica un contratto."
+
+#: ../../Extension lots:1
+msgid ""
+"The maximum estimated value of the lots in this group. This may be lower "
+"than the sum total of lot values"
+msgstr ""
+"Il valore massimo stimato dei lotti in questo gruppo. Questo potrebbe essere"
+" inferiore alla somma totale dei valori del lotto"
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Issues"
+msgstr "Problemi (issues)"
+
+#: ../../standard/docs/en/extensions/lots.md:198
+msgid ""
+"Report issues for this extension in the [ocds-extensions "
+"repository](https://github.com/open-contracting/ocds-extensions/issues), "
+"putting the extension's name in the issue's title."
+msgstr ""
+"Segnala i problemi per questa estensione nel [repository ocds-"
+"extensions](https://github.com/open-contracting/ocds-extensions/issues), "
+"inserendo il nome dell'estensione nel titolo del problema."
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "Changelog"
+msgstr "Storico delle modifiche"
+
+#: ../../standard/docs/en/extensions/lots.md:0
+msgid "v1.1.3"
+msgstr "v1.1.3"
+
+#: ../../standard/docs/en/extensions/lots.md:204
+msgid ""
+"Disallow `relatedLots` fields from having null in their arrays of strings"
+msgstr ""
+"Non consentire valori nulli nell'array di stringhe del campo `relatedLots`"
+
+#: ../../standard/docs/en/extensions/lots.md:205
+msgid "Add enum to `Lot.status`"
+msgstr "Aggiungi una enumerazione a `Lot.status`"
+
+#: ../../standard/docs/en/extensions/lots.md:206
+msgid "Allow `relatedLots` fields to be null"
+msgstr "Permetti ai valori del campo `relatedLots` di essere nulli"
+
+#: ../../standard/docs/en/extensions/lots.md:207
+msgid "Add title and description to `Tender.lotDetails`"
+msgstr "Aggiungi titolo e descrizione a `Tender.lotDetails`"
+
+#: ../../standard/docs/en/extensions/lots.md:208
+msgid "Use Apache 2.0 License"
+msgstr "Utilizzare la licenza di Apache 2.0"
+
+#: ../../standard/docs/en/extensions/lots.md:209
+msgid "Add tests and tidy code"
+msgstr "Aggiungi test e codice ordinato"

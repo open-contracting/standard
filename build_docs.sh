@@ -13,7 +13,7 @@ pybabel compile --use-fuzzy -d docs/locale -D codelists
 cd ..
 
 # Add translated JSON Schema files to the build directory.
-python standard/schema/utils/translate_schema.py en es fr
+python standard/schema/utils/translate_schema.py en es fr it
 
 cd standard
 
@@ -36,7 +36,7 @@ cp -r standard/assets build
 
 cd standard
 
-for lang in es fr; do
+for lang in es fr it; do
     echo "Building $lang..."
 
     # Translate the schema and codelist files for the language.

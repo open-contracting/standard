@@ -5,7 +5,7 @@ Increasing the transparency, efficiency and effectiveness of public contracting 
 OCDS sets out three levels for disclosure (basic, intermediate and advanced), alongside a 5* framework for the technical approach to data publication for publishers to self-assess themselves against. 
 
 
-![Levels](../../../../assets/levels_en.png)
+![Levels](../../../assets/levels_en.png)
 
 
 This supports step-by-step improvement of open contracting data and document disclosure on the web.
