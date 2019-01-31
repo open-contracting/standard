@@ -27,6 +27,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Documentation
 
 * [#772](https://github.com/open-contracting/standard/pull/772) Clarify the merge rules for compiled releases and versioned releases.
+* [#797](https://github.com/open-contracting/standard/pull/797) Fix examples of versioned releases.
 * [#783](https://github.com/open-contracting/standard/pull/783) Add missing email address for the standard governance working group.
 * [#783](https://github.com/open-contracting/standard/pull/783) List community extensions relating to party details.
 * Typos have been corrected [#692](https://github.com/open-contracting/standard/pull/692) [#713](https://github.com/open-contracting/standard/pull/713) [#719](https://github.com/open-contracting/standard/pull/719) [#726](https://github.com/open-contracting/standard/pull/726) [#732](https://github.com/open-contracting/standard/pull/732) [#752](https://github.com/open-contracting/standard/pull/752) [#756](https://github.com/open-contracting/standard/pull/756) [#795](https://github.com/open-contracting/standard/pull/795).
