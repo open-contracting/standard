@@ -11,7 +11,7 @@ addons:
 deploy:
   skip_cleanup: true
   provider: script
-  script: curl https://raw.githubusercontent.com/OpenDataServices/opendataservices-deploy/master/open-contracting-standard-deploy.sh | bash -
+  script: bash deploy.sh
   on:
     all_branches: true
 env:
