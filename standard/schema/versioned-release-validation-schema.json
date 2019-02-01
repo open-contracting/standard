@@ -42,7 +42,7 @@
       "uniqueItems": true
     },
     "buyer": {
-      "$ref": "#/definitions/OrganizationReference"
+      "$ref": "#/definitions/OrganizationReferenceVersionedId"
     },
     "planning": {
       "$ref": "#/definitions/Planning"
@@ -195,7 +195,7 @@
           }
         },
         "procuringEntity": {
-          "$ref": "#/definitions/OrganizationReference"
+          "$ref": "#/definitions/OrganizationReferenceVersionedId"
         },
         "items": {
           "type": "array",
@@ -1171,10 +1171,10 @@
           "$ref": "#/definitions/Value"
         },
         "payer": {
-          "$ref": "#/definitions/OrganizationReference"
+          "$ref": "#/definitions/OrganizationReferenceVersionedId"
         },
         "payee": {
-          "$ref": "#/definitions/OrganizationReference"
+          "$ref": "#/definitions/OrganizationReferenceVersionedId"
         },
         "uri": {
           "$ref": "#/definitions/StringNullUriVersioned"
@@ -2393,6 +2393,119 @@
           ]
         }
       }
+    },
+    "OrganizationReferenceVersionedId": {
+      "properties": {
+        "name": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "id": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "integer"
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "identifier": {
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+          },
+          "$ref": "#/definitions/Identifier"
+        },
+        "address": {
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+          },
+          "$ref": "#/definitions/Address"
+        },
+        "additionalIdentifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and additional identifiers for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+                },
+                "items": {
+                  "$ref": "#/definitions/IdentifierUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "contactPoint": {
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
+          },
+          "$ref": "#/definitions/ContactPoint"
+        }
+      },
+      "type": "object"
     },
     "ClassificationUnversioned": {
       "type": "object",

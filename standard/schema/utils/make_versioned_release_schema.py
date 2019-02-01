@@ -110,7 +110,7 @@ def _get_types(prop):
 
 
 def get_definition_ref(item):
-    for definition, keywords in common_versioned_definitions.items():
+    for name, keywords in common_versioned_definitions.items():
         # If the item matches the definition.
         if any(item.get(keyword) != value for keyword, value in keywords.items()):
             continue
@@ -118,36 +118,50 @@ def get_definition_ref(item):
         if any(keyword not in (*keywords, *keywords_to_remove) for keyword in item):
             continue
         return OrderedDict([
-            ('$ref', '#/definitions/' + definition),
+            ('$ref', '#/definitions/{}'.format(name)),
         ])
 
 
 def add_versioned(schema, unversioned_pointers, pointer=''):
     for key, value in schema['properties'].items():
         new_pointer = '{}/properties/{}'.format(pointer, key)
+        _add_versioned(schema, unversioned_pointers, new_pointer, key, value)
 
+    for key, value in schema.get('definitions', {}).items():
+        new_pointer = '{}/definitions/{}'.format(pointer, key)
+        add_versioned(value, unversioned_pointers, pointer=new_pointer)
+
+
+def _add_versioned(schema, unversioned_pointers, pointer, key, value):
         # Skip unversioned fields.
-        if new_pointer in unversioned_pointers:
-            continue
+        if pointer in unversioned_pointers:
+            return
 
         types = _get_types(value)
 
         # If a type is unrecognized, we might need to update this script.
         if '$ref' not in value and types not in recognized_types:
-            warnings.warn('{} has unrecognized type {}'.format(new_pointer, types))
+            warnings.warn('{} has unrecognized type {}'.format(pointer, types))
 
         # For example, if $ref is used.
         if not types:
-            continue
+            # Ignore the `amendment` field, which had no `id` field in OCDS 1.0.
+            if 'deprecated' not in value:
+                versioned_pointer = '{}/properties/id'.format(value['$ref'][1:])
+                # If the `id` field is on an object not in an array, it is versioned.
+                if versioned_pointer in unversioned_pointers:
+                    value['$ref'] = value['$ref'] + 'VersionedId'
+            return
 
         # Reference a common versioned definition if possible, to limit the size of the schema.
         ref = get_definition_ref(value)
         if ref:
             schema['properties'][key] = ref
 
-        # Iterate over object properties. If it has no properties, like `Organization/details`, version it as a whole.
+        # Iterate into objects with properties like `Item.unit`. Otherwise, version objects with no properties as a
+        # whole, like `Organization.details`.
         elif types == ['object'] and 'properties' in value:
-            add_versioned(value, unversioned_pointers, pointer=new_pointer)
+            add_versioned(value, unversioned_pointers, pointer=pointer)
 
         else:
             new_value = deepcopy(value)
@@ -164,22 +178,19 @@ def add_versioned(schema, unversioned_pointers, pointer=''):
                 # See http://standard.open-contracting.org/latest/en/schema/merging/#lists
                 elif '$ref' in value['items']:
                     # Leave `$ref` to the versioned definition.
-                    continue
-                # Exceptional case for deprecated `Amendment/changes`.
-                elif item_types == ['object'] and new_pointer == '/definitions/Amendment/properties/changes':
-                    continue
+                    return
+                # Exceptional case for deprecated `Amendment.changes`.
+                elif item_types == ['object'] and pointer == '/definitions/Amendment/properties/changes':
+                    return
                 # Warn in case new combinations are added to the release schema.
                 elif item_types != ['string']:
                     # Note: Versioning the properties of un-$ref'erenced objects in arrays isn't implemented. However,
                     # this combination hasn't occurred, with the exception of `Amendment/changes`.
-                    warnings.warn("{}/items has unexpected type {}".format(new_pointer, item_types))
+                    warnings.warn("{}/items has unexpected type {}".format(pointer, item_types))
 
             versioned = deepcopy(versioned_template)
             versioned['items']['properties']['value'] = new_value
             schema['properties'][key] = versioned
-
-    for key, value in schema.get('definitions', {}).items():
-        add_versioned(value, unversioned_pointers, pointer='{}/definitions/{}'.format(pointer, key))
 
 
 def update_refs_to_unversioned_definitions(schema):
@@ -246,6 +257,8 @@ def remove_metadata_and_extended_keywords(schema):
 
 
 def get_versioned_release_schema(schema):
+    original_definitions = deepcopy(schema['definitions'])
+
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
     schema['id'] = 'http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json'.format(release_with_underscores)  # noqa
@@ -268,22 +281,33 @@ def get_versioned_release_schema(schema):
     schema['properties']['ocid'] = ocid
 
     # Add the common versioned definitions.
-    for definition, keywords in common_versioned_definitions.items():
+    for name, keywords in common_versioned_definitions.items():
         versioned = deepcopy(versioned_template)
         for keyword, value in keywords.items():
             if value:
                 versioned['items']['properties']['value'][keyword] = value
-        schema['definitions'][definition] = versioned
+        schema['definitions'][name] = versioned
 
-    # Add the unversioned copies of needed definitions.
+    # Add missing definitions.
     while True:
         ref = JsonRef.replace_refs(schema)
         try:
             repr(ref)
             break
         except JsonRefError as e:
-            definition = e.cause.args[0]
-            schema['definitions'][definition] = unversioned_definitions[definition]
+            name = e.cause.args[0]
+
+            if name.endswith('VersionedId'):
+                # Add a copy of an definition with a versioned `id` field, using the same logic as before.
+                definition = deepcopy(schema['definitions'][name[:-11]])
+                pointer = '/definitions/{}/properties/id'.format(name[:-11])
+                pointers = unversioned_pointers - {pointer}
+                _add_versioned(definition, pointers, pointer, 'id', definition['properties']['id'])
+            else:
+                # Add a copy of an definition with no versioned fields.
+                definition = unversioned_definitions[name]
+
+            schema['definitions'][name] = definition
 
     # Remove all metadata and extended keywords.
     remove_metadata_and_extended_keywords(schema)
