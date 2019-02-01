@@ -1027,11 +1027,32 @@
       "type": "object",
       "properties": {
         "id": {
-          "type": [
-            "string",
-            "integer",
-            "null"
-          ]
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "integer",
+                  "null"
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "description": {
           "$ref": "#/definitions/StringNullVersioned"
@@ -1618,11 +1639,32 @@
           }
         },
         "id": {
-          "type": [
-            "string",
-            "integer",
-            "null"
-          ]
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "integer",
+                  "null"
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "description": {
           "$ref": "#/definitions/StringNullVersioned"
@@ -1647,11 +1689,32 @@
           "$ref": "#/definitions/StringNullVersioned"
         },
         "id": {
-          "type": [
-            "string",
-            "integer",
-            "null"
-          ]
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "integer",
+                  "null"
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "legalName": {
           "$ref": "#/definitions/StringNullVersioned"
