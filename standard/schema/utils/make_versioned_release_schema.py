@@ -133,64 +133,64 @@ def add_versioned(schema, unversioned_pointers, pointer=''):
 
 
 def _add_versioned(schema, unversioned_pointers, pointer, key, value):
-        # Skip unversioned fields.
-        if pointer in unversioned_pointers:
-            return
+    # Skip unversioned fields.
+    if pointer in unversioned_pointers:
+        return
 
-        types = _get_types(value)
+    types = _get_types(value)
 
-        # If a type is unrecognized, we might need to update this script.
-        if '$ref' not in value and types not in recognized_types:
-            warnings.warn('{} has unrecognized type {}'.format(pointer, types))
+    # If a type is unrecognized, we might need to update this script.
+    if '$ref' not in value and types not in recognized_types:
+        warnings.warn('{} has unrecognized type {}'.format(pointer, types))
 
-        # For example, if $ref is used.
-        if not types:
-            # Ignore the `amendment` field, which had no `id` field in OCDS 1.0.
-            if 'deprecated' not in value:
-                versioned_pointer = '{}/properties/id'.format(value['$ref'][1:])
-                # If the `id` field is on an object not in an array, it is versioned.
-                if versioned_pointer in unversioned_pointers:
-                    value['$ref'] = value['$ref'] + 'VersionedId'
-            return
+    # For example, if $ref is used.
+    if not types:
+        # Ignore the `amendment` field, which had no `id` field in OCDS 1.0.
+        if 'deprecated' not in value:
+            versioned_pointer = '{}/properties/id'.format(value['$ref'][1:])
+            # If the `id` field is on an object not in an array, it is versioned.
+            if versioned_pointer in unversioned_pointers:
+                value['$ref'] = value['$ref'] + 'VersionedId'
+        return
 
-        # Reference a common versioned definition if possible, to limit the size of the schema.
-        ref = get_definition_ref(value)
-        if ref:
-            schema['properties'][key] = ref
+    # Reference a common versioned definition if possible, to limit the size of the schema.
+    ref = get_definition_ref(value)
+    if ref:
+        schema['properties'][key] = ref
 
-        # Iterate into objects with properties like `Item.unit`. Otherwise, version objects with no properties as a
-        # whole, like `Organization.details`.
-        elif types == ['object'] and 'properties' in value:
-            add_versioned(value, unversioned_pointers, pointer=pointer)
+    # Iterate into objects with properties like `Item.unit`. Otherwise, version objects with no properties as a
+    # whole, like `Organization.details`.
+    elif types == ['object'] and 'properties' in value:
+        add_versioned(value, unversioned_pointers, pointer=pointer)
 
-        else:
-            new_value = deepcopy(value)
+    else:
+        new_value = deepcopy(value)
 
-            if types == ['array']:
-                item_types = _get_types(value['items'])
+        if types == ['array']:
+            item_types = _get_types(value['items'])
 
-                # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
-                if value.get('wholeListMerge'):
-                    # Update `$ref` to the unversioned definition.
-                    if '$ref' in value['items']:
-                        new_value['items']['$ref'] = value['items']['$ref'] + 'Unversioned'
-                    # Otherwise, similarly, don't iterate over item properties.
-                # See http://standard.open-contracting.org/latest/en/schema/merging/#lists
-                elif '$ref' in value['items']:
-                    # Leave `$ref` to the versioned definition.
-                    return
-                # Exceptional case for deprecated `Amendment.changes`.
-                elif item_types == ['object'] and pointer == '/definitions/Amendment/properties/changes':
-                    return
-                # Warn in case new combinations are added to the release schema.
-                elif item_types != ['string']:
-                    # Note: Versioning the properties of un-$ref'erenced objects in arrays isn't implemented. However,
-                    # this combination hasn't occurred, with the exception of `Amendment/changes`.
-                    warnings.warn("{}/items has unexpected type {}".format(pointer, item_types))
+            # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
+            if value.get('wholeListMerge'):
+                # Update `$ref` to the unversioned definition.
+                if '$ref' in value['items']:
+                    new_value['items']['$ref'] = value['items']['$ref'] + 'Unversioned'
+                # Otherwise, similarly, don't iterate over item properties.
+            # See http://standard.open-contracting.org/latest/en/schema/merging/#lists
+            elif '$ref' in value['items']:
+                # Leave `$ref` to the versioned definition.
+                return
+            # Exceptional case for deprecated `Amendment.changes`.
+            elif item_types == ['object'] and pointer == '/definitions/Amendment/properties/changes':
+                return
+            # Warn in case new combinations are added to the release schema.
+            elif item_types != ['string']:
+                # Note: Versioning the properties of un-$ref'erenced objects in arrays isn't implemented. However,
+                # this combination hasn't occurred, with the exception of `Amendment/changes`.
+                warnings.warn("{}/items has unexpected type {}".format(pointer, item_types))
 
-            versioned = deepcopy(versioned_template)
-            versioned['items']['properties']['value'] = new_value
-            schema['properties'][key] = versioned
+        versioned = deepcopy(versioned_template)
+        versioned['items']['properties']['value'] = new_value
+        schema['properties'][key] = versioned
 
 
 def update_refs_to_unversioned_definitions(schema):
