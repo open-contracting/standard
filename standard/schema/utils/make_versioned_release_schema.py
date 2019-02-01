@@ -1,9 +1,11 @@
-import copy
 import json
 import os.path
 import sys
 import warnings
 from collections import OrderedDict
+from copy import deepcopy
+
+from jsonref import JsonRef, JsonRefError
 
 docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en')
 sys.path.append(docs_path)
@@ -61,11 +63,11 @@ common_versioned_definitions = OrderedDict([
 recognized_types = (
     # Array
     ['array'],
-    ['array', 'null'],
+    ['array', 'null'],  # optional string arrays
 
     # Object
     ['object'],
-    ['object', 'null'],
+    ['object', 'null'],  # /Organization/details
 
     # String
     ['string'],
@@ -141,7 +143,7 @@ def add_versioned(schema, pointer=''):
             add_versioned(value, pointer=new_pointer)
 
         else:
-            new_value = copy.deepcopy(value)
+            new_value = deepcopy(value)
 
             if prop_type == ['array']:
                 items_type = value['items'].get('type', [])
@@ -167,7 +169,7 @@ def add_versioned(schema, pointer=''):
                     # this combination hasn't occurred, with the exception of `Amendment/changes`.
                     warnings.warn("{}/items has unexpected type {}".format(new_pointer, items_type))
 
-            versioned = copy.deepcopy(versioned_template)
+            versioned = deepcopy(versioned_template)
             versioned['items']['properties']['value'] = new_value
             schema['properties'][key] = versioned
 
@@ -179,21 +181,35 @@ def update_refs_to_unversioned_definitions(schema):
     for key, value in schema.items():
         if key == '$ref':
             schema[key] = value + 'Unversioned'
-        if isinstance(value, dict):
+        elif isinstance(value, dict):
             update_refs_to_unversioned_definitions(value)
 
 
-def remove_metadata_and_extended_keywords(data, pointer=''):
-    if isinstance(data, list):
-        for index, item in enumerate(data):
-            remove_metadata_and_extended_keywords(item, pointer='{}/{}'.format(pointer, index))
-    elif isinstance(data, dict):
-        for key, value in data.items():
+def remove_omit_when_merged(schema):
+    if isinstance(schema, list):
+        for item in schema:
+            remove_omit_when_merged(item)
+    elif isinstance(schema, dict):
+        for key, value in schema.items():
+            if key == 'properties':
+                for k, v in list(value.items()):
+                    if v.get('omitWhenMerged'):
+                        value.pop(k)
+                        schema['required'].remove(k)
+            remove_omit_when_merged(value)
+
+
+def remove_metadata_and_extended_keywords(schema):
+    if isinstance(schema, list):
+        for item in schema:
+            remove_metadata_and_extended_keywords(item)
+    elif isinstance(schema, dict):
+        for key, value in schema.items():
             if key in ('definitions', 'properties'):
                 for v in value.values():
                     for keyword in keywords_to_remove:
                         v.pop(keyword, None)
-            remove_metadata_and_extended_keywords(value, pointer='{}/{}'.format(pointer, key))
+            remove_metadata_and_extended_keywords(value)
 
 
 def get_versioned_release_schema(schema):
@@ -205,15 +221,10 @@ def get_versioned_release_schema(schema):
     schema['title'] = 'Schema for a compiled, versioned Open Contracting Release.'
 
     # Release IDs, dates and tags appear alongside values in the versioned release schema.
-    fields_to_remove = ('id', 'date', 'tag')
-    for key in fields_to_remove:
-        del schema['properties'][key]
-        schema['required'].remove(key)
+    remove_omit_when_merged(schema)
 
     # Create unversioned copies of all definitions.
-    unversioned_definitions = OrderedDict()
-    for key, value in schema['definitions'].items():
-        unversioned_definitions[key + 'Unversioned'] = copy.deepcopy(value)
+    unversioned_definitions = {k + 'Unversioned': deepcopy(v) for k, v in schema['definitions'].items()}
     update_refs_to_unversioned_definitions(unversioned_definitions)
 
     # Omit `ocid` from versioning.
@@ -221,16 +232,23 @@ def get_versioned_release_schema(schema):
     add_versioned(schema)
     schema['properties']['ocid'] = ocid
 
-    # Add the unversioned copies of all definitions.
-    definitions.update(unversioned_definitions)
-
     # Add the common versioned definitions.
     for definition, keywords in common_versioned_definitions.items():
-        versioned = copy.deepcopy(versioned_template)
+        versioned = deepcopy(versioned_template)
         for keyword, value in keywords.items():
             if value:
                 versioned['items']['properties']['value'][keyword] = value
         schema['definitions'][definition] = versioned
+
+    # Add the unversioned copies of needed definitions.
+    while True:
+        ref = JsonRef.replace_refs(schema)
+        try:
+            repr(ref)
+            break
+        except JsonRefError as e:
+            definition = e.cause.args[0]
+            schema['definitions'][definition] = unversioned_definitions[definition]
 
     # Remove all metadata and extended keywords.
     remove_metadata_and_extended_keywords(schema)
