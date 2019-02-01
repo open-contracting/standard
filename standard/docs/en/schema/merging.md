@@ -132,7 +132,7 @@ In a versioned release, instead of over-writing past values when combining multi
 
 As a result, the history of any field can be easily read from the data structure.
 
-The property `"versionId":true` is used to explicitly declare the cases where an `id` field **should** be versioned (i.e. within an object that is not within an array). 
+An `id` field of an object within an array is not versioned. All other `id` fields are versioned; in the release schema, the property `"versionId": true` is declared on such fields, to make them easier to identify. If `"versionId": true` is declared on an `id` field of an object within an array, it is ignored. `"versionId": false` has no meaning and is ignored if present.
 
 ### Example
 

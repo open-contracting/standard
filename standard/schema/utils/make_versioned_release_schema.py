@@ -123,14 +123,12 @@ def get_definition_ref(item):
 
 
 def add_versioned(schema, unversioned_pointers, pointer=''):
-    for key, value in list(schema['properties'].items()):
+    for key, value in schema['properties'].items():
         new_pointer = '{}/properties/{}'.format(pointer, key)
 
         # Skip unversioned fields.
         if new_pointer in unversioned_pointers:
             continue
-
-        types = _get_types(value)
 
         # If a type is unrecognized, we might need to update this script.
         if '$ref' not in value and types not in recognized_types:

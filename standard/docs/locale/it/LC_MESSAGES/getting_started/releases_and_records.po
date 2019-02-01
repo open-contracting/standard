@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)
+# This file is distributed under the same license as the OCDS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Alessio Dragoni <ad@sciamlab.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCDS 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-22 20:01-0400\n"
+"PO-Revision-Date: 2017-04-24 10:47+0000\n"
+"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Releases and Records"
+msgstr "Rilasci e Descrittori"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:3
+msgid "There are two kinds of OCDS document:"
+msgstr "Esistono due tipi di documento OCDS:"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:13
+msgid ""
+"**Releases** provide updates on each event in a contracting process, ideally"
+" in real-time. They can be used to notify users of new tenders, awards, "
+"contracts and other updates. One contracting process may have many releases."
+msgstr ""
+"**Rilasci** forniscono aggiornamenti su ogni evento in un processo di "
+"contrattazione, idealmente in tempo reale. Possono essere utilizzati per "
+"informare gli utenti di nuove offerte, aggiudicazioni, stipula di contratti "
+"e altri aggiornamenti. Un processo Open Contracting può avere molti rilasci."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:18
+msgid ""
+"**Records** compile together all the information known about a contracting "
+"process, providing a snapshot view of its current state. They can also "
+"contain a versioned history of changes over time. There should only be one "
+"record for each contracting process, created by merging together the "
+"releases."
+msgstr ""
+"**Descrittori** contengono, compilate assieme, tutte le informazioni note "
+"avvenute su un processo di appalto, fornendo una vista istantanea del suo "
+"stato attuale. Possono anche contenere una cronologia comprensiva di tutte "
+"le versioni e variazione sui dati intercorse nel tempo. Dovrebbe esserci un "
+"solo descrittore per ogni processo Open Contracting, creato unendo i vari "
+"rilasci."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Releases"
+msgstr "Rilasci (Releases)"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:26
+msgid ""
+"Releases should be immutable: presenting information about a particular "
+"event in the lifetime of a contracting process."
+msgstr ""
+"I rilasci dovrebbero essere immutabili: presentare informazioni occorse su "
+"un particolare evento nel corso del processo di appalto."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:28
+msgid ""
+"Each release must contain an `ocid`, a unique release `id`, a release `tag`,"
+" and as much information as can be provided for users to understand the "
+"event taking place."
+msgstr ""
+"Ogni rilascio deve contenere un `ocid`, un `id` di rilascio univoco, un "
+"`tag` di rilascio e tutte le informazioni aggiuntive che possono essere "
+"fornite agli utenti per comprendere meglio l'evento che si sta verificando."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:30
+msgid "For example:"
+msgstr "Per esempio:"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:32
+msgid ""
+"A 'planning' release may provide information in the `planning` section about"
+" budgets and procurement intention, and the `tender` section about the "
+"proposed details for a future tender;"
+msgstr ""
+"Un rilascio per la 'pianificazione' può fornire informazioni nella sezione "
+"`planning` sugli importi stanziati e l'intenzione di approvvigionamento "
+"mentre nella sezione `tender` i dettagli proposti per una futura gara "
+"d'appalto;"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:33
+msgid ""
+"A 'tender' release may provide information in the `tender` section about how"
+" to bid for the work, and may repeat `planning` section information on the "
+"budget or project the tender is associated with;"
+msgstr ""
+"Un rilascio per una `gara` può fornire informazioni nella sezione `tender` "
+"su come fare un'offerta per i beni o servizi, e può ripetere le informazioni"
+" della sezione `planning` in merito agli stanziamenti o sul progetto a cui è"
+" associata la gara;"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:34
+msgid ""
+"A 'tenderUpdate' release may provide an updated `tender` section with links "
+"to documents that answer questions asked during the enquiry period;"
+msgstr ""
+"Un rilascio per `tenderUpdate` può fornire un aggiornamento alla sezione "
+"`tender` con collegamenti alla documentazione con risposte  alle domande "
+"poste dai partecipanti alla gara nell'apposito periodo per la sottomissione "
+"di domande;"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:35
+msgid ""
+"An 'award' release may provide details of the supplier awarded the contract "
+"in the `award` section, and may provide repeated information about the how "
+"procurement took place in the `tender` section;"
+msgstr ""
+"Un rilascio per la comunicazione di una \"aggiudicazione\" può fornire "
+"dettagli del fornitore aggiudicatario dell'appalto nella sezione `award`    "
+"e può fornire più informazioni ripetute sul modo in cui l'appalto ha avuto "
+"luogo nella sezione `tender`;"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:36
+msgid ""
+"A 'contract' release may provide the details of the signed contract in a "
+"`contract` section, matched with a related `award` section;"
+msgstr ""
+"Un rilascio per un `contratto` può fornire i dettagli del contratto firmato "
+"nella sezione `contract`, abbinata a una relativa sezione `award`;"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:37
+msgid ""
+"An 'implementationUpdate' release may repeat details of the `contract`, and "
+"provide information on milestones achieved and payments to the supplier, or "
+"may update the contract `implementation` section with links to newly "
+"published documents."
+msgstr ""
+"Un rilascio 'implementationUpdate' può ripetere i dettagli del 'contratto' e"
+" fornire informazioni sulle fasi principali raggiunte e i pagamenti al "
+"fornitore, oppure aggiornare la sezione 'implementation' del contratto con i"
+" collegamenti ai nuovi documenti pubblicati."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:39
+msgid ""
+"You can think of **releases** as entries into a ledger: each new entry adds "
+"information. Each entry may also repeat the previous information that "
+"remains true."
+msgstr ""
+"Puoi pensare ai **rilasci** come voci in un registro: ogni nuova voce "
+"aggiunge informazioni. Ogni voce può anche ripetere alcune delle "
+"informazioni precedenti che rimangono valide."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Examples"
+msgstr "Esempi"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Best practices"
+msgstr "Migliori pratiche"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:96
+msgid ""
+"In some cases, releases will all come from the same backend system. In "
+"others, they will be generated by different systems. By ensuring all "
+"releases about a contracting process share an `ocid`, they can be tied "
+"together into a record."
+msgstr ""
+"In alcuni casi, i dati dei rilasci verranno tutti da un unico sistema o "
+"applicativo alimentate. In altri, saranno generati da diversi sistemi. "
+"Assicurandosi che tutte i rilasci di un processo di appalto condividano lo "
+"stesso `ocid`, possono essere collegati insieme in un descrittore."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:98
+msgid ""
+"In a complete OCDS implementation, each release would be published at its "
+"own persistent URL, and kept online permanently."
+msgstr ""
+"In un'implementazione OCDS completa, ogni rilascio dovrebbe essere "
+"pubblicato sul proprio URL persistente e mantenuto online permanentemente."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:100
+msgid ""
+"In these cases, where publishers are providing a single URI for fetching "
+"information on a given contracting process, the `releaseID` and "
+"`releaseDate` must be modified whenever updated data is published. A "
+"suggested pattern is to append an incrementing number to the end of the "
+"`ocid` in order to generate a unique `releaseID` for every change. For "
+"example:"
+msgstr ""
+"In questi casi, laddove gli editori forniscono un singolo URI per il "
+"recupero delle informazioni su un dato processo di contrattazione, "
+"`releaseID` e `releaseDate` devono essere modificati ogni volta che vengono "
+"pubblicati dati aggiornati. Un modello suggerito è di aggiungere un numero "
+"incrementale alla fine di `ocid` per generare un` releaseID' univoco per "
+"ogni cambiamento. Per esempio:"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:102
+msgid "ocds-a2ef3d01-1594121/1"
+msgstr "ocds-a2ef3d01-1594121/1"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:103
+msgid "ocds-a2ef3d01-1594121/2"
+msgstr "ocds-a2ef3d01-1594121/2"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:104
+msgid "ocds-a2ef3d01-1594121/3"
+msgstr "ocds-a2ef3d01-1594121/3"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:0
+msgid "Records"
+msgstr "Descrittori (Records)"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:109
+msgid ""
+"An OCDS **record** provides a snapshot of the contracting process at a given"
+" point in time, bringing together all the information from the releases to "
+"date into one place. It is updated as new information becomes available."
+msgstr ""
+"Un **descrittore** OCDS fornisce un'istantanea del processo di "
+"contrattazione in un dato momento, riunendo assieme tutte le informazioni "
+"dei rilasci effettuati fino ad oggi. Il descrittore viene aggiornato man "
+"mano che nuove informazioni diventano disponibili."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:111
+msgid ""
+"At a minimum, a record should exist for each contracting process to provide "
+"a list of all the releases that relate to that contracting process."
+msgstr ""
+"Come minimo, dovrebbe esistere un descrittore per ogni processo di appalto "
+"per fornire un elenco di tutti i rilasci relativi a tale processo di "
+"appalto."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:113
+msgid ""
+"However, to allow users to get a snapshot view the contracting process "
+"without individually looking up each release , a record should also contain:"
+msgstr ""
+"Tuttavia, per consentire agli utenti di ottenere una visualizzazione "
+"istantanea del processo di appalto senza cercare singolarmente ogni "
+"rilascio, un descrittore dovrebbe contenere anche:"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:115
+msgid ""
+"a compiledRelease block, which follows the release schema, and is updated "
+"with the most up-to-date value for each field; and, optionally,"
+msgstr ""
+"un blocco compiledRelease, che segue il formato del rilascio e viene "
+"aggiornato con il valore più recente di ogni campo; e, facoltativamente,"
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:116
+msgid ""
+"a versionedRelease, which contains a history of all the changes for each "
+"field."
+msgstr ""
+"un versionedRelease, che contiene una cronologia di tutte le modifiche "
+"effettuate nel tempo su ogni campo."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:118
+msgid ""
+"The [OCDS merge strategies](../schema/merging.md) set out how to combine "
+"multiple releases to create a single record for each contracting process."
+msgstr ""
+"La [strategie di compilazione OCDS] (../schema/merging.md) definiscono come "
+"combinare più rilasci per creare un singolo descrittore per ogni processo di"
+" appalto."
+
+#: ../../standard/docs/en/getting_started/releases_and_records.md:128
+msgid ""
+"<center><img src=\"../../../assets/release_square.png\" "
+"height=\"200\"/></center>"
+msgstr ""
+"<center><img src=\"../../../assets/release_square.png\" "
+"height=\"200\"/></center>"

@@ -8,7 +8,7 @@ Tools developed by the core team will be available at [https://github.com/open-c
 
 ### OCDS Validator
 
-The OCDS validator can be found at [http://standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/) and can be used to:
+The OCDS validator can be found at [http://standard.open-contracting.org/review/](http://standard.open-contracting.org/review/) and can be used to:
 
 * Check releases and records against the JSON OCDS schema;
 * Provide basic statistics on the data contained within OCDS files;
