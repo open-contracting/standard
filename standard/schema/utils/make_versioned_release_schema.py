@@ -257,8 +257,6 @@ def remove_metadata_and_extended_keywords(schema):
 
 
 def get_versioned_release_schema(schema):
-    original_definitions = deepcopy(schema['definitions'])
-
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
     schema['id'] = 'http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json'.format(release_with_underscores)  # noqa
