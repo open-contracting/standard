@@ -130,6 +130,8 @@ def add_versioned(schema, unversioned_pointers, pointer=''):
         if new_pointer in unversioned_pointers:
             continue
 
+        types = _get_types(value)
+
         # If a type is unrecognized, we might need to update this script.
         if '$ref' not in value and types not in recognized_types:
             warnings.warn('{} has unrecognized type {}'.format(new_pointer, types))
@@ -244,8 +246,6 @@ def remove_metadata_and_extended_keywords(schema):
 
 
 def get_versioned_release_schema(schema):
-    definitions = schema['definitions']
-
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
     schema['id'] = 'http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json'.format(release_with_underscores)  # noqa
