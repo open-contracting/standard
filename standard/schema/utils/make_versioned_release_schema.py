@@ -153,9 +153,7 @@ def add_versioned(schema, unversioned_pointers, pointer=''):
             new_value = deepcopy(value)
 
             if types == ['array']:
-                items_type = value['items'].get('type', [])
-                if isinstance(items_type, str):
-                    items_type = [items_type]
+                item_types = _get_types(value['items'])
 
                 # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
                 if value.get('wholeListMerge'):
@@ -168,13 +166,13 @@ def add_versioned(schema, unversioned_pointers, pointer=''):
                     # Leave `$ref` to the versioned definition.
                     continue
                 # Exceptional case for deprecated `Amendment/changes`.
-                elif items_type == ['object'] and new_pointer == '/definitions/Amendment/properties/changes':
+                elif item_types == ['object'] and new_pointer == '/definitions/Amendment/properties/changes':
                     continue
                 # Warn in case new combinations are added to the release schema.
-                elif items_type != ['string']:
+                elif item_types != ['string']:
                     # Note: Versioning the properties of un-$ref'erenced objects in arrays isn't implemented. However,
                     # this combination hasn't occurred, with the exception of `Amendment/changes`.
-                    warnings.warn("{}/items has unexpected type {}".format(new_pointer, items_type))
+                    warnings.warn("{}/items has unexpected type {}".format(new_pointer, item_types))
 
             versioned = deepcopy(versioned_template)
             versioned['items']['properties']['value'] = new_value
