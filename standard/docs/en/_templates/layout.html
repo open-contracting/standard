@@ -13,8 +13,8 @@
     <use xlink:href="#ocp-logo-only" />
   </svg>
   <div class="oc-heading">
-    <h2> {% trans %} Open Contracting {% endtrans %}</h2>
-    <h2> {% trans %} Data Standard {% endtrans %}</h2>
+    <h2>{% trans %} Open Contracting {% endtrans %}</h2>
+    <h2>{% trans %} Data Standard {% endtrans %}</h2>
   </div>
   <span>v{{version}}</span>
 </a>
@@ -27,13 +27,13 @@
 {% endblock %}
 
 {% block language_options %}
-            <option>Language</option>
-            <optgroup label="Supported translations">
+            <option>{%trans%}Language{% endtrans %}</option>
+            <optgroup label="{%trans%}Supported translations{% endtrans %}">
                 <option value="en">English</option>
                 <option value="es">Español</option>
                 <option value="fr">Français</option>
             </optgroup>
-            <optgroup label="Community translations">
+            <optgroup label="{%trans%}Community translations{% endtrans %}">
                 <option value="it">Italiano</option>
             </optgroup>
 {% endblock %}
