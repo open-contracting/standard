@@ -33,21 +33,6 @@ Extensions are applied by adding their URLs to the `extensions` array in the rel
 }
 ```
 
-## Core extensions
-
-```eval_rst
-.. extensionselectortable::
-   :group: core
-```
-
-## Community extensions
-
-```eval_rst
-.. extensionselectortable::
-   :group: community
-```
-
-
 ## More information
 
 ```eval_rst
@@ -55,7 +40,6 @@ Extensions are applied by adding their URLs to the `extensions` array in the rel
    :maxdepth: 2
 
    developing
-   community
 
 ```
 

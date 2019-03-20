@@ -81,26 +81,6 @@ def test_search(browser, server, lang, regex):
 
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
-def test_community_extensions(browser, server, lang):
-    url = 'https://raw.githubusercontent.com/open-contracting-extensions/ocds_budget_breakdown_extension/master/extension.json'  # noqa
-    extension = requests.get(url).json()
-
-    browser.get('{}{}/extensions'.format(server, lang))
-    community_extensions = browser.find_element_by_id('community-extensions').find_element_by_tag_name('table')
-    # Currently community extensions aren't translated
-    link = community_extensions.find_element_by_link_text(extension['name']['en'])
-    assert (link.get_attribute('href') == extension['documentationUrl']['en'])
-    cells = link.find_elements_by_xpath('../../td')
-    assert cells[2].text == extension['description']['en']
-    assert cells[3].text == 'ppp'
-
-    assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
-    browser.execute_script("arguments[0].scrollIntoView();", cells[0])
-    cells[0].click()
-    assert 'ocds_budget_breakdown_extension' in browser.find_element_by_id('using-extensions').text
-
-
-@pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_examples(browser, server, lang):
     browser.get('{}{}/getting_started/releases_and_records'.format(server, lang))
     examples = browser.find_element_by_id('examples')
