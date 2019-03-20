@@ -119,26 +119,24 @@ def test_broken_links(browser, server, lang):
     browser.get('{}{}'.format(server, lang))
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
-            # Don't test proxied or external URLs.
             href = re.sub(r'#.+$', '', link.get_attribute('href'))
+
+            # Don't test proxied or external URLs.
             if '/review/' in href or 'localhost' not in href:
                 continue
-
+            # If the URL, without an anchor, has already been visited, don't follow it.
+            if href in hrefs:
+                continue
             # Keep track of which pages have been visited.
             hrefs.append(href)
 
             response = requests.get(href)
             assert response.status_code == 200, 'expected 200, got {} for {} after processing: {}'.format(
                 response.status_code, href, ' '.join(hrefs))
+
         try:
-            link = browser.find_element_by_link_text('Next')
-
-            # If the URL, without an anchor, has already been visited, don't follow it.
-            href = re.sub(r'#.+$', '', link.get_attribute('href'))
-            if href in hrefs:
-                continue
-
             # Scroll the link into view, to make it clickable.
+            link = browser.find_element_by_link_text('Next')
             browser.execute_script("arguments[0].scrollIntoView();", link)
             link.click()
         except NoSuchElementException:
