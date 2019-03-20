@@ -115,14 +115,17 @@ def test_language_switcher(browser, server):
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_broken_links(browser, server, lang):
+    hrefs = []
     browser.get('{}{}'.format(server, lang))
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
             href = link.get_attribute('href')
             if '/review/' in href or 'localhost' not in href:
                 continue
-            r = requests.get(href)
-            assert r.status_code == 200, 'expected 200, got {} for {} in lang {}'.format(r.status_code, href, lang)
+            hrefs.append(href)
+            response = requests.get(href)
+            assert response.status_code == 200, 'expected 200, got {} for {} after processing:\n{}'.format(
+                response.status_code, href, '\n'.join(hrefs))
         try:
             next = browser.find_element_by_link_text('Next')
             browser.execute_script("arguments[0].scrollIntoView();", next)
