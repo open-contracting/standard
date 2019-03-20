@@ -124,8 +124,8 @@ def test_broken_links(browser, server, lang):
                 continue
             hrefs.append(href)
             response = requests.get(href)
-            assert response.status_code == 200, 'expected 200, got {} for {} after processing:\n{}'.format(
-                response.status_code, href, '\n'.join(hrefs))
+            assert response.status_code == 200, 'expected 200, got {} for {} after processing: {}'.format(
+                response.status_code, href, ' '.join(hrefs))
         try:
             next = browser.find_element_by_link_text('Next')
             browser.execute_script("arguments[0].scrollIntoView();", next)
