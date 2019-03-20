@@ -125,10 +125,10 @@ def test_broken_links(browser, server, lang):
             # Don't test proxied or external URLs.
             if '/review/' in href or 'localhost' not in href:
                 continue
-            # If the URL, without an anchor, has already been visited, don't follow it.
+            # If the URL, without an anchor, has already been visited, don't test it again.
             if href in hrefs:
                 continue
-            # Keep track of which pages have been visited.
+            # Keep track of which pages have been tested.
             hrefs.append(href)
 
             response = requests.get(href)
