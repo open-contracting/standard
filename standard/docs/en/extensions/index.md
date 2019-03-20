@@ -66,14 +66,7 @@ Extensions are applied by adding their URLs to the `extensions` array in the rel
    :maxdepth: 1
    :glob:
 
-   bids
-   enquiries
-   location
-   lots
-   milestone_documents
-   participation_fee
    party_details
-   process_title
 
 ```
 
