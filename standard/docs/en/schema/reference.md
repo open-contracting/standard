@@ -79,11 +79,16 @@ The following details can be provided for each party.
 
 ```
 
-Detailed classification of parties can be provided using one or more [party detail extensions](../../../../extensions/party_details/).
-
 ```eval_rst
 .. extensionlist:: The following extensions are available for parties
    :list: parties
+```
+
+Each party has an optional `details` object. Through extensions, this can be used to provide detailed classification of parties.
+
+```eval_rst
+.. extensionlist:: The following extensions are available for party details
+   :list: partyDetail
 ```
 
 ### Planning

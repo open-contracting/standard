@@ -14,43 +14,21 @@ All core and community extensions are listed in the [extensions registry](https:
 
 ## Using extensions
 
-Extensions are applied by adding their URLs to the `extensions` array in the release or record package. To use one or more extensions, select them from the extension lists below and include the following in your release or record package metadata:
-
-<style><!--
-#using-extensions div[class^='highlight'] pre {
-   white-space: pre-wrap;  
-   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-   white-space: -pre-wrap;      /* Opera 4-6 */
-   white-space: -o-pre-wrap;    /* Opera 7 */
-   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
---></style> 
-
-```json
-{
-    "extensions":[],
-    "releases":[]
-}
-```
-
-## More information
+Extensions are applied by adding their URLs to the `extensions` array in the release package or record package. Please refer to extensions' documentation in the [Extension Explorer](https://extensions.open-contracting.org/en/):
 
 ```eval_rst
-.. toctree::
-   :maxdepth: 2
-
-   developing
+ .. extensionexplorerlinklist::
 
 ```
 
-### Core extension documentation pages
+## Developing your own extensions
 
-```eval_rst
-.. toctree::
-   :maxdepth: 1
-   :glob:
+If you have additional fields to include in your data which are not covered by an existing extension, you may create a new extension.
 
-   party_details
+### Extension template
 
-```
+You can find the [extension template](https://github.com/open-contracting/standard_extension_template) on GitHub. It contains guidance on creating an extension.
 
+### Extension registry
+
+Links to externally maintained extensions may be included in the OCDS reference documentation, drawing on the [extensions registry](https://github.com/open-contracting/extension_registry).
