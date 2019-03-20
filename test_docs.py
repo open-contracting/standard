@@ -115,11 +115,12 @@ def test_language_switcher(browser, server):
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_broken_links(browser, server, lang):
-    hrefs = []
+    links = []
+    hrefs = set()
     browser.get('{}{}'.format(server, lang))
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
-            href = re.sub(r'#.+$', '', link.get_attribute('href'))
+            href = re.sub(r'#.*$', '', link.get_attribute('href'))
 
             # Don't test proxied or external URLs.
             if '/review/' in href or 'localhost' not in href:
@@ -132,11 +133,12 @@ def test_broken_links(browser, server, lang):
 
             response = requests.get(href)
             assert response.status_code == 200, 'expected 200, got {} for {} after processing: {}'.format(
-                response.status_code, href, ' '.join(hrefs))
+                response.status_code, href, ' '.join(links))
 
         try:
             # Scroll the link into view, to make it clickable.
             link = browser.find_element_by_link_text('Next')
+            links.append(link.get_attribute('href'))
             browser.execute_script("arguments[0].scrollIntoView();", link)
             link.click()
         except NoSuchElementException:
