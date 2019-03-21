@@ -173,7 +173,6 @@ def setup(app):
     codelists_domain = '{}codelists'.format(gettext_domain_prefix)
 
     schema_dir = basedir / 'standard' / 'schema'
-    extensions_dir = basedir / 'standard' / 'docs' / 'en' / 'extensions'
     build_dir = basedir / 'build'
 
     translate([
@@ -181,5 +180,4 @@ def setup(app):
         (glob(str(schema_dir / '*-schema.json')), build_dir / language, schema_domain),
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(schema_dir / 'codelists' / '*.csv')), build_dir / 'codelists' / language, codelists_domain),
-        (glob(str(extensions_dir / 'codelists' / '*.csv')), build_dir / 'codelists' / language, codelists_domain),
     ], localedir, language, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
