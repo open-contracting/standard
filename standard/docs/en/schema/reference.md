@@ -146,10 +146,7 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 
 ### Bids
 
-```eval_rst
-.. extensionlist:: The optional bids extension can be used to provide summary and detailed information about bids.
-   :list: bids
-```
+The optional [Bid statistics and details](http://extensions.open-contracting.org/en/extensions/bids/) extension can be used to provide bid statistics and detailed information about individual bids.
 
 ### Award
 
@@ -485,7 +482,7 @@ As well as providing this machine-readable link between processes, publishers ma
 
 ### Location
 
-The addition of location information is currently handled through a [proposed extension](../extensions/location.md) to the standard.
+The optional [Location](http://extensions.open-contracting.org/en/extensions/location/) extension can be used to provide location information.
 
 ### Publisher
 
