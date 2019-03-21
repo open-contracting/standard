@@ -129,7 +129,7 @@ def test_broken_links(browser, server, lang):
             if href in hrefs:
                 continue
             # Keep track of which pages have been tested.
-            hrefs.append(href)
+            hrefs.add(href)
 
             response = requests.get(href)
             assert response.status_code == 200, 'expected 200, got {} for {} after processing: {}'.format(
