@@ -115,7 +115,7 @@ def test_language_switcher(browser, server):
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_broken_links(browser, server, lang):
-    links = []
+    referrer = ''
     hrefs = set()
     browser.get('{}{}'.format(server, lang))
     while True:
@@ -132,13 +132,13 @@ def test_broken_links(browser, server, lang):
             hrefs.add(href)
 
             response = requests.get(href)
-            assert response.status_code == 200, 'expected 200, got {} for {} after processing: {}'.format(
-                response.status_code, href, ' '.join(links))
+            assert response.status_code == 200, 'expected 200, got {} for {} linked from {}'.format(
+                response.status_code, href, referrer)
 
         try:
             # Scroll the link into view, to make it clickable.
             link = browser.find_element_by_link_text('Next')
-            links.append(link.get_attribute('href'))
+            referrer = link.get_attribute('href')
             browser.execute_script("arguments[0].scrollIntoView();", link)
             link.click()
         except NoSuchElementException:
