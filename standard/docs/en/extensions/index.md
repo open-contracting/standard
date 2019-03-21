@@ -14,7 +14,9 @@ All core and community extensions are listed in the [extensions registry](https:
 
 ## Using extensions
 
-Extensions are applied by adding their URLs to the `extensions` array in the release package or record package. Please refer to extensions' documentation in the [Extension Explorer](https://extensions.open-contracting.org/en/):
+Extensions are applied by adding their URLs to the `extensions` array in the release package or record package. You can discover extensions and read their documentation using the [Extension Explorer](https://extensions.open-contracting.org/en/).
+
+This version of OCDS uses these specific versions of core extensions:
 
 ```eval_rst
  .. extensionexplorerlinklist::
