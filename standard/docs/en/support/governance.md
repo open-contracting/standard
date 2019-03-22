@@ -74,6 +74,8 @@ The revision process should ensure:
 
 Changes to the OCDS schema should be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a changelog maintained. 
 
+This documentation website is composed of normative content (the prescriptive part of OCDS) and non-normative content (the non-prescriptive, or ‘descriptive’, part of OCDS) as defined and described in the [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit). This policy establishes which changes to which parts of the documentation require the revision process described below (e.g. adding new fields to the release schema), and which changes can be made without the revision process (e.g. correcting typos in field descriptions, or updating implementation guidance).
+
 ### Versions
 
 Distinct **branches** of the standard will be maintained within GitHub for each version. 
