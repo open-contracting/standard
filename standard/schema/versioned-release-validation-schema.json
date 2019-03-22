@@ -75,8 +75,6 @@
       "type": "array"
     },
     "ocid": {
-      "title": "Open Contracting ID",
-      "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
       "type": "string",
       "minLength": 1
     }
@@ -324,7 +322,33 @@
           }
         },
         "awardCriteria": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "awardCriteria.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "awardCriteriaDetails": {
           "$ref": "#/definitions/StringNullVersioned"
@@ -816,7 +840,33 @@
           "$ref": "#/definitions/StringNullVersioned"
         },
         "type": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "milestoneType.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "description": {
           "$ref": "#/definitions/StringNullVersioned"
@@ -910,7 +960,33 @@
           "minLength": 1
         },
         "documentType": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "documentType.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "title": {
           "$ref": "#/definitions/StringNullVersioned"
@@ -1000,7 +1076,36 @@
           "$ref": "#/definitions/StringNullUriVersioned"
         },
         "source": {
-          "$ref": "#/definitions/StringNullUriVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "The budget data source field was intended to link to machine-readable data about the budget for a contracting process, but has been widely mis-used to provide free-text descriptions of budget providers. As a result, it has been removed from version 1.1. budget/uri can be used to provide a link to machine-readable budget information, and budget/description can be used to provide human-readable information on the budget source."
+                },
+                "format": "uri"
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       },
       "patternProperties": {
@@ -1081,7 +1186,32 @@
     "OrganizationReference": {
       "properties": {
         "name": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "id": {
           "type": [
@@ -1337,26 +1467,21 @@
           }
         },
         "unit": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "object",
-                  "null"
-                ],
+          "type": "object",
+          "properties": {
+            "scheme": {
+              "type": "array",
+              "items": {
+                "type": "object",
                 "properties": {
-                  "scheme": {
-                    "title": "Scheme",
-                    "description": "The list from which units of measure identifiers are taken. This should be an entry from the options available in the [unitClassificationScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended, although other options are available.",
+                  "releaseDate": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "releaseID": {
+                    "type": "string"
+                  },
+                  "value": {
                     "type": [
                       "string",
                       "null"
@@ -1364,53 +1489,34 @@
                     "codelist": "unitClassificationScheme.csv",
                     "openCodelist": true
                   },
-                  "id": {
-                    "title": "ID",
-                    "description": "The identifier from the codelist referenced in the scheme property. Check the codelist for details of how to find and use identifiers from the scheme in use.",
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "versionId": true
-                  },
-                  "name": {
-                    "title": "Name",
-                    "description": "Name of the unit.",
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "value": {
-                    "title": "Value",
-                    "description": "The monetary value of a single unit.",
-                    "$ref": "#/definitions/Value"
-                  },
-                  "uri": {
-                    "title": "URI",
-                    "description": "If the scheme used provides a machine-readable URI for this unit of measure, this can be given.",
-                    "format": "uri",
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                  "releaseTag": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
                   }
-                },
-                "patternProperties": {
-                  "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
                 }
               }
+            },
+            "id": {
+              "$ref": "#/definitions/StringNullVersioned"
+            },
+            "name": {
+              "$ref": "#/definitions/StringNullVersioned"
+            },
+            "value": {
+              "$ref": "#/definitions/Value"
+            },
+            "uri": {
+              "$ref": "#/definitions/StringNullUriVersioned"
+            }
+          },
+          "patternProperties": {
+            "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         }
@@ -1454,13 +1560,9 @@
             "type": "object",
             "properties": {
               "property": {
-                "title": "Property",
-                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in 1.1)",
                 "type": "string"
               },
               "former_value": {
-                "title": "Former Value",
-                "description": "The previous value of the changed property, in whatever type the property is. (Deprecated in 1.1)",
                 "type": [
                   "string",
                   "number",
@@ -1491,7 +1593,33 @@
       "type": "object",
       "properties": {
         "scheme": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "itemClassificationScheme.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "id": {
           "type": [
@@ -2051,7 +2179,33 @@
           "$ref": "#/definitions/StringNullVersioned"
         },
         "scheme": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "relatedProcessScheme.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "identifier": {
           "$ref": "#/definitions/StringNullVersioned"
@@ -3057,14 +3211,9 @@
           ]
         },
         "unit": {
-          "type": [
-            "object",
-            "null"
-          ],
+          "type": "object",
           "properties": {
             "scheme": {
-              "title": "Scheme",
-              "description": "The list from which units of measure identifiers are taken. This should be an entry from the options available in the [unitClassificationScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended, although other options are available.",
               "type": [
                 "string",
                 "null"
@@ -3073,30 +3222,21 @@
               "openCodelist": true
             },
             "id": {
-              "title": "ID",
-              "description": "The identifier from the codelist referenced in the scheme property. Check the codelist for details of how to find and use identifiers from the scheme in use.",
               "type": [
                 "string",
                 "null"
-              ],
-              "versionId": true
+              ]
             },
             "name": {
-              "title": "Name",
-              "description": "Name of the unit.",
               "type": [
                 "string",
                 "null"
               ]
             },
             "value": {
-              "title": "Value",
-              "description": "The monetary value of a single unit.",
               "$ref": "#/definitions/ValueUnversioned"
             },
             "uri": {
-              "title": "URI",
-              "description": "If the scheme used provides a machine-readable URI for this unit of measure, this can be given.",
               "format": "uri",
               "type": [
                 "string",
@@ -3169,13 +3309,9 @@
             "type": "object",
             "properties": {
               "property": {
-                "title": "Property",
-                "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in 1.1)",
                 "type": "string"
               },
               "former_value": {
-                "title": "Former Value",
-                "description": "The previous value of the changed property, in whatever type the property is. (Deprecated in 1.1)",
                 "type": [
                   "string",
                   "number",

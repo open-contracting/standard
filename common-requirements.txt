@@ -1,14 +1,18 @@
 # Update this file from a profile with:
 # curl -O https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/common-requirements.txt
 
-# The following lines are updated based on the `repos:dependencies` task in standard-maintenance-scripts.
+# 1.5.2 breaks the translation of the sidebar menu
+Sphinx==1.5.1
 
--e git+https://github.com/open-contracting/documentation-support.git@b4f87383702a97d130b71e183497be9090083451#egg=ocdsdocumentationsupport
--e git+https://github.com/open-contracting/sphinxcontrib-opencontracting.git@665ef3b2e0b03d196233ba26524bdb2ca5abe09e#egg=sphinxcontrib-opencontracting
--e git+https://github.com/OpenDataServices/sphinxcontrib-jsonschema.git@7b696eef47cc14c46a20c67abff18dc794e2f6cc#egg=sphinxcontrib-jsonschema
--e git+https://github.com/OpenDataServices/sphinxcontrib-opendataservices.git@fab0ff0167d32ec243d42f272e0e50766299c078#egg=sphinxcontrib-opendataservices
-
-# The following lines are stable and should follow the above lines to install the correct versions of dependencies.
-
+# Sphinx
+ocds-babel>=0.0.2
+# The next commit causes "'any' reference target not found" errors
 -e git+https://github.com/rtfd/recommonmark.git@81d7c6f7b37981ac22571dd91a7cc9d24c3e66a1#egg=recommonmark
 -e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
+
+# Make
+sphinx-intl<1
+transifex-client
+
+# Profile
+ocdsextensionregistry>=0.0.5

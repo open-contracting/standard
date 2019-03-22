@@ -1,6 +1,21 @@
 Open Contracting Data Standard: Documentation
 =============================================
 
+```eval_rst
+.. localization-note:: 
+
+  TRANSLATORS: DO NOT TRANSLATE THIS MESSAGE DIRECTLY
+
+  Instead if this is a **Community translation** translate the following:
+
+    This is a community translation of OCDS carried out by [ TRANSLATORS ]. 
+
+    This translation was last updated on [ DATE ]. If the source OCDS documentation has changed since this date, some strings in this documentation may not appear translated. 
+
+  If this is an officially supported translation (French and Spanish) please translate as a single dash '-'. 
+
+```
+
 Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny. 
 
 The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting process by defining a common data model. It was created to support organizations to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.

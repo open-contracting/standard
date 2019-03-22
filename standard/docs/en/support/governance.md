@@ -28,9 +28,9 @@ OCP is led by an executive director, and is supported by a multi-stakeholder adv
 
 As of February 2016, OCP is fiscally hosted by the [Fund for the City of New York](https://www.fcny.org/fcny/) (FCNY). Under the terms of this agreement, Intellectual Property is held by FCNY on behalf of OCP, but will transfer to any future legal entity hosting OCP. 
 
-The OCDS **technical team** work under contract to OCP, under the direction of the OCP Data & Engagement manager, providing a help desk service, and responsible for the day-to-day management of the standard documentation and validation tools. The technical team can be contacted via <a href="mailto:data@open-contracting.org">data@open-contracting.org</a>
+The OCDS **technical team** work under contract to OCP, under the direction of the OCP Data & Engagement manager, providing a help desk service, and responsible for the day-to-day management of the standard documentation and validation tools. The technical team can be contacted via <a href="mailto:data@open-contracting.org">data@open-contracting.org</a>.
 
-In the pursuit of a consensus and **community-driven process**, subscribers to the <a href="mailto:standard-discuss@open-contracting.org">standard-discuss@open-contracting.org</a> (Join by sending an email to <a href="mailto:standard-discuss+subscribe@open-contracting.org">standard-discuss+subscribe@open-contracting.org</a>) discussion list and those watching and engaging with the [standard GitHub repository](https://github.com/open-contracting/standard) should be kept informed at all stages about planned revisions to OCDS, and should be offered clear and timely opportunities to input and comment.
+In the pursuit of a consensus and **community-driven process**, subscribers to the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) discussion list (join by sending an email to <a href="mailto:standard-discuss+subscribe@open-contracting.org">standard-discuss+subscribe@open-contracting.org</a>) and those watching and engaging with the [standard GitHub repository](https://github.com/open-contracting/standard) should be kept informed at all stages about planned revisions to OCDS, and should be offered clear and timely opportunities to input and comment.
 
 To ensure the relevance, quality and effective implementation of proposed updates to the standard, new version releases are subjected to a process of **peer review** with invited reviewers from publisher and user communities, and an open review process. 
 
@@ -108,7 +108,7 @@ To release a new minor or major version upgrade will involve a number of stages 
 
 The technical team are responsible for generating key documentation during the process, but should always be guided by community consensus, submitting all decisions for discussion. 
 
-* **Appeal:** Any party may appeal against decisions made during the process by writing to the standard governance working group (address tbc.). The working group has the authority to reject proposed revisions on the standard in response to appeals. 
+* **Appeal:** Any party may appeal against decisions made during the process by writing to the standard governance working group, which can be reached through <a href="mailto:lmarchessault@open-contracting.org">Lindsey Marchessault</a>. The working group has the authority to reject proposed revisions on the standard in response to appeals. 
 
 ### Proposals
 

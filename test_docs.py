@@ -68,9 +68,9 @@ def test_basic(browser, server, lang, text):
 
 
 @pytest.mark.parametrize('lang,regex', [
-    ('en', 'found \d+ page\(s\) matching'),
-    ('es', 'encontró \d+ página\(s\) acorde'),
-    ('fr', '\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
+    ('en', r'found \d+ page\(s\) matching'),
+    ('es', r'encontró \d+ página\(s\) acorde'),
+    ('fr', r'\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
 ])
 def test_search(browser, server, lang, regex):
     browser.get('{}{}'.format(server, lang))
@@ -82,7 +82,7 @@ def test_search(browser, server, lang, regex):
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_community_extensions(browser, server, lang):
-    url = 'https://raw.githubusercontent.com/open-contracting/ocds_budget_breakdown_extension/master/extension.json'
+    url = 'https://raw.githubusercontent.com/open-contracting-extensions/ocds_budget_breakdown_extension/master/extension.json'  # noqa
     extension = requests.get(url).json()
 
     browser.get('{}{}/extensions'.format(server, lang))
@@ -139,10 +139,10 @@ def test_broken_links(browser, server, lang):
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
             href = link.get_attribute('href')
-            if '/validator/' in href or 'localhost' not in href:
+            if '/review/' in href or 'localhost' not in href:
                 continue
             r = requests.get(href)
-            assert r.status_code == 200
+            assert r.status_code == 200, 'expected 200, got {} for {}'.format(r.status_code, href)
         try:
             next = browser.find_element_by_link_text('Next')
             browser.execute_script("arguments[0].scrollIntoView();", next)
