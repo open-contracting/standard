@@ -7,7 +7,7 @@ $(function () {
     var template = '<dl><dt><a class="reference external" href=""></a></dt><dd></dd></dl>';
 
     // Append an empty list for community extensions.
-    $('.extension_list p.last').after('<br><dl class="docutils hide community-list"></dl>').wrapInner('<small></small>');
+    $('.extension_list p.last').after('<dl class="docutils hide community-list"></dl>').wrapInner('<small></small>');
 
     // Get the community extensions to add to the documentation.
     $.ajax({
