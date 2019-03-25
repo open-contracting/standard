@@ -23,6 +23,8 @@ This version of OCDS uses these specific versions of core extensions:
 
 ```
 
+Groups of extensions can be combined into **profiles**. Profiles are adaptations of OCDS to suit the disclosure requirements and user needs of a particular sector, type of contracting process or legal framework. [View the list of profiles.](https://www.open-contracting.org/data-standard/profiles-and-guidance/)
+
 ## Developing new extensions
 
 If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you should include these in your OCDS data and create a new extension to document their structure and meaning.
