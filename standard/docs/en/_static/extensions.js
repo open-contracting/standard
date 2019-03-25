@@ -15,7 +15,7 @@ $(function () {
       'crossDomain': true,
       'dataType': 'json'
     }).done(function (data) {
-      var communityExtensions = $.grep(data.extensions, function (i, extension) {
+      var communityExtensions = $.grep(data.extensions, function (extension) {
         return !extension.core;
       });
 
