@@ -22,6 +22,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Codelists
 
 * [#746](https://github.com/open-contracting/standard/pull/746) Update currency codelist for ISO4217 amendment 168 (2018-08-02).
+* [#725](https://github.com/open-contracting/standard/pull/725) Update open codelists:
+  * Add a 'plannedProcurementNotice' code to the `documentType` codelist, 'CUCOP' to `itemClassificationScheme`, 'interestedParty' to `partyRole`.
+  * Update the descriptions of the 'tenderNotice' and 'technicalSpecifications' codes in the `documentType` codelist to align with the text of the [Agreement on Government Procurement (GPA)](https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm) of the World Trade Organization (WTO).
+  * Apply the style guide and OCDS glossary to the 'procuringEntity' and 'supplier' codes in the `partyRole` codelist.
+  * Add examples to the description of the 'environmentalImpact' code in the `documentType` codelist.
 
 ### Schema
 
