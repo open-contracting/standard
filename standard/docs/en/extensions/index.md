@@ -25,7 +25,7 @@ This version of OCDS uses these specific versions of core extensions:
 
 ## Developing your own extensions
 
-If you have additional fields to include in your data which are not covered by an existing extension, you may create a new extension.
+If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you should include these in your OCDS data and create a new extension to document their structure and meaning.
 
 ### Extension template
 
