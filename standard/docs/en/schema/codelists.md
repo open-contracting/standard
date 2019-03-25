@@ -25,7 +25,7 @@ The organizations, economic operators or other participants in a contracting pro
 
 ### Item Classification Scheme
 
-Items should be classified using existing gazetteers and codelists, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm). Open codelists are strongly preferred. 
+Items should be classified using existing item classification schemes, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm).
 
 ```eval_rst
 .. csv-table-no-translate::
