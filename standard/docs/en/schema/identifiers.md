@@ -42,7 +42,7 @@ You can read more about the OCDS approach to identify organizations below.
 
 Not all the identifiers in OCDS need to be globally unique. Most only need to be unique among the identifiers used for the same type of object within the same scope. For example:
 
-* A release ID must be unique within any release package it appears in;
+* A release ID must be unique within the scope of the contracting process of which it is a part;
 * Award and contract identifiers must be unique within the scope of the contracting process of which they are a part;
 * An item, milestone or document ID must be unique within the array it is part of.
 
@@ -157,13 +157,13 @@ See [docs.org-id.guide](http://docs.org-id.guide) for more information.
 
 ## Release ID
 
-The release ID must be unique within the contracting process it is part of, **and** within any given data package it is part of. 
+A release identifier must be unique within the scope of the contracting process of which it is a part. In other words, across all OCDS data with the same `ocid` value, each release identifier refers to exactly one release; no two releases use the same release identifier.
 
-> Within any release or record package **and** for any given ocid, there should be no two release IDs that refer to different releases.
+A release identifier must also be consistent within this scope. For example, if the `id` of a release is "12345" in one release package, then the `id` of the same release in another release package must also be "12345".
 
 ## Award and Contract IDs
 
-Award and contract identifiers must be unique within the scope of the contracting process of which they are a part. In other words, across all OCDS data with the same `ocid`, each contract identifier refers to exactly one contract; no two contracts use the same contract identifier.
+Award and contract identifiers must be unique within the scope of the contracting process of which they are a part. In other words, across all OCDS data with the same `ocid` value, each contract identifier refers to exactly one contract; no two contracts use the same contract identifier.
 
 Award and contract identifiers must also be consistent within this scope. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
 
