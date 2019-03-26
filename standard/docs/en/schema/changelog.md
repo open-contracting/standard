@@ -18,7 +18,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Codelists
 
-* [#746](https://github.com/open-contracting/standard/pull/746) Update currency codelist for ISO4217 amendment 168 (2018-08-02).
+* [#746](https://github.com/open-contracting/standard/pull/842) [#746](https://github.com/open-contracting/standard/pull/842) Update currency codelist for ISO4217 amendments [166](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_166.pdf), [167](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_167.pdf), [168](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_168.pdf) and [169](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_169.pdf).
 * [#725](https://github.com/open-contracting/standard/pull/725) Add examples to the description of the 'environmentalImpact' code in the `documentType` codelist. Add 'plannedProcurementNotice' to `documentType`, 'CUCOP' to `itemClassificationScheme`, 'interestedParty' to `partyRole`.
 
 ### Schema
