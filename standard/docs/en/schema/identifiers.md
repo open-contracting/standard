@@ -161,7 +161,7 @@ The release ID must be unique within the contracting process it is part of, **an
 
 > Within any release or record package **and** for any given ocid, there should be no two release IDs that refer to different releases.
 
-### Award and Contract IDs
+## Award and Contract IDs
 
 Award and contract identifiers must be unique within the scope of the contracting process of which they are a part. In other words, across all OCDS data with the same `ocid`, each contract identifier refers to exactly one contract; no two contracts use the same contract identifier.
 
@@ -169,7 +169,7 @@ Award and contract identifiers must also be consistent within this scope. For ex
 
 Contracts should always cross-reference a related award (using the awardID property), as key information such as suppliers may be contained in the related award. There may be multiple contracts referring to a single award, as in the case of a framework contract where multiple contract are issued against a single award.
 
-## Items, Documents and Milestones
+## Item, Document and Milestone IDs
 
 An item, document or milestone ID must be unique within a given array of items, and must be used consistently across all the releases in a contracting process. 
 
