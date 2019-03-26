@@ -157,13 +157,13 @@ See [docs.org-id.guide](http://docs.org-id.guide) for more information.
 
 ## Release ID
 
-A release identifier must be unique within the scope of the contracting process of which it is a part. In other words, across all OCDS data with the same `ocid` value, each release identifier refers to exactly one release; no two releases use the same release identifier.
+A release identifier must be unique within the scope of the contracting process of which it is a part. In other words, across all OCDS releases with the same `ocid` value, each release identifier refers to exactly one release; no two releases use the same release identifier.
 
 A release identifier must also be consistent within this scope. For example, if the `id` of a release is "12345" in one release package, then the `id` of the same release in another release package must also be "12345".
 
 ## Award and Contract IDs
 
-Award and contract identifiers must be unique within the scope of the contracting process of which they are a part. In other words, across all OCDS data with the same `ocid` value, each contract identifier refers to exactly one contract; no two contracts use the same contract identifier.
+Award and contract identifiers must be unique within the scope of the contracting process of which they are a part. In other words, across all OCDS releases with the same `ocid` value, each contract identifier refers to exactly one contract; no two contracts use the same contract identifier.
 
 Award and contract identifiers must also be consistent within this scope. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
 
