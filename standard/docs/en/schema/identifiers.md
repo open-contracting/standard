@@ -167,24 +167,25 @@ Award and contract identifiers must be unique within the scope of the contractin
 
 Award and contract identifiers must also be consistent within this scope. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
 
-Contracts should always cross-reference a related award (using the awardID property), as key information such as suppliers may be contained in the related award. There may be multiple contracts referring to a single award, as in the case of a framework contract where multiple contract are issued against a single award.
+Contracts should always cross-reference a related award (using the `awardID` field), as key information such as suppliers may be contained in the related award. There may be multiple contracts referring to a single award, as in the case of a framework contract where multiple contract are issued against a single award.
 
 ## Item, Document and Milestone IDs
 
-An item, document or milestone ID must be unique within a given array of items, and must be used consistently across all the releases in a contracting process. 
+An item, document or milestone identifier must be unique within a given array of items, and must be used consistently across all the releases in a contracting process. 
 
-The same id may be re-used in another array of items within the same release, and no cross-reference between these identifiers is implied. 
+The same `id` value may be re-used in another array of items within the same release, and no cross-reference between these identifiers is implied. 
 
 The use of an identifier means that subsequent releases can update prior identified items, documents or milestones, without needing to republish all the items, documents or milestones.
 
 For example:
 
-* A release may contain tender.items (Items tendered for) and award.items
-* tender.items may contain three items, with identifiers of: [1, 2, 3]
-* award.items may contain two items, with identifiers of: [3, 4]
-* A second release is issued in which award.items contains six items: [3, 4, 5]
+* A first release sets the items to be procured in `tender/items` and the items awarded in one award in `awards/0/items`:
+  * `tender/items` contains three items, with `id` values of "1", "2", and "3"
+  * `awards/0/items` contains two items, with `id` values of "3" and "4"
 
-In this situation, note that:
+There is *no* relationship between the item to be procured with `id` "3" and the item awarded with `id` "3"; these can be different items. Continuing the example:
 
-* There is no implied relationship between the tender.item with id 3 and the award.item with id 3: these could be entirely different items
-* There is a relationship between the award.items with id 3 and 4 in the first release, and with award.id of 3 and 4 in the second release. The second release should be interpreted as updating items 3 and 4, and adding a new item, 5. 
+* A second release updates the items awarded in the single award in `awards/0/items`:
+  * `awards/0/items` contains three items, with `id` values of "3", "4", "5"
+
+Here, there *is* a relationship between the items awarded with `id` "3" and "4" in the first release and the items awarded with `id` "3" and "4" in the second release. The second release is interpreted as updating the existing items "3" and "4" and adding a new item "5". 
