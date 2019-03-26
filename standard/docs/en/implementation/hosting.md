@@ -13,17 +13,17 @@ Which formats are most important will depend on the priority use cases for each 
 
 ## Bulk downloads
 
-The release and record data package containers (in JSON and CSV) offer a way to provide **bulk access** to a collection of contracting process release and records. 
+The release package and record package can provide **bulk access** to releases and records, respectively.
 
 However, very large files can be difficult for users to download and process. The following section provides suggested good practices which will assist users in accessing data. These are not requirements of the standard, but are based on experiences of maximizing the number of users able to work with datasets with their existing hardware and software.
 
 ### File size limits
 
-When generating data packages for bulk download, apply the following limits:
+When generating packages for bulk download, apply the following limits:
 
-* Unzipped OCDS data packages should not exceed 1Gb each;
-* Zipped OCDS data packages should not exceed 10 Mb each;
-* A single OCDS data package should contain a maximum of 250,000 awards or contracts; 
+* Unzipped OCDS packages should not exceed 1Gb each;
+* Zipped OCDS packages should not exceed 10 Mb each;
+* A single OCDS package should contain a maximum of 250,000 awards or contracts; 
 
 When a file is likely to exceed one of these limits, release or records should be split across multiple files. Dynamically generated bulk downloads do not have to apply these limits, though publishers should consider ways to advise users when a query is likely to generate a very large file. 
 
@@ -34,7 +34,7 @@ When the suggested limits require publication of multiple files, publishers shou
 For releases, publishers may choose to:
 
 1. Segment by **releaseDate** - placing all the releases from a given day, month or year in the same file;
-1. Segment by **contracting process identifier** - placing all the releases related to a given set of contract process identifiers together in the same data package;
+1. Segment by **contracting process identifier** - placing all the releases related to a given set of contract process identifiers together in the same package;
 
 For records, publishers should segment either based on the first **releaseDate** associated with a contracting process, or by **contracting process identifier.**
 
@@ -42,9 +42,9 @@ Following these approaches will avoid release and records 'jumping' between file
 
 ### Compression
 
-OCDS data packages may be compressed in order to save on disk space and bandwidth. 
+OCDS packages may be compressed in order to save on disk space and bandwidth. 
 
-If compressing data packages, publishers *should* use the zip file format.
+If compressing packages, publishers *should* use the zip file format.
 
 ### Serving files
 
@@ -93,7 +93,7 @@ In addition, the data.json document may contain one or more records with the key
 
 ### Feeds
 
-Publishers exposing individual records and releases, of regularly updated data packages in small sets, should provide one or more [atom feeds](http://en.wikipedia.org/wiki/Atom_%28standard%29) that index these, and provide an easy mechanism for users to discover recently published or updated release and records.
+Publishers exposing individual records and releases, of regularly updated packages in small sets, should provide one or more [Atom feeds](http://en.wikipedia.org/wiki/Atom_%28standard%29) that index these, and provide an easy mechanism for users to discover recently published or updated release and records.
 
 The link to the release or record should be provided via a `<link>` tag, and the updated date of the entry should reflect the updated date of that release or record. The `<id>` should reflect the release id for release, or the ocid for records.
     
