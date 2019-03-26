@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Advisories
 
+* OCDS 1.0 uses the [whole-list merge](http://standard.open-contracting.org/1.1/en/schema/merging/#whole-list-merge) strategy for suppliers, whereas OCDS 1.1 uses the [identifier merge](http://standard.open-contracting.org/1.1/en/schema/merging/#identifier-merge) strategy. As a consequence, the OCDS 1.1 versioned release schema is not backward compatible with OCDS 1.0.
 * [#780](https://github.com/open-contracting/standard/pull/780) All extensions have been moved to the [open-contracting-extensions](https://github.com/open-contracting-extensions) organization. No change is required, but we recommend that publishers update the URLs of extensions in release packages and record packages.
 * [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [translation and localization policy](http://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
 * [#806](https://github.com/open-contracting/standard/pull/806) [#808](https://github.com/open-contracting/standard/pull/808) The documentation is now available in Italian.
