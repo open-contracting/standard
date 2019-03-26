@@ -4,7 +4,7 @@ Consistent identifiers are essential to help join up open contracting data.
 
 * The Open Contracting ID (ocid) is a globally unique identifier used to join up data on all stages of a contracting process;
 * Organization identifiers are important to know who is involved in each contract;
-* Release, tender, award and contract identifiers are important to help cross-reference information.
+* Release, award and contract identifiers are important to help cross-reference information.
 
 ## Types of identifiers 
 
@@ -43,10 +43,10 @@ You can read more about the OCDS approach to identify organizations below.
 Not all the identifiers in OCDS need to be globally unique. Most only need to be unique among the identifiers used for the same type of object within the same scope. For example:
 
 * A release ID must be unique within any release package it appears in;
-* A tender, award and contract ID must be unique within the contracting process it appears in;
+* Award and contract identifiers must be unique within the scope of the contracting process of which they are a part;
 * An item, milestone or document ID must be unique within the array it is part of.
 
-Local identifiers must be used consistently. For example, if an award is given the ID '22' in one release, then the same award must have the same ID (22) in any subsequent releases which contain it. 
+Local identifiers must be used consistently. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
 
 ## Contracting Process Identifier (ocid)
 
@@ -163,7 +163,9 @@ The release ID must be unique within the contracting process it is part of, **an
 
 ### Award and Contract IDs
 
-Award and contract identifiers must be unique within the scope of the contracting process of which they are a part; in other words, across all OCDS data with the same `ocid`, each contract identifier refers to exactly one contract, and no two contracts use the same contract identifier.
+Award and contract identifiers must be unique within the scope of the contracting process of which they are a part. In other words, across all OCDS data with the same `ocid`, each contract identifier refers to exactly one contract; no two contracts use the same contract identifier.
+
+Award and contract identifiers must also be consistent within this scope. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
 
 Contracts should always cross-reference a related award (using the awardID property), as key information such as suppliers may be contained in the related award. There may be multiple contracts referring to a single award, as in the case of a framework contract where multiple contract are issued against a single award.
 
