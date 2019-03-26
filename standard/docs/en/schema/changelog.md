@@ -24,6 +24,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Schema
 
 * [#712](https://github.com/open-contracting/standard/pull/712) Add missing titles for `publisher` and `url` and description for `record` in the record package schema, and missing description for `releases` in release package schema.
+* [#838](https://github.com/open-contracting/standard/pull/838) Eliminate the conflicting rule that release identifiers must be unique within release packages. Uniqueness within the scope of a release package either implies that release identifiers must be globally unique, or imposes an arbitrary restriction on the contents of release packages, as there is no rule preventing release packages from containing releases from different contracting processes. Release identifiers are only required to be locally unique within the scope of a contracting process. The `ocid` and `id` values of a release can be used together to disambiguate releases within a release package.
 
 ### Documentation
 
