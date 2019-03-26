@@ -18,7 +18,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Codelists
 
-* [#746](https://github.com/open-contracting/standard/pull/746) Update currency codelist for ISO4217 amendment 168 (2018-08-02).
+* [#746](https://github.com/open-contracting/standard/pull/842) [#746](https://github.com/open-contracting/standard/pull/842) Update currency codelist for ISO4217 amendments [166](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_166.pdf), [167](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_167.pdf), [168](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_168.pdf) and [169](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_169.pdf).
+* [#725](https://github.com/open-contracting/standard/pull/725) Add examples to the description of the 'environmentalImpact' code in the `documentType` codelist. Add 'plannedProcurementNotice' to `documentType`, 'CUCOP' to `itemClassificationScheme`, 'interestedParty' to `partyRole`.
 
 ### Schema
 
@@ -29,10 +30,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#772](https://github.com/open-contracting/standard/pull/772) Clarify the merge rules for compiled releases and versioned releases.
 * [#797](https://github.com/open-contracting/standard/pull/797) Fix examples of versioned releases.
 * [#783](https://github.com/open-contracting/standard/pull/783) Add missing email address for the standard governance working group.
+* [#835](https://github.com/open-contracting/standard/pull/835) Display the canonical schema URLs in the documentation.
+* [#823](https://github.com/open-contracting/standard/pull/823) Replace ambiguous terms on schema reference pages.
+* [#840](https://github.com/open-contracting/standard/pull/840) Remove ambiguous usage of "data package", to avoid confusion with [Frictionless Data's Data Package specification](https://frictionlessdata.io/specs/data-package/).
 * [#783](https://github.com/open-contracting/standard/pull/783) List community extensions relating to party details.
 * [#822](https://github.com/open-contracting/standard/pull/822) Integrate the [Extension Explorer](https://extensions.open-contracting.org/en/) into the documentation.
 * Typos have been corrected [#692](https://github.com/open-contracting/standard/pull/692) [#713](https://github.com/open-contracting/standard/pull/713) [#719](https://github.com/open-contracting/standard/pull/719) [#726](https://github.com/open-contracting/standard/pull/726) [#732](https://github.com/open-contracting/standard/pull/732) [#752](https://github.com/open-contracting/standard/pull/752) [#756](https://github.com/open-contracting/standard/pull/756) [#795](https://github.com/open-contracting/standard/pull/795).
-* The process to build the documentation has been improved [#666](https://github.com/open-contracting/standard/pull/666) [#698](https://github.com/open-contracting/standard/pull/698) [#708](https://github.com/open-contracting/standard/pull/708) [#709](https://github.com/open-contracting/standard/pull/709) [#721](https://github.com/open-contracting/standard/pull/721) [#724](https://github.com/open-contracting/standard/pull/724) [#727](https://github.com/open-contracting/standard/pull/727) [#729](https://github.com/open-contracting/standard/pull/729) [#733](https://github.com/open-contracting/standard/pull/733) [#740](https://github.com/open-contracting/standard/pull/740) [#747](https://github.com/open-contracting/standard/pull/747) [#753](https://github.com/open-contracting/standard/pull/753) [#762](https://github.com/open-contracting/standard/pull/762) [#767](https://github.com/open-contracting/standard/pull/767) [#783](https://github.com/open-contracting/standard/pull/783) [#787](https://github.com/open-contracting/standard/pull/787).
+* The process to build the documentation has been improved [#666](https://github.com/open-contracting/standard/pull/666) [#698](https://github.com/open-contracting/standard/pull/698) [#708](https://github.com/open-contracting/standard/pull/708) [#709](https://github.com/open-contracting/standard/pull/709) [#721](https://github.com/open-contracting/standard/pull/721) [#724](https://github.com/open-contracting/standard/pull/724) [#727](https://github.com/open-contracting/standard/pull/727) [#729](https://github.com/open-contracting/standard/pull/729) [#733](https://github.com/open-contracting/standard/pull/733) [#740](https://github.com/open-contracting/standard/pull/740) [#747](https://github.com/open-contracting/standard/pull/747) [#753](https://github.com/open-contracting/standard/pull/753) [#762](https://github.com/open-contracting/standard/pull/762) [#767](https://github.com/open-contracting/standard/pull/767) [#783](https://github.com/open-contracting/standard/pull/783) [#787](https://github.com/open-contracting/standard/pull/787) [#836](https://github.com/open-contracting/standard/pull/836).
 
 ## [1.1.3] - 2018-04-16
 

@@ -1,6 +1,6 @@
 # Release Reference
 
-The [Release Schema](release.md) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into data packages and how to compile releases into records. 
+The [Release Schema](release.md) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into release packages and how to compile releases into records. 
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence**
 

@@ -172,12 +172,12 @@ def setup(app):
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
     codelists_domain = '{}codelists'.format(gettext_domain_prefix)
 
-    schema_dir = basedir / 'standard' / 'schema'
-    build_dir = basedir / 'build'
+    standard_dir = basedir / 'standard' / 'schema'
+    standard_build_dir = basedir / 'build' / language
 
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
-        (glob(str(schema_dir / '*-schema.json')), build_dir / language, schema_domain),
+        (glob(str(standard_dir / '*-schema.json')), standard_build_dir, schema_domain),
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
-        (glob(str(schema_dir / 'codelists' / '*.csv')), build_dir / 'codelists' / language, codelists_domain),
+        (glob(str(standard_dir / 'codelists' / '*.csv')), standard_build_dir / 'codelists', codelists_domain),
     ], localedir, language, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
