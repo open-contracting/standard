@@ -84,11 +84,11 @@ Completion or Termination info
 </div>
 <br clear="all"/>
 
-Not all contracting processes have all stages. For example, direct contracting may start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case. 
+Not all contracting processes have all stages. For example, direct contracting might start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case. 
 
-You should aim to publish OCDS data close to real-time: releasing data as each stage of a contracting process takes place.
+You are encouraged to publish OCDS data close to real-time: releasing data as each stage of a contracting process takes place.
 
-This may involve generating output from a range of different systems. Data published from different systems can be tied together by use of a common Open Contracting ID (`ocid`).
+This might involve generating output from a range of different systems. Data published from different systems can be tied together by use of a common Open Contracting ID (`ocid`).
 
 ### Defining a contracting process
 
@@ -96,11 +96,11 @@ For public procurement OCDS defines a unique contracting process as:
 
 > All the planning, tendering information, awards, contracts and contract implementation information related to a single initiation process.
 
-An initiation process may be a tender, a direct contract award, or a call to award a concession. 
+An initiation process might be a tender, a direct contract award, or a call to award a concession. 
 
 ### The Open Contracting ID (ocid)
 
-Each unique contracting process should be assigned an `ocid`. This is an identifier which can be used to join up data between different stages (as often the data may be stored in different systems). 
+Each unique contracting process needs to be assigned an `ocid`. This is an identifier which can be used to join up data between different stages (as often the data might be stored in different systems). 
 
 To make sure the `ocid`s assigned by two different publishers do not clash, publishers are encouraged to register a publisher prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process. 
 
@@ -124,7 +124,7 @@ For example:
 
 > ocds-87sd3t-OM-DGRMSG-004-13
 
-All the award notices, contracts and transactions resulting from the tender with this identifier should also share this ocid - allowing Mexico City to bring together a complete picture of each contracting process.
+All the award notices, contracts and transactions resulting from the tender with this identifier share this ocid - allowing Mexico City to bring together a complete picture of each contracting process.
 
 </div>
 
@@ -132,7 +132,7 @@ All the award notices, contracts and transactions resulting from the tender with
     
 <p class="first admonition-title">Note</p>
     
-The `ocid` is case sensitive. Case should be used consistently whenever an `ocid` is presented.
+The `ocid` is case sensitive. Case needs to be used consistently whenever an `ocid` is presented.
 
 </div>
 
