@@ -7,25 +7,19 @@ An OCDS [record](../getting_started/releases_and_records.md) aggregates all the 
 
 **Merging** is the process of combining individual releases into a compiled or versioned release, described in more detail below.
 
-The versioned release makes it easy to see how field values have changed over time: for example, to see how contract values have been modified or how milestones have been re-scheduled during implementation.
+The versioned release makes it easy to see how field values have changed over time: for example, how contract values have been modified or how milestones have been re-scheduled during implementation.
 
 <div class="example hint" markdown=1>
 
 <p class="first admonition-title">Worked Example</p>
 
-A publisher provides a tender release on 1st January, with a planned contract value of $1000.
+A public procurement agency publishes a release to announce an opportunity on January 1, in which the total estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the total estimated value of the procurement is increased to $2,000.
 
-On 5th February, the publisher provides an amended tender release updating the planned contract value to $2000.
+The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
 
-After assessing bids, it is decided to award the contract in two lots.
+Through these individual releases, the agency provides real-time data about the contracting process.
 
-On 1st March, the publisher provides an award release, announcing Company A has been awarded a contract for $750.
-
-On 3rd March, the publisher provides an separate award release, announcing that company B has been awarded a contract for $750.
-
-These independent releases each provide real-time information about what is happening in the contracting process. The record will combine them together. Using the same schema and structure as the releases, the main body of the record will contain a tender with contract value of $1500, and details of both awards.
-
-If the record is complete with versioning information, then the versioning section will reveal that the planned contract value changed from $1000 to $1500 on 31st January.
+At each release, the agency also updates the record, which combines all the releases to date. The compiled release in the final record contains all the information about the opportunity and awards, using the same schema as a release. The versioned release shows that the description changed on January 31 and that the total estimated value changed from $1,000 to $2,000 on February 5.
 
 ```eval_rst
 
@@ -96,7 +90,9 @@ If `omitWhenMerged` is set to `false`, ignore it.
 ```eval_rst
 .. note::
 
-  The compiled release presently uses the same schema as the release schema, which means that the ``id``, ``date`` and ``tag`` fields are required in a compiled release. We invite discussion of a separate compiled release schema in issue `#330 <https://github.com/open-contracting/standard/issues/330>`__ to re-consider these requirements, and discussion on how to identify and date compiled and versioned releases in issue `#834 <https://github.com/open-contracting/standard/issues/834>`__. In the meantime, an intermediate solution is to set ``tag`` to ``["compiled"]``, ``date`` to the date of the most recent release, and ``id`` to ``{ocid}-{date}``, like in the reference implementation of the merge routine.
+  The compiled release presently uses the same schema as the release schema, which means that the ``id``, ``date`` and ``tag`` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue `#330 <https://github.com/open-contracting/standard/issues/330>`__, and on how to identify and date compiled and versioned releases in issue `#834 <https://github.com/open-contracting/standard/issues/834>`__.
+
+  In the meantime, an intermediate solution is to set ``tag`` to ``["compiled"]``, ``date`` to the date of the most recent release, and ``id`` to ``{ocid}-{date}``, like in the `reference implementation <#reference-implementation>`__ of the merge routine.
 ```
 
 ### Versioned values
@@ -104,32 +100,34 @@ If `omitWhenMerged` is set to `false`, ignore it.
 To convert a field's value in a release to a **versioned value**:
 
 1. Create an empty JSON object
-1. Set its `releaseID`, `releaseDate` and `releaseTag` fields to the `id`, `date` and `tag` values in the release
+1. Set its `releaseID`, `releaseDate`, `releaseTag` fields to the release's `id`, `date`, `tag` values
 1. Set its `value` field to the field's value in the release
 
-This versioned value thus describes the field's value in the referenced release.
+A **versioned value** thus describes a field's value in a specific release.
 
-For example, in the above worked example, the estimated value of the procurement (`tender/value/amount`) was $1000 (`1000`) in a release. Following the steps above, the versioned value is:
+For example, in the above worked example, the estimated value of the procurement was $1,000 in a release (`tender/value/amount` was `1000`). Following the steps above, the versioned value is:
 
-```eval_rst
-
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0/versionedRelease/tender/value/amount/0
-   :expand: value, amount
-   :title: Versioned value
-
+```json
+{
+  "releaseID": "ocds-213czf-000-00002-01-tender",
+  "releaseDate": "2016-01-01T09:30:00Z",
+  "releaseTag": [
+    "tender"
+  ],
+  "value": 1000
+}
 ```
 
-In a versioned release, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
+In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
 
-For example, in the above worked example, the estimated value was $1000 in a release published January 1, 2016 and then $2000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
+For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0/versionedRelease/tender
+   :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: value, amount
-   :title: Versioned values
+   :title: Versioned_values
 
 ```
 
@@ -138,7 +136,7 @@ For example, in the above worked example, the estimated value was $1000 in a rel
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer:
    :expand: records, versionedRelease
-   :title: Versioned release
+   :title: Versioned_release
 
 ```
 
@@ -171,18 +169,16 @@ If the **input** value is neither an object nor an array, then:
 * For a compiled release:
   * If the **input** value is not `null` and is different from the **output** value, replace the **output** value with the **input** value
 * For a versioned release:
-  * If there is no **output** value, set the **output** value to an empty JSON array, convert the **input** value to a [versioned value](#versioned-values), and append it to the **output** array of versioned values
-  * If the **input** value is different from the value of the `value` field of the most recent versioned value in **output**, convert the **input** value to a [versioned value](#versioned-values), and append it to the **output** array of versioned values
+  * If there is no **output** value, set the **output** value to an empty JSON array, convert the **input** value to a [versioned value](#versioned-values), and append it to the new array of versioned values in **output**
+  * If the **input** value is different from the value of the `value` field of the most recent versioned value in **output**, convert the **input** value to a [versioned value](#versioned-values), and append it to the array of versioned values in **output**
 
 #### Array values
 
-If the **input** array contains anything other than objects, treat the array as a literal value.
-
-Otherwise, there are two sub-routines for arrays of objects: whole list merge and identifier merge.
+If the **input** array contains anything other than objects, treat the array as a literal value. Otherwise, there are two sub-routines for arrays of objects: whole list merge and identifier merge.
 
 ##### Whole list merge
 
-An **input** array of objects should be treated as a literal value if the corresponding field in a [dereferenced copy](https://jsonref.readthedocs.io/en/latest/) of the release schema has `"array"` in its `type` and if any of the following are also true:
+An **input** array should be treated as a literal value if the corresponding field in a [dereferenced copy](https://jsonref.readthedocs.io/en/latest/) of the release schema has `"array"` in its `type` and if any of the following are also true:
 
 * The field has `"wholeListMerge": true`
 * The field sets `items/type`, and has anything other than `"object"` in `items/type`
@@ -190,7 +186,7 @@ An **input** array of objects should be treated as a literal value if the corres
 
 ##### Identifier merge
 
-This case is encountered if the above conditions weren't met. If the array is empty in **input**, do nothing. For each object within the array in **input**:
+This case is encountered if the above conditions aren't met. If the array is empty in **input**, do nothing. For each object within the array in **input**:
 
 * For a compiled release:
   * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the merge routine

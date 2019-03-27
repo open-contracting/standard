@@ -33,6 +33,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Schema
 
 * [#712](https://github.com/open-contracting/standard/pull/712) Add missing titles for `publisher` and `url` and description for `record` in the record package schema, and missing description for `releases` in release package schema.
+* [#810](https://github.com/open-contracting/standard/pull/810) Add `"versionId": true` hint to `Identifier` and `Classification`.
 
 ### Documentation
 
