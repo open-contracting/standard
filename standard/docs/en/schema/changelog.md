@@ -16,9 +16,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Bugs
 
 * [#738](https://github.com/open-contracting/standard/pull/738) 1.1.3 changed the merging and versioning behaviors of `Item.unit`, such that it could be removed by setting it to `null`, and such that it was versioned as a whole. 1.1.4 restores the behaviors from 1.1.2, such that only its sub-fields can be removed by setting them to `null`, and such that its sub-fields are versioned individually. If you are not using compiled releases or versioned releases, then this bug didn't affect you.
-* `buyer.id`, `Tender.procuringEntity.id`, `Contract.implementation.payer.id` `Contract.implementation.payee.id`, `Budget.id`, `Identifier.id`, and `Classification.id` are now versioned, consistent with the documentation.
+* [#810](https://github.com/open-contracting/standard/pull/810) `buyer.id`, `Tender.procuringEntity.id`, `Contract.implementation.payer.id` `Contract.implementation.payee.id`, `Budget.id`, `Identifier.id`, and `Classification.id` are now versioned, consistent with the documentation.
 * [#769](https://github.com/open-contracting/standard/pull/769) The versioned release schema now matches the release schema in: having a `minLength` validation property for `OrganizationReference.name`; having `codelist` and `openCodelist` properties for `Tender.awardCriteria`, `Tender.awardCriteriaDetails`, `Document.documentType`, `Item.unit.scheme`, `Classification.scheme`, and `RelatedProcess.scheme`; and having a `deprecated` property for `Budget.source`. All `title` and `description` metadata properties are removed from the versioned release schema.
-* `tag` is now `omitWhenMerged`, consistent with the reference implementation in OCDS Merge.
+* [#810](https://github.com/open-contracting/standard/pull/810) `tag` is now `omitWhenMerged`, consistent with the reference implementation in OCDS Merge.
 
 ### Codelists
 
@@ -36,7 +36,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Documentation
 
-* [#772](https://github.com/open-contracting/standard/pull/772) Clarify the merge rules for compiled releases and versioned releases.
+* [#772](https://github.com/open-contracting/standard/pull/772) [#810](https://github.com/open-contracting/standard/pull/810) Clarify the merge rules for compiled releases and versioned releases.
 * [#797](https://github.com/open-contracting/standard/pull/797) Fix examples of versioned releases.
 * [#783](https://github.com/open-contracting/standard/pull/783) Add missing email address for the standard governance working group.
 * [#835](https://github.com/open-contracting/standard/pull/835) Display the canonical schema URLs in the documentation.
