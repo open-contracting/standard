@@ -81,26 +81,6 @@ def test_search(browser, server, lang, regex):
 
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
-def test_community_extensions(browser, server, lang):
-    url = 'https://raw.githubusercontent.com/open-contracting-extensions/ocds_budget_breakdown_extension/master/extension.json'  # noqa
-    extension = requests.get(url).json()
-
-    browser.get('{}{}/extensions'.format(server, lang))
-    community_extensions = browser.find_element_by_id('community-extensions').find_element_by_tag_name('table')
-    # Currently community extensions aren't translated
-    link = community_extensions.find_element_by_link_text(extension['name']['en'])
-    assert (link.get_attribute('href') == extension['documentationUrl']['en'])
-    cells = link.find_elements_by_xpath('../../td')
-    assert cells[2].text == extension['description']['en']
-    assert cells[3].text == 'ppp'
-
-    assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
-    browser.execute_script("arguments[0].scrollIntoView();", cells[0])
-    cells[0].click()
-    assert 'ocds_budget_breakdown_extension' in browser.find_element_by_id('using-extensions').text
-
-
-@pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_examples(browser, server, lang):
     browser.get('{}{}/getting_started/releases_and_records'.format(server, lang))
     examples = browser.find_element_by_id('examples')
@@ -135,17 +115,31 @@ def test_language_switcher(browser, server):
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_broken_links(browser, server, lang):
+    referrer = ''
+    hrefs = set()
     browser.get('{}{}'.format(server, lang))
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
-            href = link.get_attribute('href')
+            href = re.sub(r'#.*$', '', link.get_attribute('href'))
+
+            # Don't test proxied or external URLs.
             if '/review/' in href or 'localhost' not in href:
                 continue
-            r = requests.get(href)
-            assert r.status_code == 200, 'expected 200, got {} for {}'.format(r.status_code, href)
+            # If the URL, without an anchor, has already been visited, don't test it again.
+            if href in hrefs:
+                continue
+            # Keep track of which pages have been tested.
+            hrefs.add(href)
+
+            response = requests.get(href)
+            assert response.status_code == 200, 'expected 200, got {} for {} linked from {}'.format(
+                response.status_code, href, referrer)
+
         try:
-            next = browser.find_element_by_link_text('Next')
-            browser.execute_script("arguments[0].scrollIntoView();", next)
-            next.click()
+            # Scroll the link into view, to make it clickable.
+            link = browser.find_element_by_link_text('Next')
+            referrer = link.get_attribute('href')
+            browser.execute_script("arguments[0].scrollIntoView();", link)
+            link.click()
         except NoSuchElementException:
             break

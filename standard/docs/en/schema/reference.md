@@ -79,11 +79,16 @@ The following details can be provided for each party.
 
 ```
 
-Detailed classification of parties can be provided using one or more [party detail extensions](../../../../extensions/party_details/).
-
 ```eval_rst
 .. extensionlist:: The following extensions are available for parties
    :list: parties
+```
+
+Each party has an optional `details` object. Through extensions, this can be used to provide detailed classification of parties.
+
+```eval_rst
+.. extensionlist:: The following extensions are available for party details
+   :list: partyDetail
 ```
 
 ### Planning
@@ -141,10 +146,7 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 
 ### Bids
 
-```eval_rst
-.. extensionlist:: The optional bids extension can be used to provide summary and detailed information about bids.
-   :list: bids
-```
+The optional [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/v1.1.4/) extension can be used to provide bid statistics and detailed information about individual bids.
 
 ### Award
 
@@ -480,7 +482,7 @@ As well as providing this machine-readable link between processes, publishers ma
 
 ### Location
 
-The addition of location information is currently handled through a [proposed extension](../extensions/location.md) to the standard.
+The optional [Location](https://extensions.open-contracting.org/en/extensions/location/v1.1.4/) extension can be used to provide location information.
 
 ### Publisher
 
