@@ -33,8 +33,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Schema
 
 * [#712](https://github.com/open-contracting/standard/pull/712) Add missing titles for `publisher` and `url` and description for `record` in the record package schema, and missing description for `releases` in release package schema.
+* [#838](https://github.com/open-contracting/standard/pull/838) Eliminate the conflicting rule that release identifiers must be unique within release packages. Uniqueness within the scope of a release package either implies that release identifiers must be globally unique, or imposes an arbitrary restriction on the contents of release packages, as there is no rule preventing release packages from containing releases from different contracting processes. Release identifiers are only required to be locally unique within the scope of a contracting process. The `ocid` and `id` values of a release can be used together to disambiguate releases within a release package.
 * [#810](https://github.com/open-contracting/standard/pull/810) Add a dereferenced release schema to ease the implementation of the merge routine.
 * [#810](https://github.com/open-contracting/standard/pull/810) Add `"versionId": true` hint to `Identifier` and `Classification`.
+* [#845](https://github.com/open-contracting/standard/pull/845) Remove reference to closed issue and note about field name.
 
 ### Documentation
 
@@ -43,6 +45,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#783](https://github.com/open-contracting/standard/pull/783) Add missing email address for the standard governance working group.
 * [#835](https://github.com/open-contracting/standard/pull/835) Display the canonical schema URLs in the documentation.
 * [#823](https://github.com/open-contracting/standard/pull/823) Replace ambiguous terms on schema reference pages.
+* [#838](https://github.com/open-contracting/standard/pull/838) Clarify the uniqueness of release, award and contract identifiers.
 * [#840](https://github.com/open-contracting/standard/pull/840) Remove ambiguous usage of "data package", to avoid confusion with [Frictionless Data's Data Package specification](https://frictionlessdata.io/specs/data-package/).
 * [#783](https://github.com/open-contracting/standard/pull/783) List community extensions relating to party details.
 * [#822](https://github.com/open-contracting/standard/pull/822) Integrate the [Extension Explorer](https://extensions.open-contracting.org/en/).
