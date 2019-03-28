@@ -167,7 +167,7 @@ If the object is empty in **input**, do nothing. For each field within the objec
 If the **input** value is neither an object nor an array, then:
 
 * For a compiled release:
-  * If the **input** value is not `null` and is different from the **output** value, replace the **output** value with the **input** value
+  * If the **input** value is different from the **output** value, replace the **output** value with the **input** value
 * For a versioned release:
   * If there is no **output** value, set the **output** value to an empty JSON array, convert the **input** value to a [versioned value](#versioned-values), and append it to the new array of versioned values in **output**
   * If the **input** value is different from the value of the `value` field of the most recent versioned value in **output**, convert the **input** value to a [versioned value](#versioned-values), and append it to the array of versioned values in **output**
@@ -178,7 +178,7 @@ If the **input** array contains anything other than objects, treat the array as 
 
 ##### Whole list merge
 
-An **input** array should be treated as a literal value if the corresponding field in a [dereferenced copy](https://jsonref.readthedocs.io/en/latest/) of the release schema has `"array"` in its `type` and if any of the following are also true:
+An **input** array should be treated as a literal value if the corresponding field in a [dereferenced copy](../../../../dereferenced-release-schema.json) of the release schema has `"array"` in its `type` and if any of the following are also true:
 
 * The field has `"wholeListMerge": true`
 * The field sets `items/type`, and has anything other than `"object"` in `items/type`
