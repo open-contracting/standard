@@ -1,6 +1,6 @@
 # Merging
 
-An OCDS [record](../getting_started/releases_and_records.md) aggregates all the releases available for a contracting process at a given time, and optionally includes:
+An OCDS [record](../getting_started/releases_and_records.md) aggregates all the releases available for a contracting process at a given time, and can include:
 
 * a compiled release, which expresses the current state of the contracting process, by showing only the most recent field values
 * a versioned release, which expresses all historical states of the contracting process, by showing all the field values over time
