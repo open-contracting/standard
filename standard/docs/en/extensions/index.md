@@ -10,7 +10,7 @@ Extensions are divided into two types:
 
 * **Community** and local extension are maintained by third-parties, or are maintained outside of the standard governance process. They might provide features needed by only a small number of publishers or users, or might be used to document a publisher's additional fields or codelist values.
 
-All core and community extensions are listed in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard technical team](../support/governance.md) approves extensions for inclusion in the registry (distinguishing community from local extensions) and for inclusion in the governance process (distinguishing core from community extensions).
+All core and community extensions are listed in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard technical team](../support/governance.md) approves extensions for inclusion in the Extension Explorer (distinguishing community from local extensions) and for inclusion in the governance process (distinguishing core from community extensions).
 
 ## Using existing extensions
 
