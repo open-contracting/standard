@@ -7,8 +7,8 @@ An OCDS [record](../getting_started/releases_and_records.md) aggregates all the 
 
 **Merging** is the process of combining individual releases into a compiled or versioned release, described in more detail below. At a high level:
 
-* A compiled release is produced by taking only the most recent values of fields from releases in a given contracting process.
-* A versioned release is produced by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
+* A compiled release is created by taking only the most recent values of fields from releases in a given contracting process.
+* A versioned release is created by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
 
 <div class="example hint" markdown=1>
 
@@ -85,7 +85,7 @@ At each release, the agency also updates the record, which combines all the rele
 
 ### Discarded fields
 
-In the release schema, `"omitWhenMerged": true` is declared on fields that should be discarded during merging. These are presently: `id`, `date` and `tag`.
+In the release schema, `"omitWhenMerged": true` is declared on fields that must be discarded during merging. These are presently: `id`, `date` and `tag`.
 
 * For a compiled release:
   * Both the fields and their values are discarded, because they are metadata about the individual releases; the compiled release replaces these with its own metadata.
@@ -104,7 +104,7 @@ If `omitWhenMerged` is set to `false`, ignore it.
 
 ### Versioned values
 
-To convert a field's value in a release to a **versioned value**:
+To convert a field's value in a release to a **versioned value**, you must:
 
 1. Create an empty JSON object
 1. Set its `releaseID`, `releaseDate`, `releaseTag` fields to the release's `id`, `date`, `tag` values
@@ -151,6 +151,8 @@ The structure of the versioned release is described by the [versioned release sc
 
 ### Merge routine
 
+To create a compiled or versioned release, you must:
+
 1. Get all releases with the same `ocid` value
 1. Order the releases in chronological order by `date`
 1. Create an empty JSON object for the compiled or versioned release
@@ -185,7 +187,7 @@ If the **input** array contains anything other than objects, treat the array as 
 
 ##### Whole list merge
 
-An **input** array should be treated as a literal value if the corresponding field in a [dereferenced copy](../../../../dereferenced-release-schema.json) of the release schema has `"array"` in its `type` and if any of the following are also true:
+An **input** array must be treated as a literal value if the corresponding field in a [dereferenced copy](../../../../dereferenced-release-schema.json) of the release schema has `"array"` in its `type` and if any of the following are also true:
 
 * The field has `"wholeListMerge": true`
 * The field sets `items/type`, and has anything other than `"object"` in `items/type`
@@ -205,14 +207,14 @@ This case is encountered if the above conditions aren't met. If the array is emp
 ```eval_rst
 .. note::
 
-  In this case, to remove an object from an array, you must instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue `#232 <https://github.com/open-contracting/standard/issues/232>`__.
+  In this case, to remove an object from an array, you need to instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue `#232 <https://github.com/open-contracting/standard/issues/232>`__.
 
 ```
 
 ```eval_rst
 .. note::
 
-  In the release schema, ``"versionId": true`` is declared on ``id`` fields that should be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue `#812 <https://github.com/open-contracting/standard/issues/812>`__). If ``"versionId": true`` is declared on the ``id`` field of an object within an array, it is ignored. ``"versionId": false`` has no meaning and is ignored.
+  In the release schema, ``"versionId": true`` is declared on ``id`` fields that must be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue `#812 <https://github.com/open-contracting/standard/issues/812>`__). If ``"versionId": true`` is declared on the ``id`` field of an object within an array, it is ignored. ``"versionId": false`` has no meaning and is ignored.
 
 ```
 
