@@ -5,9 +5,10 @@ An OCDS [record](../getting_started/releases_and_records.md) aggregates all the 
 * a compiled release, which expresses the current state of the contracting process, by showing only the most recent field values
 * a versioned release, which expresses all historical states of the contracting process, by showing all the field values over time
 
-**Merging** is the process of combining individual releases into a compiled or versioned release, described in more detail below.
+**Merging** is the process of combining individual releases into a compiled or versioned release, described in more detail below. At a high level:
 
-The versioned release makes it easy to see how field values have changed over time: for example, how contract values have been modified or how milestones have been re-scheduled during implementation.
+* A compiled release is produced by taking only the most recent values of fields from releases in a given contracting process.
+* A versioned release is produced by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
 
 <div class="example hint" markdown=1>
 
@@ -19,7 +20,10 @@ The agency decides to award the opportunity to two of the bidders. On March 1, t
 
 Through these individual releases, the agency provides real-time data about the contracting process.
 
-At each release, the agency also updates the record, which combines all the releases to date. The compiled release in the final record contains all the information about the opportunity and awards, using the same schema as a release. The versioned release shows that the description changed on January 31 and that the total estimated value changed from $1,000 to $2,000 on February 5.
+At each release, the agency also updates the record, which combines all the releases to date. In the final record:
+
+* The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
+* The versioned release makes it easy to see how the description and total estimated value changed over time.
 
 ```eval_rst
 
@@ -83,7 +87,10 @@ At each release, the agency also updates the record, which combines all the rele
 
 In the release schema, `"omitWhenMerged": true` is declared on fields that should be discarded during merging. These are presently: `id`, `date` and `tag`.
 
-The compiled release discards both the fields and their values, whereas the versioned release discards the fields but *moves* their values, as described below.
+* For a compiled release:
+  * Both the fields and their values are discarded, because they are metadata about the individual releases; the compiled release replaces these with its own metadata.
+* For a versioned release:
+  * The fields are discarded, but their values are moved, as described below, in order to indicate from which releases each other field value is taken.
 
 If `omitWhenMerged` is set to `false`, ignore it.
 
@@ -158,9 +165,9 @@ If the object is empty in **input**, do nothing. For each field within the objec
 * For a compiled release:
   * If the field in **input** has a value of `null`, remove the field from the object in **output**, if present
   * If the field isn't in **output**, add the field to the object in **output**, and set it to its value in **input**
-  * If the field is in **output**, merge the field's values in **output** and **input** according to the merge routine
+  * If the field is in **output**, merge the field's values in **output** and **input** according to the [merge routine](#merge-routine)
 * For a versioned release:
-  * Merge the field's values in **output** and **input** according to the merge routine; if there is a result, add the field to the object in **output** if not already added, and set it to the result
+  * Merge the field's values in **output** and **input** according to the [merge routine](#merge-routine); if there is a result, add the field to the object in **output** if not already added, and set it to the result
 
 #### Literal values
 
@@ -189,11 +196,11 @@ An **input** array should be treated as a literal value if the corresponding fie
 This case is encountered if the above conditions aren't met. If the array is empty in **input**, do nothing. For each object within the array in **input**:
 
 * For a compiled release:
-  * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the merge routine
+  * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the [merge routine](#merge-routine)
   * Otherwise, append the object in **input** to the array in **output**
 * For a versioned release:
-  * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the merge routine *except for the `id` field*, which is not versioned and instead kept as-is
-  * Otherwise, merge an empty JSON object and the object in **input** according to the merge routine *except for the `id` field*, which is not versioned and instead kept as-is, and append the result to the array in **output**
+  * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the [merge routine](#merge-routine) *except for the `id` field*, which is not versioned and instead kept as-is
+  * Otherwise, merge an empty JSON object and the object in **input** according to the [merge routine](#merge-routine) *except for the `id` field*, which is not versioned and instead kept as-is, and append the result to the array in **output**
 
 ```eval_rst
 .. note::
