@@ -113,4 +113,4 @@ For further information on multi-table serializations please see the [flatten to
 
 Whatever serialization is used for Open Contracting Data, a single file can contain one or more release and records.
 
-The release and record data package schemas describe the key metadata that ought to be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.
+The release package and record package schemas describe the key metadata that ought to be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.

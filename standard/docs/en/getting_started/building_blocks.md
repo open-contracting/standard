@@ -174,7 +174,7 @@ However, to support comparison across continents, the main OCDS procurement meth
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../../../../build/codelists/current_lang/method.csv
+   :file: ../../../../build/current_lang/codelists/method.csv
 ```
 
 All procedures need to be mapped to one of these options. 
