@@ -10,7 +10,7 @@ Open Contracting Data Standard: Documentation
 
     This is a community translation of OCDS carried out by [ TRANSLATORS ]. 
 
-    This translation was last updated on [ DATE ]. If the source OCDS documentation has changed since this date, some strings in this documentation may not appear translated. 
+    This translation was last updated on [ DATE ]. If the source OCDS documentation has changed since this date, some strings in this documentation might not appear translated. 
 
   If this is an officially supported translation (French and Spanish) please translate as a single dash '-'. 
 
