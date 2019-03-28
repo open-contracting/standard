@@ -61,7 +61,7 @@ Setting the `ocid` is usually a simple two step process:
 1. Identify the best **internal identifier** recorded against the contracting processes being disclosed;
 2. Register an `ocid` prefix to prepend to this internal identifier.
 
-In some cases, you may need to consider changes to existing systems to ensure that different systems handling information about your contracting processes have a common internal identifier to draw upon. 
+In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting processes have a common internal identifier to draw upon. 
 
 <div class="example hint" markdown=1>
 
@@ -93,7 +93,7 @@ See the [registration pages](../implementation/registration.md) for details of h
 
 Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes. 
 
-Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organizations may be able to issue prefixes, each with their own prefix agency identifiers.
+Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organizations might be able to issue prefixes, each with their own prefix agency identifiers.
 
 You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../implementation/registration.md). 
 
@@ -101,7 +101,7 @@ The registered prefixes are dumb identifiers. They are not intended to carry any
 
 ### Publisher namespace
 
-Earlier versions of this documentation imposed a stricter pattern on how internal identifiers should be combined with the ocid prefix, including a requirement for local namespaces. This requirement has been relaxed in practice and should be considered deprecated. 
+Earlier versions of this documentation imposed a stricter pattern on how internal identifiers ought to be combined with the ocid prefix, including a requirement for local namespaces. This requirement has been relaxed in practice and can be considered deprecated. 
 
 However, publishers are encouraged to consider whether there are any risks of clashes in local identifiers (e.g. the possibility that two parts of the publishing body might use the same identifier for different contracting processes) and to plan to mitigate this when establishing their own patterns to generate their `ocid`
 
@@ -147,9 +147,9 @@ The **organization register prefix** is used to refer to a register from which t
 
 * **Primary registers** - such as national or state company registrars. An identifier issued by these bodies has a specific legal meaning. There is a one to one equivalence between the identifier and a legal entity of a particular form in a given jurisdiction. The identifier is created at the same time that the organization is formally constituted, and changes to the status of the organization are recorded against this identifier in an official register. **Identifiers from a primary register are strongly preferred in OCDS.**
 
-* **Secondary registers** - which record a particular property of an organization, such as being registered for VAT, or registered as an employer. An organizations identifier in such a registry might change without the organization itself changing in nature. For example, in some jurisdictions, an organization may de-register from VAT, and then re-register, gaining a new number in the process; or different branches of the same legal entity might register for different VAT numbers. 
+* **Secondary registers** - which record a particular property of an organization, such as being registered for VAT, or registered as an employer. An organizations identifier in such a registry might change without the organization itself changing in nature. For example, in some jurisdictions, an organization might de-register from VAT, and then re-register, gaining a new number in the process; or different branches of the same legal entity might register for different VAT numbers. 
 
-* **Third-party databases** - which compile a list of organizations, and sometimes their sub-units, on an on-demand basis. These databases do not confer any legal status or special properties on the organizations, but may record a mapping between their own identifiers and other primary or secondary register identifiers for the organization. A common examples of a third-party database is the proprietary Dun&Bradstreet number. The OCDS organizational identifier scheme will recognize identifiers from third-party databases, but strongly prefers those drawn from non-proprietary databases, which allow users to lookup identifier information. 
+* **Third-party databases** - which compile a list of organizations, and sometimes their sub-units, on an on-demand basis. These databases do not confer any legal status or special properties on the organizations, but might record a mapping between their own identifiers and other primary or secondary register identifiers for the organization. A common examples of a third-party database is the proprietary Dun&Bradstreet number. The OCDS organizational identifier scheme will recognize identifiers from third-party databases, but strongly prefers those drawn from non-proprietary databases, which allow users to lookup identifier information. 
 
 * **Local lists** - Some publishers do not map their data to external identifiers, maintaining instead a local list of suppliers. In these cases, the publisher may use their internal identifiers, and should adopt their own **organization list prefix** starting with X- to use. Where possible, the publisher should also provide their local list on the web, with as much additional data about each supplier as possible, in order to maximize the chance of data users matching their local list to some more authoritative register. 
 
@@ -167,7 +167,7 @@ Award and contract identifiers must be unique within the scope of the contractin
 
 Award and contract identifiers must also be consistent within this scope. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
 
-Contracts should always cross-reference a related award (using the `awardID` field), as key information such as suppliers may be contained in the related award. There may be multiple contracts referring to a single award, as in the case of a framework contract where multiple contract are issued against a single award.
+Contracts must cross-reference a related award (using the `awardID` field), as key information such as suppliers can be contained in the related award. Multiple contracts may refer to a single award, as in the case of a framework contract where multiple contract are issued against a single award.
 
 ## Item, Document and Milestone IDs
 

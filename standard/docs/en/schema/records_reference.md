@@ -1,6 +1,6 @@
 # Record Reference
 
-Whereas there can be multiple releases concerning a given contracting process, there should be a single **contracting record** for each ocid, providing a summary of all the available data about this particular contracting process.
+Whereas there can be multiple releases concerning a given contracting process, there should be a single **contracting record** for each ocid at a given time, providing a summary of all the available data about this particular contracting process.
 
 A record **must** contain:
 
@@ -13,7 +13,7 @@ Records **should** contain:
 
 * **compiledRelease** - the latest version of all open contracting process fields, represented using the release schema.
 
-Records **may** optionally contain:
+Records **may** contain:
 
 * **versionedRelease** - containing the history of the data in the compiledRelease, with all known past values of any field and the release that information came from. 
 
