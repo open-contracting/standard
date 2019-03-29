@@ -1,10 +1,10 @@
 ## Record Package Schema
 
-The record package schema describes the container structure for publishing records. The contents of a record are based on the release schema. The package contains important metadata.
+The record package schema describes the structure of the container for publishing records. The contents of a record are based on the release schema. The package contains important metadata.
 
 You can view an interactive version of the record schema below (requires JavaScript) or [download this version of the schema here](../../../../record-package-schema.json).
 
-A separate, auto-generated, [versioned release schema](../../../../versioned-release-validation-schema.json) is provided for validating releases within fully versioned records.
+A separate, auto-generated [versioned release schema](../../../../versioned-release-validation-schema.json) is provided for validating versioned releases within records.
 
 For this version of OCDS, the canonical URL for the record package schema is <http://standard.open-contracting.org/schema/1__1__4/record-package-schema.json> and for the versioned release schema is <http://standard.open-contracting.org/schema/1__1__4/versioned-release-validation-schema.json>
 

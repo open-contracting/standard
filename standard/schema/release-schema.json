@@ -52,7 +52,8 @@
       },
       "codelist": "releaseTag.csv",
       "openCodelist": false,
-      "minItems": 1
+      "minItems": 1,
+      "omitWhenMerged": true
     },
     "initiationType": {
       "title": "Initiation type",
@@ -312,9 +313,7 @@
             "null"
           ],
           "items": {
-            "type": [
-              "string"
-            ]
+            "type": "string"
           },
           "codelist": "extendedProcurementCategory.csv",
           "openCodelist": true
@@ -1282,9 +1281,7 @@
           ]
         },
         "id": {
-          "type": [
-            "string"
-          ],
+          "type": "string",
           "description": "The ID used for cross-referencing to this party from other sections of the release. This field may be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}).",
           "title": "Entity ID"
         },
@@ -1575,7 +1572,8 @@
             "string",
             "integer",
             "null"
-          ]
+          ],
+          "versionId": true
         },
         "description": {
           "title": "Description",
@@ -1624,7 +1622,8 @@
             "string",
             "integer",
             "null"
-          ]
+          ],
+          "versionId": true
         },
         "legalName": {
           "title": "Legal Name",
@@ -2144,9 +2143,7 @@
         "id": {
           "title": "Relationship ID",
           "description": "A local identifier for this relationship, unique within this array.",
-          "type": [
-            "string"
-          ]
+          "type": "string"
         },
         "relationship": {
           "items": {

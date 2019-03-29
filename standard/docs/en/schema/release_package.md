@@ -1,6 +1,6 @@
 ## Release Package Schema
 
-The release package schema describes the container document for publishing releases. The package contains important metadata.
+The release package schema describes the structure of the container for publishing releases. The package contains important metadata.
 
 You can view an interactive version of the release schema below (requires JavaScript) or [download this version of the schema here](../../../../release-package-schema.json).
 
