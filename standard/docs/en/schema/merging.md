@@ -1,30 +1,35 @@
-# Merging 
+# Merging
 
-In OCDS, merging involves combining individual [releases](../getting_started/releases_and_records.md) of data during a contracting process into a [record](../getting_started/releases_and_records.md) which provides an overview of the current state of that process. Including a versioned release as part of the merged record provides structured information on the history of the process: showing when updates were made, or values were changed. 
+An OCDS [record](../getting_started/releases_and_records.md) aggregates all the releases available for a contracting process at a given time, and can include:
+
+* a compiled release, which expresses the current state of the contracting process, by showing only the most recent field values
+* a versioned release, which expresses all historical states of the contracting process, by showing all the field values over time
+
+**Merging** is the process of combining individual releases into a compiled or versioned release, described in more detail below. At a high level:
+
+* A compiled release is created by taking only the most recent values of fields from releases in a given contracting process.
+* A versioned release is created by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
 
 <div class="example hint" markdown=1>
 
 <p class="first admonition-title">Worked Example</p>
 
-A publisher provides a tender release on 1st January, with a planned contract value of $1000.
+A public procurement agency publishes a release to announce an opportunity on January 1, in which the total estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the total estimated value of the procurement is increased to $2,000.
 
-On 5th February, the publisher provides an amended tender release updating the planned contract value to $2000.
+The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
 
-After assessing bids, it is decided to award the contract in two lots.
+Through these individual releases, the agency provides real-time data about the contracting process.
 
-On 1st March, the publisher provides an award release, announcing Company A has been awarded a contract for $750.
+At each release, the agency also updates the record, which combines all the releases to date. In the final record:
 
-On 3rd March, the publisher provides an separate award release, announcing that company B has been awarded a contract for $750
-
-These independent releases each provide real-time information about what is happening in the contracting process. The record will combine them together. Using the same schema and structure as the releases, the main body of the record will contain a tender with contract value of $1500, and details of both awards.
-
-If the record is complete with versioning information, then the versioning section will reveal that the planned contract value changed from $1000 to $1500 on 31st January.
+* The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
+* The versioned release makes it easy to see how the description and total estimated value changed over time.
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/merging/merge-tender-1.json
    :jsonpointer: /releases
-   :expand: releases, tender, tag
+   :expand: releases, tag, tender
    :title: tender
 
 ```
@@ -33,7 +38,7 @@ If the record is complete with versioning information, then the versioning secti
 
 .. jsoninclude:: ../examples/merging/merge-tender-3.json
    :jsonpointer: /releases
-   :expand: releases, tender, tag
+   :expand: releases, tag, tender
    :title: tenderAmendment
 
 ```
@@ -42,7 +47,7 @@ If the record is complete with versioning information, then the versioning secti
 
 .. jsoninclude:: ../examples/merging/merge-award-1.json
    :jsonpointer: /releases
-   :expand: releases, award
+   :expand: releases, tag, awards
    :title: awardOne
 
 ```
@@ -51,7 +56,7 @@ If the record is complete with versioning information, then the versioning secti
 
 .. jsoninclude:: ../examples/merging/merge-award-2.json
    :jsonpointer: /releases
-   :expand: releases, award
+   :expand: releases, tag, awards
    :title: awardTwo
 
 ```
@@ -59,8 +64,8 @@ If the record is complete with versioning information, then the versioning secti
 ```eval_rst
 
 .. jsoninclude:: ../examples/merging/merged.json
-   :jsonpointer: 
-   :expand: records, compiledRelease, tender, award, tag
+   :jsonpointer:
+   :expand: records, compiledRelease, tag, tender, awards
    :title: record
 
 ```
@@ -68,89 +73,151 @@ If the record is complete with versioning information, then the versioning secti
 ```eval_rst
 
 .. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: 
-   :expand: records,versionedRelease, tender, award, tag
+   :jsonpointer:
+   :expand: records, versionedRelease, tag, tender, awards
    :title: versioned
 
 ```
 
 </div>
 
-## Merging rules
+## Merging specification
 
-Order all the releases that share an `ocid` by their release `date`. Starting from the oldest release (old), compare it with the next oldest release (new), and apply the following rules.
+### Discarded fields
 
-### Objects
+In the release schema, `"omitWhenMerged": true` is declared on fields that must be discarded during merging. These are presently: `id`, `date` and `tag`.
 
-In the compiled record, if an object can be set to `null` according to its `type`, it should be treated as a single value. Otherwise, merge the **new** object into the **old** object by:
+* For a compiled release:
+  * Both the fields and their values are discarded, because they are metadata about the individual releases; the compiled release replaces these with its own metadata.
+* For a versioned release:
+  * The fields are discarded, but their values are moved, as described below, in order to indicate from which releases each other field value is taken.
 
-* Overwriting all keys that exist in both **old** and **new** with the values from **new**
-* Add any key-value pairs that exist in **new**, but not in **old**
-* Remove any key that have their value explicitly set to `null` in **new**
-* Retain any keys from **old** that are not mentioned in **new**
+If `omitWhenMerged` is set to `false`, ignore it.
 
-If the value of a key-value pair is a list of objects, the list merge rules below should be used; otherwise, a list should be treated as a single value.
+```eval_rst
+.. note::
 
-### Lists
+  The compiled release presently uses the same schema as the release schema, which means that the ``id``, ``date`` and ``tag`` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue `#330 <https://github.com/open-contracting/standard/issues/330>`__, and on how to identify and date compiled and versioned releases in issue `#834 <https://github.com/open-contracting/standard/issues/834>`__.
 
-There are two merge patterns for lists of objects: identifier merge, and whole list merge. 
+  In the meantime, an intermediate solution is to set ``tag`` to ``["compiled"]``, ``date`` to the date of the most recent release, and ``id`` to ``{ocid}-{date}``, like in the `reference implementation <#reference-implementation>`__ of the merge routine.
+```
 
-#### Identifier merge
+### Versioned values
 
-When a list contains objects with their own `id` field, then:
+To convert a field's value in a release to a **versioned value**, you must:
 
-* Check for an object in **old** with the same `id` as an object in **new**, and, if so, follow the object merge rules as above
-* If there is no object in **new** with the same `id` as an object in **old**, keep the object from **old** in the list
-* If there is an object in **new** with an `id` not found in **old** then add the object to the list
+1. Create an empty JSON object
+1. Set its `releaseID`, `releaseDate`, `releaseTag` fields to the release's `id`, `date`, `tag` values
+1. Set its `value` field to the field's value in the release
 
-Note: To remove information from an old list entry its values must be explicitly set to `null`. 
+A **versioned value** thus describes a field's value in a specific release.
 
-#### Whole list merge
+For example, in the above worked example, the estimated value of the procurement was $1,000 in a release (`tender/value/amount` was `1000`). Following the steps above, the versioned value is:
 
-A list should be treated as a single value if: the list has `"wholeListMerge": true` in the schema; the objects in the list have no `id` field according to the schema; or the list can contain non-objects according to the schema.
+```json
+{
+  "releaseID": "ocds-213czf-000-00002-01-tender",
+  "releaseDate": "2016-01-01T09:30:00Z",
+  "releaseTag": [
+    "tender"
+  ],
+  "value": 1000
+}
+```
 
-i.e. if the list exists in **new**, the entire list in **new** will overwrite the list in **old**. 
+In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
 
-### Omit when merged
-
-A few properties in the schema are marked with `"omitWhenMerged": true`. These properties should be dropped from the merged record - as they only make sense in the context of a single release. 
-
-### Reference implementation
-
-A reference implementation of the merge routine in Python [is available on GitHub](https://github.com/open-contracting/ocds-merge). 
-
-## Versioned data
-
-There are some situations in which it is important to be able to see how data about a contracting process has changed over time. For example, to identify how contract values have altered, or milestones moved through stages of implementation. 
-
-The [versioned release validation schema](../../../../versioned-release-validation-schema.json) provides a model for representing this data.
-
-In a versioned release, instead of over-writing past values when combining multiple releases, each field (with the exception of the `id` property of objects within an array) becomes an array of objects, indicating the:
-
-* The date, id and tag of the releases where a field-value pair was first encountered;
-* The value of the field-value pair at that point;
-
-As a result, the history of any field can be easily read from the data structure.
-
-The property `"versionId":true` is used to explicitly declare the cases where an `id` field **should** be versioned (i.e. within an object that is not within an array). 
-
-### Example
+For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: value, amount
-   :title: versioned_extract
-   
+   :title: Versioned_values
+
 ```
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: 
-   :expand: 
-   :title: full_versioned_file
-   
+   :jsonpointer:
+   :expand: records, versionedRelease
+   :title: Versioned_release
+
 ```
 
+The structure of the versioned release is described by the [versioned release schema](../../../../versioned-release-validation-schema.json); note that the `ocid` field's value is not versioned.
+
+### Merge routine
+
+To create a compiled or versioned release, you must:
+
+1. Get all releases with the same `ocid` value
+1. Order the releases in chronological order by `date`
+1. Create an empty JSON object for the compiled or versioned release
+1. Merge each release (**input**), in order, into the JSON object (**output**), as follows:
+
+#### Object values
+
+The release is itself an object, so this case is encountered first.
+
+If the object is empty in **input**, do nothing. For each field within the object in **input**:
+
+* For a compiled release:
+  * If the field in **input** has a value of `null`, remove the field from the object in **output**, if present
+  * If the field isn't in **output**, add the field to the object in **output**, and set it to its value in **input**
+  * If the field is in **output**, merge the field's values in **output** and **input** according to the [merge routine](#merge-routine)
+* For a versioned release:
+  * Merge the field's values in **output** and **input** according to the [merge routine](#merge-routine); if there is a result, add the field to the object in **output** if not already added, and set it to the result
+
+#### Literal values
+
+If the **input** value is neither an object nor an array, then:
+
+* For a compiled release:
+  * If the **input** value is different from the **output** value, replace the **output** value with the **input** value
+* For a versioned release:
+  * If there is no **output** value, set the **output** value to an empty JSON array, convert the **input** value to a [versioned value](#versioned-values), and append it to the new array of versioned values in **output**
+  * If the **input** value is different from the value of the `value` field of the most recent versioned value in **output**, convert the **input** value to a [versioned value](#versioned-values), and append it to the array of versioned values in **output**
+
+#### Array values
+
+If the **input** array contains anything other than objects, treat the array as a literal value. Otherwise, there are two sub-routines for arrays of objects: whole list merge and identifier merge.
+
+##### Whole list merge
+
+An **input** array must be treated as a literal value if the corresponding field in a [dereferenced copy](../../../../dereferenced-release-schema.json) of the release schema has `"array"` in its `type` and if any of the following are also true:
+
+* The field has `"wholeListMerge": true`
+* The field sets `items/type`, and has anything other than `"object"` in `items/type`
+* The field has `"object"` in its `items/type`, sets `items/properties`, and has no `id` field in `items/properties`
+
+##### Identifier merge
+
+This case is encountered if the above conditions aren't met. If the array is empty in **input**, do nothing. For each object within the array in **input**:
+
+* For a compiled release:
+  * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the [merge routine](#merge-routine)
+  * Otherwise, append the object in **input** to the array in **output**
+* For a versioned release:
+  * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the [merge routine](#merge-routine) *except for the `id` field*, which is not versioned and instead kept as-is
+  * Otherwise, merge an empty JSON object and the object in **input** according to the [merge routine](#merge-routine) *except for the `id` field*, which is not versioned and instead kept as-is, and append the result to the array in **output**
+
+```eval_rst
+.. note::
+
+  In this case, to remove an object from an array, you need to instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue `#232 <https://github.com/open-contracting/standard/issues/232>`__.
+
+```
+
+```eval_rst
+.. note::
+
+  In the release schema, ``"versionId": true`` is declared on ``id`` fields that must be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue `#812 <https://github.com/open-contracting/standard/issues/812>`__). If ``"versionId": true`` is declared on the ``id`` field of an object within an array, it is ignored. ``"versionId": false`` has no meaning and is ignored.
+
+```
+
+### Reference implementation
+
+A reference implementation of the merge routine [is available in Python on GitHub](https://github.com/open-contracting/ocds-merge). We strongly encourage any re-implementations to [read its commented code and use its test cases](https://github.com/open-contracting/ocds-merge#reference-implementation), to ensure correctness.
