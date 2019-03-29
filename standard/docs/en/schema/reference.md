@@ -146,7 +146,7 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 
 ### Bids
 
-The optional [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/v1.1.4/) extension can be used to provide bid statistics and detailed information about individual bids.
+The [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/v1.1.4/) extension can be used to provide bid statistics and detailed information about individual bids.
 
 ### Award
 
@@ -482,7 +482,7 @@ As well as providing this machine-readable link between processes, publishers ma
 
 ### Location
 
-The optional [Location](https://extensions.open-contracting.org/en/extensions/location/v1.1.4/) extension can be used to provide location information.
+The [Location](https://extensions.open-contracting.org/en/extensions/location/v1.1.4/) extension can be used to provide location information.
 
 ### Publisher
 
