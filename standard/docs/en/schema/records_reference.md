@@ -55,7 +55,7 @@ Each record package contains an array of one or more records, consisting of the 
 
 ### Release list
 
-The releases that make up a contracting process may be provided in two ways:
+The releases that make up a contracting process can be provided in two ways:
 
 * URLs and metadata for each release; or
 * Embedded copies of the release;
