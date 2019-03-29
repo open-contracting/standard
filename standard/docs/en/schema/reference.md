@@ -310,8 +310,6 @@ If a contracting process represents a contract arranged by the department or bra
 
 Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
 
-The document block is also used to link to legal notices, which should have a documentType of 'notice'.
-
 ```eval_rst
 
 .. jsonschema:: ../../../../build/current_lang/release-schema.json
@@ -543,7 +541,7 @@ In this model, publishers need to to pay careful attention to null values and mi
 
 ### Empty fields
 
-Fields that are not being used, or that have no value, can be excluded in their entirety (key and value) from a published file. 
+Fields that are not being used, or that have no value, should be excluded in their entirety (key and value) from a published file. 
 
 Only including fields which have values will keep versioned datasets cleaner. 
 
