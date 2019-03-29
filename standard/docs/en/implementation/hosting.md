@@ -31,12 +31,12 @@ When a file is likely to exceed one of these limits, release or records ought to
 
 When the suggested limits entail publication of multiple files, publishers ought to consider ways to split data across available files. 
 
-For releases, publishers can choose to:
+For releases, publishers can:
 
 1. Segment by **release date** - placing all the releases from a given day, month or year in the same file;
 1. Segment by **contracting process identifier** - placing all the releases related to a given set of contract process identifiers together in the same package;
 
-For records, publishers ought to segment either based on the first **release date** associated with a contracting process, or by **contracting process identifier.**
+For records, publishers can segment by the first **release date** associated with a contracting process, or by **contracting process identifier.**
 
 Following these approaches will avoid release and records 'jumping' between files when the bulk files are updated. 
 
@@ -44,7 +44,7 @@ Following these approaches will avoid release and records 'jumping' between file
 
 OCDS packages can be compressed in order to save on disk space and bandwidth. 
 
-If compressing packages, publishers ought to use the zip file format.
+If compressing packages, publishers ought to use the ZIP file format.
 
 ### Serving files
 
@@ -79,7 +79,7 @@ For the discovery of individual releases and records, we propose use of Atom fee
 
 ### Dataset and feed discovery
 
-Publishers ought to provide a data.json document describing the location of all of the bulk OCDS files available for download. 
+Publishers can provide a data.json document describing the location of all of the bulk OCDS files available for download. 
 
 This ought to follow the structure proposed by the [US Project Open Data](https://project-open-data.github.io/schema/) with:
 
