@@ -102,7 +102,7 @@ An initiation process might be a tender, a direct contract award, or a call to a
 
 Each unique contracting process needs to be assigned an `ocid`. This is an identifier which can be used to join up data between different stages (as often the data might be stored in different systems). 
 
-To make sure the `ocid`s assigned in two different jurisdictions do not clash, publishers are encouraged to register an ocid prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process. 
+To make sure the `ocid`s assigned in two different jurisdictions do not clash, publishers must register an ocid prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process. 
 
 You can [register your ocid prefix here](../implementation/registration.md).
 
