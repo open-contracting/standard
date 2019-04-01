@@ -1,6 +1,6 @@
 # Record Reference
 
-Whereas there can be multiple releases concerning a given contracting process, there should be a single **record** for each ocid at a given time, consolidating all the available releases about the contracting process.
+Whereas there can be multiple releases about a contracting process, there should be a single **record** per contracting process, aggregating all the releases available for the contracting process.
 
 A record **must** contain:
 

@@ -144,7 +144,7 @@ The technical team, working with community members, will work on a development b
 
 This stage is likely to involve broad community engagement and discussion of specific decisions through GitHub issues. 
 
-At the point where all open issues are suitably addressed, the development branch may be submitted for peer review.
+At the point where all open issues are suitably addressed, the development branch is ready to be submitted for peer review.
 
 ### Peer-review
 
@@ -162,7 +162,7 @@ All reviews, with reviewer names, will be published. Community members can also 
 
 The technical team, with reference to the working group as appropriate, evaluates reviews, and decides whether the whole upgrade, or specific features thereof, need to be revised, rejected or postponed to future processes.
 
-If only minor changes are suggested, then the revised standard may be submitted back to reviewers for a brief review period of at least two weeks.
+If only minor changes are suggested, then the revised standard should be submitted back to reviewers for a brief review period of at least two weeks.
 
 If major changes are needed, then a longer follow up review process of at least one month should be allowed for.
 

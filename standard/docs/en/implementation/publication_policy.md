@@ -14,4 +14,4 @@ Publication policy pages ought to include information about:
 
 Publishers might also wish to apply for, and include the results of, an [Open Data Certificate](https://certificates.theodi.org/), on their publication policy pages.
 
-A link to the publication policy can be embedded within the release package or record package. 
+A link to the publication policy ought to be embedded within the release package or record package. 

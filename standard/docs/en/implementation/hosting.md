@@ -4,7 +4,7 @@ Different users have different needs when it comes to accessing OCDS data.
 
 [Data on the Web Best Practices](https://www.w3.org/TR/dwbp/#MultipleFormats) suggests that "Data should be available in multiple data formats" in order to increases the number of different users, tools and applications that can process the data.
 
-Which formats are most important will depend on the priority use cases for each OCDS implementation, but you can consider:
+Which formats are most important will depend on the priority use cases for each OCDS implementation, but you are encouraged to consider:
 
 * **Bulk downloads** - packaging together multiple releases or multiple records in one or more files for users to download and import into local tools.
 * **Individual release and record downloads** - providing a URI at which each release or record can be obtained. This is crucial for 4 ☆ data publication.

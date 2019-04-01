@@ -15,7 +15,7 @@ There are two kinds of OCDS document:
 </td>
 <td valign="top" style="padding:10px;" markdown=1>
 
-**Records** compile together all the information known about a contracting process, providing a snapshot view of its current state. They can also contain a versioned history of changes over time. There ought to be only be one record for each contracting process at one time, created by merging together the releases.
+**Records** aggregate all the releases available for a contracting process at a given time. There ought to be only be one record per contracting process.
 
 </td>
     </tr>
