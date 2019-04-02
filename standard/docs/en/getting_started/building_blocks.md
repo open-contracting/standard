@@ -50,7 +50,7 @@ These are represented in a JSON document as follows:
 
 ### Building blocks: fields
 
-The OCDS schema sets out the fields that should be included in each section, making use of simple re-usable building blocks (field structures) to represent data. 
+The OCDS schema sets out the fields that ought to be included in each section (where applicable), making use of simple re-usable building blocks (field structures) to represent data. 
 
 For example, common building blocks are provided for:
 
@@ -119,7 +119,7 @@ For example, common building blocks are provided for:
 
 #### Using building blocks
 
-These building blocks may be used in various different sections. For example, **items** can occur in tender (to indicate the items that a buyer wishes to buy), in an award object (to indicate the items that an award has been made for) and in a contract object (to indicate the items listed in the contract). 
+These building blocks can be used in various different sections. For example, **items** can occur in tender (to indicate the items that a buyer wishes to buy), in an award object (to indicate the items that an award has been made for) and in a contract object (to indicate the items listed in the contract). 
 
 In addition to these building blocks, the OCDS schema sets out the specific ways they can be used in each section, and describes a number of additional fields that can appear in specific section. For example, fields for:
 
@@ -135,7 +135,7 @@ Many of these fields make use of lightweight codelists provided by OCDS.
 
 In some cases, publishers or users need building blocks and fields which are not provided in the core OCDS schema. 
 
-We maintain a list of [extensions](../../../../extensions/) that provide optional extra building blocks and fields.
+We maintain a list of [extensions](../../../../extensions/) that provide additional building blocks and fields.
 
 <div class="example hint" markdown=1>
 
@@ -149,50 +149,13 @@ The Open Contracting Data Standard helpdesk maintain a [field-level mapping temp
 
 OCDS defines two kinds of codelist:
 
-* **Closed codelists** provide a fixed list of values. When using a field with a closed codelist, publishers must use an option from the published lists. This supports the global comparability of OCDS data on key dimensions.
+* **Closed codelists** provide a fixed list of values. When using a field with a closed codelist, publishers need to use an option from the published lists. This supports the global comparability of OCDS data on key dimensions.
 
-* **Open codelists** provide recommended values. However, publishers can suggest amendments to these codelists, or provide their own extended values.
-
-<table width="100%">
-<tr>
-<td valign="top" width="50%" style="padding:10px;" markdown=1>
-
-**Open Codelists**
-
-* Party Role
-* Item Classification Scheme
-* Unit Classification Scheme
-* Organization Identifier Scheme
-* Document Type
-* Award Criteria
-* Submission Method
-* Related Process
-* Related Process Scheme
-* Milestone Type
-* Extended Procurement Category
-
-</td>
-<td valign="top" width="50%" style="padding:10px;" markdown=1>
-
-**Closed Codelists**
-
-* Release Tag
-* Initiation Type
-* Tender Status
-* Procurement Method
-* Procurement Category
-* Award Status
-* Contract Status
-* Currency
-* Milestone Status
-
-</td>
-</tr>
-</table>
+* **Open codelists** provide representative values. However, publishers can suggest amendments to these codelists, or provide their own extended values.
 
 Codelist values are case sensitive strings with associated labels, available in each language OCDS has been translated into. 
 
-Publishers should map their existing classification systems to OCDS codes wherever possible. Many closed codelist fields are paired with a detail field where more detailed classification information can be provided. 
+Publishers need to map their existing classification systems to OCDS codes wherever possible. Many closed codelist fields are paired with a detail field where more detailed classification information can be provided. 
 
 <div class="example hint" markdown=1>
 
@@ -214,9 +177,9 @@ However, to support comparison across continents, the main OCDS procurement meth
    :file: ../../../../build/current_lang/codelists/method.csv
 ```
 
-All procedures should be able to be mapped to one of these options. 
+All procedures need to be mapped to one of these options. 
 
-To publish OCDS data, an EU publisher with data categorized by EU procedures should map the longer list of procedures to the narrower OCDS codelist and provide the codelist value in the `procurementMethod` field. They can then provide the more detailed procedure type in an extended `procurementMethodDetails` field.
+To publish OCDS data, an EU publisher with data categorized by EU procedures needs to map the longer list of procedures to the narrower OCDS codelist and provide the codelist value in the `procurementMethod` field. They can then provide the more detailed procedure type in an extended `procurementMethodDetails` field.
 
 For an Open Procedure, when a free-text justification of why the procedure was chosen is available, this would end up as:
 

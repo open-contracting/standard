@@ -95,7 +95,7 @@ Dynamic Purchasing System
 </td>
 <td>
 
-**Multiple contracting processes**: One process using awards to represent suppliers joining the DPS. `tender/status` should be active for the lifetime of the dynamic purchasing system with `tender/tenderPeriod` and `tender/awardPeriod` reflecting that suppliers can join the DPS at any time. Multiple selective or limited processes to represent competitions between suppliers on the DPS for individual contracts, linked to the DPS via relatedProcess.</td>
+**Multiple contracting processes**: One process using awards to represent suppliers joining the DPS. `tender/status` is 'active' for the lifetime of the dynamic purchasing system with `tender/tenderPeriod` and `tender/awardPeriod` reflecting that suppliers can join the DPS at any time. Multiple selective or limited processes to represent competitions between suppliers on the DPS for individual contracts, linked to the DPS via relatedProcess.</td>
 
 </tr>
 </tbody>

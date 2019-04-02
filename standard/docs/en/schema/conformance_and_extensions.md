@@ -2,7 +2,7 @@
 
 # Conformance and extensions
 
-<span class="lead">To maximize the interoperability of data published using the Open Contracting Data Standard we have set out key principles for **conforming** to the standard. These also create space for **extensions** of the standard where particular publisher or user needs require.</span>
+<span class="lead">To maximize the interoperability of data published using the Open Contracting Data Standard we have set out key principles for **conforming** to the standard. These also create space for **extensions** of the standard to respond to particular publisher or user needs.</span>
 
 ## Conformance 
 
@@ -20,7 +20,7 @@ Whenever using terms from outside the OCDS standard, we encourage the publisher 
 
 ### Validator and application conformance
 
-As of version 1.1, release/record packages should contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless otherwise instructed by the user.  
+As of version 1.1, release/record packages must contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless otherwise instructed by the user.
 
 Validators and applications should:
 
@@ -42,10 +42,10 @@ See also the [deprecation guidance](deprecation.md).
 
 ## Extensions
 
-Extensions to the standard can add new objects and properties to accommodate specific local requirements. An extension should only be created where it is not possible to model the required data using existing terms from the standard.
+Extensions to the standard can add new objects and properties to accommodate specific local requirements. An extension must not be created if it is possible to use existing terms from the standard.
 
-Extensions should be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard.
+Extensions ought to be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard.
 
-The [extensions registry](../../../../extensions/) records details of known extensions. 
+The [Extension Explorer](../../../../extensions/) publishes details of known extensions.
 
 The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields. 

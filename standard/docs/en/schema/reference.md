@@ -17,9 +17,9 @@ The majority of OCDS data is held within a release structure. One or more releas
     * [contract](#contract)
       * [implementation](#implementation)
 
-Releases are given a [tag](../../../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process may be provided. 
+Releases are given a [tag](../../../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided. 
 
-For example, a publisher announcing the signing of a contract with a 'contract' tag, may also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
+For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 
 ### Package Metadata
 
@@ -84,7 +84,7 @@ The following details can be provided for each party.
    :list: parties
 ```
 
-Each party has an optional `details` object. Through extensions, this can be used to provide detailed classification of parties.
+Each party has a `details` object. Through extensions, this can be used to provide detailed classification of parties.
 
 ```eval_rst
 .. extensionlist:: The following extensions are available for party details
@@ -93,7 +93,7 @@ Each party has an optional `details` object. Through extensions, this can be use
 
 ### Planning
 
-The planning section can be used to describe the background to a contracting process. This may include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
+The planning section can be used to describe the background to a contracting process. This can include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
 
 ```eval_rst
 
@@ -129,7 +129,7 @@ Apart from documents, the majority of information is held within the budget bloc
 
 The tender section includes details of the announcement that an organization intends to source some particular goods, works or services, and to establish one or more contract(s) for these.
 
-It may contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and may also be used to record details of a completed tender process, including details of bids received. 
+It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and can also be used to record details of a completed tender process, including details of bids received. 
 
 ```eval_rst
 
@@ -146,11 +146,11 @@ It may contain details of a forthcoming process to receive and evaluate proposal
 
 ### Bids
 
-The optional [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/v1.1.4/) extension can be used to provide bid statistics and detailed information about individual bids.
+The [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/v1.1.4/) extension can be used to provide bid statistics and detailed information about individual bids.
 
 ### Award
 
-The award section is used to announce any awards issued for this tender. There may be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required alongside every contract block, as the award contains information on the suppliers. 
+The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. 
 
 ```eval_rst
 
@@ -167,7 +167,7 @@ The award section is used to announce any awards issued for this tender. There m
 
 ### Contract
 
-The contract section is used to provide details of contracts that have been entered into. Every contract needs to have a related award, linked via the `awardID` property. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
+The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
 
 ```eval_rst
 
@@ -199,7 +199,7 @@ Implementation information can be updated over the course of a contract. It belo
    :list: implementation
 ```
 
-Information on subcontracts is not currently included in the core OCDS schema, but may be handled by [proposed extensions](conformance_and_extensions.md)
+Information on subcontracts is not currently included in the core OCDS schema, but might be handled by [proposed extensions](conformance_and_extensions.md)
 
 #### Transaction
 
@@ -211,9 +211,9 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this may be used to cross-reference to a third party `source` of data, and can re-use identifiers from that source. 
+The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source. 
 
-In most circumstances, the `payer` identifier should match that of the `buyer`, and the `payee` identifier should match that of the `supplier`. 
+In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
 #### Milestones
 
@@ -223,7 +223,7 @@ The implementation milestones should be updated to reflect when they are met.
 
 #### Documents
 
-Documents related to contract implementation should be stored here. This may include subcontracts.
+Documents related to contract implementation are stored here. This can include subcontracts.
 
 See [document](#document) reference below. 
 
@@ -243,7 +243,7 @@ The amendment array in a tender, award or contract block provides the ability to
 
 #### Changes
 
-The changes array was deprecated in OCDS 1.1. Structured information on the former value of specific fields should be provided by:
+The changes array was deprecated in OCDS 1.1. Structured information on the former value of specific fields may be provided by:
 
 * Including releases from **before** and **after** a change within a release package;
 * Using the amendment array in tender, contract or award to explicitly relate these releases to an amendment.
@@ -308,9 +308,7 @@ If a contracting process represents a contract arranged by the department or bra
 ```
 ### Document
 
-Documents may be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
-
-The document block is also used to link to legal notices, which should have a documentType of 'notice'.
+Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
 
 ```eval_rst
 
@@ -329,7 +327,7 @@ The document block is also used to link to legal notices, which should have a do
 
 A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
 
-Periods may also include a `maxExtentDate` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
+Periods can also include a `maxExtentDate` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
 
 ```eval_rst
 
@@ -348,7 +346,7 @@ Periods may also include a `maxExtentDate` which indicates the latest possible e
 
 OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339#section-5.6).
 
-A time and timezone/offset MUST always be provided in a date-time.
+A time and timezone/offset must be provided in a date-time.
 
 The following are valid date-times:
 
@@ -362,9 +360,9 @@ The following are not valid:
 * '2014-11-18T18:00:00' - Missing timezone/offset portion
 * '11/18/2014 18:00' - Not following the pattern at all!
 
-Accurately including the time and timezone offsets is particular important for tender deadlines and other dates which may have legal significance, and where users of the data may be from different timezones. The character Z on the end of a date-time indicates the [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset) timezone, whereas other timezones are indicated by their value '+/-hh:mm' UTC on the end of the date-time value. 
+Accurately including the time and timezone offsets is particular important for tender deadlines and other dates which can have legal significance, and where users of the data might be from different timezones. The character Z on the end of a date-time indicates the [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset) timezone, whereas other timezones are indicated by their value '+/-hh:mm' UTC on the end of the date-time value. 
 
-In the event that the system from which data is drawn only includes dates, and does not include time information, publishers should consider sensible defaults for each field. For example, the startDate time of a clarification period may be set to '00:00:00Z' to indicate that clarifications can be requested from any time on the date stated, with the endDate time set to 23:59:59Z to indicate that clarifications can be sent up until the end of the endDate given. Alternatively, if clarification requests are only accepted in standard office hours, these values might be 09:00:00Z and 17:00:00Z respectively.
+In the event that the system from which data is drawn only includes dates, and does not include time information, publishers should use sensible defaults for each field. For example, the startDate time of a clarification period can be set to '00:00:00Z' to indicate that clarifications can be requested from any time on the date stated, with the endDate time set to 23:59:59Z to indicate that clarifications can be sent up until the end of the endDate given. Alternatively, if clarification requests are only accepted in standard office hours, these values might be 09:00:00Z and 17:00:00Z respectively.
 
 In the event that a date field is not bound to a specific time at all, publishers should choose a default time value of '23:59:59' and either 'Z' (for UTC) or the timezone of the publisher, indicating that the time refers to the end of the given date. 
 
@@ -397,7 +395,11 @@ The items block is used to list the line-items associated with a tender, award o
 ```
 #### Unit
 
-The `unit` block allows detailed specification of the parameters and price of units that make up a line-item. Although no codelist for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the `unit.name` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
+The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
+
+If the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
+
+Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](../../../codelists/#unit-classification-scheme).
 
 ```eval_rst
 
@@ -432,7 +434,7 @@ Notes:
 
 ### Value
 
-Financial values should always be published with a currency attached. 
+Financial values should be published with a currency attached. 
 
 ```eval_rst
 
@@ -458,7 +460,7 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 * When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
-In all these cases, the `relatedProcess` block can be used to cross-reference between the relevant open contracting processes using their `ocid`.
+In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant open contracting processes using their `ocid`.
 
 ```eval_rst
 
@@ -482,7 +484,7 @@ As well as providing this machine-readable link between processes, publishers ma
 
 ### Location
 
-The optional [Location](https://extensions.open-contracting.org/en/extensions/location/v1.1.4/) extension can be used to provide location information.
+The [Location](https://extensions.open-contracting.org/en/extensions/location/v1.1.4/) extension can be used to provide location information.
 
 ### Publisher
 
@@ -506,13 +508,13 @@ E.g. `title` and `title_es`
 
 In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the `language` field. 
 
-Languages should be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the two letter [ISO639-1 two-letter language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, and should not assume that the users are able to distinguish between sub-tag variations (for example, OCDS publishers should strongly prefer 'en' over 'en_US' or 'en_GB'). 
+Languages must be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the two letter [ISO639-1 two-letter language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB'). 
 
-To include a language variation of a field, the field name should be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
+To include a language variation of a field, the field name must be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
 
 ### Worked example
 
-A contract for ‘Software consultancy services’ may be published in a release with the default language sent to ‘en’ (the ISO639-1 code for English). The following examples give the description of an item as English, French and Spanish.
+A contract for ‘Software consultancy services’ is published in a release with the default language sent to ‘en’ (the ISO639-1 code for English). The following examples give the description of an item as English, French and Spanish.
 
 **json**
 
@@ -537,23 +539,16 @@ A contract for ‘Software consultancy services’ may be published in a release
 
 The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
 
-Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice should be based on an understanding of the [merging process](merging.md) that is used to generate a snapshot record of a full contracting process.
+Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice ought to be based on an understanding of the [merging process](merging.md) that is used to generate a snapshot record of a full contracting process.
 
-This model also requires publishers to pay careful attention to null values and missing fields. 
+In this model, publishers need to to pay careful attention to null values and missing fields. 
 
 ### Empty fields
 
-Fields that are not being used, or that have no value, can be excluded in their entirety (key and value) from a published file. 
+Fields that are not being used, or that have no value, should be excluded in their entirety (key and value) from a published file. 
 
 Only including fields which have values will keep versioned datasets cleaner. 
 
 ### Emptying fields and values
 
-There may be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields should explicitly be set to `null`. 
-
-The following describes how null values will be handled in the compilation of a record:
-
-* If a field is included with a value in one release, and then set to `null` in a subsequent release, that field will be recorded as `null` in the compiled record (though past values of it should remain in the versioned section of the record).
-* If a field is set to `null` in one release, and is also set to `null` in a subsequent release, it will be recorded as `null` as per the original release, and the record will not show any change based on the subsequent release i.e. fields that are set to `null` are recorded as such and then only changed if the value is set.
-* If a field is set to `null` in one release, and then has a value in a subsequent release, it will first appear in the record, and the version section of the record as `null` and then with the subsequent value.
-* If a field does not appear in one release, and then appears with a value in a subsequent release, it will first appear in the record, and the version section of the record, when the first release that contains it is compiled into the record.
+There can be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields must be set to `null`. See the [merging documentation](../../../merging/) for more details.

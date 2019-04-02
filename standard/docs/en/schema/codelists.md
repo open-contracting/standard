@@ -2,19 +2,19 @@
 
 The Open Contracting Data Standard schema references a number of codelists in order to enable the interoperability of data. There are two kinds of codelist, **open** and **closed**.
 
-An **open codelist** provides **suggested codes**, but publishers can extend these lists with new codes on the basis of consensus with other publishers, or by using a codes prefixed with 'x\_' to indicate that it is a local 'eXtensions' to the codelist. 
+An **open codelist** provides **suggested codes**, but publishers may extend these lists with new codes on the basis of consensus with other publishers, or by using a codes prefixed with 'x\_' to indicate that it is a local 'eXtensions' to the codelist. 
 
-For example, OCDS provide a list of the types of documents which may be attached to tenders, awards, contracts and milestones. However, a group of publishers may discover they have need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they should consult with the community through the [mailing list and GitHub platform](../../../../support/), and should suggest the code for formal incorporation into the codelists.
+For example, OCDS provide a list of the types of documents which can be attached to tenders, awards, contracts and milestones. However, a group of publishers might discover they have a need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they are encouraged to consult with the community through the [mailing list and GitHub platform](../../../../support/), and are encouraged to suggest the code for formal incorporation into the codelists.
 
-A **closed codelist** provides **mandatory codes** and publishers should only use values provided in the official list. Changes to closed codelists take place through the governance and revision process for the schema. 
+A **closed codelist** provides **mandatory codes** and publishers must use values provided in the official list. Changes to closed codelists take place through the governance and revision process for the schema. 
 
-Codes are case sensitive, and are generally provided as English language camelCase. Codes values should not be translated, though the OCDS team will work with publishers to provide alternative translations of code titles and definitions.
+Codes are case-sensitive, and are generally provided as English language camelCase. Codes must not be translated, though the OCDS team will work with publishers to translate code titles and definitions.
 
 ## Open Codelists
 
 ### Party Role
 
-The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../../reference/#parties). A single party may have one or more roles in the contracting process. 
+The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../../reference/#parties). A single party can have one or more roles in the contracting process. 
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -33,11 +33,11 @@ Items should be classified using existing item classification schemes, such as t
    :file: ../../../../build/current_lang/codelists/itemClassificationScheme.csv
 ```
 
-This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy.md). 
 
 ### Unit Classification Scheme
 
-Item quantities may be provided using an established codelist for units of measurement. Codelists may provide human-readable descriptions of units, or symbols for use in input and display interfaces.
+Item quantities can be provided using an established codelist for units of measurement. Codelists might provide human-readable descriptions of units, or symbols for use in input and display interfaces.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -46,6 +46,7 @@ Item quantities may be provided using an established codelist for units of measu
 ```
 
 ### Organization Identifier Scheme
+
 <style><!--img[alt="org-id.guide"] {
    width:200px;
    float:right;
@@ -67,7 +68,7 @@ The following list describes documents and documentation recommended for publica
 
 The code descriptions are necessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
 
-Implementers may wish to map their existing document codes to this list, or, if using this list within a user-interface, to re-write the codelist titles and descriptions appropriately for the context they are being used in. 
+Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
 This is an open codelist, and additional entries can be included with a x\_ prefix. 
 
@@ -85,7 +86,7 @@ The award criteria codelist describes the basis on which contract awards will be
 ```eval_rst
 .. note:: 
 
-  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers may need to review the mapping from their internal systems to this updated list of award criteria.
+  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers ought to review the mapping from their internal systems to this updated list of award criteria.
 
 ```
 
@@ -96,11 +97,11 @@ The award criteria codelist describes the basis on which contract awards will be
    :file: ../../../../build/current_lang/codelists/awardCriteria.csv
 ```
 
-This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy.md). 
 
 ### Submission Method
 
-The submission method codelist is used to identify the mechanism through which a submission may be made. 
+The submission method codelist is used to identify the mechanism through which a submission can be made. 
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -108,7 +109,7 @@ The submission method codelist is used to identify the mechanism through which a
    :file: ../../../../build/current_lang/codelists/submissionMethod.csv
 ```
 
-This is an open codelist, and new values may be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers should include details of any additional codes they use, and their definitions in their [publication policy](../implementation/publication_policy.md). 
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy.md). 
 
 ### Related Process
 
@@ -156,7 +157,7 @@ The extended procurement category codelist is used to provide additional detail 
 
 ### Release Tag
 
-A contracting process may result in a number of releases of information over time. These should be tagged to indicate the stage of the contracting process they relate to. 
+A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to. 
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -166,7 +167,7 @@ A contracting process may result in a number of releases of information over tim
 
 ### Initiation Type
 
-Contracting processes may be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard may support other Initiation Types. The initiation type may be used to provide information to consuming applications on the different blocks of data and releases they should expect from a contracting process.
+Contracting processes can be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard might support other initiation types. The initiation type is used to provide information to consuming applications on the different blocks of data and releases they can expect from a contracting process.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -199,11 +200,11 @@ A contracting process aims to fulfill the requirements identified at the plannin
    :file: ../../../../build/current_lang/codelists/method.csv
 ```
 
-Note: The 'direct' code was introduced in Version 1.1. Publishers who completed a codelist mapping prior to 1.1 may have included direct procurement within limited, and may need to review their mappings.
+Note: The 'direct' code was introduced in Version 1.1. Publishers who completed a codelist mapping prior to 1.1 might have included direct procurement within limited, and ought to review their mappings.
 
 ### Procurement Category
 
-The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers can use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
+The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers should use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -213,7 +214,7 @@ The procurement category codelist is used to indicate the **primary** focus of a
 
 ### Award Status
 
-An award moves through multiple states. Releases over time may update the status of an award. 
+An award moves through multiple states. Releases over time can update the status of an award. 
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -225,7 +226,7 @@ The `awardStatus` field and codelist is used to indicate when a tender did not r
 
 ### Contract Status
 
-Contracts can move through multiple states. Releases over time may update the status of a contract.
+Contracts can move through multiple states. Releases over time can update the status of a contract.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -243,7 +244,7 @@ Contracts can move through multiple states. Releases over time may update the st
 
 ### Currency
 
-The currency for each amount should always be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+The currency for each amount must be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
 
 ```eval_rst
 .. csv-table-no-translate::

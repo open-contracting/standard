@@ -11,7 +11,7 @@ We focused on four main groups of user need:
 * Enabling the private sector to fairly compete for public contracts
 * Monitoring the effectiveness of service delivery
 
-Some user needs are served by direct access to bulk data. To meet other user needs will require tools built on top of OCDS data, providing interfaces, visualization, and links to spaces where users can engage with contracting bodies and data publishers. 
+Some user needs are served by direct access to bulk data. Other user needs are served by tools built on top of OCDS data that provide interfaces, visualizations, and links to spaces where users can engage with contracting bodies and data publishers. 
 
 You can read more about how people around the world are using OCDS, and other contracting data, on the [Open Contracting Partnership website](http://www.open-contracting.org). 
 
@@ -39,7 +39,7 @@ Data that can be linked up using globally unique identifiers for companies is pa
 
 #### Competing for public contracts
 
-<span style="float:right">![Person](../../../assets/icon_user.png)</span>Open contracting data can be used by private firms to understand the potential pipeline of procurement opportunities. It is a core principle of open contracting that information should be made available at the early stages of a contracting process, including information on planned procurement, and invitations for tenders.
+<span style="float:right">![Person](../../../assets/icon_user.png)</span>Open contracting data can be used by private firms to understand the potential pipeline of procurement opportunities. It is a core principle of open contracting that information ought to be made available at the early stages of a contracting process, including information on planned procurement, and invitations for tenders.
 
 Information on past contracts can allow firms to identify upcoming opportunities for re-contracting, and can support a more competitive marketplace, as transparency creates a level playing field with information on pricing, contract dates and key deliverables. 
 

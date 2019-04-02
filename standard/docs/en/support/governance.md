@@ -58,13 +58,13 @@ We are committed to the [Open Stand principles](https://open-stand.org/about-us/
 
 * **Openness.** The Open Contracting Data Standard processes are open to all interested and informed parties.
 
-In the future, the Open Contracting Data Standard may be submitted to a formal standardization body, such as the World Wide Web Consortium, or OASIS. Before such a decision is made, a model of community-driven governance shall be established based on an open and consensus-based processes for updating the standard.
+In the future, the Open Contracting Data Standard may be submitted to a formal standardization body, such as the World Wide Web Consortium, or OASIS. Before such a decision is made, a model of community-driven governance must be established based on an open and consensus-based processes for updating the standard.
 
 ## Versioning and upgrade process
 
 Over time, changes will be needed to the standard, including addition of new codes and fields, and occasionally involving changes to existing fields and structures. 
 
-The revision process should ensure:
+The revision process is designed to ensure:
 
 * The consequences of any change for different stakeholders are identified and considered;
 
@@ -72,7 +72,9 @@ The revision process should ensure:
 
 * Changes are easy to identify and are transparent, and publishers, users and intermediaries have clear documentation to allow them to update their data and tools;
 
-Changes to the OCDS schema should be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a changelog maintained. 
+Changes to the OCDS schema ought to be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a changelog maintained. 
+
+This documentation website is composed of normative content (the prescriptive part of OCDS) and non-normative content (the non-prescriptive, or ‘descriptive’, part of OCDS) as defined and described in the [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit). This policy establishes which changes to which parts of the documentation must involve the revision process described below (e.g. adding new fields to the release schema), and which changes may be made without the revision process (e.g. correcting typos in field descriptions, or updating implementation guidance).
 
 ### Versions
 
@@ -81,10 +83,10 @@ Distinct **branches** of the standard will be maintained within GitHub for each 
 Branches can be in one of two states:
 
 * **Development** - indicated by a -dev suffix (e.g. 1.1-dev)
-Both schema and documentation on a development branch can be updated and should only be implemented on an experimental basis.
+Both schema and documentation on a development branch may be updated and should be implemented on an experimental basis.
 
 * **Live** - with no suffix ( e.g. 1.0)
-Only documentation updates are permitted on a live branch. All documentation changes must be reviewed to ensure they do not make any changes to the meaning of the standard. 
+Only documentation may be updated on a live branch. All documentation changes must be reviewed to ensure they do not make any changes to the meaning of the standard. 
 
 Semantic Versioning practices will be used to distinguish between:
 
@@ -104,11 +106,11 @@ To release a new minor or major version upgrade will involve a number of stages 
 
 * **Publicity:** All stages of the revision process will be announced via the standard-discuss mailing list, and through GitHub issues. These are the formal channels for notification during the process.
 
-* **Consensus:** All processes should aim towards gaining community consensus for changes. 
+* **Consensus:** All processes will aim towards gaining community consensus for changes. 
 
-The technical team are responsible for generating key documentation during the process, but should always be guided by community consensus, submitting all decisions for discussion. 
+The technical team are responsible for generating key documentation during the process, but should be guided by community consensus, submitting all decisions for discussion. 
 
-* **Appeal:** Any party may appeal against decisions made during the process by writing to the standard governance working group, which can be reached through <a href="mailto:lmarchessault@open-contracting.org">Lindsey Marchessault</a>. The working group has the authority to reject proposed revisions on the standard in response to appeals. 
+* **Appeal:** Any party can appeal against decisions made during the process by writing to the standard governance working group, which can be reached through <a href="mailto:lmarchessault@open-contracting.org">Lindsey Marchessault</a>. The working group has the authority to reject proposed revisions on the standard in response to appeals. 
 
 ### Proposals
 
@@ -116,7 +118,7 @@ Changes to OCDS can be proposed by anyone at any point via the public, online, [
 
 Contributors are encouraged to raise discussions prior to pull requests to seek consensus on proposed changes.
 
-Changes may be proposed as:
+Changes can be proposed as:
 
 * **Extensions** - which add new features to the standard.
 
@@ -126,7 +128,7 @@ If there are at least two parties interested in using an extension, and followin
 
 ### Prioritization
 
-The technical team, with reference to community views, identify change proposals and extensions which should be considered for adoption in the next version of the standard, assigning these to milestones in the issue tracker where they are open for discussion. 
+The technical team, with reference to community views, identify change proposals and extensions which ought to be considered for adoption in the next version of the standard, assigning these to milestones in the issue tracker where they are open for discussion. 
 
 Periodically, at the start of a revision process a cut-off date for proposals will be announced  with at least two weeks notice. After that date a prioritized list of updates is produced. Any new proposed extensions or changes received after this period may not be considered until the next prioritization phase. 
 
@@ -134,7 +136,7 @@ Periodically, at the start of a revision process a cut-off date for proposals wi
 
 The list is shared for feedback, with at least a two-week window for discussion.
 
-Based on discussions, a final list is then proposed by the technical team with all the issues that will be taken forward into the rest of the process. A proposals that has made it this far may or may not make it into the final upgrade. As the proposal is worked into final concrete examples and schema changes further issues may arise.
+Based on discussions, a final list is then proposed by the technical team with all the issues that will be taken forward into the rest of the process. A proposal that has made it this far might or might not make it into the final upgrade. As the proposal is worked into final concrete examples and schema changes further issues can arise.
 
 ### Development & docs
 
@@ -142,7 +144,7 @@ The technical team, working with community members, will work on a development b
 
 This stage is likely to involve broad community engagement and discussion of specific decisions through GitHub issues. 
 
-At the point where all open issues are suitably addressed, the development branch can be submitted for peer review.
+At the point where all open issues are suitably addressed, the development branch is ready to be submitted for peer review.
 
 ### Peer-review
 
@@ -150,25 +152,25 @@ The updated schema, documentation along with a changelog and narrative descripti
 
 A group of invited reviewers, representing different stakeholders, and including data publishers and users, will be asked to complete a full review of the changes, and to submit:
 
-* A judgment on whether the overall upgrade, and/or specific changes should be **accepted**, **accepted with minor changes**, **substantially revised**, or **rejected**.
+* A judgment on whether the overall upgrade, and/or specific changes ought to be **accepted**, **accepted with minor changes**, **substantially revised**, or **rejected**.
 
 * Comments on each request for revisions or rejection.
 
-All reviews, with reviewer names, will be published. Community members may also submit their own reviews of the whole revision, or specific elements. The minimum period for peer-review is one month. 
+All reviews, with reviewer names, will be published. Community members can also submit their own reviews of the whole revision, or specific elements. The minimum period for peer-review is one month. 
 
 ### Revisions
 
-The technical team, with reference to the working group as appropriate, should evaluate reviews, and decide whether the whole upgrade, or specific features thereof, need to be revised, rejected or postponed to future processes.
+The technical team, with reference to the working group as appropriate, evaluates reviews, and decides whether the whole upgrade, or specific features thereof, need to be revised, rejected or postponed to future processes.
 
-If only minor changes are suggested, then the revised standard can be submitted back to reviewers for a brief review period of at least two weeks.
+If only minor changes are suggested, then the revised standard should be submitted back to reviewers for a brief review period of at least two weeks.
 
-If major changes are required, then a longer follow up review process of at least one month should be allowed for.
+If major changes are needed, then a longer follow up review process of at least one month should be allowed for.
 
 ### Release
 
-Once all reviewer comments have been addressed to the satisfaction of the reviewer in question, then the updated version of the standard should be submitted to the **standard governance working group** for final approval, along with a short report of the process. 
+Once all reviewer comments have been addressed to the satisfaction of the reviewer in question, then the updated version of the standard must be submitted to the **standard governance working group** for final approval, along with a short report of the process. 
 
-Following **working group** approval, the revision branch can be set to live. 
+Following **working group** approval, the revision branch may be set to live. 
 
 ## Deprecation policy 
 
@@ -192,7 +194,7 @@ Publishers should aim to move to a new **major** version within 18 months of its
 
 **Stakeholder**
 
-Anyone who is a current or potential publisher or user of the standard can be considered a stakeholder. When engaging with stakeholders, attention should be paid to representation of both publishers and users; representation of public and private sectors and civil society; and broad geographical representation.
+Anyone who is a current or potential publisher or user of the standard can be considered a stakeholder. When engaging with stakeholders, attention ought to be paid to representation of both publishers and users; representation of public and private sectors and civil society; and broad geographical representation.
 
 **Consensus**
 

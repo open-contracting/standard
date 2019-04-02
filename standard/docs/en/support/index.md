@@ -21,7 +21,7 @@ If are are planning to publish or use data using the Open Contracting Data Stand
 We can:
 
 * Help you identify approaches for converting data from your existing systems to OCDS;
-* Suggest existing tools and services which may help you public or use OCDS data;
+* Suggest existing tools and services which can help you publish or use OCDS data;
 * Provide guidance on mapping your data structures to the standard;
 * Give you feedback on draft data files, and support with validation of your data;
 
@@ -37,6 +37,6 @@ The Open Contracting community is also a good source of input and support. You c
 
 Announcements about proposed updates to the specification, and periods for comment, will be made to the mailing list.
 
-Developers, or those wishing to provide technical input on the standard, may wish to go straight to the [GitHub repository](https://github.com/open-contracting/standard).
+Developers, or those wishing to provide technical input on the standard, might wish to go straight to the [GitHub repository](https://github.com/open-contracting/standard).
 
 </div>

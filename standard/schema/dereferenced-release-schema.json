@@ -7,7 +7,7 @@
   "properties": {
     "ocid": {
       "title": "Open Contracting ID",
-      "description": "A globally unique identifier for this Open Contracting Process. Composed of a publisher prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
+      "description": "A globally unique identifier for this Open Contracting Process. Composed of an ocid prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
       "type": "string",
       "minLength": 1
     },
@@ -2981,7 +2981,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -2990,7 +2990,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -3023,7 +3023,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -3032,7 +3032,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -3081,7 +3081,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -3090,7 +3090,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -3123,7 +3123,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -3132,7 +3132,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -3151,7 +3151,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the optional bid extension.",
+          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the bid extension.",
           "type": "array",
           "items": {
             "properties": {
@@ -5182,7 +5182,7 @@
                 "format": "date-time"
               },
               "maxExtentDate": {
-                "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+                "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
                 "format": "date-time",
                 "title": "Maximum extent",
                 "type": [
@@ -5191,7 +5191,7 @@
                 ]
               },
               "durationInDays": {
-                "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+                "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
                 "title": "Duration (days)",
                 "type": [
                   "integer",
@@ -5609,7 +5609,7 @@
                 "format": "date-time"
               },
               "maxExtentDate": {
-                "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+                "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
                 "format": "date-time",
                 "title": "Maximum extent",
                 "type": [
@@ -5618,7 +5618,7 @@
                 ]
               },
               "durationInDays": {
-                "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+                "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
                 "title": "Duration (days)",
                 "type": [
                   "integer",
@@ -11252,7 +11252,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -11261,7 +11261,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -11294,7 +11294,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -11303,7 +11303,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -11352,7 +11352,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -11361,7 +11361,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -11394,7 +11394,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -11403,7 +11403,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -11422,7 +11422,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the optional bid extension.",
+          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the bid extension.",
           "type": "array",
           "items": {
             "properties": {
@@ -13449,7 +13449,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -13458,7 +13458,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -13870,7 +13870,7 @@
               "format": "date-time"
             },
             "maxExtentDate": {
-              "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
               "format": "date-time",
               "title": "Maximum extent",
               "type": [
@@ -13879,7 +13879,7 @@
               ]
             },
             "durationInDays": {
-              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+              "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
               "title": "Duration (days)",
               "type": [
                 "integer",
@@ -22424,7 +22424,7 @@
           "format": "date-time"
         },
         "maxExtentDate": {
-          "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available date for extension or renewal of this period.",
+          "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
           "format": "date-time",
           "title": "Maximum extent",
           "type": [
@@ -22433,7 +22433,7 @@
           ]
         },
         "durationInDays": {
-          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field, if used, should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field, if used, and should reflect the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
           "type": [
             "integer",

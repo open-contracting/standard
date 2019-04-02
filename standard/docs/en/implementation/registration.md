@@ -1,5 +1,3 @@
-
-
 # Registration
 
 <span class="lead">The identifiers section describes the composition of a globally unique open contracting identifier. On this page you can request an ocid prefix, and can submit details of your published data, as well as checking existing prefixes</span>
