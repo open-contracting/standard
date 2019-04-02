@@ -1,6 +1,6 @@
 # Record Reference
 
-Whereas there can be multiple releases concerning a given contracting process, there should be a single **record** for each ocid at a given time, consolidating all the available releases about the contracting process.
+Whereas there can be multiple releases about a contracting process, there should be a single **record** per contracting process, aggregating all the releases available for the contracting process.
 
 A record **must** contain:
 
@@ -55,7 +55,7 @@ Each record package contains an array of one or more records, consisting of the 
 
 ### Release list
 
-The releases that make up a contracting process may be provided in two ways:
+The releases that make up a contracting process can be provided in two ways:
 
 * URLs and metadata for each release; or
 * Embedded copies of the release;

@@ -14,7 +14,7 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 ### Party Role
 
-The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../../reference/#parties). A single party may have one or more roles in the contracting process. 
+The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../../reference/#parties). A single party can have one or more roles in the contracting process. 
 
 ```eval_rst
 .. csv-table-no-translate::

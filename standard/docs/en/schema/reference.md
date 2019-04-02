@@ -395,7 +395,11 @@ The items block is used to list the line-items associated with a tender, award o
 ```
 #### Unit
 
-The `unit` block allows detailed specification of the parameters and price of units that make up a line-item. Although no codelist for units has been established in the current release of the standard, publishers may consider using the Units provided by the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) in the `unit.name` field (drawing on the CamelCase unit names, such as SquareMile), in order to provide detailed information the cost per unit of a line-item. 
+The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
+
+If the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
+
+Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](../../../codelists/#unit-classification-scheme).
 
 ```eval_rst
 
@@ -456,7 +460,7 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 * When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
-In all these cases, the `relatedProcess` block can be used to cross-reference between the relevant open contracting processes using their `ocid`.
+In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant open contracting processes using their `ocid`.
 
 ```eval_rst
 
