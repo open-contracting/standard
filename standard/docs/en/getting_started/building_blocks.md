@@ -50,7 +50,7 @@ These are represented in a JSON document as follows:
 
 ### Building blocks: fields
 
-The OCDS schema sets out the fields that can be included in each section, making use of simple re-usable building blocks (field structures) to represent data. 
+The OCDS schema sets out the fields that ought to be included in each section (where applicable), making use of simple re-usable building blocks (field structures) to represent data. 
 
 For example, common building blocks are provided for:
 
