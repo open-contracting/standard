@@ -27,7 +27,7 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the [releaseTag codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag). Tags may be used to filter release and to understand the kind of information that a release might contain.",
+      "description": "One or more values from the closed [releaseTag](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags may be used to filter release and to understand the kind of information that a release might contain.",
       "type": "array",
       "items": {
         "type": "string",
@@ -57,7 +57,7 @@
     },
     "initiationType": {
       "title": "Initiation type",
-      "description": "String specifying the type of initiation process used for this contract, taken from the [initiationType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#initiation-type) codelist. Currently only tender is supported.",
+      "description": "The type of initiation process used for this contract, from the closed [initiationType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#initiation-type) codelist.",
       "type": "string",
       "enum": [
         "tender"
@@ -109,7 +109,7 @@
     },
     "language": {
       "title": "Release language",
-      "description": "Specifies the default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended.",
+      "description": "The default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended.",
       "type": [
         "string",
         "null"
@@ -214,7 +214,7 @@
         },
         "status": {
           "title": "Tender status",
-          "description": "The current status of the tender based on the [tenderStatus codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status)",
+          "description": "The current status of the tender, from the closed [tenderStatus](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status) codelist.",
           "type": [
             "string",
             "null"
@@ -258,7 +258,7 @@
         },
         "procurementMethod": {
           "title": "Procurement method",
-          "description": "Specify tendering method using the [method codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method). This is a closed codelist. Local method types should be mapped to this list.",
+          "description": "The procurement method, from the closed [method](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist.",
           "type": [
             "string",
             "null"
@@ -291,7 +291,7 @@
         },
         "mainProcurementCategory": {
           "title": "Main procurement category",
-          "description": "The primary category describing the main object of this contracting process from the [procurementCategory](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist. This is a closed codelist. Local classifications should be mapped to this list.",
+          "description": "The primary category describing the main object of this contracting process, from the closed [procurementCategory](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
           "type": [
             "string",
             "null"
@@ -307,7 +307,7 @@
         },
         "additionalProcurementCategories": {
           "title": "Additional procurement categories",
-          "description": "Any additional categories which describe the objects of this contracting process, from the [extendedProcurementCategory](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist. This is an open codelist. Local categories can be included in this list.",
+          "description": "Any additional categories describing the objects of this contracting process, using the open [extendedProcurementCategory](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
           "type": [
             "array",
             "null"
@@ -320,7 +320,7 @@
         },
         "awardCriteria": {
           "title": "Award criteria",
-          "description": "Specify the award criteria for the procurement, using the [award criteria codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-criteria)",
+          "description": "The award criteria for the procurement, using the open [awardCriteria](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-criteria) codelist.",
           "type": [
             "string",
             "null"
@@ -338,7 +338,7 @@
         },
         "submissionMethod": {
           "title": "Submission method",
-          "description": "Specify the method by which bids must be submitted, in person, written, or electronic auction. Using the [submission method codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#submission-method)",
+          "description": "The method by which bids must be submitted, using the open [submissionMethod](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#submission-method) codelist.",
           "type": [
             "array",
             "null"
@@ -412,7 +412,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "All documents and attachments related to the tender, including any notices. See the [documentType codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) for details of potential documents to include. Common documents include official legal notices of tender, technical specifications, evaluation criteria, and, as a tender process progresses, clarifications and replies to queries.",
+          "description": "All documents and attachments related to the tender, including any notices. See the [documentType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) codelist for details of potential documents to include. Common documents include official legal notices of tender, technical specifications, evaluation criteria, and, as a tender process progresses, clarifications and replies to queries.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -518,7 +518,7 @@
         },
         "status": {
           "title": "Award status",
-          "description": "The current status of the award drawn from the [awardStatus codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-status)",
+          "description": "The current status of the award, from the closed [awardStatus](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-status) codelist.",
           "type": [
             "string",
             "null"
@@ -658,7 +658,7 @@
         },
         "status": {
           "title": "Contract status",
-          "description": "The current status of the contract. Drawn from the [contractStatus codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status)",
+          "description": "The current status of the contract, from the closed [contractStatus](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status) codelist.",
           "type": [
             "string",
             "null"
@@ -802,7 +802,7 @@
     },
     "Milestone": {
       "title": "Milestone",
-      "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.",
+      "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
       "type": "object",
       "required": [
         "id"
@@ -827,7 +827,7 @@
         },
         "type": {
           "title": "Milestone type",
-          "description": "The type of milestone, drawn from an extended [milestoneType codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-type).",
+          "description": "The nature of the milestone, using the open [milestoneType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-type) codelist.",
           "type": [
             "string",
             "null"
@@ -845,7 +845,7 @@
         },
         "code": {
           "title": "Milestone code",
-          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed. Milestone codes is an open codelist, and codes should be agreed among data producers and the applications using that data.",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' could be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
           "type": [
             "string",
             "null"
@@ -880,7 +880,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status that was realized on the date provided in dateModified, drawn from the [milestoneStatus codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-status).",
+          "description": "The status that was realized on the date provided in `dateModified`, from the closed [milestoneStatus](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-status) codelist.",
           "type": [
             "string",
             "null"
@@ -943,7 +943,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "A classification of the document described, using the open [documentType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) codelist.",
           "type": [
             "string",
             "null"
@@ -996,7 +996,7 @@
         },
         "format": {
           "title": "Format",
-          "description": "The format of the document taken from the [IANA Media Types codelist](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
+          "description": "The format of the document, from the [IANA Media Types codelist](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
           "type": [
             "string",
             "null"
@@ -1004,7 +1004,7 @@
         },
         "language": {
           "title": "Language",
-          "description": "Specifies the language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
+          "description": "The language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
           "type": [
             "string",
             "null"
@@ -1312,7 +1312,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the contracting process. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "The party's role(s) in the contracting process, using the open [partyRole](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
           "type": [
             "array",
             "null"
@@ -1396,7 +1396,7 @@
           "properties": {
             "scheme": {
               "title": "Scheme",
-              "description": "The list from which units of measure identifiers are taken. This should be an entry from the options available in the [unitClassificationScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended, although other options are available.",
+              "description": "The list from which units of measure identifiers are taken, using the open [unitClassificationScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended.",
               "type": [
                 "string",
                 "null"
@@ -1557,7 +1557,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "A classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should represent a known [Item Classification Scheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) wherever possible.",
+          "description": "A classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn. For line item classifications, this value should be a code in the open [itemClassificationScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) codelist, wherever possible.",
           "type": [
             "string",
             "null"
@@ -1778,7 +1778,7 @@
         },
         "currency": {
           "title": "Currency",
-          "description": "The currency for each amount should always be specified using the uppercase 3-letter currency code from ISO4217.",
+          "description": "The currency for each amount should always be specified using the uppercase 3-letter currency code from ISO4217, a closed codelist.",
           "type": [
             "string",
             "null"
@@ -2149,7 +2149,7 @@
           "items": {
             "type": "string"
           },
-          "description": "Specify the type of relationship using the [related process codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process).",
+          "description": "The type of relationship, using the open [relatedProcess](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process) codelist.",
           "title": "Relationship",
           "type": [
             "array",
@@ -2168,7 +2168,7 @@
         },
         "scheme": {
           "title": "Scheme",
-          "description": "The identification scheme used by this cross-reference from the [related process scheme codelist](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process-scheme) codelist. When cross-referencing information also published using OCDS, an Open Contracting ID (ocid) should be used.",
+          "description": "The identification scheme used by this cross-reference, using the open [relatedProcessScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process-scheme) codelist. When cross-referencing information also published using OCDS, an Open Contracting ID (ocid) should be used.",
           "type": [
             "string",
             "null"
