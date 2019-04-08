@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * OCDS 1.0 uses the [whole-list merge](http://standard.open-contracting.org/1.1/en/schema/merging/#whole-list-merge) strategy for suppliers, whereas OCDS 1.1 uses the [identifier merge](http://standard.open-contracting.org/1.1/en/schema/merging/#identifier-merge) strategy. As a consequence, the OCDS 1.1 versioned release schema is not backward compatible with OCDS 1.0.
 * [#780](https://github.com/open-contracting/standard/pull/780) All extensions have been moved to the [open-contracting-extensions](https://github.com/open-contracting-extensions) organization. No change is required, but we recommend that publishers update the URLs of extensions in release packages and record packages.
+* [#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit).
 * [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [translation and localization policy](http://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
 * [#806](https://github.com/open-contracting/standard/pull/806) [#808](https://github.com/open-contracting/standard/pull/808) [#809](https://github.com/open-contracting/standard/pull/809) The documentation is now available in Italian.
 * [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a [privacy notice](http://standard.open-contracting.org/1.1/en/privacy-notice/).
@@ -29,6 +30,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#725](https://github.com/open-contracting/standard/pull/725) Apply the style guide and OCDS glossary to the 'procuringEntity' and 'supplier' codes in the `partyRole` codelist.
 * [#725](https://github.com/open-contracting/standard/pull/725) Add examples to the description of the 'environmentalImpact' code in the `documentType` codelist.
 * [#829](https://github.com/open-contracting/standard/pull/829) Use sentence case for code titles and end code descriptions with periods.
+* [#852](https://github.com/open-contracting/standard/pull/852) Use the correct normative keywords in code descriptions.
 
 ### Schema
 
@@ -37,21 +39,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#810](https://github.com/open-contracting/standard/pull/810) Add a dereferenced release schema to ease the implementation of the merge routine.
 * [#810](https://github.com/open-contracting/standard/pull/810) Add `"versionId": true` hint to `Identifier` and `Classification`.
 * [#845](https://github.com/open-contracting/standard/pull/845) Remove reference to closed issue and note about field name.
+* Clarify the uniqueness of release identifiers in the release schema [#838](https://github.com/open-contracting/standard/pull/838) and release package schema [#831](https://github.com/open-contracting/standard/pull/831).
 
 ### Documentation
 
-* [#772](https://github.com/open-contracting/standard/pull/772) [#810](https://github.com/open-contracting/standard/pull/810) Clarify the merge rules for compiled releases and versioned releases.
+* [#772](https://github.com/open-contracting/standard/pull/772) [#810](https://github.com/open-contracting/standard/pull/810) [#831](https://github.com/open-contracting/standard/pull/831) Clarify the merge rules for compiled releases and versioned releases.
 * [#797](https://github.com/open-contracting/standard/pull/797) Fix examples of versioned releases.
-* [#783](https://github.com/open-contracting/standard/pull/783) Add missing email address for the standard governance working group.
+* [#831](https://github.com/open-contracting/standard/pull/831) Use the correct normative keywords in the documentation.
 * [#835](https://github.com/open-contracting/standard/pull/835) Display the canonical schema URLs in the documentation.
-* [#823](https://github.com/open-contracting/standard/pull/823) Replace ambiguous terms on schema reference pages.
 * [#838](https://github.com/open-contracting/standard/pull/838) Clarify the uniqueness of release, award and contract identifiers.
-* [#840](https://github.com/open-contracting/standard/pull/840) Remove ambiguous usage of "data package", to avoid confusion with [Frictionless Data's Data Package specification](https://frictionlessdata.io/specs/data-package/).
-* [#783](https://github.com/open-contracting/standard/pull/783) List community extensions relating to party details.
+* [#831](https://github.com/open-contracting/standard/pull/831) Improve the description of iterating the release `id`.
 * [#822](https://github.com/open-contracting/standard/pull/822) Integrate the [Extension Explorer](https://extensions.open-contracting.org/en/).
-* [#837](https://github.com/open-contracting/standard/pull/837) Add links to OCDS profiles.
-* Typos have been corrected [#692](https://github.com/open-contracting/standard/pull/692) [#713](https://github.com/open-contracting/standard/pull/713) [#719](https://github.com/open-contracting/standard/pull/719) [#726](https://github.com/open-contracting/standard/pull/726) [#732](https://github.com/open-contracting/standard/pull/732) [#752](https://github.com/open-contracting/standard/pull/752) [#756](https://github.com/open-contracting/standard/pull/756) [#795](https://github.com/open-contracting/standard/pull/795).
-* The process to build the documentation has been improved [#666](https://github.com/open-contracting/standard/pull/666) [#698](https://github.com/open-contracting/standard/pull/698) [#708](https://github.com/open-contracting/standard/pull/708) [#709](https://github.com/open-contracting/standard/pull/709) [#721](https://github.com/open-contracting/standard/pull/721) [#724](https://github.com/open-contracting/standard/pull/724) [#727](https://github.com/open-contracting/standard/pull/727) [#729](https://github.com/open-contracting/standard/pull/729) [#733](https://github.com/open-contracting/standard/pull/733) [#740](https://github.com/open-contracting/standard/pull/740) [#747](https://github.com/open-contracting/standard/pull/747) [#753](https://github.com/open-contracting/standard/pull/753) [#762](https://github.com/open-contracting/standard/pull/762) [#767](https://github.com/open-contracting/standard/pull/767) [#783](https://github.com/open-contracting/standard/pull/783) [#787](https://github.com/open-contracting/standard/pull/787) [#796](https://github.com/open-contracting/standard/pull/796) [#813](https://github.com/open-contracting/standard/pull/813) [#836](https://github.com/open-contracting/standard/pull/836).
+* [#783](https://github.com/open-contracting/standard/pull/783) Add missing email address for the standard governance working group.
+* Replace ambiguous or incorrect terms:
+  * [#831](https://github.com/open-contracting/standard/pull/831) Use "release `id`" and "release `date`", instead of "`releaseID`" and "`releaseDate`"
+  * [#831](https://github.com/open-contracting/standard/pull/831) Use "ocid prefix", instead of "publisher prefix"
+  * [#840](https://github.com/open-contracting/standard/pull/840) Use "release package and record package", instead of "data package", to avoid confusion with [Frictionless Data's Data Package specification](https://frictionlessdata.io/specs/data-package/)
+  * [#831](https://github.com/open-contracting/standard/pull/831) Use "minor versions", instead of "decimal versions" on deprecation page
+  * [#823](https://github.com/open-contracting/standard/pull/823) Fix incorrect uses of "records", "codelists" and "gazetteers" on identifiers and codelists pages
+* Fix out-of-date content:
+  * [#831](https://github.com/open-contracting/standard/pull/831) Remove sentence implying non-existence of unit classification scheme codelist on release schema reference page
+  * [#831](https://github.com/open-contracting/standard/pull/831) Remove sentence using non-existent 'notice' code on release schema reference page
+  * [#831](https://github.com/open-contracting/standard/pull/831) Remove reference to closed issue in API section
+* Add links to:
+  * [#783](https://github.com/open-contracting/standard/pull/783) Community extensions relating to party details
+  * [#837](https://github.com/open-contracting/standard/pull/837) OCDS profiles
+* Correct typos in the documentation [#692](https://github.com/open-contracting/standard/pull/692) [#713](https://github.com/open-contracting/standard/pull/713) [#719](https://github.com/open-contracting/standard/pull/719) [#726](https://github.com/open-contracting/standard/pull/726) [#732](https://github.com/open-contracting/standard/pull/732) [#752](https://github.com/open-contracting/standard/pull/752) [#756](https://github.com/open-contracting/standard/pull/756) [#795](https://github.com/open-contracting/standard/pull/795).
+* Improve the process to build the documentation [#666](https://github.com/open-contracting/standard/pull/666) [#698](https://github.com/open-contracting/standard/pull/698) [#708](https://github.com/open-contracting/standard/pull/708) [#709](https://github.com/open-contracting/standard/pull/709) [#721](https://github.com/open-contracting/standard/pull/721) [#724](https://github.com/open-contracting/standard/pull/724) [#727](https://github.com/open-contracting/standard/pull/727) [#729](https://github.com/open-contracting/standard/pull/729) [#733](https://github.com/open-contracting/standard/pull/733) [#740](https://github.com/open-contracting/standard/pull/740) [#747](https://github.com/open-contracting/standard/pull/747) [#753](https://github.com/open-contracting/standard/pull/753) [#762](https://github.com/open-contracting/standard/pull/762) [#767](https://github.com/open-contracting/standard/pull/767) [#783](https://github.com/open-contracting/standard/pull/783) [#787](https://github.com/open-contracting/standard/pull/787) [#796](https://github.com/open-contracting/standard/pull/796) [#813](https://github.com/open-contracting/standard/pull/813) [#836](https://github.com/open-contracting/standard/pull/836).
 
 ## [1.1.3] - 2018-04-16
 
