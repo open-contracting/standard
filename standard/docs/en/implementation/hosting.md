@@ -9,7 +9,7 @@ Which formats are most important will depend on the priority use cases for each 
 * **Bulk downloads** - packaging together multiple releases or multiple records in one or more files for users to download and import into local tools.
 * **Individual release and record downloads** - providing a URI at which each release or record can be obtained. This is crucial for 4 ☆ data publication.
 * **CSV and spreadsheet serializations** - providing multiple releases or compiled records for download, enabling users to work with data directly in spreadsheet software or other tools. 
-* **API access** - enabling interactive access to your data. OCDS does not currently provide a standard for constructing APIs, but [potential approaches can be discussed with the community here](https://github.com/open-contracting/standard/issues/290).
+* **API access** - enabling interactive access to your data.
 
 ## Bulk downloads
 
