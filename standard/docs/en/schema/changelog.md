@@ -40,8 +40,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#810](https://github.com/open-contracting/standard/pull/810) Add a dereferenced release schema to ease the implementation of the merge routine.
 * [#810](https://github.com/open-contracting/standard/pull/810) Add `"versionId": true` hint to `Identifier` and `Classification`.
 * [#845](https://github.com/open-contracting/standard/pull/845) Remove a reference to a closed issue and a note about a field name.
-* [#852](https://github.com/open-contracting/standard/pull/855) Use the correct normative keywords in field descriptions.
-* [#852](https://github.com/open-contracting/standard/pull/855) Rephrase field descriptions as definitions rather than instructions.
+* [#855](https://github.com/open-contracting/standard/pull/855) Use the correct normative keywords in field descriptions.
+* [#855](https://github.com/open-contracting/standard/pull/855) Rephrase field descriptions as definitions rather than instructions.
+* [#855](https://github.com/open-contracting/standard/pull/855) Align the descriptions of the `license` fields in the release package schema and record package schema.
 
 ### Documentation
 
