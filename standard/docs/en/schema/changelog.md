@@ -7,17 +7,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Advisories
 
-* OCDS 1.0 uses the [whole-list merge](http://standard.open-contracting.org/1.1/en/schema/merging/#whole-list-merge) strategy for suppliers, whereas OCDS 1.1 uses the [identifier merge](http://standard.open-contracting.org/1.1/en/schema/merging/#identifier-merge) strategy. As a consequence, the OCDS 1.1 versioned release schema is not backward compatible with OCDS 1.0.
-* [#780](https://github.com/open-contracting/standard/pull/780) All extensions have been moved to the [open-contracting-extensions](https://github.com/open-contracting-extensions) organization. No change is required, but we recommend that publishers update the URLs of extensions in release packages and record packages.
+* OCDS 1.0 uses the [whole-list merge](http://standard.open-contracting.org/1.1/en/schema/merging/#whole-list-merge) strategy for `Award.suppliers`, whereas OCDS 1.1 uses the [identifier merge](http://standard.open-contracting.org/1.1/en/schema/merging/#identifier-merge) strategy. As a consequence, the OCDS 1.1 versioned release schema is not backward compatible with OCDS 1.0.
+  * **Action:** Versioned releases respecting the OCDS 1.0 schema that set `Award.suppliers` will need to be re-created to validate against the OCDS 1.1 schema.
+* [#780](https://github.com/open-contracting/standard/pull/780) All extensions authored by the Open Contracting Partnership have been moved to the [open-contracting-extensions](https://github.com/open-contracting-extensions) organization.
+  * **Action:** No change is required, but we recommend that publishers update the URLs of these extensions in their release packages and record packages.
 * [#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit).
-* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [translation and localization policy](http://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
+* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [Translation and localization policy](http://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
 * [#806](https://github.com/open-contracting/standard/pull/806) [#808](https://github.com/open-contracting/standard/pull/808) [#809](https://github.com/open-contracting/standard/pull/809) The documentation is now available in Italian.
 * [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a [privacy notice](http://standard.open-contracting.org/1.1/en/privacy-notice/).
 
 ### Bugs
 
-* [#738](https://github.com/open-contracting/standard/pull/738) 1.1.3 changed the merging and versioning behaviors of `Item.unit`, such that it could be removed by setting it to `null`, and such that it was versioned as a whole. 1.1.4 restores the behaviors from 1.1.2, such that only its sub-fields can be removed by setting them to `null`, and such that its sub-fields are versioned individually. If you are not using compiled releases or versioned releases, then this bug didn't affect you.
+* [#738](https://github.com/open-contracting/standard/pull/738) 1.1.3 changed the merging and versioning behaviors of `Item.unit`, such that it could be removed by setting it to `null`, and such that it was versioned as a whole. 1.1.4 restores the behaviors from 1.1.2, such that only its sub-fields can be removed by setting them to `null`, and such that its sub-fields are versioned individually.
+  * **Action:** If you had upgraded to OCDS 1.1.3, then compiled releases and versioned releases that set `Item.unit` will likely need to be re-created to validate against the OCDS 1.1.4 schema.
 * [#810](https://github.com/open-contracting/standard/pull/810) `buyer.id`, `Tender.procuringEntity.id`, `Contract.implementation.payer.id` `Contract.implementation.payee.id`, `Budget.id`, `Identifier.id`, and `Classification.id` are now versioned, consistent with the documentation.
+  * **Action:** Versioned releases that set these fields will likely need to be re-created to validate against the OCDS 1.1.4 schema.
 * [#769](https://github.com/open-contracting/standard/pull/769) The versioned release schema now matches the release schema in: having a `minLength` validation property for `OrganizationReference.name`; having `codelist` and `openCodelist` properties for `Tender.awardCriteria`, `Tender.awardCriteriaDetails`, `Document.documentType`, `Item.unit.scheme`, `Classification.scheme`, and `RelatedProcess.scheme`; and having a `deprecated` property for `Budget.source`. All `title` and `description` metadata properties are removed from the versioned release schema.
 * [#810](https://github.com/open-contracting/standard/pull/810) `tag` is now `omitWhenMerged`, consistent with the reference implementation in OCDS Merge.
 
