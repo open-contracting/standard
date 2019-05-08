@@ -23,7 +23,7 @@ There are two kinds of OCDS document:
 
 ### Releases
 
-Releases are immutable – presenting information about a particular event in the lifetime of a contracting process. Publishers must not edit a release after publication without changing the release `id`.
+Releases are immutable – presenting information about a particular event in the lifetime of a contracting process.
 
 Each release needs to contain an `ocid`, a unique release `id` and a release `tag`, and ought to contain as much information as can be provided for users to understand the event taking place.
 
@@ -97,7 +97,7 @@ In some cases, releases will all come from the same backend system. In others, t
 
 In a complete OCDS implementation, each release would be published at its own persistent URL, and kept online permanently. 
 
-In some cases, a publisher might only have the data infrastructure to publish and iteratively update one release for each contracting process. If so, the release `id` and release `date` must be modified with each update. A suggested pattern for generating a unique release `id` is to append an incrementing number to the end of the `ocid`: for example, if the `ocid` is "ocds-a2ef3d01-1594121", then each sequential release `id` can be:
+In some cases, a publisher might only have the data infrastructure to publish and iteratively update one release for each contracting process. If so, the release `id` and release `date` need to be modified with each update. A suggested pattern for generating a unique release `id` is to append an incrementing number to the end of the `ocid`: for example, if the `ocid` is "ocds-a2ef3d01-1594121", then each sequential release `id` can be:
 
 * ocds-a2ef3d01-1594121/1
 * ocds-a2ef3d01-1594121/2
@@ -108,7 +108,7 @@ In some cases, a publisher might only have the data infrastructure to publish an
 
 An OCDS **record** provides a snapshot of the contracting process at a given point in time, bringing together all the information from the releases to date into one place. It is updated as new information becomes available.
 
-At a minimum, a record should exist for each contracting process to provide a list of all the releases that relate to that contracting process.
+At a minimum, a record ought to exist for each contracting process, to provide a list of all the releases that relate to that contracting process.
 
 However, to allow users to get a snapshot view the contracting process without individually looking up each release, a record ought to also contain:
 

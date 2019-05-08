@@ -27,7 +27,7 @@ Groups of extensions can be combined into **profiles**. Profiles are adaptations
 
 ## Developing new extensions
 
-If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you should include these in your OCDS data and create a new extension to document their structure and meaning.
+If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you ought to include these in your OCDS data and create a new extension to document their structure and meaning.
 
 ### Extension template
 

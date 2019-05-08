@@ -89,7 +89,7 @@ The ocid is case-sensitive; in other words, the letter case of an ocid must be c
 
 ### Registered prefixes
 
-See the [registration pages](../implementation/registration.md) for details of how to obtain your ocid prefix. 
+Publishers must register an ocid prefix. See the [registration pages](../implementation/registration.md) for details of how to obtain your ocid prefix.
 
 Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes. 
 

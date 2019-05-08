@@ -49,6 +49,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * [#772](https://github.com/open-contracting/standard/pull/772) [#810](https://github.com/open-contracting/standard/pull/810) [#831](https://github.com/open-contracting/standard/pull/831) Clarify the merge rules for compiled releases and versioned releases.
 * [#797](https://github.com/open-contracting/standard/pull/797) Fix examples of versioned releases.
 * [#831](https://github.com/open-contracting/standard/pull/831) Use the correct normative keywords in the documentation.
+* [#869](https://github.com/open-contracting/standard/pull/869) Move normative statements into normative sections.
 * [#835](https://github.com/open-contracting/standard/pull/835) Display the canonical schema URLs in the documentation.
 * [#838](https://github.com/open-contracting/standard/pull/838) Clarify the uniqueness of release, award and contract identifiers.
 * [#831](https://github.com/open-contracting/standard/pull/831) Improve the description of iterating the release `id`.

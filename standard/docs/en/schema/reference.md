@@ -2,7 +2,9 @@
 
 The [Release Schema](release.md) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into release packages and how to compile releases into records. 
 
-**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence**
+Releases are immutable – presenting information about a particular event in the lifetime of a contracting process. Publishers must not edit a release after publication; a new release can be created by changing the release's `id` and `date`.
+
+**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
 ## Release structure
 
