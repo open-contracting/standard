@@ -23,7 +23,7 @@ There are two kinds of OCDS document:
 
 ### Releases
 
-Releases are immutable – presenting information about a particular event in the lifetime of a contracting process.
+Releases are immutable – presenting information about a particular event in the lifetime of a contracting process. The release `id` needs to be changed whenever the value of another field in the release is changed.
 
 Each release needs to contain an `ocid`, a unique release `id` and a release `tag`, and ought to contain as much information as can be provided for users to understand the event taking place.
 
