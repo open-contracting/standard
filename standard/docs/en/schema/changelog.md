@@ -36,10 +36,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * [#712](https://github.com/open-contracting/standard/pull/712) Add missing titles for `publisher` and `url` and description for `record` in the record package schema, and missing description for `releases` in release package schema.
 * [#838](https://github.com/open-contracting/standard/pull/838) Eliminate the conflicting rule that release identifiers must be unique within release packages. Uniqueness within the scope of a release package either implies that release identifiers must be globally unique, or imposes an arbitrary restriction on the contents of release packages, as there is no rule preventing release packages from containing releases from different contracting processes. Release identifiers are only required to be locally unique within the scope of a contracting process. The `ocid` and `id` values of a release can be used together to disambiguate releases within a release package.
+* Clarify the uniqueness of release identifiers in the release schema [#838](https://github.com/open-contracting/standard/pull/838) and release package schema [#831](https://github.com/open-contracting/standard/pull/831).
 * [#810](https://github.com/open-contracting/standard/pull/810) Add a dereferenced release schema to ease the implementation of the merge routine.
 * [#810](https://github.com/open-contracting/standard/pull/810) Add `"versionId": true` hint to `Identifier` and `Classification`.
-* [#845](https://github.com/open-contracting/standard/pull/845) Remove reference to closed issue and note about field name.
-* Clarify the uniqueness of release identifiers in the release schema [#838](https://github.com/open-contracting/standard/pull/838) and release package schema [#831](https://github.com/open-contracting/standard/pull/831).
+* [#845](https://github.com/open-contracting/standard/pull/845) Remove a reference to a closed issue and a note about a field name.
+* [#855](https://github.com/open-contracting/standard/pull/855) Use the correct normative keywords in field descriptions.
+* [#855](https://github.com/open-contracting/standard/pull/855) Rephrase field descriptions as definitions rather than instructions.
+* [#855](https://github.com/open-contracting/standard/pull/855) Align the descriptions of the `license` fields in the release package schema and record package schema.
 
 ### Documentation
 

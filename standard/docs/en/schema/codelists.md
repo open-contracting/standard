@@ -113,7 +113,7 @@ This is an open codelist, and new values can be suggested outside of the main re
 
 ### Related Process
 
-The related process block is used at the release level to point backwards to prior processes, such as planning, PQQ or framework establishment, and at the contract level to point onward to sub-contracts, renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
+The related process block is used at the release level to point backwards to prior processes, such as planning or framework establishment, and at the contract level to point onwards to subcontracts or to renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
 
 ```eval_rst
 .. csv-table-no-translate::
