@@ -4,22 +4,6 @@ The Open Contracting Data Standard (OCDS) has many stakeholders: governments (pr
 
 This document sets out the revision processes for OCDS.
 
-## Overview
-
-OCDS was initially developed through a year long iterative process, resulting in version 1.0 in November 2014. Over 2015/16 many organizations have been piloting use of the standard. 
-
-In 2016, we are working towards a first revised version of the standard. This is intended to fix a number of bugs identified through wider adoption of the standard over recent months, and will add a number of features which did not make it into 1.0. 
-
-This document outlines a process for management of changes to OCDS during the move from version 1.0 to 1.1. 
-
-Following this revision process, the Open Contracting Partnership will evaluate either:
-
-* Continuing to operate a self-managed revision process;
-
-* Submitting OCDS into a formal standards process, such as W3C community group, OASIS or other body;
-
-We welcome views on this approach of short-term self-managed revisions, followed by exploration of formal standards processes. 
-
 ## Stewardship and governance
 
 The [Open Contracting Partnership (OCP)](http://www.open-contracting.org) was established as an independent non-profit in early 2015 and acts as the lead steward of the Open Contracting Data Standard. 
