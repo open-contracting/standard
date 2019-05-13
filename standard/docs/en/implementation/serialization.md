@@ -10,7 +10,7 @@ However, there are many use cases where publishers and users will want to work w
 
 JSON stands for JavaScript Object Notation, and is a format widely used for the exchange of data on the web. The JSON schema language provides validation tools for working with JSON data.
 
-Valid JSON serializations of OCDS data must follow the I-JSON (Internet JSON) specification in [RFC7493](https://tools.ietf.org/html/rfc7493), according to which JSON text must be encoded using [UTF-8](https://en.wikipedia.org/wiki/UTF-8), and which introduces a number of requirements for numbers, objects and dates. 
+OCDS data needs to follow the I-JSON (Internet JSON) specification in [RFC7493](https://tools.ietf.org/html/rfc7493), according to which JSON text must be encoded using [UTF-8](https://en.wikipedia.org/wiki/UTF-8), and which introduces a number of requirements for numbers, objects and dates.
 
 ### Generating JSON
 
