@@ -4,7 +4,7 @@ OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. E
 
 **☆ Upload basic contracting data and documents to web**
 
-> Whether or not you can adopt a common standard right now, you should make sure important notices and documents are freely accessible online.
+> Whether or not you can adopt a common standard right now, you ought to make sure important notices and documents are freely accessible online.
 
 **☆ ☆ Provide machine-readable data**
 
@@ -27,7 +27,7 @@ OCDS supports a 5 ☆ approach to publishing Open Contracting data on the web. E
 
 ### Packaging releases and records
 
-When publishing releases and records, they must be provided within a release or record package. These act as an envelope for the data.
+When publishing releases and records, they need to be provided within a release package or record package. These act as an envelope for the data.
 
 A package provides information on:
 
@@ -37,7 +37,7 @@ A package provides information on:
 * The license the data is provided under
 * Links to a publication policy and further documentation
 
-A package may contain a single release or record, or may be used to publish a collection of releases, or a collection of records.
+A package can contain one or more releases or records.
 
 Consult the [release package](../../../../schema/release_package/) and [record package](../../../../schema/record_package/) schemas to package up your data. 
 
@@ -63,7 +63,7 @@ Consult the [release package](../../../../schema/release_package/) and [record p
 
 ### Bulk and individual files
 
-For 4 ☆ publication, you should:
+For 4 ☆ publication, you ought to:
 
 * Ensure all documents referenced in OCDS releases are available online;
 * Publish each release and record at its own persistent URL;

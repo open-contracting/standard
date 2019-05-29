@@ -1,6 +1,6 @@
 ## Validation
 
-You can validate your OCDS documents at [standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/).
+You can validate your OCDS documents at [standard.open-contracting.org/review/](http://standard.open-contracting.org/review/).
 
 This tool will help you to check whether the JSON files you are producing are technically valid.
 
@@ -18,7 +18,7 @@ Assessing how good your open contracting data is involves a number of elements:
 
 * **Conformance** involves a detailed check on whether OCDS terms are being used correctly. For example, are you following the field definitions and guidance when entering data, and mapping to the OCDS structure. Conformance involves a human check on how fields are being used, and which extensions to the schema you are using. 
 
-> The OCDS validator provides feedback that can be used to make an initial judgment on conformance. A full judgment requires expert input. 
+> The OCDS validator provides feedback that can be used to make an initial judgment on conformance. A full judgment involves expert input. 
 
 * **Completeness** involves checking which sections and building blocks of OCDS are being used. For example, are you publishing information from every contracting stage, or are you only providing tender or award data; and are you providing detailed identifiers for organizations, or just names. 
 

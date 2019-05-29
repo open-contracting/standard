@@ -10,12 +10,12 @@ There are two kinds of OCDS document:
     <tr>
 <td valign="top" style="padding:10px;" markdown=1>
 
-**Releases** provide updates on each event in a contracting process, ideally in real-time. They can be used to notify users of new tenders, awards, contracts and other updates. One contracting process may have many releases.
+**Releases** provide updates on each event in a contracting process, ideally in real-time. They can be used to notify users of new tenders, awards, contracts and other updates. One contracting process can have many releases.
 
 </td>
 <td valign="top" style="padding:10px;" markdown=1>
 
-**Records** compile together all the information known about a contracting process, providing a snapshot view of its current state. They can also contain a versioned history of changes over time. There should only be one record for each contracting process, created by merging together the releases.
+**Records** aggregate all the releases available for a contracting process at a given time. There ought to be only be one record per contracting process.
 
 </td>
     </tr>
@@ -23,27 +23,27 @@ There are two kinds of OCDS document:
 
 ### Releases
 
-Releases should be immutable: presenting information about a particular event in the lifetime of a contracting process. 
+Releases are immutable – presenting information about a particular event in the lifetime of a contracting process. The release `id` needs to be changed whenever the value of another field in the release is changed.
 
-Each release must contain an `ocid`, a unique release `id`, a release `tag`, and as much information as can be provided for users to understand the event taking place.
+Each release needs to contain an `ocid`, a unique release `id` and a release `tag`, and ought to contain as much information as can be provided for users to understand the event taking place.
 
 For example: 
 
-* A 'planning' release may provide information in the `planning` section about budgets and procurement intention, and the `tender` section about the proposed details for a future tender;
-* A 'tender' release may provide information in the `tender` section about how to bid for the work, and may repeat `planning` section information on the budget or project the tender is associated with;
-* A 'tenderUpdate' release may provide an updated `tender` section with links to documents that answer questions asked during the enquiry period;
-* An 'award' release may provide details of the supplier awarded the contract in the `award` section, and may provide repeated information about the how procurement took place in the `tender` section;
-* A 'contract' release may provide the details of the signed contract in a `contract` section, matched with a related `award` section;
-* An 'implementationUpdate' release may repeat details of the `contract`, and provide information on milestones achieved and payments to the supplier, or may update the contract `implementation` section with links to newly published documents. 
+* A 'planning' release can provide information in the `planning` section about budgets and procurement intention, and the `tender` section about the proposed details for a future tender;
+* A 'tender' release can provide information in the `tender` section about how to bid for the work, and can repeat `planning` section information on the budget or project the tender is associated with;
+* A 'tenderUpdate' release can provide an updated `tender` section with links to documents that answer questions asked during the enquiry period;
+* An 'award' release can provide details of the supplier awarded the contract in the `award` section, and can provide repeated information about the how procurement took place in the `tender` section;
+* A 'contract' release can provide the details of the signed contract in a `contract` section, matched with a related `award` section;
+* An 'implementationUpdate' release can repeat details of the `contract`, and provide information on milestones achieved and payments to the supplier, or can update the contract `implementation` section with links to newly published documents. 
 
-You can think of **releases** as entries into a ledger: each new entry adds information. Each entry may also repeat the previous information that remains true. 
+You can think of **releases** as entries into a ledger: each new entry adds information. Each entry can also repeat the previous information that remains true. 
 
 #### Examples
 
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/planning.json
+.. jsoninclude:: ../examples/planning.json
    :jsonpointer: /releases
    :expand: releases, planning, tag, documents
 
@@ -51,7 +51,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/tender.json
+.. jsoninclude:: ../examples/tender.json
    :jsonpointer: /releases
    :expand: releases, tender, items, tag, documents
 
@@ -59,7 +59,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/tenderUpdate.json
+.. jsoninclude:: ../examples/tenderUpdate.json
    :jsonpointer: /releases
    :expand: releases, tender, tag, documents
 
@@ -68,7 +68,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/award.json
+.. jsoninclude:: ../examples/award.json
    :jsonpointer: /releases
    :expand: releases, awards, value, suppliers, items, contractPeriod, tag, documents
 
@@ -76,7 +76,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/contract.json
+.. jsoninclude:: ../examples/contract.json
    :jsonpointer: /releases
    :expand: releases, contracts, period, value, items, tag, documents
 
@@ -85,7 +85,7 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/implementation.json
+.. jsoninclude:: ../examples/implementation.json
    :jsonpointer: /releases
    :expand: releases, contracts, implementation, transactions, tag, documents
 
@@ -97,7 +97,7 @@ In some cases, releases will all come from the same backend system. In others, t
 
 In a complete OCDS implementation, each release would be published at its own persistent URL, and kept online permanently. 
 
-In these cases, where publishers are providing a single URI for fetching information on a given contracting process, the `releaseID` and `releaseDate` must be modified whenever updated data is published. A suggested pattern is to append an incrementing number to the end of the `ocid` in order to generate a unique `releaseID` for every change. For example:
+In some cases, a publisher might only have the data infrastructure to publish and iteratively update one release for each contracting process. If so, the release `id` and release `date` need to be modified with each update. A suggested pattern for generating a unique release `id` is to append an incrementing number to the end of the `ocid`: for example, if the `ocid` is "ocds-a2ef3d01-1594121", then each sequential release `id` can be:
 
 * ocds-a2ef3d01-1594121/1
 * ocds-a2ef3d01-1594121/2
@@ -108,18 +108,18 @@ In these cases, where publishers are providing a single URI for fetching informa
 
 An OCDS **record** provides a snapshot of the contracting process at a given point in time, bringing together all the information from the releases to date into one place. It is updated as new information becomes available.
 
-At a minimum, a record should exist for each contracting process to provide a list of all the releases that relate to that contracting process.
+At a minimum, a record ought to exist for each contracting process, to provide a list of all the releases that relate to that contracting process.
 
-However, to allow users to get a snapshot view the contracting process without individually looking up each release , a record should also contain:
+However, to allow users to get a snapshot view the contracting process without individually looking up each release, a record ought to also contain:
 
-* a compiledRelease block, which follows the release schema, and is updated with the most up-to-date value for each field; and, optionally,
-* a versionedRelease, which contains a history of all the changes for each field.
+* a compiled release, which expresses the current state of the contracting process, by showing only the most recent field values
+* a versioned release, which expresses all historical states of the contracting process, by showing all the field values over time
 
-The [OCDS merge strategies](../schema/merging.md) set out how to combine multiple releases to create a single record for each contracting process. 
+The [merging documentation](../schema/merging.md) set out how to combine multiple releases to create a single record for each contracting process. 
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/record.json
+.. jsoninclude:: ../examples/record.json
    :jsonpointer: 
    :expand: compiledRelease, tender, award, contracts, implementation, transactions, tag, documents
 

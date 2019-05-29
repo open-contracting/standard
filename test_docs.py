@@ -1,14 +1,15 @@
 import os
-import pytest
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.common.exceptions import NoSuchElementException
+import re
+import time
+from collections import OrderedDict
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from multiprocessing import Process
-from collections import OrderedDict
+
+import pytest
 import requests
-import time
-import re
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 
 
@@ -67,9 +68,9 @@ def test_basic(browser, server, lang, text):
 
 
 @pytest.mark.parametrize('lang,regex', [
-    ('en', 'found \d+ page\(s\) matching'),
-    ('es', 'encontró \d+ página\(s\) acorde'),
-    ('fr', '\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
+    ('en', r'found \d+ page\(s\) matching'),
+    ('es', r'encontró \d+ página\(s\) acorde'),
+    ('fr', r'\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
 ])
 def test_search(browser, server, lang, regex):
     browser.get('{}{}'.format(server, lang))
@@ -77,24 +78,6 @@ def test_search(browser, server, lang, regex):
     search_box.send_keys('tender\n')
     time.sleep(2)
     assert re.search(regex, browser.find_element_by_tag_name('body').text)
-
-
-@pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
-def test_community_extensions(browser, server, lang):
-    browser.get('{}{}/extensions'.format(server, lang))
-    community_extensions = browser.find_element_by_id('community-extensions').find_element_by_tag_name('table')
-    # Currently community extensions aren't translated
-    link = community_extensions.find_element_by_link_text('Budget breakdown')
-    assert (link.get_attribute('href') ==
-            'https://github.com/open-contracting/ocds_budget_breakdown_extension/blob/master/README.md')
-    cells = link.find_elements_by_xpath('../../td')
-    assert cells[2].text == 'For providing a detailed budget breakdown.'
-    assert cells[3].text == 'ppp'
-
-    assert 'ocds_budget_breakdown_extension' not in browser.find_element_by_id('using-extensions').text
-    browser.execute_script("arguments[0].scrollIntoView();", cells[0])
-    cells[0].click()
-    assert 'ocds_budget_breakdown_extension' in browser.find_element_by_id('using-extensions').text
 
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
@@ -132,17 +115,31 @@ def test_language_switcher(browser, server):
 
 @pytest.mark.parametrize('lang', ['en', 'es', 'fr'])
 def test_broken_links(browser, server, lang):
+    referrer = ''
+    hrefs = set()
     browser.get('{}{}'.format(server, lang))
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
-            href = link.get_attribute('href')
-            if '/validator/' in href or 'localhost' not in href:
+            href = re.sub(r'#.*$', '', link.get_attribute('href'))
+
+            # Don't test proxied or external URLs.
+            if '/review/' in href or 'localhost' not in href:
                 continue
-            r = requests.get(href)
-            assert r.status_code == 200
+            # If the URL, without an anchor, has already been visited, don't test it again.
+            if href in hrefs:
+                continue
+            # Keep track of which pages have been tested.
+            hrefs.add(href)
+
+            response = requests.get(href)
+            assert response.status_code == 200, 'expected 200, got {} for {} linked from {}'.format(
+                response.status_code, href, referrer)
+
         try:
-            next = browser.find_element_by_link_text('Next')
-            browser.execute_script("arguments[0].scrollIntoView();", next)
-            next.click()
+            # Scroll the link into view, to make it clickable.
+            link = browser.find_element_by_link_text('Next')
+            referrer = link.get_attribute('href')
+            browser.execute_script("arguments[0].scrollIntoView();", link)
+            link.click()
         except NoSuchElementException:
             break

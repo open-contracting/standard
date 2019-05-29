@@ -1,6 +1,6 @@
 # Deprecation
 
-From time to time fields and codelist values may be removed from the Open Contracting Data Standard.
+From time to time fields and codelist values might be removed from the Open Contracting Data Standard.
 
 This will be either due to limited use, or because they have been replaced by alternative fields or codelists.
 
@@ -22,8 +22,8 @@ For example:
 
 ```
 
-Validation tools **must** report use of deprecated properties to the user, and **should** report to the user the associated description of the reason for deprecation (which may provide guidance on how to replace the property).
+Validation tools **must** report use of deprecated properties to the user, and **should** report to the user the associated description of the reason for deprecation (which might provide guidance on how to replace the property).
 
-Consuming application targeting compatibility with a particular version of the standard (e.g. 1.1) **must** support properties that were deprecated in that decimal version, and **may** support properties deprecated in earlier decimal versions. 
+Consuming applications targeting compatibility with a minor version of the standard (e.g. 1.1) **must** support properties that were deprecated in that minor version, and **may** support properties that were removed. 
 
 

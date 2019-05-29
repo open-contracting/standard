@@ -2,13 +2,13 @@
 
 Information about a contracting process will often change over time.
 
-Each time information changes, a new OCDS release should be published. 
+Each time information changes, a new OCDS release ought to be published. 
 
 There are three kinds of changes:
 
 * **New information**. For example, when information about the award of a contract is first released.
 * **Updates to existing information**. For example, to correct errors in earlier releases, or to make minor adjustments to titles, descriptions or date. 
-* **Amendments**. For example, when the value or duration of a contract is changed. The term amendment often has a specific legal meaning for a publisher. Certain changes to a tender, award or contract may only be allowed as part of an amendment. 
+* **Amendments**. For example, when the value or duration of a contract is changed. The term amendment often has a specific legal meaning for a publisher. Certain changes to a tender, award or contract might only be allowed as part of an amendment. 
 
 The nature of a change can be made explicit using:
 
@@ -27,7 +27,7 @@ In the example below:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-tender-1.json
+.. jsoninclude:: ../examples/merging/merge-tender-1.json
    :jsonpointer: 
    :expand: releases, tender, tag
    :title: tender
@@ -36,7 +36,7 @@ In the example below:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-tender-2.json
+.. jsoninclude:: ../examples/merging/merge-tender-2.json
    :jsonpointer: 
    :expand: releases, tender, tag
    :title: tenderUpdate
@@ -45,7 +45,7 @@ In the example below:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/merge-tender-3.json
+.. jsoninclude:: ../examples/merging/merge-tender-3.json
    :jsonpointer: 
    :expand: releases, tender, tag, amendments
    :title: tenderAmendment
@@ -54,7 +54,7 @@ In the example below:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: 
    :expand: records, compiledRelease, tender, tag, versionedRelease, tender, value, amount, releaseTag, amendments
    :title: versionedRecord
@@ -64,7 +64,7 @@ In the example below:
 
 Note in this example that:
 
-* **The publisher chooses in the tenderAmendment release to repeat a fragment of the original 'tender' release**, so that the before and after values of the tender can be accessed in the single file. This is not required when a full archive of releases is made accessible, but can be a convenient way of publishers making structured information on the before and after values of a field more accessible to users. 
+* **The publisher chooses in the tenderAmendment release to repeat a fragment of the original 'tender' release**, so that the before and after values of the tender can be accessed in the single file. This is not necessary when a full archive of releases is made accessible, but can be a convenient way of publishers making structured information on the before and after values of a field more accessible to users. 
 
 * **In the merged record**, the information in the `amendments` array can be used to lookup information in the `versionedRelease` section, to see where changes are explained by an amendment `rationale`. 
 

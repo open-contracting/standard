@@ -1,24 +1,28 @@
 sudo: false
 language: python
+cache: pip
 python:
-  - "3.5"
+  - "3.6"
 addons:
   apt:
     packages:
     - lftp
   chrome: stable
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install:
-  - pip install -r requirements.txt
-  - "curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip; unzip chromedriver_linux64.zip -d chromedriver; export PATH=$PATH:`pwd`/chromedriver"
-# command to run tests, e.g. python setup.py test
-script:
-  - flake8
-  - ./build_docs.sh
-  - py.test -rs --tb=line
 deploy:
-  skip_cleanup: true # don't remove stuff we've built
+  skip_cleanup: true
   provider: script
   script: bash deploy.sh
   on:
     all_branches: true
+env:
+  - BASEDIR="https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master"
+install:
+  - curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
+  - curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip -d chromedriver
+  - export PATH=$PATH:`pwd`/chromedriver
+  - pip install -r requirements.txt
+script:
+  - curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
+  - make
+  - py.test -rs --tb=line

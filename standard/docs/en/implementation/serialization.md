@@ -4,13 +4,13 @@ The Open Contracting Data Standard provides a **structured data model** for capt
 
 The current canonical version of this data model is provided by a **[JSON Schema](../../../../schema/release)** which describes field names, field definitions and structures for the data. The compliance of data with the Open Contracting Data Standard will be assessed against this schema.
 
-However, there are many use cases where publishers and users will want to work with data serialized in other formats. For this reason, the current version of OCDS supports a number of **secondary serializations** which are based on the canonical schema. These are not currently official components of the standard, but are designed to support implementers in providing accessible data to a range of different users.
+However, there are many use cases where publishers and users will want to work with data serialized in other formats. For this reason, the current version of OCDS supports a number of **secondary serializations** which are based on the canonical schema. These are not currently official components of the standard, but are designed to support publishers in providing accessible data to a range of different users.
 
 ## JSON 
 
 JSON stands for JavaScript Object Notation, and is a format widely used for the exchange of data on the web. The JSON schema language provides validation tools for working with JSON data.
 
-Valid JSON serializations of OCDS data MUST follow the [I-JSON (Internet JSON)specification from RFC7493](https://tools.ietf.org/html/rfc7493) which requires [UTF-8 encoding](https://en.wikipedia.org/wiki/UTF-8) and introduces a number of constrains and recommendations for handling numbers, objects and dates. 
+OCDS data needs to follow the I-JSON (Internet JSON) specification in [RFC7493](https://tools.ietf.org/html/rfc7493), according to which JSON text must be encoded using [UTF-8](https://en.wikipedia.org/wiki/UTF-8), and which introduces a number of requirements for numbers, objects and dates.
 
 ### Generating JSON
 
@@ -34,15 +34,15 @@ There are also a range of generic tools which can convert JSON into flat CSV str
 JSON is based on a tree structure, with data elements nested inside one another. However, many people are more familiar working with tabular data, made up of columns and rows. There is no easy way to represent structured data in a single table. However, we propose two models for publishers to adopt. 
 
 * **Simplified single table** - for cases where there are no one-to-many relationships in the data (e.g. each tender has only one award and contract, and each has only one line-item).
-* **Multi-table** - where more advanced structures are required, but where it is desirable to be able to work with data in spreadsheet-style layouts
+* **Multi-table** - where more advanced structures are needed, but where it is desirable to be able to work with data in spreadsheet-style layouts
 
-In each case, fields are identified by the [JSON pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For example:
+In each case, fields are identified in CSV headers by their [JSON Pointer](http://tools.ietf.org/html/rfc6901). For example:
 
 **JSON**
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/serialization-flat.json
+.. jsoninclude:: ../examples/serialization-flat.json
    :jsonpointer: 
    :expand: releases, tender, items
 
@@ -62,11 +62,11 @@ In each case, fields are identified by the [JSON pointer](http://tools.ietf.org/
 
 ### Simplified single table 
 
-It is possible to represent a full releases in a single flat CSV row by using full JSON pointers for each field as the headings. 
+It is possible to represent a full release in a single flat CSV row by using full JSON pointers for each field as the headings. 
 
 This approach is generally only appropriate for data without one-to-many relationships (for example, only one item per tender, and one award and contract for each tender process).
 
-It is, however, theoretically possible to represent a full releases in a single flat CSV row by using full JSON pointers for each field as the headings. For arrays, this involves adding the array index to the path, such as `tender/item/0/id` and `tender/item/1/id` as separate columns to represent each of the items. 
+It is, however, theoretically possible to represent a full release in a single flat CSV row by using full JSON pointers for each field as the headings. For arrays, this involves adding the array index to the path, such as `tender/item/0/id` and `tender/item/1/id` as separate columns to represent each of the items. 
 
 For example, to represent a tender release with two items, the CSV file would include:
 
@@ -82,7 +82,7 @@ The JSON equivalent of this would be:
 
 ```eval_rst
 
-.. jsoninclude:: docs/en/examples/serialization-flat-two-items.json
+.. jsoninclude:: ../examples/serialization-flat-two-items.json
    :jsonpointer: 
    :expand: releases, tender, items
 
@@ -92,7 +92,12 @@ Whilst this allows complex data to be expressed in flat CSV, users will need to 
 
 Instead, data with a one-to-many relationship can be represented using a multi-table serialization. 
 
-Note: OCDS CSV files MUST only be encoded in either UTF-8
+```eval_rst
+.. note:: CSV encoding
+
+  OCDS CSV files ought to be encoded in either UTF-8 or Windows-1252.
+
+```
 
 ### Multi-table
 
@@ -106,6 +111,6 @@ For further information on multi-table serializations please see the [flatten to
 
 ## Packaging files with metadata
 
-Whatever serialization is used for Open Contracting Data, a single file may contain one or more release and records.
+Whatever serialization is used for Open Contracting Data, a single file can contain one or more release and records.
 
-The release and record data package schemas describe the key metadata that must be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.
+The release package and record package schemas describe the key metadata that ought to be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.
