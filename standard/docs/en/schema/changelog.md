@@ -75,6 +75,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Correct typos in the documentation [#692](https://github.com/open-contracting/standard/pull/692) [#713](https://github.com/open-contracting/standard/pull/713) [#719](https://github.com/open-contracting/standard/pull/719) [#726](https://github.com/open-contracting/standard/pull/726) [#732](https://github.com/open-contracting/standard/pull/732) [#752](https://github.com/open-contracting/standard/pull/752) [#756](https://github.com/open-contracting/standard/pull/756) [#795](https://github.com/open-contracting/standard/pull/795) [#867](https://github.com/open-contracting/standard/pull/867).
 * Improve the process to build the documentation [#666](https://github.com/open-contracting/standard/pull/666) [#698](https://github.com/open-contracting/standard/pull/698) [#708](https://github.com/open-contracting/standard/pull/708) [#709](https://github.com/open-contracting/standard/pull/709) [#721](https://github.com/open-contracting/standard/pull/721) [#724](https://github.com/open-contracting/standard/pull/724) [#727](https://github.com/open-contracting/standard/pull/727) [#729](https://github.com/open-contracting/standard/pull/729) [#733](https://github.com/open-contracting/standard/pull/733) [#740](https://github.com/open-contracting/standard/pull/740) [#747](https://github.com/open-contracting/standard/pull/747) [#753](https://github.com/open-contracting/standard/pull/753) [#762](https://github.com/open-contracting/standard/pull/762) [#767](https://github.com/open-contracting/standard/pull/767) [#783](https://github.com/open-contracting/standard/pull/783) [#787](https://github.com/open-contracting/standard/pull/787) [#796](https://github.com/open-contracting/standard/pull/796) [#813](https://github.com/open-contracting/standard/pull/813) [#836](https://github.com/open-contracting/standard/pull/836).
 
+### Extensions
+
+See the changelogs for:
+
+* [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/master/#changelog)
+* [Enquiries](https://extensions.open-contracting.org/en/extensions/enquiries/master/#changelog)
+* [Location](https://extensions.open-contracting.org/en/extensions/location/master/#changelog)
+* [Lots](https://extensions.open-contracting.org/en/extensions/lots/master/#changelog)
+* [Participation fees](https://extensions.open-contracting.org/en/extensions/participation_fee/master/#changelog)
+* [Process level title and description](https://extensions.open-contracting.org/en/extensions/process_title/master/#changelog)
+
 ## [1.1.3] - 2018-04-16
 
 ### Codelist updates
