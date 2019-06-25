@@ -18,7 +18,7 @@ In structured data file you ought to embed a link to the license in the `license
    :emphasize-lines: 4
      
      {
-         "uri":"http://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json",
+         "uri":"https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json",
          "publishedDate":"2010-03-01T09:30:00Z",
          "license":"http://opendatacommons.org/licenses/pddl/1.0/",
          "...":"..."
