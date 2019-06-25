@@ -1,5 +1,5 @@
 {
-  "id": "http://standard.open-contracting.org/schema/1__1__3/release-schema.json",
+  "id": "https://standard.open-contracting.org/schema/1__1__4/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
   "description": "Each release provides data about a single contracting process at a particular point in time. Releases can be used to notify users of new tenders, awards, contracts and other updates. Releases may repeat or update information provided previously in this contracting process. One contracting process may have many releases. A 'record' of a contracting process follows the same structure as a release, but combines information from multiple points in time into a single summary.",
@@ -7,7 +7,7 @@
   "properties": {
     "ocid": {
       "title": "Open Contracting ID",
-      "description": "A globally unique identifier for this Open Contracting Process. Composed of an ocid prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
+      "description": "A globally unique identifier for this Open Contracting Process. Composed of an ocid prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
       "type": "string",
       "minLength": 1
     },
@@ -27,7 +27,7 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the closed [releaseTag](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags can be used to filter releases and to understand the kind of information that releases might contain.",
+      "description": "One or more values from the closed [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags can be used to filter releases and to understand the kind of information that releases might contain.",
       "type": "array",
       "items": {
         "type": "string",
@@ -57,7 +57,7 @@
     },
     "initiationType": {
       "title": "Initiation type",
-      "description": "The type of initiation process used for this contract, from the closed [initiationType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#initiation-type) codelist.",
+      "description": "The type of initiation process used for this contract, from the closed [initiationType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#initiation-type) codelist.",
       "type": "string",
       "enum": [
         "tender"
@@ -214,7 +214,7 @@
         },
         "status": {
           "title": "Tender status",
-          "description": "The current status of the tender, from the closed [tenderStatus](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status) codelist.",
+          "description": "The current status of the tender, from the closed [tenderStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status) codelist.",
           "type": [
             "string",
             "null"
@@ -258,7 +258,7 @@
         },
         "procurementMethod": {
           "title": "Procurement method",
-          "description": "The procurement method, from the closed [method](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist.",
+          "description": "The procurement method, from the closed [method](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist.",
           "type": [
             "string",
             "null"
@@ -291,7 +291,7 @@
         },
         "mainProcurementCategory": {
           "title": "Main procurement category",
-          "description": "The primary category describing the main object of this contracting process, from the closed [procurementCategory](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
+          "description": "The primary category describing the main object of this contracting process, from the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
           "type": [
             "string",
             "null"
@@ -307,7 +307,7 @@
         },
         "additionalProcurementCategories": {
           "title": "Additional procurement categories",
-          "description": "Any additional categories describing the objects of this contracting process, using the open [extendedProcurementCategory](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
+          "description": "Any additional categories describing the objects of this contracting process, using the open [extendedProcurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
           "type": [
             "array",
             "null"
@@ -320,7 +320,7 @@
         },
         "awardCriteria": {
           "title": "Award criteria",
-          "description": "The award criteria for the procurement, using the open [awardCriteria](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-criteria) codelist.",
+          "description": "The award criteria for the procurement, using the open [awardCriteria](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-criteria) codelist.",
           "type": [
             "string",
             "null"
@@ -338,7 +338,7 @@
         },
         "submissionMethod": {
           "title": "Submission method",
-          "description": "The methods by which bids are submitted, using the open [submissionMethod](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#submission-method) codelist.",
+          "description": "The methods by which bids are submitted, using the open [submissionMethod](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#submission-method) codelist.",
           "type": [
             "array",
             "null"
@@ -412,7 +412,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "All documents and attachments related to the tender, including any notices. See the [documentType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) codelist for details of potential documents to include. Common documents include official legal notices of tender, technical specifications, evaluation criteria, and, as a tender process progresses, clarifications and replies to queries.",
+          "description": "All documents and attachments related to the tender, including any notices. See the [documentType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) codelist for details of potential documents to include. Common documents include official legal notices of tender, technical specifications, evaluation criteria, and, as a tender process progresses, clarifications and replies to queries.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -493,7 +493,7 @@
       "properties": {
         "id": {
           "title": "Award ID",
-          "description": "The identifier for this award. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+          "description": "The identifier for this award. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
           "type": [
             "string",
             "integer"
@@ -518,7 +518,7 @@
         },
         "status": {
           "title": "Award status",
-          "description": "The current status of the award, from the closed [awardStatus](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-status) codelist.",
+          "description": "The current status of the award, from the closed [awardStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-status) codelist.",
           "type": [
             "string",
             "null"
@@ -624,7 +624,7 @@
       "properties": {
         "id": {
           "title": "Contract ID",
-          "description": "The identifier for this contract. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+          "description": "The identifier for this contract. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
           "type": [
             "string",
             "integer"
@@ -658,7 +658,7 @@
         },
         "status": {
           "title": "Contract status",
-          "description": "The current status of the contract, from the closed [contractStatus](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status) codelist.",
+          "description": "The current status of the contract, from the closed [contractStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status) codelist.",
           "type": [
             "string",
             "null"
@@ -827,7 +827,7 @@
         },
         "type": {
           "title": "Milestone type",
-          "description": "The nature of the milestone, using the open [milestoneType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-type) codelist.",
+          "description": "The nature of the milestone, using the open [milestoneType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-type) codelist.",
           "type": [
             "string",
             "null"
@@ -880,7 +880,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status that was realized on the date provided in `dateModified`, from the closed [milestoneStatus](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-status) codelist.",
+          "description": "The status that was realized on the date provided in `dateModified`, from the closed [milestoneStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-status) codelist.",
           "type": [
             "string",
             "null"
@@ -943,7 +943,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described, using the open [documentType](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) codelist.",
+          "description": "A classification of the document described, using the open [documentType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) codelist.",
           "type": [
             "string",
             "null"
@@ -1223,7 +1223,7 @@
         },
         "identifier": {
           "title": "Primary identifier",
-          "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
+          "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
           "deprecated": {
             "deprecatedVersion": "1.1",
             "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
@@ -1251,7 +1251,7 @@
           "title": "Additional identifiers",
           "uniqueItems": true,
           "wholeListMerge": true,
-          "description": "(Deprecated outside the parties section) A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
+          "description": "(Deprecated outside the parties section) A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
         },
         "contactPoint": {
           "deprecated": {
@@ -1287,12 +1287,12 @@
         },
         "identifier": {
           "title": "Primary identifier",
-          "description": "The primary identifier for this organization or participant. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
+          "description": "The primary identifier for this organization or participant. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
           "$ref": "#/definitions/Identifier"
         },
         "additionalIdentifiers": {
           "title": "Additional identifiers",
-          "description": "A list of additional / supplemental identifiers for the organization or participant, using the [organization identifier guidance](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
+          "description": "A list of additional / supplemental identifiers for the organization or participant, using the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Identifier"
@@ -1312,7 +1312,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the contracting process, using the open [partyRole](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
+          "description": "The party's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
           "type": [
             "array",
             "null"
@@ -1396,7 +1396,7 @@
           "properties": {
             "scheme": {
               "title": "Scheme",
-              "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+              "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
               "type": [
                 "string",
                 "null"
@@ -1557,7 +1557,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The scheme or codelist from which the classification code is taken. For line item classifications, this uses the open [itemClassificationScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) codelist.",
+          "description": "The scheme or codelist from which the classification code is taken. For line item classifications, this uses the open [itemClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) codelist.",
           "type": [
             "string",
             "null"
@@ -1609,7 +1609,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "Organization identifiers should be taken from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is taken. This value should be taken from the [Organization Identifier Scheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#organization-identifier-scheme) codelist.",
+          "description": "Organization identifiers should be taken from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is taken. This value should be taken from the [Organization Identifier Scheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#organization-identifier-scheme) codelist.",
           "type": [
             "string",
             "null"
@@ -1778,7 +1778,7 @@
         },
         "currency": {
           "title": "Currency",
-          "description": "The currency of the amount, from the closed [currency](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+          "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
           "type": [
             "string",
             "null"
@@ -2149,7 +2149,7 @@
           "items": {
             "type": "string"
           },
-          "description": "The type of relationship, using the open [relatedProcess](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process) codelist.",
+          "description": "The type of relationship, using the open [relatedProcess](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process) codelist.",
           "title": "Relationship",
           "type": [
             "array",
@@ -2168,7 +2168,7 @@
         },
         "scheme": {
           "title": "Scheme",
-          "description": "The identification scheme used by this cross-reference, using the open [relatedProcessScheme](http://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process-scheme) codelist.",
+          "description": "The identification scheme used by this cross-reference, using the open [relatedProcessScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process-scheme) codelist.",
           "type": [
             "string",
             "null"

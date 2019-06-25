@@ -1,16 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C)
-# This file is distributed under the same license as the OCDS package.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Oscar Montiel <oscar.montiel@okfn.org>, 2017
+# Ben Webb <ben.webb@opendataservices.coop>, 2017
+# Tim Davies <tim.davies@opendataservices.coop>, 2017
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
+# Romina Fernandez <romina@idatosabiertos.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCDS 1.1\n"
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-01 11:40-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2018\n"
+"POT-Creation-Date: 2019-05-08 16:14-0400\n"
+"PO-Revision-Date: 2017-04-24 10:47+0000\n"
+"Last-Translator: Romina Fernandez <romina@idatosabiertos.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,10 +52,10 @@ msgstr ""
 #: ../../standard/docs/en/implementation/hosting.md:7
 msgid ""
 "Which formats are most important will depend on the priority use cases for "
-"each OCDS implementation, but you should consider:"
+"each OCDS implementation, but you are encouraged to consider:"
 msgstr ""
-"La definición de qué formatos son los más importantes dependerá de los casos"
-" de uso prioritarios para cada implementación de OCDS, pero usted debe "
+"La importancia de ciertos formatos sobre otros va a depender de la prioridad"
+" de los casos de uso para cada implementación OCDS, pero lo invitamos a "
 "considerar:"
 
 #: ../../standard/docs/en/implementation/hosting.md:9
@@ -72,26 +79,19 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/hosting.md:11
 msgid ""
-"**CSV and Spreadsheet serializations** - providing multiple releases or "
+"**CSV and spreadsheet serializations** - providing multiple releases or "
 "compiled records for download, enabling users to work with data directly in "
 "spreadsheet software or other tools."
 msgstr ""
-"**Serializaciones de CSV y Hojas de Cálculo** - proporcionando múltiples "
-"entregas o registros compilados para su descarga, permitiendo a los usuarios"
-" trabajar con datos directamente en un software de hoja de cálculo u otras "
-"herramientas."
+"** CSV y serializaciones en hojas de cálculo ** - proveer múltiples entregas"
+" o records compilados para descargar, permitiendo a los usuarios trabajar "
+"con los datos directamente en un software de hojas de cálculo u otras "
+"herramientas"
 
 #: ../../standard/docs/en/implementation/hosting.md:12
-msgid ""
-"**API access** - enabling interactive access to your data. OCDS does not "
-"currently provide a standard for constructing APIs, but [potential "
-"approaches can be discussed with the community here](https://github.com"
-"/open-contracting/standard/issues/290)."
+msgid "**API access** - enabling interactive access to your data."
 msgstr ""
-"**Acceso a API** - habilitar el acceso interactivo a sus datos. El OCDS "
-"actualmente no proporciona un estándar para construir APIs, pero [los "
-"enfoques potenciales pueden ser discutidos con la comunidad "
-"aquí](https://github.com/open-contracting/standard/issues/290)."
+"**Acceso a través de APIs ** - permite el acceso interactivo a sus datos."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Bulk downloads"
@@ -99,13 +99,11 @@ msgstr "Descargas masivas"
 
 #: ../../standard/docs/en/implementation/hosting.md:16
 msgid ""
-"The release and record data package containers (in JSON and CSV) offer a way"
-" to provide **bulk access** to a collection of contracting process release "
-"and records."
+"The release package and record package can provide **bulk access** to "
+"releases and records, respectively."
 msgstr ""
-"Los contenedores de datos de entregas y registros (en JSON y CSV) ofrecen "
-"una forma de proporcionar **acceso MASIVO** a una colección de entregas y "
-"registros de procesos de contratación."
+"El paquete de entregas y el paquete de registros pueden dar ** acceso masivo"
+" ** a las entregas y registros, respectivamente."
 
 #: ../../standard/docs/en/implementation/hosting.md:18
 msgid ""
@@ -128,41 +126,40 @@ msgstr "Límites de tamaño de archivo"
 
 #: ../../standard/docs/en/implementation/hosting.md:22
 msgid ""
-"When generating data packages for bulk download, apply the following limits:"
+"When generating packages for bulk download, apply the following limits:"
 msgstr ""
-"Al generar paquetes de datos para descarga masiva, aplique los siguientes "
+"Cuando se generan paquetes para descarga masiva, se aplican los siguientes "
 "límites:"
 
 #: ../../standard/docs/en/implementation/hosting.md:24
-msgid "Unzipped OCDS data packages should not exceed 1Gb each;"
-msgstr ""
-"Los paquetes de datos OCDS descomprimidos no deben exceder 1Gb cada uno;"
+msgid "Unzipped OCDS packages ought to not exceed 1Gb each;"
+msgstr "Los paquetes OCDS descomprimidos no deben de exceder 1 GB cada uno;"
 
 #: ../../standard/docs/en/implementation/hosting.md:25
-msgid "Zipped OCDS data packages should not exceed 10 Mb each;"
-msgstr ""
-"Los paquetes de datos OCDS comprimidos no deben superar los 10 Mb cada uno;"
+msgid "Zipped OCDS packages ought to not exceed 10 Mb each;"
+msgstr "Los paquetes OCDS comprimidos no deben exceder 10 mb cada uno;"
 
 #: ../../standard/docs/en/implementation/hosting.md:26
 msgid ""
-"A single OCDS data package should contain a maximum of 250,000 awards or "
+"A single OCDS package ought to contain a maximum of 250,000 awards or "
 "contracts;"
 msgstr ""
-"Un único paquete de datos OCDS debe contener un máximo de 250.000 "
-"adjudicaciones o contratos;"
+"Un paquete OCDS único debe contener un máximo de 250,000 adjudicaciones o "
+"contratos;"
 
 #: ../../standard/docs/en/implementation/hosting.md:28
 msgid ""
 "When a file is likely to exceed one of these limits, release or records "
-"should be split across multiple files. Dynamically generated bulk downloads "
-"do not have to apply these limits, though publishers should consider ways to"
-" advise users when a query is likely to generate a very large file."
+"ought to be split across multiple files. Dynamically generated bulk "
+"downloads do not have to apply these limits, though publishers ought to "
+"consider ways to advise users when a query is likely to generate a very "
+"large file."
 msgstr ""
-"Cuando es probable que un archivo supere uno de estos límites, la entrega o "
-"los registros deben dividirse en varios archivos. Las descargas masivas "
-"generadas dinámicamente no tienen que aplicar estos límites, aunque los "
-"publicadores deben considerar formas de avisar a los usuarios cuando es "
-"altamente probable que una búsqueda genere un archivo muy grande."
+"Cuando es probable que un archivo exceda estos límites, las entregas o "
+"registros deben de dividirse en múltiples documentos. Las descargas masivas "
+"que se generan dinámicamente no están obligados a aplicar estos límites, "
+"aunque los publicadores deben considerar guiar a los usuarios cuando una "
+"consulta puede generar un archivo muy grande."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Segmenting files"
@@ -170,44 +167,43 @@ msgstr "Segmentación de archivos"
 
 #: ../../standard/docs/en/implementation/hosting.md:32
 msgid ""
-"When the suggested limits require publication of multiple files, publishers "
-"should consider ways to split data across available files."
+"When the suggested limits entail publication of multiple files, publishers "
+"ought to consider ways to split data across available files."
 msgstr ""
-"Cuando los límites sugeridos requieren la publicación de varios archivos, "
-"los publicadores deben considerar formas de dividir los datos entre los "
-"archivos disponibles."
+"Cuando los límites sugeridos comprenden la publicación de muchos archivos, "
+"los publicadores deben considerar la manera de dividir los datos en "
+"múltiples archivos."
 
 #: ../../standard/docs/en/implementation/hosting.md:34
-msgid "For releases, publishers may choose to:"
-msgstr "Para las entregas, los publicadores pueden elegir:"
+msgid "For releases, publishers can:"
+msgstr "Para entregas, los publicadores pueden:"
 
 #: ../../standard/docs/en/implementation/hosting.md:36
 msgid ""
-"Segment by **releaseDate** - placing all the releases from a given day, "
+"Segment by **release date** - placing all the releases from a given day, "
 "month or year in the same file;"
 msgstr ""
-"Segmento por **releaseDate** - colocando todas las entregas de un día, mes o"
-" año  en el mismo archivo;"
+"Segmentar por **fecha de entrega**- poniendo todas las entregas que salieron"
+" en un mismo día, mes o año en el mismo archivo;"
 
 #: ../../standard/docs/en/implementation/hosting.md:37
 msgid ""
 "Segment by **contracting process identifier** - placing all the releases "
 "related to a given set of contract process identifiers together in the same "
-"data package;"
+"package;"
 msgstr ""
-"Segmento por **identificador de proceso de contratación** - colocando todas "
-"las entregas relacionadas con un conjunto de identificadores de proceso de "
-"contrato juntos en el mismo paquete de datos;"
+"Segmentar por **identificador de proceso de contrataciones**- poniendo todas"
+" las entregas relacionadas a un conjunto de identificadores de proceso de "
+"contrataciones en el mismo paquete; "
 
 #: ../../standard/docs/en/implementation/hosting.md:39
 msgid ""
-"For records, publishers should segment either based on the first "
-"**releaseDate** associated with a contracting process, or by **contracting "
-"process identifier.**"
+"For records, publishers can segment by the first **release date** associated"
+" with a contracting process, or by **contracting process identifier.**"
 msgstr ""
-"En el caso de los registros, los publicadores deben segmentar basándose en "
-"el primer **releaseDate** asociado a un proceso de contratación, o **el "
-"identificador del proceso de contratación**."
+"Para registros, los publicadores pueden segmentar por la primera **fecha de "
+"entrega** asociada con un proceso de contrataciones, o por **identificador "
+"de proceso de contrataciones**."
 
 #: ../../standard/docs/en/implementation/hosting.md:41
 msgid ""
@@ -223,18 +219,16 @@ msgstr "Compresión"
 
 #: ../../standard/docs/en/implementation/hosting.md:45
 msgid ""
-"OCDS data packages may be compressed in order to save on disk space and "
+"OCDS packages can be compressed in order to save on disk space and "
 "bandwidth."
 msgstr ""
-"Los paquetes de datos de OCDS pueden comprimirse para ahorrar espacio de "
-"disco y de ancho de banda."
+"Los paquetes OCDS pueden comprimirse para ahorrar en espacio de disco y en "
+"ancho de banda."
 
 #: ../../standard/docs/en/implementation/hosting.md:47
-msgid ""
-"If compressing data packages, publishers *should* use the zip file format."
+msgid "If compressing packages, publishers ought to use the ZIP file format."
 msgstr ""
-"Si comprimen los paquetes de datos, los publicadores *deben* usar el formato"
-" de archivo zip."
+"Si se comprimen paquetes, los publicadores deben de usar el formato ZIP."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Serving files"
@@ -242,17 +236,16 @@ msgstr "Servir archivos"
 
 #: ../../standard/docs/en/implementation/hosting.md:51
 msgid ""
-"Publishers should ensure that the web server providing access to bulk files "
-"correctly reports the [HTTP Last-"
+"The web server providing access to bulk files ought to correctly report the "
+"[HTTP Last-"
 "Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) "
 "header so that consuming applications only need to download updated files."
 msgstr ""
-"Los publicadores deben asegurarse de que el servidor web que proporciona "
-"acceso a los archivos para descargas masivas informe correctamente el "
-"encabezado [HTTP Last-"
+"El servidor web que da acceso a archivos masivos debe de reportar "
+"correctamente la cabecera [HTTP Last-"
 "Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) "
-"de modo que las aplicaciones solo necesiten descargar los archivos "
-"actualizados."
+"para que las aplicaciones consumidoras necesiten descargar sólo los archivos"
+" actualizados."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Individual releases and records"
@@ -261,26 +254,26 @@ msgstr "Entregas y registros individuales"
 #: ../../standard/docs/en/implementation/hosting.md:55
 msgid ""
 "To achieve [4 ☆](levels.md) OCDS publication requires each release and "
-"record to be accessible at a permanent URI. This may be achieved by:"
+"record to be accessible at a permanent URI. This can be achieved by:"
 msgstr ""
-"Para lograr [4 ☆](levels.md) la publicación ODCS requiere que cada entrega y"
-" cada registro sea accesible en un URI permanente. Esto puede lograrse "
-"mediante:"
+"Para alcanzar  [4 ☆](levels.md) en la publicación OCDS, se requiere que cada"
+" entrega y registro sea accesible en una URI permanente. Esto puede lograrse"
+" haciendo lo siguiente:"
 
 #: ../../standard/docs/en/implementation/hosting.md:57
 msgid ""
 "(a) Archiving a single-release release package for each release to a web "
 "accessible file system as it is created, and then regularly merging these "
 "releases to compile individual record files in the same file system. One "
-"approach may be to have a folder for each `ocid` and to place the releases "
-"and record related to that process into that folder."
+"approach might be to have a folder for each `ocid` and to place the releases"
+" and record related to that process into that folder."
 msgstr ""
-"(a) Archivar un paquete de entrega única para cada entrega en un sistema de "
-"archivos accesible en la web a medida que se crea, y luego fusionar "
-"regularmente estas versiones para compilar archivos de registro individuales"
-" en el mismo sistema de archivos. Un enfoque puede ser tener una carpeta "
-"para cada `ocid` y colocar las entregas y registros relacionados con ese "
-"proceso en esa carpeta."
+"(a) Archivando un paquete de entregas con una única entrega en un sistema de"
+" archivos accesible a través de la Web al momento de ser creada, y después "
+"fusionar regularmente estas entregas para compilar archivos de registro "
+"individuales en el mismo sistema de archivos. Una manera de hacer esto "
+"podría ser tener una carpeta para cada `ocid` y poner las entregas y "
+"registro relacionados con ese proceso en esa carpeta."
 
 #: ../../standard/docs/en/implementation/hosting.md:59
 msgid "(b) Providing access to releases and records through an API."
@@ -289,24 +282,23 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/hosting.md:61
 msgid ""
-"Note that the second approach will require the API to maintain a full "
-"revision history of each contracting process, so that releases from each "
-"stage of a contracting process can be provided."
+"Note that the second approach needs the API to maintain a full revision "
+"history of each contracting process, so that releases from each stage of a "
+"contracting process can be provided."
 msgstr ""
-"Tenga en cuenta que el segundo enfoque requerirá que la API mantenga un "
-"historial de revisión completo de cada proceso de contratación, de manera "
-"que se puedan proporcionar las entregas de cada etapa de un proceso de "
-"contratación."
+"Note que el segundo enfoque necesita un API para mantener un historial de "
+"revisión completo en cada proceso de contrataciones, para que se puedan dar "
+"entregas de cada etapa del proceso de contrataciones."
 
 #: ../../standard/docs/en/implementation/hosting.md:63
 msgid ""
-"Publishers should consider how to [ensure URIs can remain "
+"Publishers ought to consider how to [ensure URIs can remain "
 "stable](https://www.w3.org/Provider/Style/URI.html), even across a change of"
 " systems."
 msgstr ""
-"Los publicadores deben considerar cómo [asegurar que los URIs puedan "
-"permanecer estables](https://www.w3.org/Provider/Style/URI.html), incluso a "
-"través de un cambio de sistemas."
+"Los publicadores deben considerar cómo [asegurar que las URIs se mantengan "
+"estables](https://www.w3.org/Provider/Style/URI.html), incluso si ocurre un "
+"cambio de sistemas."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Flattened serializations"
@@ -323,11 +315,11 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/hosting.md:69
 msgid ""
-"The same principles discussed for bulk files above should be applied to CSV "
-"or Excel downloads of data."
+"The same principles discussed for bulk files above ought to be applied to "
+"CSV or Excel downloads of data."
 msgstr ""
-"Los mismos principios discutidos para los archivos de descarga masiva "
-"anteriores deben aplicarse a las descargas de datos CSV o Excel."
+"Los mismos principios que se discutieron anteriormente sobre archivos "
+"masivos deben aplicarse a descargas CSV o Excel de los datos."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Discovery and APIs"
@@ -335,16 +327,15 @@ msgstr "Descubrimiento y APIs"
 
 #: ../../standard/docs/en/implementation/hosting.md:74
 msgid ""
-"There are many thousands of organizations who should be able to publish Open"
-" Contracting data. As a result, maintaining a central registry of all "
+"There are many thousands of organizations who ought to be able to publish "
+"open contracting data. As a result, maintaining a central registry of all "
 "published data is impractical. Instead, OCDS proposes a common pattern for "
-"the discovery of Open Contracting data releases and records."
+"the discovery of releases and records."
 msgstr ""
-"Hay miles de organizaciones que deberían ser capaces de publicar Datos de "
-"Contrataciones Abiertas. Como resultado, no es práctico mantener un registro"
-" central de todos los datos publicados. En cambio, OCDS propone un patrón "
-"común para el descubrimiento de entregas y registros de Datos de "
-"Contrataciones Abiertas."
+"Hay miles de organizaciones que deberían ser capaces de publicar datos de "
+"contrataciones abiertas. Como resultado, mantener un registro central de "
+"todos los datos publicados es impráctico. Debido a eso, OCDS propone un "
+"patrón común para el descubrimiento de entregas y registros."
 
 #: ../../standard/docs/en/implementation/hosting.md:76
 msgid ""
@@ -356,43 +347,33 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/hosting.md:78
 msgid ""
-"For the discovery of individual releases and records, we propose use atom "
-"feeds."
+"For the discovery of individual releases and records, we propose use of Atom"
+" feeds."
 msgstr ""
-"Para el descubrimiento de versiones y registros individuales, se propone "
-"utilizar feeds de atom."
-
-#: ../../standard/docs/en/implementation/hosting.md:80
-msgid ""
-"There is a [community discussion here](https://github.com/open-"
-"contracting/standard/issues/290) on whether OCDS should include a proposed "
-"API standard in future iterations."
-msgstr ""
-"Hay una [discusión de la comunidad aquí](https://github.com/open-"
-"contracting/standard/issues/290) sobre si OCDS debe incluir un estándar de "
-"API propuesto en futuras iteraciones."
+"Para el descubrimiento de entregas y registros individuales, recomendamos "
+"utilizar Atom feeds."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Dataset and feed discovery"
 msgstr "Conjunto de datos y descubrimiento de feeds"
 
+#: ../../standard/docs/en/implementation/hosting.md:82
+msgid ""
+"Publishers can provide a data.json document describing the location of all "
+"of the bulk OCDS files available for download."
+msgstr ""
+"Los publicadores pueden dar un documento data.json para describir la "
+"ubicación de todos los archivos masivos OCDS disponibles para descarga."
+
 #: ../../standard/docs/en/implementation/hosting.md:84
 msgid ""
-"Publishers should provide a data.json document describing the location of "
-"all of the bulk OCDS files available for download."
-msgstr ""
-"Los publicadores deben proporcionar un documento data.json que describa la "
-"ubicación de todos los archivos para descarga masiva de  OCDS  disponibles."
-
-#: ../../standard/docs/en/implementation/hosting.md:86
-msgid ""
-"This should follow the structure proposed by the [US Project Open "
+"This ought to follow the structure proposed by the [US Project Open "
 "Data](https://project-open-data.github.io/schema/) with:"
 msgstr ""
-"Esto debe seguir la estructura propuesta por [US Project Open Data](https"
+"Esto debe seguir la estructura propuesta por el [US Project Open Data](https"
 "://project-open-data.github.io/schema/) con:"
 
-#: ../../standard/docs/en/implementation/hosting.md:88
+#: ../../standard/docs/en/implementation/hosting.md:86
 msgid ""
 "Each record containing a distribution block with at least one accessURL "
 "pointing to OCDS data."
@@ -400,7 +381,7 @@ msgstr ""
 "Cada registro que contiene un bloque de distribución con al menos un "
 "accessURL apuntando a los datos OCDS."
 
-#: ../../standard/docs/en/implementation/hosting.md:89
+#: ../../standard/docs/en/implementation/hosting.md:87
 msgid ""
 "Each record containing 'open-contracting-data', and either 'open-"
 "contracting-release' or 'open-contracting-record' in the keyword array."
@@ -408,74 +389,73 @@ msgstr ""
 "Cada registro que contiene 'open-contracting-data' y 'open-contracting-"
 "release' o 'open-contracting-record' en la matriz de palabras clave."
 
-#: ../../standard/docs/en/implementation/hosting.md:90
+#: ../../standard/docs/en/implementation/hosting.md:88
 msgid "accessLevel set appropriately"
 msgstr "accessLevel configurado adecuadamente"
 
-#: ../../standard/docs/en/implementation/hosting.md:92
+#: ../../standard/docs/en/implementation/hosting.md:90
 msgid ""
-"In addition, the data.json document may contain one or more records with the"
+"In addition, the data.json document can contain one or more records with the"
 " keyword 'open-contracting-feed' and either 'open-contracting-release' or "
 "'open-contracting-record' and pointing via an accessURL in their "
 "distribution block to an atom feed document."
 msgstr ""
 "Además, el documento data.json puede contener uno o más registros con la "
-"palabra clave 'open-contracting-feed' y 'open-contracting-release' u 'open-"
+"palabra clave  'open-contracting-feed' y 'open-contracting-release' o 'open-"
 "contracting-record' y apuntando a través de un accessURL en su bloque de "
-"distribución a un documento de feed de átomos."
+"distribución a un documento de atom feed."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Feeds"
 msgstr "Feeds"
 
-#: ../../standard/docs/en/implementation/hosting.md:96
+#: ../../standard/docs/en/implementation/hosting.md:94
 msgid ""
 "Publishers exposing individual records and releases, of regularly updated "
-"data packages in small sets, should provide one or more [atom "
+"packages in small sets, ought to provide one or more [Atom "
 "feeds](http://en.wikipedia.org/wiki/Atom_%28standard%29) that index these, "
 "and provide an easy mechanism for users to discover recently published or "
 "updated release and records."
 msgstr ""
-"Los publicadores que expongan registros individuales y entregas, de paquetes"
-" de datos actualizados regularmente en pequeños conjuntos, deben "
-"proporcionar uno o más [atom "
-"feeds](http://en.wikipedia.org/wiki/Atom_%28standard%29) que indexan estos y"
-" proporcionan un fácil mecanismo para que los usuarios descubran "
-"publicaciones y registros recientemente publicados o actualizados."
+"Los publicadores exponiendo entregas y registros individuales, de paquetes "
+"que se actualizan regularmente en pequeños conjuntos, deben de dar uno o más"
+"  [Atom feeds](http://en.wikipedia.org/wiki/Atom_%28standard%29) que los "
+"indexan, y proporcionar un mecanismo fácil para que los usuarios descubran "
+"entregas y registros recientemente publicados o actualizados."
+
+#: ../../standard/docs/en/implementation/hosting.md:96
+msgid ""
+"The link to the release or record ought to be provided via a `<link>` tag, "
+"and the updated date of the entry ought to reflect the updated date of that "
+"release or record. The `<id>` ought to reflect the release id for release, "
+"or the ocid for records."
+msgstr ""
+"El link a la entrega o registro debe de darse via una etiqueta `<link>`, y "
+"la fecha actualizada de la entrada debe de reflejar la fecha actualizada de "
+"esa entrega o registro. El `<id>` debe reflejar el identificador de la "
+"entrega, o el ocid para registros."
 
 #: ../../standard/docs/en/implementation/hosting.md:98
 msgid ""
-"The link to the release or record should be provided via a `<link>` tag, and"
-" the updated date of the entry should reflect the updated date of that "
-"release or record. The `<id>` should reflect the release id for release, or "
-"the ocid for records."
+"The release.tag ought to be contained within an `<category>` element of the "
+"feed."
 msgstr ""
-"El vínculo con la entrega o el registro debe proporcionarse mediante una "
-"etiqueta `<link>`, y la fecha actualizada de la entrada debe reflejar la "
-"fecha actualizada de dicha entrega o registro. El `<id>` debería reflejar el"
-" id de la entrega para la entrega, o el ocid para los registros."
+"La etiqueta release.tag debe de contenerse en un elemento `<category>` del "
+"feed."
 
 #: ../../standard/docs/en/implementation/hosting.md:100
 msgid ""
-"The release.tag should be contained within an `<category>` element of the "
-"feed."
-msgstr ""
-"El release.tag debe estar contenido dentro de un elemento `<category>` del "
-"feed."
-
-#: ../../standard/docs/en/implementation/hosting.md:102
-msgid ""
-"Feeds requiring pagination should follow the approach set out in [RFC "
+"Feeds requiring pagination ought to follow the approach set out in [RFC "
 "5005](https://tools.ietf.org/html/rfc5005#section-3)."
 msgstr ""
-"Los feeds que requieren paginación deben seguir el enfoque establecido en "
+"Los feeds que requieran paginación debe seguir el enfoque establecido en "
 "[RFC 5005](https://tools.ietf.org/html/rfc5005#section-3)."
 
 #: ../../standard/docs/en/implementation/hosting.md:0
 msgid "Well Known"
 msgstr "Well Known"
 
-#: ../../standard/docs/en/implementation/hosting.md:106
+#: ../../standard/docs/en/implementation/hosting.md:104
 msgid ""
 "Future implementations of OCDS will explore use of the <a "
 "href=\"http://tools.ietf.org/html/rfc5785\">/.well-known/</a> protocol to "
@@ -485,7 +465,7 @@ msgstr ""
 "href=\"http://tools.ietf.org/html/rfc5785\">/.well-known/</a> para declarar "
 "una ubicación para almacenar un archivo data.json."
 
-#: ../../standard/docs/en/implementation/hosting.md:108
+#: ../../standard/docs/en/implementation/hosting.md:106
 msgid ""
 "At present, such files can be hosted anywhere, and consuming applications "
 "pointed towards them manually."
@@ -493,7 +473,7 @@ msgstr ""
 "En la actualidad, tales archivos pueden ser alojados en cualquier lugar, y "
 "las aplicaciones de consumo apuntadas hacia ellos manualmente."
 
-#: ../../standard/docs/en/implementation/hosting.md:110
+#: ../../standard/docs/en/implementation/hosting.md:108
 msgid ""
 "The data.json structure has been chosen to allow organizations following "
 "this approach to include tagged 'open-contracting-data' within their "
@@ -511,7 +491,7 @@ msgstr ""
 msgid "Linking data"
 msgstr "Vinculación de datos"
 
-#: ../../standard/docs/en/implementation/hosting.md:114
+#: ../../standard/docs/en/implementation/hosting.md:112
 msgid ""
 "For 5 ☆ publication of OCDS data, publishers should seek to use URIs in "
 "their datasets, linking to other machine-readable data sources at an entity-"

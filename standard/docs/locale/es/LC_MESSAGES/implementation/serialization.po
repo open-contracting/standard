@@ -1,16 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C)
-# This file is distributed under the same license as the OCDS package.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Oscar Montiel <oscar.montiel@okfn.org>, 2017
+# Ben Webb <ben.webb@opendataservices.coop>, 2017
+# Sebastian Oliva <sebastian.o@idatosabiertos.org>, 2018
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
+# Romina Fernandez <romina@idatosabiertos.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCDS 1.1\n"
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-01 11:40-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2018\n"
+"POT-Creation-Date: 2019-05-08 16:14-0400\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: Romina Fernandez <romina@idatosabiertos.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,16 +57,16 @@ msgid ""
 "work with data serialized in other formats. For this reason, the current "
 "version of OCDS supports a number of **secondary serializations** which are "
 "based on the canonical schema. These are not currently official components "
-"of the standard, but are designed to support implementers in providing "
+"of the standard, but are designed to support publishers in providing "
 "accessible data to a range of different users."
 msgstr ""
-"Sin embargo, hay muchos casos de uso en los que los publicadores y usuarios "
-"desearán trabajar con datos serializados en otros formatos. Por esta razón, "
-"la versión actual de OCDS soporta una serie de **serializaciones "
-"secundarias** que se basan en el esquema canónico. Estos no son actualmente "
-"componentes oficiales del estándar, pero están diseñados para apoyar a los "
-"implementadores en la provisión de datos accesibles a una gama de usuarios "
-"diferentes."
+"Sin embargo, hay muchos casos de uso en los cuales los publicadores y "
+"usuarios querrán trabajar con datos serializados en otros formatos. Por esta"
+" razón, la versión actual del OCDS soporta un número de **serializaciones "
+"secundarias** que están basadas en el esquema canónico. Estos no son "
+"componentes oficiales del estándar, pero están diseñados para dar soporte a "
+"los publicadores para dar datos accesibles a un rango de usuarios "
+"diferentes. "
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "JSON"
@@ -77,17 +84,15 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/serialization.md:13
 msgid ""
-"Valid JSON serializations of OCDS data MUST follow the [I-JSON (Internet "
-"JSON)specification from RFC7493](https://tools.ietf.org/html/rfc7493) which "
-"requires [UTF-8 encoding](https://en.wikipedia.org/wiki/UTF-8) and "
-"introduces a number of constrains and recommendations for handling numbers, "
-"objects and dates."
+"OCDS data needs to follow the I-JSON (Internet JSON) specification in "
+"[RFC7493](https://tools.ietf.org/html/rfc7493), according to which JSON text"
+" must be encoded using [UTF-8](https://en.wikipedia.org/wiki/UTF-8), and "
+"which introduces a number of requirements for numbers, objects and dates."
 msgstr ""
-"Las serializaciones JSON válidas de los datos OCDS DEBEN seguir la "
-"especificación [I-JSON (Internet JSON) de "
-"RFC7493](https://tools.ietf.org/html/rfc7493) que requiere [Codificación "
-"UTF-8](https://en.wikipedia.org/wiki/UTF-8) e introduce una serie de "
-"restricciones y recomendaciones para el manejo de números, objetos y fechas."
+"Los datos OCDS deben de seguir las especificaciones  I-JSON (Internet JSON) "
+"en [RFC7493](https://tools.ietf.org/html/rfc7493), que requiere que el texto"
+" JSON esté codificado usando [UTF-8](https://en.wikipedia.org/wiki/UTF-8), e"
+" introduce un número de requisitos para números, objetos y fechas."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Generating JSON"
@@ -186,20 +191,19 @@ msgstr ""
 
 #: ../../standard/docs/en/implementation/serialization.md:37
 msgid ""
-"**Multi-table** - where more advanced structures are required, but where it "
-"is desirable to be able to work with data in spreadsheet-style layouts"
+"**Multi-table** - where more advanced structures are needed, but where it is"
+" desirable to be able to work with data in spreadsheet-style layouts"
 msgstr ""
-"**Multi-tabla** - donde se requieren estructuras más avanzadas, pero donde "
-"es deseable poder trabajar con datos en diseños de hojas de cálculo"
+"**Tablas múltiples**- cuando se necesitan estructuras más avanzadas, pero "
+"cuando es deseable poder trabajar con datos en diseños de hoja de cálculo"
 
 #: ../../standard/docs/en/implementation/serialization.md:39
 msgid ""
-"In each case, fields are identified by the [JSON "
-"pointer](http://tools.ietf.org/html/rfc6901) to their JSON equivalent. For "
-"example:"
+"In each case, fields are identified in CSV headers by their [JSON "
+"Pointer](http://tools.ietf.org/html/rfc6901). For example:"
 msgstr ""
-"En cada caso, los campos son identificados por el [JSON "
-"pointer](http://tools.ietf.org/html/rfc6901) a su equivalente JSON. Por "
+"En cada caso, los campos son identificados en las cabeceras del CSV por sus"
+"  [JSON Pointers](http://tools.ietf.org/html/rfc6901) equivalentes. Por "
 "ejemplo:"
 
 #: ../../standard/docs/en/implementation/serialization.md:41
@@ -230,12 +234,11 @@ msgstr "Tabla sencilla simplificada"
 
 #: ../../standard/docs/en/implementation/serialization.md:65
 msgid ""
-"It is possible to represent a full release in a single flat CSV row by "
-"using full JSON pointers for each field as the headings."
+"It is possible to represent a full release in a single flat CSV row by using"
+" full JSON pointers for each field as the headings."
 msgstr ""
-"Es posible representar una versión completa de entregas en una única fila "
-"plana de CSV utilizando punteros JSON completos para cada campo como "
-"encabezados."
+"Es posible representar una entrega completa en una única fila plana de CSV "
+"utilizando punteros JSON completos para cada campo como encabezados."
 
 #: ../../standard/docs/en/implementation/serialization.md:67
 msgid ""
@@ -257,8 +260,8 @@ msgid ""
 msgstr ""
 "Sin embargo, es teóricamente posible representar una versión completa de "
 "entregas en una única fila plana de CSV usando punteros JSON completos para "
-"cada campo como encabezados. Para matrices, esto implica añadir el índice de"
-" la matriz a la ruta, como `tender/item/0/id` y `tender/item/1/id` como "
+"cada campo como encabezados. Para listas, esto implica añadir el índice de "
+"la lista a la ruta, como `tender/item/0/id` y `tender/item/1/id` como "
 "columnas separadas para representar cada uno de las artículos."
 
 #: ../../standard/docs/en/implementation/serialization.md:71
@@ -289,15 +292,20 @@ msgstr ""
 "En su lugar, los datos con una relación de uno a muchos se pueden "
 "representar mediante una serialización de varias tablas."
 
-#: ../../standard/docs/en/implementation/serialization.md:95
-msgid "Note: OCDS CSV files MUST only be encoded in either UTF-8 or Windows-1252"
-msgstr "Nota: Los archivos CSV de OCDS DEBEN ser codificados en UTF-8 o Windows-1252"
+#: ../../standard/docs/en/implementation/serialization.md:1
+msgid "CSV encoding"
+msgstr "Codificación CSV"
+
+#: ../../standard/docs/en/implementation/serialization.md:3
+msgid "OCDS CSV files ought to be encoded in either UTF-8 or Windows-1252."
+msgstr ""
+"Los archivos OCDS CSV deben de estar codificados en UTF-8 o Windows-1252."
 
 #: ../../standard/docs/en/implementation/serialization.md:0
 msgid "Multi-table"
 msgstr "Multi-tabla"
 
-#: ../../standard/docs/en/implementation/serialization.md:99
+#: ../../standard/docs/en/implementation/serialization.md:104
 msgid ""
 "The multi-table serialization separates  objects with many to one "
 "relationships (i.e. arrays) into their own tables."
@@ -305,7 +313,7 @@ msgstr ""
 "La serialización de multi-tabla separa los objetos con relaciones de muchas "
 "a una (es decir, matrices) en sus propias tablas."
 
-#: ../../standard/docs/en/implementation/serialization.md:101
+#: ../../standard/docs/en/implementation/serialization.md:106
 msgid ""
 "Multiple tables can be packaged together as the tabs of an Excel "
 "spreadsheet, or in a collection of CSV files."
@@ -313,7 +321,7 @@ msgstr ""
 "Tablas múltiples se pueden empaquetar juntas como las pestañas de una hoja "
 "de cálculo de Excel, o en una colección de archivos CSV."
 
-#: ../../standard/docs/en/implementation/serialization.md:103
+#: ../../standard/docs/en/implementation/serialization.md:108
 msgid ""
 "An example multi-table template can be found [in the sample data "
 "repository](https://github.com/open-contracting/sample-data/tree/master"
@@ -323,7 +331,7 @@ msgstr ""
 " de datos de muestra](https://github.com/open-contracting/sample-"
 "data/tree/master/flat-template)."
 
-#: ../../standard/docs/en/implementation/serialization.md:105
+#: ../../standard/docs/en/implementation/serialization.md:110
 msgid ""
 "For further information on multi-table serializations please see the "
 "[flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/)."
@@ -336,23 +344,22 @@ msgstr ""
 msgid "Packaging files with metadata"
 msgstr "Empaquetado de archivos con metadatos"
 
-#: ../../standard/docs/en/implementation/serialization.md:109
+#: ../../standard/docs/en/implementation/serialization.md:114
 msgid ""
-"Whatever serialization is used for Open Contracting Data, a single file may "
+"Whatever serialization is used for Open Contracting Data, a single file can "
 "contain one or more release and records."
 msgstr ""
-"Cualquiera que sea la serialización utilizada para Datos de Contrataciones "
-"Abiertas, un solo archivo puede contener una o más entregas y registros."
+"Sin importar la serialización que se usa para Datos de Contrataciones "
+"Abiertas, un archivo único puede tener una o más entregas y registros."
 
-#: ../../standard/docs/en/implementation/serialization.md:111
+#: ../../standard/docs/en/implementation/serialization.md:116
 msgid ""
-"The release and record data package schemas describe the key metadata that "
-"must be supplied for any file providing Open Contracting Data. This includes"
-" the `publishedDate`, `publisher`, `uri` for accessing the file, and the "
-"licensing details for the file."
+"The release package and record package schemas describe the key metadata "
+"that ought to be supplied for any file providing Open Contracting Data. This"
+" includes the `publishedDate`, `publisher`, `uri` for accessing the file, "
+"and the licensing details for the file."
 msgstr ""
-"Los esquemas de paquetes de datos de entrega y registro describen los "
-"metadatos clave que deben proporcionarse para cualquier archivo que "
-"proporcione Datos de Contrataciones Abiertas. Esto incluye la "
-"`publishedDate`, `publisher`, `uri` para acceder al archivo y los detalles "
-"de licencia para el archivo."
+"Los esquemas de paquete de entrega y de paquete de registros describen los "
+"metadatos claves que deben de darse para cualquier archivo que dé datos de "
+"Contrataciones Abiertas. Esto incluye el `publishedDate`, `publisher`, `uri`"
+" para acceder al archivo y los detalles de licencia del archivo."
