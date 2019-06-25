@@ -169,13 +169,13 @@ def _add_versioned(schema, unversioned_pointers, pointer, key, value):
         if types == ['array']:
             item_types = _get_types(value['items'])
 
-            # See http://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
+            # See https://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
             if value.get('wholeListMerge'):
                 # Update `$ref` to the unversioned definition.
                 if '$ref' in value['items']:
                     new_value['items']['$ref'] = value['items']['$ref'] + 'Unversioned'
                 # Otherwise, similarly, don't iterate over item properties.
-            # See http://standard.open-contracting.org/latest/en/schema/merging/#lists
+            # See https://standard.open-contracting.org/latest/en/schema/merging/#lists
             elif '$ref' in value['items']:
                 # Leave `$ref` to the versioned definition.
                 return
@@ -259,7 +259,7 @@ def remove_metadata_and_extended_keywords(schema):
 def get_versioned_release_schema(schema):
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
-    schema['id'] = 'http://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json'.format(release_with_underscores)  # noqa
+    schema['id'] = 'https://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json'.format(release_with_underscores)  # noqa
     schema['title'] = 'Schema for a compiled, versioned Open Contracting Release.'
 
     # Release IDs, dates and tags appear alongside values in the versioned release schema.

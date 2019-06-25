@@ -6,7 +6,7 @@ You can view an interactive version of the record schema below (requires JavaScr
 
 A separate, auto-generated [versioned release schema](../../../../versioned-release-validation-schema.json) is provided for validating versioned releases within records.
 
-For this version of OCDS, the canonical URL for the record package schema is <http://standard.open-contracting.org/schema/1__1__4/record-package-schema.json> and for the versioned release schema is <http://standard.open-contracting.org/schema/1__1__4/versioned-release-validation-schema.json>
+For this version of OCDS, the canonical URL for the record package schema is <https://standard.open-contracting.org/schema/1__1__4/record-package-schema.json> and for the versioned release schema is <https://standard.open-contracting.org/schema/1__1__4/versioned-release-validation-schema.json>
 
 Using the canonical URL guarantees that your software, documentation or other resources will always refer to the specific version of the schema with which they were authored and tested.
 

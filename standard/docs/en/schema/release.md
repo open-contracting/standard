@@ -2,7 +2,7 @@
 
 The release schema provides the authoritative definition of fields and their structure. You can view an interactive version of the release schema below (requires JavaScript) or [download this version of the schema here](../../../../release-schema.json).
 
-For this version of OCDS, the canonical URL of the release schema is: <http://standard.open-contracting.org/schema/1__1__4/release-schema.json>
+For this version of OCDS, the canonical URL of the release schema is: <https://standard.open-contracting.org/schema/1__1__4/release-schema.json>
 
 Using the canonical URL guarantees that your software, documentation or other resources will always refer to the specific version of the schema with which they were authored and tested.
 

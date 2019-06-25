@@ -1,16 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C)
-# This file is distributed under the same license as the OCDS package.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tim Davies <tim.davies@opendataservices.coop>, 2017
+# Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2017
+# Ben Webb <ben.webb@opendataservices.coop>, 2017
+# James McKinney <jmckinney@open-contracting.org>, 2018
+# Sebastian Oliva <sebastian.o@idatosabiertos.org>, 2018
+# Oscar Montiel <oscar.montiel@okfn.org>, 2019
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
+# Romina Fernandez <romina@idatosabiertos.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCDS 1.1\n"
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-01 11:40-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2018\n"
+"POT-Creation-Date: 2019-05-08 16:14-0400\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: Romina Fernandez <romina@idatosabiertos.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,15 +42,658 @@ msgstr ""
 "Semántico](http://semver.org/)."
 
 #: ../../standard/docs/en/schema/changelog.md:0
-msgid "[1.1.3] - 2018-01-XX"
-msgstr "[1.1.3] - 2018-01-XX"
+msgid "[1.1.4] - 2019-06-25"
+msgstr "[1.1.4] - 2019-06-25"
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "Advisories"
+msgstr "Avisos"
+
+#: ../../standard/docs/en/schema/changelog.md:10
+msgid ""
+"OCDS 1.0 uses the [whole-list merge](https://standard.open-"
+"contracting.org/1.1/en/schema/merging/#whole-list-merge) strategy for "
+"`Award.suppliers`, whereas OCDS 1.1 uses the [identifier "
+"merge](https://standard.open-contracting.org/1.1/en/schema/merging"
+"/#identifier-merge) strategy. As a consequence, the OCDS 1.1 versioned "
+"release schema is not backward compatible with OCDS 1.0."
+msgstr ""
+"OCDS 1.0 usa la estrategia de [fusionar la lista completa](https://standard"
+".open-contracting.org/1.1/es/schema/merging/#whole-list-merge) para "
+"`Award.suppliers`, mientras que OCDS 1.1 usa la estrategia de [fusión por "
+"identificador](https://standard.open-contracting.org/1.1/es/schema/merging"
+"/#identifier-merge). Como consecuencia, el esquema de release versionado de "
+"OCDS 1.1 no es compatible con OCDS 1.0. "
+
+#: ../../standard/docs/en/schema/changelog.md:11
+msgid ""
+"**Action:** Versioned releases respecting the OCDS 1.0 schema that set "
+"`Award.suppliers` will need to be re-created to validate against the OCDS "
+"1.1 schema."
+msgstr ""
+"**Acción:** Los releases versionados que respeten el esquema OCDS 1.0 y que "
+"utilizan `Award.suppliers` tendrán que volver a crearse para ser válidos "
+"contra el esquema OCDS 1.1."
+
+#: ../../standard/docs/en/schema/changelog.md:12
+msgid ""
+"[#780](https://github.com/open-contracting/standard/pull/780) All extensions"
+" authored by the Open Contracting Partnership have been moved to the [open-"
+"contracting-extensions](https://github.com/open-contracting-extensions) "
+"organization."
+msgstr ""
+"[#780](https://github.com/open-contracting/standard/pull/780) Todas las "
+"extensiones creadas por Open Contracting Partnership se encuentran ahora en "
+"la organización [open-contracting-extensions](https://github.com/open-"
+"contracting-extensions)."
+
+#: ../../standard/docs/en/schema/changelog.md:13
+msgid ""
+"**Action:** No change is required, but we recommend that publishers update "
+"the URLs of these extensions in their release packages and record packages."
+msgstr ""
+"**Acción**: No se requieren cambios, pero recomendamos que los publicadores "
+"actualicen los URLs de estas extensiones en los paquetes de entregas y "
+"registros."
+
+#: ../../standard/docs/en/schema/changelog.md:14
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a"
+" [Normative and non-normative content and changes "
+"policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit)."
+msgstr ""
+"[#831](https://github.com/open-contracting/standard/pull/831) OCDS ahora "
+"tiene una [Política de Contenido y Cambios Normativos y No "
+"Normativos](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit)"
+" (en inglés)."
+
+#: ../../standard/docs/en/schema/changelog.md:15
+msgid ""
+"[#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a"
+" [Translation and localization policy](https://standard.open-"
+"contracting.org/1.1/en/support/governance/#translation-and-localization-"
+"policy)."
+msgstr ""
+"[#744](https://github.com/open-contracting/standard/pull/744) OCDS ahora "
+"tiene una [Política de Traducción y Localización](https://standard.open-"
+"contracting.org/1.1/es/support/governance/#translation-and-localization-"
+"policy)."
+
+#: ../../standard/docs/en/schema/changelog.md:16
+msgid ""
+"[#806](https://github.com/open-contracting/standard/pull/806) "
+"[#808](https://github.com/open-contracting/standard/pull/808) "
+"[#809](https://github.com/open-contracting/standard/pull/809) The "
+"documentation is now available in Italian."
+msgstr ""
+"[#806](https://github.com/open-contracting/standard/pull/806) "
+"[#808](https://github.com/open-contracting/standard/pull/808) "
+"[#809](https://github.com/open-contracting/standard/pull/809) La "
+"documentación ahora esta disponible en Italiano."
+
+#: ../../standard/docs/en/schema/changelog.md:17
+msgid ""
+"[#717](https://github.com/open-contracting/standard/pull/717) "
+"[#734](https://github.com/open-contracting/standard/pull/734) The OCDS "
+"documentation website now has a [privacy notice](https://standard.open-"
+"contracting.org/1.1/en/privacy-notice/)."
+msgstr ""
+"[#717](https://github.com/open-contracting/standard/pull/717) "
+"[#734](https://github.com/open-contracting/standard/pull/734) La página web "
+"de documentación OCDS ahora tiene un [aviso de privacidad](https://standard"
+".open-contracting.org/1.1/es/privacy-notice/)."
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "Bugs"
+msgstr "Bugs"
+
+#: ../../standard/docs/en/schema/changelog.md:21
+msgid ""
+"[#738](https://github.com/open-contracting/standard/pull/738) 1.1.3 changed "
+"the merging and versioning behaviors of `Item.unit`, such that it could be "
+"removed by setting it to `null`, and such that it was versioned as a whole. "
+"1.1.4 restores the behaviors from 1.1.2, such that only its sub-fields can "
+"be removed by setting them to `null`, and such that its sub-fields are "
+"versioned individually."
+msgstr ""
+"[# 738] (https://github.com/open-contracting/standard/pull/738) 1.1.3 cambió"
+" los comportamientos de fusión y control de versiones de `Item.unit`, de tal"
+" manera que podría eliminarse configurándolo a `null`, y de manera que esté "
+"versionado como un todo. 1.1.4 restaura los comportamientos de 1.1.2, de "
+"modo que soló sus subcampos pueden eliminarse configurándolos como `null`, y"
+" para que sus subcampos se versionen individualmente."
+
+#: ../../standard/docs/en/schema/changelog.md:22
+msgid ""
+"**Action:** If you had upgraded to OCDS 1.1.3, then compiled releases and "
+"versioned releases that set `Item.unit` will likely need to be re-created to"
+" validate against the OCDS 1.1.4 schema."
+msgstr ""
+"**Acción:** Si ha actualizado a OCDS 1.1.3, entonces las versiones "
+"compiladas y las versiones versionadas que configuran `Item.unit` "
+"probablemente tendrán que volver a crearse para validarlas contra el esquema"
+" OCDS 1.1.4."
+
+#: ../../standard/docs/en/schema/changelog.md:23
+msgid ""
+"[#810](https://github.com/open-contracting/standard/pull/810) `buyer.id`, "
+"`Tender.procuringEntity.id`, `Contract.implementation.payer.id` "
+"`Contract.implementation.payee.id`, `Budget.id`, `Identifier.id`, and "
+"`Classification.id` are now versioned, consistent with the documentation."
+msgstr ""
+"[#810](https://github.com/open-contracting/standard/pull/810) `buyer.id`, "
+"`Tender.procuringEntity.id`, `Contract.implementation.payer.id` "
+"`Contract.implementation.payee.id`, `Budget.id`, `Identifier.id`, and "
+"`Classification.id` ahora estan versionados, consistentes con la "
+"documentación. "
+
+#: ../../standard/docs/en/schema/changelog.md:24
+msgid ""
+"**Action:** Versioned releases that set these fields will likely need to be "
+"re-created to validate against the OCDS 1.1.4 schema."
+msgstr ""
+"**Acción** Los releases versionados que configuran estos campos "
+"probablemente deberán volver a crearse para validarse contra el esquema OCDS"
+" 1.1.4."
+
+#: ../../standard/docs/en/schema/changelog.md:25
+msgid ""
+"[#769](https://github.com/open-contracting/standard/pull/769) The versioned "
+"release schema now matches the release schema in: having a `minLength` "
+"validation property for `OrganizationReference.name`; having `codelist` and "
+"`openCodelist` properties for `Tender.awardCriteria`, "
+"`Tender.awardCriteriaDetails`, `Document.documentType`, `Item.unit.scheme`, "
+"`Classification.scheme`, and `RelatedProcess.scheme`; and having a "
+"`deprecated` property for `Budget.source`. All `title` and `description` "
+"metadata properties are removed from the versioned release schema."
+msgstr ""
+"[# 769] (https://github.com/open-contracting/standard/pull/769) El esquema "
+"del release versionado ahora coincide con el esquema de entrega en: tener "
+"una propiedad de validación `minLength` para` OrganizationReference.name`; "
+"tener las propiedades `codelist` y` openCodelist` para "
+"`Tender.awardCriteria`,`Tender.awardCriteriaDetails`, "
+"`Document.documentType`,` Item.unit.scheme`, `Classification.scheme`, y` "
+"RelatedProcess.scheme`; y tener una propiedad `deprecated` para` "
+"Budget.source`. Todas las propiedades de metadatos `title` y` description` "
+"se eliminan del esquema del release versionado."
+
+#: ../../standard/docs/en/schema/changelog.md:26
+msgid ""
+"[#810](https://github.com/open-contracting/standard/pull/810) `tag` is now "
+"`omitWhenMerged`, consistent with the reference implementation in OCDS "
+"Merge."
+msgstr ""
+"[#810](https://github.com/open-contracting/standard/pull/810) `tag` ahora es"
+" `omitWhenMerged`, consistente con las referencias de implementación en OCDS"
+" Merge."
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "Codelists"
+msgstr "Listas de códigos"
+
+#: ../../standard/docs/en/schema/changelog.md:30
+msgid ""
+"[#824](https://github.com/open-contracting/standard/pull/824) Canonical "
+"codelist files are available at URLs like <https://standard.open-"
+"contracting.org/schema/1__1__4/codelists/>, and translations are available "
+"at URLs like <https://standard.open-contracting.org/1.1/en/codelists/>, for "
+"OCDS 1.1.4 and up."
+msgstr ""
+"[# 824] (https://github.com/open-contracting/standard/pull/824) Los archivos"
+" de lista de códigos canónicos están disponibles en las URL como "
+"<https://standard.open-contracting.org/schema/1__1__4/codelists/ >, y las "
+"traducciones están disponibles en las URL como <https://standard.open-"
+"contracting.org/1.1/en/codelists/>, para OCDS 1.1.4 y versiones posteriores."
+
+#: ../../standard/docs/en/schema/changelog.md:31
+msgid ""
+"[#746](https://github.com/open-contracting/standard/pull/746) "
+"[#842](https://github.com/open-contracting/standard/pull/842) Update "
+"currency codelist for ISO4217 amendments [166](https://www.currency-"
+"iso.org/dam/downloads/dl_currency_iso_amendment_166.pdf), [167](https://www"
+".currency-iso.org/dam/downloads/dl_currency_iso_amendment_167.pdf), "
+"[168](https://www.currency-"
+"iso.org/dam/downloads/dl_currency_iso_amendment_168.pdf) and "
+"[169](https://www.currency-"
+"iso.org/dam/downloads/dl_currency_iso_amendment_169.pdf)."
+msgstr ""
+"[#746](https://github.com/open-contracting/standard/pull/746) "
+"[#842](https://github.com/open-contracting/standard/pull/842) . Actualiza la"
+" lista de códigos de moneda de acuerdo a las enmiendas en ISO4217  "
+"[166](https://www.currency-"
+"iso.org/dam/downloads/dl_currency_iso_amendment_166.pdf), [167](https://www"
+".currency-iso.org/dam/downloads/dl_currency_iso_amendment_167.pdf), "
+"[168](https://www.currency-"
+"iso.org/dam/downloads/dl_currency_iso_amendment_168.pdf) and "
+"[169](https://www.currency-"
+"iso.org/dam/downloads/dl_currency_iso_amendment_169.pdf)."
+
+#: ../../standard/docs/en/schema/changelog.md:32
+msgid ""
+"[#725](https://github.com/open-contracting/standard/pull/725) Add a "
+"'plannedProcurementNotice' code to the `documentType` codelist, 'CUCOP' to "
+"`itemClassificationScheme`, 'interestedParty' to `partyRole`."
+msgstr ""
+"[# 725] (https://github.com/open-contracting/standard/pull/725) Agrega un "
+"código de 'planningProcurementNotice' a la lista de códigos `documentType`, "
+"'CUCOP' a `itemClassificationScheme`, 'interestedParty' a `partyRole `."
+
+#: ../../standard/docs/en/schema/changelog.md:33
+msgid ""
+"[#725](https://github.com/open-contracting/standard/pull/725) Update the "
+"descriptions of the 'tenderNotice' and 'technicalSpecifications' codes in "
+"the `documentType` codelist to align with the text of the [Agreement on "
+"Government Procurement "
+"(GPA)](https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm) of the "
+"World Trade Organization (WTO)."
+msgstr ""
+"[# 725] (https://github.com/open-contracting/standard/pull/725) Actualiza "
+"las descripciones de los códigos 'tenderNotice' y 'technicalSpecifications' "
+"en la lista de códigos `documentType` para alinearlos con el texto del "
+"[Agreement on Government Procurement "
+"(GPA)](https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm) de la "
+"Organización Mundial del Comercio (OMC)"
+
+#: ../../standard/docs/en/schema/changelog.md:34
+msgid ""
+"[#725](https://github.com/open-contracting/standard/pull/725) Apply the "
+"style guide and OCDS glossary to the 'procuringEntity' and 'supplier' codes "
+"in the `partyRole` codelist."
+msgstr ""
+"[# 725] (https://github.com/open-contracting/standard/pull/725) Aplica la "
+"guía de estilo y el glosario OCDS a los códigos 'procuringEntity' y "
+"'supplier' en la lista de códigos `partyRole`."
+
+#: ../../standard/docs/en/schema/changelog.md:35
+msgid ""
+"[#725](https://github.com/open-contracting/standard/pull/725) Add examples "
+"to the description of the 'environmentalImpact' code in the `documentType` "
+"codelist."
+msgstr ""
+"[# 725] (https://github.com/open-contracting/standard/pull/725) Agrega "
+"ejemplos a la descripción del código 'environmentalImpact' en la lista de "
+"códigos `documentType`."
+
+#: ../../standard/docs/en/schema/changelog.md:36
+msgid ""
+"[#829](https://github.com/open-contracting/standard/pull/829) Use sentence "
+"case for code titles and end code descriptions with periods."
+msgstr ""
+"[# 829] (https://github.com/open-contracting/standard/pull/829) Usa el "
+"formato de oraciones para títulos de códigos y descripciones de códigos con "
+"puntos."
+
+#: ../../standard/docs/en/schema/changelog.md:37
+msgid ""
+"[#852](https://github.com/open-contracting/standard/pull/852) Use the "
+"correct normative keywords in code descriptions."
+msgstr ""
+"[# 852] (https://github.com/open-contracting/standard/pull/852) Usa las "
+"palabras clave normativas correctas en las descripciones de los códigos."
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "Schema"
+msgstr "Esquema"
+
+#: ../../standard/docs/en/schema/changelog.md:41
+msgid ""
+"[#712](https://github.com/open-contracting/standard/pull/712) Add missing "
+"titles for `publisher` and `url` and description for `record` in the record "
+"package schema, and missing description for `releases` in release package "
+"schema."
+msgstr ""
+"[# 712] (https://github.com/open-contracting/standard/pull/712) Agrega los "
+"títulos que faltan para `publisher` y` url` y la descripción para `record` "
+"en el esquema del paquete de registros, y la descripción que falta para "
+"`releases` en el esquema del paquete de entregas."
+
+#: ../../standard/docs/en/schema/changelog.md:42
+msgid ""
+"[#838](https://github.com/open-contracting/standard/pull/838) Eliminate the "
+"conflicting rule that release identifiers must be unique within release "
+"packages. Uniqueness within the scope of a release package either implies "
+"that release identifiers must be globally unique, or imposes an arbitrary "
+"restriction on the contents of release packages, as there is no rule "
+"preventing release packages from containing releases from different "
+"contracting processes. Release identifiers are only required to be locally "
+"unique within the scope of a contracting process. The `ocid` and `id` values"
+" of a release can be used together to disambiguate releases within a release"
+" package."
+msgstr ""
+"[# 838] (https://github.com/open-contracting/standard/pull/838) Elimina la "
+"regla conflictiva de que los identificadores de entregas deben ser únicos "
+"dentro de los paquetes de entregas. La unicidad dentro del ámbito de un "
+"paquete de entregas implica que los identificadores de entrega deben ser "
+"globalmente únicos, o impone una restricción arbitraria sobre el contenido "
+"de los paquetes de entrega, ya que no hay ninguna regla que impida que los "
+"paquetes de entrega contengan entregas de diferentes procesos de "
+"contratación. Sólo se requiere que los identificadores de entrega sean "
+"localmente únicos dentro del alcance de un proceso de contratación. Los "
+"valores `ocid` e` id` de una entrega se pueden usar juntos para desambiguar "
+"las entregas dentro de un paquete de entregas."
+
+#: ../../standard/docs/en/schema/changelog.md:43
+msgid ""
+"Clarify the uniqueness of release identifiers in the release schema "
+"[#838](https://github.com/open-contracting/standard/pull/838) and release "
+"package schema [#831](https://github.com/open-"
+"contracting/standard/pull/831)."
+msgstr ""
+"Aclara la unicidad de los identificadores de entrega dentro del esquema de "
+"entrega [# 838] (https://github.com/open-contracting/standard/pull/838) y "
+"del esquema de paquete de entrega [# 831](https://github.com/open-"
+"contracting/standard/pull/831)."
+
+#: ../../standard/docs/en/schema/changelog.md:44
+msgid ""
+"[#810](https://github.com/open-contracting/standard/pull/810) Add a "
+"dereferenced release schema to ease the implementation of the merge routine."
+msgstr ""
+"[# 810] (https://github.com/open-contracting/standard/pull/810) Agrega un "
+"esquema de entrega sin referencia para facilitar la implementación de la "
+"rutina de combinación."
+
+#: ../../standard/docs/en/schema/changelog.md:45
+msgid ""
+"[#810](https://github.com/open-contracting/standard/pull/810) Add "
+"`\"versionId\": true` hint to `Identifier` and `Classification`."
+msgstr ""
+"[#810](https://github.com/open-contracting/standard/pull/810) Agrega "
+"`\"versionId\": true` a `Identifier` y `Classification`."
+
+#: ../../standard/docs/en/schema/changelog.md:46
+msgid ""
+"[#845](https://github.com/open-contracting/standard/pull/845) Remove a "
+"reference to a closed issue and a note about a field name."
+msgstr ""
+"[# 845] (https://github.com/open-contracting/standard/pull/845) Elimina una "
+"referencia a un problema cerrado y una nota sobre un nombre de campo."
+
+#: ../../standard/docs/en/schema/changelog.md:47
+msgid ""
+"[#855](https://github.com/open-contracting/standard/pull/855) Use the "
+"correct normative keywords in field descriptions."
+msgstr ""
+"[# 855] (https://github.com/open-contracting/standard/pull/855) Usa las "
+"palabras clave normativas correctas en las descripciones de los campos."
+
+#: ../../standard/docs/en/schema/changelog.md:48
+msgid ""
+"[#855](https://github.com/open-contracting/standard/pull/855) Rephrase field"
+" descriptions as definitions rather than instructions."
+msgstr ""
+"[# 855] (https://github.com/open-contracting/standard/pull/855) Reescribe "
+"las descripciones de los campos como definiciones en lugar de instrucciones."
+
+#: ../../standard/docs/en/schema/changelog.md:49
+msgid ""
+"[#855](https://github.com/open-contracting/standard/pull/855) Align the "
+"descriptions of the `license` fields in the release package schema and "
+"record package schema."
+msgstr ""
+"[# 855] (https://github.com/open-contracting/standard/pull/855) Alinea las "
+"descripciones de los campos `license` en el esquema del paquete de entregas "
+"y el esquema del paquete de registros."
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "Documentation"
+msgstr "Documentación"
+
+#: ../../standard/docs/en/schema/changelog.md:53
+msgid ""
+"[#772](https://github.com/open-contracting/standard/pull/772) "
+"[#810](https://github.com/open-contracting/standard/pull/810) "
+"[#831](https://github.com/open-contracting/standard/pull/831) Clarify the "
+"merge rules for compiled releases and versioned releases."
+msgstr ""
+"[# 772] (https://github.com/open-contracting/standard/pull/772) [# 810] "
+"(https://github.com/open-contracting/standard/pull/810) [# 831] "
+"(https://github.com/open-contracting/standard/pull/831) Aclara las reglas de"
+" combinación para los releases compilados y los releases versionados."
+
+#: ../../standard/docs/en/schema/changelog.md:54
+msgid ""
+"[#797](https://github.com/open-contracting/standard/pull/797) Fix examples "
+"of versioned releases."
+msgstr ""
+"[# 797] (https://github.com/open-contracting/standard/pull/797) Corrige "
+"ejemplos de releases versionados."
+
+#: ../../standard/docs/en/schema/changelog.md:55
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Use the "
+"correct normative keywords in the documentation."
+msgstr ""
+"[# 831] (https://github.com/open-contracting/standard/pull/831) Usa las "
+"palabras clave normativas correctas en la documentación."
+
+#: ../../standard/docs/en/schema/changelog.md:56
+msgid ""
+"[#869](https://github.com/open-contracting/standard/pull/869) Move normative"
+" statements into normative sections."
+msgstr ""
+"[# 869] (https://github.com/open-contracting/standard/pull/869) Mueve las "
+"declaraciones normativas a las secciones normativas."
+
+#: ../../standard/docs/en/schema/changelog.md:57
+msgid ""
+"[#835](https://github.com/open-contracting/standard/pull/835) Display the "
+"canonical schema URLs in the documentation."
+msgstr ""
+"[# 835] (https://github.com/open-contracting/standard/pull/835) Muestra las "
+"URLs del esquema canónico en la documentación."
+
+#: ../../standard/docs/en/schema/changelog.md:58
+msgid ""
+"[#838](https://github.com/open-contracting/standard/pull/838) Clarify the "
+"uniqueness of release, award and contract identifiers."
+msgstr ""
+"[# 838] (https://github.com/open-contracting/standard/pull/838) Aclara la "
+"unicidad de los identificadores de entrega, adjudicación y contrato."
+
+#: ../../standard/docs/en/schema/changelog.md:59
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Improve the "
+"description of iterating the release `id`."
+msgstr ""
+"[# 831] (https://github.com/open-contracting/standard/pull/831) Mejora la "
+"descripción de la iteración sobre el campo `id` de entrega."
+
+#: ../../standard/docs/en/schema/changelog.md:60
+msgid ""
+"[#822](https://github.com/open-contracting/standard/pull/822) Integrate the "
+"[Extension Explorer](https://extensions.open-contracting.org/en/)."
+msgstr ""
+"[#822](https://github.com/open-contracting/standard/pull/822) Integra el "
+"[Explorador de Extensiones](https://extensions.open-contracting.org/es/)."
+
+#: ../../standard/docs/en/schema/changelog.md:61
+msgid ""
+"[#783](https://github.com/open-contracting/standard/pull/783) Add missing "
+"email address for the standard governance working group."
+msgstr ""
+"[# 783] (https://github.com/open-contracting/standard/pull/783) Agrega la "
+"dirección de correo electrónico faltante para el grupo de trabajo de "
+"gobernanza del estándar."
+
+#: ../../standard/docs/en/schema/changelog.md:62
+msgid "Replace ambiguous or incorrect terms:"
+msgstr "Reemplaza términos ambiguos o incorrectos:"
+
+#: ../../standard/docs/en/schema/changelog.md:63
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Use \"release "
+"`id`\" and \"release `date`\", instead of \"`releaseID`\" and "
+"\"`releaseDate`\""
+msgstr ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Usa \"release "
+"`id`\" y \"release `date`\", en vez de \"`releaseID`\" y \"`releaseDate`\"."
+
+#: ../../standard/docs/en/schema/changelog.md:64
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Use \"ocid "
+"prefix\", instead of \"publisher prefix\""
+msgstr ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Usa \"prefijo "
+"ocid\", en vez de \"prefijo del publicador\""
+
+#: ../../standard/docs/en/schema/changelog.md:65
+msgid ""
+"[#840](https://github.com/open-contracting/standard/pull/840) Use \"release "
+"package and record package\", instead of \"data package\", to avoid "
+"confusion with [Frictionless Data's Data Package "
+"specification](https://frictionlessdata.io/specs/data-package/)"
+msgstr ""
+"[#840](https://github.com/open-contracting/standard/pull/840) Usa \"paquete "
+"de entregas y paquete de registros\", en vez de \"paquete de datos\", para "
+"evitar confusión con el [Frictionless Data's Data Package "
+"specification](https://frictionlessdata.io/specs/data-package/)"
+
+#: ../../standard/docs/en/schema/changelog.md:66
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Use \"minor "
+"versions\", instead of \"decimal versions\" on deprecation page"
+msgstr ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Usa \"minor "
+"versions\", en vez de \"decimal versions\" en la página de deprecación."
+
+#: ../../standard/docs/en/schema/changelog.md:67
+msgid ""
+"[#823](https://github.com/open-contracting/standard/pull/823) Fix incorrect "
+"uses of \"records\", \"codelists\" and \"gazetteers\" on identifiers and "
+"codelists pages"
+msgstr ""
+"[#823] (https://github.com/open-contracting/standard/pull/823) Arregla los "
+"usos incorrectos de \"registros\", \"listas de códigos\" y \"diccionarios "
+"geográficos\" en las páginas de identificadores y listas de códigos"
+
+#: ../../standard/docs/en/schema/changelog.md:68
+msgid "Fix out-of-date content:"
+msgstr "Arregla contenido desactualizado:"
+
+#: ../../standard/docs/en/schema/changelog.md:69
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Remove "
+"sentence implying non-existence of unit classification scheme codelist on "
+"release schema reference page"
+msgstr ""
+"[# 831] (https://github.com/open-contracting/standard/pull/831) Elimina "
+"frases que impliquen que no existe una lista de códigos del esquema de "
+"clasificación de unidades en la página de referencia del esquema de entregas"
+
+#: ../../standard/docs/en/schema/changelog.md:70
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Remove "
+"sentence using non-existent 'notice' code on release schema reference page"
+msgstr ""
+"# 831] (https://github.com/open-contracting/standard/pull/831) Elimina "
+"frases usando un código de 'notice' inexistente en la página de referencia "
+"del esquema de releases."
+
+#: ../../standard/docs/en/schema/changelog.md:71
+msgid ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Remove "
+"reference to closed issue in API section"
+msgstr ""
+"[#831](https://github.com/open-contracting/standard/pull/831) Quita "
+"referencias a un issue cerrado en la sección API"
+
+#: ../../standard/docs/en/schema/changelog.md:72
+msgid "Add links to:"
+msgstr "Agrega links a:"
+
+#: ../../standard/docs/en/schema/changelog.md:73
+msgid ""
+"[#783](https://github.com/open-contracting/standard/pull/783) Community "
+"extensions relating to party details"
+msgstr ""
+"[#783](https://github.com/open-contracting/standard/pull/783) Extensiones de"
+" comunidad relacionadas a los detalles de las partes"
+
+#: ../../standard/docs/en/schema/changelog.md:74
+msgid ""
+"[#837](https://github.com/open-contracting/standard/pull/837) OCDS profiles"
+msgstr ""
+"[#837](https://github.com/open-contracting/standard/pull/837) Perfiles OCDS "
+
+#: ../../standard/docs/en/schema/changelog.md:75
+msgid ""
+"Correct typos in the documentation [#692](https://github.com/open-"
+"contracting/standard/pull/692) [#713](https://github.com/open-"
+"contracting/standard/pull/713) [#719](https://github.com/open-"
+"contracting/standard/pull/719) [#726](https://github.com/open-"
+"contracting/standard/pull/726) [#732](https://github.com/open-"
+"contracting/standard/pull/732) [#752](https://github.com/open-"
+"contracting/standard/pull/752) [#756](https://github.com/open-"
+"contracting/standard/pull/756) [#795](https://github.com/open-"
+"contracting/standard/pull/795) [#867](https://github.com/open-"
+"contracting/standard/pull/867)."
+msgstr ""
+"Corrige errores en la documentación [#692](https://github.com/open-"
+"contracting/standard/pull/692) [#713](https://github.com/open-"
+"contracting/standard/pull/713) [#719](https://github.com/open-"
+"contracting/standard/pull/719) [#726](https://github.com/open-"
+"contracting/standard/pull/726) [#732](https://github.com/open-"
+"contracting/standard/pull/732) [#752](https://github.com/open-"
+"contracting/standard/pull/752) [#756](https://github.com/open-"
+"contracting/standard/pull/756) [#795](https://github.com/open-"
+"contracting/standard/pull/795) [#867](https://github.com/open-"
+"contracting/standard/pull/867)."
+
+#: ../../standard/docs/en/schema/changelog.md:76
+msgid ""
+"Improve the process to build the documentation [#666](https://github.com"
+"/open-contracting/standard/pull/666) [#698](https://github.com/open-"
+"contracting/standard/pull/698) [#708](https://github.com/open-"
+"contracting/standard/pull/708) [#709](https://github.com/open-"
+"contracting/standard/pull/709) [#721](https://github.com/open-"
+"contracting/standard/pull/721) [#724](https://github.com/open-"
+"contracting/standard/pull/724) [#727](https://github.com/open-"
+"contracting/standard/pull/727) [#729](https://github.com/open-"
+"contracting/standard/pull/729) [#733](https://github.com/open-"
+"contracting/standard/pull/733) [#740](https://github.com/open-"
+"contracting/standard/pull/740) [#747](https://github.com/open-"
+"contracting/standard/pull/747) [#753](https://github.com/open-"
+"contracting/standard/pull/753) [#762](https://github.com/open-"
+"contracting/standard/pull/762) [#767](https://github.com/open-"
+"contracting/standard/pull/767) [#783](https://github.com/open-"
+"contracting/standard/pull/783) [#787](https://github.com/open-"
+"contracting/standard/pull/787) [#796](https://github.com/open-"
+"contracting/standard/pull/796) [#813](https://github.com/open-"
+"contracting/standard/pull/813) [#836](https://github.com/open-"
+"contracting/standard/pull/836)."
+msgstr ""
+"Mejora el proceso para construir la documentación  [#666](https://github.com"
+"/open-contracting/standard/pull/666) [#698](https://github.com/open-"
+"contracting/standard/pull/698) [#708](https://github.com/open-"
+"contracting/standard/pull/708) [#709](https://github.com/open-"
+"contracting/standard/pull/709) [#721](https://github.com/open-"
+"contracting/standard/pull/721) [#724](https://github.com/open-"
+"contracting/standard/pull/724) [#727](https://github.com/open-"
+"contracting/standard/pull/727) [#729](https://github.com/open-"
+"contracting/standard/pull/729) [#733](https://github.com/open-"
+"contracting/standard/pull/733) [#740](https://github.com/open-"
+"contracting/standard/pull/740) [#747](https://github.com/open-"
+"contracting/standard/pull/747) [#753](https://github.com/open-"
+"contracting/standard/pull/753) [#762](https://github.com/open-"
+"contracting/standard/pull/762) [#767](https://github.com/open-"
+"contracting/standard/pull/767) [#783](https://github.com/open-"
+"contracting/standard/pull/783) [#787](https://github.com/open-"
+"contracting/standard/pull/787) [#796](https://github.com/open-"
+"contracting/standard/pull/796) [#813](https://github.com/open-"
+"contracting/standard/pull/813) [#836](https://github.com/open-"
+"contracting/standard/pull/836)."
+
+#: ../../standard/docs/en/schema/changelog.md:0
+msgid "[1.1.3] - 2018-04-16"
+msgstr "[1.1.3] - 2018-04-16"
 
 #: ../../standard/docs/en/schema/changelog.md:0
 #: ../../standard/docs/en/schema/changelog.md:0
 msgid "Codelist updates"
 msgstr "Actualizaciones de listado de códigos"
 
-#: ../../standard/docs/en/schema/changelog.md:10
+#: ../../standard/docs/en/schema/changelog.md:82
 msgid "Update currency codelist for ISO4217 amendment 165 (2017-12-14)."
 msgstr ""
 "Actualización del listado de códigos de moneda ISO4217 para la enmienda 165 "
@@ -50,7 +703,7 @@ msgstr ""
 msgid "Schema fixes"
 msgstr "Correcciones en el esquema"
 
-#: ../../standard/docs/en/schema/changelog.md:14
+#: ../../standard/docs/en/schema/changelog.md:86
 msgid ""
 "[#646](https://github.com/open-contracting/standard/pull/646) Disallow use "
 "of `null` as an item in the array for "
@@ -60,7 +713,7 @@ msgstr ""
 "uso de `null` como artículo en la lista "
 "`Tender.additionalProcurementCategories`."
 
-#: ../../standard/docs/en/schema/changelog.md:15
+#: ../../standard/docs/en/schema/changelog.md:87
 msgid ""
 "[#639](https://github.com/open-contracting/standard/issues/639) Make `name` "
 "field optional for `OrganizationReference`."
@@ -68,7 +721,7 @@ msgstr ""
 "[#639](https://github.com/open-contracting/standard/issues/639) Hacer que el"
 " campo `name` sea opcional para` OrganizationReference`."
 
-#: ../../standard/docs/en/schema/changelog.md:16
+#: ../../standard/docs/en/schema/changelog.md:88
 msgid ""
 "[#630](https://github.com/open-contracting/standard/issues/630) Allow "
 "optional field `Item.unit` to be `null`."
@@ -76,7 +729,7 @@ msgstr ""
 "[#630](https://github.com/open-contracting/standard/issues/630) Permitir que"
 " el campo opcional `Item.unit` sea` null`."
 
-#: ../../standard/docs/en/schema/changelog.md:17
+#: ../../standard/docs/en/schema/changelog.md:89
 msgid ""
 "[#603](https://github.com/open-contracting/standard/issues/603), "
 "[#645](https://github.com/open-contracting/standard/issues/645) Add "
@@ -88,7 +741,7 @@ msgstr ""
 "definiciones a Entrega, planning.budget, Milestone, Organization.address, "
 "Organization.contactPoint, Classification, Identifier, Value y Period."
 
-#: ../../standard/docs/en/schema/changelog.md:18
+#: ../../standard/docs/en/schema/changelog.md:90
 msgid ""
 "Make `record-package-schema.json` use the `codelist` property to reference "
 "`releaseTag.csv`, and update the `enum` accordingly."
@@ -96,7 +749,7 @@ msgstr ""
 "Hace que `record-package-schema.json` use la propiedad `codelist` para hacer"
 " referencia a `releaseTag.csv`, y actualizar el `enum` ."
 
-#: ../../standard/docs/en/schema/changelog.md:19
+#: ../../standard/docs/en/schema/changelog.md:91
 msgid ""
 "[#578](https://github.com/open-contracting/standard/issues/578) Update "
 "definition of `buyer` to cover goods, works and services, and multiple "
@@ -110,7 +763,7 @@ msgstr ""
 msgid "Documentation fixes"
 msgstr "Correcciones de documentación"
 
-#: ../../standard/docs/en/schema/changelog.md:23
+#: ../../standard/docs/en/schema/changelog.md:95
 msgid ""
 "[#633](https://github.com/open-contracting/standard/issues/633) Update "
 "schema reference page to display `Release.relatedProcesses`, "
@@ -120,7 +773,7 @@ msgstr ""
 " página de referencia del esquema para mostrar `Release.relatedProcesses`,` "
 "Planning.documents` y `Contract.relatedProcesses`."
 
-#: ../../standard/docs/en/schema/changelog.md:24
+#: ../../standard/docs/en/schema/changelog.md:96
 msgid ""
 "[#634](https://github.com/open-contracting/standard/issues/634) Clarify "
 "definitions of core, community and local extensions."
@@ -132,7 +785,7 @@ msgstr ""
 msgid "Extension fixes"
 msgstr "Corrección de extensiones"
 
-#: ../../standard/docs/en/schema/changelog.md:28
+#: ../../standard/docs/en/schema/changelog.md:100
 msgid ""
 "[#40](https://github.com/open-contracting/ocds-extensions/issues/40), "
 "[#43](https://github.com/open-contracting/ocds-extensions/issues/43), "
@@ -152,7 +805,7 @@ msgstr ""
 " `nulo`, permite que los campos opcionales sean` nulos`, usa "
 "`OrganizationReference` en lugar de` Organization`."
 
-#: ../../standard/docs/en/schema/changelog.md:30
+#: ../../standard/docs/en/schema/changelog.md:102
 msgid ""
 "Old and unused scripts have been removed from the documentation repository, "
 "and a number of script dependencies have been updated."
@@ -164,7 +817,7 @@ msgstr ""
 msgid "[1.1.2] - 2017-11-10"
 msgstr "[1.1.2] - 2017-11-10"
 
-#: ../../standard/docs/en/schema/changelog.md:36
+#: ../../standard/docs/en/schema/changelog.md:108
 msgid ""
 "[554](https://github.com/open-contracting/standard/issues/554) - **Update "
 "currency codelist for ISO4217 amendment 163 (2017-06-09)**. Note: XBT "
@@ -183,46 +836,46 @@ msgstr "[1.1.1] - 2017-07-31"
 msgid "Bug fixes"
 msgstr "Corrección de Bugs"
 
-#: ../../standard/docs/en/schema/changelog.md:42
+#: ../../standard/docs/en/schema/changelog.md:114
 msgid ""
 "[#482](https://github.com/open-contracting/standard/issues/482) **[Allow "
 "parties.role to be set to `null`](https://github.com/open-"
 "contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)**"
-" - required by the [merging approach](http://standard.open-"
+" - required by the [merging approach](https://standard.open-"
 "contracting.org/1.1/en/schema/merging/)."
 msgstr ""
 "[#482](https://github.com/open-contracting/standard/issues/482) **[Permitir "
-"que parties.role se establezca en null](https://github.com/open-"
+"que parties.role sea establecido a `null`](https://github.com/open-"
 "contracting/standard/pull/502/commits/475abf598063aae5c22e07baba015d960fcc3a95)**"
-" - requerido por el [enfoque de fusión](http://standard.open-"
-"contracting.org/1.1/en/schema/merging/)."
+" - requerido por la [estrategia de fusión](https://standard.open-"
+"contracting.org/1.1/es/schema/merging/)."
 
-#: ../../standard/docs/en/schema/changelog.md:43
+#: ../../standard/docs/en/schema/changelog.md:115
 msgid ""
 "[#422](https://github.com/open-contracting/standard/issues/422) **[Including"
-" currency codelist in documentation and schema](http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#currency)** to support "
-"validation of currency values."
+" currency codelist in documentation and schema](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#currency)** to support validation "
+"of currency values."
 msgstr ""
 "[#422](https://github.com/open-contracting/standard/issues/422) "
-"**[Incluyendo la lista de códigos de moneda en la documentación y el "
-"esquema](http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#currency)** para validar los "
-"valores de moneda."
+"**[Incluyendo la lista de códigos de moneda en la documentación y "
+"esquema](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#currency)** para soportar la "
+"validación de valores de moneda. "
 
-#: ../../standard/docs/en/schema/changelog.md:44
+#: ../../standard/docs/en/schema/changelog.md:116
 msgid ""
 "[#479](https://github.com/open-contracting/standard/issues/479) **[Fixing "
 "incorrect requirement to include releases in record-package-"
-"schema.json](http://standard.open-"
+"schema.json](https://standard.open-"
 "contracting.org/1.1/en/schema/record_package/)**"
 msgstr ""
-"[#479](https://github.com/open-contracting/standard/issues/479) **[Corregir "
-"un requisito incorrecto para incluir las versiones en record-package-"
-"schema.json](http://standard.open-"
-"contracting.org/1.1/en/schema/record_package/)**"
+"[#479](https://github.com/open-contracting/standard/issues/479) **[Arreglar "
+"requerimiento incorrecto de incluir entregas en record-package-"
+"schema.json](https://standard.open-"
+"contracting.org/1.1/es/schema/record_package/)**"
 
-#: ../../standard/docs/en/schema/changelog.md:45
+#: ../../standard/docs/en/schema/changelog.md:117
 msgid ""
 "[#475](https://github.com/open-contracting/standard/issues/475) **Adding "
 "enum arrays to all fields in the schema with a closed codelist** to support "
@@ -236,10 +889,10 @@ msgstr ""
 msgid "Minor revisions"
 msgstr "Revisiones menores"
 
-#: ../../standard/docs/en/schema/changelog.md:49
+#: ../../standard/docs/en/schema/changelog.md:121
 msgid ""
 "[#471](https://github.com/open-contracting/standard/issues/471) **[Updating "
-"milestoneType codelist](http://standard.open-"
+"milestoneType codelist](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#milestone-type)** replacing "
 "'planning' with 'preProcurement' and 'adjudication' with 'assessment' and "
 "introducing codes for 'approval' and 'financing'. This is an open codelist, "
@@ -247,30 +900,30 @@ msgid ""
 "codes should do so."
 msgstr ""
 "[#471](https://github.com/open-contracting/standard/issues/471) "
-"**[Actualización de la lista de códigos de milestoneType](http://standard"
-".open-contracting.org/1.1/en/schema/codelists/#milestone-type)**  "
-"sustituyendo «planning» por «preProcurement» y «adjudication» por "
-"«assessment» e introduciendo códigos de «aprobación» y «financiación». Esta "
-"es una lista de códigos abierta, por lo que los códigos anteriores siguen "
-"siendo válidos, pero los editores capaces de actualizar a los nuevos códigos"
-" deben hacerlo."
+"**[Actualizar lista de códigos milestoneType](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#milestone-type)** reemplazando  "
+"'planning'  con 'preProcurement'  y 'adjudication' con 'assessment' e "
+"introduciendo códigos para 'approval' y  'financing'. Esta es una lista de "
+"códigos abierta, por lo que los códigos anteriores siguen siendo válidos, "
+"pero los publicadores que puedan actualizar los nuevos códigos deberían "
+"hacerlo."
 
-#: ../../standard/docs/en/schema/changelog.md:50
+#: ../../standard/docs/en/schema/changelog.md:122
 msgid ""
 "[#473](https://github.com/open-contracting/standard/issues/473) **[Updating "
-"definition of contractSchedule in documentType codelist](http://standard"
+"definition of contractSchedule in documentType codelist](https://standard"
 ".open-contracting.org/1.1/en/schema/codelists/#document-type)**"
 msgstr ""
 "[#473](https://github.com/open-contracting/standard/issues/473) "
-"**[Actualización de la definición de contractSchedules en la lista de "
-"códigos de documentType](http://standard.open-"
-"contracting.org/1.1-dev/en/schema/codelists/#document-type)**"
+"**[Actualizar la definición de contractSchedule en la lista de códigos "
+"documentType](https://standard.open-contracting.org/1.1/es/schema/codelists"
+"/#document-type)**"
 
 #: ../../standard/docs/en/schema/changelog.md:0
 msgid "Documentation improvements"
 msgstr "Mejoras en la documentación"
 
-#: ../../standard/docs/en/schema/changelog.md:54
+#: ../../standard/docs/en/schema/changelog.md:126
 msgid ""
 "**Fixing typographic errors throughout the documentation and codelist "
 "descriptions**"
@@ -278,22 +931,22 @@ msgstr ""
 "**Corrección de los errores tipográficos a lo largo de la documentación y "
 "descripciones de la lista de códigos**"
 
-#: ../../standard/docs/en/schema/changelog.md:55
+#: ../../standard/docs/en/schema/changelog.md:127
 msgid ""
 "[#480](https://github.com/open-"
 "contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe)"
-" **[Updating basic, intermediate, advanced](http://standard.open-"
-"contracting.org/1.1/en/implementation/levels/) publication guidance** "
-"- to ensure tables and text are aligned."
+" **[Updating basic, intermediate, advanced](https://standard.open-"
+"contracting.org/1.1/en/implementation/levels/) publication guidance** - to "
+"ensure tables and text are aligned."
 msgstr ""
 "[#480](https://github.com/open-"
 "contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe)"
-" **Actualización de la guía de publicación [básica, intermedia, "
-"avanzada](http://standard.open-"
-"contracting.org/1.1/en/implementation/levels/)** - para garantizar que"
-" las tablas y el texto estén alineados."
+" **[Actualizar las guías de publicación de niveles básico, intermedio, y "
+"avanzado](https://standard.open-"
+"contracting.org/1.1/es/implementation/levels/)** - para asegurarse que las "
+"tablas y el texto estén alineados."
 
-#: ../../standard/docs/en/schema/changelog.md:56
+#: ../../standard/docs/en/schema/changelog.md:128
 msgid ""
 "[#489](https://github.com/open-contracting/standard/issues/489) **Listing "
 "the milestone documents extension as a core extension** - and removing it "
@@ -306,26 +959,26 @@ msgstr ""
 " necesaria para publicadores con datos heredados que contengan documentos a "
 "nivel del hito."
 
-#: ../../standard/docs/en/schema/changelog.md:57
+#: ../../standard/docs/en/schema/changelog.md:129
 msgid ""
 "[#493](https://github.com/open-contracting/standard/issues/493) **[Updating "
 "the description of the Organization Identifier Scheme "
-"codelist](http://standard.open-contracting.org/1.1/en/schema/codelists"
+"codelist](https://standard.open-contracting.org/1.1/en/schema/codelists"
 "/#organization-identifier-scheme)** to reflect that the codelist is now "
 "maintained by [org-id.guide](http://www.org-id.guide/)."
 msgstr ""
 "[#493](https://github.com/open-contracting/standard/issues/493) "
-"**[Actualizar la descripción de la lista de códigos del Sistema de "
-"Identificación de Organizaciones](http://standard.open-"
-"contracting.org/1.1/en/schema/codelists/#organization-identifier-"
-"scheme)** para reflejar que la lista de códigos es ahora mantenida por [org-"
-"id.guide](http://www.org-id.guide/) ."
+"**[Actualizar la descripción de la lista de códigos de Esquema de "
+"Identificación de Organizaciones](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#organization-identifier-scheme)** "
+"para reflejar que la lista de códigos se mantiene ahora en [org-"
+"id.guide](http://www.org-id.guide/)."
 
 #: ../../standard/docs/en/schema/changelog.md:0
 msgid "Code and build process"
 msgstr "Código y proceso de construcción"
 
-#: ../../standard/docs/en/schema/changelog.md:61
+#: ../../standard/docs/en/schema/changelog.md:133
 msgid ""
 "[#506](https://github.com/open-contracting/standard/issues/506) **Removed "
 "make_field_definitions.py** from utility scripts as it is no longer "
@@ -335,7 +988,7 @@ msgstr ""
 " make_field_definitions.py** de los scripts de utilidad ya que ya no es "
 "necesario."
 
-#: ../../standard/docs/en/schema/changelog.md:62
+#: ../../standard/docs/en/schema/changelog.md:134
 msgid "**Addition of docstrings to key scripts**"
 msgstr "**Adición de docstrings a los scripts clave**"
 
@@ -347,16 +1000,16 @@ msgstr "[1.1.0] - 2017-05-01"
 msgid "Policy changes"
 msgstr "Cambios en la política"
 
-#: ../../standard/docs/en/schema/changelog.md:68
+#: ../../standard/docs/en/schema/changelog.md:140
 msgid ""
 "[#401](https://github.com/open-contracting/standard/issues/401) "
-"**[Deprecation policy](http://standard.open-"
+"**[Deprecation policy](https://standard.open-"
 "contracting.org/1.1/en/schema/conformance_and_extensions/)** - The "
 "deprecation policy has been updated to support deprecation in decimal "
 "upgrades."
 msgstr ""
 "[#401](https://github.com/open-contracting/standard/issues/401) **[Política "
-"de descontinuación](http://standard.open-"
+"de descontinuación](https://standard.open-"
 "contracting.org/1.1/en/schema/conformance_and_extensions/)** - La política "
 "de descontinuación ha sido actualizada para soportar la descontinuación en "
 "las actualizaciones decimales."
@@ -371,10 +1024,10 @@ msgstr "Cambiado"
 msgid "Structural updates"
 msgstr "Actualizaciones estructurales"
 
-#: ../../standard/docs/en/schema/changelog.md:74
+#: ../../standard/docs/en/schema/changelog.md:146
 msgid ""
 "[#368](https://github.com/open-contracting/standard/issues/368) **[Updates "
-"to organization handling in OCDS](http://standard.open-"
+"to organization handling in OCDS](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#parties)** - We have updated the "
 "approach to include organization information in the standard from having "
 "embedded blocks of organization information, to using embedded cross-"
@@ -384,7 +1037,7 @@ msgid ""
 "contracting process, including multiple buyers."
 msgstr ""
 "[#368](https://github.com/open-contracting/standard/issues/368) "
-"**[Actualizaciones para el manejo de organizaciones en OCDS](http://standard"
+"**[Actualizaciones para el manejo de organizaciones en OCDS](https://standard"
 ".open-contracting.org/1.1/en/schema/reference/#parties)** - Hemos "
 "actualizado el enfoque para incluir la información de las organizaciones en "
 "el estándar; de tener bloques incrustados de información de la organización,"
@@ -395,10 +1048,10 @@ msgstr ""
 "partes involucradas en un proceso de contratación, incluyendo múltiples "
 "compradores."
 
-#: ../../standard/docs/en/schema/changelog.md:75
+#: ../../standard/docs/en/schema/changelog.md:147
 msgid ""
 "[#357](https://github.com/open-contracting/standard/issues/357) **[Amendment"
-" handling](http://standard.open-"
+" handling](https://standard.open-"
 "contracting.org/1.1/en/implementation/amendments/)** - We have replace "
 "amendment with an array of amendments, and have updated schema and guidance "
 "to remove the option of providing semi-structured changes in an amendment "
@@ -407,7 +1060,7 @@ msgid ""
 "amendment included in the new amendments array."
 msgstr ""
 "[#357](https://github.com/open-contracting/standard/issues/357) **[Manejo de"
-" enmiendas](http://standard.open-"
+" enmiendas](https://standard.open-"
 "contracting.org/1.1/en/implementation/amendments/)** - Hemos reemplazado la "
 "enmienda con una lista de enmiendas, y hemos actualizado el esquema y la "
 "orientación para eliminar la opción de proporcionar cambios "
@@ -420,59 +1073,59 @@ msgstr ""
 msgid "Schema validation updates"
 msgstr "Actualizaciones de validación de esquemas"
 
-#: ../../standard/docs/en/schema/changelog.md:79
+#: ../../standard/docs/en/schema/changelog.md:151
 msgid ""
 "[#329](https://github.com/open-contracting/standard/issues/329) **[Float for"
-" Item.quantity](http://standard.open-"
+" Item.quantity](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#item)** - Item quantities has been "
 "updated to 'number' to support decimal values (e.g 10.5 rather than just 10)"
 msgstr ""
 "[#329](https://github.com/open-contracting/standard/issues/329) **[Decimales"
-" para Item.quantity](http://standard.open-"
+" para Item.quantity](https://standard.open-"
 "contracting.org/1.1-dev/en/schema/reference/#item)** - Las cantidades de "
 "artículos se han actualizado a 'number' para soportar valores decimales (por"
 " ejemplo, 10.5 en lugar de sólo 10)"
 
-#: ../../standard/docs/en/schema/changelog.md:80
+#: ../../standard/docs/en/schema/changelog.md:152
 msgid ""
 "[#253](https://github.com/open-contracting/standard/issues/253) **[Negative "
-"amounts](http://standard.open-"
+"amounts](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#budget)** - We have added support "
 "for negative amounts in transactions"
 msgstr ""
 "[#253](https://github.com/open-contracting/standard/issues/253) **[Montos "
-"negativos](http://standard.open-"
+"negativos](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#budget)** - Hemos agregado la "
 "posibilidad de incluir montos negativos en las transacciones"
 
-#: ../../standard/docs/en/schema/changelog.md:81
+#: ../../standard/docs/en/schema/changelog.md:153
 msgid ""
 "[#323](https://github.com/open-contracting/standard/issues/323) **[Standard "
-"should specify use of UTF-8 for encoding JSON](http://standard.open-"
+"should specify use of UTF-8 for encoding JSON](https://standard.open-"
 "contracting.org/1.1/en/implementation/serialization/#json)** - We now "
 "recommend use of I-JSON and UTF-8 for JSON publication"
 msgstr ""
 "[#323](https://github.com/open-contracting/standard/issues/323) **[El "
 "estándar debe especificar el uso de UTF-8 para codificar "
-"JSON](http://standard.open-"
+"JSON](https://standard.open-"
 "contracting.org/1.1/en/implementation/serialization/#json)** - Ahora "
 "recomendamos el uso de I-JSON y UTF-8 para la publicación de JSON"
 
-#: ../../standard/docs/en/schema/changelog.md:82
+#: ../../standard/docs/en/schema/changelog.md:154
 msgid ""
 "[#166](https://github.com/open-contracting/standard/issues/166) **[Indicate "
-"encoding for CSV serializations](http://standard.open-"
+"encoding for CSV serializations](https://standard.open-"
 "contracting.org/1.1/en/implementation/serialization/#multi-table)** - We "
 "have added information on CSV encoding to the implementation guidance to "
 "recommend UTF-8 or Windows-1252."
 msgstr ""
-"[#166](https://github.com/open-contracting/standard/issues/166) **[Indica la"
-" codificación de las serializaciones de CSV](http://standard.open-"
-"contracting.org/1.1/en/implementation/serialization/#multi-table)** - Hemos "
-"añadido información sobre codificación CSV a la guía de implementación para "
-"recomendar UTF-8 o Windows-1252."
+"[#166](https://github.com/open-contracting/standard/issues/166) **[Indicar "
+"codificación para serializaciones CSV](https://standard.open-"
+"contracting.org/1.1/es/implementation/serialization/#multi-table)** - Hemos "
+"agregado información sobre la codificación CSV a la guía de implementación "
+"para recomendar UTF-8 o Windows-1252."
 
-#: ../../standard/docs/en/schema/changelog.md:83
+#: ../../standard/docs/en/schema/changelog.md:155
 msgid ""
 "[#336](https://github.com/open-contracting/standard/issues/336) **[Codelist "
 "properties in schema](https://github.com/open-"
@@ -489,10 +1142,10 @@ msgstr ""
 "(versiones CSV) en el esquema. Esto se utilizará en futuras versiones del "
 "validador para soportar la validación contra las listas de códigos."
 
-#: ../../standard/docs/en/schema/changelog.md:84
+#: ../../standard/docs/en/schema/changelog.md:156
 msgid ""
 "[#301](https://github.com/open-contracting/standard/issues/301) "
-"**[Specifying versions and extensions in package metadata](http://standard"
+"**[Specifying versions and extensions in package metadata](https://standard"
 ".open-contracting.org/1.1/en/schema/records_reference/#package-metadata)** -"
 " We have updated the package schemas to require that version is declared, "
 "and to provide a means of declaring extensions in use. This will be used in "
@@ -500,23 +1153,23 @@ msgid ""
 msgstr ""
 "[#301](https://github.com/open-contracting/standard/issues/301) "
 "**[Especificación de versiones y extensiones en los metadatos del "
-"paquete](http://standard.open-"
+"paquete](https://standard.open-"
 "contracting.org/1.1/en/schema/records_reference/#package-metadata)** - Hemos"
 " actualizado el esquema de paquetes para requerir que se declare la versión,"
 " y para proporcionar un medio para declarar las extensiones en uso. Esto se "
 "utilizará en futuras versiones del validador para soportar la validación "
 "contra extensiones."
 
-#: ../../standard/docs/en/schema/changelog.md:85
+#: ../../standard/docs/en/schema/changelog.md:157
 msgid ""
 "[#287](https://github.com/open-contracting/standard/issues/287) **[Remove "
-"all ocdsMerge strategies](http://standard.open-"
+"all ocdsMerge strategies](https://standard.open-"
 "contracting.org/1.1/en/schema/merging/)** - We have remove all 'merge "
 "strategies' from the schema as these are no longer required, now that all "
 "objects in arrays contain an id element."
 msgstr ""
 "[#287](https://github.com/open-contracting/standard/issues/287) **[Eliminar "
-"todas las estrategias de ocdsMerge](http://standard.open-"
+"todas las estrategias de ocdsMerge](https://standard.open-"
 "contracting.org/1.1/en/schema/merging/)** - Hemos eliminado todas las "
 "\"estrategias de combinación\" del esquema ya que éstas ya no son "
 "necesarias, ahora que todos los objetos de las matrices contienen un "
@@ -526,70 +1179,70 @@ msgstr ""
 msgid "Schema definition updates"
 msgstr "Actualizaciones de definición del esquema"
 
-#: ../../standard/docs/en/schema/changelog.md:89
+#: ../../standard/docs/en/schema/changelog.md:161
 msgid ""
 "[#372](https://github.com/open-contracting/standard/issues/372) **[Updates "
-"to transactions terminology](http://standard.open-"
+"to transactions terminology](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#transaction)** - We have replaced "
 "receiverOrganization and providerOrganization with payee and payer, to align"
 " with more familiar terminology, and have replaced 'amount' with 'value' for"
 " consistency with other areas of the standard."
 msgstr ""
 "[#372](https://github.com/open-contracting/standard/issues/372) "
-"**[Actualizaciones de la terminología de transacciones](http://standard"
+"**[Actualizaciones de la terminología de transacciones](https://standard"
 ".open-contracting.org/1.1/en/schema/reference/#transaction)** - Hemos "
 "reemplazado recieverOrganization y providerOrganization con beneficiario y "
 "pagador, para alinear dichos términos con la terminología más familiar, y "
 "hemos reemplazado \"monto\" con \"valor\" para la coherencia con otras áreas"
 " del estándar."
 
-#: ../../standard/docs/en/schema/changelog.md:90
+#: ../../standard/docs/en/schema/changelog.md:162
 msgid ""
 "[#378](https://github.com/open-contracting/standard/issues/378) **[Updates "
-"to core budget block](http://standard.open-"
+"to core budget block](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#budget)** - We have updated "
 "references to the Fiscal Data Package in the schema."
 msgstr ""
 "[#378](https://github.com/open-contracting/standard/issues/378) "
-"**[Actualizaciones del bloque del presupuesto central](http://standard.open-"
+"**[Actualizaciones del bloque del presupuesto central](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#budget)** - Hemos actualizado "
 "referencias al Paquete de Datos Fiscales en el esquema."
 
-#: ../../standard/docs/en/schema/changelog.md:91
+#: ../../standard/docs/en/schema/changelog.md:163
 msgid ""
 "[#337](https://github.com/open-contracting/standard/issues/337) "
-"**[Definition of \"tenderer\" to enhance clarity](http://standard.open-"
+"**[Definition of \"tenderer\" to enhance clarity](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#tender)** - We have updated the "
 "definition of tenderer in the tenders block, and cross-referenced the bid "
 "extension."
 msgstr ""
 "[#337](https://github.com/open-contracting/standard/issues/337) "
-"**[Definición de \"licitador\" para mejorar la claridad](http://standard"
+"**[Definición de \"licitador\" para mejorar la claridad](https://standard"
 ".open-contracting.org/1.1/en/schema/reference/#tender)** - Hemos actualizado"
 " la definición de licitante en el bloque de licitaciones y hemos hecho una "
 "referencia cruzada a la extensión de ofertas."
 
-#: ../../standard/docs/en/schema/changelog.md:92
+#: ../../standard/docs/en/schema/changelog.md:164
 msgid ""
 "[#259](https://github.com/open-contracting/standard/issues/259) "
-"**[Enquiries](http://standard.open-"
-"contracting.org/1.1/en/extensions/enquiries/)** - We have updated the "
-"definition of hasEnquiries."
+"**[Enquiries](https://extensions.open-"
+"contracting.org/en/extensions/enquiries/)** - We have updated the definition"
+" of hasEnquiries."
 msgstr ""
 "[#259](https://github.com/open-contracting/standard/issues/259) "
-"**[Consultas](http://standard.open-"
-"contracting.org/1.1/en/extensions/enquiries/)** - Hemos actualizado la "
+"**[Enquiries](https://extensions.open-"
+"contracting.org/en/extensions/enquiries/)** - Hemos actualizado la "
 "definición de hasEnquiries."
 
-#: ../../standard/docs/en/schema/changelog.md:93
+#: ../../standard/docs/en/schema/changelog.md:165
 msgid ""
 "[#246](https://github.com/open-contracting/standard/issues/246) **[In what "
-"scope must a release ID be unique?](http://standard.open-"
+"scope must a release ID be unique?](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#release)** - We have updated the "
 "definition of release.id to reflect the scope in which it must be unique"
 msgstr ""
 "[#246](https://github.com/open-contracting/standard/issues/246) **[¿En qué "
-"ámbito debe ser un ID de entrega único?](http://standard.open-"
+"ámbito debe ser un ID de entrega único?](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#release)** - Hemos actualizado la "
 "definición de release.id para reflejar el ámbito en el que debe ser único"
 
@@ -597,51 +1250,52 @@ msgstr ""
 msgid "Closed codelist updates"
 msgstr "Actualizaciones de listas de códigos cerradas"
 
-#: ../../standard/docs/en/schema/changelog.md:97
+#: ../../standard/docs/en/schema/changelog.md:169
 msgid ""
 "[#201](https://github.com/open-contracting/standard/issues/201) **[Tender "
-"status](http://standard.open-contracting.org/1.1/en/schema/codelists"
-"/#tender-status)** - New 'pipeline' and 'withdrawn' codes have been "
+"status](https://standard.open-contracting.org/1.1/en/schema/codelists"
+"/#tender-status)** - New 'planning' and 'withdrawn' codes have been "
 "introduced to the tenderStatus codelist."
 msgstr ""
-"[#201](https://github.com/open-contracting/standard/issues/201) **[Estado de"
-" licitación](http://standard.open-contracting.org/1.1/en/schema/codelists"
-"/#tender-status)** - Se han introducido en la lista de códigos tenderStatus "
-"los nuevos códigos 'pipeline' y 'withdrawn'."
+"[#201](https://github.com/open-contracting/standard/issues/201) **[Estatus "
+"de la Licitación](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#tender-status)** - Nuevos códigos "
+"de  'planning' y 'withdrawn' se introdujeron a la lista de códigos "
+"tenderStatus."
 
-#: ../../standard/docs/en/schema/changelog.md:98
+#: ../../standard/docs/en/schema/changelog.md:170
 msgid ""
 "[#380](https://github.com/open-contracting/standard/issues/380) "
-"**[Procurement method](http://standard.open-"
+"**[Procurement method](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#method)** - A new code for 'direct'"
 " has been added the procurementMethod codelist"
 msgstr ""
 "[#380](https://github.com/open-contracting/standard/issues/380) **[Método de"
-" adquisición](http://standard.open-"
+" adquisición](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#method)** - Se ha añadido un nuevo "
 "código para 'direct' en la lista de códigos procurementMethod"
 
-#: ../../standard/docs/en/schema/changelog.md:99
+#: ../../standard/docs/en/schema/changelog.md:171
 msgid ""
 "[#373](https://github.com/open-contracting/standard/issues/373) **[Milestone"
-" status](http://standard.open-contracting.org/1.1/en/schema/codelists"
+" status](https://standard.open-contracting.org/1.1/en/schema/codelists"
 "/#milestone-status)** - We have updated the milestoneStatus codelist with a "
 "'scheduled' entry and revised definitions"
 msgstr ""
 "[#373](https://github.com/open-contracting/standard/issues/373) **[Estado "
-"del hito](http://standard.open-contracting.org/1.1/en/schema/codelists"
+"del hito](https://standard.open-contracting.org/1.1/en/schema/codelists"
 "/#milestone-status)** - Hemos actualizado la lista de códigos "
 "milestoneStatus con una entrada 'scheduled' y definiciones revisadas"
 
-#: ../../standard/docs/en/schema/changelog.md:100
+#: ../../standard/docs/en/schema/changelog.md:172
 msgid ""
 "[#297](https://github.com/open-contracting/standard/issues/297) **[Currency "
-"codelist external link](http://standard.open-"
+"codelist external link](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#currency)** - We have fixed the "
 "external link for currency codelists to refer to the official ISO source."
 msgstr ""
 "[#297](https://github.com/open-contracting/standard/issues/297) **[Enlace "
-"externo de la lista de códigos de monedas](http://standard.open-"
+"externo de la lista de códigos de monedas](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#currency)** - Hemos fijado el "
 "enlace externo para que las listas de códigos de monedas se refieran a la "
 "fuente ISO oficial."
@@ -650,53 +1304,53 @@ msgstr ""
 msgid "Open codelist updates"
 msgstr "Actualizaciones de listas de códigos abiertas"
 
-#: ../../standard/docs/en/schema/changelog.md:104
+#: ../../standard/docs/en/schema/changelog.md:176
 msgid ""
 "[#386](https://github.com/open-contracting/standard/issues/386) **[Document "
-"type](http://standard.open-contracting.org/1.1/en/schema/codelists"
+"type](https://standard.open-contracting.org/1.1/en/schema/codelists"
 "/#document-type)** - New codes have been added to the documentType codelist,"
 " and definitions of codes updated."
 msgstr ""
 "[#386](https://github.com/open-contracting/standard/issues/386) **[Tipo de "
-"documento](http://standard.open-contracting.org/1.1/en/schema/codelists"
+"documento](https://standard.open-contracting.org/1.1/en/schema/codelists"
 "/#document-type)** - Se han añadido nuevos códigos a la lista de códigos "
 "documentType y se han actualizado las definiciones de los códigos."
 
-#: ../../standard/docs/en/schema/changelog.md:105
+#: ../../standard/docs/en/schema/changelog.md:177
 msgid ""
 "[#322](https://github.com/open-contracting/standard/issues/322) "
-"**[Submission Method Codelist](http://standard.open-"
+"**[Submission Method Codelist](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#submission-method)** - The "
 "submissionMethod codelist has been updated"
 msgstr ""
 "[#322](https://github.com/open-contracting/standard/issues/322) **[Lista de "
-"códigos de Método de envío](http://standard.open-"
+"códigos de Método de envío](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#submission-method)** - La lista de "
 "códigos de submissionMethod ha sido actualizada"
 
-#: ../../standard/docs/en/schema/changelog.md:106
+#: ../../standard/docs/en/schema/changelog.md:178
 msgid ""
 "[#387](https://github.com/open-contracting/standard/issues/387) **[Codelist "
-"updates: Item Classification Scheme](http://standard.open-"
+"updates: Item Classification Scheme](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#item-classification-scheme)** - New"
 " entries have been added to the itemClassificationScheme codelist"
 msgstr ""
 "[#387](https://github.com/open-contracting/standard/issues/387) "
 "**[Actualizaciones de lista de códigos: Esquema de clasificación de "
-"artículos](http://standard.open-contracting.org/1.1/en/schema/codelists"
+"artículos](https://standard.open-contracting.org/1.1/en/schema/codelists"
 "/#item-classification-scheme)** - Se han añadido nuevas entradas a la lista "
 "de códigos itemClassificationScheme"
 
-#: ../../standard/docs/en/schema/changelog.md:107
+#: ../../standard/docs/en/schema/changelog.md:179
 msgid ""
 "[#385](https://github.com/open-contracting/standard/issues/385) **[Codelist "
-"updates: awardCriteria](http://standard.open-"
+"updates: awardCriteria](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#award-criteria)** - Revising the "
 "awardCriteria codelist, with all existing codes deprecated and a new set of "
 "codes introduced."
 msgstr ""
 "[# 385](https://github.com/open-contracting/standard/issues/385) "
-"**[Actualizaciones de la lista de códigos: awardCriteria](http://standard"
+"**[Actualizaciones de la lista de códigos: awardCriteria](https://standard"
 ".open-contracting.org/1.1/en/schema/codelists/#award-criteria)** - Revisión "
 "de la lista de códigos awardCriteria, con la eliminación de todos los "
 "códigos  obsoletos y  la introducción de un nuevo conjunto de códigos."
@@ -705,82 +1359,82 @@ msgstr ""
 msgid "Added"
 msgstr "Agregados"
 
-#: ../../standard/docs/en/schema/changelog.md:112
+#: ../../standard/docs/en/schema/changelog.md:184
 msgid ""
 "[#371](https://github.com/open-contracting/standard/issues/371) **[Linking "
-"related processes](http://standard.open-"
+"related processes](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#relatedprocess)** - We have "
 "introduced a new RelatedProcess block at the release and contract level"
 msgstr ""
 "[#371](https://github.com/open-contracting/standard/issues/371) "
-"**[Vinculación de procesos relacionados](http://standard.open-"
+"**[Vinculación de procesos relacionados](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#relatedprocess)** - Hemos "
 "introducido un nuevo bloque RelatedProcess en el nivel de entrega y  en el "
 "nivel de contrato"
 
-#: ../../standard/docs/en/schema/changelog.md:113
+#: ../../standard/docs/en/schema/changelog.md:185
 msgid ""
 "[#374](https://github.com/open-contracting/standard/issues/374) **[Duration "
-"in periods](http://standard.open-"
+"in periods](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#period)** - We have introduced "
 "fields for duration in days, and maximum extent, to the period building "
 "block"
 msgstr ""
 "[#374](https://github.com/open-contracting/standard/issues/374) **[Duración "
-"en períodos](http://standard.open-"
+"en períodos](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#period)** - Hemos introducido los "
 "campos para la duración en días, y la extensión máxima, al bloque de del "
 "período"
 
-#: ../../standard/docs/en/schema/changelog.md:114
+#: ../../standard/docs/en/schema/changelog.md:186
 msgid ""
 "[#374](https://github.com/open-contracting/standard/issues/374) **[Contract "
-"and Award Periods in Tender](http://standard.open-"
+"and Award Periods in Tender](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#tender)** - We have introduced "
 "contract period in tender and updated the definition of award period."
 msgstr ""
 "[#374](https://github.com/open-contracting/standard/issues/374) **[Períodos "
-"de Contrato y Adjudicación en Licitación](http://standard.open-"
+"de Contrato y Adjudicación en Licitación](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#tender)** - Hemos introducido el "
 "período del contrato en la licitación y actualizado la definición del "
 "período de adjudicación."
 
-#: ../../standard/docs/en/schema/changelog.md:115
+#: ../../standard/docs/en/schema/changelog.md:187
 msgid ""
 "[#376](https://github.com/open-contracting/standard/issues/376) **[Contract "
-"type (supplies, works and services)](http://standard.open-"
+"type (supplies, works and services)](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#procurement-category)** - We have "
 "introduced a procurementCategory field to specify whether contracts are for "
 "supplies, works, services, consultancyServices or mixed"
 msgstr ""
 "[#376](https://github.com/open-contracting/standard/issues/376) **[Tipo de "
-"contrato (suministros, obras y servicios)](http://standard.open-"
+"contrato (suministros, obras y servicios)](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#procurement-category)** - Hemos "
 "introducido un campo procurementCategory para especificar si los contratos "
 "son para suministros, trabajos, servicios, consultoría o servicios mixtos"
 
-#: ../../standard/docs/en/schema/changelog.md:116
+#: ../../standard/docs/en/schema/changelog.md:188
 msgid ""
 "[#373](https://github.com/open-contracting/standard/issues/373) **[Milestone"
-" types](http://standard.open-contracting.org/1.1/en/schema/codelists"
+" types](https://standard.open-contracting.org/1.1/en/schema/codelists"
 "/#milestone-type)** - We have introduced the milestoneType property and "
 "codelist"
 msgstr ""
 "[#373](https://github.com/open-contracting/standard/issues/373) **[Tipos de "
-"hitos](http://standard.open-contracting.org/1.1/en/schema/codelists"
+"hitos](https://standard.open-contracting.org/1.1/en/schema/codelists"
 "/#milestone-type)** - Hemos introducido la propiedad milestoneType y la "
 "lista de códigos"
 
-#: ../../standard/docs/en/schema/changelog.md:117
+#: ../../standard/docs/en/schema/changelog.md:189
 msgid ""
 "[#366](https://github.com/open-contracting/standard/issues/366) **[Unit of "
-"Measure - additional fields and codelist](http://standard.open-"
+"Measure - additional fields and codelist](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#unit)** - We have introduced a "
 "structured classification for unitOfMeasure on each item, with a "
 "recommendation to use UNCEFACT."
 msgstr ""
 "[#366](https://github.com/open-contracting/standard/issues/366) **[Unidad de"
-" medida - campos adicionales y lista de códigos](http://standard.open-"
+" medida - campos adicionales y lista de códigos](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#unit)** - Hemos introducido una "
 "clasificación estructurada para unitOfMeasure en cada ítem, con una "
 "recomendación para usar UNCEFACT."
@@ -789,191 +1443,192 @@ msgstr ""
 msgid "Extensions"
 msgstr "Extensiones"
 
-#: ../../standard/docs/en/schema/changelog.md:121
+#: ../../standard/docs/en/schema/changelog.md:193
 msgid ""
 "[#335](https://github.com/open-contracting/standard/issues/335) **[Core and "
-"community extensions](http://standard.open-"
-"contracting.org/1.1/en/extensions/developing/)** - We have introduced "
-"widespread use of extensions throughout the standard. An extension provides "
-"fields and data structures that are optional, either because   (a) they are "
-"only relevant in particular contexts or contracting processes; or   (b) they"
-" represent a 'stretch goal' for most data publishers, and so are not "
-"currently suitable for inclusion in the main standard.   We divide these "
-"extensions into 'core extensions' which have wide enough relevance, and "
-"technical maturity to be included in the main standard documentation (and "
-"which are versioned along with the standard documentation), and 'community "
-"extensions' which may have less technical maturity, or which might be "
-"versioned independently of the main standard."
+"community extensions](https://standard.open-"
+"contracting.org/1.1/en/extensions/)** - We have introduced widespread use of"
+" extensions throughout the standard. An extension provides fields and data "
+"structures that are optional, either because   (a) they are only relevant in"
+" particular contexts or contracting processes; or   (b) they represent a "
+"'stretch goal' for most data publishers, and so are not currently suitable "
+"for inclusion in the main standard.   We divide these extensions into 'core "
+"extensions' which have wide enough relevance, and technical maturity to be "
+"included in the main standard documentation (and which are versioned along "
+"with the standard documentation), and 'community extensions' which may have "
+"less technical maturity, or which might be versioned independently of the "
+"main standard."
 msgstr ""
-"[# 335](https://github.com/open-contracting/standard/issues/335) "
-"**[Extensiones base y de comunidad](http://standard.open-"
-"contracting.org/1.1/en/extensions/developing/)** - Hemos introducido el uso "
-"generalizado de extensiones a lo largo del estándar. Una extensión "
-"proporciona campos y estructuras de datos que son opcionales, ya sea porque "
-"(a) sólo son relevantes en contextos particulares o procesos de "
-"contratación; o (b) representan un \"objetivo de extensión\" para la mayoría"
-" de los publicadores de datos, por lo que actualmente no son adecuados para "
-"su inclusión en el estándar central. Dividimos estas extensiones en "
-"\"extensiones centrales\" que tienen suficiente relevancia y madurez técnica"
-" para ser incluidas en la documentación principal del estándar (y que se "
-"versionan junto con la documentación del estándar) y \"extensiones de "
-"comunidad\" que pueden tener menos madurez técnica, o que podrían ser "
-"versionadas independientemente del estándar central."
+"[#335](https://github.com/open-contracting/standard/issues/335) "
+"**[Extensiones centrales y comunitarias](https://standard.open-"
+"contracting.org/1.1/en/extensions/)**  Hemos introducido el uso generalizado"
+" de extensiones en todo el estándar. Una extensión proporciona campos y "
+"estructuras de datos que son opcionales, ya sea porque (a) sólo son "
+"relevantes en contextos o procesos de contratación particulares; o (b) "
+"representan un \"objetivo estricto\" para la mayoría de los publicadores, "
+"por lo que actualmente no son adecuados para su inclusión en el estándar "
+"principal. Dividimos estas extensiones en 'extensiones centrales' que tienen"
+" una relevancia lo suficientemente amplia y madurez técnica para ser "
+"incluidas en la documentación estándar principal (y que están versionadas "
+"junto con la documentación estándar), y 'extensiones comunitarias' que "
+"pueden tener menos madurez técnica, o que podría ser versionados "
+"independientemente del estándar principal."
 
-#: ../../standard/docs/en/schema/changelog.md:122
+#: ../../standard/docs/en/schema/changelog.md:194
 msgid ""
 "[#259](https://github.com/open-contracting/standard/issues/259) "
-"**[Enquiries](http://standard.open-"
-"contracting.org/1.1/en/extensions/enquiries/)** - We have introduced a core "
+"**[Enquiries](https://extensions.open-"
+"contracting.org/en/extensions/enquiries/)** - We have introduced a core "
 "enquiries extension for providing information on enquiries received during "
 "the tender stage."
 msgstr ""
-"[# 259](https://github.com/open-contracting/standard/issues/259) "
-"**[Consultas](http://standard.open-"
-"contracting.org/1.1/en/extensions/enquiries/)** - Hemos introducido una "
-"extensión de preguntas clave para proporcionar información sobre las "
-"consultas recibidas durante la fase de licitación."
+"[#259](https://github.com/open-contracting/standard/issues/259) "
+"**[Enquiries](https://extensions.open-"
+"contracting.org/en/extensions/enquiries/)** - Hemos introducido una "
+"extensión de consultas básicas para proporcionar información sobre las "
+"consultas recibidas durante la etapa de licitación."
 
-#: ../../standard/docs/en/schema/changelog.md:123
+#: ../../standard/docs/en/schema/changelog.md:195
 msgid ""
 "[#342](https://github.com/open-contracting/standard/issues/342) **[Overall "
-"contracting process description](http://standard.open-"
+"contracting process description](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#release)** - We have introduced a "
 "new top-level title and description for the contracting process as a core "
 "extension."
 msgstr ""
 "[#342](https://github.com/open-contracting/standard/issues/342) "
-"**[Descripción general del proceso de contratación](http://standard.open-"
+"**[Descripción general del proceso de contratación](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#release)** - Hemos introducido un "
 "nuevo título y descripción de primer nivel para el proceso de contratación "
 "como una extensión base."
 
-#: ../../standard/docs/en/schema/changelog.md:124
+#: ../../standard/docs/en/schema/changelog.md:196
 msgid ""
 "[#274](https://github.com/open-contracting/standard/issues/274) **[New "
-"property of contract: extendsContractID](http://standard.open-"
+"property of contract: extendsContractID](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#contract)** - We have introduced a "
 "new field 'extendsContractID' to the Contract block to support contract "
 "cross-referencing between contracts."
 msgstr ""
 "[#274](https://github.com/open-contracting/standard/issues/274) **[Nueva "
-"propiedad del contrato: extendsContractID](http://standard.open-"
+"propiedad del contrato: extendsContractID](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#contract)** - Hemos introducido un "
 "nuevo campo 'extendsContractID' en el bloque Contract para apoyar la "
 "referencia cruzada de contratos entre contratos."
 
-#: ../../standard/docs/en/schema/changelog.md:125
+#: ../../standard/docs/en/schema/changelog.md:197
 msgid ""
 "[#381](https://github.com/open-contracting/standard/issues/381) "
-"**[Lots](http://standard.open-contracting.org/1.1/en/extensions/lots/)** - "
-"We have introduced a core extension to provide a model for contracting "
+"**[Lots](https://extensions.open-contracting.org/en/extensions/lots/)** - We"
+" have introduced a core extension to provide a model for contracting "
 "processes which are divided into lots."
 msgstr ""
 "[#381](https://github.com/open-contracting/standard/issues/381) "
-"**[Lotes](http://standard.open-contracting.org/1.1/en/extensions/lots/)** - "
-"Hemos introducido una extensión base para proporcionar un modelo para los "
-"procesos de contratación que se dividen en lotes."
+"**[Lotes](https://extensions.open-contracting.org/es/extensions/lots/)** - "
+"Hemos introducido una extensión central para proporcionar un modelo para los"
+" procesos de contratación que se dividen en lotes."
 
-#: ../../standard/docs/en/schema/changelog.md:126
+#: ../../standard/docs/en/schema/changelog.md:198
 msgid ""
 "[#379](https://github.com/open-contracting/standard/issues/379) **[Bids and "
-"Bid Statistics](http://standard.open-"
-"contracting.org/1.1/en/extensions/bids/)** - We have introduced a core "
-"extension which provides a top level Bids section, with BidStatistics and "
-"Bid building blocks for detailed information on individual bids. This "
-"supersedes the current tender/tenderers section."
+"Bid Statistics](https://extensions.open-"
+"contracting.org/en/extensions/bids/)** - We have introduced a core extension"
+" which provides a top level Bids section, with BidStatistics and Bid "
+"building blocks for detailed information on individual bids. This supersedes"
+" the current tender/tenderers section."
 msgstr ""
 "[#379](https://github.com/open-contracting/standard/issues/379) "
-"**[Estadísticas de ofertas y ofertas](http://standard.open-"
-"contracting.org/1.1/en/extensions/bids/)** - Hemos introducido una extensión"
-" principal que proporciona una sección de ofertas a primer nivel, con "
-"BidStatistics y bloques de ofertas para obtener información detallada sobre "
-"las ofertas individuales. Esto supercede la sección actual de la sección de "
-"licitación/licitantes"
+"**[Estadísticas y Detalles de las Ofertas](https://extensions.open-"
+"contracting.org/es/extensions/bids/)** - Hemos introducido una extensión "
+"central que proporciona una sección de Ofertas de nivel superior, con "
+"bloques BidStatistics y Bid para obtener información detallada sobre las "
+"ofertas individuales. Esto sustituye a la actual sección de "
+"tender/tenderers."
 
-#: ../../standard/docs/en/schema/changelog.md:127
+#: ../../standard/docs/en/schema/changelog.md:199
 msgid ""
 "[#250](https://github.com/open-contracting/standard/issues/250) **[Location "
-"extension](http://standard.open-"
-"contracting.org/1.1/en/extensions/location/)** - We have moved the location "
+"extension](https://extensions.open-"
+"contracting.org/en/extensions/location/)** - We have moved the location "
 "extensions to become a core extension"
 msgstr ""
 "[#250](https://github.com/open-contracting/standard/issues/250) **[Extensión"
-" de ubicación](http://standard.open-"
-"contracting.org/1.1/en/extensions/location/)** - Se han movido las "
-"extensiones de ubicación para convertirlas en una extensión base"
+" de Ubicación](https://extensions.open-"
+"contracting.org/es/extensions/location/)** - Movimos las extensiones de "
+"ubicación para convertirlos en una extensión central."
 
-#: ../../standard/docs/en/schema/changelog.md:128
+#: ../../standard/docs/en/schema/changelog.md:200
 msgid ""
 "[#33](https://github.com/open-contracting/standard/issues/33) "
-"**[Participation fees (bid document and submission costs)](http://standard"
-".open-contracting.org/1.1/en/extensions/participation_fee/)** - We have "
-"introduced a core extension for declaring the participation fees related to "
-"a contracting process."
+"**[Participation fees (bid document and submission "
+"costs)](https://extensions.open-"
+"contracting.org/en/extensions/participation_fee/)** - We have introduced a "
+"core extension for declaring the participation fees related to a contracting"
+" process."
 msgstr ""
-"[#33](https://github.com/open-contracting/standard/issues/33) **[Tasas de "
-"participación (documento de licitación y costos de "
-"presentación)](http://standard.open-"
-"contracting.org/1.1/en/extensions/participation_fee/)** - Hemos introducido "
-"una extensión base para declarar las tarifas de participación relacionadas "
-"con un proceso de contratación."
+"[#33](https://github.com/open-contracting/standard/issues/33) **[Costos de "
+"Participación (documentos de oferta y costos de "
+"presentación)](https://extensions.open-"
+"contracting.org/es/extensions/participation_fee/)** - Hemos introducido una "
+"extensión central para declarar los costos de participación relacionados con"
+" un proceso de contratación."
 
-#: ../../standard/docs/en/schema/changelog.md:129
+#: ../../standard/docs/en/schema/changelog.md:201
 msgid ""
 "[#249](https://github.com/open-contracting/standard/issues/249) **[Extend "
-"contract with a supplier array](http://standard.open-"
-"contracting.org/1.1/en/extensions/contract_suppliers/)** - We have "
-"introduced a core extension to allow inclusion of supplier information at "
-"the contract level."
+"contract with a supplier array](https://extensions.open-"
+"contracting.org/en/extensions/contract_suppliers/)** - We have introduced a "
+"core extension to allow inclusion of supplier information at the contract "
+"level."
 msgstr ""
-"[#249](https://github.com/open-contracting/standard/issues/249) "
-"**[Prolongación de contrato con una matriz de proveedores](http://standard"
-".open-contracting.org/1.1/en/extensions/contract_suppliers/)** - Hemos "
-"introducido una extensión central para permitir la inclusión de información "
-"de proveedores a nivel de contrato."
+"#249](https://github.com/open-contracting/standard/issues/249) **[Extender "
+"la sección de contract con una lista de proveedores](https://extensions"
+".open-contracting.org/es/extensions/contract_suppliers/)** - Introducimos "
+"una extensión central para permitir la inclusión de información de "
+"proveedores a nivel contrato."
 
 #: ../../standard/docs/en/schema/changelog.md:0
 msgid "Deprecated"
 msgstr "Obsoletos"
 
-#: ../../standard/docs/en/schema/changelog.md:133
+#: ../../standard/docs/en/schema/changelog.md:205
 msgid ""
 "[#355](https://github.com/open-contracting/standard/issues/355) "
-"**[Deprecating milestone documents](http://standard.open-"
+"**[Deprecating milestone documents](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#milestone)** - We have deprecated "
 "milestone documents from core, and added a milestone documents extension for"
 " those who wish to continue to use documents at the milestone level."
 msgstr ""
 "[#355](https://github.com/open-contracting/standard/issues/355) "
-"**[Descontinuación de documentos de hitos](http://standard.open-"
+"**[Descontinuación de documentos de hitos](https://standard.open-"
 "contracting.org/1.1-dev/en/schema/reference/#milestone)** - Hemos "
 "descontinuado los documentos de hitos del estándar central y hemos añadido "
 "una extensión de documentos de hitos para aquellos que desean seguir usando "
 "documentos en el nivel del hito."
 
-#: ../../standard/docs/en/schema/changelog.md:134
+#: ../../standard/docs/en/schema/changelog.md:206
 msgid ""
 "[#368](https://github.com/open-contracting/standard/issues/368) **[Updates "
-"to organization handling in OCDS](http://standard.open-"
+"to organization handling in OCDS](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#parties)** - We have deprecated use"
 " of the full organization block at points other than the parties array."
 msgstr ""
 "[#368](https://github.com/open-contracting/standard/issues/368) "
-"**[Actualizaciones para el manejo de organización en OCDS](http://standard"
+"**[Actualizaciones para el manejo de organización en OCDS](https://standard"
 ".open-contracting.org/1.1/en/schema/reference/#parties)** - Hemos "
 "descontinuado el uso del bloque completo de la organización en puntos "
 "distintos de la lista de las partes."
 
-#: ../../standard/docs/en/schema/changelog.md:135
+#: ../../standard/docs/en/schema/changelog.md:207
 msgid ""
 "[#372](https://github.com/open-contracting/standard/issues/372) **[Updates "
-"to transactions terminology](http://standard.open-"
+"to transactions terminology](https://standard.open-"
 "contracting.org/1.1/en/schema/reference/#transaction)** - "
 "receiverOrganization, providerOrganization and amount properties have been "
 "deprecated in favour or other terms."
 msgstr ""
 "[#372](https://github.com/open-contracting/standard/issues/372) "
-"**[Actualizaciones de la terminología de transacciones](http://standard"
+"**[Actualizaciones de la terminología de transacciones](https://standard"
 ".open-contracting.org/1.1/en/schema/reference/#transaction)** - la "
 "organización del receptor, la organización del proveedor y las propiedades "
 "de la cantidad se han descontinuado a favor de otros términos."
@@ -988,7 +1643,7 @@ msgstr "[1.0.3] - 2017-07-31"
 msgid "Fixed"
 msgstr "Solucionados"
 
-#: ../../standard/docs/en/schema/changelog.md:141
+#: ../../standard/docs/en/schema/changelog.md:213
 msgid ""
 "[#329](https://github.com/open-contracting/standard/issues/329) - updated "
 "`item.quantity` to support decimal values (integer -> number)"
@@ -997,7 +1652,7 @@ msgstr ""
 "actualizado `item.quantity` para soportar valores decimales  (integer -> "
 "number)"
 
-#: ../../standard/docs/en/schema/changelog.md:142
+#: ../../standard/docs/en/schema/changelog.md:214
 msgid ""
 "[#253](https://github.com/open-contracting/standard/issues/253) - updated "
 "`value.amount` to support negative values"
@@ -1009,31 +1664,31 @@ msgstr ""
 msgid "[1.0.2] - 2016-11-22"
 msgstr "[1.0.2] - 2016-11-22"
 
-#: ../../standard/docs/en/schema/changelog.md:150
+#: ../../standard/docs/en/schema/changelog.md:222
 msgid "Added titles to all fields in the documentation (#362)"
 msgstr "Se agregaron títulos a todos los campos de la documentación (#362)"
 
-#: ../../standard/docs/en/schema/changelog.md:151
+#: ../../standard/docs/en/schema/changelog.md:223
 msgid "Missing field `procurementMethodDetails` added to schema (#221)"
 msgstr "El campo `procurementMethodDetails` añadido al esquema (# 221)"
 
-#: ../../standard/docs/en/schema/changelog.md:152
+#: ../../standard/docs/en/schema/changelog.md:224
 msgid "Typo fix in releaseTag (#391)"
 msgstr "Corrección de errores en releaseTag (#391)"
 
-#: ../../standard/docs/en/schema/changelog.md:153
+#: ../../standard/docs/en/schema/changelog.md:225
 msgid "Fixing links to Fiscal Data Package (#271)"
 msgstr "Fijación de enlaces al Paquete de Datos Fiscales (# 271)"
 
-#: ../../standard/docs/en/schema/changelog.md:154
+#: ../../standard/docs/en/schema/changelog.md:226
 msgid "Description for `numberOfTenderers` (#314)"
 msgstr "Descripción para `numberOfTenderers` (#314)"
 
-#: ../../standard/docs/en/schema/changelog.md:155
+#: ../../standard/docs/en/schema/changelog.md:227
 msgid "Fixed definition of `changes` (#244)"
 msgstr "Se arregló la definición de `changes` (#244)"
 
-#: ../../standard/docs/en/schema/changelog.md:156
+#: ../../standard/docs/en/schema/changelog.md:228
 msgid ""
 "Updated documentation to refer to 'Object' not 'Reference' for fields (#228)"
 msgstr ""
@@ -1044,7 +1699,7 @@ msgstr ""
 msgid "Tidy up"
 msgstr "Se ordenó"
 
-#: ../../standard/docs/en/schema/changelog.md:160
+#: ../../standard/docs/en/schema/changelog.md:232
 msgid ""
 "Removed the old Spanish documentation translations folders from "
 "`standard/docs/es`"
@@ -1052,13 +1707,13 @@ msgstr ""
 "Eliminación de las carpetas de traducción de documentación en español de "
 "`standard/docs/es`"
 
-#: ../../standard/docs/en/schema/changelog.md:161
+#: ../../standard/docs/en/schema/changelog.md:233
 msgid "Added CSV download links for registered ocids, and publication levels"
 msgstr ""
 "Se han agregado enlaces de descarga CSV para los OCID registrados y los "
 "niveles de publicación"
 
-#: ../../standard/docs/en/schema/changelog.md:162
+#: ../../standard/docs/en/schema/changelog.md:234
 msgid "Updated publication levels spreadsheet to reflect version 1.0.2"
 msgstr ""
 "Plantilla de niveles de publicación actualizada para reflejar la versión "
@@ -1068,7 +1723,7 @@ msgstr ""
 msgid "[1.0.1] - 2016-03-14"
 msgstr "[1.0.1] - 2016-03-14"
 
-#: ../../standard/docs/en/schema/changelog.md:166
+#: ../../standard/docs/en/schema/changelog.md:238
 msgid ""
 "Updated documentation was released. This did not make any semantic changes "
 "to the standard."
@@ -1080,7 +1735,7 @@ msgstr ""
 msgid "[1.0] - 2015-07-29"
 msgstr "[1.0] - 2015-07-29"
 
-#: ../../standard/docs/en/schema/changelog.md:172
+#: ../../standard/docs/en/schema/changelog.md:244
 msgid ""
 "`contractPeriod` added to `award` to allow the anticipated period of a "
 "contract to be recorded, without requiring the creation of a contract block."
@@ -1092,11 +1747,11 @@ msgstr ""
 "bloque de contrato. Discutido en [#199](https://github.com/open-"
 "contracting/standard/issues/199)"
 
-#: ../../standard/docs/en/schema/changelog.md:174
+#: ../../standard/docs/en/schema/changelog.md:246
 msgid "Updated codelists"
 msgstr "Listas de códigos actualizadas"
 
-#: ../../standard/docs/en/schema/changelog.md:178
+#: ../../standard/docs/en/schema/changelog.md:250
 msgid "Minor documentation fixes."
 msgstr "Correcciones menores de documentación."
 
@@ -1104,12 +1759,15 @@ msgstr "Correcciones menores de documentación."
 msgid "[1.0.RC] - 2014-11-18"
 msgstr "[1.0.RC] - 2014-11-18"
 
-#: ../../standard/docs/en/schema/changelog.md:182
+#: ../../standard/docs/en/schema/changelog.md:254
 msgid ""
 "Changes prior to this point are not covered by this changelog. A non-"
 "exhaustive overview of changes between the beta release and 1.0.RC can be "
-"[found on the project blog](https://www.open-contracting.org/2014/11/18/release-of-data-standard/)."
+"[found on the project blog](https://www.open-contracting.org/2014/11/18"
+"/release-of-data-standard/)."
 msgstr ""
 "Los cambios anteriores a este punto no están cubiertos por este registro de "
-"cambios. Un resumen no exhaustivo de los cambios entre la versión beta y "
-"1.0.RC puede [encontrarse en el blog del proyecto](https://www.open-contracting.org/2014/11/18/release-of-data-standard/)."
+"cambios. Se puede obtener una descripción general no exhaustiva de los "
+"cambios entre la versión beta y 1.0.RC. [en esta entrada de "
+"blog](https://www.open-contracting.org/2014/11/18/release-of-data-standard/)"
+" (en inglés)."
