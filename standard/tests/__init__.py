@@ -7,7 +7,7 @@ languages = {
 }
 
 test_basic_params = OrderedDict([
-    ('en', 'Open Contracting Data Standard for Public Private Partnerships'),
+    ('en', 'Open Contracting Data Standard'),
     ('es', 'Estándar de Datos de Contrataciones Abiertas'),
     ('fr', 'Standard de Données sur la Commande Publique Ouverte'),
 ])
