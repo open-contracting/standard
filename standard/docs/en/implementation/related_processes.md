@@ -101,8 +101,8 @@ Dynamic Purchasing System
 </tbody>
 </table>
 
-## Worked example
-This example will address the following scenarios:
+## Worked examples
+The following examples address two scenarios concerning how frameworks and related processes may be modelled in OCDS data:
 
 1. A framework agreement established for multiple buyers, published by a single publisher.
 2. A framework agreement where the OCDS data is published by multiple publishers. This may occur when one publisher establishes a framework agreement, and then other publishers release OCDS data representing the call-offs from this.
@@ -124,9 +124,8 @@ Framework agreements may represent many-to-many relationships between a variety 
 
 These should be declared appropriately in the package metadata:
 
-```json
-extensions_block.json
-```
+.. literalinclude:: ../examples/frameworks/extensions_block.json
+:language: json
 
 ### Framework agreement for a single publisher with multiple buyers
 
@@ -140,24 +139,26 @@ The framework is established by first publishing a tender release opening up the
 > **Release Metadata**
 > The tender release has the following metadata
 
-```
-sample 001_framework_tender
-```
+.. literalinclude:: ../examples/frameworks/single_publisher/001_framework_tender.json
+:language: json
+:lines: 1-9
 
 Scottish Government is the one establishing the framework, so they have an entry in the `parties` array. They have the role of `procuringEntity` since they are the party establishing the framework.
 
-```
-sample 001_framework_tender
-```
+> **Release Parties Array**
+> The tender release has the following information in the parties array
+.. literalinclude:: ../examples/frameworks/single_publisher/001_framework_tender.json
+:language: json
+:lines: 9-21
 
 The `tender` block is populated normally, with information about the framework tender. For frameworks, `tender/value` should represent the total estimated upper value of the framework. Scottish Government is the procuring entity so they are referenced in `procuringEntity`.
 
 > **Tender Block**
 > The tender release has a populated `tender` block with the following information
 
-```json
-sample 001_framework_tender
-```
+.. literalinclude:: ../examples/frameworks/single_publisher/001_framework_tender.json
+:language: json
+:start-after: 21
 
 #### Establishing the framework agreement - awarding suppliers a position on the framework
 When a supplier is awarded a place on the framework, a release is made for the `award` award stage like a normal contracting process. The successful suppliers will be updated with the role of `supplier`. In this example Gamma Corp, Valkyrie Navigations, and Seaway Intelligence have each been awarded a position onto the framework.
@@ -165,18 +166,18 @@ When a supplier is awarded a place on the framework, a release is made for the `
 > **Releasing an Award -- parties array**
 > A release is made adding the parties to the parties array
 
-```
-sample 002_framework_award (parties array)
-```
+.. literalinclude:: ../examples/frameworks/single_publisher/002_framework_award.json
+:language: json
+:lines: 9-54
 
 The release must also be published with the relevant information about the award by adding an entry to the `awards` array. In the `award` references to the Suppliers are made in the `suppliers` array. Frameworks list all suppliers on a single `award` notice, with the `value` representing the total possible value of the framework and covering all suppliers with a place on it.
 
 > **Award block**
 > The award block is included in the release. It includes OrganizationReferences to the suppliers in the `suppliers` array and details of the award.
 
-```
-sample 002_framework_award (award block)
-```
+.. literalinclude:: ../examples/frameworks/single_publisher/002_framework_award.json
+:language: json
+:start-after: 54
 
 The framework is now established, and call-offs may now be made.
 
@@ -186,21 +187,21 @@ In our scenario the framework agreement is established by Scottish Government an
 > **Release metadata**
 > The release for the direct call-off has the following metadata.
 
-```
-sample 003_first_call-off (metadata)
-```
+.. literalinclude:: ../examples/frameworks/single_publisher/003_first_call-off.json
+:language: json
+:lines: 1-8
 
 Edinburgh are a new party from the data's perspective. They are added to the `parties` array with the role of `buyer` (since their budget is being used to pay for goods).
 
-```
-sample 003_first_call-off (parties array)
-```
+.. literalinclude:: ../examples/frameworks/single_publisher/003_first_call-off.json
+:language: json
+:lines: 9, 22-32
 
 A `contract` item is added to the `contracts` array with the details of the call-off, including the supplier and buyer information. This is where the [Multiple Buyers - Contract Level Extension](https://extensions.open-contracting.org/en/extensions/contract_buyer/master/) is used to reference the buyer using the `contract/buyer` field. Similarly, the [Contract Suppliers Extension](https://extensions.open-contracting.org/en/extensions/contract_suppliers/master/) is used to reference the specific supplier(s) involved in the call-off using `contract/suppliers`
 
-```
-sample 003_first_call-off (contract block)
-```
+.. literalinclude:: ../examples/frameworks/single_publisher/003_first_call-off.json
+:language: json
+:start-after: 66
 
 For each subsequent call-off this process is repeated with a new release published to add the relevant buyer information to the `parties` array and populate a new item in the `contracts` array. A second example for a call-off can be found [here](/example_data/single_publisher/multi_buyer/004_second_call-off.json) wherein Glasgow City make a call-off from the same framework established in this scenario.
 
