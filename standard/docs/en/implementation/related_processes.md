@@ -231,29 +231,27 @@ The first stages of the framework agreement are very similar to that when it onl
 > **Release Metadata**
 > The tender release has the following metadata.
 
-```json
-multi_publisher/001
-```
+.. literalinclude:: ../examples/frameworks/multi_publisher/001_framework_tender.json
+:language: json
+:lines: 1-21
 
 They are the procuring entity of the framework so they are referenced under `tender/procuringEntity`:
 
 > **Tender Block**
 > The tender release has the following information in the `tender` block
 
-```json
-multi_publisher/001
-```
+.. literalinclude:: ../examples/frameworks/multi_publisher/001_framework_tender.json
+:language: json
+:start-after: 21
 
-Next the Suppliers are awarded a place on the framework agreement. Supplier 1, Supplier 2, and Supplier 3 have made it into the framework. The tenderers are included as part of the award release:
+Next the Suppliers are awarded a place on the framework agreement. The tenderers are included as part of the award release; referenced in `award/suppliers`.
 
 > **Awards**
-> The awards release has the following information in `awards`.
+> The awards release has the following information in `awards`. Remember to include the appropriate entries under `release/parties` as well!
 
-```json
-multi_publisher/001 (awards)
-```
-
-> Remember to update the entries under `release/parties` as well!
+.. literalinclude:: ../examples/frameworks/multi_publisher/002_framework_award.json
+:language: json
+:start-after: 54
 
 The framework is now established, and call-offs may be made from it.
 
@@ -264,35 +262,35 @@ A direct call-off is represented by a `contract` block; so an OCDS release is pu
 > **Release metadata**
 > The direct call-off has the following metadata.
 
-```json
-multi_publisher/003
-```
+.. literalinclude:: ../examples/frameworks/multi_publisher/003_first_call-off.json
+:language: json
+:lines: 1-7
 
-The buyer is also added to the `parties` array with the appropriate role, in this case *East Ayrshire*:
+The buyer is also added to the `parties` array with the appropriate role, in this case *Glasgow City*:
 
 > **Parties Array**
 > The contract release representing the direct call-off has the following update to the `parties` array.
 
- ```json
- multi_publisher/003 (parties)
- ```
+.. literalinclude:: ../examples/frameworks/multi_publisher/003_first_call-off.json
+:language: json
+:lines: 54-65
 
 As before the contract section refers back to the `awardID` of the framework agreement published by *Crown Commercial Services*. This will require access to the Award ID and the OCID of the framework agreement:
 
 > **Contracts References**
 > The contracts section refers back to the id of the award in `awardID`
 
-```json
-multi_publisher/003 (contracts.awardID)
-```
+.. literalinclude:: ../examples/frameworks/multi_publisher/003_first_call-off.json
+:language: json
+:lines: 67-72
 
 Remember to include the `buyer` and `suppliers` in this section, added by the extensions used:
 > **Buyer and Supplier In Contracts**
 >  The contract section has the following information stored in `buyer` and `suppliers`. The ids used for each supplier will need to match between publisher systems -- following good practices around [organisation identifiers](http://standard.open-contracting.org/latest/en/schema/identifiers/#organization-ids) is recommended to assist in this.
 
-```json
-multi_publisher/003 (contract.buyer contract.suppliers)
-```
+.. literalinclude:: ../examples/frameworks/multi_publisher/003_first_call-off.json
+:language: json
+:lines: 83-87
 
 ### Running a mini-competition using `relatedProcess`
 Mini-competitions involve a further competitive stage and therefore are represented in OCDS using a separate contracting process which is linked to the related process that established the framework.
