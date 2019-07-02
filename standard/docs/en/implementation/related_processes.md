@@ -302,21 +302,30 @@ This is achieved through the following steps:
 
 > Note: This is a new contracting process where the buyer is known and the suppliers will be determined by the award block. Therefore the schema changes made by [Multiple Buyers - Contract Level Extension](https://extensions.open-contracting.org/en/extensions/contract_buyer/master/) and [Contract Suppliers Extension](https://extensions.open-contracting.org/en/extensions/contract_suppliers/master/) that apply to the Contract block are not necessary to model mini-competitions.
 
-Following the previous example of the Glasgow City framework agreement; after making their direct call-offs Glasgow City hold a mini-competition between suppliers on the framework. A new contracting process is created with an entry in `relatedProcesses` referencing the original framework agreement:
+Following the previous example of the framework agreement established by Crown Commercial Services; Edinburgh council decide to hold a mini-competition for providing their offices with stationery for an entire year. A *new contracting process* is created with appropriate metadata.The release is published using *Scottish Government*'s OCID prefix since they have published the mini-competition.
 
 > **Release Metadata**
 > A release for a new contracting process is begun with the following details.
 
-```json
-example_minicompetition
-```
+.. literalinclude:: ../examples/frameworks/example_minicompetition/005_framework_mini-competition.json
+:language: json
+:lines: 1-26
+
+A key element to this contracting process is the entry in `relatedProcesses` referencing the original framework agreement:
+
+> **relatedProcesses Array**
+> The relatedProcesses array contains the information required to reference the original framework agreement.
+
+.. literalinclude:: ../examples/frameworks/example_minicompetition/005_framework_mini-competition.json
+:language: json
+:lines: 27-36
+
 
 Since this is a `tender` release the `tender` block contains information about the tender opportunity. The `procurementMethod` is set to `selective` to indicate that this is not an open tender.
 > **Tender Block**
 > The new contracting process' tender block contains the following information.
-
-```json
-example_minicompetition
-```
+.. literalinclude:: ../examples/frameworks/example_minicompetition/005_framework_mini-competition.json
+:language: json
+:start-after: 36
 
 From this point the contracting process continues as normal, with the award and contract stages being released under the new OCID created for the mini-competition.
