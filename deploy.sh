@@ -22,4 +22,4 @@ echo "Copy the built files to the remote server..."
 $LFTP -c "set sftp:connect-program \"ssh -i id_rsa\"; connect sftp://ocds-docs:xxx@staging.docs.opencontracting.uk0.bigv.io; mirror -eRv build web/$TRAVIS_BRANCH"
 
 echo "Update the search index..."
-curl "www.standard-search.default.opendataservices.uk0.bigv.io/v1/index_ocds?secret=${SEARCH_SECRET}&version=${TRAVIS_BRANCH}"
+curl "www.live.standard-search.opencontracting.uk0.bigv.io/v1/index_ocds?secret=${SEARCH_SECRET}&version=${TRAVIS_BRANCH}"
