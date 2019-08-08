@@ -14,11 +14,11 @@ Assessing how good your open contracting data is involves a number of elements:
 
 * **Validation** involves a technical check on the way data is structured and formatted. If data is not valid JSON, and does not comply with the OCDS schema, then it cannot be processed by OCDS tools, and will not be interoperable with other data. Providing valid data is an important foundation for interoperable open data. 
 
-> The OCDS validator can provide an automated pass/fail check on whether data is valid at 3 ☆ level.
+> The OCDS Data Review Tool can provide an automated pass/fail check on whether data is valid at 3 ☆ level.
 
 * **Conformance** involves a detailed check on whether OCDS terms are being used correctly. For example, are you following the field definitions and guidance when entering data, and mapping to the OCDS structure. Conformance involves a human check on how fields are being used, and which extensions to the schema you are using. 
 
-> The OCDS validator provides feedback that can be used to make an initial judgment on conformance. A full judgment involves expert input. 
+> The OCDS Data Review Tool provides feedback that can be used to make an initial judgment on conformance. A full judgment involves expert input. 
 
 * **Completeness** involves checking which sections and building blocks of OCDS are being used. For example, are you publishing information from every contracting stage, or are you only providing tender or award data; and are you providing detailed identifiers for organizations, or just names. 
 
