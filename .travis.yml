@@ -11,7 +11,7 @@ addons:
 deploy:
   skip_cleanup: true
   provider: script
-  script: bash deploy.sh
+  script: curl -Ss https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-standard.sh | bash -
   on:
     all_branches: true
 env:
