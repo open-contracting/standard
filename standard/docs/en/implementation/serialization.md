@@ -58,7 +58,7 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](http:
    
 ```
 
-[Beta open source tooling](http://flatten-tool.readthedocs.io/en/latest/usage-ocds/) exists for generating flat CSV OCDS templates, and converting in both directions between JSON spreadsheets following these templates. The OCDS validator incorporates this tooling and will offer to convert files uploaded to it.
+[Beta open source tooling](http://flatten-tool.readthedocs.io/en/latest/usage-ocds/) exists for generating flat CSV OCDS templates, and converting in both directions between JSON spreadsheets following these templates. The OCDS Data Review Tool incorporates this tooling and will offer to convert files uploaded to it.
 
 ### Simplified single table 
 
