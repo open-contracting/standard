@@ -1,4 +1,4 @@
-# Publication policies
+# Publication policies: Data User Guide
 
 Publishing Open Contracting data involves making a number of choices about what data and documents to include and how to classify and categorize different items. To allow users to understand the choices that a publisher has made, a publisher ought to provide a public web page or document that details the decisions they have made concerning the issues listed below.
 
