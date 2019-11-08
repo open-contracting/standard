@@ -1,13 +1,15 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.1.5]
+## Iterative improvements
+
+Per the [normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit), iterative improvements to non-normative content can be made outside the release cycle.
 
 ### Documentation
 
-* Build the documentation [#875](https://github.com/open-contracting/standard/pull/875) [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889).
+* [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
+* Build the documentation [#875](https://github.com/open-contracting/standard/pull/875) [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923).
 
 ## [1.1.4] - 2019-06-25
 
