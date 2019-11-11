@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C)
-# This file is distributed under the same license as the OCDS package.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCDS 1.1\n"
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-22 20:01-0400\n"
+"POT-Creation-Date: 2019-11-08 13:47-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
@@ -30,14 +30,8 @@ msgid ""
 "<span class=\"lead\">To maximize the interoperability of data published "
 "using the Open Contracting Data Standard we have set out key principles for "
 "**conforming** to the standard. These also create space for **extensions** "
-"of the standard where particular publisher or user needs require.</span>"
+"of the standard to respond to particular publisher or user needs.</span>"
 msgstr ""
-"<span class=\"lead\">Per ottimizzare l'interoperabilità dei dati pubblicati "
-"utilizzando l'Open Contracting Data Standard, abbiamo definito i principi "
-"chiave per adottare e **conformarsi** allo standard. Questi principi "
-"includono la possibilità di definire delle **estensioni** allo standard da "
-"parte delle organizzazioni che pubblicano dati o degli utenti che le "
-"necessitano.</span>"
 
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:0
 msgid "Conformance"
@@ -82,12 +76,9 @@ msgstr ""
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:15
 msgid ""
 "If an implementation serializes to JSON, its serializations *must* "
-"[validate](http://ocds.open-contracting.org/validator/) against this "
+"[validate](https://standard.open-contracting.org/review/) against this "
 "specification's JSON Schema."
 msgstr ""
-"Se un'implementazione è serializzata in formato JSON, le sue serializzazioni"
-" *devono* essere [validate] (http://ocds.open-contracting.org/validator/) "
-"sullo schema JSON di questa specifica."
 
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:17
 msgid ""
@@ -114,16 +105,11 @@ msgstr "conformità e validazione dell'applicazione"
 
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:23
 msgid ""
-"As of version 1.1, release/record packages should contain a version property"
-" explicitly declaring their version. All packages without an explicit "
-"version declared should be validated against the version 1.0 schema unless "
+"As of version 1.1, release/record packages must contain a version property "
+"explicitly declaring their version. All packages without an explicit version"
+" declared should be validated against the version 1.0 schema unless "
 "otherwise instructed by the user."
 msgstr ""
-"A partire dalla versione 1.1, i blocchi di rilasci/descrittori dovrebbero "
-"contenere una proprietà per la versione dove dichiarare esplicitamente la "
-"versione. Tutti i pacchetti senza una versione esplicita dichiarata devono "
-"essere convalidati rispetto allo schema versione 1.0, se non diversamente "
-"indicato dall'utente."
 
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:25
 msgid "Validators and applications should:"
@@ -196,35 +182,33 @@ msgstr "Estensioni"
 
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:45
 msgid ""
-"Extensions to the standard can add new objects and properties to accommodate"
-" specific local requirements. An extension should only be created where it "
-"is not possible to model the required data using existing terms from the "
-"standard."
+"If you have additional fields which cannot be mapped to the OCDS schema or "
+"an existing extension, you should include these in your OCDS data and "
+"[create a new extension](../../../../extensions/) to document their "
+"structure and meaning."
 msgstr ""
-"Le estensioni dello standard possono aggiungere nuovi oggetti e proprietà "
-"per soddisfare specifici requisiti locali. Un'estensione dovrebbe essere "
-"creata solo dove non è possibile modellare i dati richiesti utilizzando i "
-"termini esistenti dello standard."
 
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:47
 msgid ""
-"Extensions should be documented and shared so that other publishers and "
-"users can draw upon them, and so that extensions can be considered for "
-"inclusion in a future version of the standard."
+"Extensions to the standard can add new objects and fields to accommodate "
+"specific local requirements. An extension must not be created if it is "
+"possible to use existing terms from the standard."
 msgstr ""
-"Le estensioni dovrebbero essere documentate e condivise in modo che altri "
-"editori e utenti possano attingervi e in modo che le estensioni possano "
-"essere considerate per l'inclusione in una versione futura dello standard."
 
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:49
 msgid ""
-"The [extensions registry](../../../../extensions/) records details of known "
-"extensions."
+"Extensions ought to be documented and shared so that other publishers and "
+"users can draw upon them, and so that extensions can be considered for "
+"inclusion in a future version of the standard."
 msgstr ""
-"Il [registro estensioni](../../../../extensions/) contiene i dettagli delle "
-"estensioni note."
 
 #: ../../standard/docs/en/schema/conformance_and_extensions.md:51
+msgid ""
+"The [Extension Explorer](../../../../extensions/) publishes details of known"
+" extensions."
+msgstr ""
+
+#: ../../standard/docs/en/schema/conformance_and_extensions.md:53
 msgid ""
 "The schema for the standard by default allows for new fields, and does not "
 "fail validation of a file which contains unknown fields."

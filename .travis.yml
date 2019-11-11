@@ -11,11 +11,14 @@ addons:
 deploy:
   skip_cleanup: true
   provider: script
-  script: bash deploy.sh
+  script: curl -Ss https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-docs.sh | bash -
   on:
     all_branches: true
 env:
-  - BASEDIR="https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master"
+  global:
+    - BASEDIR="https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master"
+    - PATH_PREFIX=""
+    - LANGS="en,es,fr,it"
 install:
   - curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
   - curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip

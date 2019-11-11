@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C)
-# This file is distributed under the same license as the OCDS package.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Tim Davies <tim.davies@opendataservices.coop>, 2018
-# Alessio Dragoni <ad@sciamlab.com>, 2018
+# Alessio Dragoni <ad@sciamlab.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCDS 1.1\n"
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-22 20:01-0400\n"
+"POT-Creation-Date: 2019-11-08 13:47-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
+"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,15 +28,10 @@ msgstr "Descrittore di riferimento"
 
 #: ../../standard/docs/en/schema/records_reference.md:3
 msgid ""
-"Whereas there can be multiple releases concerning a given contracting "
-"process, there should be a single **contracting record** for each ocid, "
-"providing a summary of all the available data about this particular "
-"contracting process."
+"Whereas there can be multiple releases about a contracting process, there "
+"should be a single **record** per contracting process, aggregating all the "
+"releases available for the contracting process."
 msgstr ""
-"Mentre ci possono essere più versioni di un determinato processo di "
-"contrattazione, dovrebbe esserci una sola **documentazione di contratto** "
-"per ciascun identificativo ocid, che fornisce un riepilogo di tutti i dati "
-"disponibili su questo particolare processo di contrattazione."
 
 #: ../../standard/docs/en/schema/records_reference.md:5
 msgid "A record **must** contain:"
@@ -48,21 +43,16 @@ msgstr "Un [ocid](../../../identifiers/#ocid)"
 
 #: ../../standard/docs/en/schema/records_reference.md:8
 msgid ""
-"An array of **[releases](#release)** related to this contracting process - "
-"either by providing a URL for where these releases can be found, or "
-"embedding a full copy of the release"
+"An array of **[releases](#release)** about this contracting process - either"
+" by providing a URL for where these releases can be found, or embedding a "
+"full copy of the release"
 msgstr ""
-"Una lista di **[versioni](#versioni)** relativo a questo processo di "
-"contrattazione - fornendo un URL per la posizione in cui queste versioni "
-"possono essere trovate, o incorporando una copia completa della versione"
 
 #: ../../standard/docs/en/schema/records_reference.md:10
 msgid ""
-"This allows the record to function as an index of all the releases related "
-"to a given contracting process."
+"This allows the record to function as an index of all the releases about a "
+"contracting process."
 msgstr ""
-"Ciò consente al descrittore di funzionare come un indice o visura di tutte "
-"le versioni relative a un determinato processo di contrattazione."
 
 #: ../../standard/docs/en/schema/records_reference.md:12
 msgid "Records **should** contain:"
@@ -77,18 +67,15 @@ msgstr ""
 "contrattazione aperta, rappresentati utilizzando lo schema per la versione."
 
 #: ../../standard/docs/en/schema/records_reference.md:16
-msgid "Records **may** optionally contain:"
-msgstr "I descrittori **possono** facoltativamente contenere:"
+msgid "Records **may** contain:"
+msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:18
 msgid ""
 "**versionedRelease** - containing the history of the data in the "
-"compiledRecord, with all known past values of any field and the release that"
-" information came from."
+"compiledRelease, with all known past values of any field and the release "
+"that information came from."
 msgstr ""
-"**versionedRelease** - contenente la cronologia dei dati nel compiledRecord,"
-" con tutti i valori passati conosciuti di qualsiasi campo e la versione da "
-"cui provengono tali informazioni."
 
 #: ../../standard/docs/en/schema/records_reference.md:20
 msgid ""
@@ -101,12 +88,13 @@ msgstr ""
 " generato dagli utenti, piuttosto che da coloro che pubblicano i dati."
 
 #: ../../standard/docs/en/schema/records_reference.md:0
-msgid "Package metadata"
+msgid "Package Metadata"
 msgstr "Metadati del pacchetto"
 
 #: ../../standard/docs/en/schema/records_reference.md:24
-msgid "Records should be embedded within a record package."
-msgstr "I record devono essere incorporati in un pacchetto."
+msgid ""
+"Records must be published within a [record package](record_package.md)."
+msgstr ""
 
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Title"
@@ -128,7 +116,7 @@ msgstr "Formato"
 msgid "Required"
 msgstr "Necessario"
 
-#: ../../standard/docs/en/schema/records_reference.md:34
+#: ../../standard/docs/en/schema/records_reference.md:33
 msgid ""
 "See the guidance on [package metadata](../../../reference#package-metadata)."
 " In addition, a record package includes:"
@@ -136,25 +124,17 @@ msgstr ""
 "Vedi la guida su [pacchetto metadata](../../../reference#package-metadata). "
 "Inoltre, un pacchetto di descrittori include:"
 
+#: ../../standard/docs/en/schema/records_reference.md:35
+msgid "`packages` - links to the release packages used to compile the records"
+msgstr ""
+
 #: ../../standard/docs/en/schema/records_reference.md:36
 msgid ""
-"`packages` - which should provide links to all the release packages used to "
-"compile this record."
+"`records` - one or more records, each of which, at least, links to or embeds"
+" the releases about the contracting process that it describes"
 msgstr ""
-"`packages` - che dovrebbe fornire collegamenti a tutti le versioni "
-"utilizzare per compilare questo descrittore."
 
-#: ../../standard/docs/en/schema/records_reference.md:37
-msgid ""
-"`records` - one or more contracting process records, containing, at the very"
-" least, identifiers for the all the releases that relate to each contracting"
-" process."
-msgstr ""
-"`records`: uno o più record del processo di aggiudicazione, contenenti, come"
-" minimo, identificatori per tutte le versioni relative a ciascuna procedura "
-"di appalto."
-
-#: ../../standard/docs/en/schema/records_reference.md:39
+#: ../../standard/docs/en/schema/records_reference.md:38
 msgid "You can see this in the full example of a record below."
 msgstr "Puoi vederlo nell'esempio completo di un descrittore qui sotto."
 
@@ -162,7 +142,7 @@ msgstr "Puoi vederlo nell'esempio completo di un descrittore qui sotto."
 msgid "Record structure"
 msgstr "Struttura del descrittore"
 
-#: ../../standard/docs/en/schema/records_reference.md:52
+#: ../../standard/docs/en/schema/records_reference.md:50
 msgid ""
 "Each record package contains an array of one or more records, consisting of "
 "the following sections:"
@@ -170,54 +150,47 @@ msgstr ""
 "Ogni pacchetto di descrittori contiene uno o più descrittori, costituiti "
 "dalle seguenti sezioni:"
 
-#: ../../standard/docs/en/schema/records_reference.md:54
+#: ../../standard/docs/en/schema/records_reference.md:52
 msgid "Releases (required)"
 msgstr "Rilasci (richiesto)"
 
-#: ../../standard/docs/en/schema/records_reference.md:55
-msgid "Compiled Release (optional)"
-msgstr "Rilasci compilati (opzionale)"
+#: ../../standard/docs/en/schema/records_reference.md:53
+msgid "Compiled Release (recommended)"
+msgstr ""
 
-#: ../../standard/docs/en/schema/records_reference.md:56
-msgid "Versioning Release (optional)"
-msgstr "Versionamento dei rilasci (opzionale)"
+#: ../../standard/docs/en/schema/records_reference.md:54
+msgid "Versioned Release (optional)"
+msgstr ""
 
 #: ../../standard/docs/en/schema/records_reference.md:0
 msgid "Release list"
 msgstr "Elenco dei rilasci"
 
-#: ../../standard/docs/en/schema/records_reference.md:60
+#: ../../standard/docs/en/schema/records_reference.md:58
 msgid ""
 "The releases that make up a contracting process can be provided in two ways:"
 msgstr ""
 "Le versioni che costituiscono una procedura di appalto possono essere "
 "fornite in due modi:"
 
-#: ../../standard/docs/en/schema/records_reference.md:62
+#: ../../standard/docs/en/schema/records_reference.md:60
 msgid "URLs and metadata for each release; or"
 msgstr "URL e metadati per ogni versione; o"
 
-#: ../../standard/docs/en/schema/records_reference.md:63
+#: ../../standard/docs/en/schema/records_reference.md:61
 msgid "Embedded copies of the release;"
 msgstr "Copie incorporate della versione;"
 
-#: ../../standard/docs/en/schema/records_reference.md:65
+#: ../../standard/docs/en/schema/records_reference.md:63
 msgid ""
-"If providing an array of URLs, it should be possible for a consuming "
+"If providing an array of URLs, it must be possible for a consuming "
 "application to look up each URL, retrieve a release package, and locate the "
 "release inside it. In order to locate the specific release inside a release "
-"package the releaseID of the release should be appended to the package URL "
-"using a fragment identifier."
+"package, the `id` of the release must be appended to the package URL using a"
+" fragment identifier."
 msgstr ""
-"Se si fornisce un array di URL, dovrebbe essere possibile per "
-"un'applicazione di processare ogni singola URL, e quindi recuperare un "
-"pacchetto di rilasci e individuare la singola versione al suo interno. Per "
-"individuare la versione specifica all'interno di un pacchetto di rilascio, "
-"l'ID della versione di rilascio deve essere aggiunto all'URL del pacchetto "
-"utilizzando un frammento dell'indirizzo dove mettere appunto "
-"l'identificatore ."
 
-#: ../../standard/docs/en/schema/records_reference.md:67
+#: ../../standard/docs/en/schema/records_reference.md:65
 msgid "An example releases section is given below."
 msgstr "Di seguito è riportata una sezione di rilascio di esempio."
 
@@ -225,7 +198,7 @@ msgstr "Di seguito è riportata una sezione di rilascio di esempio."
 msgid "Compiled Release"
 msgstr "Rilascio compilato"
 
-#: ../../standard/docs/en/schema/records_reference.md:80
+#: ../../standard/docs/en/schema/records_reference.md:77
 msgid ""
 "The compiled release is the latest version of all the data about this "
 "contracting process, and has the same schema as a release."
@@ -233,7 +206,7 @@ msgstr ""
 "Il rilascio compilato è la versione più recente contenente tutti i dati su "
 "questo processo di appalto e ha lo stesso schema di una versione."
 
-#: ../../standard/docs/en/schema/records_reference.md:82
+#: ../../standard/docs/en/schema/records_reference.md:79
 msgid ""
 "The process for creating a compiled release is described in the guidance on "
 "[merging](merging.md)."
@@ -241,20 +214,18 @@ msgstr ""
 "Il processo per la creazione di un rilascio compilato è descritto nella "
 "guida su [merging] (merging.md)."
 
-#: ../../standard/docs/en/schema/records_reference.md:84
+#: ../../standard/docs/en/schema/records_reference.md:81
 msgid ""
 "A compiled release provides a snapshot of the current state of a contracting"
-" process, and the contents should follow the release schema."
+" process, and the contents must comply with the release schema, with the "
+"exception of any fields on which `\"omitWhenMerged\": true` is declared."
 msgstr ""
-"Una rilascio o versione compilata fornisce un'istantanea dello stato "
-"corrente di un processo di contrazione e il contenuto dovrebbe seguire lo "
-"schema di versione."
 
 #: ../../standard/docs/en/schema/records_reference.md:0
 msgid "Versioned Release"
 msgstr "Rilascio versionato"
 
-#: ../../standard/docs/en/schema/records_reference.md:88
+#: ../../standard/docs/en/schema/records_reference.md:85
 msgid ""
 "A versioned release contains the history of all the data in the compiled "
 "release, including which fields have changed, when they were changed, and "
@@ -264,31 +235,21 @@ msgstr ""
 " versione compilata, compresi i campi che sono stati modificati, quando sono"
 " stati modificati e la versione che li ha aggiornati."
 
-#: ../../standard/docs/en/schema/records_reference.md:90
+#: ../../standard/docs/en/schema/records_reference.md:87
 msgid ""
 "This versioned information is valuable for many use cases relating to "
 "contract monitoring. However, it can add substantially to file sizes, and so"
-" where publishers do generate this at source, they should consider "
-"publishing versioned and non-versioned copies of the records."
+" where publishers do generate this at source, they can consider publishing "
+"versioned and non-versioned copies of the records."
 msgstr ""
-"Queste informazioni versionate sono preziose per molti casi d'uso relativi "
-"al monitoraggio dei contratti. Tuttavia, può aumentare notevolmente le "
-"dimensioni dei file e, pertanto, quando coloro che pubblicano i dati lo "
-"generano alla fonte, dovrebbero prendere in considerazione la possibilità di"
-" pubblicare copie con e senza versioni dei descrittori."
 
-#: ../../standard/docs/en/schema/records_reference.md:92
+#: ../../standard/docs/en/schema/records_reference.md:89
 msgid ""
-"Third parties should also be able to use the information in the releases "
-"list to fetch source data, compile and verify their own version history for "
-"a contract."
+"Third parties can use the information in the releases list to fetch source "
+"data, compile and verify their own version history for a contract."
 msgstr ""
-"Le terze parti dovrebbero anche essere in grado di utilizzare le "
-"informazioni nell'elenco delle versioni o dei rilasci per recuperare i dati "
-"di origine, compilare e verificare la  cronologia delle versioni di un "
-"contratto."
 
-#: ../../standard/docs/en/schema/records_reference.md:94
+#: ../../standard/docs/en/schema/records_reference.md:91
 msgid ""
 "An example extract of the versioned information for a tender value is shown "
 "below. This makes visible the change in contract value from the planning to "
