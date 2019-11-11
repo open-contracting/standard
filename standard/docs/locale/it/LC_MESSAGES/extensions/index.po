@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C)
-# This file is distributed under the same license as the OCDS package.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Tim Davies <tim.davies@opendataservices.coop>, 2018
-# Alessio Dragoni <ad@sciamlab.com>, 2018
+# Alessio Dragoni <ad@sciamlab.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCDS 1.1\n"
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-22 20:01-0400\n"
+"POT-Creation-Date: 2019-11-08 13:47-0500\n"
 "PO-Revision-Date: 2017-04-24 10:47+0000\n"
-"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
+"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,250 +66,67 @@ msgstr ""
 #: ../../standard/docs/en/extensions/index.md:11
 msgid ""
 "**Community** and local extension are maintained by third-parties, or are "
-"maintained outside of the standard governance process. They may provide "
-"features required by only a small number of publishers or users, or may be "
+"maintained outside of the standard governance process. They might provide "
+"features needed by only a small number of publishers or users, or might be "
 "used to document a publisher's additional fields or codelist values."
 msgstr ""
-"Le estensioni della **comunità** e quelle **locali* sono gestite da terze "
-"parti e in genere mantenute al di fuori del normale processo di gestione "
-"dello standard OCDS. Possono fornire funzionalità richieste solo da un "
-"numero limitato di editori o utenti o possono essere utilizzate per "
-"documentare specifici campi aggiuntivi o vocabolari controllati di un "
-"editore."
 
 #: ../../standard/docs/en/extensions/index.md:13
 msgid ""
-"All core and community extensions are listed in the [extensions "
-"registry](https://github.com/open-contracting/extension_registry) and in the"
-" documentation here. The [standard technical team](../support/governance.md)"
-" approves extensions for inclusion in the registry (distinguishing community"
-" from local extensions) and for inclusion in the governance process "
-"(distinguishing core from community extensions)."
+"All core and community extensions are listed in the [Extension "
+"Explorer](https://extensions.open-contracting.org/en/). The [standard "
+"technical team](../support/governance.md) approves extensions for inclusion "
+"in the Extension Explorer (distinguishing community from local extensions) "
+"and for inclusion in the governance process (distinguishing core from "
+"community extensions)."
 msgstr ""
-"Tutte le estensioni principali e della comunità sono elencate nel [registro "
-"delle estensioni](https://github.com/open-contracting/extension_registry) e "
-"qui nella documentazione. Il [team tecnico dello "
-"standard](../support/governance.md) approva le estensioni per essere incluse"
-" nel registro (distinguendo tra estensioni della comunità ed estensioni "
-"locali) e in caso per l'eventuale inclusione nel processo di gestione dello "
-"standard (distinguendo tra estensioni principali e della comunità)."
 
 #: ../../standard/docs/en/extensions/index.md:0
-msgid "Using extensions"
-msgstr "Utilizzando le estensioni"
+msgid "Using existing extensions"
+msgstr ""
 
 #: ../../standard/docs/en/extensions/index.md:17
 msgid ""
 "Extensions are applied by adding their URLs to the `extensions` array in the"
-" release or record package. To use one or more extensions, select them from "
-"the extension lists below and include the following in your release or "
-"record package metadata:"
+" release package or record package. You can discover extensions, read their "
+"documentation and find the URL to add using the [Extension "
+"Explorer](https://extensions.open-contracting.org/en/)."
 msgstr ""
-"Le estensioni vengono applicate aggiungendo i loro URL all'array "
-"`extensions` nel pacchetto di rilascio o nel descrittore. Per utilizzare una"
-" o più estensioni, puoi selezionarle dai seguenti elenchi di estensioni e "
-"includere quanto segue nei metadati del pacchetto di rilascio o nel "
-"descrittore:"
+
+#: ../../standard/docs/en/extensions/index.md:19
+msgid "This version of OCDS uses these specific versions of core extensions:"
+msgstr ""
+
+#: ../../standard/docs/en/extensions/index.md:26
+msgid ""
+"Groups of extensions can be combined into **profiles**. Profiles are "
+"adaptations of OCDS to suit the disclosure requirements and user needs of a "
+"particular sector, type of contracting process or legal framework. [View the"
+" list of profiles.](https://www.open-contracting.org/data-standard/profiles-"
+"and-guidance/)"
+msgstr ""
 
 #: ../../standard/docs/en/extensions/index.md:0
-msgid "Core extensions"
-msgstr "Estensioni principali"
-
-#: ../../Extension registry:1 ../../Extension registry:1
-msgid "Extension"
-msgstr "Estensione"
-
-#: ../../Extension registry:1 ../../Extension registry:1
-msgid "Description"
-msgstr "Descrizione"
-
-#: ../../Extension registry:1 ../../Extension registry:1
-msgid "Category"
-msgstr "Categoria"
-
-#: ../../Extension registry:1 ../../Extension registry:1
-msgid "Extension URL"
-msgstr "URL dell'estensione"
-
-#: ../../Extension registry:1
-msgid ""
-"Bid statistics and details::https://standard.open-"
-"contracting.org/1.1/en/extensions/bids/"
+msgid "Developing new extensions"
 msgstr ""
-"Statistiche e dettagli dell'offerta: https://standard.open-"
-"contracting.org/1.1/en/extensions/bids/"
 
-#: ../../Extension registry:1
+#: ../../standard/docs/en/extensions/index.md:30
 msgid ""
-"Allowing bid statistics, and detailed bid information to be represented."
+"If you have additional fields which cannot be mapped to the OCDS schema or "
+"an existing extension, you ought to include these in your OCDS data and "
+"create a new extension to document their structure and meaning."
 msgstr ""
-"Consentire la visualizzazione di statistiche di offerta e informazioni "
-"dettagliate sull'offerta."
-
-#: ../../Extension registry:1
-msgid ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_bid_extension/v1.1.3/extension.json"
-msgstr ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_bid_extension/v1.1.3/extension.json"
-
-#: ../../Extension registry:1
-msgid ""
-"Enquiries::https://standard.open-contracting.org/1.1/en/extensions/enquiries/"
-msgstr ""
-"Domande::https://standard.open-contracting.org/1.1/en/extensions/enquiries/"
-
-#: ../../Extension registry:1
-msgid ""
-"The enquiries extension can be used to record questions raised during a "
-"contracting process, and the answers provided."
-msgstr ""
-"L'estensione per le richieste di informazioni può essere utilizzata per "
-"registrare le domande sollevate durante una procedura di appalto e le "
-"risposte fornite."
-
-#: ../../Extension registry:1
-msgid ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_enquiry_extension/v1.1.3/extension.json"
-msgstr ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_enquiry_extension/v1.1.3/extension.json"
-
-#: ../../Extension registry:1
-msgid ""
-"Location::https://standard.open-contracting.org/1.1/en/extensions/location/"
-msgstr ""
-"Località::https://standard.open-contracting.org/1.1/en/extensions/location/"
-
-#: ../../Extension registry:1
-msgid ""
-"Allow the point of delivery for a given item or the site of works to be "
-"completed to be indicated in both the tender, award and contract stage."
-msgstr ""
-"Consentire di indicare il punto di consegna per un dato articolo o il luogo "
-"di lavoro da indicare sia nella fase di gara, aggiudicazione e contratto."
-
-#: ../../Extension registry:1
-msgid ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_location_extension/v1.1.3/extension.json"
-msgstr ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_location_extension/v1.1.3/extension.json"
-
-#: ../../Extension registry:1
-msgid "Lots::https://standard.open-contracting.org/1.1/en/extensions/lots/"
-msgstr "Lotti::https://standard.open-contracting.org/1.1/en/extensions/lots/"
-
-#: ../../Extension registry:1
-msgid ""
-"A tender process may be divided into lots, where bidders can bid on one or "
-"more lots. Details of each lot can be provided here. Items, documents and "
-"other features can then reference the lot they are related to using "
-"relatedLot. Where no relatedLot identifier is given, the values should be "
-"interpreted as applicable to the whole tender."
-msgstr ""
-"Una gara d'appalto può essere suddivisa in lotti, dove gli offerenti possono"
-" fare offerte per uno o più lotti. I dettagli di ogni lotto possono essere "
-"specificati qui. Elementi, documenti e altre funzionalità possono quindi "
-"fare riferimento al lotto a cui sono correlati utilizzando relatedLot. "
-"Laddove non sia fornito alcun identificatore per i relatedLot, i valori "
-"devono essere interpretati come applicabili all'intera offerta."
-
-#: ../../Extension registry:1
-msgid ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_lots_extension/v1.1.3/extension.json"
-msgstr ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_lots_extension/v1.1.3/extension.json"
-
-#: ../../Extension registry:1
-msgid ""
-"Milestone documents::https://standard.open-"
-"contracting.org/1.1/en/extensions/milestone_documents/"
-msgstr ""
-"Documentazione delle fasi principali::https://standard.open-"
-"contracting.org/1.1/en/extensions/milestone_documents/"
-
-#: ../../Extension registry:1
-msgid ""
-"Documents at the milestone level were deprecated in OCDS 1.1. This extension"
-" re-introduces the ability to attach documents to each individual milestone."
-msgstr ""
-"I documenti al livello di fase erano deprecati in OCDS 1.1. Questa "
-"estensione reintroduce la capacità di allegare documenti a ogni singola fase"
-" principale."
-
-#: ../../Extension registry:1
-msgid ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_milestone_documents_extension/v1.1.3/extension.json"
-msgstr ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_milestone_documents_extension/v1.1.3/extension.json"
-
-#: ../../Extension registry:1
-msgid ""
-"Participation Fees::https://standard.open-"
-"contracting.org/1.1/en/extensions/participation_fee/"
-msgstr ""
-"Oneri per la partecipazione::https://standard.open-"
-"contracting.org/1.1/en/extensions/participation_fee/"
-
-#: ../../Extension registry:1
-msgid ""
-"Where a tender process involves payment of fees to access documents, submit "
-"a proposal, or be awarded a contract, this extension can be used to provide "
-"fee details."
-msgstr ""
-"Quando una procedura di gara comporta il pagamento di tasse per accedere a "
-"documenti, presentare una proposta o aggiudicarsi un contratto, questa "
-"estensione può essere utilizzata per fornire dettagli di pagamento."
-
-#: ../../Extension registry:1
-msgid ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_participationFee_extension/v1.1.3/extension.json"
-msgstr ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_participationFee_extension/v1.1.3/extension.json"
-
-#: ../../Extension registry:1
-msgid ""
-"Process level title and description::https://standard.open-"
-"contracting.org/1.1/en/extensions/process_title/"
-msgstr ""
-"Titolo e descrizione del livello di processo: https://standard.open-"
-"contracting.org/1.1/en/extensions/process_title/"
-
-#: ../../Extension registry:1
-msgid ""
-"For providing overall process titles and descriptions, often to give a free-"
-"text summary of the contracting process as a whole."
-msgstr ""
-"Per fornire una descrizione generale per titolo e descrizione di un "
-"processo, spesso è sufficiente fornire un riassunto a testo libero del "
-"processo di aggiudicazione nel suo complesso."
-
-#: ../../Extension registry:1
-msgid ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_process_title_extension/v1.1.3/extension.json"
-msgstr ""
-"https://raw.githubusercontent.com/open-"
-"contracting/ocds_process_title_extension/v1.1.3/extension.json"
 
 #: ../../standard/docs/en/extensions/index.md:0
-msgid "Community extensions"
-msgstr "Estensioni della comunità"
+msgid "Extension template"
+msgstr "Modello di estensione"
 
-#: ../../standard/docs/en/extensions/index.md:0
-msgid "More information"
-msgstr "Maggiori informazioni"
-
-#: ../../standard/docs/en/extensions/index.md:0
-msgid "Core extension documentation pages"
-msgstr "Pagine di documentazione della estensione principale"
+#: ../../standard/docs/en/extensions/index.md:34
+msgid ""
+"You can find the [extension template](https://github.com/open-"
+"contracting/standard_extension_template) on GitHub. It contains guidance on "
+"creating an extension."
+msgstr ""
+"Puoi trovare il [modello di estensione](https://github.com/open-"
+"contracting/standard_extension_template) su GitHub. Contiene indicazioni "
+"sulla creazione di un'estensione."
