@@ -10,7 +10,7 @@ from jsonref import JsonRef, JsonRefError
 docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en')
 sys.path.append(docs_path)
 
-from conf import release  # noqa
+from conf import release  # noqa isort:skip
 
 
 def custom_warning_formatter(message, category, filename, lineno, line=None):

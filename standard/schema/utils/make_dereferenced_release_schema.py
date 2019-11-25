@@ -4,7 +4,6 @@ from collections import OrderedDict
 
 import jsonref
 
-
 if __name__ == '__main__':
     schema_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

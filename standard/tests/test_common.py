@@ -8,7 +8,7 @@ import requests
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import Select
 
-from tests import languages, test_basic_params, test_search_params
+from . import languages, test_basic_params, test_search_params
 
 
 @pytest.mark.parametrize('lang,text', test_basic_params.items())

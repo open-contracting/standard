@@ -1,7 +1,7 @@
 import pytest
 from selenium.webdriver.support.ui import Select
 
-from tests import languages
+from . import languages
 
 
 @pytest.mark.parametrize('lang', list(languages))
