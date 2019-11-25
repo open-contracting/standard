@@ -7,8 +7,8 @@ from pathlib import Path
 
 import jsonref
 
-from ..utils.make_versioned_release_schema import get_versioned_release_schema
 from ..utils.make_metaschema import make_metaschema, metaschema_path
+from ..utils.make_versioned_release_schema import get_versioned_release_schema
 
 RELEASE_SCHEMA_PATH = Path(__file__).parents[1] / 'release-schema.json'
 VERSIONED_RELEASE_SCHEMA_PATH = Path(__file__).parents[1] / 'versioned-release-validation-schema.json'
