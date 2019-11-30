@@ -5,7 +5,6 @@ Updates the currency codelist from ISO4217 files.
 import csv
 import json
 import re
-from collections import OrderedDict
 
 import requests
 from lxml import etree
@@ -56,8 +55,8 @@ with open('standard/schema/codelists/currency.csv', 'w') as fp:
     for code in sorted(historic_codes.keys()):
         writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
-with open('standard/schema/release-schema.json') as fp:
-    release_schema = json.load(fp, object_pairs_hook=OrderedDict)
+with open('standard/schema/release-schema.json') as f:
+    release_schema = json.load(f)
 
 codes = sorted(list(current_codes.keys()) + list(historic_codes.keys()))
 release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]

@@ -1,5 +1,4 @@
 import json
-from collections import OrderedDict
 from os.path import abspath, dirname, join
 
 import json_merge_patch
@@ -13,8 +12,8 @@ metaschema_path = join(schema_dir, 'meta-schema.json')
 
 def make_metaschema():
     with open(draft4_path) as draft4, open(patch_path) as patch:
-        draft4_schema = json.load(draft4, object_pairs_hook=OrderedDict)
-        patch_schema = json.load(patch, object_pairs_hook=OrderedDict)
+        draft4_schema = json.load(draft4)
+        patch_schema = json.load(patch)
 
     return json_merge_patch.merge(draft4_schema, patch_schema)
 

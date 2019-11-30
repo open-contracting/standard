@@ -2,7 +2,6 @@ import json
 import os.path
 import sys
 import warnings
-from collections import OrderedDict
 from copy import deepcopy
 
 from jsonref import JsonRef, JsonRefError
@@ -43,22 +42,22 @@ versioned_template_json = '''
   }
 }
 '''
-versioned_template = json.loads(versioned_template_json, object_pairs_hook=OrderedDict)
+versioned_template = json.loads(versioned_template_json)
 
-common_versioned_definitions = OrderedDict([
-    ('StringNullUriVersioned', OrderedDict([
-        ('type', ['string', 'null']),
-        ('format', 'uri'),
-    ])),
-    ('StringNullDateTimeVersioned', OrderedDict([
-        ('type', ['string', 'null']),
-        ('format', 'date-time'),
-    ])),
-    ('StringNullVersioned', OrderedDict([
-        ('type', ['string', 'null']),
-        ('format', None),
-    ])),
-])
+common_versioned_definitions = {
+    'StringNullUriVersioned': {
+        'type': ['string', 'null'],
+        'format': 'uri',
+    },
+    'StringNullDateTimeVersioned': {
+        'type': ['string', 'null'],
+        'format': 'date-time',
+    },
+    'StringNullVersioned': {
+        'type': ['string', 'null'],
+        'format': None,
+    },
+}
 
 recognized_types = (
     # Array
@@ -117,9 +116,7 @@ def get_definition_ref(item):
         # And adds no keywords to the definition.
         if any(keyword not in (*keywords, *keywords_to_remove) for keyword in item):
             continue
-        return OrderedDict([
-            ('$ref', '#/definitions/{}'.format(name)),
-        ])
+        return {'$ref': '#/definitions/{}'.format(name)}
 
 
 def add_versioned(schema, unversioned_pointers, pointer=''):
@@ -317,7 +314,7 @@ if __name__ == '__main__':
     schema_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     with open(os.path.join(schema_dir, 'release-schema.json')) as f:
-        release_schema = json.load(f, object_pairs_hook=OrderedDict)
+        release_schema = json.load(f)
 
     versioned_release_schema = get_versioned_release_schema(release_schema)
 

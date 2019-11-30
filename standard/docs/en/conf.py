@@ -21,7 +21,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import os
-from collections import OrderedDict
 from glob import glob
 from pathlib import Path
 
@@ -140,15 +139,15 @@ gettext_domain_prefix = ''
 # List the extension identifiers and versions that should be part of the standard. The extensions must be available in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
 default_extension_version = 'v{}'.format(release)
-extension_versions = OrderedDict([
-    ('bids', default_extension_version),
-    ('enquiries', default_extension_version),
-    ('location', default_extension_version),
-    ('lots', default_extension_version),
-    ('milestone_documents', default_extension_version),
-    ('participation_fee', default_extension_version),
-    ('process_title', default_extension_version),
-])
+extension_versions = {
+    'bids': default_extension_version,
+    'enquiries': default_extension_version,
+    'location': default_extension_version,
+    'lots': default_extension_version,
+    'milestone_documents': default_extension_version,
+    'participation_fee': default_extension_version,
+    'process_title': default_extension_version,
+}
 
 
 def setup(app):
