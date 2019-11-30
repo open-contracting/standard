@@ -1,14 +1,23 @@
-# Update this file from a profile with:
-# curl https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/tests/test_common.py -o tests/test_common.py # noqa
+import os
 import re
 import time
+import warnings
 
 import pytest
 import requests
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import Select
 
-from . import languages, test_basic_params, test_search_params
+from tests import languages, last_path, test_basic_params, test_navigation_params, test_search_params
+
+cwd = os.getcwd()
+
+
+def custom_warning_formatter(message, category, filename, lineno, line=None):
+    return str(message).replace(cwd + os.sep, '')
+
+
+warnings.formatwarning = custom_warning_formatter
 
 
 @pytest.mark.parametrize('lang,text', test_basic_params.items())
@@ -39,33 +48,36 @@ def test_language_switcher(browser, server):
         assert test_basic_params[lang] in browser.find_element_by_tag_name('body').text
 
 
-@pytest.mark.parametrize('lang', list(languages))
-def test_broken_links(browser, server, lang):
-    referrer = ''
-    hrefs = set()
+@pytest.mark.parametrize('lang,link_text', test_navigation_params)
+def test_broken_links(browser, server, lang, link_text):
+    status_codes = {}
     browser.get('{}{}'.format(server, lang))
+    failures = []
     while True:
-        for link in browser.find_elements_by_partial_link_text(''):
-            href = re.sub(r'#.*$', '', link.get_attribute('href'))
+        for element in browser.find_elements_by_xpath('//*[@href]|//*[@src]'):
+            url = element.get_attribute('href') or element.get_attribute('src')
 
             # Don't test proxied or external URLs.
-            if '/review/' in href or 'localhost' not in href:
+            if '/review/' in url or 'localhost' not in url:
                 continue
-            # If the URL, without an anchor, has already been visited, don't test it again.
-            if href in hrefs:
-                continue
-            # Keep track of which pages have been tested.
-            hrefs.add(href)
 
-            response = requests.get(href)
-            assert response.status_code == 200, 'expected 200, got {} for {} linked from {}'.format(
-                response.status_code, href, referrer)
+            url = re.sub(r'#.*$', '', url)
+            if url not in status_codes:
+                status_codes[url] = requests.get(url).status_code
+
+            status_code = status_codes[url]
+            if status_code != 200:
+                failures.append([status_code, url, browser.current_url])
 
         try:
             # Scroll the link into view, to make it clickable.
-            link = browser.find_element_by_link_text('Next')
-            referrer = link.get_attribute('href')
+            link = browser.find_element_by_link_text(link_text)
             browser.execute_script("arguments[0].scrollIntoView();", link)
             link.click()
         except NoSuchElementException:
+            assert browser.current_url.endswith(last_path)
             break
+
+    for status_code, url, referrer in failures:
+        warnings.warn('expected 200, got {} for {} linked from {}\n'.format(status_code, url, referrer))
+    assert not failures, 'One or more links are broken. See warnings below.'

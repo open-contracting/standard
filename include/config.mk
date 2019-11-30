@@ -15,7 +15,7 @@ LOCALE_DIR=standard/docs/locale
 # Directory in which to build documentation files.
 BUILD_DIR=build
 # Extra build files or directories. (These should match paths in .gitignore.)
-EXTRA_BUILD_FILES=/chromedriver*
+EXTRA_BUILD_FILES=
 # Files that are built and distributed (you may use Bash extended globbing).
 DIST_FILES=
 # Directory in which to build .pot files.

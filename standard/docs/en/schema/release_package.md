@@ -2,7 +2,7 @@
 
 The release package schema describes the structure of the container for publishing releases. The package contains important metadata.
 
-You can view an interactive version of the release schema below (requires JavaScript) or [download this version of the schema here](../../../../release-package-schema.json).
+You can view an interactive version of the release schema below (requires JavaScript) or [download this version of the schema here](../../release-package-schema.json).
 
 For this version of OCDS, the canonical URL of the release package schema is: <https://standard.open-contracting.org/schema/1__1__4/release-package-schema.json>
 

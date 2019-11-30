@@ -8,12 +8,12 @@ OCDS was designed with a focus on public procurement of goods, works and service
 
 To get started publishing OCDS data:
 
-* Discuss the key [users and use cases](use_cases.md) for your OCDS project
-* Identify out the data and documents you will publish from your [contracting process](contracting_process.md)
-* Map your data against the OCDS [building blocks](building_blocks.md)
-* Present the data in [JSON releases and records](releases_and_records.md)
-* Publish your data on the web using the [publication patterns](publication_patterns.md)
-* Check the [validation of your data](validation.md)
+* Discuss the key [users and use cases](use_cases) for your OCDS project
+* Identify out the data and documents you will publish from your [contracting process](contracting_process)
+* Map your data against the OCDS [building blocks](building_blocks)
+* Present the data in [JSON releases and records](releases_and_records)
+* Publish your data on the web using the [publication patterns](publication_patterns)
+* Check the [validation of your data](validation)
 * Encourage and facilitate stakeholder use of the data
 
 <!-- You can find [samples of OCDS data](ToDo), and [information on using OCDS](ToDo) in the implementation handbook. -->

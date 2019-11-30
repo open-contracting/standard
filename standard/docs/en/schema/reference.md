@@ -1,6 +1,6 @@
 # Release Reference
 
-The [Release Schema](release.md) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into release packages and how to compile releases into records. 
+The [Release Schema](release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into release packages and how to compile releases into records.
 
 Releases are immutable – presenting information about a particular event in the lifetime of a contracting process. Publishers must not edit a release after publication; a new release can be created by changing the release's `id` and `date`.
 
@@ -19,13 +19,13 @@ The majority of OCDS data is held within a release structure. One or more releas
     * [contract](#contract)
       * [implementation](#implementation)
 
-Releases are given a [tag](../../../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided. 
+Releases are given a [tag](../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided.
 
 For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 
 ### Package Metadata
 
-Releases must be published within a [release package](release_package.md). The release package provides metadata about the release(s) that it contains. 
+Releases must be published within a [release package](release_package). The release package provides metadata about the release(s) that it contains.
 
 ```eval_rst
 
@@ -35,9 +35,9 @@ Releases must be published within a [release package](release_package.md). The r
 
 ```
 
-See the [licensing guidance](../implementation/licensing.md) for more details on selecting a license, and publishing license information. 
+See the [licensing guidance](../implementation/licensing) for more details on selecting a license, and publishing license information.
 
-See the [publication policy](../implementation/publication_policy.md) guidance for more details on what to include in a publication policy.
+See the [publication policy](../implementation/publication_policy) guidance for more details on what to include in a publication policy.
 
 ### Release
 
@@ -201,7 +201,7 @@ Implementation information can be updated over the course of a contract. It belo
    :list: implementation
 ```
 
-Information on subcontracts is not currently included in the core OCDS schema, but might be handled by [proposed extensions](conformance_and_extensions.md)
+Information on subcontracts is not currently included in the core OCDS schema, but might be handled by [proposed extensions](conformance_and_extensions)
 
 #### Transaction
 
@@ -250,7 +250,7 @@ The changes array was deprecated in OCDS 1.1. Structured information on the form
 * Including releases from **before** and **after** a change within a release package;
 * Using the amendment array in tender, contract or award to explicitly relate these releases to an amendment.
 
-See the [amendment implementation guidance](../../../../implementation/amendments/) for more details.
+See the [amendment implementation guidance](../implementation/amendments) for more details.
 
 ## Building block reference
 
@@ -278,7 +278,7 @@ See the [parties](#parties) section
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../../../identifiers/#organization-ids) involved in a contracting process. 
+The identifier block provides a way to [identify the legal entities](../identifiers/#organization-ids) involved in a contracting process.
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
@@ -310,7 +310,7 @@ If a contracting process represents a contract arranged by the department or bra
 ```
 ### Document
 
-Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../../../codelists/#document-type) codelist.
+Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../codelists/#document-type) codelist.
 
 ```eval_rst
 
@@ -401,7 +401,7 @@ The `unit` block allows detailed specification of the parameters and price of un
 
 If the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
-Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](../../../codelists/#unit-classification-scheme).
+Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](../codelists/#unit-classification-scheme).
 
 ```eval_rst
 
@@ -541,7 +541,7 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
 
-Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice ought to be based on an understanding of the [merging process](merging.md) that is used to generate a snapshot record of a full contracting process.
+Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice ought to be based on an understanding of the [merging process](merging) that is used to generate a snapshot record of a full contracting process.
 
 In this model, publishers need to to pay careful attention to null values and missing fields. 
 
@@ -553,4 +553,4 @@ Only including fields which have values will keep versioned datasets cleaner.
 
 ### Emptying fields and values
 
-There can be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields must be set to `null`. See the [merging documentation](../../../merging/) for more details.
+There can be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields must be set to `null`. See the [merging documentation](merging) for more details.

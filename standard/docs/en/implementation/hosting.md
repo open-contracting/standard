@@ -52,7 +52,7 @@ The web server providing access to bulk files ought to correctly report the [HTT
 
 ## Individual releases and records
 
-To achieve [4 ☆](levels.md) OCDS publication requires each release and record to be accessible at a permanent URI. This can be achieved by:
+To achieve [4 ☆](levels) OCDS publication requires each release and record to be accessible at a permanent URI. This can be achieved by:
 
 (a) Archiving a single-release release package for each release to a web accessible file system as it is created, and then regularly merging these releases to compile individual record files in the same file system. One approach might be to have a folder for each `ocid` and to place the releases and record related to that process into that folder. 
 
@@ -64,7 +64,7 @@ Publishers ought to consider how to [ensure URIs can remain stable](https://www.
 
 ## Flattened serializations
 
-The [serialization](../../../serialization/) page provides details of how to generate 'flat' versions of OCDS data for use in spreadsheet software.
+The [serialization](serialization) page provides details of how to generate 'flat' versions of OCDS data for use in spreadsheet software.
 
 The same principles discussed for bulk files above ought to be applied to CSV or Excel downloads of data.
 
