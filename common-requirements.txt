@@ -1,13 +1,11 @@
-# Update this file from a profile with:
-# curl -O https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/common-requirements.txt
-
-# 1.5.2 breaks the translation of the sidebar menu
-Sphinx==1.5.1
+# See https://github.com/sphinx-doc/sphinx/pull/6856
+-e git+https://github.com/jpmckinney/sphinx.git@v2.2.1-hotfix#egg=sphinx
 
 # Sphinx
-ocds-babel>=0.1.0
-# The next commit causes "'any' reference target not found" errors
--e git+https://github.com/rtfd/recommonmark.git@81d7c6f7b37981ac22571dd91a7cc9d24c3e66a1#egg=recommonmark
+ocds-babel>=0.2.1
+# See https://ocds-babel.readthedocs.io/en/latest/api/translate.html#install-requirements-for-markdown-translation
+-e git+https://github.com/jpmckinney/commonmark.py.git@hotfix#egg=commonmark
+-e git+https://github.com/jpmckinney/recommonmark.git@hotfix#egg=recommonmark
 -e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
 
 # Make
@@ -15,7 +13,7 @@ sphinx-intl<1
 transifex-client
 
 # Profile
-ocdsextensionregistry>=0.0.11
+ocdsextensionregistry>=0.0.16
 
 # Tests
 pytest==2.8.7
