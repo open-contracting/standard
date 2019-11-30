@@ -1,6 +1,3 @@
-# Update this file from a profile with:
-# curl https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/include/common.mk -o include/common.mk
-
 # See https://github.com/datamade/data-making-guidelines
 
 # See http://clarkgrubb.com/makefile-style-guide#phony-target-arg

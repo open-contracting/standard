@@ -1,14 +1,23 @@
-# Update this file from a profile with:
-# curl https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/tests/test_common.py -o tests/test_common.py # noqa
+import os
 import re
 import time
+import warnings
 
 import pytest
 import requests
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import Select
 
-from . import languages, test_basic_params, test_search_params
+from tests import languages, test_basic_params, test_search_params
+
+cwd = os.getcwd()
+
+
+def custom_warning_formatter(message, category, filename, lineno, line=None):
+    return str(message).replace(cwd + os.sep, '')
+
+
+warnings.formatwarning = custom_warning_formatter
 
 
 @pytest.mark.parametrize('lang,text', test_basic_params.items())
@@ -44,6 +53,7 @@ def test_broken_links(browser, server, lang):
     referrer = ''
     hrefs = set()
     browser.get('{}{}'.format(server, lang))
+    failures = []
     while True:
         for link in browser.find_elements_by_partial_link_text(''):
             href = re.sub(r'#.*$', '', link.get_attribute('href'))
@@ -58,9 +68,8 @@ def test_broken_links(browser, server, lang):
             hrefs.add(href)
 
             response = requests.get(href)
-            assert response.status_code == 200, 'expected 200, got {} for {} linked from {}'.format(
-                response.status_code, href, referrer)
-
+            if response.status_code != 200:
+                failures.append([response.status_code, href, referrer])
         try:
             # Scroll the link into view, to make it clickable.
             link = browser.find_element_by_link_text('Next')
@@ -69,3 +78,7 @@ def test_broken_links(browser, server, lang):
             link.click()
         except NoSuchElementException:
             break
+
+    for status_code, href, referrer in failures:
+        warnings.warn('expected 200, got {} for {} linked from {}\n'.format(status_code, href, referrer))
+    assert not failures, 'One or more links are broken. See warnings below.'
