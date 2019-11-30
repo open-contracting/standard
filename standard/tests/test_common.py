@@ -8,7 +8,7 @@ import requests
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import Select
 
-from tests import languages, test_basic_params, test_search_params
+from tests import languages, last_path, test_basic_params, test_navigation_params, test_search_params
 
 cwd = os.getcwd()
 
@@ -48,8 +48,8 @@ def test_language_switcher(browser, server):
         assert test_basic_params[lang] in browser.find_element_by_tag_name('body').text
 
 
-@pytest.mark.parametrize('lang', list(languages))
-def test_broken_links(browser, server, lang):
+@pytest.mark.parametrize('lang,link_text', test_navigation_params)
+def test_broken_links(browser, server, lang, link_text):
     referrer = ''
     hrefs = set()
     browser.get('{}{}'.format(server, lang))
@@ -72,11 +72,12 @@ def test_broken_links(browser, server, lang):
                 failures.append([response.status_code, href, referrer])
         try:
             # Scroll the link into view, to make it clickable.
-            link = browser.find_element_by_link_text('Next')
+            link = browser.find_element_by_link_text(link_text)
             referrer = link.get_attribute('href')
             browser.execute_script("arguments[0].scrollIntoView();", link)
             link.click()
         except NoSuchElementException:
+            assert browser.current_url.endswith(last_path)
             break
 
     for status_code, href, referrer in failures:
