@@ -4,7 +4,7 @@ Whereas there can be multiple releases about a contracting process, there should
 
 A record **must** contain:
 
-* An [ocid](../../../identifiers/#ocid)
+* An [ocid](../identifiers/#ocid)
 * An array of **[releases](#release)** about this contracting process - either by providing a URL for where these releases can be found, or embedding a full copy of the release
 
 This allows the record to function as an index of all the releases about a contracting process.
@@ -21,7 +21,7 @@ The versioned release format is designed to support analysis of how data has cha
 
 ## Package Metadata
 
-Records must be published within a [record package](record_package.md).
+Records must be published within a [record package](record_package).
 
 ```eval_rst
 .. jsonschema:: ../../../../build/current_lang/record-package-schema.json
@@ -30,7 +30,7 @@ Records must be published within a [record package](record_package.md).
 
 ```
 
-See the guidance on [package metadata](../../../reference#package-metadata). In addition, a record package includes:
+See the guidance on [package metadata](../reference/#package-metadata). In addition, a record package includes:
 
 * `packages` - links to the release packages used to compile the records
 * `records` - one or more records, each of which, at least, links to or embeds the releases about the contracting process that it describes
@@ -76,7 +76,7 @@ An example releases section is given below.
 
 The compiled release is the latest version of all the data about this contracting process, and has the same schema as a release.
 
-The process for creating a compiled release is described in the guidance on [merging](merging.md).
+The process for creating a compiled release is described in the guidance on [merging](merging).
 
 A compiled release provides a snapshot of the current state of a contracting process, and the contents must comply with the release schema, with the exception of any fields on which `"omitWhenMerged": true` is declared.
 

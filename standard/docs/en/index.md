@@ -46,7 +46,7 @@ Version 1.0 of the standard was developed for the OCP by the [World Wide Web Fou
 
 ## Support
 
-A [free helpdesk service](support/index.md) is available to support implementation and use of OCDS.
+A [free helpdesk service](support/index) is available to support implementation and use of OCDS.
 
 ```eval_rst
 .. toctree::

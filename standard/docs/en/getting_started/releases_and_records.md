@@ -115,7 +115,7 @@ However, to allow users to get a snapshot view the contracting process without i
 * a compiled release, which expresses the current state of the contracting process, by showing only the most recent field values
 * a versioned release, which expresses all historical states of the contracting process, by showing all the field values over time
 
-The [merging documentation](../schema/merging.md) set out how to combine multiple releases to create a single record for each contracting process. 
+The [merging documentation](../schema/merging) set out how to combine multiple releases to create a single record for each contracting process.
 
 ```eval_rst
 

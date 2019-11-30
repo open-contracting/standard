@@ -104,7 +104,7 @@ Each unique contracting process needs to be assigned an `ocid`. This is an ident
 
 To make sure the `ocid`s assigned in two different jurisdictions do not clash, publishers need to register an ocid prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process.
 
-You can [register your ocid prefix here](../implementation/registration.md).
+You can [register your ocid prefix here](../implementation/registration).
 
 <div class="example hint" markdown=1>
 

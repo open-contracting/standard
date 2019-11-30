@@ -4,7 +4,7 @@ The Open Contracting Data Standard schema references a number of codelists in or
 
 An **open codelist** provides **suggested codes**, but publishers may extend these lists with new codes on the basis of consensus with other publishers, or by using a codes prefixed with 'x\_' to indicate that it is a local 'eXtensions' to the codelist. 
 
-For example, OCDS provide a list of the types of documents which can be attached to tenders, awards, contracts and milestones. However, a group of publishers might discover they have a need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they are encouraged to consult with the community through the [mailing list and GitHub platform](../../../../support/), and are encouraged to suggest the code for formal incorporation into the codelists.
+For example, OCDS provide a list of the types of documents which can be attached to tenders, awards, contracts and milestones. However, a group of publishers might discover they have a need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they are encouraged to consult with the community through the [mailing list and GitHub platform](../support/index), and are encouraged to suggest the code for formal incorporation into the codelists.
 
 A **closed codelist** provides **mandatory codes** and publishers must use values provided in the official list. Changes to closed codelists take place through the governance and revision process for the schema. 
 
@@ -14,7 +14,7 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 ### Party Role
 
-The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../../../reference/#parties). A single party can have one or more roles in the contracting process. 
+The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../reference/#parties). A single party can have one or more roles in the contracting process.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -33,7 +33,7 @@ Items should be classified using existing item classification schemes, such as t
    :file: ../../../../build/current_lang/codelists/itemClassificationScheme.csv
 ```
 
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy.md). 
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy).
 
 ### Unit Classification Scheme
 
@@ -97,7 +97,7 @@ The award criteria codelist describes the basis on which contract awards will be
    :file: ../../../../build/current_lang/codelists/awardCriteria.csv
 ```
 
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy.md). 
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy).
 
 ### Submission Method
 
@@ -109,7 +109,7 @@ The submission method codelist is used to identify the mechanism through which a
    :file: ../../../../build/current_lang/codelists/submissionMethod.csv
 ```
 
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy.md). 
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy).
 
 ### Related Process
 
