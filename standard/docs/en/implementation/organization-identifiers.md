@@ -13,25 +13,20 @@ organization register prefix.
 
 ## Worked example
 
-An example publisher uses identifiers from the UK Companies House for suppliers, which has the *GB-COH* prefix in org-id.guide. 
+An example publisher uses identifiers from the UK Companies House for suppliers, which has the GB-COH prefix in [org-id.guide](http://org-id.guide). 
 AnyCorp Ltd. has been assigned the company number ‘1234567844’ by Companies House. 
-The globally unique organization identifier for AnyCorp Ltd. can then expressed as follows:
+The globally unique organization identifier for AnyCorp Ltd. can then be expressed in the `identifier` section in the sample
+below:
 
 ```eval_rst
 .. jsoninclude:: ../examples/organization-identifiers.json
-    :jsonpointer: /parties/2/
+    :jsonpointer: /releases/0/parties/1
     :expand: identifier
 ```
 
 Note that it is possible to use more than one organization register, in which case any additional identifiers can be included
-as follows:
-
-```eval_rst
-.. jsoninclude:: ../examples/organization-identifiers.json
-    :jsonpointer: /parties/2/
-    :expand: additionalIdentifiers
-```
+in the `additionalIdentifiers` section.
 
 Publishers should consider if/when to include [local identifiers](../schema/identifiers#choosing-an-identifier).
-Local identifiers may not be registered in org-id.guide, provided that the organization list is described in a
+Local identifiers may not be registered in [org-id.guide](http://org-id.guide), provided that the organization list is described in a
 publication policies document.
