@@ -1,12 +1,11 @@
 # Organization References
 
-Multiple organization can be part of a procurement process, and sometimes the same organization may have multiples roles
-in the same process, for example a supplier can be first a tenderer and then become a supplier. 
+During a contracting process many parties can be involved in it. Some times the same party may have multiples roles. 
+For example a supplier can be first a tenderer and then become a supplier.
 
-To avoid data repetition, since OCDS 1.1, there is a `parties` array where all the parties involved in the procurement
-process must be in with the whole information about itself, as its `contactPoint`, `identifier`, etc. And each
-time an Organization is mentioned in the data, you should use an `OrganizationReference` object to **reference** an
-existing Organization.
+To avoid data repetition, since OCDS 1.1, there is a parties array where the information about all the parties is set. 
+And then, when you need to **reference** one of these parties you use a OrganizationReference object. 
+This object includes just the name and id of it instead of its whole data again.
 
 # Worked Example
 
