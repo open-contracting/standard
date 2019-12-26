@@ -4,8 +4,8 @@ During a contracting process many parties can be involved in it. Some times the 
 For example a supplier can be first a tenderer and then become a supplier.
 
 To avoid data repetition, since OCDS 1.1, there is a parties array where the information about all the parties is set. 
-And then, when you need to **reference** one of these parties you use a OrganizationReference object. 
-This object includes just the name and id of it instead of its whole data again.
+And then, when you need to **reference** one of these parties you use a `OrganizationReference` object. 
+This object includes just the `name` and `id` of it instead of its whole data again.
 
 # Worked Example
 
