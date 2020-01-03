@@ -5,12 +5,12 @@ Milestones can be included within the planning, tender, contract and contract im
 * The planning milestone block may describe anticipated milestones during the planning stage, such as the preparation 
 of key studies. Usually using the 'preProcurement' milestone type code.
 
-* The tender milestone block should be used to describe anticipated milestones during the proposed delivery 
+* Tender milestone blocks should be used to describe anticipated milestones during the proposed delivery 
 of a contract, as well as key dates from the process of tendering and awarding the contract.
 
-* The contract milestone block should be used for events related to the signing of the contract documents.
+* Contract milestone block should be used for events related to the signing of the contract documents.
 
-* The contract implementation milestones block should be used for any event related to delivery of the contract.
+* Contract implementation milestones block should be used for any event related to delivery of the contract.
 
 The nature of the milestone is indicated by the milestone type code list.
 
@@ -28,7 +28,7 @@ In the example below:
 
 .. jsoninclude:: ../examples/implementation-milestones-1.json
    :jsonpointer: 
-   :expand: contracts, implementation, milestones
+   :expand: releases, contracts, implementation, milestones
    :title: milestones-1
 
 ```
@@ -37,7 +37,7 @@ In the example below:
 
 .. jsoninclude:: ../examples/implementation-milestones-2.json
    :jsonpointer: 
-   :expand: contracts, implementation, milestones
+   :expand: releases, contracts, implementation, milestones
    :title: milestones-2
 
 ```
@@ -46,7 +46,7 @@ In the example below:
 
 .. jsoninclude:: ../examples/implementation-milestones-3.json
    :jsonpointer: 
-   :expand: contracts, implementation, milestones
+   :expand: releases, contracts, implementation, milestones
    :title: milestones-3
 
 ```
