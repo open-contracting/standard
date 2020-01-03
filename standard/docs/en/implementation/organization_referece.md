@@ -7,7 +7,7 @@ To avoid data repetition, since OCDS 1.1, there is a parties array where the inf
 And then, when you need to **reference** one of these parties you use a `OrganizationReference` object. 
 This object includes just the `name` and `id` of it instead of its whole data again.
 
-# Worked Example
+## Worked Example
 
 In the example below:
 
@@ -19,7 +19,12 @@ the information related to its legal `identifier` and `contactPoint` is disclose
 the `id` *GB-COH-09506232* in the `parties` array.
 * The same must be applied to each `OrganizationReference` instance. 
 
+
+```eval_rst
+
 .. jsoninclude:: ../examples/organization_reference.json
    :jsonpointer: 
-   :expand: parties, tender, awards
+   :expand: releases, parties, tender, tenderers, awards, suppliers
    :title: organizationReference
+
+```
