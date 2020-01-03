@@ -13,5 +13,6 @@
    registration
    related_processes
    amendments
-   
+   milestones
+
 ```
