@@ -1,23 +1,17 @@
 #!/bin/bash
 set -e
 
-if [ -d standard ]; then
-  prefix=standard/
-else
-  prefix=
-fi
-
-mkdir -p script include ${prefix}tests
+mkdir -p script include tests
 
 for f in Makefile common-requirements.txt include/common.mk include/prologue.mk script/diff script/update; do
   curl -sS -o $f https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/$f
 done
 
 for f in tests/conftest.py tests/test_common.py; do
-  curl -sS -o $prefix$f https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/$f
+  curl -sS -o $f https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/$f
 done
 
-if [ ! -d standard -a ! -d schema/project-level ]; then
+if [ ! -d schema/project-level ]; then
   curl -sS -o .gitignore https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/.gitignore
 fi
 

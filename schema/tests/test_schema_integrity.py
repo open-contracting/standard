@@ -22,7 +22,7 @@ def test_versioned_release_schema_is_in_sync():
     with open(RELEASE_SCHEMA_PATH) as f:
         expected = get_versioned_release_schema(json.load(f))
 
-    assert actual == expected, 'Run: python standard/schema/utils/make_versioned_release_schema.py'
+    assert actual == expected, 'Run: python schema/utils/make_versioned_release_schema.py'
 
 
 def test_dereferenced_release_schema_is_in_sync():
@@ -32,7 +32,7 @@ def test_dereferenced_release_schema_is_in_sync():
     with open(RELEASE_SCHEMA_PATH) as f:
         expected = jsonref.load(f)
 
-    assert actual == expected, 'Run: python standard/schema/utils/make_dereferenced_release_schema.py'
+    assert actual == expected, 'Run: python schema/utils/make_dereferenced_release_schema.py'
 
 
 def test_metaschema_is_in_sync():

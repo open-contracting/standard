@@ -9,9 +9,9 @@ TRANSLATIONS=.es .fr .it
 LANGUAGES=.en $(TRANSLATIONS)
 
 # Directory of documentation files to build with Sphinx.
-DOCS_DIR=standard/docs/en
+DOCS_DIR=docs
 # Directory of catalog files.
-LOCALE_DIR=standard/docs/locale
+LOCALE_DIR=locale
 # Directory in which to build documentation files.
 BUILD_DIR=build
 # Extra build files or directories. (These should match paths in .gitignore.)
@@ -23,7 +23,7 @@ POT_DIR=$(BUILD_DIR)/locale
 # The prefix, if any, to the schema and codelists domains.
 DOMAIN_PREFIX=
 # Directory containing assets to copy to the build directory (no trailing slash).
-ASSETS_DIR=standard/assets
+ASSETS_DIR=assets
 # The Transifex project name.
 TRANSIFEX_PROJECT=open-contracting-standard-1-1
 

@@ -1,11 +1,5 @@
 #!/bin/bash
-if [ -d standard ]; then
-  conf=standard/docs/en/conf.py
-else
-  conf=docs/conf.py
-fi
-
-curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/docs/conf.py | diff -u - $conf
+curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/docs/conf.py | diff -u - docs/conf.py
 
 for f in .travis.yml include/config.mk; do
   curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/$f | diff -u - $f
