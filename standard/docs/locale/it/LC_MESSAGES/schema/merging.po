@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-08 13:47-0500\n"
+"POT-Creation-Date: 2020-01-13 13:23-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
@@ -21,14 +21,14 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:1
 msgid "Merging"
 msgstr "Unione"
 
 #: ../../standard/docs/en/schema/merging.md:3
 msgid ""
-"An OCDS [record](../getting_started/releases_and_records.md) aggregates all "
-"the releases available for a contracting process at a given time, and can "
+"An OCDS [record](../getting_started/releases_and_records) aggregates all the"
+" releases available for a contracting process at a given time, and can "
 "include:"
 msgstr ""
 
@@ -105,11 +105,11 @@ msgid ""
 "estimated value changed over time."
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:84
 msgid "Merging specification"
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:86
 msgid "Discarded fields"
 msgstr ""
 
@@ -170,7 +170,7 @@ msgid ""
 "<#reference-implementation>`__ of the merge routine."
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:105
 msgid "Versioned values"
 msgstr ""
 
@@ -222,11 +222,11 @@ msgstr ""
 #: ../../standard/docs/en/schema/merging.md:150
 msgid ""
 "The structure of the versioned release is described by the [versioned "
-"release schema](../../../../versioned-release-validation-schema.json); note "
-"that the `ocid` field's value is not versioned."
+"release schema](../../versioned-release-validation-schema.json); note that "
+"the `ocid` field's value is not versioned."
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:152
 msgid "Merge routine"
 msgstr ""
 
@@ -252,7 +252,7 @@ msgid ""
 " as follows:"
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:161
 msgid "Object values"
 msgstr ""
 
@@ -291,7 +291,7 @@ msgid ""
 " in **output** if not already added, and set it to the result"
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:174
 msgid "Literal values"
 msgstr ""
 
@@ -320,7 +320,7 @@ msgid ""
 "versioned values in **output**"
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:184
 msgid "Array values"
 msgstr ""
 
@@ -331,16 +331,16 @@ msgid ""
 "objects: whole list merge and identifier merge."
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:188
 msgid "Whole list merge"
 msgstr "Unire il contenuto di tutto l'elenco"
 
 #: ../../standard/docs/en/schema/merging.md:190
 msgid ""
 "An **input** array must be treated as a literal value if the corresponding "
-"field in a [dereferenced copy](../../../../dereferenced-release-schema.json)"
-" of the release schema has `\"array\"` in its `type` and if any of the "
-"following are also true:"
+"field in a [dereferenced copy](../../dereferenced-release-schema.json) of "
+"the release schema has `\"array\"` in its `type` and if any of the following"
+" are also true:"
 msgstr ""
 
 #: ../../standard/docs/en/schema/merging.md:192
@@ -359,7 +359,7 @@ msgid ""
 " has no `id` field in `items/properties`"
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:196
 msgid "Identifier merge"
 msgstr "Unione degli identificatori"
 
@@ -415,7 +415,7 @@ msgid ""
 "``\"versionId\": false`` has no meaning and is ignored."
 msgstr ""
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:221
 msgid "Reference implementation"
 msgstr "Implementazione di riferimento"
 

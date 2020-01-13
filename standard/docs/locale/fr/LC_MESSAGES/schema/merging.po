@@ -9,15 +9,16 @@
 # Colin Maudry <colin@maudry.com>, 2017
 # Cecile LG <cecile@datactivi.st>, 2019
 # Mathieu Morey <mathieu@datactivi.st>, 2019
+# James McKinney <jmckinney@open-contracting.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-08 13:47-0500\n"
+"POT-Creation-Date: 2020-01-13 13:23-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: Mathieu Morey <mathieu@datactivi.st>, 2019\n"
+"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2020\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,18 +26,18 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:1
 msgid "Merging"
 msgstr "Fusion"
 
 #: ../../standard/docs/en/schema/merging.md:3
 msgid ""
-"An OCDS [record](../getting_started/releases_and_records.md) aggregates all "
-"the releases available for a contracting process at a given time, and can "
+"An OCDS [record](../getting_started/releases_and_records) aggregates all the"
+" releases available for a contracting process at a given time, and can "
 "include:"
 msgstr ""
-"Une [archive](../getting_started/releases_and_records.md) OCDS agrège toutes"
-" les instances disponibles pour un processus de passation de marché à un "
+"Une [archive](../getting_started/releases_and_records) OCDS agrège toutes "
+"les instances disponibles pour un processus de passation de marché à un "
 "moment donné, et peut inclure :"
 
 #: ../../standard/docs/en/schema/merging.md:5
@@ -151,11 +152,11 @@ msgstr ""
 "L'instance versionnée permet de voir facilement comment la description et le"
 " montant estimé ont changé à travers le temps."
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:84
 msgid "Merging specification"
 msgstr "Fusionner la spécification"
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:86
 msgid "Discarded fields"
 msgstr "Champs abandonnés"
 
@@ -237,7 +238,7 @@ msgstr ""
 "``id`` en ``{ocid}-{date}``, comme dans la `reference implementation "
 "<#reference-implementation>`__ de la routine de fusion."
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:105
 msgid "Versioned values"
 msgstr "Valeurs versionnées"
 
@@ -306,14 +307,14 @@ msgstr ""
 #: ../../standard/docs/en/schema/merging.md:150
 msgid ""
 "The structure of the versioned release is described by the [versioned "
-"release schema](../../../../versioned-release-validation-schema.json); note "
-"that the `ocid` field's value is not versioned."
+"release schema](../../versioned-release-validation-schema.json); note that "
+"the `ocid` field's value is not versioned."
 msgstr ""
 "La structure de l'instance versionnée est décrite par le [schéma d'instance "
-"versionnée](../../../../versioned-release-validation-schema.json);  à noter "
-"que la valeur du champ `ocid` n'est pas versionné."
+"versionnée](../../versioned-release-validation-schema.json);  à noter que la"
+" valeur du champ `ocid` n'est pas versionné."
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:152
 msgid "Merge routine"
 msgstr "Routine de fusion"
 
@@ -341,7 +342,7 @@ msgstr ""
 "Fusionner chaque instance (**input**), en ordre, dans l'objet JSON "
 "(**output**), comme dans l'exemple suivant :"
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:161
 msgid "Object values"
 msgstr "Valeurs des objets"
 
@@ -393,7 +394,7 @@ msgstr ""
 "le champ à l'objet dans **output** s'il n'est pas déjà ajouté, et le définir"
 " au résultat"
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:174
 msgid "Literal values"
 msgstr "Valeurs littérales"
 
@@ -432,7 +433,7 @@ msgstr ""
 " l'**input** vers une [valeur versionnée](#versioned-values), et l'ajouter "
 "au nouvel array de valeurs versionnées dans **output**"
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:184
 msgid "Array values"
 msgstr "Valeurs des arrays"
 
@@ -447,21 +448,21 @@ msgstr ""
 "les arrays d'objets : la liste entière de fusion,  la fusion de "
 "l'identificateur."
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:188
 msgid "Whole list merge"
 msgstr "Fusion d'une liste intégrale"
 
 #: ../../standard/docs/en/schema/merging.md:190
 msgid ""
 "An **input** array must be treated as a literal value if the corresponding "
-"field in a [dereferenced copy](../../../../dereferenced-release-schema.json)"
-" of the release schema has `\"array\"` in its `type` and if any of the "
-"following are also true:"
+"field in a [dereferenced copy](../../dereferenced-release-schema.json) of "
+"the release schema has `\"array\"` in its `type` and if any of the following"
+" are also true:"
 msgstr ""
 "Un array d'*input** doit être traité en tant que valeur littérale si le "
-"champ correspondant de la [copie déréférencée](../../../../dereferenced-"
-"release-schema.json) du schéma d'instance contient un `\"array\"` dans son "
-"`type` et si l'un des éléments suivants est également vrai : "
+"champ correspondant de la [copie déréférencée](../../dereferenced-release-"
+"schema.json) du schéma d'instance contient un `\"array\"` dans son `type` et"
+" si l'un des éléments suivants est également vrai : "
 
 #: ../../standard/docs/en/schema/merging.md:192
 msgid "The field has `\"wholeListMerge\": true`"
@@ -483,7 +484,7 @@ msgstr ""
 "Le champ a `\"object\"` dans ses `items/type`, définit `items/properties`, "
 "et n'a pas de champ `id` dans `items/properties`"
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:196
 msgid "Identifier merge"
 msgstr "Fusion par identifiant"
 
@@ -567,7 +568,7 @@ msgstr ""
 "dans un tableau (array), il est ignoré. ``\"versionId\": false`` n'a pas de "
 "signification et est ignoré."
 
-#: ../../standard/docs/en/schema/merging.md:0
+#: ../../standard/docs/en/schema/merging.md:221
 msgid "Reference implementation"
 msgstr "Implémentation de référence"
 

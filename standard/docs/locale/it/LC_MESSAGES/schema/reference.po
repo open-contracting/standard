@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-08 13:47-0500\n"
+"POT-Creation-Date: 2020-01-13 13:23-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
@@ -21,13 +21,13 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:1
 msgid "Release Reference"
 msgstr "Riferimenti sui rilasci"
 
 #: ../../standard/docs/en/schema/reference.md:3
 msgid ""
-"The [Release Schema](release.md) provides a detailed specification of the "
+"The [Release Schema](release) provides a detailed specification of the "
 "fields and data structures to use when publishing contracting data. "
 "Supplementary schemas show how to combine releases into release packages and"
 " how to compile releases into records."
@@ -47,7 +47,7 @@ msgid ""
 "the schema, the schema takes precedence.**"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:9
 msgid "Release structure"
 msgstr "Struttura dei rilasci"
 
@@ -96,7 +96,7 @@ msgstr "[attuazione (implementation)](#implementation)"
 
 #: ../../standard/docs/en/schema/reference.md:22
 msgid ""
-"Releases are given a [tag](../../../codelists/#release-tag) to indicate the "
+"Releases are given a [tag](../codelists/#release-tag) to indicate the "
 "specific stage of a contracting process they represent. However, there are "
 "no formal restrictions on when information about a stage of the contracting "
 "process can be provided."
@@ -110,18 +110,15 @@ msgid ""
 "date which led to that contract being signed."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:26
 msgid "Package Metadata"
 msgstr "Metadati del pacchetto"
 
 #: ../../standard/docs/en/schema/reference.md:28
 msgid ""
-"Releases must be published within a [release package](release_package.md). "
-"The release package provides metadata about the release(s) that it contains."
+"Releases must be published within a [release package](release_package). The "
+"release package provides metadata about the release(s) that it contains."
 msgstr ""
-"Le versioni devono essere pubblicate all'interno di un [pacchetto di "
-"rilascio](release_package.md). Il pacchetto di rilascio fornisce i metadati "
-"relativi alle versioni che contiene."
 
 #: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
@@ -200,24 +197,17 @@ msgstr "Necessario"
 
 #: ../../standard/docs/en/schema/reference.md:38
 msgid ""
-"See the [licensing guidance](../implementation/licensing.md) for more "
-"details on selecting a license, and publishing license information."
+"See the [licensing guidance](../implementation/licensing) for more details "
+"on selecting a license, and publishing license information."
 msgstr ""
-"Consulta la [guida alla gestione delle "
-"licenze](../implementation/licensing.md) per maggiori dettagli sulla "
-"selezione di una licenza e sulla pubblicazione delle informazioni sulla "
-"licenza."
 
 #: ../../standard/docs/en/schema/reference.md:40
 msgid ""
-"See the [publication policy](../implementation/publication_policy.md) "
-"guidance for more details on what to include in a publication policy."
+"See the [publication policy](../implementation/publication_policy) guidance "
+"for more details on what to include in a publication policy."
 msgstr ""
-"Vedere le linee guida [politiche per la "
-"pubblicazione](../implementation/publication_policy.md) per maggiori "
-"dettagli su cosa includere in una strategia di pubblicazione."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:42
 msgid "Release"
 msgstr "Rilascio"
 
@@ -258,7 +248,7 @@ msgstr ""
 "Le seguenti sono estensioni della community e non sono mantenute da Open "
 "Contracting Partnership."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:59
 #: ../../standard/docs/en/schema/reference.md:1
 msgid "Parties"
 msgstr "Parti"
@@ -327,7 +317,7 @@ msgstr ""
 msgid "The following extensions are available for party details"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:96
 msgid "Planning"
 msgstr "Pianificazione"
 
@@ -353,7 +343,7 @@ msgid ""
 "even where linked data is not available."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:115
 msgid "Budget"
 msgstr "Bilancio"
 
@@ -361,7 +351,7 @@ msgstr "Bilancio"
 msgid "The following extensions are available for budget"
 msgstr "Le seguenti estensioni sono disponibili per il budget"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:130
 msgid "Tender"
 msgstr "Gara d'appalto."
 
@@ -432,7 +422,7 @@ msgstr ""
 "documenti, presentare una proposta o aggiudicarsi un contratto, questa "
 "estensione può essere utilizzata per fornire dettagli di pagamento."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:149
 msgid "Bids"
 msgstr "Offerte"
 
@@ -443,7 +433,7 @@ msgid ""
 " bid statistics and detailed information about individual bids."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:153
 msgid "Award"
 msgstr "Aggiudicazione"
 
@@ -455,7 +445,7 @@ msgid ""
 "as the award contains information on the suppliers."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:170
 msgid "Contract"
 msgstr "Contratto"
 
@@ -472,7 +462,7 @@ msgstr ""
 msgid "The following extensions are available for contracts"
 msgstr "Le seguenti estensioni sono disponibili per i contratti"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:187
 msgid "Implementation"
 msgstr "Attuazione"
 
@@ -495,10 +485,10 @@ msgstr "Le seguenti estensioni sono disponibili per l'attuazione"
 msgid ""
 "Information on subcontracts is not currently included in the core OCDS "
 "schema, but might be handled by [proposed "
-"extensions](conformance_and_extensions.md)"
+"extensions](conformance_and_extensions)"
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:206
 msgid "Transaction"
 msgstr "Transazione"
 
@@ -519,7 +509,7 @@ msgid ""
 "`buyer`, and the `payee` identifier will match that of the `supplier`."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:220
 msgid "Milestones"
 msgstr "Fasi"
 
@@ -535,7 +525,7 @@ msgstr ""
 "Le fasi dell'attuazione dovrebbero essere aggiornate quando vengono "
 "raggiunte e completate."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:226
 msgid "Documents"
 msgstr "Documenti"
 
@@ -549,7 +539,7 @@ msgstr ""
 msgid "See [document](#document) reference below."
 msgstr "Vedere di seguito il [documento (document)](#document)."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:232
 msgid "Amendment"
 msgstr "Variante"
 
@@ -579,7 +569,7 @@ msgstr ""
 "libero che dettagliano i cambiamenti intercorsi, nonché contengono le "
 "versioni con le informazioni prima e dopo ciascuna variante."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:246
 msgid "Changes"
 msgstr "Modifiche"
 
@@ -608,13 +598,11 @@ msgstr ""
 
 #: ../../standard/docs/en/schema/reference.md:253
 msgid ""
-"See the [amendment implementation "
-"guidance](../../../../implementation/amendments/) for more details."
+"See the [amendment implementation guidance](../implementation/amendments) "
+"for more details."
 msgstr ""
-"Vedere [guida all'implementazione delle "
-"varianti](../../../../implementation/amendments/) per maggiori dettagli."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:255
 msgid "Building block reference"
 msgstr "Riferimenti per gli elementi costituenti "
 
@@ -625,7 +613,7 @@ msgstr ""
 "I seguenti elementi costituenti sono comunemente riutilizzati in tutto lo "
 "standard."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:259
 msgid "OrganizationReference"
 msgstr "OrganizationReference"
 
@@ -681,7 +669,7 @@ msgstr ""
 "Lo schema di riferimento dell'organizzazione contiene campi deprecati per "
 "impedire errori di convalida dei dati OCDS 1.0."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:275
 msgid "Organization"
 msgstr "Organizzazione"
 
@@ -689,19 +677,16 @@ msgstr "Organizzazione"
 msgid "See the [parties](#parties) section"
 msgstr "Vedi la sezione [parti](#parties)"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:279
 msgid "Identifier"
 msgstr "Identificatore"
 
 #: ../../standard/docs/en/schema/reference.md:281
 msgid ""
 "The identifier block provides a way to [identify the legal "
-"entities](../../../identifiers/#organization-ids) involved in a contracting "
+"entities](../identifiers/#organization-ids) involved in a contracting "
 "process."
 msgstr ""
-"Il blocco identificatore fornisce un modo per [identificare le persone "
-"giuridiche](../../../identifiers/#organization-ids) coinvolti in un processo"
-" di contrattazione."
 
 #: ../../standard/docs/en/schema/reference.md:283
 msgid ""
@@ -718,15 +703,15 @@ msgstr ""
 "indicando nome,[indirizzo](#address) e [punto di contatto](#contactpoint) "
 "come pertinente."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:293
 msgid "Address"
 msgstr "Indirizzo"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:302
 msgid "ContactPoint"
 msgstr "Punto di contatto"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:311
 msgid "Document"
 msgstr "Documento"
 
@@ -735,10 +720,10 @@ msgid ""
 "Documents can be attached at a number of points within the standard: to "
 "planning, tenders, awards, contracts and implementation. Each document block"
 " can consist of multiple documents, classified using the "
-"[documentType](../../../codelists/#document-type) codelist."
+"[documentType](../codelists/#document-type) codelist."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:328
 msgid "Period"
 msgstr "Periodo"
 
@@ -759,7 +744,7 @@ msgid ""
 "period could be extended without an amendment."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:347
 msgid "Date"
 msgstr "Data"
 
@@ -849,7 +834,7 @@ msgstr ""
 "predefinito di '23:59:59' e 'Z' (per UTC) o altro fuso orario dell'editore, "
 "indicando che il tempo si riferisce alla fine della data indicata."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:371
 msgid "Item"
 msgstr "Articolo"
 
@@ -865,7 +850,7 @@ msgstr ""
 msgid "These are extensions related to Items."
 msgstr "Queste sono estensioni relative agli Articoli."
 
-#: ../../extension_list_item:1 ../../standard/docs/en/schema/reference.md:0
+#: ../../extension_list_item:1 ../../standard/docs/en/schema/reference.md:487
 msgid "Location"
 msgstr "Posizione"
 
@@ -875,11 +860,11 @@ msgid ""
 "indicated in tender, award and contract objects."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:389
 msgid "Classification"
 msgstr "Classificazione"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:398
 msgid "Unit"
 msgstr "Unità"
 
@@ -900,11 +885,11 @@ msgstr ""
 #: ../../standard/docs/en/schema/reference.md:404
 msgid ""
 "Other unit classification schemes can be used, including those in the "
-"[unitClassificationScheme codelist](../../../codelists/#unit-classification-"
+"[unitClassificationScheme codelist](../codelists/#unit-classification-"
 "scheme)."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:414
 msgid "Milestone"
 msgstr "Fase"
 
@@ -947,7 +932,7 @@ msgstr ""
 "estensione reintroduce la capacità di allegare documenti a ogni singola fase"
 " principale."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:437
 msgid "Value"
 msgstr "Valore"
 
@@ -963,7 +948,7 @@ msgstr ""
 "Il supporto per i tassi di cambio e le informazioni fiscali possono essere "
 "forniti utilizzando le estensioni."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:456
 msgid "RelatedProcess"
 msgstr "RelatedProcess"
 
@@ -1094,7 +1079,7 @@ msgid ""
 "provide location information."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:491
 msgid "Publisher"
 msgstr "Pubblicatore"
 
@@ -1106,7 +1091,7 @@ msgstr ""
 "Il blocco del pubblicatore viene utilizzato nei pacchetti di versione e "
 "registrazione per identificare l'origine di un set di dati."
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:503
 msgid "Language"
 msgstr "Lingua"
 
@@ -1162,7 +1147,7 @@ msgid ""
 "Spanish."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:517
 msgid "Worked example"
 msgstr "Esempio funzionante"
 
@@ -1182,7 +1167,7 @@ msgstr "**json**"
 msgid "**csv**"
 msgstr "**csv**"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:540
 msgid "Release handling"
 msgstr "Gestione del rilascio di una versione"
 
@@ -1205,8 +1190,8 @@ msgstr ""
 msgid ""
 "Publishers will need to choose how to generate new releases, and whether to "
 "repeat information in each release, or just to provide changes. This choice "
-"ought to be based on an understanding of the [merging process](merging.md) "
-"that is used to generate a snapshot record of a full contracting process."
+"ought to be based on an understanding of the [merging process](merging) that"
+" is used to generate a snapshot record of a full contracting process."
 msgstr ""
 
 #: ../../standard/docs/en/schema/reference.md:546
@@ -1215,7 +1200,7 @@ msgid ""
 "and missing fields."
 msgstr ""
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:548
 msgid "Empty fields"
 msgstr "Campi vuoti"
 
@@ -1233,7 +1218,7 @@ msgstr ""
 "Solo includendo i campi contenenti valori si manterranno le versioni dei "
 "dataset più pulite"
 
-#: ../../standard/docs/en/schema/reference.md:0
+#: ../../standard/docs/en/schema/reference.md:554
 msgid "Emptying fields and values"
 msgstr "Svuotamento di campi e valori"
 
@@ -1241,6 +1226,5 @@ msgstr "Svuotamento di campi e valori"
 msgid ""
 "There can be cases where a publisher needs to remove, rather than update, a "
 "value which was set in a previous release. In this case, the fields must be "
-"set to `null`. See the [merging documentation](../../../merging/) for more "
-"details."
+"set to `null`. See the [merging documentation](merging) for more details."
 msgstr ""
