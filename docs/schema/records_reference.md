@@ -24,7 +24,7 @@ The versioned release format is designed to support analysis of how data has cha
 Records must be published within a [record package](record_package).
 
 ```eval_rst
-.. jsonschema:: ../../../../build/current_lang/record-package-schema.json
+.. jsonschema:: ../../build/current_lang/record-package-schema.json
     :include:
     :collapse: records
 

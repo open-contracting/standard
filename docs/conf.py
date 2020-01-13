@@ -60,7 +60,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = 'standard_theme'
 html_theme_path = [standard_theme.get_html_theme_path()]
-html_favicon = '../../assets/favicon-16x16.ico'
+html_favicon = '../assets/favicon-16x16.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -114,9 +114,9 @@ def setup(app):
     app.add_transform(AutoStructify)
 
     # The root of the repository.
-    basedir = Path(os.path.realpath(__file__)).parents[3]
+    basedir = Path(os.path.realpath(__file__)).parents[1]
     # The `LOCALE_DIR` from `config.mk`.
-    localedir = basedir / 'standard' / 'docs' / 'locale'
+    localedir = basedir / 'locale'
 
     language = app.config.overrides.get('language', 'en')
 
@@ -126,7 +126,7 @@ def setup(app):
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
     codelists_domain = '{}codelists'.format(gettext_domain_prefix)
 
-    standard_dir = basedir / 'standard' / 'schema'
+    standard_dir = basedir / 'schema'
     standard_build_dir = basedir / 'build' / language
 
     translate([
