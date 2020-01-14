@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-13 13:28-0500\n"
+"POT-Creation-Date: 2020-01-13 21:53-0500\n"
 "PO-Revision-Date: 2017-04-24 10:46+0000\n"
 "Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2019\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
@@ -28,15 +28,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. /title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Schema for an Open Contracting Release"
 msgstr "Schéma pour une instance Open Contracting"
 
 #. /description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "Each release provides data about a single contracting process at a "
 "particular point in time. Releases can be used to notify users of new "
@@ -58,15 +56,13 @@ msgstr ""
 
 #. /properties/ocid/title
 #. /definitions/record/properties/ocid/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-schema.json:1
 msgid "Open Contracting ID"
 msgstr "Identifiant Open Contracting"
 
 #. /properties/ocid/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A globally unique identifier for this Open Contracting Process. Composed of "
 "an ocid prefix and an identifier for the contracting process. For more "
@@ -80,14 +76,12 @@ msgstr ""
 "contracting.org/{{version}}/{{lang}}/schema/identifiers/)."
 
 #. /properties/id/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Release ID"
 msgstr "Identifiant d'instance"
 
 #. /properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "An identifier for this particular release of information. A release "
 "identifier must be unique within the scope of its related contracting "
@@ -102,15 +96,13 @@ msgstr ""
 
 #. /properties/date/title
 #. /definitions/record/properties/releases/oneOf/0/items/properties/date/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-schema.json:1
 msgid "Release Date"
 msgstr "Date de l'instance"
 
 #. /properties/date/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The date this information was first released, or published."
 msgstr ""
 "La date à laquelle cette information a été communiquée ou publiée pour la "
@@ -118,15 +110,13 @@ msgstr ""
 
 #. /properties/tag/title
 #. /definitions/record/properties/releases/oneOf/0/items/properties/tag/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-schema.json:1
 msgid "Release Tag"
 msgstr "Tag d'instance"
 
 #. /properties/tag/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "One or more values from the closed [releaseTag](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) "
@@ -140,14 +130,12 @@ msgstr ""
 "type d'information qu'une instance peut contenir."
 
 #. /properties/initiationType/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Initiation type"
 msgstr "Type de lancement"
 
 #. /properties/initiationType/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The type of initiation process used for this contract, from the closed "
 "[initiationType](https://standard.open-"
@@ -159,14 +147,12 @@ msgstr ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#initiation-type)."
 
 #. /properties/parties/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Parties"
 msgstr "Parties"
 
 #. /properties/parties/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Information on the parties (organizations, economic operators and other "
 "participants) who are involved in the contracting process and their roles, "
@@ -181,29 +167,25 @@ msgstr ""
 
 #. /properties/parties/items/title
 #. /definitions/Organization/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Organization"
 msgstr "Organisation"
 
 #. /properties/parties/items/description
 #. /definitions/Organization/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A party (organization)"
 msgstr "Une partie (organisation)"
 
 #. /properties/parties/items/properties/name/title
 #. /definitions/Organization/properties/name/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Common name"
 msgstr "Nom courant"
 
 #. /properties/parties/items/properties/name/description
 #. /definitions/Organization/properties/name/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A common name for this organization or other participant in the contracting "
 "process. The identifier object provides a space for the formal legal name, "
@@ -220,8 +202,7 @@ msgstr ""
 
 #. /properties/parties/items/properties/id/description
 #. /definitions/Organization/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The ID used for cross-referencing to this party from other sections of the "
 "release. This field may be built with the following structure "
@@ -233,8 +214,7 @@ msgstr ""
 
 #. /properties/parties/items/properties/id/title
 #. /definitions/Organization/properties/id/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Entity ID"
 msgstr "Identifiant d'entité"
 
@@ -287,8 +267,7 @@ msgstr "Identifiant d'entité"
 #. /definitions/Organization/properties/additionalIdentifiers/items/title
 #. /definitions/Identifier/title
 #. /definitions/RelatedProcess/properties/identifier/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Identifier"
 msgstr "Identifiant"
 
@@ -337,8 +316,7 @@ msgstr "Identifiant"
 #. /definitions/Organization/properties/identifier/description
 #. /definitions/Organization/properties/additionalIdentifiers/items/description
 #. /definitions/Identifier/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A unique identifier for a party (organization)."
 msgstr "Un identifiant unique pour une partie (organisation)."
 
@@ -414,10 +392,9 @@ msgstr "Un identifiant unique pour une partie (organisation)."
 #. /definitions/Identifier/properties/scheme/title
 #. /definitions/RelatedProcess/properties/scheme/title
 #. /properties/publisher/properties/scheme/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
+#: schema/release-schema.json:1
 msgid "Scheme"
 msgstr "Schéma d'URI"
 
@@ -466,8 +443,7 @@ msgstr "Schéma d'URI"
 #. /definitions/Organization/properties/identifier/properties/scheme/description
 #. /definitions/Organization/properties/additionalIdentifiers/items/properties/scheme/description
 #. /definitions/Identifier/properties/scheme/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Organization identifiers should be taken from an existing organization "
 "identifier list. The scheme field is used to indicate the list or register "
@@ -610,8 +586,7 @@ msgstr ""
 #. /definitions/Amendment/properties/id/title
 #. /definitions/Classification/properties/id/title
 #. /definitions/Identifier/properties/id/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "ID"
 msgstr "Identifiant"
 
@@ -660,8 +635,7 @@ msgstr "Identifiant"
 #. /definitions/Organization/properties/identifier/properties/id/description
 #. /definitions/Organization/properties/additionalIdentifiers/items/properties/id/description
 #. /definitions/Identifier/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The identifier of the organization in the selected scheme."
 msgstr "L'identifiant de l'organisation dans le schéma sélectionné."
 
@@ -710,8 +684,7 @@ msgstr "L'identifiant de l'organisation dans le schéma sélectionné."
 #. /definitions/Organization/properties/identifier/properties/legalName/title
 #. /definitions/Organization/properties/additionalIdentifiers/items/properties/legalName/title
 #. /definitions/Identifier/properties/legalName/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Legal Name"
 msgstr "Raison sociale"
 
@@ -760,8 +733,7 @@ msgstr "Raison sociale"
 #. /definitions/Organization/properties/identifier/properties/legalName/description
 #. /definitions/Organization/properties/additionalIdentifiers/items/properties/legalName/description
 #. /definitions/Identifier/properties/legalName/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The legally registered name of the organization."
 msgstr ""
 "Le nom officiel de l'organisation tel qu'enregistré au registre des "
@@ -835,10 +807,9 @@ msgstr ""
 #. /definitions/Classification/properties/uri/title
 #. /definitions/Identifier/properties/uri/title
 #. /properties/publisher/properties/uri/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
+#: schema/release-schema.json:1
 msgid "URI"
 msgstr "URI"
 
@@ -887,8 +858,7 @@ msgstr "URI"
 #. /definitions/Organization/properties/identifier/properties/uri/description
 #. /definitions/Organization/properties/additionalIdentifiers/items/properties/uri/description
 #. /definitions/Identifier/properties/uri/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A URI to identify the organization, such as those provided by [Open "
 "Corporates](http://www.opencorporates.com) or some other relevant URI "
@@ -918,15 +888,13 @@ msgstr ""
 #. /definitions/Transaction/properties/payee/properties/additionalIdentifiers/title
 #. /definitions/OrganizationReference/properties/additionalIdentifiers/title
 #. /definitions/Organization/properties/additionalIdentifiers/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Additional identifiers"
 msgstr "Identifiants supplémentaires"
 
 #. /properties/parties/items/properties/additionalIdentifiers/description
 #. /definitions/Organization/properties/additionalIdentifiers/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A list of additional / supplemental identifiers for the organization or "
 "participant, using the [organization identifier guidance](https://standard"
@@ -960,8 +928,7 @@ msgstr ""
 #. /definitions/OrganizationReference/properties/address/title
 #. /definitions/Organization/properties/address/title
 #. /definitions/Address/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Address"
 msgstr "Adresse"
 
@@ -984,8 +951,7 @@ msgstr "Adresse"
 #. /definitions/OrganizationReference/properties/address/description
 #. /definitions/Organization/properties/address/description
 #. /definitions/Address/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "An address."
 msgstr "Une adresse."
 
@@ -1008,8 +974,7 @@ msgstr "Une adresse."
 #. /definitions/OrganizationReference/properties/address/properties/streetAddress/title
 #. /definitions/Organization/properties/address/properties/streetAddress/title
 #. /definitions/Address/properties/streetAddress/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Street address"
 msgstr "Numéro et nom de la rue"
 
@@ -1032,8 +997,7 @@ msgstr "Numéro et nom de la rue"
 #. /definitions/OrganizationReference/properties/address/properties/streetAddress/description
 #. /definitions/Organization/properties/address/properties/streetAddress/description
 #. /definitions/Address/properties/streetAddress/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The street address. For example, 1600 Amphitheatre Pkwy."
 msgstr "L'adresse de la rue. Par exemple, 57 rue du Faubourg-Saint-Honoré."
 
@@ -1056,8 +1020,7 @@ msgstr "L'adresse de la rue. Par exemple, 57 rue du Faubourg-Saint-Honoré."
 #. /definitions/OrganizationReference/properties/address/properties/locality/title
 #. /definitions/Organization/properties/address/properties/locality/title
 #. /definitions/Address/properties/locality/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Locality"
 msgstr "Ville"
 
@@ -1080,8 +1043,7 @@ msgstr "Ville"
 #. /definitions/OrganizationReference/properties/address/properties/locality/description
 #. /definitions/Organization/properties/address/properties/locality/description
 #. /definitions/Address/properties/locality/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The locality. For example, Mountain View."
 msgstr "Le nom de la commune. Par exemple, Nantes."
 
@@ -1104,8 +1066,7 @@ msgstr "Le nom de la commune. Par exemple, Nantes."
 #. /definitions/OrganizationReference/properties/address/properties/region/title
 #. /definitions/Organization/properties/address/properties/region/title
 #. /definitions/Address/properties/region/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Region"
 msgstr "Région"
 
@@ -1128,8 +1089,7 @@ msgstr "Région"
 #. /definitions/OrganizationReference/properties/address/properties/region/description
 #. /definitions/Organization/properties/address/properties/region/description
 #. /definitions/Address/properties/region/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The region. For example, CA."
 msgstr "La région. Par exemple, Île-de-France."
 
@@ -1152,8 +1112,7 @@ msgstr "La région. Par exemple, Île-de-France."
 #. /definitions/OrganizationReference/properties/address/properties/postalCode/title
 #. /definitions/Organization/properties/address/properties/postalCode/title
 #. /definitions/Address/properties/postalCode/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Postal code"
 msgstr "Code postal"
 
@@ -1176,8 +1135,7 @@ msgstr "Code postal"
 #. /definitions/OrganizationReference/properties/address/properties/postalCode/description
 #. /definitions/Organization/properties/address/properties/postalCode/description
 #. /definitions/Address/properties/postalCode/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The postal code. For example, 94043."
 msgstr "Le code postal. Par exemple, 75008."
 
@@ -1200,8 +1158,7 @@ msgstr "Le code postal. Par exemple, 75008."
 #. /definitions/OrganizationReference/properties/address/properties/countryName/title
 #. /definitions/Organization/properties/address/properties/countryName/title
 #. /definitions/Address/properties/countryName/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Country name"
 msgstr "Pays"
 
@@ -1224,8 +1181,7 @@ msgstr "Pays"
 #. /definitions/OrganizationReference/properties/address/properties/countryName/description
 #. /definitions/Organization/properties/address/properties/countryName/description
 #. /definitions/Address/properties/countryName/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The country name. For example, United States."
 msgstr "Le nom du pays. Par exemple, États-Unis."
 
@@ -1248,8 +1204,7 @@ msgstr "Le nom du pays. Par exemple, États-Unis."
 #. /definitions/OrganizationReference/properties/contactPoint/title
 #. /definitions/Organization/properties/contactPoint/title
 #. /definitions/ContactPoint/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Contact point"
 msgstr "Coordonnées de contact"
 
@@ -1272,8 +1227,7 @@ msgstr "Coordonnées de contact"
 #. /definitions/OrganizationReference/properties/contactPoint/description
 #. /definitions/Organization/properties/contactPoint/description
 #. /definitions/ContactPoint/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A person, contact point or department to contact in relation to this "
 "contracting process."
@@ -1308,10 +1262,9 @@ msgstr ""
 #. /definitions/Item/properties/unit/properties/name/title
 #. /definitions/ContactPoint/properties/name/title
 #. /properties/publisher/properties/name/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
+#: schema/release-schema.json:1
 msgid "Name"
 msgstr "Nom"
 
@@ -1334,8 +1287,7 @@ msgstr "Nom"
 #. /definitions/OrganizationReference/properties/contactPoint/properties/name/description
 #. /definitions/Organization/properties/contactPoint/properties/name/description
 #. /definitions/ContactPoint/properties/name/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The name of the contact person, department, or contact point, for "
 "correspondence relating to this contracting process."
@@ -1362,8 +1314,7 @@ msgstr ""
 #. /definitions/OrganizationReference/properties/contactPoint/properties/email/title
 #. /definitions/Organization/properties/contactPoint/properties/email/title
 #. /definitions/ContactPoint/properties/email/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Email"
 msgstr "E-mail"
 
@@ -1386,8 +1337,7 @@ msgstr "E-mail"
 #. /definitions/OrganizationReference/properties/contactPoint/properties/email/description
 #. /definitions/Organization/properties/contactPoint/properties/email/description
 #. /definitions/ContactPoint/properties/email/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The e-mail address of the contact point/person."
 msgstr "L'adresse e-mail du point de contact ou de la personne en charge."
 
@@ -1410,8 +1360,7 @@ msgstr "L'adresse e-mail du point de contact ou de la personne en charge."
 #. /definitions/OrganizationReference/properties/contactPoint/properties/telephone/title
 #. /definitions/Organization/properties/contactPoint/properties/telephone/title
 #. /definitions/ContactPoint/properties/telephone/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Telephone"
 msgstr "Numéro de téléphone"
 
@@ -1434,8 +1383,7 @@ msgstr "Numéro de téléphone"
 #. /definitions/OrganizationReference/properties/contactPoint/properties/telephone/description
 #. /definitions/Organization/properties/contactPoint/properties/telephone/description
 #. /definitions/ContactPoint/properties/telephone/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The telephone number of the contact point/person. This should include the "
 "international dialing code."
@@ -1462,8 +1410,7 @@ msgstr ""
 #. /definitions/OrganizationReference/properties/contactPoint/properties/faxNumber/title
 #. /definitions/Organization/properties/contactPoint/properties/faxNumber/title
 #. /definitions/ContactPoint/properties/faxNumber/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Fax number"
 msgstr "Numéro de fax"
 
@@ -1486,8 +1433,7 @@ msgstr "Numéro de fax"
 #. /definitions/OrganizationReference/properties/contactPoint/properties/faxNumber/description
 #. /definitions/Organization/properties/contactPoint/properties/faxNumber/description
 #. /definitions/ContactPoint/properties/faxNumber/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The fax number of the contact point/person. This should include the "
 "international dialing code."
@@ -1536,8 +1482,7 @@ msgstr ""
 #. /definitions/OrganizationReference/properties/contactPoint/properties/url/title
 #. /definitions/Organization/properties/contactPoint/properties/url/title
 #. /definitions/ContactPoint/properties/url/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "URL"
 msgstr "URL"
 
@@ -1560,22 +1505,19 @@ msgstr "URL"
 #. /definitions/OrganizationReference/properties/contactPoint/properties/url/description
 #. /definitions/Organization/properties/contactPoint/properties/url/description
 #. /definitions/ContactPoint/properties/url/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A web address for the contact point/person."
 msgstr "L'adresse Web du point de contact ou de la personne en charge."
 
 #. /properties/parties/items/properties/roles/title
 #. /definitions/Organization/properties/roles/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Party roles"
 msgstr "Rôles des parties"
 
 #. /properties/parties/items/properties/roles/description
 #. /definitions/Organization/properties/roles/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The party's role(s) in the contracting process, using the open "
 "[partyRole](https://standard.open-"
@@ -1587,8 +1529,7 @@ msgstr ""
 
 #. /properties/parties/items/properties/details/description
 #. /definitions/Organization/properties/details/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Additional classification information about parties can be provided using "
 "partyDetail extensions that define particular properties and classification "
@@ -1600,8 +1541,7 @@ msgstr ""
 
 #. /properties/parties/items/properties/details/title
 #. /definitions/Organization/properties/details/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Details"
 msgstr "Détails"
 
@@ -1621,8 +1561,7 @@ msgstr "Détails"
 #. /definitions/Transaction/properties/payer/properties/name/description
 #. /definitions/Transaction/properties/payee/properties/name/description
 #. /definitions/OrganizationReference/properties/name/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The name of the party being referenced. This must match the name of an entry"
 " in the parties section."
@@ -1646,8 +1585,7 @@ msgstr ""
 #. /definitions/Transaction/properties/payer/properties/name/title
 #. /definitions/Transaction/properties/payee/properties/name/title
 #. /definitions/OrganizationReference/properties/name/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Organization name"
 msgstr "Nom de l'organisation"
 
@@ -1667,8 +1605,7 @@ msgstr "Nom de l'organisation"
 #. /definitions/Transaction/properties/payer/properties/id/description
 #. /definitions/Transaction/properties/payee/properties/id/description
 #. /definitions/OrganizationReference/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The id of the party being referenced. This must match the id of an entry in "
 "the parties section."
@@ -1692,8 +1629,7 @@ msgstr ""
 #. /definitions/Transaction/properties/payer/properties/id/title
 #. /definitions/Transaction/properties/payee/properties/id/title
 #. /definitions/OrganizationReference/properties/id/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Organization ID"
 msgstr "Identifiant de l'organisation"
 
@@ -1715,9 +1651,8 @@ msgstr "Identifiant de l'organisation"
 #. /definitions/OrganizationReference/properties/additionalIdentifiers/deprecated/description
 #. /definitions/OrganizationReference/properties/additionalIdentifiers/items/properties/value/deprecated/description
 #. /definitions/OrganizationReferenceVersionedId/properties/additionalIdentifiers/items/properties/value/deprecated/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "From version 1.1, organizations should be referenced by their identifier and"
 " name in a document, and additional identifiers for an organization should "
@@ -1746,8 +1681,7 @@ msgstr ""
 #. /definitions/Transaction/properties/payer/properties/additionalIdentifiers/description
 #. /definitions/Transaction/properties/payee/properties/additionalIdentifiers/description
 #. /definitions/OrganizationReference/properties/additionalIdentifiers/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "(Deprecated outside the parties section) A list of additional / supplemental"
 " identifiers for the organization, using the [organization identifier "
@@ -1779,8 +1713,7 @@ msgstr ""
 #. /definitions/Transaction/properties/payer/description
 #. /definitions/Transaction/properties/payee/description
 #. /definitions/OrganizationReference/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The id and name of the party being referenced. Used to cross-reference to "
 "the parties section"
@@ -1804,22 +1737,19 @@ msgstr ""
 #. /definitions/Transaction/properties/payer/title
 #. /definitions/Transaction/properties/payee/title
 #. /definitions/OrganizationReference/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Organization reference"
 msgstr "Référence de l'organisation"
 
 #. /properties/planning/title
 #. /definitions/Planning/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Planning"
 msgstr "Planification"
 
 #. /properties/planning/description
 #. /definitions/Planning/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Information from the planning phase of the contracting process. Note that "
 "many other fields can be filled in a planning release, in the appropriate "
@@ -1847,15 +1777,13 @@ msgstr ""
 #. /definitions/Contract/properties/amendments/items/properties/rationale/title
 #. /definitions/Contract/properties/amendment/properties/rationale/title
 #. /definitions/Amendment/properties/rationale/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Rationale"
 msgstr "Raisons"
 
 #. /properties/planning/properties/rationale/description
 #. /definitions/Planning/properties/rationale/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The rationale for the procurement provided in free text. More detail can be "
 "provided in an attached document."
@@ -1866,16 +1794,14 @@ msgstr ""
 #. /properties/planning/properties/budget/title
 #. /definitions/Planning/properties/budget/title
 #. /definitions/Budget/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Budget information"
 msgstr "Informations sur le budget"
 
 #. /properties/planning/properties/budget/description
 #. /definitions/Planning/properties/budget/description
 #. /definitions/Budget/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "This section contains information about the budget line, and associated "
 "projects, through which this contracting process is funded. It draws upon "
@@ -1900,8 +1826,7 @@ msgstr ""
 #. /properties/planning/properties/budget/properties/id/description
 #. /definitions/Planning/properties/budget/properties/id/description
 #. /definitions/Budget/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "An identifier for the budget line item which provides funds for this "
 "contracting process. This identifier should be possible to cross-reference "
@@ -1914,16 +1839,14 @@ msgstr ""
 #. /properties/planning/properties/budget/properties/description/title
 #. /definitions/Planning/properties/budget/properties/description/title
 #. /definitions/Budget/properties/description/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Budget Source"
 msgstr "Source du budget"
 
 #. /properties/planning/properties/budget/properties/description/description
 #. /definitions/Planning/properties/budget/properties/description/description
 #. /definitions/Budget/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A short free text description of the budget source. May be used to provide "
 "the title of the budget line, or the programme used to fund this project."
@@ -1959,8 +1882,7 @@ msgstr ""
 #. /definitions/Transaction/properties/amount/title
 #. /definitions/Item/properties/unit/properties/value/title
 #. /definitions/Value/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Value"
 msgstr "Montant"
 
@@ -1991,8 +1913,7 @@ msgstr "Montant"
 #. /definitions/Transaction/properties/amount/description
 #. /definitions/Item/properties/unit/properties/value/description
 #. /definitions/Value/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Financial values should be published with a currency attached."
 msgstr ""
 "Les valeurs financières devraient toujours être associées à une devise."
@@ -2026,8 +1947,7 @@ msgstr ""
 #. /definitions/Value/properties/amount/title
 #. /definitions/Budget/properties/amount/title
 #. /definitions/Transaction/properties/amount/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amount"
 msgstr "Montant"
 
@@ -2058,8 +1978,7 @@ msgstr "Montant"
 #. /definitions/Transaction/properties/amount/properties/amount/description
 #. /definitions/Item/properties/unit/properties/value/properties/amount/description
 #. /definitions/Value/properties/amount/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amount as a number."
 msgstr "Montant sous la forme d'un nombre."
 
@@ -2090,8 +2009,7 @@ msgstr "Montant sous la forme d'un nombre."
 #. /definitions/Transaction/properties/amount/properties/currency/title
 #. /definitions/Item/properties/unit/properties/value/properties/currency/title
 #. /definitions/Value/properties/currency/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Currency"
 msgstr "Devise monétaire"
 
@@ -2122,8 +2040,7 @@ msgstr "Devise monétaire"
 #. /definitions/Transaction/properties/amount/properties/currency/description
 #. /definitions/Item/properties/unit/properties/value/properties/currency/description
 #. /definitions/Value/properties/currency/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The currency of the amount, from the closed [currency](https://standard"
 ".open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) "
@@ -2136,16 +2053,14 @@ msgstr ""
 #. /properties/planning/properties/budget/properties/project/title
 #. /definitions/Planning/properties/budget/properties/project/title
 #. /definitions/Budget/properties/project/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Project title"
 msgstr "Titre du projet"
 
 #. /properties/planning/properties/budget/properties/project/description
 #. /definitions/Planning/properties/budget/properties/project/description
 #. /definitions/Budget/properties/project/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The name of the project through which this contracting process is funded (if"
 " applicable). Some organizations maintain a registry of projects, and the "
@@ -2163,16 +2078,14 @@ msgstr ""
 #. /properties/planning/properties/budget/properties/projectID/title
 #. /definitions/Planning/properties/budget/properties/projectID/title
 #. /definitions/Budget/properties/projectID/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Project identifier"
 msgstr "Identifiant du projet"
 
 #. /properties/planning/properties/budget/properties/projectID/description
 #. /definitions/Planning/properties/budget/properties/projectID/description
 #. /definitions/Budget/properties/projectID/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "An external identifier for the project that this contracting process forms "
 "part of, or is funded via (if applicable). Some organizations maintain a "
@@ -2187,16 +2100,14 @@ msgstr ""
 #. /properties/planning/properties/budget/properties/uri/title
 #. /definitions/Planning/properties/budget/properties/uri/title
 #. /definitions/Budget/properties/uri/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Linked budget information"
 msgstr "Informations sur le budget liées"
 
 #. /properties/planning/properties/budget/properties/uri/description
 #. /definitions/Planning/properties/budget/properties/uri/description
 #. /definitions/Budget/properties/uri/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A URI pointing directly to a machine-readable record about the budget line-"
 "item or line-items that fund this contracting process. Information can be "
@@ -2215,16 +2126,14 @@ msgstr ""
 #. /properties/planning/properties/budget/properties/source/title
 #. /definitions/Planning/properties/budget/properties/source/title
 #. /definitions/Budget/properties/source/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Data Source"
 msgstr "Source des données"
 
 #. /properties/planning/properties/budget/properties/source/description
 #. /definitions/Planning/properties/budget/properties/source/description
 #. /definitions/Budget/properties/source/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "(Deprecated in 1.1) Used to point either to a corresponding Budget Data "
 "Package, or to a machine or human-readable source where users can find "
@@ -2241,9 +2150,8 @@ msgstr ""
 #. /definitions/Planning/properties/budget/properties/source/deprecated/description
 #. /definitions/Budget/properties/source/deprecated/description
 #. /definitions/Budget/properties/source/items/properties/value/deprecated/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "The budget data source field was intended to link to machine-readable data "
 "about the budget for a contracting process, but has been widely mis-used to "
@@ -2282,15 +2190,13 @@ msgstr ""
 #. /definitions/Implementation/properties/milestones/items/properties/documents/title
 #. /definitions/Implementation/properties/documents/title
 #. /definitions/Milestone/properties/documents/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Documents"
 msgstr "Documents"
 
 #. /properties/planning/properties/documents/description
 #. /definitions/Planning/properties/documents/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A list of documents related to the planning process."
 msgstr "Une liste des documents relatifs au processus de planification."
 
@@ -2316,8 +2222,7 @@ msgstr "Une liste des documents relatifs au processus de planification."
 #. /definitions/Implementation/properties/documents/items/title
 #. /definitions/Milestone/properties/documents/items/title
 #. /definitions/Document/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Document"
 msgstr "Document"
 
@@ -2343,8 +2248,7 @@ msgstr "Document"
 #. /definitions/Implementation/properties/documents/items/description
 #. /definitions/Milestone/properties/documents/items/description
 #. /definitions/Document/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Links to, or descriptions of, external documents can be attached at various "
 "locations within the standard. Documents can be supporting information, "
@@ -2379,8 +2283,7 @@ msgstr ""
 #. /definitions/Implementation/properties/documents/items/properties/id/description
 #. /definitions/Milestone/properties/documents/items/properties/id/description
 #. /definitions/Document/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A local, unique identifier for this document. This field is used to keep "
 "track of multiple revisions of a document through the compilation from "
@@ -2412,8 +2315,7 @@ msgstr ""
 #. /definitions/Implementation/properties/documents/items/properties/documentType/title
 #. /definitions/Milestone/properties/documents/items/properties/documentType/title
 #. /definitions/Document/properties/documentType/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Document type"
 msgstr "Type de document"
 
@@ -2439,8 +2341,7 @@ msgstr "Type de document"
 #. /definitions/Implementation/properties/documents/items/properties/documentType/description
 #. /definitions/Milestone/properties/documents/items/properties/documentType/description
 #. /definitions/Document/properties/documentType/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A classification of the document described, using the open "
 "[documentType](https://standard.open-"
@@ -2485,8 +2386,7 @@ msgstr ""
 #. /definitions/Milestone/properties/title/title
 #. /definitions/Milestone/properties/documents/items/properties/title/title
 #. /definitions/Document/properties/title/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Title"
 msgstr "Titre"
 
@@ -2512,8 +2412,7 @@ msgstr "Titre"
 #. /definitions/Implementation/properties/documents/items/properties/title/description
 #. /definitions/Milestone/properties/documents/items/properties/title/description
 #. /definitions/Document/properties/title/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The document title."
 msgstr "Le titre du document."
 
@@ -2586,8 +2485,7 @@ msgstr "Le titre du document."
 #. /definitions/Item/properties/additionalClassifications/items/properties/description/title
 #. /definitions/Amendment/properties/description/title
 #. /definitions/Classification/properties/description/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Description"
 msgstr "Description"
 
@@ -2613,8 +2511,7 @@ msgstr "Description"
 #. /definitions/Implementation/properties/documents/items/properties/description/description
 #. /definitions/Milestone/properties/documents/items/properties/description/description
 #. /definitions/Document/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A short description of the document. Descriptions are recommended to not "
 "exceed 250 words. In the event the document is not accessible online, the "
@@ -2648,8 +2545,7 @@ msgstr ""
 #. /definitions/Implementation/properties/documents/items/properties/url/description
 #. /definitions/Milestone/properties/documents/items/properties/url/description
 #. /definitions/Document/properties/url/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A direct link to the document or attachment. The server providing access to "
 "this document ought to be configured to correctly report the document mime "
@@ -2681,8 +2577,7 @@ msgstr ""
 #. /definitions/Implementation/properties/documents/items/properties/datePublished/title
 #. /definitions/Milestone/properties/documents/items/properties/datePublished/title
 #. /definitions/Document/properties/datePublished/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Date published"
 msgstr "Date de publication"
 
@@ -2708,8 +2603,7 @@ msgstr "Date de publication"
 #. /definitions/Implementation/properties/documents/items/properties/datePublished/description
 #. /definitions/Milestone/properties/documents/items/properties/datePublished/description
 #. /definitions/Document/properties/datePublished/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The date on which the document was first published. This is particularly "
 "important for legally important documents such as notices of a tender."
@@ -2750,8 +2644,7 @@ msgstr ""
 #. /definitions/Milestone/properties/dateModified/title
 #. /definitions/Milestone/properties/documents/items/properties/dateModified/title
 #. /definitions/Document/properties/dateModified/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Date modified"
 msgstr "Date de modification"
 
@@ -2777,8 +2670,7 @@ msgstr "Date de modification"
 #. /definitions/Implementation/properties/documents/items/properties/dateModified/description
 #. /definitions/Milestone/properties/documents/items/properties/dateModified/description
 #. /definitions/Document/properties/dateModified/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Date that the document was last modified"
 msgstr "Date à laquelle le document a été modifié pour la dernière fois"
 
@@ -2804,8 +2696,7 @@ msgstr "Date à laquelle le document a été modifié pour la dernière fois"
 #. /definitions/Implementation/properties/documents/items/properties/format/title
 #. /definitions/Milestone/properties/documents/items/properties/format/title
 #. /definitions/Document/properties/format/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Format"
 msgstr "Format"
 
@@ -2831,8 +2722,7 @@ msgstr "Format"
 #. /definitions/Implementation/properties/documents/items/properties/format/description
 #. /definitions/Milestone/properties/documents/items/properties/format/description
 #. /definitions/Document/properties/format/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The format of the document, using the open [IANA Media "
 "Types](http://www.iana.org/assignments/media-types/) codelist (see the "
@@ -2868,8 +2758,7 @@ msgstr ""
 #. /definitions/Implementation/properties/documents/items/properties/language/title
 #. /definitions/Milestone/properties/documents/items/properties/language/title
 #. /definitions/Document/properties/language/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Language"
 msgstr "Langue"
 
@@ -2895,8 +2784,7 @@ msgstr "Langue"
 #. /definitions/Implementation/properties/documents/items/properties/language/description
 #. /definitions/Milestone/properties/documents/items/properties/language/description
 #. /definitions/Document/properties/language/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The language of the linked document using either two-letter "
 "[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or "
@@ -2918,15 +2806,13 @@ msgstr ""
 
 #. /properties/planning/properties/milestones/title
 #. /definitions/Planning/properties/milestones/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Planning milestones"
 msgstr "Étapes de la planification"
 
 #. /properties/planning/properties/milestones/description
 #. /definitions/Planning/properties/milestones/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A list of milestones associated with the planning stage."
 msgstr "Une liste d'étapes associées à l'étape de la planification."
 
@@ -2940,8 +2826,7 @@ msgstr "Une liste d'étapes associées à l'étape de la planification."
 #. /definitions/Contract/properties/milestones/items/title
 #. /definitions/Implementation/properties/milestones/items/title
 #. /definitions/Milestone/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Milestone"
 msgstr "Étape"
 
@@ -2955,8 +2840,7 @@ msgstr "Étape"
 #. /definitions/Contract/properties/milestones/items/description
 #. /definitions/Implementation/properties/milestones/items/description
 #. /definitions/Milestone/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The milestone block can be used to represent a wide variety of events in the"
 " lifetime of a contracting process."
@@ -2974,8 +2858,7 @@ msgstr ""
 #. /definitions/Contract/properties/milestones/items/properties/id/description
 #. /definitions/Implementation/properties/milestones/items/properties/id/description
 #. /definitions/Milestone/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A local identifier for this milestone, unique within this block. This field "
 "is used to keep track of multiple revisions of a milestone through the "
@@ -2995,8 +2878,7 @@ msgstr ""
 #. /definitions/Contract/properties/milestones/items/properties/title/description
 #. /definitions/Implementation/properties/milestones/items/properties/title/description
 #. /definitions/Milestone/properties/title/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Milestone title"
 msgstr "Titre de l'étape"
 
@@ -3010,8 +2892,7 @@ msgstr "Titre de l'étape"
 #. /definitions/Contract/properties/milestones/items/properties/type/title
 #. /definitions/Implementation/properties/milestones/items/properties/type/title
 #. /definitions/Milestone/properties/type/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Milestone type"
 msgstr "Type d'étape"
 
@@ -3025,8 +2906,7 @@ msgstr "Type d'étape"
 #. /definitions/Contract/properties/milestones/items/properties/type/description
 #. /definitions/Implementation/properties/milestones/items/properties/type/description
 #. /definitions/Milestone/properties/type/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The nature of the milestone, using the open [milestoneType](https://standard"
 ".open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-type)"
@@ -3046,8 +2926,7 @@ msgstr ""
 #. /definitions/Contract/properties/milestones/items/properties/description/description
 #. /definitions/Implementation/properties/milestones/items/properties/description/description
 #. /definitions/Milestone/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A description of the milestone."
 msgstr "Une description de l'étape."
 
@@ -3061,8 +2940,7 @@ msgstr "Une description de l'étape."
 #. /definitions/Contract/properties/milestones/items/properties/code/title
 #. /definitions/Implementation/properties/milestones/items/properties/code/title
 #. /definitions/Milestone/properties/code/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Milestone code"
 msgstr "Code d'étape"
 
@@ -3076,8 +2954,7 @@ msgstr "Code d'étape"
 #. /definitions/Contract/properties/milestones/items/properties/code/description
 #. /definitions/Implementation/properties/milestones/items/properties/code/description
 #. /definitions/Milestone/properties/code/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Milestone codes can be used to track specific events that take place for a "
 "particular kind of contracting process. For example, a code of "
@@ -3101,8 +2978,7 @@ msgstr ""
 #. /definitions/Contract/properties/milestones/items/properties/dueDate/title
 #. /definitions/Implementation/properties/milestones/items/properties/dueDate/title
 #. /definitions/Milestone/properties/dueDate/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Due date"
 msgstr "Date de fin prévue"
 
@@ -3116,8 +2992,7 @@ msgstr "Date de fin prévue"
 #. /definitions/Contract/properties/milestones/items/properties/dueDate/description
 #. /definitions/Implementation/properties/milestones/items/properties/dueDate/description
 #. /definitions/Milestone/properties/dueDate/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The date the milestone is due."
 msgstr "La date à laquelle l'étape doit être achevée"
 
@@ -3131,8 +3006,7 @@ msgstr "La date à laquelle l'étape doit être achevée"
 #. /definitions/Contract/properties/milestones/items/properties/dateMet/title
 #. /definitions/Implementation/properties/milestones/items/properties/dateMet/title
 #. /definitions/Milestone/properties/dateMet/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Date met"
 msgstr "Date à laquelle l'étape est atteinte"
 
@@ -3146,8 +3020,7 @@ msgstr "Date à laquelle l'étape est atteinte"
 #. /definitions/Contract/properties/milestones/items/properties/dateMet/description
 #. /definitions/Implementation/properties/milestones/items/properties/dateMet/description
 #. /definitions/Milestone/properties/dateMet/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The date on which the milestone was met."
 msgstr "La date à laquelle l'étape a été atteinte."
 
@@ -3161,8 +3034,7 @@ msgstr "La date à laquelle l'étape a été atteinte."
 #. /definitions/Contract/properties/milestones/items/properties/dateModified/description
 #. /definitions/Implementation/properties/milestones/items/properties/dateModified/description
 #. /definitions/Milestone/properties/dateModified/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The date the milestone was last reviewed or modified and the status was "
 "altered or confirmed to still be correct."
@@ -3180,8 +3052,7 @@ msgstr ""
 #. /definitions/Contract/properties/milestones/items/properties/status/title
 #. /definitions/Implementation/properties/milestones/items/properties/status/title
 #. /definitions/Milestone/properties/status/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Status"
 msgstr "Statut"
 
@@ -3195,8 +3066,7 @@ msgstr "Statut"
 #. /definitions/Contract/properties/milestones/items/properties/status/description
 #. /definitions/Implementation/properties/milestones/items/properties/status/description
 #. /definitions/Milestone/properties/status/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The status that was realized on the date provided in `dateModified`, from "
 "the closed [milestoneStatus](https://standard.open-"
@@ -3217,8 +3087,7 @@ msgstr ""
 #. /definitions/Contract/properties/milestones/items/properties/documents/description
 #. /definitions/Implementation/properties/milestones/items/properties/documents/description
 #. /definitions/Milestone/properties/documents/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "List of documents associated with this milestone (Deprecated in 1.1)."
 msgstr ""
 "Liste de documents associés à cette étape (déprécié dans la version 1.1)"
@@ -3233,9 +3102,8 @@ msgstr ""
 #. /definitions/Contract/properties/milestones/items/properties/documents/deprecated/description
 #. /definitions/Implementation/properties/milestones/items/properties/documents/deprecated/description
 #. /definitions/Milestone/properties/documents/deprecated/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "Inclusion of documents at the milestone level is now deprecated. "
 "Documentation should be attached in the tender, award, contract or "
@@ -3254,15 +3122,13 @@ msgstr ""
 
 #. /properties/tender/title
 #. /definitions/Tender/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Tender"
 msgstr "Appel d'offre"
 
 #. /properties/tender/description
 #. /definitions/Tender/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Data regarding tender process - publicly inviting prospective contractors to"
 " submit bids for evaluation and selecting a winner or winners."
@@ -3273,15 +3139,13 @@ msgstr ""
 
 #. /properties/tender/properties/id/title
 #. /definitions/Tender/properties/id/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Tender ID"
 msgstr "Identifiant de l'appel d'offre"
 
 #. /properties/tender/properties/id/description
 #. /definitions/Tender/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "An identifier for this tender process. This may be the same as the ocid, or "
 "may be an internal identifier for this tender."
@@ -3291,15 +3155,13 @@ msgstr ""
 
 #. /properties/tender/properties/title/title
 #. /definitions/Tender/properties/title/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Tender title"
 msgstr "Titre de l'appel d'offre"
 
 #. /properties/tender/properties/title/description
 #. /definitions/Tender/properties/title/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A title for this tender. This will often be used by applications as a "
 "headline to attract interest, and to help analysts understand the nature of "
@@ -3311,15 +3173,13 @@ msgstr ""
 
 #. /properties/tender/properties/description/title
 #. /definitions/Tender/properties/description/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Tender description"
 msgstr "Description de l'appel d'offre"
 
 #. /properties/tender/properties/description/description
 #. /definitions/Tender/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A summary description of the tender. This complements any structured "
 "information provided using the items array. Descriptions should be short and"
@@ -3332,15 +3192,13 @@ msgstr ""
 
 #. /properties/tender/properties/status/title
 #. /definitions/Tender/properties/status/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Tender status"
 msgstr "Statut de l'appel d'offres"
 
 #. /properties/tender/properties/status/description
 #. /definitions/Tender/properties/status/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The current status of the tender, from the closed "
 "[tenderStatus](https://standard.open-"
@@ -3353,15 +3211,13 @@ msgstr ""
 
 #. /properties/tender/properties/items/title
 #. /definitions/Tender/properties/items/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Items to be procured"
 msgstr "Livrables du marché"
 
 #. /properties/tender/properties/items/description
 #. /definitions/Tender/properties/items/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The goods and services to be purchased, broken into line items wherever "
 "possible. Items should not be duplicated, but the quantity specified "
@@ -3378,8 +3234,7 @@ msgstr ""
 #. /definitions/Award/properties/items/items/title
 #. /definitions/Contract/properties/items/items/title
 #. /definitions/Item/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Item"
 msgstr "Livrable"
 
@@ -3390,8 +3245,7 @@ msgstr "Livrable"
 #. /definitions/Award/properties/items/items/description
 #. /definitions/Contract/properties/items/items/description
 #. /definitions/Item/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A good, service, or work to be contracted."
 msgstr ""
 "Un bien, un service, ou des travaux qui pourront faire l'objet d'un contrat."
@@ -3403,8 +3257,7 @@ msgstr ""
 #. /definitions/Award/properties/items/items/properties/id/description
 #. /definitions/Contract/properties/items/items/properties/id/description
 #. /definitions/Item/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A local identifier to reference and merge the items by. Must be unique "
 "within a given array of items."
@@ -3419,8 +3272,7 @@ msgstr ""
 #. /definitions/Award/properties/items/items/properties/description/description
 #. /definitions/Contract/properties/items/items/properties/description/description
 #. /definitions/Item/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A description of the goods, services to be provided."
 msgstr "Une description des biens et des services à fournir."
 
@@ -3439,8 +3291,7 @@ msgstr "Une description des biens et des services à fournir."
 #. /definitions/Item/properties/classification/title
 #. /definitions/Item/properties/additionalClassifications/items/title
 #. /definitions/Classification/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Classification"
 msgstr "Classification"
 
@@ -3459,8 +3310,7 @@ msgstr "Classification"
 #. /definitions/Item/properties/classification/description
 #. /definitions/Item/properties/additionalClassifications/items/description
 #. /definitions/Classification/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A classification consists of at least two parts: an identifier for the list "
 "(scheme) from which the classification is taken, and an identifier for the "
@@ -3488,8 +3338,7 @@ msgstr ""
 #. /definitions/Item/properties/classification/properties/scheme/description
 #. /definitions/Item/properties/additionalClassifications/items/properties/scheme/description
 #. /definitions/Classification/properties/scheme/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The scheme or codelist from which the classification code is taken. For line"
 " item classifications, this uses the open "
@@ -3518,8 +3367,7 @@ msgstr ""
 #. /definitions/Item/properties/classification/properties/id/description
 #. /definitions/Item/properties/additionalClassifications/items/properties/id/description
 #. /definitions/Classification/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The classification code taken from the scheme."
 msgstr "Le code tiré d'un schéma de classification pré-établi."
 
@@ -3538,8 +3386,7 @@ msgstr "Le code tiré d'un schéma de classification pré-établi."
 #. /definitions/Item/properties/classification/properties/description/description
 #. /definitions/Item/properties/additionalClassifications/items/properties/description/description
 #. /definitions/Classification/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A textual description or title for the classification code."
 msgstr "Une description textuelle ou le titre du code."
 
@@ -3558,8 +3405,7 @@ msgstr "Une description textuelle ou le titre du code."
 #. /definitions/Item/properties/classification/properties/uri/description
 #. /definitions/Item/properties/additionalClassifications/items/properties/uri/description
 #. /definitions/Classification/properties/uri/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A URI to uniquely identify the classification code."
 msgstr "Un URI pour identifier de manière unique le code de classification."
 
@@ -3570,8 +3416,7 @@ msgstr "Un URI pour identifier de manière unique le code de classification."
 #. /definitions/Award/properties/items/items/properties/additionalClassifications/title
 #. /definitions/Contract/properties/items/items/properties/additionalClassifications/title
 #. /definitions/Item/properties/additionalClassifications/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Additional classifications"
 msgstr "Classifications additionnelles"
 
@@ -3582,8 +3427,7 @@ msgstr "Classifications additionnelles"
 #. /definitions/Award/properties/items/items/properties/additionalClassifications/description
 #. /definitions/Contract/properties/items/items/properties/additionalClassifications/description
 #. /definitions/Item/properties/additionalClassifications/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "An array of additional classifications for the item."
 msgstr "Un tableau (array) de classification additionnelle pour l'article."
 
@@ -3594,8 +3438,7 @@ msgstr "Un tableau (array) de classification additionnelle pour l'article."
 #. /definitions/Award/properties/items/items/properties/quantity/title
 #. /definitions/Contract/properties/items/items/properties/quantity/title
 #. /definitions/Item/properties/quantity/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Quantity"
 msgstr "Quantité"
 
@@ -3606,8 +3449,7 @@ msgstr "Quantité"
 #. /definitions/Award/properties/items/items/properties/quantity/description
 #. /definitions/Contract/properties/items/items/properties/quantity/description
 #. /definitions/Item/properties/quantity/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The number of units to be provided."
 msgstr "Le nombre d'unités requises."
 
@@ -3618,8 +3460,7 @@ msgstr "Le nombre d'unités requises."
 #. /definitions/Award/properties/items/items/properties/unit/title
 #. /definitions/Contract/properties/items/items/properties/unit/title
 #. /definitions/Item/properties/unit/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Unit"
 msgstr "Unité"
 
@@ -3630,8 +3471,7 @@ msgstr "Unité"
 #. /definitions/Award/properties/items/items/properties/unit/description
 #. /definitions/Contract/properties/items/items/properties/unit/description
 #. /definitions/Item/properties/unit/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A description of the unit in which the supplies, services or works are "
 "provided (e.g. hours, kilograms) and the unit-price."
@@ -3646,8 +3486,7 @@ msgstr ""
 #. /definitions/Award/properties/items/items/properties/unit/properties/scheme/description
 #. /definitions/Contract/properties/items/items/properties/unit/properties/scheme/description
 #. /definitions/Item/properties/unit/properties/scheme/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The list from which identifiers for units of measure are taken, using the "
 "open [unitClassificationScheme](https://standard.open-"
@@ -3669,8 +3508,7 @@ msgstr ""
 #. /definitions/Award/properties/items/items/properties/unit/properties/id/description
 #. /definitions/Contract/properties/items/items/properties/unit/properties/id/description
 #. /definitions/Item/properties/unit/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The identifier from the codelist referenced in the scheme property. Check "
 "the codelist for details of how to find and use identifiers from the scheme "
@@ -3687,8 +3525,7 @@ msgstr ""
 #. /definitions/Award/properties/items/items/properties/unit/properties/name/description
 #. /definitions/Contract/properties/items/items/properties/unit/properties/name/description
 #. /definitions/Item/properties/unit/properties/name/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Name of the unit."
 msgstr "Nom de l'unité."
 
@@ -3699,8 +3536,7 @@ msgstr "Nom de l'unité."
 #. /definitions/Award/properties/items/items/properties/unit/properties/uri/description
 #. /definitions/Contract/properties/items/items/properties/unit/properties/uri/description
 #. /definitions/Item/properties/unit/properties/uri/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The machine-readable URI for the unit of measure, provided by the scheme."
 msgstr ""
@@ -3709,15 +3545,13 @@ msgstr ""
 
 #. /properties/tender/properties/procurementMethod/title
 #. /definitions/Tender/properties/procurementMethod/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Procurement method"
 msgstr "Procédure de passation de marché"
 
 #. /properties/tender/properties/procurementMethod/description
 #. /definitions/Tender/properties/procurementMethod/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The procurement method, from the closed [method](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist."
@@ -3728,15 +3562,13 @@ msgstr ""
 
 #. /properties/tender/properties/procurementMethodDetails/title
 #. /definitions/Tender/properties/procurementMethodDetails/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Procurement method details"
 msgstr "Détails de la procédure de passation de marché"
 
 #. /properties/tender/properties/procurementMethodDetails/description
 #. /definitions/Tender/properties/procurementMethodDetails/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Additional detail on the procurement method used. This field can be used to "
 "provide the local name of the particular procurement method used."
@@ -3747,15 +3579,13 @@ msgstr ""
 
 #. /properties/tender/properties/procurementMethodRationale/title
 #. /definitions/Tender/properties/procurementMethodRationale/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Procurement method rationale"
 msgstr "Choix de la procédure de passation de marché"
 
 #. /properties/tender/properties/procurementMethodRationale/description
 #. /definitions/Tender/properties/procurementMethodRationale/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Rationale for the chosen procurement method. This is especially important to"
 " provide a justification in the case of limited tenders or direct awards."
@@ -3766,15 +3596,13 @@ msgstr ""
 
 #. /properties/tender/properties/mainProcurementCategory/title
 #. /definitions/Tender/properties/mainProcurementCategory/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Main procurement category"
 msgstr "Catégorie principale du marché"
 
 #. /properties/tender/properties/mainProcurementCategory/description
 #. /definitions/Tender/properties/mainProcurementCategory/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The primary category describing the main object of this contracting process,"
 " from the closed [procurementCategory](https://standard.open-"
@@ -3789,15 +3617,13 @@ msgstr ""
 
 #. /properties/tender/properties/additionalProcurementCategories/title
 #. /definitions/Tender/properties/additionalProcurementCategories/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Additional procurement categories"
 msgstr "Catégories de commande publique supplémentaires"
 
 #. /properties/tender/properties/additionalProcurementCategories/description
 #. /definitions/Tender/properties/additionalProcurementCategories/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Any additional categories describing the objects of this contracting "
 "process, using the open [extendedProcurementCategory](https://standard.open-"
@@ -3813,15 +3639,13 @@ msgstr ""
 
 #. /properties/tender/properties/awardCriteria/title
 #. /definitions/Tender/properties/awardCriteria/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Award criteria"
 msgstr "Critères d'attribution"
 
 #. /properties/tender/properties/awardCriteria/description
 #. /definitions/Tender/properties/awardCriteria/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The award criteria for the procurement, using the open "
 "[awardCriteria](https://standard.open-"
@@ -3834,15 +3658,13 @@ msgstr ""
 
 #. /properties/tender/properties/awardCriteriaDetails/title
 #. /definitions/Tender/properties/awardCriteriaDetails/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Award criteria details"
 msgstr "Détails des critères d'attribution"
 
 #. /properties/tender/properties/awardCriteriaDetails/description
 #. /definitions/Tender/properties/awardCriteriaDetails/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Any detailed or further information on the award or selection criteria."
 msgstr ""
@@ -3851,15 +3673,13 @@ msgstr ""
 
 #. /properties/tender/properties/submissionMethod/title
 #. /definitions/Tender/properties/submissionMethod/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Submission method"
 msgstr "Méthode de soumission des offres"
 
 #. /properties/tender/properties/submissionMethod/description
 #. /definitions/Tender/properties/submissionMethod/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The methods by which bids are submitted, using the open "
 "[submissionMethod](https://standard.open-"
@@ -3872,15 +3692,13 @@ msgstr ""
 
 #. /properties/tender/properties/submissionMethodDetails/title
 #. /definitions/Tender/properties/submissionMethodDetails/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Submission method details"
 msgstr "Détails sur la méthode de soumission des offres"
 
 #. /properties/tender/properties/submissionMethodDetails/description
 #. /definitions/Tender/properties/submissionMethodDetails/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Any detailed or further information on the submission method. This can "
 "include the address, e-mail address or online service to which bids are "
@@ -3904,8 +3722,7 @@ msgstr ""
 #. /definitions/Award/properties/contractPeriod/title
 #. /definitions/Contract/properties/period/title
 #. /definitions/Period/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Period"
 msgstr "Période"
 
@@ -3922,8 +3739,7 @@ msgstr "Période"
 #. /definitions/Award/properties/contractPeriod/description
 #. /definitions/Contract/properties/period/description
 #. /definitions/Period/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Key events during a contracting process may have a known start date, end "
 "date, duration, or maximum extent (the latest date the period can extend "
@@ -3949,8 +3765,7 @@ msgstr ""
 #. /definitions/Award/properties/contractPeriod/properties/startDate/title
 #. /definitions/Contract/properties/period/properties/startDate/title
 #. /definitions/Period/properties/startDate/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Start date"
 msgstr "Date de début"
 
@@ -3967,8 +3782,7 @@ msgstr "Date de début"
 #. /definitions/Award/properties/contractPeriod/properties/startDate/description
 #. /definitions/Contract/properties/period/properties/startDate/description
 #. /definitions/Period/properties/startDate/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The start date for the period. When known, a precise start date must be "
 "provided."
@@ -3989,8 +3803,7 @@ msgstr ""
 #. /definitions/Award/properties/contractPeriod/properties/endDate/title
 #. /definitions/Contract/properties/period/properties/endDate/title
 #. /definitions/Period/properties/endDate/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "End date"
 msgstr "Date de fin"
 
@@ -4007,8 +3820,7 @@ msgstr "Date de fin"
 #. /definitions/Award/properties/contractPeriod/properties/endDate/description
 #. /definitions/Contract/properties/period/properties/endDate/description
 #. /definitions/Period/properties/endDate/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The end date for the period. When known, a precise end date must be "
 "provided."
@@ -4029,8 +3841,7 @@ msgstr ""
 #. /definitions/Award/properties/contractPeriod/properties/maxExtentDate/description
 #. /definitions/Contract/properties/period/properties/maxExtentDate/description
 #. /definitions/Period/properties/maxExtentDate/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The period cannot be extended beyond this date. This field can be used to "
 "express the maximum available date for extension or renewal of this period."
@@ -4053,8 +3864,7 @@ msgstr ""
 #. /definitions/Award/properties/contractPeriod/properties/maxExtentDate/title
 #. /definitions/Contract/properties/period/properties/maxExtentDate/title
 #. /definitions/Period/properties/maxExtentDate/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Maximum extent"
 msgstr "Date maximale d'extension"
 
@@ -4071,8 +3881,7 @@ msgstr "Date maximale d'extension"
 #. /definitions/Award/properties/contractPeriod/properties/durationInDays/description
 #. /definitions/Contract/properties/period/properties/durationInDays/description
 #. /definitions/Period/properties/durationInDays/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The maximum duration of this period in days. A user interface can collect or"
 " display this data in months or years as appropriate, and then convert it "
@@ -4104,22 +3913,19 @@ msgstr ""
 #. /definitions/Award/properties/contractPeriod/properties/durationInDays/title
 #. /definitions/Contract/properties/period/properties/durationInDays/title
 #. /definitions/Period/properties/durationInDays/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Duration (days)"
 msgstr "Durée (en jours)"
 
 #. /properties/tender/properties/hasEnquiries/title
 #. /definitions/Tender/properties/hasEnquiries/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Has enquiries?"
 msgstr "Des questions ont été posées ?"
 
 #. /properties/tender/properties/hasEnquiries/description
 #. /definitions/Tender/properties/hasEnquiries/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A true/false field to indicate whether any enquiries were received during "
 "the tender process. Structured information on enquiries that were received, "
@@ -4132,44 +3938,38 @@ msgstr ""
 
 #. /properties/tender/properties/eligibilityCriteria/title
 #. /definitions/Tender/properties/eligibilityCriteria/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Eligibility criteria"
 msgstr "Critères d'éligibilité"
 
 #. /properties/tender/properties/eligibilityCriteria/description
 #. /definitions/Tender/properties/eligibilityCriteria/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A description of any eligibility criteria for potential suppliers."
 msgstr ""
 "Une description des critères d'éligibilité pour les fournisseurs potentiels."
 
 #. /properties/tender/properties/numberOfTenderers/title
 #. /definitions/Tender/properties/numberOfTenderers/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Number of tenderers"
 msgstr "Nombre de candidats"
 
 #. /properties/tender/properties/numberOfTenderers/description
 #. /definitions/Tender/properties/numberOfTenderers/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The number of parties who submit a bid."
 msgstr "Le nombre de parties qui soumettent une offre."
 
 #. /properties/tender/properties/tenderers/title
 #. /definitions/Tender/properties/tenderers/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Tenderers"
 msgstr "Candidats"
 
 #. /properties/tender/properties/tenderers/description
 #. /definitions/Tender/properties/tenderers/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "All parties who submit a bid on a tender. More detailed information on bids "
 "and the bidding organization can be provided using the bid extension."
@@ -4181,8 +3981,7 @@ msgstr ""
 
 #. /properties/tender/properties/documents/description
 #. /definitions/Tender/properties/documents/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "All documents and attachments related to the tender, including any notices. "
 "See the [documentType](https://standard.open-"
@@ -4205,22 +4004,19 @@ msgstr ""
 #. /definitions/Tender/properties/milestones/title
 #. /definitions/Contract/properties/implementation/properties/milestones/title
 #. /definitions/Implementation/properties/milestones/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Milestones"
 msgstr "Étapes"
 
 #. /properties/tender/properties/milestones/description
 #. /definitions/Tender/properties/milestones/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A list of milestones associated with the tender."
 msgstr "Une liste des étapes associées à l'appel d'offres."
 
 #. /properties/tender/properties/amendments/description
 #. /definitions/Tender/properties/amendments/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A tender amendment is a formal change to the tender, and generally involves "
 "the publication of a new tender notice/release. The rationale and a "
@@ -4237,8 +4033,7 @@ msgstr ""
 #. /definitions/Tender/properties/amendments/title
 #. /definitions/Award/properties/amendments/title
 #. /definitions/Contract/properties/amendments/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amendments"
 msgstr "Modifications"
 
@@ -4255,8 +4050,7 @@ msgstr "Modifications"
 #. /definitions/Contract/properties/amendments/items/title
 #. /definitions/Contract/properties/amendment/title
 #. /definitions/Amendment/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amendment"
 msgstr "Modification"
 
@@ -4273,8 +4067,7 @@ msgstr "Modification"
 #. /definitions/Contract/properties/amendments/items/description
 #. /definitions/Contract/properties/amendment/description
 #. /definitions/Amendment/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amendment information"
 msgstr "Informations sur la modification"
 
@@ -4291,8 +4084,7 @@ msgstr "Informations sur la modification"
 #. /definitions/Contract/properties/amendments/items/properties/date/title
 #. /definitions/Contract/properties/amendment/properties/date/title
 #. /definitions/Amendment/properties/date/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amendment date"
 msgstr "Date de la modification"
 
@@ -4309,8 +4101,7 @@ msgstr "Date de la modification"
 #. /definitions/Contract/properties/amendments/items/properties/date/description
 #. /definitions/Contract/properties/amendment/properties/date/description
 #. /definitions/Amendment/properties/date/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The date of this amendment."
 msgstr "La date de cette modification."
 
@@ -4327,8 +4118,7 @@ msgstr "La date de cette modification."
 #. /definitions/Contract/properties/amendments/items/properties/rationale/description
 #. /definitions/Contract/properties/amendment/properties/rationale/description
 #. /definitions/Amendment/properties/rationale/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "An explanation for the amendment."
 msgstr "Une explication de la modification."
 
@@ -4345,8 +4135,7 @@ msgstr "Une explication de la modification."
 #. /definitions/Contract/properties/amendments/items/properties/id/description
 #. /definitions/Contract/properties/amendment/properties/id/description
 #. /definitions/Amendment/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "An identifier for this amendment: often the amendment number"
 msgstr ""
 "Un identifiant pour cette modification : souvent le numéro de modification"
@@ -4364,8 +4153,7 @@ msgstr ""
 #. /definitions/Contract/properties/amendments/items/properties/description/description
 #. /definitions/Contract/properties/amendment/properties/description/description
 #. /definitions/Amendment/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A free text, or semi-structured, description of the changes made in this "
 "amendment."
@@ -4386,8 +4174,7 @@ msgstr ""
 #. /definitions/Contract/properties/amendments/items/properties/amendsReleaseID/description
 #. /definitions/Contract/properties/amendment/properties/amendsReleaseID/description
 #. /definitions/Amendment/properties/amendsReleaseID/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Provide the identifier (release.id) of the OCDS release (from this "
 "contracting process) that provides the values for this contracting process "
@@ -4410,8 +4197,7 @@ msgstr ""
 #. /definitions/Contract/properties/amendments/items/properties/amendsReleaseID/title
 #. /definitions/Contract/properties/amendment/properties/amendsReleaseID/title
 #. /definitions/Amendment/properties/amendsReleaseID/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amended release (identifier)"
 msgstr "Instance modifiée (identifiant)"
 
@@ -4428,8 +4214,7 @@ msgstr "Instance modifiée (identifiant)"
 #. /definitions/Contract/properties/amendments/items/properties/releaseID/description
 #. /definitions/Contract/properties/amendment/properties/releaseID/description
 #. /definitions/Amendment/properties/releaseID/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Provide the identifier (release.id) of the OCDS release (from this "
 "contracting process) that provides the values for this contracting process "
@@ -4452,8 +4237,7 @@ msgstr ""
 #. /definitions/Contract/properties/amendments/items/properties/releaseID/title
 #. /definitions/Contract/properties/amendment/properties/releaseID/title
 #. /definitions/Amendment/properties/releaseID/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amending release (identifier)"
 msgstr "Instance modificatrice (identifiant)"
 
@@ -4470,8 +4254,7 @@ msgstr "Instance modificatrice (identifiant)"
 #. /definitions/Contract/properties/amendments/items/properties/changes/title
 #. /definitions/Contract/properties/amendment/properties/changes/title
 #. /definitions/Amendment/properties/changes/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amended fields"
 msgstr "Champs modifiés"
 
@@ -4488,8 +4271,7 @@ msgstr "Champs modifiés"
 #. /definitions/Contract/properties/amendments/items/properties/changes/description
 #. /definitions/Contract/properties/amendment/properties/changes/description
 #. /definitions/Amendment/properties/changes/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "An array of change objects describing the fields changed, and their former "
 "values. (Deprecated in 1.1)"
@@ -4510,8 +4292,7 @@ msgstr ""
 #. /definitions/Contract/properties/amendments/items/properties/changes/items/properties/property/title
 #. /definitions/Contract/properties/amendment/properties/changes/items/properties/property/title
 #. /definitions/Amendment/properties/changes/items/properties/property/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Property"
 msgstr "Propriété"
 
@@ -4528,8 +4309,7 @@ msgstr "Propriété"
 #. /definitions/Contract/properties/amendments/items/properties/changes/items/properties/property/description
 #. /definitions/Contract/properties/amendment/properties/changes/items/properties/property/description
 #. /definitions/Amendment/properties/changes/items/properties/property/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The property name that has been changed relative to the place the amendment "
 "is. For example if the contract value has changed, then the property under "
@@ -4554,8 +4334,7 @@ msgstr ""
 #. /definitions/Contract/properties/amendments/items/properties/changes/items/properties/former_value/title
 #. /definitions/Contract/properties/amendment/properties/changes/items/properties/former_value/title
 #. /definitions/Amendment/properties/changes/items/properties/former_value/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Former Value"
 msgstr "Valeur précédente"
 
@@ -4572,8 +4351,7 @@ msgstr "Valeur précédente"
 #. /definitions/Contract/properties/amendments/items/properties/changes/items/properties/former_value/description
 #. /definitions/Contract/properties/amendment/properties/changes/items/properties/former_value/description
 #. /definitions/Amendment/properties/changes/items/properties/former_value/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The previous value of the changed property, in whatever type the property "
 "is. (Deprecated in 1.1)"
@@ -4594,9 +4372,8 @@ msgstr ""
 #. /definitions/Contract/properties/amendments/items/properties/changes/deprecated/description
 #. /definitions/Contract/properties/amendment/properties/changes/deprecated/description
 #. /definitions/Amendment/properties/changes/deprecated/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "A free-text or semi-structured string describing the changes made in each "
 "amendment can be provided in the amendment.description field. To provide "
@@ -4612,14 +4389,12 @@ msgstr ""
 "de marché avant et après la modification."
 
 #. /properties/awards/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Awards"
 msgstr "Attributions"
 
 #. /properties/awards/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Information from the award phase of the contracting process. There can be "
 "more than one award per contracting process e.g. because the contract is "
@@ -4632,15 +4407,13 @@ msgstr ""
 
 #. /properties/awards/items/title
 #. /definitions/Award/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Award"
 msgstr "Attribution"
 
 #. /properties/awards/items/description
 #. /definitions/Award/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "An award for the given procurement. There can be more than one award per "
 "contracting process e.g. because the contract is split among different "
@@ -4655,15 +4428,13 @@ msgstr ""
 #. /properties/contracts/items/properties/awardID/title
 #. /definitions/Award/properties/id/title
 #. /definitions/Contract/properties/awardID/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Award ID"
 msgstr "Identifiant de l'attribution"
 
 #. /properties/awards/items/properties/id/description
 #. /definitions/Award/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The identifier for this award. It must be unique and must not change within "
 "the Open Contracting Process it is part of (defined by a single ocid). See "
@@ -4679,29 +4450,25 @@ msgstr ""
 
 #. /properties/awards/items/properties/title/description
 #. /definitions/Award/properties/title/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Award title"
 msgstr "Titre de l'attribution"
 
 #. /properties/awards/items/properties/description/description
 #. /definitions/Award/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Award description"
 msgstr "Description de l'attribution"
 
 #. /properties/awards/items/properties/status/title
 #. /definitions/Award/properties/status/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Award status"
 msgstr "Status de l'attribution"
 
 #. /properties/awards/items/properties/status/description
 #. /definitions/Award/properties/status/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The current status of the award, from the closed "
 "[awardStatus](https://standard.open-"
@@ -4714,15 +4481,13 @@ msgstr ""
 
 #. /properties/awards/items/properties/date/title
 #. /definitions/Award/properties/date/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Award date"
 msgstr "Date d'attribution"
 
 #. /properties/awards/items/properties/date/description
 #. /definitions/Award/properties/date/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The date of the contract award. This is usually the date on which a decision"
 " to award was made."
@@ -4732,15 +4497,13 @@ msgstr ""
 
 #. /properties/awards/items/properties/suppliers/title
 #. /definitions/Award/properties/suppliers/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Suppliers"
 msgstr "Titulaires"
 
 #. /properties/awards/items/properties/suppliers/description
 #. /definitions/Award/properties/suppliers/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The suppliers awarded this award. If different suppliers have been awarded "
 "different items or values, these should be split into separate award blocks."
@@ -4751,15 +4514,13 @@ msgstr ""
 
 #. /properties/awards/items/properties/items/title
 #. /definitions/Award/properties/items/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Items awarded"
 msgstr "Livrables attribués"
 
 #. /properties/awards/items/properties/items/description
 #. /definitions/Award/properties/items/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The goods and services awarded in this award, broken into line items "
 "wherever possible. Items should not be duplicated, but the quantity "
@@ -4771,8 +4532,7 @@ msgstr ""
 
 #. /properties/awards/items/properties/documents/description
 #. /definitions/Award/properties/documents/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "All documents and attachments related to the award, including any notices."
 msgstr ""
@@ -4781,8 +4541,7 @@ msgstr ""
 
 #. /properties/awards/items/properties/amendments/description
 #. /definitions/Award/properties/amendments/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "An award amendment is a formal change to the details of the award, and "
 "generally involves the publication of a new award notice/release. The "
@@ -4794,14 +4553,12 @@ msgstr ""
 "description des modifications apportées peuvent être fournies ici."
 
 #. /properties/contracts/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Contracts"
 msgstr "Contrats"
 
 #. /properties/contracts/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Information from the contract creation phase of the procurement process."
 msgstr ""
@@ -4810,15 +4567,13 @@ msgstr ""
 
 #. /properties/contracts/items/title
 #. /definitions/Contract/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Contract"
 msgstr "Contrat"
 
 #. /properties/contracts/items/description
 #. /definitions/Contract/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Information regarding the signed contract between the buyer and supplier(s)."
 msgstr ""
@@ -4827,15 +4582,13 @@ msgstr ""
 
 #. /properties/contracts/items/properties/id/title
 #. /definitions/Contract/properties/id/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Contract ID"
 msgstr "Identifiant du contrat"
 
 #. /properties/contracts/items/properties/id/description
 #. /definitions/Contract/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The identifier for this contract. It must be unique and must not change "
 "within the Open Contracting Process it is part of (defined by a single "
@@ -4852,8 +4605,7 @@ msgstr ""
 
 #. /properties/contracts/items/properties/awardID/description
 #. /definitions/Contract/properties/awardID/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The award.id against which this contract is being issued."
 msgstr ""
 "L'identifiant de l'attribution `award.id` à partir duquel ce contrat est "
@@ -4863,8 +4615,7 @@ msgstr ""
 #. /properties/contracts/items/properties/title/description
 #. /definitions/Contract/properties/title/title
 #. /definitions/Contract/properties/title/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Contract title"
 msgstr "Intitulé du marché"
 
@@ -4872,22 +4623,19 @@ msgstr "Intitulé du marché"
 #. /properties/contracts/items/properties/description/description
 #. /definitions/Contract/properties/description/title
 #. /definitions/Contract/properties/description/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Contract description"
 msgstr "Description du contrat"
 
 #. /properties/contracts/items/properties/status/title
 #. /definitions/Contract/properties/status/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Contract status"
 msgstr "Statut du contrat"
 
 #. /properties/contracts/items/properties/status/description
 #. /definitions/Contract/properties/status/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The current status of the contract, from the closed "
 "[contractStatus](https://standard.open-"
@@ -4900,15 +4648,13 @@ msgstr ""
 
 #. /properties/contracts/items/properties/items/title
 #. /definitions/Contract/properties/items/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Items contracted"
 msgstr "Livrables inclus dans le contrat"
 
 #. /properties/contracts/items/properties/items/description
 #. /definitions/Contract/properties/items/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The goods, services, and any intangible outcomes in this contract. Note: If "
 "the items are the same as the award do not repeat."
@@ -4919,15 +4665,13 @@ msgstr ""
 
 #. /properties/contracts/items/properties/dateSigned/title
 #. /definitions/Contract/properties/dateSigned/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Date signed"
 msgstr "Date de signature"
 
 #. /properties/contracts/items/properties/dateSigned/description
 #. /definitions/Contract/properties/dateSigned/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The date the contract was signed. In the case of multiple signatures, the "
 "date of the last signature."
@@ -4937,8 +4681,7 @@ msgstr ""
 
 #. /properties/contracts/items/properties/documents/description
 #. /definitions/Contract/properties/documents/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "All documents and attachments related to the contract, including any "
 "notices."
@@ -4948,16 +4691,14 @@ msgstr ""
 #. /properties/contracts/items/properties/implementation/title
 #. /definitions/Contract/properties/implementation/title
 #. /definitions/Implementation/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Implementation"
 msgstr "Exécution"
 
 #. /properties/contracts/items/properties/implementation/description
 #. /definitions/Contract/properties/implementation/description
 #. /definitions/Implementation/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Information during the performance / implementation stage of the contract."
 msgstr "Informations sur l'étape d'exécution du contrat"
@@ -4965,16 +4706,14 @@ msgstr "Informations sur l'étape d'exécution du contrat"
 #. /properties/contracts/items/properties/implementation/properties/transactions/title
 #. /definitions/Contract/properties/implementation/properties/transactions/title
 #. /definitions/Implementation/properties/transactions/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Transactions"
 msgstr "Transactions"
 
 #. /properties/contracts/items/properties/implementation/properties/transactions/description
 #. /definitions/Contract/properties/implementation/properties/transactions/description
 #. /definitions/Implementation/properties/transactions/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A list of the spending transactions made against this contract"
 msgstr ""
 "Une liste des transactions de dépense réalisées dans le cadre de ce contrat"
@@ -4983,8 +4722,7 @@ msgstr ""
 #. /definitions/Contract/properties/implementation/properties/transactions/items/title
 #. /definitions/Implementation/properties/transactions/items/title
 #. /definitions/Transaction/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Transaction information"
 msgstr "Informations de transaction"
 
@@ -4992,8 +4730,7 @@ msgstr "Informations de transaction"
 #. /definitions/Contract/properties/implementation/properties/transactions/items/description
 #. /definitions/Implementation/properties/transactions/items/description
 #. /definitions/Transaction/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A spending transaction related to the contracting process. Draws upon the "
 "data models of the [Fiscal Data Package](https://frictionlessdata.io/specs"
@@ -5019,8 +4756,7 @@ msgstr ""
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/id/description
 #. /definitions/Implementation/properties/transactions/items/properties/id/description
 #. /definitions/Transaction/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A unique identifier for this transaction. This identifier should be possible"
 " to cross-reference against the provided data source. For IATI this is the "
@@ -5034,8 +4770,7 @@ msgstr ""
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/source/title
 #. /definitions/Implementation/properties/transactions/items/properties/source/title
 #. /definitions/Transaction/properties/source/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Data source"
 msgstr "Source des données"
 
@@ -5043,8 +4778,7 @@ msgstr "Source des données"
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/source/description
 #. /definitions/Implementation/properties/transactions/items/properties/source/description
 #. /definitions/Transaction/properties/source/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Used to point either to a corresponding Fiscal Data Package, IATI file, or "
 "machine or human-readable source where users can find further information on"
@@ -5059,8 +4793,7 @@ msgstr ""
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/date/title
 #. /definitions/Implementation/properties/transactions/items/properties/date/title
 #. /definitions/Transaction/properties/date/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Date"
 msgstr "Date"
 
@@ -5068,8 +4801,7 @@ msgstr "Date"
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/date/description
 #. /definitions/Implementation/properties/transactions/items/properties/date/description
 #. /definitions/Transaction/properties/date/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The date of the transaction"
 msgstr "La date de la transaction"
 
@@ -5077,8 +4809,7 @@ msgstr "La date de la transaction"
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/uri/title
 #. /definitions/Implementation/properties/transactions/items/properties/uri/title
 #. /definitions/Transaction/properties/uri/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Linked spending information"
 msgstr "Informations sur la transaction"
 
@@ -5086,8 +4817,7 @@ msgstr "Informations sur la transaction"
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/uri/description
 #. /definitions/Implementation/properties/transactions/items/properties/uri/description
 #. /definitions/Transaction/properties/uri/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A URI pointing directly to a machine-readable record about this spending "
 "transaction."
@@ -5098,8 +4828,7 @@ msgstr ""
 #. /properties/contracts/items/properties/implementation/properties/milestones/description
 #. /definitions/Contract/properties/implementation/properties/milestones/description
 #. /definitions/Implementation/properties/milestones/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "As milestones are completed, the milestone's status and dates should be "
 "updated."
@@ -5110,8 +4839,7 @@ msgstr ""
 #. /properties/contracts/items/properties/implementation/properties/documents/description
 #. /definitions/Contract/properties/implementation/properties/documents/description
 #. /definitions/Implementation/properties/documents/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Documents and reports that are part of the implementation phase e.g. audit "
 "and evaluation reports."
@@ -5123,8 +4851,7 @@ msgstr ""
 #. /properties/relatedProcesses/items/description
 #. /definitions/Contract/properties/relatedProcesses/items/description
 #. /definitions/RelatedProcess/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A reference to a related contracting process: generally one preceding or "
 "following on from the current process."
@@ -5136,8 +4863,7 @@ msgstr ""
 #. /properties/relatedProcesses/items/title
 #. /definitions/Contract/properties/relatedProcesses/items/title
 #. /definitions/RelatedProcess/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Related Process"
 msgstr "Processus connexe"
 
@@ -5145,8 +4871,7 @@ msgstr "Processus connexe"
 #. /properties/relatedProcesses/items/properties/id/title
 #. /definitions/Contract/properties/relatedProcesses/items/properties/id/title
 #. /definitions/RelatedProcess/properties/id/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Relationship ID"
 msgstr "Identifiant de relation"
 
@@ -5154,8 +4879,7 @@ msgstr "Identifiant de relation"
 #. /properties/relatedProcesses/items/properties/id/description
 #. /definitions/Contract/properties/relatedProcesses/items/properties/id/description
 #. /definitions/RelatedProcess/properties/id/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A local identifier for this relationship, unique within this array."
 msgstr "Un identifiant local pour cette relation, unique dans cette liste."
 
@@ -5163,8 +4887,7 @@ msgstr "Un identifiant local pour cette relation, unique dans cette liste."
 #. /properties/relatedProcesses/items/properties/relationship/description
 #. /definitions/Contract/properties/relatedProcesses/items/properties/relationship/description
 #. /definitions/RelatedProcess/properties/relationship/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The type of relationship, using the open [relatedProcess](https://standard"
 ".open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-"
@@ -5178,8 +4901,7 @@ msgstr ""
 #. /properties/relatedProcesses/items/properties/relationship/title
 #. /definitions/Contract/properties/relatedProcesses/items/properties/relationship/title
 #. /definitions/RelatedProcess/properties/relationship/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Relationship"
 msgstr "Relation"
 
@@ -5187,8 +4909,7 @@ msgstr "Relation"
 #. /properties/relatedProcesses/items/properties/title/description
 #. /definitions/Contract/properties/relatedProcesses/items/properties/title/description
 #. /definitions/RelatedProcess/properties/title/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The title of the related process, where referencing an open contracting "
 "process, this field should match the tender/title field in the related "
@@ -5202,8 +4923,7 @@ msgstr ""
 #. /properties/relatedProcesses/items/properties/title/title
 #. /definitions/Contract/properties/relatedProcesses/items/properties/title/title
 #. /definitions/RelatedProcess/properties/title/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Related process title"
 msgstr "Titre du processus connexe"
 
@@ -5211,8 +4931,7 @@ msgstr "Titre du processus connexe"
 #. /properties/relatedProcesses/items/properties/scheme/description
 #. /definitions/Contract/properties/relatedProcesses/items/properties/scheme/description
 #. /definitions/RelatedProcess/properties/scheme/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The identification scheme used by this cross-reference, using the open "
 "[relatedProcessScheme](https://standard.open-"
@@ -5229,8 +4948,7 @@ msgstr ""
 #. /properties/relatedProcesses/items/properties/identifier/description
 #. /definitions/Contract/properties/relatedProcesses/items/properties/identifier/description
 #. /definitions/RelatedProcess/properties/identifier/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The identifier of the related process. If the scheme is 'ocid', this must be"
 " an Open Contracting ID (ocid)."
@@ -5243,8 +4961,7 @@ msgstr ""
 #. /properties/relatedProcesses/items/properties/uri/description
 #. /definitions/Contract/properties/relatedProcesses/items/properties/uri/description
 #. /definitions/RelatedProcess/properties/uri/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A URI pointing to a machine-readable document, release or record package "
 "containing the identified related process."
@@ -5256,15 +4973,13 @@ msgstr ""
 #. /properties/relatedProcesses/items/properties/uri/title
 #. /definitions/Contract/properties/relatedProcesses/items/properties/uri/title
 #. /definitions/RelatedProcess/properties/uri/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Related process URI"
 msgstr "URI du processus connexe"
 
 #. /properties/contracts/items/properties/relatedProcesses/description
 #. /definitions/Contract/properties/relatedProcesses/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The details of related processes: for example, if this process is followed "
 "by one or more contracting processes, represented under a separate open "
@@ -5280,30 +4995,26 @@ msgstr ""
 #. /properties/contracts/items/properties/relatedProcesses/title
 #. /properties/relatedProcesses/title
 #. /definitions/Contract/properties/relatedProcesses/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Related processes"
 msgstr "Processus liés"
 
 #. /properties/contracts/items/properties/milestones/title
 #. /definitions/Contract/properties/milestones/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Contract milestones"
 msgstr "Étapes du contrat"
 
 #. /properties/contracts/items/properties/milestones/description
 #. /definitions/Contract/properties/milestones/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A list of milestones associated with the finalization of this contract."
 msgstr "Une liste d'étapes associées à la finalisation du contrat."
 
 #. /properties/contracts/items/properties/amendments/description
 #. /definitions/Contract/properties/amendments/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "A contract amendment is a formal change to, or extension of, a contract, and"
 " generally involves the publication of a new contract notice/release, or "
@@ -5317,14 +5028,12 @@ msgstr ""
 "fournies ici."
 
 #. /properties/language/title
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Release language"
 msgstr "Langue de l'instance"
 
 #. /properties/language/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The default language of the data using either two-letter "
 "[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or "
@@ -5342,8 +5051,7 @@ msgstr ""
 "recommandée."
 
 #. /properties/relatedProcesses/description
-#: standard/schema/dereferenced-release-schema.json:1
-#: standard/schema/release-schema.json:1
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "The details of related processes: for example, if this process follows on "
 "from one or more other processes, represented under a separate open "
@@ -5360,17 +5068,17 @@ msgstr ""
 "planification."
 
 #. /description
-#: standard/schema/meta-schema.json:1
+#: schema/meta-schema.json:1
 msgid "Core schema meta-schema"
 msgstr "Méta-schéma du schéma de base"
 
 #. /title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Schema for an Open Contracting Record package"
 msgstr "Schéma pour un paquet d'archives Open Contracting"
 
 #. /description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "The record package contains a list of records along with some publishing "
 "metadata. The records pull together all the releases under a single Open "
@@ -5384,25 +5092,22 @@ msgstr ""
 " apportés aux données."
 
 #. /properties/uri/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "Package identifier"
 msgstr "Identifiant du paquet"
 
 #. /properties/uri/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "The URI of this package that identifies it uniquely in the world."
 msgstr "L'URI du paquet qui lui donne un identifiant unique et universel. "
 
 #. /properties/version/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "OCDS schema version"
 msgstr "La version du schéma OCDS"
 
 #. /properties/version/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid ""
 "The version of the OCDS schema used in this package, expressed as "
 "major.minor For example: 1.0 or 1.1"
@@ -5411,14 +5116,12 @@ msgstr ""
 "majeure.mineure. Par exemple : 1.0 ou 1.1"
 
 #. /properties/extensions/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "OCDS extensions"
 msgstr "Extensions du standard OCDS"
 
 #. /properties/extensions/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid ""
 "An array of OCDS extensions used in this package, in which each array item "
 "is the URL of an extension.json file."
@@ -5428,21 +5131,18 @@ msgstr ""
 "l'extension."
 
 #. /properties/publisher/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "Publisher"
 msgstr "Producteur de données"
 
 #. /properties/publisher/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "Information to uniquely identify the publisher of this package."
 msgstr ""
 "Information pour identifier de manière unique le producteur du paquet. "
 
 #. /properties/publisher/properties/name/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid ""
 "The name of the organization or department responsible for publishing this "
 "data."
@@ -5451,8 +5151,7 @@ msgstr ""
 "ces données."
 
 #. /properties/publisher/properties/scheme/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid ""
 "The scheme that holds the unique identifiers used to identify the item being"
 " identified."
@@ -5462,33 +5161,28 @@ msgstr ""
 "cours d'identification."
 
 #. /properties/publisher/properties/uid/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "uid"
 msgstr "uid"
 
 #. /properties/publisher/properties/uid/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "The unique ID for this entity under the given ID scheme."
 msgstr ""
 "L'identifiant unique de cette entité sous le schéma d'identifiant donné."
 
 #. /properties/publisher/properties/uri/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "A URI to identify the publisher."
 msgstr "Une URI qui identifie le producteur des données."
 
 #. /properties/license/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "License"
 msgstr "Licence"
 
 #. /properties/license/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid ""
 "A link to the license that applies to the data in this package. A Public "
 "Domain Dedication or [Open Definition "
@@ -5504,27 +5198,24 @@ msgstr ""
 "s'appliquer aux documents liées à ce paquet."
 
 #. /properties/publicationPolicy/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "Publication policy"
 msgstr "Politique de publication"
 
 #. /properties/publicationPolicy/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "A link to a document describing the publishers publication policy."
 msgstr ""
 "Un lien vers un document décrivant la politique de publication du producteur"
 " des données."
 
 #. /properties/publishedDate/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "Published date"
 msgstr "Date de publication"
 
 #. /properties/publishedDate/description
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid ""
 "The date that this package was published. If this package is generated 'on "
 "demand', this date should reflect the date of the last change to the "
@@ -5535,12 +5226,12 @@ msgstr ""
 "sur le contenu du paquet."
 
 #. /properties/packages/title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Packages"
 msgstr "Paquets"
 
 #. /properties/packages/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "A list of URIs of all the release packages that were used to create this "
 "record package."
@@ -5549,22 +5240,22 @@ msgstr ""
 "pour créer ce paquet d'archive."
 
 #. /properties/records/title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Records"
 msgstr "Archives"
 
 #. /properties/records/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "The records for this data package."
 msgstr "Les archives pour ce paquet de données."
 
 #. /definitions/record/title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Record"
 msgstr "Archive"
 
 #. /definitions/record/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "An OCDS record must provide a list of all the existing OCDS releases "
 "relating to a single contracting process and should provide a compiled "
@@ -5579,7 +5270,7 @@ msgstr ""
 " de toutes les modifications apportées aux données dans l'instance compilée."
 
 #. /definitions/record/properties/ocid/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "A unique identifier that identifies the unique Open Contracting Process. For"
 " more information see: https://standard.open-"
@@ -5591,25 +5282,24 @@ msgstr ""
 
 #. /definitions/record/properties/releases/title
 #. /properties/releases/title
-#: standard/schema/record-package-schema.json:1
-#: standard/schema/release-package-schema.json:1
+#: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "Releases"
 msgstr "Instances"
 
 #. /definitions/record/properties/releases/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "An array of linking identifiers or releases"
 msgstr ""
 "Une liste d'instances, soit référencées via leur URI, soit intégrées "
 "directement dans le paquet."
 
 #. /definitions/record/properties/releases/oneOf/0/title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Linked releases"
 msgstr "Instances liées"
 
 #. /definitions/record/properties/releases/oneOf/0/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "A list of objects that identify the releases associated with this Open "
 "Contracting ID. The releases MUST be sorted into date order in the array, "
@@ -5621,17 +5311,17 @@ msgstr ""
 "jusqu'à la plus récente (en dernière position)."
 
 #. /definitions/record/properties/releases/oneOf/0/items/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Information to uniquely identify the release."
 msgstr "Information permettant l'identification unique de l'instance."
 
 #. /definitions/record/properties/releases/oneOf/0/items/properties/url/title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Release URL"
 msgstr "URL de l'instance"
 
 #. /definitions/record/properties/releases/oneOf/0/items/properties/url/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "The URL of the release which contains the URL of the package with the "
 "release `id` appended using a fragment identifier e.g. https://standard"
@@ -5645,7 +5335,7 @@ msgstr ""
 "213czf-000-00001"
 
 #. /definitions/record/properties/releases/oneOf/0/items/properties/date/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "The date of the release. It should match the value of the `date` field of "
 "the release. This is used to sort the releases in the list in chronological "
@@ -5656,7 +5346,7 @@ msgstr ""
 "chronologique dans la liste."
 
 #. /definitions/record/properties/releases/oneOf/0/items/properties/tag/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "The tags of the release. It should match the value of the `tag` field of the"
 " release. This provides additional context when reviewing a record to see "
@@ -5667,12 +5357,12 @@ msgstr ""
 "d'instances sont incluses pour cet `ocid`."
 
 #. /definitions/record/properties/releases/oneOf/1/title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Embedded releases"
 msgstr "Instances enchâssées"
 
 #. /definitions/record/properties/releases/oneOf/1/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "A list of releases, with all the data. The releases MUST be sorted into date"
 " order in the array, from oldest (at position 0) to newest (last)."
@@ -5682,12 +5372,12 @@ msgstr ""
 "(à la position 0) jusqu'à la plus récente (en dernière position)."
 
 #. /definitions/record/properties/compiledRelease/title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Compiled release"
 msgstr "Instance compilée"
 
 #. /definitions/record/properties/compiledRelease/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "This is the latest version of all the contracting data, it has the same "
 "schema as an open contracting release."
@@ -5696,12 +5386,12 @@ msgstr ""
 " de marché. Le schéma est le même que pour une instance Open Contracting. "
 
 #. /definitions/record/properties/versionedRelease/title
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid "Versioned release"
 msgstr "Instance versionnée"
 
 #. /definitions/record/properties/versionedRelease/description
-#: standard/schema/record-package-schema.json:1
+#: schema/record-package-schema.json:1
 msgid ""
 "This contains the history of the data in the compiledRecord. With all "
 "versions of the information and the release they came from."
@@ -5711,12 +5401,12 @@ msgstr ""
 "données, ainsi que l'instance dont elles proviennent."
 
 #. /title
-#: standard/schema/release-package-schema.json:1
+#: schema/release-package-schema.json:1
 msgid "Schema for an Open Contracting Release Package"
 msgstr "Schéma pour un paquet d'instances Open Contracting"
 
 #. /description
-#: standard/schema/release-package-schema.json:1
+#: schema/release-package-schema.json:1
 msgid ""
 "The release package contains a list of releases along with some publishing "
 "metadata."
@@ -5725,7 +5415,7 @@ msgstr ""
 "publication. "
 
 #. /properties/uri/description
-#: standard/schema/release-package-schema.json:1
+#: schema/release-package-schema.json:1
 msgid ""
 "The URI of this package that identifies it uniquely in the world. "
 "Recommended practice is to use a dereferenceable URI, where a persistent "
@@ -5736,12 +5426,12 @@ msgstr ""
 "pérenne du paquet est disponible. "
 
 #. /properties/releases/description
-#: standard/schema/release-package-schema.json:1
+#: schema/release-package-schema.json:1
 msgid "An array of one or more OCDS releases."
 msgstr "Un liste d'une ou plusieurs instances OCDS."
 
 #. /properties/publicationPolicy/description
-#: standard/schema/release-package-schema.json:1
+#: schema/release-package-schema.json:1
 msgid ""
 "A link to a document describing the publishers [publication "
 "policy](https://standard.open-"
@@ -5752,12 +5442,12 @@ msgstr ""
 "contracting.org/{{version}}/{{lang}}/implementation/publication_policy/)."
 
 #. /properties/buyer/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Buyer"
 msgstr "Acheteur"
 
 #. /properties/buyer/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "A buyer is an entity whose budget will be used to pay for goods, works or "
 "services related to a contract. This may be different from the procuring "
@@ -5768,7 +5458,7 @@ msgstr ""
 "qui peut être spécifié dans les données d'appel d'offres."
 
 #. /properties/planning/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "Information from the planning phase of the contracting process. This "
 "includes information related to the process of deciding what to contract, "
@@ -5779,29 +5469,29 @@ msgstr ""
 "l'objet du marché, son calendrier et ses modalités."
 
 #. /properties/tender/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "The activities undertaken in order to enter into a contract."
 msgstr ""
 "Les activités menées dans le but de signer un contrat avec un fournisseur."
 
 #. /definitions/Planning/properties/budget/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Budget"
 msgstr "Budget"
 
 #. /definitions/Planning/properties/budget/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Details of the budget that funds this contracting process."
 msgstr ""
 "Les détails du budget qui finance le processus de passation de marché."
 
 #. /definitions/Tender/properties/procuringEntity/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Procuring entity"
 msgstr "Organisation adjudicatrice"
 
 #. /definitions/Tender/properties/procuringEntity/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The entity managing the procurement. This may be different from the buyer "
 "who pays for, or uses, the items being procured."
@@ -5810,7 +5500,7 @@ msgstr ""
 "l'acheteur qui paye, ou utilise, les biens ou services achetés."
 
 #. /definitions/Tender/properties/value/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The total upper estimated value of the procurement. A negative value "
 "indicates that the contracting process may involve payments from the "
@@ -5821,12 +5511,12 @@ msgstr ""
 "(couramment utilisé dans les contrats de concession)."
 
 #. /definitions/Tender/properties/minValue/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Minimum value"
 msgstr "Montant minimum"
 
 #. /definitions/Tender/properties/minValue/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The minimum estimated value of the procurement.  A negative value indicates "
 "that the contracting process may involve payments from the supplier to the "
@@ -5837,12 +5527,12 @@ msgstr ""
 " à l'acheteur (couramment utilisé dans les contrats de concession)."
 
 #. /definitions/Tender/properties/tenderPeriod/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Tender period"
 msgstr "Période de l'appel d'offre"
 
 #. /definitions/Tender/properties/tenderPeriod/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The period when the tender is open for submissions. The end date is the "
 "closing date for tender submissions."
@@ -5851,12 +5541,12 @@ msgstr ""
 " date de fin est la date de clôture des candidatures à l'appel d'offres."
 
 #. /definitions/Tender/properties/enquiryPeriod/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Enquiry period"
 msgstr "Période de questions"
 
 #. /definitions/Tender/properties/enquiryPeriod/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The period during which potential bidders may submit questions and requests "
 "for clarification to the entity managing procurement. Details of how to "
@@ -5872,12 +5562,12 @@ msgstr ""
 "fournies en utilisant les étapes de l'appel d'offre."
 
 #. /definitions/Tender/properties/awardPeriod/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Evaluation and award period"
 msgstr "Période d'évaluation et d'attribution"
 
 #. /definitions/Tender/properties/awardPeriod/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The period for decision making regarding the contract award. The end date "
 "should be the date on which an award decision is due to be finalized. The "
@@ -5889,7 +5579,7 @@ msgstr ""
 "indiquer le début d'une période d'évaluation."
 
 #. /definitions/Tender/properties/contractPeriod/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The period over which the contract is estimated or required to be active. If"
 " the tender does not specify explicit dates, the duration field may be used."
@@ -5900,14 +5590,14 @@ msgstr ""
 
 #. /definitions/Tender/properties/contractPeriod/title
 #. /definitions/Award/properties/contractPeriod/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Contract period"
 msgstr "Période du contrat"
 
 #. /definitions/Tender/properties/amendment/description
 #. /definitions/Award/properties/amendment/description
 #. /definitions/Contract/properties/amendment/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The use of individual amendment objects has been deprecated. From OCDS 1.1 "
 "information should be provided in the amendments array."
@@ -5919,8 +5609,8 @@ msgstr ""
 #. /definitions/Tender/properties/amendment/deprecated/description
 #. /definitions/Award/properties/amendment/deprecated/description
 #. /definitions/Contract/properties/amendment/deprecated/description
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "The single amendment object has been deprecated in favour of including "
 "amendments in an amendments (plural) array."
@@ -5930,7 +5620,7 @@ msgstr ""
 "modifications."
 
 #. /definitions/Award/properties/value/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The total value of this award. In the case of a framework contract this may "
 "be the total estimated lifetime value, or maximum value, of the agreement. "
@@ -5946,17 +5636,17 @@ msgstr ""
 "dans les contrats de concession)."
 
 #. /definitions/Award/properties/contractPeriod/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "The period for which the contract has been awarded."
 msgstr "La période pour laquelle le marché a été attribué."
 
 #. /definitions/Contract/properties/period/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "The start and end date for the contract."
 msgstr "Les dates de début et de fin du contrat."
 
 #. /definitions/Contract/properties/value/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The total value of this contract. A negative value indicates that the "
 "contract will involve payments from the supplier to the buyer (commonly used"
@@ -5967,7 +5657,7 @@ msgstr ""
 "dans les contrats de concession)."
 
 #. /definitions/Contract/properties/implementation/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "Information related to the implementation of the contract in accordance with"
 " the obligations laid out therein."
@@ -5976,7 +5666,7 @@ msgstr ""
 "obligations qui y figurent."
 
 #. /definitions/Budget/properties/amount/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The value reserved in the budget for this contracting process. A negative "
 "value indicates anticipated income to the budget as a result of this "
@@ -5992,17 +5682,17 @@ msgstr ""
 " utilisée."
 
 #. /definitions/Transaction/properties/value/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "The value of the transaction."
 msgstr "Le montant de la transaction."
 
 #. /definitions/Transaction/properties/payer/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Payer"
 msgstr "Payeur"
 
 #. /definitions/Transaction/properties/payer/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "An organization reference for the organization from which the funds in this "
 "transaction originate."
@@ -6011,12 +5701,12 @@ msgstr ""
 "utilités dans cette transaction."
 
 #. /definitions/Transaction/properties/payee/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Payee"
 msgstr "Bénéficiaire"
 
 #. /definitions/Transaction/properties/payee/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "An organization reference for the organization which receives the funds in "
 "this transaction."
@@ -6025,7 +5715,7 @@ msgstr ""
 "dans cette transaction."
 
 #. /definitions/Transaction/properties/amount/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "(Deprecated in 1.1. Use transaction.value instead) The value of the "
 "transaction. A negative value indicates a refund or correction."
@@ -6035,8 +5725,8 @@ msgstr ""
 "une correction."
 
 #. /definitions/Transaction/properties/amount/deprecated/description
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "This field has been replaced by the `transaction.value` field for "
 "consistency with the use of value and amount elsewhere in the standard."
@@ -6045,12 +5735,12 @@ msgstr ""
 "l'utilisation de la valeur et du montant ailleurs dans le standard."
 
 #. /definitions/Transaction/properties/providerOrganization/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Provider organization"
 msgstr "Organisation d'origine"
 
 #. /definitions/Transaction/properties/providerOrganization/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "(Deprecated in 1.1. Use transaction.payer instead.) The Organization "
 "Identifier for the organization from which the funds in this transaction "
@@ -6063,8 +5753,8 @@ msgstr ""
 "consultez la documentation et la liste de codes."
 
 #. /definitions/Transaction/properties/providerOrganization/deprecated/description
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "This field has been replaced by the `transaction.payer` field to resolve "
 "ambiguity arising from 'provider' being interpreted as relating to the goods"
@@ -6076,12 +5766,12 @@ msgstr ""
 "les parties."
 
 #. /definitions/Transaction/properties/receiverOrganization/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Receiver organization"
 msgstr "Organisation destinataire"
 
 #. /definitions/Transaction/properties/receiverOrganization/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "(Deprecated in 1.1. Use transaction.payee instead). The Organization "
 "Identifier for the organization which receives the funds in this "
@@ -6094,8 +5784,8 @@ msgstr ""
 "documentation et la liste de codes."
 
 #. /definitions/Transaction/properties/receiverOrganization/deprecated/description
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "This field has been replaced by the `transaction.payee` field to resolve "
 "ambiguity arising from 'receiver' being interpreted as relating to the goods"
@@ -6108,12 +5798,12 @@ msgstr ""
 
 #. /definitions/OrganizationReference/properties/identifier/title
 #. /definitions/Organization/properties/identifier/title
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Primary identifier"
 msgstr "Identifiant principal"
 
 #. /definitions/OrganizationReference/properties/identifier/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The primary identifier for this organization. Identifiers that uniquely pick"
 " out a legal entity should be preferred. Consult the [organization "
@@ -6130,8 +5820,8 @@ msgstr ""
 
 #. /definitions/OrganizationReference/properties/identifier/deprecated/description
 #. /definitions/OrganizationReferenceVersionedId/properties/identifier/deprecated/description
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "From version 1.1, organizations should be referenced by their identifier and"
 " name in a document, and detailed legal identifier information should only "
@@ -6146,8 +5836,8 @@ msgstr ""
 
 #. /definitions/OrganizationReference/properties/address/deprecated/description
 #. /definitions/OrganizationReferenceVersionedId/properties/address/deprecated/description
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "From version 1.1, organizations should be referenced by their identifier and"
 " name in a document, and address information should only be provided in the "
@@ -6161,14 +5851,14 @@ msgstr ""
 
 #. /definitions/OrganizationReference/properties/address/description
 #. /definitions/OrganizationReference/properties/contactPoint/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "(Deprecated outside the parties section)"
 msgstr "(Obsolète hors de la section relative aux parties)"
 
 #. /definitions/OrganizationReference/properties/contactPoint/deprecated/description
 #. /definitions/OrganizationReferenceVersionedId/properties/contactPoint/deprecated/description
-#: standard/schema/release-schema.json:1
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid ""
 "From version 1.1, organizations should be referenced by their identifier and"
 " name in a document, and contact point information for an organization "
@@ -6182,7 +5872,7 @@ msgstr ""
 "racine d'une instance."
 
 #. /definitions/Organization/properties/identifier/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "The primary identifier for this organization or participant. Identifiers "
 "that uniquely pick out a legal entity should be preferred. Consult the "
@@ -6198,7 +5888,7 @@ msgstr ""
 "schéma préféré et l'identifiant à utiliser."
 
 #. /definitions/Organization/properties/address/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid ""
 "An address. This may be the legally registered address of the organization, "
 "or may be a correspondence address for this particular contracting process."
@@ -6208,21 +5898,21 @@ msgstr ""
 "de passation de marché en particulier."
 
 #. /definitions/Organization/properties/contactPoint/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "Contact details that can be used for this party."
 msgstr "Les coordonnées qui peuvent être utilisées pour cette partie."
 
 #. /definitions/Item/properties/classification/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "The primary classification for the item."
 msgstr "La classification principale de l'article."
 
 #. /definitions/Item/properties/unit/properties/value/description
-#: standard/schema/release-schema.json:1
+#: schema/release-schema.json:1
 msgid "The monetary value of a single unit."
 msgstr "La valeur monétaire d'une seule unité."
 
 #. /title
-#: standard/schema/versioned-release-validation-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
 msgid "Schema for a compiled, versioned Open Contracting Release."
 msgstr "Schéma pour une instance Open Contracting versionnée et compilée"

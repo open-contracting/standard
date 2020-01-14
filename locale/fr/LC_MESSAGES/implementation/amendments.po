@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 13:23-0500\n"
+"POT-Creation-Date: 2020-01-13 21:53-0500\n"
 "PO-Revision-Date: 2017-05-02 09:27+0000\n"
 "Last-Translator: Maximovitch <clara@datactivist.coop>, 2019\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
@@ -26,28 +26,28 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../standard/docs/en/implementation/amendments.md:1
+#: ../../docs/implementation/amendments.md:1
 msgid "Amendments"
 msgstr "Modifications"
 
-#: ../../standard/docs/en/implementation/amendments.md:3
+#: ../../docs/implementation/amendments.md:3
 msgid "Information about a contracting process will often change over time."
 msgstr ""
 "Les informations sur un processus de passation de marchés changent souvent "
 "avec le temps."
 
-#: ../../standard/docs/en/implementation/amendments.md:5
+#: ../../docs/implementation/amendments.md:5
 msgid ""
 "Each time information changes, a new OCDS release ought to be published."
 msgstr ""
 "Chaque modification de ces informations devra s'accompagner d'une nouvelle "
 "publication OCDS."
 
-#: ../../standard/docs/en/implementation/amendments.md:7
+#: ../../docs/implementation/amendments.md:7
 msgid "There are three kinds of changes:"
 msgstr "Il existe trois types de modification :"
 
-#: ../../standard/docs/en/implementation/amendments.md:9
+#: ../../docs/implementation/amendments.md:9
 msgid ""
 "**New information**. For example, when information about the award of a "
 "contract is first released."
@@ -55,7 +55,7 @@ msgstr ""
 "**Nouvelles informations**. Par exemple, lorsque des informations sur "
 "l'attribution d'un contrat sont publiées pour la première fois."
 
-#: ../../standard/docs/en/implementation/amendments.md:10
+#: ../../docs/implementation/amendments.md:10
 msgid ""
 "**Updates to existing information**. For example, to correct errors in "
 "earlier releases, or to make minor adjustments to titles, descriptions or "
@@ -65,7 +65,7 @@ msgstr ""
 " erreurs dans les instances antérieures ou pour effectuer des ajustements "
 "mineurs aux titres, descriptions ou date."
 
-#: ../../standard/docs/en/implementation/amendments.md:11
+#: ../../docs/implementation/amendments.md:11
 msgid ""
 "**Amendments**. For example, when the value or duration of a contract is "
 "changed. The term amendment often has a specific legal meaning for a "
@@ -78,11 +78,11 @@ msgstr ""
 "attribution ou à un contrat ne peuvent être autorisées que dans le cadre "
 "d'un avenant. "
 
-#: ../../standard/docs/en/implementation/amendments.md:13
+#: ../../docs/implementation/amendments.md:13
 msgid "The nature of a change can be made explicit using:"
 msgstr "La nature d'un changement peut être explicitée en utilisant :"
 
-#: ../../standard/docs/en/implementation/amendments.md:15
+#: ../../docs/implementation/amendments.md:15
 msgid ""
 "**The release tag** (`tag`). For example, for a release with a new contract,"
 " use 'contract'. For an update to the award, use 'contractUpdate', and for "
@@ -93,7 +93,7 @@ msgstr ""
 "l'attribution, utilisez \"contractUpdate\", et pour une modification du "
 "contrat, utilisez \"contractAmendment\"."
 
-#: ../../standard/docs/en/implementation/amendments.md:17
+#: ../../docs/implementation/amendments.md:17
 msgid ""
 "**The amendments** building block. This can contain an array of amendment "
 "explanations, and clearly identify the releases that contain before and "
@@ -103,15 +103,15 @@ msgstr ""
 "d'explications sur les modifications et identifier clairement les instances "
 "contenant des valeurs \"avant\" et \"après\"."
 
-#: ../../standard/docs/en/implementation/amendments.md:19
+#: ../../docs/implementation/amendments.md:19
 msgid "Worked example"
 msgstr "Exemple d'utilisation"
 
-#: ../../standard/docs/en/implementation/amendments.md:21
+#: ../../docs/implementation/amendments.md:21
 msgid "In the example below:"
 msgstr "Dans l'exemple ci-dessous :"
 
-#: ../../standard/docs/en/implementation/amendments.md:23
+#: ../../docs/implementation/amendments.md:23
 msgid ""
 "A tender is issued for a \"Data merge tool\" in a release with the `tag` "
 "'tender'."
@@ -119,7 +119,7 @@ msgstr ""
 "Une offre est émise pour un \"outil de fusion de données\" dans une instance"
 " avec le `tag` ''tender\"."
 
-#: ../../standard/docs/en/implementation/amendments.md:24
+#: ../../docs/implementation/amendments.md:24
 msgid ""
 "This is updated in a release with the `tag` 'tenderUpdate' to provide an "
 "expanded description of the item. The publisher did not consider this to be "
@@ -132,7 +132,7 @@ msgstr ""
 "d'offres, de sorte qu'il n'a pas publié d'informations sur les "
 "modifications."
 
-#: ../../standard/docs/en/implementation/amendments.md:25
+#: ../../docs/implementation/amendments.md:25
 msgid ""
 "The tender is then formally amended, with an increased value. This is "
 "published in a release with the `tag` 'tenderAmendment', and an `amendments`"
@@ -142,11 +142,11 @@ msgstr ""
 "information est publiée dans une instance avec le `tag` 'tenderAmendment', "
 "et un composant ` amendment` sous `tender`."
 
-#: ../../standard/docs/en/implementation/amendments.md:65
+#: ../../docs/implementation/amendments.md:60
 msgid "Note in this example that:"
 msgstr "Notez dans cet exemple que :"
 
-#: ../../standard/docs/en/implementation/amendments.md:67
+#: ../../docs/implementation/amendments.md:62
 msgid ""
 "**The publisher chooses in the tenderAmendment release to repeat a fragment "
 "of the original 'tender' release**, so that the before and after values of "
@@ -163,7 +163,7 @@ msgstr ""
 " structurées concernant les valeurs antérieures et postérieures d'un champ "
 "plus accessibles aux usagers. "
 
-#: ../../standard/docs/en/implementation/amendments.md:69
+#: ../../docs/implementation/amendments.md:64
 msgid ""
 "**In the merged record**, the information in the `amendments` array can be "
 "used to lookup information in the `versionedRelease` section, to see where "

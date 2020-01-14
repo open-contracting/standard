@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 13:23-0500\n"
+"POT-Creation-Date: 2020-01-13 21:53-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
@@ -25,11 +25,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../standard/docs/en/schema/merging.md:1
+#: ../../docs/schema/merging.md:1
 msgid "Merging"
 msgstr "Fusionar"
 
-#: ../../standard/docs/en/schema/merging.md:3
+#: ../../docs/schema/merging.md:3
 msgid ""
 "An OCDS [record](../getting_started/releases_and_records) aggregates all the"
 " releases available for a contracting process at a given time, and can "
@@ -39,7 +39,7 @@ msgstr ""
 "entregas disponibles para un proceso de contrataciones en un momento dado, y"
 " puede incluir: "
 
-#: ../../standard/docs/en/schema/merging.md:5
+#: ../../docs/schema/merging.md:5
 msgid ""
 "a compiled release, which expresses the current state of the contracting "
 "process, by showing only the most recent field values"
@@ -47,7 +47,7 @@ msgstr ""
 "un release compilado, que expresa el estado actual del proceso de "
 "contrataciones, mostrando solamente los valores más recientes de los campos"
 
-#: ../../standard/docs/en/schema/merging.md:6
+#: ../../docs/schema/merging.md:6
 msgid ""
 "a versioned release, which expresses all historical states of the "
 "contracting process, by showing all the field values over time"
@@ -55,7 +55,7 @@ msgstr ""
 "un release versionado, que expresa todos los estados históricos del proceso "
 "de contrataciones, mostrando los valores de los campos en el tiempo"
 
-#: ../../standard/docs/en/schema/merging.md:8
+#: ../../docs/schema/merging.md:8
 msgid ""
 "**Merging** is the process of combining individual releases into a compiled "
 "or versioned release, described in more detail below. At a high level:"
@@ -63,7 +63,7 @@ msgstr ""
 "**Fusión** es el proceso de combinar entregas individuales en un release "
 "compilado o versionado, descrito con más detalle abajo. A grandes rasgos: "
 
-#: ../../standard/docs/en/schema/merging.md:10
+#: ../../docs/schema/merging.md:10
 msgid ""
 "A compiled release is created by taking only the most recent values of "
 "fields from releases in a given contracting process."
@@ -71,7 +71,7 @@ msgstr ""
 "Un release compilado se crea tomando solamente los valores más recientes de "
 "los campos de las entregas de un proceso de contrataciones específico."
 
-#: ../../standard/docs/en/schema/merging.md:11
+#: ../../docs/schema/merging.md:11
 msgid ""
 "A versioned release is created by taking all values of fields from releases "
 "in a given contracting process, copying metadata about the release from "
@@ -81,7 +81,7 @@ msgstr ""
 " entregas en un proceso de contratación particular, copiando los metadatos "
 "sobre la entrega del cual se obtienen, y  poniéndolos en orden cronológico."
 
-#: ../../standard/docs/en/schema/merging.md:17
+#: ../../docs/schema/merging.md:17
 msgid ""
 "A public procurement agency publishes a release to announce an opportunity "
 "on January 1, in which the total estimated value of the procurement is "
@@ -97,7 +97,7 @@ msgstr ""
 "publica un release con una enmienda a la oportunidad, en la cual el valor "
 "total estimado de la compra ha aumentado a $2,000. "
 
-#: ../../standard/docs/en/schema/merging.md:19
+#: ../../docs/schema/merging.md:19
 msgid ""
 "The agency decides to award the opportunity to two of the bidders. On March "
 "1, the agency publishes a release to announce that Company A is awarded a "
@@ -109,7 +109,7 @@ msgstr ""
 " de $750 a la Compañía A. El 3 de Marzo, la agencia publica una entrega "
 "anunciando que se adjudicó la compañía B un contrato de $750."
 
-#: ../../standard/docs/en/schema/merging.md:21
+#: ../../docs/schema/merging.md:21
 msgid ""
 "Through these individual releases, the agency provides real-time data about "
 "the contracting process."
@@ -117,7 +117,7 @@ msgstr ""
 "A través de estas entregas individuales, la agencia da datos en tiempo real "
 "sobre el proceso de contrataciones."
 
-#: ../../standard/docs/en/schema/merging.md:23
+#: ../../docs/schema/merging.md:23
 msgid ""
 "At each release, the agency also updates the record, which combines all the "
 "releases to date. In the final record:"
@@ -125,7 +125,7 @@ msgstr ""
 "En cada entrega la agencia actualiza el registro, que combina todos las "
 "entregas a la fecha. En el registro final: "
 
-#: ../../standard/docs/en/schema/merging.md:25
+#: ../../docs/schema/merging.md:25
 msgid ""
 "The compiled release contains all the information about the opportunity and "
 "awards, using the same schema as a release."
@@ -133,7 +133,7 @@ msgstr ""
 "El release compilado contiene toda la información sobre la oportunidad y "
 "adjudicaciones, utilizando el mismo esquema que utiliza una entrega."
 
-#: ../../standard/docs/en/schema/merging.md:26
+#: ../../docs/schema/merging.md:26
 msgid ""
 "The versioned release makes it easy to see how the description and total "
 "estimated value changed over time."
@@ -141,15 +141,15 @@ msgstr ""
 "El release versionado hace más fácil ver como la descripción y el valor "
 "estimado total cambiaron con el tiempo."
 
-#: ../../standard/docs/en/schema/merging.md:84
+#: ../../docs/schema/merging.md:78
 msgid "Merging specification"
 msgstr "Especificaciones de fusión (merging)"
 
-#: ../../standard/docs/en/schema/merging.md:86
+#: ../../docs/schema/merging.md:80
 msgid "Discarded fields"
 msgstr "Campos descartados"
 
-#: ../../standard/docs/en/schema/merging.md:88
+#: ../../docs/schema/merging.md:82
 msgid ""
 "In the release schema, `\"omitWhenMerged\": true` is declared on fields that"
 " must be discarded during merging. These are presently: `id`, `date` and "
@@ -159,14 +159,12 @@ msgstr ""
 "que se deben descartar cuando se hace la fusión. Estos actualmente son: "
 "`id`, `date` y `tag`."
 
-#: ../../standard/docs/en/schema/merging.md:90
-#: ../../standard/docs/en/schema/merging.md:167
-#: ../../standard/docs/en/schema/merging.md:178
-#: ../../standard/docs/en/schema/merging.md:200
+#: ../../docs/schema/merging.md:84 ../../docs/schema/merging.md:161
+#: ../../docs/schema/merging.md:172 ../../docs/schema/merging.md:194
 msgid "For a compiled release:"
 msgstr "Para un release compilado:"
 
-#: ../../standard/docs/en/schema/merging.md:91
+#: ../../docs/schema/merging.md:85
 msgid ""
 "Both the fields and their values are discarded, because they are metadata "
 "about the individual releases; the compiled release replaces these with its "
@@ -176,14 +174,12 @@ msgstr ""
 "entregas individuales; los releases compilados reemplazan estos con sus "
 "propios metadatos."
 
-#: ../../standard/docs/en/schema/merging.md:92
-#: ../../standard/docs/en/schema/merging.md:171
-#: ../../standard/docs/en/schema/merging.md:180
-#: ../../standard/docs/en/schema/merging.md:203
+#: ../../docs/schema/merging.md:86 ../../docs/schema/merging.md:165
+#: ../../docs/schema/merging.md:174 ../../docs/schema/merging.md:197
 msgid "For a versioned release:"
 msgstr "Para un release versionado: "
 
-#: ../../standard/docs/en/schema/merging.md:93
+#: ../../docs/schema/merging.md:87
 msgid ""
 "The fields are discarded, but their values are moved, as described below, in"
 " order to indicate from which releases each other field value is taken."
@@ -191,57 +187,56 @@ msgstr ""
 "Los campos se descartan, pero sus valores se mueven, como se describe abajo,"
 " para indicar de cuáles entregas se obtiene el valor del campo."
 
-#: ../../standard/docs/en/schema/merging.md:95
+#: ../../docs/schema/merging.md:89
 msgid "If `omitWhenMerged` is set to `false`, ignore it."
 msgstr "Si `omitWhenMerged` es `false`, ignórelo."
 
-#: ../../standard/docs/en/schema/merging.md:3
+#: ../../None:1
 msgid ""
 "The compiled release presently uses the same schema as the release schema, "
 "which means that the `id`, `date` and `tag` fields are required in a "
 "compiled release. We invite discussion on whether to change these "
-"requirements in a separate compiled release schema in issue [#330]"
-"(https://github.com/open-contracting/standard/issues/330), and on how to "
-"identify and date compiled and versioned releases in issue [#834]"
-"(https://github.com/open-contracting/standard/issues/834)."
+"requirements in a separate compiled release schema in issue "
+"[#330](https://github.com/open-contracting/standard/issues/330), and on how "
+"to identify and date compiled and versioned releases in issue "
+"[#834](https://github.com/open-contracting/standard/issues/834)."
 msgstr ""
 "El release compilado actualmente usa el mismo esquema que la entrega OCDS, "
-"lo cual significa que los campos `id`, `date` y `tag` son requisitos "
-"en un release compilado. Invitamos a discutir sobre si es necesario hacer "
-"cambios a estos requisitos en un esquema separado de release compilado en el"
-" issue [#330](https://github.com/open-contracting/standard/issues/330), y"
-" sobre cómo identificar y poner fecha a releases compilados y versionados en"
-" el issue [#834](https://github.com/open-"
-"contracting/standard/issues/834)."
+"lo cual significa que los campos `id`, `date` y `tag` son requisitos en un "
+"release compilado. Invitamos a discutir sobre si es necesario hacer cambios "
+"a estos requisitos en un esquema separado de release compilado en el issue "
+"[#330](https://github.com/open-contracting/standard/issues/330), y sobre "
+"cómo identificar y poner fecha a releases compilados y versionados en el "
+"issue [#834](https://github.com/open-contracting/standard/issues/834)."
 
-#: ../../standard/docs/en/schema/merging.md:5
+#: ../../None:3
 msgid ""
 "In the meantime, an intermediate solution is to set `tag` to "
-"`[\"compiled\"]`, `date` to the date of the most recent release, and "
-"`id` to `{ocid}-{date}`, like in the [reference implementation]"
-"(#reference-implementation) of the merge routine."
+"`[\"compiled\"]`, `date` to the date of the most recent release, and `id` to"
+" `{ocid}-{date}`, like in the [reference implementation](#reference-"
+"implementation) of the merge routine."
 msgstr ""
 "Mientras tanto, una solución intermedia es poner `tag` igual a "
-"`[\"compiled\"]`, `date` con la fecha de la entrega más reciente, y "
-"`id` igual a `{ocid}-{date}`, como en la [referencia de implementación]"
-"(#reference-implementation) de la rutina de fusión (merge)."
+"`[\"compiled\"]`, `date` con la fecha de la entrega más reciente, y `id` "
+"igual a `{ocid}-{date}`, como en la  [referencia de implementación"
+"](#reference-implementation) de la rutina de fusión (merge)."
 
-#: ../../standard/docs/en/schema/merging.md:105
+#: ../../docs/schema/merging.md:101
 msgid "Versioned values"
 msgstr "Valores versionados"
 
-#: ../../standard/docs/en/schema/merging.md:107
+#: ../../docs/schema/merging.md:103
 msgid ""
 "To convert a field's value in a release to a **versioned value**, you must:"
 msgstr ""
 "Para convertir los valores de un campo de una entrega a un  **versioned "
 "value**, debe: "
 
-#: ../../standard/docs/en/schema/merging.md:109
+#: ../../docs/schema/merging.md:105
 msgid "Create an empty JSON object"
 msgstr "Crear un objeto JSON vacío"
 
-#: ../../standard/docs/en/schema/merging.md:110
+#: ../../docs/schema/merging.md:106
 msgid ""
 "Set its `releaseID`, `releaseDate`, `releaseTag` fields to the release's "
 "`id`, `date`, `tag` values"
@@ -249,19 +244,19 @@ msgstr ""
 "Ajustar los campos `releaseID`, `releaseDate` y `releaseTag` a los valores "
 "`id`, `date` y `tag` de la entrega"
 
-#: ../../standard/docs/en/schema/merging.md:111
+#: ../../docs/schema/merging.md:107
 msgid "Set its `value` field to the field's value in the release"
 msgstr ""
 "Ajustar el valor del campo (`value`)  al valor del campo en la entrega"
 
-#: ../../standard/docs/en/schema/merging.md:113
+#: ../../docs/schema/merging.md:109
 msgid ""
 "A **versioned value** thus describes a field's value in a specific release."
 msgstr ""
 "Así, un **versioned value** describe los valores de un campo en una entrega "
 "específica."
 
-#: ../../standard/docs/en/schema/merging.md:115
+#: ../../docs/schema/merging.md:111
 msgid ""
 "For example, in the above worked example, the estimated value of the "
 "procurement was $1,000 in a release (`tender/value/amount` was `1000`). "
@@ -271,7 +266,7 @@ msgstr ""
 " fue $1,000 en una entrega (`tender/value/amount` fue `1000`). Siguiendo los"
 " pasos de arriba, el valor versionado es:"
 
-#: ../../standard/docs/en/schema/merging.md:128
+#: ../../docs/schema/merging.md:124
 msgid ""
 "In a **versioned release**, with a few exceptions, a field's value is "
 "replaced with an array of versioned values, which should be in chronological"
@@ -281,7 +276,7 @@ msgstr ""
 "reemplaza con una lista de valores versionados, los cuales deben estar en "
 "orden cronológico ordenados por  `releaseDate`."
 
-#: ../../standard/docs/en/schema/merging.md:130
+#: ../../docs/schema/merging.md:126
 msgid ""
 "For example, in the above worked example, the estimated value was $1,000 in "
 "a release published January 1, 2016 and then $2,000 in a release published "
@@ -292,7 +287,7 @@ msgstr ""
 "entrega publicada el 5 de Febrero de 2016. En un release versionado, esto se"
 " serializa de la siguiente manera:"
 
-#: ../../standard/docs/en/schema/merging.md:150
+#: ../../docs/schema/merging.md:144
 msgid ""
 "The structure of the versioned release is described by the [versioned "
 "release schema](../../versioned-release-validation-schema.json); note that "
@@ -302,27 +297,27 @@ msgstr ""
 "release versionado](../../versioned-release-validation-schema.json); note "
 "que el valor del campo `ocid` no está versionado."
 
-#: ../../standard/docs/en/schema/merging.md:152
+#: ../../docs/schema/merging.md:146
 msgid "Merge routine"
 msgstr "Rutina de fusión (merge)"
 
-#: ../../standard/docs/en/schema/merging.md:154
+#: ../../docs/schema/merging.md:148
 msgid "To create a compiled or versioned release, you must:"
 msgstr "Para crear un release compilado o versionado, debe de:"
 
-#: ../../standard/docs/en/schema/merging.md:156
+#: ../../docs/schema/merging.md:150
 msgid "Get all releases with the same `ocid` value"
 msgstr "Obtener todas las entregas con el mismo valor  `ocid`"
 
-#: ../../standard/docs/en/schema/merging.md:157
+#: ../../docs/schema/merging.md:151
 msgid "Order the releases in chronological order by `date`"
 msgstr "Ordenar las entregas en orden cronológico por fecha (`date`)"
 
-#: ../../standard/docs/en/schema/merging.md:158
+#: ../../docs/schema/merging.md:152
 msgid "Create an empty JSON object for the compiled or versioned release"
 msgstr "Crear un objeto JSON vacío para releases compilados o versionados"
 
-#: ../../standard/docs/en/schema/merging.md:159
+#: ../../docs/schema/merging.md:153
 msgid ""
 "Merge each release (**input**), in order, into the JSON object (**output**),"
 " as follows:"
@@ -330,17 +325,17 @@ msgstr ""
 "Fusionar cada entrega (**input**), en orden, en el objeto JSON (**output**),"
 " de la siguiente manera:"
 
-#: ../../standard/docs/en/schema/merging.md:161
+#: ../../docs/schema/merging.md:155
 msgid "Object values"
 msgstr "Valores de objeto"
 
-#: ../../standard/docs/en/schema/merging.md:163
+#: ../../docs/schema/merging.md:157
 msgid "The release is itself an object, so this case is encountered first."
 msgstr ""
 "La entrega es un objeto por si mismo, por lo que este caso se encuentra "
 "primero."
 
-#: ../../standard/docs/en/schema/merging.md:165
+#: ../../docs/schema/merging.md:159
 msgid ""
 "If the object is empty in **input**, do nothing. For each field within the "
 "object in **input**:"
@@ -348,7 +343,7 @@ msgstr ""
 "Si el objeto esta vacío en **input**, no debe hacer nada. Por cada campo "
 "dentro del objeto en **input**:"
 
-#: ../../standard/docs/en/schema/merging.md:168
+#: ../../docs/schema/merging.md:162
 msgid ""
 "If the field in **input** has a value of `null`, remove the field from the "
 "object in **output**, if present"
@@ -356,7 +351,7 @@ msgstr ""
 "Si el campo en **input**  tiene el valor `null`, quite el campo del objeto "
 "en  **output**, si está presente"
 
-#: ../../standard/docs/en/schema/merging.md:169
+#: ../../docs/schema/merging.md:163
 msgid ""
 "If the field isn't in **output**, add the field to the object in **output**,"
 " and set it to its value in **input**"
@@ -364,7 +359,7 @@ msgstr ""
 "Si el campo no está en **output**, añada el campo al objeto en **output** y "
 "establézcalo al valor presente en **input**"
 
-#: ../../standard/docs/en/schema/merging.md:170
+#: ../../docs/schema/merging.md:164
 msgid ""
 "If the field is in **output**, merge the field's values in **output** and "
 "**input** according to the [merge routine](#merge-routine)"
@@ -372,7 +367,7 @@ msgstr ""
 "Si el campo está en **output**, fusione los valores de los campos en "
 "**output** e **input** de acuerdo a la [rutina de fusión](#merge-routine)"
 
-#: ../../standard/docs/en/schema/merging.md:172
+#: ../../docs/schema/merging.md:166
 msgid ""
 "Merge the field's values in **output** and **input** according to the [merge"
 " routine](#merge-routine); if there is a result, add the field to the object"
@@ -383,15 +378,15 @@ msgstr ""
 "al objeto en **output** si no esta agregado ya, y establezca su valor al "
 "resultado"
 
-#: ../../standard/docs/en/schema/merging.md:174
+#: ../../docs/schema/merging.md:168
 msgid "Literal values"
 msgstr "Valores literales"
 
-#: ../../standard/docs/en/schema/merging.md:176
+#: ../../docs/schema/merging.md:170
 msgid "If the **input** value is neither an object nor an array, then:"
 msgstr "Si el valor **input** no es un objeto ni una lista, entonces:"
 
-#: ../../standard/docs/en/schema/merging.md:179
+#: ../../docs/schema/merging.md:173
 msgid ""
 "If the **input** value is different from the **output** value, replace the "
 "**output** value with the **input** value"
@@ -399,7 +394,7 @@ msgstr ""
 "Si el valor **input** es diferente al valor **output**, reemplace el valor  "
 "**output** con el valor **input**"
 
-#: ../../standard/docs/en/schema/merging.md:181
+#: ../../docs/schema/merging.md:175
 msgid ""
 "If there is no **output** value, set the **output** value to an empty JSON "
 "array, convert the **input** value to a [versioned value](#versioned-"
@@ -410,7 +405,7 @@ msgstr ""
 "](#versioned-values), y adjúntelo a la nueva lista de valores versionados en"
 " **output**"
 
-#: ../../standard/docs/en/schema/merging.md:182
+#: ../../docs/schema/merging.md:176
 msgid ""
 "If the **input** value is different from the value of the `value` field of "
 "the most recent versioned value in **output**, convert the **input** value "
@@ -422,11 +417,11 @@ msgstr ""
 "[valor versionado](#versioned-values), y adjúntelo a la lista de valores "
 "versionados en **output**"
 
-#: ../../standard/docs/en/schema/merging.md:184
+#: ../../docs/schema/merging.md:178
 msgid "Array values"
 msgstr "Valores de lista"
 
-#: ../../standard/docs/en/schema/merging.md:186
+#: ../../docs/schema/merging.md:180
 msgid ""
 "If the **input** array contains anything other than objects, treat the array"
 " as a literal value. Otherwise, there are two sub-routines for arrays of "
@@ -436,11 +431,11 @@ msgstr ""
 "valor literal. De otra manera, hay dos sub rutinas para listas de objetos: "
 "fusión de lista completa y fusión de identificadores"
 
-#: ../../standard/docs/en/schema/merging.md:188
+#: ../../docs/schema/merging.md:182
 msgid "Whole list merge"
 msgstr "Fusionar la lista completa"
 
-#: ../../standard/docs/en/schema/merging.md:190
+#: ../../docs/schema/merging.md:184
 msgid ""
 "An **input** array must be treated as a literal value if the corresponding "
 "field in a [dereferenced copy](../../dereferenced-release-schema.json) of "
@@ -452,11 +447,11 @@ msgstr ""
 "schema.json) del esquema de entrega tiene `\"array\"` como `type` y si "
 "cualquiera de las siguientes son verdaderas:"
 
-#: ../../standard/docs/en/schema/merging.md:192
+#: ../../docs/schema/merging.md:186
 msgid "The field has `\"wholeListMerge\": true`"
 msgstr "El campo tiene \"wholeListMerge\": true`"
 
-#: ../../standard/docs/en/schema/merging.md:193
+#: ../../docs/schema/merging.md:187
 msgid ""
 "The field sets `items/type`, and has anything other than `\"object\"` in "
 "`items/type`"
@@ -464,7 +459,7 @@ msgstr ""
 "El campo establece  `items/type`, y tiene cualquier cosa menos `\"object\"` "
 "en su `items/type`"
 
-#: ../../standard/docs/en/schema/merging.md:194
+#: ../../docs/schema/merging.md:188
 msgid ""
 "The field has `\"object\"` in its `items/type`, sets `items/properties`, and"
 " has no `id` field in `items/properties`"
@@ -472,11 +467,11 @@ msgstr ""
 "El campo tiene `\"object\"` en `items/type`, establece `items/properties`, y"
 " no tiene el campo `id` en `items/properties`"
 
-#: ../../standard/docs/en/schema/merging.md:196
+#: ../../docs/schema/merging.md:190
 msgid "Identifier merge"
 msgstr "Fusión de identificador"
 
-#: ../../standard/docs/en/schema/merging.md:198
+#: ../../docs/schema/merging.md:192
 msgid ""
 "This case is encountered if the above conditions aren't met. If the array is"
 " empty in **input**, do nothing. For each object within the array in "
@@ -486,7 +481,7 @@ msgstr ""
 "lista está vacía en **input**, no haga nada. Para cada objeto en la lista "
 "**input**:"
 
-#: ../../standard/docs/en/schema/merging.md:201
+#: ../../docs/schema/merging.md:195
 msgid ""
 "If there is an object in the array in **output** with the same `id` value as"
 " the object in **input**, merge the matching objects in **input** and "
@@ -496,12 +491,12 @@ msgstr ""
 "objeto **input**, fusione los objetos iguales en **input** y **output** de "
 "acuerdo a la [rutina de fusión](#merge-routine)"
 
-#: ../../standard/docs/en/schema/merging.md:202
+#: ../../docs/schema/merging.md:196
 msgid "Otherwise, append the object in **input** to the array in **output**"
 msgstr ""
 "De otra manera, adjunte el objeto en **input** a la lista en **output**"
 
-#: ../../standard/docs/en/schema/merging.md:204
+#: ../../docs/schema/merging.md:198
 msgid ""
 "If there is an object in the array in **output** with the same `id` value as"
 " the object in **input**, merge the matching objects in **input** and "
@@ -513,7 +508,7 @@ msgstr ""
 "**output** de acuerdo a la [rutina de fusión](#merge-routine), *menos el "
 "campo `id`*, que no está versionado y se debe mantener igual"
 
-#: ../../standard/docs/en/schema/merging.md:205
+#: ../../docs/schema/merging.md:199
 msgid ""
 "Otherwise, merge an empty JSON object and the object in **input** according "
 "to the [merge routine](#merge-routine) *except for the `id` field*, which is"
@@ -525,7 +520,7 @@ msgstr ""
 "no está versionado y se debe mantener igual, y adjunte el resultado a la "
 "lista en **output**"
 
-#: ../../standard/docs/en/schema/merging.md:3
+#: ../../None:1
 msgid ""
 "In this case, to remove an object from an array, you need to instead set "
 "each of its fields to `null`. We invite discussion on how to remove objects "
@@ -537,28 +532,27 @@ msgstr ""
 "de listas en el issue [#232](https://github.com/open-"
 "contracting/standard/issues/232)."
 
-#: ../../standard/docs/en/schema/merging.md:3
+#: ../../None:1
 msgid ""
-"In the release schema, `\"versionId\": true` is declared on `id` fields "
-"that must be versioned. This is only for convenience and might be removed in"
-" future versions of OCDS (see issue [#812](https://github.com/open-"
-"contracting/standard/issues/812)). If `\"versionId\": true` is declared"
-" on the `id` field of an object within an array, it is ignored. "
-"`\"versionId\": false` has no meaning and is ignored."
+"In the release schema, `\"versionId\": true` is declared on `id` fields that"
+" must be versioned. This is only for convenience and might be removed in "
+"future versions of OCDS (see issue [#812](https://github.com/open-"
+"contracting/standard/issues/812)). If `\"versionId\": true` is declared on "
+"the `id` field of an object within an array, it is ignored. `\"versionId\": "
+"false` has no meaning and is ignored."
 msgstr ""
 "En el esquema de entrega, `\"versionId\": true` se declara en los campos "
 "`id` que deben estar versionados. Esto es por conveniencia y debería "
-"retirarse en versiones futuras de OCDS (vea el issue [#812]"
-"(https://github.com/open-contracting/standard/issues/812)). Si se declara"
-" `\"versionId\": true` en el campo `id` de un objeto en una lista, es "
-"ignorado. `\"versionId\": false` no tiene ningún significado y es "
-"ignorado."
+"retirarse en versiones futuras de OCDS (vea el issue "
+"[#812](https://github.com/open-contracting/standard/issues/812)). Si se "
+"declara `\"versionId\": true` en el campo `id` de un objeto en una lista, es"
+" ignorado. `\"versionId\": false` no tiene ningún significado y es ignorado."
 
-#: ../../standard/docs/en/schema/merging.md:221
+#: ../../docs/schema/merging.md:219
 msgid "Reference implementation"
 msgstr "Implementación de referencia"
 
-#: ../../standard/docs/en/schema/merging.md:223
+#: ../../docs/schema/merging.md:221
 msgid ""
 "A reference implementation of the merge routine [is available in Python on "
 "GitHub](https://github.com/open-contracting/ocds-merge). We strongly "
