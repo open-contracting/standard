@@ -20,7 +20,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#780](https://github.com/open-contracting/standard/pull/780) All extensions authored by the Open Contracting Partnership have been moved to the [open-contracting-extensions](https://github.com/open-contracting-extensions) organization.
   * **Action:** No change is required, but we recommend that publishers update the URLs of these extensions in their release packages and record packages.
 * [#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit).
-* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [Translation and localization policy](https://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy).
+* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [Translation and localization policy](https://standard.open-contracting.org/1.1/en/schema/governance/#translation-and-localization-policy).
 * [#806](https://github.com/open-contracting/standard/pull/806) [#808](https://github.com/open-contracting/standard/pull/808) [#809](https://github.com/open-contracting/standard/pull/809) The documentation is now available in Italian.
 * [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a [privacy notice](https://standard.open-contracting.org/1.1/en/privacy-notice/).
 

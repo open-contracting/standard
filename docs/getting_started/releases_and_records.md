@@ -40,7 +40,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 #### Examples
 
-
 ```eval_rst
 .. jsoninclude:: ../examples/planning.json
    :jsonpointer: /releases
@@ -62,7 +61,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 ```
 
-
 ```eval_rst
 .. jsoninclude:: ../examples/award.json
    :jsonpointer: /releases
@@ -76,7 +74,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
    :expand: releases, contracts, period, value, items, tag, documents
 
 ```
-
 
 ```eval_rst
 .. jsoninclude:: ../examples/implementation.json

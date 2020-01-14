@@ -59,5 +59,6 @@ A [free helpdesk service](support/index) is available to support implementation 
    implementation/index
    extensions/index
    support/index
+   history/index
 
 ```

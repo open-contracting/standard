@@ -1,4 +1,4 @@
-# Support and governance
+# Getting Help
 
 The Open Contracting Data Standard help-desk is available to support you in implementing or using OCDS, and to assist in the ongoing development of the standard.
 
@@ -9,10 +9,6 @@ The Open Contracting Data Standard help-desk is available to support you in impl
    :hidden:
 
    tools
-   history_and_development
-   governance
-   credits
-
 
 ```
 

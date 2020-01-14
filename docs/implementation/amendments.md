@@ -24,7 +24,6 @@ In the example below:
 * This is updated in a release with the `tag` 'tenderUpdate' to provide an expanded description of the item. The publisher did not consider this to be a formal 'amendment' to the tender, so did not publish any amendment information.
 * The tender is then formally amended, with an increased value. This is published in a release with the `tag` 'tenderAmendment', and an `amendments` block under `tender`.
 
-
 ```eval_rst
 .. jsoninclude:: ../examples/merging/merge-tender-1.json
    :jsonpointer: 
