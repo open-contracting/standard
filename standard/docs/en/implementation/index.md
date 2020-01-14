@@ -13,6 +13,6 @@
    registration
    related_processes
    amendments
-   organization_referece
+   organization_reference
    
 ```
