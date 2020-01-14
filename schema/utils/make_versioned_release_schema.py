@@ -6,7 +6,7 @@ from copy import deepcopy
 
 from jsonref import JsonRef, JsonRefError
 
-docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs', 'en')
+docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs')
 sys.path.append(docs_path)
 
 from conf import release  # noqa isort:skip
