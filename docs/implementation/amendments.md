@@ -26,7 +26,6 @@ In the example below:
 
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/merge-tender-1.json
    :jsonpointer: 
    :expand: releases, tender, tag
@@ -35,7 +34,6 @@ In the example below:
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/merge-tender-2.json
    :jsonpointer: 
    :expand: releases, tender, tag
@@ -44,7 +42,6 @@ In the example below:
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/merge-tender-3.json
    :jsonpointer: 
    :expand: releases, tender, tag, amendments
@@ -53,7 +50,6 @@ In the example below:
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: 
    :expand: records, compiledRelease, tender, tag, versionedRelease, tender, value, amount, releaseTag, amendments
@@ -61,12 +57,8 @@ In the example below:
 
 ```
 
-
 Note in this example that:
 
 * **The publisher chooses in the tenderAmendment release to repeat a fragment of the original 'tender' release**, so that the before and after values of the tender can be accessed in the single file. This is not necessary when a full archive of releases is made accessible, but can be a convenient way of publishers making structured information on the before and after values of a field more accessible to users. 
 
 * **In the merged record**, the information in the `amendments` array can be used to lookup information in the `versionedRelease` section, to see where changes are explained by an amendment `rationale`. 
-
-
-

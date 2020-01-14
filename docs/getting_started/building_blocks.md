@@ -64,7 +64,6 @@ For example, common building blocks are provided for:
 #### Examples
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/parties/0
    :expand: identifier, address, contactPoint
@@ -73,7 +72,6 @@ For example, common building blocks are provided for:
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/value
    :expand: 
@@ -82,7 +80,6 @@ For example, common building blocks are provided for:
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/items
    :expand: classification, unit, additionalClassifications, value
@@ -91,7 +88,6 @@ For example, common building blocks are provided for:
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/contractPeriod
    :expand: 
@@ -100,7 +96,6 @@ For example, common building blocks are provided for:
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/documents
    :expand: 
@@ -109,7 +104,6 @@ For example, common building blocks are provided for:
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/tender/milestones/0
    :expand: 

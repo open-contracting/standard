@@ -71,4 +71,3 @@ For 4 ☆ publication, you ought to:
 * Additionally, produce 'flat' versions of the data for users to access in CSV for Excel formats
 
 You will need to make decisions about how to segment the data in bulk files, so that files are easy for users to work with. 
-

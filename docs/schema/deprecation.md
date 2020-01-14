@@ -25,5 +25,3 @@ For example:
 Validation tools **must** report use of deprecated properties to the user, and **should** report to the user the associated description of the reason for deprecation (which might provide guidance on how to replace the property).
 
 Consuming applications targeting compatibility with a minor version of the standard (e.g. 1.1) **must** support properties that were deprecated in that minor version, and **may** support properties that were removed. 
-
-

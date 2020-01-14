@@ -13,4 +13,3 @@ Using the canonical URL guarantees that your software, documentation or other re
 Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section.
 
 <script src="../../_static/docson/widget.js" data-schema="../../record-package-schema.json"></script>
-

@@ -27,8 +27,3 @@ Assessing how good your open contracting data is involves a number of elements:
 * **Utility** involves checking whether the data is fit for purpose. This involves considering the priority use cases for the data, and considering whether all feasible steps that could increase the re-usability of the data have been taken. Quality involves considering questions of coherence (do the relationships in the data make sense, and is information logically structured?) and usefulness.
 
 > The best way to test the utility of the data is through its successful use for analysis, monitoring and increasing access to contracting information.
-
-
-
-
-

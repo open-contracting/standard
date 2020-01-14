@@ -42,7 +42,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/planning.json
    :jsonpointer: /releases
    :expand: releases, planning, tag, documents
@@ -50,7 +49,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/tender.json
    :jsonpointer: /releases
    :expand: releases, tender, items, tag, documents
@@ -58,7 +56,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/tenderUpdate.json
    :jsonpointer: /releases
    :expand: releases, tender, tag, documents
@@ -67,7 +64,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/award.json
    :jsonpointer: /releases
    :expand: releases, awards, value, suppliers, items, contractPeriod, tag, documents
@@ -75,7 +71,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/contract.json
    :jsonpointer: /releases
    :expand: releases, contracts, period, value, items, tag, documents
@@ -84,7 +79,6 @@ You can think of **releases** as entries into a ledger: each new entry adds info
 
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/implementation.json
    :jsonpointer: /releases
    :expand: releases, contracts, implementation, transactions, tag, documents
@@ -118,7 +112,6 @@ However, to allow users to get a snapshot view the contracting process without i
 The [merging documentation](../schema/merging) set out how to combine multiple releases to create a single record for each contracting process.
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: 
    :expand: compiledRelease, tender, award, contracts, implementation, transactions, tag, documents
