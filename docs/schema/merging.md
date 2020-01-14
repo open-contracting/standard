@@ -26,7 +26,6 @@ At each release, the agency also updates the record, which combines all the rele
 * The versioned release makes it easy to see how the description and total estimated value changed over time.
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/merge-tender-1.json
    :jsonpointer: /releases
    :expand: releases, tag, tender
@@ -35,7 +34,6 @@ At each release, the agency also updates the record, which combines all the rele
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/merge-tender-3.json
    :jsonpointer: /releases
    :expand: releases, tag, tender
@@ -44,7 +42,6 @@ At each release, the agency also updates the record, which combines all the rele
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/merge-award-1.json
    :jsonpointer: /releases
    :expand: releases, tag, awards
@@ -53,7 +50,6 @@ At each release, the agency also updates the record, which combines all the rele
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/merge-award-2.json
    :jsonpointer: /releases
    :expand: releases, tag, awards
@@ -62,7 +58,6 @@ At each release, the agency also updates the record, which combines all the rele
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/merged.json
    :jsonpointer:
    :expand: records, compiledRelease, tag, tender, awards
@@ -71,7 +66,6 @@ At each release, the agency also updates the record, which combines all the rele
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer:
    :expand: records, versionedRelease, tag, tender, awards
@@ -97,9 +91,11 @@ If `omitWhenMerged` is set to `false`, ignore it.
 ```eval_rst
 .. note::
 
-  The compiled release presently uses the same schema as the release schema, which means that the ``id``, ``date`` and ``tag`` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue `#330 <https://github.com/open-contracting/standard/issues/330>`__, and on how to identify and date compiled and versioned releases in issue `#834 <https://github.com/open-contracting/standard/issues/834>`__.
+   .. markdown::
 
-  In the meantime, an intermediate solution is to set ``tag`` to ``["compiled"]``, ``date`` to the date of the most recent release, and ``id`` to ``{ocid}-{date}``, like in the `reference implementation <#reference-implementation>`__ of the merge routine.
+      The compiled release presently uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue [#330](https://github.com/open-contracting/standard/issues/330), and on how to identify and date compiled and versioned releases in issue [#834](https://github.com/open-contracting/standard/issues/834).
+
+      In the meantime, an intermediate solution is to set `tag` to `["compiled"]`, `date` to the date of the most recent release, and `id` to `{ocid}-{date}`, like in the [reference implementation](#reference-implementation) of the merge routine.
 ```
 
 ### Versioned values
@@ -130,7 +126,6 @@ In a **versioned release**, with a few exceptions, a field's value is replaced w
 For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: value, amount
@@ -139,7 +134,6 @@ For example, in the above worked example, the estimated value was $1,000 in a re
 ```
 
 ```eval_rst
-
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer:
    :expand: records, versionedRelease
@@ -207,14 +201,18 @@ This case is encountered if the above conditions aren't met. If the array is emp
 ```eval_rst
 .. note::
 
-  In this case, to remove an object from an array, you need to instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue `#232 <https://github.com/open-contracting/standard/issues/232>`__.
+   .. markdown::
+
+      In this case, to remove an object from an array, you need to instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue [#232](https://github.com/open-contracting/standard/issues/232).
 
 ```
 
 ```eval_rst
 .. note::
 
-  In the release schema, ``"versionId": true`` is declared on ``id`` fields that must be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue `#812 <https://github.com/open-contracting/standard/issues/812>`__). If ``"versionId": true`` is declared on the ``id`` field of an object within an array, it is ignored. ``"versionId": false`` has no meaning and is ignored.
+   .. markdown::
+
+      In the release schema, `"versionId": true` is declared on `id` fields that must be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue [#812](https://github.com/open-contracting/standard/issues/812)). If `"versionId": true` is declared on the `id` field of an object within an array, it is ignored. `"versionId": false` has no meaning and is ignored.
 
 ```
 
