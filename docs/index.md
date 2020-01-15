@@ -57,7 +57,6 @@ A [free helpdesk service](support/index) is available to support implementation 
    getting_started/index
    schema/index
    implementation/index
-   extensions/index
    support/index
    history/index
 

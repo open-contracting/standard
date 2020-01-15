@@ -1,4 +1,4 @@
-# Schema Reference
+# Reference
 
 The Open Contracting Data Standard is maintained using JSON Schema. 
 

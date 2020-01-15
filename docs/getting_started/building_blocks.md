@@ -129,7 +129,7 @@ Many of these fields make use of lightweight codelists provided by OCDS.
 
 In some cases, publishers or users need building blocks and fields which are not provided in the core OCDS schema. 
 
-We maintain a list of [extensions](../extensions/index) that provide additional building blocks and fields.
+We maintain a list of [extensions](../implementation/extensions) that provide additional building blocks and fields.
 
 <div class="example hint" markdown=1>
 
