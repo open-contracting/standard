@@ -42,12 +42,12 @@ See also the [deprecation guidance](deprecation).
 
 ## Extensions
 
-If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you should include these in your OCDS data and [create a new extension](../extensions/index) to document their structure and meaning.
+If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you should include these in your OCDS data and [create a new extension](../guidance/model/extensions) to document their structure and meaning.
 
 Extensions to the standard can add new objects and fields to accommodate specific local requirements. An extension must not be created if it is possible to use existing terms from the standard.
 
 Extensions ought to be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard.
 
-The [Extension Explorer](../extensions/index) publishes details of known extensions.
+The [Extension Explorer](../guidance/model/extensions) publishes details of known extensions.
 
 The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields. 

@@ -33,7 +33,7 @@ Items should be classified using existing item classification schemes, such as t
    :file: ../../build/current_lang/codelists/itemClassificationScheme.csv
 ```
 
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy).
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../guidance/publish/publication_policy).
 
 ### Unit Classification Scheme
 
@@ -97,7 +97,7 @@ The award criteria codelist describes the basis on which contract awards will be
    :file: ../../build/current_lang/codelists/awardCriteria.csv
 ```
 
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy).
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../guidance/publish/publication_policy).
 
 ### Submission Method
 
@@ -109,7 +109,7 @@ The submission method codelist is used to identify the mechanism through which a
    :file: ../../build/current_lang/codelists/submissionMethod.csv
 ```
 
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../implementation/publication_policy).
+This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../guidance/publish/publication_policy).
 
 ### Related Process
 

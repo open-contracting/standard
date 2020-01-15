@@ -5,7 +5,7 @@ Increasing the transparency, efficiency and effectiveness of public contracting 
 OCDS sets out three levels for disclosure (basic, intermediate and advanced), alongside a 5* framework for the technical approach to data publication for publishers to self-assess themselves against. 
 
 
-![Levels](../../assets/levels_en.png)
+![Levels](../../../assets/levels_en.png)
 
 
 This supports step-by-step improvement of open contracting data and document disclosure on the web.
@@ -115,7 +115,7 @@ Providing structured data will allow users to perform basic analysis, but until 
 
 Using the Open Contracting Data Standard model to publish initiation, award, contract and implementation information for each contracting process.
 
-OCDS provides guidance on the fields to include, and how to structure them using [a JSON schema](../schema/reference) so that third-parties can re-use your data effectively.
+OCDS provides guidance on the fields to include, and how to structure them using [a JSON schema](../../schema/reference) so that third-parties can re-use your data effectively.
 
 Fully compliant OCDS publication involves providing a release of data for every event or change that occurs in the life of a contracting process (e.g. when a tender is issued, an award made, and a contract signed), and then combining these into a summary record. This is important to enable tracking of change over time. However, there are different paths to take in moving towards this, and technical assistance from the community can be sought to identify the best approach.
 

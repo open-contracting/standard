@@ -25,7 +25,7 @@ In the example below:
 * The tender is then formally amended, with an increased value. This is published in a release with the `tag` 'tenderAmendment', and an `amendments` block under `tender`.
 
 ```eval_rst
-.. jsoninclude:: ../examples/merging/merge-tender-1.json
+.. jsoninclude:: ../../examples/merging/merge-tender-1.json
    :jsonpointer: 
    :expand: releases, tender, tag
    :title: tender
@@ -33,7 +33,7 @@ In the example below:
 ```
 
 ```eval_rst
-.. jsoninclude:: ../examples/merging/merge-tender-2.json
+.. jsoninclude:: ../../examples/merging/merge-tender-2.json
    :jsonpointer: 
    :expand: releases, tender, tag
    :title: tenderUpdate
@@ -41,7 +41,7 @@ In the example below:
 ```
 
 ```eval_rst
-.. jsoninclude:: ../examples/merging/merge-tender-3.json
+.. jsoninclude:: ../../examples/merging/merge-tender-3.json
    :jsonpointer: 
    :expand: releases, tender, tag, amendments
    :title: tenderAmendment
@@ -49,7 +49,7 @@ In the example below:
 ```
 
 ```eval_rst
-.. jsoninclude:: ../examples/merging/versioned.json
+.. jsoninclude:: ../../examples/merging/versioned.json
    :jsonpointer: 
    :expand: records, compiledRelease, tender, tag, versionedRelease, tender, value, amount, releaseTag, amendments
    :title: versionedRecord
