@@ -118,27 +118,6 @@ There are two parts to expressing an **organization identifier** in open contrac
 1. An **organization register prefix** identifying a **register** in which the organization is identified
 2. The **existing organizational ID** provided in that public register
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Worked Example</p>
-
-The **organization register prefix** for UK Companies House is GB-COH. The organization **Development Initiatives** has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can then expressed as follows:
-
-```eval_rst
-
-.. code-block:: json
-
-    {
-        "scheme":"GB-COH",
-        "id":"06368740",
-        "uri":"http://opencorporates.com/companies/gb/06368740",
-        "legalName":"Development Initiatives Poverty Research Limited"
-    }
-
-```
-
-</div>
-
 In OCDS, the organization register prefix is included in the `scheme` field of an identifier block, with the existing organization id placed in the `id` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from [Open Corporates](https://opencorporates.com/)) this can also be given in the `uri` field. 
 
 ### Choosing an identifier
