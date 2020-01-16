@@ -3,9 +3,9 @@ import os.path
 
 import jsonref
 
-if __name__ == '__main__':
-    schema_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from helper import schema_dir
 
+if __name__ == '__main__':
     with open(os.path.join(schema_dir, 'release-schema.json')) as f:
         dereferenced_release_schema = jsonref.load(f)
 

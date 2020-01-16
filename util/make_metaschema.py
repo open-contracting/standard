@@ -1,13 +1,13 @@
 import json
-from os.path import abspath, dirname, join
+import os.path
 
 import json_merge_patch
 
-schema_dir = dirname(dirname(abspath(__file__)))
-metaschema_dir = join(schema_dir, 'metaschema')
-draft4_path = join(metaschema_dir, 'json-schema-draft-4.json')
-patch_path = join(metaschema_dir, 'meta-schema-patch.json')
-metaschema_path = join(schema_dir, 'meta-schema.json')
+from helper import schema_dir
+
+draft4_path = os.path.join(schema_dir, 'metaschema', 'json-schema-draft-4.json')
+patch_path = os.path.join(schema_dir, 'metaschema', 'meta-schema-patch.json')
+metaschema_path = os.path.join(schema_dir, 'meta-schema.json')
 
 
 def make_metaschema():

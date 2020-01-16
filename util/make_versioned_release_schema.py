@@ -6,8 +6,9 @@ from copy import deepcopy
 
 from jsonref import JsonRef, JsonRefError
 
-docs_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'docs')
-sys.path.append(docs_path)
+from helper import base_dir, schema_dir
+
+sys.path.append(os.path.join(base_dir, 'docs'))
 
 from conf import release  # noqa isort:skip
 
@@ -311,8 +312,6 @@ def get_versioned_release_schema(schema):
 
 
 if __name__ == '__main__':
-    schema_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
     with open(os.path.join(schema_dir, 'release-schema.json')) as f:
         release_schema = json.load(f)
 
