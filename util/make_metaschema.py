@@ -1,24 +1,12 @@
-import json
-import os.path
-
 import json_merge_patch
 
-from helper import schema_dir
-
-draft4_path = os.path.join(schema_dir, 'metaschema', 'json-schema-draft-4.json')
-patch_path = os.path.join(schema_dir, 'metaschema', 'meta-schema-patch.json')
-metaschema_path = os.path.join(schema_dir, 'meta-schema.json')
+from helper import json_dump, json_load
 
 
-def make_metaschema():
-    with open(draft4_path) as draft4, open(patch_path) as patch:
-        draft4_schema = json.load(draft4)
-        patch_schema = json.load(patch)
-
-    return json_merge_patch.merge(draft4_schema, patch_schema)
+def get_metaschema():
+    return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4.json'),
+                                  json_load('metaschema/meta-schema-patch.json'))
 
 
 if __name__ == '__main__':
-    with open(metaschema_path, 'w') as f:
-        json.dump(make_metaschema(), f, indent=2, separators=(',', ': '))
-        f.write('\n')
+    json_dump('meta-schema.json', get_metaschema())

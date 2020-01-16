@@ -3,14 +3,13 @@ Updates the currency codelist from ISO4217 files.
 """
 
 import csv
-import json
 import os.path
 import re
 
 import requests
 from lxml import etree
 
-from helper import schema_dir
+from helper import json_dump, json_load, schema_dir
 
 
 def get_and_parse_xml(url):
@@ -59,12 +58,8 @@ if __name__ == '__main__':
         for code in sorted(historic_codes.keys()):
             writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
-    with open(os.path.join(schema_dir, 'release-schema.json')) as f:
-        release_schema = json.load(f)
-
+    release_schema = json_load('release-schema.json')
     codes = sorted(list(current_codes.keys()) + list(historic_codes.keys()))
     release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
 
-    with open(os.path.join(schema_dir, 'release-schema.json'), 'w') as f:
-        json.dump(release_schema, f, indent=2, separators=(',', ': '))
-        f.write('\n')
+    json_dump('release-schema.json', release_schema)

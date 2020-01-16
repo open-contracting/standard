@@ -6,7 +6,7 @@ import json
 
 import jsonref
 
-from util.make_metaschema import make_metaschema, metaschema_path
+from util.make_metaschema import get_metaschema
 from util.make_versioned_release_schema import get_versioned_release_schema
 
 
@@ -31,7 +31,7 @@ def test_dereferenced_release_schema_is_in_sync():
 
 
 def test_metaschema_is_in_sync():
-    with open(metaschema_path) as f:
+    with open('schema/meta-schema.json') as f:
         actual = json.load(f)
 
-    assert actual == make_metaschema()
+    assert actual == get_metaschema()

@@ -6,7 +6,7 @@ from copy import deepcopy
 
 from jsonref import JsonRef, JsonRefError
 
-from helper import base_dir, schema_dir
+from helper import base_dir, json_dump, json_load
 
 sys.path.append(os.path.join(base_dir, 'docs'))
 
@@ -312,11 +312,5 @@ def get_versioned_release_schema(schema):
 
 
 if __name__ == '__main__':
-    with open(os.path.join(schema_dir, 'release-schema.json')) as f:
-        release_schema = json.load(f)
-
-    versioned_release_schema = get_versioned_release_schema(release_schema)
-
-    with open(os.path.join(schema_dir, 'versioned-release-validation-schema.json'), 'w') as f:
-        json.dump(versioned_release_schema, f, indent=2, separators=(',', ': '))
-        f.write('\n')
+    release_schema = json_load('release-schema.json')
+    json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
