@@ -8,13 +8,6 @@ for a particular version."
 https://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy
 """
 
-# This file contains strings to translate. If strings are added or changed, push to Transifex with:
-#
-#     make extract_notes
-#     tx push -s -r open-contracting-standard-1-1.notes
-#
-# Then, translate and pull from Transifex as normal.
-
 import gettext
 import os
 

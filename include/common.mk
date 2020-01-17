@@ -47,7 +47,7 @@ extract_markdown: current_lang.en
 	sphinx-build -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
 .PHONY: extract
-extract: extract_codelists extract_schema extract_markdown clean_current_lang
+extract: extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
 
 ### Transifex
 
