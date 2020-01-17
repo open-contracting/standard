@@ -12,13 +12,13 @@ OCP is led by an executive director, and is supported by a multi-stakeholder adv
 
 As of February 2016, OCP is fiscally hosted by the [Fund for the City of New York](https://www.fcny.org/fcny/) (FCNY). Under the terms of this agreement, Intellectual Property is held by FCNY on behalf of OCP, but will transfer to any future legal entity hosting OCP. 
 
-The OCDS **technical team** work under contract to OCP, under the direction of the OCP Data & Engagement manager, providing a help desk service, and responsible for the day-to-day management of the standard documentation and validation tools. The technical team can be contacted via <a href="mailto:data@open-contracting.org">data@open-contracting.org</a>.
-
 In the pursuit of a consensus and **community-driven process**, subscribers to the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) discussion list (join by sending an email to <a href="mailto:standard-discuss+subscribe@open-contracting.org">standard-discuss+subscribe@open-contracting.org</a>) and those watching and engaging with the [standard GitHub repository](https://github.com/open-contracting/standard) should be kept informed at all stages about planned revisions to OCDS, and should be offered clear and timely opportunities to input and comment.
 
 To ensure the relevance, quality and effective implementation of proposed updates to the standard, new version releases are subjected to a process of **peer review** with invited reviewers from publisher and user communities, and an open review process. 
 
-A lightweight **standard governance working group**, made up of representatives from OCP staff, the multi-stakeholder advisory board, and the technical team will be responsible for giving final approval to formal upgrades of the standard and ensuring the processes in this document have been properly carried out. 
+A lightweight **standard governance working group**, made up of representatives from OCP staff, the multi-stakeholder advisory board, and the standard development team will be responsible for giving final approval to formal upgrades of the standard and ensuring the processes in this document have been properly carried out.
+
+In the future, the Open Contracting Data Standard may be submitted to a formal standardization body, such as the World Wide Web Consortium, or OASIS. Before such a decision is made, a model of community-driven governance must be established based on an open and consensus-based processes for updating the standard.
 
 ### Intellectual property
 
@@ -42,8 +42,6 @@ We are committed to the [Open Stand principles](https://open-stand.org/about-us/
 
 * **Openness.** The Open Contracting Data Standard processes are open to all interested and informed parties.
 
-In the future, the Open Contracting Data Standard may be submitted to a formal standardization body, such as the World Wide Web Consortium, or OASIS. Before such a decision is made, a model of community-driven governance must be established based on an open and consensus-based processes for updating the standard.
-
 ## Versioning and upgrade process
 
 Over time, changes will be needed to the standard, including addition of new codes and fields, and occasionally involving changes to existing fields and structures. 
@@ -56,7 +54,7 @@ The revision process is designed to ensure:
 
 * Changes are easy to identify and are transparent, and publishers, users and intermediaries have clear documentation to allow them to update their data and tools;
 
-Changes to the OCDS schema ought to be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a changelog maintained. 
+Changes to the OCDS schema will be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a changelog maintained.
 
 This documentation website is composed of normative content (the prescriptive part of OCDS) and non-normative content (the non-prescriptive, or ‘descriptive’, part of OCDS) as defined and described in the [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit). This policy establishes which changes to which parts of the documentation must involve the revision process described below (e.g. adding new fields to the release schema), and which changes may be made without the revision process (e.g. correcting typos in field descriptions, or updating implementation guidance).
 
@@ -74,9 +72,9 @@ Only documentation may be updated on a live branch. All documentation changes mu
 
 Semantic Versioning practices will be used to distinguish between:
 
-* **Major versions** which make backwards-incompatible API changes
+* **Major versions** which make backwards-incompatible changes (e.g. 2.0)
 
-* **Minor** **versions** which add functionality in a backwards-compatible manner
+* **Minor versions** which add functionality in a backwards-compatible manner (e.g. 1.2)
 
 These are captured by a version number in the format MAJOR.MINOR
 
@@ -92,9 +90,9 @@ To release a new minor or major version upgrade will involve a number of stages 
 
 * **Consensus:** All processes will aim towards gaining community consensus for changes. 
 
-The technical team are responsible for generating key documentation during the process, but should be guided by community consensus, submitting all decisions for discussion. 
+The standard development team is responsible for generating key documentation during the process, but should be guided by community consensus, submitting all decisions for discussion.
 
-* **Appeal:** Any party can appeal against decisions made during the process by writing to the standard governance working group, which can be reached through <a href="mailto:lmarchessault@open-contracting.org">Lindsey Marchessault</a>. The working group has the authority to reject proposed revisions on the standard in response to appeals. 
+* **Appeal:** Any party can appeal against decisions made during the process by writing to the standard governance working group, which can be reached through OCP's Director for Data & Engagement, <a href="mailto:lmarchessault@open-contracting.org">Lindsey Marchessault</a>. The working group has the authority to reject proposed revisions on the standard in response to appeals.
 
 ### Proposals
 
@@ -112,7 +110,7 @@ If there are at least two parties interested in using an extension, and followin
 
 ### Prioritization
 
-The technical team, with reference to community views, identify change proposals and extensions which ought to be considered for adoption in the next version of the standard, assigning these to milestones in the issue tracker where they are open for discussion. 
+The standard development team, with reference to community views, identify change proposals and extensions which ought to be considered for adoption in the next version of the standard, assigning these to milestones in the issue tracker where they are open for discussion.
 
 Periodically, at the start of a revision process a cut-off date for proposals will be announced  with at least two weeks notice. After that date a prioritized list of updates is produced. Any new proposed extensions or changes received after this period may not be considered until the next prioritization phase. 
 
@@ -120,11 +118,11 @@ Periodically, at the start of a revision process a cut-off date for proposals wi
 
 The list is shared for feedback, with at least a two-week window for discussion.
 
-Based on discussions, a final list is then proposed by the technical team with all the issues that will be taken forward into the rest of the process. A proposal that has made it this far might or might not make it into the final upgrade. As the proposal is worked into final concrete examples and schema changes further issues can arise.
+Based on discussions, a final list is then proposed by the OCP's Head of Data Products & Services with all the issues that will be taken forward into the rest of the process. A proposal that has made it this far might or might not make it into the final upgrade. As the proposal is worked into final concrete examples and schema changes further issues can arise.
 
-### Development & docs
+### Development
 
-The technical team, working with community members, will work on a development branch to prepare updates to the schema, documentation and codelists, according to the prioritized list. 
+The standard development team, working with community members, will work on a development branch to prepare updates to the schema, documentation and codelists, according to the prioritized list.
 
 This stage is likely to involve broad community engagement and discussion of specific decisions through GitHub issues. 
 
@@ -144,7 +142,7 @@ All reviews, with reviewer names, will be published. Community members can also 
 
 ### Revisions
 
-The technical team, with reference to the working group as appropriate, evaluates reviews, and decides whether the whole upgrade, or specific features thereof, need to be revised, rejected or postponed to future processes.
+The standard development team, with reference to the working group as appropriate, evaluates reviews, and decides whether the whole upgrade, or specific features thereof, need to be revised, rejected or postponed to future processes.
 
 If only minor changes are suggested, then the revised standard should be submitted back to reviewers for a brief review period of at least two weeks.
 
@@ -170,15 +168,15 @@ Support will be offered for one prior version of the standard. Support for any e
 
 For example, when 1.1 is the latest release, 1.0 will be supported in the OCDS Data Review Tool and other tooling. When 1.2 is released, support for 1.0 will end.
 
-Publishers are encouraged to review each new version when it released, and to consider how they might adopt new features. 
+Publishers are encouraged to review each new version when it is released, and to consider how they might adopt new features.
 
 Publishers should aim to move to a new **major** version within 18 months of its release. 
 
-## Definitions & procedures
+## Definitions
 
 **Stakeholder**
 
-Anyone who is a current or potential publisher or user of the standard can be considered a stakeholder. When engaging with stakeholders, attention ought to be paid to representation of both publishers and users; representation of public and private sectors and civil society; and broad geographical representation.
+Any current or potential OCDS publisher or data user of the standard can be considered a stakeholder. When engaging with stakeholders, attention ought to be paid to representation of both publishers and users; representation of public and private sectors and civil society; and broad geographical representation.
 
 **Consensus**
 
