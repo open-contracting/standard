@@ -30,4 +30,4 @@ script:
   - if [ $TRAVIS_REPO_SLUG = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
   - make
   - python util/add_translation_notes.py
-  - py.test
+  - pytest
