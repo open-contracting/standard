@@ -14,7 +14,7 @@ OCDS covers:
 
 <div class="process-table" markdown=1>
 
-![Tender](../../assets/green_planning.svg.png)
+![Tender](../_static/png/green_planning.svg.png)
 
 **Planning**<br/>
 *Including:*<br/>
@@ -28,7 +28,7 @@ Public hearing info<br/>
 
 <div class="process-table" markdown=1>
 
-![Tender](../../assets/green_tendering.svg.png)
+![Tender](../_static/png/green_tendering.svg.png)
 
 **Initiation (Tender)**<br/>
 *Including:*<br/>
@@ -42,7 +42,7 @@ Enquiries
 
 <div class="process-table" markdown=1>
 
-![Award](../../assets/green_awarded.svg.png)
+![Award](../_static/png/green_awarded.svg.png)
 
 **Award**<br/>
 *Including:*<br/>
@@ -55,7 +55,7 @@ Values
 
 <div class="process-table" markdown=1>
 
-![Contract](../../assets/green_signed.svg.png)
+![Contract](../_static/png/green_signed.svg.png)
 
 **Contract**<br/>
 *Including:*<br/>
@@ -68,7 +68,7 @@ Values
 
 <div class="process-table" markdown=1>
 
-![Implementation](../../assets/green_implementation.svg.png)
+![Implementation](../_static/png/green_implementation.svg.png)
 
 **Implementation**<br/>
 *Including:*<br/>

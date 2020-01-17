@@ -60,7 +60,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = 'standard_theme'
 html_theme_path = [standard_theme.get_html_theme_path()]
-html_favicon = '../assets/favicon-16x16.ico'
+html_favicon = '_static/favicon-16x16.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

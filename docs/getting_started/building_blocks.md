@@ -4,11 +4,11 @@ In mapping your data to OCDS, or using OCDS data, you will encounter a number of
 
 <table style="margin-bottom:2em;">
     <tr>
-        <td width="20%" align="center"><img src="../../../assets/green_organisation.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../../assets/green_value.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../../assets/green_items.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../../assets/green_milestone.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../../assets/green_documents.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/png/green_organisation.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/png/green_value.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/png/green_items.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/png/green_milestone.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/png/green_documents.svg.png" width="80%"></td>
     </tr>
 </table>
 

@@ -50,7 +50,7 @@ Local identifiers must be used consistently. For example, if the `id` of an awar
 
 ## Contracting Process Identifier (ocid)
 
-<img src="../../../assets/green_compilation.svg.png" width="150" align="right"/>
+<img src="../../_static/png/green_compilation.svg.png" width="150" align="right"/>
 
 An Open Contracting ID (ocid) is a **globally unique identifier** for a contracting process. Every OCDS release has an `ocid`.
 
@@ -107,7 +107,7 @@ However, publishers are encouraged to consider whether there are any risks of cl
 
 ## Organization IDs
 
-<img src="../../../assets/green_organisation.svg.png" width="150" align="right"/>
+<img src="../../_static/png/green_organisation.svg.png" width="150" align="right"/>
 
 Reliably identifying the legal entities involved in a contracting process is vital for transparency and accountability, and for carrying out analysis to improve procurement and contract management.
 

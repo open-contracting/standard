@@ -52,7 +52,7 @@ Item quantities can be provided using an established codelist for units of measu
    float:right;
 }--></style>
 
-![org-id.guide](../../assets/org-id-logo-full.png)
+![org-id.guide](../_static/png/org-id-logo-full.png)
 
 The Organization Identifier Scheme currently uses the codes from [org-id.guide](http://www.org-id.guide). 
 

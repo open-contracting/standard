@@ -4,8 +4,8 @@ There are two kinds of OCDS document:
 
 <table>
     <tr>
-        <td width="50%" align="center"><img src="../../../assets/green_release.svg.png" width="50%"></td>
-        <td width="50%" align="center"><img src="../../../assets/green_compilation.svg.png" width="50%"></td>
+        <td width="50%" align="center"><img src="../../_static/png/green_release.svg.png" width="50%"></td>
+        <td width="50%" align="center"><img src="../../_static/png/green_compilation.svg.png" width="50%"></td>
     </tr>
     <tr>
 <td valign="top" style="padding:10px;" markdown=1>
@@ -115,4 +115,4 @@ The [merging documentation](../schema/merging) set out how to combine multiple r
 
 ```
 
-<center><img src="../../../assets/release_square.png" height="200"/></center>
+<center><img src="../../_static/png/release_square.png" height="200"/></center>
