@@ -20,7 +20,7 @@ from docutils.utils import relative_path
 from helper import base_dir
 
 localedir = os.path.join(base_dir, 'locale')
-base_url = 'https://standard.open-contracting.org/1.1/'
+base_url = 'https://standard.open-contracting.org/1.1'
 supported_translations = ['es', 'fr']
 
 
@@ -54,33 +54,39 @@ def add_translation_notes():
 
 
 def add_translation_note(path, language, domain):
+    with open(path) as f:
+        document = lxml.html.fromstring(f.read())
+
     translator = gettext.translation('notes', localedir, languages=[language])
-    response = requests.get(base_url + language + '/' + domain + '/')
     _ = translator.gettext
+
+    pattern = '{}/{{}}/{}/'.format(base_url, domain)
+    response = requests.get(pattern.format(language))
 
     # If it's a new page, add the note to the current version of the page.
     if response.status_code == 404:
-        with open(path) as f:
-            content = f.read()
         message = _('This page was recently added to the <a href="%(url)s">English documentation</a>. '
                     'It has not yet been translated.')
 
     # If it's an existing page, add the note the last version of the page.
     else:
         response.raise_for_status()
-        content = response.content
+        xpath = '//div[@itemprop="articleBody"]'
+        replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
+        parent = document.xpath(xpath)[0].getparent()
+        parent.getparent().replace(parent, replacement)
+
         message = _('This page was recently changed in the <a href="%(url)s">English documentation</a>. '
                     'The changes have not yet been translated.')
 
     template = '<div class="admonition note"><p class="first admonition-title">%(note)s</p><p class="last">' \
                '%(message)s</p></div>'
 
-    doc = lxml.html.fromstring(content)
-    url = base_url + 'en/' + domain + '/'
-    doc.xpath('//h1')[0].addnext(lxml.etree.XML((template % {'note': _('Note'), 'message': message}) % {'url': url}))
+    document.xpath('//h1')[0].addnext(lxml.etree.XML(template % {
+        'note': _('Note'), 'message': message % {'url': pattern.format('en')}}))
 
     with open(path, 'wb') as f:
-        f.write(lxml.html.tostring(doc, encoding='utf-8'))
+        f.write(lxml.html.tostring(document, encoding='utf-8'))
 
 
 if __name__ == '__main__':
