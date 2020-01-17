@@ -19,7 +19,7 @@ from docutils.utils import relative_path
 
 from helper import base_dir
 
-localedir = os.path.join(base_dir, 'locale')
+localedir = os.path.join(base_dir, 'docs', 'locale')
 base_url = 'https://standard.open-contracting.org/1.1'
 supported_translations = ['es', 'fr']
 
