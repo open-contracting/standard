@@ -1,13 +1,17 @@
 """
-Ensures that `make_versioned_release_schema.py` and `make_metaschema.py` has been run.
+Ensures that `make_versioned_release_schema.py` and `make_metaschema.py` have been run.
 """
 
 import json
+import os.path
+import sys
 
 import jsonref
 
-from util.make_metaschema import get_metaschema
-from util.make_versioned_release_schema import get_versioned_release_schema
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'util'))
+
+from make_metaschema import get_metaschema  # noqa isort:skip
+from make_versioned_release_schema import get_versioned_release_schema  # noqa isort:skip
 
 
 def test_versioned_release_schema_is_in_sync():
