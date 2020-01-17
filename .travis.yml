@@ -24,7 +24,7 @@ install:
   - curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip -d chromedriver
   - export PATH=$PATH:`pwd`/chromedriver
-  - pip install -r requirements.txt
+  - pip install --upgrade -r requirements.txt
 script:
   - curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
   - if [ $TRAVIS_REPO_SLUG = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
