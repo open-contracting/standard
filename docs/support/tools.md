@@ -25,7 +25,3 @@ This python library provides functions to merge a list of OCDS Releases into eit
 We will be developing a list of community developed tools which consume or produce OCDS data here. 
 
 In the meantime, please share suggestions for tools with the mailing list.
-
-## Archived tools
-
-A number of older tools, created during the development of the standard, can be found in the [Open Contracting Archive GitHub organization](https://github.com/open-contracting-archive).
