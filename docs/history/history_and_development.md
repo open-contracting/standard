@@ -2,7 +2,7 @@
 
 The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](https://www.open-contracting.org/) (OCP). Version 1.0 was developed for the OCP by the [World Wide Web Foundation](https://webfoundation.org/) and the [World Bank](https://www.worldbank.org/), through a project supported by the [Omidyar Network](https://www.omidyar.com) and the World Bank.
 
-## Development process
+## Development
 
 ### Version 1.0.0
 
