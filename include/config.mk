@@ -11,7 +11,7 @@ LANGUAGES=.en $(TRANSLATIONS)
 # Directory of documentation files to build with Sphinx.
 DOCS_DIR=docs
 # Directory of catalog files.
-LOCALE_DIR=locale
+LOCALE_DIR=docs/locale
 # Directory in which to build documentation files.
 BUILD_DIR=build
 # Extra build files or directories. (These should match paths in .gitignore.)

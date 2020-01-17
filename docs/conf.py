@@ -83,7 +83,7 @@ html_theme_options = {
 }
 
 # The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
-locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 
 gettext_compact = False
 
@@ -116,7 +116,7 @@ def setup(app):
     # The root of the repository.
     basedir = Path(os.path.realpath(__file__)).parents[1]
     # The `LOCALE_DIR` from `config.mk`.
-    localedir = basedir / 'locale'
+    localedir = basedir / 'docs' / 'locale'
 
     language = app.config.overrides.get('language', 'en')
 
