@@ -8,6 +8,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Documentation
 
+* [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
+* [#955](https://github.com/open-contracting/standard/pull/955) Move Governance page to Reference section. Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
 * Build the documentation [#875](https://github.com/open-contracting/standard/pull/875) [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923).
 
