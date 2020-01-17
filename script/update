@@ -3,7 +3,7 @@ set -e
 
 mkdir -p script include tests
 
-for f in Makefile common-requirements.txt include/common.mk include/prologue.mk script/diff script/update; do
+for f in Makefile common-requirements.in common-requirements.txt include/common.mk include/prologue.mk script/diff script/update; do
   curl -sS -o $f https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/$f
 done
 
