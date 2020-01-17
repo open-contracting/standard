@@ -1,0 +1,657 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Alessio Dragoni <ad@sciamlab.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-15 18:50-0500\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/schema/identifiers.md:1
+msgid "Identifiers"
+msgstr "Identificatori"
+
+#: ../../docs/schema/identifiers.md:3
+msgid ""
+"Consistent identifiers are essential to help join up open contracting data."
+msgstr ""
+"L'impiego di identificatori consistenti e persistenti sono essenziali per "
+"aiutare a unire i dati open contracting."
+
+#: ../../docs/schema/identifiers.md:5
+msgid ""
+"The Open Contracting ID (ocid) is a globally unique identifier used to join "
+"up data on all stages of a contracting process;"
+msgstr ""
+"L'Open Contracting ID (ocid) è un identificatore univoco globale utilizzato "
+"per unire i dati su tutte le fasi di un processo di appalto;"
+
+#: ../../docs/schema/identifiers.md:6
+msgid ""
+"Organization identifiers are important to know who is involved in each "
+"contract;"
+msgstr ""
+"Gli identificativi dell'organizzazione sono importanti per sapere chi è "
+"coinvolto in ogni contratto;"
+
+#: ../../docs/schema/identifiers.md:7
+msgid ""
+"Release, award and contract identifiers are important to help cross-"
+"reference information."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:9
+msgid "Types of identifiers"
+msgstr "Tipi di identificatori"
+
+#: ../../docs/schema/identifiers.md:11
+msgid "In OCDS there are two kinds of identifiers: globally unique and local."
+msgstr ""
+"In OCDS ci sono due tipi di identificatori: unici globalmente e unici "
+"localmente."
+
+#: ../../docs/schema/identifiers.md:13
+msgid "Globally unique identifiers"
+msgstr "Identificatori univoci a livello globale"
+
+#: ../../docs/schema/identifiers.md:15
+msgid ""
+"Across the whole universe of OCDS publishers these identifiers refer to one "
+"specific contracting process or organization."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:17
+msgid ""
+"We create globally unique contracting process identifiers by adding a prefix"
+" to the internal identifiers held by publishers."
+msgstr ""
+"Creiamo identificatori di processi di contrattazione unici globalmente "
+"aggiungendo un prefisso agli identificatori interni utilizzati da ciascuna "
+"entità che pubblica dati."
+
+#: ../../docs/schema/identifiers.md:23
+msgid ""
+"Two government publishers (Town A and Town B) number their contracting "
+"processes from 0 upwards."
+msgstr ""
+"Due pubbliche amministrazioni che pubblicano dati (Città A e Città B) "
+"numerano i loro processi contrattuali da 0 in su."
+
+#: ../../docs/schema/identifiers.md:25
+msgid ""
+"Town A publishes information on a contracting process to build a new road. "
+"Internally they know this as contract 0005."
+msgstr ""
+"La città A pubblica informazioni su una procedura di appalto per costruire "
+"una nuova strada. Internamente lo identificano come contratto 0005."
+
+#: ../../docs/schema/identifiers.md:27
+msgid ""
+"Town B publishes information on a contracting process to buy textbooks for a"
+" school. Internally they also know this as contract 0005."
+msgstr ""
+"La città B pubblica informazioni su una procedura di appalto per acquistare "
+"libri di testo per una scuola. Internamente lo identificano anche come "
+"contratto 0005."
+
+#: ../../docs/schema/identifiers.md:29
+msgid ""
+"When they publish their OCDS data, each government adds a unique prefix onto"
+" their internal identifiers."
+msgstr ""
+"Quando pubblicano i loro dati OCDS, ogni amministrazione aggiunge un "
+"prefisso univoco ai loro identificatori interni."
+
+#: ../../docs/schema/identifiers.md:31
+msgid ""
+"Now Town A's contracting process has the `ocid` of 'ocds-fh349f-0005' and "
+"Town B's contracting process has the `ocid` of 'ocds-twb234-0005'."
+msgstr ""
+"Ora il processo di appalto della Città A ha un `ocid` con valore 'ocds-"
+"fh349f-0005' mentre il processo di contrazione della Città B ha un `ocid` "
+"con valore 'ocds-twb234-0005'."
+
+#: ../../docs/schema/identifiers.md:33
+msgid ""
+"There is now no chance of these getting mixed up in a system which imports "
+"data from both towns."
+msgstr ""
+"Così facendo non c'è alcuna possibilità che questi vengano confusi in un "
+"sistema che importa dati da entrambe le città."
+
+#: ../../docs/schema/identifiers.md:35
+msgid ""
+"And, if an independent civil society contract monitoring group want to "
+"publish a report about implementation of Town A's road project, or Town B's "
+"text-book procurement, they have distinct identifiers they can use in their "
+"own data to refer to these."
+msgstr ""
+"E, se un gruppo indipendente di monitoraggio della società civile vuole "
+"pubblicare un rapporto sull'attuazione del progetto stradale della Città A, "
+"o sull'approvvigionamento di libri di testo della Città B, hanno "
+"identificatori distinti che possono usare nei propri dati per riferirsi a "
+"questi."
+
+#: ../../docs/schema/identifiers.md:39
+msgid ""
+"You can read more about the OCDS approach to identify organizations below."
+msgstr ""
+"Puoi leggere ulteriori informazioni sull'approccio OCDS per identificare le "
+"organizzazioni qui di seguito."
+
+#: ../../docs/schema/identifiers.md:41
+msgid "Local identifiers"
+msgstr "Identificatori locali"
+
+#: ../../docs/schema/identifiers.md:43
+msgid ""
+"Not all the identifiers in OCDS need to be globally unique. Most only need "
+"to be unique among the identifiers used for the same type of object within "
+"the same scope. For example:"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:45
+msgid ""
+"A release ID must be unique within the scope of the contracting process of "
+"which it is a part;"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:46
+msgid ""
+"Award and contract identifiers must be unique within the scope of the "
+"contracting process of which they are a part;"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:47
+msgid ""
+"An item, milestone or document ID must be unique within the array it is part"
+" of."
+msgstr ""
+"Un articolo, una fase o ID del documento deve essere univoco all'interno "
+"dell'elenco di cui fa parte."
+
+#: ../../docs/schema/identifiers.md:49
+msgid ""
+"Local identifiers must be used consistently. For example, if the `id` of an "
+"award is \"22\" in one release, then the `id` of the same award in another "
+"release must also be \"22\"."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:51
+msgid "Contracting Process Identifier (ocid)"
+msgstr "Identificatore del processo di appalto (ocid)"
+
+#: ../../docs/schema/identifiers.md:55
+msgid ""
+"An Open Contracting ID (ocid) is a **globally unique identifier** for a "
+"contracting process. Every OCDS release has an `ocid`."
+msgstr ""
+"Un Open Contracting ID (ocid) è un **identificativo univoco globale** per un"
+" processo di appalto. Ogni versione di OCDS ha un `ocid`."
+
+#: ../../docs/schema/identifiers.md:57
+msgid ""
+"It can be used to join up information published at different times, and in "
+"different places."
+msgstr ""
+"Può essere utilizzato per unire le informazioni pubblicate in momenti "
+"diversi e in luoghi diversi."
+
+#: ../../docs/schema/identifiers.md:59
+msgid "Setting the `ocid` is usually a simple two step process:"
+msgstr ""
+"L'impostazione di `ocid` è in genere una semplice procedura in due passaggi:"
+
+#: ../../docs/schema/identifiers.md:61
+msgid ""
+"Identify the best **internal identifier** recorded against the contracting "
+"processes being disclosed;"
+msgstr ""
+"Identificare il migliore **identificativo interno** registrato rispetto ai "
+"processi di aggiudicazione che vengono divulgati;"
+
+#: ../../docs/schema/identifiers.md:62
+msgid "Register an `ocid` prefix to prepend to this internal identifier."
+msgstr ""
+"Registrare un prefisso `ocid` da anteporre all'identificatore interno."
+
+#: ../../docs/schema/identifiers.md:64
+msgid ""
+"In some cases, you might need to consider changes to existing systems to "
+"ensure that different systems handling information about your contracting "
+"processes have a common internal identifier to draw upon."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:70
+msgid ""
+"In Mexico City, each time a tender or direct contract award process is "
+"initiated, the department responsible assigns an identifier."
+msgstr ""
+"A Città del Messico, ogni volta che viene avviato un processo di "
+"aggiudicazione dell'appalto o di un contratto diretto, il dipartimento "
+"responsabile assegna un identificativo."
+
+#: ../../docs/schema/identifiers.md:72
+msgid ""
+"These are made up of an identifier for the department responsible for the "
+"procurement, a tender number, and the year."
+msgstr ""
+"Questi sono costituiti da un identificativo per il dipartimento responsabile"
+" dell'appalto, un numero di gara e l'anno."
+
+#: ../../docs/schema/identifiers.md:74 ../../docs/schema/identifiers.md:179
+msgid "For example:"
+msgstr "Per esempio:"
+
+#: ../../docs/schema/identifiers.md:76
+msgid "OM-DGRMSG-004-13"
+msgstr "OM-DGRMSG-004-13"
+
+#: ../../docs/schema/identifiers.md:78
+msgid ""
+"This internal identifier can be exchanged with, and recorded in, any other "
+"systems which process information about this contracting process. For "
+"example, systems for reporting or recording spending transactions to "
+"suppliers."
+msgstr ""
+"Questo identificatore interno può essere scambiato e registrato in qualsiasi"
+" altro sistema che elabora informazioni di questo processo di "
+"aggiudicazione. Ad esempio, sistemi per la segnalazione o la registrazione "
+"delle transazioni di spesa ai fornitori."
+
+#: ../../docs/schema/identifiers.md:80
+msgid ""
+"Mexico City then registered a prefix with the OCDS helpdesk. They have been "
+"given the prefix ‘ocds-87sd3t’ which can be added to their unique process "
+"identifiers to give a globally unique `ocid`. E.g."
+msgstr ""
+"Città del Messico ha poi registrato un prefisso con l'helpdesk OCDS. Hanno "
+"ricevuto il prefisso 'ocds-87sd3t' che può essere aggiunto ai loro "
+"identificatori di processo univoci per dare un 'ocid` globalmente unico. Per"
+" esempio."
+
+#: ../../docs/schema/identifiers.md:82
+msgid "ocds-87sd3t-OM-DGRMSG-004-13"
+msgstr "ocds-87sd3t-OM-DGRMSG-004-13"
+
+#: ../../docs/schema/identifiers.md:86
+msgid ""
+"The ocid prefix itself is made up of two parts: a prefix agency identifier "
+"(currently only 'ocds' is used), and a random six-character alphanumeric "
+"string generated for each publisher of data."
+msgstr ""
+"Il prefisso ocid stesso è composto da due parti: un prefisso utilizzate come"
+" identificatore dell'agenzia (attualmente viene utilizzato solo il termine "
+"'ocds') e una stringa alfanumerica casuale di sei caratteri generata per "
+"ciascun entità che pubblica dati."
+
+#: ../../docs/schema/identifiers.md:88
+msgid ""
+"The ocid is case-sensitive; in other words, the letter case of an ocid must "
+"be consistent."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:90
+msgid "Registered prefixes"
+msgstr "Prefissi registrati"
+
+#: ../../docs/schema/identifiers.md:92
+msgid ""
+"Publishers must register an ocid prefix. See the [registration "
+"pages](../guidance/publish/registration) for details of how to obtain your "
+"ocid prefix."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:94
+msgid ""
+"Prefix are randomly generated lowercase alpha-numeric strings. A prefix is "
+"assigned to each organization that holds the existing internal identifier "
+"for a Contracting Processes."
+msgstr ""
+"Il prefisso consiste in una stringha alfanumericha minuscola generata "
+"casualmente. Un prefisso viene assegnato a ciascuna organizzazione che "
+"detiene l'identificatore interno esistente per un determinato processo di "
+"approvvigionamento o di gestione degli appalti"
+
+#: ../../docs/schema/identifiers.md:96
+msgid ""
+"Currently, only the Open Contracting Partnership issues valid prefixes. In "
+"future, other organizations might be able to issue prefixes, each with their"
+" own prefix agency identifiers."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:98
+msgid ""
+"You can find a [list of registered prefixes here along with a registration "
+"form for creating new prefixes](../guidance/publish/registration)."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:100
+msgid ""
+"The registered prefixes are dumb identifiers. They are not intended to carry"
+" any semantics, and their sole purpose is to turn internal identifiers into "
+"globally unique identifiers which can be cross-referenced between systems."
+msgstr ""
+"I prefissi registrati sono identificatori senza una particolare "
+"intelligenza. Non sono intesi per portare alcuna semantica, e il loro unico "
+"scopo è quello di trasformare gli identificatori interni in identificatori "
+"univoci a livello globale che possono essere incrociati tra sistemi diversi."
+
+#: ../../docs/schema/identifiers.md:102
+msgid "Publisher namespace"
+msgstr "Namespace dell'editore"
+
+#: ../../docs/schema/identifiers.md:104
+msgid ""
+"Earlier versions of this documentation imposed a stricter pattern on how "
+"internal identifiers ought to be combined with the ocid prefix, including a "
+"requirement for local namespaces. This requirement has been relaxed in "
+"practice and can be considered deprecated."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:106
+msgid ""
+"However, publishers are encouraged to consider whether there are any risks "
+"of clashes in local identifiers (e.g. the possibility that two parts of the "
+"publishing body might use the same identifier for different contracting "
+"processes) and to plan to mitigate this when establishing their own patterns"
+" to generate their `ocid`"
+msgstr ""
+"Tuttavia, gli editori sono incoraggiati a considerare se sussitono rischi di"
+" conflitti o sovrapposizioni negli identificatori locali (ad esempio la "
+"possibilità che due dipartimenti  possano utilizzare lo stesso "
+"identificativo per diversi processi di contrattazione) e di pianificare "
+"opportunamente come generare il proprio `ocid` in modo che ciò non si "
+"verifichi"
+
+#: ../../docs/schema/identifiers.md:108
+msgid "Organization IDs"
+msgstr "ID organizzazione"
+
+#: ../../docs/schema/identifiers.md:112
+msgid ""
+"Reliably identifying the legal entities involved in a contracting process is"
+" vital for transparency and accountability, and for carrying out analysis to"
+" improve procurement and contract management."
+msgstr ""
+"Identificare in modo affidabile e univoco le figure giuridiche coinvolte in "
+"un processo di contrattazione è vitale per la trasparenza e la "
+"responsabilità e per condurre analisi volte al miglioramento dei processi di"
+"  approvvigionamento e la gestione dei contratti."
+
+#: ../../docs/schema/identifiers.md:114
+msgid ""
+"Publishers should seek to collect and record the **legal identifier** from "
+"an official register of any organizations involved in a contracting process "
+"(including procuring organizations, bidders and suppliers), and should "
+"include this in their OCDS files."
+msgstr ""
+"Gli editori dovrebbero cercare di raccogliere e registrare gli "
+"**identificativi legali** dai registri ufficiali di qualsiasi organizzazione"
+" coinvolta in un processo di appalto (comprese le organizzazioni di "
+"acquisto, le imprese offerenti, i fornitori) e dovrebbero includerli nei "
+"loro file OCDS."
+
+#: ../../docs/schema/identifiers.md:116
+msgid ""
+"There are two parts to expressing an **organization identifier** in open "
+"contracting data."
+msgstr ""
+"Esistono due parti per esprimere un **identificatore di organizzazione** nei"
+" dati open contracting."
+
+#: ../../docs/schema/identifiers.md:118
+msgid ""
+"An **organization register prefix** identifying a **register** in which the "
+"organization is identified"
+msgstr ""
+"Un **prefisso di registro dell'organizzazione** che identifica un "
+"**registro** in cui l'organizzazione è identificata"
+
+#: ../../docs/schema/identifiers.md:119
+msgid "The **existing organizational ID** provided in that public register"
+msgstr "L'**ID dell'organizzazione** fornito in tale registro pubblico"
+
+#: ../../docs/schema/identifiers.md:125
+msgid ""
+"The **organization register prefix** for UK Companies House is GB-COH. The "
+"organization **Development Initiatives** has been assigned the company "
+"number ‘06368740’ by Companies House. The globally unique organization "
+"identifier for Development Initiatives can then expressed as follows:"
+msgstr ""
+"Il **prefisso di registro dell'organizzazione** per il registo delle "
+"compagnie Inglesi (UK Companies House) è GB-COH. All'organizzazione "
+"**Development Initiatives** è stato assegnato il numero di società "
+"'06368740' dall'UK Companies House. L'identificatore di organizzazione "
+"globalmente univoco per le iniziative di sviluppo può quindi essere espresso"
+" come segue:"
+
+#: ../../docs/schema/identifiers.md:141
+msgid ""
+"In OCDS, the organization register prefix is included in the `scheme` field "
+"of an identifier block, with the existing organization id placed in the `id`"
+" field. If there is a recognized public URI that uniquely identifies this "
+"organization (for example, drawn from [Open "
+"Corporates](https://opencorporates.com/)) this can also be given in the "
+"`uri` field."
+msgstr ""
+"In OCDS, il prefisso del registro di organizzazione è incluso nel campo "
+"`scheme` di un blocco identificativo, con l'id dell'organizzazione esistente"
+" inserito nel campo `id`. Se esiste un URI pubblico riconosciuto che "
+"identifica in modo univoco questa organizzazione (ad esempio, tratto da "
+"[Open Corporates](https://opencorporates.com/), questo può anche essere "
+"fornito nel campo `uri`."
+
+#: ../../docs/schema/identifiers.md:143
+msgid "Choosing an identifier"
+msgstr "Scegliere un identificatore"
+
+#: ../../docs/schema/identifiers.md:145
+msgid ""
+"The **organization register prefix** is used to refer to a register from "
+"which the organization identifier is drawn. There are a range of different "
+"kinds of **organization list**:"
+msgstr ""
+"Il **prefisso del registro di organizzazione** viene utilizzato per fare "
+"riferimento a un registro da cui viene assegnato l'identificatore di "
+"organizzazione. Esistono diversi tipi di **elenchi di organizzazioni**:"
+
+#: ../../docs/schema/identifiers.md:147
+msgid ""
+"**Primary registers** - such as national or state company registrars. An "
+"identifier issued by these bodies has a specific legal meaning. There is a "
+"one to one equivalence between the identifier and a legal entity of a "
+"particular form in a given jurisdiction. The identifier is created at the "
+"same time that the organization is formally constituted, and changes to the "
+"status of the organization are recorded against this identifier in an "
+"official register. **Identifiers from a primary register are strongly "
+"preferred in OCDS.**"
+msgstr ""
+"**Registri primari** - come registri nazionali o statali. Un identificatore "
+"rilasciato da questi organismi ha uno specifico significato giuridico. "
+"Esiste un'equivalenza uno a uno tra l'identificatore e un'entità legale di "
+"una particolare forma in una determinata giurisdizione. L'identificatore "
+"viene creato nello stesso momento in cui l'organizzazione è formalmente "
+"costituita e le modifiche allo stato dell'organizzazione sono registrate "
+"contro questo identificatore in un registro ufficiale. **Gli identificatori "
+"di un registro primario sono fortemente preferiti in OCDS.**"
+
+#: ../../docs/schema/identifiers.md:149
+msgid ""
+"**Secondary registers** - which record a particular property of an "
+"organization, such as being registered for VAT, or registered as an "
+"employer. An organizations identifier in such a registry might change "
+"without the organization itself changing in nature. For example, in some "
+"jurisdictions, an organization might de-register from VAT, and then re-"
+"register, gaining a new number in the process; or different branches of the "
+"same legal entity might register for different VAT numbers."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:151
+msgid ""
+"**Third-party databases** - which compile a list of organizations, and "
+"sometimes their sub-units, on an on-demand basis. These databases do not "
+"confer any legal status or special properties on the organizations, but "
+"might record a mapping between their own identifiers and other primary or "
+"secondary register identifiers for the organization. A common examples of a "
+"third-party database is the proprietary Dun&Bradstreet number. The OCDS "
+"organizational identifier scheme will recognize identifiers from third-party"
+" databases, but strongly prefers those drawn from non-proprietary databases,"
+" which allow users to lookup identifier information."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:153
+msgid ""
+"**Local lists** - Some publishers do not map their data to external "
+"identifiers, maintaining instead a local list of suppliers. In these cases, "
+"the publisher may use their internal identifiers, and should adopt their own"
+" **organization list prefix** starting with X- to use. Where possible, the "
+"publisher should also provide their local list on the web, with as much "
+"additional data about each supplier as possible, in order to maximize the "
+"chance of data users matching their local list to some more authoritative "
+"register."
+msgstr ""
+"**Elenchi locali** - Alcuni editori non mappano i loro dati con "
+"identificatori validi anche all'esterno, mantenendo invece un elenco locale "
+"di fornitori. In questi casi, l'editore può utilizzare i propri "
+"identificatori interni e deve adottare il proprio prefisso "
+"**dell'organizzazione** a patto questo venga aggiunto il prefisso X- . "
+"Laddove possibile, l'editore dovrebbe comunque fornire il proprio elenco "
+"locale sul web, in modo che il maggior numero di dati aggiuntivi su ciascun "
+"fornitore sia reso disponibile anche per consentire agli utenti dei dati "
+"maggiori probabilità che riescano ad associare la loro lista locale a un "
+"registro più autorevole."
+
+#: ../../docs/schema/identifiers.md:155
+msgid ""
+"See [docs.org-id.guide](http://docs.org-id.guide) for more information."
+msgstr ""
+"Vedi [docs.org-id.guide](http://docs.org-id.guide) per maggiori "
+"informazioni."
+
+#: ../../docs/schema/identifiers.md:157
+msgid "Release ID"
+msgstr "ID di rilascio"
+
+#: ../../docs/schema/identifiers.md:159
+msgid ""
+"A release identifier must be unique within the scope of the contracting "
+"process of which it is a part. In other words, across all OCDS releases with"
+" the same `ocid` value, each release identifier refers to exactly one "
+"release; no two releases use the same release identifier."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:161
+msgid ""
+"A release identifier must also be consistent within this scope. For example,"
+" if the `id` of a release is \"12345\" in one release package, then the `id`"
+" of the same release in another release package must also be \"12345\"."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:163
+msgid "Award and Contract IDs"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:165
+msgid ""
+"Award and contract identifiers must be unique within the scope of the "
+"contracting process of which they are a part. In other words, across all "
+"OCDS releases with the same `ocid` value, each contract identifier refers to"
+" exactly one contract; no two contracts use the same contract identifier."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:167
+msgid ""
+"Award and contract identifiers must also be consistent within this scope. "
+"For example, if the `id` of an award is \"22\" in one release, then the `id`"
+" of the same award in another release must also be \"22\"."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:169
+msgid ""
+"Contracts must cross-reference a related award (using the `awardID` field), "
+"as key information such as suppliers can be contained in the related award. "
+"Multiple contracts may refer to a single award, as in the case of a "
+"framework contract where multiple contract are issued against a single "
+"award."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:171
+msgid "Item, Document and Milestone IDs"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:173
+msgid ""
+"An item, document or milestone identifier must be unique within a given "
+"array of items, and must be used consistently across all the releases in a "
+"contracting process."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:175
+msgid ""
+"The same `id` value may be re-used in another array of items within the same"
+" release, and no cross-reference between these identifiers is implied."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:177
+msgid ""
+"The use of an identifier means that subsequent releases can update prior "
+"identified items, documents or milestones, without needing to republish all "
+"the items, documents or milestones."
+msgstr ""
+"L'uso di un identificatore significa che le versioni successive possono "
+"aggiornare articoli, documenti o fasi identificati in precedenza, senza la "
+"necessità di ripubblicare tutti gli articoli, i documenti o le fasi."
+
+#: ../../docs/schema/identifiers.md:181
+msgid ""
+"A first release sets the items to be procured in `tender/items` and the "
+"items awarded in one award in `awards/0/items`:"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:182
+msgid "`tender/items` contains three items, with `id` values of \"1\", \"2\", and \"3\""
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:183
+msgid "`awards/0/items` contains two items, with `id` values of \"3\" and \"4\""
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:185
+msgid ""
+"There is *no* relationship between the item to be procured with `id` \"3\" "
+"and the item awarded with `id` \"3\"; these can be different items. "
+"Continuing the example:"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:187
+msgid ""
+"A second release updates the items awarded in the single award in "
+"`awards/0/items`:"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:188
+msgid "`awards/0/items` contains three items, with `id` values of \"3\", \"4\", \"5\""
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:190
+msgid ""
+"Here, there *is* a relationship between the items awarded with `id` \"3\" "
+"and \"4\" in the first release and the items awarded with `id` \"3\" and "
+"\"4\" in the second release. The second release is interpreted as updating "
+"the existing items \"3\" and \"4\" and adding a new item \"5\"."
+msgstr ""

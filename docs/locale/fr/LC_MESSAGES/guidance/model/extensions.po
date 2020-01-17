@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Colin Maudry <colin@maudry.com>, 2020
+# samgoeta <samgoeta@gmail.com>, 2020
+# Cecile LG <cecile@datactivi.st>, 2020
+# James McKinney <jmckinney@open-contracting.org>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-15 18:50-0500\n"
+"PO-Revision-Date: 2020-01-16 00:02+0000\n"
+"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2020\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/guidance/model/extensions.md:1
+msgid "Extensions"
+msgstr "Extensions"
+
+#: ../../docs/guidance/model/extensions.md:3
+msgid ""
+"OCDS provides a common core of [sections and building "
+"blocks](../../getting_started/building_blocks) for describing contracting "
+"processes."
+msgstr ""
+"OCDS fournit un tronc commun de [sections et de composants "
+"essentiels](../../getting_started/building_blocks) pour décrire les "
+"processus de passation de marché."
+
+#: ../../docs/guidance/model/extensions.md:5
+msgid ""
+"Many publishers will have additional data that they could publish. Instead "
+"of ignoring this data and leaving it unpublished, OCDS encourages publishers"
+" to collaborate on the creation of **extensions** to the standard."
+msgstr ""
+"De nombreux producteurs de données ont des données supplémentaires qu'ils "
+"pourraient publier. Au lieu d'ignorer ces données et de les laisser non "
+"publiées, OCDS encourage les producteurs de données à collaborer pour la "
+"création d'**extensions** au standard."
+
+#: ../../docs/guidance/model/extensions.md:7
+msgid "Extensions are divided into two types:"
+msgstr "Les extensions sont divisées en deux types :"
+
+#: ../../docs/guidance/model/extensions.md:9
+msgid ""
+"**Core** extensions are maintained as part of the standard governance "
+"process, documented as part of the standard and reviewed by the OCDS "
+"technical team with each version upgrade of OCDS. They are likely to be "
+"relevant to a large number of publishers and users."
+msgstr ""
+"Les extensions **de base** sont maintenues comme une partie du processus de "
+"la gouvernance du standard, documentées comme une partie du standard et "
+"revues par l'équipe technique d'OCDS à chaque mise à jour d'OCDS. Elles sont"
+" censées être utiles à un grand nombre de producteurs et d'usagers des "
+"données."
+
+#: ../../docs/guidance/model/extensions.md:11
+msgid ""
+"**Community** and local extension are maintained by third-parties, or are "
+"maintained outside of the standard governance process. They might provide "
+"features needed by only a small number of publishers or users, or might be "
+"used to document a publisher's additional fields or codelist values."
+msgstr ""
+"**Les communautés** et les extensions locales sont gérées par des tiers ou "
+"sont maintenues en dehors du processus de gouvernance habituel. Ils peuvent "
+"fournir des fonctionnalités nécessaires à un nombre restreint d'éditeurs ou "
+"d'utilisateurs, ou peuvent être utilisés pour documenter les champs "
+"supplémentaires ou les valeurs d'une liste d'options."
+
+#: ../../docs/guidance/model/extensions.md:13
+msgid ""
+"All core and community extensions are listed in the [Extension "
+"Explorer](https://extensions.open-contracting.org/en/). The [standard "
+"technical team](../../schema/governance) approves extensions for inclusion "
+"in the Extension Explorer (distinguishing community from local extensions) "
+"and for inclusion in the governance process (distinguishing core from "
+"community extensions)."
+msgstr ""
+"Toutes les extensions natives et celles de la communauté sont répertoriées "
+"dans [Extension Explorer](https://extensions.open-contracting.org/fr/). "
+"[L'équipe technique du standard](../../schema/governance) valide les "
+"extensions à inclure dans l'explorateur d'extensions (distinction entre les "
+"extensions réalisées par la communauté et les extensions locales) et au "
+"processus de gouvernance (en distinguant les extensions principales et de la"
+" communauté)."
+
+#: ../../docs/guidance/model/extensions.md:15
+msgid "Using existing extensions"
+msgstr "Utiliser des extensions existantes"
+
+#: ../../docs/guidance/model/extensions.md:17
+msgid ""
+"Extensions are applied by adding their URLs to the `extensions` array in the"
+" release package or record package. You can discover extensions, read their "
+"documentation and find the URL to add using the [Extension "
+"Explorer](https://extensions.open-contracting.org/en/)."
+msgstr ""
+"Les extensions sont appliquées en ajoutant leurs URL dans l'array "
+"`extensions` dans le package de la version ou le package d'enregistrement. "
+"Vous pouvez trouver les extensions, lire leur documentation et trouver l'URL"
+" à ajouter à l'aide de [Extension Explorer](https://extensions.open-"
+"contracting.org/en/)."
+
+#: ../../docs/guidance/model/extensions.md:19
+msgid "This version of OCDS uses these specific versions of core extensions:"
+msgstr "Cette version d'OCDS utilise ces versions d'extensions natives :"
+
+#: ../../docs/guidance/model/extensions.md:26
+msgid ""
+"Groups of extensions can be combined into **profiles**. Profiles are "
+"adaptations of OCDS to suit the disclosure requirements and user needs of a "
+"particular sector, type of contracting process or legal framework. [View the"
+" list of profiles.](https://www.open-contracting.org/data-standard/profiles-"
+"and-guidance/)"
+msgstr ""
+"Les groupes d'extensions peuvent être combinés en **profils**. Les profils "
+"sont des adaptations d'OCDS aux exigences de publication et aux besoins des "
+"utilisateurs d'un secteur en particulier, d'un type de processus de "
+"passation de marché ou d'un cadre juridique. [Voir la liste des "
+"profils.](https://www.open-contracting.org/data-standard/profiles-and-"
+"guidance/)"
+
+#: ../../docs/guidance/model/extensions.md:28
+msgid "Developing new extensions"
+msgstr "Développement de nouvelles extensions"
+
+#: ../../docs/guidance/model/extensions.md:30
+msgid ""
+"If you have additional fields which cannot be mapped to the OCDS schema or "
+"an existing extension, you ought to include these in your OCDS data and "
+"create a new extension to document their structure and meaning."
+msgstr ""
+"Si vous avez des champs qui n'ont pas de correspondance avec le schéma OCDS "
+"ou sur une extension existante, vous devez les inclure dans vos données OCDS"
+" et créer une nouvelle extension pour documenter leur structure et leur "
+"signification."
+
+#: ../../docs/guidance/model/extensions.md:32
+msgid "Extension template"
+msgstr "Modèle d'extension"
+
+#: ../../docs/guidance/model/extensions.md:34
+msgid ""
+"You can find the [extension template](https://github.com/open-"
+"contracting/standard_extension_template) on GitHub. It contains guidance on "
+"creating an extension."
+msgstr ""
+"Vous trouverez le [modèle d'extension sur GitHub](https://github.com/open-"
+"contracting/standard_extension_template). Il contient des indications sur la"
+" création d'une extension."

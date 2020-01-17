@@ -1,0 +1,1420 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tim Davies <tim.davies@opendataservices.coop>, 2017
+# Colin Maudry <colin@maudry.com>, 2017
+# Joel Gombin <joel.gombin@gmail.com>, 2017
+# Maximovitch <clara@datactivist.coop>, 2019
+# Cecile LG <cecile@datactivi.st>, 2019
+# James McKinney <jmckinney@open-contracting.org>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-15 18:50-0500\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2020\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/schema/reference.md:1
+msgid "Release Reference"
+msgstr "Documentation sur les instances"
+
+#: ../../docs/schema/reference.md:3
+msgid ""
+"The [Release Schema](release) provides a detailed specification of the "
+"fields and data structures to use when publishing contracting data. "
+"Supplementary schemas show how to combine releases into release packages and"
+" how to compile releases into records."
+msgstr ""
+"Le [schéma des instances](release) fournit une spécification détaillée des "
+"champs et des structures de données à utiliser lors de la publication de "
+"données de commande publique. Des schémas complémentaires montrent comment "
+"combiner les instances en paquets de données et comment compiler les "
+"instances en archives."
+
+#: ../../docs/schema/reference.md:5
+msgid ""
+"Releases are immutable – presenting information about a particular event in "
+"the lifetime of a contracting process. Publishers must not edit a release "
+"after publication; a new release can be created by changing the release's "
+"`id` and `date`."
+msgstr ""
+"Les instances doivent être immuables : elles présentent des informations à "
+"propos d'un évènement particulier dans le cycle de vie d'un processus de "
+"passation de marché. Les éditeurs ne doivent pas modifier une instance après"
+" sa publication. Une nouvelle instance peut être créée en modifiant  l' 'id'"
+" et la 'date' de l'instance existante."
+
+#: ../../docs/schema/reference.md:7
+msgid ""
+"**Note: If any conflicts are found between this text, and the text within "
+"the schema, the schema takes precedence.**"
+msgstr ""
+"**Remarque : si une contradiction est trouvée entre ce texte et celui du "
+"schéma, le texte du schéma prévaut**"
+
+#: ../../docs/schema/reference.md:9
+msgid "Release structure"
+msgstr "Structure de l'instance"
+
+#: ../../docs/schema/reference.md:11
+msgid ""
+"The majority of OCDS data is held within a release structure. One or more "
+"releases can be published within a release package. Releases are made up of "
+"a number of sections, arranged in the following structure."
+msgstr ""
+"La majorité des données OCDS sont contenues dans une structure d'instance. "
+"Une ou plusieurs instances peuvent être publiées dans un paquet d'instance. "
+"Les instances sont constituées d'un certain nombre de sections, disposées "
+"dans la structure suivante."
+
+#: ../../docs/schema/reference.md:13
+msgid "[package](#package-metadata)"
+msgstr "[paquet](#package-metadata)"
+
+#: ../../docs/schema/reference.md:14
+msgid "[release](#release)"
+msgstr "[instance](#release)"
+
+#: ../../docs/schema/reference.md:15
+msgid "[parties](#parties)"
+msgstr "[parties](#parties)"
+
+#: ../../docs/schema/reference.md:16
+msgid "[planning](#planning)"
+msgstr "[`planning` (planification)](#planning)"
+
+#: ../../docs/schema/reference.md:17
+msgid "[tender](#tender)"
+msgstr "[`tender` (appel d'offres)](#tender)"
+
+#: ../../docs/schema/reference.md:18
+msgid "[award](#award)"
+msgstr "[`award` (attribution)](#award)"
+
+#: ../../docs/schema/reference.md:19
+msgid "[contract](#contract)"
+msgstr "[`contract` (contrat)](#contract)"
+
+#: ../../docs/schema/reference.md:20
+msgid "[implementation](#implementation)"
+msgstr "[`implementation` (l'exécution)](#implementation)"
+
+#: ../../docs/schema/reference.md:22
+msgid ""
+"Releases are given a [tag](../codelists/#release-tag) to indicate the "
+"specific stage of a contracting process they represent. However, there are "
+"no formal restrictions on when information about a stage of the contracting "
+"process can be provided."
+msgstr ""
+"Chaque instance reçoit un [tag](../codelists/#release-tag) pour indiquer à "
+"quelle étape du processus de passation de marché elle correspond. Cependant,"
+" il n'y a pas de restriction formelle concernant le moment où les "
+"informations sur une étape du processus de passation de marché peuvent être "
+"publiées. "
+
+#: ../../docs/schema/reference.md:24
+msgid ""
+"For example, a publisher announcing the signing of a contract with a "
+"'contract' tag might also include information in the award and tender blocks"
+" in order to provide a comprehensive picture of the contracting process to "
+"date which led to that contract being signed."
+msgstr ""
+"Par exemple, un producteur de données qui annonce la signature d'un marché "
+"avec le tag `contract` peut aussi inclure des informations dans les blocs "
+"sur l'attribution (`award`) et l'appel d'offre (`tender`) afin de fournir "
+"une vue d'ensemble du processus de passation de marché ayant mené à la "
+"signature du contrat. "
+
+#: ../../docs/schema/reference.md:26
+msgid "Package Metadata"
+msgstr "Métadonnées des paquets"
+
+#: ../../docs/schema/reference.md:28
+msgid ""
+"Releases must be published within a [release package](release_package). The "
+"release package provides metadata about the release(s) that it contains."
+msgstr ""
+"Les instances doivent être publiées dans un [paquet "
+"d'instance](release_package). Le paquet d'instance fournit des métadonnées à"
+" propos de la ou des instance(s) qu'il contient."
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Title"
+msgstr "Titre"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Description"
+msgstr "Description"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Type"
+msgstr "Type"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Format"
+msgstr "Format"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Required"
+msgstr "Nécessaire"
+
+#: ../../docs/schema/reference.md:37
+msgid ""
+"See the [licensing guidance](../guidance/publish/licensing) for more details"
+" on selecting a license, and publishing license information."
+msgstr ""
+"Pour plus d'informations sur la sélection d'une licence et la publication "
+"d'informations sur les licences, reportez-vous aux [instructions de "
+"licence](../guidance/publish/licensing)."
+
+#: ../../docs/schema/reference.md:39
+msgid ""
+"See the [publication policy](../guidance/publish/publication_policy) "
+"guidance for more details on what to include in a publication policy."
+msgstr ""
+"Pour plus de détails sur ce qu'il convient d'inclure dans une politique de "
+"publication, consultez la page [politique de "
+"publication](../guidance/publish/publication_policy)."
+
+#: ../../docs/schema/reference.md:41
+msgid "Release"
+msgstr "Instance"
+
+#: ../../docs/schema/reference.md:43
+msgid ""
+"All new information about a contracting process is described within a "
+"release."
+msgstr ""
+"Toute nouvelle information concernant un processus de passation de marché "
+"est décrite dans une instance."
+
+#: ../../extension_list_release:0
+msgid "The following extensions are available for release"
+msgstr "Les extensions suivantes sont disponibles pour les instances"
+
+#: ../../extension_list_release:1
+msgid "Process level title and description"
+msgstr "Titre et description au niveau du processus"
+
+#: ../../extension_list_release:1
+msgid ""
+"For providing overall process titles and descriptions, often to give a free-"
+"text summary of the contracting process as a whole."
+msgstr ""
+"Ils servent à fournir des titres et des descriptions généraux des processus,"
+" souvent pour donner un résumé en texte libre du processus de passation de "
+"marchés dans son ensemble."
+
+#: ../../extension_list_release:2 ../../extension_list_parties:2
+#: ../../extension_list_partyDetail:2 ../../extension_list_budget:2
+#: ../../extension_list_tender:2 ../../extension_list_contract:2
+#: ../../extension_list_implementation:2 ../../extension_list_item:2
+#: ../../extension_list_milestones:2
+msgid ""
+"The following are community extensions and are not maintained by Open "
+"Contracting Partnership."
+msgstr ""
+"Les extensions suivantes sont communautaires et ne sont pas maintenues par "
+"l'Open Contracting Partnership."
+
+#: ../../docs/schema/reference.md:57 ../../docs/schema/reference.md:1
+msgid "Parties"
+msgstr "Parties"
+
+#: ../../docs/schema/reference.md:59
+msgid ""
+"Each of the parties (organizations or other participants) referenced in a "
+"release must be included in the parties section."
+msgstr ""
+"Chacune des parties (organisations ou autres participants) référencées dans "
+"une instance doit être incluse dans la section des parties."
+
+#: ../../docs/schema/reference.md:3
+msgid ""
+"Version 1.1 of OCDS introduces a new approach to describing the buyers,  "
+"suppliers, economic operators, and other participants in a contracting "
+"process. Instead of embedding organization information at various points "
+"within an OCDS release, information on all the parties involved in a "
+"contracting process is collected together in a top-level section, and the "
+"parties indicated by a cross-reference to their id at other points."
+msgstr ""
+"La version 1.1 d'OCDS introduit une nouvelle approche pour décrire les "
+"acheteurs, les fournisseurs, les opérateurs économiques et les autres "
+"participants à un processus de passation de marché. Au lieu d'incorporer des"
+" informations sur l'organisation dans divers sections d'une instance, les "
+"informations sur toutes les parties impliquées dans un processus de "
+"passation de marché sont rassemblées dans une section à la racine de "
+"l'instance (`parties`). Ces parties sont ensuite référencées dans les autres"
+" sections de l'instance grâce à leur `id`."
+
+#: ../../docs/schema/reference.md:5
+msgid ""
+"This reduces repetition of information on parties who appear at multiple "
+"points in the contracting process, and supports publication of information "
+"about additional parties to the contracting process, including auditors, "
+"multiple buyers, and consortia partners of a winning bidder."
+msgstr ""
+"Cette approche réduit la répétition des informations sur les parties qui "
+"apparaissent à plusieurs points dans le processus de passation de marchés et"
+" permet la publication d'informations sur des parties supplémentaires, "
+"telles que des auditeurs, des acheteurs multiples et les partenaires d'une "
+"offre gagnante."
+
+#: ../../docs/schema/reference.md:7
+msgid ""
+"The old, embedded data, approach to organization data is deprecated in OCDS "
+"1.1, and will be removed in version 2.0."
+msgstr ""
+"L'ancienne approche, qui impliquait la duplication des d'organisation, est "
+"dépréciée dans la version 1.1 d'OCDS et sera supprimée dans la version 2.0."
+
+#: ../../docs/schema/reference.md:72
+msgid "The following details can be provided for each party."
+msgstr "Les détails suivants peuvent être fournis pour chaque partie."
+
+#: ../../extension_list_parties:0
+msgid "The following extensions are available for parties"
+msgstr "Les extensions suivantes sont disponibles pour les parties"
+
+#: ../../docs/schema/reference.md:86
+msgid ""
+"Each party has a `details` object. Through extensions, this can be used to "
+"provide detailed classification of parties."
+msgstr ""
+"Chaque partie a un objet `details`. Grâce aux extensions, cela peut être "
+"utilisé pour fournir une classification détaillée des parties."
+
+#: ../../extension_list_partyDetail:0
+msgid "The following extensions are available for party details"
+msgstr ""
+"Les extensions suivantes sont disponibles pour les détails des parties"
+
+#: ../../docs/schema/reference.md:93
+msgid "Planning"
+msgstr "Planification"
+
+#: ../../docs/schema/reference.md:95
+msgid ""
+"The planning section can be used to describe the background to a contracting"
+" process. This can include details of the budget from which funds are drawn,"
+" or related projects for this contracting process. Background documents such"
+" as a needs assessment, feasibility study and project plan can also be "
+"included in this section."
+msgstr ""
+"La section sur la planification peut être utilisée pour décrire le contexte "
+"d'un processus de passation de marché. Elle peut inclure des détails sur le "
+"budget duquel sont issus les fonds ou sur les projets reliés à ce processus "
+"de passation de marché. Les documents sur le contexte tels qu'une fiche "
+"d'évaluation des besoins, une étude de faisabilité ou un plan du projet "
+"peuvent être inclus dans cette section."
+
+#: ../../docs/schema/reference.md:109
+msgid ""
+"Apart from documents, the majority of information is held within the budget "
+"block. This is designed to allow both machine-readable linkable data about "
+"budgets, cross-referencing to data held in other standards such as the "
+"[Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-"
+"package/) or [International Aid Transparency Initiative "
+"Standard](http://www.iatistandard.org), and human readable description of "
+"the related budgets and projects, supporting users to understand the "
+"relationship of the contracting process to existing projects and budgets "
+"even where linked data is not available."
+msgstr ""
+"À l'exception des documents, la majorité des informations est contenue dans "
+"le composant `budget`. Celui-ci a été conçu avec un double impératif. D'une "
+"part, permettre la lisibilité des données par les machines et leur liaison "
+"avec des données publiées avec d'autres standards telles que le [Fiscal Data"
+" Package](http://fiscal.dataprotocols.org/) ou [International Aid "
+"Transparency Initiative Standard](http://www.iatistandard.org). D'autre "
+"part, fournir une description des budgets et des projets connexes qui soit "
+"humainement intelligeibles afin d'aider les utilisateurs à comprendre le "
+"lien entre un processus de passation de marché et des projets et budgets "
+"existants, même lorsque des données liées (Linked Data) ne sont pas "
+"disponibles. "
+
+#: ../../docs/schema/reference.md:111
+msgid "Budget"
+msgstr "Budget"
+
+#: ../../extension_list_budget:0
+msgid "The following extensions are available for budget"
+msgstr "Les extensions suivantes sont disponibles pour le budget"
+
+#: ../../docs/schema/reference.md:125
+msgid "Tender"
+msgstr "Appel d'offres"
+
+#: ../../docs/schema/reference.md:127
+msgid ""
+"The tender section includes details of the announcement that an organization"
+" intends to source some particular goods, works or services, and to "
+"establish one or more contract(s) for these."
+msgstr ""
+"La section sur l'appel d'offres comprend des détails sur l'annonce faite par"
+" une organisation qu'elle a l'intention de se procurer certains biens, "
+"travaux ou services, et souhaite établir un ou plusieurs contrats pour ces "
+"derniers."
+
+#: ../../docs/schema/reference.md:129
+msgid ""
+"It can contain details of a forthcoming process to receive and evaluate "
+"proposals to supply these goods and services, and can also be used to record"
+" details of a completed tender process, including details of bids received."
+msgstr ""
+"Elle peut contenir des détails sur un processus à venir afin de recevoir et "
+"d'évaluer les offres de biens et services. Elle peut également être utilisée"
+" pour enregistrer les détails d'un processus d'appel d'offres terminé, y "
+"compris les détails des candidatures reçues. "
+
+#: ../../extension_list_tender:0
+msgid "The following extensions are available for the tender section"
+msgstr ""
+"Les extensions suivantes sont disponibles pour la section sur l'appel "
+"d'offres"
+
+#: ../../extension_list_tender:1
+msgid "Enquiries"
+msgstr "Questions"
+
+#: ../../extension_list_tender:1
+msgid ""
+"The enquiries extension can be used to record questions raised during a "
+"contracting process, and the answers provided."
+msgstr ""
+"L'extension questions peut être utilisée pour enregistrer les questions "
+"soulevées lors d'un processus de passation de marchés et les réponses "
+"fournies."
+
+#: ../../extension_list_tender:1
+msgid "Lots"
+msgstr "Lots"
+
+#: ../../extension_list_tender:1
+msgid ""
+"A tender process may be divided into lots, where bidders can bid on one or "
+"more lots. Details of each lot can be provided here. Items, documents and "
+"other features can then reference the lot they are related to using "
+"relatedLot. Where no relatedLot identifier is given, the values should be "
+"interpreted as applicable to the whole tender."
+msgstr ""
+"Un processus d'appel d'offres peut être divisé en lots, où les candidats "
+"peuvent soumissionner sur un ou plusieurs lots. Les détails de chaque lot "
+"peuvent être fournis ici. Les biens ou services achetés, les documents et "
+"les autres caractéristiques peuvent ensuite faire référence au lot auxquels "
+"ils sont liés en utilisant `relatedLot`. Lorsque aucun identifiant "
+"`relatedLot` n'est donné, les valeurs doivent être interprétées comme "
+"applicables à l'ensemble de l'appel d'offres."
+
+#: ../../extension_list_tender:1
+msgid "Participation Fees"
+msgstr "Frais de participation"
+
+#: ../../extension_list_tender:1
+msgid ""
+"Where a tender process involves payment of fees to access documents, submit "
+"a proposal, or be awarded a contract, this extension can be used to provide "
+"fee details."
+msgstr ""
+"Lorsqu'un processus d'appel d'offres implique le paiement de frais pour "
+"accéder aux documents, soumettre une proposition ou se voir attribuer un "
+"contrat, cette extension peut être utilisée pour fournir des détails sur les"
+" frais."
+
+#: ../../docs/schema/reference.md:143
+msgid "Bids"
+msgstr "Offres"
+
+#: ../../docs/schema/reference.md:145
+msgid ""
+"The [Bid statistics and details](https://extensions.open-"
+"contracting.org/en/extensions/bids/v1.1.4/) extension can be used to provide"
+" bid statistics and detailed information about individual bids."
+msgstr ""
+"L'extension comprenant les [Statistiques et détails concernant les offres] "
+"(https://extensions.open-contracting.org/en/extensions/bids/v1.1.4/) peut "
+"être utilisée pour fournir des statistiques sur les offres ainsi que des "
+"informations détaillées sur les offres individuelles. "
+
+#: ../../docs/schema/reference.md:147
+msgid "Award"
+msgstr "Attribution"
+
+#: ../../docs/schema/reference.md:149
+msgid ""
+"The award section is used to announce any awards issued for this tender. "
+"There can be multiple awards made. Releases can contain all, or a subset, of"
+" these awards. A related award block is required for every contract block, "
+"as the award contains information on the suppliers."
+msgstr ""
+"La section attribution sert à annoncer les attributions de marché effectuées"
+" pour cet appel d'offres. Il peut y avoir plusieurs attributions. Les "
+"instances peuvent contenir toutes ou une partie de ces attributions. Un bloc"
+" attribution connexe est requis à côté de chaque bloc de contrat, car "
+"l'attribution contient des informations sur les fournisseurs. "
+
+#: ../../docs/schema/reference.md:163
+msgid "Contract"
+msgstr "Contrat"
+
+#: ../../docs/schema/reference.md:165
+msgid ""
+"The contract section is used to provide details of contracts that have been "
+"entered into. Every contract must have a related award, linked via the "
+"`awardID` field. This is because supplier information is contained within "
+"the 'award'. The framework contract details below help illustrate the "
+"reasons for this."
+msgstr ""
+"La section contrat est utilisée pour fournir des détails sur les contrats "
+"qui ont été saisis. Chaque contrat doit être relié à une attribution, liée "
+"via le champ 'awardID' , et ce parce que  les informations concernant le "
+"fournisseur sont renseignées dans l'attribution. Le cadre détaillé des "
+"contrats ci-dessous aide à mieux illustrer les raisons de cette contrainte."
+
+#: ../../extension_list_contract:0
+msgid "The following extensions are available for contracts"
+msgstr "Les extensions suivantes sont disponibles pour les contrats"
+
+#: ../../docs/schema/reference.md:179
+msgid "Implementation"
+msgstr "Exécution du marché"
+
+#: ../../docs/schema/reference.md:181
+msgid ""
+"Implementation information can be updated over the course of a contract. It "
+"belongs nested within the contract it relates to. Implementation blocks "
+"include the following elements:"
+msgstr ""
+"Les informations sur l'exécution peuvent être mises à jour au cours d'un "
+"contrat. Elles sont imbriquées dans le contrat auxquelles elles se "
+"rapportent. Les composants sur l'exécution comprennent les éléments suivants"
+" :"
+
+#: ../../extension_list_implementation:0
+msgid "The following extensions are available for implementation"
+msgstr "Les extensions suivantes sont disponibles pour l'exécution du marché"
+
+#: ../../docs/schema/reference.md:195
+msgid ""
+"Information on subcontracts is not currently included in the core OCDS "
+"schema, but might be handled by [proposed "
+"extensions](conformance_and_extensions)"
+msgstr ""
+"Les informations sur la sous-traitance ne sont à l'heure actuelle pas "
+"inclues dans le schéma OCDS de base, mais elles peuvent être gérées par des "
+"[extensions proposées par la communauté](conformance_and_extensions)."
+
+#: ../../docs/schema/reference.md:197
+msgid "Transaction"
+msgstr "Transaction"
+
+#: ../../docs/schema/reference.md:206
+msgid ""
+"The transaction block is modelled on the [International Aid Transparency "
+"Initiative (IATI) transaction element](http://iatistandard.org/activity-"
+"standard/iati-activities/iati-activity/transaction/), and can be used to "
+"represent actual flows of money between organizations in relation to this "
+"contract. As with the [budget](#budget) block, this can be used to cross-"
+"reference to a third party `source` of data, and ought to re-use identifiers"
+" from that source."
+msgstr ""
+"Le composant sur les transactions est calqué sur les [éléments de "
+"transaction de l'Initiative Internationale de Transparence de l'Aide "
+"(IITA)](http://iatistandard.org/activity-standard/iati-activities/iati-"
+"activity/transaction/) et peut être utilisé pour représenter les flux "
+"d'argent circulant entre organisations dans le cadre d'un contrat. Comme "
+"avec le composant sur le [budget](#budget), ces données peuvent être "
+"utilisées pour croiser des données issues d'une `source` tierce. Les données"
+" de transactions peuvent également réutiliser les identifiants de cette "
+"`source`."
+
+#: ../../docs/schema/reference.md:208
+msgid ""
+"In most circumstances, the `payer` identifier will match that of the "
+"`buyer`, and the `payee` identifier will match that of the `supplier`."
+msgstr ""
+"Dans la plupart des cas, l'identifiant `payer` devrait correspondre à celui "
+"du `buyer`, et l'identifiant `payee` doit correspondre à celui du "
+"`supplier`."
+
+#: ../../docs/schema/reference.md:210
+msgid "Milestones"
+msgstr "Étapes"
+
+#: ../../docs/schema/reference.md:212
+msgid "See [milestone](#milestone) reference below."
+msgstr "Voir ci-dessous [la documentation sur les étapes](#milestone). "
+
+#: ../../docs/schema/reference.md:214
+msgid ""
+"The implementation milestones should be updated to reflect when they are "
+"met."
+msgstr ""
+"Les étapes de l'exécution du contrat doivent être mises à jour pour refléter"
+" leur date de fin."
+
+#: ../../docs/schema/reference.md:216
+msgid "Documents"
+msgstr "Documents"
+
+#: ../../docs/schema/reference.md:218
+msgid ""
+"Documents related to contract implementation are stored here. This can "
+"include subcontracts."
+msgstr ""
+"Les documents relatifs à l'exécution du contrat doivent être référencés dans"
+" ce composant. Les documents de sous-traitance peuvent également y être "
+"référencés."
+
+#: ../../docs/schema/reference.md:220
+msgid "See [document](#document) reference below."
+msgstr "Voir la [documentation sur les documents](#document) ci-dessous."
+
+#: ../../docs/schema/reference.md:222
+msgid "Amendment"
+msgstr "Modification"
+
+#: ../../docs/schema/reference.md:224
+msgid ""
+"A release may amend properties from a previous release. Whilst the release &"
+" record model of OCDS offers the opportunity to keep a full versioned "
+"history of changes, in many cases it is important for changes to a tender, "
+"award or contract to be explicitly declared."
+msgstr ""
+"Une instance peut modifier la valeur des propriétés d'une instance "
+"précédente. Le modèle OCDS pour les instances et les archives offre la "
+"possibilité de conserver un historique complet et versionné des changements,"
+" mails il est souvent important que les modifications apportées à un appel "
+"d'offres, l'attribution ou un contrat soient explicitement déclarées."
+
+#: ../../docs/schema/reference.md:226
+msgid ""
+"The amendment array in a tender, award or contract block provides the "
+"ability to detail the amendments that have taken place with dates, rationale"
+" and free-text descriptions of the change, as well as to point to the "
+"releases that contain information from before and after the amendment."
+msgstr ""
+"La liste des modifications dans un composant d'appel d'offres, d'attribution"
+" ou de contrat permet de détailler les modifications qui ont eu lieu. Chaque"
+" modification comprend la date, les raisons de la modification et une "
+"description en texte libre. Il est également possible d'indiquer les "
+"instances contenant des informations avant et après la modification."
+
+#: ../../docs/schema/reference.md:235
+msgid "Changes"
+msgstr "Changements"
+
+#: ../../docs/schema/reference.md:237
+msgid ""
+"The changes array was deprecated in OCDS 1.1. Structured information on the "
+"former value of specific fields may be provided by:"
+msgstr ""
+"La liste des modifications a été dépréciée dans la version 1.1 d'OCDS. Les "
+"informations structurées sur la valeur antérieure de champs spécifiques "
+"devraient être fournies par : "
+
+#: ../../docs/schema/reference.md:239
+msgid ""
+"Including releases from **before** and **after** a change within a release "
+"package;"
+msgstr ""
+"L'inclusion des instances **avant** et **après** une modification au sein "
+"d'un paquet d'instances ;"
+
+#: ../../docs/schema/reference.md:240
+msgid ""
+"Using the amendment array in tender, contract or award to explicitly relate "
+"these releases to an amendment."
+msgstr ""
+"L'utilisation de la liste de modifications dans l'appel d'offres, le contrat"
+" ou l'attribution pour relier explicitement ces instances à une "
+"modification."
+
+#: ../../docs/schema/reference.md:242
+msgid ""
+"See the [amendment implementation guidance](../guidance/model/amendments) "
+"for more details."
+msgstr ""
+"Voir le [guide sur les modifications de l'exécution du "
+"marché](../guidance/model/amendments) pour plus de détails."
+
+#: ../../docs/schema/reference.md:244
+msgid "Building block reference"
+msgstr "Documentation sur les composants essentiels"
+
+#: ../../docs/schema/reference.md:246
+msgid ""
+"The following building blocks are commonly re-used throughout the standard."
+msgstr ""
+"Les composants essentiels sont des composants couramment réutilisés dans le "
+"standard."
+
+#: ../../docs/schema/reference.md:248
+msgid "OrganizationReference"
+msgstr "`OrganizationReference`"
+
+#: ../../docs/schema/reference.md:1
+msgid "Organizations"
+msgstr "Organisations"
+
+#: ../../docs/schema/reference.md:3
+msgid ""
+"The approach to including organizations information has changed in OCDS 1.1."
+" Instead of embedding all the details of an organization, publishers should "
+"use an organization reference to indicate the entry in the parties section "
+"that contains full details of this organization."
+msgstr ""
+"L'approche adoptée pour inclure les informations sur les organisations a "
+"changé dans la verison 1.1 du standard OCDS. Au lieu d'intégrer tous les "
+"détails d'une organisation, les producteurs de données devraient utiliser "
+"une référence d'organisation (`id`) pour indiquer l'entrée dans la section "
+"sur les parties qui contient les détails de cette organisation."
+
+#: ../../docs/schema/reference.md:257
+msgid "An organization reference consists of two main components:"
+msgstr ""
+"Une référence d'organisation se compose de deux composantes principales :"
+
+#: ../../docs/schema/reference.md:259
+msgid ""
+"An `id` used to cross-reference the entry in the [parties](#parties) section"
+" that contains full information on this organization or entity;"
+msgstr ""
+"Un `id` utilisé pour faire une référence croisée à l'entrée dans la section "
+"[parties](#parties) qui contient des informations complètes sur cette "
+"organisation ou cette entité ;"
+
+#: ../../docs/schema/reference.md:260
+msgid ""
+"A `name` field that repeats the name given in the [parties](#parties) "
+"section, provided for the convenience of users viewing the data, and to "
+"support detection of mistakes in cross-referencing."
+msgstr ""
+"Un champ `name` qui répète le nom donné dans la section [parties](#parties),"
+" fourni pour aider les utilisateurs qui regardent les données et pour "
+"permettre la détection des erreurs lors des références croisées."
+
+#: ../../docs/schema/reference.md:262
+msgid ""
+"The Organization Reference schema contains deprecated fields to prevent "
+"validation failures of OCDS 1.0 data."
+msgstr ""
+"Le schéma de référence d'organisation contient des champs dépréciés pour "
+"éviter les erreurs de validation des données OCDS version 1.0."
+
+#: ../../docs/schema/reference.md:264
+msgid "Organization"
+msgstr "Organisation"
+
+#: ../../docs/schema/reference.md:266
+msgid "See the [parties](#parties) section"
+msgstr "Voir la section [parties](#parties)"
+
+#: ../../docs/schema/reference.md:268
+msgid "Identifier"
+msgstr "Identifiant"
+
+#: ../../docs/schema/reference.md:270
+msgid ""
+"The identifier block provides a way to [identify the legal "
+"entities](../identifiers/#organization-ids) involved in a contracting "
+"process."
+msgstr ""
+"Le bloc identifiant fournit un moyen d'[identifier les entités "
+"juridiques](../identifiers/#organisation-ids impliquées dans un processus de"
+" passation des marchés."
+
+#: ../../docs/schema/reference.md:272
+msgid ""
+"If a contracting process represents a contract arranged by the department or"
+" branch of a larger organization, the legal entity (usually the registered "
+"organization) should be described in the [identifier](#identifier) section, "
+"with details of the branch or department given in the name, "
+"[address](#address) and [contact point](#contactpoint) as relevant."
+msgstr ""
+"Si un processus de passation de marchés représente un contrat organisé par "
+"la direction ou la branche d'une organisation plus grande, l'entité "
+"juridique (habituellement l'organisation disposant d'une personnalité "
+"morale) doit être décrite dans la section [identifiant](#identifier), avec "
+"les détails de la direction ou de la branche donnés dans le nom, "
+"[l'adresse](#adress) et le [point de contact](#contactpoint), si besoin."
+
+#: ../../docs/schema/reference.md:281
+msgid "Address"
+msgstr "Adresse"
+
+#: ../../docs/schema/reference.md:290
+msgid "ContactPoint"
+msgstr "Point de contact"
+
+#: ../../docs/schema/reference.md:298
+msgid "Document"
+msgstr "Document"
+
+#: ../../docs/schema/reference.md:300
+msgid ""
+"Documents can be attached at a number of points within the standard: to "
+"planning, tenders, awards, contracts and implementation. Each document block"
+" can consist of multiple documents, classified using the "
+"[documentType](../codelists/#document-type) codelist."
+msgstr ""
+" Les documents peuvent être joints à un certain nombre d'étapes au sein du "
+"standard : lors de la planification, des appels d'offre, des attributions, "
+"des contrats et de l'exécution. Chaque compilation de documents peut être "
+"composé de plusieurs documents, classés à l'aide de la liste de codes "
+"[`documentType`](../codelists/#document-type)."
+
+#: ../../docs/schema/reference.md:314
+msgid "Period"
+msgstr "Période"
+
+#: ../../docs/schema/reference.md:316
+msgid ""
+"A period has a start date, end date, and/or duration. Start and end dates "
+"are represented using date-times. Durations are represented as a number of "
+"days."
+msgstr ""
+"Une période a une date de début, une date de fin et/ou une durée. Les dates "
+"de début et de fin sont représentées à l'aide des dates-heures. Les durées "
+"sont représentées en nombre de jours."
+
+#: ../../docs/schema/reference.md:318
+msgid ""
+"Periods can also include a `maxExtentDate` which indicates the latest "
+"possible end date of this period, or the latest date up until which the "
+"period could be extended without an amendment."
+msgstr ""
+"Les périodes peuvent également inclure une `maxExtentDate` qui indique la "
+"date de fin la plus tardive de cette période ou la dernière date jusqu'à "
+"laquelle la période pourrait être prolongée, sans avenant."
+
+#: ../../docs/schema/reference.md:332
+msgid "Date"
+msgstr "Date"
+
+#: ../../docs/schema/reference.md:334
+msgid ""
+"OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-"
+"times, following [RFC3339 "
+"§5.6](http://tools.ietf.org/html/rfc3339#section-5.6)."
+msgstr ""
+"OCDS utilise la norme de date et d'heure "
+"[ISO8601](http://en.wikipedia.org/wiki/ISO_8601), suivant la [RFC3339 "
+"§5.6](http://tools.ietf.org/html/rfc3339#section-5.6)."
+
+#: ../../docs/schema/reference.md:336
+msgid "A time and timezone/offset must be provided in a date-time."
+msgstr ""
+"Une heure complète (heures, minutes, secondes) et un fuseau horaire doivent "
+"toujours être fournis dans une date-heure."
+
+#: ../../docs/schema/reference.md:338
+msgid "The following are valid date-times:"
+msgstr "Les date-heures suivantes sont valides:"
+
+#: ../../docs/schema/reference.md:340
+msgid "'2014-10-21T09:30:00Z' - 9:30 am on the 21st October 2014, UTC"
+msgstr ""
+"'2014-10-21T09:30:00Z' - 9:30 le 21 octobre 2014, fuseau UTC (temps "
+"universel)"
+
+#: ../../docs/schema/reference.md:341
+msgid ""
+"'2014-11-18T18:00:00-06:00' - 6pm on 18th November 2014 CST (Central "
+"Standard Time)"
+msgstr ""
+"'2014-11-18T18:00:00-06:00' - 18:00 le 18 novembre 2014 UTC -6h (fuseau CST,"
+" Central Standard Time)"
+
+#: ../../docs/schema/reference.md:343
+msgid "The following are not valid:"
+msgstr "La date-heures suivantes ne sont pas valides :"
+
+#: ../../docs/schema/reference.md:345
+msgid "'2014-10-21' - Missing time portion"
+msgstr "'2014-10-21' - Il manque l'heure."
+
+#: ../../docs/schema/reference.md:346
+msgid "'2014-10-21T18:00' - missing seconds in time portion."
+msgstr "'2014-10-21T18:00' - il manque les secondes."
+
+#: ../../docs/schema/reference.md:347
+msgid "'2014-11-18T18:00:00' - Missing timezone/offset portion"
+msgstr "'2014-11-18T18:00:00' - il manque le fuseau horaire."
+
+#: ../../docs/schema/reference.md:348
+msgid "'11/18/2014 18:00' - Not following the pattern at all!"
+msgstr "'11/18/2014 18:00' - ne suit absolument pas le modèle !"
+
+#: ../../docs/schema/reference.md:350
+msgid ""
+"Accurately including the time and timezone offsets is particular important "
+"for tender deadlines and other dates which can have legal significance, and "
+"where users of the data might be from different timezones. The character Z "
+"on the end of a date-time indicates the "
+"[UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero "
+"offset) timezone, whereas other timezones are indicated by their value "
+"'+/-hh:mm' UTC on the end of the date-time value."
+msgstr ""
+"Il est particulièrement important d'indiquer avec précision l'heure et le "
+"fuseau horaire pour les délais d'appel d'offres et les autres dates qui "
+"peuvent avoir une valeur juridique, les utilisateurs des données pouvant "
+"dépendre de fuseaux horaires différents. Le caractère Z à la fin d'une date-"
+"heure indique le fuseau "
+"[UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (ou zéro "
+"décalage), tandis que les autres fuseaux horaires sont indiqués par leur "
+"valeur '+/- hh:mm UTC ' à la fin de la valeur date-heure."
+
+#: ../../docs/schema/reference.md:352
+msgid ""
+"In the event that the system from which data is drawn only includes dates, "
+"and does not include time information, publishers should use sensible "
+"defaults for each field. For example, the startDate time of a clarification "
+"period can be set to '00:00:00Z' to indicate that clarifications can be "
+"requested from any time on the date stated, with the endDate time set to "
+"23:59:59Z to indicate that clarifications can be sent up until the end of "
+"the endDate given. Alternatively, if clarification requests are only "
+"accepted in standard office hours, these values might be 09:00:00Z and "
+"17:00:00Z respectively."
+msgstr ""
+"Dans le cas où le système d'où les des données sont extraites inclut "
+"uniquement des informations sur la date et non sur l'heure, les producteurs "
+"de données doivent réfléchir à une valeur par défaut pour chaque champ. Par "
+"exemple, l'heure `startDate` de début d'une période de clarification peut "
+"être fixée à '00:00:00Z' pour indiquer que des précisions peuvent être "
+"demandées à tout moment compris dans la date indiquée, avec le temps de "
+"`endDate` fixé à 23:23:59Z pour indiquer que les clarifications peuvent être"
+" envoyées jusqu'à la fin de la journée à la date de fin donnée. Par "
+"ailleurs, si les demandes de clarification ne sont acceptées qu'aux horaires"
+" classiques de bureau, ces valeurs peuvent être comprises entre 09:00:00Z et"
+" 17:00:00Z."
+
+#: ../../docs/schema/reference.md:354
+msgid ""
+"In the event that a date field is not bound to a specific time at all, "
+"publishers should choose a default time value of '23:59:59' and either 'Z' "
+"(for UTC) or the timezone of the publisher, indicating that the time refers "
+"to the end of the given date."
+msgstr ""
+"Dans le cas où un champ de date n'est pas lié à un horaire précis, les "
+"producteurs de données OCDS doivent choisir une valeur de temps par défaut "
+"de '23:59:59' et soit 'Z' (pour le fuseau UTC) soit le fuseau horaire du "
+"producteur des données, indiquant ainsi que l'heure se réfère à la fin de la"
+" date donnée."
+
+#: ../../docs/schema/reference.md:356
+msgid "Item"
+msgstr "Biens et services"
+
+#: ../../docs/schema/reference.md:358
+msgid ""
+"The items block is used to list the line-items associated with a tender, "
+"award or contract."
+msgstr ""
+"Le composant des biens et services —`items`— est utilisé pour lister les "
+"postes de dépense associés à l'offre (`tender`), l'attribution (`award`) ou "
+"au contrat (`contract`). "
+
+#: ../../extension_list_item:0
+msgid "These are extensions related to Items."
+msgstr "Voici les extensions liées aux biens et services achetés."
+
+#: ../../extension_list_item:1 ../../docs/schema/reference.md:465
+msgid "Location"
+msgstr "Localisation"
+
+#: ../../extension_list_item:1
+msgid ""
+"Allows the point of delivery or site of works for a given line item to be "
+"indicated in tender, award and contract objects."
+msgstr ""
+"Permet d'indiquer le lieu de livraison d'un objet ou le site où des travaux "
+"doivent être réalisés aux étapes de l'appel d'offre, de l'attribution et de "
+"la contractualisation."
+
+#: ../../docs/schema/reference.md:372
+msgid "Classification"
+msgstr "Classification"
+
+#: ../../docs/schema/reference.md:380
+msgid "Unit"
+msgstr "Unité"
+
+#: ../../docs/schema/reference.md:382
+msgid ""
+"The `unit` block allows detailed specification of the parameters and price "
+"of units that make up a line-item."
+msgstr ""
+"Le bloc `unité` permet de préciser dans le détail les paramètres et le prix "
+"des unités constituant un article."
+
+#: ../../docs/schema/reference.md:384
+msgid ""
+"If the [Quantities, Units, Dimensions and Data Types "
+"Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification "
+"scheme is used, then publishers can use its CamelCase unit names, such as "
+"\"SquareMile\", in the `unit.name` field."
+msgstr ""
+"Si les [ontologies de quantités, unités, dimensions ou types de "
+"données](http://www.qudt.org/qudt/owl/1.0.0/unit/) d'un système de "
+"classification d'unité sont utilisés, alors les éditeurs peuvent utiliser le"
+" CamelCase pour nommer les unités en question, par exemple \"MetreCarré\", "
+"dans le champ `unit.name`."
+
+#: ../../docs/schema/reference.md:386
+msgid ""
+"Other unit classification schemes can be used, including those in the "
+"[unitClassificationScheme codelist](../codelists/#unit-classification-"
+"scheme)."
+msgstr ""
+"D'autres systèmes de classification des unités peuvent être utilisés, celui-"
+"ci inclus : [liste de codes du unitClassificationScheme](../codelists/#unit-"
+"classification-scheme)."
+
+#: ../../docs/schema/reference.md:395
+msgid "Milestone"
+msgstr "Étape"
+
+#: ../../docs/schema/reference.md:397
+msgid ""
+"Milestone information can be included in the [planning](#planning), "
+"[tender](#tender), [contract](#contract) and [contract "
+"implementation](#implementation) blocks."
+msgstr ""
+"Les informations sur une étape peuvent être incluses dans les blocs sur la "
+"[planification](#planning), l'[appel d'offres](#tender), le "
+"[contrat](#contract) et l'[exécution du marché](#implementation). "
+
+#: ../../docs/schema/reference.md:406
+msgid "Notes:"
+msgstr "Notes :"
+
+#: ../../docs/schema/reference.md:408
+msgid ""
+"The `dateModified` field should be changed whenever the progress towards a "
+"milestone is reviewed, and the `status` either updated, or re-confirmed."
+msgstr ""
+"Le champ `dateModified` (date de modification) doit être mis à jour lors de "
+"la révision de la progression d'un étape, et le champ `status` (statut) doit"
+" être soit mis à jour, soit confirmé."
+
+#: ../../extension_list_milestones:0
+msgid "The following extensions to milestone are available"
+msgstr "Les extensions suivantes sont disponibles pour les étapes"
+
+#: ../../extension_list_milestones:1
+msgid "Milestone documents"
+msgstr "Documents de l'étape"
+
+#: ../../extension_list_milestones:1
+msgid ""
+"Documents at the milestone level were deprecated in OCDS 1.1. This extension"
+" re-introduces the ability to attach documents to each individual milestone."
+msgstr ""
+"La description de documents au niveau des étapes a été dépréciée dans la "
+"version 1.1 du standard OCDS. Cette extension ré-introduit la possibilité "
+"d'attacher des documents à chaque étape individuelle."
+
+#: ../../docs/schema/reference.md:417
+msgid "Value"
+msgstr "Valeur"
+
+#: ../../docs/schema/reference.md:419
+msgid "Financial values should be published with a currency attached."
+msgstr "Les valeurs financières doivent toujours être associées à une devise."
+
+#: ../../docs/schema/reference.md:428
+msgid ""
+"Support for exchange rates, and tax information, can be provided using "
+"extensions."
+msgstr ""
+"Il est possible d'inclure des taux de change et des informations fiscales en"
+" utilisant des extensions."
+
+#: ../../docs/schema/reference.md:435
+msgid "RelatedProcess"
+msgstr "`RelatedProcess`"
+
+#: ../../docs/schema/reference.md:437
+msgid ""
+"In OCDS each contracting process can have only one planning and tender "
+"stage. There are a number of cases where it is important to know about "
+"related planning and tendering processes, including:"
+msgstr ""
+"Dans le standard OCDS, chaque processus de passation de marché ne peut avoir"
+" qu'une seule étape de planification et d'appel d'offres. Il existe un "
+"certain nombre de cas où il est important de connaître les processus de "
+"planification et d'appels d'offres connexes, y compris :"
+
+#: ../../docs/schema/reference.md:439
+msgid "When one planning process results in many tenders;"
+msgstr ""
+"Lorsqu'un processus de planification aboutit à de nombreux appels d'offres ;"
+
+#: ../../docs/schema/reference.md:440
+msgid ""
+"What a contract is awarded following two distinct, but related, tender "
+"processes, such as in national frameworks with locally run mini-"
+"competitions;"
+msgstr ""
+"Quand un contrat est attribué à la suite de deux processus distincts (mais "
+"connexes) d'appels d'offres, tels que dans les contrats-cadres nationaux "
+"avec des mini-mises en concurrence locales;"
+
+#: ../../docs/schema/reference.md:441
+msgid ""
+"When a contract results in the award of sub-contracts - and those sub-"
+"contracts are also tracked using OCDS;"
+msgstr ""
+"Lorsqu'un contrat aboutit à l'attribution de sous-contrats et que ces sous-"
+"contrats sont également suivis à l'aide du standard OCDS ;"
+
+#: ../../docs/schema/reference.md:442
+msgid ""
+"When a contract is coming up for renewal or replacement, and there is a "
+"contracting process to award  the renewal/replacement contract;"
+msgstr ""
+"Lorsqu'un contrat prévoit son renouvellement ou son remplacement, et qu'il "
+"existe un processus de passation des marchés pour attribuer le contrat de "
+"renouvellement/remplacement;"
+
+#: ../../docs/schema/reference.md:444
+msgid ""
+"In all these cases, the `relatedProcess` block should be used to cross-"
+"reference between the relevant open contracting processes using their "
+"`ocid`."
+msgstr ""
+"Dans tous ces cas, le bloc `relatedProcess` peut être utilisé pour faire un "
+"renvoi entre les processus de passation de marchés connexes en utilisant "
+"leur `ocid`."
+
+#: ../../docs/schema/reference.md:453
+msgid "A related process can be declared at two points in an OCDS release."
+msgstr ""
+"Un processus connexe peut être déclaré à deux endroits dans une instance "
+"OCDS."
+
+#: ../../docs/schema/reference.md:455
+msgid ""
+"**(1) At the release level** - used to point backwards to prior processes, "
+"such as planning or framework establishment."
+msgstr ""
+"**(1) Au niveau de l'instance** - utilisé pour pointer vers des processus "
+"précédents, tels que la planification ou l'établissement d'un cadre."
+
+#: ../../docs/schema/reference.md:457
+msgid ""
+"**(2) At the contract level** - used to point onward to sub-contracts, "
+"renewal or replacement processes that relate solely to the particular "
+"contract the property appears in."
+msgstr ""
+"**(2) Au niveau du contrat** - utilisé pour pointer vers des processus de "
+"sous-traitance, de renouvellement ou de remplacement qui concernent "
+"uniquement le contrat dans lequel apparaît la propriété `relatedProcess`."
+
+#: ../../docs/schema/reference.md:459
+msgid ""
+"As well as providing this machine-readable link between processes, "
+"publishers may also provide links to human-readable documentation in the "
+"relevant `documents` blocks. For example:"
+msgstr ""
+"En plus de fournir ce lien lisible par une machine entre les processus, les "
+"éditeurs peuvent également fournir des liens vers une documentation lisible "
+"par un humain dans les composants `documents` adaptés. Par exemple :"
+
+#: ../../docs/schema/reference.md:461
+msgid ""
+"When recording a `release/relatedProcess` pointing to the ocid of the "
+"planning process that resulted in a tender, a `tender/documents` entry with "
+"a `documentType` of 'procurementPlan' and a link to web pages about the "
+"procurement plan could be provided;"
+msgstr ""
+"Lors de l'enregistrement d'un `release/relatedProcess` pointant vers "
+"l'`ocid` du processus de planification qui a débouché sur un appel d'offres,"
+" une entrée `tender\\documents` avec un `documentType` indiquant la valeur "
+"`procurementPlan` et un lien vers les pages Web relatives au plan d'achat "
+"public pourrait être renseignée dans le composant `documents` ;"
+
+#: ../../docs/schema/reference.md:462
+msgid ""
+"When recording a `contract/relatedProcess` pointing to the ocid of a  sub-"
+"contracting process, a `contract/documents` entry with a `documentType` of "
+"'subContract' and a title that describes it as the subcontracting process, "
+"could be provided;"
+msgstr ""
+"Lors de l'enregistrement d'un `contract/relatedProcess` pointant vers "
+"l'`ocid` d'un processus de sous-traitance, une entrée `contract/documents` "
+"avec un `documentType` indiquant la valeur `subContract` et un titre le "
+"décrivant dans le processus de sous-traitance pourrait être fourni dans le "
+"composant `documents`;"
+
+#: ../../docs/schema/reference.md:463
+msgid ""
+"When recording a `contract/relatedProcess` pointing to the ocid of a tender "
+"process to renew a given contract, a `contract/documents` entry with a "
+"`documentType` of 'tenderNotice' and a title that describes it as the "
+"successor process, could be provided;"
+msgstr ""
+"Lors de l'enregistrement d'un `contract/relatedProcess` pointant vers "
+"l'`ocid` d'un processus d'appel d'offres pour renouveler un contrat donné, "
+"une entrée `contract/documents` avec un `documentType` indiquant la valeur "
+"`tenderNotice` et un titre le décrivant comme le processus lui succédant "
+"pourrait être fourni dans le composant `documents`;"
+
+#: ../../docs/schema/reference.md:467
+msgid ""
+"The [Location](https://extensions.open-"
+"contracting.org/en/extensions/location/v1.1.4/) extension can be used to "
+"provide location information."
+msgstr ""
+"L'extension [Location](https://extensions.open-"
+"contracting.org/en/extensions/location/v1.1.4/) peut être utilisé pour "
+"fournir des informations de localisation."
+
+#: ../../docs/schema/reference.md:469
+msgid "Publisher"
+msgstr "Producteur de données"
+
+#: ../../docs/schema/reference.md:471
+msgid ""
+"The publisher block is used in release and record packages to identify the "
+"source of a dataset."
+msgstr ""
+"Le composant du producteur des données est utilisé dans les paquets "
+"d'instances et d'archives pour identifier la source d'un jeu de données."
+
+#: ../../docs/schema/reference.md:480
+msgid "Language"
+msgstr "Langue"
+
+#: ../../docs/schema/reference.md:482
+msgid ""
+"Many publishers need to be able to share key data in multiple languages. All"
+" free-text title and description fields in the Open Contracting Data "
+"Standard can be given in one or more languages."
+msgstr ""
+"De nombreux producteurs de données doivent être en mesure de partager des "
+"données clés en plusieurs langues. Tous les titres et les descriptions des "
+"champs en texte libre dans le standard OCDS peuvent être renseignés dans une"
+" ou plusieurs langues."
+
+#: ../../docs/schema/reference.md:484
+msgid ""
+"Language variations are included by a copy of multi-lingual fields, suffixed"
+" with a language code."
+msgstr ""
+"Les variations de la langue sont comprises dans des champs multilingues, "
+"avec pour suffixe un code de langue."
+
+#: ../../docs/schema/reference.md:486
+msgid "E.g. `title` and `title_es`"
+msgstr "Par exemple `title` et `title_es`"
+
+#: ../../docs/schema/reference.md:488
+msgid ""
+"In order to allow users to identify the language used in non-suffixed "
+"fields, OCDS release and records should declare the default language in the "
+"`language` field."
+msgstr ""
+"Afin de permettre aux utilisateurs d'identifier la langue utilisée dans les "
+"champs non-suffixés, les instances OCDS et les archives doivent déclarer la "
+"langue par défaut dans le champ `language`."
+
+#: ../../docs/schema/reference.md:490
+msgid ""
+"Languages must be identified using language tags taken from "
+"[BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 "
+"values in order to accommodate variations in dialect where this is "
+"important. However, publishers **should** use the lowercase two-letter "
+"[ISO639-1 language "
+"tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast "
+"majority of circumstances, to avoid users having to distinguish between sub-"
+"tag variations (for example, OCDS publishers should use 'en' instead of "
+"'en_US' or 'en_GB')."
+msgstr ""
+"Les langues doivent être identifiées en utilisant les codes de langues "
+"telles que définies par [BCP47](http://tools.ietf.org/html/bcp47). OCDS "
+"autorise l'utilisation des codes proposés par BCP47 afin de tenir compte des"
+" variations de dialecte lorsque c'est justifié. Cependant, les producteurs "
+"de données **doivent** utiliser des [codes ISO-639-1 à deux lettres] "
+"(http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) dans la grande "
+"majorité des cas, et ne devraient pas supposer que les utilisateurs sont en "
+"mesure de faire la distinction entre les variations de codes associées au "
+"dialecte (par exemple, les producteurs de données OCDS sont fortement "
+"invités à utiliser 'fr' plutôt que 'fr_FR' ou 'fr_BE')."
+
+#: ../../docs/schema/reference.md:492
+msgid ""
+"To include a language variation of a field, the field name must be suffixed "
+"with _ and the appropriate language tag. For example: `title_es` for "
+"Spanish."
+msgstr ""
+"Pour inclure une variation linguistique d'un champ, _ et le code de la "
+"langue doivent être ajoutés au nom du champ. Par exemple : `title_es` pour "
+"l'Espagnol."
+
+#: ../../docs/schema/reference.md:494
+msgid "Worked example"
+msgstr "Exemple d'utilisation"
+
+#: ../../docs/schema/reference.md:496
+msgid ""
+"A contract for ‘Software consultancy services’ is published in a release "
+"with the default language sent to ‘en’ (the ISO639-1 code for English). The "
+"following examples give the description of an item as English, French and "
+"Spanish."
+msgstr ""
+"Un contrat pour des \"services de conseil en logiciels\" peut être publié "
+"avec l'anglais comme langue par défaut grâce au code ‘en’ ('le code ISO "
+"639-1 pour l'anglais). Les exemples suivants donnent la description d'un "
+"livrable en anglais, français et espagnol."
+
+#: ../../docs/schema/reference.md:498
+msgid "**json**"
+msgstr "**json**"
+
+#: ../../docs/schema/reference.md:507
+msgid "**csv**"
+msgstr "**csv**"
+
+#: ../../docs/schema/reference.md:516
+msgid "Release handling"
+msgstr "Traitement des livraisons"
+
+#: ../../docs/schema/reference.md:518
+msgid ""
+"The full OCDS data model is based on the idea of publishing a new release "
+"every time information about a contracting process changes. This way, users "
+"can gain a full view of change over time, and third-parties can  understand "
+"what needs to be updated in any system that is tracking the progress of a "
+"contracting process."
+msgstr ""
+"L'ensemble du modèle de données OCDS repose sur l'idée de publier une "
+"nouvelle instance à chaque fois qu'un processus de passation de marché subit"
+" un changement de quelque nature que ce soit. Ainsi, les usagers peuvent "
+"obtenir une vue complète des changements au fil du temps, et les tierces-"
+"parties peuvent comprendre ce qui doit être mis à jour dans tout système qui"
+" fait le suivi du déroulement d'un processus de passation de marché."
+
+#: ../../docs/schema/reference.md:520
+msgid ""
+"Publishers will need to choose how to generate new releases, and whether to "
+"repeat information in each release, or just to provide changes. This choice "
+"ought to be based on an understanding of the [merging process](merging) that"
+" is used to generate a snapshot record of a full contracting process."
+msgstr ""
+"Les producteurs de données devront aussi choisir comment générer de "
+"nouvelles instances, et si les informations doivent être répétées dans "
+"chaque instance, ou si seuls les changements doivent être indiqués. Ce choix"
+" doit être fondé sur une bonne compréhension du [processus de "
+"fusion](merging), utilisé pour produire un instantané du processus complet "
+"de passation de marchés, sous la forme d'une archive."
+
+#: ../../docs/schema/reference.md:522
+msgid ""
+"In this model, publishers need to to pay careful attention to null values "
+"and missing fields."
+msgstr ""
+"Ce modèle impose également aux producteurs de données de prêter tout "
+"particulièrement attention aux valeurs nulles et aux champs manquants."
+
+#: ../../docs/schema/reference.md:524
+msgid "Empty fields"
+msgstr "Champs vides"
+
+#: ../../docs/schema/reference.md:526
+msgid ""
+"Fields that are not being used, or that have no value, should be excluded in"
+" their entirety (key and value) from a published file."
+msgstr ""
+"Les champs qui ne sont pas utilisés, ou qui ont pas de valeur, peuvent être "
+"supprimés (clé et valeur) d'un fichier publié."
+
+#: ../../docs/schema/reference.md:528
+msgid ""
+"Only including fields which have values will keep versioned datasets "
+"cleaner."
+msgstr ""
+"Le fait de n'inclure que les champs qui ont des valeurs permet de garder les"
+" jeux de données versionnés plus propre."
+
+#: ../../docs/schema/reference.md:530
+msgid "Emptying fields and values"
+msgstr "Champs vides et valeurs"
+
+#: ../../docs/schema/reference.md:532
+msgid ""
+"There can be cases where a publisher needs to remove, rather than update, a "
+"value which was set in a previous release. In this case, the fields must be "
+"set to `null`. See the [merging documentation](merging) for more details."
+msgstr ""
+"Dans certains cas, un producteur de données doit supprimer, plutôt que de "
+"mettre à jour, une valeur qui a été créée dans une version précédente. Dans "
+"ce cas, les champs doivent être présents et la valeur doit être `null`. Voir"
+" la [documentation de fusion](merging) pour plus de détails."
