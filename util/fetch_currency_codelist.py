@@ -13,7 +13,9 @@ from helper import json_dump, json_load, schema_dir
 
 
 def get_and_parse_xml(url):
-    return etree.fromstring(requests.get(url).content)
+    response = requests.get(url)
+    response.raise_for_status()
+    return etree.fromstring(response.content)
 
 
 if __name__ == '__main__':
