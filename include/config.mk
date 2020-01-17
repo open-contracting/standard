@@ -22,8 +22,6 @@ DIST_FILES=
 POT_DIR=$(BUILD_DIR)/locale
 # The prefix, if any, to the schema and codelists domains.
 DOMAIN_PREFIX=
-# Directory containing assets to copy to the build directory (no trailing slash).
-ASSETS_DIR=assets
 # The Transifex project name.
 TRANSIFEX_PROJECT=open-contracting-standard-1-1
 # Any additional extract targets.
