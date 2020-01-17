@@ -1,38 +1,28 @@
 # Getting Help
 
-The Open Contracting Data Standard help-desk is available to support you in implementing or using OCDS, and to assist in the ongoing development of the standard.
+## OCDS Helpdesk
 
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-   :glob:
-   :hidden:
+The Open Contracting Data Standard (OCDS) Helpdesk is available to support you in publishing or using OCDS data, and to assist in the ongoing development of the standard.
 
-   tools
+If you are planning to publish or use OCDS data, then the OCDS Helpdesk is on-hand to offer advice and input, by:
 
-```
+* Helping you identify approaches for converting data from your existing systems to OCDS
+* Suggesting existing tools and services that can help you publish or use OCDS data
+* Providing guidance on mapping your data structures to OCDS
+* Giving you feedback on draft data files, and checking the structure of your data
 
-If are are planning to publish or use data using the Open Contracting Data Standards then the OCDS help-desk team are on hand to offer advice and input.
-
-We can:
-
-* Help you identify approaches for converting data from your existing systems to OCDS;
-* Suggest existing tools and services which can help you publish or use OCDS data;
-* Provide guidance on mapping your data structures to the standard;
-* Give you feedback on draft data files, and support with validation of your data;
+Helpdesk support is available in English and Spanish and delivered through collaboration with the [Open Data Services Cooperative](https://opendataservices.coop) in the United Kingdom and [Centro de Desarrollo Sostenible](http://www.cds.com.py) in Paraguay.
 
 Through funding from the Open Contracting Partnership, this support is provided free of charge.
 
-E-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with your questions, and a member of the help-desk team will be in touch with you soon.
+Please e-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with your questions, and a member of the OCDS Helpdesk will be in touch with you soon.
 
-<div class="example hint" markdown=1>
+## OCDS Community
 
-<p class="first admonition-title">OCDS Community</p>
+The Open Contracting community is a great source of input and support. You can ask questions, discuss ideas, and share news on your projects on the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) mailing list.
 
-The Open Contracting community is also a good source of input and support. You can ask questions, discuss ideas for using the standard, and share news on your projects on the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) mailing list.
+You can also contribute directly to public discussions about implementing the standard and give feedback on its development development, via the issue tracker of its [GitHub repository](https://github.com/open-contracting/standard).
 
-Announcements about proposed updates to the specification, and periods for comment, will be made to the mailing list.
+## OCDS Tools
 
-Developers, or those wishing to provide technical input on the standard, might wish to go straight to the [GitHub repository](https://github.com/open-contracting/standard).
-
-</div>
+There are a growing number of tools available to support the publication and use of OCDS data. Please refer to the [Open Contracting Tools Directory](https://www.open-contracting.org/resources/open-contracting-tools-directory/).

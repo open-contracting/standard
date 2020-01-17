@@ -11,6 +11,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#955](https://github.com/open-contracting/standard/pull/955) Move Governance page to Reference section. Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 * [#959](https://github.com/open-contracting/standard/pull/959) History page: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
+* [#960](https://github.com/open-contracting/standard/pull/960) Support page: Merge Tools page into Support page.
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
 * Build the documentation [#875](https://github.com/open-contracting/standard/pull/875) [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923).
 

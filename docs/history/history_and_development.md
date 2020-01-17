@@ -22,6 +22,8 @@ The timeline of development was:
 
 Over 150 people provided comments, feedback and input into the specification over the year of initial development.
 
+A number of older tools, created during the development of the standard, can be found in the [Open Contracting Archive GitHub organization](https://github.com/open-contracting-archive).
+
 ### Upgrade history
 
 * May 31, 2017: Version 1.1: [Governance Report & Changelog](https://docs.google.com/document/d/1mpLX7R9S_DyPTPZFtoAh0Gt0IHZLDt4WZbM-nzy8xUY/edit)
