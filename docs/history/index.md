@@ -7,6 +7,5 @@
 
    changelog
    history_and_development
-   credits
 
 ```
