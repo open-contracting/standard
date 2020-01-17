@@ -4,23 +4,27 @@ The Open Contracting Data Standard is a core product of the [Open Contracting Pa
 
 ## Development process
 
-The development of the 1.0 Release Candidate specification took place through a year-long process of supply and demand-side research, and open consultation. This processes has included:
+### Version 1.0.0
+
+The development of the 1.0 Release Candidate took place through a year-long process of supply and demand-side research, and open consultation, with reference to the [Principles for Digital Development](https://digitalprinciples.org/). The process included:
 
 * **Assessing data currently supplied through contract portals** - in order to understand the data that governments currently hold and publish, and how it is structured. To carry out this analysis we created the [Contracting Data Comparison tool](http://ocds.open-contracting.org/opendatacomparison/), and [mapped](http://ocds.open-contracting.org/opendatacomparison/datamap/) the fields of data available from a wide range of existing government contracting data portals around the world. 
-* **Exploring demand for contracting data** - through field work, interviews and online engagement with different communities and individuals who many use of contract information. The information needs of users were catalogued, and fed into the requirements for the specification structure and fields. We developed a series of priority use cases to guide implementation and adoption of the specification. [Read the demand-side assessment](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit?usp=sharing)
+* **Exploring demand for contracting data** - through field work, interviews and online engagement with different communities and individuals who many use of contract information. The information needs of users were catalogued, and fed into the requirements for the specification structure and fields. We developed a series of priority use cases to guide implementation and adoption of the specification. [Read the demand-side assessment](https://docs.google.com/document/d/1zdgqSf-LUFVxO6Y_7v1cQf7l0vx35-p502jAI49JRmQ/edit).
 * **Iterative, open development** - we offered transparency, and gained broad feedback to improve the specification by offering early releases for comment ([alpha](https://standard.open-contracting.org/legacy/r/0__2__0/) and [beta](https://standard.open-contracting.org/legacy/r/0__3__2/)) and by maintaining a [public issue tracker](https://github.com/open-contracting/standard/issues). We engaged contracting, open-data, and other stakeholders through mailing lists and other online spaces. Finally, development sprints held at PyCon Montreal and PyCon Europe 2014 also actively contributed to the development of the specification. 
 
-Over 150 people provided comments, feedback and input into the specification over the year of initial development.
-
-The development process took place with reference to the [Greentree Consensus Principles for Digital Development](http://ict4dprinciples.org/). 
-
-## Development stages
+The timeline of development was:
 
 * **research** (November 2013 - May 2014) - User requirements gathered, and existing data supply explored. Technical options for the specification considered and consulted on.
 * **alpha** (June 2014) - An [outline data model was shared](https://standard.open-contracting.org/legacy/r/0__2__0/), and high-level concepts outlined for consultation. Design of individual field-level specifications began.
 * **beta** (September 2014) - A proposed schema, including field-level definitions was put forward, and opened for consultation. Feedback suggested a number of substantial changes.
 * **release candidate** (November 2014) - The specification was released for final review.
 * **release** (July 2015) -  The initial version (1.0) was released with minor bug fixes.
+
+Over 150 people provided comments, feedback and input into the specification over the year of initial development.
+
+### Upgrade history
+
+* May 31, 2017: Version 1.1: [Governance Report & Changelog](https://docs.google.com/document/d/1mpLX7R9S_DyPTPZFtoAh0Gt0IHZLDt4WZbM-nzy8xUY/edit)
 
 ## Appreciation
 
