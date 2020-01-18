@@ -16,21 +16,6 @@ The Government of UK uses identifiers from the UK Companies House to uniquely id
     :expand: identifier, additionalIdentifiers
 ```
 
-The publisher also collects the VAT identification number for suppliers. The additional identifier is included as an entry in the `additionalIdentifiers` array, using the "GB-VAT" scheme. Note that the VAT registry is not present in [org-id.guide](http://org-id.guide/), but the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to build the "GB-VAT" code used in the `scheme` field: the two-letter country prefix ("GB") plus a short abbreviation for the registry ("VAT").
+The publisher also collects two extra identifiers, which are disclosed in the `additionalIdentifiers` block. The first one is the VAT identification number for suppliers. Note that the VAT registry is not present in [org-id.guide](http://org-id.guide/), but the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to build the "GB-VAT" code used in the `scheme` field: the two-letter country prefix ("GB") plus a short abbreviation for the registry ("VAT").
 
-In this fictional example, the publisher decides to add identifiers from an internal supplier list used in Contracts Finder, the platform used in England to publish opportunities and contract information. A new entry is included in the `parties/additionalIdentifiers` section that looks as follows:
-
-```
-"additionalIdentifiers": [
-  {
-    "scheme": "GB-VAT",
-    "id": "987654321"
-  },
-  {
-    "id": "100012",
-    "scheme": "X-GB-CFLOCAL"
-  }
-]
-```
-
-The code for the local list has the "X-" prefix to indicate that the code represents a local list. 
+The last identifier in the `additionalIdentifiers` array belongs to an internal supplier list used in Contracts Finder, the platform used in England to publish opportunities and contract information. The publisher built the "X-GB-CF" code for the list, and the "X-" prefix indicates that the code represents a local list.
