@@ -114,5 +114,3 @@ The [merging documentation](../schema/merging) set out how to combine multiple r
    :expand: compiledRelease, tender, award, contracts, implementation, transactions, tag, documents
 
 ```
-
-<center><img src="../../_static/png/release_square.png" height="200"/></center>
