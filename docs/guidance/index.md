@@ -9,6 +9,7 @@
    model/related_processes
    model/amendments
    model/extensions
+   model/organizational_units
 ```
 
 ## Publishing data
