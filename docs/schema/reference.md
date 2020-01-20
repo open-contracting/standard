@@ -227,7 +227,7 @@ See [document](#document) reference below.
 
 ### Amendment
 
-A release may amend properties from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for changes to a tender, award or contract to be explicitly declared. 
+A release may amend values from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for changes to a tender, award or contract to be explicitly declared.
 
 The amendment array in a tender, award or contract block provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
 
@@ -460,7 +460,7 @@ A related process can be declared at two points in an OCDS release.
 
 **(1) At the release level** - used to point backwards to prior processes, such as planning or framework establishment.
 
-**(2) At the contract level** - used to point onward to sub-contracts, renewal or replacement processes that relate solely to the particular contract the property appears in.  
+**(2) At the contract level** - used to point onward to sub-contracts, renewal or replacement processes that relate solely to the particular contract the field appears in.
 
 As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` blocks. For example:
 

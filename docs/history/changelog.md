@@ -26,6 +26,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 ### Documentation
 
 * [#965](https://github.com/open-contracting/standard/pull/965) Add extensions list for the Transaction object.
+* [#967](https://github.com/open-contracting/standard/pull/967) Use "field" to refer to OCDS fields and "property" to refer to JSON Schema properties.
 
 ## [1.1.4] - 2019-06-25
 
