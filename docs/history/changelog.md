@@ -19,6 +19,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ## [1.1.5] - Unreleased
 
+### Codelists
+
+* [#966](https://github.com/open-contracting/standard/pull/966) Remove the discouragement of the 'UNSPSC' code.
+
 ### Documentation
 
 * [#965](https://github.com/open-contracting/standard/pull/965) Add extensions list for the Transaction object.
