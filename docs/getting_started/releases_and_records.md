@@ -4,8 +4,8 @@ There are two kinds of OCDS document:
 
 <table>
     <tr>
-        <td width="50%" align="center"><img src="../../_static/png/green_release.svg.png" width="50%"></td>
-        <td width="50%" align="center"><img src="../../_static/png/green_compilation.svg.png" width="50%"></td>
+        <td width="50%" align="center"><img src="../../_static/svg/green_release.svg" width="50%"></td>
+        <td width="50%" align="center"><img src="../../_static/svg/green_compilation.svg" width="50%"></td>
     </tr>
     <tr>
 <td valign="top" style="padding:10px;" markdown=1>
@@ -114,5 +114,3 @@ The [merging documentation](../schema/merging) set out how to combine multiple r
    :expand: compiledRelease, tender, award, contracts, implementation, transactions, tag, documents
 
 ```
-
-<center><img src="../../_static/png/release_square.png" height="200"/></center>
