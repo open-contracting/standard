@@ -17,6 +17,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Build the documentation [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923) [#935](https://github.com/open-contracting/standard/pull/935) [#944](https://github.com/open-contracting/standard/pull/944) [#945](https://github.com/open-contracting/standard/pull/945) [#946](https://github.com/open-contracting/standard/pull/946) [#953](https://github.com/open-contracting/standard/pull/953) [#962](https://github.com/open-contracting/standard/pull/962).
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932).
 
+## [1.1.5] - Unreleased
+
+### Documentation
+
+* [#965](https://github.com/open-contracting/standard/pull/965) Add extensions list for the Transaction object.
+
 ## [1.1.4] - 2019-06-25
 
 ### Advisories

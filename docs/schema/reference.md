@@ -207,6 +207,12 @@ The transaction block is modelled on the [International Aid Transparency Initiat
 
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
+
+```eval_rst
+.. extensionlist:: The following extensions are available for transactions
+   :list: transaction
+```
+
 #### Milestones
 
 See [milestone](#milestone) reference below.
