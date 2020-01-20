@@ -134,7 +134,7 @@ Make each **release** and **record** describing a contracting process accessible
 
 Provide feeds that detail recently changed information, and that allow users to search for specific kinds of tenders, awards or contracts (for example, by the classification of goods and services being procured). 
 
-Use [established protocols](../hosting/#discovery-and-apis) to support discovery of your data, and to provide atom feeds of recently updated data. At this level, publishers may also expose data through an API, following community established conventions for API operation.
+Use established protocols to support discovery of your data, and to provide atom feeds of recently updated data. At this level, publishers may also expose data through an API, following community established conventions for API operation.
 
 The use of these protocols, and following API conventions, will allow aggregators and other analysts to integrate this open contracting data in minutes and hours or work, rather than days, weeks and months. 
 
