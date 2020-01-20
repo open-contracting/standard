@@ -1,4 +1,4 @@
-# Data files, APIs and discovery
+# Data files and APIs
 
 Different users have different needs when it comes to accessing OCDS data. 
 
