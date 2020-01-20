@@ -7,7 +7,7 @@ $(function () {
     var template = '<dl><dt><a class="reference external" href=""></a></dt><dd></dd></dl>';
 
     // Append an empty list for community extensions.
-    $('.extension_list p.hide.last').after('<dl class="docutils hide community-list"></dl>').wrapInner('<small></small>');
+    $('.extension_list p.hide').after('<dl class="docutils hide community-list"></dl>').wrapInner('<small></small>');
 
     // Get the community extensions to add to the documentation.
     $.ajax({
@@ -29,7 +29,7 @@ $(function () {
         $item.find('a').attr('href', extension.documentation_url).text(extensionName);
         $item.find('dd').text(extensionDescription);
         $(extensionListId).find('.community-list').append($item.html()).removeClass('hide');
-        $(extensionListId).find('p.last').removeClass('hide');
+        $(extensionListId).find('p.hide').removeClass('hide');
       });
 
       // Remove empty extension lists.
