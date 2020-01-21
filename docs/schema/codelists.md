@@ -10,6 +10,8 @@ A **closed codelist** provides **mandatory codes** and publishers must use value
 
 Codes are case-sensitive, and are generally provided as English language camelCase. Codes must not be translated, though the OCDS team will work with publishers to translate code titles and definitions.
 
+The release schema, in [JSON Schema](../../release-schema.json), has a `codelist` property to indicate the [CSV file](../../codelists/) that defines the codes in the codelist (shown as tables below). It also has an `openCodelist` property, to indicate whether the codelist is open or closed.
+
 ## Open Codelists
 
 ### Party Role

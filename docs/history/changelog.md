@@ -33,6 +33,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#968](https://github.com/open-contracting/standard/pull/968) Use "field" to refer to OCDS fields and "property" to refer to JSON Schema properties.
 * [#970](https://github.com/open-contracting/standard/pull/970) Add links to access the release schema as a CSV spreadsheet and via the Field-Level Mapping Template. Add notes to describe the alternatives for browsing the schemas.
 * [#970](https://github.com/open-contracting/standard/pull/970) Release Schema page: Correct the description of compiled releases.
+* [#973](https://github.com/open-contracting/standard/pull/973) Codelists page: Describe the `openCodelist` and `codelist` JSON Schema properties.
 
 ## [1.1.4] - 2019-06-25
 
