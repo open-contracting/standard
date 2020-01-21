@@ -23,6 +23,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * [#967](https://github.com/open-contracting/standard/pull/967) Remove the discouragement of the 'UNSPSC' code.
 
+### Schema
+
+* [#969](https://github.com/open-contracting/standard/pull/969) Clarify the instruction for setting the `Unit.id` field.
+
 ### Documentation
 
 * [#965](https://github.com/open-contracting/standard/pull/965) Add extensions list for the Transaction object.
