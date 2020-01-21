@@ -6,6 +6,15 @@ Releases are immutable – presenting information about a particular event in th
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
+```eval_rst
+.. admonition:: Browsing the schema
+   :class: note
+
+   .. markdown::
+
+      This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as [JSON Schema](../../release-schema.json), download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
+```
+
 ## Release structure
 
 The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, arranged in the following structure.
@@ -59,7 +68,8 @@ All new information about a contracting process is described within a release.
 Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
 
 ```eval_rst
-.. note:: Parties
+.. admonition:: Parties
+   :class: note
 
    Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points. 
 
@@ -254,7 +264,8 @@ The following building blocks are commonly re-used throughout the standard.
 ### OrganizationReference
 
 ```eval_rst
-.. note:: Organizations
+.. admonition:: Organizations
+   :class: note
 
    The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
 
