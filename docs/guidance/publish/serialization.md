@@ -90,6 +90,7 @@ Instead, data with a one-to-many relationship can be represented using a multi-t
 
 ```eval_rst
 .. admonition:: CSV encoding
+   :class: note
 
    OCDS CSV files ought to be encoded in either UTF-8 or Windows-1252.
 

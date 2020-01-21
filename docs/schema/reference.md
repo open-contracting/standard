@@ -8,6 +8,7 @@ Releases are immutable – presenting information about a particular event in th
 
 ```eval_rst
 .. admonition:: Browsing the schema
+   :class: note
 
    .. markdown::
 
@@ -68,6 +69,7 @@ Each of the parties (organizations or other participants) referenced in a releas
 
 ```eval_rst
 .. admonition:: Parties
+   :class: note
 
    Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points. 
 
@@ -263,6 +265,7 @@ The following building blocks are commonly re-used throughout the standard.
 
 ```eval_rst
 .. admonition:: Organizations
+   :class: note
 
    The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
 
