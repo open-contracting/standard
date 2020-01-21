@@ -6,6 +6,14 @@ Releases are immutable – presenting information about a particular event in th
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
+```eval_rst
+.. admonition:: Browsing the schema
+
+   .. markdown::
+
+      This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as [JSON Schema](../../release-schema.json), download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
+```
+
 ## Release structure
 
 The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, arranged in the following structure.
