@@ -20,7 +20,7 @@ Whenever using terms from outside the OCDS standard, we encourage the publisher 
 
 ### Validator and application conformance
 
-As of version 1.1, release/record packages must contain a version property explicitly declaring their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless otherwise instructed by the user.
+As of OCDS 1.1, release/record packages must include a `version` field to explicitly declare their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless otherwise instructed by the user.
 
 Validators and applications should:
 
@@ -30,11 +30,11 @@ Validators and applications should:
 
 * Report to the user when it encounters extensions it does not support;
 
-Validators **must** report a warning to the user when they encounter properties not covered by the version of the schema and extensions that they are validating against. 
+Validators **must** report a warning to the user when they encounter fields not covered by the version of the schema and extensions that they are validating against.
 
-Applications **may** report a warning to use the user when they encounter properties they do not support, or **may** discard these properties.
+Applications **may** report a warning to use the user when they encounter fields they do not support, or **may** discard these fields.
 
-The handling of additional properties and deprecated properties is implementation defined.
+The handling of additional fields and deprecated fields is implementation defined.
 
 For behaviours that are implementation defined, applications should clearly document their chosen approach. 
 
