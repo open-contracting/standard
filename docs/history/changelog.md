@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
+These release notes describe what's new in each version. OCDS adheres to [Semantic Versioning](https://semver.org/).
 
 ## Iterative improvements
 
