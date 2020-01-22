@@ -9,6 +9,7 @@
    model/related_processes
    model/amendments
    model/extensions
+   model/awards_contracts_buyers_suppliers
 ```
 
 ## Publishing data
