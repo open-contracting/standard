@@ -29,4 +29,5 @@ script:
   - curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
   - if [ $TRAVIS_REPO_SLUG = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
   - make
-  - py.test
+  - python util/add_translation_notes.py
+  - pytest

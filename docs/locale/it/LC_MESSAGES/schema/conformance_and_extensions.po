@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Alessio Dragoni <ad@sciamlab.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-17 11:28-0500\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/OpenDataServices/teams/59224/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/schema/conformance_and_extensions.md:3
+msgid "Conformance and extensions"
+msgstr "Conformità ed estensioni"
+
+#: ../../docs/schema/conformance_and_extensions.md:5
+msgid ""
+"<span class=\"lead\">To maximize the interoperability of data published "
+"using the Open Contracting Data Standard we have set out key principles for "
+"**conforming** to the standard. These also create space for **extensions** "
+"of the standard to respond to particular publisher or user needs.</span>"
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:7
+msgid "Conformance"
+msgstr "Conformità"
+
+#: ../../docs/schema/conformance_and_extensions.md:9
+msgid "Publication conformance"
+msgstr "Conformità della pubblicazione"
+
+#: ../../docs/schema/conformance_and_extensions.md:11
+msgid ""
+"A conforming implementation *may* use only a subset of this specification's "
+"terms."
+msgstr ""
+"Un'implementazione conforme *può* utilizzare solo un sottoinsieme dei "
+"termini di questa specifica."
+
+#: ../../docs/schema/conformance_and_extensions.md:12
+msgid ""
+"It *must not* use terms from outside this specification's terms where this "
+"specification's terms would suffice."
+msgstr ""
+"*Non deve* usare termini al di fuori dei termini di questa specifica se "
+"quelli presenti sono sufficienti."
+
+#: ../../docs/schema/conformance_and_extensions.md:13
+msgid ""
+"Its usage of this specification's terms *must* be consistent with the "
+"semantics of those terms."
+msgstr ""
+"L'uso dei termini in questa specifica *deve* essere coerente con la "
+"semantica di quei termini."
+
+#: ../../docs/schema/conformance_and_extensions.md:14
+msgid ""
+"It *may* use terms from outside this specification's terms where this "
+"specification's terms are insufficient."
+msgstr ""
+"*Può* usare termini al di fuori dei termini di questa specifica quando "
+"questi non sono sufficienti."
+
+#: ../../docs/schema/conformance_and_extensions.md:15
+msgid ""
+"If an implementation serializes to JSON, its serializations *must* "
+"[validate](https://standard.open-contracting.org/review/) against this "
+"specification's JSON Schema."
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:17
+msgid ""
+"Whenever using terms from outside the OCDS standard, we encourage the "
+"publisher or user responsible to consult with the community on the best "
+"approach to adopt."
+msgstr ""
+"Quando utilizzi termini al di fuori dello standard OCDS, incoraggiamo "
+"l'editore o l'utente responsabile a consultare la comunità sul miglior "
+"approccio da adottare."
+
+#: ../../docs/schema/conformance_and_extensions.md:19
+msgid ""
+"(Our publication conformance section is [based on the Popolo "
+"Project](http://www.popoloproject.com/specs/#conformance) approach.)"
+msgstr ""
+"(La nostra sezione sulla conformità della pubblicazione è [basata "
+"sull'approccio Popolo "
+"Project](http://www.popoloproject.com/specs/#conformance).)"
+
+#: ../../docs/schema/conformance_and_extensions.md:21
+msgid "Validator and application conformance"
+msgstr "conformità e validazione dell'applicazione"
+
+#: ../../docs/schema/conformance_and_extensions.md:23
+msgid ""
+"As of version 1.1, release/record packages must contain a version property "
+"explicitly declaring their version. All packages without an explicit version"
+" declared should be validated against the version 1.0 schema unless "
+"otherwise instructed by the user."
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:25
+msgid "Validators and applications should:"
+msgstr "I validatori e le applicazioni dovrebbero:"
+
+#: ../../docs/schema/conformance_and_extensions.md:27
+msgid ""
+"Report to the user when it encounters a version of the data it does not "
+"support;"
+msgstr ""
+"Segnalare all'utente se è stata rilevata una versione dei dati non "
+"supportata;"
+
+#: ../../docs/schema/conformance_and_extensions.md:29
+msgid ""
+"Reject data from a higher integer version than it supports, unless otherwise"
+" instructed by the user;"
+msgstr ""
+"Rifiutare i dati da una versione più recente di quella supportata, se non "
+"diversamente indicato dall'utente;"
+
+#: ../../docs/schema/conformance_and_extensions.md:31
+msgid "Report to the user when it encounters extensions it does not support;"
+msgstr ""
+"Segnala all'utente quando vengono rilevate estensioni che non sono "
+"supportate;"
+
+#: ../../docs/schema/conformance_and_extensions.md:33
+msgid ""
+"Validators **must** report a warning to the user when they encounter "
+"properties not covered by the version of the schema and extensions that they"
+" are validating against."
+msgstr ""
+"I validatori **devono** segnalare un avviso all'utente quando incontrano "
+"proprietà non coperte dalla versione dello schema e delle estensioni per le "
+"quali si sta chiedendo la validazione."
+
+#: ../../docs/schema/conformance_and_extensions.md:35
+msgid ""
+"Applications **may** report a warning to use the user when they encounter "
+"properties they do not support, or **may** discard these properties."
+msgstr ""
+"Le applicazioni **possono** riportare un avviso per l'utente quando "
+"incontrano proprietà che non supportano, oppure **possono** scartare o non "
+"considerare queste proprietà."
+
+#: ../../docs/schema/conformance_and_extensions.md:37
+msgid ""
+"The handling of additional properties and deprecated properties is "
+"implementation defined."
+msgstr ""
+"La gestione di proprietà aggiuntive e proprietà deprecate è definita "
+"nell'implementazione."
+
+#: ../../docs/schema/conformance_and_extensions.md:39
+msgid ""
+"For behaviours that are implementation defined, applications should clearly "
+"document their chosen approach."
+msgstr ""
+"Per i comportamenti definiti nell'implementazione, le applicazioni devono "
+"documentare chiaramente l'approccio che è stato scelto."
+
+#: ../../docs/schema/conformance_and_extensions.md:41
+msgid "See also the [deprecation guidance](deprecation)."
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:43
+msgid "Extensions"
+msgstr "Estensioni"
+
+#: ../../docs/schema/conformance_and_extensions.md:45
+msgid ""
+"If you have additional fields which cannot be mapped to the OCDS schema or "
+"an existing extension, you should include these in your OCDS data and "
+"[create a new extension](../guidance/model/extensions) to document their "
+"structure and meaning."
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:47
+msgid ""
+"Extensions to the standard can add new objects and fields to accommodate "
+"specific local requirements. An extension must not be created if it is "
+"possible to use existing terms from the standard."
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:49
+msgid ""
+"Extensions ought to be documented and shared so that other publishers and "
+"users can draw upon them, and so that extensions can be considered for "
+"inclusion in a future version of the standard."
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:51
+msgid ""
+"The [Extension Explorer](../guidance/model/extensions) publishes details of "
+"known extensions."
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:53
+msgid ""
+"The schema for the standard by default allows for new fields, and does not "
+"fail validation of a file which contains unknown fields."
+msgstr ""
+"Lo schema dello standard per default consente nuovi campi e non invalida un "
+"file che contiene campi sconosciuti."
