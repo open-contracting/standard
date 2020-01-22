@@ -12,9 +12,9 @@ of a contract, as well as key dates from the process of tendering and awarding t
 
 * The contract implementation milestone block should be used for any event related to delivery of the contract.
 
-The nature of the milestone is indicated by the [milestone type codelist](../../schema/codelists#milestone-type).
+The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type).
 
-The lifecycle of the milestone should be modeled with the fields: `dueDate`, `dateMet`, `dateModified` and [status](../../schema/codelists/#milestone-status).
+The lifecycle of the milestone should be modeled with the fields: `dueDate`, `dateMet`, `dateModified` and [status](../../../schema/codelists/#milestone-status).
 
 ## Worked examples
 
