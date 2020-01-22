@@ -57,7 +57,7 @@ with `tender/status` = `active`, the actual dates for milestones in `tender/mile
 In the example below:
 
 * A contract is awarded to a user committee with milestones for project commencement and project completion.
-* The project starts later than expected. The project commencement milestone is updated with actual start date and the project completion milestone `status` is set to `notMet`.
+* The project starts later than expected. The project commencement milestone is updated with the actual start date and the project completion milestone `status` is set to `notMet`.
 * The project is completed earlier than expected. The project completion milestone is updated with the actual completion date.
 
 ```eval_rst
@@ -86,3 +86,9 @@ In the example below:
    :title: milestones-3
 
 ```
+
+Notes:
+
+* Contract implementation milestones should be kept updated as things progress
+* At the point of contract signature, a comparison between `tender/milestones` and `contract/implementation/milestones` 
+with a `milestone/type` of `delivery` or `reporting` should reveal how the negotiated contract differs from what was set out at tender time.
