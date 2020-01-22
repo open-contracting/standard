@@ -47,7 +47,7 @@ extract_markdown: current_lang.en
 	sphinx-build -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
 .PHONY: extract
-extract: extract_codelists extract_schema extract_markdown clean_current_lang
+extract: extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
 
 ### Transifex
 
@@ -81,7 +81,7 @@ pull:
 
 # Create a symlink for the language, so that file paths in `jsonschema` directives resolve.
 # (Don't use clean_current_lang as a prerequisite, as then it won't run as a prerequisite later.)
-$(LANGUAGES:.%=current_lang.%): current_lang.%: FORCE
+$(LANGUAGES:.%=current_lang.%): current_lang.%: $(BUILD_DIR)
 	rm -f $(BUILD_DIR)/current_lang
 	ln -s $* $(BUILD_DIR)/current_lang
 
@@ -102,15 +102,10 @@ build_source: current_lang.en
 $(TRANSLATIONS:.%=build.%): build.%: current_lang.%
 	sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
 
-# Copy the assets into the build directory.
-.PHONY: assets
-assets: $(BUILD_DIR)
-	if [ -n "$(ASSETS_DIR)" ]; then cp -r $(ASSETS_DIR) $(BUILD_DIR); fi
-
 .PHONY: source
-source: assets | build_source clean_current_lang
+source: build_source clean_current_lang
 
-$(TRANSLATIONS:.%=%): %: assets | build_source compile build.% clean_current_lang
+$(TRANSLATIONS:.%=%): %: build_source compile build.% clean_current_lang
 
 .PHONY: all
-all: assets | build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
+all: build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
