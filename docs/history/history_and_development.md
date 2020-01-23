@@ -20,7 +20,7 @@ The timeline was:
 
 ### Upgrade history
 
-* May 31, 2017: Version 1.1: [Governance Report & Changelog](https://docs.google.com/document/d/1mpLX7R9S_DyPTPZFtoAh0Gt0IHZLDt4WZbM-nzy8xUY/edit)
+* May 31, 2017: Version 1.1: [Summary note on version upgrade](https://www.open-contracting.org/resources/ocds-1-1-summary-note-version-upgrade/), [Governance report](https://docs.google.com/document/d/1mpLX7R9S_DyPTPZFtoAh0Gt0IHZLDt4WZbM-nzy8xUY/edit)
 
 Old tools that have been superseded or obsoleted by new tools can be found in the [Open Contracting Archive GitHub organization](https://github.com/open-contracting-archive).
 

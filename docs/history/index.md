@@ -4,8 +4,6 @@ The [Changelog](changelog) describes what's new in each version of OCDS. [Develo
 
 ```eval_rst
 .. toctree::
-   :maxdepth: 2
-   :glob:
    :hidden:
 
    changelog

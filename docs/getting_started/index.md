@@ -30,8 +30,6 @@ When you are done you could be producing data that looks something like the cont
 ```eval_rst
 .. toctree::
    :hidden:
-   :maxdepth: 2
-   :glob:
 
    use_cases
    contracting_process
