@@ -1,16 +1,23 @@
 # Codelists
 
-The Open Contracting Data Standard schema references a number of codelists in order to enable the interoperability of data. There are two kinds of codelist, **open** and **closed**.
+Some schema fields refer to codelists, to limit and standardize the possible values of the fields, in order to promote data interoperability.
 
-An **open codelist** provides **suggested codes**, but publishers may extend these lists with new codes.
+Codelists can either be open or closed. **Closed codelists** are intended to be comprehensive; for example, the [currency](#currency) codelist covers all currencies in the world. **Open codelists** are intended to be representative, but not comprehensive.
 
-For example, OCDS provide a list of the types of documents which can be attached to tenders, awards, contracts and milestones. However, a group of publishers might discover they have a need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they are encouraged to consult with the community through the [mailing list and GitHub platform](../support/index), and are encouraged to suggest the code for formal incorporation into the codelists.
+Publishers must use the codes in the codelists, unless no code is appropriate. If no code is appropriate and the codelist is **open**, then a publisher may use a new code outside those in the codelist. If no code is appropriate and the codelist is **closed**, then a publisher is encouraged to create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues) about adding a new code.
 
-A **closed codelist** provides **mandatory codes** and publishers must use values provided in the official list. Changes to closed codelists take place through the governance and revision process for the schema. 
+```eval_rst
+.. admonition:: Extending open codelists
+   :class: note
 
-Codes are case-sensitive, and are generally provided as English language camelCase. Codes must not be translated, though the OCDS team will work with publishers to translate code titles and definitions.
+   .. markdown::
+
+      If you use new codes outside those in an open codelist, please document the codes in an [OCDS extension](../guidance/model/extensions/) and in your [publication policy](../guidance/publish/publication_policy). Please also create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
+```
 
 The release schema, in [JSON Schema](../../release-schema.json), has a `codelist` property to indicate the [CSV file](../../codelists/) that defines the codes in the codelist (shown as tables below). It also has an `openCodelist` property, to indicate whether the codelist is open or closed.
+
+Codes are case-sensitive, and are generally provided as English language camelCase. Codes must not be translated, though the OCDS team will work with publishers to translate code titles and definitions.
 
 ## Open Codelists
 
