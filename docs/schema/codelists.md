@@ -14,7 +14,7 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
    .. markdown::
 
-      If you use new codes outside those in an open codelist, please document the codes in your [publication policy](../guidance/publish/publication_policy), and create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
+      If you use new codes outside those in an open codelist, please document the codes in an [OCDS extension](../guidance/model/extensions/) and in your [publication policy](../guidance/publish/publication_policy). Please also create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
 ```
 
 ## Open Codelists
