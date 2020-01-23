@@ -2,7 +2,7 @@
 
 The Open Contracting Data Standard schema references a number of codelists in order to enable the interoperability of data. There are two kinds of codelist, **open** and **closed**.
 
-An **open codelist** provides **suggested codes**, but publishers may extend these lists with new codes on the basis of consensus with other publishers, or by using a codes prefixed with 'x\_' to indicate that it is a local 'eXtensions' to the codelist. 
+An **open codelist** provides **suggested codes**, but publishers may extend these lists with new codes.
 
 For example, OCDS provide a list of the types of documents which can be attached to tenders, awards, contracts and milestones. However, a group of publishers might discover they have a need to identify another kind of document. These publishers would not need to wait for a future version of the standard to agree upon and add a new code to an open codelist, although they are encouraged to consult with the community through the [mailing list and GitHub platform](../support/index), and are encouraged to suggest the code for formal incorporation into the codelists.
 
@@ -32,8 +32,6 @@ Items should be classified using existing item classification schemes, such as t
    :header-rows: 1
    :file: ../../build/current_lang/codelists/itemClassificationScheme.csv
 ```
-
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../guidance/publish/publication_policy).
 
 ### Unit Classification Scheme
 
@@ -70,8 +68,6 @@ The code descriptions are necessarily broad, to cover their usage in a range of 
 
 Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
-This is an open codelist, and additional entries can be included with a x\_ prefix. 
-
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
@@ -97,8 +93,6 @@ The award criteria codelist describes the basis on which contract awards will be
    :file: ../../build/current_lang/codelists/awardCriteria.csv
 ```
 
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../guidance/publish/publication_policy).
-
 ### Submission Method
 
 The submission method codelist is used to identify the mechanism through which a submission can be made. 
@@ -108,9 +102,6 @@ The submission method codelist is used to identify the mechanism through which a
    :header-rows: 1
    :file: ../../build/current_lang/codelists/submissionMethod.csv
 ```
-
-This is an open codelist, and new values can be suggested outside of the main revision process for the standard, or local codes (prefixed by x\_) added by a publisher. Publishers are encouraged to include details of any additional codes they use and their definitions in their [publication policy](../guidance/publish/publication_policy).
-
 ### Related Process
 
 The related process block is used at the release level to point backwards to prior processes, such as planning or framework establishment, and at the contract level to point onwards to subcontracts or to renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
