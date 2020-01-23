@@ -33,7 +33,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#968](https://github.com/open-contracting/standard/pull/968) Use "field" to refer to OCDS fields and "property" to refer to JSON Schema properties.
 * [#970](https://github.com/open-contracting/standard/pull/970) Add links to access the release schema as a CSV spreadsheet and via the Field-Level Mapping Template. Add notes to describe the alternatives for browsing the schemas.
 * [#970](https://github.com/open-contracting/standard/pull/970) Release Schema page: Correct the description of compiled releases.
-* [#973](https://github.com/open-contracting/standard/pull/973) Codelists page: Describe the `openCodelist` and `codelist` JSON Schema properties.
+* Codelists page:
+  * [#971](https://github.com/open-contracting/standard/pull/971) Remove the suggestion to use X prefixes, for the reasons expressed by the [IETF](https://tools.ietf.org/html/rfc6648#appendix-B).
+  * [#972](https://github.com/open-contracting/standard/pull/972) Clarify the norms around open and closed codelists.
+  * [#973](https://github.com/open-contracting/standard/pull/973) Describe the `openCodelist` and `codelist` JSON Schema properties.
 
 ## [1.1.4] - 2019-06-25
 
