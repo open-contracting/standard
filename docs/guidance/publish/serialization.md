@@ -89,7 +89,8 @@ Whilst this allows complex data to be expressed in flat CSV, users will need to 
 Instead, data with a one-to-many relationship can be represented using a multi-table serialization. 
 
 ```eval_rst
-.. note:: CSV encoding
+.. admonition:: CSV encoding
+   :class: note
 
    OCDS CSV files ought to be encoded in either UTF-8 or Windows-1252.
 

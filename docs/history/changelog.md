@@ -17,6 +17,24 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Build the documentation [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923) [#935](https://github.com/open-contracting/standard/pull/935) [#944](https://github.com/open-contracting/standard/pull/944) [#945](https://github.com/open-contracting/standard/pull/945) [#946](https://github.com/open-contracting/standard/pull/946) [#953](https://github.com/open-contracting/standard/pull/953) [#962](https://github.com/open-contracting/standard/pull/962).
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932).
 
+## [1.1.5] - Unreleased
+
+### Codelists
+
+* [#967](https://github.com/open-contracting/standard/pull/967) Remove the discouragement of the 'UNSPSC' code.
+
+### Schema
+
+* [#969](https://github.com/open-contracting/standard/pull/969) Clarify the instruction for setting the `Unit.id` field.
+
+### Documentation
+
+* [#965](https://github.com/open-contracting/standard/pull/965) Add extensions list for the Transaction object.
+* [#968](https://github.com/open-contracting/standard/pull/968) Use "field" to refer to OCDS fields and "property" to refer to JSON Schema properties.
+* [#970](https://github.com/open-contracting/standard/pull/970) Add links to access the release schema as a CSV spreadsheet and via the Field-Level Mapping Template. Add notes to describe the alternatives for browsing the schemas.
+* [#970](https://github.com/open-contracting/standard/pull/970) Release Schema page: Correct the description of compiled releases.
+* [#973](https://github.com/open-contracting/standard/pull/973) Codelists page: Describe the `openCodelist` and `codelist` JSON Schema properties.
+
 ## [1.1.4] - 2019-06-25
 
 ### Advisories
