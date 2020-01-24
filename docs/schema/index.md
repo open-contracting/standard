@@ -14,8 +14,6 @@ OCDS data must follow the I-JSON (Internet JSON) specification in [RFC7493](http
 
 ```eval_rst
 .. toctree::
-   :maxdepth: 2
-   :glob:
    :hidden:
 
    reference
@@ -29,5 +27,4 @@ OCDS data must follow the I-JSON (Internet JSON) specification in [RFC7493](http
    conformance_and_extensions
    deprecation
    governance
-
 ```
