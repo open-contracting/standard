@@ -10,7 +10,7 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
 .. toctree::
    :maxdepth: 2
 
-   publish/levels
+   design/levels
 ```
 
 ## Map: How-To Guides
