@@ -8,6 +8,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Documentation
 
+* [#980](https://github.com/open-contracting/standard/pull/980) Getting Started section: Remove references to ☆ levels.
 * [#955](https://github.com/open-contracting/standard/pull/955) Move Governance page to Reference section. Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 * [#963](https://github.com/open-contracting/standard/pull/963) Guidance section: Remove guidance on web discovery.
