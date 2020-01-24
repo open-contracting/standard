@@ -1,6 +1,19 @@
 # Guidance
 
-## Modeling data
+Are you new to OCDS? [Read the Primer](../getting_started/index).
+
+Do you have questions or need assistance with specific steps? Browse the tutorials below or [contact the OCDS Helpesk](../support/index).
+
+## Design: How-To Guides
+
+```eval_rst
+.. toctree::
+   :maxdepth: 2
+
+   publish/levels
+```
+
+## Map: How-To Guides
 
 ```eval_rst
 .. toctree::
@@ -11,16 +24,23 @@
    model/extensions
 ```
 
-## Publishing data
+## Build: How-To Guides
+
+```eval_rst
+.. toctree::
+   :maxdepth: 2
+
+   build/hosting
+   build/serialization
+```
+
+## Publish: How-To Guides
 
 ```eval_rst
 .. toctree::
    :maxdepth: 2
 
    publish/registration
-   publish/levels
    publish/publication_policy
    publish/licensing
-   publish/serialization
-   publish/hosting
 ```
