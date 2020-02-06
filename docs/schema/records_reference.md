@@ -38,7 +38,7 @@ See the guidance on [package metadata](../reference/#package-metadata). In addit
 You can see this in the full example of a record below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/record.json
    :jsonpointer:
    :expand: packages, records
    :title: Full_record
@@ -65,7 +65,7 @@ If providing an array of URLs, it must be possible for a consuming application t
 An example releases section is given below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/record.json
    :jsonpointer: /records/0
    :expand: releases, tag
    :title: releases
@@ -91,7 +91,7 @@ Third parties can use the information in the releases list to fetch source data,
 An example extract of the versioned information for a tender value is shown below. This makes visible the change in contract value from the planning to the tender stage, whilst currency, which was first encountered in the planning stage stayed unchanged.
 
 ```eval_rst
-.. jsoninclude:: ../examples/merging/versioned.json
+.. jsoninclude:: ../examples/merging/record.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: amount, releaseTag
    :title: versioned

@@ -43,4 +43,5 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
    publish/registration
    publish/publication_policy
    publish/licensing
+   publish/merging
 ```
