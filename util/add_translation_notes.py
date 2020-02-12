@@ -44,6 +44,9 @@ def add_translation_notes():
                 path = os.path.join(language_dir, domain, 'index.po')
                 if not os.path.isfile(path):
                     path = os.path.join(language_dir, '%s.po' % domain)
+                if not os.path.isfile(path):
+                    add_translation_note(os.path.join(root, name), language, domain)
+                    break
 
                 # Check the PO files, because Babel sets the msgstr to the msgid if the msgstr is missing.
                 with open(path) as f:
