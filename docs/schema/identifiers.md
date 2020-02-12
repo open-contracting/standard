@@ -89,13 +89,13 @@ The ocid is case-sensitive; in other words, the letter case of an ocid must be c
 
 ### Registered prefixes
 
-Publishers must register an ocid prefix. See the [registration pages](../guidance/publish/registration) for details of how to obtain your ocid prefix.
+Publishers must register an ocid prefix. See the [registration pages](../guidance/phases/build) for details of how to obtain your ocid prefix.
 
 Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes. 
 
 Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organizations might be able to issue prefixes, each with their own prefix agency identifiers.
 
-You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../guidance/publish/registration).
+You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../guidance/phases/build).
 
 The registered prefixes are dumb identifiers. They are not intended to carry any semantics, and their sole purpose is to turn internal identifiers into globally unique identifiers which can be cross-referenced between systems. 
 

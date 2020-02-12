@@ -2,7 +2,16 @@
 
 Are you new to OCDS? [Read the Primer](../getting_started/index).
 
-Do you have questions or need assistance with specific steps? Browse the tutorials below or [contact the OCDS Helpesk](../support/index).
+Do you want to understand the main steps to implement OCDS, and to locate resources to support you in that process? [Read the Tutorial](phases/index).
+
+Do you have questions or need assistance with specific tasks? Browse the how-to guides below or [contact the OCDS Helpesk](../support/index).
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   phases/index
+```
 
 ## How-To Guides
 
@@ -42,7 +51,6 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
 .. toctree::
    :maxdepth: 2
 
-   publish/registration
    publish/publication_policy
    publish/licensing
 ```
