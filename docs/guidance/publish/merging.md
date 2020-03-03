@@ -4,7 +4,7 @@ The [merging documentation](../../schema/merging/) specifies how releases can be
 
 Deletions are not a frequent occurrence, but it is important that deletion rules are considered when transforming data to OCDS. Even if the publisher doesn’t publish records or compiled releases, a correct implementation allows users to build them themselves for their own needs.
 
-As the merge routine shows, the use of the `null` keyword in JSON has a role in the deletion of data, **that’s why is important to never include `null` values in data that are not meant to delete a field**.
+As the merge routine shows, the use of the `null` keyword in JSON has a role in the deletion of data, **that’s why it is important never to include `null` values in data that are not meant to delete a field**.
 
 ## Worked examples
 
