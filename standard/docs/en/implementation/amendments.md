@@ -146,7 +146,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 
 The Easy releases guidance (<mark>add link</mark>) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it may still be possible to publish a history of amendments when using this model.
 
-However, it is possible for a publisher to store partial history of events that may be relevant to them, like contract amendments. This example shows how amendment releases can be built when amendment history is present.
+Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract notice, contract amendments can be published as separate releases in OCDS.
 
 A publisher does not register changes in the contracting process. However, since contract amendments are a more frequent ocurrence, these are stored as new contract notices with a reference to the contract being modified. 
 
