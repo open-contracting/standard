@@ -144,7 +144,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 
 ### Example 3: Amendments in a Easy Releases scenario
 
-The Easy releases guidance (<mark>add link</mark>) explains how to build releases when there is no access to the change history for contracting processes. In a scenario when little or no change history is present, it may or may not be possible to identify and build amendments inside releases.
+The Easy releases guidance (<mark>add link</mark>) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it may still be possible to publish a history of amendments when using this model.
 
 However, it is possible for a publisher to store partial history of events that may be relevant to them, like contract amendments. This example shows how amendment releases can be built when amendment history is present.
 
