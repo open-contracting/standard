@@ -146,9 +146,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 
 The Easy releases guidance (<mark>add link</mark>) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it may still be possible to publish a history of amendments when using this model.
 
-Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract notice, contract amendments can be published as separate releases in OCDS.
-
-A publisher does not register changes in the contracting process. However, since contract amendments are a more frequent ocurrence, these are stored as new contract notices with a reference to the contract being modified. 
+Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract notice, contract amendments can be published as separate releases in OCDS. A real life [example](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516) can be found in Australia's AusTender platform. 
 
 The table below shows an example of the contract notices table, with an original contract in the first row and an amendment of the same contract in the second. The amendment increases the value of the original contract and changes the contract period.
 
@@ -179,6 +177,6 @@ This can be modelled as the releases shown below. The original `contract` releas
 ```
 Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
 
-The advantage of this approach, in contrast with the Easy releases approach, is that the users have access to the details of each amendment instead of the latest values only, without any additional effort of their end as it is expected in the Easy releases scenario.
+The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
 
 As in the previous examples, you can download a <a href="../../_static/json/amendments-easy-releases-example.json" target="_blank">record</a> file for the example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
