@@ -10,6 +10,7 @@
    model/amendments
    model/extensions
    model/organizational_units
+   model/organization_classifications
 ```
 
 ## Publishing data

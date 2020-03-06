@@ -1,0 +1,89 @@
+{
+  "uri": "https://standard.open-contracting.org/examples/release/ocds-b3wdp1-MD-1554728148250-EV-1555051169779",
+  "version": "1.1",
+  "extensions": [
+    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_partyDetails_scale_extension/master/extension.json"
+  ],
+  "publisher": {
+    "name": "M-Tender"
+  },
+  "license": "http://opendefinition.org/licenses/",
+  "publicationPolicy": "https://standard.open-contracting.org/examples/publicationPolicy/",
+  "publishedDate": "2019-04-08T12:55:48Z",
+  "releases": [
+    {
+      "ocid": "ocds-b3wdp1-MD-1554728148222-EV-1555",
+      "id": "ocds-b3wdp1-MD-1554728148222-EV-1555-155",
+      "date": "2019-05-15T10:24:48Z",
+      "tag": [
+        "tenderCancellation"
+      ],
+      "initiationType": "tender",
+      "parties": [
+        {
+          "id": "MD-IDNO-1012600024777",
+          "name": "Companie mică",
+          "identifier": {
+            "scheme": "MD-IDNO",
+            "id": "1012600024777",
+            "legalName": "Exemplu de companie mică"
+          },
+                   "details": {
+            "scale": "micro"
+          },
+          "roles": [
+            "tenderer",
+            "supplier"
+          ]
+        }
+      ],
+      "tender": {
+        "id": "ocds-b3wdp1-MD-1554728148222-tender",
+        "title": "Evaluation",
+        "description": "Evaluation stage of contracting process",
+        "status": "cancelled",
+        "tenderPeriod": {
+          "startDate": "2019-04-24T10:00:00Z",
+          "endDate": "2019-05-08T07:00:00Z"
+        },
+        "enquiryPeriod": {
+          "startDate": "2019-04-12T06:39:29Z",
+          "endDate": "2019-04-24T10:00:00Z"
+        },
+        "awardPeriod": {
+          "startDate": "2019-05-08T07:00:00Z"
+        },
+        "hasEnquiries": false,
+        "awardCriteria": "priceOnly",
+        "submissionMethod": [
+          "electronicSubmission"
+        ],
+        "submissionMethodDetails": "Lista platformelor: achizitii, ebs, licitatie, yptender",
+        "tenderers": [
+          {
+            "id": "MD-IDNO-1012600024777",
+            "name": "Exemplu de companie mică"
+          }
+        ]
+      },
+      "awards": [
+        {
+          "id": "e5b771e0-715e-11e9-94b9-f5c641d7a5b5",
+          "description": "Grupul de lucru anulează procedura de achiziție din considerente că nu există cel puțin trei ofertanți, care au întrunit condițiile de calificare stabilite.",
+          "status": "unsuccessful",
+          "date": "2019-05-15T10:24:53Z",
+          "value": {
+            "amount": 27089725.78,
+            "currency": "MDL"
+          },
+          "suppliers": [
+            {
+              "id": "MD-IDNO-1012600024777",
+              "name": "Exemplu de companie mică"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
