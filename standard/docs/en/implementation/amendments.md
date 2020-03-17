@@ -87,7 +87,7 @@ Note in this example that:
 
 * **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher may want to provide the latest data available in each release.
 
-* **In the merged record**, the `releaseID` and `amendsReleaseID` fields from the `amendments` array can be used to lookup information in the `versionedRelease` section, to see where changes are explained by an amendment `rationale`.
+* **In the record**, the `releaseID` and `amendsReleaseID` fields from the `amendments` array can be used to look up information in the `versionedRelease` object or `releases` array, to see where changes are explained by an amendment `rationale`.
 
 ### Example 2: Contract amendment
 
