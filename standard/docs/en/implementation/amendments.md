@@ -2,19 +2,19 @@
 
 Information about a contracting process will often change over time.
 
-Each time information changes, a new OCDS release ought to be published. 
+Each time information changes, a new OCDS release ought to be published.
 
 There are three kinds of changes:
 
 * **New information**. For example, when information about the award of a contract is first released.
-* **Updates to existing information**. For example, to correct errors in earlier releases, or to make minor adjustments to titles, descriptions or date. 
-* **Amendments**. For example, when the value or duration of a contract is changed. The term amendment often has a specific legal meaning for a publisher. Certain changes to a tender, award or contract might only be allowed as part of an amendment. 
+* **Updates to existing information**. For example, to correct errors in earlier releases, or to make minor adjustments to titles, descriptions or date.
+* **Amendments**. For example, when the value or duration of a contract is changed. The term amendment often has a specific legal meaning for a publisher. Certain changes to a tender, award or contract might only be allowed as part of an amendment.
 
 The nature of a change can be made explicit using:
 
-* **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the award, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'. 
+* **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the award, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'.
 
-* **The amendments** building block. This can contain an array of amendment explanations, and clearly identify the releases that contain before and after values. 
+* **The amendments** building block. This can contain an array of amendment explanations, and clearly identify the releases that contain before and after values.
 
 ## Worked examples
 
@@ -40,7 +40,7 @@ A publisher issues a tender for a "Data merge tool". A new release with the `tag
 Weeks later, the publisher expands the `description` of the tender to provide more details about the tool being procured. A new release with the `tag` 'tenderUpdate' is built. The publisher does not consider this to be a formal 'amendment' to the tender, so does not publish any amendment information. See the JSON release below.
 
 ```eval_rst
- 
+
 .. jsoninclude:: ../_static/json/amendments-tender-example.json
    :jsonpointer: /records/0/releases/1
    :expand: tender, tag
@@ -50,7 +50,7 @@ Weeks later, the publisher expands the `description` of the tender to provide mo
 
 #### Tender Amendment
 
-A few days later, the publisher increases the value of the tender and extends the deadline for bid submissions. These changes are considered as an 'amendment' by the publisher (depending of jurisdiction, certain changes can need to be disclosed as amendments), and so the new release has the `tag` 'tenderAmendment' and an `amendments` block under `tender`. The release reflects the updated value (USD 2000 instead of USD 1000) and the updated closing date for bid submissions (`2012-02-20` instead of `2012-02-15`). See the JSON example below.
+A few days later, the publisher increases the value of the tender and extends the deadline for bid submissions. These changes are considered as an 'amendment' by the publisher (depending on jurisdiction, certain changes can need to be disclosed as amendments), and so the new release has the `tag` 'tenderAmendment' and an `amendments` block under `tender`. The release reflects the updated value (USD 2000 instead of USD 1000) and the updated closing date for bid submissions (`2012-02-20` instead of `2012-02-15`). See the JSON example below.
 
 ```eval_rst
 
@@ -68,7 +68,7 @@ A full record is provided below, with all the releases for the process and a `co
 ```eval_rst
 
 .. jsoninclude:: ../_static/json/amendments-tender-example.json
-   :jsonpointer: 
+   :jsonpointer:
    :expand: records, releases
    :title: FullRecord
 
@@ -83,11 +83,11 @@ It is recommended to <a href="../../_static/json/amendments-tender-example.json"
 
 Note in this example that:
 
-* **The amendments block does not contain data on what was changed**. Changes are recorded by updating the properties of the `tender` block a new release. 
+* **The amendments block does not contain data on what was changed**. Changes are recorded by updating the properties of the `tender` block a new release.
 
-* **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher may want to provide the latest data available in each release. 
+* **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher may want to provide the latest data available in each release.
 
-* **In the merged record**, the `releaseID` and `amendsReleaseID` fields from the `amendments` array can be used to lookup information in the `versionedRelease` section, to see where changes are explained by an amendment `rationale`. 
+* **In the merged record**, the `releaseID` and `amendsReleaseID` fields from the `amendments` array can be used to lookup information in the `versionedRelease` section, to see where changes are explained by an amendment `rationale`.
 
 ### Example 2: Contract amendment
 
@@ -110,7 +110,7 @@ See the JSON release below.
 
 #### Contract Amendment
 
-A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts/items` block and the value of the contract is increased. A `amendments` block is included to explain the rationale of the changes. 
+A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts/items` block and the value of the contract is increased. A `amendments` block is included to explain the rationale of the changes.
 
 See the example release below.
 
@@ -123,7 +123,7 @@ See the example release below.
 
 ```
 
-Note that amendments can cover more than values or duration. Also, note that the publisher chose to not repeat the contract items, but add a new one with a new ID value. 
+Note that amendments can cover more than values or duration. Also, note that the publisher chose to not repeat the contract items, but add a new one with a new ID value.
 
 In certain scenarios there may not be a valid `amendsReleaseID` and so it can be omitted, e.g. when historical data is being published in a single release.
 
@@ -136,7 +136,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 ```eval_rst
 
 .. jsoninclude:: ../_static/json/amendments-contract-example.json
-   :jsonpointer: 
+   :jsonpointer:
    :expand: records, releases
    :title: Record
 
@@ -146,7 +146,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 
 The Easy releases guidance (<mark>add link</mark>) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it may still be possible to publish a history of amendments when using this model.
 
-Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract notice, contract amendments can be published as separate releases in OCDS. A real life [example](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516) can be found in Australia's AusTender platform. 
+Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract notice, contract amendments can be published as separate releases in OCDS. A real life [example](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516) can be found in Australia's AusTender platform.
 
 The table below shows an example of the contract notices table, with an original contract in the first row and an amendment of the same contract in the second. The amendment increases the value of the original contract and changes the contract period.
 
