@@ -2,7 +2,7 @@
 
 Are you new to OCDS? [Read the Primer](../getting_started/index).
 
-Do you want to understand the main steps to implement OCDS, and to locate resources to support you in that process? [Read the Tutorial](phases/index).
+Do you want to understand the main steps to implement OCDS, and to locate resources to support you in that process? [Read the Implementation Process](phases/index).
 
 Do you have questions or need assistance with specific tasks? Browse the how-to guides below or [contact the OCDS Helpesk](../support/index).
 
