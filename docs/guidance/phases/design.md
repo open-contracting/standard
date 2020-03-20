@@ -6,7 +6,7 @@ A first two steps are to understand your context and prepare your team. If you a
 
 ## Understand your context
 
-How does public contracting work in your context? What does the law require to be made public? What are the opportunities or barriers to greater openness? Which stakeholders ought to be involved? What institutional and technical skills and experience do stakeholders have?
+How does public contracting work in your jurisdiction? What does the law require to be made public? What are the opportunities or barriers to greater openness? Which stakeholders ought to be involved? What institutional and technical skills and experience do stakeholders have?
 
 The answers to these questions will have an impact on the success of your implementation. You can find the answers by following, adapting, or commissioning a report based on our [methodology for open contracting scoping studies](https://www.open-contracting.org/resources/methodology-open-contracting-scoping-studies/).
 
@@ -16,7 +16,7 @@ The [Open Contracting Playbook](https://docs.google.com/document/d/1qRb171Ps-CZd
 
 In terms of technical advice, you can:
 
-* Contact the OCDS Helpdesk to [schedule an online introduction to OCDS](../../support/index) for your technical team, in either English or Spanish.
+* Contact the [OCDS Helpdesk](../../support/index) to schedule an online introduction to OCDS for your technical team, in either English or Spanish.
 
 ## Align your e-GP system
 
