@@ -4,7 +4,14 @@ OCDS separates data about the contract award and data about the signed contract 
 
 If the data in the source system relates only to contract awards, then only the `award` section of OCDS ought to be populated, unless the law governing procurement permits no changes between award and signature of a contract, in which case the `contract` section may be populated.
 
-Conversely, if the data in the source system only relates to the signed contract, only the `contract` section of OCDS ought to be populated, unless the law does not permit any difference between the award and contract.
+If the data in the source system relates only to the signed contract and no changes are permitted between the award and signature of a contract, then:
+
+* Add an `Award` object to `awards` and a `Contract` object to `contracts`
+* Set `awards.id` and `contracts.id` to the same value
+* Populate the `awards.value`, `awards.contractPeriod` and `awards.items` fields with the initial contract value, period and items respectively
+* If the contract value, period or items are subsequently updated, populate the `contracts.value`, `contracts.period` and `contracts.items` fields with the updated value
+
+The above approach is also applicable to direct call-offs from framework agreements with multiple suppliers, since the call-off is, conceptually, an award.
 
 ## Example: Changes between award and contract
 
