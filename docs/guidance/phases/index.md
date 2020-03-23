@@ -9,7 +9,7 @@ The four phases of implementation described in this guide have helped implemente
 
   .. markdown::
 
-      Are you new to OCDS? [Read the Primer](../getting_started/index).
+      Are you new to OCDS? [Read the Primer](../../getting_started/index).
 
 .. toctree::
    :hidden:
