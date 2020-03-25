@@ -69,7 +69,7 @@ The releases that make up a contracting process can be provided in two ways:
 * URLs and metadata for each release; or
 * Embedded copies of the release;
 
-If providing an array of URLs, it must be possible for a consuming application to look up each URL, retrieve a release package, and locate the release inside it. In order to locate the specific release inside a release package, the `id` of the release must be appended to the package URL using a fragment identifier.
+If providing an array of URLs, it must be possible for a consuming application to look up each URL, retrieve a release package, and locate the release inside it. In order to locate the specific release inside a release package, the `id` of the release must be appended to the package URL using a fragment identifier. As release identifiers are only required to be locally unique within the scope of a contracting process, the `ocid` can be used to disambiguate matching releases in a record package.
 
 An example releases section is given below.
 
