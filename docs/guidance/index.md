@@ -40,7 +40,9 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
 .. toctree::
    :maxdepth: 2
 
+   publish/change_history
    publish/registration
    publish/publication_policy
    publish/licensing
+   publish/system_architectures
 ```
