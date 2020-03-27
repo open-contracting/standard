@@ -22,6 +22,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 ### Codelists
 
 * [#967](https://github.com/open-contracting/standard/pull/967) Remove the discouragement of the 'UNSPSC' code.
+* [#993](https://github.com/open-contracting/standard/pull/993) Add NAICS, PSC and HS item classification scheme codes.
 
 ### Schema
 
