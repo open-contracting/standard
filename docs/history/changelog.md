@@ -24,9 +24,9 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * `itemClassificationScheme.csv`:
   * [#998](hhttps://github.com/open-contracting/standard/pull/998) Add 'NAICS', 'PSC' and 'HS' codes.
   * [#967](https://github.com/open-contracting/standard/pull/967) Remove the discouragement of the 'UNSPSC' code.
-
 * `milestoneType.csv`:
   * [#1000](https://github.com/open-contracting/standard/pull/1000) Update description of 'financing' code, and add 'payment' code.
+
 ### Schema
 
 * [#969](https://github.com/open-contracting/standard/pull/969) Clarify the instruction for setting the `Unit.id` field.
