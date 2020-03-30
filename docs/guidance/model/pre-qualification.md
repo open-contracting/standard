@@ -5,8 +5,7 @@ Single stage procurement procedures, in which suppliers are invited to bid witho
 However, many jurisdictions also use multi-stage procedures. Such procedures typically follow a process similar to:
 
 ```eval_rst
-.. csv-table:: Multi-stage procurement procedures
-
+.. csv-table::
    :file: ../../examples/pre-qualification/multi-stage.csv
    :widths: 50,50
    :header-rows: 1
@@ -20,7 +19,7 @@ The term ‘pre-qualification’ is used to describe different types of procurem
 
 ### Pre-qualification with no limit on the number of qualified suppliers
 
-The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement) was developed through extensive consultations with governments and interested international organizations and therefore reflects the procurement practices and concepts used in many different jurisdictions.. The UNCITRAL model law defines pre-qualification as a procedure to:
+The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement) was developed through extensive consultations with governments and interested international organizations and therefore reflects the procurement practices and concepts used in many different jurisdictions. The UNCITRAL model law defines pre-qualification as a procedure to:
 
 > ...identify, prior to solicitation, suppliers or contractors that are qualified.
 
@@ -29,9 +28,11 @@ The model law states that an invitation to pre-qualify must be published, specif
 Once the qualifications of the suppliers or contracts have been assessed, only those that have been pre-qualified are entitled to participate further in the procurement proceedings.
 
 ```eval_rst
-.. note:: Example
+.. note::
 
-   The European Union’s restricted procedure (see Article 28, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) is an example of a procurement procedure which uses pre-qualification.
+   .. markdown::
+
+      The European Union’s restricted procedure (see Article 28, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) is an example of a procurement procedure which uses pre-qualification.
 ```
 
 ### Pre-qualification with a limit on the number of qualified suppliers (pre-selection)
@@ -47,14 +48,16 @@ Procedures using pre-selection follow the same process as those using pre-qualif
 * The manner in which the pre-selection will be carried out.
 
 ```eval_rst
-.. note:: Example
+.. note::
 
-   The European Union’s restricted procedures, competitive procedures with negotiation, competitive dialog procedures and innovation partnerships all permit the use of pre-select (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj))
+   .. markdown::
+
+      The European Union’s restricted procedures, competitive procedures with negotiation, competitive dialog procedures and innovation partnerships all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj))
 ```
 
 ### Pre-qualification in Paraguay
 
-In Paraguay, a procuring entity can carry out a single pre-qualification for several tenders of the same nature (see article 22, [law Nº 2.051/03](https://www.contrataciones.gov.py/documentos/download/marco-legal/12760). The details of this procedure will become clearer in the example below.
+In Paraguay, a procuring entity can carry out a single pre-qualification for several tenders of the same nature (see article 22, [law Nº 2.051/03](https://www.contrataciones.gov.py/documentos/download/marco-legal/12760)). The details of this procedure will become clearer in the example below.
 
 ## The OCDS model
 
@@ -70,7 +73,7 @@ The OCDS contracting process model includes a single competitive stage (the `ten
 
 <div class="process-table" markdown=1>
 
-![Planning](../_static/svg/grey_planning.svg)
+![Planning](../../_static/svg/grey_planning.svg)
 
 **Planning**
 
@@ -78,7 +81,7 @@ The OCDS contracting process model includes a single competitive stage (the `ten
 
 <div class="process-table" markdown=1>
 
-![Tender](../_static/svg/green_tendering.svg)
+![Tender](../../_static/svg/green_tendering.svg)
 
 **Initiation (Tender)**
 
@@ -86,7 +89,7 @@ The OCDS contracting process model includes a single competitive stage (the `ten
 
 <div class="process-table" markdown=1>
 
-![Award](../_static/svg/grey_awarded.svg)
+![Award](../../_static/svg/grey_awarded.svg)
 
 **Award**
 
@@ -94,7 +97,7 @@ The OCDS contracting process model includes a single competitive stage (the `ten
 
 <div class="process-table" markdown=1>
 
-![Contract](../_static/svg/grey_signed.svg)
+![Contract](../../_static/svg/grey_signed.svg)
 
 **Contract**
 
@@ -102,7 +105,7 @@ The OCDS contracting process model includes a single competitive stage (the `ten
 
 <div class="process-table" markdown=1>
 
-![Implementation](../_static/svg/grey_implementation.svg)
+![Implementation](../../_static/svg/grey_implementation.svg)
 
 **Implementation**
 
@@ -114,7 +117,7 @@ The OCDS contracting process model includes a single competitive stage (the `ten
 The `tender` section is also used to disclose information about the procedure used by the contracting process. In particular, the `tender.procurementMethod` field is used to classify the procedure used against the following codelist:
 
 ```eval_rst
-.. csv-table-no-translate:: Method codelist
+.. csv-table-no-translate::
    :header-rows: 1
    :file: ../../../build/current_lang/codelists/method.csv
 ```
@@ -127,7 +130,7 @@ Since this contract notice represents the initiation of the contracting process,
 
 ```eval_rst
 .. jsoninclude:: ../../examples/pre-qualification/pre-qualification-package.json
-   :jsonpointer: releases/0/tender
+   :jsonpointer: /releases/0/tender
    :title: Tender section
 
 ```
@@ -135,9 +138,13 @@ Since this contract notice represents the initiation of the contracting process,
 Although any potential supplier may submit a request to participate in the first stage, only qualified suppliers will be invited to submit a tender for the contract, so `tender/procurementMethod` is set to ‘selective’.
 
 ```eval_rst
-.. note:: Second stage modelling
+.. note::
 
-   OCDS does not currently provide a means to disclose information on the second stage of multi-stage contracting processes. Possible approaches to modelling multi-stage contracting processes in OCDS are under discussion for inclusion in a future version of the standard ([Github issue](https://github.com/open-contracting/standard/issues/440)).
+   .. markdown ::
+
+      OCDS does not currently provide a means to disclose information on the second stage of multi-stage contracting processes. Possible approaches to modelling multi-stage contracting processes in OCDS are under discussion for inclusion in a future version of the standard ([Github issue](https://github.com/open-contracting/standard/issues/440)).
+
+      Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
 ```
 
 ## Example: Pre-selection
@@ -152,7 +159,7 @@ In addition, the criteria for choosing the limited number of candidates is discl
 
 ```eval_rst
 .. jsoninclude:: ../../examples/pre-qualification/pre-selection-package.json
-   :jsonpointer: releases/0/tender
+   :jsonpointer: /releases/0/tender
    :title: Tender section
 
 ```
@@ -167,13 +174,17 @@ Since this invitation represents the initiation of a contracting process to esta
 
 ```eval_rst
 .. jsoninclude:: ../../examples/pre-qualification/pre-qualification-paraguay-package.json
-   :jsonpointer: releases/0/tender
+   :jsonpointer: /releases/0/tender
    :title: Tender section
 
 ```
 
 ```eval_rst
-.. note:: Second stage modelling
+.. note::
 
-   OCDS does not currently provide a means to disclose information on the second stage of multi-stage contracting processes. Possible approaches to modelling multi-stage contracting processes in OCDS are under discussion for inclusion in a future version of the standard ([Github issue](https://github.com/open-contracting/standard/issues/440)).
+   .. markdown ::
+
+      OCDS does not currently provide a means to disclose information on the second stage of multi-stage contracting processes. Possible approaches to modelling multi-stage contracting processes in OCDS are under discussion for inclusion in a future version of the standard ([Github issue](https://github.com/open-contracting/standard/issues/440)).
+
+      Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
 ```
