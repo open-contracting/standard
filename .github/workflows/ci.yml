@@ -1,5 +1,7 @@
 name: CI
 on: [push, pull_request]
+env:
+  BASEDIR: https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,11 +18,9 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
-    # Don't install editable projects in the current working directory.
-    # https://pip.pypa.io/en/latest/reference/pip_install/#install-src
+    - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
     - run: pip install --src $GITHUB_WORKSPACE/../src -r requirements.txt
-    # Google Chrome and ChromeDriver are already included.
-    # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
+    - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
     - name: Make and test
       run: |
         if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
