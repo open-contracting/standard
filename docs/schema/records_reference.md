@@ -69,7 +69,11 @@ The releases that make up a contracting process can be provided in two ways:
 * URLs and metadata for each release; or
 * Embedded copies of the release;
 
-If providing an array of URLs, it must be possible for a consuming application to look up each URL, retrieve a release package, and locate the release inside it. In order to locate the specific release inside a release package, the `id` of the release must be appended to the package URL using a fragment identifier. As release identifiers are only required to be locally unique within the scope of a contracting process, the `ocid` can be used to disambiguate matching releases in a record package.
+#### Linked releases
+
+A linked release is composed by the release's `tag` and `date` and the release package `url` in which the release is packaged and published.
+As a release package can contain multiple releases, for each linked release URL, it must be possible for a consuming application to look up each URL, retrieve a release package, and locate the release inside it.
+In order to locate the specific release inside a release package, the `id` of the release must be appended to the package URL using a fragment identifier.
 
 An example releases section is given below.
 
@@ -77,6 +81,24 @@ An example releases section is given below.
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0
    :expand: releases, tag
+   :title: releases
+
+```
+
+In the example, the first linked release refers to <https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json#ocds-213czf-000-00002-01-award1>. The first part of the URL `https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json` refers to the complete release package and `ocds-213czf-000-00002-01-award1` to the release `id` that this linked release is referring to.
+
+As release identifiers are only required to be unique within the scope of a contracting process, it could happen that inside a release package could be two or more releases with the same id. From the perspective of a record package, the `ocid` is used to disambiguate matching releases.
+
+However, there is an [open issue](https://github.com/open-contracting/standard/issues/844) to consider alternative methods of linking to releases to make the url values unambiguous.
+
+### Embedded releases
+
+The other option is to include the releases themself embedded into the release array. With these approach all the information is autocontained in the record package, but the record package will be increased as much as releases exists per ocid. An example is showed below
+
+```eval_rst
+.. jsoninclude:: ../examples/record-embeded-releases.json
+   :jsonpointer: /records/0
+   :expand: releases,tag
    :title: releases
 
 ```
