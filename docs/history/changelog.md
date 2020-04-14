@@ -31,6 +31,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * [#969](https://github.com/open-contracting/standard/pull/969) Clarify the instruction for setting the `Unit.id` field.
 * [#995](https://github.com/open-contracting/standard/pull/995) Clarify the instruction for setting the `Release.date` field.
+* [#996](https://github.com/open-contracting/standard/pull/996) Clarify the instruction for setting the `Record.releases` array.
 
 ### Documentation
 
