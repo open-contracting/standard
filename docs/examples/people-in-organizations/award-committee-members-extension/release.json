@@ -1,0 +1,55 @@
+{
+  "definitions": {
+    "AwardCommitteeMember": {
+      "title": "Award committee member",
+      "description": "Member of the Award Committee for a procuring entity",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "ID of the member",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "name",
+          "description": "Name of the member",
+          "type": "string"
+        },
+        "identifier": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "membershipType": {
+          "title": "Membership type",
+          "description": "Role of the member",
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "full",
+            "alternate"
+          ],
+          "codelist": "membershipType.csv",
+          "openCodelist": false
+        }
+      }
+    },
+    "Organization": {
+      "properties": {
+        "details": {
+          "properties": {
+            "awardCommitteeMembers": {
+              "title": "Award committee members",
+              "description": "Members of the award committee",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AwardCommitteeMember"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
