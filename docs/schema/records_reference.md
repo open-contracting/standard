@@ -71,9 +71,9 @@ The releases that make up a contracting process can be provided in two ways:
 
 #### Linked releases
 
-A linked release is composed by the release `tag` and `date` and the release package URL.
+A linked release is composed of the release `tag` and `date` and the release package URL.
 For each linked release package URL, it must be possible for a consuming application to look up each URL, retrieve a release package, and locate the release inside it.
-As a release package can contain multiple releases, in order to locate the specific release referenced by the linked release, the `id` of the release must be appended to the package URL using a fragment identifier
+As a release package can contain multiple releases, to locate the specific release referenced by the linked release, the `id` of the release must be appended to the package URL using a fragment identifier
 
 An example releases section is given below.
 
@@ -93,7 +93,7 @@ However, there is an [open issue](https://github.com/open-contracting/standard/i
 
 ### Embedded releases
 
-The other option is to include the releases themself embedded into the releases array. With this approach all the information is autocontained in the record package, but the record package will increase as much as releases exists per ocid. An example is showed below
+Another option is to include the releases themself embedded into the releases array. With this approach all the information is auto contained in the record package. However, the record package will increase as much as releases exist per ocid. An example is shown below:
 
 ```eval_rst
 .. jsoninclude:: ../examples/record-embeded-releases.json
