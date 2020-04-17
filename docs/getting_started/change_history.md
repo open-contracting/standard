@@ -1,6 +1,6 @@
 # Change History
 
-The tracking of changes in a contracting process can be important for a publisher’s open contracting goals. For example, frequent changes or amendments can signal possible corruption (red flags), or opportunities of improvement in public contracting management.
+Tracking change over time is important for users of contracting data. For example, frequent changes or amendments can signal possible corruption (red flags), or opportunities for improvement in the management of public contracts.
 
 Publishers are encouraged to publish changes to the contracting process in real time, whenever possible. OCDS supports real-time publication with the releases and records model, which describes how to publish updates to a contracting process and maintain a history of changes.
 
@@ -12,7 +12,7 @@ Consider the timeline of a contracting process. While OCDS identifies five possi
 
 ![Contracting Process](../_static/png/changehistory_process.png)
 
-There are major events that indicate progress from one stage to another, like the publication of an award notice, and there are smaller events that  take place within a stage, like extending the deadline for bid submission, or extending the duration of a contract. In OCDS, all changes are disclosed using **releases**. Releases are JSON documents, published each time there is any update to the contracting process.
+There are major events that indicate progress from one stage to another, like the publication of an award notice, and there are smaller events that  take place within a stage, like extending the deadline for bid submission. In OCDS, all changes are disclosed using **releases**. Releases are JSON documents, published each time there is any update to the contracting process.
 
 ![Contracting Process with releases](../_static/png/changehistory_process2.png)
 
@@ -74,13 +74,13 @@ The [Release tag codelist](../schema/codelists/#release-tag) contains the list o
 
 #### Repeating previous information
 
-Releases can include new information only, or it can contain part or all unchanged data from previous releases along with the new/updated data. Both alternatives are equally valid and publishers can choose how much unchanged data to include in their releases while being careful of always including required fields. Releases with repeating information may be more appropriate for datasets with fewer releases per contracting processes. Repeating previous information also impacts on the final size of the dataset.
+Releases can include new information only, or can repeat unchanged data from previous releases along with new or updated data. Both alternatives are equally valid and publishers can choose how much unchanged data to include in their releases while being careful of always including required fields. Releases with repeating information may be more appropriate for datasets with fewer releases per contracting processes. Repeating previous information can impact on the final size of the dataset.
 
 <div class="example hint" markdown=1>
 
 <p class="first admonition-title">Example</p>
 
-The following example presents releases from a contracting process with minimal changes on each update. The first release presents tender data. The second introduces a new document in the tender section with the tenderUpdate tag. Note that all not-required tender fields are omitted, even the award notice present in the previous release. The third release presents award data, and the complete tender section is omitted.
+The following example presents releases from a contracting process with minimal changes on each update. The first release presents tender data. The second introduces a new document in the tender section with the tenderUpdate tag. Note that all not-required tender fields are omitted, even the tender notice present in the previous release. The third release presents award data, and the complete tender section is omitted.
  
  ```eval_rst
 .. jsoninclude:: ../examples/minimal_updates/tender.json
@@ -116,7 +116,7 @@ A record should follow the structure defined in the [Records Reference](../schem
 
 A **compiled release** follows the release structure and contains the latest value for all fields that have been filled in the releases of a contracting process. The example above shows how a compiled release looks like. It is strongly recommended to include a compiled release when producing records.
 
-A **versioned release** follows a structure similar to the release, but each final field contains an object with the history of the field. See the example above. 
+A **versioned release** follows a structure similar to the release, but in place of each field an object is provided, containing a history of changes to the field.
 
 The following animation shows how the record for a contracting process should be updated as releases are published over time.
 
@@ -125,7 +125,7 @@ The following animation shows how the record for a contracting process should be
 Each time a new release is available:
 
 * The new release is added to the releases list, either embedding it or by adding a link to it.
-* Both the compiled and versioned releases are updated with the new information from the release. Note that both should look the same either if the releases contain repeating information or not.
+* Both the compiled and versioned releases are updated with the new information from the release. Whether release repeat unchanged information from previous releases doesn't affect the resulting compiled and versioned releases.
 
 <div class="example hint" markdown=1>
 
@@ -149,7 +149,9 @@ Compare that to how to calculate the **total value of active tenders** using rel
     :file: ../examples/compiledreleases_releases.csv
 ```
 
-Whilst it’s easier to answer this simple question using the compiled releases, a full change history is required to answer other types of questions, e.g. how many tender values were amended?
+Working with individual releases, we need to check whether an active tender has later been cancelled before including it in our results.
+
+Whilst it’s easier to answer this simple question using the compiled releases, a full change history is required to answer other types of question, such as checking how many times a tender value was amended.
 
 </div>
 
@@ -161,4 +163,4 @@ See the [Record reference](../schema/records_reference/) for more details.
 
 #### Packaging
 
-When publishing, records should be always published wrapped in a Record Package , with a URI leading to a copy of the package and record.The following animation shows the relationship between the individual releases published during the life of a contracting process and the record for the contracting process.
+When publishing, records should be always published wrapped in a Record Package , with a URI leading to a copy of the package and record.

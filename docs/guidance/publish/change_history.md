@@ -33,9 +33,9 @@ The notice is represented in OCDS as a release with the 'planning' tag and data 
 
 The London Borough of Barnet is ready to invite bids for the contract, so they issue the tender via an 'notice of intended procurement' (also known as 'contract notice' or 'opportunity notice').
 
-In OCDS, the notice is represented as a new release, using the 'tender' tag and providing details in the 'tender' section.
+In OCDS, the notice is represented as a new release, using the 'tender' tag and providing details in the `tender` section.
 
-No changes are made to the already published planning release, however the `tender` section of the new tender release is updated with the actual date the tender was issued, along with additional information about the deadline for bid submission, the items being procured, links to copies of tender documents and the estimated tender value.
+No changes are made to the already published planning release, however the `tender` section of the new tender release is updated with the actual date the tender was issued and new information is provided about the deadline for bid submission, the items being procured, links to copies of tender documents and the estimated tender value.
 
 The tender release is added to the `releases` list in the record for the contracting process and the compiled release is updated to reflect the latest values for the new and updated fields in the 'tender' release. Note that the bid submission dates have been updated in the compiled release, and the versioned release now contains a list of changes for each field.
 
@@ -64,13 +64,11 @@ The enquiry period has ended, and a few questions from potential suppliers have 
 
 In OCDS, a new release is published using the 'tenderUpdate' tag.
 
-No changes are made to the existing planning and tender releases, however in the new release a link to the enquiry responses is added to `tender.documents`.
+No changes are made to the existing planning and tender releases, however in the new release a link to the enquiry responses is added to `tender.documents` and the `hasEnquiries` field is set to true.
 
-The `hasEnquiries` field is set to true.
+The publisher has decided to repeat fields and values which are unchanged from the previous releases in the new one.
 
-The publisher has decided to include all unchanged fields and values for the previous immutable release in the new one.
-
-The record for the contracting process now has three immutable releases, and updated compiled and versioned releases. Note that the compiled release has included the enquiries document in the tender section, and the field hasEnquiries has more than one entry in the versioned release.
+The record for the contracting process now has three immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section, and the field `tender.hasEnquiries` has more than one entry in the versioned release.
 
 ```eval_rst
 
@@ -96,7 +94,7 @@ The procuring entity makes the decision to award the contract to Balfour Beatty 
 
 The award notice is represented as a new OCDS release with the details of the award provided in the `award` section and using the 'award' tag. An entry is added to the `parties` array to provide information about the supplier and the full tender block is included as well with the `.status` field set to 'complete'. No changes are made to the existing planning, tender and tenderUpdate releases.
 
-The record for the contracting process has been updated to include the latest release, and the compiled and versioned releases have been updated accordingly. The compiled release has an award block and the supplier in parties, and the status of the tender has been updated to 'complete' as well. The versioned release also reflects the change in the status field.
+The record for the contracting process has been updated to include the latest release, and the compiled and versioned releases have been updated accordingly. The compiled release has an award block and an entry for the supplier in the `parties` section. The status of the tender has been updated to 'complete'. The versioned release also reflects the change in the `tender.status` field.
 
 ```eval_rst
 
@@ -144,11 +142,11 @@ The record now has an additional release, and the compiled and versioned release
 
 ### Implementation
 
-The supplier has started the construction work, and the procuring entity makes the first payment against the contract using their finance system, which shares a common contract identifier with the contract register. 
+The supplier has started the construction work, and the procuring entity makes the first payment against the contract using their finance system, which shares a common contract identifier with the procurement system used to publish the earlier stages of the contracting process. 
 
 An OCDS release is published from the finance system using the 'implementation' tag, with details of the payment provided in the `contracts.implementation.transactions` section.
 
-Since the previous releases from the contract register share a common `ocid` with the release from the finance system, it’s possible to update the OCDS record for the contracting process with the new information from the finance system.
+Since the previous releases from the procurement system share a common `ocid` with the release from the finance system, it’s possible to update the OCDS record for the contracting process with the new information from the finance system.
 
 <div class="example hint" markdown=1>
 
@@ -181,7 +179,7 @@ The new release from the finance system is added to the releases list in the OCD
 
 ### Contract Amendment
 
-Due to unforeseen complications with subsistence in the area of the works, the procuring entity and the supplier agree to a contract extension to cover the additional time and cost required to complete the works. The contract register is updated with the new contract value and period and a modification notice is issued, this is represented in OCDS as a new release with the 'contractAmendment' tag.
+Due to unforeseen complications with subsistence in the area of the works, the procuring entity and the supplier agree to a contract extension to cover the additional time and cost required to complete the works. The procurement system is updated with the new contract value and period and a modification notice is issued, this is represented in OCDS as a new release with the 'contractAmendment' tag.
 
 Refer to the amendments worked example for more information on how contract amendments are modelled in OCDS.
 

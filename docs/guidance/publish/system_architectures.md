@@ -14,7 +14,7 @@ In the ideal scenario:
 * Bulk downloads in JSON, CSV (and, if appropriate, Excel) format should be available covering set periods of contracting;
 * Users should be able to easily locate the collections of releases and records they want.
 
-The following guidance describes some high-level approaches that can be used, with their advantages and disadvantages. These approaches are by no means an extensive or exclusive list, but can be used to inform the design of OCDS publication systems.
+The following guidance describes some high-level approaches that can be used to publish OCDS data, with their advantages and disadvantages. These approaches are by no means an extensive or exclusive list, but can be used to inform the design of OCDS publication systems.
 
 ## On-demand transformation from live systems
 
@@ -66,7 +66,7 @@ This approach requires limited modification to live systems, to enable the middl
 
 An important decision in the implementation of such a system is how frequently to pull data from the source systems. If data is pulled infrequently there is a risk that the detail of individual changes may be lost.
 
-An alternative to the pull mechanism is to implement a push mechanism in each source system, triggered by specific events or changes to the data, however approach may require more modifications to the source system.
+An alternative to the pull mechanism is to implement a push mechanism in each source system, triggered by specific events or changes to the data. This approach can mitigate the risk of individual changes being lost, however it may require more modifications to the source system.
 
 A similar approach has been adopted by European Dynamics to support OCDS output from a new e-procurement system for the Zambian Public Procurement Agency.
 
