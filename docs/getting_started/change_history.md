@@ -61,7 +61,7 @@ The Easy releases section introduces two strategies that can be used in any scen
 
 #### Packaging
 
-Releases should be always wrapped in a release package to provide context to the data. The `uri` package field should contain an URI to an online copy of the same release. In a full OCDS implementation, each release should be available at its own persistent URL.
+Releases should be always wrapped in a release package to provide context to the data. The `uri` package field should contain a URI to an online copy of the same release package. In a full OCDS implementation, each release should be available at its own persistent URL.
 
 See the [Release Package schema](../schema/release_package/) for details.
 
