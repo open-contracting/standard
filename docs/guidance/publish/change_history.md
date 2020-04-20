@@ -1,14 +1,18 @@
 # Change history
 
-The following example shows how to publish the full history of a contracting process using releases and records. Each subsection refers to a stage or event in the contracting process lifetime.
+The following example shows how to publish a contracting process' data as it unfolds. Releases are built and published for each event in the process. Records are updated for each new release available.
+
+Each subsection refers to a stage or event in the contracting process lifetime.
 
 Refer to the [change history](../../getting_started/change_history) guidance for an introduction to the concepts involved.
 
 ### Planning
 
-In order to prepare the market for the tender for cycle lane improvements which is planned for later in the year, the London Borough of Barnet publishes a 'notice of planned procurement' (also known as 'prior information notice' or 'future opportunity notice').
+The London Borough of Barnet has a planned tender for later in the year. To prepare the market they publish a *notice of planning procurement*. This is also known as *prior information notice*, or *future opportunity notice*.
 
-The notice is represented in OCDS as a release with the 'planning' tag and data on the planned procurement, such as the estimated date the tender will be issued, is provided in the `tender` section with `.status` set to 'planned'. The `releases` list in the record for the contracting process is updated to include the ‘planning’ release, the only one that exists for the process at the moment. The compiled and versioned releases inside the record contain the latest information, which should be very similar to the 'planning' release. Compare the planning release and the record using the box below.
+The publisher creates an OCDS release to represent this notice. The release uses the 'planning' tag and includes data of the planned procurement. The `tender` section holds the estimated values, as the issue date. The section also uses the 'planned' status to state these are planned values.
+
+The publisher also creates an OCDS Record for the starting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled version should look very much like this release. Compare the planning release and the record using the box below.
 
 
 ```eval_rst
@@ -31,13 +35,21 @@ The notice is represented in OCDS as a release with the 'planning' tag and data 
 
 ### Tender
 
-The London Borough of Barnet is ready to invite bids for the contract, so they issue the tender via an 'notice of intended procurement' (also known as 'contract notice' or 'opportunity notice').
+The London Borough of Barnet is ready to invite bids for the contract. They issue the tender via an *notice of intended procurement*. This is also known as *contract notice* or *opportunity notice*.
 
-In OCDS, the notice is represented as a new release, using the 'tender' tag and providing details in the `tender` section.
+The publisher creates a new release to represent this notice. The release uses the 'tender' tag and provides the details in the `tender` section.
 
-No changes are made to the already published planning release, however the `tender` section of the new tender release is updated with the actual date the tender was issued and new information is provided about the deadline for bid submission, the items being procured, links to copies of tender documents and the estimated tender value.
+There are no changes to the planning release published before. But the new release has the updated information about the tender. This includes the real issue date, and the following new information:
 
-The tender release is added to the `releases` list in the record for the contracting process and the compiled release is updated to reflect the latest values for the new and updated fields in the 'tender' release. Note that the bid submission dates have been updated in the compiled release, and the versioned release now contains a list of changes for each field.
+* The deadline for bid submission
+
+* The items to buy
+
+* Links to copies of tender documents
+
+* The estimated tender value
+
+The publisher adds the new release to the record, in the releases list. Also they update the compiled and versioned releases with the new information. Note that the bid submission date has changed in the compiled release. Also, note that the versioned release has a list of changes for each field that has been updated.
 
 
 ```eval_rst
@@ -62,13 +74,11 @@ The tender release is added to the `releases` list in the record for the contrac
 
 The enquiry period has ended, and a few questions from potential suppliers have been received. The procuring entity issues a document with the responses to the enquiries received from bidders.
 
-In OCDS, a new release is published using the 'tenderUpdate' tag.
+The publisher creates a new OCDS release with the 'tenderUpdate' tag.
 
-No changes are made to the existing planning and tender releases, however in the new release a link to the enquiry responses is added to `tender.documents` and the `hasEnquiries` field is set to true.
+The previous releases of planning and tender are not changed. In the new release, the publisher adds a link to the new document in the `tender.documents` section. The `tender.hasEnquiries` field is also set to true. The publisher has decided to keep unchanged fields from the previous releases in the new one.
 
-The publisher has decided to repeat fields and values which are unchanged from the previous releases in the new one.
-
-The record for the contracting process now has three immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section, and the field `tender.hasEnquiries` has more than one entry in the versioned release.
+The record now has three immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. Also, the field `tender.hasEnquiries` has more than one entry in the versioned release.
 
 ```eval_rst
 
@@ -90,11 +100,13 @@ The record for the contracting process now has three immutable releases, and upd
 
 ### Award
 
-The procuring entity makes the decision to award the contract to Balfour Beatty and issues an award notice. 
+The procuring entity makes the decision to award the contract to Balfour Beatty. They issue an award notice. 
 
-The award notice is represented as a new OCDS release with the details of the award provided in the `award` section and using the 'award' tag. An entry is added to the `parties` array to provide information about the supplier and the full tender block is included as well with the `.status` field set to 'complete'. No changes are made to the existing planning, tender and tenderUpdate releases.
+The publisher creates a new OCDS release for the award. The record has the relevant information in the award section and uses the 'award' tag. 
 
-The record for the contracting process has been updated to include the latest release, and the compiled and versioned releases have been updated accordingly. The compiled release has an award block and an entry for the supplier in the `parties` section. The status of the tender has been updated to 'complete'. The versioned release also reflects the change in the `tender.status` field.
+The `parties` array has a new entry with the supplier's information. The complete `tender` section is repeated, with the `status` field set to 'complete'. Previous releases remain unchanged.
+
+The publisher adds the new release to the record. They also update the compiled and versioned releases. The compiled release reflects the changes to the `awards`, `tender` and `parties` sections. The versioned release includes a new change for the `tender.status` field.
 
 ```eval_rst
 
@@ -116,9 +128,11 @@ The record for the contracting process has been updated to include the latest re
 
 ### Contract
 
-After the standstill period has passed and no complaints have been issued against the award of the contract, the procuring entity and the supplier sign the contract. A new OCDS release is published using the 'contract' tag with the `contracts` section populated.
+By law, the procuring entity has to wait for complaints for a given period of time before signing a contract. Once the period ends with no complaints, the contract with the supplier is signed.
 
-The record now has an additional release, and the compiled and versioned releases now include the contract section with no other changes.
+The publisher creates a new OCDS release using the 'contract' tag. They include all the relevant information in the `contracts` section.
+
+The record gets updated to include the new release. The compiled and versioned release now have the new `contract` section. There are no updates to other sections.
 
 
 ```eval_rst
@@ -142,21 +156,25 @@ The record now has an additional release, and the compiled and versioned release
 
 ### Implementation
 
-The supplier has started the construction work, and the procuring entity makes the first payment against the contract using their finance system, which shares a common contract identifier with the procurement system used to publish the earlier stages of the contracting process. 
+The supplier starts the construction work. After a while, the procuring entity makes the first payment to the supplier. The publisher creates a release to document this update in the process.
 
-An OCDS release is published from the finance system using the 'implementation' tag, with details of the payment provided in the `contracts.implementation.transactions` section.
+Up to this point, the publisher used a single source to generate OCDS documents. They store procurement data in a procurement system. Payment data, however, gets stored in a financial system, so do we need to join the data to create a release?
 
-Since the previous releases from the procurement system share a common `ocid` with the release from the finance system, it’s possible to update the OCDS record for the contracting process with the new information from the finance system.
+If the systems share common *process identifiers*, there is no need to join data to create a release. The only requisite is to built the `ocid` using the shared identifier.
+
+The publisher uses the information from the financial system to create a new release. This release uses the 'implementation' tag. The `contracts.implementation.transactions` section includes the details of the payment.
+
+The publisher produces the same `ocid` for the process using the common identifier. This way, is possible to update the record with the new release.
 
 <div class="example hint" markdown=1>
 
 <p class="first admonition-title">Combining data from different systems</p>
 
-Refer to the guidance on system architecture for more information on how OCDS can be used to combine data from different systems.
+OCDS can be used to combine data from different systems. For more information refer to the guidance on system architectures.
 
 </div>
 
-The new release from the finance system is added to the releases list in the OCDS record and both the compiled and versioned releases are updated to include the new transaction.
+The publisher adds the new release from the finance system to the releases list in the OCDS record. The compiled and versioned releases get updated to include the new transaction.
 
 
 ```eval_rst
@@ -179,11 +197,13 @@ The new release from the finance system is added to the releases list in the OCD
 
 ### Contract Amendment
 
-Due to unforeseen complications with subsistence in the area of the works, the procuring entity and the supplier agree to a contract extension to cover the additional time and cost required to complete the works. The procurement system is updated with the new contract value and period and a modification notice is issued, this is represented in OCDS as a new release with the 'contractAmendment' tag.
+Unexpected complications causes delays in the construction work. Because of them the procuring entity and the supplier agree to a contract extension. This will cover the extra time and cost required to complete the works. 
 
-Refer to the amendments worked example for more information on how contract amendments are modelled in OCDS.
+The publisher updates their procurement system with the new contract value and period. They issue a modification notice through the system. They also create a new OCDS with the 'contractAmendment' tag to represent the notice.
 
-The record for the contracting process is updated with an entry in the releases list for the new contract amendment release. The compiled release reflects the new values, and the versioned release shows new entries for the contract’s value and end date.
+Note that contract amendments in OCDS involves more modelling considerations. Refer to the amendments worked example for guidance on the topic.
+
+The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release shows new entries for the contract’s value and end date.
 
 
 ```eval_rst
