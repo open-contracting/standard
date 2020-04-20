@@ -1,6 +1,6 @@
 # Change History
 
-Tracking change over time is important for users of contracting data. Frequent changes during the procurement process can signal possible corruption. Constant, repetitive changes through processes may reveal some opportunities for improvement.
+Tracking change over time is important for users of contracting data. Frequent changes during a procurement process can signal possible corruption or opportunities for improvement.
 
 Publishers ought to aim to publish data in real-time and to provide a change history. The OCDS releases and records model describes how to do this.
 
@@ -40,7 +40,7 @@ In software development terms, releases are analogous to Git commits on a branch
 
 ### Releases
 
-Releases follow the OCDS Release schema. The schema is flexible enough to publish small portions of data, along with a few required fields. The box below shows an example.
+Releases follow the OCDS release schema. The schema covers the whole contracting process, but there are only a few required fields. The box below shows an example.
 
 ```eval_rst
 .. jsoninclude:: ../examples/tender.json
@@ -177,4 +177,4 @@ See the [Record reference](../schema/records_reference/) for more details.
 
 #### Packaging
 
-Records should be always published wrapped in a Record Package. The `uri` package field should lead to a copy of the same package and record.
+Records should be always published wrapped in a Record Package. The `uri` field in the package should lead to a copy of the same record package.

@@ -1,6 +1,6 @@
 # Change history
 
-The following example shows how to publish a contracting process' data as it unfolds. Releases are built and published for each event in the process. Records are updated for each new release available.
+The following example shows how to publish data about a contracting process. Publish a release for each event in the process and update the record each time you publish a release.
 
 Each subsection refers to a stage or event in the contracting process lifetime.
 
@@ -8,11 +8,11 @@ Refer to the [change history](../../getting_started/change_history) guidance for
 
 ### Planning
 
-The London Borough of Barnet has a planned tender for later in the year. To prepare the market they publish a *notice of planning procurement*. This is also known as *prior information notice*, or *future opportunity notice*.
+The London Borough of Barnet plans to publish a tender for cycle lane improvements later in the year. To prepare the market they publish a *notice of planned procurement*. This is also known as *prior information notice*, or *future opportunity notice*.
 
-The publisher creates an OCDS release to represent this notice. The release uses the 'planning' tag and includes data of the planned procurement. The `tender` section holds the estimated values, as the issue date. The section also uses the 'planned' status to state these are planned values.
+The publisher creates an OCDS release to represent this notice. The release uses the 'planning' tag and includes data about the planned procurement. The `tender` section holds the estimated values and publication date. The tender status is 'planned'.
 
-The publisher also creates an OCDS Record for the starting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled version should look very much like this release. Compare the planning release and the record using the box below.
+The publisher also creates an OCDS record for the new contracting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled version should look very much like this release. Compare the planning release and the record using the box below.
 
 
 ```eval_rst
@@ -39,7 +39,7 @@ The London Borough of Barnet is ready to invite bids for the contract. They issu
 
 The publisher creates a new release to represent this notice. The release uses the 'tender' tag and provides the details in the `tender` section.
 
-There are no changes to the planning release published before. But the new release has the updated information about the tender. This includes the real issue date, and the following new information:
+There are no changes to the planning release published before. But the new release has the updated information about the tender. This includes the actual publication date, and the following new information:
 
 * The deadline for bid submission
 
@@ -164,7 +164,7 @@ If the systems share common *process identifiers*, there is no need to join data
 
 The publisher uses the information from the financial system to create a new release. This release uses the 'implementation' tag. The `contracts.implementation.transactions` section includes the details of the payment.
 
-The publisher produces the same `ocid` for the process using the common identifier. This way, is possible to update the record with the new release.
+Because the new release uses the same `ocid`, it is possible to update the record with the information.
 
 <div class="example hint" markdown=1>
 
