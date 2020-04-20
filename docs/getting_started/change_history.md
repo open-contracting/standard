@@ -57,7 +57,7 @@ Each release needs to contain an [ocid](../schema/identifiers/#contracting-proce
 
 A release also needs a release identifier, unique in the scope of the contracting process. A release id can be built in several ways. Publishers can use any generation strategy, as long as the ids don’t clash within the same process.
 
-The Easy releases section introduces two strategies that can be used in any scenario. 
+The [Easy releases](../publication/easy-releases/) section introduces two strategies that can be used in any scenario. 
 
 #### Packaging
 
@@ -125,6 +125,12 @@ A record should follow the structure defined in the [Records Reference](../schem
    :expand: 
 ```
 
+#### Embedding or linking Releases
+
+Records contain the history of a contracting process as a group of releases. A record may have embedded releases, or a list of URLs to the releases.
+
+See the [Record reference](../schema/records_reference/) for more details.
+
 #### Compiled and Versioned Releases
 
 A **compiled release** follows the release structure. It contains the latest value for all fields present in the releases of a process. The example above shows how a compiled release looks like. It is strongly recommended to include a compiled release when producing records.
@@ -155,6 +161,8 @@ Consider how to calculate the **total value of active tenders** using compiled r
     :file: ../examples/compiledreleases_compiled.csv
 ```
 
+Working with compiled releases, this metric can be calculated by filtering on the tender status and summing the tender value.
+
 Compare that to how to calculate the **total value of active tenders** using releases:
 
 ```eval_rst
@@ -168,12 +176,6 @@ If we have releases only, we need to check if any tender has been cancelled befo
 Compiled releases can be useful for many scenarios. But users may need the full history to answer other questions. For example, how many amends there are for a tender's value.
 
 </div>
-
-#### Embedding or linking Releases
-
-Records contain the history of a contracting process as a group of releases. A record may have embedded releases, or a list of URLs to the releases.
-
-See the [Record reference](../schema/records_reference/) for more details.
 
 #### Packaging
 
