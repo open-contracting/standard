@@ -11,6 +11,8 @@ Usually, these individuals already belong to an organization that participates i
 
 When including information about individuals, it is important to link them clearly to the organizations they belong to, either by including them as attributes in the party block or through organization references. 
 
+It is a good practice to provide identifiers for individuals if possible. For more information refer to the [personal identifiers](./personal_identifiers/) guidance.
+
 We invite for discussion at [Github](https://github.com/open-contracting/standard/issues/883) about how to include individual information in a generic way for future versions of the standard.
 
 ## Worked examples
