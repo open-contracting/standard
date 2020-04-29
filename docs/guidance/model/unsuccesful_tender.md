@@ -8,11 +8,11 @@ In OCDS, at a conceptual level, a contracting process is intended to match each 
 
 In OCDS, the `ocid` is the unique identifier for a contracting process. As the initiation of the procurement process is the tender, normally the identifier for a tender can be used as the `ocid`.
 
-In most jurisdictions, if a procedure is cancelled or unsuccessful, and a new procedure is started to procure the same items, the two procedures are considered two different contracting processes. This is in keeping with the OCDS definition of a contracting process.
+In most jurisdictions, if a procedure is cancelled or unsuccessful, and a **new procedure** is started to procure the same items, the two procedures are considered two **different** contracting processes. This is in keeping with the OCDS definition of a contracting process.
 
 But in other jurisdictions, such as Paraguay, the planning stage is considered as the initiation of the process. In these jurisdictions when a tender fails and a new tender is started, the two tenders are considered part of the same contracting process. This differs from the OCDS definition of a contracting process.
 
-In OCDS, it is relevant and desirable to include the planning information that relates to the process, but the contracting process is not interpreted as ‘starting’ with the planning stage. In OCDS, the planning stage is something that comes before the initiation of a contracting process. The initiation of the procedure is not the planning stage, because at least one of the following is true of a planning stage: it is not a concrete attempt to award one or more contracts like a request for tender, etc.; it is not a concrete opportunity for potential suppliers to participate in; it does not describe the competitive conditions.
+In OCDS, it is relevant and desirable to include the planning information that relates to the process, but the contracting process is not interpreted as ‘starting’ with the planning stage. In OCDS, the planning stage is something that comes **before** the initiation of a contracting process. The initiation of the procedure is not the planning stage, because at least one of the following is true of a planning stage: it is not a concrete attempt to award one or more contracts like a request for tender, etc.; it is not a concrete opportunity for potential suppliers to participate in; it does not describe the competitive conditions.
 
 However a jurisdiction treats unsuccessful tenders and subsequent tenders, in OCDS they are considered separate but related contracting processes. 
 
@@ -22,8 +22,8 @@ This relationship can be modelled using the `relatedProcess` array at the releas
 
 ### Example: Modelling unsuccessful tenders in Paraguay
 
-The Sistema de Información de las Contrataciones Públicas (SICP) discloses information about contracting processes for all public entities in Paraguay. SICP is managed by the National Directorate of Public Procurement (DNCP in Spanish).
-
+The [Sistema de Información de las Contrataciones Públicas (SICP)](https://contrataciones.gov.py/) discloses information about contracting processes for all public entities in Paraguay. SICP is managed by the National Directorate of Public Procurement (DNCP in Spanish).
+``
 Paraguay discloses all stages of the contracting process, from planning to implementation. The first data disclosed is about the planning stage. Planning data includes an estimate of what an entity is going to buy, when and for how much. SICP assigns an `ocid` when the planning data is first disclosed, before the tender stage. In this example, the ocid is 'ocds-03ad3f-331547-1'
 
 ```eval_rst
