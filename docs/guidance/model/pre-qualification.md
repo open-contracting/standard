@@ -1,8 +1,8 @@
 # Pre-qualification and pre-selection
 
-Single stage procurement procedures, in which suppliers are invited to bid without submitting any prior information, are straightforward to model in OCDS.
+In single-stage procedures, procuring entities invite suppliers to bid without submitting any prior information.  Such procedures are straightforward to model in OCDS.
 
-However, many jurisdictions also use multi-stage procedures. Such procedures typically follow a process similar to:
+But, many jurisdictions also use multi-stage procedures. Such procedures follow a process like:
 
 ```eval_rst
 .. csv-table::
@@ -11,28 +11,28 @@ However, many jurisdictions also use multi-stage procedures. Such procedures typ
    :header-rows: 1
 ```
 
-This worked example describes 3 types of multi-stage procurement procedures and explains how to model them in OCDS.
+This worked example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
 
 ## Definitions
 
-The term ‘pre-qualification’ is used to describe different types of procurement procedure:
+The term ‘pre-qualification’ describes different types of multi-stage procedure:
 
 ### Pre-qualification with no limit on the number of qualified suppliers
 
-The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement) was developed through extensive consultations with governments and interested international organizations and therefore reflects the procurement practices and concepts used in many different jurisdictions. The UNCITRAL model law defines pre-qualification as a procedure to:
+The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement) was developed through extensive consultation and so reflects the procurement practices and concepts used in many different jurisdictions. The UNCITRAL model law defines pre-qualification as a procedure to:
 
 > ...identify, prior to solicitation, suppliers or contractors that are qualified.
 
-The model law states that an invitation to pre-qualify must be published, specifying the criteria and procedures for ascertaining the qualifications of suppliers or contractors and containing much of the information that would otherwise appear on an invitation to tender.
+The model law requires procuring entities to publish an invitation to pre-qualify. The invitation needs to specify the criteria and procedure for assessing the qualifications of suppliers. Much of the information that would usually appear on an invitation to tender is provided on the invitation to pre-qualify.
 
-Once the qualifications of the suppliers or contracts have been assessed, only those that have been pre-qualified are entitled to participate further in the procurement proceedings.
+The procuring entity assesses the qualifications of the suppliers based on their responses. Only pre-qualified suppliers can take part in the later proceedings.
 
 ```eval_rst
 .. note::
 
    .. markdown::
 
-      The European Union’s restricted procedure (see Article 28, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) is an example of a procurement procedure which uses pre-qualification.
+      The European Union’s restricted procedure (see Article 28, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) uses pre-qualification.
 ```
 
 ### Pre-qualification with a limit on the number of qualified suppliers (pre-selection)
@@ -41,27 +41,23 @@ The UNCITRAL model law defines pre-selection as a procedure to:
 
 > ...identify, prior to solicitation, a **limited number** of suppliers or contractors that best meet the qualification criteria for the procurement concerned.
 
-Procedures using pre-selection follow the same process as those using pre-qualification, with the addition that the procuring entity must use the invitation to pre-qualify to disclose:
-
-* The maximum number of pre-selected suppliers or contractors from which proposals will be requested.
-
-* The manner in which the pre-selection will be carried out.
+Pre-selection follows the same process as pre-qualification, with some additional requirements. The invitation to pre-qualify needs to specify how many suppliers the procuring entity will later request proposals from. The invitation also needs to specify how the procuring entity will select the suppliers to request proposals from.
 
 ```eval_rst
 .. note::
 
    .. markdown::
 
-      The European Union’s restricted procedures, competitive procedures with negotiation, competitive dialog procedures and innovation partnerships all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj))
+      The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialog procedure and innovation partnership all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).  
 ```
 
 ### Pre-qualification in Paraguay
 
-In Paraguay, a procuring entity can carry out a single pre-qualification for several tenders of the same nature (see article 22, [law Nº 2.051/03](https://www.contrataciones.gov.py/documentos/download/marco-legal/12760)). The details of this procedure will become clearer in the example below.
+In Paraguay, procuring entities can carry out a single pre-qualification for several tenders of the same nature (see article 22, [law Nº 2.051/03](https://www.contrataciones.gov.py/documentos/download/marco-legal/12760)). The details of this procedure will become clearer in the example below.
 
 ## The OCDS model
 
-The OCDS contracting process model includes a single competitive stage (the `tender` section) representing the initiation of a contracting process, in which procuring entities invite submissions from potential suppliers:
+In OCDS, a contracting process has a single competitive stage, the `tender` section. This represents the initiation of the process, when procuring entities invite suppliers to take part:
 
 <style><!--
 .process-table { width:18%; float:left; font-size:10pt; }
@@ -114,7 +110,7 @@ The OCDS contracting process model includes a single competitive stage (the `ten
 </div>
 <br clear="all"/>
 
-The `tender` section is also used to disclose information about the procedure used by the contracting process. In particular, the `tender.procurementMethod` field is used to classify the procedure used against the following codelist:
+The `tender` section is also used to disclose information about the procedure used by the contracting process. In particular, the `tender.procurementMethod` field classifies the procedure using the following codelist:
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -124,9 +120,9 @@ The `tender` section is also used to disclose information about the procedure us
 
 ## Example: Pre-qualification
 
-The Bank of England issues a [restricted procedure contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:90873-2019:TEXT:EN:HTML) to invite potential suppliers to pre-qualify to bid for a tender to provide facilities management services at its site in Roehampton.
+The Bank of England issues a [restricted procedure contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:90873-2019:TEXT:EN:HTML) to invite suppliers to pre-qualify for a tender to provide facilities management services.
 
-Since this contract notice represents the initiation of the contracting process, it is modelled using the `tender` section in OCDS:
+The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS:
 
 ```eval_rst
 .. jsoninclude:: ../../examples/pre-qualification/pre-qualification-package.json
@@ -135,27 +131,25 @@ Since this contract notice represents the initiation of the contracting process,
 
 ```
 
-Although any potential supplier may submit a request to participate in the first stage, only qualified suppliers will be invited to submit a tender for the contract, so `tender/procurementMethod` is set to ‘selective’.
+Any supplier may submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
 
 ```eval_rst
 .. note::
 
    .. markdown ::
 
-      OCDS does not currently provide a means to disclose information on the second stage of multi-stage contracting processes. Possible approaches to modelling multi-stage contracting processes in OCDS are under discussion for inclusion in a future version of the standard ([Github issue](https://github.com/open-contracting/standard/issues/440)).
+      OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github](https://github.com/open-contracting/standard/issues/440).
 
       Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
 ```
 
 ## Example: Pre-selection
 
-The National Nuclear Laboratory issues a [restricted procedure contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:28681-2020:TEXT:EN:HTML&src=0) to invite potential suppliers to pre-qualify for a project to update the physical security system arrangements at Preston Laboratory.
+The National Nuclear Laboratory issues a [restricted procedure contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:28681-2020:TEXT:EN:HTML&src=0) to invite suppliers to pre-qualify for a project to update its physical security system arrangements.
 
-Since this contract notice represents the initiation of the contracting process, it is modelled using the `tender` section in OCDS.
+The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
-As with the previous example, `tender/procurementMethod` is set to ‘selective’, since only qualified suppliers will be invited to submit a tender for the contract.
-
-In addition, the criteria for choosing the limited number of candidates is disclosed using the [selectionCriteria extension](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension), developed for the OCDS for the EU profile:
+The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a tender at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) is used to disclose the criteria for choosing which suppliers to invite proposals from.
 
 ```eval_rst
 .. jsoninclude:: ../../examples/pre-qualification/pre-selection-package.json
@@ -166,11 +160,11 @@ In addition, the criteria for choosing the limited number of candidates is discl
 
 ## Example: Pre-qualification in Paraguay
 
-The Ministry of Public Works and Communications issues an [invitation for suppliers to pre-qualify for two tenders for consulting services related to road construction in two different groups of neighbourhoods](https://contrataciones.gov.py/licitaciones/convocatoria/338229-servicios-consultoria-estudios-factibilidad-diseno-final-ingenieria-tramos-caminos-1/precalificacion.html). Each tender will re-use the list of pre-qualified suppliers established as a result of this first procedure.
+The Ministry of Public Works and Communications issues an [invitation for suppliers to pre-qualify for two tenders for road construction in different neighbourhoods](https://contrataciones.gov.py/licitaciones/convocatoria/338229-servicios-consultoria-estudios-factibilidad-diseno-final-ingenieria-tramos-caminos-1/precalificacion.html). Each tender will re-use the list of pre-qualified suppliers established as a result of this first procedure.
 
-Since this invitation represents the initiation of a contracting process to establish a list of pre-qualified suppliers, it is modelled using the tender block in OCDS.
+The invitation represents the initiation of a contracting process to establish a list of pre-qualified suppliers, so it is modelled using the `tender` section in OCDS.
 
-`tender.procurementMethod` is set to ‘selective’, since only qualified suppliers will be invited to bid in subsequent tenders that use the list.
+Only qualified suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to ‘selective’.
 
 ```eval_rst
 .. jsoninclude:: ../../examples/pre-qualification/pre-qualification-paraguay-package.json
@@ -184,7 +178,7 @@ Since this invitation represents the initiation of a contracting process to esta
 
    .. markdown ::
 
-      OCDS does not currently provide a means to disclose information on the second stage of multi-stage contracting processes. Possible approaches to modelling multi-stage contracting processes in OCDS are under discussion for inclusion in a future version of the standard ([Github issue](https://github.com/open-contracting/standard/issues/440)).
+      OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github issue](https://github.com/open-contracting/standard/issues/440).
 
       Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
 ```
