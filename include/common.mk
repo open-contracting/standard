@@ -109,3 +109,17 @@ $(TRANSLATIONS:.%=%): %: build_source compile build.% clean_current_lang
 
 .PHONY: all
 all: build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
+
+### PDF generation
+
+$(LANGUAGES:.%=pdf.%): pdf.%: FORCE
+	wkhtmltopdf \
+		--no-stop-slow-scripts \
+		--javascript-delay $(PDF_DELAY) \
+		--disable-smart-shrinking \
+		--print-media-type \
+		--header-html include/header.html \
+		toc https://standard.open-contracting.org$(PDF_ROOT)/$*/$(PDF_PAGES) $*.pdf
+
+.PHONY: pdf
+pdf: $(LANGUAGES:.%=pdf.%)

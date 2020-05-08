@@ -50,8 +50,6 @@ A [free helpdesk service](support/index) is available to support implementation 
 
 ```eval_rst
 .. toctree::
-   :maxdepth: 2
-   :glob:
    :hidden:
 
    getting_started/index
