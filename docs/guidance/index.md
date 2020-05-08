@@ -22,6 +22,7 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
    model/related_processes
    model/amendments
    model/extensions
+   model/organization_classifications
 ```
 
 ## Build: How-To Guides
