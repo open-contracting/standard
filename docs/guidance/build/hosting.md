@@ -7,7 +7,7 @@ Different users have different needs when it comes to accessing OCDS data.
 Which formats are most important will depend on the priority use cases for each OCDS implementation, but you are encouraged to consider:
 
 * **Bulk downloads** - packaging together multiple releases or multiple records in one or more files for users to download and import into local tools.
-* **Individual release and record downloads** - providing a URI at which each release or record can be obtained. This is crucial for 4 ☆ data publication.
+* **Individual release and record downloads** - providing a URI at which each release or record can be obtained.
 * **CSV and spreadsheet serializations** - providing multiple releases or compiled records for download, enabling users to work with data directly in spreadsheet software or other tools. 
 * **API access** - enabling interactive access to your data.
 
@@ -52,7 +52,7 @@ The web server providing access to bulk files ought to correctly report the [HTT
 
 ## Individual releases and records
 
-To achieve [4 ☆](levels) OCDS publication requires each release and record to be accessible at a permanent URI. This can be achieved by:
+Each release and record can be made accessible at a permanent URI. This can be achieved by:
 
 (a) Archiving a single-release release package for each release to a web accessible file system as it is created, and then regularly merging these releases to compile individual record files in the same file system. One approach might be to have a folder for each `ocid` and to place the releases and record related to that process into that folder. 
 

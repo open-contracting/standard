@@ -129,9 +129,11 @@ def setup(app):
     standard_dir = basedir / 'schema'
     standard_build_dir = basedir / 'build' / language
 
+    branch = os.getenv('TRAVIS_BRANCH', os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1])
+
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
         (glob(str(standard_dir / '*-schema.json')), standard_build_dir, schema_domain),
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(standard_dir / 'codelists' / '*.csv')), standard_build_dir / 'codelists', codelists_domain),
-    ], localedir, language, headers, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
+    ], localedir, language, headers, version=branch)
