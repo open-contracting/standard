@@ -26,6 +26,7 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
    model/awards_contracts_buyers_suppliers
    model/organization_identifiers
    model/organization_classifications
+   model/unsuccesful_tender
 ```
 
 ## Build: How-To Guides
