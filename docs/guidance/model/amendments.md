@@ -28,7 +28,7 @@ A publisher issues a tender for a "Data merge tool". A new release with the `tag
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-tender-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-tender-example.json
    :jsonpointer: /records/0/releases/0
    :expand: tender, tag
    :title: Tender
@@ -41,7 +41,7 @@ Weeks later, the publisher expands the `description` of the tender to provide mo
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-tender-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-tender-example.json
    :jsonpointer: /records/0/releases/1
    :expand: tender, tag
    :title: TenderUpdate
@@ -54,7 +54,7 @@ A few days later, the publisher increases the value of the tender and extends th
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-tender-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-tender-example.json
    :jsonpointer: /records/0/releases/2
    :expand: tender, tag, amendments
    :title: TenderAmendment
@@ -67,7 +67,7 @@ A full record is provided below, with all the releases for the process and a `co
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-tender-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-tender-example.json
    :jsonpointer:
    :expand: records, releases
    :title: FullRecord
@@ -78,7 +78,7 @@ A full record is provided below, with all the releases for the process and a `co
 
 <p class="first admonition-title">Hint</p>
 
-It is recommended to <a href="../../../examples/amendments/amendments-tender-example.json" target="_blank">download</a> the record example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
+It is recommended to <a href="../../../_static/json/amendments/amendments-tender-example.json" target="_blank">download</a> the record example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
 
 </div>
 
@@ -102,7 +102,7 @@ See the JSON release below.
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-contract-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-contract-example.json
    :jsonpointer: /records/0/releases/0
    :expand: tag, contracts, items
    :title: Contract
@@ -117,7 +117,7 @@ See the example release below.
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-contract-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-contract-example.json
    :jsonpointer: /records/0/releases/1
    :expand: tag, contracts, items, amendments
    :title: ContractAmendment
@@ -130,13 +130,13 @@ In certain scenarios there may not be a valid `amendsReleaseID` and so it can be
 
 #### Record
 
-An example record for the whole process is shown below. Consider downloading the <a href="../../../examples/amendments/amendments-contract-example.json" target="_blank">record example</a> and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
+An example record for the whole process is shown below. Consider downloading the <a href="../../../_static/json/amendments/amendments-contract-example.json" target="_blank">record example</a> and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
 
 Note that the `compiledRelease` contains all the items, included the latest one added in the contract amendment.
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-contract-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-contract-example.json
    :jsonpointer:
    :expand: records, releases
    :title: Record
@@ -153,7 +153,7 @@ The table below shows an example of a contract notices table from a procurement 
 
 ```eval_rst
 .. csv-table-no-translate::
-   :file: ../examples/amendments-contract-notice.csv
+   :file: ../_static/json/amendments-contract-notice.csv
    :header-rows: 1
 ```
 
@@ -161,7 +161,7 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-easy-releases-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-easy-releases-example.json
    :jsonpointer: /records/0/releases/1
    :expand: tag, contracts
    :title: Contract
@@ -170,7 +170,7 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/amendments/amendments-easy-releases-example.json
+.. jsoninclude:: ../../_static/json/amendments/amendments-easy-releases-example.json
    :jsonpointer: /records/0/releases/2
    :expand: tag, contracts, amendments
    :title: ContractAmendment
@@ -180,4 +180,4 @@ Note that the mapping of the fields remains the same for the contract amendments
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
 
-As in the previous examples, you can download a <a href="../../../examples/amendments/amendments-easy-releases-example.json" target="_blank">record</a> file for the example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
+As in the previous examples, you can download a <a href="../../../_static/json/amendments/amendments-easy-releases-example.json" target="_blank">record</a> file for the example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
