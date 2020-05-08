@@ -28,7 +28,7 @@ The conversion module produces OCDS releases and/or records wrapped in packages.
 
 This approach does not need extra storage space. But it may be not possible to provide persistent URLs for releases, nor a change history for each process.
 
-The [easy releases guidance](./easy-releases/) explains how to achieve a conformant OCDS implementation where it is not possible to provide a full change history.
+The [easy releases guidance](easy-releases) explains how to achieve a conformant OCDS implementation where it is not possible to provide a full change history.
 
 Bulk downloads can be provided as part of the API. Live queries may stress the live systems if they need to scan large portions of data.
 
@@ -45,7 +45,7 @@ On the other hand, there is a cost of maintaining a separate datastore. In these
 
 Publishers should consider how to store OCDS data. Releases are immutable so can be stored as they are, but records change over time. The process can build records on each API call, or store and update them each time a new release is created. The API must return OCDS data wrapped in a release or record package. Usually there is no need to store wrapped OCDS data, since package data can be generated in real time.
 
-The [change history guidance](../../getting_started/change_history/) describes OCDS releases and records and their different components.
+The [change history guidance](../../getting_started/change_history) describes OCDS releases and records and their different components.
 
 
 ### Pull and convert

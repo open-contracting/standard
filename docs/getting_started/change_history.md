@@ -49,21 +49,21 @@ Releases follow the OCDS release schema. The schema covers the whole contracting
    :title: release
 ```
 
-See the [Release reference](../schema/reference/) for more details on the fields available.
+See the [Release reference](../schema/reference) for more details on the fields available.
 
 #### Identifiers
 
-Each release needs to contain an [ocid](../schema/identifiers/#contracting-process-identifier-ocid) to identify the contracting process it relates to. An ocid is made by a prefix and an unique process identifier chosen by the publisher.
+Each release needs to contain an [ocid](../../schema/identifiers/#contracting-process-identifier-ocid) to identify the contracting process it relates to. An ocid is made by a prefix and an unique process identifier chosen by the publisher.
 
 A release also needs a release identifier, unique in the scope of the contracting process. A release id can be built in several ways. Publishers can use any generation strategy, as long as the ids don’t clash within the same process.
 
-The [Easy releases](../publication/easy-releases/) section introduces two strategies that can be used in any scenario. 
+The [Easy releases](../guidance/publish/easy-releases) section introduces two strategies that can be used in any scenario. 
 
 #### Packaging
 
 Releases should be always wrapped in a release package to provide context to the data. The `uri` package field should contain a URI to an online copy of the same release package. In a full OCDS implementation, each release should be available at its own persistent URL.
 
-See the [Release Package schema](../schema/release_package/) for details.
+See the [Release Package schema](../schema/release_package) for details.
 
 #### Tags
 
@@ -129,7 +129,7 @@ A record should follow the structure defined in the [Records Reference](../schem
 
 Records contain the history of a contracting process as a group of releases. A record may have embedded releases, or a list of URLs to the releases.
 
-See the [Record reference](../schema/records_reference/) for more details.
+See the [Record reference](../schema/records_reference) for more details.
 
 #### Compiled and Versioned Releases
 
