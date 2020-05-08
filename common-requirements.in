@@ -1,0 +1,20 @@
+# See https://github.com/sphinx-doc/sphinx/pull/6856
+-e git+https://github.com/jpmckinney/sphinx.git@v2.2.1-hotfix#egg=sphinx
+
+# Sphinx
+ocds-babel>=0.2.1
+# See https://ocds-babel.readthedocs.io/en/latest/api/translate.html#install-requirements-for-markdown-translation
+-e git+https://github.com/readthedocs/commonmark.py.git@dafae75015cc342f3fddb499674bab97ac4a6a96#egg=commonmark
+-e git+https://github.com/jpmckinney/recommonmark.git@hotfix#egg=recommonmark
+-e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
+
+# Make
+sphinx-intl<1
+transifex-client
+
+# Profile
+ocdsextensionregistry>=0.0.16
+
+# Tests
+pytest
+selenium
