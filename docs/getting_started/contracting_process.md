@@ -14,7 +14,7 @@ OCDS covers:
 
 <div class="process-table" markdown=1>
 
-![Tender](../_static/svg/green_planning.svg)
+![Planning](../_static/svg/green_planning.svg)
 
 **Planning**<br/>
 *Including:*<br/>
