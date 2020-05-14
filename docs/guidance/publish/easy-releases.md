@@ -1,11 +1,11 @@
 # 'Easy' Releases
 
 OCDS encourages the use of the [Releases and
-Records](../getting_started/releases_and_records) model in order to publish
+Records](../getting_started/change_history.md) model in order to publish
 up-to-date, timely data. However, sometimes publishers can't fully support the
 model, because historic data of contracting processes is not stored in the
 source system(s). In such case, the publisher can produce only one release for
-each contracting process, and the release gets overriden with new updates.
+each contracting process, and the release gets overridden with new updates.
 
 In this situation, it is possible to still meet OCDS requirements by following
 a strategy to build different release identifiers each time the data changes in
@@ -22,19 +22,49 @@ identifiers on each data update will be shown:
   release identifier.
 * **When the system does not contain a last modified date** - use a hash of all
   the fields to create a unique release ID. A hash is guaranteed to change when
-  the data changes, and it is almost impossible for it to colide with a previous,
+  the data changes, and it is almost impossible for it to collide with a previous,
   existent identifier for the same contracting process.
+
+See the examples below for more details.
 
 These approaches can be useful for most situations but they are not meant to be
 the best solution for all cases. A publisher may find an alternative that works
 best for its own scenario.
+
+## Additional Considerations
+
+### Packaging
+
+Releases in OCDS should be packaged correctly using a [release package](../../schema/release_package.md). This is to provide consistency and important metadata.
+
+In an 'Easy' releases scenario it is still important to package data correctly. Therefore the release should be wrapped in a *release package*. It is *not* recommended to use an OCDS Record to contain the release because `record.releases` should be a list of all the releases and not just the latest one.
+
+### Release tags
+
+Releases in OCDS have a [release tag](../schema/codelists.md#release-tag) which indicates the stage of the contracting process they relate to. 
+
+When producing a single release for each contracting process, we can't use any tags that require other tags to be present in previous releases, e.g. 'tenderUpdate' which requires the 'tender' tag. 
+
+In this case, tags should be provided to indicate the sections of the schema which are populated. For example, if a release provides data in the `tender`, `award`, and `contract` sections, the `tag` array would look like this:
+
+```json
+{
+    "tag": [
+      "tender",
+      "award",
+      "contract"
+    ]
+}
+```
+
+This makes more sense if we realize that a release is always the "first release" of a contracting process for an user that access the data for the first time. All sections contain new data, and the release requires a tag for each one.
 
 ## Worked examples
 
 For the examples in the present section, the architecture in the image below
 is assumed.
 
-![Example architecture](../../../assets/easyreleases-example-architecture.png)
+![Example architecture](../../_static/png/easyreleases-example-architecture.png)
 
 Data is extracted from the source and transformed to OCDS each time there is a
 request, and resulting JSON files are not stored by the owner.
@@ -44,7 +74,7 @@ request, and resulting JSON files are not stored by the owner.
 The sample database structure used for the present example is illustrated
 in the image below.
 
-![Sample database 1](../../../assets/easyreleases-sampledb-1.png)
+![Sample database 1](../../_static/png/easyreleases-sampledb-1.png)
 
 The 'ProcurementProcess' table contains one single row for each contracting
 process in the system, and the row is updated with each change. Contracts and
@@ -65,7 +95,7 @@ the following data:
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
+   :file: ../../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
 ```
 
 There is no supplier or contract yet, so there are no entries for this
@@ -94,7 +124,7 @@ same release package.
 See the full JSON file below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/easy-releases/worked-example-1/1-tender.json
+.. jsoninclude:: ../../examples/easy-releases/worked-example-1/1-tender.json
    :jsonpointer:
    :expand: releases,tender
 ```
@@ -109,7 +139,7 @@ has changed.
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-1/2-tenderUpdate-procurementProcess.csv
+   :file: ../../examples/easy-releases/worked-example-1/2-tenderUpdate-procurementProcess.csv
 ```
 
 The `lastModifiedDate` value has changed as well, therefore the value of the
@@ -124,24 +154,12 @@ release identifier will change:
 See the full JSON below:
 
 ```eval_rst
-.. jsoninclude:: ../examples/easy-releases/worked-example-1/2-tenderUpdate.json
+.. jsoninclude:: ../../examples/easy-releases/worked-example-1/2-tenderUpdate.json
    :jsonpointer:
    :expand: releases,tag,tender
 ```
 
-Note that the 'tag' field has been set to 'tenderUpdate'. How the correct tag
-can be determined?
-
-In the present example, is possible to use the `createdAt` and the `updatedAt`
-columns from the 'ProcurementProcess' table: when both are not empty, their
-values differ and the `stage` column is 'tender', it can be assumed that there
-has been a tender update. But note as well that it is not possible to apply the
-same logic to detect an award update, and that a change in the tender value
-should probably be tagged as a tender amendment and documented in a
-'tender/amendments' section.
-
-There may be more or less limitations of publishing OCDS data with no history
-available, depending of how much data is stored in the source system(s).
+Note that the 'tag' field is still 'tender'. 
 
 #### 3. Award
 
@@ -154,7 +172,7 @@ the process.
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-1/3-award-procurementProcess.csv
+   :file: ../../examples/easy-releases/worked-example-1/3-award-procurementProcess.csv
 ```
 
 **Supplier**
@@ -162,7 +180,7 @@ the process.
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-1/3-award-supplier.csv
+   :file: ../../examples/easy-releases/worked-example-1/3-award-supplier.csv
 ```
 
 As the 'ProcurementProcess' table has been updated, the related release will
@@ -178,10 +196,12 @@ And the 'awards' section will be filled with the corresponding data. See the
 full JSON below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/easy-releases/worked-example-1/3-award.json
+.. jsoninclude:: ../../examples/easy-releases/worked-example-1/3-award.json
    :jsonpointer:
    :expand: releases,awards
 ```
+
+Note that we are keeping the 'tender' tag from the previous step. 
 
 #### 4. Contract
 
@@ -194,7 +214,7 @@ changes again to reflect the new stage, and a new entry is added in the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-1/4-contract-procurementProcess.csv
+   :file: ../../examples/easy-releases/worked-example-1/4-contract-procurementProcess.csv
 ```
 
 **Contract**
@@ -202,7 +222,7 @@ changes again to reflect the new stage, and a new entry is added in the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-1/4-contract-contract.csv
+   :file: ../../examples/easy-releases/worked-example-1/4-contract-contract.csv
 ```
 
 A new release id is generated:
@@ -216,17 +236,17 @@ A new release id is generated:
 See the full JSON below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/easy-releases/worked-example-1/4-contract.json
+.. jsoninclude:: ../../examples/easy-releases/worked-example-1/4-contract.json
    :jsonpointer:
    :expand: releases,contracts
 ```
 
 ### Scenario 2: when a last modified date is NOT stored
 
-This approach can be used when there is not a last modified date in the source
+This approach can be used when there is no last modified date in the source
 data. Below there is an updated image from the previous example:
 
-![Sample database 2](../../../assets/easyreleases-sampledb-2.png)
+![Sample database 2](../../_static/png/easyreleases-sampledb-2.png)
 
 The example is almost the same as the previous one, with the same steps, but
 with no last modified date in the tables as seen in the image above.
@@ -241,7 +261,7 @@ The example starts with the tender, and the following data in the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
+   :file: ../../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
 ```
 
 The unique identifier for this stage should be generated by joining all fields
@@ -271,7 +291,7 @@ this will be appended at the end of the ocid:
 See the full JSON below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/easy-releases/worked-example-2/1-tender.json
+.. jsoninclude:: ../../examples/easy-releases/worked-example-2/1-tender.json
    :jsonpointer:
    :expand: releases,tender
 ```
@@ -286,7 +306,7 @@ description fields.
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-2/2-tenderUpdate-procurementProcess.csv
+   :file: ../../examples/easy-releases/worked-example-2/2-tenderUpdate-procurementProcess.csv
 ```
 
 The same hash operation is repeated over the updated row and the resulting
@@ -301,15 +321,10 @@ value is `957969e7458f5144a931d2feb452ea48`. The new release identifier is:
 See the full JSON below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/easy-releases/worked-example-2/2-tenderUpdate.json
+.. jsoninclude:: ../../examples/easy-releases/worked-example-2/2-tenderUpdate.json
    :jsonpointer:
    :expand: releases,tag,tender
 ```
-
-Note that the tag used in the file is 'tender' and compare it with the previous
-example in Scenario 1. Here there is no way to detect an update unless the
-publisher takes additional steps in the generation of OCDS files, like opening
-and reading previous files before updating them.
 
 #### 3. Award
 
@@ -321,7 +336,7 @@ updated and a new entry in the 'Supplier' table is included.
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-2/3-award-procurementProcess.csv
+   :file: ../../examples/easy-releases/worked-example-2/3-award-procurementProcess.csv
 ```
 
 **Supplier**
@@ -329,7 +344,7 @@ updated and a new entry in the 'Supplier' table is included.
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-2/3-award-supplier.csv
+   :file: ../../examples/easy-releases/worked-example-2/3-award-supplier.csv
 ```
 
 The new data in the 'Supplier' table should be included in the hash generation
@@ -359,7 +374,7 @@ release identifier is:
 See the full JSON below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/easy-releases/worked-example-2/3-award.json
+.. jsoninclude:: ../../examples/easy-releases/worked-example-2/3-award.json
    :jsonpointer:
    :expand: releases,awards
 ```
@@ -374,7 +389,7 @@ updated and a new entry in the 'Contract' table is added.
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-2/4-contract-procurementProcess.csv
+   :file: ../../examples/easy-releases/worked-example-2/4-contract-procurementProcess.csv
 ```
 
 **Contract**
@@ -382,7 +397,7 @@ updated and a new entry in the 'Contract' table is added.
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :file: ../examples/easy-releases/worked-example-2/4-contract-contract.csv
+   :file: ../../examples/easy-releases/worked-example-2/4-contract-contract.csv
 ```
 
 Since there is one more table involved ('Contract'), the *three tables* that
@@ -418,27 +433,9 @@ identifier is:
 See the final JSON below.
 
 ```eval_rst
-.. jsoninclude:: ../examples/easy-releases/worked-example-2/4-contract.json
+.. jsoninclude:: ../../examples/easy-releases/worked-example-2/4-contract.json
    :jsonpointer:
    :expand: releases,contracts
 ```
 
-## Packaging
-Releases in OCDS should be packaged correctly using a [release package](../schema/release_package.md). This is to provide consistency and important metadata.
-
-When using following a model like that outlined above it is still important to package data correctly. Therefore the release should be wrapped in a *release package*. It is *not* recommended to use an OCDS Record to contain the release because `record.releases` should be a list of all the releases and not just the latest one.
-
-## Considerations for release tags
-Releases in OCDS have a [release tag](../schema/codelists.md#release-tag) which indicates the stage of the contracting process they relate to. If you are using one of the strategies outlined above it may not be obvious which release tag to use for a release if you are unable to detect which fields have changed.
-
-In these cases multiple release tags should be provided to indicate the sections of the schema which are populated. For example if you are providing data in the `tender`, `award`, and `contract` sections then your release tags array would look like this:
-
-```json
-{
-    "tag": [
-      "tender",
-      "award",
-      "contract"
-    ]
-}
-```
+## 

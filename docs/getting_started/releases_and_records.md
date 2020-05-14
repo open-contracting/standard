@@ -94,7 +94,6 @@ In some cases, a publisher might only have the data infrastructure to publish an
 * ocds-a2ef3d01-1594121/2
 * ocds-a2ef3d01-1594121/3
 
-Other possible approaches are to append the date or timestamp of the last data change to the `ocid` (if any is saved in the source system(s)) or to use a hash of the release data to generate an unique suffix. The [implementation guidance](../implementation/easy-releases.md) has detailed examples of both strategies.
 
 ### Records
 
