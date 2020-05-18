@@ -8,7 +8,7 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 * Identify [hard cases](#mapping-the-hard-cases) that need more attention
 * Get input from the [OCDS Helpdesk](../../support/index)
 
-The documentation you produce can also later be included in your [Data User Guide](../publish/publication_policy).
+The documentation you produce can also later be included in your [Data User Guide](./publish/publication_policy).
 
 As you make progress through this phase, we encourage you to update your [publication plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/), in order to help set priorities and ease communication within your team, with your stakeholders, and with the [OCDS Helpdesk](../../support/index).
 
@@ -44,7 +44,7 @@ To make this step easier we provide templates to list the data elements within y
 * An org-id code, identifying the register from the which the identifier is drawn
 * The identifier for the organization, drawn from the register
 
-Check out the [organization identifiers worked example](../guidance/model/organization_identifier) to see how this works in practice.
+Check out the [organization identifiers worked example](../guidance/map/organization_identifiers) to see how this works in practice.
 
 Use [org-id.guide](http://org-id.guide/) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index).
 
@@ -87,12 +87,17 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 
 ```
 
-Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using [extensions](../map/extensions/).
+## Extensions
 
-Here you can find guidance on:
+Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using extensions. Read the extensions guidance to learn how:
 
-* [Using existing extensions](../map/extensions/#using-existing-extensions)
-* [Developing new extensions](../map/extensions/#developing-new-extensions)
+```eval_rst
+.. toctree::
+   :maxdepth: 2
+
+   map/extensions
+
+```
 
 **Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
 
@@ -104,7 +109,7 @@ Here you can find guidance on:
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
 
-### Wrapping up
+## Wrapping up
 
 Once complete, you can:
 

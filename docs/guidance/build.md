@@ -33,13 +33,27 @@ Your choice of architecture can determine how frequently your data is updated, w
 
 OCDS data can be published in different formats and accessed using different methods.
 
-It is best practice to provide data in multiple formats, so that as many users as possible can use the data without first having to transform it to their preferred format. In OCDS terms, this means publishing both structured JSON data and tabular CSV or spreadsheet data.
+It is best practice to provide data in multiple formats, so that as many users as possible can use the data without first having to transform it to their preferred format. In OCDS terms, this means publishing both structured JSON data and tabular CSV or spreadsheet data. Read the serialization guidance to learn how:
 
-The [serialization guidance](../build/serialization) explains how to provide OCDS data in JSON and CSV/spreadsheet formats, including how to package OCDS data and provide important metadata.
+```eval_rst
+.. toctree::
+   :maxdepth: 2
 
-Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means providing both bulk downloads and an API.
+   build/serialization
 
-The [data files and APIs guidance](../build/hosting/) describes how to provide access to bulk downloads and individual OCDS releases and records. The [OCDS pagination extension](https://github.com/open-contracting-extensions/ocds_pagination_extension) describes how to paginate OCDS data via an API.
+```
+
+Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means providing both bulk downloads and an API. Read the hosting guidance to learn how:
+
+```eval_rst
+.. toctree::
+   :maxdepth: 2
+
+   build/hosting
+
+```
+
+ The [OCDS pagination extension](https://github.com/open-contracting-extensions/ocds_pagination_extension) describes how to paginate OCDS data via an API.
 
 **Remember to check that your chosen publication formats and access methods meet the needs you identified at the design stage.**
 
@@ -54,7 +68,7 @@ Having determined your system architecture, it’s time to implement it. This is
 
    .. markdown::
 
-    If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../../support).
+    If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../support).
 
 ```
 
@@ -91,7 +105,7 @@ If your [mapping](map) identified data elements which don’t map to OCDS or an 
 
 **Action:** Read the guidance on [developing new extensions](../guidance/map/extensions/#developing-new-extensions), which includes links to useful tools and resources.
 
-**Action:** Request support from the [OCDS Helpdesk](../../../support) to model your extensions.
+**Action:** Request support from the [OCDS Helpdesk](../../support) to model your extensions.
 
 **Action:** Share your extensions with the OCDS community on [Github](https://github.com/open-contracting/standard/issues).
 
@@ -101,7 +115,7 @@ As covered in the [Design](design) phase, different users will need information 
 
 **Resource:** [Guidance on Bulk downloads, APIs, Individual Releases and Records, and Flattened serializations.](../build/hosting/#data-files-and-apis)
 
-**Resource:** [Guidance on JSON and CSV serialization, including packaging files with metadata.](../build/serialization)
+**Resource:** [Guidance on JSON and CSV serialization, including packaging files with metadata.](build/serialization)
 
 ## Check your data
 
@@ -113,7 +127,7 @@ The Data Review Tool reports any structural issues with your data. It checks whe
 
 **Action:** Upload some data to the [OCDS Data Review Tool](http://standard.open-contracting.org/review/).
 
-**Action:** Request feedback on your draft data from the [OCDS Helpdesk](../../../support).
+**Action:** Request feedback on your draft data from the [OCDS Helpdesk](../../support).
 
 **Tool:** The [jOCDS Validator](http://www.developmentgateway.org/blog/your-data-ocds-compliant-introducing-jocds-validator) can be used for bulk checking of the structure and format of OCDS data
 

@@ -65,7 +65,7 @@ Consult stakeholders early in the design of your OCDS implementation to identify
 
 **Action:** Identify your stakeholders and their use cases.
 
-**Action:** Document your stakeholders and goals in your [publication plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).  
+**Action:** Document your stakeholders and goals in your [publication plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
 
 ## Build your team
 
