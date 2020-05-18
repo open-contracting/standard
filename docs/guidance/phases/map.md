@@ -1,10 +1,16 @@
 # Map
 
-This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which [OCDS fields and codes](../../schema/index) from its [schema](../../schema/reference) and [codelists](../../schema/codelists).
+This phase is about documenting your sources of contracting data, and documenting how that data “maps” to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process.
 
-Mapping data to OCDS is not always obvious. This phase gives members of your team (and the [OCDS Helpdesk](../../support/index)) an opportunity to catch errors early on and to identify [hard cases](#mapping-the-hard-cases) that need more attention – before any software is written in the [Build](build) phase. The documentation you produce can also later be included in your [Data User Guide](publish). This phase is critical to the implementation process.
+Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
-As you make progress through this phase, we encourage you to fill in the [publication plan template](https://docs.google.com/document/d/1Cz8nDDfAZ18qdzkl2vsSvdSyiXN11JRe8W5efjh8pEs/edit) ([create a copy](https://www.open-contracting.org/resources/ocds-publication-plan-template/)), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the *Goals (design)* section.
+* Catch errors early on
+* Identify [hard cases](#mapping-the-hard-cases) that need more attention
+* Get input from the [OCDS Helpdesk](../../support/index)
+
+The documentation you produce can also later be included in your [Data User Guide](../publish/publication_policy).
+
+As you make progress through this phase, we encourage you to update your [publication plan template](https://www.open-contracting.org/resources/ocds-publication-plan-template/), in order to help set priorities and ease communication within your team, with your stakeholders, and with the [OCDS Helpdesk](../../support/index).
 
 ## Involve the right people
 
@@ -16,50 +22,76 @@ As described in the [Field-Level Mapping Template Guidance](https://www.open-con
 
 ## Identify your data sources
 
-A necessary step to implement OCDS is to identify which IT systems capture and store contracting data and related documents. The [Technical Assessment Template](https://www.open-contracting.org/resources/ocds-technical-assessment-template/) guides you through the process of identifying data sources, describing their contents, and determining how to interlink their data.
+To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/ocds-technical-assessment-template/) guides you through this process.
 
 Once complete, you can:
 
 * Ask the [OCDS Helpdesk](../../support/index) to review your Technical Assessment.
-* Fill in the *Source systems* sub-section of your [Publication Plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
-* Fill in the *Systems* sheet of your Field-Level Mapping (introduced below).
+* Fill in the _Source systems_ sub-section of your [Publication Plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
+* Fill in the _Systems_ sheet of your Field-Level Mapping (introduced below).
 
 ## Map your data to OCDS
 
-This is one of the longest steps of implementing OCDS. To make it easier, we provide templates to list the data elements within your data sources, and map them to either:
+To make this step easier we provide templates to list the data elements within your data sources, and map them to either:
 
 * OCDS [fields](../../schema/reference), using the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-guidance/))
 * OCDS [codes](../../schema/codelists), using the [Codelist Mapping Template](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template-guidance/))
 
+### Mapping organization identifiers
+
+[Organization identifiers](../../schema/identifiers/#organization-ids) in OCDS are made up of two parts
+
+* An org-id code, identifying the register from the which the identifier is drawn
+* The identifier for the organization, drawn from the register
+
+Check out the [organization identifiers worked example](../guidance/model/organization_identifier) to see how this works in practice.
+
+Use [org-id.guide](http://org-id.guide/) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index).
+
+### Working in parallel
+
+Working in parallel on the map and build phases can be useful, because the choices you make at the build stage might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
+
 ### Splitting up the work
 
-You can complete this step in parts, while working in parallel on the [Build](build) phase. For example, you can map each of these, one at a time:
+You can complete this step in parts. For example, you might choose to split your mapping by any of the following:
 
 * **data source** (e-procurement system, contract management system, [financial management information system](https://www.worldbank.org/en/topic/governance/brief/financial-management-information-systems-fmis), etc.)
 * **contracting process type** (open procedure, selective procedure, concession contract, framework agreement, etc.)
 * **contracting process stage** (planning, tender, award, contract, implementation)
 * **public notice** (tender notice, award notice, etc.)
 
-The preferred approach is to eventually list *all* the data elements within your data sources in your Field-Level Mapping, decide whether to publish each, and then map each. The decision to publish a data element is up to you; it isn't necessary to map all your contracting data.
+The preferred approach is to eventually list *all* the data elements within your data sources in your Field-Level Mapping, decide whether to publish each, and then map each. The decision to publish a data element is up to you; it isn’t necessary to map all your contracting data.
 
-A limited approach is to focus on the data elements whose disclosure was prioritized by users during the [Design](design) phase. However, it's important that your eventual OCDS publication contain at least as much information as your other public datasets of contracting data; otherwise, users are less likely to use your OCDS publication.
+It is also important to focus on the data elements whose disclosure was prioritized by users during the [design](design) phase. If you have not determined which data elements are a priority, you should do this now, based on your user needs.
+
+Whichever approach you take, it’s important that your eventual OCDS publication contain at least as much information as your other public datasets of contracting data; otherwise, users are less likely to use your OCDS publication.
 
 ### Mapping the hard cases
 
 Mapping data to OCDS is not always obvious. Please refer to our how-to guides to learn how to map data for specific cases:
 
-```eval_rst
-.. toctree::
-   :maxdepth: 2
+* [Frameworks and related processes](../map/related_processes)
+  * [Framework types](../map/related_processes/#framework-types)
+* [Amendments](../map/amendments)
+  * [Worked example](../map/amendments/#worked-example)
 
-   ../map/related_processes
-   ../map/amendments
-   ../map/extensions
-```
+Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using [extensions](../map/extensions/).
 
-Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS by [authoring extensions](../map/extensions). You can also:
+Here you can find guidance on:
 
-* Contact the [OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
+* [Using existing extensions](../map/extensions/#using-existing-extensions)
+* [Developing new extensions](../map/extensions/#developing-new-extensions)
+
+**Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
+
+**Resource:** [What to do when fields don’t map?](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/)
+
+**Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)
+
+**Action:** Contact the [OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
+
+**Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
 
 ### Wrapping up
 
