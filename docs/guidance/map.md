@@ -69,12 +69,23 @@ Whichever approach you take, it’s important that your eventual OCDS publicatio
 
 ### Mapping the hard cases
 
-Mapping data to OCDS is not always obvious. Please refer to our how-to guides to learn how to map data for specific cases:
+Mapping data to OCDS is not always obvious. Please refer to our how-to guides and worked examples to learn how to map data for specific cases:
 
-* [Frameworks and related processes](../map/related_processes)
-  * [Framework types](../map/related_processes/#framework-types)
-* [Amendments](../map/amendments)
-  * [Worked example](../map/amendments/#worked-example)
+```eval_rst
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+
+   map/amendments
+   map/awards_contracts_buyers_suppliers
+   map/organization_classifications
+   map/organization_identifiers
+   map/organization_reference
+   map/pre-qualification
+   map/related_processes
+   map/unsuccessful_tender
+
+```
 
 Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using [extensions](../map/extensions/).
 

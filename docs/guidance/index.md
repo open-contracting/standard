@@ -2,60 +2,19 @@
 
 Are you new to OCDS? [Read the Primer](../getting_started/index).
 
-Do you want to understand the main steps to implement OCDS, and to locate resources to support you in that process? [Read the Implementation Process](phases/index).
+The four phases of implementation described in this guide have helped implementers around the world publish open contracting data to help address real-world problems.
 
-Do you have questions or need assistance with specific tasks? Browse the how-to guides below or [contact the OCDS Helpesk](../support/index).
-
-```eval_rst
-.. toctree::
-   :hidden:
-
-   phases/index
-```
-
-## How-To Guides
-
-### Design
+Read the guidance to understand the main steps to implement OCDS and to find supporting resources. Detailed guidance on specific topics and tasks is provided in sub-pages.
 
 ```eval_rst
 .. toctree::
    :maxdepth: 2
 
-   design/levels
+   design
+   map
+   build
+   publish
+
 ```
 
-### Map
-
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-
-   model/related_processes
-   model/amendments
-   model/extensions
-   model/organization_reference
-   model/awards_contracts_buyers_suppliers
-   model/organization_identifiers
-   model/organization_classifications
-   model/unsuccesful_tender
-```
-
-### Build
-
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-
-   build/hosting
-   build/serialization
-```
-
-### Publish
-
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-
-   publish/publication_policy
-   publish/licensing
-```
+Do you have questions or need assistance? Contact the [OCDS Helpesk](../support).

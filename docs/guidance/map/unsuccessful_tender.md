@@ -1,6 +1,6 @@
-## Unsuccessful Tender
+## Unsuccessful tenders
 
-In the case of procurement, a contracting process can be defined as a procurement procedure. There is a one-to-one correspondence between the first stage of a procurement procedure (tender) and a contracting process. 
+In the case of procurement, a contracting process can be defined as a procurement procedure. There is a one-to-one correspondence between the first stage of a procurement procedure (tender) and a contracting process.
 
 In OCDS, at a conceptual level, a contracting process is intended to match each concrete attempt to start a procedure that leads to one or more contracts. Attempts can include: an invitation to tender (in open procedure); an invitation to request to participate; a competition for a concession; a direct award, etc.
 
@@ -14,7 +14,7 @@ But in other jurisdictions, such as Paraguay, the planning stage is considered a
 
 In OCDS, it is relevant and desirable to include the planning information that relates to the process, but the contracting process is not interpreted as ‘starting’ with the planning stage. In OCDS, the planning stage is something that comes **before** the initiation of a contracting process. The initiation of the procedure is not the planning stage, because at least one of the following is true of a planning stage: it is not a concrete attempt to award one or more contracts like a request for tender, etc.; it is not a concrete opportunity for potential suppliers to participate in; it does not describe the competitive conditions.
 
-However a jurisdiction treats unsuccessful tenders and subsequent tenders, in OCDS they are considered separate but related contracting processes. 
+However a jurisdiction treats unsuccessful tenders and subsequent tenders, in OCDS they are considered separate but related contracting processes.
 
 This relationship can be modelled using the `relatedProcess` array at the release level, with the ‘unsuccessfulProcess’ relationship type.  
 
@@ -28,17 +28,17 @@ Paraguay discloses all stages of the contracting process, from planning to imple
 
 ```eval_rst
 .. jsoninclude:: ../../examples/unsuccessful-tender-planning.json
-   :jsonpointer: 
+   :jsonpointer:
    :expand: releases, planning
    :title: unsuccessful-tender-planning
 
 ```
 
-Next, the tender data is disclosed, but the tender was unsuccessful, so the tender status is ‘unsuccessful’ 
+Next, the tender data is disclosed, but the tender was unsuccessful, so the tender status is ‘unsuccessful’
 
 ```eval_rst
 .. jsoninclude:: ../../examples/unsuccessful-tender-tender.json
-   :jsonpointer: 
+   :jsonpointer:
    :expand: releases, tender, status
    :title: unsuccessful-tender-tender
 
@@ -56,7 +56,7 @@ The `relatedProcess` block links the two processes, with the relationship set to
 
 ```eval_rst
 .. jsoninclude:: ../../examples/unsuccessful-tender-related-process.json
-   :jsonpointer: 
+   :jsonpointer:
    :expand: releases, relatedProcesses, relationship
    :title: unsuccessful-tender-related-process
 
