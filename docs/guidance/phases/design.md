@@ -74,24 +74,19 @@ Implementing OCDS is easier when your team combines both policy and technology e
 To achieve success, an OCDS implementation team ought to include the following roles, though one individual might play several roles:
 
 * A **project manager** who will oversee the project timeline and deliverables.
-
 * A **data expert** who will identify where data recommended for publication in OCDS exists at a technical level. They need to be familiar with the IT systems that capture and store contracting data and related documents.
-
 * A **procurement expert** who will identify where data recommended for publication in OCDS exists at a semantic level. They need to be familiar with procurement legislation and procedures.
-
 * A **policy champion** who can help navigate the policy decisions of publishing and using OCDS data
-
 * A **system architect** who will define the architecture for publishing OCDS data. They can be an internal team member or an external consultant.
-
 * A **user champion** who will represent the needs of data users throughout the project. They can be an internal team member, an outside partner, or a representative of external stakeholders.
 
 **Action:** Identify your team members.
 
-**Action:** Ask everyone in your team to read the [getting started documentation](../../getting_started/index.md).
+**Action:** Ask everyone in your team to read the [getting started documentation](../../getting_started/index).
 
-**Action:** [Contact the OCDS Helpdesk](mailto:data@open-contracting.org/) to arrange an online introductory training for your technical team in English or Spanish.
+**Action:** Contact the [OCDS Helpdesk](../../support/index) to arrange an online introductory training for your technical team in English or Spanish.
 
-**Action:** [Join the OCDS discussion group](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) to keep up to date and engage with other implementers.
+**Action:** Join the [OCDS discussion group](../../support/index) to keep up to date and engage with other implementers.
 
 ## Writing OCDS Requirements for eGP developers
 
@@ -99,4 +94,4 @@ If you will be hiring a team to develop or update an electronic government procu
 
 The World Bank Group’s [e-Procurement Toolkit](http://www.eprocurementtoolkit.org/) offers additional advice and template requirements for procuring e-GP systems, and its [Open Contracting Data Standard implementation methodology](http://www.eprocurementtoolkit.org/sites/default/files/2016-11/OCDS_Implemetation_Methodology_0.pdf#page=27) has guidance relevant to OCDS in e-GP systems from section 3.2.3 on page 27 onwards. *(Note: Its earlier sections are based on OCDS 1.0.0.)*
 
-[Next phase: Map](map.md)
+[Next phase: Map](map)
