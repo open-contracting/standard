@@ -30,9 +30,14 @@ Do you have questions or need assistance with specific tasks? Browse the how-to 
 .. toctree::
    :maxdepth: 2
 
-   map/related_processes
-   map/amendments
-   map/extensions
+   model/related_processes
+   model/amendments
+   model/extensions
+   model/organization_reference
+   model/awards_contracts_buyers_suppliers
+   model/organization_identifiers
+   model/organization_classifications
+   model/unsuccesful_tender
 ```
 
 ### Build
