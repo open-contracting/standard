@@ -10,7 +10,7 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 
 The documentation you produce can also later be included in your [Data User Guide](../publish/publication_policy).
 
-As you make progress through this phase, we encourage you to update your [publication plan template](https://www.open-contracting.org/resources/ocds-publication-plan-template/), in order to help set priorities and ease communication within your team, with your stakeholders, and with the [OCDS Helpdesk](../../support/index).
+As you make progress through this phase, we encourage you to update your [publication plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/), in order to help set priorities and ease communication within your team, with your stakeholders, and with the [OCDS Helpdesk](../../support/index).
 
 ## Involve the right people
 

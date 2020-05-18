@@ -88,7 +88,7 @@ To achieve success, an OCDS implementation team ought to include the following r
 
 **Action:** Join the [OCDS discussion group](../../support/index) to keep up to date and engage with other implementers.
 
-## Writing OCDS Requirements for eGP developers
+## Writing OCDS requirements for eGP developers
 
 If you will be hiring a team to develop or update an electronic government procurement system and wish to include the OCDS into the terms of reference,  please refer to our [Guide to defining OCDS functional requirements for e-GP systems](https://www.open-contracting.org/resources/guide-defining-open-contracting-data-standard-functional-requirements-electronic-government-procurement-systems/), which includes functional requirements and template clauses that you can adapt for your technical specifications or procurement documents (terms of reference, request for proposals, etc.).
 
