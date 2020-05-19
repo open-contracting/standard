@@ -45,7 +45,7 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
 .. toctree::
    :maxdepth: 2
 
-   publish/easy-releases.md
+   publish/easy_releases
    publish/registration
    publish/publication_policy
    publish/licensing

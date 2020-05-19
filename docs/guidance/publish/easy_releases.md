@@ -1,6 +1,6 @@
 # 'Easy' Releases
 
-OCDS encourages the use of the [Releases and Records](../getting_started/change_history.md) model in order to publish up-to-date, timely data. However, sometimes publishers can't fully support the model, because historic data of contracting processes is not stored in the source system(s). In such case, the publisher can produce only one release for each contracting process, and the release gets overridden with new updates.
+OCDS encourages the use of the [Releases and Records](../../getting_started/change_history) model in order to publish up-to-date, timely data. However, sometimes publishers can't fully support the model, because historic data of contracting processes is not stored in the source system(s). In such case, the publisher can produce only one release for each contracting process, and the release gets overridden with new updates.
 
 In this situation, it is possible to still meet OCDS requirements by following a strategy to build different release identifiers each time the data changes in a contracting process. Over the course of multiple updates, third parties would be able to build their own data store by periodically downloading or scraping the published data, and identifying the updates using release identifiers.
 
@@ -17,13 +17,13 @@ These approaches can be useful for most situations but they are not meant to be 
 
 ### Packaging
 
-Releases in OCDS should be packaged correctly using a [release package](../../schema/release_package.md). This is to provide consistency and important metadata.
+Releases in OCDS should be packaged correctly using a [release package](../../schema/release_package). This is to provide consistency and important metadata.
 
 In an 'Easy' releases scenario it is still important to package data correctly. Therefore the release should be wrapped in a *release package*. It is *not* recommended to use an OCDS Record to contain the release because `record.releases` should be a list of all the releases and not just the latest one.
 
 ### Release tags
 
-Releases in OCDS have a [release tag](../schema/codelists.md#release-tag) which indicates the stage of the contracting process they relate to. 
+Releases in OCDS have a [release tag](../../../schema/codelists/#release-tag) which indicates the stage of the contracting process they relate to.
 
 When producing a single release for each contracting process, we can't use any tags that require other tags to be present in previous releases, e.g. 'tenderUpdate' which requires the 'tender' tag. 
 
