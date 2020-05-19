@@ -22,9 +22,11 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
    model/related_processes
    model/amendments
    model/extensions
+   model/organization_reference
    model/awards_contracts_buyers_suppliers
    model/organization_identifiers
    model/organization_classifications
+   model/unsuccesful_tender
 ```
 
 ## Build: How-To Guides
@@ -44,6 +46,7 @@ Do you have questions or need assistance with specific steps? Browse the tutoria
    :maxdepth: 2
 
    publish/change_history
+   publish/easy_releases
    publish/registration
    publish/publication_policy
    publish/licensing
