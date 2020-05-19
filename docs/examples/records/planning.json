@@ -1,0 +1,1133 @@
+{
+  "uri": "https://standard.open-contracting.org/examples/records/ocds-213czf-000-00001.json",
+  "publisher": {
+    "scheme": "GB-COH",
+    "uid": "09506232",
+    "name": "Open Data Services Co-operative Limited",
+    "uri": "https://standard.open-contracting.org/examples/"
+  },
+  "publishedDate": "2009-03-15T14:45:00Z",
+  "license": "http://opendatacommons.org/licenses/pddl/1.0/",
+  "publicationPolicy": "https://github.com/open-contracting/sample-data/",
+  "version": "1.1",
+  "packages": [
+    "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-01-planning.json"
+  ],
+  "records": [
+    {
+      "ocid": "ocds-213czf-000-00001",
+      "releases": [
+        {
+          "url": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-01-planning.json#ocds-213czf-000-00001-01-planning",
+          "date": "2009-03-15T14:45:00Z",
+          "tag": [
+            "planning"
+          ]
+        }
+      ],
+      "compiledRelease": {
+        "tag": [
+          "compiled"
+        ],
+        "id": "ocds-213czf-000-00001-2009-03-15T14:45:00Z",
+        "date": "2009-03-15T14:45:00Z",
+        "ocid": "ocds-213czf-000-00001",
+        "language": "en",
+        "initiationType": "tender",
+        "parties": [
+          {
+            "id": "GB-LAC-E09000003",
+            "identifier": {
+              "scheme": "GB-LAC",
+              "id": "E09000003",
+              "legalName": "London Borough of Barnet",
+              "uri": "http://www.barnet.gov.uk/"
+            },
+            "name": "London Borough of Barnet",
+            "address": {
+              "streetAddress": "4, North London Business Park, Oakleigh Rd S",
+              "locality": "London",
+              "region": "London",
+              "postalCode": "N11 1NP",
+              "countryName": "United Kingdom"
+            },
+            "contactPoint": {
+              "name": "Procurement Team",
+              "email": "procurement-team@example.com",
+              "telephone": "01234 345 346",
+              "faxNumber": "01234 345 345",
+              "url": "http://example.com/contact/"
+            },
+            "roles": [
+              "procuringEntity",
+              "buyer"
+            ]
+          }
+        ],
+        "buyer": {
+          "id": "GB-LAC-E09000003",
+          "name": "London Borough of Barnet"
+        },
+        "planning": {
+          "budget": {
+            "id": "6801ad388f3a38b7740dde20108c58b35984ee91",
+            "description": "Budget allocation for highway maintenance, aligned with 2015 strategic plan. ",
+            "amount": {
+              "amount": 6700000.0,
+              "currency": "GBP"
+            },
+            "project": "Central Junction Cycle Scheme",
+            "projectID": "SP001",
+            "uri": "https://openspending.org/uk-barnet-budget/entries/6801ad388f3a38b7740dde20108c58b35984ee91"
+          },
+          "rationale": "The 2009 Strategic Plan identifies a need for an improved cycle route in the centre of town.",
+          "documents": [
+            {
+              "id": "0001",
+              "documentType": "procurementPlan",
+              "title": "Area Wide Cycle Improvements - Procurement Plan",
+              "description": "The overall strategic framework for procurement to enhance cycle provision.",
+              "url": "http://example.com/opencontracting/documents/planning/highways/procurementPlan.pdf",
+              "datePublished": "2009-01-05T00:00:00Z",
+              "format": "application/pdf",
+              "language": "en"
+            },
+            {
+              "id": "0002",
+              "documentType": "needsAssessment",
+              "title": "Cycle provision - Needs Assessment",
+              "description": "Needs assessment for provision for cyclists in the centre of town.",
+              "url": "http://example.com/opencontracting/documents/ocds-213czf-000-00001/needsAssessment.pdf",
+              "datePublished": "2009-01-15T00:00:00Z",
+              "format": "application/pdf",
+              "language": "en"
+            }
+          ]
+        },
+        "tender": {
+          "id": "ocds-213czf-000-00001-01-planning",
+          "title": "Planned cycle lane improvements",
+          "description": "The authority plans to tender for improvements to the cycle lane in early 2010. This notice provides advanced notice of the intention to tender, and details to upcoming consultation events.",
+          "status": "planned",
+          "items": [
+            {
+              "id": "0001",
+              "description": "string",
+              "classification": {
+                "scheme": "CPV",
+                "id": "45233130",
+                "description": "Construction work for highways",
+                "uri": "http://cpv.data.ac.uk/code-45233130"
+              },
+              "additionalClassifications": [
+                {
+                  "scheme": "CPV",
+                  "id": "45233162-2",
+                  "description": "Cycle path construction work",
+                  "uri": "http://cpv.data.ac.uk/code-45233162.html"
+                }
+              ],
+              "quantity": 10,
+              "unit": {
+                "name": "Miles",
+                "value": {
+                  "amount": 100000,
+                  "currency": "GBP"
+                }
+              }
+            }
+          ],
+          "minValue": {
+            "amount": 500000,
+            "currency": "GBP"
+          },
+          "value": {
+            "amount": 1000000,
+            "currency": "GBP"
+          },
+          "procurementMethod": "open",
+          "procurementMethodRationale": "An open competitive tender is required by EU Rules",
+          "awardCriteria": "bestProposal",
+          "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
+          "tenderPeriod": {
+            "startDate": "2010-02-01T00:00:00Z"
+          },
+          "awardPeriod": {
+            "startDate": "2010-06-01T00:00:00Z",
+            "endDate": "2011-06-01T23:59:59Z"
+          },
+          "procuringEntity": {
+            "id": "GB-LAC-E09000003",
+            "name": "London Borough of Barnet"
+          },
+          "documents": [
+            {
+              "id": "0003",
+              "documentType": "x_consultationDocument",
+              "title": "Consultation on cycle provision",
+              "description": "A consultation document inviting citizen input into cycle provision.",
+              "url": "http://example.com/consultations/cycle-provision/",
+              "datePublished": "2015-02-15T00:00:00Z",
+              "dateModified": "2015-02-15T00:00:00Z",
+              "format": "text/html",
+              "language": "en"
+            },
+            {
+              "id": "0004",
+              "documentType": "x_map",
+              "title": "Map of affected areas",
+              "description": "A map showing areas affected by the planned highway updates. Available from local libraries.",
+              "datePublished": "2015-02-15T00:00:00Z",
+              "format": "offline/print",
+              "language": "en"
+            }
+          ],
+          "milestones": [
+            {
+              "id": "0001",
+              "title": "Consultation Period",
+              "description": "A consultation period is open for citizen input to shape the final plans.",
+              "dueDate": "2015-04-15T17:00:00Z"
+            }
+          ]
+        }
+      },
+      "versionedRelease": {
+        "ocid": "ocds-213czf-000-00001",
+        "language": [
+          {
+            "releaseID": "ocds-213czf-000-00001-01-planning",
+            "releaseDate": "2009-03-15T14:45:00Z",
+            "releaseTag": [
+              "planning"
+            ],
+            "value": "en"
+          }
+        ],
+        "initiationType": [
+          {
+            "releaseID": "ocds-213czf-000-00001-01-planning",
+            "releaseDate": "2009-03-15T14:45:00Z",
+            "releaseTag": [
+              "planning"
+            ],
+            "value": "tender"
+          }
+        ],
+        "parties": [
+          {
+            "id": "GB-LAC-E09000003",
+            "identifier": {
+              "scheme": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "GB-LAC"
+                }
+              ],
+              "id": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "E09000003"
+                }
+              ],
+              "legalName": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "London Borough of Barnet"
+                }
+              ],
+              "uri": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "http://www.barnet.gov.uk/"
+                }
+              ]
+            },
+            "name": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "London Borough of Barnet"
+              }
+            ],
+            "address": {
+              "streetAddress": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "4, North London Business Park, Oakleigh Rd S"
+                }
+              ],
+              "locality": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "London"
+                }
+              ],
+              "region": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "London"
+                }
+              ],
+              "postalCode": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "N11 1NP"
+                }
+              ],
+              "countryName": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "United Kingdom"
+                }
+              ]
+            },
+            "contactPoint": {
+              "name": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "Procurement Team"
+                }
+              ],
+              "email": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "procurement-team@example.com"
+                }
+              ],
+              "telephone": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "01234 345 346"
+                }
+              ],
+              "faxNumber": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "01234 345 345"
+                }
+              ],
+              "url": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "http://example.com/contact/"
+                }
+              ]
+            },
+            "roles": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": [
+                  "procuringEntity",
+                  "buyer"
+                ]
+              }
+            ]
+          }
+        ],
+        "buyer": {
+          "id": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "GB-LAC-E09000003"
+            }
+          ],
+          "name": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "London Borough of Barnet"
+            }
+          ]
+        },
+        "planning": {
+          "budget": {
+            "id": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "6801ad388f3a38b7740dde20108c58b35984ee91"
+              }
+            ],
+            "description": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "Budget allocation for highway maintenance, aligned with 2015 strategic plan. "
+              }
+            ],
+            "amount": {
+              "amount": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": 6700000.0
+                }
+              ],
+              "currency": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "GBP"
+                }
+              ]
+            },
+            "project": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "Central Junction Cycle Scheme"
+              }
+            ],
+            "projectID": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "SP001"
+              }
+            ],
+            "uri": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "https://openspending.org/uk-barnet-budget/entries/6801ad388f3a38b7740dde20108c58b35984ee91"
+              }
+            ]
+          },
+          "rationale": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "The 2009 Strategic Plan identifies a need for an improved cycle route in the centre of town."
+            }
+          ],
+          "documents": [
+            {
+              "id": "0001",
+              "documentType": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "procurementPlan"
+                }
+              ],
+              "title": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "Area Wide Cycle Improvements - Procurement Plan"
+                }
+              ],
+              "description": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "The overall strategic framework for procurement to enhance cycle provision."
+                }
+              ],
+              "url": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "http://example.com/opencontracting/documents/planning/highways/procurementPlan.pdf"
+                }
+              ],
+              "datePublished": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "2009-01-05T00:00:00Z"
+                }
+              ],
+              "format": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "application/pdf"
+                }
+              ],
+              "language": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "en"
+                }
+              ]
+            },
+            {
+              "id": "0002",
+              "documentType": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "needsAssessment"
+                }
+              ],
+              "title": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "Cycle provision - Needs Assessment"
+                }
+              ],
+              "description": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "Needs assessment for provision for cyclists in the centre of town."
+                }
+              ],
+              "url": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "http://example.com/opencontracting/documents/ocds-213czf-000-00001/needsAssessment.pdf"
+                }
+              ],
+              "datePublished": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "2009-01-15T00:00:00Z"
+                }
+              ],
+              "format": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "application/pdf"
+                }
+              ],
+              "language": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "en"
+                }
+              ]
+            }
+          ]
+        },
+        "tender": {
+          "id": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "ocds-213czf-000-00001-01-planning"
+            }
+          ],
+          "title": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "Planned cycle lane improvements"
+            }
+          ],
+          "description": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "The authority plans to tender for improvements to the cycle lane in early 2010. This notice provides advanced notice of the intention to tender, and details to upcoming consultation events."
+            }
+          ],
+          "status": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "planned"
+            }
+          ],
+          "items": [
+            {
+              "id": "0001",
+              "description": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "string"
+                }
+              ],
+              "classification": {
+                "scheme": [
+                  {
+                    "releaseID": "ocds-213czf-000-00001-01-planning",
+                    "releaseDate": "2009-03-15T14:45:00Z",
+                    "releaseTag": [
+                      "planning"
+                    ],
+                    "value": "CPV"
+                  }
+                ],
+                "id": [
+                  {
+                    "releaseID": "ocds-213czf-000-00001-01-planning",
+                    "releaseDate": "2009-03-15T14:45:00Z",
+                    "releaseTag": [
+                      "planning"
+                    ],
+                    "value": "45233130"
+                  }
+                ],
+                "description": [
+                  {
+                    "releaseID": "ocds-213czf-000-00001-01-planning",
+                    "releaseDate": "2009-03-15T14:45:00Z",
+                    "releaseTag": [
+                      "planning"
+                    ],
+                    "value": "Construction work for highways"
+                  }
+                ],
+                "uri": [
+                  {
+                    "releaseID": "ocds-213czf-000-00001-01-planning",
+                    "releaseDate": "2009-03-15T14:45:00Z",
+                    "releaseTag": [
+                      "planning"
+                    ],
+                    "value": "http://cpv.data.ac.uk/code-45233130"
+                  }
+                ]
+              },
+              "additionalClassifications": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": [
+                    {
+                      "scheme": "CPV",
+                      "id": "45233162-2",
+                      "description": "Cycle path construction work",
+                      "uri": "http://cpv.data.ac.uk/code-45233162.html"
+                    }
+                  ]
+                }
+              ],
+              "quantity": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": 10
+                }
+              ],
+              "unit": {
+                "name": [
+                  {
+                    "releaseID": "ocds-213czf-000-00001-01-planning",
+                    "releaseDate": "2009-03-15T14:45:00Z",
+                    "releaseTag": [
+                      "planning"
+                    ],
+                    "value": "Miles"
+                  }
+                ],
+                "value": {
+                  "amount": [
+                    {
+                      "releaseID": "ocds-213czf-000-00001-01-planning",
+                      "releaseDate": "2009-03-15T14:45:00Z",
+                      "releaseTag": [
+                        "planning"
+                      ],
+                      "value": 100000
+                    }
+                  ],
+                  "currency": [
+                    {
+                      "releaseID": "ocds-213czf-000-00001-01-planning",
+                      "releaseDate": "2009-03-15T14:45:00Z",
+                      "releaseTag": [
+                        "planning"
+                      ],
+                      "value": "GBP"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "minValue": {
+            "amount": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": 500000
+              }
+            ],
+            "currency": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "GBP"
+              }
+            ]
+          },
+          "value": {
+            "amount": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": 1000000
+              }
+            ],
+            "currency": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "GBP"
+              }
+            ]
+          },
+          "procurementMethod": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "open"
+            }
+          ],
+          "procurementMethodRationale": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "An open competitive tender is required by EU Rules"
+            }
+          ],
+          "awardCriteria": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "bestProposal"
+            }
+          ],
+          "awardCriteriaDetails": [
+            {
+              "releaseID": "ocds-213czf-000-00001-01-planning",
+              "releaseDate": "2009-03-15T14:45:00Z",
+              "releaseTag": [
+                "planning"
+              ],
+              "value": "The best proposal, subject to value for money requirements, will be accepted."
+            }
+          ],
+          "tenderPeriod": {
+            "startDate": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "2010-02-01T00:00:00Z"
+              }
+            ]
+          },
+          "awardPeriod": {
+            "startDate": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "2010-06-01T00:00:00Z"
+              }
+            ],
+            "endDate": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "2011-06-01T23:59:59Z"
+              }
+            ]
+          },
+          "procuringEntity": {
+            "id": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "GB-LAC-E09000003"
+              }
+            ],
+            "name": [
+              {
+                "releaseID": "ocds-213czf-000-00001-01-planning",
+                "releaseDate": "2009-03-15T14:45:00Z",
+                "releaseTag": [
+                  "planning"
+                ],
+                "value": "London Borough of Barnet"
+              }
+            ]
+          },
+          "documents": [
+            {
+              "id": "0003",
+              "documentType": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "x_consultationDocument"
+                }
+              ],
+              "title": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "Consultation on cycle provision"
+                }
+              ],
+              "description": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "A consultation document inviting citizen input into cycle provision."
+                }
+              ],
+              "url": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "http://example.com/consultations/cycle-provision/"
+                }
+              ],
+              "datePublished": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "2015-02-15T00:00:00Z"
+                }
+              ],
+              "dateModified": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "2015-02-15T00:00:00Z"
+                }
+              ],
+              "format": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "text/html"
+                }
+              ],
+              "language": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "en"
+                }
+              ]
+            },
+            {
+              "id": "0004",
+              "documentType": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "x_map"
+                }
+              ],
+              "title": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "Map of affected areas"
+                }
+              ],
+              "description": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "A map showing areas affected by the planned highway updates. Available from local libraries."
+                }
+              ],
+              "datePublished": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "2015-02-15T00:00:00Z"
+                }
+              ],
+              "format": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "offline/print"
+                }
+              ],
+              "language": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "en"
+                }
+              ]
+            }
+          ],
+          "milestones": [
+            {
+              "id": "0001",
+              "title": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "Consultation Period"
+                }
+              ],
+              "description": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "A consultation period is open for citizen input to shape the final plans."
+                }
+              ],
+              "dueDate": [
+                {
+                  "releaseID": "ocds-213czf-000-00001-01-planning",
+                  "releaseDate": "2009-03-15T14:45:00Z",
+                  "releaseTag": [
+                    "planning"
+                  ],
+                  "value": "2015-04-15T17:00:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
