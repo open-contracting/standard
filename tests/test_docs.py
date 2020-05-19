@@ -6,7 +6,7 @@ from . import languages
 
 @pytest.mark.parametrize('lang', list(languages))
 def test_examples(browser, server, lang):
-    browser.get('{}{}/getting_started/releases_and_records'.format(server, lang))
+    browser.get('{}{}/getting_started/change_history'.format(server, lang))
     examples = browser.find_element_by_id('examples')
     select = Select(examples.find_element_by_tag_name('select'))
 
