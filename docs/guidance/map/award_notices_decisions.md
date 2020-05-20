@@ -37,10 +37,9 @@ There are no identifiers for the individual supplier/value pairings on the origi
 
 ```eval_rst
 .. admonition:: View the example in JSON
-    :class: tip
+   :class: tip
 
-    .. markdown::
+   .. markdown::
 
       [View the example in Paraguay’s API](http://beta.dncp.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
-
 ```
