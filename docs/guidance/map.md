@@ -1,6 +1,6 @@
 # Map
 
-This phase is about documenting your sources of contracting data, and documenting how that data “maps” to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process.
+This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
@@ -10,7 +10,7 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 
 The documentation you produce can also later be included in your [Data User Guide](./publish/publication_policy).
 
-As you make progress through this phase, we encourage you to update your [publication plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/), in order to help set priorities and ease communication within your team, with your stakeholders, and with the [OCDS Helpdesk](../../support/index).
+As you make progress through this phase, we encourage you to update your [publication plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the _Goals (design)_ section.
 
 ## Involve the right people
 
@@ -39,12 +39,12 @@ To make this step easier we provide templates to list the data elements within y
 
 ### Mapping organization identifiers
 
-[Organization identifiers](../../schema/identifiers/#organization-ids) in OCDS are made up of two parts
+[Organization identifiers](../../schema/identifiers/#organization-ids) in OCDS are made up of two parts:
 
 * An org-id code, identifying the register from the which the identifier is drawn
 * The identifier for the organization, drawn from the register
 
-Check out the [organization identifiers worked example](../guidance/map/organization_identifiers) to see how this works in practice.
+The [organization identifiers worked example](../guidance/map/organization_identifiers) shows how this works in practice.
 
 Use [org-id.guide](http://org-id.guide/) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index).
 
@@ -61,11 +61,11 @@ You can complete this step in parts. For example, you might choose to split your
 * **contracting process stage** (planning, tender, award, contract, implementation)
 * **public notice** (tender notice, award notice, etc.)
 
-The preferred approach is to eventually list *all* the data elements within your data sources in your Field-Level Mapping, decide whether to publish each, and then map each. The decision to publish a data element is up to you; it isn’t necessary to map all your contracting data.
+The preferred approach is to eventually list *all* the data elements within your data sources in your Field-Level Mapping, decide whether to publish each, and then map each. The decision to publish a data element is up to you; it isn't necessary to map all your contracting data.
 
 It is also important to focus on the data elements whose disclosure was prioritized by users during the [design](design) phase. If you have not determined which data elements are a priority, you should do this now, based on your user needs.
 
-Whichever approach you take, it’s important that your eventual OCDS publication contain at least as much information as your other public datasets of contracting data; otherwise, users are less likely to use your OCDS publication.
+Whichever approach you take, it's important that your eventual OCDS publication contain at least as much information as your other public datasets of contracting data; otherwise, users are less likely to use your OCDS publication.
 
 ### Mapping the hard cases
 
@@ -84,7 +84,6 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
    map/pre-qualification
    map/related_processes
    map/unsuccessful_tender
-
 ```
 
 ## Extensions
@@ -96,16 +95,15 @@ Some data elements might not match any field or code in OCDS. To cover such case
    :maxdepth: 2
 
    map/extensions
-
 ```
 
 **Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
 
-**Resource:** [What to do when fields don’t map?](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/)
+**Resource:** [What to do when fields don't map?](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/)
 
 **Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)
 
-**Action:** Contact the [OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
+**Action:** [Contact the OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
 
