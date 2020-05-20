@@ -80,11 +80,11 @@ Having determined your system architecture, it’s time to implement it. This is
 *   If you intend to **publish [record packages](../../schema/record_package/)**, [OCDS Merge](https://ocds-merge.readthedocs.io/en/latest/) is the best software library for creating OCDS [records](../../getting_started/releases_and_records/). If you use the [Python](https://www.python.org/) programming language, you can use it directly. If not, you can use its [test cases](https://ocds-merge.readthedocs.io/en/latest/#test-cases) to test your implementation of the [merge routine](../../schema/merging/), and you can read its [commented code](https://github.com/open-contracting/ocds-merge) as inspiration for your implementation.
 *   If you have [release packages](../../schema/release_package/) and want to have [record packages](../../schema/record_package/), if you have data that follows an older version of OCDS, or if you otherwise need to transform your OCDS data, you can use [OCDS Kit](https://ocdskit.readthedocs.io/) as a command-line tool or [Python](https://www.python.org/) library.
 *   If you are **authoring data from scratch**, you can use this tool to [enter data](https://github.com/INAImexico/Contrataciones_abiertas_v2), which also includes a web interface for users to access and explore the OCDS data. (This tool is authored by Mexico’s Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI).) (*Manuals are in Spanish.*)
-*   If you want to **collect data using a spreadsheet or without an internet connection**, you can develop a [spreadsheet input template](https://docs.google.com/spreadsheets/d/1Py2Ki88TeerEToK8dIWcyU8rF5p6-jXhD7tx1W92m2g/edit#gid=956894726).
+*   If you want to **collect data using a spreadsheet or without an internet connection**, you can develop a [spreadsheet input template](https://www.open-contracting.org/resources/simple-ocds-spreadsheet-template/).
 
 **Resource:** [Using tabular versions of JSON to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
 
-**Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on [prototyping OCDS data using spreadsheets](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/).
+**Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([part I](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/),[part II](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/)).
 
 ```eval_rst
 .. note::
