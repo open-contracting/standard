@@ -4,8 +4,6 @@
 .. toctree::
    :hidden:
 
-   publish/publication_policy
-   publish/licensing
    publish/change_history
    publish/easy_releases
    publish/system_architectures

@@ -4,7 +4,7 @@ Normally, publishers collect *legal identifiers* from the organizations that are
 
 It is strongly recommended to use an organization register prefix from [org-id.guide](http://org-id.guide), or to [propose a new entry](http://docs.org-id.guide/en/latest/contribute/#proposing-a-new-entry) for the organization register used if an appropiate entry does not exists. The instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) can be used to build a meaningful organization register prefix.
 
-Publishers should consider if/when to include [local lists](../../../schema/identifiers/#choosing-an-identifier).  Local lists may not be registered in [org-id.guide](http://org-id.guide), provided that the organization list is described in a [publication policy document](../publish/publication_policy/).
+Publishers should consider if/when to include [local lists](../../../schema/identifiers/#choosing-an-identifier).  Local lists may not be registered in [org-id.guide](http://org-id.guide), provided that the organization list is described in a [publication policy document](../../publish/#finalize-your-publication-policy).
 
 ## Worked example
 
