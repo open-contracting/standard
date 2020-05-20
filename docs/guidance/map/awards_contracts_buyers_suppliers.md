@@ -1,4 +1,4 @@
-# Modelling awards, contracts, buyers and suppliers in OCDS
+# Awards, contracts, buyers and suppliers
 
 Contracting processes can take many forms and follow many different types of procedure, from a simple contracting process resulting in a single contract between a buyer and supplier, to a multi-buyer, multi-supplier framework agreement implemented as an electronic catalog.
 
@@ -18,12 +18,11 @@ In OCDS, the `Award` object is intended to communicate a direct relationship bet
 
 ```eval_rst
 .. admonition:: Note
-    :class: note
+   :class: note
 
-    .. markdown::
+   .. markdown::
 
       The OCDS schema and documentation are not clear what, precisely, is meant by 'award'. A revision of the definition of `Award` in OCDS is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/895)).
-
 ```
 
 ### Contract
@@ -95,7 +94,7 @@ OCDS defines a common model for disclosing structured data on public contracting
 
 ### Awards and contracts
 
-In OCDS, **awards** and **contracts** are modelled as separate stages of the contracting process. This approach allows for the possibility that an award is made but a contract is never entered into. The model also allows for the possibility that there is a difference between the award and the signed contract, either in value, duration, items or otherwise. While such differences might be illegal in some jurisdictions, they can occur in some cases and are therefore possible in OCDS.
+In OCDS, **awards** and **contracts** are modelled as separate stages of the contracting process. This approach allows for the possibility that an award is made but a contract is never entered into. The model also allows for the possibility that there is a difference between the award and the signed contract, either in value, duration, items or otherwise. While such differences might be illegal in some jurisdictions, they can occur in some cases and are therefore possible in OCDS. Source systems may contain data on awards, on contracts, or on both.
 
 <style><!--
 .process-table { width:18%; float:left; font-size:10pt; }
@@ -167,9 +166,10 @@ That said, many organizations can be assigned the 'buyer' role in the `parties` 
    :maxdepth: 1
 
    award_notices_decisions
-   catalogs
-   consortia
-   frameworks
    mapping_awards_contracts
+   consortia
+   catalogs
+   frameworks
    purchase_orders
+   
 ```

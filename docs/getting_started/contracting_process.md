@@ -1,6 +1,6 @@
 ## The Contracting Process
 
-There are several stages to a contracting process. 
+There are several stages to a contracting process.
 
 OCDS covers:
 
@@ -84,7 +84,7 @@ Completion or Termination info
 </div>
 <br clear="all"/>
 
-Not all contracting processes have all stages. For example, direct contracting might start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case. 
+Not all contracting processes have all stages. For example, direct contracting might start with the award of a contract. However, there will still be information that can be disclosed about the budgets, specifications and selection process even in this case.
 
 You are encouraged to publish OCDS data close to real-time: releasing data as each stage of a contracting process takes place.
 
@@ -96,21 +96,21 @@ For public procurement OCDS defines a unique contracting process as:
 
 > All the planning, tendering information, awards, contracts and contract implementation information related to a single initiation process.
 
-An initiation process might be a tender, a direct contract award, or a call to award a concession. 
+An initiation process might be a tender, a direct contract award, or a call to award a concession.
 
 ### The Open Contracting ID (ocid)
 
-Each unique contracting process needs to be assigned an `ocid`. This is an identifier which can be used to join up data between different stages (as often the data might be stored in different systems). 
+Each unique contracting process needs to be assigned an `ocid`. This is an identifier which can be used to join up data between different stages (as often the data might be stored in different systems).
 
 To make sure the `ocid`s assigned in two different jurisdictions do not clash, publishers need to register an ocid prefix. This can be prepended onto locally generated identifiers, giving a globally unique identifier, and allowing disparate data sources to confidently refer to a unique contracting process.
 
-You can [register your ocid prefix here](../guidance/publish/registration).
+You can [register your ocid prefix here](../guidance/build).
 
 <div class="example hint" markdown=1>
 
 <p class="first admonition-title">Worked Example</p>
 
-In [Mexico City](http://www.contratosabiertos.cdmx.gob.mx/), an initial mapping identified that identifiers were assigned to each tender process or direct award, using a pattern based on the initials or name of the department involved, a tender or contract number, and the year. 
+In [Mexico City](http://www.contratosabiertos.cdmx.gob.mx/), an initial mapping identified that identifiers were assigned to each tender process or direct award, using a pattern based on the initials or name of the department involved, a tender or contract number, and the year.
 
 For example:
 
@@ -118,7 +118,7 @@ For example:
 
 These identifiers uniquely identify each contracting process. Fields and business processes to capture these identifiers at each contracting process stage were added to the relevant systems.
 
-Mexico City then registered a prefix with the OCDS helpdesk. They have been given the prefix 'ocds-87sd3t' which can be added to their unique process identifiers to give a globally unique ocid. 
+Mexico City then registered a prefix with the OCDS helpdesk. They have been given the prefix 'ocds-87sd3t' which can be added to their unique process identifiers to give a globally unique ocid.
 
 For example:
 
@@ -129,9 +129,9 @@ All the award notices, contracts and transactions resulting from the tender with
 </div>
 
 <div class="warning" markdown=1>
-    
+
 <p class="first admonition-title">Note</p>
-    
+
 The `ocid` is case sensitive. Case needs to be used consistently whenever an `ocid` is presented.
 
 </div>

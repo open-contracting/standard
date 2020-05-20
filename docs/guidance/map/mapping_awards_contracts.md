@@ -1,4 +1,4 @@
-# Mapping to the award and contract sections of OCDS
+# Awards and contracts
 
 OCDS separates data about the contract award and data about the signed contract into the `awards` and `contracts` sections respectively. Source systems may contain data on awards, on contracts, or on both.
 
