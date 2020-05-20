@@ -1,31 +1,30 @@
 # Design
 
-This phase is about setting up your OCDS implementation to be a success.  
+This phase is about setting up your OCDS implementation to be a success.
 
 On this page, you will find guidance on how to:
 
-*   determine your priorities for data use.
-*   set up your team.
-*   build buy-in.
-*   understand your context.
-*   include OCDS in requirements for software developers and technical consultants.
+* Determine your priorities for data use
+* Set up your team
+* Build buy-in
+* Understand your context
+* Include OCDS in requirements for software developers and technical consultants
 
 ```eval_rst
 .. note::
 
    .. markdown::
 
-    Open contracting is about more than just implementing OCDS.
+      Open contracting is about more than just implementing OCDS.
 
-    Visit the Open Contracting Partnership’s website for [help implementing wider open contracting reforms](https://www.open-contracting.org/implement/) and for [guidance on open contracting reform design and management](https://www.open-contracting.org/2020/04/29/open-contracting-reform-design-and-management-resources-new-guide/).
-
+      Visit the Open Contracting Partnership's website for [help implementing wider open contracting reforms](https://www.open-contracting.org/implement/) and for [guidance on open contracting reform design and management](https://www.open-contracting.org/2020/04/29/open-contracting-reform-design-and-management-resources-new-guide/).
 ```
 
 ## Understand your context
 
 How does public contracting work in your jurisdiction? What does the law require to be made public? What are the opportunities or barriers to greater openness? Which stakeholders ought to be involved? What institutional and technical skills and experience do stakeholders have?
 
-The answers to these questions will help you to develop a robust publication plan.  A scoping study can help your team to understand your political, legal, and technical context.
+The answers to these questions will help you to develop a robust publication plan. A scoping study can help your team to understand your political, legal, and technical context.
 
 **Resource**: [Methodology for Open Contracting Scoping Studies](https://www.open-contracting.org/resources/methodology-open-contracting-scoping-studies/)
 
@@ -35,21 +34,21 @@ The answers to these questions will help you to develop a robust publication pla
 
 The most useful OCDS implementations are those that were designed around real-world goals and priorities. To achieve success, you need to understand your policy goals and user needs, and use them to inform the design of your OCDS implementation.
 
-Common goals include
+Common goals include:
 
-*   Tracking and improving value for money in procurement
-*   Measuring and increasing competition for contracts
-*   Helping business understand what government buys and how
-*   Promoting public integrity by monitoring for ‘red flags’ of corruption;
-*   Increasing participation of small, women-led, or minority-led businesses; and
-*   Enhancing service delivery by tracking quality, delivery and milestones in contracts.
+* Tracking and improving value for money in procurement
+* Measuring and increasing competition for contracts
+* Helping business understand what government buys and how
+* Promoting public integrity by monitoring for 'red flags' of corruption
+* Increasing participation of small, women-led, or minority-led businesses
+* Enhancing service delivery by tracking quality, delivery and milestones in contracts
 
 Each of these goals has different data needs. These needs ought to inform your choices about how to implement OCDS, for example:
 
-*   Which fields to publish
-*   How often to publish or update data
-*   Whether to publish a change history
-*   What data formats and access methods to provide
+* Which fields to publish
+* How often to publish or update data
+* Whether to publish a change history
+* What data formats and access methods to provide
 
 **Resource:** [How can OCDS help to assess the quality and performance of a procurement system? A step-by-step guide](https://www.open-contracting.org/2019/04/03/oecdmaps-ocds-step-by-step-guide/)
 
@@ -57,7 +56,7 @@ Each of these goals has different data needs. These needs ought to inform your c
 
 **Resource:** [Indicators to diagnose the performance of a procurement market guide](https://docs.google.com/document/d/1vSJk9-qWSTQEx9ZZc7BUhQZMHvTRcyDYVS2sl8HB__k/edit?usp=sharing) ([procurement indicators to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222))
 
-Different stakeholders in your OCDS implementation can have different objectives. Journalists, civil society organizations, policymakers and auditors will all have different goals.  
+Different stakeholders in your OCDS implementation can have different objectives. Journalists, civil society organizations, policymakers and auditors will all have different goals.
 
 Consult stakeholders early in the design of your OCDS implementation to identify your key goals.
 
@@ -84,14 +83,14 @@ To achieve success, an OCDS implementation team ought to include the following r
 
 **Action:** Ask everyone in your team to read the [getting started documentation](../../getting_started/index).
 
-**Action:** Contact the [OCDS Helpdesk](../../support/index) to arrange an online introductory training for your technical team in English or Spanish.
+**Action:** [Contact the OCDS Helpdesk](../../support/index) to arrange an online introductory training for your technical team, in English or Spanish.
 
-**Action:** Join the [OCDS discussion group](../../support/index) to keep up to date and engage with other implementers.
+**Action:** [Join the OCDS discussion group](../../support/index) to keep up to date and engage with other implementers.
 
 ## Writing OCDS requirements for eGP developers
 
-If you will be hiring a team to develop or update an electronic government procurement system and wish to include the OCDS into the terms of reference,  please refer to our [Guide to defining OCDS functional requirements for e-GP systems](https://www.open-contracting.org/resources/guide-defining-open-contracting-data-standard-functional-requirements-electronic-government-procurement-systems/), which includes functional requirements and template clauses that you can adapt for your technical specifications or procurement documents (terms of reference, request for proposals, etc.).
+If you will be hiring a team to develop or update an electronic government procurement (e-GP) system or open contracting data portal and wish to include the OCDS in the terms of reference, please refer to our [Guide to Defining OCDS Functional Requirements for e-GP Systems](https://www.open-contracting.org/resources/guide-defining-open-contracting-data-standard-functional-requirements-electronic-government-procurement-systems/), which includes functional requirements and template clauses that you can adapt for your technical specifications or procurement documents (terms of reference, request for proposals, etc.).
 
-The World Bank Group’s [e-Procurement Toolkit](http://www.eprocurementtoolkit.org/) offers additional advice and template requirements for procuring e-GP systems, and its [Open Contracting Data Standard implementation methodology](http://www.eprocurementtoolkit.org/sites/default/files/2016-11/OCDS_Implemetation_Methodology_0.pdf#page=27) has guidance relevant to OCDS in e-GP systems from section 3.2.3 on page 27 onwards. *(Note: Its earlier sections are based on OCDS 1.0.0.)*
+The World Bank Group's [e-Procurement Toolkit](http://www.eprocurementtoolkit.org/) offers additional advice and template requirements for procuring e-GP systems, and its [Open Contracting Data Standard Implementation Methodology](http://www.eprocurementtoolkit.org/sites/default/files/2016-11/OCDS_Implemetation_Methodology_0.pdf#page=27) has guidance relevant to OCDS in e-GP systems from section 3.2.3 on page 27 onwards. *(Note: Its earlier sections are based on OCDS 1.0.0.)*
 
 [Next phase: Map](map)
