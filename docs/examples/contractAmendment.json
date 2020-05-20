@@ -1,6 +1,6 @@
 {
-  "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-04-award.json",
-  "publishedDate": "2010-05-10T09:30:00Z",
+  "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-07-contractAmendment.json",
+  "publishedDate": "2011-04-05T13:30:00Z",
   "publisher": {
     "scheme": "GB-COH",
     "uid": "09506232",
@@ -14,11 +14,11 @@
   "releases": [
     {
       "ocid": "ocds-213czf-000-00001",
-      "id": "ocds-213czf-000-00001-04-award",
-      "date": "2010-05-10T09:30:00Z",
+      "id": "ocds-213czf-000-00001-07-contractAmendment",
+      "date": "2011-04-05T13:30:00Z",
       "language": "en",
       "tag": [
-        "award"
+        "contractAmendment"
       ],
       "initiationType": "tender",
       "parties": [
@@ -86,112 +86,13 @@
         "id": "GB-LAC-E09000003",
         "name": "London Borough of Barnet"
       },
-      "tender": {
-        "id": "ocds-213czf-000-00001-01-tender",
-        "title": "Planned cycle lane improvements",
-        "description": "Tenders solicited for work to build new cycle lanes in the centre of town.",
-        "status": "complete",
-        "items": [
-          {
-            "id": "0001",
-            "description": "string",
-            "classification": {
-              "scheme": "CPV",
-              "id": "45233130",
-              "description": "Construction work for highways",
-              "uri": "http://cpv.data.ac.uk/code-45233130"
-            },
-            "additionalClassifications": [
-              {
-                "scheme": "CPV",
-                "id": "45233162-2",
-                "description": "Cycle path construction work",
-                "uri": "http://cpv.data.ac.uk/code-45233162.html"
-              }
-            ],
-            "quantity": 8,
-            "unit": {
-              "name": "Miles",
-              "value": {
-                "amount": 120000,
-                "currency": "GBP"
-              }
-            }
-          }
-        ],
-        "minValue": {
-          "amount": 600000,
-          "currency": "GBP"
-        },
-        "value": {
-          "amount": 1100000,
-          "currency": "GBP"
-        },
-        "procurementMethod": "open",
-        "procurementMethodRationale": "An open competitive tender is required by EU Rules",
-        "awardCriteria": "bestProposal",
-        "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
-        "submissionMethod": [
-          "electronicSubmission"
-        ],
-        "submissionMethodDetails": "Submit through the online portal at http://example.com/submissions/ocds-213czf-000-00001-01/",
-        "enquiryPeriod": {
-          "startDate": "2010-03-01T09:00:00Z",
-          "endDate": "2010-03-14T17:30:00Z"
-        },
-        "hasEnquiries": true,
-        "tenderPeriod": {
-          "startDate": "2010-03-01T09:00:00Z",
-          "endDate": "2011-04-01T18:00:00Z"
-        },
-        "awardPeriod": {
-          "startDate": "2010-06-01T00:00:00Z",
-          "endDate": "2011-08-01T23:59:59Z"
-        },
-        "procuringEntity": {
-          "id": "GB-LAC-E09000003",
-          "name": "London Borough of Barnet"
-        },
-        "documents": [
-          {
-            "id": "0005",
-            "documentType": "tenderNotice",
-            "title": "Tender Notice",
-            "description": "Official tender notice.",
-            "url": "http://example.com/tender-notices/ocds-213czf-000-00001-01.html",
-            "datePublished": "2010-03-01T09:00:00Z",
-            "format": "text/html",
-            "language": "en"
-          },
-          {
-            "id": "0006",
-            "documentType": "clarifications",
-            "title": "Enquiry Responses",
-            "description": "Responses to enquiries asked by interested parties.",
-            "url": "http://example.com/enquiry-response/ocds-213czf-000-00001-01.html",
-            "datePublished": "2010-03-20T11:30:15Z",
-            "format": "text/html",
-            "language": "en"
-          }
-        ],
-        "amendments": [
-          {
-            "id": "update-1",
-            "date": "2010-03-20T09:45:00Z",
-            "rationale": "Update following enquiries.",
-            "description": "Following the enquiry period, enquiries were received and responses to questions asked have been published. No changes to the overall tender details were made.",
-            "amendsReleaseID": "ocds-213czf-000-00001-02-tender",
-            "releaseID": "ocds-213czf-000-00001-03-tenderUpdate"
-          }
-        ]
-      },
       "awards": [
         {
           "id": "ocds-213czf-000-00001-award-01",
           "title": "Award of contract to build new cycle lanes in the centre of town.",
           "description": "Balfour Beatty Plc has been awarded the contract to build new cycle lanes in the centre of town.",
-          "status": "pending",
-          "date": "2010-05-10T09:30:00Z",
+          "status": "active",
+          "date": "2010-05-10T10:30:00Z",
           "value": {
             "amount": 11000000,
             "currency": "GBP"
@@ -241,9 +142,76 @@
               "title": "Award notice",
               "description": "Award of contract to build new cycle lanes in the centre of town to Balfour Beatty Plc.",
               "url": "http://example.com/tender-notices/ocds-213czf-000-00001-04.html",
-              "datePublished": "2010-05-10T09:30:00Z",
+              "datePublished": "2010-05-10T10:30:00Z",
               "format": "text/html",
               "language": "en"
+            }
+          ]
+        }
+      ],
+      "contracts": [
+        {
+          "id": "ocds-213czf-000-00001-contract-01",
+          "awardID": "ocds-213czf-000-00001-award-01",
+          "title": "Contract to build new cycle lanes in the centre of town.",
+          "description": "Contract monitoring for cycle lane construction.",
+          "status": "active",
+          "period": {
+            "startDate": "2010-07-01T00:00:00Z",
+            "endDate": "2011-10-30T23:59:00Z"
+          },
+          "value": {
+            "amount": 13500000,
+            "currency": "GBP"
+          },
+          "items": [
+            {
+              "id": "0001",
+              "description": "string",
+              "classification": {
+                "scheme": "CPV",
+                "id": "45233130",
+                "description": "Construction work for highways",
+                "uri": "http://cpv.data.ac.uk/code-45233130"
+              },
+              "additionalClassifications": [
+                {
+                  "scheme": "CPV",
+                  "id": "45233162-2",
+                  "description": "Cycle path construction work",
+                  "uri": "http://cpv.data.ac.uk/code-45233162.html"
+                }
+              ],
+              "quantity": 8,
+              "unit": {
+                "name": "Miles",
+                "value": {
+                  "amount": 137000,
+                  "currency": "GBP"
+                }
+              }
+            }
+          ],
+          "dateSigned": "2015-06-10T14:23:12Z",
+          "documents": [
+            {
+              "id": "0008",
+              "documentType": "contractSigned",
+              "title": "Signed Contract",
+              "description": "The Signed Contract for Cycle Path Construction",
+              "url": "http://example.com/contracts/ocds-213czf-000-00001",
+              "datePublished": "2015-06-10T16:43:12Z",
+              "format": "application/pdf",
+              "language": "en"
+            }
+          ],
+          "amendments": [
+            {
+              "date": "2011-04-05T13:30:00Z",
+              "rationale": "Due to unforeseen complications, a contract extension is issued to cover the additional time and cost required to complete the works.",
+              "id": "0001",
+              "amendsReleaseID": "ocds-213czf-000-00001-06-implementation",
+              "releaseID": "ocds-213czf-000-00001-07-contractAmendment"
             }
           ]
         }
