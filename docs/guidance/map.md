@@ -1,5 +1,12 @@
 # Map
 
+```eval_rst
+.. toctree::
+   :hidden:
+
+   map/extensions
+```
+
 This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
@@ -8,7 +15,7 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 * Identify [hard cases](#mapping-the-hard-cases) that need more attention
 * Get input from the [OCDS Helpdesk](../../support/index)
 
-The documentation you produce can also later be included in your [Data User Guide](./publish/publication_policy).
+The documentation you produce can also later be included in your [Data User Guide](publish/publication_policy).
 
 As you make progress through this phase, we encourage you to update your [publication plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the _Goals (design)_ section.
 
@@ -88,14 +95,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 
 ## Extensions
 
-Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using extensions. Read the extensions guidance to learn how:
-
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-
-   map/extensions
-```
+Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using [extensions](map/extensions).
 
 **Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
 

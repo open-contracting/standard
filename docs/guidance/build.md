@@ -1,5 +1,13 @@
 # Build
 
+```eval_rst
+.. toctree::
+   :hidden:
+
+   build/serialization
+   build/hosting
+```
+
 This phase is about creating a new IT system, or updating an existing IT system, to implement your [mapping](map) and publish OCDS data.
 
 As you complete this phase, you can:
@@ -32,25 +40,9 @@ Your choice of architecture can determine how frequently your data is updated, w
 
 OCDS data can be published in different formats and accessed using different methods.
 
-It is best practice to provide data in multiple formats, so that as many users as possible can use the data without first having to transform it to their preferred format. In OCDS terms, this means publishing both structured JSON data and tabular CSV or spreadsheet data. Read the serialization guidance to learn how:
+It is best practice to provide data in multiple formats, so that as many users as possible can use the data without first having to transform it to their preferred format. In OCDS terms, this means [publishing both structured JSON data and tabular CSV or spreadsheet data](build/serialization).
 
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-
-   build/serialization
-```
-
-Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means providing both bulk downloads and an API. Read the hosting guidance to learn how:
-
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-
-   build/hosting
-```
-
- The [OCDS pagination extension](https://github.com/open-contracting-extensions/ocds_pagination_extension) describes how to paginate OCDS data via an API.
+Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means [providing both bulk downloads and an API](build/hosting). The [OCDS pagination extension](https://github.com/open-contracting-extensions/ocds_pagination_extension) describes how to paginate OCDS data via an API.
 
 **Remember to check that your chosen publication formats and access methods meet the needs you identified at the design stage.**
 
