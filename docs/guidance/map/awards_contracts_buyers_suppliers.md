@@ -18,12 +18,11 @@ In OCDS, the `Award` object is intended to communicate a direct relationship bet
 
 ```eval_rst
 .. admonition:: Note
-    :class: note
+   :class: note
 
-    .. markdown::
+   .. markdown::
 
       The OCDS schema and documentation are not clear what, precisely, is meant by 'award'. A revision of the definition of `Award` in OCDS is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/895)).
-
 ```
 
 ### Contract
