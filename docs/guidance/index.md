@@ -14,7 +14,6 @@ Read the guidance to understand the main steps to implement OCDS and to find sup
    map
    build
    publish
-
 ```
 
-Do you have questions or need assistance? Contact the [OCDS Helpesk](../support).
+Do you have questions or need assistance? Contact the [OCDS Helpesk](../support/index).
