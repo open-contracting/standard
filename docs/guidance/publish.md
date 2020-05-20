@@ -1,5 +1,16 @@
 # Publish
 
+```eval_rst
+.. toctree::
+   :hidden:
+
+   publish/publication_policy
+   publish/licensing
+   publish/change_history
+   publish/easy_releases
+   publish/system_architectures
+```
+
 Congratulations! You are almost ready to publish your OCDS data.
 
 ## Finalize your publication policy
@@ -53,11 +64,11 @@ In individual CSV files or other models of publishing, it might not be possible 
 
 Once you have published your data, it's time to share it with the world. It is also not the end of your OCDS journey. As users start using the data, there will likely be some requests for iterative improvements over time to improve the quality and usability of the data. You may even want to develop or adapt tools for displaying and using the data.
 
-**Action:** Share your publication on the [OCDS mailing list](../../../support/#ocds-community).
+**Action:** Share your publication on the [OCDS mailing list](../../support/#ocds-community).
 
-**Action:** Request a data quality and usability feedback report from the [OCDS Helpdesk](../../../support/#ocds-helpdesk).
+**Action:** Request a data quality and usability feedback report from the [OCDS Helpdesk](../../support/#ocds-helpdesk).
 
-**Action:** Request support from OCP to build capacity or tools for key stakeholders to start using the data.
+**Action:** [Request support from OCP](mailto:data@open-contracting.org) to build capacity or tools for key stakeholders to start using the data.
 
 **Resource:** [OCDS Tool Directory](https://www.open-contracting.org/resources/open-contracting-tools-directory/)
 

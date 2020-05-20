@@ -1,5 +1,12 @@
 # Design
 
+```eval_rst
+.. toctree::
+   :hidden:
+
+   design/levels
+```
+
 This phase is about setting up your OCDS implementation to be a success.
 
 On this page, you will find guidance on how to:

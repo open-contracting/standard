@@ -32,7 +32,7 @@ To publish OCDS data, you need to register an ocid prefix.
 
 ## Determine your system architecture
 
-There are many ways to extract data from data sources, combine it, map it to OCDS, and publish it. The [system architectures](../publish/system_architectures) guidance page describes some possible approaches.
+There are many ways to extract data from data sources, combine it, map it to OCDS, and publish it. The [system architectures](publish/system_architectures) guidance page describes some possible approaches.
 
 Your choice of architecture can determine how frequently your data is updated, whether you can publish a change history and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the design stage.**
 
