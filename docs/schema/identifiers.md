@@ -152,7 +152,7 @@ The **organization register prefix** is used to refer to a register from which t
 
 * **Local lists** - Some publishers do not map their data to external identifiers, maintaining instead a local list of suppliers. In these cases, the publisher may use their internal identifiers, and should adopt their own **organization list prefix** starting with X- to use. Where possible, the publisher should also provide their local list on the web, with as much additional data about each supplier as possible, in order to maximize the chance of data users matching their local list to some more authoritative register. 
 
-See the [full worked example](../../guidance/model/organization_identifiers) for more information on implementing identifiers from these different kinds of organization list.
+See the [full worked example](../../guidance/model/organization_identifiers) for more information on implementing identifiers from these different kinds of organization lists.
 
 ## Release ID
 
