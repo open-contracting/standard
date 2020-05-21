@@ -11,7 +11,7 @@ To get started publishing OCDS data:
 * Discuss the key [users and use cases](use_cases) for your OCDS project
 * Identify out the data and documents you will publish from your [contracting process](contracting_process)
 * Map your data against the OCDS [building blocks](building_blocks)
-* Present the data in [JSON releases and records](releases_and_records)
+* Present the data in [JSON releases and records](change_history)
 * Publish your data on the web using the [publication patterns](publication_patterns)
 * Check the [validation of your data](validation)
 * Encourage and facilitate stakeholder use of the data
@@ -34,7 +34,7 @@ When you are done you could be producing data that looks something like the cont
    use_cases
    contracting_process
    building_blocks
-   releases_and_records
+   change_history
    publication_patterns
    validation
 ```

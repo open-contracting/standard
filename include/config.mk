@@ -30,7 +30,7 @@ EXTRACT_TARGETS=extract_notes
 # The path to the branch of the documentation to print to PDF.
 PDF_ROOT=/1.1-dev
 # The pattern of pages to print to PDF. Update if the documentation adds, removes or renames pages.
-PDF_PAGES={,getting_started/{,use_cases/,contracting_process/,building_blocks/,releases_and_records/,publication_patterns/,validation/},schema/{,reference/,release/,release_package/,records_reference/,record_package/,merging/,identifiers/,codelists/,conformance_and_extensions/,deprecation/,governance/},guidance/{,model/{related_processes/,amendments/,extensions/},publish/{registration/,levels/,publication_policy/,licensing/,serialization/,hosting/}},support/,history/{,changelog/,history_and_development/}}
+PDF_PAGES={,getting_started/{,use_cases/,contracting_process/,building_blocks/,releases_and_records/,publication_patterns/,validation/},schema/{,reference/,release/,release_package/,records_reference/,record_package/,merging/,identifiers/,codelists/,conformance_and_extensions/,deprecation/,governance/},guidance/{,phases/{,design/,map/,build/,publish/},design/{levels/},map/{related_processes/,amendments/,extensions/},build/{serialization/,hosting/},publish/{registration/,publication_policy/,licensing/}},support/,history/{,changelog/,history_and_development/}}
 # 15000 may warn: "Warning: Received createRequest signal on a disposed ResourceObject's NetworkAccessManager. This might
 # be an indication of an iframe taking too long to load."
 PDF_DELAY=20000
