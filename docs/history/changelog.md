@@ -13,7 +13,9 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 * Guidance section:
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
+  * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
   * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
+  * [#1016](https://github.com/open-contracting/standard/pull/1016) Add links to OCDS profiles and linked standards.
   * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
   * [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012) Merge Publication policy and Licensing pages into Publish page.
   * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007).
