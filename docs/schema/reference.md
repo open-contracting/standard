@@ -412,8 +412,6 @@ Notes:
    :list: milestones
 ```
 
-<!-- ToDo: Add example -->
-
 ### Value
 
 Financial values should be published with a currency attached. 

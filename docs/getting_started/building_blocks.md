@@ -187,5 +187,3 @@ For an Open Procedure, when a free-text justification of why the procedure was c
 ```
 
 </div>
-
-<!--ToDo: Add section on mapping - including links to mapping tools -->
