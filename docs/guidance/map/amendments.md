@@ -174,8 +174,8 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
    :jsonpointer: /records/0/releases/2
    :expand: tag, contracts, amendments
    :title: ContractAmendment
-
 ```
+
 Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.

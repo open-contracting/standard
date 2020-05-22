@@ -23,8 +23,8 @@ This relationship can be modelled using the `relatedProcess` array at the releas
 ### Example: Modelling unsuccessful tenders in Paraguay
 
 The [Sistema de Información de las Contrataciones Públicas (SICP)](https://contrataciones.gov.py/) discloses information about contracting processes for all public entities in Paraguay. SICP is managed by the National Directorate of Public Procurement (DNCP in Spanish).
-``
-Paraguay discloses all stages of the contracting process, from planning to implementation. The first data disclosed is about the planning stage. Planning data includes an estimate of what an entity is going to buy, when and for how much. SICP assigns an `ocid` when the planning data is first disclosed, before the tender stage. In this example, the ocid is 'ocds-03ad3f-331547-1'
+
+Paraguay discloses all stages of the contracting process, from planning to implementation. The first data disclosed is about the planning stage. Planning data includes an estimate of what an entity is going to buy, when and for how much. SICP assigns an `ocid` when the planning data is first disclosed, before the tender stage. In this example, the ocid is 'ocds-03ad3f-331547-1'.
 
 ```eval_rst
 .. jsoninclude:: ../../examples/unsuccessful-tender-planning.json
@@ -34,7 +34,7 @@ Paraguay discloses all stages of the contracting process, from planning to imple
 
 ```
 
-Next, the tender data is disclosed, but the tender was unsuccessful, so the tender status is ‘unsuccessful’
+Next, the tender data is disclosed, but the tender was unsuccessful, so the tender status is ‘unsuccessful’.
 
 ```eval_rst
 .. jsoninclude:: ../../examples/unsuccessful-tender-tender.json
