@@ -4,11 +4,11 @@ In mapping your data to OCDS, or using OCDS data, you will encounter a number of
 
 <table style="margin-bottom:2em;">
     <tr>
-        <td width="20%" align="center"><img src="../../_static/png/green_organisation.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../_static/png/green_value.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../_static/png/green_items.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../_static/png/green_milestone.svg.png" width="80%"></td>
-        <td width="20%" align="center"><img src="../../_static/png/green_documents.svg.png" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/svg/green_organisation.svg" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/svg/green_value.svg" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/svg/green_items.svg" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/svg/green_milestone.svg" width="80%"></td>
+        <td width="20%" align="center"><img src="../../_static/svg/green_documents.svg" width="80%"></td>
     </tr>
 </table>
 
@@ -129,7 +129,7 @@ Many of these fields make use of lightweight codelists provided by OCDS.
 
 In some cases, publishers or users need building blocks and fields which are not provided in the core OCDS schema. 
 
-We maintain a list of [extensions](../guidance/model/extensions) that provide additional building blocks and fields.
+We maintain a list of [extensions](../guidance/map/extensions) that provide additional building blocks and fields.
 
 <div class="example hint" markdown=1>
 
@@ -187,5 +187,3 @@ For an Open Procedure, when a free-text justification of why the procedure was c
 ```
 
 </div>
-
-<!--ToDo: Add section on mapping - including links to mapping tools -->
