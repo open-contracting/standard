@@ -43,9 +43,9 @@ Releases must be published within a [release package](release_package). The rele
 
 ```
 
-See the [licensing guidance](../guidance/publish/licensing) for more details on selecting a license, and publishing license information.
+See the [licensing guidance](../../guidance/publish/#license-your-data) for more details on selecting a license, and publishing license information.
 
-See the [publication policy](../guidance/publish/publication_policy) guidance for more details on what to include in a publication policy.
+See the [publication policy](../../guidance/publish/#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
 
 ### Release
 
@@ -255,7 +255,7 @@ The changes array was deprecated in OCDS 1.1. Structured information on the form
 * Including releases from **before** and **after** a change within a release package;
 * Using the amendment array in tender, contract or award to explicitly relate these releases to an amendment.
 
-See the [amendment implementation guidance](../guidance/model/amendments) for more details.
+See the [amendment implementation guidance](../guidance/map/amendments) for more details.
 
 ## Building block reference
 
@@ -428,8 +428,6 @@ Notes:
 .. extensionlist:: The following extensions to milestone are available
    :list: milestones
 ```
-
-<!-- ToDo: Add example -->
 
 ### Value
 

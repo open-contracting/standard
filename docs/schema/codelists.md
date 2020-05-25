@@ -31,7 +31,6 @@ The organizations, economic operators or other participants in a contracting pro
    :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
-
 ### Item Classification Scheme
 
 Items should be classified using existing item classification schemes, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm).
@@ -111,6 +110,7 @@ The submission method codelist is used to identify the mechanism through which a
    :header-rows: 1
    :file: ../../build/current_lang/codelists/submissionMethod.csv
 ```
+
 ### Related Process
 
 The related process block is used at the release level to point backwards to prior processes, such as planning or framework establishment, and at the contract level to point onwards to subcontracts or to renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
