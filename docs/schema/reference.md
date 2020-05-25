@@ -15,6 +15,60 @@ Releases are immutable – presenting information about a particular event in th
       This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as [JSON Schema](../../release-schema.json), download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
 ```
 
+## Release handling
+
+The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
+
+Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice ought to be based on an understanding of the [merging process](merging) that is used to generate a snapshot record of a full contracting process.
+
+In this model, publishers need to to pay careful attention to null values and missing fields.
+
+### Empty fields
+
+Fields that are not being used, or that have no value, should be excluded in their entirety (key and value) from a published file.
+
+Only including fields which have values will keep versioned datasets cleaner.
+
+### Emptying fields and values
+
+There can be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields must be set to `null`. See the [merging documentation](merging) for more details.
+
+## Language
+
+Many publishers need to be able to share key data in multiple languages. All free-text title and description fields in the Open Contracting Data Standard can be given in one or more languages.
+
+Language variations are included by a copy of multi-lingual fields, suffixed with a language code.
+
+E.g. `title` and `title_es`
+
+In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the `language` field.
+
+Languages must be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
+
+To include a language variation of a field, the field name must be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
+
+### Worked example
+
+A contract for ‘Software consultancy services’ is published in a release with the default language sent to ‘en’ (the ISO639-1 code for English). The following examples give the description of an item as English, French and Spanish.
+
+**json**
+
+```eval_rst
+.. jsoninclude:: ../examples/language.json
+   :jsonpointer:
+   :expand: tender,item
+
+```
+
+**csv**
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 65 15
+   :file: ../examples/language.csv
+```
+
 ## Release structure
 
 The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, arranged in the following structure.
@@ -491,57 +545,3 @@ The publisher block is used in release and record packages to identify the sourc
     :collapse: 
     
 ```
-
-## Language
-
-Many publishers need to be able to share key data in multiple languages. All free-text title and description fields in the Open Contracting Data Standard can be given in one or more languages.
-
-Language variations are included by a copy of multi-lingual fields, suffixed with a language code.
-
-E.g. `title` and `title_es`
-
-In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the `language` field. 
-
-Languages must be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
-
-To include a language variation of a field, the field name must be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
-
-### Worked example
-
-A contract for ‘Software consultancy services’ is published in a release with the default language sent to ‘en’ (the ISO639-1 code for English). The following examples give the description of an item as English, French and Spanish.
-
-**json**
-
-```eval_rst
-.. jsoninclude:: ../examples/language.json
-   :jsonpointer: 
-   :expand: tender,item
-
-```
-
-**csv** 
-
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: ../examples/language.csv
-```
-
-## Release handling
-
-The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
-
-Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice ought to be based on an understanding of the [merging process](merging) that is used to generate a snapshot record of a full contracting process.
-
-In this model, publishers need to to pay careful attention to null values and missing fields. 
-
-### Empty fields
-
-Fields that are not being used, or that have no value, should be excluded in their entirety (key and value) from a published file. 
-
-Only including fields which have values will keep versioned datasets cleaner. 
-
-### Emptying fields and values
-
-There can be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields must be set to `null`. See the [merging documentation](merging) for more details.
