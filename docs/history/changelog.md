@@ -14,6 +14,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#960](https://github.com/open-contracting/standard/pull/960) Support section: Merge Tools page into Support page.
 * [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
+* Copy-edit and re-organize normative pages [#1025](https://github.com/open-contracting/standard/pull/1025)
 * Build the documentation [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923) [#935](https://github.com/open-contracting/standard/pull/935) [#944](https://github.com/open-contracting/standard/pull/944) [#945](https://github.com/open-contracting/standard/pull/945) [#946](https://github.com/open-contracting/standard/pull/946) [#953](https://github.com/open-contracting/standard/pull/953) [#962](https://github.com/open-contracting/standard/pull/962).
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932).
 
