@@ -36,15 +36,13 @@ In the examples below, two different publishers have disclosed information about
 
 #### Classification schemes
 
-Each `classification` block contains fields to provide information about the `description` (a textual description or title for the classification code), `id` (the classification code), `uri` (to uniquely identify the classification code) and `scheme`. The `scheme` value can be drawn from the open [itemClassificationScheme codelist](../../../schema/codelists/#item-classification-scheme) (where 'Context' is 'organization'), or it can be a local scheme. Schemes are given to classify the activities of procuring authorities (i.e. procuring entities and/or buyers).
-
-Note that for OCDS 1.2, we are considering renaming the 'itemClassificationScheme' codelist to the less-specific 'classificationScheme'.
+Each `classification` block contains fields to provide information about the `description` (a textual description or title for the classification code), `id` (the classification code), `uri` (to uniquely identify the classification code) and `scheme`. The `scheme` value can be drawn from the open [itemClassificationScheme codelist](../../../schema/codelists/#item-classification-scheme) (where the `Category` value is "organization"), or it can be a local scheme. Schemes are given to classify the activities of procuring authorities (i.e. procuring entities and/or buyers).
 
 Where an appropriate scheme is not listed in the [itemClassificationScheme codelist](../../../schema/codelists/#item-classification-scheme), publishers may specify their own scheme. Publishers can either re-use an alternative scheme, or provide their own. Where publishers provide their own local schemes, they should prefix their `scheme` code with an [ISO-3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1) to preserve its global uniqueness. Details of this local scheme, and a list of possible codes, should be given in the [publication policy](../../publish/#finalize-your-publication-policy).
 
 #### Example 2.1 disclosing data using existing schemes
 
-In the first fictional example below, the UK has disclosed a code from two different European Commission (EC) schemes, 'TED_CE_ACTIVITY' and 'TED_CA_TYPE' to classify the organization whose name is 'London Borough of Haringey'. Refer to the  [itemClassificationScheme codelist](../../../schema/codelists/#item-classification-scheme) for further details of these schemes.
+In the first fictional example below, the UK has disclosed a code from two different European Commission (EC) schemes, 'TED_CE_ACTIVITY' and 'TED_CA_TYPE' to classify the organization whose name is "London Borough of Haringey". Refer to the  [itemClassificationScheme codelist](../../../schema/codelists/#item-classification-scheme) for further details of these schemes.
 
 Note that the `classification.id` relates to the id of the code in the `classification.scheme` given, rather than its position in the `classifications` array. Therefore, the first `classification` shows that the `id` of 'Regional or local authority' in the 'TED_CA_TYPE' scheme is 'REGIONAL_AUTHORITY', and the second `classification` shows that the `id` of 'General public services' in the 'COFOG' scheme is '01'.
 
