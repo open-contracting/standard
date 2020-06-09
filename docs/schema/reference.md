@@ -1,8 +1,12 @@
 # Release Reference
 
-The [Release Schema](release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into release packages and how to compile releases into records.
+The [Release Schema](release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into release packages and record packages.
 
 Releases are immutable – presenting information about a particular event in the lifetime of a contracting process. Publishers must not edit a release after publication; a new release can be created by changing the release's `id` and `date`.
+
+A few fields are required, to ensure the structural integrity of OCDS data. For example, `awards.id` is required so that references from `contracts.awardID` can resolve.
+
+The number of required fields is small, because OCDS standardizes the format in which contracting information is disclosed; it does not standardize the minimum amount of contracting information to disclose. Publishers choose what to disclose. That said, publishers are encouraged to populate as many fields as they can, without using placeholder values and without repeating the same value from an information source across multiple fields.
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
