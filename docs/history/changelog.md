@@ -37,6 +37,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * `itemClassificationScheme.csv`:
   * [#998](hhttps://github.com/open-contracting/standard/pull/998) Add 'NAICS', 'PSC' and 'HS' codes.
   * [#967](https://github.com/open-contracting/standard/pull/967) Remove the discouragement of the 'UNSPSC' code.
+  * [#1033](https://github.com/open-contracting/standard/pull/1033) Add a `Category` column to indicate the context in which the classification scheme is used.
 * `milestoneType.csv`:
   * [#1000](https://github.com/open-contracting/standard/pull/1000) Update description of 'financing' code, and add 'payment' code.
 

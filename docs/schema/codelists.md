@@ -35,6 +35,8 @@ The organizations, economic operators or other participants in a contracting pro
 
 Items should be classified using existing item classification schemes, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm).
 
+The `itemClassificationScheme` codelist is referenced by the `scheme` field of the `Classification` object, which can be used in multiple contexts. You can find the codes relevant to a given context by filtering the codelist by its `Category` column.
+
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
