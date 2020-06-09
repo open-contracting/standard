@@ -84,7 +84,7 @@ It is recommended to <a href="../../../_static/json/amendments/amendments-tender
 
 Note in this example that:
 
-* **The amendments block does not contain data on what was changed**. Changes are recorded by updating the properties of the `tender` block a new release.
+* **The amendments block does not contain data on what was changed**. Changes are recorded by updating the fields of the `tender` block a new release.
 
 * **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher may want to provide the latest data available in each release.
 
