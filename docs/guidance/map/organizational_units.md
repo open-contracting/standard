@@ -23,7 +23,7 @@ In Honduras, the Ministry of Health is planning the procurement of food supplies
 
 In the release below, the publisher adds the hospital name at the end of the procuring entity name. The main identifier for the organization (*Secretaría de Salud Pública*) is extracted from a local list in the "HonduCompras" platform, used to publish procurement information in the country.
 
-An identifier for the hospital has been added using the "X-HN-ONCAE-UNIT" list code. The `address` and `contactPoint` information belongs to the hospital only.
+An identifier for the hospital has been added using the "HN-ONCAE-UNIT" list code. The `address` and `contactPoint` information belongs to the hospital only.
 
 ```eval_rst
 

@@ -2,9 +2,9 @@
 
 Normally, publishers collect *legal identifiers* from the organizations that are part of the contracting process.  [Organization identifiers](../../../schema/identifiers/#organization-ids) can be provided in OCDS by identifying the **organization registers or lists** used in the source data, choosing an appropiate **organization register prefix** for each one, and identifying the organizational ID for each registry or list and organization in the data.
 
-It is strongly recommended to use an organization register prefix from [org-id.guide](http://org-id.guide), or to [propose a new entry](http://docs.org-id.guide/en/latest/contribute/#proposing-a-new-entry) for the organization register used if an appropiate entry does not exists. The instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) can be used to build a meaningful organization register prefix.
+It is encouraged to use an organization register prefix from [org-id.guide](http://org-id.guide), or to [propose a new entry](http://docs.org-id.guide/en/latest/contribute/#proposing-a-new-entry) for the organization register used if an appropiate entry does not exists. The instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) can be used to build a meaningful organization register prefix.
 
-Publishers should consider if/when to include [local lists](../../../schema/identifiers/#choosing-an-identifier).  Local lists may not be registered in [org-id.guide](http://org-id.guide), provided that the organization list is described in a [publication policy document](../../publish/#finalize-your-publication-policy).
+If a publisher chooses not to register an organization list with org-id.guide, the publisher ought to describe the organization list in a [publication policy](../../publish/#finalize-your-publication-policy), and needs to ensure that its prefix doesn't collide with a list code in org-id.guide.
 
 ## Worked example
 
@@ -16,6 +16,6 @@ The Government of UK uses identifiers from the UK Companies House to uniquely id
     :expand: identifier, additionalIdentifiers
 ```
 
-The publisher also collects two extra identifiers, which are disclosed in the `additionalIdentifiers` block. The first one is the VAT identification number for suppliers. Note that the VAT registry is not present in [org-id.guide](http://org-id.guide/), but the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to build the "GB-VAT" code used in the `scheme` field: the two-letter country prefix ("GB") plus a short abbreviation for the registry ("VAT").
+The publisher also collects two extra identifiers, which are disclosed in the `additionalIdentifiers` block. The first one is the VAT identification number for suppliers. Note that the VAT registry is not present in org-id.guide, but the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to build the "GB-VAT" code used in the `scheme` field: the two-letter country prefix ("GB") plus a short abbreviation for the registry ("VAT").
 
-The last identifier in the `additionalIdentifiers` array belongs to an internal supplier list used in Contracts Finder, the platform used in England to publish opportunities and contract information. The publisher built the "X-GB-CF" code for the list, and the "X-" prefix indicates that the code represents a local list.
+The last identifier in the `additionalIdentifiers` array belongs to an internal supplier list used in Contracts Finder, the platform used in England to publish opportunities and contract information. The publisher selected the "GB-CF" prefix for the list, which does not conflict with any list code in org-id.guide.

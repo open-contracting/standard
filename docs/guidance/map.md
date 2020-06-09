@@ -88,6 +88,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
    map/organization_classifications
    map/organization_identifiers
    map/organization_reference
+   map/organizational_units
    map/pre-qualification
    map/related_processes
    map/unsuccessful_tender
