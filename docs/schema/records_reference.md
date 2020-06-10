@@ -23,7 +23,11 @@ Records must be published within a [record package](record_package). The record 
     :collapse: records
 ```
 
-Refer to the [release package metadata](../reference/#package-metadata) reference for details. The record package metadata has two differences:
+See the [licensing guidance](../../guidance/publish/#license-your-data) for more details on selecting a license, and publishing license information.
+
+See the [publication policy](../../guidance/publish/#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
+
+The record package metadata has two differences from the release package metadata:
 
 * Instead of a `releases` array, a record package has a `records` array containing one or more records.
 * A record package has a `packages` array, to link to any release packages that were used to prepare the records.
