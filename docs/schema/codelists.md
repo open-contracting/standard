@@ -12,7 +12,7 @@ Publishers must use the codes in the codelists, unless no code is appropriate. I
 
    .. markdown::
 
-      If you use new codes outside those in an open codelist, please document the codes in an [OCDS extension](../guidance/model/extensions/) and in your [publication policy](../guidance/publish/publication_policy). Please also create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
+      If you use new codes outside those in an open codelist, please document the codes in an [OCDS extension](../guidance/map/extensions) and in your [publication policy](../../guidance/publish/#finalize-your-publication-policy). Please also create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
 ```
 
 The release schema, in [JSON Schema](../../release-schema.json), has a `codelist` property to indicate the [CSV file](../../codelists/) that defines the codes in the codelist (shown as tables below). It also has an `openCodelist` property, to indicate whether the codelist is open or closed.
@@ -31,10 +31,11 @@ The organizations, economic operators or other participants in a contracting pro
    :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
-
 ### Item Classification Scheme
 
 Items should be classified using existing item classification schemes, such as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm).
+
+The `itemClassificationScheme` codelist is referenced by the `scheme` field of the `Classification` object, which can be used in multiple contexts. You can find the codes relevant to a given context by filtering the codelist by its `Category` column.
 
 ```eval_rst
 .. codelisttable::
@@ -111,6 +112,7 @@ The submission method codelist is used to identify the mechanism through which a
    :header-rows: 1
    :file: ../../build/current_lang/codelists/submissionMethod.csv
 ```
+
 ### Related Process
 
 The related process block is used at the release level to point backwards to prior processes, such as planning or framework establishment, and at the contract level to point onwards to subcontracts or to renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.

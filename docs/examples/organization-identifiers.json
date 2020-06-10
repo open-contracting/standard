@@ -1,0 +1,137 @@
+{
+  "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-04-award.json",
+  "publishedDate": "2010-05-10T09:30:00Z",
+  "publisher": {
+    "scheme": "GB-COH",
+    "uid": "09506232",
+    "name": "Open Data Services Co-operative Limited",
+    "uri": "https://standard.open-contracting.org/examples/"
+  },
+  "license": "http://opendatacommons.org/licenses/pddl/1.0/",
+  "publicationPolicy": "https://github.com/open-contracting/sample-data/",
+  "version": "1.1",
+  "extensions": [],
+  "releases": [
+    {
+      "ocid": "ocds-213czf-000-00001",
+      "id": "ocds-213czf-000-00001-04-award",
+      "date": "2010-05-10T09:30:00Z",
+      "language": "en",
+      "tag": [
+        "award"
+      ],
+      "initiationType": "tender",
+      "parties": [
+        {
+          "identifier": {
+            "scheme": "GB-LAC",
+            "id": "E09000003",
+            "legalName": "London Borough of Barnet"
+          },
+          "name": "London Borough of Barnet",
+          "address": {
+            "streetAddress": "4, North London Business Park, Oakleigh Rd S",
+            "locality": "London",
+            "region": "London",
+            "postalCode": "N11 1NP",
+            "countryName": "United Kingdom"
+          },
+          "contactPoint": {
+            "name": "Procurement Team",
+            "email": "procurement-team@example.com",
+            "telephone": "01234 345 346",
+            "faxNumber": "01234 345 345",
+            "url": "http://www.barnet.gov.uk/"
+          },
+          "roles": [
+            "buyer"
+          ],
+          "id": "GB-LAC-E09000003"
+        },
+        {
+          "identifier": {
+            "scheme": "GB-COH",
+            "id": "04336774",
+            "legalName": "IBM LP LIMITED",
+            "uri": "https://opencorporates.com/companies/gb/04336774"
+          },
+          "additionalIdentifiers": [
+            {
+              "scheme": "GB-VAT",
+              "id": "GB107328000",
+              "legalName": "IBM UK LIMITED"
+            },
+            {
+              "id": "100012",
+              "scheme": "GB-CF"
+            }
+          ],
+          "name": "IBM",
+          "address": {
+            "streetAddress": "76, 78 Upper Ground",
+            "locality": "London",
+            "region": "London",
+            "postalCode": "SE1 9PZ",
+            "countryName": "United Kingdom"
+          },
+          "contactPoint": {
+            "name": "Contracts Team",
+            "email": "ibm_crc@uk.ibm.com",
+            "telephone": "+44 (0) 370 909 9997"
+          },
+          "roles": [
+            "supplier"
+          ],
+          "id": "GB-COH-04336774"
+        }
+      ],
+      "buyer": {
+        "id": "GB-LAC-E09000003",
+        "name": "London Borough of Barnet"
+      },
+      "awards": [
+        {
+          "id": "ocds-213czf-000-00001-award-01",
+          "title": "Licenses for analytical software",
+          "description": "IBM has been awarded for licenses for the SPSS Statistics software",
+          "status": "pending",
+          "date": "2010-05-10T09:30:00Z",
+          "value": {
+            "amount": 1096000,
+            "currency": "GBP"
+          },
+          "suppliers": [
+            {
+              "id": "GB-COH-04336774",
+              "name": "IBM"
+            }
+          ],
+          "items": [
+            {
+              "id": "0001",
+              "description": "string",
+              "classification": {
+                "scheme": "CPV",
+                "id": "48218000",
+                "description": "Construction work for highways",
+                "uri": "http://cpv.data.ac.uk/code-48218000"
+              },
+              "quantity": 8,
+              "unit": {
+                "name": "unit",
+                "value": {
+                  "amount": 137000,
+                  "currency": "GBP"
+                }
+              }
+            }
+          ],
+          "contractPeriod": {
+            "startDate": "2010-07-01T00:00:00Z",
+            "endDate": "2011-07-31T23:59:00Z"
+          }
+        }
+      ]
+    }
+  ]
+}
