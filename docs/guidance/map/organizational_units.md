@@ -1,19 +1,19 @@
 # Organizational Units
 
-For some use cases, publishers may need to disclose the organizational units involved in the contracting process, e.g agency branches or divisions.
+For some use cases, publishers might need to disclose the organizational units involved in the contracting process, e.g agency branches or divisions.
 
 There is more than one approach to model organizational units in OCDS:
 
 1. **Use the fields and blocks available in the Organization building block**. This is the preferred approach, when possible. 
 
     * Unit names can be included in the `name` field alongside the organization name. 
-    * The `additionalIdentifiers` array can be used to provide any unit identifiers. It is important to note that `identifier` and `additionalIdentifiers` should always point towards the *same legal entity*. The main `identifier` should belong to the organization and the `legalName` field can be used to provide the organization name alone. 
+    * The `additionalIdentifiers` array can be used to provide any unit identifiers. It is important to note that `identifier` and `additionalIdentifiers` need to point toward the *same legal entity*. The main `identifier` ought to belong to the organization and the `legalName` field can be used to provide the organization name alone. 
     * The `address` and `contactPoint` blocks can be filled with the unit information. 
     * Unit identifiers can also be appended to `parties/id`.
 
-2. When the first option is not enough to model the publisher's case, **use or create an extension**. Any additional fields should be placed in the `details` section of the Organization building block.
+2. When the first option is not enough to model the publisher's case, **use or create an extension**. Any additional fields can be placed in the `details` section of the Organization building block.
 
-Some publishers use the [memberOf](https://github.com/open-contracting-extensions/ocds_memberOf_extension) extension to represent organization hierarchies, including organizational units. This is strongly discouraged unless there is a clear use case to support it, because OCDS is not designed to disclose hierarchical organization information. Ideally, organizational hierarchies should be represented in separate, non-OCDS datasets, and organizational units should be modelled using one of the alternatives described above. 
+Some publishers use the [memberOf](https://github.com/open-contracting-extensions/ocds_memberOf_extension) extension to represent organization hierarchies, including organizational units. This is strongly discouraged unless there is a clear use case to support it, because OCDS is not designed to disclose hierarchical organization information. Ideally, organizational hierarchies would be represented in separate, non-OCDS datasets, and organizational units would be modelled using one of the alternatives described above. 
 
 ## Worked examples
 
@@ -75,7 +75,7 @@ The `extension.json` and `release-schema.json` files for the Division code exten
 
 The *Hospital de Clínicas* is in the planning stage of procuring supplies for their Blood Center.  The Hospital is part of the Medical School in the National University of Asuncion. Since the hospital is key in the provision of healthcare for low income groups in the community, it is in the interest of many to clearly identify the procurement of the Hospital only. It is also important for the publisher that users can group the data following organizational hierarchies.
 
-It is important to note that OCDS should not be used to publish organizational hierarchies unless there is a strong case to support it. Organizational hierarchies can be disclosed in additional datasets. Publishers can refer to the [W3C Organization Ontology](https://www.w3.org/TR/vocab-org/) to design a hierarchy-oriented dataset.
+It is important to note that OCDS ought to not be used to publish organizational hierarchies unless there is a strong case to support it. Organizational hierarchies can be disclosed in additional datasets. Publishers can refer to the [W3C Organization Ontology](https://www.w3.org/TR/vocab-org/) to design a hierarchy-oriented dataset.
 
 The release below shows how the publisher chooses to model the hospital as an organizational unit of the Medical School (*Facultad de Ciencias Médicas*). The source systems collect the name of the organizational unit only, and this is appended to the organization name.
 

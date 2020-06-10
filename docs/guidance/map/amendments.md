@@ -78,7 +78,7 @@ A full record is provided below, with all the releases for the process and a `co
 
 <p class="first admonition-title">Hint</p>
 
-It is recommended to <a href="../../../_static/json/amendments/amendments-tender-example.json" target="_blank">download</a> the record example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
+It is encouraged to <a href="../../../_static/json/amendments/amendments-tender-example.json" target="_blank">download</a> the record example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
 
 </div>
 
@@ -86,7 +86,7 @@ Note in this example that:
 
 * **The amendments block does not contain data on what was changed**. Changes are recorded by updating the fields of the `tender` block a new release.
 
-* **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher may want to provide the latest data available in each release.
+* **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher might want to provide the latest data available in each release.
 
 * **In the record**, the `releaseID` and `amendsReleaseID` fields from the `amendments` array can be used to look up information in the `versionedRelease` object or `releases` array, to see where changes are explained by an amendment `rationale`.
 
@@ -126,7 +126,7 @@ See the example release below.
 
 Note that amendments can cover more than values or duration. Also, note that the publisher chose to not repeat the contract items, but add a new one with a new ID value.
 
-In certain scenarios there may not be a valid `amendsReleaseID` and so it can be omitted, e.g. when historical data is being published in a single release.
+In certain scenarios there might not be a valid `amendsReleaseID` and so it can be omitted, e.g. when historical data is being published in a single release.
 
 #### Record
 
@@ -145,7 +145,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 
 ### Example 3: Amendments in a Easy Releases scenario
 
-The [Easy releases guidance](../publish/easy_releases) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it may still be possible to publish a history of amendments when using this model.
+The [Easy releases guidance](../publish/easy_releases) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
 
 Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract notice, contract amendments can be published as separate releases in OCDS. For example, Australia's AusTender platform [stores contract amendments as separate notices, related to the original contract notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516).
 

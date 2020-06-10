@@ -102,7 +102,7 @@ If your [mapping](map) identified data elements which don't map to OCDS or an ex
 
 ## Keep users in mind as you build
 
-As covered in the [Design](design) phase, different users will need information in different ways. Some will require bulk downloads, some will need APIs, some will need CSVs, most will require change history published on a timely basis with individual releases and records.
+As covered in the [Design](design) phase, different users will need information in different ways. Some will need bulk downloads, some will need APIs, some will need CSVs, most will need change history published on a timely basis with individual releases and records.
 
 **Resource:** [Guidance on bulk downloads, APIs, individual releases and records, and flattened serializations](hosting/#data-files-and-apis)
 

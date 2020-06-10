@@ -23,7 +23,7 @@ The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en
 
 > ...identify, prior to solicitation, suppliers or contractors that are qualified.
 
-The model law requires procuring entities to publish an invitation to pre-qualify. The invitation needs to specify the criteria and procedure for assessing the qualifications of suppliers. Much of the information that would usually appear on an invitation to tender is provided on the invitation to pre-qualify.
+The model law obliges procuring entities to publish an invitation to pre-qualify. The invitation needs to specify the criteria and procedure for assessing the qualifications of suppliers. Much of the information that would usually appear on an invitation to tender is provided on the invitation to pre-qualify.
 
 The procuring entity assesses the qualifications of the suppliers based on their responses. Only pre-qualified suppliers can take part in the later proceedings.
 
@@ -131,7 +131,7 @@ The notice represents the initiation of the contracting process, so it is modell
 
 ```
 
-Any supplier may submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
+Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
 
 ```eval_rst
 .. note::

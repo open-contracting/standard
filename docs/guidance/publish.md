@@ -13,7 +13,7 @@ Congratulations! You are almost ready to publish your OCDS data.
 
 ## Finalize your publication policy
 
-In OCDS, a publication policy is an essential data guide for users. Each OCDS publisher should have a publication policy that covers:
+In OCDS, a publication policy is an essential data guide for users. Each OCDS publisher ought to have a publication policy that covers:
 
 * What information is and is not covered within the scope of the publication
 * Any custom codelists used - or custom codes added to existing codelists
@@ -23,9 +23,9 @@ In OCDS, a publication policy is an essential data guide for users. Each OCDS pu
 * License information for data reuse
 * Contact information for the publisher
 
-The publication policy should be made available as a public web page, with links to the policy added to OCDS release packages and record packages and any OCDS web portal.
+The publication policy ought to be made available as a public web page, with links to the policy added to OCDS release packages and record packages and any OCDS web portal.
 
-The publication policy should also contain information about future plans for changes to the publication (and be updated when changes are made).
+The publication policy ought to also contain information about future plans for changes to the publication (and be updated when changes are made).
 
 **Resource**: Use the [OCDS publication policy template](https://www.open-contracting.org/resources/ocds-1-1-publication-policy-template/) to develop your publication policy.
 
@@ -60,7 +60,7 @@ In individual CSV files or other models of publishing, it might not be possible 
 
 ## Publish and share your data
 
-Once you have published your data, it's time to share it with the world. It is also not the end of your OCDS journey. As users start using the data, there will likely be some requests for iterative improvements over time to improve the quality and usability of the data. You may even want to develop or adapt tools for displaying and using the data.
+Once you have published your data, it's time to share it with the world. It is also not the end of your OCDS journey. As users start using the data, there will likely be some requests for iterative improvements over time to improve the quality and usability of the data. You might even want to develop or adapt tools for displaying and using the data.
 
 **Action:** Share your publication on the [OCDS mailing list](../../support/#ocds-community).
 

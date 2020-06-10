@@ -29,7 +29,7 @@ On this page, you will find guidance on how to:
 
 ## Understand your context
 
-How does public contracting work in your jurisdiction? What does the law require to be made public? What are the opportunities or barriers to greater openness? Which stakeholders ought to be involved? What institutional and technical skills and experience do stakeholders have?
+How does public contracting work in your jurisdiction? What does the law oblige to be made public? What are the opportunities or barriers to greater openness? Which stakeholders ought to be involved? What institutional and technical skills and experience do stakeholders have?
 
 The answers to these questions will help you to develop a robust publication plan. A scoping study can help your team to understand your political, legal, and technical context.
 
@@ -80,8 +80,8 @@ Implementing OCDS is easier when your team combines both policy and technology e
 To achieve success, an OCDS implementation team ought to include the following roles, though one individual might play several roles:
 
 * A **project manager** who will oversee the project timeline and deliverables.
-* A **data expert** who will identify where data recommended for publication in OCDS exists at a technical level. They need to be familiar with the IT systems that capture and store contracting data and related documents.
-* A **procurement expert** who will identify where data recommended for publication in OCDS exists at a semantic level. They need to be familiar with procurement legislation and procedures.
+* A **data expert** who will identify where data put forward for publication in OCDS exists at a technical level. They need to be familiar with the IT systems that capture and store contracting data and related documents.
+* A **procurement expert** who will identify where data put forward for publication in OCDS exists at a semantic level. They need to be familiar with procurement legislation and procedures.
 * A **policy champion** who can help navigate the policy decisions of publishing and using OCDS data
 * A **system architect** who will define the architecture for publishing OCDS data. They can be an internal team member or an external consultant.
 * A **user champion** who will represent the needs of data users throughout the project. They can be an internal team member, an outside partner, or a representative of external stakeholders.

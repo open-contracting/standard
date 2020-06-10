@@ -1,6 +1,6 @@
 # Purchase orders
 
-Purchase orders that are made against contracts with a definite quantity or value of items should not be disclosed in the `contracts` section of OCDS, due to the risk of double counting items on the purchase order and the contract it relates to.
+Purchase orders that are made against contracts with a definite quantity or value of items ought to not be disclosed in the `contracts` section of OCDS, due to the risk of double counting items on the purchase order and the contract it relates to.
 
 ## Example: Double counting contracts and purchase orders
 

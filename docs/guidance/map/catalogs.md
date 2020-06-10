@@ -4,7 +4,7 @@ Electronic catalogs are a technique, or instrument, for electronic procurement, 
 
 When a buyer makes a purchase from an electronic catalog, an order is placed with a supplier for a specific quantity or value of items.
 
-In OCDS, purchases from electronic catalogs should be modelled using `awards` and `contracts`, since catalog purchases:
+In OCDS, purchases from electronic catalogs ought to be modelled using `awards` and `contracts`, since catalog purchases:
 
 1. Create a direct relationship between the items being purchased, the supplier providing the items, and the value of the items (an award in OCDS)
 
