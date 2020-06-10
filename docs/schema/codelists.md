@@ -62,13 +62,15 @@ Item quantities can be provided using an established codelist for units of measu
 
 ![org-id.guide](../_static/png/org-id-logo-full.png)
 
-The Organization Identifier Scheme currently uses the codes from [org-id.guide](http://www.org-id.guide). 
+The Organization Identifier Scheme uses the codes from [org-id.guide](http://www.org-id.guide). The latest version of the codelist can be [downloaded](http://org-id.guide/download) or [browsed](http://org-id.guide/) from its website.
 
-The latest version of the codelist can be [accessed at http://org-id.guide/download](http://org-id.guide/download) and can be explored through the [online list locator](http://org-id.guide/).
+To add new codes to the codelist, contact the [OCDS Helpdesk](../../support/index).
 
-For information on how to get new additions made to this list, see the [org-id.guide handbook](http://docs.org-id.guide/en/latest/contribute/)
+```eval_rst
+.. note::
 
-(**Update:** This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS documentation as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1)
+   This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS documentation as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1.
+```
 
 ### Document Type
 
