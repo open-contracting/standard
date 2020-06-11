@@ -60,6 +60,18 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#973](https://github.com/open-contracting/standard/pull/973) Describe the `openCodelist` and `codelist` JSON Schema properties.
   * [#1036](https://github.com/open-contracting/standard/pull/1036) Add instruction for OCDS publishers to contact the OCDS Helpdesk to add list codes to org-id.guide.
 
+### Extensions
+
+See the changelogs for:
+
+* [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/master/#changelog)
+* [Enquiries](https://extensions.open-contracting.org/en/extensions/enquiries/master/#changelog)
+* [Location](https://extensions.open-contracting.org/en/extensions/location/master/#changelog)
+* [Lots](https://extensions.open-contracting.org/en/extensions/lots/master/#changelog)
+* [Milestone documents](https://extensions.open-contracting.org/en/extensions/milestone_documents/master/#changelog)
+* [Participation fees](https://extensions.open-contracting.org/en/extensions/participation_fee/master/#changelog)
+* [Process level title and description](https://extensions.open-contracting.org/en/extensions/process_title/master/#changelog)
+
 ## [1.1.4] - 2019-06-25
 
 ### Advisories
