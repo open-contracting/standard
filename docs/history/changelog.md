@@ -45,13 +45,15 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * [#969](https://github.com/open-contracting/standard/pull/969) Clarify the instruction for setting the `Unit.id` field.
 * [#995](https://github.com/open-contracting/standard/pull/995) Clarify the instruction for setting the `Release.date` field.
+* [#996](https://github.com/open-contracting/standard/pull/996) Fix a typo in the `versionedRelease` field.
 
 ### Documentation
 
-* [#965](https://github.com/open-contracting/standard/pull/965) Add extensions list for the Transaction object.
 * [#968](https://github.com/open-contracting/standard/pull/968) [#1032](https://github.com/open-contracting/standard/pull/1032) Use "field" to refer to OCDS fields and "property" to refer to JSON Schema properties.
 * [#970](https://github.com/open-contracting/standard/pull/970) Add links to access the release schema as a CSV spreadsheet and via the Field-Level Mapping Template. Add notes to describe the alternatives for browsing the schemas.
+* [#965](https://github.com/open-contracting/standard/pull/965) Release Reference page: Add extensions list for the Transaction object.
 * [#970](https://github.com/open-contracting/standard/pull/970) Release Schema page: Correct the description of compiled releases.
+* [#996](https://github.com/open-contracting/standard/pull/996) Record Reference page: Rewrite page to improve clarity.
 * Codelists page:
   * [#971](https://github.com/open-contracting/standard/pull/971) [#1032](https://github.com/open-contracting/standard/pull/1032) Remove the suggestion to use X prefixes, for the reasons expressed by the [IETF](https://tools.ietf.org/html/rfc6648#appendix-B).
   * [#972](https://github.com/open-contracting/standard/pull/972) Clarify the norms around open and closed codelists.
