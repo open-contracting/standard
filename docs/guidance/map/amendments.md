@@ -153,7 +153,7 @@ The table below shows an example of a contract notices table from a procurement 
 
 ```eval_rst
 .. csv-table-no-translate::
-   :file: ../_static/json/amendments-contract-notice.csv
+   :file: ../../examples/amendments-contract-notice.csv
    :header-rows: 1
 ```
 
