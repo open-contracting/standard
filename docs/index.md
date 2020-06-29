@@ -55,8 +55,8 @@ A [free helpdesk service](support/index) is available to support implementation 
    :hidden:
 
    getting_started/index
-   schema/index
    guidance/index
+   schema/index
    support/index
    history/index
 ```
