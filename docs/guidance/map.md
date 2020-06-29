@@ -1,12 +1,5 @@
 # Map
 
-```eval_rst
-.. toctree::
-   :hidden:
-
-   map/extensions
-```
-
 This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
@@ -107,6 +100,13 @@ Some data elements might not match any field or code in OCDS. To cover such case
 **Action:** [Contact the OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   map/extensions
+```
 
 ## Wrapping up
 

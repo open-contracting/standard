@@ -1,14 +1,5 @@
 # Publish
 
-```eval_rst
-.. toctree::
-   :hidden:
-
-   publish/change_history
-   publish/easy_releases
-   publish/system_architectures
-```
-
 Congratulations! You are almost ready to publish your OCDS data.
 
 ## Finalize your publication policy

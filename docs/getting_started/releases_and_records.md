@@ -53,7 +53,7 @@ Each release contains an [ocid](../../schema/identifiers/#contracting-process-id
 
 A release also needs a release identifier, unique in the scope of the contracting process. A release id can be built in several ways. Publishers can use any generation strategy, as long as the ids don’t collide within the same process.
 
-The [easy releases](../guidance/publish/easy_releases) section introduces two strategies that can be used in any scenario. 
+The [easy releases](../guidance/build/easy_releases) section introduces two strategies that can be used in any scenario. 
 
 #### Packaging
 
