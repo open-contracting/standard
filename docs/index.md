@@ -59,4 +59,5 @@ A [free helpdesk service](support/index) is available to support implementation 
    schema/index
    support/index
    history/index
+   governance/index
 ```

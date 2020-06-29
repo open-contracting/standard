@@ -36,7 +36,7 @@ The handling of additional fields and deprecated fields is implementation define
 
 For behaviours that are implementation defined, applications should clearly document their chosen approach. 
 
-See also the [deprecation guidance](deprecation).
+See also the [deprecation guidance](../governance/deprecation).
 
 ## Extensions
 
