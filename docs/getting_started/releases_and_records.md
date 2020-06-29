@@ -1,4 +1,4 @@
-# Change History
+# Releases and Records
 
 Tracking change over time is important for users of contracting data.
 
