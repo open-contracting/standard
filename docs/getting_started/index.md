@@ -35,4 +35,5 @@ When you are done you could be producing data that looks something like the cont
    change_history
    publication_patterns
    validation
+   quality
 ```
