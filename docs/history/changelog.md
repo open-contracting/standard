@@ -11,7 +11,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Getting Started section:
   * [#980](https://github.com/open-contracting/standard/pull/980) Remove references to ☆ levels.
   * [#1017](https://github.com/open-contracting/standard/pull/1017) Add link to bulk downloads in Guidance section.
-* [#955](https://github.com/open-contracting/standard/pull/955) Move Governance page to Reference section. Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
+* [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 * Guidance section:
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
@@ -49,6 +49,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Documentation
 
+* [#966](https://github.com/open-contracting/standard/pull/966) Move Governance and Deprecation pages to new Governance section.
 * [#968](https://github.com/open-contracting/standard/pull/968) [#1032](https://github.com/open-contracting/standard/pull/1032) Use "field" to refer to OCDS fields and "property" to refer to JSON Schema properties.
 * [#970](https://github.com/open-contracting/standard/pull/970) Add links to access the release schema as a CSV spreadsheet and via the Field-Level Mapping Template. Add notes to describe the alternatives for browsing the schemas.
 * [#965](https://github.com/open-contracting/standard/pull/965) Release Reference page: Add extensions list for the Transaction object.
