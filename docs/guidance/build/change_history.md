@@ -4,7 +4,7 @@ The following example shows how to publish data about a contracting process. Pub
 
 Each subsection refers to a stage or event in the contracting process lifetime.
 
-Refer to the [change history](../../getting_started/change_history) guidance for an introduction to the concepts involved.
+Refer to the [releases and records](../../getting_started/releases_and_records) guidance for an introduction to the concepts involved.
 
 ### Planning
 
@@ -12,7 +12,7 @@ The London Borough of Barnet plans to publish a tender for cycle lane improvemen
 
 The publisher creates an OCDS release to represent this notice. The release uses the 'planning' tag and includes data about the planned procurement. The `tender` section holds the estimated values and publication date. The tender status is 'planned'.
 
-The publisher also creates an OCDS record for the new contracting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled version should look very much like this release. Compare the planning release and the record using the box below.
+The publisher also creates an OCDS record for the new contracting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled version is expected look very much like this release. Compare the planning release and the record using the box below.
 
 
 ```eval_rst
@@ -197,7 +197,7 @@ The publisher adds the new release from the finance system to the releases list 
 
 ### Contract Amendment
 
-Unexpected complications causes delays in the construction work. Because of them the procuring entity and the supplier agree to a contract extension. This will cover the extra time and cost required to complete the works. 
+Unexpected complications causes delays in the construction work. Because of them the procuring entity and the supplier agree to a contract extension. This will cover the extra time and cost needed to complete the works. 
 
 The publisher updates their procurement system with the new contract value and period. They issue a modification notice through the system. They also create a new OCDS with the 'contractAmendment' tag to represent the notice.
 

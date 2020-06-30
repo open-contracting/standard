@@ -23,6 +23,4 @@ OCDS data must follow the I-JSON (Internet JSON) specification in [RFC7493](http
    identifiers
    codelists
    conformance_and_extensions
-   deprecation
-   governance
 ```

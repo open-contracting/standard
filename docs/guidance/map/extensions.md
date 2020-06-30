@@ -10,7 +10,7 @@ Extensions are divided into two types:
 
 * **Community** and local extension are maintained by third-parties, or are maintained outside of the standard governance process. They might provide features needed by only a small number of publishers or users, or might be used to document a publisher's additional fields or codelist values.
 
-All core and community extensions are listed in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard technical team](../../schema/governance) approves extensions for inclusion in the Extension Explorer (distinguishing community from local extensions) and for inclusion in the governance process (distinguishing core from community extensions).
+All core and community extensions are listed in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard technical team](../../governance/index) approves extensions for inclusion in the Extension Explorer (distinguishing community from local extensions) and for inclusion in the governance process (distinguishing core from community extensions).
 
 ## Using existing extensions
 
@@ -41,11 +41,11 @@ Groups of extensions can be combined into **profiles**. OCDS provides a common c
 
 ### OCDS for the European Union
 
-[OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/master/en/) describes how to use OCDS to publish information on public procurement as required by law within the European Union.
+[OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/master/en/) describes how to use OCDS to publish information on public procurement as obliged by law within the European Union.
 
 ### OCDS for the Agreement on Government Procurement
 
-[OCDS for the Agreement on Government Procurement](https://standard.open-contracting.org/profiles/gpa/master/en/) (GPA) describes how to use OCDS to publish information as required by the World Trade Organization’s [Agreement on Government Procurement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
+[OCDS for the Agreement on Government Procurement](https://standard.open-contracting.org/profiles/gpa/master/en/) (GPA) describes how to use OCDS to publish information as obliged by the World Trade Organization’s [Agreement on Government Procurement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
 
 ## Linked standards
 

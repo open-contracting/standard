@@ -1,12 +1,5 @@
 # Map
 
-```eval_rst
-.. toctree::
-   :hidden:
-
-   map/extensions
-```
-
 This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
@@ -70,7 +63,7 @@ You can complete this step in parts. For example, you might choose to split your
 
 The preferred approach is to eventually list *all* the data elements within your data sources in your Field-Level Mapping, decide whether to publish each, and then map each. The decision to publish a data element is up to you; it isn't necessary to map all your contracting data.
 
-It is also important to focus on the data elements whose disclosure was prioritized by users during the [design](design) phase. If you have not determined which data elements are a priority, you should do this now, based on your user needs.
+It is also important to focus on the data elements whose disclosure was prioritized by users during the [design](design) phase. If you have not determined which data elements are a priority, you ought to do this now, based on your user needs.
 
 Whichever approach you take, it's important that your eventual OCDS publication contain at least as much information as your other public datasets of contracting data; otherwise, users are less likely to use your OCDS publication.
 
@@ -88,6 +81,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
    map/organization_classifications
    map/organization_identifiers
    map/organization_reference
+   map/organizational_units
    map/pre-qualification
    map/related_processes
    map/unsuccessful_tender
@@ -106,6 +100,13 @@ Some data elements might not match any field or code in OCDS. To cover such case
 **Action:** [Contact the OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   map/extensions
+```
 
 ## Wrapping up
 

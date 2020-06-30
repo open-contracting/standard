@@ -156,7 +156,7 @@ Following **working group** approval, the revision branch may be set to live.
 
 ## Deprecation policy 
 
-If a term (a class or property) is scheduled to be renamed or removed from the specification as a result of the revision process, the next minor release of the specification must [deprecate](https://en.wikipedia.org/wiki/Deprecation) the term within the schema, and the following major release must rename or remove the term from the schema, making the term obsolete. Implementations may use deprecated terms, but will receive warnings from the OCDS Data Review Tool described below. Implementations may not use obsolete terms, and will receive errors from the OCDS Data Review Tool.
+If a term (a definition or field) is scheduled to be renamed or removed from the specification as a result of the revision process, the next minor release of the specification must [deprecate](https://en.wikipedia.org/wiki/Deprecation) the term within the schema, and the following major release must rename or remove the term from the schema, making the term obsolete. Implementations may use deprecated terms, but will receive warnings from the OCDS Data Review Tool described below. Implementations may not use obsolete terms, and will receive errors from the OCDS Data Review Tool.
 
 ## Translation and localization policy
 
@@ -181,3 +181,10 @@ Any current or potential OCDS publisher or data user of the standard can be cons
 **Consensus**
 
 "The principle of consensus has its origins in the desire to achieve the general acceptance and application of a Standard within its intended sphere of influence. This entails trying to ensure that the interests of all those likely to be affected by it are taken into account, and that individual concerns are carefully and fairly balanced against the wider public interest." [BSI, 2012](http://www.bsigroup.com/Documents/about-bsi/NSB/BSI-pocket-guide-to-standards-development-UK-EN.pdf) 
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   deprecation
+```

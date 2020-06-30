@@ -1,13 +1,5 @@
 # Build
 
-```eval_rst
-.. toctree::
-   :hidden:
-
-   build/serialization
-   build/hosting
-```
-
 This phase is about creating a new IT system, or updating an existing IT system, to implement your [mapping](map) and publish OCDS data.
 
 As you complete this phase, you can:
@@ -32,9 +24,18 @@ To publish OCDS data, you need to register an ocid prefix.
 
 ## Determine your system architecture
 
-There are many ways to extract data from data sources, combine it, map it to OCDS, and publish it. The [system architectures](publish/system_architectures) guidance page describes some possible approaches.
+There are many ways to extract data from data sources, combine it, map it to OCDS, and publish it. The [system architectures](build/system_architectures) guidance page describes some possible approaches.
 
 Your choice of architecture can determine how frequently your data is updated, whether you can publish a change history and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the design stage.**
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   build/system_architectures
+   build/change_history
+   build/easy_releases
+```
 
 ## Establish your publication formats and access methods
 
@@ -47,6 +48,14 @@ Where resources allow, it is also best practice to provide multiple access metho
 **Remember to check that your chosen publication formats and access methods meet the needs you identified at the design stage.**
 
 **Tool:** [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) can be used to convert OCDS data between JSON and CSV/spreadsheet formats.
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   build/serialization
+   build/hosting
+```
 
 ## Build your data pipeline
 
@@ -67,7 +76,7 @@ Having determined your system architecture, it's time to implement it. This is o
 * If your source data is in **Excel files**, you can alternately transform Excel files to OCDS JSON by using the [Open Contracting Explorer](http://www.developmentgateway.org/expertise/contracting), which includes a web interface and web API for users to access and explore the OCDS data. (This tool is authored by Development Gateway.)
 * If your source data is in **SQL tables**, you can use [Kavure'i](https://gitlab.com/dncp-opendata/opendata-etl/-/blob/master/README_en.md) to transform it to OCDS. To use it, you write SQL queries to extract data from SQL tables, setting the columns for the query results to match the JSON paths in OCDS (for example, `buyer/name`). The query results are saved to CSV files, which are transformed to OCDS JSON using [Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/). (Kavure'i is authored by Paraguay's Dirección Nacional de Contrataciones Públicas (DNCP).)
 * To **make OCDS data available via an API**, you can use another component of [Kavure'i](https://gitlab.com/dncp-opendata/opendata-etl/-/blob/master/README_en.md) to load OCDS data into [ElasticSearch](https://www.elastic.co/), and then use [Pitogüé](https://gitlab.com/dncp-opendata/opendata-api-v3/blob/master/README_en.md) to make it available via an API. (Both tools are authored by Paraguay's Dirección Nacional de Contrataciones Públicas (DNCP).)
-* If you intend to **publish [record packages](../../schema/record_package)**, [OCDS Merge](https://ocds-merge.readthedocs.io/en/latest/) is the best software library for creating OCDS [records](../../getting_started/change_history). If you use the [Python](https://www.python.org/) programming language, you can use it directly. If not, you can use its [test cases](https://ocds-merge.readthedocs.io/en/latest/#test-cases) to test your implementation of the [merge routine](../../schema/merging), and you can read its [commented code](https://github.com/open-contracting/ocds-merge) as inspiration for your implementation.
+* If you intend to **publish [record packages](../../schema/record_package)**, [OCDS Merge](https://ocds-merge.readthedocs.io/en/latest/) is the best software library for creating OCDS [records](../../getting_started/releases_and_records). If you use the [Python](https://www.python.org/) programming language, you can use it directly. If not, you can use its [test cases](https://ocds-merge.readthedocs.io/en/latest/#test-cases) to test your implementation of the [merge routine](../../schema/merging), and you can read its [commented code](https://github.com/open-contracting/ocds-merge) as inspiration for your implementation.
 * If you have [release packages](../../schema/release_package) and want to have [record packages](../../schema/record_package), if you have data that follows an older version of OCDS, or if you otherwise need to transform your OCDS data, you can use [OCDS Kit](https://ocdskit.readthedocs.io/) as a command-line tool or [Python](https://www.python.org/) library.
 * If you are **authoring data from scratch**, you can use this tool to [enter data](https://github.com/INAImexico/Contrataciones_abiertas_v2), which also includes a web interface for users to access and explore the OCDS data. (This tool is authored by Mexico's Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI).) (*Manuals are in Spanish.*)
 * If you want to **collect data using a spreadsheet or without an internet connection**, you can develop a [spreadsheet input template](https://www.open-contracting.org/resources/simple-ocds-spreadsheet-template/).
@@ -102,7 +111,7 @@ If your [mapping](map) identified data elements which don't map to OCDS or an ex
 
 ## Keep users in mind as you build
 
-As covered in the [Design](design) phase, different users will need information in different ways. Some will require bulk downloads, some will need APIs, some will need CSVs, most will require change history published on a timely basis with individual releases and records.
+As covered in the [Design](design) phase, different users will need information in different ways. Some will need bulk downloads, some will need APIs, some will need CSVs, most will need change history published on a timely basis with individual releases and records.
 
 **Resource:** [Guidance on bulk downloads, APIs, individual releases and records, and flattened serializations](hosting/#data-files-and-apis)
 

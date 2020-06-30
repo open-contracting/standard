@@ -86,7 +86,7 @@ The [Chartered Institute of Procurement and Supply](https://www.cips.org/en-NZ/k
 
 A purchase order is an official document issued by a buyer committing to pay a supplier for the supply of specific goods, works or services to be delivered in the future.
 
-Purchase orders may be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
+Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 
 ## The OCDS model
 
@@ -94,7 +94,7 @@ OCDS defines a common model for disclosing structured data on public contracting
 
 ### Awards and contracts
 
-In OCDS, **awards** and **contracts** are modelled as separate stages of the contracting process. This approach allows for the possibility that an award is made but a contract is never entered into. The model also allows for the possibility that there is a difference between the award and the signed contract, either in value, duration, items or otherwise. While such differences might be illegal in some jurisdictions, they can occur in some cases and are therefore possible in OCDS. Source systems may contain data on awards, on contracts, or on both.
+In OCDS, **awards** and **contracts** are modelled as separate stages of the contracting process. This approach allows for the possibility that an award is made but a contract is never entered into. The model also allows for the possibility that there is a difference between the award and the signed contract, either in value, duration, items or otherwise. While such differences might be illegal in some jurisdictions, they can occur in some cases and are therefore possible in OCDS. Source systems can contain data on awards, on contracts, or on both.
 
 <style><!--
 .process-table { width:18%; float:left; font-size:10pt; }
