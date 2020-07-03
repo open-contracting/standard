@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Oscar Montiel <oscar.montiel@okfn.org>, 2020
+# Ben Webb <ben.webb@opendataservices.coop>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-30 01:22+0000\n"
+"Last-Translator: Ben Webb <ben.webb@opendataservices.coop>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/build/change_history.md:1
+msgid "Change history"
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:3
+msgid ""
+"The following example shows how to publish data about a contracting process."
+" Publish a release for each event in the process and update the record each "
+"time you publish a release."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:5
+msgid ""
+"Each subsection refers to a stage or event in the contracting process "
+"lifetime."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:7
+msgid ""
+"Refer to the [releases and "
+"records](../../getting_started/releases_and_records) guidance for an "
+"introduction to the concepts involved."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:9
+msgid "Planning"
+msgstr "Planeación"
+
+#: ../../docs/guidance/build/change_history.md:11
+msgid ""
+"The London Borough of Barnet plans to publish a tender for cycle lane "
+"improvements later in the year. To prepare the market they publish a *notice"
+" of planned procurement*. This is also known as *prior information notice*, "
+"or *future opportunity notice*."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:13
+msgid ""
+"The publisher creates an OCDS release to represent this notice. The release "
+"uses the 'planning' tag and includes data about the planned procurement. The"
+" `tender` section holds the estimated values and publication date. The "
+"tender status is 'planned'."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:15
+msgid ""
+"The publisher also creates an OCDS record for the new contracting process. "
+"The releases list includes the new and only release so far. The compiled and"
+" versioned releases are also created for the record. Since there is only one"
+" release, the compiled version is expected look very much like this release."
+" Compare the planning release and the record using the box below."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:36
+msgid "Tender"
+msgstr "Licitación"
+
+#: ../../docs/guidance/build/change_history.md:38
+msgid ""
+"The London Borough of Barnet is ready to invite bids for the contract. They "
+"issue the tender via an *notice of intended procurement*. This is also known"
+" as *contract notice* or *opportunity notice*."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:40
+msgid ""
+"The publisher creates a new release to represent this notice. The release "
+"uses the 'tender' tag and provides the details in the `tender` section."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:42
+msgid ""
+"There are no changes to the planning release published before. But the new "
+"release has the updated information about the tender. This includes the "
+"actual publication date, and the following new information:"
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:44
+msgid "The deadline for bid submission"
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:46
+msgid "The items to buy"
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:48
+msgid "Links to copies of tender documents"
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:50
+msgid "The estimated tender value"
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:52
+msgid ""
+"The publisher adds the new release to the record, in the releases list. Also"
+" they update the compiled and versioned releases with the new information. "
+"Note that the bid submission date has changed in the compiled release. Also,"
+" note that the versioned release has a list of changes for each field that "
+"has been updated."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:73
+msgid "Tender Update"
+msgstr "Actualización de Licitación"
+
+#: ../../docs/guidance/build/change_history.md:75
+msgid ""
+"The enquiry period has ended, and a few questions from potential suppliers "
+"have been received. The procuring entity issues a document with the "
+"responses to the enquiries received from bidders."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:77
+msgid "The publisher creates a new OCDS release with the 'tenderUpdate' tag."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:79
+msgid ""
+"The previous releases of planning and tender are not changed. In the new "
+"release, the publisher adds a link to the new document in the "
+"`tender.documents` section. The `tender.hasEnquiries` field is also set to "
+"true. The publisher has decided to keep unchanged fields from the previous "
+"releases in the new one."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:81
+msgid ""
+"The record now has three immutable releases, and updated compiled and "
+"versioned releases. Note that the compiled release includes the enquiries "
+"document in the tender section. Also, the field `tender.hasEnquiries` has "
+"more than one entry in the versioned release."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:101
+msgid "Award"
+msgstr "Adjudicación"
+
+#: ../../docs/guidance/build/change_history.md:103
+msgid ""
+"The procuring entity makes the decision to award the contract to Balfour "
+"Beatty. They issue an award notice."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:105
+msgid ""
+"The publisher creates a new OCDS release for the award. The record has the "
+"relevant information in the award section and uses the 'award' tag."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:107
+msgid ""
+"The `parties` array has a new entry with the supplier's information. The "
+"complete `tender` section is repeated, with the `status` field set to "
+"'complete'. Previous releases remain unchanged."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:109
+msgid ""
+"The publisher adds the new release to the record. They also update the "
+"compiled and versioned releases. The compiled release reflects the changes "
+"to the `awards`, `tender` and `parties` sections. The versioned release "
+"includes a new change for the `tender.status` field."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:129
+msgid "Contract"
+msgstr "Contrato"
+
+#: ../../docs/guidance/build/change_history.md:131
+msgid ""
+"By law, the procuring entity has to wait for complaints for a given period "
+"of time before signing a contract. Once the period ends with no complaints, "
+"the contract with the supplier is signed."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:133
+msgid ""
+"The publisher creates a new OCDS release using the 'contract' tag. They "
+"include all the relevant information in the `contracts` section."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:135
+msgid ""
+"The record gets updated to include the new release. The compiled and "
+"versioned release now have the new `contract` section. There are no updates "
+"to other sections."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:157
+msgid "Implementation"
+msgstr "Implementación"
+
+#: ../../docs/guidance/build/change_history.md:159
+msgid ""
+"The supplier starts the construction work. After a while, the procuring "
+"entity makes the first payment to the supplier. The publisher creates a "
+"release to document this update in the process."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:161
+msgid ""
+"Up to this point, the publisher used a single source to generate OCDS "
+"documents. They store procurement data in a procurement system. Payment "
+"data, however, gets stored in a financial system, so do we need to join the "
+"data to create a release?"
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:163
+msgid ""
+"If the systems share common *process identifiers*, there is no need to join "
+"data to create a release. The only requisite is to built the `ocid` using "
+"the shared identifier."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:165
+msgid ""
+"The publisher uses the information from the financial system to create a new"
+" release. This release uses the 'implementation' tag. The "
+"`contracts.implementation.transactions` section includes the details of the "
+"payment."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:167
+msgid ""
+"Because the new release uses the same `ocid`, it is possible to update the "
+"record with the information."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:173
+msgid ""
+"OCDS can be used to combine data from different systems. For more "
+"information refer to the guidance on system architectures."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:177
+msgid ""
+"The publisher adds the new release from the finance system to the releases "
+"list in the OCDS record. The compiled and versioned releases get updated to "
+"include the new transaction."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:198
+msgid "Contract Amendment"
+msgstr "Enmienda del Contrato"
+
+#: ../../docs/guidance/build/change_history.md:200
+msgid ""
+"Unexpected complications causes delays in the construction work. Because of "
+"them the procuring entity and the supplier agree to a contract extension. "
+"This will cover the extra time and cost needed to complete the works."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:202
+msgid ""
+"The publisher updates their procurement system with the new contract value "
+"and period. They issue a modification notice through the system. They also "
+"create a new OCDS with the 'contractAmendment' tag to represent the notice."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:204
+msgid ""
+"Note that contract amendments in OCDS involves more modelling "
+"considerations. Refer to the amendments worked example for guidance on the "
+"topic."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:206
+msgid ""
+"The publisher updates the record for the contracting process with the new "
+"release. The compiled release has the new values. The versioned release "
+"shows new entries for the contract’s value and end date."
+msgstr ""

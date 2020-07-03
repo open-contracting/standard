@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# James McKinney, 2020
+# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/map/organization_identifiers.md:1
+msgid "Organization identifiers"
+msgstr "Identificadores de Organización"
+
+#: ../../docs/guidance/map/organization_identifiers.md:3
+msgid ""
+"Normally, publishers collect *legal identifiers* from the organizations that"
+" are part of the contracting process. [Organization "
+"identifiers](../../../schema/identifiers/#organization-ids) can be provided "
+"in OCDS by identifying the **organization registers** used in the source "
+"data, choosing an appropiate **organization register prefix** for each one, "
+"and identifying the organizational ID for each registry or list and "
+"organization in the data."
+msgstr ""
+"Normalmente, los publicadores recopilan *identificadores legales* de las "
+"organizaciones que forman parte del proceso de contratación. Los "
+"[identificadores de la organización](../../../schema/identifiers"
+"/#organization-ids) se pueden proporcionar en OCDS identificando los "
+"**registros de organización** utilizados en los datos de origen, eligiendo "
+"un **prefijo registrado de la organización** apropiado para cada uno e "
+"identificando el ID de la organización para cada registro o lista y "
+"organización en los datos."
+
+#: ../../docs/guidance/map/organization_identifiers.md:5
+msgid ""
+"Use [org-id.guide](http://org-id.guide/) to find the code for the register "
+"your identifiers are drawn from. If no code exists for the register, contact"
+" the [OCDS Helpdesk](../../support/index) to register an organization list."
+msgstr ""
+"Utilice el sitio [org-id.guide](http://org-id.guide/) para encontrar el "
+"código del registro del que se extraen sus identificadores. Si no existe un "
+"código para el registro, comuníquese con el [Servicio de ayuda de "
+"OCDS](../../ support/index) para registrar una lista de organizaciones."
+
+#: ../../docs/guidance/map/organization_identifiers.md:7
+msgid ""
+"If a publisher chooses not to register an organization list with org-"
+"id.guide, the publisher ought to describe the organization list in a "
+"[publication policy](../../publish/#finalize-your-publication-policy), and "
+"needs to ensure that its prefix doesn't collide with a list code in org-"
+"id.guide."
+msgstr ""
+"Si un publicador decide no registrar una lista de organizaciones con org-"
+"id.guide, el editor debe describir la lista de organizaciones en una "
+"[política de publicación](../../publish/#finalize-your-publication-policy), "
+"y necesita asegurarse de que su prefijo no colisione con un código de lista "
+"en org-id.guide."
+
+#: ../../docs/guidance/map/organization_identifiers.md:9
+msgid "Worked example"
+msgstr "Ejemplo desarrollado"
+
+#: ../../docs/guidance/map/organization_identifiers.md:11
+msgid ""
+"The Government of UK uses identifiers from the UK Companies House to "
+"uniquely identify suppliers. The UK Companies House has an entry in [org-"
+"id.guide](http://org-id.guide/list/GB-COH), which specifies the \"GB-COH\" "
+"code for the registry. IBM has been assigned the company number ‘04336774’ "
+"by the Companies House.  The globally unique organization identifier for IBM"
+" can then be expressed as in the `identifier` section in the sample below:"
+msgstr ""
+"El Gobierno del Reino Unido utiliza identificadores de la Cámara de Empresas"
+" del Reino Unido para identificar de forma exclusiva a los proveedores. La "
+"UK Companies House tiene una entrada en [org-id.guide](http://org-"
+"id.guide/list/GB-COH), que especifica el código \"GB-COH\" para el registro."
+" IBM ha asignado el número de compañía '04336774' por la Cámara de Empresas."
+" El identificador de organización globalmente único para IBM se puede "
+"expresar como en la sección `identifier` en el siguiente ejemplo:"
+
+#: ../../docs/guidance/map/organization_identifiers.md:19
+msgid ""
+"The publisher also collects two extra identifiers, which are disclosed in "
+"the `additionalIdentifiers` block. The first one is the VAT identification "
+"number for suppliers. Note that the VAT registry is not present in org-"
+"id.guide, but the publisher followed the instructions in the [org-id meta-"
+"data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) "
+"to build the \"GB-VAT\" code used in the `scheme` field: the two-letter "
+"country prefix (\"GB\") plus a short abbreviation for the registry "
+"(\"VAT\"). The publisher checked that it does not conflict with any list "
+"code in org-id.guide."
+msgstr ""
+"El editor también recopila dos identificadores adicionales, que se divulgan "
+"en el bloque `additionalIdentifiers`. El primero es el número de "
+"identificación del IVA para los proveedores. Tenga en cuenta que el registro"
+" de IVA no está presente en org-id.guide, pero el editor siguió las "
+"instrucciones en la [guía de metadatos org-id](http://docs.org-"
+"id.guide/en/latest/metadata/#assigning-a-code) para crear el código \"GB-"
+"VAT\" utilizado en el campo `scheme`: el prefijo de país de dos letras "
+"(\"GB\") más una abreviatura breve para el registro (\"VAT\"). El publicador"
+" verificó que no entre en conflicto con ningún código de lista en org-"
+"id.guide."

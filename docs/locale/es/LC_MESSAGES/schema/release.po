@@ -5,18 +5,17 @@
 # 
 # Translators:
 # Ben Webb <ben.webb@opendataservices.coop>, 2017
-# Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2017
-# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
-# James McKinney <jmckinney@open-contracting.org>, 2020
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 11:28-0500\n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2020\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,54 +30,64 @@ msgstr "Esquema de Entrega"
 #: ../../docs/schema/release.md:3
 msgid ""
 "The release schema provides the authoritative definition of fields and their"
-" structure. You can view an interactive version of the release schema below "
-"(requires JavaScript) or [download this version of the schema here"
-"](../../release-schema.json)."
+" structure. It is used to check the structure of the `releases` array of "
+"[release packages](release_package), and any `compiledRelease` fields in a "
+"[record package](record_package)."
 msgstr ""
-"El esquema de entrega provee la definición oficial de los campos y su "
-"estructura. Puedes ver una versión interactiva del esquema de entrega a "
-"continuación (requiere javascript) o [descargar esta versión del esquema "
-"aquí](../../release-schema.json)."
+"El esquema de entrega proporciona la definición oficial de los campos y su "
+"estructura. Se utiliza para verificar la estructura de la lista de "
+"`releases` en [paquetes de entrega](release_package) y cualquier campo de la"
+" estructura `compiledRelease` en un [paquete de registro](record_package)."
 
 #: ../../docs/schema/release.md:5
 msgid ""
 "For this version of OCDS, the canonical URL of the release schema is: "
-"<https://standard.open-contracting.org/schema/1__1__4/release-schema.json>"
-msgstr ""
-"Para esta versión del OCDS, el URL canónico del esquema de entrega es: "
-"<https://standard.open-contracting.org/schema/1__1__4/release-schema.json>"
-
-#: ../../docs/schema/release.md:7
-msgid ""
+"<https://standard.open-contracting.org/schema/1__1__4/release-schema.json>. "
 "Using the canonical URL guarantees that your software, documentation or "
 "other resources will always refer to the specific version of the schema with"
 " which they were authored and tested."
 msgstr ""
-"Utilizar el URL canónico garantiza que su software, documentación y otros "
-"recursos siempre se refieran a la versión específica del esquema con el cual"
-" se han escrito y probado."
+"Para esta versión de OCDS, la URL canónica del esquema de entrega es: "
+"<https://standard.open-contracting.org/schema/1__1__4/release-schema.json>. "
+"El uso de la URL canónica garantiza que su software, documentación u otros "
+"recursos siempre harán referencia a la versión específica del esquema con el"
+" que fueron creados y probados."
 
-#: ../../docs/schema/release.md:9
-msgid ""
-"The release schema is used to validate the contents of the `releases` array "
-"of [release packages](release_package), and the `compiledReleases` array of "
-"releases in a [record package](record_package)."
-msgstr ""
-"El esquema de entrega se usa para validar los contenidos de la matriz de "
-"`entregas` de [paquetes de entregas](release_package) y de la matriz de "
-"`compiledReseases` de entregas en un [paquete de registros](record_package)."
-
-#: ../../docs/schema/release.md:11
-msgid "Release schema"
-msgstr "Esquema de entrega"
-
-#: ../../docs/schema/release.md:13
+#: ../../docs/schema/release.md:7
 msgid ""
 "Click on schema elements to expand the tree, or use the '+' icon to expand "
 "all elements. Use { } to view the underlying schema for any section. "
-"Required fields are indicated in **bold**."
+"Required fields are indicated in **bold**. [Deprecated "
+"fields](../governance/deprecation) and [multilingual "
+"fields](../reference/#language) are omitted."
 msgstr ""
-"Haga click en los elementos del esquema para expandir el árbol, o usa el "
-"ícono de '+' para expandir todos los elementos. Usa { }  para ver el esquema"
-" subyacente para cada sección. Los campos requeridos están indicados en "
-"**bold**"
+"Haga clic en los elementos del esquema para expandir el árbol, o use el "
+"icono '+' para expandir todos los elementos. Use {} para ver el esquema "
+"subyacente de cualquier sección. Los campos obligatorios se indican en "
+"**negritas**. Los [campos obsoletos](../governance/deprecation) y los "
+"[campos multilingües](../reference/#language) se omiten."
+
+#: ../../docs/schema/release.md:1
+msgid "Browsing the schema"
+msgstr "Navegando el esquema"
+
+#: ../../None:1
+msgid ""
+"This page presents the release schema in an interactive browser. You can "
+"also download the canonical version of the release schema as [JSON Schema"
+"](../../release-schema.json), download it as a [CSV "
+"spreadsheet](https://toucan.open-contracting.org/mapping-"
+"sheet/?source=https://standard.open-contracting.org/1.1/en/release-"
+"schema.json), view it as [tables](reference), or access it through the "
+"[Field-Level Mapping Template](https://www.open-contracting.org/resources"
+"/ocds-field-level-mapping-template/)."
+msgstr ""
+"Esta página presenta el esquema de publicación en un navegador interactivo, "
+"con información adicional en párrafos. También puede descargar la versión "
+"canónica del esquema de registro como [Esquema JSON] (../../ release-"
+"schema.json), descargarlo como una [hoja de cálculo CSV](https://toucan"
+".open-contracting.org/mapping-sheet/?source=https://standard.open-"
+"contracting.org/1.1/en/release-schema.json), visualícelo en un [navegador "
+"interactivo] (versión) o acceder a él a través del [Plantilla de Mapeo a "
+"Nivel Campos] (https://www.open-contracting.org/resources/ocds-field-level-"
+"mapping-template/)."
