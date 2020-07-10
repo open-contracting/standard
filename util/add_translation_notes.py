@@ -5,7 +5,7 @@ This script implements the following policy:
 updates are released. The documentation will clearly display when the English documentation is 'ahead' of translations
 for a particular version."
 
-https://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy
+https://standard.open-contracting.org/1.1/en/governance/#translation-and-localization-policy
 """
 
 import gettext

@@ -16,8 +16,6 @@ To get started publishing OCDS data:
 * Check the [validation of your data](validation)
 * Encourage and facilitate stakeholder use of the data
 
-<!-- You can find [samples of OCDS data](ToDo), and [information on using OCDS](ToDo) in the implementation handbook. -->
-
 When you are done you could be producing data that looks something like the contract release below, which is compatible with a growing range of OCDS aware tools (you will encounter a range of different OCDS release types in the following pages).
 
 ```eval_rst
@@ -37,4 +35,5 @@ When you are done you could be producing data that looks something like the cont
    releases_and_records
    publication_patterns
    validation
+   quality
 ```

@@ -20,7 +20,7 @@
     },
     "date": {
       "title": "Release Date",
-      "description": "The date this information was first released, or published.",
+      "description": "The date on which the information contained in the release was first recorded in, or published by, any system.",
       "type": "string",
       "format": "date-time",
       "omitWhenMerged": true
@@ -1328,7 +1328,7 @@
             "object",
             "null"
           ],
-          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular properties and classification schemes. ",
+          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular fields and classification schemes.",
           "title": "Details"
         }
       },
@@ -1406,7 +1406,7 @@
             },
             "id": {
               "title": "ID",
-              "description": "The identifier from the codelist referenced in the scheme property. Check the codelist for details of how to find and use identifiers from the scheme in use.",
+              "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
               "type": [
                 "string",
                 "null"
