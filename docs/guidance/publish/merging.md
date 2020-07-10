@@ -64,7 +64,7 @@ At each release, the agency also updates the record, which combines all the rele
 ```
 
 ```eval_rst
-.. jsoninclude:: ../../examples/merging/record.json
+.. jsoninclude:: ../../examples/merging/versioned.json
    :jsonpointer:
    :expand: records, compiledRelease, versionedRelease, tag, tender, awards
    :title: record

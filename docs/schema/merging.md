@@ -1,6 +1,6 @@
 # Merging
 
-An OCDS [record](../schema/records_reference) aggregates all the releases available for a contracting process at a given time, and can include:
+An OCDS [record](../getting_started/releases_and_records) aggregates all the releases available for a contracting process at a given time, and can include:
 
 * a compiled release, which expresses the current state of the contracting process, by showing only the most recent field values
 * a versioned release, which expresses all historical states of the contracting process, by showing all the field values over time
@@ -9,6 +9,71 @@ An OCDS [record](../schema/records_reference) aggregates all the releases availa
 
 * A compiled release is created by taking only the most recent values of fields from releases in a given contracting process.
 * A versioned release is created by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
+
+<div class="example hint" markdown=1>
+
+<p class="first admonition-title">Worked Example</p>
+
+A public procurement agency publishes a release to announce an opportunity on January 1, in which the total estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the total estimated value of the procurement is increased to $2,000.
+
+The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
+
+Through these individual releases, the agency provides real-time data about the contracting process.
+
+At each release, the agency also updates the record, which combines all the releases to date. In the final record:
+
+* The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
+* The versioned release makes it easy to see how the description and total estimated value changed over time.
+
+```eval_rst
+.. jsoninclude:: ../examples/merging/merge-tender-1.json
+   :jsonpointer: /releases
+   :expand: releases, tag, tender
+   :title: tender
+
+```
+
+```eval_rst
+.. jsoninclude:: ../examples/merging/merge-tender-3.json
+   :jsonpointer: /releases
+   :expand: releases, tag, tender
+   :title: tenderAmendment
+
+```
+
+```eval_rst
+.. jsoninclude:: ../examples/merging/merge-award-1.json
+   :jsonpointer: /releases
+   :expand: releases, tag, awards
+   :title: awardOne
+
+```
+
+```eval_rst
+.. jsoninclude:: ../examples/merging/merge-award-2.json
+   :jsonpointer: /releases
+   :expand: releases, tag, awards
+   :title: awardTwo
+
+```
+
+```eval_rst
+.. jsoninclude:: ../examples/merging/merged.json
+   :jsonpointer:
+   :expand: records, compiledRelease, tag, tender, awards
+   :title: record
+
+```
+
+```eval_rst
+.. jsoninclude:: ../examples/merging/versioned.json
+   :jsonpointer:
+   :expand: records, versionedRelease, tag, tender, awards
+   :title: versioned
+
+```
+
+</div>
 
 ## Merging specification
 
