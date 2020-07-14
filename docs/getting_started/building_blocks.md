@@ -129,7 +129,7 @@ Many of these fields make use of lightweight codelists provided by OCDS.
 
 In some cases, publishers or users need building blocks and fields which are not provided in the core OCDS schema. 
 
-We maintain a list of [extensions](../guidance/model/extensions) that provide additional building blocks and fields.
+We maintain a list of [extensions](../guidance/map/extensions) that provide additional building blocks and fields.
 
 <div class="example hint" markdown=1>
 
@@ -166,7 +166,7 @@ In the EU, contracts can be initiated through a number of different procedures i
 However, to support comparison across continents, the main OCDS procurement method codelist is a closed codelist with four values:
 
 ```eval_rst
-.. csv-table-no-translate::
+.. codelisttable::
    :header-rows: 1
    :file: ../../build/current_lang/codelists/method.csv
 ```
@@ -187,5 +187,3 @@ For an Open Procedure, when a free-text justification of why the procedure was c
 ```
 
 </div>
-
-<!--ToDo: Add section on mapping - including links to mapping tools -->

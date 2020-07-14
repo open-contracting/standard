@@ -122,7 +122,7 @@
   "definitions": {
     "record": {
       "title": "Record",
-      "description": "An OCDS record must provide a list of all the existing OCDS releases relating to a single contracting process and should provide a compiled release containing the current state of all fields in the OCDS schema. An OCDS record may also provide a versioned history of all changes to the data in the compiled release.",
+      "description": "An OCDS record must provide a list of all the existing OCDS releases relating to a single contracting process and should provide a compiled release containing the current state of all fields in the release schema. An OCDS record may also provide a versioned history of all changes to the data in the compiled release.",
       "type": "object",
       "properties": {
         "ocid": {
@@ -212,7 +212,7 @@
         },
         "versionedRelease": {
           "title": "Versioned release",
-          "description": "This contains the history of the data in the compiledRecord. With all versions of the information and the release they came from.",
+          "description": "This contains the history of all the data in the compiled release.",
           "$ref": "https://standard.open-contracting.org/schema/1__1__4/versioned-release-validation-schema.json"
         }
       },
