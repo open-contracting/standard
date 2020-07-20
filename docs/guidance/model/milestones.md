@@ -2,20 +2,21 @@
 
 Milestones can be included within the planning, tender, contract and contract implementation sections. 
 
-* The planning milestone block may describe anticipated milestones during the planning stage, such as the preparation 
-of key studies. These anticipated milestones usually set `milestone/type` to 'preProcurement'.
+* The planning milestones block is used for two types of milestones:
+  * Key events in the planning stage, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
+ * Anticipated milestones during the contract implementation stage, for example, the date by which goods delivery of the goods is required.
 
 * The tender milestones block is used to describe two types of milestone:
   * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which procuring entity will respond to enquiries.
   * Anticipated milestones during the contract implementation stage, for example, the date by which goods need to be delivered.
 
-* The contract milestone block should be used for events related to the signing of the contract documents.
+* The contract milestones block is used for events related to the signing of the contract, for example, the date of commercial close in a PPP contract.
 
-* The contract implementation milestone block should be used for any event related to delivery of the contract.
+* The contract implementation milestones block is used for any events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
 
-The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type).
+The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and milestones in the planning section which relate to contract implementation.
 
-The lifecycle of the milestone should be modeled with the fields: `dueDate`, `dateMet`, `dateModified` and [status](../../../schema/codelists/#milestone-status).
+The `dueDate`, `dateMet`, `dateModified` and [`status`](../../../schema/codelists/#milestone-status) are used to track the lifecycle of the milestone.
 
 ## Worked examples
 
