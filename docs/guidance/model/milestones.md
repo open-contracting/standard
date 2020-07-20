@@ -5,8 +5,9 @@ Milestones can be included within the planning, tender, contract and contract im
 * The planning milestone block may describe anticipated milestones during the planning stage, such as the preparation 
 of key studies. These anticipated milestones usually set `milestone/type` to 'preProcurement'.
 
-* The tender milestone block should be used to describe anticipated milestones during the proposed delivery 
-of a contract, as well as key dates from the process of tendering and awarding the contract.
+* The tender milestones block is used to describe two types of milestone:
+  * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which procuring entity will respond to enquiries.
+  * Anticipated milestones during the contract implementation stage, for example, the date by which goods need to be delivered.
 
 * The contract milestone block should be used for events related to the signing of the contract documents.
 
