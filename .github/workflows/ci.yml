@@ -12,12 +12,12 @@ jobs:
     - uses: actions/setup-python@v1
       with:
         python-version: 3.6
-    - uses: actions/cache@v1
-      with:
-        path: venv
-        key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-venv-
+    # - uses: actions/cache@v1
+    #   with:
+    #     path: venv
+    #     key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements.txt') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-venv-
     # Need to install editable projects in a venv for isort to detect.
     - name: Install
       run: |
