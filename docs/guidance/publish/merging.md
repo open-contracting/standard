@@ -1,24 +1,20 @@
 # Merging and Deletion
 
-The [merging documentation](../../schema/merging/) specifies how releases can be merged to produce compiled releases (latest version of the contracting process) and versioned releases (change history for each field in the standard) that are usually included in a record. An important matter that arises along with merging is how to delete fields, objects or array items in releases.
+The [merging documentation](../../schema/merging) specifies how individual releases are merged into compiled releases (the latest version of the contracting process) and versioned releases (the change history for each field), which form part of a [record](../../getting_started/releases_and_records). 
 
-Deletions are not a frequent occurrence, but it is important that deletion rules are considered when transforming data to OCDS. Even if the publisher doesn’t publish records or compiled releases, a correct implementation allows users to build them themselves for their own needs.
-
-As the merge routine shows, the use of the `null` keyword in JSON has a role in the deletion of data, **that’s why it is important never to include `null` values in data that are not meant to delete a field**.
-
-## Worked examples
+The merge routine also allows a publisher to correct a publication error by deleting a field, object or array entry from the compiled release. To do so, a publisher sets the field's value to `null` in an individual release (more on this below). As such, as a publisher, it is important to **never use a `null` value in an individual release, unless you intend to delete that field**. If you don't have a value to assign to a field, simply omit the field from the JSON, or assign an empty value like `""`, `[]` or `{}`. Using `null` values correctly means that publishers and/or users can create compiled releases reliably.
 
 The following examples show how updates and deletions are reflected in compiled and versioned releases.
 
-### Example 1: Updates
+## Example 1: Updates
 
-A public procurement agency publishes a release to announce an opportunity on January 1, 2016 in which the total estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the total estimated value of the procurement is increased to $2,000.
+A public procurement agency publishes a release to announce an opportunity on January 1, 2016 in which the total estimated value of the procurement is $1,000. On January 31, it publishes a release to expand the description of the procurement. On February 5, it publishes a release to amend the opportunity, in which the total estimated value is increased to $2,000.
 
 The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
 
 Through these individual releases, the agency provides real-time data about the contracting process.
 
-At each release, the agency also updates the record, which combines all the releases to date. In the final record:
+In each release, the agency also updates the record, which combines all the releases to date. In the final record:
 
 * The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
 * The versioned release makes it easy to see how the description and total estimated value changed over time.
@@ -28,7 +24,6 @@ At each release, the agency also updates the record, which combines all the rele
    :jsonpointer:
    :expand: releases, tag, tender
    :title: tender
-
 ```
 
 ```eval_rst
@@ -36,7 +31,6 @@ At each release, the agency also updates the record, which combines all the rele
    :jsonpointer:
    :expand: releases, tag, tender
    :title: tenderUpdate
-
 ```
 
 ```eval_rst
@@ -44,7 +38,6 @@ At each release, the agency also updates the record, which combines all the rele
    :jsonpointer:
    :expand: releases, tag, tender
    :title: tenderAmendment
-
 ```
 
 ```eval_rst
@@ -52,7 +45,6 @@ At each release, the agency also updates the record, which combines all the rele
    :jsonpointer:
    :expand: releases, tag, awards
    :title: awardOne
-
 ```
 
 ```eval_rst
@@ -60,7 +52,6 @@ At each release, the agency also updates the record, which combines all the rele
    :jsonpointer:
    :expand: releases, tag, awards
    :title: awardTwo
-
 ```
 
 ```eval_rst
@@ -68,25 +59,23 @@ At each release, the agency also updates the record, which combines all the rele
    :jsonpointer:
    :expand: records, compiledRelease, versionedRelease, tag, tender, awards
    :title: record
-
 ```
 
-### Example 2: Deletion of fields and objects
+## Example 2: Deletion of fields and objects
 
-#### Fields
+### Fields
 
-A government agency in Colombia publishes the planning of a procurement opportunity, including draft data for the tender. See the JSON example below.
+A government agency in Colombia publishes the planning of a procurement opportunity, including draft data for the tender, as shown below.
 
-After a few weeks, the tender is ready to be announced. The officer in charge notices that the rationale of the planning is a duplication of the budget description and decides to leave the `rationale` field in blank, judging that the `budget/description` field has all the information needed. A new OCDS release with the “tender” tag is created, and the record for the process is updated. See the JSON example below.
+After a few weeks, the tender is ready to be announced. The officer in charge notices that the rationale of the planning is a duplication of the budget description and decides to leave the `rationale` field blank, judging that the `budget/description` field has all the information needed. A release with a 'tender' tag is published, and the record for the process is updated.
 
-In the final record, both the compiled and versioned releases show the changes. The `planning/rationale` field has dissapeared from the compiledRelease, and the versionedRelease shows both its previous value and the `null` value used to delete the field. The `null` entry can be used to identify when the field has been deleted.
+In the final record, both the compiled and versioned releases show the changes. The `planning/rationale` field has disappeared from the `compiledRelease`, and the `versionedRelease` shows both its previous value and the `null` value used to delete the field. The entry with the `null` value can be used to determine when the field was deleted.
 
 ```eval_rst
 .. jsoninclude:: ../../examples/merging/example02-field-planning.json
    :jsonpointer:
    :expand: releases, tag, planning
    :title: planning
-
 ```
 
 ```eval_rst
@@ -94,7 +83,6 @@ In the final record, both the compiled and versioned releases show the changes. 
    :jsonpointer:
    :expand: releases, tag, planning, tender
    :title: tender
-
 ```
 
 ```eval_rst
@@ -102,25 +90,23 @@ In the final record, both the compiled and versioned releases show the changes. 
    :jsonpointer:
    :expand: records, compiledRelease, versionedRelease
    :title: record
-
 ```
 
-#### Objects
+### Objects
 
-Another government agency in Colombia publishes a new procuring opportunity. Details are provided in an OCDS release, as shown below.
+Another government agency in Colombia publishes a new procurement opportunity. Details are provided in an OCDS release, as shown below.
 
-A few days after releasing the tender notice, the government agency receives feedback for potential bidders, and they realize that the estimated contract period set for the tender could be inaccurate. They decide to negotiate the contract periods with the supplier once the contract is awarded, and remove the contract period to avoid confusion with potential bidders. 
+A few days after releasing the tender notice, the government agency receives feedback for potential bidders, and they realize that the estimated contract period set for the tender could be infeasible. They decide to instead negotiate the contract period with the awarded supplier, and they remove the contract period from the opportunity to avoid confusing potential bidders.
 
-A tenderAmendment release is provided, in which both the `startDate` and `endDate` of the `contractPeriod` block have been set to `null`. Also, an `amendments` block is provided to explain these changes.
+A release with a 'tenderAmendment' tag is published, in which both the `startDate` and `endDate` of the `contractPeriod` block have been set to `null`. Also, an `amendments` block is provided to explain the changes.
 
-The final record is shown below. Note that the fields in the `contractPeriod` block have dissappeared in the compiledRelease, and the versionedRelease contains the previous values.
+The final record is shown below. Note that the fields in the `contractPeriod` block have disappeared in the `compiledRelease`, and the `versionedRelease` contains the previous values.
 
 ```eval_rst
 .. jsoninclude:: ../../examples/merging/example02-object-tender.json
    :jsonpointer: 
    :expand: releases, tag, tender
    :title: tender
-
 ```
 
 ```eval_rst
@@ -128,7 +114,6 @@ The final record is shown below. Note that the fields in the `contractPeriod` bl
    :jsonpointer: 
    :expand: releases, tag, tender, amendments
    :title: tenderAmendment
-
 ```
 
 ```eval_rst
@@ -136,23 +121,21 @@ The final record is shown below. Note that the fields in the `contractPeriod` bl
    :jsonpointer: 
    :expand: records, compiledRelease, versionedRelease
    :title: record
-
 ```
 
-### Example 3: Deletion of array items
+## Example 3: Deletion of array items
 
-The public procurement authority in Zambia publishes an award notice, as well as an OCDS release using the 'award' tag. A NGO collects the releases published by the procurement authority on a weekly basis to build their own records, which are more appropriate to display information on their webpage. 
+The public procurement authority in Zambia publishes an award notice, as well as an OCDS release with an 'award' tag. A NGO collects the individual releases published by the procurement authority on a weekly basis to merge into their own records, which they use to display information on their website.
 
-Two weeks later, the procurement authority publishes a new release. Due to negotiations with the supplier selected, one of the items in the award is being deleted and two new ones have been added to replace it. See the JSON example below: the two new items have been added at the end of the `items` array, and the item to remove has all its fields set to `null`.
+Two weeks later, the authority publishes a new release. Due to negotiations with the awarded supplier, one of the items in the award is being deleted and two new ones have been added to replace it, as show below. The two new items have been added at the end of the `items` array, and the item to remove has all its fields set to `null`.
 
-The NGO generates a record (see below). In the record, all the fields of the removed item have dissappeared, and only its `id` is left.
+The NGO generates a record. In the record, all the fields of the removed item have disappeared, and only its `id` is left.
 
 ```eval_rst
 .. jsoninclude:: ../../examples/merging/example03-award.json
    :jsonpointer: 
    :expand: releases, tag, awards
    :title: award
-
 ```
 
 ```eval_rst
@@ -160,7 +143,6 @@ The NGO generates a record (see below). In the record, all the fields of the rem
    :jsonpointer: 
    :expand: releases, tag, awards, amendments, items
    :title: awardAmendment
-
 ```
 
 ```eval_rst
@@ -168,12 +150,10 @@ The NGO generates a record (see below). In the record, all the fields of the rem
    :jsonpointer: 
    :expand: records, compiledRelease, versionedRelease
    :title: record
-
 ```
 
 ```eval_rst
 .. note::
 
     The current `merge routine <../../../schema/merging#merge-routine>`__ does not include a strategy to completely remove an entry from an array. We invite discussion on how to remove objects from arrays in issue `#232 <https://github.com/open-contracting/standard/issues/232>`__.
-
 ```
