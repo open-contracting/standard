@@ -16,11 +16,11 @@ Milestones can be included within the planning, tender, contract and contract im
 
 The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and milestones in the planning section which relate to contract implementation.
 
-The `dueDate`, `dateMet`, `dateModified` and [`status`](../../../schema/codelists/#milestone-status) are used to track the lifecycle of the milestone.
+The `dueDate`, `dateMet`, `dateModified` and [`status`](../../../schema/codelists/#milestone-status) fields are used to track the lifecycle of the milestone.
 
 ## Worked examples
 
-The following worked examples will show how to fill the milestone block depending on its nature.
+The following worked examples show how to use milestones in different scenarios.
 
 ### Planning and tender milestones
 
@@ -28,14 +28,20 @@ The planning milestone block should be used only to disclose information about t
 budget approval, key studies etc. If during the planning stage you have information about tender process milestones, then you
 should populated the tender/milestones block instead.
 
-In the example below:
+The example below includes two OCDS releases:
 
-* The process starts at the planning stage, and the information about when the budget plan is estimated to be ready 
-is available. We create a planning release including a milestone with type set to 'preProcurement', `dueDate` set to the estimated date, and `status` set to 'scheduled'. 
-The publisher also knows when the tender notice is estimated to take place. This information is part of the **tender** process.  A `milestone` is created in the `tender/milestones` block with type set to 'preProcurement' and the relevant date set in the `dueDate` field. The tender must have a `status` set to 'planned'.
-* The process goes forward and enters the tender stage. We publish a tender release 
-with `tender/status` set to 'active',  set the relevant date in the milestone's `dateMet` field, and set its status to 'met'.
-* To explore differences between the planned and actual date of the tender milestone, users can then compare the values of `tender/milestones/dueDate` and `tender/milestones/dateMet` in a single (compiled) release.
+* A planning release with details of a planned procurement, including the date the budget plan is expected to be ready and the date the tender notice is expected to be issued.
+* A tender release with the actual date the tender notice was issued.
+
+In the planning release:
+
+* The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning stage of the contracting process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
+* The date the tender notice is expected to be issued is represented using a milestone in `tender/milestones` because it relates to the tender stage of the contracting process. `.dueDate` is set to the date and `.status` is set to scheduled.
+
+In the tender release:
+
+* The `.dateMet` field in the tender notice milestone is updated with the actual date the notice was issued and `.status` is set to 'met'.
+To explore differences between the planned and actual date of the tender milestone, users can then compare the values of `tender/milestones/dueDate` and `tender/milestones/dateMet` in a single (compiled) release.
 
 ```eval_rst
 
@@ -55,15 +61,29 @@ with `tender/status` set to 'active',  set the relevant date in the milestone's 
 
 #### 1. Project data
 
-This worked example shows how milestones for project commencement and project completion should be updated in OCDS.
+This worked example shows how to use milestones to model the planned and actual start and finish dates for a construction project.
 
-The example includes three updates to a single contracting process (ocds-213czf-000-00001):
+The example below includes 3 OCDS releases from a contracting process for the construction of a cycle lane:
 
-* A contract is awarded to a user committee with milestones for project commencement and project completion.
-* The project starts later than expected. The project commencement milestone is updated with the actual start date and the project completion milestone `status` is set to 'notMet'.
-* The project is completed earlier than expected. The project completion milestone is updated with the actual completion date.
+* An award release which includes the scheduled start and end dates for the project.
+* An implementation update release with the actual start date of the project
+* An implementation update release with the actual end date of the project
 
-The OCDS releases for each update are shown below. 
+In the award release:
+
+* The scheduled start and end dates for the project are represented using milestones in `contracts/implementation/milestones` with `.type` set to 'delivery' because they related to the delivery of the contract. The dates are provided in `.dueDate` and `.status` is set to 'scheduled'.
+* The publisher has defined their own values for the `.code` field so they can filter and compare start and end date milestones across different contracts.
+
+The first implementation update is published after the project starts but before it completes:
+
+* In the project commencement milestone, `.dateMet` is set to the actual start date and `.status` is set to 'met'. `.dateModified` is set to the date the milestone was updated.
+* In the project completion milestone, `.status` is set to 'notMet' since the project is not yet complete and `.dateModified` is set to the date the milestone was updated.
+
+Users can compare the project commencement milestone's `.dueDate` and `.dateMet` fields to determine if the project started on time. Users can also compare the project completion milestone's `.dueDate` and `.dateModified` fields to determine whether the `.status` has been updated since the scheduled completion date.
+
+The second implementation update is published after the project completes:
+
+* In the project completion milestone, `.dateMet` is set to the actual completion date for the project and `.status` is set to 'met'.
 
 ```eval_rst
 
