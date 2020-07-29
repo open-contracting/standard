@@ -35,6 +35,7 @@ Your choice of architecture can determine how frequently your data is updated, w
    build/system_architectures
    build/change_history
    build/easy_releases
+   build/merging
 ```
 
 ## Establish your publication formats and access methods
