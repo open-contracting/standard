@@ -24,7 +24,7 @@ The contract milestones block is used to describe two types of milestone:
   * Any events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
 
 
-The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and milestones in the planning section which relate to contract implementation.
+The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and those which relate to contract implementation.
 
 The `dueDate`, `dateMet`, `dateModified` and [`status`](../../../schema/codelists/#milestone-status) fields are used to track the lifecycle of the milestone.
 
@@ -65,7 +65,7 @@ To explore differences between the planned and actual date of the tender milesto
 
 ### Contract implementation milestones
 
-The following worked examples show how to use milestones in contracts implementation releases
+The following worked examples show how to use milestones in contract implementation releases
 
 #### Project data
 
@@ -73,26 +73,22 @@ This worked example shows how to use milestones to model the planned and actual 
 
 The example below includes three OCDS releases:
 
-* An award release which includes the scheduled start and end dates for the project.
+* An implementation release which includes the scheduled start and end dates for the project.
 * An implementation update release with the actual start date of the project
 * An implementation update release with the actual end date of the project
 
 In the award release:
 
-* The scheduled start and end dates for the project are represented using milestones in `contracts/implementation/milestones` with `.type` set to 'delivery' because they related to the delivery of the contract. The dates are provided in `.dueDate` and `.status` is set to 'scheduled'.
+* The scheduled start and end dates for the project are represented using milestones in `contracts/implementation/milestones` with `.type` set to 'delivery' because they relate to the delivery of the contract. The dates are provided in `.dueDate` and `.status` is set to 'scheduled'.
 * The publisher has defined their own values for the `.code` field so they can filter and compare start and end date milestones across different contracts.
 
-In the first implementation update release:
-
-* It is published after the project starts but before it completes.
+In the first implementation update release, which is published after the project starts but before it completes:
 * In the project commencement milestone, `.dateMet` is set to the actual start date and `.status` is set to 'met'. `.dateModified` is set to the date the milestone was updated.
 * In the project completion milestone, `.status` is set to 'notMet' since the project is not yet complete and `.dateModified` is set to the date the milestone was updated.
 
 Users can compare the project commencement milestone's `.dueDate` and `.dateMet` fields to determine if the project started on time. Users can also compare the project completion milestone's `.dueDate` and `.dateModified` fields to determine whether the `.status` has been updated since the scheduled completion date.
 
-In the second implementation update release:
-
-* It is published after the project completes
+In the second implementation update release, which is published after the project completes:
 * In the project completion milestone, `.dateMet` is set to the actual completion date for the project and `.status` is set to 'met'.
 
 ```eval_rst
@@ -128,21 +124,21 @@ This example shows how milestones can be used to keep track of delivery and fina
 
 The example below includes three OCDS releases:
 
-* An implementation release with contract information along its implementation milestones.
+* An implementation release with contract information including scheduled implementation milestones.
 * An implementation update release with the actual date the milestone was reached.
 * An implementation update release with payment information
 
 In the implementation release:
 
-* Milestones have been set for the delivery and payment of goods and services related to the project. Contract information is released along its implementation milestones.
+* Milestones have been set for the delivery and payment of goods and services related to the project. Contract information is released along with the implementation milestones.
 
 In the first implementation update release:
 
-* The milestone ("Finish the exterior and interior walls") has been reached, then the `status` field is set to 'met' and the relevant dates added to the `dateMet` and `dateModified` fields.
+* The milestone ("Finish the exterior and interior walls") has been met, so the `status` field is set to 'met' and the relevant dates are added to the `dateMet` and `dateModified` fields.
 
 In the second implementation update release:
 
-* The construction company has received payment for the work done so far, and the milestone for the wall restoration with type 'financing' is updated. A new `transaction` is disclosed, with the amount paid to the company.
+* The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'financing' is updated. A new `transaction` is disclosed, with the amount paid to the company.
 
 ```eval_rst
 
