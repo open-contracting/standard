@@ -17,14 +17,15 @@ The tender milestones block is used to describe two types of milestone:
   * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which procuring entity will respond to enquiries.
   * Anticipated milestones during the contract implementation stage, for example, the date by which goods need to be delivered.
 
-## Contracts and implementation
+## Contract
 
 The contract milestones block is used to describe two types of milestone:
   * Events related to the signing of the contract, for example, the date of commercial close in a PPP contract.
   * Any events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
 
-
 The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and those which relate to contract implementation.
+
+At the point of contract signature, a comparison between `tender/milestones` and `contract/implementation/milestones` with a `milestone/type` of 'delivery' or 'reporting' should reveal how the negotiated contract differs from what was set out at tender time.
 
 The `dueDate`, `dateMet`, `dateModified` and [`status`](../../../schema/codelists/#milestone-status) fields are used to track the lifecycle of the milestone.
 
@@ -166,8 +167,3 @@ In the second implementation update release:
    :title: implementation-update-2
 
 ```
-
-Notes:
-
-* Contract implementation milestones are kept updated as things progress with the relevant date added to the `dateModified` field.
-* At the point of contract signature, a comparison between `tender/milestones` and `contract/implementation/milestones` with a `milestone/type` of 'delivery' or 'reporting' should reveal how the negotiated contract differs from what was set out at tender time.
