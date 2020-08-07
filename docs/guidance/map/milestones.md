@@ -19,8 +19,12 @@ The tender milestones block is used to describe two types of milestone:
 
 ## Contract
 
-The contract milestones block is used to describe two types of milestone:
+The contract milestones block is used to describe:
   * Events related to the signing of the contract, for example, the date of commercial close in a PPP contract.
+ 
+## Contract Implementation
+
+The contract implementation milestones block is used to describe:
   * Any events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
 
 The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and those which relate to contract implementation.
