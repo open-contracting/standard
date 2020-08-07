@@ -78,6 +78,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 
    map/amendments
    map/awards_contracts_buyers_suppliers
+   map/milestones
    map/organization_classifications
    map/organization_identifiers
    map/organization_reference
