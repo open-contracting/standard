@@ -37,6 +37,7 @@ Your choice of architecture can determine how frequently your data is updated, w
    build/easy_releases
    build/merging
 ```
+**Resource:** [Technical case studies: OCDS implementation insights report](https://www.open-contracting.org/resources/technical-case-studies-ocds-implementation-insights/) provides insights into the technical choices made in OCDS implementations in Paraguay, Zambia, Colombia, Moldova and Argentina's Road Agency Vialidad.
 
 ## Establish your publication formats and access methods
 
