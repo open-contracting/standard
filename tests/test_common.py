@@ -62,8 +62,7 @@ def test_broken_links(browser, server, lang, link_text):
                 continue
 
             url = re.sub(r'#.*$', '', url)
-            if url not in status_codes:
-                status_codes[url] = requests.get(url).status_code
+            status_codes.setdefault(url, requests.get(url).status_code)
 
             status_code = status_codes[url]
             if status_code != 200:
