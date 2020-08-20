@@ -1,0 +1,420 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-30 01:22+0000\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/guidance/build/easy_releases.md:1
+msgid "'Easy' Releases"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:3
+msgid ""
+"OCDS encourages the use of the [releases and "
+"records](../../getting_started/releases_and_records) model in order to "
+"publish up-to-date, timely data. However, sometimes publishers can't fully "
+"support the model, because historic data of contracting processes is not "
+"stored in the source system(s). In such case, the publisher can produce only"
+" one release for each contracting process, and the release gets overridden "
+"with new updates."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:5
+msgid ""
+"In this situation, it is possible to still meet OCDS requirements by "
+"following a strategy to build different release identifiers each time the "
+"data changes in a contracting process. Over the course of multiple updates, "
+"third parties would be able to build their own data store by periodically "
+"downloading or scraping the published data, and identifying the updates "
+"using release identifiers."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:7
+msgid ""
+"Here, two general approaches that a publisher can follow to renew release "
+"identifiers on each data update will be shown:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:9
+msgid ""
+"**When the system saves a last modified date for entities** - use the dates "
+"to create a new release ID. This can be as simple as appending the date to "
+"the release identifier."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:10
+msgid ""
+"**When the system does not contain a last modified date** - use a hash of "
+"all the fields to create a unique release ID. A hash is guaranteed to change"
+" when the data changes, and it is almost impossible for it to collide with a"
+" previous, existent identifier for the same contracting process."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:12
+msgid "See the examples below for more details."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:14
+msgid ""
+"These approaches can be useful for most situations but they are not meant to"
+" be the best solution for all cases. A publisher can find an alternative "
+"that works best for its own scenario."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:16
+msgid "Additional Considerations"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:18
+msgid "Packaging"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:20
+msgid ""
+"Releases in OCDS need to be packaged using a [release "
+"package](../../schema/release_package). This is to provide consistency and "
+"important metadata."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:22
+msgid ""
+"In an 'Easy' releases scenario it is still necessary to package data. "
+"Therefore the release needs to be wrapped in a *release package*. It is "
+"*not* appropriate to use an OCDS record to contain the release because "
+"`record.releases` is a list of all the releases and not just the latest one."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:24
+msgid "Release tags"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:26
+msgid ""
+"Releases in OCDS have a [release tag](../../../schema/codelists/#release-"
+"tag) which indicates the stage of the contracting process they relate to."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:28
+msgid ""
+"When producing a single release for each contracting process, we can't use "
+"any tags that need other tags to be present in previous releases, e.g. "
+"'tenderUpdate' which follows the 'tender' tag."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:30
+msgid ""
+"In this case, tags need to indicate the sections of the schema which are "
+"populated. For example, if a release provides data in the `tender`, `award`,"
+" and `contract` sections, the `tag` array would look like this:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:42
+msgid ""
+"This makes more sense if we realize that a release is always the \"first "
+"release\" of a contracting process for an user that access the data for the "
+"first time. All sections contain new data, and the release needs a tag for "
+"each one."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:44
+msgid "Worked examples"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:46
+msgid ""
+"For the examples in the present section, the architecture in the image below"
+" is assumed."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:48
+msgid ""
+"![Example architecture](../../_static/png/easyreleases-example-"
+"architecture.png)"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:50
+msgid ""
+"Data is extracted from the source and transformed to OCDS each time there is"
+" a request, and resulting JSON files are not stored by the owner."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:52
+msgid "Scenario 1: when a last modified date is stored"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:54
+msgid ""
+"The sample database structure used for the present example is illustrated in"
+" the image below."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:56
+msgid "![Sample database 1](../../_static/png/easyreleases-sampledb-1.png)"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:58
+msgid ""
+"The 'ProcurementProcess' table contains one single row for each contracting "
+"process in the system, and the row is updated with each change. Contracts "
+"and suppliers are saved in separate tables. For both 'ProcurementProcess' "
+"and 'Contract' tables there is a `lastModifiedDate` column, with a timestamp"
+" of the last change made for the row."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:60
+msgid ""
+"The following steps show the progress in a single contracting process, and "
+"how the unique release identifier is built for each update."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:62
+#: ../../docs/guidance/build/easy_releases.md:212
+msgid "1. Tender initiation"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:64
+msgid ""
+"The contracting process begins with a tender notice. The source tables "
+"contain the following data:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:66
+#: ../../docs/guidance/build/easy_releases.md:104
+#: ../../docs/guidance/build/easy_releases.md:134
+#: ../../docs/guidance/build/easy_releases.md:172
+#: ../../docs/guidance/build/easy_releases.md:216
+#: ../../docs/guidance/build/easy_releases.md:253
+#: ../../docs/guidance/build/easy_releases.md:281
+#: ../../docs/guidance/build/easy_releases.md:330
+msgid "**ProcurementProcess**"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:74
+msgid ""
+"There is no supplier or contract yet, so there are no entries for this "
+"contracting process in them. In this stage, the ocid is build by appending "
+"the value of the field `processID` to the ocid prefix ('ocds-213czf'), since"
+" `processID` is identifying uniquely each contracting process."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:82
+msgid ""
+"For the release ID, the value for `lastModifiedAt` is appended to the end of"
+" the ocid:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:90
+msgid ""
+"It is possible to use the date alone as the release identifier, but "
+"prepending the ocid makes easier to differentiate releases from various "
+"processes in the same release package."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:92
+msgid "See the full JSON file below."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:100
+#: ../../docs/guidance/build/easy_releases.md:249
+msgid "2. Tender update"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:102
+msgid ""
+"The tender has been updated: the value increased slighly and the description"
+" has changed."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:112
+msgid ""
+"The `lastModifiedDate` value has changed as well, therefore the value of the"
+" release identifier will change:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:120
+msgid "See the full JSON below:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:128
+msgid "Note that the 'tag' field is still 'tender'."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:130
+#: ../../docs/guidance/build/easy_releases.md:277
+msgid "3. Award"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:132
+msgid ""
+"Now, the tender has been awarded. The related columns in "
+"'ProcurementProcess' table have been populated and there is a new row in the"
+" 'Supplier' table for the process."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:142
+#: ../../docs/guidance/build/easy_releases.md:289
+msgid "**Supplier**"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:150
+msgid ""
+"As the 'ProcurementProcess' table has been updated, the related release will"
+" have a new id:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:158
+msgid ""
+"And the 'awards' section will be filled with the corresponding data. See the"
+" full JSON below."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:166
+msgid "Note that we are keeping the 'tender' tag from the previous step."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:168
+#: ../../docs/guidance/build/easy_releases.md:326
+msgid "4. Contract"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:170
+msgid ""
+"At the last stage there is a signed contract. The 'ProcurementProcess' table"
+" changes again to reflect the new stage, and a new entry is added in the "
+"'Contract' table as shown below."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:180
+#: ../../docs/guidance/build/easy_releases.md:338
+msgid "**Contract**"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:188
+msgid "A new release id is generated:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:196
+#: ../../docs/guidance/build/easy_releases.md:241
+#: ../../docs/guidance/build/easy_releases.md:269
+#: ../../docs/guidance/build/easy_releases.md:318
+msgid "See the full JSON below."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:204
+msgid "Scenario 2: when a last modified date is NOT stored"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:206
+msgid ""
+"This approach can be used when there is no last modified date in the source "
+"data. Below there is an updated image from the previous example:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:208
+msgid "![Sample database 2](../../_static/png/easyreleases-sampledb-2.png)"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:210
+msgid ""
+"The example is almost the same as the previous one, with the same steps, but"
+" with no last modified date in the tables as seen in the image above."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:214
+msgid ""
+"The example starts with the tender, and the following data in the "
+"'ProcurementProcess' table:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:224
+msgid ""
+"The unique identifier for this stage can be generated by joining all fields "
+"into a single string, and applying a hash function on it. Depending of tools"
+" and/or programming languages used in the transformation process, there can "
+"be many ways to achieve this task.  An example of how it can be done using a"
+" PostgreSQL query is shown below:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:233
+msgid ""
+"It is important to include *all* data fields that are included in OCDS data "
+"in the hash calculation. For the current row, the output value is "
+"`69a19ab9713d08bc7c54793144997d3a`. As the date field in the previous "
+"example, this will be appended at the end of the ocid:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:251
+msgid ""
+"Now that tender data has changed: there are updates in the value and "
+"description fields."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:261
+msgid ""
+"The same hash operation is repeated over the updated row and the resulting "
+"value is `957969e7458f5144a931d2feb452ea48`. The new release identifier is:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:279
+msgid ""
+"The tender has been awarded, therefore the 'ProcurementProcess' table has "
+"been updated and a new entry in the 'Supplier' table is included."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:297
+msgid ""
+"The new data in the 'Supplier' table can be included in the hash generation "
+"as well. In PostgreSQL, the previous sentence can be changed to include the "
+"'Supplier' table as follows:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:310
+msgid ""
+"The result of the query is `610d5900f947bcf67100449999ea49ce`, and the new "
+"release identifier is:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:328
+msgid ""
+"In the last stage the contract is signed, the 'ProcurementProcess' table is "
+"updated and a new entry in the 'Contract' table is added."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:346
+msgid ""
+"Since there is one more table involved ('Contract'), the *three tables* that"
+" store data for the full process can be used to calculate the hash. The "
+"previous SQL query can be changed again to include the 'Contract' table:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:360
+msgid ""
+"Although it is true that the data in the 'Supplier' table has not changed in"
+" the last step, it ought to be included unless it is guaranteed that the "
+"data from the table does not change after a certain step in the process "
+"(with suppliers, this could be possible in some scenarios but that "
+"assumption is not taken here)."
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:362
+msgid ""
+"The new hash value is `1a87b0662990c66e140e62e813165107`, and the new "
+"release identifier is:"
+msgstr ""
+
+#: ../../docs/guidance/build/easy_releases.md:370
+msgid "See the final JSON below."
+msgstr ""

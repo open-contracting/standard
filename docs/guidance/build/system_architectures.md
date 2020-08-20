@@ -36,7 +36,7 @@ Bulk downloads can be provided as part of the API. Live queries can stress the l
 
 In the scenarios that follow, a middleware component converts and stores the data in OCDS format. This has some advantages:
 
-* It is possible to merge an centralize data from more than one systems in a single datastore.
+* It is possible to merge and centralize data from more than one system in a single datastore.
 * It can relieve live systems from expensive queries.
 * It can enable the generation of the change history for each contracting process.
 

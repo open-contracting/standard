@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# James McKinney, 2020
+# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/map/purchase_orders.md:1
+msgid "Purchase orders"
+msgstr "Órdenes de compra"
+
+#: ../../docs/guidance/map/purchase_orders.md:3
+msgid ""
+"Purchase orders that are made against contracts with a definite quantity or "
+"value of items ought to not be disclosed in the `contracts` section of OCDS,"
+" due to the risk of double counting items on the purchase order and the "
+"contract it relates to."
+msgstr ""
+"Las órdenes de compra que se realizan contra contratos con una cantidad o "
+"valor definidos de artículos no deberían divulgarse en la sección de "
+"`contracts` de OCDS, por el riesgo de contar dos veces los artículos en la "
+"orden de compra y el contrato al que se refiere."
+
+#: ../../docs/guidance/map/purchase_orders.md:5
+msgid "Example: Double counting contracts and purchase orders"
+msgstr "Ejemplo: Duplicando el conteo de contratos y órdenes de compra"
+
+#: ../../docs/guidance/map/purchase_orders.md:7
+msgid ""
+"The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG "
+"to provide the Project Management Office function for a project to construct"
+" a new highway bypass. The contract specifies that payment will be made "
+"quarterly in arrears in four equal amounts. The contract is represented in "
+"the `contracts` section of OCDS as follows:"
+msgstr ""
+"El Departamento de Transporte del Reino Unido otorga un contrato de 12 meses"
+" por £1.2 millones a KPMG para proporcionar la función de Oficina de Gestión"
+" de Proyectos para un proyecto para construir un nuevo desvío de carretera. "
+"El contrato especifica que el pago se realizará trimestralmente en cuatro "
+"montos iguales. El contrato está representado en la sección `contracts` de "
+"OCDS de la siguiente manera:"
+
+#: ../../docs/guidance/map/purchase_orders.md:15
+msgid ""
+"Calculating the sum of the contract value in the above example gives the "
+"correct result of £1.2m."
+msgstr ""
+"Calculando la suma del valor del contrato en el ejemplo anterior da el "
+"resultado correcto de £1.2m."
+
+#: ../../docs/guidance/map/purchase_orders.md:17
+msgid ""
+"The Department for Transport issues a purchase order on the final day of "
+"each quarter of the contract term, each for £300k."
+msgstr ""
+"El Departamento de Transporte emite una orden de compra el último día de "
+"cada trimestre del plazo del contrato, cada uno por £300k."
+
+#: ../../docs/guidance/map/purchase_orders.md:19
+msgid ""
+"If purchase orders were also disclosed in the `contracts` section of OCDS, "
+"by the end of the contract term, the `contracts` section of OCDS would be "
+"populated as follows:"
+msgstr ""
+"Si las órdenes de compra también se divulgaran en la sección `contracts` de "
+"OCDS, al final del plazo del contrato, la sección `contracts` de OCDS se "
+"completaría de la siguiente manera:"
+
+#: ../../docs/guidance/map/purchase_orders.md:27
+msgid ""
+"Calculating the sum of the contract value in the above example gives an "
+"incorrect result of £2.4m - double the actual value of the contract."
+msgstr ""
+"El cálculo de la suma del valor del contrato en el ejemplo anterior da un "
+"resultado incorrecto de £2.4m, el doble del valor real del contrato."
+
+#: ../../docs/guidance/map/purchase_orders.md:1
+msgid "Note"
+msgstr "Nota"
+
+#: ../../None:1
+msgid ""
+"The approach for modelling purchase orders in OCDS is under discussion "
+"([GitHub issue](https://github.com/open-contracting/standard/issues/897))"
+msgstr ""
+"El enfoque para modelar órdenes de compra en OCDS está en discusión ([issue "
+"en GitHub](https://github.com/open-contracting/standard/issues/897))"

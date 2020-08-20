@@ -8,18 +8,18 @@
 # Oscar Montiel <oscar.montiel@okfn.org>, 2018
 # Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2018
 # Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2019
-# James McKinney <jmckinney@open-contracting.org>, 2019
+# James McKinney, 2019
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-17 16:54-0500\n"
+"POT-Creation-Date: 2020-06-29 21:21-0400\n"
 "PO-Revision-Date: 2017-04-24 10:46+0000\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2019\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -101,8 +101,12 @@ msgstr "Fecha de entrega"
 
 #. /properties/date/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "The date this information was first released, or published."
-msgstr "Fecha en la cual esta información se publicó por primera vez."
+msgid ""
+"The date on which the information contained in the release was first "
+"recorded in, or published by, any system."
+msgstr ""
+"La fecha en la cual la información contenida en la entrega fue registrada "
+"por primera vez, o publicada, por cualquier sistema."
 
 #. /properties/tag/title
 #. /definitions/record/properties/releases/oneOf/0/items/properties/tag/title
@@ -1526,12 +1530,12 @@ msgstr ""
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Additional classification information about parties can be provided using "
-"partyDetail extensions that define particular properties and classification "
+"partyDetail extensions that define particular fields and classification "
 "schemes."
 msgstr ""
-"Información adicional de clasificación de las partes involucradas pueden ser"
-" proveídas usando las extensiones de partyDetail que definen propiedades "
-"particulares y esquemas de clasificación."
+"Información adicional de clasificación de las partes se puede proporcionar "
+"usando las extensiones de partyDetail que definen campos particulares y "
+"esquemas de clasificación."
 
 #. /properties/parties/items/properties/details/title
 #. /definitions/Organization/properties/details/title
@@ -3498,13 +3502,18 @@ msgstr ""
 #. /definitions/Item/properties/unit/properties/id/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
-"The identifier from the codelist referenced in the scheme property. Check "
-"the codelist for details of how to find and use identifiers from the scheme "
-"in use."
+"The identifier from the codelist referenced in the `scheme` field. Check the"
+" [unitClassificationScheme](https://standard.open-"
+"contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-"
+"scheme) codelist for details of how to find and use identifiers from the "
+"scheme in use."
 msgstr ""
-"El identificador de la lista de códigos a la que se hace referencia en la "
-"propiedad de esquema. Revisa la lista de códigos para tener detalles sobre "
-"cómo encontrar y usar identificadores del esquema en uso."
+"El identificador de la lista de código a la que se hace referencia en el "
+"campo `scheme` . Revise la lista de código "
+"[unitClassificationScheme](https://standard.open-"
+"contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-"
+"scheme) para más detalles sobre cómo encontrar y usar identificadores del "
+"esquema en uso. "
 
 #. /properties/tender/properties/items/items/properties/unit/properties/name/description
 #. /properties/awards/items/properties/items/items/properties/unit/properties/name/description
@@ -5228,15 +5237,16 @@ msgstr "Registro"
 msgid ""
 "An OCDS record must provide a list of all the existing OCDS releases "
 "relating to a single contracting process and should provide a compiled "
-"release containing the current state of all fields in the OCDS schema. An "
-"OCDS record may also provide a versioned history of all changes to the data "
-"in the compiled release."
+"release containing the current state of all fields in the release schema. An"
+" OCDS record may also provide a versioned history of all changes to the data"
+" in the compiled release."
 msgstr ""
-"Un registro OCDS debe proporcionar una lista de todos las entregas OCDS "
-"relacionadas a un proceso de contrataciones particular, y debe proveer un "
-"release compilado que contenga el estado actual de todos los campos en el "
-"esquema OCDS. Un registro OCDS también debe dar un historial de versiones de"
-" todos los cambios en los datos en el release compilado."
+"Un registro o *record* OCDS debe proporcionar una lista de todas las "
+"entregas o *releases* OCDS existentes que están relacionadas con un solo "
+"proceso de contratación y debería proporcionar una entrega compilada que "
+"contenga el estado actual de todos los campos en el esquema de entrega. Un "
+"registro OCDS también puede proporcionar un historial versionado de todos "
+"los cambios a los datos en la entrega compilada."
 
 #. /definitions/record/properties/ocid/description
 #: schema/record-package-schema.json:1
@@ -5357,12 +5367,9 @@ msgstr "Entrega versionada"
 
 #. /definitions/record/properties/versionedRelease/description
 #: schema/record-package-schema.json:1
-msgid ""
-"This contains the history of the data in the compiledRecord. With all "
-"versions of the information and the release they came from."
+msgid "This contains the history of all the data in the compiled release."
 msgstr ""
-"Ésta contiene el historial de los datos en el compiledRecord. Con todas las "
-"versiones de la información y la entrega de la que salieron."
+"Esto contiene el historial de todos los datos en la entrega compilada."
 
 #. /title
 #: schema/release-package-schema.json:1

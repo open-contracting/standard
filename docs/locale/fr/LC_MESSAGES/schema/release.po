@@ -5,18 +5,15 @@
 # 
 # Translators:
 # Tim Davies <tim.davies@opendataservices.coop>, 2017
-# Colin Maudry <colin@maudry.com>, 2017
-# Cecile LG <cecile@datactivi.st>, 2019
-# James McKinney <jmckinney@open-contracting.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 11:28-0500\n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2020\n"
+"Last-Translator: Tim Davies <tim.davies@opendataservices.coop>, 2017\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,56 +28,41 @@ msgstr "Schéma d'instance"
 #: ../../docs/schema/release.md:3
 msgid ""
 "The release schema provides the authoritative definition of fields and their"
-" structure. You can view an interactive version of the release schema below "
-"(requires JavaScript) or [download this version of the schema here"
-"](../../release-schema.json)."
+" structure. It is used to check the structure of the `releases` array of "
+"[release packages](release_package), and any `compiledRelease` fields in a "
+"[record package](record_package)."
 msgstr ""
-"Le schéma d'instance fournit la définition officielle des champs et de leur "
-"structure. Vous pouvez voir une version interactive du schéma de publication"
-" ci-dessous (nécessite l'activation de JavaScript) ou [télécharger cette "
-"version du schéma ici](../../release-schema.json)."
 
 #: ../../docs/schema/release.md:5
 msgid ""
 "For this version of OCDS, the canonical URL of the release schema is: "
-"<https://standard.open-contracting.org/schema/1__1__4/release-schema.json>"
-msgstr ""
-"Pour cette version d'OCDS, l'URL canonique du schéma de version est la "
-"suivante : <https://standard.open-contracting.org/schema/1__1__4/release-"
-"schema.json>"
-
-#: ../../docs/schema/release.md:7
-msgid ""
+"<https://standard.open-contracting.org/schema/1__1__4/release-schema.json>. "
 "Using the canonical URL guarantees that your software, documentation or "
 "other resources will always refer to the specific version of the schema with"
 " which they were authored and tested."
 msgstr ""
-"L'utilisation de l'URL canonique garantit que votre logiciel, votre "
-"documentation ou d'autres ressources feront toujours référence à la version "
-"spécifique du schéma avec lequel ils ont été créés et testés."
 
-#: ../../docs/schema/release.md:9
-msgid ""
-"The release schema is used to validate the contents of the `releases` array "
-"of [release packages](release_package), and the `compiledReleases` array of "
-"releases in a [record package](record_package)."
-msgstr ""
-"Le schéma d'instance est utilisé pour valider le contenu de la liste des "
-"instances (`releases`) dans les [paquets d'instances](release_package) et la"
-" liste des instances compilées (`compiledReleases`) dans un [paquet "
-"d'archives](record_package)."
-
-#: ../../docs/schema/release.md:11
-msgid "Release schema"
-msgstr "Schéma d'instance"
-
-#: ../../docs/schema/release.md:13
+#: ../../docs/schema/release.md:7
 msgid ""
 "Click on schema elements to expand the tree, or use the '+' icon to expand "
 "all elements. Use { } to view the underlying schema for any section. "
-"Required fields are indicated in **bold**."
+"Required fields are indicated in **bold**. [Deprecated "
+"fields](../governance/deprecation) and [multilingual "
+"fields](../reference/#language) are omitted."
 msgstr ""
-"Cliquez sur les éléments du schéma pour développer l'arborescence , ou "
-"cliquez sur l'icône '+' pour développer tous les éléments du schéma. Cliquez"
-" sur { } pour afficher le schéma sous-jacent d'une section. Les champs "
-"obligatoires sont en gras."
+
+#: ../../docs/schema/release.md:1
+msgid "Browsing the schema"
+msgstr ""
+
+#: ../../None:1
+msgid ""
+"This page presents the release schema in an interactive browser. You can "
+"also download the canonical version of the release schema as [JSON Schema"
+"](../../release-schema.json), download it as a [CSV "
+"spreadsheet](https://toucan.open-contracting.org/mapping-"
+"sheet/?source=https://standard.open-contracting.org/1.1/en/release-"
+"schema.json), view it as [tables](reference), or access it through the "
+"[Field-Level Mapping Template](https://www.open-contracting.org/resources"
+"/ocds-field-level-mapping-template/)."
+msgstr ""

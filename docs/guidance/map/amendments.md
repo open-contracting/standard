@@ -12,7 +12,7 @@ There are three kinds of changes:
 
 The nature of a change can be made explicit using:
 
-* **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the award, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'.
+* **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the contract, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'.
 
 * **The amendments** building block. This can contain an array of amendment explanations, and clearly identify the releases that contain before and after values.
 

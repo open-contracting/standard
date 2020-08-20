@@ -1,7 +1,5 @@
 name: CI
 on: [push, pull_request]
-env:
-  BASEDIR: https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,20 +10,19 @@ jobs:
     - uses: actions/setup-python@v1
       with:
         python-version: 3.6
-    # Need to install editable projects in a venv for isort to detect.
-    - name: Install
-      run: |
-        python -m venv venv
-        . venv/bin/activate
-        curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
-        pip install -r requirements.txt
-    - name: Lint
-      run:
-        . venv/bin/activate
-        curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
+    - uses: actions/cache@v1
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    # Don't install editable projects in the current working directory.
+    # https://pip.pypa.io/en/latest/reference/pip_install/#install-src
+    - run: pip install --src $GITHUB_WORKSPACE/../src -r requirements.txt
+    # Google Chrome and ChromeDriver are already included.
+    # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
     - name: Make and test
       run: |
-        . venv/bin/activate
         if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
         make
         python util/add_translation_notes.py
