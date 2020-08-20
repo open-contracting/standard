@@ -87,8 +87,9 @@ def add_translation_note(path, language, domain):
         response.raise_for_status()
         xpath = '//div[@itemprop="articleBody"]'
 
-        replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
+        replacement = lxml.html.fromstring(response.content)
         replacement.replace_links(replace_links)
+        replacement = replacement.xpath(xpath)[0]
 
         parent = document.xpath(xpath)[0].getparent()
         parent.getparent().replace(parent, replacement)
