@@ -3,14 +3,19 @@
 # This file is distributed under the same license as the Open Contracting Data Standard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"POT-Creation-Date: 2020-07-07 15:40-0400\n"
 "PO-Revision-Date: 2020-06-29 22:59+0000\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,13 +24,16 @@ msgstr ""
 
 #: ../../docs/guidance/map/award_notices_decisions.md:2
 msgid "Award notices and decisions"
-msgstr ""
+msgstr "Avisos y decisiones de adjudicación"
 
 #: ../../docs/guidance/map/award_notices_decisions.md:4
 msgid ""
 "Award notices are used by procuring entities to disclose award decisions, "
 "i.e. the value and/or items awarded to each supplier."
 msgstr ""
+"Los avisos de adjudicación son utilizados por las entidades contratantes "
+"para divulgar decisiones de adjudicación, es decir, el valor y/o los "
+"artículos adjudicados a cada proveedor."
 
 #: ../../docs/guidance/map/award_notices_decisions.md:6
 msgid ""
@@ -34,10 +42,15 @@ msgid ""
 "the items being purchased, the supplier providing the items, and the value "
 "of the items, such notices ought to be split into multiple awards in OCDS."
 msgstr ""
+"Se puede usar un solo aviso de adjudicación para divulgar muchas decisiones "
+"de adjudicación; sin embargo, para que una adjudicación en OCDS exprese una "
+"relación directa entre los artículos que se compran, el proveedor que "
+"proporciona los artículos y el valor de los mismos, dichos avisos deben "
+"dividirse en múltiples adjudicaciones en OCDS."
 
 #: ../../docs/guidance/map/award_notices_decisions.md:8
 msgid "Example: Modelling award notices with multiple decisions"
-msgstr ""
+msgstr "Ejemplo: modelar avisos de adjudicación con decisiones múltiples"
 
 #: ../../docs/guidance/map/award_notices_decisions.md:10
 msgid ""
@@ -46,12 +59,18 @@ msgid ""
 "however all decisions on an award notice share the same identifier. For "
 "example:"
 msgstr ""
+"En Paraguay, se utiliza un solo aviso de adjudicación para divulgar muchas "
+"decisiones de adjudicación. Se proporciona información detallada sobre cada "
+"decisión de adjudicación individual; sin embargo, todas las decisiones en un"
+" aviso de adjudicación comparten el mismo identificador. Por ejemplo:"
 
 #: ../../docs/guidance/map/award_notices_decisions.md:12
 msgid ""
 "![Example award notice from "
 "Paraguay](../../_static/png/awards_example_paraguay.png)"
 msgstr ""
+"![Ejemplo de aviso de adjudicación de "
+"Paraguay](../../_static/png/awards_example_paraguay.png)"
 
 #: ../../docs/guidance/map/award_notices_decisions.md:14
 msgid ""
@@ -59,6 +78,10 @@ msgid ""
 "impossible to determine which items related to which suppliers or how much "
 "of the total award value related to each supplier:"
 msgstr ""
+"El uso de un único objeto de adjudicación para modelar dicho aviso en OCDS "
+"haría imposible determinar qué artículos están relacionados con qué "
+"proveedores o cuánto del valor total de adjudicación está relacionado con "
+"cada proveedor:"
 
 #: ../../docs/guidance/map/award_notices_decisions.md:22
 msgid ""
@@ -66,6 +89,10 @@ msgid ""
 "items, suppliers, and values, Paraguay's award notice is split into multiple"
 " award objects, one for each supplier/value pairing on the notice."
 msgstr ""
+"Para que el objeto de adjudicación en OCDS indique una relación directa "
+"entre artículos, proveedores y valores, el aviso de adjudicación de Paraguay"
+" se divide en varios objetos de adjudicación, uno para cada par "
+"proveedor/valor en el aviso."
 
 #: ../../docs/guidance/map/award_notices_decisions.md:30
 msgid ""
@@ -73,19 +100,26 @@ msgid ""
 "original award notice, so it is necessary to create a new identifier for "
 "each award object in OCDS. The approach to creating an identifier will "
 "depend on the properties of the dataset; for example, in Paraguay a "
-"combination of the award notice identifier and the supplier name is used, "
-"however this approach is only appropriate as long as there can only be one "
-"supplier per award decision and each supplier can only appear once per "
-"notice."
+"combination of the award notice identifier, supplier name, and a consecutive"
+" number is used."
 msgstr ""
+"No hay identificadores para los pares de proveedores/valores individuales en"
+" el aviso de adjudicación original, por lo que es necesario crear un nuevo "
+"identificador para cada objeto de adjudicación en OCDS. El enfoque para "
+"crear un identificador dependerá de las propiedades del conjunto de datos; "
+"por ejemplo, en Paraguay se usa una combinación del identificador de aviso "
+"de adjudicación, el nombre del proveedor y un número consecutivo."
 
 #: ../../docs/guidance/map/award_notices_decisions.md:1
 msgid "View the example in JSON"
-msgstr ""
+msgstr "Vea el ejemplo en JSON"
 
 #: ../../None:1
 msgid ""
 "[View the example in Paraguay’s "
-"API](http://beta.dncp.gov.py/datos/api/v3/doc/ocds/record/ocds-"
+"API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-"
 "03ad3f-340885-1)"
 msgstr ""
+"[Ver el ejemplo en la API de Paraguay] "
+"(https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-"
+"03ad3f-340885-1)"

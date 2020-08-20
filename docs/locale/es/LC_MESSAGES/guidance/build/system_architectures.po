@@ -5,16 +5,17 @@
 # 
 # Translators:
 # Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
+# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"POT-Creation-Date: 2020-07-07 15:40-0400\n"
 "PO-Revision-Date: 2020-06-30 01:22+0000\n"
-"Last-Translator: Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:1
 msgid "System architectures"
-msgstr "Arquitectura de sistema"
+msgstr "Arquitecturas de sistemas"
 
 #: ../../docs/guidance/build/system_architectures.md:3
 msgid ""
@@ -51,7 +52,7 @@ msgstr "Si es posible ampliar sistemas existentes, o crear un nuevo sistema"
 
 #: ../../docs/guidance/build/system_architectures.md:8
 msgid "The number and nature of the live systems,"
-msgstr "El número y naturaleza de los sistemas en vivo"
+msgstr "El número y naturaleza de los sistemas activos"
 
 #: ../../docs/guidance/build/system_architectures.md:9
 msgid ""
@@ -73,7 +74,7 @@ msgid ""
 "persistent URLs."
 msgstr ""
 "Los documentos OCDS individuales para cada proceso deben estar disponibles "
-"en URLs persistentes únicos."
+"en URLs persistentes únicas."
 
 #: ../../docs/guidance/build/system_architectures.md:14
 msgid ""
@@ -91,7 +92,7 @@ msgid ""
 "they want."
 msgstr ""
 "Los usuarios deben de poder localizar las colecciones de registros y "
-"entradas que necesiten."
+"entregas que necesiten."
 
 #: ../../docs/guidance/build/system_architectures.md:17
 msgid ""
@@ -105,7 +106,7 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:19
 msgid "On-demand transformation from live systems"
-msgstr "Transformación bajo demanda desde sistemas vivos"
+msgstr "Transformación bajo demanda desde sistemas activos"
 
 #: ../../docs/guidance/build/system_architectures.md:21
 msgid ""
@@ -118,7 +119,7 @@ msgstr ""
 "En este escenario, cada sistema fuente convierte los datos en formato OCDS "
 "bajo demanda.  Los datos no se almacenan sino que se convierten cada vez que"
 " un usuario o un tercero invoca el proceso de conversión. Este es el camino "
-"más fácil cuando un solo sistema vivo gestiona todos los procesos de "
+"más fácil cuando un solo sistema gestiona todos los procesos de "
 "contratación. Sin embargo, implica modificaciones en el sistema para agregar"
 " un módulo de conversión OCDS"
 
@@ -127,7 +128,8 @@ msgid ""
 "An API performs data transformation on the fly each time it receives a "
 "request."
 msgstr ""
-"Una API hace la transformación de los datos cada vez que recibe un pedido."
+"Una API hace la transformación de los datos cada vez que recibe una "
+"petición."
 
 #: ../../docs/guidance/build/system_architectures.md:25
 msgid "![Direct Publication 2](../../_static/png/directPublication2.png)"
@@ -157,7 +159,7 @@ msgid ""
 "conformant OCDS implementation where it is not possible to provide a full "
 "change history."
 msgstr ""
-"La [guía de lanzamientos fáciles] (easy_releases) explica cómo lograr una "
+"La [guía de lanzamientos fáciles](easy_releases) explica cómo lograr una "
 "implementación conforme al OCDS cuando no es posible proporcionar un "
 "historial de cambios completo."
 
@@ -167,12 +169,12 @@ msgid ""
 "the live systems if they need to scan large portions of data."
 msgstr ""
 "Se pueden proporcionar descargas masivas como parte de la API. Las consultas"
-" en vivo pueden estresar a los sistemas en vivo si necesitan escanear "
+" en vivo pueden estresar a los sistemas en producción si necesitan escanear "
 "grandes porciones de datos."
 
 #: ../../docs/guidance/build/system_architectures.md:35
 msgid "Separate OCDS datastore"
-msgstr "Almacén de datos OCDS separado"
+msgstr "Almacenamiento OCDS separado"
 
 #: ../../docs/guidance/build/system_architectures.md:37
 msgid ""
@@ -184,15 +186,13 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:39
 msgid ""
-"It is possible to merge an centralize data from more than one systems in a "
+"It is possible to merge and centralize data from more than one system in a "
 "single datastore."
 msgstr ""
-"Es posible fusionar datos centralizados de más de un sistema en un almacén "
-"de datos único."
 
 #: ../../docs/guidance/build/system_architectures.md:40
 msgid "It can relieve live systems from expensive queries."
-msgstr "Puede aliviar a los sistemas en vivo de consultas costosas."
+msgstr "Puede evitar consultas costosas a los sistemas en producción."
 
 #: ../../docs/guidance/build/system_architectures.md:41
 msgid ""
@@ -207,8 +207,9 @@ msgid ""
 "On the other hand, there is a cost of maintaining a separate datastore. In "
 "these scenarios, we assume an API provides access to OCDS data."
 msgstr ""
-"Por otro lado, hay un costo de mantener un almacén de datos separado. En "
-"estos escenarios, asumimos que una API proporciona el acceso a datos OCDS."
+"Por otro lado, hay un costo de mantener un almacenamiento de datos separado."
+" En estos escenarios, asumimos que una API proporciona el acceso a datos "
+"OCDS."
 
 #: ../../docs/guidance/build/system_architectures.md:45
 msgid ""
@@ -225,7 +226,7 @@ msgstr ""
 "llamada a la API, o almacenarlas y actualizarlas cada vez que se crea un "
 "nuevo registro. La API necesita devolver datos OCDS envueltos en un paquete "
 "de entrega o registro. Por lo general, no es necesario almacenar datos OCDS "
-"envueltos, ya que los datos del paquete se pueden generar en tiempo real."
+"empaquetados, ya que los datos del paquete se pueden generar en tiempo real."
 
 #: ../../docs/guidance/build/system_architectures.md:47
 msgid ""
@@ -246,9 +247,9 @@ msgid ""
 "middleware system. The middleware performs the conversion to OCDS and "
 "maintains a datastore in OCDS format."
 msgstr ""
-"En este escenario, un proceso automatizado extrae datos de sistemas en vivo "
-"al sistema de middleware. El middleware realiza la conversión a OCDS y "
-"mantiene un almacén de datos en formato OCDS."
+"En este escenario, un proceso automatizado extrae datos de sistemas en "
+"producción  al sistema middleware. El middleware realiza la conversión a "
+"OCDS y mantiene el almacenamiento de datos en formato OCDS."
 
 #: ../../docs/guidance/build/system_architectures.md:54
 msgid "![Pull and Convert](../../_static/png/pullAndConvert.png)"
@@ -260,7 +261,7 @@ msgid ""
 " change history. This is especially good when source systems do not maintain"
 " historic data."
 msgstr ""
-"El beneficio clave de este enfoque es que el sistema de middleware puede "
+"El beneficio clave de este enfoque es que el sistema middleware puede "
 "almacenar el historial de cambios. Esto es especialmente bueno cuando los "
 "sistemas de origen no mantienen datos históricos."
 
@@ -270,17 +271,17 @@ msgid ""
 "middleware to pull data. The middleware system merges and centralizes data "
 "in a single place."
 msgstr ""
-"Este enfoque podría implicar algunos cambios en los sistemas en vivo para "
-"permitir que el middleware extraiga datos. El sistema de middleware combina "
-"y centraliza los datos en un solo lugar."
+"Este enfoque podría implicar algunos cambios en los sistemas en producción "
+"para permitir que el middleware extraiga datos. El sistema middleware "
+"combina y centraliza los datos en un solo lugar."
 
 #: ../../docs/guidance/build/system_architectures.md:60
 msgid ""
 "To add more source systems, the OCDS conversion module needs to be updated "
 "to pull data from the new system(s)."
 msgstr ""
-"Para añadir más sistemas fuente, las necesidades módulo de conversión OCDS "
-"necesita actualizarse para obtener datos del sistema nuevo."
+"Para añadir más sistemas fuente, el módulo de conversión OCDS necesita "
+"actualizarse para obtener datos del sistema nuevo."
 
 #: ../../docs/guidance/build/system_architectures.md:62
 msgid ""
@@ -300,11 +301,11 @@ msgid ""
 "individual changes. But this might involve bigger modifications to the "
 "source system(s)."
 msgstr ""
-"Una alternativa al mecanismo de extracción es utilizar un mecanismo de "
-"inserción en cada sistema fuente. Los eventos específicos o los cambios en "
-"los datos desencadenarían un envío de datos al middleware. Este enfoque "
-"puede mitigar el riesgo de perder cambios individuales. Pero esto podría "
-"implicar modificaciones más grandes en los sistemas de origen."
+"Una alternativa al mecanismo de extracción es utilizar un mecanismo \"push\""
+" en cada sistema fuente. Los eventos específicos o los cambios en los datos "
+"desencadenarían un envío de datos al middleware. Este enfoque puede mitigar "
+"el riesgo de perder cambios individuales. Pero esto podría implicar "
+"modificaciones más grandes en los sistemas de origen."
 
 #: ../../docs/guidance/build/system_architectures.md:66
 msgid ""
@@ -318,7 +319,7 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:68
 msgid "Convert and push"
-msgstr "Conversión y empuje"
+msgstr "Conversión y \"push\""
 
 #: ../../docs/guidance/build/system_architectures.md:70
 msgid ""
@@ -328,10 +329,10 @@ msgid ""
 "middleware system serves the OCDS data."
 msgstr ""
 "Este escenario es una combinación de los dos escenarios anteriores. Los "
-"sistemas en vivo realizan la conversión de datos al formato OCDS. Empujan "
-"los datos convertidos a un middleware, que mantiene un almacén de datos con "
-"formato OCDS. Una API en el sistema de middleware proporciona los datos "
-"OCDS."
+"sistemas en producción realizan la conversión de datos al formato OCDS. "
+"Empujan los datos convertidos a un middleware, que mantiene un almacén de "
+"datos con formato OCDS. Una API en el sistema middleware proporciona los "
+"datos OCDS."
 
 #: ../../docs/guidance/build/system_architectures.md:72
 msgid "![Convert and Push](../../_static/png/convertAndPush.png)"
@@ -343,9 +344,9 @@ msgid ""
 "might be a solution for publishers with a single source system which does "
 "not store the change history."
 msgstr ""
-"Este enfoque pone la carga de la conversión de datos en sistemas en vivo. "
-"Sin embargo, una solución para los publicadores podría ser tener un sistema "
-"único de origen que no almacena el historial de cambios."
+"Este enfoque pone la carga de la conversión de datos en los sistemas en "
+"producción. Sin embargo, una solución para los publicadores podría ser tener"
+" un sistema único de origen que no almacena el historial de cambios."
 
 #: ../../docs/guidance/build/system_architectures.md:76
 msgid ""
@@ -355,7 +356,7 @@ msgid ""
 msgstr ""
 "Este enfoque también podría ser adecuado para combinar datos de muchos "
 "sistemas de origen. Cada sistema fuente se convierte en un publicador OCDS. "
-"El middleware se vuelve menos complejo ya que ingiere datos en un solo "
+"El middleware se vuelve menos complejo ya que consume datos en un solo "
 "formato."
 
 #: ../../docs/guidance/build/system_architectures.md:78
@@ -369,7 +370,7 @@ msgstr ""
 "enfoque similar. Este sistema fue desarrollado en Ucrania y es la base de la"
 " plataforma [Prozorro] (https://prozorro.gov.ua/en/). Prozorro utiliza "
 "bloques de construcción OCDS como base para los modelos de datos de sistemas"
-" en vivo."
+" en producción."
 
 #: ../../docs/guidance/build/system_architectures.md:80
 msgid ""
@@ -397,12 +398,12 @@ msgid ""
 msgstr ""
 "El sistema de archivos garantiza que cada documento OCDS tenga una URL "
 "persistente para el acceso. Una desventaja puede ser que el volumen de datos"
-" crezca rápidamente, ya que los archivos sin formato pueden ocupar un "
-"espacio considerable. El sistema de archivos puede proporcionar un historial"
-" de cambios siempre y cuando los registros nunca se sobrescriban. Las "
-"descargas masivas pueden generarse periódicamente y almacenarse en el "
-"sistema de archivos. Las entregas pueden ser imposibles de producir si hay "
-"más de un sistema."
+" crezca rápidamente, ya que los archivos planos pueden ocupar un espacio "
+"considerable. El sistema de archivos puede proporcionar un historial de "
+"cambios siempre y cuando los registros nunca se sobrescriban. Las descargas "
+"masivas pueden generarse periódicamente y almacenarse en el sistema de "
+"archivos. Los registros pueden ser imposibles de producir si hay más de un "
+"sistema."
 
 #: ../../docs/guidance/build/system_architectures.md:86
 msgid "Manual import"
@@ -413,7 +414,7 @@ msgid ""
 "In this scenario a middleware system sits between live systems and the API."
 msgstr ""
 "En este escenario, un sistema de middleware se ubica entre los sistemas en "
-"vivo y la API."
+"producción y la API."
 
 #: ../../docs/guidance/build/system_architectures.md:90
 msgid ""
@@ -421,9 +422,9 @@ msgid ""
 "uploaded to the middleware system, which converts the data to OCDS. The "
 "system stores the data in OCDS format."
 msgstr ""
-"Los datos se exportan manualmente desde sistemas en vivo hacia archivos. Los"
-" archivos se cargan en el sistema de middleware, que convierte los datos a "
-"OCDS. El sistema almacena los datos en formato OCDS."
+"Los datos se exportan manualmente desde sistemas en producción hacia "
+"archivos. Los archivos se cargan en el sistema de middleware, que convierte "
+"los datos a OCDS. El sistema almacena los datos en formato OCDS."
 
 #: ../../docs/guidance/build/system_architectures.md:92
 msgid "![Manual Import](../../_static/png/manualImport.png)"
@@ -437,7 +438,7 @@ msgid ""
 msgstr ""
 "Una desventaja en este enfoque es el potencial de fallas. Los archivos de "
 "entrada pueden estar dañados o tener formatos inesperados debido a cambios o"
-" errores en los sistemas en vivo."
+" errores en los sistemas en producción."
 
 #: ../../docs/guidance/build/system_architectures.md:96
 msgid ""
@@ -457,7 +458,7 @@ msgstr "Consideraciones adicionales"
 msgid ""
 "When designing an architecture, publishers ought to consider the following:"
 msgstr ""
-"Al diseñar una arquitectura, los editores deben considerar lo siguiente:"
+"Al diseñar una arquitectura, los publicadores deben considerar lo siguiente:"
 
 #: ../../docs/guidance/build/system_architectures.md:102
 msgid ""
@@ -467,12 +468,12 @@ msgid ""
 "formats, like CSV and Excel data. This is important for users who are more "
 "familiar with spreadsheets."
 msgstr ""
-"** Puntos finales de búsqueda **. Una API puede proporcionar más que "
-"registros y entregas individuales. Los puntos finales ayudan a filtrar datos"
-" por diferentes parámetros, como proveedores y tipos de productos. Otra "
-"consideración es proporcionar formatos alternativos, como CSV y datos de "
-"Excel. Esto es importante para los usuarios que están más familiarizados con"
-" las hojas de cálculo."
+"** Endpoints de búsqueda **. Una API puede proporcionar más que registros y "
+"entregas individuales. Los endpoints ayudan a filtrar datos por diferentes "
+"parámetros, como proveedores y tipos de productos. Otra consideración es "
+"proporcionar formatos alternativos, como CSV y datos de Excel. Esto es "
+"importante para los usuarios que están más familiarizados con las hojas de "
+"cálculo."
 
 #: ../../docs/guidance/build/system_architectures.md:103
 msgid ""
@@ -480,7 +481,7 @@ msgid ""
 "link out to documents on external platforms, where link-rot can set-in. The "
 "best systems will ensure that documents are archived but still available."
 msgstr ""
-"**Documentos**. El OCDS incluye la divulgación de documentos. A menudo, los "
-"sistemas se vinculan a documentos en plataformas externas, donde se puede "
-"establecer link-rot. Los mejores sistemas asegurarán que los documentos se "
+"**Documentos**. OCDS incluye la publicación de documentos. A menudo, los "
+"sistemas se vinculan a documentos en plataformas externas, donde se pueden "
+"dar enlaces rotos. Los mejores sistemas asegurarán que los documentos se "
 "archiven pero aún estén disponibles."
