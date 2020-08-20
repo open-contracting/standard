@@ -10,7 +10,6 @@ https://standard.open-contracting.org/1.1/en/governance/#translation-and-localiz
 
 import gettext
 import os
-import re
 
 import lxml.etree
 import lxml.html
@@ -60,13 +59,6 @@ def add_translation_notes():
                             break
 
 
-# 2020-08: Fix for bb0651f6b0868bdb59ddd242b09c2c8200e76529 until content is translated.
-def rewrite_links(link):
-    if '.svg.png' in link:
-        return re.sub(r'/png/(\S+\.svg)\.png', r'/svg/\1', link)
-    return link
-
-
 def add_translation_note(path, language, domain):
     with open(path) as f:
         document = lxml.html.fromstring(f.read())
@@ -88,7 +80,7 @@ def add_translation_note(path, language, domain):
         xpath = '//div[@itemprop="articleBody"]'
 
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
-        replacement.rewrite_links(rewrite_links)
+        replacement.make_links_absolute('{}/{}'.format(base_url, language))
 
         parent = document.xpath(xpath)[0].getparent()
         parent.getparent().replace(parent, replacement)
