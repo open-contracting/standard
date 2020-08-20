@@ -1,0 +1,509 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Oscar Montiel <oscar.montiel@okfn.org>, 2017
+# Ben Webb <ben.webb@opendataservices.coop>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2017-04-24 10:47+0000\n"
+"Last-Translator: Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/getting_started/releases_and_records.md:1
+msgid "Releases and Records"
+msgstr "Entregas y Registros"
+
+#: ../../docs/getting_started/releases_and_records.md:3
+msgid "Tracking change over time is important for users of contracting data."
+msgstr ""
+"Hacer seguimiento de los cambios a través del tiempo es importante para los "
+"usuarios de datos de contrataciones."
+
+#: ../../docs/getting_started/releases_and_records.md:5
+msgid ""
+"Publishers are encouraged to publish data in near real-time and to provide a"
+" change history. The OCDS releases and records model describes how to do "
+"this."
+msgstr ""
+"Se anima a los publicadores a divulgar datos en tiempo casi real y a proveer"
+" un historial de cambios. El modelo de entregas y registros OCDS describe "
+"cómo hacer esto."
+
+#: ../../docs/getting_started/releases_and_records.md:7
+msgid "The Releases and Records model"
+msgstr "El modelo de Entregas y Registros"
+
+#: ../../docs/getting_started/releases_and_records.md:9
+msgid ""
+"Releases and records are the two JSON document formats supported by OCDS."
+msgstr ""
+"Las entregas y los registros son dos formatos de documento JSON soportados "
+"por OCDS."
+
+#: ../../docs/getting_started/releases_and_records.md:11
+msgid ""
+"Consider the timeline of a contracting process. OCDS identifies five main "
+"stages but there can be many events within each stage. The image below shows"
+" an example timeline for a contracting process."
+msgstr ""
+"Considere la línea de tiempo de un proceso de contratación. OCDS identifica "
+"cinco etapas principales, pero pueden haber muchos eventos dentro de cada "
+"etapa. La imagen de abajo muestra una línea de tiempo de ejemplo para un "
+"proceso de contratación."
+
+#: ../../docs/getting_started/releases_and_records.md:13
+msgid "![Contracting Process](../_static/png/changehistory_process.png)"
+msgstr "![Proceso de Contratación](../_static/png/changehistory_process.png)"
+
+#: ../../docs/getting_started/releases_and_records.md:15
+msgid ""
+"There are major events that mark the progress from one stage to another, "
+"like an award notice. Smaller events take place within a stage, like a "
+"deadline extension for bidding. In OCDS, all changes are disclosed using "
+"**releases**. Releases are JSON documents, published each time there is an "
+"update in the process."
+msgstr ""
+"Hay eventos principales que marcan el progreso de una etapa a otra, como un "
+"aviso de adjudicación. Eventos similares tienen lugar dentro de una etapa, "
+"como la extensión de una fecha límite para la presentación de ofertas. En "
+"OCDS, todos los cambios son divulgados usando **entregas**. Las entregas son"
+" documentos JSON, publicados cada vez que hay una actualización en el "
+"proceso."
+
+#: ../../docs/getting_started/releases_and_records.md:17
+msgid ""
+"![Contracting Process with "
+"releases](../_static/png/changehistory_process2.png)"
+msgstr ""
+"![Proceso de Contratación con "
+"entregas](../_static/png/changehistory_process2.png)"
+
+#: ../../docs/getting_started/releases_and_records.md:19
+msgid ""
+"Releases are **immutable**. Each change is documented in a **new** release, "
+"rather than by updating an existing one. The collection of releases for a "
+"particular process makes its change history."
+msgstr ""
+"Las entregas son **inmutables**. Cada cambio está documentado en una "
+"**nueva** entrega, en lugar de actualizar una ya existente. La colección de "
+"entregas para un proceso en particular conforma su historial de cambios."
+
+#: ../../docs/getting_started/releases_and_records.md:21
+msgid ""
+"**Records** are JSON documents that act as an index of all releases for a "
+"single contracting process. While releases are never updated, records are "
+"updated each time there is a change. A record is updated by adding a new "
+"release to this index."
+msgstr ""
+"Los **registros** son documentos JSON que actúan como un índice de todas las"
+" entregas para un solo proceso de contratación. Mientras que las entregas "
+"nunca se actualizan, los registros son actualizados cada vez que hay un "
+"cambio. Un registro es actualizado agregando una nueva entrega a este "
+"índice."
+
+#: ../../docs/getting_started/releases_and_records.md:23
+msgid ""
+"![Contracting Process with releases and a "
+"record](../_static/png/changehistory_process_record.png)"
+msgstr ""
+"![Proceso de contratación con entregas y un "
+"registro](../_static/png/changehistory_process_record.png)"
+
+#: ../../docs/getting_started/releases_and_records.md:25
+msgid "Records can also contain:"
+msgstr "Los registros también pueden contener:"
+
+#: ../../docs/getting_started/releases_and_records.md:27
+msgid ""
+"A *compiled release*, which uses the same structure as an OCDS release. It "
+"represents the latest state of each field."
+msgstr ""
+"Una *entrega compilada*, que usa la misma estructura que una entrega OCDS. "
+"Esta representa el último estado de cada campo."
+
+#: ../../docs/getting_started/releases_and_records.md:28
+msgid ""
+"A *versioned release*, that contains a history of changes for each "
+"individual field."
+msgstr ""
+"Una *entrega versionada*, que contiene un historial de cambios para cada "
+"campo individual."
+
+#: ../../docs/getting_started/releases_and_records.md:30
+msgid "These structures are designed to help users to access:"
+msgstr ""
+"Estas estructuras están diseñadas para ayudar a los usuarios a acceder a:"
+
+#: ../../docs/getting_started/releases_and_records.md:32
+msgid "The current state of the contracting process"
+msgstr "El estado actual del proceso de contratación"
+
+#: ../../docs/getting_started/releases_and_records.md:33
+msgid "The detailed history of changes for individual fields"
+msgstr "El historial de cambios detallado para campos individuales"
+
+#: ../../docs/getting_started/releases_and_records.md:35
+msgid ""
+"In accounting terms, releases are analogous to individual transactions in an"
+" account. A record represents both the ledger of all transactions and the "
+"closing balance. The ledger is the releases list, and the closing balance is"
+" the compiled release."
+msgstr ""
+"En términos de contabilidad, las entregas son análogas a transacciones "
+"individuales en una cuenta. Un registro representa tanto el libro de cuentas"
+" de todas las transacciones como el balance final. El libro de cuentas es la"
+" lista de entregas, y el balance final es la entrega compilada."
+
+#: ../../docs/getting_started/releases_and_records.md:37
+msgid ""
+"In software development terms, releases are analogous to Git commits on a "
+"branch. A record represents both the commit history for the branch and the "
+"HEAD for the branch. The releases list is the commit history, and the HEAD "
+"is the compiled release."
+msgstr ""
+"En términos de desarrollo de software, las entregas son análogas a commits "
+"de Git en una rama. Un registro representa tanto el historial de commits "
+"para la rama como la cabecera (HEAD) de la rama. La lista de entregas es el "
+"historial de commits, y el HEAD es la entrega compilada."
+
+#: ../../docs/getting_started/releases_and_records.md:39
+msgid "Releases"
+msgstr "Entregas"
+
+#: ../../docs/getting_started/releases_and_records.md:41
+msgid ""
+"Releases follow the [release schema](../schema/reference). The schema covers"
+" the whole contracting process, but there are only a few mandatory fields. "
+"The box below shows an example."
+msgstr ""
+"Las entregas siguen el [esquema de entregas](../schema/reference). El "
+"esquema cubre el proceso de contratación completo, pero sólo hay algunos "
+"campos obligatorios. El cuadro de abajo muestra un ejemplo."
+
+#: ../../docs/getting_started/releases_and_records.md:50
+msgid "Identifiers"
+msgstr "Identificadores"
+
+#: ../../docs/getting_started/releases_and_records.md:52
+msgid ""
+"Each release contains an [ocid](../../schema/identifiers/#contracting-"
+"process-identifier-ocid) to identify the contracting process it relates to. "
+"An ocid is composed of a prefix and an unique process identifier chosen by "
+"the publisher."
+msgstr ""
+"Cada entrega contiene un [ocid](../../schema/identifiers/#contracting-"
+"process-identifier-ocid) para identificar el proceso de contratación con el "
+"cual se relaciona. Un ocid está compuesto de un prefijo y un identificador "
+"de proceso único elegido por el publicador."
+
+#: ../../docs/getting_started/releases_and_records.md:54
+msgid ""
+"A release also needs a release identifier, unique in the scope of the "
+"contracting process. A release id can be built in several ways. Publishers "
+"can use any generation strategy, as long as the ids don’t collide within the"
+" same process."
+msgstr ""
+"Una entrega también necesita un identificador de entrega, único dentro del "
+"alcance del proceso de contratación. Un id de entrega puede ser construido "
+"de varias maneras. Los publicadores pueden usar cualquier estrategia de "
+"generación, siempre y cuando los ids no colisionen dentro del mismo proceso."
+
+#: ../../docs/getting_started/releases_and_records.md:56
+msgid ""
+"The [easy releases](../guidance/build/easy_releases) section introduces two "
+"strategies that can be used in any scenario."
+msgstr ""
+"La sección de [entregas fáciles](../guidance/build/easy_releases) introduce "
+"dos estrategias que pueden ser usadas en cualquier escenario."
+
+#: ../../docs/getting_started/releases_and_records.md:58
+#: ../../docs/getting_started/releases_and_records.md:174
+msgid "Packaging"
+msgstr "Empaquetado"
+
+#: ../../docs/getting_started/releases_and_records.md:60
+msgid ""
+"Releases are wrapped in a release package to provide context to the data. "
+"The `uri` package field contains a URI to an online copy of the same release"
+" package."
+msgstr ""
+"Las entregas son envueltas en paquetes de entregas para proveer de contexto "
+"a los datos. El campo de paquete `uri` contiene una URI a una copia online "
+"del mismo paquete de entregas."
+
+#: ../../docs/getting_started/releases_and_records.md:62
+msgid ""
+"See the [Release Package schema](../schema/release_package) for details."
+msgstr ""
+"Vea el [Esquema de Paquete de Entregas](../schema/release_package) para más "
+"detalles."
+
+#: ../../docs/getting_started/releases_and_records.md:64
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: ../../docs/getting_started/releases_and_records.md:66
+msgid ""
+"Each release also provides one or more tags. Tags provide information about "
+"the event the release relates to."
+msgstr ""
+"Cada entrega también provee una o más etiquetas. Las etiquetas proveen "
+"información sobre el evento al cual se relaciona la entrega."
+
+#: ../../docs/getting_started/releases_and_records.md:68
+msgid "For example:"
+msgstr "Por ejemplo:"
+
+#: ../../docs/getting_started/releases_and_records.md:70
+msgid ""
+"When an invitation to tender is published, the publisher uses the 'tender' "
+"tag . The release includes the relevant details in the `tender` section. It "
+"can also contain information about the budget in the planning section."
+msgstr ""
+"Cuando se publica una invitación a ofertas, el publicador utiliza la "
+"etiqueta 'tender'. La entrega incluye los detalles relevantes en la sección "
+"de `tender`. También puede contener información sobre el presupuesto en la "
+"sección de planeación (`planning`)."
+
+#: ../../docs/getting_started/releases_and_records.md:71
+msgid ""
+"When a contract is awarded, the publisher uses the 'award' tag. The release "
+"includes the relevant details in the `award` section. It can also update the"
+" tender section with the list of tenderers that submitted a bid."
+msgstr ""
+"Cuando un contrato es adjudicado, el publicador usa la etiqueta 'award'. La "
+"entrega incluye los detalles relevantes en la sección de `award`. También "
+"puede actualizar la sección de licitación (`tender`) con la lista de "
+"oferentes que presentaron una oferta."
+
+#: ../../docs/getting_started/releases_and_records.md:73
+msgid ""
+"The [release tag codelist](../../schema/codelists/#release-tag) contains the"
+" list of all tags provided by OCDS. Note that it is allowed to use more than"
+" one tag in the same release. For example, a release with new data in the "
+"`tender` and `award` sections can use the 'tender' and 'award' tags "
+"together."
+msgstr ""
+"La [lista de códigos de etiquetas de entrega](../../schema/codelists"
+"/#release-tag) contiene la lista de todas las etiquetas proveídas por OCDS. "
+"Note que está permitido usar más de una etiqueta en la misma entrega. Por "
+"ejemplo, una entrega con datos nuevos en las secciones de `tender` y `award`"
+" puede usar las etiquetas 'tender' y 'award' juntas."
+
+#: ../../docs/getting_started/releases_and_records.md:75
+msgid "Repeating previous information"
+msgstr "Repitiendo información previa"
+
+#: ../../docs/getting_started/releases_and_records.md:77
+msgid ""
+"Releases can repeat unchanged data from previous releases, or include new "
+"information only. Publishers decide how much data to include as long as "
+"mandatory fields are present."
+msgstr ""
+"Las entregas pueden repetir los datos sin cambiar de las entregas "
+"anteriores, o incluir nueva información solamente. Los publicadores deciden "
+"qué tantos datos incluir siempre y cuando los campos obligatorios estén "
+"presentes."
+
+#: ../../docs/getting_started/releases_and_records.md:79
+msgid ""
+"It might be more appropriate to repeat data when processes have fewer "
+"releases. Consider as well that repeating previous information makes larger "
+"releases and larger datasets."
+msgstr ""
+"Podría ser más apropiado repetir los datos cuando los procesos de "
+"contratación tengan menos entregas. Considere también que repetir "
+"información previa crea entregas más extensas y conjuntos de datos más "
+"grandes."
+
+#: ../../docs/getting_started/releases_and_records.md:85
+msgid ""
+"The following example shows releases with minimal changes on each update."
+msgstr ""
+"El siguiente ejemplo muestra entregas con cambios mínimos en cada "
+"actualización."
+
+#: ../../docs/getting_started/releases_and_records.md:87
+msgid "The first release presents tender data."
+msgstr "La primera entrega presenta datos de licitación."
+
+#: ../../docs/getting_started/releases_and_records.md:89
+msgid ""
+"The second introduces a new document in the `tender` section with the "
+"'tenderUpdate' tag. Note that the release ignores all the nonmandatory "
+"fields. The tender document present in the previous release is also ignored."
+msgstr ""
+"La segunda introduce un nuevo documento en la sección de `tender` con la "
+"etiqueta 'tenderUpdate'. Note que la entrega ignora todos los campos no "
+"obligatorios. El documento de licitación presente en la entrega anterior "
+"también se omite."
+
+#: ../../docs/getting_started/releases_and_records.md:91
+msgid "The third release presents award data, and ignores the tender section."
+msgstr ""
+"La tercera entrega presenta datos de adjudicación, e ignora la sección de "
+"`tender`."
+
+#: ../../docs/getting_started/releases_and_records.md:113
+msgid "Records"
+msgstr "Registros"
+
+#: ../../docs/getting_started/releases_and_records.md:115
+msgid ""
+"A record follows the structure defined in the [Records "
+"Reference](../schema/records_reference). Below is a full example."
+msgstr ""
+"Un registro sigue la estructura definida en la [Referencia de "
+"Registros](../schema/records_reference). Abajo hay un ejemplo completo."
+
+#: ../../docs/getting_started/releases_and_records.md:123
+msgid "Embedding or linking Releases"
+msgstr "Entregas embebidas o enlazadas"
+
+#: ../../docs/getting_started/releases_and_records.md:125
+msgid ""
+"Records contain the history of a contracting process as a list of releases, "
+"by either embedding or linkint to the releases."
+msgstr ""
+"Los registros contienen la historia de un proceso de contratación como una "
+"lista de entregas, ya sea embebiendo o enlazando a las entregas."
+
+#: ../../docs/getting_started/releases_and_records.md:127
+msgid ""
+"See the [Record reference](../schema/records_reference) for more details."
+msgstr ""
+"Vea la [referencia de Registros](../schema/records_reference) para más "
+"detalles."
+
+#: ../../docs/getting_started/releases_and_records.md:129
+msgid "Compiled and Versioned Releases"
+msgstr "Entregas Compiladas y Versionadas"
+
+#: ../../docs/getting_started/releases_and_records.md:131
+msgid ""
+"A **compiled release** follows the release structure. It contains the latest"
+" value for all fields present in the releases of a process. The example "
+"above shows how a compiled release looks. It is encouraged to include a "
+"compiled release when producing records."
+msgstr ""
+"Una **entrega compilada** sigue la estructura de entregas. Contiene el "
+"último valor para todos los campos presentes en las entregas de un proceso. "
+"El ejemplo anterior muestra cómo se ve una entrega compilada. Se alienta a "
+"incluir una entrega compilada cuando se producen registros."
+
+#: ../../docs/getting_started/releases_and_records.md:133
+msgid ""
+"A **versioned release** follows a similar structure. For each field in the "
+"release structure, the versioned release provides an object. This object "
+"contains the history of changes for the field."
+msgstr ""
+"Una **entrega versionada** sigue una estructura similar. Por cada campo en "
+"la estructura de entregas, la entrega versionada provee un objeto. Este "
+"objeto contiene el historial de cambios para el campo."
+
+#: ../../docs/getting_started/releases_and_records.md:135
+msgid ""
+"The following shows how to update a record as releases are published over "
+"time."
+msgstr ""
+"El siguiente muestra cómo actualizar un registro a medida que las entregas "
+"se publican con el tiempo."
+
+#: ../../docs/getting_started/releases_and_records.md:137
+msgid "![Record updates](../_static/change_history_animation.gif)"
+msgstr ""
+"![Actualizaciones de registro](../_static/change_history_animation.gif)"
+
+#: ../../docs/getting_started/releases_and_records.md:139
+msgid "Each time a new release is available:"
+msgstr "Cada vez que una nueva entrega está disponible:"
+
+#: ../../docs/getting_started/releases_and_records.md:141
+msgid ""
+"The record adds the new release to the releases list, by either embedding it"
+" or adding a link to it."
+msgstr ""
+"El registro añade la nueva entrega a la lista de entregas, ya sea "
+"embebiéndola o añadiendo un enlace a ella."
+
+#: ../../docs/getting_started/releases_and_records.md:142
+msgid ""
+"The record updates the compiled and versioned releases using the new "
+"information. Repeating unchanged information does not affect the result."
+msgstr ""
+"El registro actualiza las entregas compilada y versionada usando la nueva "
+"información. Repetir la información sin cambios no afecta el resultado."
+
+#: ../../docs/getting_started/releases_and_records.md:148
+msgid ""
+"Compiled releases are not mandatory, but it helps to make OCDS data more "
+"accessible, especially for users that don’t need a detailed change history."
+msgstr ""
+"Las entregas compiladas no son obligatorias, pero ayudan a hacer los datos "
+"OCDS más accesibles, especialmente para los usuarios que no necesitan un "
+"historial de cambios detallado."
+
+#: ../../docs/getting_started/releases_and_records.md:150
+msgid ""
+"Consider how to calculate the **total value of active tenders** using "
+"compiled releases:"
+msgstr ""
+"Considere cómo calcular el **valor total de las licitaciones activas** "
+"usando entregas compiladas:"
+
+#: ../../docs/getting_started/releases_and_records.md:158
+msgid ""
+"Working with compiled releases, this metric can be calculated by filtering "
+"on the tender status and summing the tender value."
+msgstr ""
+"Cuando se trabaja con entregas compiladas, esta métrica puede ser calculada "
+"filtrando por el estado de la licitación y sumando el valor de la misma."
+
+#: ../../docs/getting_started/releases_and_records.md:160
+msgid ""
+"Compare that to how to calculate the **total value of active tenders** using"
+" releases:"
+msgstr ""
+"Compare esto a cómo calcular el **valor total de las licitaciones activas** "
+"usando entregas:"
+
+#: ../../docs/getting_started/releases_and_records.md:168
+msgid ""
+"If a user has releases only, they need to first determine the final status "
+"before calculating the result."
+msgstr ""
+"Si un usuario tiene sólo entregas, necesitan determinar primero el estado "
+"final antes de calcular el resultado."
+
+#: ../../docs/getting_started/releases_and_records.md:170
+msgid ""
+"Compiled releases are useful for many scenarios. But users might need the "
+"full history to answer other questions. For example, how many amends there "
+"are for a tender's value."
+msgstr ""
+"Las entregas compiladas son útiles para muchos escenarios. Pero los usuarios"
+" podrían necesitar la historia completa para contestar otras preguntas. Por "
+"ejemplo, cuántas enmiendas hay para un valor de licitación."
+
+#: ../../docs/getting_started/releases_and_records.md:176
+msgid ""
+"Records are published wrapped in a record package. The `uri` field in the "
+"package leads to a copy of the same record package."
+msgstr ""
+"Los registros son publicados envueltos en un paquete de registros. El campo "
+"`uri` del paquete lleva a una copia del mismo paquete de registros."

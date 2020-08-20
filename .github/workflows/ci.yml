@@ -1,0 +1,39 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - uses: actions/setup-python@v1
+      with:
+        python-version: 3.6
+    - uses: actions/cache@v1
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    # Don't install editable projects in the current working directory.
+    # https://pip.pypa.io/en/latest/reference/pip_install/#install-src
+    - run: pip install --src $GITHUB_WORKSPACE/../src -r requirements.txt
+    # Google Chrome and ChromeDriver are already included.
+    # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
+    - name: Make and test
+      run: |
+        if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
+        make
+        python util/add_translation_notes.py
+        pytest
+    - uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.PRIVATE_KEY }}
+        known_hosts: staging.standard.open-contracting.org ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDk8O226B/sYkPqyHdNBdjUFCEpT9IMdUxgFXEOtlPq1QnwTgHY76PsaOin7KhJcBrm8RAOuzoOIrKfgUJjXoxCtx1edp594tD8OChF5koHyO8YkQVlJmH8LrV16txsxokfh2F31ofRIVMk+TXiEfvR4+WehqeR24TwnXzlLIv1KfMJB7znTDdwqZS3uONKjlNNzSBNNIvCZ4WTI6etVlCzQgv4HL9QllKGfk1ctDuwOgsGPMT8f5NNPhI/z7kZkNbcrHJ5Mo6ZtF26qFmZ3Hy6vxJAQ2C4/x/Zemtb0MbIvI4Qlghh3bl5lER1rB54oMg+DidJ36qMrbqEtZxrBwvP
+    - if: success()
+      env:
+        LANGS: en,es,fr,it
+        PATH_PREFIX: ''
+        SEARCH_SECRET: ${{ secrets.SEARCH_SECRET }}
+      run: curl -Ss https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-docs.sh | bash -

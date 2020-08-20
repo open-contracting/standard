@@ -1,0 +1,289 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Oscar Montiel <oscar.montiel@okfn.org>, 2020
+# Ben Webb <ben.webb@opendataservices.coop>, 2020
+# Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2020
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
+# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/map/extensions.md:1
+msgid "Extensions"
+msgstr "Extensiones"
+
+#: ../../docs/guidance/map/extensions.md:3
+msgid ""
+"OCDS provides a common core of [sections and building "
+"blocks](../../getting_started/building_blocks) for describing contracting "
+"processes."
+msgstr ""
+"OCDS proporciona [secciones y "
+"bloques](../../getting_started/building_blocks) centrales para describir los"
+" procesos de contratación."
+
+#: ../../docs/guidance/map/extensions.md:5
+msgid ""
+"Many publishers will have additional data that they could publish. Instead "
+"of ignoring this data and leaving it unpublished, OCDS encourages publishers"
+" to collaborate on the creation of **extensions** to the standard."
+msgstr ""
+"Muchos publicadores tendrán datos adicionales que podrían publicar. En lugar"
+" de ignorar estos datos y dejarlos inéditos, OCDS anima a los publicadores a"
+" colaborar en la creación de **extensiones** al estándar."
+
+#: ../../docs/guidance/map/extensions.md:7
+msgid "Extensions are divided into two types:"
+msgstr "Las extensiones se dividen en dos tipos:"
+
+#: ../../docs/guidance/map/extensions.md:9
+msgid ""
+"**Core** extensions are maintained as part of the standard governance "
+"process, documented as part of the standard and reviewed by the OCDS "
+"technical team with each version upgrade of OCDS. They are likely to be "
+"relevant to a large number of publishers and users."
+msgstr ""
+"Las extensiones **Centrales**  se mantienen como parte del proceso de "
+"gobernanza del estándar,  documentadas como parte del estándar y revisadas "
+"por el equipo técnico de OCDS con cada actualización de versión de OCDS. "
+"Probablemente estas extensiones son relevantes para un gran número de "
+"publicadores y usuarios."
+
+#: ../../docs/guidance/map/extensions.md:11
+msgid ""
+"**Community** and local extension are maintained by third-parties, or are "
+"maintained outside of the standard governance process. They might provide "
+"features needed by only a small number of publishers or users, or might be "
+"used to document a publisher's additional fields or codelist values."
+msgstr ""
+"Las extensiones **comunitarias** y locales son mantenidas por terceros, o se"
+" mantienen fuera del proceso de gobernanza del estándar. Pueden proporcionar"
+" características requeridas solamente por un pequeño número de publicadores "
+"o usuarios, o pueden ser usadas para documentar campos adicionales de un "
+"publicador o valores de listas de código."
+
+#: ../../docs/guidance/map/extensions.md:13
+msgid ""
+"All core and community extensions are listed in the [Extension "
+"Explorer](https://extensions.open-contracting.org/en/). The [standard "
+"technical team](../../governance/index) approves extensions for inclusion in"
+" the Extension Explorer (distinguishing community from local extensions) and"
+" for inclusion in the governance process (distinguishing core from community"
+" extensions)."
+msgstr ""
+"Todas las extensiones centrales y comunitarias se listan en el [Explorador "
+"de extensiones](https://extensions.open-contracting.org/en/). El [equipo "
+"técnico del estándar](../../governance/index) aprueba las extensiones para "
+"incluirlas en el Explorador de extensiones (diferenciando las extensiones "
+"comunitarias de las locales) y para incluirlas en el proceso de gobernanza "
+"(diferenciando las extensiones centrales de las extensiones de la "
+"comunidad)."
+
+#: ../../docs/guidance/map/extensions.md:15
+msgid "Using existing extensions"
+msgstr "Uso de extensiones existentes"
+
+#: ../../docs/guidance/map/extensions.md:17
+msgid ""
+"Extensions are applied by adding their URLs to the `extensions` array in the"
+" release package or record package. You can discover extensions, read their "
+"documentation and find the URL to add using the [Extension "
+"Explorer](https://extensions.open-contracting.org/en/)."
+msgstr ""
+"Las extensiones se aplican añadiendo sus URLs a la lista de `extensions` en "
+"el paquete de entrega o en el paquete de registro. Puedes descubrir "
+"extensiones, leer su documentación y encontrar el URL para añadirlo usando "
+"el [Explorador de Extensiones](https://extensions.open-contracting.org/es/)."
+
+#: ../../docs/guidance/map/extensions.md:19
+msgid "This version of OCDS uses these specific versions of core extensions:"
+msgstr ""
+"Esta version del OCDS usa estas versiones específicas de las extensiones "
+"centrales:"
+
+#: ../../docs/guidance/map/extensions.md:26
+msgid "Developing new extensions"
+msgstr "Desarrollo de nuevas extensiones"
+
+#: ../../docs/guidance/map/extensions.md:28
+msgid ""
+"If you have additional fields which cannot be mapped to the OCDS schema or "
+"an existing extension, you ought to include these in your OCDS data and "
+"create a new extension to document their structure and meaning."
+msgstr ""
+"Si tiene campos adicionales que no se pueden mapear al esquema OCDS o a una "
+"extensión existente, debe de incluir estas en sus datos OCDS y crear una "
+"nueva extensión para documentar su estructura y significado."
+
+#: ../../docs/guidance/map/extensions.md:30
+msgid "Extension template"
+msgstr "Plantilla de extensión"
+
+#: ../../docs/guidance/map/extensions.md:32
+msgid ""
+"You can find the [extension template](https://github.com/open-"
+"contracting/standard_extension_template) on GitHub. It contains guidance on "
+"creating an extension."
+msgstr ""
+"Puede encontrar la [plantilla de extensión](https://github.com/open-"
+"contracting/standard_extension_template) en GitHub. Contiene instrucciones "
+"para crear una extensión."
+
+#: ../../docs/guidance/map/extensions.md:34
+msgid "Profiles"
+msgstr "Perfiles"
+
+#: ../../docs/guidance/map/extensions.md:36
+msgid ""
+"Groups of extensions can be combined into **profiles**. OCDS provides a "
+"common core for describing contracting processes, which profiles expand to "
+"suit the disclosure requirements and user needs of a particular sector or "
+"legal framework."
+msgstr ""
+"Los grupos de extensiones se pueden combinar en **perfiles**. OCDS "
+"proporciona una base común para describir los procesos de contratación, "
+"cuyos perfiles se expanden para adaptarse a los requisitos de publicación y "
+"las necesidades del usuario de un sector o marco legal en particular."
+
+#: ../../docs/guidance/map/extensions.md:38
+msgid "OCDS for Public-Private Partnerships"
+msgstr "OCDS para Asociaciones Público-Privadas"
+
+#: ../../docs/guidance/map/extensions.md:40
+msgid ""
+"[OCDS for Public-Private Partnerships](https://standard.open-"
+"contracting.org/profiles/ppp/latest/en/) (PPPs) describes how to use OCDS to"
+" publish information about PPPs. The profile extends OCDS to offer a data "
+"format that follows the World Bank Group’s [Framework for Disclosure in "
+"Public-Private Partnership "
+"Projects](http://www.worldbank.org/en/topic/publicprivatepartnerships/brief"
+"/ppp-tools#T1)."
+msgstr ""
+"[OCDS para Asociaciones Público-Privadas](https://standard.open-"
+"contracting.org/profiles/ppp/latest/en/) (APPs) describe cómo usar OCDS para"
+" publicar información sobre APPs. El perfil amplía OCDS para ofrecer un "
+"formato de datos que sigue el [Marco para la Divulgación en Proyectos de "
+"Asociación Público-"
+"Privada](http://www.worldbank.org/en/topic/publicprivatepartnerships/brief"
+"/ppp-tools#T1) del Grupo del Banco Mundial. "
+
+#: ../../docs/guidance/map/extensions.md:42
+msgid "OCDS for the European Union"
+msgstr "OCDS para la Unión Europea"
+
+#: ../../docs/guidance/map/extensions.md:44
+msgid ""
+"[OCDS for the European Union](https://standard.open-"
+"contracting.org/profiles/eu/master/en/) describes how to use OCDS to publish"
+" information on public procurement as obliged by law within the European "
+"Union."
+msgstr ""
+"[OCDS para la Unión Europea](https://standard.open-"
+"contracting.org/profiles/eu/master/en/) describe cómo usar OCDS para "
+"publicar información sobre contratación pública según lo exige la ley dentro"
+" de la Unión Europea."
+
+#: ../../docs/guidance/map/extensions.md:46
+msgid "OCDS for the Agreement on Government Procurement"
+msgstr "OCDS para el Acuerdo sobre Contratación Pública"
+
+#: ../../docs/guidance/map/extensions.md:48
+msgid ""
+"[OCDS for the Agreement on Government Procurement](https://standard.open-"
+"contracting.org/profiles/gpa/master/en/) (GPA) describes how to use OCDS to "
+"publish information as obliged by the World Trade Organization’s [Agreement "
+"on Government Procurement](https://www.wto.org/english/docs_e/legal_e/rev-"
+"gpr-94_01_e.htm)."
+msgstr ""
+"[OCDS para el Acuerdo sobre Contratación Pública](https://standard.open-"
+"contracting.org/profiles/gpa/master/en/) (GPA) describe cómo utilizar OCDS "
+"para publicar información según lo dispuesto por el [Acuerdo sobre "
+"Contratación Pública](https://www.wto.org/english/docs_e/legal_e/rev-gpr-"
+"94_01_e.htm) de la Organización Mundial del Comercio."
+
+#: ../../docs/guidance/map/extensions.md:50
+msgid "Linked standards"
+msgstr "Estándares vinculados"
+
+#: ../../docs/guidance/map/extensions.md:52
+msgid ""
+"OCDS data often refers to other datasets, like company registers, government"
+" budgets and infrastructure projects. These datasets contain information "
+"that is managed outside the lifecycle of a contracting process."
+msgstr ""
+"Los datos de OCDS a menudo se refieren a otros conjuntos de datos, como "
+"registros de empresas, presupuestos gubernamentales y proyectos de "
+"infraestructura. Estos conjuntos de datos contienen información que se "
+"gestiona fuera del ciclo de vida de un proceso de contratación."
+
+#: ../../docs/guidance/map/extensions.md:54
+msgid "Open Contracting for Infrastructure Data Standards"
+msgstr "Estándares de Datos de Contrataciones Abiertas para Infraestructura"
+
+#: ../../docs/guidance/map/extensions.md:56
+msgid ""
+"The [Open Contracting for Infrastructure Data Standards](https://standard"
+".open-contracting.org/infrastructure/latest/en/) (OC4IDS) describe what "
+"information to disclose and how to disclose it, at each stage of an "
+"infrastructure project. It connects previously siloed information to better "
+"publish and track infrastructure investment and delivery, providing data at "
+"the project level, at the contracting summary level, and at contract process"
+" detail level."
+msgstr ""
+"Los [Estándares de Datos de Contrataciones Abiertas para "
+"Infraestructura](https://standard.open-"
+"contracting.org/infrastructure/latest/en/) (OC4IDS) describe qué información"
+" divulgar y cómo divulgarla, en cada etapa de un proyecto de "
+"infraestructura. Conecta información que anteriormente estaba aislada para "
+"publicar y rastrear mejor la inversión y entrega de infraestructura, "
+"proporcionando datos a nivel de proyecto, a nivel de resumen de contratación"
+" y a nivel de detalle de proceso de contratación."
+
+#: ../../docs/guidance/map/extensions.md:58
+msgid ""
+"A joint effort by the [Infrastructure Transparency "
+"Initiative](http://infrastructuretransparency.org) (CoST) and the Open "
+"Contracting Partnership, it builds on best practice in open data and "
+"openness of public infrastructure procurement globally."
+msgstr ""
+"Un esfuerzo conjunto de la [Iniciativa de Transparencia en "
+"Infraestructura](http://infrastructuretransparency.org)(CoST) y la Open "
+"Contracting Partnership, se basa en las mejores prácticas en datos abiertos "
+"y la apertura de las adquisiciones de infraestructura pública a nivel "
+"mundial."
+
+#: ../../docs/guidance/map/extensions.md:60
+msgid "Open Fiscal Data Package"
+msgstr "Open Fiscal Data Package"
+
+#: ../../docs/guidance/map/extensions.md:62
+msgid ""
+"The [Open Fiscal Data Package](http://www.fiscaltransparency.net/ofdp/) "
+"(OFDP) describes government budget and spending data. The [Budget and "
+"spending classification](https://extensions.open-"
+"contracting.org/en/extensions/budget_and_spend/) extension describes how to "
+"connect OCDS and OFDP datasets."
+msgstr ""
+"El [Open Fiscal Data Package](http://www.fiscaltransparency.net/ofdp/) "
+"(OFDP) describe los datos de presupuesto gubernamental y gastos. La "
+"extensión [Budget and spending classification](https://extensions.open-"
+"contracting.org/en/extensions/budget_and_spend/) describe cómo conectar los "
+"conjuntos de datos OCDS y OFDP."

@@ -1,0 +1,111 @@
+{
+  "id": "https://standard.open-contracting.org/schema/1__1__5/release-package-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Schema for an Open Contracting Release Package",
+  "description": "The release package contains a list of releases along with some publishing metadata.",
+  "type": "object",
+  "required": [
+    "uri",
+    "publisher",
+    "publishedDate",
+    "releases",
+    "version"
+  ],
+  "properties": {
+    "uri": {
+      "title": "Package identifier",
+      "description": "The URI of this package that identifies it uniquely in the world. Recommended practice is to use a dereferenceable URI, where a persistent copy of this package is available.",
+      "type": "string",
+      "format": "uri"
+    },
+    "version": {
+      "title": "OCDS schema version",
+      "description": "The version of the OCDS schema used in this package, expressed as major.minor For example: 1.0 or 1.1",
+      "type": "string",
+      "pattern": "^(\\d+\\.)(\\d+)$"
+    },
+    "extensions": {
+      "title": "OCDS extensions",
+      "description": "An array of OCDS extensions used in this package, in which each array item is the URL of an extension.json file.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "publishedDate": {
+      "title": "Published date",
+      "description": "The date that this package was published. If this package is generated 'on demand', this date should reflect the date of the last change to the underlying contents of the package.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "releases": {
+      "title": "Releases",
+      "description": "An array of one or more OCDS releases.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
+      },
+      "uniqueItems": true
+    },
+    "publisher": {
+      "title": "Publisher",
+      "description": "Information to uniquely identify the publisher of this package.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "description": "The name of the organization or department responsible for publishing this data.",
+          "type": "string"
+        },
+        "scheme": {
+          "title": "Scheme",
+          "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "uid": {
+          "title": "uid",
+          "description": "The unique ID for this entity under the given ID scheme.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "uri": {
+          "title": "URI",
+          "description": "A URI to identify the publisher.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "license": {
+      "title": "License",
+      "description": "A link to the license that applies to the data in this package. A Public Domain Dedication or [Open Definition Conformant](http://opendefinition.org/licenses/) license is recommended. The canonical URI of the license should be used. Documents linked from this file may be under other license conditions.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "publicationPolicy": {
+      "title": "Publication policy",
+      "description": "A link to a document describing the publishers [publication policy](https://standard.open-contracting.org/{{version}}/{{lang}}/implementation/publication_policy/).",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    }
+  }
+}

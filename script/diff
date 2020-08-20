@@ -1,0 +1,12 @@
+#!/bin/bash
+curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/docs/conf.py | diff -u - docs/conf.py
+
+for f in .github/workflows/ci.yml include/config.mk; do
+  curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/$f | diff -u - $f
+done
+
+if [ -d util -o -d schema/project-level ]; then
+  curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/.gitignore | diff -u - .gitignore
+else
+  curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/schema/build-profile.py | diff -u - schema/build-profile.py
+fi

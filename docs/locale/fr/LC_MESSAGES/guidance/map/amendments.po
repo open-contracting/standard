@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Colin Maudry <colin@maudry.com>, 2020
+# Joel Gombin <joel.gombin@gmail.com>, 2020
+# samgoeta <samgoeta@gmail.com>, 2020
+# Tim Davies <tim.davies@opendataservices.coop>, 2020
+# James McKinney, 2020
+# Maximovitch <clara@datactivist.coop>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Last-Translator: Maximovitch <clara@datactivist.coop>, 2020\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/guidance/map/amendments.md:1
+msgid "Amendments"
+msgstr "Modifications"
+
+#: ../../docs/guidance/map/amendments.md:3
+msgid "Information about a contracting process will often change over time."
+msgstr ""
+"Les informations sur un processus de passation de marchés changent souvent "
+"avec le temps."
+
+#: ../../docs/guidance/map/amendments.md:5
+msgid ""
+"Each time information changes, a new OCDS release ought to be published."
+msgstr ""
+"Chaque modification de ces informations devra s'accompagner d'une nouvelle "
+"publication OCDS."
+
+#: ../../docs/guidance/map/amendments.md:7
+msgid "There are three kinds of changes:"
+msgstr "Il existe trois types de modification :"
+
+#: ../../docs/guidance/map/amendments.md:9
+msgid ""
+"**New information**. For example, when information about the award of a "
+"contract is first released."
+msgstr ""
+"**Nouvelles informations**. Par exemple, lorsque des informations sur "
+"l'attribution d'un contrat sont publiées pour la première fois."
+
+#: ../../docs/guidance/map/amendments.md:10
+msgid ""
+"**Updates to existing information**. For example, to correct errors in "
+"earlier releases, or to make minor adjustments to titles, descriptions or "
+"date."
+msgstr ""
+"**Mises à jour des informations existantes**. Par exemple, pour corriger les"
+" erreurs dans les instances antérieures ou pour effectuer des ajustements "
+"mineurs aux titres, descriptions ou date."
+
+#: ../../docs/guidance/map/amendments.md:11
+msgid ""
+"**Amendments**. For example, when the value or duration of a contract is "
+"changed. The term amendment often has a specific legal meaning for a "
+"publisher. Certain changes to a tender, award or contract might only be "
+"allowed as part of an amendment."
+msgstr ""
+"** avenants **. Par exemple, lorsque la valeur ou la durée d'un contrat est "
+"modifiée. Le terme avenant a souvent une signification juridique spécifique "
+"pour un éditeur. Certaines modifications apportées à une offre, à une "
+"attribution ou à un contrat ne peuvent être autorisées que dans le cadre "
+"d'un avenant. "
+
+#: ../../docs/guidance/map/amendments.md:13
+msgid "The nature of a change can be made explicit using:"
+msgstr "La nature d'un changement peut être explicitée en utilisant :"
+
+#: ../../docs/guidance/map/amendments.md:15
+msgid ""
+"**The release tag** (`tag`). For example, for a release with a new contract,"
+" use 'contract'. For an update to the award, use 'contractUpdate', and for "
+"an amendment to the contract, use 'contractAmendment'."
+msgstr ""
+"**Le tag d'instance** (`tag`). Par exemple, pour une instance avec un "
+"nouveau contrat, utilisez \"contract\". Pour une mise à jour de "
+"l'attribution, utilisez \"contractUpdate\", et pour une modification du "
+"contrat, utilisez \"contractAmendment\"."
+
+#: ../../docs/guidance/map/amendments.md:17
+msgid ""
+"**The amendments** building block. This can contain an array of amendment "
+"explanations, and clearly identify the releases that contain before and "
+"after values."
+msgstr ""
+"Le composant **amendments**. Ce composant peut contenir une liste "
+"d'explications sur les modifications et identifier clairement les instances "
+"contenant des valeurs \"avant\" et \"après\"."
+
+#: ../../docs/guidance/map/amendments.md:19
+msgid "Worked examples"
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:21
+msgid "Example 1: Tender updates and amendments"
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:23
+msgid ""
+"This example goes through updates during the **tender** stage in a "
+"contracting process."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:25
+msgid "Tender"
+msgstr "Appel d'offre"
+
+#: ../../docs/guidance/map/amendments.md:27
+msgid ""
+"A publisher issues a tender for a \"Data merge tool\". A new release with "
+"the `tag` 'tender' is built, see the JSON example below."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:38
+msgid "Tender Update"
+msgstr "Mise à jour de l'appel d'offres"
+
+#: ../../docs/guidance/map/amendments.md:40
+msgid ""
+"Weeks later, the publisher expands the `description` of the tender to "
+"provide more details about the tool being procured. A new release with the "
+"`tag` 'tenderUpdate' is built. The publisher does not consider this to be a "
+"formal 'amendment' to the tender, so does not publish any amendment "
+"information. See the JSON release below."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:51
+msgid "Tender Amendment"
+msgstr "Modification d'un appel d'offres"
+
+#: ../../docs/guidance/map/amendments.md:53
+msgid ""
+"A few days later, the publisher increases the value of the tender and "
+"extends the deadline for bid submissions. These changes are considered as an"
+" 'amendment' by the publisher (depending on jurisdiction, certain changes "
+"can need to be disclosed as amendments), and so the new release has the "
+"`tag` 'tenderAmendment' and an `amendments` block under `tender`. The "
+"release reflects the updated value (USD 2000 instead of USD 1000) and the "
+"updated closing date for bid submissions (`2012-02-20` instead of "
+"`2012-02-15`). See the JSON example below."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:64
+#: ../../docs/guidance/map/amendments.md:131
+msgid "Record"
+msgstr "Archive"
+
+#: ../../docs/guidance/map/amendments.md:66
+msgid ""
+"A full record is provided below, with all the releases for the process and a"
+" `compiledRelease` and `versionedRelease`. The `versionedRelease` block "
+"reflects all the changes made in the tender."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:81
+msgid ""
+"It is encouraged to <a href=\"../../../_static/json/amendments/amendments-"
+"tender-example.json\" target=\"_blank\">download</a> the record example and "
+"use the [Data Review Tool](https://standard.open-contracting.org/review) to "
+"explore the changes in the contracting process."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:85
+msgid "Note in this example that:"
+msgstr "Notez dans cet exemple que :"
+
+#: ../../docs/guidance/map/amendments.md:87
+msgid ""
+"**The amendments block does not contain data on what was changed**. Changes "
+"are recorded by updating the fields of the `tender` block a new release."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:89
+msgid ""
+"**The publisher chooses in the 'tenderAmendment' release to repeat a "
+"fragment of the original 'tender' release**. This is not necessary when a "
+"full archive of releases is made accessible, but a publisher might want to "
+"provide the latest data available in each release."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:91
+msgid ""
+"**In the record**, the `releaseID` and `amendsReleaseID` fields from the "
+"`amendments` array can be used to look up information in the "
+"`versionedRelease` object or `releases` array, to see where changes are "
+"explained by an amendment `rationale`."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:93
+msgid "Example 2: Contract amendment"
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:95
+msgid "This example shows an update to the value and scope of a contract."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:97
+msgid "Contract"
+msgstr "Contrat"
+
+#: ../../docs/guidance/map/amendments.md:99
+msgid ""
+"A contract notice is published for the purchase of domestic appliances. The "
+"publisher builds a release and uses the 'contract' `tag`."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:101
+msgid "See the JSON release below."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:112
+msgid "Contract Amendment"
+msgstr "Modifications du contrat"
+
+#: ../../docs/guidance/map/amendments.md:114
+msgid ""
+"A few days after the contract release, its scope is increased to include the"
+" purchase of one additional appliance. A new 'contractAmendment' release is "
+"built, where a single item is added in the `contracts/items` block and the "
+"value of the contract is increased. A `amendments` block is included to "
+"explain the rationale of the changes."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:116
+msgid "See the example release below."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:127
+msgid ""
+"Note that amendments can cover more than values or duration. Also, note that"
+" the publisher chose to not repeat the contract items, but add a new one "
+"with a new ID value."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:129
+msgid ""
+"In certain scenarios there might not be a valid `amendsReleaseID` and so it "
+"can be omitted, e.g. when historical data is being published in a single "
+"release."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:133
+msgid ""
+"An example record for the whole process is shown below. Consider downloading"
+" the <a href=\"../../../_static/json/amendments/amendments-contract-"
+"example.json\" target=\"_blank\">record example</a> and use the [Data Review"
+" Tool](https://standard.open-contracting.org/review) to explore the changes "
+"in the contracting process."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:135
+msgid ""
+"Note that the `compiledRelease` contains all the items, included the latest "
+"one added in the contract amendment."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:146
+msgid "Example 3: Amendments in a Easy Releases scenario"
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:148
+msgid ""
+"The [Easy releases guidance](../build/easy_releases) explains how to publish"
+" releases without storing or publishing a full change history. Depending on "
+"the source system, it might still be possible to publish a history of "
+"amendments when using this model."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:150
+msgid ""
+"Where the source system stores a history of contract amendments, either as "
+"separate notices or as properties of the original contract notice, contract "
+"amendments can be published as separate releases in OCDS. For example, "
+"Australia's AusTender platform [stores contract amendments as separate "
+"notices, related to the original contract "
+"notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-"
+"4c659e44a516)."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:152
+msgid ""
+"The table below shows an example of a contract notices table from a "
+"procurement system, with an original contract in the first row and an "
+"amendment of the same contract in the second. The amendment increases the "
+"value of the original contract and changes the contract period."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:160
+msgid ""
+"This can be modelled as the separate releases in OCDS as shown below. The "
+"original `contract` release includes all the fields from the first entry in "
+"the contract notices table. A `contractAmendment` release is built for each "
+"contract amendment identified in the table (by verifying that the "
+"`amendmentId` column in the contract notices table is not empty)."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:179
+msgid ""
+"Note that the mapping of the fields remains the same for the contract "
+"amendments, except for the `description` column. When a row in the contract "
+"notices table is identified as an original contract, the description is "
+"included in the `contracts/description` field, and when the row represents a"
+" contract amendment, it is mapped to the `contracts/amendments/description` "
+"field. This aligns with the use of the `description` column, because for "
+"contract amendments it is used to include an explanation of the change."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:181
+msgid ""
+"The advantage of this approach, in contrast with the Easy releases proposal,"
+" is that the users have access to the details of each amendment instead of "
+"the latest values only without any additional effort of their end."
+msgstr ""
+
+#: ../../docs/guidance/map/amendments.md:183
+msgid ""
+"As in the previous examples, you can download a <a "
+"href=\"../../../_static/json/amendments/amendments-easy-releases-"
+"example.json\" target=\"_blank\">record</a> file for the example and use the"
+" [Data Review Tool](https://standard.open-contracting.org/review) to explore"
+" the changes in the contracting process."
+msgstr ""
