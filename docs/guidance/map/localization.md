@@ -16,7 +16,7 @@ For example, the current Spanish translation of OCDS uses the term 'Artículos q
 
 You can use the [field-level mapping template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) to document localized titles and descriptions for OCDS fields. The **OCDS Schema** sheet contains the titles and descriptions used in the mapping sheets.
 
-![Mapping template screenshot](../../_static/mapping_template_screenshot.png "Localizing field titles and descriptions")
+![Field Level Mapping Template](../../_static/png/mapping_template.png)
 
 To localize a field title or description, edit the values columns C or D. We recommend that you keep the original title or description in brackets after your localized version. For example:
 
