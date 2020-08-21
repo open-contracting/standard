@@ -7,45 +7,46 @@
 # Oscar Montiel <oscar.montiel@okfn.org>, 2020
 # Ben Webb <ben.webb@opendataservices.coop>, 2020
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
-# James McKinney <jmckinney@open-contracting.org>, 2020
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
+# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 11:28-0500\n"
-"PO-Revision-Date: 2020-01-16 00:02+0000\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/guidance/model/amendments.md:1
+#: ../../docs/guidance/map/amendments.md:1
 msgid "Amendments"
 msgstr "Enmiendas"
 
-#: ../../docs/guidance/model/amendments.md:3
+#: ../../docs/guidance/map/amendments.md:3
 msgid "Information about a contracting process will often change over time."
 msgstr ""
 "La información sobre un proceso de contratación a menudo cambiará con el "
 "tiempo."
 
-#: ../../docs/guidance/model/amendments.md:5
+#: ../../docs/guidance/map/amendments.md:5
 msgid ""
 "Each time information changes, a new OCDS release ought to be published."
 msgstr ""
 "Cada vez que cambie la información, se debe de publicar una nueva entrega "
 "OCDS."
 
-#: ../../docs/guidance/model/amendments.md:7
+#: ../../docs/guidance/map/amendments.md:7
 msgid "There are three kinds of changes:"
 msgstr "Hay tres tipos de cambios:"
 
-#: ../../docs/guidance/model/amendments.md:9
+#: ../../docs/guidance/map/amendments.md:9
 msgid ""
 "**New information**. For example, when information about the award of a "
 "contract is first released."
@@ -53,17 +54,17 @@ msgstr ""
 "**Nueva información**. Por ejemplo, cuando la información sobre la "
 "adjudicación de un contrato se publica por primera vez."
 
-#: ../../docs/guidance/model/amendments.md:10
+#: ../../docs/guidance/map/amendments.md:10
 msgid ""
 "**Updates to existing information**. For example, to correct errors in "
 "earlier releases, or to make minor adjustments to titles, descriptions or "
 "date."
 msgstr ""
 "**Actualizaciones a la información existente**. Por ejemplo, para corregir "
-"errores en versiones anteriores o para realizar ajustes menores en títulos, "
+"errores en entregas anteriores o para realizar ajustes menores en títulos, "
 "descripciones o fechas."
 
-#: ../../docs/guidance/model/amendments.md:11
+#: ../../docs/guidance/map/amendments.md:11
 msgid ""
 "**Amendments**. For example, when the value or duration of a contract is "
 "changed. The term amendment often has a specific legal meaning for a "
@@ -75,96 +76,363 @@ msgstr ""
 "específico para el publicador. Ciertos cambios a la licitación, adjudicación"
 " o contrato pueden permitirse sólo como parte de una enmienda."
 
-#: ../../docs/guidance/model/amendments.md:13
+#: ../../docs/guidance/map/amendments.md:13
 msgid "The nature of a change can be made explicit using:"
 msgstr "La naturaleza de un cambio se puede hacer explícito usando:"
 
-#: ../../docs/guidance/model/amendments.md:15
+#: ../../docs/guidance/map/amendments.md:15
 msgid ""
 "**The release tag** (`tag`). For example, for a release with a new contract,"
 " use 'contract'. For an update to the award, use 'contractUpdate', and for "
 "an amendment to the contract, use 'contractAmendment'."
 msgstr ""
 "**La etiqueta de entrega** (`tag`). Por ejemplo, para una entrega con un "
-"nuevo contrato, use \"contract\". Para una actualización de la adjudicación,"
-" use 'contractUpdate', y para una enmienda al contrato, use "
-"'contractAmendment'."
+"nuevo contrato, use \"contract\". Para una actualización del contrato, use "
+"'contractUpdate', y para una enmienda al contrato, use 'contractAmendment'."
 
-#: ../../docs/guidance/model/amendments.md:17
+#: ../../docs/guidance/map/amendments.md:17
 msgid ""
 "**The amendments** building block. This can contain an array of amendment "
 "explanations, and clearly identify the releases that contain before and "
 "after values."
 msgstr ""
-"**El bloque Enmiendas**. Este puede contener una matriz de explicaciones de "
-"enmienda e identificar claramente las versiones que contienen valores antes "
-"y después."
+"**El bloque Enmiendas**. Este puede contener una lista de explicaciones de "
+"la enmienda e identificar claramente las entregas que contienen valores "
+"antes y después."
 
-#: ../../docs/guidance/model/amendments.md:19
-msgid "Worked example"
-msgstr "Ejemplo desarrollado"
+#: ../../docs/guidance/map/amendments.md:19
+msgid "Worked examples"
+msgstr "Ejemplos Prácticos"
 
-#: ../../docs/guidance/model/amendments.md:21
-msgid "In the example below:"
-msgstr "En el siguiente ejemplo:"
+#: ../../docs/guidance/map/amendments.md:21
+msgid "Example 1: Tender updates and amendments"
+msgstr "Ejemplo 1: Actualizaciones y enmiendas a la licitación"
 
-#: ../../docs/guidance/model/amendments.md:23
+#: ../../docs/guidance/map/amendments.md:23
 msgid ""
-"A tender is issued for a \"Data merge tool\" in a release with the `tag` "
-"'tender'."
+"This example goes through updates during the **tender** stage in a "
+"contracting process."
 msgstr ""
-"Se emite una licitación para una \"herramienta de combinación de datos\" en "
-"una entrega con la `tag` 'tender'."
+"Este ejemplo pasa por actualizaciones durante la etapa de **licitación** en "
+"un proceso de contratación."
 
-#: ../../docs/guidance/model/amendments.md:24
+#: ../../docs/guidance/map/amendments.md:25
+msgid "Tender"
+msgstr "Licitación"
+
+#: ../../docs/guidance/map/amendments.md:27
 msgid ""
-"This is updated in a release with the `tag` 'tenderUpdate' to provide an "
-"expanded description of the item. The publisher did not consider this to be "
-"a formal 'amendment' to the tender, so did not publish any amendment "
-"information."
+"A publisher issues a tender for a \"Data merge tool\". A new release with "
+"the `tag` 'tender' is built, see the JSON example below."
 msgstr ""
-"Esta se actualiza en una entrega con la `tag` 'tenderUpdate' para "
-"proporcionar una descripción ampliada del elemento. El publicador no "
-"consideró que esto fuera una 'enmienda' formal a la licitación, por lo que "
-"no publicó ninguna información de enmienda."
+"Un publicador emite una oferta para una \"herramienta de combinación de "
+"datos\". Se construye una nueva entrega con el campo `tag` en 'tender', vea "
+"el ejemplo de JSON a continuación."
 
-#: ../../docs/guidance/model/amendments.md:25
+#: ../../docs/guidance/map/amendments.md:38
+msgid "Tender Update"
+msgstr "Actualización de la Licitación"
+
+#: ../../docs/guidance/map/amendments.md:40
 msgid ""
-"The tender is then formally amended, with an increased value. This is "
-"published in a release with the `tag` 'tenderAmendment', and an `amendments`"
-" block under `tender`."
+"Weeks later, the publisher expands the `description` of the tender to "
+"provide more details about the tool being procured. A new release with the "
+"`tag` 'tenderUpdate' is built. The publisher does not consider this to be a "
+"formal 'amendment' to the tender, so does not publish any amendment "
+"information. See the JSON release below."
 msgstr ""
-"A continuación, la licitación se enmienda formalmente con un valor mayor. "
-"Esto se publica en una entrega con un `tag` 'tenderAmendment',  y un bloque "
-"`amendments` bajo `tender`."
+"Semanas después, el publicador amplía el campo `description` de la "
+"licitación para proporcionar más detalles sobre la herramienta que se está "
+"adquiriendo. Se construye un nuevo registro con el campo `tag` en "
+"'tenderUpdate'.  El publicador no considera que esto sea una 'enmienda' "
+"formal a la licitación, por lo que no publica ninguna información de "
+"enmienda. Vea la versión de JSON a continuación."
 
-#: ../../docs/guidance/model/amendments.md:59
+#: ../../docs/guidance/map/amendments.md:51
+msgid "Tender Amendment"
+msgstr "Enmienda a la Licitación"
+
+#: ../../docs/guidance/map/amendments.md:53
+msgid ""
+"A few days later, the publisher increases the value of the tender and "
+"extends the deadline for bid submissions. These changes are considered as an"
+" 'amendment' by the publisher (depending on jurisdiction, certain changes "
+"can need to be disclosed as amendments), and so the new release has the "
+"`tag` 'tenderAmendment' and an `amendments` block under `tender`. The "
+"release reflects the updated value (USD 2000 instead of USD 1000) and the "
+"updated closing date for bid submissions (`2012-02-20` instead of "
+"`2012-02-15`). See the JSON example below."
+msgstr ""
+"Unos días después, el publicador aumenta el valor de la licitación y "
+"extiende el plazo para la presentación de ofertas. El publicador considera "
+"estos cambios como una 'enmienda' (según la jurisdicción, es posible que "
+"ciertos cambios tengan que divulgarse como enmiendas), por lo que la nueva "
+"entrega tiene la etiqueta `tag` en 'tenderAmendment' y un bloque "
+"`amendments` en `tender`. La publicación refleja el valor actualizado (USD "
+"2000 en lugar de USD 1000) y la fecha de cierre actualizada para la "
+"presentación de ofertas (`2012-02-20` en lugar de` 2012-02-15`). Vea el "
+"ejemplo de JSON a continuación."
+
+#: ../../docs/guidance/map/amendments.md:64
+#: ../../docs/guidance/map/amendments.md:131
+msgid "Record"
+msgstr "Registro"
+
+#: ../../docs/guidance/map/amendments.md:66
+msgid ""
+"A full record is provided below, with all the releases for the process and a"
+" `compiledRelease` and `versionedRelease`. The `versionedRelease` block "
+"reflects all the changes made in the tender."
+msgstr ""
+"Se provee un registro completo debajo, con todos las entregas para el "
+"proceso y un  `compiledRelease` y `versionedRelease`. El bloque "
+"`versionedRelease` refleja todos los cambios que se hicieron en la "
+"licitación."
+
+#: ../../docs/guidance/map/amendments.md:81
+msgid ""
+"It is encouraged to <a href=\"../../../_static/json/amendments/amendments-"
+"tender-example.json\" target=\"_blank\">download</a> the record example and "
+"use the [Data Review Tool](https://standard.open-contracting.org/review) to "
+"explore the changes in the contracting process."
+msgstr ""
+"Se recomienda <a href=\"../../../_static/json/amendments/amendments-tender-"
+"example.json\" target=\"_blank\">descargar</a> el ejemplo de entrega y "
+"utilizar la [Herramienta de revisión de datos](https://standard.open-"
+"contracting.org/review) para explorar los cambios en el proceso de "
+"contratación"
+
+#: ../../docs/guidance/map/amendments.md:85
 msgid "Note in this example that:"
 msgstr "Tenga en cuenta en este ejemplo que:"
 
-#: ../../docs/guidance/model/amendments.md:61
+#: ../../docs/guidance/map/amendments.md:87
 msgid ""
-"**The publisher chooses in the tenderAmendment release to repeat a fragment "
-"of the original 'tender' release**, so that the before and after values of "
-"the tender can be accessed in the single file. This is not necessary when a "
-"full archive of releases is made accessible, but can be a convenient way of "
-"publishers making structured information on the before and after values of a"
-" field more accessible to users."
+"**The amendments block does not contain data on what was changed**. Changes "
+"are recorded by updating the fields of the `tender` block a new release."
 msgstr ""
-"**El publicador elige repetir un fragmento de la entrega original de "
-"'tender' en la entrega de tenderAmendment**, de modo que los valores antes y"
-" después de la licitación se pueden acceder en el archivo único. Esto no es "
-"necesario cuando un archivo completo de entregas está disponible, pero puede"
-" ser una forma conveniente de que los publicadores publiquen información "
-"estructurada sobre los valores antes y después de un campo más accesible "
-"para los usuarios."
+"**El bloque de enmiendas no contiene datos sobre lo que se modificó**. Los "
+"cambios se registran actualizando los campos del bloque `tender` en una "
+"nueva entrega."
 
-#: ../../docs/guidance/model/amendments.md:63
+#: ../../docs/guidance/map/amendments.md:89
 msgid ""
-"**In the merged record**, the information in the `amendments` array can be "
-"used to lookup information in the `versionedRelease` section, to see where "
-"changes are explained by an amendment `rationale`."
+"**The publisher chooses in the 'tenderAmendment' release to repeat a "
+"fragment of the original 'tender' release**. This is not necessary when a "
+"full archive of releases is made accessible, but a publisher might want to "
+"provide the latest data available in each release."
 msgstr ""
-"**En el registro combinado**, puede usarse la información de la matriz "
-"`amendments` para buscar información en la sección `versionedRelease`, para "
-"ver donde se explican los cambios con un `rationale` de enmienda."
+"**El publicador elige en la entrega de 'tenderAmendment' repetir un "
+"fragmento de la entrega 'tender' original**. Esto no es necesario cuando se "
+"hace accesible un archivo completo de entregas, pero un publicador puede "
+"querer proporcionar los últimos datos disponibles en cada entrega."
+
+#: ../../docs/guidance/map/amendments.md:91
+msgid ""
+"**In the record**, the `releaseID` and `amendsReleaseID` fields from the "
+"`amendments` array can be used to look up information in the "
+"`versionedRelease` object or `releases` array, to see where changes are "
+"explained by an amendment `rationale`."
+msgstr ""
+"**En el registro**, los campos `releaseID` y `amendsReleaseID`  de la lista "
+"`amendments` pueden usarse para buscar información en el objeto "
+"`versionedRelease` o la lista `releases`, para ver dónde se explican los "
+"cambios con un `rationale` de la enmienda."
+
+#: ../../docs/guidance/map/amendments.md:93
+msgid "Example 2: Contract amendment"
+msgstr "Ejemplo 2: Enmienda al contrato"
+
+#: ../../docs/guidance/map/amendments.md:95
+msgid "This example shows an update to the value and scope of a contract."
+msgstr ""
+"Este ejemplo muestra una actualización al valor y alcance del contrato."
+
+#: ../../docs/guidance/map/amendments.md:97
+msgid "Contract"
+msgstr "Contrato"
+
+#: ../../docs/guidance/map/amendments.md:99
+msgid ""
+"A contract notice is published for the purchase of domestic appliances. The "
+"publisher builds a release and uses the 'contract' `tag`."
+msgstr ""
+"Se publica un aviso de contrato para la compra de electrodomésticos. El "
+"publicador crea una entrega  y usa el `tag`'contract'."
+
+#: ../../docs/guidance/map/amendments.md:101
+msgid "See the JSON release below."
+msgstr "Vea la entrega en JSON abajo."
+
+#: ../../docs/guidance/map/amendments.md:112
+msgid "Contract Amendment"
+msgstr "Enmienda al Contrato"
+
+#: ../../docs/guidance/map/amendments.md:114
+msgid ""
+"A few days after the contract release, its scope is increased to include the"
+" purchase of one additional appliance. A new 'contractAmendment' release is "
+"built, where a single item is added in the `contracts/items` block and the "
+"value of the contract is increased. A `amendments` block is included to "
+"explain the rationale of the changes."
+msgstr ""
+"Unos días después de la entrega del contrato, su alcance aumenta para "
+"incluir la compra de un dispositivo adicional. Se crea una nueva entrega "
+"'contractAmendment', donde se agrega un solo artículo en el bloque "
+"`contracts/items` y se aumenta el valor del contrato. Se incluye un bloque "
+"de `amendments` para explicar la justificación de los cambios."
+
+#: ../../docs/guidance/map/amendments.md:116
+msgid "See the example release below."
+msgstr "Vea el ejemplo de la entrega abajo."
+
+#: ../../docs/guidance/map/amendments.md:127
+msgid ""
+"Note that amendments can cover more than values or duration. Also, note that"
+" the publisher chose to not repeat the contract items, but add a new one "
+"with a new ID value."
+msgstr ""
+"Considere que las enmiendas pueden abarcar más que valores o duración. "
+"Además, tenga en cuenta que el publicador decidió no repetir los artículos "
+"del contrato, sino agregar uno nuevo con un nuevo valor de ID."
+
+#: ../../docs/guidance/map/amendments.md:129
+msgid ""
+"In certain scenarios there might not be a valid `amendsReleaseID` and so it "
+"can be omitted, e.g. when historical data is being published in a single "
+"release."
+msgstr ""
+"En algunos escenarios, es posible que no haya un `amendsReleaseID` válido, "
+"por lo que puede omitirse. Por ejemplo, cuando los datos históricos se "
+"publican en una sola entrega."
+
+#: ../../docs/guidance/map/amendments.md:133
+msgid ""
+"An example record for the whole process is shown below. Consider downloading"
+" the <a href=\"../../../_static/json/amendments/amendments-contract-"
+"example.json\" target=\"_blank\">record example</a> and use the [Data Review"
+" Tool](https://standard.open-contracting.org/review) to explore the changes "
+"in the contracting process."
+msgstr ""
+"A continuación se muestra un registro de ejemplo para todo el proceso. "
+"Considere descargar el <a href=\"../../../_static/json/amendments"
+"/amendments-contract-example.json\" target=\"_blank\"> ejemplo de registro y"
+" use la [Herramienta de Revisión de Datos](https://standard.open-"
+"contracting.org/review) para explorar los cambios en el proceso de "
+"contratación."
+
+#: ../../docs/guidance/map/amendments.md:135
+msgid ""
+"Note that the `compiledRelease` contains all the items, included the latest "
+"one added in the contract amendment."
+msgstr ""
+"Considere que el `compiledRelease` contiene todos los elementos, incluido el"
+" último agregado en la modificación del contrato."
+
+#: ../../docs/guidance/map/amendments.md:146
+msgid "Example 3: Amendments in a Easy Releases scenario"
+msgstr ""
+"Ejemplo 3: Enmiendas en un escenario de entregas fáciles (Easy Releases)"
+
+#: ../../docs/guidance/map/amendments.md:148
+msgid ""
+"The [Easy releases guidance](../build/easy_releases) explains how to publish"
+" releases without storing or publishing a full change history. Depending on "
+"the source system, it might still be possible to publish a history of "
+"amendments when using this model."
+msgstr ""
+"La [Guía de entregas fáciles](../build/easy_releases) explica cómo publicar "
+"entregas sin almacenar o publicar un historial de cambios completo. "
+"Dependiendo del sistema de origen, podría ser posible publicar un historial "
+"de enmiendas al usar este modelo."
+
+#: ../../docs/guidance/map/amendments.md:150
+msgid ""
+"Where the source system stores a history of contract amendments, either as "
+"separate notices or as properties of the original contract notice, contract "
+"amendments can be published as separate releases in OCDS. For example, "
+"Australia's AusTender platform [stores contract amendments as separate "
+"notices, related to the original contract "
+"notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-"
+"4c659e44a516)."
+msgstr ""
+"Cuando el sistema fuente almacena un historial de enmiendas del contrato, ya"
+" sea como notificaciones separadas o como propiedades de la notificación "
+"original del contrato, las modificaciones del contrato pueden publicarse "
+"como entregas separadas en OCDS. Por ejemplo, la plataforma AusTender de "
+"Australia [almacena las enmiendas del contrato como avisos separados, "
+"relacionados con el aviso original del "
+"contrato](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-"
+"4c659e44a516)."
+
+#: ../../docs/guidance/map/amendments.md:152
+msgid ""
+"The table below shows an example of a contract notices table from a "
+"procurement system, with an original contract in the first row and an "
+"amendment of the same contract in the second. The amendment increases the "
+"value of the original contract and changes the contract period."
+msgstr ""
+"La siguiente tabla muestra un ejemplo de una tabla de avisos de contrato de "
+"un sistema de adquisiciones, con un contrato original en la primera fila y "
+"una enmienda del mismo contrato en la segunda. La enmienda aumenta el valor "
+"del contrato original y cambia el período del contrato."
+
+#: ../../docs/guidance/map/amendments.md:160
+msgid ""
+"This can be modelled as the separate releases in OCDS as shown below. The "
+"original `contract` release includes all the fields from the first entry in "
+"the contract notices table. A `contractAmendment` release is built for each "
+"contract amendment identified in the table (by verifying that the "
+"`amendmentId` column in the contract notices table is not empty)."
+msgstr ""
+"Esto se puede modelar como entregas separadas en OCDS como se muestra a "
+"continuación. La entrega original `contract` incluye todos los campos del "
+"primer registro en la tabla de avisos del contrato. Se crea una entrega "
+"`contractAmendment` para cada enmienda de contrato identificada en la tabla "
+"(verificando que la columna `amendmentId` en la tabla de avisos de contrato "
+"no está vacía)."
+
+#: ../../docs/guidance/map/amendments.md:179
+msgid ""
+"Note that the mapping of the fields remains the same for the contract "
+"amendments, except for the `description` column. When a row in the contract "
+"notices table is identified as an original contract, the description is "
+"included in the `contracts/description` field, and when the row represents a"
+" contract amendment, it is mapped to the `contracts/amendments/description` "
+"field. This aligns with the use of the `description` column, because for "
+"contract amendments it is used to include an explanation of the change."
+msgstr ""
+"Tenga en cuenta que el mapeo de los campos sigue siendo el mismo para las "
+"enmiendas del contrato, excepto para la columna `description`. Cuando una "
+"fila en la tabla de avisos de contrato se identifica como un contrato "
+"original, la descripción se incluye en el campo `contracts/description`, y "
+"cuando la fila representa una modificación de contrato, se asigna al campo  "
+"`contracts/amendments/description`. Esto se alinea con el uso de la columna "
+"`description`, porque para las modificaciones del contrato se utiliza para "
+"incluir una explicación del cambio."
+
+#: ../../docs/guidance/map/amendments.md:181
+msgid ""
+"The advantage of this approach, in contrast with the Easy releases proposal,"
+" is that the users have access to the details of each amendment instead of "
+"the latest values only without any additional effort of their end."
+msgstr ""
+"La ventaja de este enfoque, en contraste con la propuesta de lanzamientos "
+"fáciles (Easy Releases), es que los usuarios tienen acceso a los detalles de"
+" cada enmienda en lugar de tener acceso solamente a los últimos valores, sin"
+" ningún esfuerzo adicional de su parte."
+
+#: ../../docs/guidance/map/amendments.md:183
+msgid ""
+"As in the previous examples, you can download a <a "
+"href=\"../../../_static/json/amendments/amendments-easy-releases-"
+"example.json\" target=\"_blank\">record</a> file for the example and use the"
+" [Data Review Tool](https://standard.open-contracting.org/review) to explore"
+" the changes in the contracting process."
+msgstr ""
+"Como en los ejemplos anteriores, puede descargar un archivo de <a "
+"href=\"../../../_static/json/amendments/amendments-easy-releases-"
+"example.json\" target=\"_blank\">entrega</a> para el ejemplo y utilizar la "
+"[Herramienta de Revisión de Datos](https://standard.open-"
+"contracting.org/review) para explorar los cambios en el proceso de "
+"contratación."

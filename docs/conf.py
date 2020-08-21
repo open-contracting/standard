@@ -21,7 +21,6 @@ import standard_theme
 from ocds_babel.translate import translate
 from recommonmark.transform import AutoStructify
 
-
 # -- Project information -----------------------------------------------------
 
 project = 'Open Contracting Data Standard'
@@ -29,7 +28,7 @@ copyright = 'Open Contracting Partnership'
 author = 'Open Contracting Partnership'
 
 version = '1.1'
-release = '1.1.4'
+release = '1.1.5'
 
 
 # -- General configuration ---------------------------------------------------

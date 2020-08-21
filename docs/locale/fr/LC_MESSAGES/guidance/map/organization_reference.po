@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# samgoeta <samgoeta@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Last-Translator: samgoeta <samgoeta@gmail.com>, 2020\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/guidance/map/organization_reference.md:1
+msgid "Organization references"
+msgstr ""
+
+#: ../../docs/guidance/map/organization_reference.md:3
+msgid ""
+"Many parties can be involved in the lifecycle of a contracting process. "
+"Sometimes the same party can have multiple roles. For example, an "
+"organization can first be a tenderer and then become a supplier."
+msgstr ""
+
+#: ../../docs/guidance/map/organization_reference.md:5
+msgid ""
+"To avoid data repetition, OCDS 1.1 introduced a top-level parties array, "
+"where the detailed information about all the organizations and other "
+"participants involved in a particular contracting process is declared."
+msgstr ""
+
+#: ../../docs/guidance/map/organization_reference.md:7
+msgid ""
+"When a **reference** is needed to an entry in the parties array, e.g. to "
+"provide a link between a `tenderer` declared in the `tender` section and its"
+" organization details, use an `OrganizationReference` object. This object "
+"includes just the `name` and `id` of the organization, instead of repeating "
+"all its relevant data again."
+msgstr ""
+
+#: ../../docs/guidance/map/organization_reference.md:9
+msgid "Worked Example"
+msgstr ""
+
+#: ../../docs/guidance/map/organization_reference.md:11
+msgid "In the example below:"
+msgstr "Dans l'exemple ci-dessous :"
+
+#: ../../docs/guidance/map/organization_reference.md:13
+msgid ""
+"An Organization is declared in the `parties` array with the `id` *GB-"
+"COH-09506232* and `name` *Open Data Services*. Information related to its "
+"legal `identifier` and `contactPoint` is also disclosed here."
+msgstr ""
+
+#: ../../docs/guidance/map/organization_reference.md:14
+msgid ""
+"An OrganizationReference object is used in the `tenderers` and `suppliers` "
+"array to reference *Open Data Services*, **without** duplicating the "
+"organization's detailed information."
+msgstr ""
+
+#: ../../docs/guidance/map/organization_reference.md:15
+msgid ""
+"If a user looks at the `tenderers` block and wants to contact *Open Data "
+"Services*, then the user has to search for the `id` *GB-COH-09506232* in the"
+" `parties` array."
+msgstr ""
+
+#: ../../docs/guidance/map/organization_reference.md:16
+msgid "The same needs to be applied to each `OrganizationReference` instance."
+msgstr ""

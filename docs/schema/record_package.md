@@ -4,7 +4,7 @@ The record package schema describes the structure of the container for publishin
 
 A separate, auto-generated [versioned release schema](../../versioned-release-validation-schema.json) is provided for validating versioned releases within records.
 
-For this version of OCDS, the canonical URL for the record package schema is <https://standard.open-contracting.org/schema/1__1__4/record-package-schema.json> and for the versioned release schema is <https://standard.open-contracting.org/schema/1__1__4/versioned-release-validation-schema.json>. Using the canonical URL guarantees that your software, documentation or other resources will always refer to the specific version of the schema with which they were authored and tested.
+For this version of OCDS, the canonical URL for the record package schema is <https://standard.open-contracting.org/schema/1__1__5/record-package-schema.json> and for the versioned release schema is <https://standard.open-contracting.org/schema/1__1__5/versioned-release-validation-schema.json>. Using the canonical URL guarantees that your software, documentation or other resources will always refer to the specific version of the schema with which they were authored and tested.
 
 Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section. Required fields are indicated in **bold**. [Deprecated fields](../governance/deprecation) and [multilingual fields](../reference/#language) are omitted.
 

@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/map/organizational_units.md:1
+msgid "Organizational Units"
+msgstr "Unidades Organizacionales"
+
+#: ../../docs/guidance/map/organizational_units.md:3
+msgid ""
+"For some use cases, publishers might need to disclose the organizational "
+"units involved in the contracting process, e.g agency branches or divisions."
+msgstr ""
+"Para algunos casos de uso, los publicadores pueden necesitar publicar las "
+"unidades organizativas involucradas en el proceso de contratación, por "
+"ejemplo, las ramas o divisiones de agencias."
+
+#: ../../docs/guidance/map/organizational_units.md:5
+msgid "There is more than one approach to model organizational units in OCDS:"
+msgstr "Hay más de un enfoque para modelar unidades organizativas en OCDS:"
+
+#: ../../docs/guidance/map/organizational_units.md:7
+msgid ""
+"**Use the fields and blocks available in the Organization building block**. "
+"This is the preferred approach, when possible."
+msgstr ""
+"**Use los campos y bloques disponibles en el bloque de construcción de "
+"Organización**. Este es el enfoque preferido, cuando sea posible."
+
+#: ../../docs/guidance/map/organizational_units.md:9
+msgid ""
+"Unit names can be included in the `name` field alongside the organization "
+"name."
+msgstr ""
+"Los nombres de las unidades se pueden incluir en el campo `name` junto con "
+"el nombre de la organización."
+
+#: ../../docs/guidance/map/organizational_units.md:10
+msgid ""
+"The `additionalIdentifiers` array can be used to provide any unit "
+"identifiers. It is important to note that `identifier` and "
+"`additionalIdentifiers` need to point toward the *same legal entity*. The "
+"main `identifier` ought to belong to the organization and the `legalName` "
+"field can be used to provide the organization name alone."
+msgstr ""
+"La lista de `additionalIdentifiers` se puede utilizar para proporcionar "
+"cualquier identificador de unidad. Es importante tener en cuenta que los "
+"campos `identifier` y `additionalIdentifiers` deben apuntar hacia la *misma "
+"entidad legal*. El `identificador` principal debe pertenecer a la "
+"organización y el campo `legalName` puede usarse para proporcionar sólo el "
+"nombre de la organización."
+
+#: ../../docs/guidance/map/organizational_units.md:11
+msgid ""
+"The `address` and `contactPoint` blocks can be filled with the unit "
+"information."
+msgstr ""
+"Los bloques `address` y` contactPoint` pueden rellenarse con la información "
+"de la unidad."
+
+#: ../../docs/guidance/map/organizational_units.md:12
+msgid "Unit identifiers can also be appended to `parties/id`."
+msgstr ""
+"Los identificadores de unidad también se pueden agregar al final de "
+"`parties/id`."
+
+#: ../../docs/guidance/map/organizational_units.md:14
+msgid ""
+"When the first option is not enough to model the publisher's case, **use or "
+"create an extension**. Any additional fields can be placed in the `details` "
+"section of the Organization building block."
+msgstr ""
+"Cuando la primera opción no es suficiente para modelar el caso del "
+"publicador, **use o cree una extensión**. Cualquier campo adicional se puede"
+" colocar en la sección `details` del bloque de Organización."
+
+#: ../../docs/guidance/map/organizational_units.md:16
+msgid ""
+"Some publishers use the [memberOf](https://github.com/open-contracting-"
+"extensions/ocds_memberOf_extension) extension to represent organization "
+"hierarchies, including organizational units. This is strongly discouraged "
+"unless there is a clear use case to support it, because OCDS is not designed"
+" to disclose hierarchical organization information. Ideally, organizational "
+"hierarchies would be represented in separate, non-OCDS datasets, and "
+"organizational units would be modelled using one of the alternatives "
+"described above."
+msgstr ""
+"Algunos editores usan la extensión [memberOf](https://github.com/open-"
+"contracting-extensions/ocds_memberOf_extension) para representar las "
+"jerarquías de la organización, incluidas las unidades organizativas. Esto se"
+" desaconseja encarecidamente a menos que exista un caso de uso claro para "
+"respaldarlo, porque OCDS no está diseñado para divulgar información de "
+"organización jerárquica. Idealmente, las jerarquías organizacionales "
+"estarían representadas en conjuntos de datos separados, no en OCDS, y las "
+"unidades organizacionales serían modeladas usando una de las alternativas "
+"descritas anteriormente."
+
+#: ../../docs/guidance/map/organizational_units.md:18
+msgid "Worked examples"
+msgstr "Ejemplos Prácticos"
+
+#: ../../docs/guidance/map/organizational_units.md:20
+msgid "1. Using the Organization building block"
+msgstr "1. Usando el bloque de Organización"
+
+#: ../../docs/guidance/map/organizational_units.md:22
+msgid ""
+"In Honduras, the Ministry of Health is planning the procurement of food "
+"supplies for the San Felipe Hospital. For the purposes of the example, San "
+"Felipe Hospital is considered to be a unit belonging to the Ministry of "
+"Health, and it is not a legal entity of its own."
+msgstr ""
+"En Honduras, el Ministerio de Salud está planificando la adquisición de "
+"alimentos para el Hospital San Felipe. A los fines del ejemplo, el Hospital "
+"San Felipe se considera una unidad perteneciente al Ministerio de Salud, y "
+"no es una entidad legal propia."
+
+#: ../../docs/guidance/map/organizational_units.md:24
+msgid ""
+"In the release below, the publisher adds the hospital name at the end of the"
+" procuring entity name. The main identifier for the organization "
+"(*Secretaría de Salud Pública*) is extracted from a local list in the "
+"\"HonduCompras\" platform, used to publish procurement information in the "
+"country."
+msgstr ""
+"En la entrega a continuación, el editor agrega el nombre del hospital al "
+"final del nombre de la entidad contratante. El identificador principal de la"
+" organización (*Secretaría de Salud Pública*) se extrae de una lista local "
+"en la plataforma \"HonduCompras\", utilizada para publicar información de "
+"adquisiciones en el país."
+
+#: ../../docs/guidance/map/organizational_units.md:26
+msgid ""
+"An identifier for the hospital has been added using the \"HN-ONCAE-UNIT\" "
+"list code. The `address` and `contactPoint` information belongs to the "
+"hospital only."
+msgstr ""
+"Se ha agregado un identificador para el hospital utilizando el código de "
+"lista \"HN-ONCAE-UNIT\". La información de `address` y` contactPoint` "
+"pertenecen sólo al hospital."
+
+#: ../../docs/guidance/map/organizational_units.md:37
+msgid "2. Defining a new Extension"
+msgstr "2. Definiendo una nueva extensión"
+
+#: ../../docs/guidance/map/organizational_units.md:39
+msgid ""
+"In Moldova, the national procurement agency needs to include a division code"
+" for particular organizations. Since divisions can be separate legal "
+"entities in some cases, the publisher chooses to use the `identifier` block "
+"to point to the main organization for all cases, and use an additional field"
+" to provide the division code that enables data users to locate the "
+"departments and branches involved."
+msgstr ""
+"En Moldavia, la agencia nacional de adquisiciones debe incluir un código de "
+"división para organizaciones particulares. Dado que las divisiones pueden "
+"ser entidades legales separadas en algunos casos, el publicador elige usar "
+"el bloque \"identificador\" para apuntar a la organización principal para "
+"todos los casos, y usar un campo adicional para proporcionar el código de "
+"división que permite a los usuarios de datos ubicar los departamentos y "
+"sucursales involucradas."
+
+#: ../../docs/guidance/map/organizational_units.md:41
+msgid ""
+"In the release below, a branch of the Bank of Moldova announces a contract "
+"opportunity for the provision of consumables for electrical appliances."
+msgstr ""
+"En la entrega a continuación, una sucursal del Banco de Moldavia anuncia una"
+" oportunidad de contrato para el suministro de consumibles para aparatos "
+"eléctricos."
+
+#: ../../docs/guidance/map/organizational_units.md:70
+msgid ""
+"The branch name (*Chişinău Branch*) is appended at the end of the name of "
+"the procuring entity. A new extension called \"Division code\" has been "
+"defined to add the `divisionCode` field in the `parties/details` section. "
+"The branch code in the example is \"101\"."
+msgstr ""
+"El nombre de la sucursal (*Chişinău Branch*) se adjunta al final del nombre "
+"de la entidad contratante. Se ha definido una nueva extensión llamada "
+"\"Division code\" para agregar el campo `divisionCode` en la sección` "
+"parties/details`. El código de sucursal en el ejemplo es \"101\"."
+
+#: ../../docs/guidance/map/organizational_units.md:72
+msgid ""
+"The `extension.json` and `release-schema.json` files for the Division code "
+"extension can be displayed using the combo box above the JSON example. "
+"Instructions on how to create an OCDS extension can be found "
+"[here](https://github.com/open-contracting/standard_extension_template)."
+msgstr ""
+"Los archivos `extension.json` y `release-schema.json` para la extensión de "
+"código de División se pueden mostrar usando el cuadro combinado arriba del "
+"ejemplo JSON. Puede encontrar instrucciones sobre cómo crear una extensión "
+"OCDS [aquí](https://github.com/open-"
+"contracting/standard_extension_template)."
+
+#: ../../docs/guidance/map/organizational_units.md:74
+msgid ""
+"3. Using the Organization building block with an organizational hierarchy"
+msgstr "3. Usando el bloque de Organización con una jerarquía organizacional"
+
+#: ../../docs/guidance/map/organizational_units.md:76
+msgid ""
+"The *Hospital de Clínicas* is in the planning stage of procuring supplies "
+"for their Blood Center.  The Hospital is part of the Medical School in the "
+"National University of Asuncion. Since the hospital is key in the provision "
+"of healthcare for low income groups in the community, it is in the interest "
+"of many to clearly identify the procurement of the Hospital only. It is also"
+" important for the publisher that users can group the data following "
+"organizational hierarchies."
+msgstr ""
+"El *Hospital de Clínicas* se encuentra en la etapa de planificación de la "
+"adquisición de suministros para su Centro de Sangre. El Hospital es parte de"
+" la Escuela de Medicina de la Universidad Nacional de Asunción. Dado que el "
+"hospital es clave en la provisión de atención médica para grupos de bajos "
+"ingresos en la comunidad, a muchos les interesa identificar claramente las "
+"adquisiciones del hospital únicamente. También es importante para el "
+"publicador que los usuarios puedan agrupar los datos siguiendo las "
+"jerarquías organizacionales."
+
+#: ../../docs/guidance/map/organizational_units.md:78
+msgid ""
+"It is important to note that OCDS ought to not be used to publish "
+"organizational hierarchies unless there is a strong case to support it. "
+"Organizational hierarchies can be disclosed in additional datasets. "
+"Publishers can refer to the [W3C Organization "
+"Ontology](https://www.w3.org/TR/vocab-org/) to design a hierarchy-oriented "
+"dataset."
+msgstr ""
+"Es importante tener en cuenta que OCDS no debe usarse para publicar "
+"jerarquías organizacionales a menos que haya un caso sólido para esto. Las "
+"jerarquías organizacionales se pueden publicar en conjuntos de datos "
+"adicionales. Los publicadores pueden consultar la [Ontología de la "
+"organización del W3C](https://www.w3.org/TR/vocab-org/) para diseñar un "
+"conjunto de datos orientado a jerarquías."
+
+#: ../../docs/guidance/map/organizational_units.md:80
+msgid ""
+"The release below shows how the publisher chooses to model the hospital as "
+"an organizational unit of the Medical School (*Facultad de Ciencias "
+"Médicas*). The source systems collect the name of the organizational unit "
+"only, and this is appended to the organization name."
+msgstr ""
+"La entrega a continuación muestra cómo el editor elige modelar el hospital "
+"como una unidad organizativa de la Facultad de Medicina (*Facultad de "
+"Ciencias Médicas*). Los sistemas de origen sólo recopilan el nombre de la "
+"unidad organizativa, y esto se agrega al nombre de la organización."
+
+#: ../../docs/guidance/map/organizational_units.md:91
+msgid ""
+"In a separate dataset, the publisher discloses the organizational hierarchy."
+" This dataset, in combination with the OCDS publication,  would allow users "
+"to summarize contracting information. The table below shows an extract of "
+"the dataset."
+msgstr ""
+"En un conjunto de datos separado, el publicador publica la jerarquía "
+"organizacional. Este conjunto de datos, en combinación con la publicación "
+"OCDS, permitiría a los usuarios resumir la información de contratación. La "
+"siguiente tabla muestra un extracto del conjunto de datos."

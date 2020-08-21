@@ -31,9 +31,12 @@ def add_translation_notes():
 
         for root, dirs, files in os.walk(build_dir):
             # Skip Sphinx directories.
-            for directory in ('.doctrees', '_images', '_sources', '_static', 'genindex', 'search'):
+            for directory in ('.doctrees', '_images', '_sources', '_static', 'codelists', 'genindex', 'search'):
                 if directory in dirs:
                     dirs.remove(directory)
+
+            if root == build_dir:
+                continue
 
             for name in files:
                 # See `sphinx.transforms.i18n.Locale.apply()`.
@@ -75,7 +78,10 @@ def add_translation_note(path, language, domain):
     else:
         response.raise_for_status()
         xpath = '//div[@itemprop="articleBody"]'
+
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
+        replacement.make_links_absolute('{}/{}'.format(base_url, language))
+
         parent = document.xpath(xpath)[0].getparent()
         parent.getparent().replace(parent, replacement)
 
