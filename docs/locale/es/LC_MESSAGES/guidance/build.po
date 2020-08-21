@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
 # Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
+# James McKinney, 2020
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"POT-Creation-Date: 2020-08-20 16:26-0400\n"
 "PO-Revision-Date: 2020-06-29 22:58+0000\n"
-"Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020\n"
+"Last-Translator: Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -117,10 +118,25 @@ msgstr ""
 "de diseño.**"
 
 #: ../../docs/guidance/build.md:40
+msgid ""
+"**Resource:** [Technical case studies: OCDS implementation insights "
+"report](https://www.open-contracting.org/resources/technical-case-studies-"
+"ocds-implementation-insights/) provides insights into the technical choices "
+"made in OCDS implementations in Paraguay, Zambia, Colombia, Moldova and "
+"Argentina's Road Agency Vialidad."
+msgstr ""
+"**Recurso:** [Casos de estudio técnicos: reporte de información sobre la "
+"implementación OCDS](https://www.open-contracting.org/resources/technical-"
+"case-studies-ocds-implementation-insights/) proporciona información sobre "
+"las decisiones técnicas que se llevaron a cabo en las implementaciones OCDS "
+"en Paraguay, Zambia, Colombia, Moldova y la Dirección de Vialidad Nacional "
+"de Argentina."
+
+#: ../../docs/guidance/build.md:42
 msgid "Establish your publication formats and access methods"
 msgstr "Establezca sus formatos de publicación y métodos de acceso."
 
-#: ../../docs/guidance/build.md:42
+#: ../../docs/guidance/build.md:44
 msgid ""
 "OCDS data can be published in different formats and accessed using different"
 " methods."
@@ -128,7 +144,7 @@ msgstr ""
 "Los datos de OCDS se pueden publicar en diferentes formatos y acceder a "
 "ellos utilizando diferentes métodos"
 
-#: ../../docs/guidance/build.md:44
+#: ../../docs/guidance/build.md:46
 msgid ""
 "It is best practice to provide data in multiple formats, so that as many "
 "users as possible can use the data without first having to transform it to "
@@ -142,7 +158,7 @@ msgstr ""
 "significa [publicar datos JSON estructurados y datos tabulares CSV u hojas "
 "de cálculo](build/serialization)."
 
-#: ../../docs/guidance/build.md:46
+#: ../../docs/guidance/build.md:48
 msgid ""
 "Where resources allow, it is also best practice to provide multiple access "
 "methods for your data, so that both humans and machines can access it "
@@ -159,7 +175,7 @@ msgstr ""
 "extensions/ocds_pagination_extension) describe cómo paginar datos OCDS a "
 "través de una API."
 
-#: ../../docs/guidance/build.md:48
+#: ../../docs/guidance/build.md:50
 msgid ""
 "**Remember to check that your chosen publication formats and access methods "
 "meet the needs you identified at the design stage.**"
@@ -168,7 +184,7 @@ msgstr ""
 "preferidos cumplan con los requisitos que se identificaron en el proceso de "
 "diseño.**"
 
-#: ../../docs/guidance/build.md:50
+#: ../../docs/guidance/build.md:52
 msgid ""
 "**Tool:** [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest"
 "/usage-ocds/) can be used to convert OCDS data between JSON and "
@@ -178,11 +194,11 @@ msgstr ""
 "tool.readthedocs.io/en/latest/usage-ocds/) puede usarse para convertir datos"
 " OCDS entre formatos JSON y CSV/hojas de cálculo."
 
-#: ../../docs/guidance/build.md:60
+#: ../../docs/guidance/build.md:62
 msgid "Build your data pipeline"
 msgstr "Implemente sus canales de datos"
 
-#: ../../docs/guidance/build.md:62
+#: ../../docs/guidance/build.md:64
 msgid ""
 "Having determined your system architecture, it's time to implement it. This "
 "is one of the longest steps of implementing OCDS. Depending on your [data "
@@ -203,7 +219,7 @@ msgstr ""
 "Si tiene algún problema utilizando herramientas OCDS, contacte al  [Helpdesk"
 " OCDS](../../support/index)."
 
-#: ../../docs/guidance/build.md:74
+#: ../../docs/guidance/build.md:76
 msgid ""
 "If you are creating (or upgrading) an **electronic government procurement "
 "(e-GP) system** or open contracting data portal, refer to our [Guide to "
@@ -218,7 +234,7 @@ msgstr ""
 "open-contracting-data-standard-functional-requirements-electronic-"
 "government-procurement-systems/)."
 
-#: ../../docs/guidance/build.md:75
+#: ../../docs/guidance/build.md:77
 msgid ""
 "If your source data is in **CSV/Excel files**, you can rename the columns to"
 " match the JSON paths in OCDS (for example, `buyer/name`) and then "
@@ -235,7 +251,7 @@ msgstr ""
 "tool.readthedocs.io/en/latest/usage-ocds/), una herramienta de línea de "
 "comando."
 
-#: ../../docs/guidance/build.md:76
+#: ../../docs/guidance/build.md:78
 msgid ""
 "If your source data is in **Excel files**, you can alternately transform "
 "Excel files to OCDS JSON by using the [Open Contracting "
@@ -250,7 +266,7 @@ msgstr ""
 "y explorar los datos OCDS. (Esta herramienta fue desarrollada por  "
 "Development Gateway.)"
 
-#: ../../docs/guidance/build.md:77
+#: ../../docs/guidance/build.md:79
 msgid ""
 "If your source data is in **SQL tables**, you can use "
 "[Kavure'i](https://gitlab.com/dncp-opendata/opendata-"
@@ -262,18 +278,18 @@ msgid ""
 "tool.readthedocs.io/en/latest/usage-ocds/). (Kavure'i is authored by "
 "Paraguay's Dirección Nacional de Contrataciones Públicas (DNCP).)"
 msgstr ""
-"Si sus datos de origen están en ** tablas SQL**, puede usar [Kavure'i]"
-"(https://gitlab.com/dncp-opendata/opendata-etl/-/blob/master/README_en.md) "
-"para transformarlos a OCDS. Para usarlo, debe escribir consultas SQL para "
-"extraer datos de las tablas SQL, configurando las columnas para que los "
-"resultados de la consulta coincidan con las rutas JSON en OCDS (por ejemplo,"
-" `buyer/name`). Los resultados de la consulta se guardan en archivos CSV, "
-"que se transforman a OCDS JSON utilizando la [Flatten Tool](https"
-"://flatten-tool.readthedocs.io/en/latest/usage-ocds/). (Kavure'i fue "
-"desarrollada por la Dirección Nacional de Contrataciones Públicas (DNCP) de "
-"Paraguay)."
+"Si sus datos de origen están en ** tablas SQL**, puede usar "
+"[Kavure'i](https://gitlab.com/dncp-opendata/opendata-"
+"etl/-/blob/master/README_en.md) para transformarlos a OCDS. Para usarlo, "
+"debe escribir consultas SQL para extraer datos de las tablas SQL, "
+"configurando las columnas para que los resultados de la consulta coincidan "
+"con las rutas JSON en OCDS (por ejemplo, `buyer/name`). Los resultados de la"
+" consulta se guardan en archivos CSV, que se transforman a OCDS JSON "
+"utilizando la [Flatten Tool](https://flatten-tool.readthedocs.io/en/latest"
+"/usage-ocds/). (Kavure'i fue desarrollada por la Dirección Nacional de "
+"Contrataciones Públicas (DNCP) de Paraguay)."
 
-#: ../../docs/guidance/build.md:78
+#: ../../docs/guidance/build.md:80
 msgid ""
 "To **make OCDS data available via an API**, you can use another component of"
 " [Kavure'i](https://gitlab.com/dncp-opendata/opendata-"
@@ -293,7 +309,7 @@ msgstr ""
 "API. (Ambas herramientas son de la Dirección Nacional de Contrataciones "
 "Públicas (DNCP) de Paraguay)."
 
-#: ../../docs/guidance/build.md:79
+#: ../../docs/guidance/build.md:81
 msgid ""
 "If you intend to **publish [record packages](../../schema/record_package)**,"
 " [OCDS Merge](https://ocds-merge.readthedocs.io/en/latest/) is the best "
@@ -316,7 +332,7 @@ msgstr ""
 "el [código comentado](https://github.com/open-contracting/ocds-merge) como "
 "inspiración para su implementación."
 
-#: ../../docs/guidance/build.md:80
+#: ../../docs/guidance/build.md:82
 msgid ""
 "If you have [release packages](../../schema/release_package) and want to "
 "have [record packages](../../schema/record_package), if you have data that "
@@ -330,7 +346,7 @@ msgstr ""
 "OCDS, puede utilizar [OCDS Kit](https://ocdskit.readthedocs.io/) como línea "
 "de comando o librería [Python](https://www.python.org/). "
 
-#: ../../docs/guidance/build.md:81
+#: ../../docs/guidance/build.md:83
 msgid ""
 "If you are **authoring data from scratch**, you can use this tool to [enter "
 "data](https://github.com/INAImexico/Contrataciones_abiertas_v2), which also "
@@ -340,13 +356,13 @@ msgid ""
 "are in Spanish.*)"
 msgstr ""
 "Si está **creando datos desde cero**, puede usar esta herramienta para "
-"[ingresar datos](https://github.com/INAImexico/Contrataciones_abiertas_v2),"
-" que también incluye una interfaz web para que los usuarios accedan y "
+"[ingresar datos](https://github.com/INAImexico/Contrataciones_abiertas_v2), "
+"que también incluye una interfaz web para que los usuarios accedan y "
 "exploren datos OCDS . (Esta herramienta está escrita por el Instituto "
 "Nacional de Transparencia de México, Acceso a la Información y Protección de"
 " Datos Personales (INAI).) (* Los manuales están en español.*)"
 
-#: ../../docs/guidance/build.md:82
+#: ../../docs/guidance/build.md:84
 msgid ""
 "If you want to **collect data using a spreadsheet or without an internet "
 "connection**, you can develop a [spreadsheet input template](https://www"
@@ -357,7 +373,7 @@ msgstr ""
 "cálculo](https://www.open-contracting.org/resources/simple-ocds-spreadsheet-"
 "template/)."
 
-#: ../../docs/guidance/build.md:86
+#: ../../docs/guidance/build.md:88
 msgid ""
 "**Resource:** [Using tabular versions of JSON to generate JSON "
 "data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-"
@@ -367,7 +383,7 @@ msgstr ""
 "JSON](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-"
 "ocds-to-generate-json-data/) detalla el enfoque utilizado en Paraguay."
 
-#: ../../docs/guidance/build.md:88
+#: ../../docs/guidance/build.md:90
 msgid ""
 "**Resource:** To learn about how to create a spreadsheet input template for "
 "OCDS, check out our blog series on prototyping OCDS data using spreadsheets "
@@ -420,11 +436,11 @@ msgstr ""
 "contracting.org/resources/open-contracting-tools-directory/) para obtener "
 "una lista completa."
 
-#: ../../docs/guidance/build.md:102
+#: ../../docs/guidance/build.md:104
 msgid "Build your extensions"
 msgstr "Desarrolle sus extensiones"
 
-#: ../../docs/guidance/build.md:104
+#: ../../docs/guidance/build.md:106
 msgid ""
 "If your [mapping](map) identified data elements which don't map to OCDS or "
 "an existing extension, you ought to develop your own extensions. Documenting"
@@ -437,7 +453,7 @@ msgstr ""
 " importante sobre la estructura, el formato y el significado de sus datos "
 "esté disponible para los usuarios."
 
-#: ../../docs/guidance/build.md:106
+#: ../../docs/guidance/build.md:108
 msgid ""
 "**Action:** Read the guidance on [developing new "
 "extensions](../map/extensions/#developing-new-extensions), which includes "
@@ -447,7 +463,7 @@ msgstr ""
 "extensiones](../map/extensions/#developing-new-extensions), que incluye "
 "enlaces a herramientas y recursos útiles."
 
-#: ../../docs/guidance/build.md:108
+#: ../../docs/guidance/build.md:110
 msgid ""
 "**Action:** Request support from the [OCDS Helpdesk](../../support/index) to"
 " model your extensions."
@@ -455,7 +471,7 @@ msgstr ""
 "**Acción:** Pida ayuda del [Helpdesk OCDS](../../support/index) para modelar"
 " sus extensiones."
 
-#: ../../docs/guidance/build.md:110
+#: ../../docs/guidance/build.md:112
 msgid ""
 "**Action:** Share your extensions with the OCDS community on "
 "[Github](https://github.com/open-contracting/standard/issues)."
@@ -463,11 +479,11 @@ msgstr ""
 "**Acción:** Comparta sus extensiones con la comunidad OCDS en "
 "[Github](https://github.com/open-contracting/standard/issues)."
 
-#: ../../docs/guidance/build.md:112
+#: ../../docs/guidance/build.md:114
 msgid "Keep users in mind as you build"
 msgstr "Mantenga a sus usuarios en mente durante el desarrollo"
 
-#: ../../docs/guidance/build.md:114
+#: ../../docs/guidance/build.md:116
 msgid ""
 "As covered in the [Design](design) phase, different users will need "
 "information in different ways. Some will need bulk downloads, some will need"
@@ -480,7 +496,7 @@ msgstr ""
 "formato CSV, la mayoría necesitará la publicación del historial de cambios "
 "de manera oportuna con entregas y registros individuales."
 
-#: ../../docs/guidance/build.md:116
+#: ../../docs/guidance/build.md:118
 msgid ""
 "**Resource:** [Guidance on bulk downloads, APIs, individual releases and "
 "records, and flattened serializations](hosting/#data-files-and-apis)"
@@ -489,7 +505,7 @@ msgstr ""
 "entregas individuales y serializaciones planas](hosting/#data-files-and-"
 "apis)"
 
-#: ../../docs/guidance/build.md:118
+#: ../../docs/guidance/build.md:120
 msgid ""
 "**Resource:** [Guidance on JSON and CSV serialization, including packaging "
 "files with metadata](build/serialization)"
@@ -497,11 +513,11 @@ msgstr ""
 "**Recurso:** [Guía sobre serialización en JSON y CSV, incluidos los archivos"
 " de empaquetado con metadatos](build/serialization)"
 
-#: ../../docs/guidance/build.md:120
+#: ../../docs/guidance/build.md:122
 msgid "Check your data"
 msgstr "Revise sus datos"
 
-#: ../../docs/guidance/build.md:122
+#: ../../docs/guidance/build.md:124
 msgid ""
 "Throughout the build phase you ought to regularly use the [OCDS Data Review "
 "Tool](http://standard.open-contracting.org/review/) to check the structure "
@@ -511,7 +527,7 @@ msgstr ""
 "de Revisión de datos OCDS Data Review Tool](http://standard.open-"
 "contracting.org/review/) para revisar la estructura y formato de sus datos."
 
-#: ../../docs/guidance/build.md:124
+#: ../../docs/guidance/build.md:126
 msgid ""
 "OCDS data needs to be published as part of a release package or a record "
 "package. You can use [OCDSKit](https://pypi.org/project/ocdskit/) to "
@@ -523,7 +539,7 @@ msgstr ""
 " para volver a formatear sus datos antes de enviarlos a la herramienta de "
 "revisión, pero los datos que publique deben empaquetarse correctamente."
 
-#: ../../docs/guidance/build.md:126
+#: ../../docs/guidance/build.md:128
 msgid ""
 "The Data Review Tool reports any structural issues with your data. It checks"
 " whether your data makes sense and uses [OCDS Show](https://open-"
@@ -539,7 +555,7 @@ msgstr ""
 "aparece en el lugar correcto dentro del esquema. También puede usar [OCDS "
 "Show](https://open-contracting.github.io/ocds-show/) directamente."
 
-#: ../../docs/guidance/build.md:128
+#: ../../docs/guidance/build.md:130
 msgid ""
 "**Action:** Upload some data to the [OCDS Data Review Tool](http://standard"
 ".open-contracting.org/review/)."
@@ -547,7 +563,7 @@ msgstr ""
 "**Acción:** Cargue algunos datos a la [Herramienta de revisión de datos "
 "OCDS](http://standard.open-contracting.org/review/)."
 
-#: ../../docs/guidance/build.md:130
+#: ../../docs/guidance/build.md:132
 msgid ""
 "**Action:** Request feedback on your draft data from the [OCDS "
 "Helpdesk](../../support/index)."
@@ -555,7 +571,7 @@ msgstr ""
 "**Acción:** Solicite un informe de retroalimentación sus datos preliminares "
 "al [Helpdesk OCDS](../../support/#ocds-helpdesk)."
 
-#: ../../docs/guidance/build.md:132
+#: ../../docs/guidance/build.md:134
 msgid ""
 "**Tool:** The [jOCDS Validator](http://www.developmentgateway.org/blog/your-"
 "data-ocds-compliant-introducing-jocds-validator) can be used for bulk "
@@ -565,12 +581,12 @@ msgstr ""
 "/your-data-ocds-compliant-introducing-jocds-validator) puede usarse para la "
 "verificación masiva de la estructura y  formato de datos OCDS"
 
-#: ../../docs/guidance/build.md:134
+#: ../../docs/guidance/build.md:136
 msgid "**Tool:** [OCDS Show](https://open-contracting.github.io/ocds-show/)"
 msgstr ""
 "**Herramienta:** [OCDS Show](https://open-contracting.github.io/ocds-show/)"
 
-#: ../../docs/guidance/build.md:136
+#: ../../docs/guidance/build.md:138
 msgid ""
 "**Resource:** [How to check your OCDS data validates](https://www.open-"
 "contracting.org/2018/05/09/check-ocds-data-validates/)"
@@ -578,6 +594,6 @@ msgstr ""
 "**Recurso:** [Cómo revisar que sus datos OCDS son válidos](https://www.open-"
 "contracting.org/2018/05/09/check-ocds-data-validates/)"
 
-#: ../../docs/guidance/build.md:138
+#: ../../docs/guidance/build.md:140
 msgid "[Next phase: Publish](publish)"
 msgstr "[Siguiente fase: Publicación](publish)"
