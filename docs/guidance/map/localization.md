@@ -55,7 +55,7 @@ To localize a code title or description, edit the values in columns B and C. As 
       Do not edit the values in column A. These are the OCDS field paths which cannot be edited.
 ```
 
-You can ask the [OCDS Helpdesk](../../../support/#ocds-helpdesk) to review your localized mapping template before you put it to use.
+You can ask the [OCDS Helpdesk](../../support/index) to review your localized mapping template before you put it to use.
 
 ## Mapping between disclosures required by law and OCDS fields
 
@@ -81,7 +81,7 @@ Provide as much detail as you can about these extra requirements and then share 
 
 OCDS is an extensible standard. Extensions are used to document the meaning, structure and format of additional fields so that users and tools can interpret them.
 
-Refer to the [extensions documentation](../extensions/#extensions) for more information on using and developing extensions.
+Refer to the [extensions documentation](extensions) for more information on using and developing extensions.
 
 ## Translating the standard
 
@@ -89,12 +89,12 @@ French and Spanish translations of the schema and documentation are maintained b
 
 If the standard is not yet available in your language, you can propose a new translation of the schema and documentation, or collaborate on an existing community translation.
 
-Translations are managed using [Transifex](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/) which can generate translated versions of the schema, documentation and other resources.
+Translations are managed using [Transifex](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/) which can generate translated versions of the schema, documentation and other resources.
 
-Contact the [OCDS Helpdesk](../../../support/#ocds-helpdesk) to get access to Transifex or to propose a new translation.
+Contact the [OCDS Helpdesk](../../support/index) to get access to Transifex or to propose a new translation.
 
 ## Document and share your work
 
 Whatever you do to localize the OCDS, it’s important to provide clear documentation. For example, you could set-up a page on your website with links to the main standard documentation, and details of your localization.
 
-It’s also important to share updates with the OCDS community, through the [standard-discuss mailing list](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) and the [Github issue tracker](https://github.com/open-contracting/standard). Without doing this, there is a chance that you might be duplicating work that others have already undertaken, or missing out on insights from other projects working on similar issues.
+It’s also important to share updates with the OCDS community, through the [standard-discuss mailing list](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) and the [GitHub issue tracker](https://github.com/open-contracting/standard). Without doing this, there is a chance that you might be duplicating work that others have already undertaken, or missing out on insights from other projects working on similar issues.
