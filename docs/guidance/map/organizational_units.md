@@ -51,7 +51,7 @@ In the release below, a branch of the Bank of Moldova announces a contract oppor
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/organizational-units/division-code-extension/extension.json
+.. jsoninclude:: ../../examples/organizational-units/ocds_divisionCode_extension/extension.json
    :jsonpointer: 
    :expand: name, description, schemas, compatibility
    :title: extension
@@ -60,7 +60,7 @@ In the release below, a branch of the Bank of Moldova announces a contract oppor
 
 ```eval_rst
 
-.. jsoninclude:: ../../examples/organizational-units/division-code-extension/release-schema.json
+.. jsoninclude:: ../../examples/organizational-units/ocds_divisionCode_extension/release-schema.json
    :jsonpointer: 
    :expand: definitions, Organization, properties, details, properties, divisionCode
    :title: release-schema

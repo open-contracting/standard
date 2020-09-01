@@ -9,6 +9,11 @@ from selenium.webdriver.chrome.options import Options
 BROWSER = os.environ.get('BROWSER', 'ChromeHeadless')
 
 
+class QuietHTTPRequestHandler(SimpleHTTPRequestHandler):
+    def log_request(*args):
+        pass
+
+
 @pytest.fixture(scope="module")
 def browser(request):
     if BROWSER == 'ChromeHeadless':
@@ -34,7 +39,7 @@ def server(request):
     def run():
         os.chdir('build')
         server_address = (host, port_number)
-        httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
+        httpd = HTTPServer(server_address, QuietHTTPRequestHandler)
         httpd.serve_forever()
 
     p = Process(target=run)

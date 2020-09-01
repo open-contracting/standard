@@ -30,7 +30,9 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932) [#976](https://github.com/open-contracting/standard/pull/976).
 * Make changes to how the documentation is built [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923) [#935](https://github.com/open-contracting/standard/pull/935) [#944](https://github.com/open-contracting/standard/pull/944) [#945](https://github.com/open-contracting/standard/pull/945) [#946](https://github.com/open-contracting/standard/pull/946) [#953](https://github.com/open-contracting/standard/pull/953) [#962](https://github.com/open-contracting/standard/pull/962) [#964](https://github.com/open-contracting/standard/pull/964) [#1002](https://github.com/open-contracting/standard/pull/1002) [#1003](https://github.com/open-contracting/standard/pull/1003).
 
-## [1.1.5] - Unreleased
+## [1.1.5] - 2020-08-20
+
+* The [Translation and localization policy](../../governance/#translation-and-localization-policy) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
 
 ### Codelists
 
@@ -97,7 +99,7 @@ See the changelogs for:
 
 ### Codelists
 
-* [#824](https://github.com/open-contracting/standard/pull/824) Canonical codelist files are available at URLs like <https://standard.open-contracting.org/schema/1__1__4/codelists/>, and translations are available at URLs like <https://standard.open-contracting.org/1.1/en/codelists/>, for OCDS 1.1.4 and up.
+* [#824](https://github.com/open-contracting/standard/pull/824) Canonical codelist files are available at URLs like <https://standard.open-contracting.org/schema/1__1__5/codelists/>, and translations are available at URLs like <https://standard.open-contracting.org/1.1/en/codelists/>, for OCDS 1.1.4 and up.
 * [#746](https://github.com/open-contracting/standard/pull/746) [#842](https://github.com/open-contracting/standard/pull/842) Update the currency codelist for ISO4217 amendments [166](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_166.pdf), [167](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_167.pdf), [168](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_168.pdf) and [169](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_169.pdf).
 * [#725](https://github.com/open-contracting/standard/pull/725) Add a 'plannedProcurementNotice' code to the `documentType` codelist, 'CUCOP' to `itemClassificationScheme`, 'interestedParty' to `partyRole`.
 * [#725](https://github.com/open-contracting/standard/pull/725) Update the descriptions of the 'tenderNotice' and 'technicalSpecifications' codes in the `documentType` codelist to align with the text of the [Agreement on Government Procurement (GPA)](https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm) of the World Trade Organization (WTO).
