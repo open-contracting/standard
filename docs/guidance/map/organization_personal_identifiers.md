@@ -2,7 +2,7 @@
 
 Suppliers and tenderers can be organizations or individuals (natural persons). Such individuals are often referred to as "sole traders" or "self-employed individuals".
 
-Details of natural persons can be disclosed using the `parties` section in OCDS, but only if:
+Details of natural persons can be disclosed using the `parties` section in OCDS only if:
 
 * The natural person is a tenderer or supplier; and
 * The laws in your jurisdiction permit the publication of such details
@@ -14,9 +14,9 @@ There are two components to an identifier in OCDS:
 * a code indicating the list or register from which the identifier is drawn (the `scheme`); and
 * the identifier itself (the `id`).
 
-Following the [guidance](http://standard.openownership.org/en/schema-beta-2/schema/guidance/identifiers.html?#shared-identifiers) from BODS to construct a `scheme` code for personal identifiers:
+Follow the [guidance](http://standard.openownership.org/en/0.2.0/schema/guidance/identifiers.html#shared-identifiers) from BODS to construct a `scheme` code for personal identifiers:
 
-> “the scheme should have the pattern {JURISDICTION}-{TYPE} where JURISDICTION is an uppercase ISO 3166-1 alpha-3 country code and TYPE is one of PASSPORT, TAXID or IDCARD”
+> the scheme should have the pattern {JURISDICTION}-{TYPE} where JURISDICTION is an uppercase ISO 3166-1 alpha-3 country code and TYPE is one of PASSPORT, TAXID or IDCARD
 
 ## Worked example
 
