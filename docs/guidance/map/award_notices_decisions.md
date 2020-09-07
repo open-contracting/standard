@@ -27,7 +27,7 @@ For the award object in OCDS to communicate a direct relationship between items,
    :file: ../../examples/award_decisions/multi_award.csv
 ```
 
-There are no identifiers for the individual supplier/value pairings on the original award notice, so it is necessary to create a new identifier for each award object in OCDS. The approach to creating an identifier will depend on the properties of the dataset; for example, in Paraguay a combination of the award notice identifier and the supplier name is used, however this approach is only appropriate as long as there can only be one supplier per award decision and each supplier can only appear once per notice.
+There are no identifiers for the individual supplier/value pairings on the original award notice, so it is necessary to create a new identifier for each award object in OCDS. The approach to creating an identifier will depend on the properties of the dataset; for example, in Paraguay a combination of the award notice identifier, supplier name, and a consecutive number is used.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -41,5 +41,5 @@ There are no identifiers for the individual supplier/value pairings on the origi
 
    .. markdown::
 
-      [View the example in Paraguay’s API](http://beta.dncp.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
+      [View the example in Paraguay’s API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
 ```

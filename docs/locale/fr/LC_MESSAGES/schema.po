@@ -9,16 +9,16 @@
 # Tim Davies <tim.davies@opendataservices.coop>, 2018
 # Joel Gombin <joel.gombin@gmail.com>, 2018
 # Cecile LG <cecile@datactivi.st>, 2019
-# James McKinney <jmckinney@open-contracting.org>, 2019
+# James McKinney, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-17 16:54-0500\n"
+"POT-Creation-Date: 2020-06-29 21:21-0400\n"
 "PO-Revision-Date: 2017-04-24 10:46+0000\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2019\n"
+"Last-Translator: James McKinney, 2019\n"
 "Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,10 +103,10 @@ msgstr "Date de l'instance"
 
 #. /properties/date/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "The date this information was first released, or published."
+msgid ""
+"The date on which the information contained in the release was first "
+"recorded in, or published by, any system."
 msgstr ""
-"La date à laquelle cette information a été communiquée ou publiée pour la "
-"première fois."
 
 #. /properties/tag/title
 #. /definitions/record/properties/releases/oneOf/0/items/properties/tag/title
@@ -1532,12 +1532,9 @@ msgstr ""
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
 "Additional classification information about parties can be provided using "
-"partyDetail extensions that define particular properties and classification "
+"partyDetail extensions that define particular fields and classification "
 "schemes."
 msgstr ""
-"Des informations supplémentaires de classification sur les parties peuvent "
-"être fournies en utilisant les extensions `partyDetail` qui définissent des "
-"propriétés particulières et des schémas de classification."
 
 #. /properties/parties/items/properties/details/title
 #. /definitions/Organization/properties/details/title
@@ -3510,13 +3507,12 @@ msgstr ""
 #. /definitions/Item/properties/unit/properties/id/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
-"The identifier from the codelist referenced in the scheme property. Check "
-"the codelist for details of how to find and use identifiers from the scheme "
-"in use."
+"The identifier from the codelist referenced in the `scheme` field. Check the"
+" [unitClassificationScheme](https://standard.open-"
+"contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-"
+"scheme) codelist for details of how to find and use identifiers from the "
+"scheme in use."
 msgstr ""
-"L'identifiant tiré de la liste de codes référencée dans la propriété "
-"`scheme`.  Consultez la liste de codes pour avoir des détails sur la manière"
-" de trouver et utiliser les identifiants de la liste de codes utilisée."
 
 #. /properties/tender/properties/items/items/properties/unit/properties/name/description
 #. /properties/awards/items/properties/items/items/properties/unit/properties/name/description
@@ -5259,15 +5255,10 @@ msgstr "Archive"
 msgid ""
 "An OCDS record must provide a list of all the existing OCDS releases "
 "relating to a single contracting process and should provide a compiled "
-"release containing the current state of all fields in the OCDS schema. An "
-"OCDS record may also provide a versioned history of all changes to the data "
-"in the compiled release."
+"release containing the current state of all fields in the release schema. An"
+" OCDS record may also provide a versioned history of all changes to the data"
+" in the compiled release."
 msgstr ""
-"Une archive OCDS doit fournir une liste de toutes les instances d'OCDS "
-"existantes relatives à un processus de passation de marché unique et doit "
-"contenir une version compilée contenant l'état actuel de tous les champs du "
-"schéma OCDS. Une archive OCDS peut également fournir un historique versionné"
-" de toutes les modifications apportées aux données dans l'instance compilée."
 
 #. /definitions/record/properties/ocid/description
 #: schema/record-package-schema.json:1
@@ -5392,13 +5383,8 @@ msgstr "Instance versionnée"
 
 #. /definitions/record/properties/versionedRelease/description
 #: schema/record-package-schema.json:1
-msgid ""
-"This contains the history of the data in the compiledRecord. With all "
-"versions of the information and the release they came from."
+msgid "This contains the history of all the data in the compiled release."
 msgstr ""
-"Cet objet contient l'historique de modification des données contenues dans "
-"un `compiledRecord` (archive compilée), avec toutes les versions des "
-"données, ainsi que l'instance dont elles proviennent."
 
 #. /title
 #: schema/release-package-schema.json:1

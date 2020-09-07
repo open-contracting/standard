@@ -12,7 +12,7 @@ There are three kinds of changes:
 
 The nature of a change can be made explicit using:
 
-* **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the award, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'.
+* **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the contract, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'.
 
 * **The amendments** building block. This can contain an array of amendment explanations, and clearly identify the releases that contain before and after values.
 
@@ -78,15 +78,15 @@ A full record is provided below, with all the releases for the process and a `co
 
 <p class="first admonition-title">Hint</p>
 
-It is recommended to <a href="../../../_static/json/amendments/amendments-tender-example.json" target="_blank">download</a> the record example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
+It is encouraged to <a href="../../../_static/json/amendments/amendments-tender-example.json" target="_blank">download</a> the record example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
 
 </div>
 
 Note in this example that:
 
-* **The amendments block does not contain data on what was changed**. Changes are recorded by updating the properties of the `tender` block a new release.
+* **The amendments block does not contain data on what was changed**. Changes are recorded by updating the fields of the `tender` block a new release.
 
-* **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher may want to provide the latest data available in each release.
+* **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher might want to provide the latest data available in each release.
 
 * **In the record**, the `releaseID` and `amendsReleaseID` fields from the `amendments` array can be used to look up information in the `versionedRelease` object or `releases` array, to see where changes are explained by an amendment `rationale`.
 
@@ -126,7 +126,7 @@ See the example release below.
 
 Note that amendments can cover more than values or duration. Also, note that the publisher chose to not repeat the contract items, but add a new one with a new ID value.
 
-In certain scenarios there may not be a valid `amendsReleaseID` and so it can be omitted, e.g. when historical data is being published in a single release.
+In certain scenarios there might not be a valid `amendsReleaseID` and so it can be omitted, e.g. when historical data is being published in a single release.
 
 #### Record
 
@@ -145,7 +145,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 
 ### Example 3: Amendments in a Easy Releases scenario
 
-The [Easy releases guidance](../publish/easy_releases) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it may still be possible to publish a history of amendments when using this model.
+The [Easy releases guidance](../build/easy_releases) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
 
 Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract notice, contract amendments can be published as separate releases in OCDS. For example, Australia's AusTender platform [stores contract amendments as separate notices, related to the original contract notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516).
 
@@ -153,7 +153,7 @@ The table below shows an example of a contract notices table from a procurement 
 
 ```eval_rst
 .. csv-table-no-translate::
-   :file: ../_static/json/amendments-contract-notice.csv
+   :file: ../../examples/amendments-contract-notice.csv
    :header-rows: 1
 ```
 
@@ -174,8 +174,8 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
    :jsonpointer: /records/0/releases/2
    :expand: tag, contracts, amendments
    :title: ContractAmendment
-
 ```
+
 Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.

@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/guidance/map/award_notices_decisions.md:2
+msgid "Award notices and decisions"
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:4
+msgid ""
+"Award notices are used by procuring entities to disclose award decisions, "
+"i.e. the value and/or items awarded to each supplier."
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:6
+msgid ""
+"A single award notice can be used to disclose many award decisions; however "
+"in order for an award in OCDS to communicate a direct relationship between "
+"the items being purchased, the supplier providing the items, and the value "
+"of the items, such notices ought to be split into multiple awards in OCDS."
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:8
+msgid "Example: Modelling award notices with multiple decisions"
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:10
+msgid ""
+"In Paraguay, a single award notice is used to disclose many award decisions."
+" Detailed information is provided about each individual award decision; "
+"however all decisions on an award notice share the same identifier. For "
+"example:"
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:12
+msgid ""
+"![Example award notice from "
+"Paraguay](../../_static/png/awards_example_paraguay.png)"
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:14
+msgid ""
+"Using a single award object to model such a notice in OCDS would make it "
+"impossible to determine which items related to which suppliers or how much "
+"of the total award value related to each supplier:"
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:22
+msgid ""
+"For the award object in OCDS to communicate a direct relationship between "
+"items, suppliers, and values, Paraguay's award notice is split into multiple"
+" award objects, one for each supplier/value pairing on the notice."
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:30
+msgid ""
+"There are no identifiers for the individual supplier/value pairings on the "
+"original award notice, so it is necessary to create a new identifier for "
+"each award object in OCDS. The approach to creating an identifier will "
+"depend on the properties of the dataset; for example, in Paraguay a "
+"combination of the award notice identifier and the supplier name is used, "
+"however this approach is only appropriate as long as there can only be one "
+"supplier per award decision and each supplier can only appear once per "
+"notice."
+msgstr ""
+
+#: ../../docs/guidance/map/award_notices_decisions.md:1
+msgid "View the example in JSON"
+msgstr ""
+
+#: ../../None:1
+msgid ""
+"[View the example in Paraguay’s "
+"API](http://beta.dncp.gov.py/datos/api/v3/doc/ocds/record/ocds-"
+"03ad3f-340885-1)"
+msgstr ""

@@ -8,12 +8,16 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Documentation
 
-* [#980](https://github.com/open-contracting/standard/pull/980) Getting Started section: Remove references to ☆ levels.
-* [#955](https://github.com/open-contracting/standard/pull/955) Move Governance page to Reference section. Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
+* Getting Started section:
+  * [#980](https://github.com/open-contracting/standard/pull/980) Remove references to ☆ levels.
+  * [#1017](https://github.com/open-contracting/standard/pull/1017) Add link to bulk downloads in Guidance section.
+* [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 * Guidance section:
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
+  * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
   * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
+  * [#1016](https://github.com/open-contracting/standard/pull/1016) Add links to OCDS profiles and linked standards.
   * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
   * [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012) Merge Publication policy and Licensing pages into Publish page.
   * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007).
@@ -22,9 +26,54 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
 * [#975](https://github.com/open-contracting/standard/pull/975) Add a Make target to generate PDFs of the documentation.
-* Copy-edit and re-organize non-normative pages [#979](https://github.com/open-contracting/standard/pull/979).
+* Copy-edit and re-organize non-normative pages [#979](https://github.com/open-contracting/standard/pull/979) [#1018](https://github.com/open-contracting/standard/pull/1018) [#1023](https://github.com/open-contracting/standard/pull/1023).
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932) [#976](https://github.com/open-contracting/standard/pull/976).
 * Make changes to how the documentation is built [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923) [#935](https://github.com/open-contracting/standard/pull/935) [#944](https://github.com/open-contracting/standard/pull/944) [#945](https://github.com/open-contracting/standard/pull/945) [#946](https://github.com/open-contracting/standard/pull/946) [#953](https://github.com/open-contracting/standard/pull/953) [#962](https://github.com/open-contracting/standard/pull/962) [#964](https://github.com/open-contracting/standard/pull/964) [#1002](https://github.com/open-contracting/standard/pull/1002) [#1003](https://github.com/open-contracting/standard/pull/1003).
+
+## [1.1.5] - 2020-08-20
+
+* The [Translation and localization policy](../../governance/#translation-and-localization-policy) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
+
+### Codelists
+
+* `itemClassificationScheme.csv`:
+  * [#998](https://github.com/open-contracting/standard/pull/998) Add 'NAICS', 'PSC' and 'HS' codes.
+  * [#967](https://github.com/open-contracting/standard/pull/967) Remove the discouragement of the 'UNSPSC' code.
+  * [#1033](https://github.com/open-contracting/standard/pull/1033) Add a `Category` column to indicate the context in which the classification scheme is used.
+* `milestoneType.csv`:
+  * [#1000](https://github.com/open-contracting/standard/pull/1000) Update description of 'financing' code, and add 'payment' code.
+
+### Schema
+
+* [#969](https://github.com/open-contracting/standard/pull/969) Clarify the instruction for setting the `Unit.id` field.
+* [#995](https://github.com/open-contracting/standard/pull/995) Clarify the instruction for setting the `Release.date` field.
+* [#996](https://github.com/open-contracting/standard/pull/996) Fix a typo in the `versionedRelease` field.
+
+### Documentation
+
+* [#966](https://github.com/open-contracting/standard/pull/966) Move Governance and Deprecation pages to new Governance section.
+* [#968](https://github.com/open-contracting/standard/pull/968) [#1032](https://github.com/open-contracting/standard/pull/1032) Use "field" to refer to OCDS fields and "property" to refer to JSON Schema properties.
+* [#970](https://github.com/open-contracting/standard/pull/970) Add links to access the release schema as a CSV spreadsheet and via the Field-Level Mapping Template. Add notes to describe the alternatives for browsing the schemas.
+* [#965](https://github.com/open-contracting/standard/pull/965) Release Reference page: Add extensions list for the Transaction object.
+* [#970](https://github.com/open-contracting/standard/pull/970) Release Schema page: Correct the description of compiled releases.
+* [#996](https://github.com/open-contracting/standard/pull/996) Record Reference page: Rewrite page to improve clarity.
+* Codelists page:
+  * [#971](https://github.com/open-contracting/standard/pull/971) [#1032](https://github.com/open-contracting/standard/pull/1032) Remove the suggestion to use X prefixes, for the reasons expressed by the [IETF](https://tools.ietf.org/html/rfc6648#appendix-B).
+  * [#972](https://github.com/open-contracting/standard/pull/972) Clarify the norms around open and closed codelists.
+  * [#973](https://github.com/open-contracting/standard/pull/973) Describe the `openCodelist` and `codelist` JSON Schema properties.
+  * [#1036](https://github.com/open-contracting/standard/pull/1036) Add instruction for OCDS publishers to contact the OCDS Helpdesk to add list codes to org-id.guide.
+
+### Extensions
+
+See the changelogs for:
+
+* [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/master/#changelog)
+* [Enquiries](https://extensions.open-contracting.org/en/extensions/enquiries/master/#changelog)
+* [Location](https://extensions.open-contracting.org/en/extensions/location/master/#changelog)
+* [Lots](https://extensions.open-contracting.org/en/extensions/lots/master/#changelog)
+* [Milestone documents](https://extensions.open-contracting.org/en/extensions/milestone_documents/master/#changelog)
+* [Participation fees](https://extensions.open-contracting.org/en/extensions/participation_fee/master/#changelog)
+* [Process level title and description](https://extensions.open-contracting.org/en/extensions/process_title/master/#changelog)
 
 ## [1.1.4] - 2019-06-25
 
@@ -50,7 +99,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Codelists
 
-* [#824](https://github.com/open-contracting/standard/pull/824) Canonical codelist files are available at URLs like <https://standard.open-contracting.org/schema/1__1__4/codelists/>, and translations are available at URLs like <https://standard.open-contracting.org/1.1/en/codelists/>, for OCDS 1.1.4 and up.
+* [#824](https://github.com/open-contracting/standard/pull/824) Canonical codelist files are available at URLs like <https://standard.open-contracting.org/schema/1__1__5/codelists/>, and translations are available at URLs like <https://standard.open-contracting.org/1.1/en/codelists/>, for OCDS 1.1.4 and up.
 * [#746](https://github.com/open-contracting/standard/pull/746) [#842](https://github.com/open-contracting/standard/pull/842) Update the currency codelist for ISO4217 amendments [166](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_166.pdf), [167](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_167.pdf), [168](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_168.pdf) and [169](https://www.currency-iso.org/dam/downloads/dl_currency_iso_amendment_169.pdf).
 * [#725](https://github.com/open-contracting/standard/pull/725) Add a 'plannedProcurementNotice' code to the `documentType` codelist, 'CUCOP' to `itemClassificationScheme`, 'interestedParty' to `partyRole`.
 * [#725](https://github.com/open-contracting/standard/pull/725) Update the descriptions of the 'tenderNotice' and 'technicalSpecifications' codes in the `documentType` codelist to align with the text of the [Agreement on Government Procurement (GPA)](https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm) of the World Trade Organization (WTO).

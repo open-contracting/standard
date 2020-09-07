@@ -22,4 +22,4 @@ test_search_params = [
     ('fr', r'\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
 ]
 
-last_path = '/history_and_development/'
+last_path = '/deprecation/'

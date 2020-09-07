@@ -4,22 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2017
-# Oscar Montiel <oscar.montiel@okfn.org>, 2017
-# Ben Webb <ben.webb@opendataservices.coop>, 2019
-# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2019
-# James McKinney <jmckinney@open-contracting.org>, 2020
+# Ben Webb <ben.webb@opendataservices.coop>, 2017
+# Oscar Montiel <oscar.montiel@okfn.org>, 2020
+# Tim Davies <tim.davies@opendataservices.coop>, 2020
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# James McKinney, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-17 11:28-0500\n"
+"POT-Creation-Date: 2020-06-29 21:20-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: James McKinney <jmckinney@open-contracting.org>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59224/es/)\n"
+"Last-Translator: James McKinney, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,260 +41,352 @@ msgstr ""
 " las entregas disponibles para el proceso de contrataciones."
 
 #: ../../docs/schema/records_reference.md:5
-msgid "A record **must** contain:"
-msgstr "Un registro **debe** contener:"
-
-#: ../../docs/schema/records_reference.md:7
-msgid "An [ocid](../identifiers/#ocid)"
-msgstr "Un [ocid](../identifiers/#ocid)"
-
-#: ../../docs/schema/records_reference.md:8
 msgid ""
-"An array of **[releases](#release)** about this contracting process - either"
-" by providing a URL for where these releases can be found, or embedding a "
-"full copy of the release"
+"**Note: If any conflicts are found between this text, and the text within "
+"the schema, the schema takes precedence.**"
 msgstr ""
-"Una lista de **[releases](#release)** sobre este proceso de contrataciones- "
-"puede ser dando un URL de dónde se puedan encontrar estas entregas, o "
-"incorporando una copia completa de la entrega."
+"**Nota: Si se encuentran conflictos entre este texto, y el texto dentro del "
+"esquema, el esquema tiene precedencia.**"
 
-#: ../../docs/schema/records_reference.md:10
+#: ../../docs/schema/records_reference.md:1
+msgid "Browsing the schema"
+msgstr "Navegando el esquema"
+
+#: ../../None:1
 msgid ""
-"This allows the record to function as an index of all the releases about a "
-"contracting process."
+"This page presents the record package schema as tables. You can also "
+"download the canonical version of the record package schema as [JSON Schema"
+"](../../record-package-schema.json), or view it in an [interactive "
+"browser](record_package)."
 msgstr ""
-"Esto permite al registro funcionar como un índice de todas las entregas "
-"sobre un proceso de contrataciones."
-
-#: ../../docs/schema/records_reference.md:12
-msgid "Records **should** contain:"
-msgstr "Los registros **deberían** contener:"
-
-#: ../../docs/schema/records_reference.md:14
-msgid ""
-"**compiledRelease** - the latest version of all open contracting process "
-"fields, represented using the release schema."
-msgstr ""
-"Una **compiledRelease** - la última versión de todos los campos del proceso "
-"de contratación abierta, representada usando el esquema de entrega."
+"Esta página presenta el esquema del paquete de entregas en un navegador "
+"interactivo. También puede descargar la versión canónica del esquema del "
+"paquete de entregas como [Esquema JSON](../../record-package-schema.json),"
+" o verlo en un [navegador interactivo](record_package)."
 
 #: ../../docs/schema/records_reference.md:16
-msgid "Records **may** contain:"
-msgstr "Los registros **pueden** contener:"
+msgid "Package metadata"
+msgstr "Metadatos del paquete"
 
 #: ../../docs/schema/records_reference.md:18
 msgid ""
-"**versionedRelease** - containing the history of the data in the "
-"compiledRelease, with all known past values of any field and the release "
-"that information came from."
+"Records must be published within a [record package](record_package). The "
+"record package provides metadata about the record(s) that it contains."
 msgstr ""
-"**versionedRelease**- contiene una historia de los datos en el "
-"compiledRelease, con todos los valores pasados de cualquier campo y la "
-"entrega de la que viene la información."
+"Los registros deben publicarse dentro de un [paquete de "
+"registros](record_package). El paquete de registros proporciona metadatos "
+"sobre el(los) registro(s) que contiene."
 
-#: ../../docs/schema/records_reference.md:20
-msgid ""
-"The versioned release format is designed to support analysis of how data has"
-" changed between releases, and will often be generated by data users, rather"
-" than by publishers."
-msgstr ""
-"El formato de entrega versionada está diseñado para apoyar el análisis de "
-"cómo han cambiado los datos entre entregas y normalmente se generarán por "
-"los usuarios más que por los publicadores"
-
-#: ../../docs/schema/records_reference.md:22
-msgid "Package Metadata"
-msgstr "Metadatos de Paquete"
-
-#: ../../docs/schema/records_reference.md:24
-msgid "Records must be published within a [record package](record_package)."
-msgstr ""
-"Los registros deben de publicarse dentro de un [paquete de "
-"registros](record_package)."
-
-#: ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 msgid "Title"
 msgstr "Título"
 
-#: ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 msgid "Description"
 msgstr "Descripción"
 
-#: ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 msgid "Format"
 msgstr "Formato"
 
-#: ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 msgid "Required"
 msgstr "Requerido"
 
+#: ../../docs/schema/records_reference.md:26
+msgid ""
+"See the [licensing guidance](../../guidance/publish/#license-your-data) for "
+"more details on selecting a license, and publishing license information."
+msgstr ""
+"Consulte la [guía de licencias](../../guidance/publish/#license-your-data) "
+"para obtener más detalles sobre cómo seleccionar una licencia y publicar "
+"información de esta."
+
+#: ../../docs/schema/records_reference.md:28
+msgid ""
+"See the [publication policy](../../guidance/publish/#finalize-your-"
+"publication-policy) guidance for more details on what to include in a "
+"publication policy."
+msgstr ""
+"Consulte la guía de [política de publicación](../../guidance/publish"
+"/#finalize-your-publication-policy) para obtener más detalles sobre qué "
+"incluir en una política de publicación."
+
+#: ../../docs/schema/records_reference.md:30
+msgid ""
+"The record package metadata has two differences from the release package "
+"metadata:"
+msgstr ""
+"Los metadatos del paquete de registro tienen dos diferencias frente a los "
+"metadatos del paquete de entrega:"
+
+#: ../../docs/schema/records_reference.md:32
+msgid ""
+"Instead of a `releases` array, a record package has a `records` array "
+"containing one or more records."
+msgstr ""
+"En vez de una lista de `releases`, un paquete de registros tiene una lista "
+"de `records` que contiene uno o más registros."
+
 #: ../../docs/schema/records_reference.md:33
 msgid ""
-"See the guidance on [package metadata](../reference/#package-metadata). In "
-"addition, a record package includes:"
+"A record package has a `packages` array, to link to any release packages "
+"that were used to prepare the records."
 msgstr ""
-"Ve la guía de [meta-datos de un paquete](../reference#package-metadata). "
-"Adicionalmente, un paquete de registros incluye:"
+"Un paquete de registros tiene una lista de `packages`, para vincular los "
+"paquetes de entregas que se utilizaron para preparar los registros."
 
 #: ../../docs/schema/records_reference.md:35
-msgid "`packages` - links to the release packages used to compile the records"
-msgstr ""
-"`packages`- enlaces a los paquetes de entregas utilizados para compilar los "
-"registros"
-
-#: ../../docs/schema/records_reference.md:36
 msgid ""
-"`records` - one or more records, each of which, at least, links to or embeds"
-" the releases about the contracting process that it describes"
+"The following example demonstrates all package metadata and record fields."
 msgstr ""
-"`records` - uno o más registros, cada uno de los cuales, al menos, enlaza o "
-"incrusta las entregas sobre el proceso de contratación que describe"
+"El siguiente ejemplo muestra todos los metadatos del paquete y los campos "
+"del registro."
 
-#: ../../docs/schema/records_reference.md:38
-msgid "You can see this in the full example of a record below."
-msgstr "Puedes ver esto a continuación en el ejemplo completo de un registro."
-
-#: ../../docs/schema/records_reference.md:48
+#: ../../docs/schema/records_reference.md:44
 msgid "Record structure"
 msgstr "Estructura de un registro"
 
+#: ../../docs/schema/records_reference.md:46
+msgid ""
+"A record **must** contain an [ocid](../identifiers/#ocid) and all "
+"[releases](#releases) about the contracting process. As such, a record "
+"functions as an index of all releases about a contracting process."
+msgstr ""
+"Un registro **debe** contener un [ocid](../identifiers/#ocid) y todas las "
+"[entregas](#releases) sobre el proceso de contrataciones. Como tal, un "
+"registro funciona como un índice de todas las entregas sobre un proceso de "
+"contrataciones."
+
+#: ../../docs/schema/records_reference.md:48
+msgid ""
+"A record **should** contain a [compiledRelease](#compiled-release) object, "
+"which represents the state of the contracting process at the time of the "
+"record's publication."
+msgstr ""
+"Un registro **debería** contener un objeto [compiledRelease](#compiled-"
+"release), que representa el estado del proceso de contrataciones al momento "
+"de la publicación del registro."
+
 #: ../../docs/schema/records_reference.md:50
 msgid ""
-"Each record package contains an array of one or more records, consisting of "
-"the following sections:"
+"A record **may** contain a [versionedRelease](#versioned-release) object, "
+"which aggregates, into a single object, all values of all fields from all "
+"releases. The versioned release is designed to make it easy to see how "
+"values change from one release to another, and will often be generated by "
+"data users, rather than by publishers."
 msgstr ""
-"Cada paquete de registros contiene una matriz de uno o más registros, que "
-"consiste en las siguientes secciones:"
+"Un registro ** puede ** contener un objeto [versionedRelease](#versioned-"
+"release), que agrega, en un solo objeto, todos los valores de todos los "
+"campos de todas las entregas. La entrega versionada está diseñada para que "
+"sea fácil ver cómo cambian los valores de una entrega a otra, y generalmente"
+" serán generados por los usuarios de datos en vez de los publicadores."
 
 #: ../../docs/schema/records_reference.md:52
-msgid "Releases (required)"
-msgstr "Entregas (requerido)"
-
-#: ../../docs/schema/records_reference.md:53
-msgid "Compiled Release (recommended)"
-msgstr "Release compilado (recomendado)"
+msgid "Releases"
+msgstr "Entregas"
 
 #: ../../docs/schema/records_reference.md:54
-msgid "Versioned Release (optional)"
-msgstr "Release versionado (opcional) "
+msgid ""
+"Each release in a record can be provided as either a linked release or an "
+"embedded release."
+msgstr ""
+"Cada entrega en un registro puede proporcionarse como una entrega vinculada "
+"o como una entrega incrustada."
 
 #: ../../docs/schema/records_reference.md:56
-msgid "Release list"
-msgstr "Lista de entregas"
+msgid "Linked releases"
+msgstr "Entregas vinculadas"
 
 #: ../../docs/schema/records_reference.md:58
-msgid ""
-"The releases that make up a contracting process can be provided in two ways:"
-msgstr ""
-"Las entregas que crean un proceso de contratación pueden proveerse de dos "
-"maneras:"
-
-#: ../../docs/schema/records_reference.md:60
-msgid "URLs and metadata for each release; or"
-msgstr "URLs y meta-datos para cada entrega; o"
-
-#: ../../docs/schema/records_reference.md:61
-msgid "Embedded copies of the release;"
-msgstr "Copias embebidas de la entrega;"
-
-#: ../../docs/schema/records_reference.md:63
-msgid ""
-"If providing an array of URLs, it must be possible for a consuming "
-"application to look up each URL, retrieve a release package, and locate the "
-"release inside it. In order to locate the specific release inside a release "
-"package, the `id` of the release must be appended to the package URL using a"
-" fragment identifier."
-msgstr ""
-"Si se provee una lista de URLs, debería ser posible para un aplicación "
-"consumidora buscar cada URL, recuperar un paquete de entregas y ubicar la "
-"entrega dentro de éste. Para poder ubicar la entrega específica dentro de un"
-" paquete, el `id` de la entrega debe de estar adjunto a la URL del paquete "
-"usando un identificador de fragmento."
+msgid "A linked release follows a simple schema:"
+msgstr "Una entrega vinculada sigue un esquema simple:"
 
 #: ../../docs/schema/records_reference.md:65
-msgid "An example releases section is given below."
-msgstr "A continuación se presenta un ejemplo de la sección de entregas."
-
-#: ../../docs/schema/records_reference.md:75
-msgid "Compiled Release"
-msgstr "Entrega Compliada"
-
-#: ../../docs/schema/records_reference.md:77
 msgid ""
-"The compiled release is the latest version of all the data about this "
-"contracting process, and has the same schema as a release."
+"For each `url` value, it must be possible for a consuming application to "
+"retrieve the release package at the URL and identify the release within it. "
+"Since a release package can contain multiple releases, for a linked release "
+"to identify a specific release via its `url` field, the `id` of the release "
+"must be appended to the release package URL using a fragment identifier."
 msgstr ""
-"La entrega compilada es la última versión de todos los datos sobre este "
-"proceso de contratación y tiene el mismo esquema que una entrega."
+"Para cada valor de `url`, debe ser posible que una aplicación de consumo "
+"recupere el paquete de entregas en la URL e identifique la entrega dentro de"
+" él. Dado que un paquete de entregas puede contener múltiples entregas, para"
+" que una entrega vinculada identifique una entrega específica a través de su"
+" campo `url`, el `id` de la entrega debe adjuntarse a la URL del paquete de "
+"entrega utilizando un identificador de fragmento."
 
-#: ../../docs/schema/records_reference.md:79
+#: ../../docs/schema/records_reference.md:67
+msgid "The following example demonstrates the use of linked releases."
+msgstr "El siguiente ejemplo muestra el uso de entregas vinculadas."
+
+#: ../../docs/schema/records_reference.md:76
 msgid ""
-"The process for creating a compiled release is described in the guidance on "
-"[merging](merging)."
+"Above, the first linked release has a `url` value of <https://standard.open-"
+"contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json#ocds-"
+"213czf-000-00002-01-award1>. The first part (`https://standard.open-"
+"contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json`) is "
+"the URL of the release package, and the fragment identifier (`ocds-"
+"213czf-000-00002-01-award1`) is the `id` of the release."
 msgstr ""
-"El proceso para crear una entrega compilada se describe en la guía sobre "
-"cómo [fusionar](merging)."
+"Arriba, la primera entrega vinculada tiene el valor de `url` de "
+"<https://standard.open-contracting.org/examples/releases/ocds-"
+"213czf-000-00002-01-award1.json#ocds-213czf-000-00002-01-award1>. La primera"
+" parte (`https://standard.open-contracting.org/examples/releases/ocds-"
+"213czf-000-00002-01-award1.json`) es la URL del paquete de entregas, y el "
+"identificador de fragmento `ocds-213czf-000-00002-01-award1`) es el `id` de "
+"la entrega."
 
-#: ../../docs/schema/records_reference.md:81
+#: ../../docs/schema/records_reference.md:78
 msgid ""
-"A compiled release provides a snapshot of the current state of a contracting"
-" process, and the contents must comply with the release schema, with the "
+"Release `id` values are only required to be unique within the scope of a "
+"contracting process: that is, within the scope of an `ocid` value. As such, "
+"a consuming application needs to use that fragment identifier in combination"
+" with the `ocid` of the record in order to identify the matching release "
+"within the release package."
+msgstr ""
+"Los valores de `id` de entrega sólo deben ser únicos dentro del alcance de "
+"un proceso de contratación: es decir, dentro del alcance de un valor de "
+"`ocid`. Así, una aplicación de consumo necesita usar ese identificador de "
+"fragmento en combinación con el `ocid` del registro para identificar la "
+"entrega correspondiente dentro del paquete de entregas."
+
+#: ../../docs/schema/records_reference.md:80
+msgid "Embedded releases"
+msgstr "Entregas embebidas"
+
+#: ../../docs/schema/records_reference.md:82
+msgid ""
+"An embedded release follows the [release schema](reference). In other words,"
+" instead of linking to a release within a release package as above, that "
+"release is entirely included in the record."
+msgstr ""
+"Una entrega incrustada sigue el [esquema de entrega](reference). En otras "
+"palabras, en vez de vincularse a una entrega dentro de un paquete de entrega"
+" como se mencionó anteriormente, la entrega se incluye en su totalidad "
+"dentro del registro."
+
+#: ../../docs/schema/records_reference.md:84
+msgid "The following example demonstrates the use of embedded releases."
+msgstr "El siguiente ejemplo muestra el uso de entregas incrustadas."
+
+#: ../../docs/schema/records_reference.md:93
+msgid "Comparing options"
+msgstr "Comparando opciones"
+
+#: ../../docs/schema/records_reference.md:95
+msgid "The considerations are:"
+msgstr "Las consideraciones son:"
+
+#: ../../docs/schema/records_reference.md:97
+msgid ""
+"Using linked releases yields smaller file sizes than using embedded "
+"releases."
+msgstr ""
+"Utilizar entregas vinculadas genera archivos de menor tamaño, en comparación"
+" a utilizar entregas incrustadas."
+
+#: ../../docs/schema/records_reference.md:98
+msgid ""
+"From a user's perspective, the contents of releases are easier to access as "
+"embedded releases than as linked releases (which involves the retrieval "
+"process described above)."
+msgstr ""
+"Desde la perspectiva del usuario, el contenido de las entregas es más fácil "
+"de acceder como entregas incrustadas que como entregas vinculadas (lo cual "
+"requiere el proceso de recuperación que se describió anteriormente)."
+
+#: ../../docs/schema/records_reference.md:99
+msgid ""
+"From a publisher's perspective, using linked releases involves publishing "
+"release packages and constructing `url` values, whereas using embedded "
+"releases doesn't."
+msgstr ""
+"Desde la perspectiva de un publicador, usar entregas vinculadas involucra "
+"publicar paquetes de entregas y construir valores de `url`, mientras que "
+"utilizar entregas incrustadas no involucra esto."
+
+#: ../../docs/schema/records_reference.md:101
+msgid "Compiled release"
+msgstr "Entrega compilada"
+
+#: ../../docs/schema/records_reference.md:103
+msgid ""
+"The compiled release is the latest version of all the data about a "
+"contracting process. In other words, it provides a snapshot of the current "
+"state of a contracting process."
+msgstr ""
+"La entrega compilada es la última versión de todos los datos sobre un "
+"proceso de contratación. En otras palabras, proporciona una instantánea o "
+"imagen del estado actual de un proceso de contrataciones.  "
+
+#: ../../docs/schema/records_reference.md:105
+msgid ""
+"The compiled release follows the [release schema](reference), with the "
 "exception of any fields on which `\"omitWhenMerged\": true` is declared."
 msgstr ""
-"Un release compilado da una vista del estado actual de un proceso de "
-"contrataciones, y los contenidos deben de cumplir con el esquema de entrega,"
-" con la excepción de los campos en los que se declare `\"omitWhenMerged\": "
-"true`."
+"La entrega compilada sigue el [esquema de entrega](reference), con la "
+"excepción de cualquier campo en el que se declara `\"omitWhenMerged\": "
+"true`. "
 
-#: ../../docs/schema/records_reference.md:83
-msgid "Versioned Release"
-msgstr "Entrega Versionada"
-
-#: ../../docs/schema/records_reference.md:85
+#: ../../docs/schema/records_reference.md:107
 msgid ""
-"A versioned release contains the history of all the data in the compiled "
-"release, including which fields have changed, when they were changed, and "
-"the release which updated them."
+"The process for creating a compiled release from individual releases is "
+"described in the [merging](merging) reference."
 msgstr ""
-"Una **entrega** versionada contiene el historial de todos los datos en la "
-"**entrega** compilada, incluyendo cuáles campos han cambiado, cuándo fueron "
-"cambiados y la **entrega** en la que se actualizaron."
+"El proceso para crear una entrega compilada a partir de entregas "
+"individuales se describe en la referencia de [fusionar](merging) "
 
-#: ../../docs/schema/records_reference.md:87
+#: ../../docs/schema/records_reference.md:109
+msgid "Versioned release"
+msgstr "Entrega versionada"
+
+#: ../../docs/schema/records_reference.md:111
 msgid ""
-"This versioned information is valuable for many use cases relating to "
-"contract monitoring. However, it can add substantially to file sizes, and so"
-" where publishers do generate this at source, they can consider publishing "
-"versioned and non-versioned copies of the records."
+"A versioned release aggregates all values of all fields from all releases. "
+"For each field, it describes the history of values from the initial value to"
+" the current value, including the `id`, `date` and `tag` of the release in "
+"which it was changed."
+msgstr ""
+"Una entrega versionada contiene todos los valores de todos los campos de "
+"todas las entregas. Para cada campo, se describe el historial de valores "
+"desde el valor inicial hasta el valor actual, incluyendo el `id`,` date` y "
+"`tag` de la entrega en la que el valor se modificó."
+
+#: ../../docs/schema/records_reference.md:113
+msgid ""
+"This versioned information is relevant to many use cases relating to "
+"contract monitoring. However, it can significantly increase file sizes. As "
+"such, publishers can consider publishing records both with and without the "
+"versioned release."
 msgstr ""
 "La información versionada es importante para muchos casos de uso "
 "relacionados al monitoreo de los contratos. Sin embargo, puede incrementar "
-"substancialmente el tamaño de los archivos, entonces, cuando los "
-"publicadores generan esto en la fuente, pueden considerar publicar copias "
-"versionadas y no versionadas de los registros."
+"substancialmente el tamaño de los archivos. Los publicadores pueden "
+"considerar publicar copias de los registros con y sin entregas versionadas."
 
-#: ../../docs/schema/records_reference.md:89
+#: ../../docs/schema/records_reference.md:115
 msgid ""
-"Third parties can use the information in the releases list to fetch source "
-"data, compile and verify their own version history for a contract."
+"If the versioned release is not provided, third parties can generate it by "
+"processing the record's releases according to the [merging](merging) "
+"reference."
 msgstr ""
-"Los terceros pueden usar información en la lista de entregas para obtener "
-"datos de la fuente, compilar, y verificar su propio historial de versiones "
-"para un contrato."
+"Si la entrega versionada no se proporciona, entidades externas pueden "
+"generarla al procesar las entregas en el registro de acuerdo a lo indicado "
+"en la referencia de [fusionar](merging)."
 
-#: ../../docs/schema/records_reference.md:91
+#: ../../docs/schema/records_reference.md:117
 msgid ""
-"An example extract of the versioned information for a tender value is shown "
-"below. This makes visible the change in contract value from the planning to "
-"the tender stage, whilst currency, which was first encountered in the "
-"planning stage stayed unchanged."
+"The following example displays a single field's [versioned "
+"values](../merging/#versioned-values). This shows that the amount changed "
+"between the planning stage and the tender stage, while the currency did not."
 msgstr ""
-"A continuación se muestra un extracto de ejemplo de la información "
-"versionada para un valor de licitación. Esto visibiliza el cambio en el "
-"valor del contrato de la planeación a la etapa de licitación, mientras que "
-"la divisa, que se encontró por primera vez en la etapa de planeación no tuvo"
-" cambios."
+"El siguiente ejemplo muestra los [valores versionados](../merging"
+"/#versioned-values) de un solo campo. Esto muestra que la cantidad cambió "
+"entre la etapa de planificación y la etapa de licitación, mientras que la "
+"moneda no cambió. "
