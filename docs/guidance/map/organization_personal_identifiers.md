@@ -1,29 +1,38 @@
 # Personal Identifiers
 
-A procurement process has several parties involved, most of them are legal organizations. To identify them, OCDS recommends the use of a **legal identifier**. The data users should have information about about what this identifier is. The publisher should document the organization's identifier in [org-id.guide](http://org-id.guide/)
+Suppliers and tenderers can be organizations or individuals (natural persons). Such individuals are often referred to as "sole traders" or "self-employed individuals".
 
-But sometimes, the party is not an organization, but a natural person, so it doesn't have a legal identifier. If the individual is a supplier and you have its personal identification you must declare it as it. OCDS recommends to follow the same approach used in the [BODS](http://standard.openownership.org/en/schema-beta-2/schema/guidance/identifiers.html?#shared-identifiers) standard:
+Details of natural persons can be disclosed using the `parties` section in OCDS, but only if:
 
-> *"the scheme should have the pattern {JURISDICTION}-{TYPE} where JURISDICTION is an uppercase ISO 3166-1 alpha-3 country code and TYPE is one of PASSPORT, TAXID or IDCARD"*
+* The natural person is a tenderer or supplier; and
+* The laws in your jurisdiction permit the publication of such details
 
-You can follow this approach only if the laws in your jurisdiction allows the publication of personal information.
+Subject to the above, you can disclose identifiers for natural persons using the `Identifier` building block.
+
+There are two components to an identifier in OCDS:
+
+* a code indicating the list or register from which the identifier is drawn (the `scheme`); and
+* the identifier itself (the `id`).
+
+Following the [guidance](http://standard.openownership.org/en/schema-beta-2/schema/guidance/identifiers.html?#shared-identifiers) from BODS to construct a `scheme` code for personal identifiers:
+
+> “the scheme should have the pattern {JURISDICTION}-{TYPE} where JURISDICTION is an uppercase ISO 3166-1 alpha-3 country code and TYPE is one of PASSPORT, TAXID or IDCARD”
 
 ## Worked example
 
 In the example below:
 
-* Colombia needs to publish information about a tenderer that is a self-employed individual
-* Colombia has the IDCARD for that tenderer. The laws there allow the publication of IDCARDs.
-* The ISO 3166-1 alpha-3 country code for Colombia is *COL*
-* Colombia publishes the IDCARD for the tenderer with `identifier.scheme` field set to `COL-IDCARD`.
-* The `identifier.id` field is set to the IDCARD number.
+* A self-employed individual submits a bid for a tender in Colombia
+* The individual is listed in the `parties` section with 'tenderer' in `.roles`
+* The individual's ID card number is published in `.identifier.id`
+* `.identifier.scheme` is constructed from the ISO 3166-1 alpha-3 country code for Colombia ('COL') and the type of the identifier ('IDCARD')
+
 
 ```eval_rst
 
 .. jsoninclude:: ../../examples/organization-personal-identifier.json
-   :jsonpointer: 
+   :jsonpointer:
    :expand: releases, parties, identifier
    :title: personal-identifiers
 
 ```
-
