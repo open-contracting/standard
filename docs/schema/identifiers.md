@@ -83,9 +83,11 @@ Mexico City then registered a prefix with the OCDS helpdesk. They have been give
 
 </div>
 
-The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data. 
+The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data.
 
 The ocid is case-sensitive; in other words, the letter case of an ocid must be consistent.
+
+It is good practice to separate the ocds prefix and the internal identifier with and hyphen (`-`).
 
 ### Registered prefixes
 
