@@ -685,7 +685,7 @@
         },
         "items": {
           "title": "Items contracted",
-          "description": "The goods, services, and any intangible outcomes in this contract. Note: If the items are the same as the award do not repeat.",
+          "description": "The goods, services, and any intangible outcomes in this contract. Note: you should not repeat the items if they are the same as the award.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -1282,7 +1282,7 @@
         },
         "id": {
           "type": "string",
-          "description": "The ID used for cross-referencing to this party from other sections of the release. This field may be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}).",
+          "description": "The ID used for cross-referencing to this party from other sections of the release. This field should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}).",
           "title": "Entity ID"
         },
         "identifier": {
@@ -2126,7 +2126,7 @@
           ]
         },
         "durationInDays": {
-          "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, should be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, should be equal to the difference between startDate and maxExtentDate.",
+          "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, must be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
           "type": [
             "integer",
