@@ -37,6 +37,15 @@ To make this step easier we provide templates to list the data elements within y
 * OCDS [fields](../../schema/reference), using the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-guidance/))
 * OCDS [codes](../../schema/codelists), using the [Codelist Mapping Template](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template-guidance/))
 
+Before working on mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   map/localization
+```
+
 ### Mapping organization identifiers
 
 [Organization identifiers](../../schema/identifiers/#organization-ids) in OCDS are made up of two parts:
