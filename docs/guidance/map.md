@@ -90,6 +90,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
    map/milestones
    map/organization_classifications
    map/organization_identifiers
+   map/organization_personal_identifiers
    map/organization_reference
    map/organizational_units
    map/pre-qualification

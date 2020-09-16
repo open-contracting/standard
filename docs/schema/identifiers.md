@@ -83,7 +83,7 @@ Mexico City then registered a prefix with the OCDS helpdesk. They have been give
 
 </div>
 
-The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data. 
+The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data.
 
 The ocid is case-sensitive; in other words, the letter case of an ocid must be consistent.
 
@@ -153,6 +153,8 @@ The **organization register prefix** is used to refer to a register from which t
 * **Local lists** - Some publishers do not map their data to external identifiers, maintaining instead a local list of suppliers. In these cases, the publisher may use their internal identifiers, and should adopt their own **organization list prefix**. Where possible, the publisher should also provide their local list on the web, with as much additional data about each supplier as possible, in order to maximize the chance of data users matching their local list to some more authoritative register.
 
 See the [full worked example](../guidance/map/organization_identifiers) for more information on implementing identifiers from these different kinds of organization lists.
+
+If you want to disclose identifiers for natural persons, see the [personal identifiers guidance](../guidance/map/organization_personal_identifiers).
 
 ## Release ID
 
