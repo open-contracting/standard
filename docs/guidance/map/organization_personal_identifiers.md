@@ -14,7 +14,7 @@ There are two components to an identifier in OCDS:
 * a code indicating the list or register from which the identifier is drawn (the `scheme`); and
 * the identifier itself (the `id`).
 
-Follow the [guidance](http://standard.openownership.org/en/0.2.0/schema/guidance/identifiers.html#shared-identifiers) from BODS to construct a `scheme` code for personal identifiers:
+Follow the [guidance](http://standard.openownership.org/en/0.2.0/schema/guidance/identifiers.html#shared-identifiers) from the Beneficial Ownership Data Standard to construct a `scheme` value for the personal identifier:
 
 > the scheme should have the pattern {JURISDICTION}-{TYPE} where JURISDICTION is an uppercase ISO 3166-1 alpha-3 country code and TYPE is one of PASSPORT, TAXID or IDCARD
 
@@ -29,10 +29,8 @@ In the example below:
 
 
 ```eval_rst
-
 .. jsoninclude:: ../../examples/organization-personal-identifier.json
    :jsonpointer:
    :expand: releases, parties, identifier
    :title: personal-identifiers
-
 ```
