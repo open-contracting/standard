@@ -31,7 +31,7 @@ Read more about using and customizing the form in the [resource guide](https://w
 
 The [data collection spreadsheet](https://www.open-contracting.org/resources/data-collection-spreadsheet/) is available in Google Sheets and for offline use in Microsoft Excel.
 
-Data is entered directly into the template, which structures and formats it to conform to OCDS.
+Data is entered directly into the template, which is structured and formatted to conform to OCDS.
 
 Data entered the template can be checked and converted using the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) and published in either spreadsheet or JSON format.
 
