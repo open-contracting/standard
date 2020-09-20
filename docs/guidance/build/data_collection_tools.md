@@ -95,7 +95,7 @@ The tool is open source and is [documented in Spanish](https://github.com/INAIme
 
 ## What next?
 
-However you choose to collect and structure your data, you should publish it online using an [open license](../../publish/#license-your-data) so that others can make use of it.
+[Establish your publication formats and access methods](../../build#establish-your-publication-formats-and-access-methods), and [publish your data](../../publish).
 
 Consider how you will make it easy for users to discover the data you have published. For example, by publishing it on an existing procurement portal, on your organization’s website, or an open data portal.
 
