@@ -26,7 +26,7 @@ As described in the [Field-Level Mapping Template Guidance](https://www.open-con
 
 To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/ocds-technical-assessment-template/) guides you through this process.
 
-If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents you should use the template to identify those data sources too.
+If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, you should use the template to identify those data sources, too.
 
 Once complete, you can:
 
