@@ -91,7 +91,7 @@ Consider using Contrataciones Abiertas if:
 * You want a [dashboard and visualizations](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/) of your data
 * Spanish is your (and your users') main language
 
-The tool is open source and is documented in Spanish [here](https://github.com/INAImexico/Contrataciones_abiertas_v2). You can also find an introduction to the tool in [our blog](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/).
+The tool is open source and is [documented in Spanish](https://github.com/INAImexico/Contrataciones_abiertas_v2). You can also find an introduction to the tool in [our blog](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/).
 
 ## What next?
 
