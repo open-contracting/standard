@@ -2,7 +2,7 @@
 
 This phase is about creating a new IT system, or updating an existing IT system, to implement your [mapping](map) and publish OCDS data.
 
-Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to collate and publish your data.
+Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../../support/#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
 
 ```eval_rst
 .. toctree::
@@ -48,7 +48,18 @@ Your choice of architecture can determine how frequently your data is updated, w
 ```
 **Resource:** [Technical case studies: OCDS implementation insights report](https://www.open-contracting.org/resources/technical-case-studies-ocds-implementation-insights/) provides insights into the technical choices made in OCDS implementations in Paraguay, Zambia, Colombia, Moldova and Argentina's Road Agency Vialidad.
 
-If you’re reusing an existing tool for collecting OCDS data, you should consider how you will collate and publish data collected using the tool. The [OCDS Helpdesk](../../support/#ocds-helpdesk) can help you to consider options for publication.
+### Decide how to combine spreadsheet data
+
+If you aren't creating or updating an IT system, but are instead collecting data using multiple spreadsheets, then this step is about working out how to combine your data into a single file for publication. Combining your data makes it easier for users to analyze the whole dataset.
+
+If you plan to publish your data infrequently and you only have a small number of spreadsheets, then simply copy-pasting the data into a single file for publication may be the easiest method.
+
+Otherwise, you can consider the following methods:
+
+* If you're comfortable using the commandline, you can CSV Kit's [`in2csv` command](https://csvkit.readthedocs.io/en/latest/scripts/in2csv.html) to convert your files to CSV format and the [`csvstack` command](https://csvkit.readthedocs.io/en/latest/scripts/csvstack.html) to combine them into a single file.
+* If you're comfortable writing VBA or Google Apps Script code, you can write a macro script in your preferred spreadsheet package to combine your data into a single file.
+* If you're comfortable using spreadsheet formulae, you can use Google Sheet's [IMPORTRANGE](https://support.google.com/docs/answer/3093340?hl=en) or [QUERY](https://support.google.com/docs/answer/3093343?hl=en) functions to import data from multiple spreadsheets to a single sheet.
+* If you aren't comfortable with the above methods, you can consider using a spreadsheet add-on for combining data from multiple sheets.
 
 ## Establish your publication formats and access methods
 
@@ -92,7 +103,7 @@ Having determined your system architecture, it's time to implement it. This is o
 * If you intend to **publish [record packages](../../schema/record_package)**, [OCDS Merge](https://ocds-merge.readthedocs.io/en/latest/) is the best software library for creating OCDS [records](../../getting_started/releases_and_records). If you use the [Python](https://www.python.org/) programming language, you can use it directly. If not, you can use its [test cases](https://ocds-merge.readthedocs.io/en/latest/#test-cases) to test your implementation of the [merge routine](../../schema/merging), and you can read its [commented code](https://github.com/open-contracting/ocds-merge) as inspiration for your implementation.
 * If you have [release packages](../../schema/release_package) and want to have [record packages](../../schema/record_package), if you have data that follows an older version of OCDS, or if you otherwise need to transform your OCDS data, you can use [OCDS Kit](https://ocdskit.readthedocs.io/) as a command-line tool or [Python](https://www.python.org/) library.
 
-If you’re reusing an existing [data collection tool](build/data_collection_tools), you can customize it:
+If you aren't creating or updating an IT system, but are instead reusing an existing [data collection tool](build/data_collection_tools), you can customize it:
 
 * The [data collection spreadsheet](https://www.open-contracting.org/resources/data-collection-spreadsheet/) includes instructions describing how to add fields and how to add and reformat sheets.
 * The [data collection form](https://www.open-contracting.org/resources/ocds-data-collection-form/) includes instructions describing how to add fields and how to customize descriptions and guidance.
