@@ -17,11 +17,11 @@ Data entered using the form can be checked and converted using the [OCDS Data Re
 Consider using the form if:
 
 * You don’t have the capacity to develop or install a software tool
-* Your users have access to reliable internet connections
-* Your users are unfamiliar with spreadsheets
-* Data entry will be done by many different users
+* Your users have access to **reliable internet connections**
+* Your users are **unfamiliar** with spreadsheets
+* Data entry will be done by **many** different users
 * You want to minimize the work required to collate data
-* You don’t need to update the data about a contracting process after it is first entered
+* You **don’t need to update** the data about a contracting process after it is first entered
 
 The form includes a subset of fields from the **tender** and **buyer** sections of OCDS. The OCDS Helpdesk can help you extend and adapt the form to suit your needs.
 
@@ -38,11 +38,11 @@ Data entered the template can be checked and converted using the [OCDS Data Revi
 Consider using the spreadsheet template to collect data if:
 
 * You don’t have the capacity to develop or install a software tool
-* You need to collect data without access to an internet connection
-* Your users are familiar with using spreadsheets
-* Data entry will be done by a small number of users
-* You have the capacity to collate data entered in multiple spreadsheets
-* You need to make multiple updates over the life of a contracting process
+* You need to collect data **without** access to an internet connection
+* Your users are **familiar** with using spreadsheets
+* Data entry will be done by a **small number of** users
+* You have the **capacity to collate** data entered in multiple spreadsheets
+* You need to make **multiple updates** over the life of a contracting process
 
 The template includes a subset of fields from the **planning**, **tender**, **award**, **contract** and **implementation** sections of OCDS.
 
@@ -64,12 +64,12 @@ OpenContractR can be added to a new or existing WordPress site. There are many W
 
 Consider using OpenContractR if:
 
-* You already have a WordPress website, or you have the capacity to set one up
-* Your users have access to reliable internet connections
-* Data entry will be done by many different users
+* You already have a **WordPress** website, or you have the capacity to set one up
+* Your users have access to **reliable internet connections**
+* Data entry will be done by **many** different users
 * You want to minimize the work required to collate data
-* You want users to be able to edit or update already entered data
-* You want an online search interface for your data
+* You want users to be able to **edit or update** already entered data
+* You want an online **search** interface for your data
 
 Read more about OpenContractR in its [introduction](https://drive.google.com/file/d/18WHnQcnA6oESZtcZgS4rgaBLjd8BKvbM/view). If you’re interested in using OpenContractR please get in touch with the OCDS Helpdesk.
 
@@ -85,11 +85,11 @@ The objective of the tool is to enable the monitoring of contracting processes b
 Consider using Contrataciones Abiertas if:
 
 * You have the resources and technical capacity to [set up the tool](https://github.com/INAImexico/Contrataciones_abiertas_v2/raw/master/Manual%20de%20instalaci%C3%B3n.docx)
-* Data entry will be done by different users
-* You want to validate your data before publication
+* Data entry will be done by **many** different users
+* You want to **validate** your data before publication
 * You want to minimize the work required to collate and publish data
-* You want a [dashboard and visualizations](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/) of your data
-* Spanish is your (and your users') main language
+* You want a [**dashboard and visualizations**](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/) of your data
+* **Spanish** is your (and your users') main language
 
 The tool is open source and is [documented in Spanish](https://github.com/INAImexico/Contrataciones_abiertas_v2). You can also find an introduction to the tool in [our blog](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/).
 
