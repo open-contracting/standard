@@ -56,7 +56,7 @@ If you plan to publish your data infrequently and you only have a small number o
 
 Otherwise, you can consider the following methods:
 
-* If you're comfortable using the commandline, you can CSV Kit's [`in2csv` command](https://csvkit.readthedocs.io/en/latest/scripts/in2csv.html) to convert your files to CSV format and the [`csvstack` command](https://csvkit.readthedocs.io/en/latest/scripts/csvstack.html) to combine them into a single file.
+* If you're comfortable using a command-line interface, you can use CSV Kit's [`in2csv` command](https://csvkit.readthedocs.io/en/latest/scripts/in2csv.html) to convert each sheet of a spreadsheet into a CSV file, and then use the [`csvstack` command](https://csvkit.readthedocs.io/en/latest/scripts/csvstack.html) to combine sets of CSV files with identical headers into single CSV files.
 * If you're comfortable writing VBA or Google Apps Script code, you can write a macro script in your preferred spreadsheet package to combine your data into a single file.
 * If you're comfortable using spreadsheet formulae, you can use Google Sheet's [IMPORTRANGE](https://support.google.com/docs/answer/3093340?hl=en) or [QUERY](https://support.google.com/docs/answer/3093343?hl=en) functions to import data from multiple spreadsheets to a single sheet.
 * If you aren't comfortable with the above methods, you can consider using a spreadsheet add-on for combining data from multiple sheets.
