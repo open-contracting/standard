@@ -50,9 +50,9 @@ Your choice of architecture can determine how frequently your data is updated, w
 
 ### Decide how to combine spreadsheet data
 
-If you aren't creating or updating an IT system, but are instead collecting data using multiple spreadsheets, then this step is about working out how to combine your data into a single file for publication. Combining your data makes it easier for users to analyze the whole dataset.
+If you aren't creating or updating an IT system, but are instead collecting data from different individuals, departments or agencies using spreadsheets, then this step is about working out how to combine your data into a single file for publication. Combining your data makes it easier for users to analyze the whole dataset.
 
-If you plan to publish your data infrequently and you only have a small number of spreadsheets, then simply copy-pasting the data into a single file for publication may be the easiest method.
+If you plan to publish your data infrequently, you only have a small number of spreadsheets and your spreadsheets have identical headers, then simply copy-pasting the data into a single file for publication may be the easiest method.
 
 Otherwise, you can consider the following methods:
 
