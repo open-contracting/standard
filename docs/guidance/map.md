@@ -45,6 +45,14 @@ If your contracting data is managed on paper or in unstructured electronic docum
 
 You can [contact the OCDS Helpdesk](../../support/#ocds-helpdesk) for support and guidance on using the mapping templates.
 
+Before working on mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   map/localization
+
 ### Mapping organization identifiers
 
 [Organization identifiers](../../schema/identifiers/#organization-ids) in OCDS are made up of two parts:
@@ -89,6 +97,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
    map/milestones
    map/organization_classifications
    map/organization_identifiers
+   map/organization_personal_identifiers
    map/organization_reference
    map/organizational_units
    map/pre-qualification

@@ -158,11 +158,13 @@ The record gets updated to include the new release. The compiled and versioned r
 
 The supplier starts the construction work. After a while, the procuring entity makes the first payment to the supplier. The publisher creates a release to document this update in the process.
 
-Up to this point, the publisher used a single source to generate OCDS documents. They store procurement data in a procurement system. Payment data, however, gets stored in a financial system, so do we need to join the data to create a release?
+So far, the council used a single procurement system to manage the process. The procurement system published the previous OCDS releases.
 
-If the systems share common *process identifiers*, there is no need to join data to create a release. The only requisite is to built the `ocid` using the shared identifier.
+The council now uses a separate financial system to manage payments. The financial system publishes the new OCDS release.
 
-The publisher uses the information from the financial system to create a new release. This release uses the 'implementation' tag. The `contracts.implementation.transactions` section includes the details of the payment.
+The procurement system and the financial system share a common contracting process identifier. This means that the two systems can publish releases using the same `ocid`.
+
+The new release uses the 'implementation' tag. The `contracts.implementation.transactions` section includes the details of the payment.
 
 Because the new release uses the same `ocid`, it is possible to update the record with the information.
 
