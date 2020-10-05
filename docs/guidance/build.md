@@ -87,7 +87,7 @@ Having determined your system architecture, it's time to implement it. This is o
 
 **Resource:** [Using tabular versions of JSON to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
 
-**Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([part I](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/),[part II](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/)).
+**Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([Part 1](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/), [Part 2](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/), [Part 3](https://www.open-contracting.org/2020/05/28/prototyping-ocds-data-using-spreadsheets-part-iii/)).
 
 ```eval_rst
 .. note::
