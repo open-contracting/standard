@@ -30,6 +30,8 @@ The answers to these questions will help you to develop a robust publication pla
 
 **Resource:** [Publication Plan Template](https://www.open-contracting.org/resources/ocds-publication-plan-template/)
 
+If your contracting data is mostly on paper, in local spreadsheets or in unstructured electronic documents, and you don’t have the capacity to create a new IT system to collect data, consider reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools).
+
 ## Set your goals and priorities
 
 The most useful OCDS implementations are those that were designed around real-world goals and priorities. To achieve success, you need to understand your policy goals and user needs, and use them to inform the design of your OCDS implementation.
