@@ -56,7 +56,7 @@ Each of these goals has different data needs. These needs ought to inform your c
 
 **Resource:** [Red flags for integrity methodology guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/) ([red flags to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/12PFkUlQH09jQvcnORjcbh9-8d-NnIuk4mAQwdGiXeSM/edit#gid=0))
 
-**Resource:** [Indicators to diagnose the performance of a procurement market guide](https://docs.google.com/document/d/1vSJk9-qWSTQEx9ZZc7BUhQZMHvTRcyDYVS2sl8HB__k/edit?usp=sharing) ([procurement indicators to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222))
+**Resource:** [Indicators to diagnose the performance of a procurement market guide](https://www.open-contracting.org/resources/indicators-to-diagnose-the-performance-of-a-procurement-market/) ([procurement indicators to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222))
 
 Different stakeholders in your OCDS implementation can have different objectives. Journalists, civil society organizations, policymakers and auditors will all have different goals.
 
