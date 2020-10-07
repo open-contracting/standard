@@ -13,7 +13,7 @@ Alternatively, if you don't have the capacity to create or update an IT system, 
 
 As you complete this phase, you can:
 
-* Fill in the *Publication architecture* sub-section of your [Publication Plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
+* Fill in the *Publication architecture* sub-section of your [Publication Plan](../design/#develop-your-publication-plan).
 
 ## Register an OCID prefix
 
