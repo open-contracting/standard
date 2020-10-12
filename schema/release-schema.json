@@ -188,7 +188,7 @@
       "properties": {
         "id": {
           "title": "Tender ID",
-          "description": "An identifier for this tender process. This may be the same as the ocid, or may be an internal identifier for this tender.",
+          "description": "An identifier for this tender process. This may be the same as the ocid, or may be an internal identifier for this tender. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer"
@@ -493,7 +493,7 @@
       "properties": {
         "id": {
           "title": "Award ID",
-          "description": "The identifier for this award. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+          "description": "The identifier for this award. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
           "type": [
             "string",
             "integer"
@@ -624,7 +624,7 @@
       "properties": {
         "id": {
           "title": "Contract ID",
-          "description": "The identifier for this contract. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+          "description": "The identifier for this contract. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
           "type": [
             "string",
             "integer"
@@ -810,7 +810,7 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "A local identifier for this milestone, unique within this block. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism.",
+          "description": "A local identifier for this milestone, unique within this block. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer"
@@ -934,7 +934,7 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "A local, unique identifier for this document. This field is used to keep track of multiple revisions of a document through the compilation from release to record mechanism.",
+          "description": "A local, unique identifier for this document. This field is used to keep track of multiple revisions of a document through the compilation from release to record mechanism. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer"
@@ -1033,7 +1033,7 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source.",
+          "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -1063,7 +1063,7 @@
         },
         "projectID": {
           "title": "Project identifier",
-          "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects.",
+          "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -1124,7 +1124,7 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "A unique identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For IATI this is the transaction reference.",
+          "description": "A unique identifier for this transaction. This identifier should be possible to cross-reference against the provided data source. For IATI this is the transaction reference. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer"
@@ -1218,7 +1218,7 @@
             "string",
             "integer"
           ],
-          "description": "The id of the party being referenced. This must match the id of an entry in the parties section.",
+          "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
           "title": "Organization ID"
         },
         "identifier": {
@@ -1351,7 +1351,7 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "A local identifier to reference and merge the items by. Must be unique within a given array of items.",
+          "description": "A local identifier to reference and merge the items by. Must be unique within a given array of items. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer"
@@ -1567,7 +1567,7 @@
         },
         "id": {
           "title": "ID",
-          "description": "The classification code taken from the scheme.",
+          "description": "The classification code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -1617,7 +1617,7 @@
         },
         "id": {
           "title": "ID",
-          "description": "The identifier of the organization in the selected scheme.",
+          "description": "The identifier of the organization in the selected scheme. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
