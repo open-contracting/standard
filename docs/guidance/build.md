@@ -83,7 +83,9 @@ Where resources allow, it is also best practice to provide multiple access metho
 
 ## Build your data pipeline
 
-Having determined your system architecture, it's time to implement it. This is one of the longest steps of implementing OCDS. Depending on your [data sources](../map/#identify-your-data-sources) and system architecture, you might be able to reuse some of these OCDS tools:
+Having determined your system architecture, it's time to implement it. This is one of the longest steps of implementing OCDS.
+
+Whether your current infrastructure is low tech or high tech, we have tools and resources to help you publish OCDS. Depending on your [data sources](../map/#identify-your-data-sources) and system architecture, you might be able to reuse some of these OCDS tools:
 
 ```eval_rst
 .. note::
