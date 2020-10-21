@@ -1,6 +1,6 @@
 # Data files and APIs
 
-Different users have different needs when it comes to accessing OCDS data. It also must be possible to automate the download of all the OCDS data, in some form.
+Different users have different needs when it comes to accessing OCDS data. It also needs to be possible to automate the download of all the OCDS data, in some form.
 
 [Data on the Web Best Practices](https://www.w3.org/TR/dwbp/#MultipleFormats) suggests that "Data should be available in multiple data formats" in order to increases the number of different users, tools and applications that can process the data.
 
