@@ -17,3 +17,9 @@ The Government of UK uses identifiers from the UK Companies House to uniquely id
 ```
 
 The publisher also collects two extra identifiers, which are disclosed in the `additionalIdentifiers` block. The first one is the VAT identification number for suppliers. Note that the VAT registry is not present in org-id.guide, but the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to build the "GB-VAT" code used in the `scheme` field: the two-letter country prefix ("GB") plus a short abbreviation for the registry ("VAT"). The publisher checked that it does not conflict with any list code in org-id.guide.
+
+## Party IDs
+
+Each of the parties (organizations or other participants) in the [parties section](../schema/reference#Parties) ought to have a [local `id`](../schema/identifiers#Party-IDs) used to reference it from elsewhere in the schema. For parties with an organization identifier, you can construct `id` using `{identifier.scheme}-{identifier.id}`.
+
+For parties without an organization identifier, you can populate `id` with a fixed or sequential value. For example, you can set the buyer's `id` to '1' and set each supplier's `id` sequentially from '2' onwards. Alternatively, you can set the party's `id` to its `role` and add a sequential number for roles with multiple parties, e.g. 'buyer', 'tenderer-1', 'tenderer-2' etc.
