@@ -34,11 +34,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Schema
 
-* []() Clarify the uniqueness of `Organization.id`
+* [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
 
 ### Documentation
 
-* []() Add guidance on populating `Organization.id` for parties without an organization identifier
+* [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
 
 ## [1.1.5] - 2020-08-20
 
