@@ -12,5 +12,5 @@ def json_load(filename, library=json):
 
 def json_dump(filename, data):
     with open(os.path.join(schema_dir, filename), 'w') as f:
-        json.dump(data, f, indent=2, separators=(',', ': '))
+        json.dump(data, f, indent=2)
         f.write('\n')
