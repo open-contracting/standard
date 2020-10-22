@@ -160,7 +160,7 @@ If you want to disclose identifiers for natural persons, see the [personal ident
 
 Each of the parties (organizations or other participants) involved in a contracting process is declared in the [parties section](../reference/#parties).
 
-Each party has a local identifier (`id`) used to reference it from elsewhere in the schema. For example, `buyer/id` references the buyer's entry in the parties section using `parties/id`.
+Each party has a local identifier (`id`) used to reference it from elsewhere in the data. For example, `buyer/id` references the buyer's entry in the parties section using `parties/id`.
 
 A party's `id` is separate from its organization identifier and need only be unique within the scope of the contracting process to which it is a party.
 
