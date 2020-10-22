@@ -83,7 +83,7 @@ Mexico City then registered a prefix with the OCDS helpdesk. They have been give
 
 </div>
 
-The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data. 
+The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data.
 
 The ocid is case-sensitive; in other words, the letter case of an ocid must be consistent.
 
@@ -153,6 +153,16 @@ The **organization register prefix** is used to refer to a register from which t
 * **Local lists** - Some publishers do not map their data to external identifiers, maintaining instead a local list of suppliers. In these cases, the publisher may use their internal identifiers, and should adopt their own **organization list prefix**. Where possible, the publisher should also provide their local list on the web, with as much additional data about each supplier as possible, in order to maximize the chance of data users matching their local list to some more authoritative register.
 
 See the [full worked example](../guidance/map/organization_identifiers) for more information on implementing identifiers from these different kinds of organization lists.
+
+## Party IDs
+
+Each of the parties (organizations or other participants) involved in a contracting process is declared in the [parties section](reference#Parties).
+
+Each party has a local identifier (`id`) used to reference it from elsewhere in the schema. For example, `buyer/id` references the buyer's entry in the parties section using `parties/id`.
+
+A party's `id` is separate from its organization identifier and need only be unique within the scope of the contracting process to which it is a party.
+
+See the [full worked example](../guidance/map/organization_reference) for more information on organization references.
 
 ## Release ID
 
