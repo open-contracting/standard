@@ -156,6 +156,16 @@ See the [full worked example](../guidance/map/organization_identifiers) for more
 
 If you want to disclose identifiers for natural persons, see the [personal identifiers guidance](../guidance/map/organization_personal_identifiers).
 
+## Party IDs
+
+Each of the parties (organizations or other participants) involved in a contracting process is declared in the [parties section](../reference/#parties).
+
+Each party has a local identifier (`id`) used to reference it from elsewhere in the data. For example, `buyer/id` references the buyer's entry in the parties section using `parties/id`.
+
+A party's `id` is separate from its organization identifier and need only be unique within the scope of the contracting process to which it is a party. A party’s `id` must be consistent across all releases with the same `ocid` value.
+
+See the [guidance](../../guidance/map/organization_identifiers/#party-ids) for more information on party IDs.
+
 ## Release ID
 
 A release identifier must be unique within the scope of the contracting process of which it is a part. In other words, across all OCDS releases with the same `ocid` value, each release identifier refers to exactly one release; no two releases use the same release identifier.
