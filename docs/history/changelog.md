@@ -34,7 +34,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Schema
 
-* [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of string over integer for identifiers
+* [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 
 ## [1.1.5] - 2020-08-20
 
