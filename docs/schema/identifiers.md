@@ -162,7 +162,7 @@ Each party has a local identifier (`id`) used to reference it from elsewhere in 
 
 A party's `id` is separate from its organization identifier and need only be unique within the scope of the contracting process to which it is a party.
 
-See the [full worked example](../guidance/map/organization_reference) for more information on organization references.
+See the [guidance](../guidance/map/organization_identifiers#Party-IDs) for more information on party IDs.
 
 ## Release ID
 
