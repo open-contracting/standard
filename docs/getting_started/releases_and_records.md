@@ -132,10 +132,6 @@ A **compiled release** follows the release structure. It contains the latest val
 
 A **versioned release** follows a similar structure. For each field in the release structure, the versioned release provides an object. This object contains the history of changes for the field.
 
-The following shows how to update a record as releases are published over time.
-
-![Record updates](../_static/change_history_animation.gif)
-
 Each time a new release is available:
 
 * The record adds the new release to the releases list, by either embedding it or adding a link to it.
@@ -174,3 +170,9 @@ Compiled releases are useful for many scenarios. But users might need the full h
 #### Packaging
 
 Records are published wrapped in a record package. The `uri` field in the package leads to a copy of the same record package.
+
+#### How does all fit together?
+
+The following shows how to update a record as releases are published over time.
+
+![Record updates](../_static/change_history_animation.gif)

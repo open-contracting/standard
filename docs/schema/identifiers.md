@@ -154,6 +154,8 @@ The **organization register prefix** is used to refer to a register from which t
 
 See the [full worked example](../guidance/map/organization_identifiers) for more information on implementing identifiers from these different kinds of organization lists.
 
+If you want to disclose identifiers for natural persons, see the [personal identifiers guidance](../guidance/map/organization_personal_identifiers).
+
 ## Party IDs
 
 Each of the parties (organizations or other participants) involved in a contracting process is declared in the [parties section](reference#Parties).
