@@ -34,6 +34,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Schema
 
+* [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
 
 ### Documentation
