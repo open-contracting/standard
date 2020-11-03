@@ -169,7 +169,7 @@ That said, many organizations can be assigned the 'buyer' role in the `parties` 
    mapping_awards_contracts
    consortia
    catalogs
-   frameworks
+   related_processes
    purchase_orders
-   
+
 ```
