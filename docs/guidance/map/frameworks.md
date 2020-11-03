@@ -60,7 +60,7 @@ Competition at the second stage is limited to suppliers that are party to the fr
 
 The second stage of a framework agreement procedure is also known as a “call-off.” Non-competitive second stages are also known as “direct call-offs.” Competitive second stages are also known as “mini-competitions.”
 
-[Types of framework agreement](../../_static/framework_agreement_types.png)
+![Types of framework agreement](../../_static/png/framework_agreement_types.png)
 
 ## Modelling framework agreements in OCDS
 
@@ -83,7 +83,7 @@ OCDS models the first and second stages of framework agreement procedures as sep
 
 The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
 
-![OCDS framework agreement model](../../_static/framework_agreement_model.png)
+![OCDS framework agreement model](../../_static/png/framework_agreement_model.png)
 
 The competitive extension is used to distinguish whether the second stage of a framework agreement procedure involves competition.
 
@@ -205,6 +205,7 @@ The notice is modelled as an OCDS release with `tag` set to ‘tender’ and wit
 ```eval_rst
 
 .. jsoninclude:: ../../examples/frameworks/closed_single_first_stage.json
+   :jsonpointer:
    :title: First Stage
 
 ```
@@ -223,6 +224,7 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 ```eval_rst
 
 .. jsoninclude:: ../../examples/frameworks/closed_single_supplier.json
+   :jsonpointer:
    :title: Adding a supplier
 
 ```
@@ -250,6 +252,7 @@ The release has the following properties:
 ```eval_rst
 
 .. jsoninclude:: ../../examples/frameworks/closed_single_award.json
+   :jsonpointer:
    :title: Award of a procurement contract
 
 ```
@@ -276,6 +279,7 @@ The notice is modelled as an OCDS release with `tag` set to ‘tender’ and wit
 ```eval_rst
 
 .. jsoninclude:: ../../examples/frameworks/open_multiple_first_stage.json
+   :jsonpointer:
    :title: First Stage
 
 ```
@@ -294,7 +298,7 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 ```eval_rst
 
 .. jsoninclude:: ../../examples/frameworks/open_multiple_supplier.json
-   :jsonpointer: /records/0/releases/0
+   :jsonpointer:
    :title: Adding a supplier
 
 ```
@@ -317,6 +321,7 @@ The release has the following properties:
 ```eval_rst
 
 .. jsoninclude:: ../../examples/frameworks/open_multiple_second_stage.json
+   :jsonpointer:
    :title: Second Stage
 
 ```
@@ -338,6 +343,7 @@ The release has the following properties:
 ```eval_rst
 
 .. jsoninclude:: ../../examples/frameworks/open_multiple_award.json
+   :jsonpointer:
    :title: Award of a procurement contract
 
 ```
