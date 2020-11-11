@@ -30,6 +30,17 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932) [#976](https://github.com/open-contracting/standard/pull/976).
 * Make changes to how the documentation is built [#880](https://github.com/open-contracting/standard/pull/880) [#886](https://github.com/open-contracting/standard/pull/886) [#889](https://github.com/open-contracting/standard/pull/889) [#905](https://github.com/open-contracting/standard/pull/905) [#915](https://github.com/open-contracting/standard/pull/915) [#916](https://github.com/open-contracting/standard/pull/916) [#923](https://github.com/open-contracting/standard/pull/923) [#935](https://github.com/open-contracting/standard/pull/935) [#944](https://github.com/open-contracting/standard/pull/944) [#945](https://github.com/open-contracting/standard/pull/945) [#946](https://github.com/open-contracting/standard/pull/946) [#953](https://github.com/open-contracting/standard/pull/953) [#962](https://github.com/open-contracting/standard/pull/962) [#964](https://github.com/open-contracting/standard/pull/964) [#1002](https://github.com/open-contracting/standard/pull/1002) [#1003](https://github.com/open-contracting/standard/pull/1003).
 
+## [1.2] - YYYY-MM-DD
+
+### Schema
+
+* [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
+* [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
+
+### Documentation
+
+* [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
+
 ## [1.1.5] - 2020-08-20
 
 * The [Translation and localization policy](../../governance/#translation-and-localization-policy) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
@@ -223,12 +234,12 @@ See the changelogs for:
 
 ### Changed
 
-#### Structural updates 
+#### Structural updates
 
 * [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](https://standard.open-contracting.org/1.1/en/schema/reference/#parties)** - We have updated the approach to include organization information in the standard from having embedded blocks of organization information, to using embedded cross-references to a top-level 'parties' array where full organization details are stored. This change reduces duplication of organization information, and enables more flexible disclosure of information on all the parties to a contracting process, including multiple buyers.
-* [#357](https://github.com/open-contracting/standard/issues/357) **[Amendment handling](https://standard.open-contracting.org/1.1/en/implementation/amendments/)** - We have replace amendment with an array of amendments, and have updated schema and guidance to remove the option of providing semi-structured changes in an amendment object. Changes between amendments should now be provided using multiple releases, with the option to explicitly declare how releases relate to an amendment included in the new amendments array. 
+* [#357](https://github.com/open-contracting/standard/issues/357) **[Amendment handling](https://standard.open-contracting.org/1.1/en/implementation/amendments/)** - We have replace amendment with an array of amendments, and have updated schema and guidance to remove the option of providing semi-structured changes in an amendment object. Changes between amendments should now be provided using multiple releases, with the option to explicitly declare how releases relate to an amendment included in the new amendments array.
 
-#### Schema validation updates 
+#### Schema validation updates
 
 * [#329](https://github.com/open-contracting/standard/issues/329) **[Float for Item.quantity](https://standard.open-contracting.org/1.1/en/schema/reference/#item)** - Item quantities has been updated to 'number' to support decimal values (e.g 10.5 rather than just 10)
 * [#253](https://github.com/open-contracting/standard/issues/253) **[Negative amounts](https://standard.open-contracting.org/1.1/en/schema/reference/#budget)** - We have added support for negative amounts in transactions
@@ -238,7 +249,7 @@ See the changelogs for:
 * [#301](https://github.com/open-contracting/standard/issues/301) **[Specifying versions and extensions in package metadata](https://standard.open-contracting.org/1.1/en/schema/records_reference/#package-metadata)** - We have updated the package schemas to require that version is declared, and to provide a means of declaring extensions in use. This will be used in future versions of the validator to support validation against extensions.
 * [#287](https://github.com/open-contracting/standard/issues/287) **[Remove all ocdsMerge strategies](https://standard.open-contracting.org/1.1/en/schema/merging/)** - We have remove all 'merge strategies' from the schema as these are no longer required, now that all objects in arrays contain an id element.
 
-#### Schema definition updates 
+#### Schema definition updates
 
 * [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](https://standard.open-contracting.org/1.1/en/schema/reference/#transaction)** - We have replaced receiverOrganization and providerOrganization with payee and payer, to align with more familiar terminology, and have replaced 'amount' with 'value' for consistency with other areas of the standard.
 * [#378](https://github.com/open-contracting/standard/issues/378) **[Updates to core budget block](https://standard.open-contracting.org/1.1/en/schema/reference/#budget)** - We have updated references to the Fiscal Data Package in the schema.
@@ -258,7 +269,7 @@ See the changelogs for:
 * [#386](https://github.com/open-contracting/standard/issues/386) **[Document type](https://standard.open-contracting.org/1.1/en/schema/codelists/#document-type)** - New codes have been added to the documentType codelist, and definitions of codes updated.
 * [#322](https://github.com/open-contracting/standard/issues/322) **[Submission Method Codelist](https://standard.open-contracting.org/1.1/en/schema/codelists/#submission-method)** - The submissionMethod codelist has been updated
 * [#387](https://github.com/open-contracting/standard/issues/387) **[Codelist updates: Item Classification Scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme)** - New entries have been added to the itemClassificationScheme codelist
-* [#385](https://github.com/open-contracting/standard/issues/385) **[Codelist updates: awardCriteria](https://standard.open-contracting.org/1.1/en/schema/codelists/#award-criteria)** - Revising the awardCriteria codelist, with all existing codes deprecated and a new set of codes introduced. 
+* [#385](https://github.com/open-contracting/standard/issues/385) **[Codelist updates: awardCriteria](https://standard.open-contracting.org/1.1/en/schema/codelists/#award-criteria)** - Revising the awardCriteria codelist, with all existing codes deprecated and a new set of codes introduced.
 
 ### Added
 
