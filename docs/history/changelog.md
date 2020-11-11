@@ -36,10 +36,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
+* [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
 
 ### Documentation
 
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
+* [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
 
 ## [1.1.5] - 2020-08-20
 
