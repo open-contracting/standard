@@ -3051,7 +3051,15 @@
         },
         "eligibilityCriteria": {
           "title": "Eligibility criteria",
-          "description": "A description of any eligibility criteria for potential suppliers.",
+          "description": "A description of any eligibility criteria for potential suppliers. For example, a supplier might be ineligible if they have been temporarily suspended or debarred by the buyer.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "selectionCriteria": {
+          "title": "Selection criteria",
+          "description": "A description of any selection criteria for potential suppliers. For example, a supplier might need to prove a certain professional ability, enrollment in a particular trade register or a minimum financial standing. More structured information can be provided on selection criteria using the selection criteria extension.",
           "type": [
             "string",
             "null"
@@ -3964,6 +3972,12 @@
           ]
         },
         "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "^(selectionCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
@@ -11322,7 +11336,15 @@
         },
         "eligibilityCriteria": {
           "title": "Eligibility criteria",
-          "description": "A description of any eligibility criteria for potential suppliers.",
+          "description": "A description of any eligibility criteria for potential suppliers. For example, a supplier might be ineligible if they have been temporarily suspended or debarred by the buyer.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "selectionCriteria": {
+          "title": "Selection criteria",
+          "description": "A description of any selection criteria for potential suppliers. For example, a supplier might need to prove a certain professional ability, enrollment in a particular trade register or a minimum financial standing. More structured information can be provided on selection criteria using the selection criteria extension.",
           "type": [
             "string",
             "null"
@@ -12235,6 +12257,12 @@
           ]
         },
         "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "^(selectionCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
