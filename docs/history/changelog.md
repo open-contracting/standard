@@ -36,7 +36,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
-* [#1112](https://github.com/open-contracting/standard/pull/1112) Strengthen some normative statements in schema
+* [#1112](https://github.com/open-contracting/standard/pull/1112) Strengthen normative statements in the description of the following fields:
+  * `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available" ("may" replaced with "should")
+  * `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
+  * `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
 
 ### Documentation
 
