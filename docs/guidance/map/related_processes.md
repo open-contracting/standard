@@ -103,7 +103,7 @@ The following guidance describes how to model the different stages of a framewor
 
 #### Setting procurement method
 
-The `tender.procurementMethod` field uses the [method codelist](../../schema/codelists/#method) to describe the competitive conditions of the framework agreement procedure as a whole, not only the first stage.
+The `tender.procurementMethod` field uses the [method codelist](../../../schema/codelists/#method) to describe the competitive conditions of the framework agreement procedure as a whole, not only the first stage.
 
 Use the following criteria to determine the procurement method:
 
