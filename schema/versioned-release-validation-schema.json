@@ -1526,6 +1526,41 @@
             },
             "uri": {
               "$ref": "#/definitions/StringNullUriVersioned"
+            },
+            "weight": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/definitions/StringNullVersioned"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "releaseDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "releaseID": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "releaseTag": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "patternProperties": {
