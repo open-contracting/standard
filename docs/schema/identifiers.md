@@ -87,6 +87,8 @@ The ocid prefix itself is made up of two parts: a prefix agency identifier (curr
 
 The ocid is case-sensitive; in other words, the letter case of an ocid must be consistent.
 
+It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`).
+
 ### Registered prefixes
 
 Publishers must register an ocid prefix. See the [registration pages](../guidance/build) for details of how to obtain your ocid prefix.
