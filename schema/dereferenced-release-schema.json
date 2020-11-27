@@ -2180,16 +2180,43 @@
                     "type": "object",
                     "properties": {
                       "unit": {
-                        "title": "Unit",
-                        "description": "The code for the unit in which the weight is specified, using UN/CEFACT Common Codes for Units of Measurement.",
-                        "type": [
-                          "string",
-                          "null"
-                        ]
+                        "title": "Simple Unit",
+                        "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                        "type": "object",
+                        "properties": {
+                          "scheme": {
+                            "title": "Scheme",
+                            "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "codelist": "unitClassificationScheme.csv",
+                            "openCodelist": true
+                          },
+                          "id": {
+                            "title": "ID",
+                            "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                            "type": [
+                              "string",
+                              "integer",
+                              "null"
+                            ],
+                            "versionId": true
+                          }
+                        },
+                        "patternProperties": {
+                          "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
                       },
-                      "value": {
-                        "title": "Value",
-                        "description": "The value of the weight",
+                      "quantity": {
+                        "title": "Quantity",
+                        "description": "The number of units",
                         "type": [
                           "number",
                           "null"
@@ -5165,16 +5192,43 @@
                       "type": "object",
                       "properties": {
                         "unit": {
-                          "title": "Unit",
-                          "description": "The code for the unit in which the weight is specified, using UN/CEFACT Common Codes for Units of Measurement.",
-                          "type": [
-                            "string",
-                            "null"
-                          ]
+                          "title": "Simple Unit",
+                          "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                          "type": "object",
+                          "properties": {
+                            "scheme": {
+                              "title": "Scheme",
+                              "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "codelist": "unitClassificationScheme.csv",
+                              "openCodelist": true
+                            },
+                            "id": {
+                              "title": "ID",
+                              "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                              "type": [
+                                "string",
+                                "integer",
+                                "null"
+                              ],
+                              "versionId": true
+                            }
+                          },
+                          "patternProperties": {
+                            "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          }
                         },
-                        "value": {
-                          "title": "Value",
-                          "description": "The value of the weight",
+                        "quantity": {
+                          "title": "Quantity",
+                          "description": "The number of units",
                           "type": [
                             "number",
                             "null"
@@ -6529,16 +6583,43 @@
                       "type": "object",
                       "properties": {
                         "unit": {
-                          "title": "Unit",
-                          "description": "The code for the unit in which the weight is specified, using UN/CEFACT Common Codes for Units of Measurement.",
-                          "type": [
-                            "string",
-                            "null"
-                          ]
+                          "title": "Simple Unit",
+                          "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                          "type": "object",
+                          "properties": {
+                            "scheme": {
+                              "title": "Scheme",
+                              "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "codelist": "unitClassificationScheme.csv",
+                              "openCodelist": true
+                            },
+                            "id": {
+                              "title": "ID",
+                              "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                              "type": [
+                                "string",
+                                "integer",
+                                "null"
+                              ],
+                              "versionId": true
+                            }
+                          },
+                          "patternProperties": {
+                            "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          }
                         },
-                        "value": {
-                          "title": "Value",
-                          "description": "The value of the weight",
+                        "quantity": {
+                          "title": "Quantity",
+                          "description": "The number of units",
                           "type": [
                             "number",
                             "null"
@@ -10520,16 +10601,43 @@
                     "type": "object",
                     "properties": {
                       "unit": {
-                        "title": "Unit",
-                        "description": "The code for the unit in which the weight is specified, using UN/CEFACT Common Codes for Units of Measurement.",
-                        "type": [
-                          "string",
-                          "null"
-                        ]
+                        "title": "Simple Unit",
+                        "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                        "type": "object",
+                        "properties": {
+                          "scheme": {
+                            "title": "Scheme",
+                            "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "codelist": "unitClassificationScheme.csv",
+                            "openCodelist": true
+                          },
+                          "id": {
+                            "title": "ID",
+                            "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                            "type": [
+                              "string",
+                              "integer",
+                              "null"
+                            ],
+                            "versionId": true
+                          }
+                        },
+                        "patternProperties": {
+                          "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
                       },
-                      "value": {
-                        "title": "Value",
-                        "description": "The value of the weight",
+                      "quantity": {
+                        "title": "Quantity",
+                        "description": "The number of units",
                         "type": [
                           "number",
                           "null"
@@ -13501,16 +13609,43 @@
                     "type": "object",
                     "properties": {
                       "unit": {
-                        "title": "Unit",
-                        "description": "The code for the unit in which the weight is specified, using UN/CEFACT Common Codes for Units of Measurement.",
-                        "type": [
-                          "string",
-                          "null"
-                        ]
+                        "title": "Simple Unit",
+                        "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                        "type": "object",
+                        "properties": {
+                          "scheme": {
+                            "title": "Scheme",
+                            "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "codelist": "unitClassificationScheme.csv",
+                            "openCodelist": true
+                          },
+                          "id": {
+                            "title": "ID",
+                            "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                            "type": [
+                              "string",
+                              "integer",
+                              "null"
+                            ],
+                            "versionId": true
+                          }
+                        },
+                        "patternProperties": {
+                          "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
                       },
-                      "value": {
-                        "title": "Value",
-                        "description": "The value of the weight",
+                      "quantity": {
+                        "title": "Quantity",
+                        "description": "The number of units",
                         "type": [
                           "number",
                           "null"
@@ -14859,16 +14994,43 @@
                     "type": "object",
                     "properties": {
                       "unit": {
-                        "title": "Unit",
-                        "description": "The code for the unit in which the weight is specified, using UN/CEFACT Common Codes for Units of Measurement.",
-                        "type": [
-                          "string",
-                          "null"
-                        ]
+                        "title": "Simple Unit",
+                        "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                        "type": "object",
+                        "properties": {
+                          "scheme": {
+                            "title": "Scheme",
+                            "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "codelist": "unitClassificationScheme.csv",
+                            "openCodelist": true
+                          },
+                          "id": {
+                            "title": "ID",
+                            "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                            "type": [
+                              "string",
+                              "integer",
+                              "null"
+                            ],
+                            "versionId": true
+                          }
+                        },
+                        "patternProperties": {
+                          "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
                       },
-                      "value": {
-                        "title": "Value",
-                        "description": "The value of the weight",
+                      "quantity": {
+                        "title": "Quantity",
+                        "description": "The number of units",
                         "type": [
                           "number",
                           "null"
@@ -21886,16 +22048,43 @@
               "type": "object",
               "properties": {
                 "unit": {
-                  "title": "Unit",
-                  "description": "The code for the unit in which the weight is specified, using UN/CEFACT Common Codes for Units of Measurement.",
-                  "type": [
-                    "string",
-                    "null"
-                  ]
+                  "title": "Simple Unit",
+                  "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                  "type": "object",
+                  "properties": {
+                    "scheme": {
+                      "title": "Scheme",
+                      "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "codelist": "unitClassificationScheme.csv",
+                      "openCodelist": true
+                    },
+                    "id": {
+                      "title": "ID",
+                      "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                      "type": [
+                        "string",
+                        "integer",
+                        "null"
+                      ],
+                      "versionId": true
+                    }
+                  },
+                  "patternProperties": {
+                    "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
                 },
-                "value": {
-                  "title": "Value",
-                  "description": "The value of the weight",
+                "quantity": {
+                  "title": "Quantity",
+                  "description": "The number of units",
                   "type": [
                     "number",
                     "null"
@@ -22598,6 +22787,41 @@
           "title": "Duration (days)",
           "type": [
             "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "SimpleUnit": {
+      "title": "Simple Unit",
+      "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "unitClassificationScheme.csv",
+          "openCodelist": true
+        },
+        "id": {
+          "title": "ID",
+          "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ],
+          "versionId": true
+        }
+      },
+      "patternProperties": {
+        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
             "null"
           ]
         }
