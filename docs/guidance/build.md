@@ -21,7 +21,7 @@ The [identifiers](../../schema/identifiers) reference page describes the contrac
 
 To publish OCDS data, you need to register an ocid prefix.
 
-**Action**: Email <data@open-contracting.org> with your organization's name and request an OCID prefix.
+**Action**: Email <data@open-contracting.org> to request an OCID prefix. Provide the name of the publishing organization and the email address of a contact person at this organization.
 
 ```eval_rst
 .. note::
