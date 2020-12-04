@@ -2181,7 +2181,7 @@
                     "properties": {
                       "unit": {
                         "title": "Simple Unit",
-                        "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                        "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
                         "type": "object",
                         "properties": {
                           "scheme": {
@@ -2196,27 +2196,18 @@
                           },
                           "id": {
                             "title": "ID",
-                            "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                            "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
                             "type": [
                               "string",
-                              "integer",
                               "null"
                             ],
                             "versionId": true
-                          }
-                        },
-                        "patternProperties": {
-                          "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                            "type": [
-                              "string",
-                              "null"
-                            ]
                           }
                         }
                       },
                       "quantity": {
                         "title": "Quantity",
-                        "description": "The number of units",
+                        "description": "The number of units.",
                         "type": [
                           "number",
                           "null"
@@ -5193,7 +5184,7 @@
                       "properties": {
                         "unit": {
                           "title": "Simple Unit",
-                          "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                          "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
                           "type": "object",
                           "properties": {
                             "scheme": {
@@ -5208,27 +5199,18 @@
                             },
                             "id": {
                               "title": "ID",
-                              "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                              "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
                               "type": [
                                 "string",
-                                "integer",
                                 "null"
                               ],
                               "versionId": true
-                            }
-                          },
-                          "patternProperties": {
-                            "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                              "type": [
-                                "string",
-                                "null"
-                              ]
                             }
                           }
                         },
                         "quantity": {
                           "title": "Quantity",
-                          "description": "The number of units",
+                          "description": "The number of units.",
                           "type": [
                             "number",
                             "null"
@@ -6584,7 +6566,7 @@
                       "properties": {
                         "unit": {
                           "title": "Simple Unit",
-                          "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                          "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
                           "type": "object",
                           "properties": {
                             "scheme": {
@@ -6599,27 +6581,18 @@
                             },
                             "id": {
                               "title": "ID",
-                              "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                              "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
                               "type": [
                                 "string",
-                                "integer",
                                 "null"
                               ],
                               "versionId": true
-                            }
-                          },
-                          "patternProperties": {
-                            "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                              "type": [
-                                "string",
-                                "null"
-                              ]
                             }
                           }
                         },
                         "quantity": {
                           "title": "Quantity",
-                          "description": "The number of units",
+                          "description": "The number of units.",
                           "type": [
                             "number",
                             "null"
@@ -10602,7 +10575,7 @@
                     "properties": {
                       "unit": {
                         "title": "Simple Unit",
-                        "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                        "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
                         "type": "object",
                         "properties": {
                           "scheme": {
@@ -10617,27 +10590,18 @@
                           },
                           "id": {
                             "title": "ID",
-                            "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                            "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
                             "type": [
                               "string",
-                              "integer",
                               "null"
                             ],
                             "versionId": true
-                          }
-                        },
-                        "patternProperties": {
-                          "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                            "type": [
-                              "string",
-                              "null"
-                            ]
                           }
                         }
                       },
                       "quantity": {
                         "title": "Quantity",
-                        "description": "The number of units",
+                        "description": "The number of units.",
                         "type": [
                           "number",
                           "null"
@@ -13610,7 +13574,7 @@
                     "properties": {
                       "unit": {
                         "title": "Simple Unit",
-                        "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                        "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
                         "type": "object",
                         "properties": {
                           "scheme": {
@@ -13625,27 +13589,18 @@
                           },
                           "id": {
                             "title": "ID",
-                            "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                            "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
                             "type": [
                               "string",
-                              "integer",
                               "null"
                             ],
                             "versionId": true
-                          }
-                        },
-                        "patternProperties": {
-                          "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                            "type": [
-                              "string",
-                              "null"
-                            ]
                           }
                         }
                       },
                       "quantity": {
                         "title": "Quantity",
-                        "description": "The number of units",
+                        "description": "The number of units.",
                         "type": [
                           "number",
                           "null"
@@ -14995,7 +14950,7 @@
                     "properties": {
                       "unit": {
                         "title": "Simple Unit",
-                        "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                        "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
                         "type": "object",
                         "properties": {
                           "scheme": {
@@ -15010,27 +14965,18 @@
                           },
                           "id": {
                             "title": "ID",
-                            "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                            "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
                             "type": [
                               "string",
-                              "integer",
                               "null"
                             ],
                             "versionId": true
-                          }
-                        },
-                        "patternProperties": {
-                          "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                            "type": [
-                              "string",
-                              "null"
-                            ]
                           }
                         }
                       },
                       "quantity": {
                         "title": "Quantity",
-                        "description": "The number of units",
+                        "description": "The number of units.",
                         "type": [
                           "number",
                           "null"
@@ -22049,7 +21995,7 @@
               "properties": {
                 "unit": {
                   "title": "Simple Unit",
-                  "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+                  "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
                   "type": "object",
                   "properties": {
                     "scheme": {
@@ -22064,27 +22010,18 @@
                     },
                     "id": {
                       "title": "ID",
-                      "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                      "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
                       "type": [
                         "string",
-                        "integer",
                         "null"
                       ],
                       "versionId": true
-                    }
-                  },
-                  "patternProperties": {
-                    "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-                      "type": [
-                        "string",
-                        "null"
-                      ]
                     }
                   }
                 },
                 "quantity": {
                   "title": "Quantity",
-                  "description": "The number of units",
+                  "description": "The number of units.",
                   "type": [
                     "number",
                     "null"
@@ -22794,7 +22731,7 @@
     },
     "SimpleUnit": {
       "title": "Simple Unit",
-      "description": "A simple unit consists of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the category from that list being applied.",
+      "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
       "type": "object",
       "properties": {
         "scheme": {
@@ -22809,21 +22746,12 @@
         },
         "id": {
           "title": "ID",
-          "description": "The unit code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+          "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
           "type": [
             "string",
-            "integer",
             "null"
           ],
           "versionId": true
-        }
-      },
-      "patternProperties": {
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
