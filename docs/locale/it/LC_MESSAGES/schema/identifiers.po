@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 16:26-0400\n"
+"POT-Creation-Date: 2020-12-11 21:23-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: James McKinney, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/open-contracting-partnership-1/teams/112300/it/)\n"
@@ -254,7 +254,7 @@ msgstr ""
 "Questi sono costituiti da un identificativo per il dipartimento responsabile"
 " dell'appalto, un numero di gara e l'anno."
 
-#: ../../docs/schema/identifiers.md:74 ../../docs/schema/identifiers.md:179
+#: ../../docs/schema/identifiers.md:74 ../../docs/schema/identifiers.md:181
 msgid "For example:"
 msgstr "Per esempio:"
 
@@ -533,10 +533,16 @@ msgid ""
 msgstr ""
 
 #: ../../docs/schema/identifiers.md:157
+msgid ""
+"If you want to disclose identifiers for natural persons, see the [personal "
+"identifiers guidance](../guidance/map/organization_personal_identifiers)."
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:159
 msgid "Release ID"
 msgstr "ID di rilascio"
 
-#: ../../docs/schema/identifiers.md:159
+#: ../../docs/schema/identifiers.md:161
 msgid ""
 "A release identifier must be unique within the scope of the contracting "
 "process of which it is a part. In other words, across all OCDS releases with"
@@ -544,18 +550,18 @@ msgid ""
 "release; no two releases use the same release identifier."
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:161
+#: ../../docs/schema/identifiers.md:163
 msgid ""
 "A release identifier must also be consistent within this scope. For example,"
 " if the `id` of a release is \"12345\" in one release package, then the `id`"
 " of the same release in another release package must also be \"12345\"."
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:163
+#: ../../docs/schema/identifiers.md:165
 msgid "Award and Contract IDs"
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:165
+#: ../../docs/schema/identifiers.md:167
 msgid ""
 "Award and contract identifiers must be unique within the scope of the "
 "contracting process of which they are a part. In other words, across all "
@@ -563,14 +569,14 @@ msgid ""
 " exactly one contract; no two contracts use the same contract identifier."
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:167
+#: ../../docs/schema/identifiers.md:169
 msgid ""
 "Award and contract identifiers must also be consistent within this scope. "
 "For example, if the `id` of an award is \"22\" in one release, then the `id`"
 " of the same award in another release must also be \"22\"."
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:169
+#: ../../docs/schema/identifiers.md:171
 msgid ""
 "Contracts must cross-reference a related award (using the `awardID` field), "
 "as key information such as suppliers can be contained in the related award. "
@@ -579,24 +585,24 @@ msgid ""
 "award."
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:171
+#: ../../docs/schema/identifiers.md:173
 msgid "Item, Document and Milestone IDs"
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:173
+#: ../../docs/schema/identifiers.md:175
 msgid ""
 "An item, document or milestone identifier must be unique within a given "
 "array of items, and must be used consistently across all the releases in a "
 "contracting process."
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:175
+#: ../../docs/schema/identifiers.md:177
 msgid ""
 "The same `id` value may be re-used in another array of items within the same"
 " release, and no cross-reference between these identifiers is implied."
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:177
+#: ../../docs/schema/identifiers.md:179
 msgid ""
 "The use of an identifier means that subsequent releases can update prior "
 "identified items, documents or milestones, without needing to republish all "
@@ -606,38 +612,38 @@ msgstr ""
 "aggiornare articoli, documenti o fasi identificati in precedenza, senza la "
 "necessità di ripubblicare tutti gli articoli, i documenti o le fasi."
 
-#: ../../docs/schema/identifiers.md:181
+#: ../../docs/schema/identifiers.md:183
 msgid ""
 "A first release sets the items to be procured in `tender/items` and the "
 "items awarded in one award in `awards/0/items`:"
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:182
+#: ../../docs/schema/identifiers.md:184
 msgid "`tender/items` contains three items, with `id` values of \"1\", \"2\", and \"3\""
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:183
+#: ../../docs/schema/identifiers.md:185
 msgid "`awards/0/items` contains two items, with `id` values of \"3\" and \"4\""
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:185
+#: ../../docs/schema/identifiers.md:187
 msgid ""
 "There is *no* relationship between the item to be procured with `id` \"3\" "
 "and the item awarded with `id` \"3\"; these can be different items. "
 "Continuing the example:"
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:187
+#: ../../docs/schema/identifiers.md:189
 msgid ""
 "A second release updates the items awarded in the single award in "
 "`awards/0/items`:"
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:188
+#: ../../docs/schema/identifiers.md:190
 msgid "`awards/0/items` contains three items, with `id` values of \"3\", \"4\", \"5\""
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:190
+#: ../../docs/schema/identifiers.md:192
 msgid ""
 "Here, there *is* a relationship between the items awarded with `id` \"3\" "
 "and \"4\" in the first release and the items awarded with `id` \"3\" and "
