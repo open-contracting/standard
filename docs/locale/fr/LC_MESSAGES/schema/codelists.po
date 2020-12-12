@@ -5,21 +5,22 @@
 # 
 # Translators:
 # James McKinney, 2020
-# Colin Maudry <colin@maudry.com>, 2020
 # Joel Gombin <joel.gombin@gmail.com>, 2020
-# samgoeta <samgoeta@gmail.com>, 2020
 # Tim Davies <tim.davies@opendataservices.coop>, 2020
 # Cecile LG <cecile@datactivi.st>, 2020
+# samgoeta <samgoeta@gmail.com>, 2020
+# Emeline Vandeven <emeline@datactivist.coop>, 2020
+# Colin Maudry <colin@maudry.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"POT-Creation-Date: 2020-08-20 16:26-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: Cecile LG <cecile@datactivi.st>, 2020\n"
-"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"Last-Translator: Colin Maudry <colin@maudry.com>, 2020\n"
+"Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,6 +36,9 @@ msgid ""
 "Some schema fields refer to codelists, to limit and standardize the possible"
 " values of the fields, in order to promote data interoperability."
 msgstr ""
+"Certains champs du schéma font référence à des listes de codes pour limiter "
+"et harmoniser les valeurs possibles des champs pour augmenter "
+"l'interopérabilité des données."
 
 #: ../../docs/schema/codelists.md:5
 msgid ""
@@ -43,6 +47,11 @@ msgid ""
 "all currencies in the world. **Open codelists** are intended to be "
 "representative, but not comprehensive."
 msgstr ""
+"Les listes de codes peuvent être soit ouvertes, soit fermées. Les **listes "
+"de codes fermées** sont prévues pour être exhaustives ; par exemple la liste"
+" des codes relative aux [devises](#currency) couvre les unités monétaires du"
+" monde entier. Les **listes de codes ouvertes** sont prévues pour être "
+"représentative, mais pas exhaustives."
 
 #: ../../docs/schema/codelists.md:7
 msgid ""
@@ -53,10 +62,17 @@ msgid ""
 "to create an issue in the [OCDS GitHub repository](https://github.com/open-"
 "contracting/standard/issues) about adding a new code."
 msgstr ""
+"Les producteurs de données doivent utiliser les codes des listes de codes, à"
+" moins qu'aucun code ne convienne. Si aucun code ne convient et que la liste"
+" de codes est **ouverte**, alors un producteur de donnée peut utiliser un "
+"nouveau code. Si aucun code n'est approprié et que la liste de codes est "
+"**fermée**, alors le producteur de données est encouragé à créer une "
+"question dans le [dépôt GitHub OCDS](https://github.com/open-"
+"contracting/standard/issues) à propos de l'ajout d'un nouveau code."
 
 #: ../../docs/schema/codelists.md:1
 msgid "Extending open codelists"
-msgstr ""
+msgstr "Extension des listes de codes ouvertes"
 
 #: ../../None:1
 msgid ""
@@ -67,6 +83,13 @@ msgid ""
 "repository](https://github.com/open-contracting/standard/issues), so that "
 "the codes can be considered for inclusion in the codelist."
 msgstr ""
+"Si vous utilisez de nouveaux codes en dehors de ceux recensés dans une liste"
+" de codes ouverts, merci de documenter les codes dans un [dépôt "
+"Github](../guidance/map/extensions) ou dans votre [politique de "
+"publication](../../guidance/publish/#finalize-your-publication-policy). "
+"Créez également une question dans le [dépôt GitHub OCDS](https://github.com"
+"/open-contracting/standard/issues), afin que nous puissions éventuellement "
+"ajouter ces codes dans la liste de codes."
 
 #: ../../docs/schema/codelists.md:18
 msgid ""
@@ -75,6 +98,11 @@ msgid ""
 "defines the codes in the codelist (shown as tables below). It also has an "
 "`openCodelist` property, to indicate whether the codelist is open or closed."
 msgstr ""
+"Le schéma d'instance, dans [Schéma JSON ](../../release-schema.json), a un "
+"champ `codelist` pour indiquer le [fichier CSV](../../codelists/) qui "
+"contient la définition des codes de la liste de codes (présentée dans les "
+"tableaux ci-dessous). Le schéma d'instance a également un champ "
+"`openCodelist` qui indique si la liste de codes est ouverte ou fermée."
 
 #: ../../docs/schema/codelists.md:20
 msgid ""
@@ -82,10 +110,10 @@ msgid ""
 "camelCase. Codes must not be translated, though the OCDS team will work with"
 " publishers to translate code titles and definitions."
 msgstr ""
-"Les codes sont sensibles à la casse, et sont généralement fournis en langue "
-"anglaise et au format camelCase. La valeur des codes ne doit pas être "
-"traduite car l'équipe OCDS travaille avec les producteurs de données pour la"
-" publication de la traduction des titres de codes et des définitions."
+"Les codes sont sensibles à la casse, et sont généralement en anglais et au "
+"format camelCase. La valeur des codes ne doit pas être traduite. L'équipe "
+"OCDS travaille avec les producteurs de données pour la publication de la "
+"traduction des titres et des définitions des codes."
 
 #: ../../docs/schema/codelists.md:22
 msgid "Open Codelists"
@@ -173,7 +201,7 @@ msgstr "Description"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "buyer"
-msgstr ""
+msgstr "buyer"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Buyer"
@@ -189,7 +217,7 @@ msgstr ""
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "procuringEntity"
-msgstr ""
+msgstr "procuringEntity"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Procuring entity"
@@ -200,12 +228,12 @@ msgid ""
 "The entity managing the procurement. This can be different from the buyer "
 "who pays for, or uses, the items being procured."
 msgstr ""
-"L'entité qui gère la commande publique. Cela peut être différent de "
-"l'acheteur qui paye, ou utilise, les biens ou services achetés."
+"L'entité qui gère la commande publique. Il peut s'agir d'une organisation "
+"différente de l'acheteur, qui paye ou utilise les biens ou services achetés."
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "supplier"
-msgstr ""
+msgstr "supplier"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Supplier"
@@ -219,11 +247,11 @@ msgstr ""
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "tenderer"
-msgstr ""
+msgstr "tenderer"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Tenderer"
-msgstr "Candidats"
+msgstr "Candidat"
 
 #: ../current_lang/codelists/partyRole.csv:2
 msgid "All entities who submit a tender."
@@ -231,7 +259,7 @@ msgstr "Toutes les entités qui soumettent une offre."
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "funder"
-msgstr ""
+msgstr "funder"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Funder"
@@ -242,12 +270,12 @@ msgid ""
 "The funder is an entity providing money or finance for this contracting "
 "process."
 msgstr ""
-"Le bailleur de fonds est une entité fournissant de l'argent ou des finances "
-"pour ce processus de passation de marché."
+"Le bailleur de fonds est une entité fournissant de l'argent ou des services "
+"financiers dans le cadre de cette procédure de passation de marché."
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "enquirer"
-msgstr ""
+msgstr "enquirer"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Enquirer"
@@ -258,12 +286,12 @@ msgid ""
 "A party who has made an enquiry during the enquiry phase of a contracting "
 "process."
 msgstr ""
-"Une partie qui a pris part à un échange durant la phase d'échange d'un "
-"processus de passation de marché."
+"Une partie qui a pris part à un échange durant la phase d'échange d'une "
+"procédure de passation de marché."
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "payer"
-msgstr ""
+msgstr "payer"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Payer"
@@ -275,7 +303,7 @@ msgstr "Une partie réalisant un paiement dans une une transaction."
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "payee"
-msgstr ""
+msgstr "payee"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Payee"
@@ -283,11 +311,11 @@ msgstr "Bénéficiaire"
 
 #: ../current_lang/codelists/partyRole.csv:2
 msgid "A party in receipt of a payment from a transaction."
-msgstr "Une partie qui reçoit un paiement d'une transaction."
+msgstr "Une partie qui reçoit un paiement lors d'une transaction."
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "reviewBody"
-msgstr ""
+msgstr "reviewBody"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Review body"
@@ -304,7 +332,7 @@ msgstr ""
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "interestedParty"
-msgstr ""
+msgstr "interestedParty"
 
 #: ../current_lang/codelists/partyRole.csv:1
 msgid "Interested party"
@@ -327,14 +355,13 @@ msgstr "Schéma de classification des éléments"
 #: ../../docs/schema/codelists.md:36
 msgid ""
 "Items should be classified using existing item classification schemes, such "
-"as the [EC Common Procurement Vocabulary (CPV)](http://simap.europa.eu"
-"/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm)."
+"as the [EC Common Procurement Vocabulary "
+"(CPV)](https://simap.ted.europa.eu/web/simap/cpv)."
 msgstr ""
 "Les livrables qui composent le marché doivent être classés selon les "
 "nomenclatures et les listes de codes existantes, telles que le [Vocabulaire "
-"Commun des Marchés de l'Union Européenne (CPV)](http://simap.europa.eu"
-"/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm). L'utilisation de "
-"listes de codes ouvertes est fortement suggérée."
+"Commun des Marchés de l'Union Européenne "
+"(CPV)](https://simap.ted.europa.eu/web/simap/cpv)."
 
 #: ../../docs/schema/codelists.md:38
 msgid ""
@@ -343,6 +370,10 @@ msgid ""
 "can find the codes relevant to a given context by filtering the codelist by "
 "its `Category` column."
 msgstr ""
+"La liste de code `itemClassificationScheme` est référencée par le champs "
+"`schéma` de l'objet `Classification`, lequel peut être utilisé dans de "
+"multiples contextes. Vous pouvez trouver les codes adéquats à une situation "
+"donnée en filtrant la liste de codes dans la colonne `catégorie`."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "Source"
@@ -355,11 +386,12 @@ msgstr "Catégorie"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "CPV"
-msgstr ""
+msgstr "CPV"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "EC Common Procurement Vocabulary"
-msgstr "Vocabulaire commun de l'union européenne pour les marchés publics"
+msgstr ""
+"Vocabulaire commun de la Commission européenne pour les marchés publics"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -374,23 +406,22 @@ msgid ""
 "consuming applications ought to be aware of this when processing data with "
 "CPV codes."
 msgstr ""
-"Le vocabulaire commun d'approvisionnement est une norme adoptée par la "
-"Commission de la Communauté européenne et qui comprend un vocabulaire "
-"principal pour la définition du sujet d'un contrat, et un vocabulaire "
-"supplémentaire pour l'ajout d'informations qualitatives supplémentaires. Le "
-"vocabulaire principal, identifié dans OCDS par le code CPV, repose sur une "
-"structure arborescente comprenant des codes allant jusqu'à 9 chiffres (un "
-"code à 8 chiffres plus un chiffre de contrôle) associé à un libellé qui "
-"décrit le type de biens, de travaux ou de services constituant l'objet du "
-"contrat. Les codes peuvent être fournis avec ou sans le chiffre de contrôle,"
-" et les applications consommant les données doivent prendre en compte cela "
-"lors du traitement des données comprenant des codes CPV."
+"Le vocabulaire commun pour les marchés publics est une norme adoptée par la "
+"Commission européenne et qui comprend un vocabulaire principal pour la "
+"définition du sujet d'un contrat, et d'un autre vocabulaire pour l'ajout "
+"d'informations qualitatives supplémentaires. Le vocabulaire principal, "
+"identifié dans OCDS par le code CPV, repose sur une arborescence de codes "
+"allant jusqu'à 9 chiffres (un code à 8 chiffres plus un chiffre de "
+"contrôle), associés à un libellé qui décrit le type de biens, de travaux ou "
+"de services constituant l'objet du contrat. Les codes peuvent être fournis "
+"avec ou sans le chiffre de contrôle, et les applications consommant les "
+"données doivent en tenir compte lors du traitement des données comprenant "
+"des codes CPV."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
-msgid ""
-"http://simap.europa.eu/codes-and-nomenclatures/codes-cpv/codes-cpv_en.htm"
-msgstr ""
+msgid "https://simap.ted.europa.eu/web/simap/cpv"
+msgstr "https://simap.ted.europa.eu/web/simap/cpv"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
@@ -404,11 +435,11 @@ msgstr ""
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "item"
-msgstr ""
+msgstr "item"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "CPVS"
-msgstr ""
+msgstr "CPVS"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "EC Common Procurement Vocabulary - Supplementary Codelists"
@@ -428,21 +459,21 @@ msgid ""
 msgstr ""
 "Le vocabulaire commun pour les marchés publics (Common Procurement "
 "Vocabulary, CPV) est une nomenclature européenne de classification "
-"uniformisée en matière de marchés publics permettant de standardiser, grâce "
-"à un vocabulaire principal, la définition de l'objet du contrat, ainsi qu'un"
-" vocabulaire supplémentaire pour ajouter des informations qualitatives "
-"complémentaires. Le vocabulaire supplémentaire, identifié dans OCDS par le "
-"code CPVS, est fondé sur un code alphanumérique avec un libellé "
-"correspondant permettant d'ajouter des détails supplémentaires sur la nature"
-" ou la destination spécifiques des biens contractés. "
+"uniformisée des marchés publics permettant de standardiser, grâce à un "
+"vocabulaire principal, la définition de l'objet du contrat. Elle propose "
+"également un vocabulaire supplémentaire pour ajouter des informations "
+"qualitatives complémentaires. Le vocabulaire supplémentaire, identifié dans "
+"OCDS par le code CPVS, est composé d'un code alphanumérique et d'un libellé "
+"permettant d'ajouter des détails supplémentaires sur la nature ou la "
+"fonction des biens achetés. "
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "GSIN"
-msgstr ""
+msgstr "GSIN"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "Goods and Services Identification Number"
-msgstr "Numéro d'Identification des Biens et Services (NIBS/GSIN)"
+msgstr "Numéro d'Identification des Biens et Services (NIBS)"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -452,7 +483,7 @@ msgid ""
 "buyandsell.gc.ca"
 msgstr ""
 "Le gouvernement fédéral canadien utilise des Numéros d'Identification des "
-"Biens et Services (NIBS/GSIN) pour identifier les descriptions de produits "
+"Biens et Services (NIBS/GSIN) pour normaliser la description des produits "
 "génériques pour ses activités de commande publique. La liste complète est "
 "publiée et maintenue sur [http://buyandsell.gc.ca](http://buyandsell.gc.ca)"
 
@@ -461,32 +492,37 @@ msgid ""
 "https://buyandsell.gc.ca/procurement-data/goods-and-services-identification-"
 "number"
 msgstr ""
+"https://buyandsell.gc.ca/procurement-data/goods-and-services-identification-"
+"number"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "UNSPSC"
-msgstr ""
+msgstr "UNSPSC"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "United Nations Standard Products and Services Code"
-msgstr "Code des produits et services standard des Nations Unies"
+msgstr ""
+"Classification Standard des Produits et des Services des Nations Unies"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
 "The United Nations Standard Products and Services Code (UNSPSC) is a "
 "hierarchical convention that is used to classify all products and services."
 msgstr ""
+"L'UNSPSC est une arborescence de codes utilisée pour classifier tous les "
+"produits et les services."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "http://www.unspsc.org/codeset-downloads"
-msgstr ""
+msgstr "http://www.unspsc.org/codeset-downloads"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "CPC"
-msgstr ""
+msgstr "CPC"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "Central Product Classification"
-msgstr "Classification centrale des produits"
+msgstr "Classification centrale de produits"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -495,25 +531,23 @@ msgid ""
 " It is intended to be an international standard for organizing and analyzing"
 " data on industrial production, national accounts, trade and prices."
 msgstr ""
-"La Classification Centrale des Produits (CPC) est une classification des "
-"produits et services promulguée par la Commission statistique des Nations "
-"Unies. Elle est destinée à être une norme internationale pour organiser et "
-"analyser les données sur la production industrielle, les comptes nationaux, "
-"les échanges et les prix."
+"La CPC est une classification des produits et services promulguée par la "
+"Commission statistique des Nations Unies. C'est une norme internationale "
+"destinée à organiser et analyser les données sur la production industrielle,"
+" les comptes nationaux, les échanges et les prix."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "https://unstats.un.org/unsd/classifications/Econ/cpc"
-msgstr ""
+msgstr "https://unstats.un.org/unsd/classifications/Econ/cpc"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "OKDP"
-msgstr ""
+msgstr "OKDP"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid ""
 "Russian National Classification of Products by Economic Activity (1994)"
-msgstr ""
-"Classification nationale russe des produits par activité économique (1994)"
+msgstr "Classification Russe des activités et produits économiques  (1994)"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -522,25 +556,25 @@ msgid ""
 "Russian Procurement information until January 1, 2016. Superseded by OKPD."
 msgstr ""
 "Composante du système unifié de classification et de codage des informations"
-" techniques, économiques et sociales de la Fédération de Russie, utilisé "
+" techniques, économiques et sociales de la Fédération de Russie, utilisée "
 "pour l'information sur les appels d'offres russes jusqu'au 1er janvier 2016."
-" Remplacé par OKPD."
+" Remplacée par l'OKPD."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid ""
 "http://base.consultant.ru/cons/cgi/online.cgi?req=doc;base=LAW;n=143095;fld=134;from=14052-7;rnd=0.33374630799517035"
 msgstr ""
+"http://base.consultant.ru/cons/cgi/online.cgi?req=doc;base=LAW;n=143095;fld=134;from=14052-7;rnd=0.33374630799517035"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "OKPD"
-msgstr ""
+msgstr "OKPD"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid ""
 "Russian National Classification of Products by Economic Activity (2014)"
 msgstr ""
-"Classification nationale russe des produits par activité économique (OKPD, "
-"2014)"
+"Classification nationale russe des produits par activité économique (2014)"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -550,22 +584,22 @@ msgid ""
 "2014."
 msgstr ""
 "Cette classification fait partie du système national de normalisation de la "
-"Fédération de Russie et est basée sur l'harmonisation avec la Classification"
-" statistique des produits par activité dans la Communauté économique "
-"européenne, 2008. En usage à partir du 1er janvier 2014."
+"Fédération de Russie et est harmonisée avec la version 2008 de la "
+"nomenclature CPV européenne. En usage depuis le 1er janvier 2014."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid ""
 "http://base.consultant.ru/cons/cgi/online.cgi?req=doc;base=LAW;n=163703;fld=134;from=170864-15;rnd=0.39699640963226557"
 msgstr ""
+"http://base.consultant.ru/cons/cgi/online.cgi?req=doc;base=LAW;n=163703;fld=134;from=170864-15;rnd=0.39699640963226557"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "CUCOP"
-msgstr ""
+msgstr "CUCOP"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "Mexican Single Classifier of Public Procurement"
-msgstr "Classificateur unique des marchés publics Mexicains"
+msgstr "Classement Unique de la Commande Publique (Mexique)"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -573,21 +607,22 @@ msgid ""
 "Contrataciones Públicas) is a national scheme in Mexico for the "
 "classification of goods, works, services and leases."
 msgstr ""
-"Le classificateur unique des marchés publics (Clasificador Único de las "
-"Contrataciones Públicas) est un système national mexicain de classification "
-"des biens, travaux, services et contrats de location."
+"Le CUCOP (Clasificador Único de las Contrataciones Públicas) est un système "
+"national mexicain de classification des biens, travaux, services et contrats"
+" de location."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "https://sites.google.com/site/cnetcucop/"
-msgstr ""
+msgstr "https://sites.google.com/site/cnetcucop/"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "NAICS"
-msgstr ""
+msgstr "NAICS"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "North American Industry Classification System"
 msgstr ""
+"Le système de classification des industries de l'Amérique du Nord (SCIAN)"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -601,18 +636,28 @@ msgid ""
 "data, classified to NAICS, are suitable for the analysis of production-"
 "related issues such as industrial performance."
 msgstr ""
+"Le système de classification des industries de l'Amérique du Nord (SCIAN) "
+"est un système de classification des industries développé par les agences de"
+" statistiques du Canada, du Mexique et des États-Unis. Créé dans un contexte"
+" d'opposition à l'accord de libre-échange nord-américain, il est conçu pour "
+"élaborer des définitions communes de la structure industrielle des trois "
+"pays et un cadre statistique commun pour faciliter l'analyse des trois "
+"économies. Le SCIAN est articulé autour des principes de l'offre ou de la "
+"production, afin d'assurer que les données industrielles classées selon le "
+"SCIAN permettent l'analyse des enjeux liés à la production, telle que la "
+"performance industrielle."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "https://www.census.gov/eos/www/naics/downloadables/downloadables.html"
-msgstr ""
+msgstr "https://www.census.gov/eos/www/naics/downloadables/downloadables.html"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "PSC"
-msgstr ""
+msgstr "PSC"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "Product and Service Codes"
-msgstr ""
+msgstr "Codes des produits et services (États-Unis)"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -622,18 +667,23 @@ msgid ""
 " each contract action reported in the Federal Procurement Data System "
 "(FPDS)."
 msgstr ""
+"Le guide des codes des produits et services (PSC) fournit des codes pour "
+"décrire les produits, les services et la recherche et développement achetés "
+"par le gouvernement fédéral des États-Unis. Ces codes indiquent ce qui a été"
+" acheté pour chaque action contractuelle reportée dans le système fédéral de"
+" données d'achat (FPDS)."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "https://www.acquisition.gov/PSC_Manual"
-msgstr ""
+msgstr "https://www.acquisition.gov/PSC_Manual"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "HS"
-msgstr ""
+msgstr "HS"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid "Harmonized Commodity Description and Coding System"
-msgstr ""
+msgstr "Système harmonisé (SH)"
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:2
 msgid ""
@@ -643,12 +693,19 @@ msgid ""
 "level, the Harmonized System (HS) for classifying goods is a six-digit code "
 "system."
 msgstr ""
+"Le système harmonisé est une nomenclature internationale pour la "
+"classification des produits. Cela permet aux pays participants d'harmoniser "
+"la classification des biens commercialisés à des fins douanières. Au niveau "
+"international, le système harmonisé (SH) pour classer les biens est un "
+"système de code à 6 chiffres."
 
 #: ../current_lang/codelists/itemClassificationScheme.csv:1
 msgid ""
 "https://unstats.un.org/unsd/tradekb/Knowledgebase/50018/Harmonized-"
 "Commodity-Description-and-Coding-Systems-HS"
 msgstr ""
+"https://unstats.un.org/unsd/tradekb/Knowledgebase/50018/Harmonized-"
+"Commodity-Description-and-Coding-Systems-HS"
 
 #: ../../docs/schema/codelists.md:46
 msgid "Unit Classification Scheme"
@@ -660,14 +717,14 @@ msgid ""
 "measurement. Codelists might provide human-readable descriptions of units, "
 "or symbols for use in input and display interfaces."
 msgstr ""
-"Les quantités d'éléments peuvent être fournies en utilisant une liste de "
-"codes établie pour les unités de mesure. Les listes de codes peuvent fournir"
-" des descriptions lisibles par l'utilisateur des unités ou des symboles à "
-"utiliser dans les interfaces de saisie et d'affichage."
+"Les quantités de livrables (*items*) peuvent être fournies en utilisant une "
+"liste de codes établie pour les unités de mesure. Les listes de codes "
+"peuvent fournir des descriptions lisibles par l'utilisateur des unités ou "
+"des symboles à utiliser dans les interfaces de saisie et d'affichage."
 
 #: ../current_lang/codelists/unitClassificationScheme.csv:1
 msgid "UNCEFACT"
-msgstr ""
+msgstr "UNCEFACT"
 
 #: ../current_lang/codelists/unitClassificationScheme.csv:1
 msgid "UN/CEFACT Recommendation 20"
@@ -684,7 +741,7 @@ msgstr ""
 
 #: ../current_lang/codelists/unitClassificationScheme.csv:1
 msgid "QUDT"
-msgstr ""
+msgstr "QUDT"
 
 #: ../current_lang/codelists/unitClassificationScheme.csv:1
 msgid "Quantities, Units, Dimensions and Data Types Ontologies"
@@ -695,6 +752,8 @@ msgid ""
 "Use the `QUDT Code "
 "<http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html>`_ value."
 msgstr ""
+"Utilisez la valeur du code `QUDT Code "
+"<http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html>`."
 
 #: ../../docs/schema/codelists.md:56
 msgid "Organization Identifier Scheme"
@@ -711,12 +770,18 @@ msgid ""
 "be [downloaded](http://org-id.guide/download) or [browsed](http://org-"
 "id.guide/) from its website."
 msgstr ""
+"Le Schéma d'identification des organisations utilise les codes en provenance"
+" de [org-id.guide](http://www.org-id.guide). La dernière version des listes "
+"de codes peut être [téléchargée](http://org-id.guide/download) ou "
+"[consultée](http://org-id.guide/) sur le site Web."
 
 #: ../../docs/schema/codelists.md:67
 msgid ""
 "To add new codes to the codelist, contact the [OCDS "
 "Helpdesk](../../support/index)."
 msgstr ""
+"Pour ajouter de nouveaux codes dans les listes de codes, contacter "
+"l'[Assistance OCDS](../../support/index)."
 
 #: ../../docs/schema/codelists.md:3
 msgid ""
@@ -725,6 +790,10 @@ msgid ""
 "organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS "
 "1.1.1."
 msgstr ""
+"Cette liste était auparavant maintenue par l'International Aid Transparency "
+"Initiative et comprise dans la documentation d'OCDS dans le fichier "
+"`organizationIdentifierRegistrationAgency_iati.csv`. Elle a été retirée dans"
+" OCDS 1.1.1."
 
 #: ../../docs/schema/codelists.md:75
 msgid "Document Type"
@@ -764,11 +833,11 @@ msgid ""
 "write the codelist titles and descriptions appropriately for the context "
 "they are being used in."
 msgstr ""
-"Les personnes responsables de l'implémentation peuvent vouloir mapper leurs "
-"codes de document existants par rapport à cette liste ou, si vous utilisez "
-"cette liste dans une interface utilisateur, vous pouvez réécrire les titres "
-"et les descriptions de codes de manière appropriée pour le contexte dans "
-"lequel ils sont utilisés."
+"Les organisations qui publient des données doivent, autant que possible, "
+"faire correspondre leurs codes de document aux codes présents dans cette "
+"liste. Si vous utilisez cette liste dans une interface utilisateur, vous "
+"pouvez réécrire les titres et les descriptions de codes en fonction du "
+"contexte dans lequel ils sont utilisés."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Section"
@@ -786,15 +855,15 @@ msgstr "Section"
 #: ../current_lang/codelists/releaseTag.csv:1
 #: ../current_lang/codelists/tenderStatus.csv:1
 msgid "planning"
-msgstr "Planification"
+msgstr "planning"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "plannedProcurementNotice"
-msgstr ""
+msgstr "plannedProcurementNotice"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Notice of planned procurement"
-msgstr "Avis de préinformation"
+msgstr "Avis de pré-information"
 
 #: ../current_lang/codelists/documentType.csv:2
 msgid ""
@@ -802,10 +871,8 @@ msgid ""
 "procurement, also known as a prior information notice. The procuring entity "
 "can use the notice of planned procurement as a tender notice."
 msgstr ""
-"L'avis de pré-information est un avis publié par les pouvoirs adjudicateurs "
-"leur permettant de faire connaître leur intention de passer un marché public"
-" sur les douze mois à venir. Il peut remplacer dans certains cas et de façon"
-" très encadrée, la publication d’un avis de marché."
+"Un avis publié par l'acheteur décrivant les achats planifiés.  Dans certains"
+" cas, il peut remplacer la publication d’un avis de marché."
 
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
@@ -816,7 +883,7 @@ msgstr ""
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
 msgid "basic"
-msgstr ""
+msgstr "basique"
 
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
@@ -831,11 +898,11 @@ msgstr ""
 #: ../current_lang/codelists/releaseTag.csv:1
 #: ../current_lang/codelists/initiationType.csv:1
 msgid "tender"
-msgstr ""
+msgstr "tender"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "tenderNotice"
-msgstr ""
+msgstr "tenderNotice"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Tender notice"
@@ -848,21 +915,21 @@ msgid ""
 " a downloadable document, to a web page, or to an official gazette in which "
 "the notice is contained."
 msgstr ""
-"L'avis de marché est une annonce (une publicité) publiée par l'acheteur pour"
-" informer les opérateurs économiques qu'il cherche un fournisseur ou un "
-"prestataire. Il peut être lu sur des publications spécialisées, profils "
-"d'acheteurs, sites Internet institutionnels, mais aussi presse spécialisée "
-"ou journal local. "
+"L'avis de marché est une annonce publiée par l'acheteur pour informer les "
+"opérateurs économiques qu'il cherche un fournisseur ou un prestataire. Il "
+"peut être lu sur des publications spécialisées, des profils d'acheteurs, des"
+" sites Internet institutionnels, mais aussi dans la presse spécialisée ou "
+"dans journal local. "
 
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "award"
-msgstr ""
+msgstr "award"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "awardNotice"
-msgstr ""
+msgstr "awardNotice"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Award notice"
@@ -885,11 +952,11 @@ msgstr ""
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "contract"
-msgstr ""
+msgstr "contract"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "contractNotice"
-msgstr ""
+msgstr "contractNotice"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Contract notice"
@@ -912,15 +979,15 @@ msgstr ""
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "implementation"
-msgstr ""
+msgstr "implementation"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "completionCertificate"
-msgstr ""
+msgstr "completionCertificate"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Completion certificate"
-msgstr "Réception"
+msgstr "Certificat d'achèvement"
 
 #: ../current_lang/codelists/documentType.csv:2
 msgid ""
@@ -929,14 +996,14 @@ msgid ""
 "certificates might only be relevant for particular kinds of contracting "
 "processes."
 msgstr ""
-"Un certificat de réalisation publié par une autorité compétente qui fournit "
+"Un certificat d'achèvement publié par une autorité compétente qui fournit "
 "des preuves que les travaux ont été accomplis avec un certain niveau de "
-"qualité. Des certificats de réalisation peuvent n'être pertinents que dans "
+"qualité. Des certificats d'achèvement peuvent n'être pertinents que dans "
 "certains types de processus de passation de marché."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "procurementPlan"
-msgstr ""
+msgstr "procurementPlan"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Procurement plan"
@@ -947,12 +1014,11 @@ msgid ""
 "Documentation that sets out the basis for this particular contracting "
 "process."
 msgstr ""
-"Les cahiers des clauses administratives particulières fixent les "
-"dispositions administratives propres à chaque marché."
+"La documentation générale que décrit les fondements de la procédure d'achat."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "biddingDocuments"
-msgstr ""
+msgstr "biddingDocuments"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Bidding documents"
@@ -963,15 +1029,13 @@ msgid ""
 "Documentation for potential suppliers, describing the goals of the contract "
 "(e.g. goods and services to be procured), and the bidding process."
 msgstr ""
-"Le règlement de la consultation précise les modalités de la mise en "
-"concurrence entre les soumissionnaires. C'est ce document qui précise à qui "
-"et où remettre l'offre, la possibilité d'une visite des lieux, le contenu "
-"attendu de l'offre, les critères de choix et leur pondération, la "
-"possibilité d'une négociation, etc."
+"La documentation destinée aux candidats potentiels. Elle contient les "
+"objectifs du marché, tels que les biens ou services à acheter, ainsi qu'une "
+"description de la procédure de candidature."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "technicalSpecifications"
-msgstr ""
+msgstr "technicalSpecifications"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Technical specifications"
@@ -985,16 +1049,16 @@ msgid ""
 "or address terminology, symbols, packaging, marking or labelling "
 "requirements, as they apply to a good or service."
 msgstr ""
-"Le cahier des charges qui : définit les caractéristiques des biens ou "
-"services qui doivent être fournis, dont la qualité, la performance, la "
-"sécurité et les dimensions, ou les processus et méthodes de production ou "
-"d'approvisionnement ; ou aborde la terminologie, les symboles, le packaging,"
-" les exigences en termes d'étiquetage, en tant qu'ils s'appliquent à un bien"
-" ou service."
+"Le cahier des charges qui définit les caractéristiques des biens ou services"
+" qui doivent être fournis, dont la qualité, la performance, la sécurité et "
+"les dimensions, ou les processus et méthodes de production ou "
+"d'approvisionnement. Le document peut également aborder la terminologie, les"
+" symboles, le packaging, les exigences en termes d'étiquetage, tant qu'ils "
+"s'appliquent à un bien ou service."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "evaluationCriteria"
-msgstr ""
+msgstr "evaluationCriteria"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Evaluation criteria"
@@ -1018,11 +1082,11 @@ msgstr "Documentation expliquant la manière dont les offres seront évaluées."
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
 msgid "intermediate"
-msgstr ""
+msgstr "intermédiaire"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "evaluationReports"
-msgstr ""
+msgstr "evaluationReports"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Evaluation report"
@@ -1039,15 +1103,15 @@ msgstr ""
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
 msgid "tender, award"
-msgstr ""
+msgstr "tender, award"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "contractDraft"
-msgstr ""
+msgstr "contractDraft"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Contract draft"
-msgstr "Brouillon du contrat"
+msgstr "Projet de contrat"
 
 #: ../current_lang/codelists/documentType.csv:2
 msgid "A draft or pro-forma copy of the contract."
@@ -1056,7 +1120,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "contractSigned"
-msgstr ""
+msgstr "contractSigned"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Signed contract"
@@ -1071,16 +1135,16 @@ msgstr ""
 "Une copie du contrat signé. Pensez à le fournir sous une forme lisible par "
 "les machines (par exemple un PDF original, un fichier aux formats Word ou "
 "Open Document) et un document séparé avec les pages scannées et signées "
-"quand c'est demandé.  "
+"lorsque c'est nécessaire.  "
 
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
 msgid "tender, award, contract"
-msgstr ""
+msgstr "tender, award, contract"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "contractArrangements"
-msgstr ""
+msgstr "contractArrangements"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Arrangements for ending contract"
@@ -1088,15 +1152,15 @@ msgstr "Clauses de fin de contrat"
 
 #: ../current_lang/codelists/documentType.csv:2
 msgid "Documentation of the arrangements for ending the contract(s)."
-msgstr "Documentation des dispositions de fin de contrat(s). "
+msgstr "Documentation des dispositions de fin de contrat. "
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "contractSchedule"
-msgstr ""
+msgstr "contractSchedule"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Contract schedules"
-msgstr "Calendriers du marché"
+msgstr "Annexes au contrat"
 
 #: ../current_lang/codelists/documentType.csv:2
 msgid ""
@@ -1110,7 +1174,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "physicalProgressReport"
-msgstr ""
+msgstr "physicalProgressReport"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Physical progress reports"
@@ -1126,7 +1190,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "financialProgressReport"
-msgstr ""
+msgstr "financialProgressReport"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Financial progress reports"
@@ -1147,7 +1211,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "finalAudit"
-msgstr ""
+msgstr "finalAudit"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Final audit"
@@ -1161,7 +1225,7 @@ msgstr "Documentation de l'audit réalisé à la fin de l'exécution du contrat.
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "hearingNotice"
-msgstr ""
+msgstr "hearingNotice"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Public hearing notice"
@@ -1177,7 +1241,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "marketStudies"
-msgstr ""
+msgstr "marketStudies"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Market studies"
@@ -1189,11 +1253,11 @@ msgid ""
 "for this contracting process."
 msgstr ""
 "Documentation des études de marché qui ont été réalisées dans le cadre de la"
-" planification de ce processus de marché. "
+" planification de ce processus de marché."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "eligibilityCriteria"
-msgstr ""
+msgstr "eligibilityCriteria"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Eligibility criteria"
@@ -1205,7 +1269,7 @@ msgstr "Des documents détaillés sur l'éligibilité des candidats."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "clarifications"
-msgstr ""
+msgstr "clarifications"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Clarifications to bidders questions"
@@ -1217,11 +1281,11 @@ msgid ""
 "or an enquiry processes."
 msgstr ""
 "Documentation qui fournit des réponses aux problèmes soulevés dans les "
-"discussions précédents les offres ou pendant le processus d'échange. "
+"discussions précédant les offres ou pendant le processus d'échange."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "shortlistedFirms"
-msgstr ""
+msgstr "shortlistedFirms"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Shortlisted firms"
@@ -1234,7 +1298,7 @@ msgid ""
 msgstr ""
 "Documentation fournissant des informations sur les entreprises "
 "présélectionnées. Des versions structurées de ces informations peuvent être "
-"fournies en utilisant l'extension sur les offres. "
+"fournies en utilisant l'extension sur les offres."
 
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
@@ -1256,15 +1320,15 @@ msgstr ""
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
 msgid "advanced"
-msgstr ""
+msgstr "avancé"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "planning, implementation"
-msgstr ""
+msgstr "planning, implementation"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "environmentalImpact"
-msgstr ""
+msgstr "environmentalImpact"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Environmental impact"
@@ -1285,7 +1349,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "assetAndLiabilityAssessment"
-msgstr ""
+msgstr "assetAndLiabilityAssessment"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Assessment of government's assets and liabilities"
@@ -1301,7 +1365,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "riskProvisions"
-msgstr ""
+msgstr "riskProvisions"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Provisions for management of risks and liabilities"
@@ -1313,12 +1377,12 @@ msgid ""
 "Documentation covering how risks will be managed as part of this contracting"
 " process."
 msgstr ""
-"Documentation relatives aux risques gérés dans le cadre de ce processus de "
-"passation de marchés."
+"Documentation relative à la gestion des risques dans le cadre de ce "
+"processus de passation de marchés."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "winningBid"
-msgstr ""
+msgstr "winningBid"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Winning bid"
@@ -1334,7 +1398,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "complaints"
-msgstr ""
+msgstr "complaints"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Complaints and decisions"
@@ -1345,12 +1409,12 @@ msgid ""
 "Documentation of any complaints received, or decisions in response to "
 "complaints."
 msgstr ""
-"Documentation sur les réclamations reçues et les décisions prises en réponse"
-" à ces réclamations. "
+"Documentation sur les réclamations reçues et sur les décisions prises en "
+"réponse à ces réclamations. "
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "contractAnnexe"
-msgstr ""
+msgstr "contractAnnexe"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Annexes to the contract"
@@ -1364,11 +1428,11 @@ msgstr "Copie des annexes et de la documentation à l'appui du contrat. "
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "tender, contract"
-msgstr ""
+msgstr "tender, contract"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "contractGuarantees"
-msgstr ""
+msgstr "contractGuarantees"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Guarantees"
@@ -1384,7 +1448,7 @@ msgstr ""
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "subContract"
-msgstr ""
+msgstr "subContract"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Subcontracts"
@@ -1403,7 +1467,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "needsAssessment"
-msgstr ""
+msgstr "needsAssessment"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Needs assessment"
@@ -1417,11 +1481,11 @@ msgid ""
 msgstr ""
 "Documents sur l'étude des besoins conduite pour ce processus de passation de"
 " marché abordant les demandes pour ce projet ou investissement de la part "
-"des communautés affectées ou par les futurs usagers. "
+"des communautés affectées ou des futurs usagers. "
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "feasibilityStudy"
-msgstr ""
+msgstr "feasibilityStudy"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Feasibility study"
@@ -1435,11 +1499,11 @@ msgid ""
 msgstr ""
 "Documentation des études de faisabilité réalisées pour ce processus de "
 "passation de marchés, fournissant des informations sur les avantages nets ou"
-" les coûts des biens, travaux ou services proposés."
+" le coût des biens, travaux ou services proposés."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "projectPlan"
-msgstr ""
+msgstr "projectPlan"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Project plan"
@@ -1455,7 +1519,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "billOfQuantity"
-msgstr ""
+msgstr "billOfQuantity"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Bill of quantity"
@@ -1475,11 +1539,11 @@ msgstr ""
 "prestations. Les versions structurées des informations sur les biens et "
 "services et les quantités à chaque étape de l'appel d'offres, de "
 "l'attribution et du contrat peuvent être fournies à l'aide d'unités dans le "
-"composant sur les biens et services."
+"composant items."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "tender, bidder"
-msgstr ""
+msgstr "tender, bidder"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "bidders"
@@ -1501,11 +1565,11 @@ msgstr ""
 #: ../current_lang/codelists/documentType.csv:1
 #: ../current_lang/codelists/documentType.csv:1
 msgid "tender, award, contract, implementation"
-msgstr ""
+msgstr "tender, award, contract, implementation"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "conflictOfInterest"
-msgstr ""
+msgstr "conflictOfInterest"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Conflict of interest"
@@ -1513,11 +1577,11 @@ msgstr "Conflit d'intérêt"
 
 #: ../current_lang/codelists/documentType.csv:2
 msgid "Documentation of conflicts of interest declared or uncovered."
-msgstr "Documentation sur les conflits d'intérêts déclarés ou non."
+msgstr "Documentation sur les conflits d'intérêts déclarés ou découverts."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "debarments"
-msgstr ""
+msgstr "exclusion"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Debarments"
@@ -1529,11 +1593,11 @@ msgstr "Documentation sur les exclusions qui ont été prononcées."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "tender, bid, contract, implementation"
-msgstr ""
+msgstr "tender, bid, contract, implementation"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "illustration"
-msgstr ""
+msgstr "illustration"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Illustrations"
@@ -1557,11 +1621,11 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "bid, award, contract"
-msgstr ""
+msgstr "bid, award, contract"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "submissionDocuments"
-msgstr ""
+msgstr "submissionDocuments"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Bid submission documents"
@@ -1569,11 +1633,11 @@ msgstr "Documents joints à une offre"
 
 #: ../current_lang/codelists/documentType.csv:2
 msgid "Documentation submitted by a bidder as part of their proposal."
-msgstr "Documents soumis par un candidat dans le cadre de sa proposition."
+msgstr "Documents soumis par un candidat dans le cadre de son offre."
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "contractSummary"
-msgstr ""
+msgstr "contractSummary"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Contract summary"
@@ -1590,7 +1654,7 @@ msgstr ""
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "cancellationDetails"
-msgstr ""
+msgstr "cancellationDetails"
 
 #: ../current_lang/codelists/documentType.csv:1
 msgid "Cancellation details"
@@ -1623,11 +1687,11 @@ msgid ""
 "introducing a new set of codelist entries. Publishers ought to review the "
 "mapping from their internal systems to this updated list of award criteria."
 msgstr ""
-"Cette liste de codes a été révisée dans la version 1.1 de l'OCDS en "
-"supprimant les codes précédents et en introduisant un nouvel ensemble "
-"d'entrées dans la liste de codes. Les producteurs de données peuvent avoir "
-"besoin de réviser la correspondance (\"mapping\") de leurs systèmes internes"
-" par rapport à cette liste mise à jour des critères d'attribution."
+"Cette liste de codes a été révisée dans la version 1.1 d'OCDS en supprimant "
+"les codes précédents et en introduisant un nouvel ensemble d'entrées dans la"
+" liste de codes. Les producteurs de données peuvent avoir besoin de réviser "
+"la correspondance (\"mapping\") de leurs systèmes internes par rapport à "
+"cette liste mise à jour des critères d'attribution."
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "Deprecated"
@@ -1635,7 +1699,7 @@ msgstr "Déprécié"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "priceOnly"
-msgstr ""
+msgstr "priceOnly"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "Price only"
@@ -1644,7 +1708,7 @@ msgstr "Prix uniquement"
 #: ../current_lang/codelists/awardCriteria.csv:2
 msgid "The award will be made to the qualified bid with the lowest price."
 msgstr ""
-"L'attribution sera faite à l'offre économiquement la plus avantageuse."
+"L'attribution sera faite à l'offre la plus avantageuse économiquement."
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "costOnly"
@@ -1663,13 +1727,13 @@ msgid ""
 msgstr ""
 "L'attribution sera faite à l'offre qualifiée qui aura démontrée le coût "
 "d'ensemble le plus faible. Une évaluation des coûts peut comprendre les "
-"implications monétaires de la proposition, comprenant le prix payé au "
+"implications financière de la proposition, comprenant le prix payé au "
 "fournisseur et les coûts de fonctionnement, les coûts de transition ou tout "
 "autre coût non chiffré lié au choix d'une option particulière. "
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "qualityOnly"
-msgstr ""
+msgstr "qualityOnly"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "Quality only"
@@ -1688,7 +1752,7 @@ msgstr ""
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "ratedCriteria"
-msgstr ""
+msgstr "ratedCriteria"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "Rated criteria"
@@ -1711,7 +1775,7 @@ msgstr ""
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "lowestCost"
-msgstr ""
+msgstr "lowestCost"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "Lowest cost"
@@ -1729,11 +1793,11 @@ msgstr "Ce code a été déprécié. Veuillez choisir un des autres codes. "
 #: ../current_lang/codelists/awardCriteria.csv:1
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "1.1"
-msgstr ""
+msgstr "1.1"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "bestProposal"
-msgstr ""
+msgstr "bestProposal"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "Best proposal"
@@ -1741,7 +1805,7 @@ msgstr "Meilleure proposition"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "bestValueToGovernment"
-msgstr ""
+msgstr "bestValueToGovernment"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "Best value to government"
@@ -1752,12 +1816,12 @@ msgid ""
 "This code has been deprecated. 'Rated criteria' is a likely alternatives for"
 " most procedures formerly mapped to this code."
 msgstr ""
-"Ce code a été déprécié. \"Rated criteria\" est une alternative probable pour"
+"Ce code a été déprécié. \"Critères notés\" est une alternative probable pour"
 " la plupart des procédures correspondant à ce code. "
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "singleBidOnly"
-msgstr ""
+msgstr "singleBidOnly"
 
 #: ../current_lang/codelists/awardCriteria.csv:1
 msgid "Single bid only"
@@ -1777,7 +1841,7 @@ msgstr ""
 
 #: ../current_lang/codelists/submissionMethod.csv:1
 msgid "electronicSubmission"
-msgstr ""
+msgstr "electronicSubmission"
 
 #: ../current_lang/codelists/submissionMethod.csv:1
 msgid "Electronic submission"
@@ -1791,7 +1855,7 @@ msgstr ""
 
 #: ../current_lang/codelists/submissionMethod.csv:1
 msgid "electronicAuction"
-msgstr ""
+msgstr "electronicAuction"
 
 #: ../current_lang/codelists/submissionMethod.csv:1
 msgid "Electronic auction"
@@ -1803,7 +1867,7 @@ msgstr "Les offres seront reçues via une plateforme électronique d'enchères."
 
 #: ../current_lang/codelists/submissionMethod.csv:1
 msgid "written"
-msgstr ""
+msgstr "written"
 
 #: ../current_lang/codelists/submissionMethod.csv:1
 msgid "Written"
@@ -1815,12 +1879,12 @@ msgid ""
 "generic e-mail systems, or some similar mechanism."
 msgstr ""
 "Les offres seront reçues via des documents écrits, livrés sous forme de "
-"copies papier, ou via un système d'e-mail générique, ou via un mécanisme "
+"copies papier, via un système d'e-mail générique, ou via un mécanisme "
 "similaire."
 
 #: ../current_lang/codelists/submissionMethod.csv:1
 msgid "inPerson"
-msgstr ""
+msgstr "inPerson"
 
 #: ../current_lang/codelists/submissionMethod.csv:1
 msgid "In person"
@@ -1849,14 +1913,14 @@ msgid ""
 msgstr ""
 "Le bloc sur les processus connexes est utilisé au niveau de l'instance pour "
 "pointer vers des processus antérieurs tels que la planification ou "
-"l'établissement d'un contrat-cadre, et au niveau du contrat pour démarrer "
-"les processus de sous-contrats, de renouvellement ou de remplacement. La "
-"liste de codes de processus connexes détermine le type de relation qui est "
+"l'établissement d'un accord-cadre, et au niveau du contrat pour démarrer les"
+" processus de sous-contrats, de renouvellement ou de remplacement. La liste "
+"de codes de processus connexes détermine le type de relation qui est "
 "décrite."
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "framework"
-msgstr ""
+msgstr "framework"
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "Framework agreement procedure first stage"
@@ -1868,9 +1932,9 @@ msgid ""
 "framework. The suppliers on the framework are listed in the award section of"
 " the related process."
 msgstr ""
-"Ce processus de passation de marchés suit le processus associé pour établir "
-"un contrat-cadre. Les fournisseurs sur le contra-cadre sont répertoriés dans"
-" la section sur l'attribution du processus associé."
+"Ce processus de passation de marchés suit le processus connexe qui établit "
+"un accord-cadre. Les fournisseurs sélectionnés sont répertoriés dans la "
+"section `award` du processus connexe."
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "Planning process"
@@ -1884,7 +1948,7 @@ msgstr ""
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "parent"
-msgstr ""
+msgstr "parent "
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "Parent contract (for sub-contracts)"
@@ -1900,7 +1964,7 @@ msgstr ""
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "prior"
-msgstr ""
+msgstr "prior"
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "Prior process"
@@ -1916,7 +1980,7 @@ msgstr ""
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "unsuccessfulProcess"
-msgstr ""
+msgstr "unsuccessfulProcess"
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "Unsuccessful process"
@@ -1936,11 +2000,11 @@ msgstr "Sous-contrat"
 #: ../current_lang/codelists/relatedProcess.csv:2
 msgid "The related process might result in a sub-contract of this contract."
 msgstr ""
-"Le processus connexe pourrait entraîner un sous-contrat de ce contrat."
+"Le processus connexe pourrait donner lieu à un sous-contrat de ce contrat."
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "replacementProcess"
-msgstr ""
+msgstr "replacementProcess"
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "Replacement process"
@@ -1949,11 +2013,11 @@ msgstr "Processus de remplacement"
 #: ../current_lang/codelists/relatedProcess.csv:2
 msgid "The related process might result in the replacement of this contract."
 msgstr ""
-"Le processus associé pourrait entraîner le remplacement de ce contrat."
+"Le processus connexe pourrait entraîner le remplacement de ce contrat."
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "renewalProcess"
-msgstr ""
+msgstr "renewalProcess"
 
 #: ../current_lang/codelists/relatedProcess.csv:1
 msgid "Renewal process"
@@ -1962,7 +2026,7 @@ msgstr "Processus de renouvellement"
 #: ../current_lang/codelists/relatedProcess.csv:2
 msgid "The related process might result in the renewal of this contract."
 msgstr ""
-"Le processus associé pourrait entraîner le renouvellement de ce contrat."
+"Le processus connexe pourrait entraîner le renouvellement de ce contrat."
 
 #: ../../docs/schema/codelists.md:128
 msgid "Related Process Scheme"
@@ -1978,7 +2042,7 @@ msgstr ""
 
 #: ../current_lang/codelists/relatedProcessScheme.csv:1
 msgid "ocid"
-msgstr ""
+msgstr "ocid"
 
 #: ../current_lang/codelists/relatedProcessScheme.csv:1
 msgid "Open Contracting ID"
@@ -2005,7 +2069,7 @@ msgstr ""
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "preProcurement"
-msgstr ""
+msgstr "preProcurement"
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "Pre-procurement milestones"
@@ -2016,12 +2080,12 @@ msgid ""
 "For events during the planning or pre-procurement phase of a process, such "
 "as the preparation of key studies."
 msgstr ""
-"Pour des événements durant la phase de planification ou antérieure à la "
-"commande publique du processus, tels que la préparation d'études clés."
+"Pour des événements durant la phase de planification ou antérieurs au "
+"processus de commande publique, tels que la préparation d'études clés."
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "approval"
-msgstr ""
+msgstr "approval"
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "Approval milestones"
@@ -2033,7 +2097,7 @@ msgstr "Pour des événements tels que la signature du marché ou du projet."
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "engagement"
-msgstr ""
+msgstr "engagement"
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "Engagement milestones"
@@ -2045,22 +2109,23 @@ msgstr "Pour les étapes de consultation, comme une audience publique."
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "assessment"
-msgstr ""
+msgstr "assessment"
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "Assessment milestones"
-msgstr "Étapes de l'évaluation"
+msgstr "Étapes d'évaluation"
 
 #: ../current_lang/codelists/milestoneType.csv:2
 msgid ""
 "For assessment and adjudication milestones, such as the meeting date of a "
 "committee."
 msgstr ""
-"Pour des étapes de la sélection, comme la date de réunion d'un comité."
+"Pour des étapes d'évaluation et de sélection, comme la date de réunion d'un "
+"comité."
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "delivery"
-msgstr ""
+msgstr "delivery"
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "Delivery milestones"
@@ -2076,7 +2141,7 @@ msgstr ""
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "reporting"
-msgstr ""
+msgstr "reporting"
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "Reporting milestones"
@@ -2090,11 +2155,11 @@ msgstr ""
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "financing"
-msgstr ""
+msgstr "financing"
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "Financing milestones"
-msgstr "Étapes du financement"
+msgstr "Étapes de financement"
 
 #: ../current_lang/codelists/milestoneType.csv:2
 msgid ""
@@ -2102,14 +2167,18 @@ msgid ""
 "private partnerships, such events might include, for example, planned "
 "payments and equity transfers."
 msgstr ""
+"Pour les événements relatifs au financement de la processus de commande "
+"publique. Dans un partenariat public-privé, plusieurs événements pourraient "
+"inclure, par exemple, la planification des paiements et des transferts de "
+"capitaux. "
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "payment"
-msgstr ""
+msgstr "payment"
 
 #: ../current_lang/codelists/milestoneType.csv:1
 msgid "Payment milestones"
-msgstr ""
+msgstr "Étapes de paiement"
 
 #: ../current_lang/codelists/milestoneType.csv:2
 msgid ""
@@ -2118,6 +2187,10 @@ msgid ""
 "'met', then the contract ought to have an entry for the payment under its "
 "``implementation.transactions``."
 msgstr ""
+"Pour les étapes (échéances) de paiement, comme la date à laquelle un "
+"paiement doit être effectué au titulaire. Si le ``status`` de l'étape de "
+"paiement du contrat est 'met', alors le contrat doit avoir une saisie pour "
+"le paiement au titre de ses ``implementation.transactions``."
 
 #: ../../docs/schema/codelists.md:149
 msgid "Extended Procurement Category"
@@ -2135,7 +2208,7 @@ msgstr ""
 #: ../current_lang/codelists/extendedProcurementCategory.csv:1
 #: ../current_lang/codelists/procurementCategory.csv:1
 msgid "goods"
-msgstr ""
+msgstr "goods"
 
 #: ../current_lang/codelists/extendedProcurementCategory.csv:1
 #: ../current_lang/codelists/procurementCategory.csv:1
@@ -2152,7 +2225,7 @@ msgstr ""
 #: ../current_lang/codelists/extendedProcurementCategory.csv:1
 #: ../current_lang/codelists/procurementCategory.csv:1
 msgid "works"
-msgstr ""
+msgstr "works"
 
 #: ../current_lang/codelists/extendedProcurementCategory.csv:1
 #: ../current_lang/codelists/procurementCategory.csv:1
@@ -2166,12 +2239,12 @@ msgid ""
 msgstr ""
 "Ce processus de passation de marchés implique la construction, la "
 "réparation, la réhabilitation, la démolition, la restauration ou l'entretien"
-" d'un actif ou d'une infrastructure."
+" d'un bien immobilier ou d'une infrastructure."
 
 #: ../current_lang/codelists/extendedProcurementCategory.csv:1
 #: ../current_lang/codelists/procurementCategory.csv:1
 msgid "services"
-msgstr ""
+msgstr "services"
 
 #: ../current_lang/codelists/extendedProcurementCategory.csv:1
 #: ../current_lang/codelists/procurementCategory.csv:1
@@ -2188,14 +2261,14 @@ msgid ""
 msgstr ""
 "Ce processus de passation de marchés implique des services professionnels "
 "d'une certaine forme, généralement contractés sur la base de résultats "
-"mesurables ou de livrables. Lorsque le code `consultingServices` est aussi "
+"mesurables ou de livrables. Lorsque le code 'consultingServices' est aussi "
 "disponible ou utilisé pour les données d'un jeu de données particulier, le "
-"code `services` ne doit être utilisé que pour des services autres que du "
+"code 'services' ne doit être utilisé que pour des services autres que du "
 "conseil."
 
 #: ../current_lang/codelists/extendedProcurementCategory.csv:1
 msgid "consultingServices"
-msgstr ""
+msgstr "consultingServices"
 
 #: ../current_lang/codelists/extendedProcurementCategory.csv:1
 msgid "Consulting services"
@@ -2224,8 +2297,8 @@ msgid ""
 " they relate to."
 msgstr ""
 "Un processus contractuel peut, avec le temps, entraîner la publication d'un "
-"certain nombre d'instances de données. Celles-ci devraient avoir un tag pour"
-" indiquer l'étape de processus de passation des marchés à laquelle elles se "
+"certain nombre d'instances de données. Celles-ci doivent avoir un tag pour "
+"indiquer l'étape de processus de passation des marchés à laquelle elles se "
 "rapportent."
 
 #: ../current_lang/codelists/releaseTag.csv:1
@@ -2240,15 +2313,15 @@ msgid ""
 "used to identify whether the planning is at an early pipeline stage, or "
 "whether there are detailed plans for a tender developed."
 msgstr ""
-"Un processus de passation de marchés est proposé ou prévu. L'information "
-"dans la section sur l'appel d'offres décrit le processus proposé. Le champ "
+"Un processus de passation de marchés est proposé ou planifié. L'information "
+"dans la section `tender` décrit le processus proposé. Le champ "
 "`tender.status` devrait être utilisé pour identifier si la planification se "
 "trouve à un stade précoce du processus ou s'il existe des plans détaillés "
-"pour que l'appel d'offres se développe."
+"pour le développement de l'appel d'offres."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "planningUpdate"
-msgstr ""
+msgstr "planningUpdate"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Planning update"
@@ -2263,10 +2336,10 @@ msgid ""
 "proposal has been withdrawn."
 msgstr ""
 "Les détails d'un processus de passation de marchés proposé ou prévu sont mis"
-" à jour. Cela pourrait inclure l'ajout d'informations et de documents tirés "
-"de la consultation de la société civile, des détails révisés ou des étapes "
-"pour un processus de passation de marché proposé ou une mise à jour du champ"
-" `tender.status` pour indiquer qu'une proposition a été retirée."
+" à jour. Cela peut inclure l'ajout d'informations et de documents tirés de "
+"la consultation de la société civile, des détails révisés ou des étapes pour"
+" un processus de passation de marché proposé ou une mise à jour du champ "
+"`tender.status` pour indiquer qu'une proposition a été retirée."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 #: ../current_lang/codelists/initiationType.csv:1
@@ -2279,12 +2352,12 @@ msgid ""
 "Tender release should contain details of the goods or services being sought."
 msgstr ""
 "Fournit des informations sur un nouveau processus d'appel d'offres (appel à "
-"propositions). L'instance sur l'appel d'offres doit contenir des détails sur"
-" les produits ou services recherchés."
+"propositions). L'instance sur l'appel d'offres devrait contenir des détails "
+"sur les produits ou services recherchés."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "tenderAmendment"
-msgstr ""
+msgstr "tenderAmendment"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Tender amendment"
@@ -2297,15 +2370,15 @@ msgid ""
 "tenderAmendment is published. The term amendment has legal meaning in many "
 "jurisdictions."
 msgstr ""
-"La modification d'instance existante d'appel d'offres. Il devrait y avoir au"
-" moins une instance d'appel d'offres avec le même `ocid`, mais avec une date"
-" d'instance antérieure avant qu'une modification `tenderAmendment` ne soit "
-"publiée. Le terme \"modification\" a une signification juridique dans de "
-"nombreux systèmes juridiques."
+"La modification d'une instance existante d'appel d'offres. Il devrait y "
+"avoir au moins une instance d'appel d'offres avec le même `ocid`, mais avec "
+"une date d'instance antérieure avant qu'une modification `tenderAmendment` "
+"ne soit publiée. Le terme \"modification\" a une signification juridique "
+"dans de nombreux systèmes juridiques."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "tenderUpdate"
-msgstr ""
+msgstr "tenderUpdate"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Tender update"
@@ -2321,16 +2394,16 @@ msgid ""
 "used."
 msgstr ""
 "Une mise à jour d'une instance d'appel d'offres existante. Il devrait y "
-"avoir au moins une instance d'appel d'offres avec le même `ocid` mais une "
-"date d'instance antérieure, avant qu'une instance `tenderUpdate` ne soit "
-"publiée. Une mise à jour peut ajouter de nouvelles informations ou apporter "
-"des corrections aux informations publiées de manière antérieure. Ce tag ne "
+"avoir au moins une instance d'appel d'offres avec le même ocid mais une date"
+" d'instance antérieure, avant qu'une instance tenderUpdate ne soit publiée. "
+"Une mise à jour peut ajouter de nouvelles informations ou apporter des "
+"corrections aux informations publiées de manière antérieure. Ce tag ne "
 "devrait pas être utilisé pour des modifications légales formelles à un appel"
-" d'offres, pour lequel le tag `tenderAmendment` doit être utilisé."
+" d'offres, pour lequel le tag tenderAmendment doit être utilisé."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "tenderCancellation"
-msgstr ""
+msgstr "tenderCancellation"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Tender cancellation"
@@ -2343,7 +2416,7 @@ msgid ""
 "the tender being cancelled."
 msgstr ""
 "L'annulation d'un appel d'offre existant. Il devrait y avoir au moins une "
-"instance avec le même `ocid`, mais à une date d'instance antérieure, qui "
+"instance avec le même ocid, mais à une date d'instance antérieure, qui "
 "fournit des détails sur l'appel d'offres annulé."
 
 #: ../current_lang/codelists/releaseTag.csv:1
@@ -2356,13 +2429,13 @@ msgid ""
 "sections will be present, and the tender section might be populated with "
 "details of the process leading up to the award."
 msgstr ""
-"Fournir des informations sur l'attribution d'un contrat. Une ou plusieurs "
-"sections d’attribution seront présentes, et la section sur l'appel d'offre "
-"peut contenir des détails sur le processus menant à l’attribution."
+"Fournit des informations sur l'attribution d'un contrat. Une ou plusieurs "
+"sections `awards` peuvent être présentes, et la section `tender` peut "
+"contenir des détails sur le processus menant à l’attribution."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "awardUpdate"
-msgstr ""
+msgstr "awardUpdate"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Award update"
@@ -2376,13 +2449,13 @@ msgid ""
 "corrections."
 msgstr ""
 "Une mise à jour d'une instance d'attribution existante. Il devrait y avoir "
-"au moins une instance d'attribution avec le même `ocid`, mais à une date "
-"d'instance antérieure avant la publication d'un `awardUpdate`. Une mise à "
-"jour peut ajouter de nouvelles informations ou apporter des corrections."
+"au moins une instance d'attribution avec le même ocid, mais à une date "
+"d'instance antérieure avant la publication d'un awardUpdate. Une mise à jour"
+" peut ajouter de nouvelles informations ou apporter des corrections."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "awardCancellation"
-msgstr ""
+msgstr "awardCancellation"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Award cancellation"
@@ -2410,7 +2483,7 @@ msgstr ""
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "contractUpdate"
-msgstr ""
+msgstr "contractUpdate"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Contract update"
@@ -2426,16 +2499,16 @@ msgid ""
 "be used."
 msgstr ""
 "Fournit des informations sur les mises à jour d'un contrat. Il devrait y "
-"avoir au moins une instance de contrat avec le même `ocid`, mais à une date "
-"d'instance antérieure, avant qu'un `contractUpdate` ne soit publié. Une mise"
-" à jour peut ajouter de nouvelles informations ou apporter des corrections "
-"aux informations publiées antérieurement. Ce tag ne devrait pas être utilisé"
-" pour des modifications légales formelles à un contrat, pour lequel le tag "
+"avoir au moins une instance de contrat avec le même ocid, mais à une date "
+"d'instance antérieure, avant qu'un contractUpdate ne soit publié. Une mise à"
+" jour peut ajouter de nouvelles informations ou apporter des corrections aux"
+" informations publiées antérieurement. Ce tag ne devrait pas être utilisé "
+"pour des modifications légales formelles à un contrat, pour lequel le tag "
 "`contractAmendment` doit être utilisé."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "contractAmendment"
-msgstr ""
+msgstr "contractAmendment"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Contract amendment"
@@ -2449,8 +2522,8 @@ msgid ""
 " jurisdictions."
 msgstr ""
 "Une modification à une instance existante de contrat. Il devrait y avoir au "
-"moins une instance de contrat avec le même `ocid`, mais avec une date "
-"d'instance antérieure avant qu'une modification `contractAmendment` ne soit "
+"moins une instance de contrat avec le même ocid, mais avec une date "
+"d'instance antérieure avant qu'une modification contractAmendment ne soit "
 "publiée. Le terme modification a une signification juridique dans de "
 "nombreux systèmes juridiques."
 
@@ -2462,12 +2535,12 @@ msgstr "Exécution"
 msgid ""
 "Providing new information on the implementation of a contracting process."
 msgstr ""
-"Fournir de nouvelles informations sur la phase d'exécution d'un processus de"
+"Fournit de nouvelles informations sur la phase d'exécution d'un processus de"
 " passation de marchés."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "implementationUpdate"
-msgstr ""
+msgstr "implementationUpdate"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Implementation update"
@@ -2483,7 +2556,7 @@ msgstr ""
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "contractTermination"
-msgstr ""
+msgstr "contractTermination"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Contract termination"
@@ -2491,11 +2564,11 @@ msgstr "Fin d'un contrat"
 
 #: ../current_lang/codelists/releaseTag.csv:2
 msgid "Providing information at the end of a contracting process."
-msgstr "Fournir des informations sur la fin d'un contrat."
+msgstr "Fournit des informations sur la fin d'un contrat."
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "compiled"
-msgstr ""
+msgstr "compiled"
 
 #: ../current_lang/codelists/releaseTag.csv:1
 msgid "Compiled record"
@@ -2508,8 +2581,8 @@ msgid ""
 "history."
 msgstr ""
 "Ce tag est utilisé seulement dans des archives compilées qui ont fusionné "
-"plusieurs instances pour fournir un aperçu du contrat et de l'historique des"
-" versions. "
+"plusieurs instances pour fournir un instantané du contrat et de l'historique"
+" des versions. "
 
 #: ../../docs/schema/codelists.md:172
 msgid "Initiation Type"
@@ -2524,12 +2597,12 @@ msgid ""
 "blocks of data and releases they can expect from a contracting process."
 msgstr ""
 "Les processus de commande publique peuvent être initiés à travers un certain"
-" nombre de procédures. Actuellement, seuls les appels d'offre sont pris en "
-"charge par cette liste de codes. Les futures versions du standard prendront "
-"en charge d'autres types de lancement de marché. Le type de lancement de "
-"marché peut fournir des informations aux applications réutilisant les "
-"données sur les différents composants de données et les instances qu'ils "
-"devraient attendre d'un processus de commande publique."
+" nombre de procédures. Actuellement, la seule valeur valide dans cette liste"
+" de codes est 'tender'. Les futures versions du standard prendront en charge"
+" d'autres types de lancement de marché. Le type de lancement de marché peut "
+"fournir des informations aux applications sur les différents composants de "
+"données et les instances qu'ils devraient attendre d'un processus de "
+"commande publique."
 
 #: ../current_lang/codelists/initiationType.csv:2
 msgid ""
@@ -2540,7 +2613,7 @@ msgstr ""
 "Un appel d'offres ouvert et concurrentiel pour passer des marchés. Le "
 "processus implique généralement d'inviter publiquement les entreprises qui "
 "pourraient potentiellement soumettre des offres en vue de leur évaluation et"
-" de la sélection d'un ou des gagnant(s)."
+" de la sélection d'un ou plusieurs gagnants."
 
 #: ../../docs/schema/codelists.md:182
 msgid "Tender Status"
@@ -2563,15 +2636,14 @@ msgid ""
 "shaped."
 msgstr ""
 "Un futur processus de passation de marchés est en cours d'examen. Des "
-"informations précises sur le processus peuvent être fournies dans la section"
-" sur l'appel d'offres. Un processus avec ce statut pourrait fournir des "
-"informations sur des possibilités d'engagements ou des opportunités de "
-"consultation, au cours desquelles les détails d'une offre ultérieure peuvent"
-" être façonnés."
+"informations sur le processus peuvent être fournies très tôt dans la section"
+" `tender`. Un processus avec ce statut pourrait fournir des informations sur"
+" des possibilités d'engagements ou des opportunités de consultation, au "
+"cours desquelles les détails d'une offre ultérieure peuvent être façonnés."
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 msgid "planned"
-msgstr ""
+msgstr "planned"
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 msgid "Planned"
@@ -2583,20 +2655,20 @@ msgid ""
 "the anticipated dates can be provided in the tender block."
 msgstr ""
 "Un processus de passation de marchés est programmé, mais il n'a pas encore "
-"débuté. Les détails des dates planifiées peuvent être fournis dans le "
-"composant d'appel d'offres."
+"débuté. Les détails des dates prévues peuvent être fournis dans la section "
+"`tender`."
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 #: ../current_lang/codelists/awardStatus.csv:1
 #: ../current_lang/codelists/contractStatus.csv:1
 msgid "active"
-msgstr ""
+msgstr "active"
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 #: ../current_lang/codelists/awardStatus.csv:1
 #: ../current_lang/codelists/contractStatus.csv:1
 msgid "Active"
-msgstr "Active"
+msgstr "Actif"
 
 #: ../current_lang/codelists/tenderStatus.csv:2
 msgid "A tender process is currently taking place."
@@ -2606,13 +2678,13 @@ msgstr "Un processus d'appel d'offres est en cours."
 #: ../current_lang/codelists/awardStatus.csv:1
 #: ../current_lang/codelists/contractStatus.csv:1
 msgid "cancelled"
-msgstr ""
+msgstr "cancelled"
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 #: ../current_lang/codelists/awardStatus.csv:1
 #: ../current_lang/codelists/contractStatus.csv:1
 msgid "Cancelled"
-msgstr "Annulée"
+msgstr "Annulé"
 
 #: ../current_lang/codelists/tenderStatus.csv:2
 msgid "The tender process has been cancelled."
@@ -2621,7 +2693,7 @@ msgstr "Le processus d'appel d'offres a été annulé."
 #: ../current_lang/codelists/tenderStatus.csv:1
 #: ../current_lang/codelists/awardStatus.csv:1
 msgid "unsuccessful"
-msgstr ""
+msgstr "unsuccessful"
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 #: ../current_lang/codelists/awardStatus.csv:1
@@ -2634,11 +2706,11 @@ msgstr "Le processus d'appel d'offres s'est révélé infructueux."
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 msgid "complete"
-msgstr ""
+msgstr "complete"
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 msgid "Complete"
-msgstr "Clôturé"
+msgstr "Terminé"
 
 #: ../current_lang/codelists/tenderStatus.csv:2
 msgid "The tender process is complete."
@@ -2650,7 +2722,7 @@ msgstr "withdrawn"
 
 #: ../current_lang/codelists/tenderStatus.csv:1
 msgid "Withdrawn"
-msgstr "Retirée"
+msgstr "Retiré"
 
 #: ../current_lang/codelists/tenderStatus.csv:2
 msgid "No further information on this process is available under this ocid."
@@ -2687,7 +2759,7 @@ msgstr ""
 
 #: ../current_lang/codelists/method.csv:1
 msgid "open"
-msgstr ""
+msgstr "open"
 
 #: ../current_lang/codelists/method.csv:1
 msgid "Open"
@@ -2699,7 +2771,7 @@ msgstr "Tous les fournisseurs intéressés peuvent soumettre une offre."
 
 #: ../current_lang/codelists/method.csv:1
 msgid "selective"
-msgstr ""
+msgstr "selective"
 
 #: ../current_lang/codelists/method.csv:1
 msgid "Selective"
@@ -2707,11 +2779,11 @@ msgstr "Sélectif"
 
 #: ../current_lang/codelists/method.csv:2
 msgid "Only qualified suppliers are invited to submit a tender."
-msgstr "Seuls les fournisseurs qualifiés sont invités à soumettre une offre."
+msgstr "Seuls les fournisseurs qualifiés sont invités à soumettre une offre.²"
 
 #: ../current_lang/codelists/method.csv:1
 msgid "limited"
-msgstr ""
+msgstr "limited"
 
 #: ../current_lang/codelists/method.csv:1
 msgid "Limited"
@@ -2725,7 +2797,7 @@ msgstr ""
 
 #: ../current_lang/codelists/method.csv:1
 msgid "direct"
-msgstr ""
+msgstr "direct"
 
 #: ../current_lang/codelists/method.csv:1
 msgid "Direct"
@@ -2733,7 +2805,8 @@ msgstr "Direct"
 
 #: ../current_lang/codelists/method.csv:2
 msgid "The contract is awarded to a single supplier without competition."
-msgstr "Le contrat est attribué à un seul fournisseur sans compétition. "
+msgstr ""
+"Le contrat est attribué à un seul fournisseur sans mise en concurrence. "
 
 #: ../../docs/schema/codelists.md:207
 msgid ""
@@ -2742,9 +2815,9 @@ msgid ""
 "procurement within limited, and ought to review their mappings."
 msgstr ""
 "Remarque : le code \"direct\" a été introduit dans la version 1.1. Les "
-"producteurs de données qui ont complété un mapping de liste de codes avant "
-"1.1 peuvent avoir inclus des commandes directes dans dans le code \"limité\""
-" et peuvent avoir besoin de revoir leur concordance."
+"producteurs de données qui ont utilisée une concordance de codes avant la "
+"version 1.1 peuvent avoir publié des procédures directes avec le code "
+"'limited' et peuvent avoir besoin de revoir leur concordance."
 
 #: ../../docs/schema/codelists.md:209
 msgid "Procurement Category"
@@ -2761,9 +2834,10 @@ msgstr ""
 "La liste de codes sur la catégorie de passation de marché sert à indiquer "
 "l'objectif **principal** d'un processus de passation de marchés. Lorsqu'un "
 "processus de passation de marchés couvre plus d'une des options ci-dessous, "
-"les éditeurs peuvent utiliser le champ `additionalProcurementCategories` "
-"avec une liste de valeurs tirées de la liste ouverte de codes "
-"[extendedProcurementCategory](#extended-procurement-category)."
+"les producteurs de données peuvent utiliser le champ "
+"`additionalProcurementCategories` avec une liste de valeurs tirées de la "
+"liste de codes ouverte [extendedProcurementCategory](#extended-procurement-"
+"category)."
 
 #: ../current_lang/codelists/procurementCategory.csv:2
 msgid ""
@@ -2771,7 +2845,7 @@ msgid ""
 "electronic goods or supplies."
 msgstr ""
 "Le principal objet de ce processus de passation de marchés concerne des "
-"biens ou des ressources physiques ou électroniques."
+"biens ou des ressources physiques ou numériques."
 
 #: ../current_lang/codelists/procurementCategory.csv:2
 msgid ""
@@ -2781,7 +2855,8 @@ msgid ""
 msgstr ""
 "L'objet principal de ce processus de passation de marchés implique la "
 "construction, la réparation, la réhabilitation, la démolition, la "
-"restauration ou l'entretien de certains actifs ou infrastructures."
+"restauration ou l'entretien de certains biens immobiliers ou "
+"infrastructures."
 
 #: ../current_lang/codelists/procurementCategory.csv:2
 msgid ""
@@ -2790,8 +2865,8 @@ msgid ""
 "outputs or deliverables."
 msgstr ""
 "L'objet principal de ce processus de passation de marchés implique des "
-"services professionnels d'une certaine forme, généralement contractés sur la"
-" base de résultats mesurables ou de livrables."
+"services professionnels d'une certaine forme, généralement engagés sur la "
+"base de résultats mesurables ou de livrables."
 
 #: ../../docs/schema/codelists.md:219
 msgid "Award Status"
@@ -2803,8 +2878,7 @@ msgid ""
 "status of an award."
 msgstr ""
 "Une attribution de marché passe par plusieurs étapes. L'état d'une "
-"attribution peut être mis à jour via la publication de nouvelles instances "
-"du marché."
+"attribution peut être mis à jour via la publication de nouvelles instances."
 
 #: ../current_lang/codelists/awardStatus.csv:1
 #: ../current_lang/codelists/contractStatus.csv:1
@@ -2822,7 +2896,7 @@ msgid ""
 "cooling off period, or some other process."
 msgstr ""
 "Ce marché a été attribué mais n'a pas encore commencé. Cela peut être dû à "
-"une période calme ou à un autre processus ne le permettant pas."
+"un délai de suspension ou à un autre processus."
 
 #: ../current_lang/codelists/awardStatus.csv:2
 msgid "This award has been made, and is currently in force."
@@ -2840,12 +2914,12 @@ msgid ""
 "supplier, was unsuccessful, but there can be other successful awards for "
 "different items listed in the tender, or to different suppliers)."
 msgstr ""
-"Ce marché n'a pas pu être correctement attribué. Si des éléments du marchés "
-"ou des détails sur les fournisseurs sont inclus dans la section "
-"\"attribution\", ceux-ci réduisent la portée de l'attribution non retenue "
-"(c.-à-d. l'attribution d'éléments notés ou l'attribution au fournisseur noté"
-" n'a pas abouti, mais d'autres attributions figurant dans l’offre, ou à des "
-"fournisseurs différents peuvent être validées)."
+"Ce marché n'a pas pu être intégralement attribué. Si des éléments du marché "
+"ou des détails sur les fournisseurs sont inclus dans la section `awards`, "
+"ceux-ci indiquent que l'attribution est partielle (c.-à-d. l'attribution des"
+" 'items' ou l'attribution au fournisseur du bloc `award` en question n'a pas"
+" abouti, mais l'attribution d'autres 'items', ou à des fournisseurs "
+"différents, peuvent être validées)."
 
 #: ../../docs/schema/codelists.md:229
 msgid ""
@@ -2866,8 +2940,8 @@ msgid ""
 "Contracts can move through multiple states. Releases over time can update "
 "the status of a contract."
 msgstr ""
-"Les contrats peuvent passer par plusieurs états. L'état d'un contrat peut "
-"être mis à jour via la publication de nouvelles instances du marché."
+"Les contrats peuvent passer par plusieurs status. Le statut d'un contrat "
+"peut être mis à jour via la publication de nouvelles instances."
 
 #: ../current_lang/codelists/contractStatus.csv:2
 msgid ""
@@ -2891,7 +2965,7 @@ msgstr "Ce contrat a été annulé avant d'être signé."
 
 #: ../current_lang/codelists/contractStatus.csv:1
 msgid "terminated"
-msgstr ""
+msgstr "terminated"
 
 #: ../current_lang/codelists/contractStatus.csv:1
 msgid "Terminated"
@@ -2903,8 +2977,8 @@ msgid ""
 "might be due to the successful completion of the contract, or might be early"
 " termination due to some non-completion."
 msgstr ""
-"Ce contrat était signé, il est en vigueur et vient de se terminer. Cela peut"
-" être dû à la bonne exécution du contrat à la date prévue, ou à une "
+"Ce contrat était signé et en vigueur, et il vient de se terminer. Cela peut "
+"être dû à la bonne exécution du contrat à la date prévue, ou à une "
 "résiliation anticipée pour cause de non-achèvement."
 
 #: ../../docs/schema/codelists.md:241
@@ -2913,7 +2987,7 @@ msgstr "État de l'étape"
 
 #: ../current_lang/codelists/milestoneStatus.csv:1
 msgid "scheduled"
-msgstr ""
+msgstr "scheduled"
 
 #: ../current_lang/codelists/milestoneStatus.csv:1
 msgid "Scheduled"
@@ -2925,13 +2999,13 @@ msgid ""
 "Progress towards the milestone has not yet been evaluated as of "
 "milestone.dateModified."
 msgstr ""
-"Cette étape a été planifiée pour la date dans `milestone.dueDate`. "
-"L'avancement vers l'étape n'a pas encore été évalué à la date  "
+"Cette étape a été planifiée pour la date indiquée dans `milestone.dueDate`. "
+"L'avancement vers l'étape n'a pas encore été examiné à la date  "
 "`milestone.dateModified`."
 
 #: ../current_lang/codelists/milestoneStatus.csv:1
 msgid "met"
-msgstr ""
+msgstr "met"
 
 #: ../current_lang/codelists/milestoneStatus.csv:1
 msgid "Met"
@@ -2942,12 +3016,12 @@ msgid ""
 "This milestone has been achieved. The date on which it was met should be "
 "placed in the milestone.dateMet field."
 msgstr ""
-"Cette étape a été atteinte. La date à laquelle elle a été réalisée doit être"
-" placée dans le champ milestone.dateMet."
+"Cette étape a été réalisée. La date à laquelle elle a été réalisée doit être"
+" placée dans le champ `milestone.dateMet`."
 
 #: ../current_lang/codelists/milestoneStatus.csv:1
 msgid "notMet"
-msgstr ""
+msgstr "notMet"
 
 #: ../current_lang/codelists/milestoneStatus.csv:1
 msgid "Not met"
@@ -2958,24 +3032,24 @@ msgid ""
 "This milestone had not been met at the date it was last reviewed (see "
 "milestone.dateModified)."
 msgstr ""
-"Cet étape n'a pas été atteinte à la date à laquelle elle a été examiné pour "
-"la dernière fois (voir `milestone.dateModified`)."
+"Cet étape n'a pas été atteinte à la date à laquelle elle a été examinée pour"
+" la dernière fois (voir `milestone.dateModified`)."
 
 #: ../current_lang/codelists/milestoneStatus.csv:1
 msgid "partiallyMet"
-msgstr ""
+msgstr "partiallyMet"
 
 #: ../current_lang/codelists/milestoneStatus.csv:1
 msgid "Partially met"
-msgstr "Partiellement atteint"
+msgstr "Partiellement atteinte"
 
 #: ../current_lang/codelists/milestoneStatus.csv:2
 msgid ""
 "This milestone was judged to have been partially met at the date it was last"
 " reviewed (see milestone.dateModified)."
 msgstr ""
-"Ce jalon a été jugé partiellement atteint à la date de la dernière révision "
-"(voir `milestone.dateModified`)."
+"Cette étape a été jugée partiellement atteinte la dernière fois qu'elle a "
+"été examinée (voir `milestone.dateModified`)."
 
 #: ../../docs/schema/codelists.md:249
 msgid "Currency"
@@ -2987,17 +3061,17 @@ msgid ""
 "currency code from "
 "[ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm)."
 msgstr ""
-"La devise de chaque montant devrait être indiquée au moyen d'un code composé"
-" de 3 lettres majuscules, tiré du standard [ISO "
+"La devise de chaque montant doit être indiquée au moyen d'un code composé de"
+" 3 lettres majuscules, tiré du standard [ISO "
 "4217](http://www.iso.org/iso/home/standards/currency_codes.htm)."
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Valid Until"
-msgstr "Valide jusqu'à date"
+msgstr "Date d'expiration"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AED"
-msgstr ""
+msgstr "AED"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UAE Dirham"
@@ -3005,7 +3079,7 @@ msgstr "Dirham des Émirats arabes unis"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AFN"
-msgstr ""
+msgstr "AFN"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3014,7 +3088,7 @@ msgstr "Afghani"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ALL"
-msgstr ""
+msgstr "ALL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lek"
@@ -3022,7 +3096,7 @@ msgstr "Lek"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AMD"
-msgstr ""
+msgstr "AMD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Armenian Dram"
@@ -3030,7 +3104,7 @@ msgstr "Dram arménien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ANG"
-msgstr ""
+msgstr "ANG"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Netherlands Antillean Guilder"
@@ -3038,7 +3112,7 @@ msgstr "Florin des Antilles néerlandaises"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AOA"
-msgstr ""
+msgstr "AOA"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3047,7 +3121,7 @@ msgstr "Kwanza"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ARS"
-msgstr ""
+msgstr "ARS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Argentine Peso"
@@ -3055,7 +3129,7 @@ msgstr "Peso argentin"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AUD"
-msgstr ""
+msgstr "AUD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Australian Dollar"
@@ -3063,15 +3137,15 @@ msgstr "Dollar australien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AWG"
-msgstr ""
+msgstr "AWG"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Aruban Florin"
-msgstr "Florin arubais"
+msgstr "Florin d'Aruba"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AZN"
-msgstr ""
+msgstr "AZN"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3080,7 +3154,7 @@ msgstr "Manat azerbaïdjanais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BAM"
-msgstr ""
+msgstr "BAM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Convertible Mark"
@@ -3088,7 +3162,7 @@ msgstr "Mark convertible de Bosnie-Herzégovine"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BBD"
-msgstr ""
+msgstr "BBD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Barbados Dollar"
@@ -3096,7 +3170,7 @@ msgstr "Dollar de la Barbade"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BDT"
-msgstr ""
+msgstr "BDT"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Taka"
@@ -3104,7 +3178,7 @@ msgstr "Taka"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BGN"
-msgstr ""
+msgstr "BGN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bulgarian Lev"
@@ -3112,7 +3186,7 @@ msgstr "Lev bulgare"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BHD"
-msgstr ""
+msgstr "BHD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bahraini Dinar"
@@ -3120,7 +3194,7 @@ msgstr "Dinar bahreïni"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BIF"
-msgstr ""
+msgstr "BIF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Burundi Franc"
@@ -3128,15 +3202,15 @@ msgstr "Franc burundais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BMD"
-msgstr ""
+msgstr "BMD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bermudian Dollar"
-msgstr "Dollar bermudien"
+msgstr "Dollar des Bermudes"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BND"
-msgstr ""
+msgstr "BND"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Brunei Dollar"
@@ -3144,7 +3218,7 @@ msgstr "Dollar de Brunei"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BOB"
-msgstr ""
+msgstr "BOB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Boliviano"
@@ -3152,7 +3226,7 @@ msgstr "Boliviano"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BOV"
-msgstr ""
+msgstr "BOV"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Mvdol"
@@ -3160,7 +3234,7 @@ msgstr "Mvdol"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BRL"
-msgstr ""
+msgstr "BRL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Brazilian Real"
@@ -3168,7 +3242,7 @@ msgstr "Réal brésilien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BSD"
-msgstr ""
+msgstr "BSD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bahamian Dollar"
@@ -3176,7 +3250,7 @@ msgstr "Dollar bahaméen"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BTN"
-msgstr ""
+msgstr "BTN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Ngultrum"
@@ -3184,7 +3258,7 @@ msgstr "Ngultrum"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BWP"
-msgstr ""
+msgstr "BWP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Pula"
@@ -3192,7 +3266,7 @@ msgstr "Pula"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BYN"
-msgstr ""
+msgstr "BYN"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3202,7 +3276,7 @@ msgstr "Rouble biélorusse"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BZD"
-msgstr ""
+msgstr "BZD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Belize Dollar"
@@ -3210,7 +3284,7 @@ msgstr "Dollar bélizien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CAD"
-msgstr ""
+msgstr "CAD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Canadian Dollar"
@@ -3218,7 +3292,7 @@ msgstr "Dollar canadien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CDF"
-msgstr ""
+msgstr "CDF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Congolese Franc"
@@ -3226,7 +3300,7 @@ msgstr "Franc congolais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CHE"
-msgstr ""
+msgstr "CHE"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "WIR Euro"
@@ -3234,7 +3308,7 @@ msgstr "Euro WIR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CHF"
-msgstr ""
+msgstr "CHF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Swiss Franc"
@@ -3242,7 +3316,7 @@ msgstr "Franc suisse"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CHW"
-msgstr ""
+msgstr "CHW"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "WIR Franc"
@@ -3250,15 +3324,15 @@ msgstr "France WIR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CLF"
-msgstr ""
+msgstr "CLF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Unidad de Fomento"
-msgstr "Unidades de fomento"
+msgstr "Unidad de fomento"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CLP"
-msgstr ""
+msgstr "CLP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Chilean Peso"
@@ -3266,15 +3340,15 @@ msgstr "Peso chilien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CNY"
-msgstr ""
+msgstr "CNY"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Yuan Renminbi"
-msgstr "Yian Renminbi"
+msgstr "Yuan renminbi"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "COP"
-msgstr ""
+msgstr "COP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Colombian Peso"
@@ -3282,7 +3356,7 @@ msgstr "Peso colombien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "COU"
-msgstr ""
+msgstr "COU"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Unidad de Valor Real"
@@ -3290,7 +3364,7 @@ msgstr "Unidad de Valor Real"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CRC"
-msgstr ""
+msgstr "CRC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Costa Rican Colon"
@@ -3298,7 +3372,7 @@ msgstr "Colon costaricain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CUC"
-msgstr ""
+msgstr "CUC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Peso Convertible"
@@ -3306,7 +3380,7 @@ msgstr "Peso cubain convertible"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CUP"
-msgstr ""
+msgstr "CUP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cuban Peso"
@@ -3314,7 +3388,7 @@ msgstr "Peso cubain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CVE"
-msgstr ""
+msgstr "CVE"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cabo Verde Escudo"
@@ -3322,7 +3396,7 @@ msgstr "Escudo cap-verdien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CZK"
-msgstr ""
+msgstr "CZK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Czech Koruna"
@@ -3330,7 +3404,7 @@ msgstr "Couronne tchèque"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "DJF"
-msgstr ""
+msgstr "DJF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Djibouti Franc"
@@ -3338,7 +3412,7 @@ msgstr "Franc Djibouti"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "DKK"
-msgstr ""
+msgstr "DKK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Danish Krone"
@@ -3346,7 +3420,7 @@ msgstr "Couronne danoise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "DOP"
-msgstr ""
+msgstr "DOP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Dominican Peso"
@@ -3354,7 +3428,7 @@ msgstr "Peso dominicain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "DZD"
-msgstr ""
+msgstr "DZD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Algerian Dinar"
@@ -3362,7 +3436,7 @@ msgstr "Dinar algérien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "EGP"
-msgstr ""
+msgstr "EGP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Egyptian Pound"
@@ -3370,7 +3444,7 @@ msgstr "Livre égyptienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ERN"
-msgstr ""
+msgstr "ERN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Nakfa"
@@ -3378,7 +3452,7 @@ msgstr "Nakfa"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ETB"
-msgstr ""
+msgstr "ETB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Ethiopian Birr"
@@ -3386,7 +3460,7 @@ msgstr "Birr éthiopien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "EUR"
-msgstr ""
+msgstr "EUR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Euro"
@@ -3394,7 +3468,7 @@ msgstr "Euro"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "FJD"
-msgstr ""
+msgstr "FJD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Fiji Dollar"
@@ -3402,7 +3476,7 @@ msgstr "Dollar de Fidji"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "FKP"
-msgstr ""
+msgstr "FKP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Falkland Islands Pound"
@@ -3410,7 +3484,7 @@ msgstr "Livre des Îles Malouines"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GBP"
-msgstr ""
+msgstr "GBP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Pound Sterling"
@@ -3418,7 +3492,7 @@ msgstr "Livre sterling"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GEL"
-msgstr ""
+msgstr "GEL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lari"
@@ -3426,7 +3500,7 @@ msgstr "Lari"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GHS"
-msgstr ""
+msgstr "GHS"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3435,7 +3509,7 @@ msgstr "Cedi ghanéen"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GIP"
-msgstr ""
+msgstr "GIP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Gibraltar Pound"
@@ -3443,7 +3517,7 @@ msgstr "Livre de Gibraltar"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GMD"
-msgstr ""
+msgstr "GMD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Dalasi"
@@ -3451,7 +3525,7 @@ msgstr "Dalasi"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GNF"
-msgstr ""
+msgstr "GNF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Guinean Franc"
@@ -3459,23 +3533,23 @@ msgstr "Franc guinéen"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GTQ"
-msgstr ""
+msgstr "GTQ"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Quetzal"
-msgstr "Quetzal"
+msgstr "Quetzal guatemaltèque"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GYD"
-msgstr ""
+msgstr "GYD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Guyana Dollar"
-msgstr "Dollar guyanien"
+msgstr "Dollar du Guyana"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "HKD"
-msgstr ""
+msgstr "HKD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Hong Kong Dollar"
@@ -3483,15 +3557,15 @@ msgstr "Dollar de Hong Kong"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "HNL"
-msgstr ""
+msgstr "HNL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lempira"
-msgstr "Lempira"
+msgstr "Lempira hondurien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "HRK"
-msgstr ""
+msgstr "HRK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Kuna"
@@ -3499,15 +3573,15 @@ msgstr "Kuna croate"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "HTG"
-msgstr ""
+msgstr "HTG"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Gourde"
-msgstr "Gourde"
+msgstr "Gourde haïtienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "HUF"
-msgstr ""
+msgstr "HUF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Forint"
@@ -3515,7 +3589,7 @@ msgstr "Forint"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "IDR"
-msgstr ""
+msgstr "IDR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Rupiah"
@@ -3523,15 +3597,15 @@ msgstr "Roupie indonésienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ILS"
-msgstr ""
+msgstr "ILS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "New Israeli Sheqel"
-msgstr "Shekel"
+msgstr "Nouveau shekel"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "INR"
-msgstr ""
+msgstr "INR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Indian Rupee"
@@ -3539,7 +3613,7 @@ msgstr "Roupie indienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "IQD"
-msgstr ""
+msgstr "IQD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Iraqi Dinar"
@@ -3547,7 +3621,7 @@ msgstr "Dinar iraquien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "IRR"
-msgstr ""
+msgstr "IRR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Iranian Rial"
@@ -3555,7 +3629,7 @@ msgstr "Rial iranien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ISK"
-msgstr ""
+msgstr "ISK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Iceland Krona"
@@ -3563,7 +3637,7 @@ msgstr "Couronne islandaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "JMD"
-msgstr ""
+msgstr "JMD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Jamaican Dollar"
@@ -3571,7 +3645,7 @@ msgstr "Dollar jamaïcain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "JOD"
-msgstr ""
+msgstr "JOD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Jordanian Dinar"
@@ -3579,7 +3653,7 @@ msgstr "Dinar jordanien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "JPY"
-msgstr ""
+msgstr "JPY"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Yen"
@@ -3587,7 +3661,7 @@ msgstr "Yen"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KES"
-msgstr ""
+msgstr "KES"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Kenyan Shilling"
@@ -3595,15 +3669,15 @@ msgstr "Shilling kényan"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KGS"
-msgstr ""
+msgstr "KGS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Som"
-msgstr "Sum"
+msgstr "Som"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KHR"
-msgstr ""
+msgstr "KHR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Riel"
@@ -3611,7 +3685,7 @@ msgstr "Riel"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KMF"
-msgstr ""
+msgstr "KMF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Comorian Franc"
@@ -3619,7 +3693,7 @@ msgstr "Franc comorien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KPW"
-msgstr ""
+msgstr "KPW"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "North Korean Won"
@@ -3627,7 +3701,7 @@ msgstr "Won nord-coréen"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KRW"
-msgstr ""
+msgstr "KRW"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Won"
@@ -3635,7 +3709,7 @@ msgstr "Won sud-coréen"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KWD"
-msgstr ""
+msgstr "KWD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Kuwaiti Dinar"
@@ -3643,7 +3717,7 @@ msgstr "Dinar koweïtien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KYD"
-msgstr ""
+msgstr "KYD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cayman Islands Dollar"
@@ -3651,7 +3725,7 @@ msgstr "Dollar des Îles Caïman"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "KZT"
-msgstr ""
+msgstr "KZT"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Tenge"
@@ -3659,7 +3733,7 @@ msgstr "Tenge"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LAK"
-msgstr ""
+msgstr "LAK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lao Kip"
@@ -3667,7 +3741,7 @@ msgstr "Kip laotien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LBP"
-msgstr ""
+msgstr "LBP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lebanese Pound"
@@ -3675,7 +3749,7 @@ msgstr "Livre libanaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LKR"
-msgstr ""
+msgstr "LKR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Sri Lanka Rupee"
@@ -3683,7 +3757,7 @@ msgstr "Roupie srilankaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LRD"
-msgstr ""
+msgstr "LRD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Liberian Dollar"
@@ -3691,7 +3765,7 @@ msgstr "Dollar libérien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LSL"
-msgstr ""
+msgstr "LSL"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3700,7 +3774,7 @@ msgstr "Loti"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LYD"
-msgstr ""
+msgstr "LYD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Libyan Dinar"
@@ -3708,7 +3782,7 @@ msgstr "Dinar lybien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MAD"
-msgstr ""
+msgstr "MAD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Moroccan Dirham"
@@ -3716,7 +3790,7 @@ msgstr "Dirham marocain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MDL"
-msgstr ""
+msgstr "MDL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Moldovan Leu"
@@ -3724,7 +3798,7 @@ msgstr "Leu moldave"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MGA"
-msgstr ""
+msgstr "MGA"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Malagasy Ariary"
@@ -3732,7 +3806,7 @@ msgstr "Ariary malgache"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MKD"
-msgstr ""
+msgstr "MKD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Denar"
@@ -3740,7 +3814,7 @@ msgstr "Denar macédonien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MMK"
-msgstr ""
+msgstr "MMK"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3749,7 +3823,7 @@ msgstr "Kyat"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MNT"
-msgstr ""
+msgstr "MNT"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Tugrik"
@@ -3757,7 +3831,7 @@ msgstr "Tugrik"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MOP"
-msgstr ""
+msgstr "MOP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Pataca"
@@ -3765,7 +3839,7 @@ msgstr "Pataca"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MRU"
-msgstr ""
+msgstr "MRU"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3774,23 +3848,23 @@ msgstr "Ouguiya"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MUR"
-msgstr ""
+msgstr "MUR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Mauritius Rupee"
-msgstr "Roupie mauritienne"
+msgstr "Roupie mauricienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MVR"
-msgstr ""
+msgstr "MVR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Rufiyaa"
-msgstr "Rufiyaa"
+msgstr "Rufiyaa maldivienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MWK"
-msgstr ""
+msgstr "MWK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Malawi Kwacha"
@@ -3798,7 +3872,7 @@ msgstr "Kwacha malawien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MXN"
-msgstr ""
+msgstr "MXN"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3807,15 +3881,15 @@ msgstr "Peso mexicain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MXV"
-msgstr ""
+msgstr "MXV"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Mexican Unidad de Inversion (UDI)"
-msgstr "Mexican Unidad de Inversion (UDI)"
+msgstr "Unidad de Inversión (UDI) mexicaine"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MYR"
-msgstr ""
+msgstr "MYR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Malaysian Ringgit"
@@ -3823,7 +3897,7 @@ msgstr "Ringgit malais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MZN"
-msgstr ""
+msgstr "MZN"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3832,7 +3906,7 @@ msgstr "Metical mozambicain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "NAD"
-msgstr ""
+msgstr "NAD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Namibia Dollar"
@@ -3840,7 +3914,7 @@ msgstr "Dollar namibien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "NGN"
-msgstr ""
+msgstr "NGN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Naira"
@@ -3848,7 +3922,7 @@ msgstr "Naira"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "NIO"
-msgstr ""
+msgstr "NIO"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cordoba Oro"
@@ -3856,7 +3930,7 @@ msgstr "Cordoba d'or"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "NOK"
-msgstr ""
+msgstr "NOK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Norwegian Krone"
@@ -3864,7 +3938,7 @@ msgstr "Couronne norvégienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "NPR"
-msgstr ""
+msgstr "NPR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Nepalese Rupee"
@@ -3872,7 +3946,7 @@ msgstr "Roupie népalaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "NZD"
-msgstr ""
+msgstr "NZD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "New Zealand Dollar"
@@ -3880,7 +3954,7 @@ msgstr "Dollar néo-zélandais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "OMR"
-msgstr ""
+msgstr "OMR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Rial Omani"
@@ -3888,7 +3962,7 @@ msgstr "Rial omanais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PAB"
-msgstr ""
+msgstr "PAB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Balboa"
@@ -3896,7 +3970,7 @@ msgstr "Balboa"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PEN"
-msgstr ""
+msgstr "PEN"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3906,7 +3980,7 @@ msgstr "Sol péruvien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PGK"
-msgstr ""
+msgstr "PGK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Kina"
@@ -3914,7 +3988,7 @@ msgstr "Kina"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PHP"
-msgstr ""
+msgstr "PHP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Philippine Peso"
@@ -3922,7 +3996,7 @@ msgstr "Peso philippin"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PKR"
-msgstr ""
+msgstr "PKR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Pakistan Rupee"
@@ -3930,7 +4004,7 @@ msgstr "Roupie pakistanaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PLN"
-msgstr ""
+msgstr "PLN"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3939,7 +4013,7 @@ msgstr "Złoty"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PYG"
-msgstr ""
+msgstr "PYG"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Guarani"
@@ -3947,7 +4021,7 @@ msgstr "Guaraní"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "QAR"
-msgstr ""
+msgstr "QAR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Qatari Rial"
@@ -3955,7 +4029,7 @@ msgstr "Riyal qatarien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "RON"
-msgstr ""
+msgstr "RON"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Romanian Leu"
@@ -3963,7 +4037,7 @@ msgstr "Leu roumain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "RSD"
-msgstr ""
+msgstr "RSD"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3972,7 +4046,7 @@ msgstr "Dinar serbe"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "RUB"
-msgstr ""
+msgstr "RUB"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -3981,7 +4055,7 @@ msgstr "Rouble russe"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "RWF"
-msgstr ""
+msgstr "RWF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Rwanda Franc"
@@ -3989,7 +4063,7 @@ msgstr "Franc rwandais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SAR"
-msgstr ""
+msgstr "SAR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Saudi Riyal"
@@ -3997,7 +4071,7 @@ msgstr "Riyal saoudien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SBD"
-msgstr ""
+msgstr "SBD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Solomon Islands Dollar"
@@ -4005,7 +4079,7 @@ msgstr "Dollar des Salomon"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SCR"
-msgstr ""
+msgstr "SCR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Seychelles Rupee"
@@ -4013,7 +4087,7 @@ msgstr "Roupie seychelloise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SDG"
-msgstr ""
+msgstr "SDG"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4022,7 +4096,7 @@ msgstr "Livre soudanaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SEK"
-msgstr ""
+msgstr "SEK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Swedish Krona"
@@ -4030,7 +4104,7 @@ msgstr "Couronne suédoise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SGD"
-msgstr ""
+msgstr "SGD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Singapore Dollar"
@@ -4038,7 +4112,7 @@ msgstr "Dollar de Singapour"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SHP"
-msgstr ""
+msgstr "SHP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Saint Helena Pound"
@@ -4046,7 +4120,7 @@ msgstr "Livre de Saint-Hélène"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SLL"
-msgstr ""
+msgstr "SLL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Leone"
@@ -4054,7 +4128,7 @@ msgstr "Leone"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SOS"
-msgstr ""
+msgstr "SOS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Somali Shilling"
@@ -4062,7 +4136,7 @@ msgstr "Shilling somalien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SRD"
-msgstr ""
+msgstr "SRD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Surinam Dollar"
@@ -4070,7 +4144,7 @@ msgstr "Dollar du Surinam"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SSP"
-msgstr ""
+msgstr "SSP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "South Sudanese Pound"
@@ -4078,7 +4152,7 @@ msgstr "Livre sud-soudanaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "STN"
-msgstr ""
+msgstr "STN"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4087,7 +4161,7 @@ msgstr "Dobra"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SVC"
-msgstr ""
+msgstr "SVC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "El Salvador Colon"
@@ -4095,7 +4169,7 @@ msgstr "Colon salvadorien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SYP"
-msgstr ""
+msgstr "SYP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Syrian Pound"
@@ -4103,7 +4177,7 @@ msgstr "Livre syrienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SZL"
-msgstr ""
+msgstr "SZL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lilangeni"
@@ -4111,7 +4185,7 @@ msgstr "Lilangeni"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "THB"
-msgstr ""
+msgstr "THB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Baht"
@@ -4119,7 +4193,7 @@ msgstr "Baht"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TJS"
-msgstr ""
+msgstr "TJS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Somoni"
@@ -4127,7 +4201,7 @@ msgstr "Somoni"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TMT"
-msgstr ""
+msgstr "TMT"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Turkmenistan New Manat"
@@ -4135,7 +4209,7 @@ msgstr "Manat turkmène"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TND"
-msgstr ""
+msgstr "TND"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Tunisian Dinar"
@@ -4143,7 +4217,7 @@ msgstr "Dinar tunisien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TOP"
-msgstr ""
+msgstr "TOP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Pa’anga"
@@ -4151,7 +4225,7 @@ msgstr "Pa'anga tongien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TRY"
-msgstr ""
+msgstr "TRY"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Turkish Lira"
@@ -4159,7 +4233,7 @@ msgstr "Livre turque"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TTD"
-msgstr ""
+msgstr "TTD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Trinidad and Tobago Dollar"
@@ -4167,7 +4241,7 @@ msgstr "Dollar de Trinidad et Tobago"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TWD"
-msgstr ""
+msgstr "TWD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "New Taiwan Dollar"
@@ -4175,7 +4249,7 @@ msgstr "Nouveau dollar de Taïwan"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TZS"
-msgstr ""
+msgstr "TZS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Tanzanian Shilling"
@@ -4183,7 +4257,7 @@ msgstr "Shilling tanzanien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UAH"
-msgstr ""
+msgstr "UAH"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Hryvnia"
@@ -4191,7 +4265,7 @@ msgstr "Hryvnia"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UGX"
-msgstr ""
+msgstr "UGX"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4200,7 +4274,7 @@ msgstr "Shilling ougandais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "US Dollar"
@@ -4208,7 +4282,7 @@ msgstr "Dollar américain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "USN"
-msgstr ""
+msgstr "USN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "US Dollar (Next day)"
@@ -4216,15 +4290,15 @@ msgstr "Dollar américain (lendemain)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UYI"
-msgstr ""
+msgstr "UYI"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Uruguay Peso en Unidades Indexadas (UI)"
-msgstr ""
+msgstr "Uruguay Peso en Unidades Indexadas (UI)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UYU"
-msgstr ""
+msgstr "UYU"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Peso Uruguayo"
@@ -4232,15 +4306,15 @@ msgstr "Peso uruguayen"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UYW"
-msgstr ""
+msgstr "UYW"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Unidad Previsional"
-msgstr ""
+msgstr "Unidad Previsional"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UZS"
-msgstr ""
+msgstr "UZS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Uzbekistan Sum"
@@ -4248,15 +4322,15 @@ msgstr "Sum ouzbek"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "VES"
-msgstr ""
+msgstr "VES"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bolívar Soberano"
-msgstr ""
+msgstr "Bolivar souverain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "VND"
-msgstr ""
+msgstr "VND"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Dong"
@@ -4264,7 +4338,7 @@ msgstr "Dong"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "VUV"
-msgstr ""
+msgstr "VUV"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Vatu"
@@ -4272,7 +4346,7 @@ msgstr "Vatu"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "WST"
-msgstr ""
+msgstr "WST"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Tala"
@@ -4280,7 +4354,7 @@ msgstr "Tala"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XAF"
-msgstr ""
+msgstr "XAF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CFA Franc BEAC"
@@ -4288,7 +4362,7 @@ msgstr "France CFA BEAC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XAG"
-msgstr ""
+msgstr "XAG"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Silver"
@@ -4296,7 +4370,7 @@ msgstr "Argent"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XAU"
-msgstr ""
+msgstr "XAU"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Gold"
@@ -4304,7 +4378,7 @@ msgstr "Or"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XBA"
-msgstr ""
+msgstr "XBA"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bond Markets Unit European Composite Unit (EURCO)"
@@ -4312,7 +4386,7 @@ msgstr "Unité européenne composée (EURCO)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XBB"
-msgstr ""
+msgstr "XBB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bond Markets Unit European Monetary Unit (E.M.U.-6)"
@@ -4320,7 +4394,7 @@ msgstr "Unité monétaire européenne (U.M.E.-6)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XBC"
-msgstr ""
+msgstr "XBC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)"
@@ -4328,7 +4402,7 @@ msgstr "Unité de compte 9 (U.E.C.-9)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XBD"
-msgstr ""
+msgstr "XBD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)"
@@ -4336,7 +4410,7 @@ msgstr "Unité de compte 17 (U.E.C.-17)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XCD"
-msgstr ""
+msgstr "XCD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "East Caribbean Dollar"
@@ -4344,7 +4418,7 @@ msgstr "Dollar des Caraïbes orientales"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XDR"
-msgstr ""
+msgstr "XDR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SDR (Special Drawing Right)"
@@ -4352,7 +4426,7 @@ msgstr " Droits de tirage spéciaux (DTS) "
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XOF"
-msgstr ""
+msgstr "XOF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CFA Franc BCEAO"
@@ -4360,7 +4434,7 @@ msgstr "Franc CFA BCEAO"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XPD"
-msgstr ""
+msgstr "XPD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Palladium"
@@ -4368,7 +4442,7 @@ msgstr "Palladium"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XPF"
-msgstr ""
+msgstr "XPF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CFP Franc"
@@ -4376,7 +4450,7 @@ msgstr "Franc CFP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XPT"
-msgstr ""
+msgstr "XPT"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Platinum"
@@ -4384,7 +4458,7 @@ msgstr "Platine"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XSU"
-msgstr ""
+msgstr "XSU"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4393,7 +4467,7 @@ msgstr "Sucre équatorien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XTS"
-msgstr ""
+msgstr "XTS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Codes specifically reserved for testing purposes"
@@ -4401,7 +4475,7 @@ msgstr "Codes réservés à des fins de test"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XUA"
-msgstr ""
+msgstr "XUA"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ADB Unit of Account"
@@ -4409,7 +4483,7 @@ msgstr "Unité de compte ADB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XXX"
-msgstr ""
+msgstr "XXX"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "The codes assigned for transactions where no currency is involved"
@@ -4419,7 +4493,7 @@ msgstr ""
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "YER"
-msgstr ""
+msgstr "YER"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Yemeni Rial"
@@ -4427,7 +4501,7 @@ msgstr "Riyal yéménite"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZAR"
-msgstr ""
+msgstr "ZAR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Rand"
@@ -4435,7 +4509,7 @@ msgstr "Rand"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZMW"
-msgstr ""
+msgstr "ZMW"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4444,7 +4518,7 @@ msgstr "Kwacha zambien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZWL"
-msgstr ""
+msgstr "ZWL"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4454,7 +4528,7 @@ msgstr "Dollar du Zimbabwe"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ADP"
-msgstr ""
+msgstr "ADP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Andorran Peseta"
@@ -4463,23 +4537,23 @@ msgstr "Peseta andorrane"
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2003-07"
-msgstr ""
+msgstr "2003-07"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AFA"
-msgstr ""
+msgstr "AFA"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2003-01"
-msgstr ""
+msgstr "2003-01 "
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ALK"
-msgstr ""
+msgstr "ALK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Old Lek"
-msgstr "Lek albanais"
+msgstr "Ancien lek albanais"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4487,19 +4561,19 @@ msgstr "Lek albanais"
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "1989-12"
-msgstr ""
+msgstr "1989-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AOK"
-msgstr ""
+msgstr "AOK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1991-03"
-msgstr ""
+msgstr "1991-03"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AON"
-msgstr ""
+msgstr "AON"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "New Kwanza"
@@ -4508,11 +4582,11 @@ msgstr "Kwanza angolais (nouveau)"
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2000-02"
-msgstr ""
+msgstr "2000-02"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AOR"
-msgstr ""
+msgstr "AOR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Kwanza Reajustado"
@@ -4520,19 +4594,19 @@ msgstr "Kwanza angolais (réajusté)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ARA"
-msgstr ""
+msgstr "ARA"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Austral"
-msgstr ""
+msgstr "Austral"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1992-01"
-msgstr ""
+msgstr "1992-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ARP"
-msgstr ""
+msgstr "ARP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Peso Argentino"
@@ -4540,11 +4614,11 @@ msgstr "Peso argentin"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1985-07"
-msgstr ""
+msgstr "1985-07"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ARY"
-msgstr ""
+msgstr "ARY"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Peso"
@@ -4561,11 +4635,11 @@ msgstr "Peso"
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "1989/1990"
-msgstr ""
+msgstr "1989/1990"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ATS"
-msgstr ""
+msgstr "ATS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Schilling"
@@ -4584,19 +4658,19 @@ msgstr "Schilling"
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2002-03"
-msgstr ""
+msgstr "2002-03"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AYM"
-msgstr ""
+msgstr "AYM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2005-10"
-msgstr ""
+msgstr "2005-10"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "AZM"
-msgstr ""
+msgstr "AZM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Azerbaijanian Manat"
@@ -4605,11 +4679,11 @@ msgstr "Manat azerbaïdjanais"
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2005-12"
-msgstr ""
+msgstr "2005-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BAD"
-msgstr ""
+msgstr "BAD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Dinar"
@@ -4617,15 +4691,15 @@ msgstr "Dinar"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1998-07"
-msgstr ""
+msgstr "1998-07"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BEC"
-msgstr ""
+msgstr "BEC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Convertible Franc"
-msgstr "France convertible"
+msgstr "Franc convertible"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4633,11 +4707,11 @@ msgstr "France convertible"
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "1990-03"
-msgstr ""
+msgstr "1990-03"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BEF"
-msgstr ""
+msgstr "BEF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Belgian Franc"
@@ -4645,15 +4719,15 @@ msgstr "Franc belge"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BEL"
-msgstr ""
+msgstr "BEL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Financial Franc"
-msgstr "France financier"
+msgstr "Franc financier"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BGJ"
-msgstr ""
+msgstr "BGJ"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lev A/52"
@@ -4661,7 +4735,7 @@ msgstr "Lev A/52"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BGK"
-msgstr ""
+msgstr "BGK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lev A/62"
@@ -4669,7 +4743,7 @@ msgstr "Lev A/62"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BGL"
-msgstr ""
+msgstr "BGL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lev"
@@ -4677,11 +4751,11 @@ msgstr "Lev"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2003-11"
-msgstr ""
+msgstr "2003-11"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BOP"
-msgstr ""
+msgstr "BOP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Peso boliviano"
@@ -4689,11 +4763,11 @@ msgstr "Peso bolivien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1987-02"
-msgstr ""
+msgstr "1987-02"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BRB"
-msgstr ""
+msgstr "BRB"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4702,11 +4776,11 @@ msgstr "Cruzeiro"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1986-03"
-msgstr ""
+msgstr "1986-03"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BRC"
-msgstr ""
+msgstr "BRC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cruzado"
@@ -4714,21 +4788,21 @@ msgstr "Cruzado"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1989-02"
-msgstr ""
+msgstr "1989-02"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BRE"
-msgstr ""
+msgstr "BRE"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "1993-03"
-msgstr ""
+msgstr "1993-03"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BRN"
-msgstr ""
+msgstr "BRN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "New Cruzado"
@@ -4736,7 +4810,7 @@ msgstr "Cruzado nouveau"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BRR"
-msgstr ""
+msgstr "BRR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cruzeiro Real"
@@ -4744,35 +4818,35 @@ msgstr "Cruzeiro real"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1994-07"
-msgstr ""
+msgstr "1994-07"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BUK"
-msgstr ""
+msgstr "BUK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1990-02"
-msgstr ""
+msgstr "1990-02"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BYB"
-msgstr ""
+msgstr "BYB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2001-01"
-msgstr ""
+msgstr "2001-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "BYR"
-msgstr ""
+msgstr "BYR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2017-01"
-msgstr ""
+msgstr "2017-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CHC"
-msgstr ""
+msgstr "CHC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "WIR Franc (for electronic)"
@@ -4780,88 +4854,88 @@ msgstr "Franc WIR (électronique)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2004-11"
-msgstr ""
+msgstr "2004-11"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CSD"
-msgstr ""
+msgstr "CSD"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2006-10"
-msgstr ""
+msgstr "2006-10"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CSJ"
-msgstr ""
+msgstr "CSJ"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Krona A/53"
-msgstr ""
+msgstr "Couronne A/53"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CSK"
-msgstr ""
+msgstr "CSK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Koruna"
-msgstr ""
+msgstr "Koruna"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "CYP"
-msgstr ""
+msgstr "CYP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cyprus Pound"
-msgstr ""
+msgstr "Livre de Chypre"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2008-01"
-msgstr ""
+msgstr "2008-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "DDM"
-msgstr ""
+msgstr "DDM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Mark der DDR"
-msgstr ""
+msgstr "Mark est-allemand"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1990-07/1990-09"
-msgstr ""
+msgstr "1990-07/1990-09"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "DEM"
-msgstr ""
+msgstr "DEM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Deutsche Mark"
-msgstr ""
+msgstr "Deutsche Mark"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ECS"
-msgstr ""
+msgstr "ECS"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2000-09"
-msgstr ""
+msgstr "2000-09"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ECV"
-msgstr ""
+msgstr "ECV"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Unidad de Valor Constante (UVC)"
-msgstr ""
+msgstr "Unidad de Valor Constante (UVC)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "EEK"
-msgstr ""
+msgstr "EEK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Kroon"
@@ -4869,16 +4943,16 @@ msgstr "Couronne estonienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2011-01"
-msgstr ""
+msgstr "2011-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ESA"
-msgstr ""
+msgstr "ESA"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "Spanish Peseta"
-msgstr ""
+msgstr "Peseta espagnole"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
@@ -4886,56 +4960,56 @@ msgstr ""
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "1978/1981"
-msgstr ""
+msgstr "1978/1981"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ESB"
-msgstr ""
+msgstr "ESB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "\"A\" Account (convertible Peseta Account)"
-msgstr ""
+msgstr "\"A\" Account (convertible Peseta Account)"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "1994-12"
-msgstr ""
+msgstr "1994-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ESP"
-msgstr ""
+msgstr "ESP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "FIM"
-msgstr ""
+msgstr "FIM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Markka"
-msgstr ""
+msgstr "Mark finlandais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "FRF"
-msgstr ""
+msgstr "FRF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "French Franc"
-msgstr ""
+msgstr "Franc français"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GEK"
-msgstr ""
+msgstr "GEK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Georgian Coupon"
-msgstr ""
+msgstr "Coupon géorgien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1995-10"
-msgstr ""
+msgstr "1995-10"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GHC"
-msgstr ""
+msgstr "GHC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cedi"
@@ -4943,145 +5017,145 @@ msgstr "Cedi"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GHP"
-msgstr ""
+msgstr "GHP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2007-06"
-msgstr ""
+msgstr "2007-06"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GNE"
-msgstr ""
+msgstr "GNE"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "Syli"
-msgstr ""
+msgstr "Syli"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GNS"
-msgstr ""
+msgstr "GNS"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "1986-02"
-msgstr ""
+msgstr "1986-02"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GQE"
-msgstr ""
+msgstr "GQE"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Ekwele"
-msgstr ""
+msgstr "Ekwele"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1986-06"
-msgstr ""
+msgstr "1986-06"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GRD"
-msgstr ""
+msgstr "GRD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Drachma"
-msgstr ""
+msgstr "Drachma"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GWE"
-msgstr ""
+msgstr "GWE"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Guinea Escudo"
-msgstr ""
+msgstr "Escudo de Guinée"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "GWP"
-msgstr ""
+msgstr "GWP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Guinea-Bissau Peso"
-msgstr ""
+msgstr "Le peso de Guinée-Bissau"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1997-05"
-msgstr ""
+msgstr "1997-05"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "HRD"
-msgstr ""
+msgstr "HRD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Croatian Dinar"
-msgstr ""
+msgstr "Dinar croate"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1995-01"
-msgstr ""
+msgstr "1995-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "IEP"
-msgstr ""
+msgstr "IEP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Irish Pound"
-msgstr ""
+msgstr "Livre irlandaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ILP"
-msgstr ""
+msgstr "ILP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Pound"
-msgstr ""
+msgstr "Livre"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ILR"
-msgstr ""
+msgstr "ILR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Old Shekel"
-msgstr ""
+msgstr "Ancien shekel israélien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ISJ"
-msgstr ""
+msgstr "ISJ"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Old Krona"
-msgstr ""
+msgstr "Old Krona"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ITL"
-msgstr ""
+msgstr "ITL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Italian Lira"
-msgstr ""
+msgstr "Lire italienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LAJ"
-msgstr ""
+msgstr "LAJ"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Pathet Lao Kip"
-msgstr ""
+msgstr "Kip laotien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1979-12"
-msgstr ""
+msgstr "1979-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LSM"
-msgstr ""
+msgstr "LSM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1985-05"
-msgstr ""
+msgstr "1985-05"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LTL"
-msgstr ""
+msgstr "LTL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Lithuanian Litas"
@@ -5089,47 +5163,47 @@ msgstr "Litas lituanien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2014-12"
-msgstr ""
+msgstr "2014-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LTT"
-msgstr ""
+msgstr "LTT"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Talonas"
-msgstr ""
+msgstr "Talonas lituanien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1993-07"
-msgstr ""
+msgstr "1993-07"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LUC"
-msgstr ""
+msgstr "LUC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Luxembourg Convertible Franc"
-msgstr ""
+msgstr "Franc convertible Luxembourgeois"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LUF"
-msgstr ""
+msgstr "LUF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Luxembourg Franc"
-msgstr ""
+msgstr "Franc Luxembourgeois"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LUL"
-msgstr ""
+msgstr "LUL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Luxembourg Financial Franc"
-msgstr ""
+msgstr "Franc financier Luxembourgeois"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LVL"
-msgstr ""
+msgstr "LVL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Latvian Lats"
@@ -5137,338 +5211,338 @@ msgstr "Lats letton"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2014-01"
-msgstr ""
+msgstr "2014-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "LVR"
-msgstr ""
+msgstr "LVR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Latvian Ruble"
-msgstr ""
+msgstr "Rouble letton"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MGF"
-msgstr ""
+msgstr "MGF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Malagasy Franc"
-msgstr ""
+msgstr "Franc de Madagascar"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2004-12"
-msgstr ""
+msgstr "2004-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MLF"
-msgstr ""
+msgstr "MLF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Mali Franc"
-msgstr ""
+msgstr "Franc malien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1984-11"
-msgstr ""
+msgstr "1984-11"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MRO"
-msgstr ""
+msgstr "MRO"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2017-12"
-msgstr ""
+msgstr "2017-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MTL"
-msgstr ""
+msgstr "MTL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Maltese Lira"
-msgstr ""
+msgstr "Lire maltaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MTP"
-msgstr ""
+msgstr "MTP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Maltese Pound"
-msgstr ""
+msgstr "Livre maltaise"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1983-06"
-msgstr ""
+msgstr "1983-06"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MVQ"
-msgstr ""
+msgstr "MVQ"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Maldive Rupee"
-msgstr ""
+msgstr "Roupie maldivienne"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MXP"
-msgstr ""
+msgstr "MXP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1993-01"
-msgstr ""
+msgstr "1993-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MZE"
-msgstr ""
+msgstr "MZE"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Mozambique Escudo"
-msgstr ""
+msgstr "Escudo mozambicain"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "MZM"
-msgstr ""
+msgstr "MZM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2006-06"
-msgstr ""
+msgstr "2006-06"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "NIC"
-msgstr ""
+msgstr "NIC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Cordoba"
-msgstr ""
+msgstr "Cordoba"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1990-10"
-msgstr ""
+msgstr "1990-10"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "NLG"
-msgstr ""
+msgstr "NLG"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Netherlands Guilder"
-msgstr ""
+msgstr "Florin néerlandais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PEH"
-msgstr ""
+msgstr "PEH"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PEI"
-msgstr ""
+msgstr "PEI"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Inti"
-msgstr ""
+msgstr "Inti"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1991-07"
-msgstr ""
+msgstr "1991-07"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PES"
-msgstr ""
+msgstr "PES"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PLZ"
-msgstr ""
+msgstr "PLZ"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1997-01"
-msgstr ""
+msgstr "1997-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "PTE"
-msgstr ""
+msgstr "PTE"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Portuguese Escudo"
-msgstr ""
+msgstr "Escudo portugais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "RHD"
-msgstr ""
+msgstr "RHD"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "Rhodesian Dollar"
-msgstr ""
+msgstr "Dollar rhodésien"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ROK"
-msgstr ""
+msgstr "ROK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Leu A/52"
-msgstr ""
+msgstr "Leu A/52"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ROL"
-msgstr ""
+msgstr "ROL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Old Leu"
-msgstr ""
+msgstr "Vieux leu"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2005-06"
-msgstr ""
+msgstr "2005-06"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "RUR"
-msgstr ""
+msgstr "RUR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2004-01"
-msgstr ""
+msgstr "2004-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SDD"
-msgstr ""
+msgstr "SDD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Sudanese Dinar"
-msgstr ""
+msgstr "Dinar soudanais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2007-07"
-msgstr ""
+msgstr "2007-07"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SDP"
-msgstr ""
+msgstr "SDP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1998-06"
-msgstr ""
+msgstr "1998-06"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SIT"
-msgstr ""
+msgstr "SIT"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Tolar"
-msgstr ""
+msgstr "Tolar"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2007-01"
-msgstr ""
+msgstr "2007-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SKK"
-msgstr ""
+msgstr "SKK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Slovak Koruna"
-msgstr ""
+msgstr "Couronne slovaque"
 
 #: ../current_lang/codelists/currency.csv:1
 #: ../current_lang/codelists/currency.csv:1
 msgid "2009-01"
-msgstr ""
+msgstr "2009-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SRG"
-msgstr ""
+msgstr "SRG"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Surinam Guilder"
-msgstr ""
+msgstr "Florin surinamais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2003-12"
-msgstr ""
+msgstr "2003-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "STD"
-msgstr ""
+msgstr "STD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "SUR"
-msgstr ""
+msgstr "SUR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Rouble"
-msgstr ""
+msgstr "Rouble"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1990-12"
-msgstr ""
+msgstr "1990-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TJR"
-msgstr ""
+msgstr "TJR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Tajik Ruble"
-msgstr ""
+msgstr "Rouble tadjik"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2001-04"
-msgstr ""
+msgstr "2001-04"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TMM"
-msgstr ""
+msgstr "TMM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Turkmenistan Manat"
-msgstr ""
+msgstr "Manat turkmène"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TPE"
-msgstr ""
+msgstr "TPE"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Timor Escudo"
-msgstr ""
+msgstr "Escudo timorais"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2002-11"
-msgstr ""
+msgstr "2002-11"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "TRL"
-msgstr ""
+msgstr "TRL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Old Turkish Lira"
-msgstr ""
+msgstr "Ancienne lire turque"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UAK"
-msgstr ""
+msgstr "UAK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Karbovanet"
-msgstr ""
+msgstr "Karbovanets"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1996-09"
-msgstr ""
+msgstr "1996-09"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UGS"
-msgstr ""
+msgstr "UGS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1987-05"
-msgstr ""
+msgstr "1987-05"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UGW"
-msgstr ""
+msgstr "UGW"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Old Shilling"
-msgstr ""
+msgstr "Ancien shilling"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "USS"
-msgstr ""
+msgstr "USS"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "US Dollar (Same day)"
@@ -5476,27 +5550,27 @@ msgstr "Dollar américain (même jour)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2014-03"
-msgstr ""
+msgstr "2014-03"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UYN"
-msgstr ""
+msgstr "UYN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Old Uruguay Peso"
-msgstr ""
+msgstr "Ancien peso d'Uruguay"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UYP"
-msgstr ""
+msgstr "UYP"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Uruguayan Peso"
-msgstr ""
+msgstr "Peso uruguayen"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "VEB"
-msgstr ""
+msgstr "VEB"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bolivar"
@@ -5504,7 +5578,7 @@ msgstr "Bolivar"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "VEF"
-msgstr ""
+msgstr "VEF"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Bolívar"
@@ -5512,176 +5586,176 @@ msgstr "Bolivar"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2018-08"
-msgstr ""
+msgstr "2018-08"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "VNC"
-msgstr ""
+msgstr "VNC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Old Dong"
-msgstr ""
+msgstr "Ancien Dong"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XEU"
-msgstr ""
+msgstr "XEU"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "European Currency Unit (E.C.U)"
-msgstr ""
+msgstr "Unité de compte européenne (ECU)"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1999-01"
-msgstr ""
+msgstr "1999-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XFO"
-msgstr ""
+msgstr "XFO"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Gold-Franc"
-msgstr ""
+msgstr "Franc or"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XFU"
-msgstr ""
+msgstr "XFU"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "UIC-Franc"
-msgstr ""
+msgstr "Franc UIC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2013-11"
-msgstr ""
+msgstr "2013-11"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "XRE"
-msgstr ""
+msgstr "XRE"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "RINET Funds Code"
-msgstr ""
+msgstr "RINET Funds Code"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1999-11"
-msgstr ""
+msgstr "1999-11"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "YDD"
-msgstr ""
+msgstr "YDD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Yemeni Dinar"
-msgstr ""
+msgstr "Dinar du Yémen du Sud"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1991-09"
-msgstr ""
+msgstr "1991-09"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "YUD"
-msgstr ""
+msgstr "YUD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "New Yugoslavian Dinar"
-msgstr ""
+msgstr "Nouveau dinar yougoslave"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1990-01"
-msgstr ""
+msgstr "1990-01"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "YUM"
-msgstr ""
+msgstr "YUM"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "New Dinar"
-msgstr ""
+msgstr "Nouveau Dinar"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "YUN"
-msgstr ""
+msgstr "YUN "
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Yugoslavian Dinar"
-msgstr ""
+msgstr "Dinar yougoslave"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1995-11"
-msgstr ""
+msgstr "1995-11"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZAL"
-msgstr ""
+msgstr "ZAL"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Financial Rand"
-msgstr ""
+msgstr "Rand financier"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1995-03"
-msgstr ""
+msgstr "1995-03"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZMK"
-msgstr ""
+msgstr "ZMK"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2012-12"
-msgstr ""
+msgstr "2012-12"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZRN"
-msgstr ""
+msgstr "ZRN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "New Zaire"
-msgstr ""
+msgstr "Nouveau Zaïre"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1999-06"
-msgstr ""
+msgstr "1999-06"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZRZ"
-msgstr ""
+msgstr "ZRZ"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Zaire"
-msgstr ""
+msgstr "Zaire"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "1994-02"
-msgstr ""
+msgstr "1994-02"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZWC"
-msgstr ""
+msgstr "ZWC"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZWD"
-msgstr ""
+msgstr "ZWD"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2008-08"
-msgstr ""
+msgstr "2008-08"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZWN"
-msgstr ""
+msgstr "ZWN"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "Zimbabwe Dollar (new)"
-msgstr ""
+msgstr "Nouveau Dollar du Zimbabwe"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2006-09"
-msgstr ""
+msgstr "2006-09"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "ZWR"
-msgstr ""
+msgstr "ZWR"
 
 #: ../current_lang/codelists/currency.csv:1
 msgid "2009-06"
-msgstr ""
+msgstr "2009-06"
