@@ -6,19 +6,19 @@
 # Translators:
 # Tim Davies <tim.davies@opendataservices.coop>, 2017
 # samgoeta <samgoeta@gmail.com>, 2017
-# Colin Maudry <colin@maudry.com>, 2017
 # Cecile LG <cecile@datactivi.st>, 2019
-# James McKinney, 2019
+# Emeline Vandeven <emeline@datactivist.coop>, 2020
+# Colin Maudry <colin@maudry.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"POT-Creation-Date: 2020-08-20 16:26-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: James McKinney, 2019\n"
-"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"Last-Translator: Colin Maudry <colin@maudry.com>, 2020\n"
+"Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,6 +36,11 @@ msgid ""
 "to the standard. These also create space for **extensions** of the standard "
 "to respond to particular publisher or user needs."
 msgstr ""
+"Afin de maximiser l'interopérabilité des données publiées en utilisant le "
+"standard OCDS, nous avons établi des principes clés pour être en "
+"**conformité** avec le standard. Il est ainsi possible de créer des "
+"**extensions** du standard grâce auxquelles les producteurs de données "
+"peuvent répondre à des besoins d'utilisateurs particuliers."
 
 #: ../../docs/schema/conformance_and_extensions.md:5
 msgid "Conformance"
@@ -83,9 +88,10 @@ msgid ""
 "[validate](https://standard.open-contracting.org/review/) against this "
 "specification's JSON Schema."
 msgstr ""
-"Si une implémentation est sérialisée en JSON, ses sérialisations *doivent* "
-"[être en conformité](https://standard.open-contracting.org/review/) avec le "
-"schéma JSON correspondant à ces spécifications."
+"Si une implémentation du standard produit des données au format JSON, ces "
+"données *doivent* [être en conformité](https://standard.open-"
+"contracting.org/review/) avec le schéma JSON correspondant à ces "
+"spécifications."
 
 #: ../../docs/schema/conformance_and_extensions.md:15
 msgid ""
@@ -117,6 +123,11 @@ msgid ""
 "declared should be validated against the version 1.0 schema unless otherwise"
 " instructed by the user."
 msgstr ""
+"À partir d'OCDS 1.1, les packages d'instances et d'archives devraient "
+"inclure un champ 'version' pour déclarer explicitement leur version d'OCDS. "
+"Tous les packages sans une version explicitement déclarée devraient être "
+"validés par rapport au schéma de la version 1.0, sauf indication contraire "
+"de l'utilisateur."
 
 #: ../../docs/schema/conformance_and_extensions.md:23
 msgid "Validators and applications should:"
@@ -150,18 +161,26 @@ msgid ""
 "not covered by the version of the schema and extensions that they are "
 "validating against."
 msgstr ""
+"Les outils de validation **doivent** avertir l'utilisateur lorsqu'ils "
+"rencontrent des champs non couverts par la version du schéma et des "
+"extensions par rapport auxquels ils valident."
 
 #: ../../docs/schema/conformance_and_extensions.md:33
 msgid ""
 "Applications **may** report a warning to use the user when they encounter "
 "fields they do not support, or **may** discard these fields."
 msgstr ""
+"Les applications **peuvent** émettre un avertissement lorsqu'elles "
+"rencontrent des champs non-supportés, ou bien elles **peuvent** ignorer ces "
+"champs."
 
 #: ../../docs/schema/conformance_and_extensions.md:35
 msgid ""
 "The handling of additional fields and deprecated fields is implementation "
 "defined."
 msgstr ""
+"La gestion des champs supplémentaires et des champs dépréciées est propre à "
+"chaque implémentation."
 
 #: ../../docs/schema/conformance_and_extensions.md:37
 msgid ""
@@ -175,6 +194,7 @@ msgstr ""
 #: ../../docs/schema/conformance_and_extensions.md:39
 msgid "See also the [deprecation guidance](../governance/deprecation)."
 msgstr ""
+"Voir aussi [la section sur la dépréciation](../governance/deprecation)."
 
 #: ../../docs/schema/conformance_and_extensions.md:41
 msgid "Extensions"
@@ -187,6 +207,10 @@ msgid ""
 "[create a new extension](../guidance/map/extensions) to document their "
 "structure and meaning."
 msgstr ""
+"Si vous avez des champs qui n'ont pas de correspondance avec le schéma OCDS "
+"ou sur une extension existante, vous devriez les inclure dans vos données "
+"OCDS et [créer une nouvelle extension](../guidance/map/extensions) pour "
+"documenter leur structure et leur signification."
 
 #: ../../docs/schema/conformance_and_extensions.md:45
 msgid ""
@@ -206,7 +230,7 @@ msgid ""
 "inclusion in a future version of the standard."
 msgstr ""
 "Les extensions doivent être documentées et partagées afin que les autres "
-"producteurs et utilisateurs puissent s'appuyer sur elles et qu'elles "
+"producteurs de données et utilisateurs puissent les utiliser, et qu'elles "
 "puissent être incluses dans une future version du standard."
 
 #: ../../docs/schema/conformance_and_extensions.md:49
@@ -214,6 +238,8 @@ msgid ""
 "The [Extension Explorer](../guidance/map/extensions) publishes details of "
 "known extensions."
 msgstr ""
+"Le [registre des extensions](../guidance/map/extensions) publie des "
+"informations détaillées sur les extensions connues."
 
 #: ../../docs/schema/conformance_and_extensions.md:51
 msgid ""
