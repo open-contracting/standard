@@ -2,6 +2,8 @@
 
 This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process.
 
+If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the OCDS Helpdesk](../../support/#ocds-helpdesk) for guidance on how to identify which OCDS fields match your local concepts.
+
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
 * Catch errors early on
@@ -10,7 +12,7 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 
 The documentation you produce can also later be included in your [Data User Guide](../publish/#finalize-your-publication-policy).
 
-As you make progress through this phase, we encourage you to update your [publication plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the _Goals (design)_ section.
+As you make progress through this phase, we encourage you to update your [publication plan](../design/#develop-your-publication-plan), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the _Goals (design)_ section.
 
 ## Involve the right people
 
@@ -24,6 +26,8 @@ As described in the [Field-Level Mapping Template Guidance](https://www.open-con
 
 To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/ocds-technical-assessment-template/) guides you through this process.
 
+If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, you should use the template to identify those data sources, too.
+
 Once complete, you can:
 
 * Ask the [OCDS Helpdesk](../../support/index) to review your Technical Assessment.
@@ -36,6 +40,19 @@ To make this step easier we provide templates to list the data elements within y
 
 * OCDS [fields](../../schema/reference), using the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-guidance/))
 * OCDS [codes](../../schema/codelists), using the [Codelist Mapping Template](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template-guidance/))
+
+If your contracting data is managed on paper or in unstructured electronic documents, you should use the templates to list the data elements in those data sources and map them to OCDS.
+
+You can [contact the OCDS Helpdesk](../../support/#ocds-helpdesk) for support and guidance on using the mapping templates.
+
+Before working on mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
+
+```eval_rst
+.. toctree::
+   :hidden:
+
+   map/localization
+```
 
 ### Mapping organization identifiers
 
@@ -81,6 +98,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
    map/milestones
    map/organization_classifications
    map/organization_identifiers
+   map/organization_personal_identifiers
    map/organization_reference
    map/organizational_units
    map/pre-qualification
