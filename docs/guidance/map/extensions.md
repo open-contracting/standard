@@ -41,7 +41,7 @@ Groups of extensions can be combined into **profiles**. OCDS provides a common c
 
 ### OCDS for the European Union
 
-[OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/master/en/) describes how to use OCDS to publish information on public procurement as obliged by law within the European Union.
+[OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/master/en/) describes how to express, in OCDS, the information in Tenders Electronic Daily (TED) notices as obliged by law within the EU.
 
 ### OCDS for the Agreement on Government Procurement
 
