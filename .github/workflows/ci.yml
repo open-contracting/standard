@@ -36,6 +36,8 @@ jobs:
         machine: standard.open-contracting.org
         username: manage
         password: ${{ secrets.ELASTICSEARCH_PASSWORD }}
+    # https://github.com/extractions/netrc/issues/2
+    - run: chmod 600 /home/runner/.netrc
     - if: success()
       env:
         PATH_PREFIX: ''
