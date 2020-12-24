@@ -21,12 +21,12 @@ jobs:
     - run: pip install --src $GITHUB_WORKSPACE/../src -r requirements.txt
     # Google Chrome and ChromeDriver are already included.
     # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
-    - name: Make and test
+    - name: Make
       run: |
         if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
         make
         python util/add_translation_notes.py
-        pytest
+    - run: pytest
     - uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.PRIVATE_KEY }}
