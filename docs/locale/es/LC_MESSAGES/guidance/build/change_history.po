@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Ben Webb <ben.webb@opendataservices.coop>, 2020
-# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2020
+# Maria Esther Cervantes <mcervantes@cds.com.py>, 2020
 # Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
 # 
 #, fuzzy
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"POT-Creation-Date: 2020-12-11 21:23-0500\n"
 "PO-Revision-Date: 2020-06-30 01:22+0000\n"
 "Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
@@ -299,38 +299,31 @@ msgstr ""
 
 #: ../../docs/guidance/build/change_history.md:161
 msgid ""
-"Up to this point, the publisher used a single source to generate OCDS "
-"documents. They store procurement data in a procurement system. Payment "
-"data, however, gets stored in a financial system, so do we need to join the "
-"data to create a release?"
+"So far, the council used a single procurement system to manage the process. "
+"The procurement system published the previous OCDS releases."
 msgstr ""
-"Hasta este punto, el publicador ha utilizado una sola fuente para generar "
-"documentos OCDS. El publicador almacena datos de compras en un sistema de "
-"compras. Sin embargo, los datos de pago se almacenan en un sistema "
-"financiero, entonces, ¿debemos unir los datos para crear una entrega?"
 
 #: ../../docs/guidance/build/change_history.md:163
 msgid ""
-"If the systems share common *process identifiers*, there is no need to join "
-"data to create a release. The only requisite is to built the `ocid` using "
-"the shared identifier."
+"The council now uses a separate financial system to manage payments. The "
+"financial system publishes the new OCDS release."
 msgstr ""
-"Si los sistemas comparten *identificadores de proceso* comunes, no es "
-"necesario unir datos para crear una entrega. El único requisito es construir"
-" el 'ocid' usando el identificador compartido."
 
 #: ../../docs/guidance/build/change_history.md:165
 msgid ""
-"The publisher uses the information from the financial system to create a new"
-" release. This release uses the 'implementation' tag. The "
+"The procurement system and the financial system share a common contracting "
+"process identifier. This means that the two systems can publish releases "
+"using the same `ocid`."
+msgstr ""
+
+#: ../../docs/guidance/build/change_history.md:167
+msgid ""
+"The new release uses the 'implementation' tag. The "
 "`contracts.implementation.transactions` section includes the details of the "
 "payment."
 msgstr ""
-"El publicador utiliza la información del sistema financiero para crear una "
-"nueva entrega. Esta entrega usa la etiqueta 'implementation'. La sección "
-"`contracts.implementation.transactions` incluye los detalles del pago."
 
-#: ../../docs/guidance/build/change_history.md:167
+#: ../../docs/guidance/build/change_history.md:169
 msgid ""
 "Because the new release uses the same `ocid`, it is possible to update the "
 "record with the information."
@@ -338,7 +331,7 @@ msgstr ""
 "Debido a que a la nueva entrega usa el mismo `ocid`, es posible actualizar "
 "el registro con la información."
 
-#: ../../docs/guidance/build/change_history.md:173
+#: ../../docs/guidance/build/change_history.md:175
 msgid ""
 "OCDS can be used to combine data from different systems. For more "
 "information refer to the guidance on system architectures."
@@ -346,7 +339,7 @@ msgstr ""
 "El OCDS puede usarse para combinar datos de diferentes sistemas. Para más "
 "información vea la guía sobre sistemas de arquitectura."
 
-#: ../../docs/guidance/build/change_history.md:177
+#: ../../docs/guidance/build/change_history.md:179
 msgid ""
 "The publisher adds the new release from the finance system to the releases "
 "list in the OCDS record. The compiled and versioned releases get updated to "
@@ -356,11 +349,11 @@ msgstr ""
 "entregas en el registro OCDS. Las entregas compilada y versionada se "
 "actualizan para incluir la nueva transacción."
 
-#: ../../docs/guidance/build/change_history.md:198
+#: ../../docs/guidance/build/change_history.md:200
 msgid "Contract Amendment"
 msgstr "Enmienda al Contrato"
 
-#: ../../docs/guidance/build/change_history.md:200
+#: ../../docs/guidance/build/change_history.md:202
 msgid ""
 "Unexpected complications causes delays in the construction work. Because of "
 "them the procuring entity and the supplier agree to a contract extension. "
@@ -371,7 +364,7 @@ msgstr ""
 "una extensión del contrato. Esto cubrirá el tiempo extra y el costo "
 "necesario para completar los trabajos."
 
-#: ../../docs/guidance/build/change_history.md:202
+#: ../../docs/guidance/build/change_history.md:204
 msgid ""
 "The publisher updates their procurement system with the new contract value "
 "and period. They issue a modification notice through the system. They also "
@@ -382,7 +375,7 @@ msgstr ""
 "sistema. También crean una nueva entrega OCDS con la etiqueta "
 "'contractAmendment' para representar el aviso."
 
-#: ../../docs/guidance/build/change_history.md:204
+#: ../../docs/guidance/build/change_history.md:206
 msgid ""
 "Note that contract amendments in OCDS involves more modelling "
 "considerations. Refer to the amendments worked example for guidance on the "
@@ -392,7 +385,7 @@ msgstr ""
 "consideraciones de modelado. Consulte el ejemplo desarrollado de enmiendas "
 "para obtener orientación sobre el tema."
 
-#: ../../docs/guidance/build/change_history.md:206
+#: ../../docs/guidance/build/change_history.md:208
 msgid ""
 "The publisher updates the record for the contracting process with the new "
 "release. The compiled release has the new values. The versioned release "
