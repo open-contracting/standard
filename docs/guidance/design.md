@@ -37,27 +37,7 @@ If your contracting data is mostly on paper, in local spreadsheets or in unstruc
 
 The most useful OCDS implementations are those that were designed around real-world goals and priorities. To achieve success, you need to understand your policy goals and user needs, and use them to inform the design of your OCDS implementation.
 
-Common goals include:
-
-* Tracking and improving value for money in procurement
-* Measuring and increasing competition for contracts
-* Helping business understand what government buys and how
-* Promoting public integrity by monitoring for 'red flags' of corruption
-* Increasing participation of small, women-led, or minority-led businesses
-* Enhancing service delivery by tracking quality, delivery and milestones in contracts
-
-Each of these goals has different data needs. These needs ought to inform your choices about how to implement OCDS, for example:
-
-* Which fields to publish
-* How often to publish or update data
-* Whether to publish a change history
-* What data formats and access methods to provide
-
-**Resource:** [How can OCDS help to assess the quality and performance of a procurement system? A step-by-step guide](https://www.open-contracting.org/2019/04/03/oecdmaps-ocds-step-by-step-guide/)
-
-**Resource:** [Red flags for integrity methodology guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/) ([red flags to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/12PFkUlQH09jQvcnORjcbh9-8d-NnIuk4mAQwdGiXeSM/edit#gid=0))
-
-**Resource:** [Indicators to diagnose the performance of a procurement market guide](https://www.open-contracting.org/resources/indicators-to-diagnose-the-performance-of-a-procurement-market/) ([procurement indicators to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222))
+### Identify stakeholders
 
 Different stakeholders in your OCDS implementation can have different objectives. Journalists, civil society organizations, policymakers and auditors will all have different goals.
 
@@ -68,6 +48,32 @@ Consult stakeholders early in the design of your OCDS implementation to identify
 **Action:** Identify your stakeholders and their use cases.
 
 **Action:** Document your stakeholders and goals in your [publication plan](#develop-your-publication-plan).
+
+### Set goals
+
+Common goals include:
+
+* Tracking and improving value for money in procurement
+* Measuring and increasing competition for contracts
+* Helping business understand what government buys and how
+* Promoting public integrity by monitoring for 'red flags' of corruption
+* Increasing participation of small, women-led, or minority-led businesses
+* Enhancing service delivery by tracking quality, delivery and milestones in contracts
+
+**Resource:** [How can OCDS help to assess the quality and performance of a procurement system? A step-by-step guide](https://www.open-contracting.org/2019/04/03/oecdmaps-ocds-step-by-step-guide/)
+
+### Determine data needs
+
+Each of the goals above have different data needs. These needs ought to inform your choices about how to implement OCDS, for example:
+
+* Which fields to publish
+* How often to publish or update data
+* Whether to publish a change history
+* What data formats and access methods to provide
+
+**Resource:** [Red flags for integrity methodology guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/) ([red flags to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/12PFkUlQH09jQvcnORjcbh9-8d-NnIuk4mAQwdGiXeSM/edit#gid=0))
+
+**Resource:** [Indicators to diagnose the performance of a procurement market guide](https://www.open-contracting.org/resources/indicators-to-diagnose-the-performance-of-a-procurement-market/) ([procurement indicators to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222))
 
 ## Build your team
 
