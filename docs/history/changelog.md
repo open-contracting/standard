@@ -43,10 +43,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
   * `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
 * [#1125](https://github.com/open-contracting/standard/pull/1125) Add `weight` to `Item.unit`
+* [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
 
 ### Documentation
 
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
+* [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
 
 ## [1.1.5] - 2020-08-20
 
