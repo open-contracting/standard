@@ -20,6 +20,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
     - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
-    - run: npm install standard
+    - run: npm install --global standard
     - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
-    - run: npx standard docs/_static/json-example-format.js docs/_static/extensions.js
+    - run: standard docs/_static/json-example-format.js docs/_static/extensions.js
