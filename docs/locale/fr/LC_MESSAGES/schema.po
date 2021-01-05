@@ -5,21 +5,22 @@
 # 
 # Translators:
 # Ben Webb <ben.webb@opendataservices.coop>, 2017
-# Colin Maudry <colin@maudry.com>, 2017
 # Tim Davies <tim.davies@opendataservices.coop>, 2018
 # Joel Gombin <joel.gombin@gmail.com>, 2018
 # Cecile LG <cecile@datactivi.st>, 2019
 # James McKinney, 2019
+# Emeline Vandeven <emeline@datactivist.coop>, 2020
+# Colin Maudry <colin@maudry.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-29 21:21-0400\n"
+"POT-Creation-Date: 2020-12-11 21:23-0500\n"
 "PO-Revision-Date: 2017-04-24 10:46+0000\n"
-"Last-Translator: James McKinney, 2019\n"
-"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"Last-Translator: Colin Maudry <colin@maudry.com>, 2020\n"
+"Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,9 +90,9 @@ msgid ""
 "the # character."
 msgstr ""
 "Un identifiant pour cette instance. Un identifiant d'instance doit être "
-"unique au sein du processus de passation de marché dont elle relève (défini "
+"unique au sein du processus de passation de marché dont il relève (défini "
 "par un `ocid` commun), et unique au sein du paquet d'instance au sein duquel"
-" elle apparaît. Un identifiant d'instance ne doit pas contenir le caractère "
+" il apparaît. Un identifiant d'instance ne doit pas contenir le caractère "
 "`#`."
 
 #. /properties/date/title
@@ -107,6 +108,8 @@ msgid ""
 "The date on which the information contained in the release was first "
 "recorded in, or published by, any system."
 msgstr ""
+"La date à laquelle l'information contenue dans l'instance a été enregistrée "
+"pour la première fois ou publiée par n'importe quel système."
 
 #. /properties/tag/title
 #. /definitions/record/properties/releases/oneOf/0/items/properties/tag/title
@@ -123,7 +126,7 @@ msgid ""
 "codelist. Tags can be used to filter releases and to understand the kind of "
 "information that releases might contain."
 msgstr ""
-"Une ou plusieurs valeurs parmi la liste des [tags d'instance "
+"Une ou plusieurs valeurs tirées de la liste fermée des [tags d'instance "
 "(releaseTag)](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag). Les "
 "tags peuvent être utilisés pour filtrer les instances et pour comprendre le "
@@ -195,10 +198,11 @@ msgid ""
 msgstr ""
 "Un nom commun pour cette organisation ou un autre participant dans le "
 "processus de passation de marché. L'objet identifiant fournit un espace pour"
-" une dénomination juridique formelle, et ainsi ce champ peut soit dupliquer "
-"cette valeur, soit fournir le nom courant par lequel cette organisation ou "
-"entité est connue. Ce champ peut aussi inclure les détails du département ou"
-" de la sous-unité impliqué dans ce processus de passation de marché."
+" indiquer une dénomination juridique formelle. Ce champ peut ainsi soit "
+"indiquer la dénomination formelle de l'organisation, soit fournir le nom "
+"courant par lequel cette organisation ou entité est généralement connue. Ce "
+"champ peut aussi inclure les détails du département ou de l'unité impliquée "
+"dans ce processus de passation de marché."
 
 #. /properties/parties/items/properties/id/description
 #. /definitions/Organization/properties/id/description
@@ -454,9 +458,9 @@ msgid ""
 msgstr ""
 "Les identifiants d'organisation doivent être pris dans un schéma "
 "d'identification existant. Ce champ est utilisé pour indiquer le schéma ou "
-"la liste de codes dans lequel l'identifiant est pris. Cette valeur devrait "
-"être tirée du [système des identifiants d'organisation - Organization "
-"Identifier Scheme](https://standard.open-"
+"la liste de codes dont l'identifiant est tiré. Cette valeur devrait être "
+"tirée du [système des identifiants d'organisation - Organization Identifier "
+"Scheme](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#organization-"
 "identifier-scheme)."
 
@@ -905,9 +909,9 @@ msgstr ""
 "Une liste d'identifiants supplémentaires pour l'organisation ou le "
 "participant, utilisant le [guide sur l'identification des "
 "organisations](https://standard.open-"
-"contracting.org/{{version}}/{{lang}}/schema/identifiers/). Cette liste "
-"pourrait être utilisée pour fournir un identifiant interne à l'organisation "
-"en plus de l'identifiant primaire de l'entité juridique."
+"contracting.org/{{version}}/{{lang}}/schema/identifiers/). Cette liste peut "
+"être utilisée pour fournir un identifiant interne à l'organisation en plus "
+"de l'identifiant primaire de l'entité juridique."
 
 #. /properties/parties/items/properties/address/title
 #. /properties/buyer/properties/address/title
@@ -1232,8 +1236,8 @@ msgid ""
 "A person, contact point or department to contact in relation to this "
 "contracting process."
 msgstr ""
-"Une personne, point de contact ou un département à contacter par rapport à "
-"ce processus de passation des marchés."
+"Une personne, point de contact ou un service à contacter en lien avec ce "
+"processus de passation de marché."
 
 #. /properties/parties/items/properties/contactPoint/properties/name/title
 #. /properties/buyer/properties/contactPoint/properties/name/title
@@ -1524,7 +1528,7 @@ msgid ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist."
 msgstr ""
 "Le rôle des parties dans le processus de passation de marchés, utilisant la "
-"liste de code ouverte [partyRole](https://standard.open-"
+"liste de codes ouverte [partyRole](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role)"
 
 #. /properties/parties/items/properties/details/description
@@ -1535,6 +1539,9 @@ msgid ""
 "partyDetail extensions that define particular fields and classification "
 "schemes."
 msgstr ""
+"Des informations supplémentaires de classification sur les parties peuvent "
+"être fournies en utilisant les extensions `partyDetail` qui définissent des "
+"champs spécifiques et des schémas de classification."
 
 #. /properties/parties/items/properties/details/title
 #. /definitions/Organization/properties/details/title
@@ -1688,11 +1695,11 @@ msgid ""
 "to the primary legal entity identifier."
 msgstr ""
 "(Obsolète hors de la section relative aux parties) Une liste d'identifiants "
-"additionnels/supplémentaires pour l'organisation, utilisant le [guide sur "
-"l'identification des organisations](https://standard.open-"
-"contracting.org/{{version}}/{{lang}}/schema/identifiers/). Cela pourrait "
-"être utilisé pour fournir un identifiant interne à l'organisation en plus de"
-" l'identifiant primaire de l'entité juridique."
+"additionnels pour l'organisation, utilisant le [guide sur l'identification "
+"des organisations](https://standard.open-"
+"contracting.org/{{version}}/{{lang}}/schema/identifiers/). Elle peut être "
+"utilisée pour fournir un identifiant interne à l'organisation en plus de "
+"l'identifiant primaire de l'entité juridique."
 
 #. /properties/buyer/description
 #. /properties/tender/properties/procuringEntity/description
@@ -1754,10 +1761,10 @@ msgid ""
 "stage, e.g. value in tender."
 msgstr ""
 "Les informations provenant de la phase de planification du processus de "
-"passation des marchés. Notez que de nombreux autres champs peuvent être "
+"passation de marché. Notez que de nombreux autres champs peuvent être "
 "remplis dans une instance de planification. Dans les champs appropriés "
 "d'autres sections du schéma, ceux-ci sont probablement des estimations à ce "
-"stade comme par exemple value (montant total) dans un appel d'offre."
+"stade comme par exemple `tender.value`."
 
 #. /properties/planning/properties/rationale/title
 #. /properties/tender/properties/amendments/items/properties/rationale/title
@@ -1811,14 +1818,14 @@ msgid ""
 "information."
 msgstr ""
 "Cette section contient des informations sur la ligne budgétaire et les "
-"projets associés par lesquels ce processus de passation des marchés est "
-"financé. Elle se fonde sur le modèle de données ouvertes budgétaires [Fiscal"
+"projets associés via lesquels ce processus de passation des marchés est "
+"financé. Elle se fonde sur le modèle de données budgétaires ouvertes [Fiscal"
 " Data Package](https://frictionlessdata.io/specs/fiscal-data-package/), et "
-"doit être utilisée pour croiser des références à des informations plus "
-"détaillées à l'aide d'un Budget Data Package, ou, si aucun Budget Data "
-"Package n'est disponible, de fournir suffisamment d'informations pour "
-"permettre à un utilisateur de croiser manuellement ou automatiquement une "
-"autre source d'informations sur le budget et les projets."
+"doit être utilisée pour croiser ces données avec d'autres informations plus "
+"détaillées stockées  Budget Data Package. Si aucun Budget Data Package n'est"
+" disponible, cette section doit fournir suffisamment d'informations pour "
+"permettre à un utilisateur de croiser manuellement ou automatiquement "
+"d'autres sources d'informations sur le budget et les projets."
 
 #. /properties/planning/properties/budget/properties/id/description
 #. /definitions/Planning/properties/budget/properties/id/description
@@ -2065,12 +2072,14 @@ msgid ""
 "translation option is offered for this string, as translated values can be "
 "provided in third-party data, linked from the data source above."
 msgstr ""
-"Le nom du projet à travers lequel ce processus de passation des marchés est "
-"financé. Certaines organisations maintiennent un registre des projets, et "
-"les données doivent utiliser le nom par lequel le projet est connu dans ce "
-"registre. Aucune option de traduction n'est offerte pour cette chaîne de "
-"caractères, car des valeurs traduites peuvent être fournies dans des données"
-" tierces, liées à la source de données ci-dessus."
+"Le nom du projet via lequel ce processus de passation des marchés est "
+"financé (optionnel). Certaines organisations maintiennent un registre des "
+"projets, et les données doivent utiliser le nom par lequel le projet est "
+"connu dans ce registre. Exceptionnellement, aucune option de traduction "
+"n'est donc offerte pour le contenu de ce champ, car des valeurs traduites "
+"peuvent être fournies dans des données tierces, liées à la source de données"
+" ci-dessus (voir aussi [Langue](https://standard.open-"
+"contracting.org/latest/fr/schema/reference/#language))."
 
 #. /properties/planning/properties/budget/properties/projectID/title
 #. /definitions/Planning/properties/budget/properties/projectID/title
@@ -2252,11 +2261,11 @@ msgid ""
 "formal notices, downloadable forms, or any other kind of resource that ought"
 " to be made public as part of full open contracting."
 msgstr ""
-"Des liens ou des descriptions de documents externes qui peuvent être "
-"attachés à divers endroits dans le standard. Les documents peuvent présenter"
-" des informations d'assistance, des avis officiels, des formulaires "
-"téléchargeables, ou tout autre type de ressource qui devrait être rendue "
-"publique dans le cadre d'une commande publique ouverte totale."
+"Des liens ou des descriptions de documents externes peuvent renseignés dans "
+"plusieurs champs OCDS. Il peut s'agir de documents sur le support, d'avis "
+"officiels, de formulaires téléchargeables, ou de tout autre type de "
+"ressource qui devrait être rendue publique dans le cadre d'une commande "
+"publique intégralement ouverte."
 
 #. /properties/planning/properties/documents/items/properties/id/description
 #. /properties/planning/properties/milestones/items/properties/documents/items/properties/id/description
@@ -2515,10 +2524,10 @@ msgid ""
 "description field can be used to describe arrangements for obtaining a copy "
 "of the document."
 msgstr ""
-"Une brève description du document. Nous recommandons que les descriptions ne"
-" dépassent pas 250 mots. Dans le cas où le document n'est pas accessible en "
-"ligne, le champ de description peut être utilisé pour décrire les "
-"dispositions à entreprendre pour obtenir une copie du document."
+"Une brève description du document. Il est recommancé de rédiger des "
+"descriptions ne dépassant pas 250 mots. Dans le cas où le document n'est pas"
+" accessible en ligne, le champ de description peut être utilisé pour décrire"
+" les dispositions à entreprendre pour obtenir une copie du document."
 
 #. /properties/planning/properties/documents/items/properties/url/description
 #. /properties/planning/properties/milestones/items/properties/documents/items/properties/url/description
@@ -2549,8 +2558,7 @@ msgid ""
 "type."
 msgstr ""
 "Lien direct vers le document ou la pièce jointe. Le serveur donnant accès à "
-"ce document doit être configuré pour signaler correctement le type MIME du "
-"document."
+"ce document doit être configuré pour indiquer le type MIME du document."
 
 #. /properties/planning/properties/documents/items/properties/datePublished/title
 #. /properties/planning/properties/milestones/items/properties/documents/items/properties/datePublished/title
@@ -2730,7 +2738,7 @@ msgstr ""
 "Le format du document tiré de la liste de codes ouverte [IANA Media "
 "Types](http://www.iana.org/assignments/media-types/) (voir les valeurs dans "
 "la colonne 'Template') ou utilisant le code 'offline/print', utilisé lorsque"
-" l'entrée document décrit un document publié hors ligne. Par exemple, des "
+" l'entrée document décrit un document publié hors ligne. Par exemple, les "
 "pages Web ont un format \"text/html\"."
 
 #. /properties/planning/properties/documents/items/properties/language/title
@@ -2792,11 +2800,11 @@ msgid ""
 "language subtype."
 msgstr ""
 "Spécifie la langue du document liée en utilisant soit un code sur deux "
-"chiffres [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes),"
-" soit des [tags de langue étendus "
-"BCP47](http://www.w3.org/International/articles/language-tags/). "
-"L'utilisation de codes sur deux lettres minuscules [ISO "
-"639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) est "
+"chiffres [ISO "
+"639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1), soit des "
+"[tags de langue étendus BCP47](http://www.w3.org/International/articles"
+"/language-tags/). L'utilisation de codes sur deux lettres minuscules [ISO "
+"639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) est "
 "recommandée, à moins qu'il n'existe un véritable besoin de distinguer les "
 "variantes d'une langue (par exemple, distinguer le français de Belgique du "
 "français de France)."
@@ -2958,12 +2966,11 @@ msgid ""
 "'approvalLetter' can be used to allow applications to understand this "
 "milestone represents the date an approvalLetter is due or signed."
 msgstr ""
-"Les codes d'étape peuvent être utilisés pour suivre les événements "
-"spécifiques qui se produisent pour un type particulier de processus de "
-"passation de marché. Par exemple, un code d'`approvalLetter` pourrait être "
-"utilisé pour permettre aux applications de comprendre que cette étape "
-"représente la date à laquelle une lettre d'approbation est attendue ou "
-"signée."
+"Les codes d'étape peuvent être utilisés pour suivre des  événements propres "
+"à certains processus de passation de marché. Par exemple, le code "
+"`approvalLetter` peut être utilisé pour permettre aux applications de "
+"comprendre que cette étape représente la date à laquelle une lettre "
+"d'approbation est attendue ou signée."
 
 #. /properties/planning/properties/milestones/items/properties/dueDate/title
 #. /properties/tender/properties/milestones/items/properties/dueDate/title
@@ -3202,7 +3209,7 @@ msgid ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status) "
 "codelist."
 msgstr ""
-"L'état actuel de l'appel d'offre en fonction de la liste de codes fermée "
+"L'état actuel de l'appel d'offre, tiré de la liste de codes fermée "
 "[tenderStatus](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status)"
 
@@ -3315,10 +3322,10 @@ msgid ""
 "label and/or URI that users can draw on to interpret the classification."
 msgstr ""
 "Une classification consiste en au moins deux parties : un identifiant pour "
-"la liste (schéma) dont la classification est issue, et un identifiant pour "
-"la catégorie utilisée, tirée de cette liste. Il est utile de publier "
-"également un champ texte et/ou une URI que les utilisateurs peuvent utiliser"
-" pour interpréter la classification."
+"la liste (`scheme`) dont la classification est issue, et un identifiant pour"
+" la catégorie utilisée, tirée de cette liste. Il est utile de publier "
+"également un libellé textuel et/ou une URI que les utilisateurs peuvent "
+"utiliser pour interpréter la classification."
 
 #. /properties/tender/properties/items/items/properties/classification/properties/scheme/description
 #. /properties/tender/properties/items/items/properties/additionalClassifications/items/properties/scheme/description
@@ -3343,9 +3350,9 @@ msgid ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-"
 "scheme) codelist."
 msgstr ""
-"Le schéma ou la liste de codes à partir de laquelle le code de "
-"classification est pris. Pour les classifications d’articles, cela utilise "
-"la liste de codes ouverte [itemClassificationScheme](https://standard.open-"
+"Le schéma ou la liste de codes dont est tiré le code de classification. Pour"
+" les classifications de livrables, il utilise la liste de codes ouverte "
+"[itemClassificationScheme](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-"
 "scheme)."
 
@@ -3366,7 +3373,7 @@ msgstr ""
 #. /definitions/Classification/properties/id/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The classification code taken from the scheme."
-msgstr "Le code tiré d'un schéma de classification pré-établi."
+msgstr "Le code tiré d'un schéma de classification."
 
 #. /properties/tender/properties/items/items/properties/classification/properties/description/description
 #. /properties/tender/properties/items/items/properties/additionalClassifications/items/properties/description/description
@@ -3404,7 +3411,7 @@ msgstr "Une description textuelle ou le titre du code."
 #. /definitions/Classification/properties/uri/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "A URI to uniquely identify the classification code."
-msgstr "Un URI pour identifier de manière unique le code de classification."
+msgstr "Une URI pour identifier de manière unique le code de classification."
 
 #. /properties/tender/properties/items/items/properties/additionalClassifications/title
 #. /properties/awards/items/properties/items/items/properties/additionalClassifications/title
@@ -3426,7 +3433,7 @@ msgstr "Classifications additionnelles"
 #. /definitions/Item/properties/additionalClassifications/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "An array of additional classifications for the item."
-msgstr "Un tableau (array) de classification additionnelle pour l'article."
+msgstr "Une liste (array) de classifications additionnelles pour le livrable."
 
 #. /properties/tender/properties/items/items/properties/quantity/title
 #. /properties/awards/items/properties/items/items/properties/quantity/title
@@ -3448,7 +3455,7 @@ msgstr "Quantité"
 #. /definitions/Item/properties/quantity/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "The number of units to be provided."
-msgstr "Le nombre d'unités requises."
+msgstr "Le nombre d'exemplaires demandés."
 
 #. /properties/tender/properties/items/items/properties/unit/title
 #. /properties/awards/items/properties/items/items/properties/unit/title
@@ -3474,7 +3481,7 @@ msgid ""
 "provided (e.g. hours, kilograms) and the unit-price."
 msgstr ""
 "Une description de l'unité dans laquelle les biens, services ou travaux sont"
-" fournis (par exemple heures, kilogrammes) et le prix par unité."
+" fournis (par exemple heures, kilogrammes, etc.) et le prix par unité."
 
 #. /properties/tender/properties/items/items/properties/unit/properties/scheme/description
 #. /properties/awards/items/properties/items/items/properties/unit/properties/scheme/description
@@ -3490,13 +3497,11 @@ msgid ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-"
 "scheme) codelist. 'UNCEFACT' is recommended."
 msgstr ""
-"La liste dans laquelle les identifiants des unités de mesure sont pris. "
-"Cette liste utilise des éléments  disponibles dans la liste de codes fermée "
+"La liste sont sont tirés les identifiants des unités de mesure. Cette liste "
+"utilise des éléments  disponibles dans la liste de codes ouverte "
 "[unitClassificationScheme](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-"
-"scheme). L'utilisation du schéma \"UNCEFACT\" pour les \"Codes des unités de"
-" mesure utilisées dans le commerce international\" (recommandation UN/CEFACT"
-" no. 20) est recommandée, bien que d'autres options soient disponibles."
+"scheme). L'utilisation du schéma \"UNCEFACT\" est recommandée."
 
 #. /properties/tender/properties/items/items/properties/unit/properties/id/description
 #. /properties/awards/items/properties/items/items/properties/unit/properties/id/description
@@ -3513,6 +3518,11 @@ msgid ""
 "scheme) codelist for details of how to find and use identifiers from the "
 "scheme in use."
 msgstr ""
+"L'identifiant tiré de la liste de codes référencée dans le champ `scheme`. "
+"Consultez la liste de codes [unitClassificationScheme](https://standard"
+".open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-"
+"classification-scheme) pour avoir des détails sur la manière de trouver et "
+"d'utiliser les identifiants de la liste de codes utilisée."
 
 #. /properties/tender/properties/items/items/properties/unit/properties/name/description
 #. /properties/awards/items/properties/items/items/properties/unit/properties/name/description
@@ -3536,8 +3546,8 @@ msgstr "Nom de l'unité."
 msgid ""
 "The machine-readable URI for the unit of measure, provided by the scheme."
 msgstr ""
-"L'URI pour l'unité de mesure, fourni par le schéma, en format lisible par "
-"une machine."
+"L'URI (identifiant lisible par une machine) pour l'unité de mesure, fournie "
+"par le schéma."
 
 #. /properties/tender/properties/procurementMethod/title
 #. /definitions/Tender/properties/procurementMethod/title
@@ -3552,7 +3562,7 @@ msgid ""
 "The procurement method, from the closed [method](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist."
 msgstr ""
-"La méthode de passation de marchés, en fonction de la liste de codes fermée "
+"La procédure de passation de marchés, tirée de la liste de codes fermée "
 "[method](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#method)."
 
@@ -3626,12 +3636,11 @@ msgid ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-"
 "category) codelist."
 msgstr ""
-"Toute catégorie supplémentaire dérivant les objets de ce processus de "
-"passation de marché, tirée de la liste de codes "
+"Toute catégorie supplémentaire décrivant les objets de ce processus de "
+"passation de marché, tirée de la liste de codes ouverte "
 "[extendedProcurementCategory](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-"
-"category). Il s'agit d'une liste de codes ouverte, dans laquelle des "
-"catégories locales peuvent être ajoutées."
+"category)."
 
 #. /properties/tender/properties/awardCriteria/title
 #. /definitions/Tender/properties/awardCriteria/title
@@ -3700,8 +3709,8 @@ msgid ""
 "include the address, e-mail address or online service to which bids are "
 "submitted, and any special requirements to be followed for submissions."
 msgstr ""
-"Toute les détails ou compléments sur la méthode de soumission des offres. Il"
-" peut s'agir de l'adresse, de l'adresse e-mail ou d'un service en ligne sur "
+"Tous les détails ou compléments sur la méthode de soumission des offres. Il "
+"peut s'agir de l'adresse, de l'adresse e-mail ou d'un service en ligne sur "
 "lequel les offres doivent être soumises et les pré-requis pour soumettre une"
 " offre."
 
@@ -3843,9 +3852,8 @@ msgid ""
 "express the maximum available date for extension or renewal of this period."
 msgstr ""
 "La période du contrat ne peut pas être prolongée au-delà de cette date. Ce "
-"champ est facultatif et peut être utilisé pour exprimer les données "
-"disponibles relatives à l'extension ou au renouvellement maximal de cette "
-"période."
+"champ est facultatif et peut être utilisé pour exprimer la date maximale "
+"pour l'extension ou le renouvellement de cette période."
 
 #. /properties/tender/properties/tenderPeriod/properties/maxExtentDate/title
 #. /properties/tender/properties/enquiryPeriod/properties/maxExtentDate/title
@@ -3971,8 +3979,8 @@ msgid ""
 "and the bidding organization can be provided using the bid extension."
 msgstr ""
 "Toutes les parties qui soumettent une offre dans le cadre d'un appel "
-"d'offre. Des informations plus détaillées sur les enchères et l'organisation"
-" d'enchères peuvent être fournies en utilisant l'extension facultative "
+"d'offre. Des informations plus détaillées sur les enchères et les "
+"participants peuvent être fournies en utilisant l'extension facultative "
 "`bid`."
 
 #. /properties/tender/properties/documents/description
@@ -3990,10 +3998,10 @@ msgstr ""
 "Tous les documents et pièces jointes liés à l'appel d'offre, y compris les "
 "avis. Voir la [liste de codes des documentType](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) pour "
-"plus de détails sur les documents potentiels à inclure. Les documents "
-"communs incluent des avis d'appel d'offres officiels, des spécifications "
-"techniques, des critères d'évaluation et, au fur et à mesure de l'avancement"
-" des appels d'offres, des éclaircissements et des réponses aux requêtes."
+"plus de détails sur les documents pouvant être ajoutés. Les documents les "
+"plus courants sont les avis d'appel d'offres officiels, les spécifications "
+"techniques, les critères d'évaluation et, au fur et à mesure de l'avancement"
+" des appels d'offres, les éclaircissements et les réponses aux requêtes."
 
 #. /properties/tender/properties/milestones/title
 #. /properties/contracts/items/properties/implementation/properties/milestones/title
@@ -4471,8 +4479,8 @@ msgid ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#award-status) "
 "codelist."
 msgstr ""
-"L'état actuel de l'attribution du marché, utilisant des éléments de la liste"
-" de code fermée [awardStatus](https://standard.open-"
+"L'état actuel de l'attribution du marché, tiré de la liste de codes fermée "
+"[awardStatus](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#award-status)."
 
 #. /properties/awards/items/properties/date/title
@@ -4638,8 +4646,8 @@ msgid ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status) "
 "codelist."
 msgstr ""
-"L'état actuel du statut du contrat d'attribution, utilisant des éléments de "
-"la liste de code fermée [contractStatus](https://standard.open-"
+"L'état actuel du statut du contrat, tiré de la liste de codes fermée "
+"[contractStatus](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status). "
 
 #. /properties/contracts/items/properties/items/title
@@ -4738,8 +4746,8 @@ msgid ""
 "cross-reference with some other published source of transactional spending "
 "data."
 msgstr ""
-"Une transaction de dépense liée au processus de passation de marché. "
-"S'appuie sur le modèle de données du [Fiscal Data "
+"Une transaction de dépense liée au processus de passation de marché. Elle "
+"s'appuie sur le modèle de données du [Fiscal Data "
 "Package](https://frictionlessdata.io/specs/fiscal-data-package/) et de "
 "l'[International Aid Transparency Initiative](http://iatistandard.org"
 "/activity-standard/iati-activities/iati-activity/transaction/) et devrait "
@@ -4829,8 +4837,8 @@ msgid ""
 "As milestones are completed, the milestone's status and dates should be "
 "updated."
 msgstr ""
-"Lorsque les étapes sont terminées, les statuts des points d'étapes et les "
-"dates doivent être mises à jour."
+"Au fur et à mesure que la procédure franchit des étapes, les statuts et les "
+"dates des étapes (\"milestones\") devraient être mises à jour."
 
 #. /properties/contracts/items/properties/implementation/properties/documents/description
 #. /definitions/Contract/properties/implementation/properties/documents/description
@@ -4889,7 +4897,7 @@ msgid ""
 ".open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-"
 "process) codelist."
 msgstr ""
-"Le type de relation, utilisant des éléments de la liste de code ouverte "
+"Le type de relation, tiré de la liste de codes ouverte "
 "[relatedProcess](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process)."
 
@@ -4934,9 +4942,8 @@ msgid ""
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process-"
 "scheme) codelist."
 msgstr ""
-"Le schéma d'identification utilisé par cette référence croisée, utilisant "
-"des éléments de la liste de code ouverte "
-"[relatedProcessScheme](https://standard.open-"
+"Le schéma d'identification utilisé par cette référence croisée, tiré de la "
+"liste de code ouverte [relatedProcessScheme](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process-"
 "scheme)."
 
@@ -4949,9 +4956,8 @@ msgid ""
 "The identifier of the related process. If the scheme is 'ocid', this must be"
 " an Open Contracting ID (ocid)."
 msgstr ""
-"L'identifiant du processus connexe. Lorsque des informations croisées sont "
-"également publiées à l'aide de l'OCDS, cet identifiant devrait être "
-"l'identifiant de contrat ouvert (`ocid`)."
+"L'identifiant du processus connexe. Si le `scheme` est 'ocid', cet "
+"identifiant devrait être un identifiant Open Contracting (`ocid`)."
 
 #. /properties/contracts/items/properties/relatedProcesses/items/properties/uri/description
 #. /properties/relatedProcesses/items/properties/uri/description
@@ -4984,9 +4990,9 @@ msgid ""
 msgstr ""
 "Si ce processus est suivi par un un ou plusieurs processus ultérieurs, "
 "représentés par un identifiant open contracting (`ocid`) différent, les "
-"détails des processus liés peuvent être fournis ici. Cela est utilisé "
-"couramment pour indiquer de la sous-traitance, ou pour des processus de "
-"renouvellement et de replacement pour ce contrat."
+"détails des processus liés peuvent être fournis ici. Ce champ est souvent "
+"utilisé pour indiquer de la sous-traitance, ou pour des processus de "
+"renouvellement et de remplacement du marché."
 
 #. /properties/contracts/items/properties/relatedProcesses/title
 #. /properties/relatedProcesses/title
@@ -5038,12 +5044,12 @@ msgid ""
 "[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is "
 "recommended."
 msgstr ""
-"Spécifie le langage par défaut en utilisant soit un code [ISO "
-"639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) à deux "
+"Le langage par défaut, en utilisant soit un code [ISO "
+"639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) à deux "
 "chiffres, soit des [tags de langage "
 "BCP47](http://www.w3.org/International/articles/language-tags/). "
 "L'utilisation de codes à deux lettre minuscules [ISO "
-"639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) est "
+"639-1](https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1) est "
 "recommandée."
 
 #. /properties/relatedProcesses/description
@@ -5056,12 +5062,11 @@ msgid ""
 "planning process."
 msgstr ""
 "Si ce processus découle d'un ou plusieurs processus précédents, représentés "
-"par un identifiant open contracting (`ocid`) différent, les détails des "
-"processus liés peuvent être fournis ici. Cela est utilisé couramment pour "
-"lier des mini mises en concurrence aux appels d'offre cadres dans lesquels "
-"ils s'inscrivent, des appels d'offre complets à la phase de pré-"
-"qualification, ou des appels d'offre individuel à un large processus de "
-"planification."
+"par un identifiant Open Contracting (`ocid`) différent, les détails des "
+"processus connexes peuvent être fournis ici. Ce champ est généralement "
+"utilisé pour lier des mini mises en concurrence dans une procédure d'accord-"
+"cadre, ou pour des appels d'offre individuels dans le cadre d'un processus "
+"de planification plus large."
 
 #. /description
 #: schema/meta-schema.json:1
@@ -5165,7 +5170,7 @@ msgstr "uid"
 #: schema/record-package-schema.json:1 schema/release-package-schema.json:1
 msgid "The unique ID for this entity under the given ID scheme."
 msgstr ""
-"L'identifiant unique de cette entité sous le schéma d'identifiant donné."
+"L'identifiant unique de cette entité d'après le schéma d'identifiant donné."
 
 #. /properties/publisher/properties/uri/description
 #: schema/record-package-schema.json:1 schema/release-package-schema.json:1
@@ -5259,6 +5264,12 @@ msgid ""
 " OCDS record may also provide a versioned history of all changes to the data"
 " in the compiled release."
 msgstr ""
+"Une archive OCDS doit fournir une liste de toutes les instances d'OCDS "
+"existantes relatives à un processus de passation de marché unique et devrait"
+" contenir une version compilée contenant l'état actuel de tous les champs du"
+" schéma d'instance. Une archive OCDS peut également fournir un historique "
+"versionné de toutes les modifications apportées aux données dans l'instance "
+"compilée."
 
 #. /definitions/record/properties/ocid/description
 #: schema/record-package-schema.json:1
@@ -5320,8 +5331,8 @@ msgid ""
 "213czf-000-00001"
 msgstr ""
 "L'URL de l'instance qui contient l'URL du package avec l'identifiant "
-"d'instance suffixé, en utilisant un identificateur de fragment. Par exemple "
-": https://standard.open-"
+"d'instance suffixé, en utilisant un séparateur de fragment. Par exemple : "
+"https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/examples/tender.json#ocds-"
 "213czf-000-00001"
 
@@ -5332,9 +5343,9 @@ msgid ""
 "the release. This is used to sort the releases in the list in chronological "
 "order."
 msgstr ""
-"La date de l'instance, devrait correspondre au champ `date` à la racine de "
-"l'instance. Elle est utilisée pour trier les instances par ordre "
-"chronologique dans la liste."
+"La date de l'instance devrait correspondre au champ `date` à la racine de "
+"l'instance. Elle est utilisée pour trier les instances de la liste "
+"`releases` par ordre chronologique."
 
 #. /definitions/record/properties/releases/oneOf/0/items/properties/tag/description
 #: schema/record-package-schema.json:1
@@ -5343,9 +5354,10 @@ msgid ""
 " release. This provides additional context when reviewing a record to see "
 "what types of releases are included for this ocid."
 msgstr ""
-"Le tag devrait correspondre au tag de l'instance. Cela fournir davantage de "
-"contexte au moment de passer en revue une archive pour voir quelles sortes "
-"d'instances sont incluses pour cet `ocid`."
+"Les tags de l'instance. Cette liste de tag devrait correspondre au champ "
+"`tag` de l'instance. Elle fournit davantage de contexte au moment de passer "
+"en revue une archive pour voir quelles types d'instances sont inclus dans "
+"cet `ocid`."
 
 #. /definitions/record/properties/releases/oneOf/1/title
 #: schema/record-package-schema.json:1
@@ -5385,6 +5397,8 @@ msgstr "Instance versionnée"
 #: schema/record-package-schema.json:1
 msgid "This contains the history of all the data in the compiled release."
 msgstr ""
+"Cet objet contient l'historique de toutes les données dans l'instance "
+"compilée."
 
 #. /title
 #: schema/release-package-schema.json:1
@@ -5560,9 +5574,9 @@ msgid ""
 "start date may be used to indicate the start of an evaluation period."
 msgstr ""
 "La période de décision concernant l'attribution du marché. La date de fin "
-"devrait être la date à laquelle une décision d'attribution doit être "
-"finalisée. La date de début est facultative et peut être utilisée pour "
-"indiquer le début d'une période d'évaluation."
+"devrait être la date à laquelle une décision d'attribution doit être prise. "
+"La date de début est facultative et peut être utilisée pour indiquer le "
+"début d'une période d'évaluation des offres."
 
 #. /definitions/Tender/properties/contractPeriod/description
 #: schema/release-schema.json:1
@@ -5614,7 +5628,7 @@ msgid ""
 " that the award may involve payments from the supplier to the buyer "
 "(commonly used in concession contracts)."
 msgstr ""
-"La valeur totale de cette attribution. Dans le cas d'un contrat-cadre, il "
+"La valeur totale de cette attribution. Dans le cas d'un accord-cadre, il "
 "peut s'agir de la valeur totale estimée sur la durée du contrat ou de la "
 "valeur maximale du marché. Il peut y avoir plus d'une attribution par "
 "processus de commande publique. Une valeur négative indique que le prix peut"
@@ -5802,7 +5816,7 @@ msgstr ""
 "préférés. Consultez le [guide d'identification des "
 "organisations](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/identifiers/) pour choisir le "
-"schéma préféré et l'identifiant à utiliser."
+"schéma et l'identifiant à utiliser."
 
 #. /definitions/OrganizationReference/properties/identifier/deprecated/description
 #. /definitions/OrganizationReferenceVersionedId/properties/identifier/deprecated/description
@@ -5871,7 +5885,7 @@ msgstr ""
 "devraient être préférés. Consultez le [guide d'identification des "
 "organisations](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/identifiers/) pour choisir le "
-"schéma préféré et l'identifiant à utiliser."
+"schéma et l'identifiant à utiliser."
 
 #. /definitions/Organization/properties/address/description
 #: schema/release-schema.json:1
@@ -5891,7 +5905,7 @@ msgstr "Les coordonnées qui peuvent être utilisées pour cette partie."
 #. /definitions/Item/properties/classification/description
 #: schema/release-schema.json:1
 msgid "The primary classification for the item."
-msgstr "La classification principale de l'article."
+msgstr "La classification principale du livrable."
 
 #. /definitions/Item/properties/unit/properties/value/description
 #: schema/release-schema.json:1
