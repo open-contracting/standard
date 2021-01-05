@@ -1,3 +1,5 @@
+/* global $, location */
+
 $(function () {
   // FYI: extensionlist appears many times on /schema/reference
   if ($('.extension_list').length) {
