@@ -44,6 +44,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
 * [#1125](https://github.com/open-contracting/standard/pull/1125) Add `weight` to `Item.unit`
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
+* [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
 ### Documentation
 
@@ -77,6 +78,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#965](https://github.com/open-contracting/standard/pull/965) Release Reference page: Add extensions list for the Transaction object.
 * [#970](https://github.com/open-contracting/standard/pull/970) Release Schema page: Correct the description of compiled releases.
 * [#996](https://github.com/open-contracting/standard/pull/996) Record Reference page: Rewrite page to improve clarity.
+* [#1153](https://github.com/open-contracting/standard/pull/1153) Release Reference page: Remove framework agreement related sentence from Contract section.
 * Codelists page:
   * [#971](https://github.com/open-contracting/standard/pull/971) [#1032](https://github.com/open-contracting/standard/pull/1032) Remove the suggestion to use X prefixes, for the reasons expressed by the [IETF](https://tools.ietf.org/html/rfc6648#appendix-B).
   * [#972](https://github.com/open-contracting/standard/pull/972) Clarify the norms around open and closed codelists.
