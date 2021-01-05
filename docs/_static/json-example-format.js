@@ -25,8 +25,11 @@ document.querySelectorAll('.expandjson').forEach(function (element) {
   const container = element.previousElementSibling
   let select
   if (container && container.classList.contains('selection-container')) {
+    // Hide additional examples.
     element.style.display = 'none'
     container.appendChild(element)
+
+    // Display the select element if there are multiple options.
     select = container.querySelector('select')
     select.style.display = ''
   } else {
@@ -37,10 +40,12 @@ document.querySelectorAll('.expandjson').forEach(function (element) {
 
     select = document.createElement('select')
     div.insertAdjacentElement('afterbegin', select)
+
+    // Hide the select element if there is one option.
     select.style.display = 'none'
     select.addEventListener('change', function () {
-      div.querySelectorAll('.expandjson').forEach(function (sibling) {
-        sibling.style.display = 'none'
+      div.querySelectorAll('.expandjson').forEach(function (child) {
+        child.style.display = 'none'
       })
       div.querySelector(`.${select.value}`).style.display = ''
     })
@@ -49,5 +54,5 @@ document.querySelectorAll('.expandjson').forEach(function (element) {
   const option = document.createElement('option')
   option.value = fileClassName
   option.textContent = fileClassName.replace('file-', '')
-  select.append(option)
+  select.appendChild(option)
 })
