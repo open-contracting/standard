@@ -21,7 +21,7 @@ if ($('.extension_list').length) {
     })
 
     // Add community extensions.
-    $.each(communityExtensions, function (i, extension) {
+    communityExtensions.forEach(function (extension) {
       const extensionName = extension.name[language] || extension.name.en
       const extensionDescription = extension.description[language] || extension.description.en
       const extensionListId = '#extensionlist-' + extension.category

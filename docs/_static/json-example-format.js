@@ -4,7 +4,7 @@ $('.expandjson').each(function () {
   const classList = $(this).attr('class').split(/\s+/)
   const expand = []
   let filename
-  $.each(classList, function (index, item) {
+  classList.forEach(function (item) {
     if (item.indexOf('expand') === 0) {
       expand.push(item.replace('expand-', ''))
     }
