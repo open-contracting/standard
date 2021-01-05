@@ -1,9 +1,9 @@
 /* global renderjson */
 
-document.querySelectorAll('.expandjson').forEach(function (element) {
+document.querySelectorAll('.expandjson').forEach(element => {
   const defaultOpen = []
   let fileClassName
-  element.classList.forEach(function (className) {
+  element.classList.forEach(className => {
     if (className.substring(0, 7) === 'expand-' && className.length > 7) {
       defaultOpen.push(className.substring(7))
     }
@@ -43,8 +43,8 @@ document.querySelectorAll('.expandjson').forEach(function (element) {
 
     // Hide the select element if there is one option.
     select.style.display = 'none'
-    select.addEventListener('change', function () {
-      div.querySelectorAll('.expandjson').forEach(function (child) {
+    select.addEventListener('change', () => {
+      div.querySelectorAll('.expandjson').forEach(child => {
         child.style.display = 'none'
       })
       div.querySelector(`.${select.value}`).style.display = ''

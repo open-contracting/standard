@@ -5,7 +5,7 @@ if (document.querySelector('.extension_list')) {
   const language = location.pathname.split('/')[2]
 
   // Append an empty list for community extensions.
-  document.querySelectorAll('.extension_list .hide').forEach(function (element) {
+  document.querySelectorAll('.extension_list .hide').forEach(element => {
     const dl = document.createElement('dl')
     dl.className = 'simple community-list hide'
     element.insertAdjacentElement('afterend', dl)
@@ -17,12 +17,12 @@ if (document.querySelector('.extension_list')) {
   request.open('GET', 'https://raw.githubusercontent.com/open-contracting/extension_registry/master/build/extensions.json')
   request.responseType = 'json'
 
-  request.onload = function () {
+  request.onload = () => {
     if (request.status >= 200 && request.status < 400) {
       // Add community extensions.
-      request.response.extensions.forEach(function (extension) {
+      request.response.extensions.forEach(extension => {
         if (!extension.core) {
-          const div = document.getElementById('extensionlist-' + extension.category)
+          const div = document.getElementById(`extensionlist-${extension.category}`)
           if (div) {
             div.querySelector('.community-list').insertAdjacentHTML('beforeend', `
               <dt>
@@ -34,7 +34,7 @@ if (document.querySelector('.extension_list')) {
                 ${extension.description[language] || extension.description.en}
               </dd>
             `)
-            div.querySelectorAll('.hide').forEach(function (element) {
+            div.querySelectorAll('.hide').forEach(element => {
               element.classList.remove('hide')
             })
           }
@@ -42,7 +42,7 @@ if (document.querySelector('.extension_list')) {
       })
 
       // Remove empty extension lists.
-      document.querySelectorAll('.extension_list').forEach(function (element) {
+      document.querySelectorAll('.extension_list').forEach(element => {
         if (!element.querySelector('a')) {
           element.remove()
         }
