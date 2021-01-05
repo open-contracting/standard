@@ -1,6 +1,4 @@
-/* global $, renderjson */
-
-let groupIndex = 0;
+/* global renderjson */
 
 document.querySelectorAll('.expandjson').forEach(function (element) {
   const defaultOpen = []
