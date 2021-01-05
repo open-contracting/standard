@@ -70,6 +70,7 @@ html_static_path = ['_static']
 # -- Local configuration -----------------------------------------------------
 
 repository_url = 'https://github.com/open-contracting/standard'
+smartquotes = False
 
 html_theme_options = {
     'display_version': True,
