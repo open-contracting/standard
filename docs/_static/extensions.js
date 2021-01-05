@@ -1,6 +1,6 @@
 /* global XMLHttpRequest, location */
 
-// FYI: extensionlist appears many times on /schema/reference
+// FYI: extensionlist appears many times on /schema/reference/
 if (document.querySelector('.extension_list')) {
   const language = location.pathname.split('/')[2]
 
@@ -44,7 +44,7 @@ if (document.querySelector('.extension_list')) {
       // Remove empty extension lists.
       document.querySelectorAll('.extension_list').forEach(function (element) {
         if (!element.querySelector('a')) {
-          element.parentNode.removeChild(element)
+          element.remove()
         }
       })
     }
