@@ -226,7 +226,7 @@ The award section is used to announce any awards issued for this tender. There c
 
 ### Contract
 
-The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
+The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. 
 
 ```eval_rst
 .. jsonschema:: ../../build/current_lang/release-schema.json
