@@ -43,6 +43,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
   * `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
+* [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data
 
 ### Documentation
 
