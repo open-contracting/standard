@@ -4,9 +4,9 @@ The publication of OCDS data involves the creation of a conversion process. Like
 
 This process needs an adequate architecture to support it. Its design depends on several factors:
 
-* Whether is possible to extend existing sources, or a new sources will be built,
+* Whether existing data sources can be used, or new data sources need to be created,
 * The number and nature of the data sources,
-* The technical resources available to the publisher, like storage and processing capabilities. This includes the availability of technical personnel to maintain sources and modules.
+* The technical resources available to the publisher, like storage and processing capabilities. This includes the availability of technical personnel to maintain the data sources and modules.
 
 Other considerations that affect the design are:
 
@@ -18,7 +18,7 @@ This guidance describes some design approaches with their advantages and disadva
 
 ## On-demand transformation from data sources
 
-In this scenario, each data source converts data in OCDS format on demand. Data is not stored but gets converted each time a user or third party invokes the conversion process. This is the easiest path when a single source manages all contracting processes. But it involves modifications to the data source to add an OCDS conversion module.
+In this scenario, data from each source is converted to OCDS format on-demand. OCDS data is not stored, but is created each time a user or third-party invokes the conversion process. This is the easiest path when a single source manages the data for all contracting processes. But it involves adding an OCDS conversion module.
 
 An API performs data transformation on the fly each time it receives a request.
 
@@ -36,7 +36,7 @@ Bulk downloads can be provided as part of the API. Live queries can stress the d
 
 In the scenarios that follow, a middleware component converts and stores the data in OCDS format. This has some advantages:
 
-* It is possible to merge and centralize data from more than one source in a single datastore.
+* It is possible to merge and centralize data from more than one data source in a single datastore.
 * It can relieve data sources from expensive queries.
 * It can enable the generation of the change history for each contracting process.
 
@@ -49,7 +49,7 @@ The [releases and records](../../getting_started/releases_and_records) guidance 
 
 ### Pull and convert
 
-In this scenario an automated process pulls data from data sources to the middleware system. The middleware performs the conversion to OCDS and maintains a datastore in OCDS format.
+In this scenario an automated process pulls data from the data sources to the middleware system. The middleware performs the conversion to OCDS and maintains a datastore in OCDS format.
 
 ![Pull and Convert](../../_static/png/pullAndConvert.png)
 
@@ -71,11 +71,11 @@ This scenario is a combination of the two previous scenarios. Data sources perfo
 
 ![Convert and Push](../../_static/png/convertAndPush.png)
 
-This approach puts the burden of data conversion in data sources. Yet it might be a solution for publishers with a single data source which does not store the change history.
+This approach puts the burden of data conversion on data sources. Yet it might be a solution for publishers with a single data source which does not store the change history.
 
 This approach might also be suitable to combine data from many data sources. Each source becomes an OCDS publisher. The middleware becomes less complex since it only ingests data in a single format.
 
-The [OpenProcurement](http://openprocurement.org/en/) system adopted a similar approach. This system was developed in Ukraine and it's the base for the [Prozorro](https://prozorro.gov.ua/en/) platform. Prozorro uses OCDS building blocks as the foundation for data sources data models.
+The [OpenProcurement](http://openprocurement.org/en/) system adopted a similar approach. This system was developed in Ukraine and it's the base for the [Prozorro](https://prozorro.gov.ua/en/) platform. Prozorro uses OCDS building blocks as the foundation for data sources' data models.
 
 A variant in this scenario is to store files in a web-accessible file system, as shown below. A periodical invocation of the conversion module updates the file system.
 
