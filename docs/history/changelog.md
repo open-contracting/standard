@@ -50,6 +50,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
+* [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component
 
 ## [1.1.5] - 2020-08-20
 
