@@ -36,10 +36,21 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
+* [#1113](https://github.com/open-contracting/standard/pull/1113) Add recommendation to put hyphen after the ocid prefix
+* [#1109](https://github.com/open-contracting/standard/pull/1109) Remove "selection criteria" from the description of `Tender.awardCriteriaDetails`.
+* [#1112](https://github.com/open-contracting/standard/pull/1112) Strengthen normative statements in the descriptions of the following fields:
+  * `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available" ("may" replaced with "should")
+  * `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
+  * `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
+* [#1125](https://github.com/open-contracting/standard/pull/1125) Add `weight` to `Item.unit`
+* [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
+* [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
 ### Documentation
 
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
+* [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
+* [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component
 
 ## [1.1.5] - 2020-08-20
 
@@ -68,6 +79,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#965](https://github.com/open-contracting/standard/pull/965) Release Reference page: Add extensions list for the Transaction object.
 * [#970](https://github.com/open-contracting/standard/pull/970) Release Schema page: Correct the description of compiled releases.
 * [#996](https://github.com/open-contracting/standard/pull/996) Record Reference page: Rewrite page to improve clarity.
+* [#1153](https://github.com/open-contracting/standard/pull/1153) Release Reference page: Remove framework agreement related sentence from Contract section.
 * Codelists page:
   * [#971](https://github.com/open-contracting/standard/pull/971) [#1032](https://github.com/open-contracting/standard/pull/1032) Remove the suggestion to use X prefixes, for the reasons expressed by the [IETF](https://tools.ietf.org/html/rfc6648#appendix-B).
   * [#972](https://github.com/open-contracting/standard/pull/972) Clarify the norms around open and closed codelists.

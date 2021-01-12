@@ -210,7 +210,7 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 ### Award
 
-The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. 
+The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/consortia) and in framework agreements.
 
 ```eval_rst
 .. jsonschema:: ../../build/current_lang/release-schema.json
@@ -226,7 +226,7 @@ The award section is used to announce any awards issued for this tender. There c
 
 ### Contract
 
-The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
+The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. 
 
 ```eval_rst
 .. jsonschema:: ../../build/current_lang/release-schema.json
@@ -422,7 +422,7 @@ Accurately including the time and timezone offsets is particular important for t
 
 In the event that the system from which data is drawn only includes dates, and does not include time information, publishers should use sensible defaults for each field. For example, the startDate time of a clarification period can be set to '00:00:00Z' to indicate that clarifications can be requested from any time on the date stated, with the endDate time set to 23:59:59Z to indicate that clarifications can be sent up until the end of the endDate given. Alternatively, if clarification requests are only accepted in standard office hours, these values might be 09:00:00Z and 17:00:00Z respectively.
 
-In the event that a date field is not bound to a specific time at all, publishers should choose a default time value of '23:59:59' and either 'Z' (for UTC) or the timezone of the publisher, indicating that the time refers to the end of the given date. 
+In the event that a date field is not bound to a specific time at all, publishers should choose a default time value of '00:00:00' and either 'Z' (for UTC) or the timezone of the publisher. However, if the date is an endDate in a period object the default time value should be set to '23:59:59', indicating that the time refers to the end of the given date.
 
 ### Item
 

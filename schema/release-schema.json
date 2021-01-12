@@ -7,7 +7,7 @@
   "properties": {
     "ocid": {
       "title": "Open Contracting ID",
-      "description": "A globally unique identifier for this Open Contracting Process. Composed of an ocid prefix and an identifier for the contracting process. For more information see the [Open Contracting Identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
+      "description": "A globally unique identifier for this Open Contracting Process. Composed of an ocid prefix and an identifier for the contracting process. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information see the [Open Contracting Identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
       "type": "string",
       "minLength": 1
     },
@@ -330,7 +330,7 @@
         },
         "awardCriteriaDetails": {
           "title": "Award criteria details",
-          "description": "Any detailed or further information on the award or selection criteria.",
+          "description": "Any detailed or further information on the award criteria.",
           "type": [
             "string",
             "null"
@@ -549,7 +549,7 @@
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "The suppliers awarded this award. If different suppliers have been awarded different items or values, these should be split into separate award blocks.",
+          "description": "The suppliers awarded this award. If different suppliers have been awarded different items or values, these should be split into separate award blocks. There can be multiple suppliers for a single award if, for example, the award recipient is an unincorporated consortium or if the award represents the addition of suppliers as parties to a framework agreement.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -685,7 +685,7 @@
         },
         "items": {
           "title": "Items contracted",
-          "description": "The goods, services, and any intangible outcomes in this contract. Note: If the items are the same as the award do not repeat.",
+          "description": "The goods, services, and any intangible outcomes in this contract. If the items contracted are identical to the items awarded, this field should be omitted.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -1282,7 +1282,7 @@
         },
         "id": {
           "type": "string",
-          "description": "The ID used for cross-referencing to this party from other sections of the release. This field need only be unique within the scope of the contracting process, but may be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available.",
+          "description": "The ID used for cross-referencing to this party from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available.",
           "title": "Entity ID"
         },
         "identifier": {
@@ -1434,6 +1434,26 @@
                 "string",
                 "null"
               ]
+            },
+            "weight": {
+              "title": "Weight",
+              "description": "The weight of one item unit.",
+              "type": "object",
+              "properties": {
+                "unit": {
+                  "title": "Unit",
+                  "description": "The code and scheme for the unit in which the weight is specified.",
+                  "$ref": "#/definitions/SimpleUnit"
+                },
+                "quantity": {
+                  "title": "Quantity",
+                  "description": "The number of units.",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
             }
           },
           "patternProperties": {
@@ -2126,12 +2146,38 @@
           ]
         },
         "durationInDays": {
-          "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, should be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, should be equal to the difference between startDate and maxExtentDate.",
+          "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, must be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
           "type": [
             "integer",
             "null"
           ]
+        }
+      }
+    },
+    "SimpleUnit": {
+      "title": "Simple Unit",
+      "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "unitClassificationScheme.csv",
+          "openCodelist": true
+        },
+        "id": {
+          "title": "ID",
+          "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
         }
       }
     },
