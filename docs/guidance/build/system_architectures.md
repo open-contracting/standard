@@ -4,9 +4,9 @@ The publication of OCDS data involves the creation of a conversion process. Like
 
 This process needs an adequate architecture to support it. Its design depends on several factors:
 
-* Whether is possible to extend existing systems, or a new system will be built,
-* The number and nature of the live systems,
-* The technical resources available to the publisher, like storage and processing capabilities. This includes the availability of technical personnel to maintain systems and modules.
+* Whether existing systems can be updated, or new systems need to be created,
+* The number and nature of the data sources,
+* The technical resources available to the publisher, like storage and processing capabilities. This includes the availability of technical personnel to maintain new and updated systems.
 
 Other considerations that affect the design are:
 
@@ -16,9 +16,9 @@ Other considerations that affect the design are:
 
 This guidance describes some design approaches with their advantages and disadvantages. This is not an exhaustive list, but it can be used to inform the design of the publication system.
 
-## On-demand transformation from live systems
+## On-demand transformation from data sources
 
-In this scenario, each source system converts data in OCDS format on demand. Data is not stored but gets converted each time a user or third party invokes the conversion process. This is the easiest path when a single live system manages all contracting processes. But it involves modifications to the system to add an OCDS conversion module.
+In this scenario, data from each source is converted to OCDS format on-demand. OCDS data is not stored, but is created each time a user or third-party invokes the conversion process. This is the easiest path when a single source manages the data for all contracting processes. But it involves adding an OCDS conversion module.
 
 An API performs data transformation on the fly each time it receives a request.
 
@@ -30,14 +30,14 @@ This approach does not need extra storage space. But it might not be possible to
 
 The [easy releases guidance](easy_releases) explains how to achieve a conformant OCDS implementation where it is not possible to provide a full change history.
 
-Bulk downloads can be provided as part of the API. Live queries can stress the live systems if they need to scan large portions of data.
+Bulk downloads can be provided as part of the API. Live queries can stress the data sources if they need to scan large portions of data.
 
 ## Separate OCDS datastore
 
 In the scenarios that follow, a middleware component converts and stores the data in OCDS format. This has some advantages:
 
-* It is possible to merge and centralize data from more than one system in a single datastore.
-* It can relieve live systems from expensive queries.
+* It is possible to merge and centralize data from more than one data source in a single datastore.
+* It can relieve data sources from expensive queries.
 * It can enable the generation of the change history for each contracting process.
 
 On the other hand, there is a cost of maintaining a separate datastore. In these scenarios, we assume an API provides access to OCDS data.
@@ -49,33 +49,33 @@ The [releases and records](../../getting_started/releases_and_records) guidance 
 
 ### Pull and convert
 
-In this scenario an automated process pulls data from live systems to the middleware system. The middleware performs the conversion to OCDS and maintains a datastore in OCDS format.
+In this scenario an automated process pulls data from the data sources to the middleware system. The middleware performs the conversion to OCDS and maintains a datastore in OCDS format.
 
 ![Pull and Convert](../../_static/png/pullAndConvert.png)
 
-The key benefit of this approach is that the middleware system can store the change history. This is especially good when source systems do not maintain historic data.
+The key benefit of this approach is that the middleware system can store the change history. This is especially good when data sources do not maintain historic data.
 
-This approach might involve some changes to live systems to allow the middleware to pull data. The middleware system merges and centralizes data in a single place.
+This approach might involve some changes to data sources to allow the middleware to pull data. The middleware system merges and centralizes data in a single place.
 
-To add more source systems, the OCDS conversion module needs to be updated to pull data from the new system(s).
+To add more data sources, the OCDS conversion module needs to be updated to pull data from the new source(s).
 
 An important decision in the implementation is the frequency to pull data. If the frequency is low, there is a risk of losing the detail of individual changes.
 
-An alternative to the pull mechanism is to use a push mechanism in each source system. Specific events or changes to the data would trigger a data push to the middleware. This approach can mitigate the risk of losing individual changes. But this might involve bigger modifications to the source system(s).
+An alternative to the pull mechanism is to use a push mechanism in each data source. Specific events or changes to the data would trigger a data push to the middleware. This approach can mitigate the risk of losing individual changes. But this might involve bigger modifications to the data source(s).
 
 European Dynamics developed an e-procurement system with a similar approach for OCDS output. The system was built for the Zambian Public Procurement Agency.
 
 ### Convert and push
 
-This scenario is a combination of the two previous scenarios. Live systems perform the conversion of data to OCDS format. They push converted data to a middleware, which maintains an OCDS format datastore. An API in the middleware system serves the OCDS data.
+This scenario is a combination of the two previous scenarios. Data sources perform the conversion of data to OCDS format. They push converted data to a middleware, which maintains an OCDS format datastore. An API in the middleware system serves the OCDS data.
 
 ![Convert and Push](../../_static/png/convertAndPush.png)
 
-This approach puts the burden of data conversion in live systems. Yet it might be a solution for publishers with a single source system which does not store the change history.
+This approach puts the burden of data conversion on data sources. Yet it might be a solution for publishers with a single data source which does not store the change history.
 
-This approach might also be suitable to combine data from many source systems. Each source system becomes an OCDS publisher. The middleware becomes less complex since it only ingests data in a single format.
+This approach might also be suitable to combine data from many data sources. Each source becomes an OCDS publisher. The middleware becomes less complex since it only ingests data in a single format.
 
-The [OpenProcurement](http://openprocurement.org/en/) system adopted a similar approach. This system was developed in Ukraine and it's the base for the [Prozorro](https://prozorro.gov.ua/en/) platform. Prozorro uses OCDS building blocks as the foundation for live systems data models.
+The [OpenProcurement](http://openprocurement.org/en/) system adopted a similar approach. This system was developed in Ukraine and it's the base for the [Prozorro](https://prozorro.gov.ua/en/) platform. Prozorro uses OCDS building blocks as the foundation for data sources' data models.
 
 A variant in this scenario is to store files in a web-accessible file system, as shown below. A periodical invocation of the conversion module updates the file system.
 
@@ -85,13 +85,13 @@ The file system ensures that each OCDS document has a persistent URL for access.
 
 ### Manual import
 
-In this scenario a middleware system sits between live systems and the API.
+In this scenario a middleware system sits between data sources and the API.
 
-Data is manually exported from live systems into files. The files are uploaded to the middleware system, which converts the data to OCDS. The system stores the data in OCDS format.
+Data is manually exported from data sources into files. The files are uploaded to the middleware system, which converts the data to OCDS. The system stores the data in OCDS format.
 
 ![Manual Import](../../_static/png/manualImport.png)
 
-A disadvantage in this approach is the potential of failures. Input files might be corrupted or have unexpected formats due to changes or errors in the live systems.
+A disadvantage in this approach is the potential of failures. Input files might be corrupted or have unexpected formats due to changes or errors in the data sources.
 
 There’s a documented example of this approach in the work Development Gateway did in [Vietnam](https://www.developmentgateway.org/blog/under-hood-open-source-dashboard-procurement-vietnam).
 
