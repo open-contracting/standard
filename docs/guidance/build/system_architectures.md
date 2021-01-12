@@ -4,9 +4,9 @@ The publication of OCDS data involves the creation of a conversion process. Like
 
 This process needs an adequate architecture to support it. Its design depends on several factors:
 
-* Whether existing data sources can be used, or new data sources need to be created,
+* Whether existing systems can be updated, or new systems need to be created,
 * The number and nature of the data sources,
-* The technical resources available to the publisher, like storage and processing capabilities. This includes the availability of technical personnel to maintain the data sources and modules.
+* The technical resources available to the publisher, like storage and processing capabilities. This includes the availability of technical personnel to maintain new and updated systems.
 
 Other considerations that affect the design are:
 
