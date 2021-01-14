@@ -45,6 +45,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1125](https://github.com/open-contracting/standard/pull/1125) Add `weight` to `Item.unit`
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
 * [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
+* [#1167](https://github.com/open-contracting/standard/pull/1167) Improve the description of `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`
 
 ### Documentation
 
