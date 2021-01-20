@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
     - uses: actions/setup-python@v1
       with:
         python-version: 3.6
@@ -20,6 +17,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
     - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
-    - run: npm install --global standard
+    - run: sudo apt-get install shellcheck
     - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
-    - run: standard docs/_static/json-example-format.js docs/_static/extensions.js
+    - run: shellcheck script/*
