@@ -50,21 +50,7 @@ In OCDS, the `Contract` object is intended to communicate a legally binding agre
 
 OCDS defines the buyer as:
 
-> *an entity whose budget will be used to pay for goods, works or services related to a contract. This may be different from the procuring entity who may be specified in the tender data.*
-
-```eval_rst
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
-      Elsewhere in the OCDS schema the buyer is described as:
-
-      > *The entity managing the procurement. This may be different from the buyer who pays for, **or uses**, the items being procured.*
-
-      There is a proposal to align this description with the above definition.
-
-```
+> *The organisation aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.*
 
 ### Suppliers
 
