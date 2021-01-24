@@ -7,7 +7,6 @@ These release notes describe what's new in each version. OCDS adheres to [Semant
 Per the [normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit), iterative improvements to non-normative content can be made outside the release cycle.
 
 ### Documentation
-
 * Getting Started section:
   * [#980](https://github.com/open-contracting/standard/pull/980) Remove references to ☆ levels.
   * [#1017](https://github.com/open-contracting/standard/pull/1017) Add link to bulk downloads in Guidance section.
@@ -34,6 +33,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Schema
 
+* [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'Buyer' and deprecate 'Funder'
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
 * [#1113](https://github.com/open-contracting/standard/pull/1113) Add recommendation to put hyphen after the ocid prefix
@@ -47,7 +47,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
 ### Documentation
-
+* [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'Buyer' in the [guidance](https://standard.open-contracting.org/latest/en/guidance/map/awards_contracts_buyers_suppliers/)
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
 * [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component
