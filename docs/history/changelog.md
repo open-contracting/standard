@@ -32,6 +32,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ## [1.2] - YYYY-MM-DD
 
+## Codelists
+
+* [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
+
 ### Schema
 
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
