@@ -32,7 +32,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 ## [1.2] - YYYY-MM-DD
 
 ### Schema
-
+* [#1187](https://github.com/open-contracting/standard/pull/1187) partyRole: added contractImplementationManager
 * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'Buyer' and deprecate 'Funder'
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
