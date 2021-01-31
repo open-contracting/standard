@@ -33,7 +33,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 ## [1.2] - YYYY-MM-DD
 
 ### Schema
-
+* [707](https://github.com/open-contracting/standard/pull/1189) Specify in the document reference information about good document publishing and referencing practices
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
 * [#1113](https://github.com/open-contracting/standard/pull/1113) Add recommendation to put hyphen after the ocid prefix
@@ -47,7 +47,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
 ### Documentation
-
+* [707](https://github.com/open-contracting/standard/pull/1189) Expand the definition of `Document.URL`
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
 * [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component
