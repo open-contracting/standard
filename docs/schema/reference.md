@@ -370,6 +370,10 @@ If a contracting process represents a contract arranged by the department or bra
 
 Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../codelists/#document-type) codelist.
 
+Documents related to contracting processes should be public by default. For more information on why that is the right approach, see the Open Contracting Partnership's report ["Mythbusting Confidentiality in Public Contracting"](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts). Furthermore, documents should be published at their own stable URLs, accessible for free and without the need to search, log-in or authenticate, and available at the time of publication of the OCDS release that refers to them.
+
+OCDS allows summarizing information in the document description field. Providing clear summaries is a good practice, as it allows applications to display this information in a user-interface and thus enables users to read key facts without having to search through the whole document.
+
 ```eval_rst
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Document
