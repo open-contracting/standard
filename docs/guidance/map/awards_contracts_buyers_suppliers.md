@@ -50,7 +50,7 @@ In OCDS, the `Contract` object is intended to communicate a legally binding agre
 
 OCDS defines the buyer as:
 
-> *The organisation aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.*
+> *The organization aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.*
 
 ### Suppliers
 
