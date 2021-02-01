@@ -16,7 +16,7 @@ The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en
 
 In OCDS, the `Award` object is intended to communicate a direct relationship between items, suppliers, and values. It ought to be possible to know, at the award stage, in OCDS data, which items will later be supplied by which suppliers, and what the value of those contracts will be.
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
    :class: note
 
@@ -36,7 +36,7 @@ Contracting processes can result in different types of contract between buyers a
 
 In OCDS, the `Contract` object is intended to communicate a legally binding agreement between a buyer and suppliers to provide items. This excludes agreements to set-up a structure through which contracts are later awarded to provide items, for example: a contract to set up or add suppliers to a framework agreement or dynamic purchasing system.
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
     :class: note
 
@@ -52,7 +52,7 @@ OCDS defines the buyer as:
 
 > *an entity whose budget will be used to pay for goods, works or services related to a contract. This may be different from the procuring entity who may be specified in the tender data.*
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
     :class: note
 
@@ -161,7 +161,7 @@ That said, many organizations can be assigned the 'buyer' role in the `parties` 
 
 ## Examples
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :maxdepth: 1
 

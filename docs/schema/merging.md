@@ -25,7 +25,7 @@ At each release, the agency also updates the record, which combines all the rele
 * The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
 * The versioned release makes it easy to see how the description and total estimated value changed over time.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/merge-tender-1.json
    :jsonpointer: /releases
    :expand: releases, tag, tender
@@ -33,7 +33,7 @@ At each release, the agency also updates the record, which combines all the rele
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/merge-tender-3.json
    :jsonpointer: /releases
    :expand: releases, tag, tender
@@ -41,7 +41,7 @@ At each release, the agency also updates the record, which combines all the rele
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/merge-award-1.json
    :jsonpointer: /releases
    :expand: releases, tag, awards
@@ -49,7 +49,7 @@ At each release, the agency also updates the record, which combines all the rele
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/merge-award-2.json
    :jsonpointer: /releases
    :expand: releases, tag, awards
@@ -57,7 +57,7 @@ At each release, the agency also updates the record, which combines all the rele
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/merged.json
    :jsonpointer:
    :expand: records, compiledRelease, tag, tender, awards
@@ -65,7 +65,7 @@ At each release, the agency also updates the record, which combines all the rele
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer:
    :expand: records, versionedRelease, tag, tender, awards
@@ -88,7 +88,7 @@ In the release schema, `"omitWhenMerged": true` is declared on fields that must 
 
 If `omitWhenMerged` is set to `false`, ignore it.
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::
@@ -125,7 +125,7 @@ In a **versioned release**, with a few exceptions, a field's value is replaced w
 
 For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: value, amount
@@ -133,7 +133,7 @@ For example, in the above worked example, the estimated value was $1,000 in a re
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer:
    :expand: records, versionedRelease
@@ -198,7 +198,7 @@ This case is encountered if the above conditions aren't met. If the array is emp
   * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the [merge routine](#merge-routine) *except for the `id` field*, which is not versioned and instead kept as-is
   * Otherwise, merge an empty JSON object and the object in **input** according to the [merge routine](#merge-routine) *except for the `id` field*, which is not versioned and instead kept as-is, and append the result to the array in **output**
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::
@@ -207,7 +207,7 @@ This case is encountered if the above conditions aren't met. If the array is emp
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::

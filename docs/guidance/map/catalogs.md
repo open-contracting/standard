@@ -20,7 +20,7 @@ Australia's Department of Defence uses an electronic catalog for purchases of ba
 
 In July 2019, the department makes 3 separate purchases from the catalog: envelopes that are supplied by COS, whiteboard markers that are supplied by Office National, and sticky notes that are supplied by Mega Office Supplies. These purchases are represented in the `awards` section of OCDS as follows:
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/catalogs/catalog_purchases.csv
@@ -28,7 +28,7 @@ In July 2019, the department makes 3 separate purchases from the catalog: envelo
 
 During the same month, the department also concludes a separate contracting process to procure 30 office desks by awarding a contract to Office National. This purchase is also represented in the `awards` section of OCDS:
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/catalogs/separate_process.csv
@@ -36,13 +36,13 @@ During the same month, the department also concludes a separate contracting proc
 
 By using the `awards` section consistently for both contracting processes, it is possible to calculate the total value of purchases from Office National in July 2019, using only the `awards` section:
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/catalogs/combined.csv
 ```
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
     :class: note
 

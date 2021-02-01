@@ -35,7 +35,7 @@ When using custom licenses, publishers are encouraged to check that they are [co
 
 In structured data file you ought to embed a link to the license in the `license` field of the release or record package as indicated below:
 
-```eval_rst
+```{eval-rst}
 .. code-block:: json
    :emphasize-lines: 4
 

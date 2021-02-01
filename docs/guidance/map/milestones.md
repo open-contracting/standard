@@ -54,7 +54,7 @@ In the tender release:
 * The `.dateMet` field in the tender notice milestone is updated with the actual date the notice was issued and `.status` is set to 'met'.
 To explore differences between the planned and actual date of the tender milestone, users can then compare the values of `tender/milestones/dueDate` and `tender/milestones/dateMet` in a single (compiled) release.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/milestones/planning-tender-milestones.json
    :jsonpointer: 
@@ -96,7 +96,7 @@ Users can compare the project commencement milestone's `.dueDate` and `.dateMet`
 In the second implementation update release, which is published after the project completes:
 * In the project completion milestone, `.dateMet` is set to the actual completion date for the project and `.status` is set to 'met'.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/milestones/implementation-milestones-1.json
    :jsonpointer: 
@@ -105,7 +105,7 @@ In the second implementation update release, which is published after the projec
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/milestones/implementation-milestones-2.json
    :jsonpointer: 
@@ -114,7 +114,7 @@ In the second implementation update release, which is published after the projec
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/milestones/implementation-milestones-3.json
    :jsonpointer: 
@@ -145,7 +145,7 @@ In the second implementation update release:
 
 * The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'financing' is updated. A new `transaction` is disclosed, with the amount paid to the company.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/milestones/af-implementation-milestones-1.json
    :jsonpointer: 
@@ -154,7 +154,7 @@ In the second implementation update release:
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/milestones/af-implementation-milestones-2.json
    :jsonpointer: 
@@ -163,7 +163,7 @@ In the second implementation update release:
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/milestones/af-implementation-milestones-3.json
    :jsonpointer: 

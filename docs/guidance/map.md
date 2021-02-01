@@ -47,7 +47,7 @@ You can [contact the OCDS Helpdesk](../../support/#ocds-helpdesk) for support an
 
 Before working on mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 
@@ -88,7 +88,7 @@ Whichever approach you take, it's important that your eventual OCDS publication 
 
 Mapping data to OCDS is not always obvious. Please refer to our how-to guides and worked examples to learn how to map data for specific cases:
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :maxdepth: 2
    :titlesonly:
@@ -120,7 +120,7 @@ Some data elements might not match any field or code in OCDS. To cover such case
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 

@@ -1,7 +1,7 @@
 Open Contracting Data Standard: Documentation
 =============================================
 
-```eval_rst
+```{eval-rst}
 .. localization-note:: 
 
   TRANSLATORS: DO NOT TRANSLATE THIS MESSAGE DIRECTLY
@@ -32,7 +32,7 @@ In this documentation, you will find:
 If you are interested to learn more about Open Contracting advocacy and how it can be used to support wider reform and measurable improvements in public contracting, please visit [www.open-contracting.org](https://www.open-contracting.org/).
 
 
-```eval_rst
+```{eval-rst}
 .. note:: 
 
   This is the 1.1 release of OCDS, published on 31st May 2017. Version 1.0 documentation is still available from the version switcher at the bottom left of the page.
@@ -50,7 +50,7 @@ Version 1.0 of the standard was developed for the OCP by the [World Wide Web Fou
 
 A [free helpdesk service](support/index) is available to support implementation and use of OCDS.
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 

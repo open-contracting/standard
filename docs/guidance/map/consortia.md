@@ -14,7 +14,7 @@ The contract is awarded to the consortium; however, the legal entity for the con
 
 Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS, with the respective legal entity identifiers for each organization:
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/consortia_simple.csv
