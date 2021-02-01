@@ -2,21 +2,19 @@
 
 OCDS provides a common core of [sections and building blocks](../../getting_started/building_blocks) for describing contracting processes.
 
-Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard. 
+Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard.
 
-Extensions are divided into two types:
+Some extensions are maintained by the Open Contracting Partnership (OCP) as part of the [standard governance process](../../governance/index), documented as part of the standard, and reviewed by the OCDS technical team with each version upgrade of OCDS. They are likely to be relevant to a large number of publishers and users.
 
-* **Core** extensions are maintained as part of the standard governance process, documented as part of the standard and reviewed by the OCDS technical team with each version upgrade of OCDS. They are likely to be relevant to a large number of publishers and users.
+Other extensions are maintained outside of the standard governance process, or are maintained by third parties such as the OCDS community or an OCDS publisher. These extensions might provide features which are needed by only a small number of publishers or users, or they might be used to document a specific publisher's additional fields or codelist values.
 
-* **Community** and local extension are maintained by third-parties, or are maintained outside of the standard governance process. They might provide features needed by only a small number of publishers or users, or might be used to document a publisher's additional fields or codelist values.
-
-All core and community extensions are listed in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard technical team](../../governance/index) approves extensions for inclusion in the Extension Explorer (distinguishing community from local extensions) and for inclusion in the governance process (distinguishing core from community extensions).
+All registered extensions are listed in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard technical team](../../governance/index) approves extensions for inclusion in the Extension Explorer (distinguishing community from local extensions) and for inclusion in the governance process.
 
 ## Using existing extensions
 
 Extensions are applied by adding their URLs to the `extensions` array in the release package or record package. You can discover extensions, read their documentation and find the URL to add using the [Extension Explorer](https://extensions.open-contracting.org/en/).
 
-This version of OCDS uses these specific versions of core extensions:
+This version of OCDS uses these specific versions of extensions:
 
 ```eval_rst
  .. extensionexplorerlinklist::
