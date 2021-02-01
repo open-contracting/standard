@@ -26,7 +26,7 @@ An OCDS document is made up of a number of sections. These are:
 
 These are represented in a JSON document as follows:
 
-```eval_rst
+```{eval-rst}
 .. code-block:: json
    :emphasize-lines: 8-13
        
@@ -63,7 +63,7 @@ For example, common building blocks are provided for:
 
 #### Examples
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/parties/0
    :expand: identifier, address, contactPoint
@@ -71,7 +71,7 @@ For example, common building blocks are provided for:
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/value
    :expand: 
@@ -79,7 +79,7 @@ For example, common building blocks are provided for:
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/items
    :expand: classification, unit, additionalClassifications, value
@@ -87,7 +87,7 @@ For example, common building blocks are provided for:
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/contractPeriod
    :expand: 
@@ -95,7 +95,7 @@ For example, common building blocks are provided for:
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/awards/0/documents
    :expand: 
@@ -103,7 +103,7 @@ For example, common building blocks are provided for:
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/record.json
    :jsonpointer: /records/0/compiledRelease/tender/milestones/0
    :expand: 
@@ -165,7 +165,7 @@ In the EU, contracts can be initiated through a number of different procedures i
 
 However, to support comparison across continents, the main OCDS procurement method codelist is a closed codelist with four values:
 
-```eval_rst
+```{eval-rst}
 .. codelisttable::
    :header-rows: 1
    :file: ../../build/current_lang/codelists/method.csv

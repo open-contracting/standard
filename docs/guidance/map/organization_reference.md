@@ -16,7 +16,7 @@ In the example below:
 * The same needs to be applied to each `OrganizationReference` instance.
 
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/organization_reference.json
    :jsonpointer:

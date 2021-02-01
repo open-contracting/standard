@@ -19,42 +19,42 @@ In each release, the agency also updates the record, which combines all the rele
 * The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
 * The versioned release makes it easy to see how the description and total estimated value changed over time.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/merge-tender-1.json
    :jsonpointer:
    :expand: releases, tag, tender
    :title: tender
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/merge-tender-2.json
    :jsonpointer:
    :expand: releases, tag, tender
    :title: tenderUpdate
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/merge-tender-3.json
    :jsonpointer:
    :expand: releases, tag, tender
    :title: tenderAmendment
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/merge-award-1.json
    :jsonpointer:
    :expand: releases, tag, awards
    :title: awardOne
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/merge-award-2.json
    :jsonpointer:
    :expand: releases, tag, awards
    :title: awardTwo
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/versioned.json
    :jsonpointer:
    :expand: records, compiledRelease, versionedRelease, tag, tender, awards
@@ -71,21 +71,21 @@ After a few weeks, the tender is ready to be announced. The officer in charge no
 
 In the final record, both the compiled and versioned releases show the changes. The `planning/rationale` field has disappeared from the `compiledRelease`, and the `versionedRelease` shows both its previous value and the `null` value used to delete the field. The entry with the `null` value can be used to determine when the field was deleted.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example02-field-planning.json
    :jsonpointer:
    :expand: releases, tag, planning
    :title: planning
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example02-field-tender.json
    :jsonpointer:
    :expand: releases, tag, planning, tender
    :title: tender
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example02-field-record.json
    :jsonpointer:
    :expand: records, compiledRelease, versionedRelease
@@ -102,21 +102,21 @@ A release with a 'tenderAmendment' tag is published, in which both the `startDat
 
 The final record is shown below. Note that the fields in the `contractPeriod` block have disappeared in the `compiledRelease`, and the `versionedRelease` contains the previous values.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example02-object-tender.json
    :jsonpointer: 
    :expand: releases, tag, tender
    :title: tender
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example02-object-tenderAmendment.json
    :jsonpointer: 
    :expand: releases, tag, tender, amendments
    :title: tenderAmendment
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example02-object-record.json
    :jsonpointer: 
    :expand: records, compiledRelease, versionedRelease
@@ -131,28 +131,28 @@ Two weeks later, the authority publishes a new release. Due to negotiations with
 
 The NGO generates a record. In the record, all the fields of the removed item have disappeared, and only its `id` is left.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example03-award.json
    :jsonpointer: 
    :expand: releases, tag, awards
    :title: award
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example03-awardAmendment.json
    :jsonpointer: 
    :expand: releases, tag, awards, amendments, items
    :title: awardAmendment
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/merging/example03-record.json
    :jsonpointer: 
    :expand: records, compiledRelease, versionedRelease
    :title: record
 ```
 
-```eval_rst
+```{eval-rst}
 .. note::
 
     The current `merge routine <../../../schema/merging#merge-routine>`__ does not include a strategy to completely remove an entry from an array. We invite discussion on how to remove objects from arrays in issue `#232 <https://github.com/open-contracting/standard/issues/232>`__.

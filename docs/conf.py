@@ -19,7 +19,6 @@ from pathlib import Path
 
 import standard_theme
 from ocds_babel.translate import translate
-from recommonmark.transform import AutoStructify
 
 # -- Project information -----------------------------------------------------
 
@@ -37,10 +36,10 @@ release = '1.1.5'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'recommonmark',
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
+    'myst_parser',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -106,12 +105,6 @@ extension_versions = {
 
 def setup(app):
     app.add_config_value('extension_versions', extension_versions, True)
-    app.add_config_value('recommonmark_config', {
-        'auto_toc_tree_section': 'Contents',
-        'enable_eval_rst': True
-    }, True)
-
-    app.add_transform(AutoStructify)
 
     # The root of the repository.
     basedir = Path(os.path.realpath(__file__)).parents[1]
