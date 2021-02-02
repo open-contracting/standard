@@ -6,7 +6,7 @@ Each subsection refers to a stage or event in the contracting process lifetime.
 
 Refer to the [releases and records](../../getting_started/releases_and_records) guidance for an introduction to the concepts involved.
 
-### Planning
+## Planning
 
 The London Borough of Barnet plans to publish a tender for cycle lane improvements later in the year. To prepare the market they publish a *notice of planned procurement*. This is also known as *prior information notice*, or *future opportunity notice*.
 
@@ -33,7 +33,7 @@ The publisher also creates an OCDS record for the new contracting process. The r
 
 ```
 
-### Tender
+## Tender
 
 The London Borough of Barnet is ready to invite bids for the contract. They issue the tender via an *notice of intended procurement*. This is also known as *contract notice* or *opportunity notice*.
 
@@ -70,7 +70,7 @@ The publisher adds the new release to the record, in the releases list. Also the
 
 ```
 
-### Tender Update
+## Tender Update
 
 The enquiry period has ended, and a few questions from potential suppliers have been received. The procuring entity issues a document with the responses to the enquiries received from bidders.
 
@@ -98,7 +98,7 @@ The record now has three immutable releases, and updated compiled and versioned 
 
 ```
 
-### Award
+## Award
 
 The procuring entity makes the decision to award the contract to Balfour Beatty. They issue an award notice. 
 
@@ -126,7 +126,7 @@ The publisher adds the new release to the record. They also update the compiled 
 
 ```
 
-### Contract
+## Contract
 
 By law, the procuring entity has to wait for complaints for a given period of time before signing a contract. Once the period ends with no complaints, the contract with the supplier is signed.
 
@@ -154,7 +154,7 @@ The record gets updated to include the new release. The compiled and versioned r
 ```
 
 
-### Implementation
+## Implementation
 
 The supplier starts the construction work. After a while, the procuring entity makes the first payment to the supplier. The publisher creates a release to document this update in the process.
 
@@ -197,7 +197,7 @@ The publisher adds the new release from the finance system to the releases list 
 
 ```
 
-### Contract Amendment
+## Contract Amendment
 
 Unexpected complications causes delays in the construction work. Because of them the procuring entity and the supplier agree to a contract extension. This will cover the extra time and cost needed to complete the works. 
 

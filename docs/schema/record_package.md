@@ -1,4 +1,4 @@
-## Record Package Schema
+# Record Package Schema
 
 The record package schema describes the structure of the container for publishing records. The contents of a record are based on the release schema. The package contains important metadata.
 
