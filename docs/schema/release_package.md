@@ -1,4 +1,4 @@
-## Release Package Schema
+# Release Package Schema
 
 The release package schema describes the structure of the container for publishing releases. The package contains important metadata.
 

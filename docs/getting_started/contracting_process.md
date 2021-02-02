@@ -1,4 +1,4 @@
-## The Contracting Process
+# The Contracting Process
 
 There are several stages to a contracting process.
 
@@ -90,7 +90,7 @@ You are encouraged to publish OCDS data close to real-time: releasing data as ea
 
 This might involve generating output from a range of different systems. Data published from different systems can be tied together by use of a common Open Contracting ID (`ocid`).
 
-### Defining a contracting process
+## Defining a contracting process
 
 For public procurement OCDS defines a unique contracting process as:
 
@@ -98,7 +98,7 @@ For public procurement OCDS defines a unique contracting process as:
 
 An initiation process might be a tender, a direct contract award, or a call to award a concession.
 
-### The Open Contracting ID (ocid)
+## The Open Contracting ID (ocid)
 
 Each unique contracting process needs to be assigned an `ocid`. This is an identifier which can be used to join up data between different stages (as often the data might be stored in different systems).
 
@@ -136,6 +136,6 @@ The `ocid` is case sensitive. Case needs to be used consistently whenever an `oc
 
 </div>
 
-### Mapping your systems
+## Mapping your systems
 
 The Open Contracting Data Standard helpdesk provide [a technical assessment template](http://www.open-contracting.org/resources/ocds-technical-assessment-template/) that can be used to identify the different systems involved in managing data on each stage of the contracting process.

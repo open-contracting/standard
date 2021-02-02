@@ -1,4 +1,4 @@
-## Unsuccessful tenders
+# Unsuccessful tenders
 
 In the case of procurement, a contracting process can be defined as a procurement procedure. There is a one-to-one correspondence between the first stage of a procurement procedure (tender) and a contracting process.
 
@@ -20,7 +20,7 @@ This relationship can be modelled using the `relatedProcess` array at the releas
 
 ![Unsuccessful Tender](../../_static/png/unsuccessful-tender.png)
 
-### Example: Modelling unsuccessful tenders in Paraguay
+## Example: Modelling unsuccessful tenders in Paraguay
 
 The [Sistema de Información de las Contrataciones Públicas (SICP)](https://contrataciones.gov.py/) discloses information about contracting processes for all public entities in Paraguay. SICP is managed by the National Directorate of Public Procurement (DNCP in Spanish).
 
