@@ -34,7 +34,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Codelists
 
-* [#1185](https://github.com/open-contracting/standard/pull/1185) Add contractStatus termination codes (terminatedEarly, terminatedSuccessfully)
+* [#1185](https://github.com/open-contracting/standard/pull/1185) Add contractStatus termination codes (terminatedEarly, terminatedSuccessfully).
+* [#1185](https://github.com/open-contracting/standard/pull/1185) Deprecate all the codes of the `submissionMethod` codelist.
 
 ### Schema
 
