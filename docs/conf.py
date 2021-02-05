@@ -102,6 +102,10 @@ extension_versions = {
     'process_title': default_extension_version,
 }
 
+# Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
+# https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
+myst_enable_extensions = []
+
 
 def setup(app):
     app.add_config_value('extension_versions', extension_versions, True)
