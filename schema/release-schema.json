@@ -100,7 +100,7 @@
     },
     "contracts": {
       "title": "Contracts",
-      "description": "Information from the contract creation phase of the contracting process. This includes contract implementation.",
+      "description": "Information from the contract creation and implementation phase of the contracting process.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Contract"
@@ -696,8 +696,8 @@
           "uniqueItems": true
         },
         "dateSigned": {
-          "title": "Date signed",
-          "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
+          "title": "Date concluded",
+          "description": "The date the contract was concluded. Typically, this is the date when the last buyer or supplier signed the contract. However, if no contract is signed, then the date of contract conclusion may correspond to other dates (e.g. the date when the buyer notified the supplier, which had the legal effect of concluding the contract).",
           "type": [
             "string",
             "null"
