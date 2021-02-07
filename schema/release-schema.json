@@ -248,13 +248,18 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total upper estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "$ref": "#/definitions/Value"
         },
         "minValue": {
           "title": "Minimum value",
-          "description": "The minimum estimated value of the procurement.  A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated minimum value of the procurement.  A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The estimated maximum value of the framework agreement, as estimated when publishing the tender information.",
+          "$ref": "#/definitions/Value"      
         },
         "procurementMethod": {
           "title": "Procurement method",
@@ -485,7 +490,7 @@
     },
     "Award": {
       "title": "Award",
-      "description": "An award for the given procurement. There can be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
+      "description": "An award for the given procurement. There can be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer. When concluding framework agreements, a single award should inform about all participating suppliers.",
       "type": "object",
       "required": [
         "id"
@@ -544,8 +549,18 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total value of this award. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement, those should be given in estimatedValue or maximumValue instead.",
           "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The estimated maximum value of the framework agreement, as estimated when making the award.",
+          "$ref": "#/definitions/Value"
+        },
+        "estimatedValue": {
+          "title": "Estimated value",
+          "description": "The estimated value of the framework agreement, as estimated when making the award.",
+          "$ref": "#/definitions/Value" 
         },
         "suppliers": {
           "title": "Suppliers",
@@ -682,8 +697,21 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement, those should be given in estimatedValue or maximumValue instead.",
           "$ref": "#/definitions/Value"
+
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The maximum value of the framework agreement.",
+          "$ref": "#/definitions/Value"
+
+                  },
+        "estimatedValue": {
+          "title": "Estimated value",
+          "description": "The estimated value of the framework agreement, as estimated when the framework agreement is concluded (e.g. signed).",
+          "$ref": "#/definitions/Value"
+
         },
         "items": {
           "title": "Items contracted",
