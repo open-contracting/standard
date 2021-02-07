@@ -29,9 +29,9 @@ In OCDS, the `Award` object is intended to communicate a direct relationship bet
 
 Contracting processes can result in different types of contracts between buyers and suppliers, such as:
 
-* Contract describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery)
-* Contracts only describing general conditions (e.g. a framework agreement)
-* Contractly only describing specific conditions (e.g. a contract within a framework agreement)
+* Contract describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery),
+* Contracts only describing the general contractual conditions, such as a framework agreement,
+* Contracts only describing the specific contractual conditions, such as a contract within a framework agreement.
 
  Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also cover prizes or other rewards (e.g. a follow-up contract) resulting from a design contest.
 
@@ -70,12 +70,6 @@ OCDS defines a supplier as:
 The [Chartered Institute of Procurement and Supply](https://www.cips.org/en-NZ/knowledge/procurement-topics-and-skills/ecommerce---systems/e-sourcing--e-procurement-systems-p2p/catalogue-management/) describes an electronic catalog as:
 
 > *a web resource that provides information on products and services offered and sold by a vendor, and supports on-line ordering and payment capabilities.*
-
-### Purchase order
-
-A purchase order is an official document issued by a buyer committing to pay a supplier for the supply of specific goods, works or services to be delivered in the future.
-
-Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 
 ## The OCDS model
 
