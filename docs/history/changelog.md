@@ -39,6 +39,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Schema
 
+* [#1208](https://github.com/open-contracting/standard/pull/1208) Updating the description of `contracts` and `Contract` as well as related definitions of value fields and the use of "signed/concluded"
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
 * [#1113](https://github.com/open-contracting/standard/pull/1113) Add recommendation to put hyphen after the ocid prefix
@@ -52,7 +53,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
 ### Documentation
-
+* [#1208](https://github.com/open-contracting/standard/pull/1208) Minor changes to https://standard.open-contracting.org/latest/en/guidance/map/awards_contracts_buyers_suppliers to reflect the updated definitions of `contracts` and `Contract`.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
 * [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component
