@@ -1,6 +1,6 @@
 # Awards and contracts
 
-OCDS separates data about the contract award and data about the signed contract into the `awards` and `contracts` sections respectively. Source systems can contain data on awards, on contracts, or on both.
+OCDS separates data about the contract award and data about the contract into the `awards` and `contracts` sections respectively. Source systems can contain data on awards, on contracts, or on both.
 
 If the data in the source system relates only to contract awards, then only the `award` section of OCDS ought to be populated, unless the law governing procurement permits no changes between award and signature of a contract, in which case the `contract` section can be populated.
 

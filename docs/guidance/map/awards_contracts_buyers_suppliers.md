@@ -27,24 +27,13 @@ In OCDS, the `Award` object is intended to communicate a direct relationship bet
 
 ### Contract
 
-Contracting processes can result in different types of contract between buyers and suppliers, which can include:
+Contracting processes can result in different types of contracts between buyers and suppliers, such as:
 
-* A contract establishing the relationship, like the set-up of a framework agreement
-* A contract within the relationship, like a call-off contract under a framework agreement
-* Purchase orders
-* Catalog purchases
+* Contract describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery),
+* Contracts only describing the general contractual conditions, such as a framework agreement,
+* Contracts only describing the specific contractual conditions, such as a contract within a framework agreement.
 
-In OCDS, the `Contract` object is intended to communicate a legally binding agreement between a buyer and suppliers to provide items. This excludes agreements to set-up a structure through which contracts are later awarded to provide items, for example: a contract to set up or add suppliers to a framework agreement or dynamic purchasing system.
-
-```eval_rst
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
-      The OCDS schema and documentation are not clear what, precisely, is meant by 'contract'. A revision of the definition of `Contract` is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/896)).
-
-```
+ Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also govern the granting of prizes or other rewards (e.g. a follow-up contract) resulting from a design contest."
 
 ### Buyer
 
@@ -81,12 +70,6 @@ OCDS defines a supplier as:
 The [Chartered Institute of Procurement and Supply](https://www.cips.org/en-NZ/knowledge/procurement-topics-and-skills/ecommerce---systems/e-sourcing--e-procurement-systems-p2p/catalogue-management/) describes an electronic catalog as:
 
 > *a web resource that provides information on products and services offered and sold by a vendor, and supports on-line ordering and payment capabilities.*
-
-### Purchase order
-
-A purchase order is an official document issued by a buyer committing to pay a supplier for the supply of specific goods, works or services to be delivered in the future.
-
-Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 
 ## The OCDS model
 
