@@ -35,8 +35,6 @@ Contracting processes can result in different types of contracts between buyers 
 
  Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also govern the granting of prizes or other rewards (e.g. a follow-up contract) resulting from a design contest."
 
-
-
 ### Buyer
 
 OCDS defines the buyer as:
