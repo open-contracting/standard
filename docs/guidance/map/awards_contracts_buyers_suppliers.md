@@ -33,7 +33,9 @@ Contracting processes can result in different types of contracts between buyers 
 * Contracts only describing the general contractual conditions, such as a framework agreement,
 * Contracts only describing the specific contractual conditions, such as a contract within a framework agreement.
 
- Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also cover prizes or other rewards (e.g. a follow-up contract) resulting from a design contest.
+ Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also govern the granting of prizes or other rewards (e.g. a follow-up contract) resulting from a design contest."
+
+
 
 ### Buyer
 
