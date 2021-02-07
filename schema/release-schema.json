@@ -100,7 +100,7 @@
     },
     "contracts": {
       "title": "Contracts",
-      "description": "Information from the contract creation phase of the procurement process.",
+      "description": "Information from the contract creation phase of the contracting process.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Contract"
@@ -616,7 +616,7 @@
     "Contract": {
       "type": "object",
       "title": "Contract",
-      "description": "Information regarding the signed contract between the buyer and supplier(s).",
+      "description": "Information regarding the contract, typically between the buyer and supplier. This includes contracts describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery), as well as contracts only describing general conditions (e.g. a framework agreement) and those only describing specific conditions (e.g. a contract within a framework agreement). Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also cover prizes or other rewards (e.g. a follow-up contract) resulting from a design contest.",
       "required": [
         "id",
         "awardID"

@@ -27,24 +27,13 @@ In OCDS, the `Award` object is intended to communicate a direct relationship bet
 
 ### Contract
 
-Contracting processes can result in different types of contract between buyers and suppliers, which can include:
+Contracting processes can result in different types of contracts between buyers and suppliers, such as:
 
-* A contract establishing the relationship, like the set-up of a framework agreement
-* A contract within the relationship, like a call-off contract under a framework agreement
-* Purchase orders
-* Catalog purchases
+* Contract describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery)
+* Contracts only describing general conditions (e.g. a framework agreement)
+* Contractly only describing specific conditions (e.g. a contract within a framework agreement)
 
-In OCDS, the `Contract` object is intended to communicate a legally binding agreement between a buyer and suppliers to provide items. This excludes agreements to set-up a structure through which contracts are later awarded to provide items, for example: a contract to set up or add suppliers to a framework agreement or dynamic purchasing system.
-
-```eval_rst
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
-      The OCDS schema and documentation are not clear what, precisely, is meant by 'contract'. A revision of the definition of `Contract` is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/896)).
-
-```
+ Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also cover prizes or other rewards (e.g. a follow-up contract) resulting from a design contest.
 
 ### Buyer
 
