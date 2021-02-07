@@ -72,15 +72,16 @@ OCDS defines a supplier as:
 
 > *An entity awarded or contracted to provide goods, works or services.*
 
-### Electronic Catalog
+### Electronic catalog
 
-[EU directive 2014/24/EU](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32014L0024) on public procurement categorises an electronic catalog as a techniques, or instrument, for electronic and aggregated procurement and describes an electronic catalog as:
+```eval_rst
+.. admonition:: Hint
+    :class: hint
 
-> *...a format for the presentation and organisation of information in a manner that is common to all the participating bidders and which lends itself to electronic treatment*
+    .. markdown::
 
-The [Chartered Institute of Procurement and Supply](https://www.cips.org/en-NZ/knowledge/procurement-topics-and-skills/ecommerce---systems/e-sourcing--e-procurement-systems-p2p/catalogue-management/) describes an electronic catalog as:
-
-> *a web resource that provides information on products and services offered and sold by a vendor, and supports on-line ordering and payment capabilities.*
+      Electronic catalogs can often be found in more complicated procedures, usually together with framework agreements and involving multiple bidders. However, on their own, they are simply an electronic format (typically prescribed by the buyer) that participants in the contracting process must follow when exchaning information about technical specifications, evaluation criteria, bids, lots, etc. As such, catalogs do not influence the relationship between awards, contracts, buyers and suppliers. 
+```
 
 ### Purchase order
 
@@ -168,7 +169,6 @@ That said, many organizations can be assigned the 'buyer' role in the `parties` 
    award_notices_decisions
    mapping_awards_contracts
    consortia
-   catalogs
    frameworks
    purchase_orders
    
