@@ -33,6 +33,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ## [1.2] - YYYY-MM-DD
 
+### Codelists
+
+* [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
+
 ### Schema
 
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
