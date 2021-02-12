@@ -12,7 +12,7 @@ Click on schema elements to expand the tree, or use the '+' icon to expand all e
 
    .. markdown::
 
-      This page presents the release package schema in an interactive browser. You can also download the canonical version of the release package schema as [JSON Schema](../../release-package-schema.json).
+      This page presents the release package schema in an interactive browser. You can also download the canonical version of the release package schema as {download}`JSON Schema <../../schema/release-package-schema.json>`).
 ```
 
 <script src="../../_static/docson/public/js/widget.js" data-schema="../../../release-package-schema.json"></script>
