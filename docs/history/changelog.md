@@ -22,6 +22,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012) Merge Publication policy and Licensing pages into Publish page.
   * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007).
   * Add worked examples for the Build phase [#951](https://github.com/open-contracting/standard/pull/951) [#997](https://github.com/open-contracting/standard/pull/997).
+  * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
 * [#960](https://github.com/open-contracting/standard/pull/960) Support section: Merge Tools page into Support page.
 * [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
@@ -36,6 +37,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * `partyRole.csv`:
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of `procuringEntity`
+* [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
+* [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 
 ### Schema
 
@@ -51,6 +54,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
 * [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of `tender.procuringEntity`
+* [#1165](https://github.com/open-contracting/standard/pull/1165) Add `statusDetails` to Tender, Award, Contract
 
 ### Documentation
 
