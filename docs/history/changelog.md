@@ -33,9 +33,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ## [1.2] - YYYY-MM-DD
 
-## Codelists
+### Codelists
 
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate all the codes of the `submissionMethod` codelist.
+* [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
+* [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 
 ### Schema
 
