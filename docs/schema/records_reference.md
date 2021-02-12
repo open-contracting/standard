@@ -10,7 +10,7 @@ Whereas there can be multiple releases about a contracting process, there should
 
    .. markdown::
 
-      This page presents the record package schema as tables. You can also download the canonical version of the record package schema as [JSON Schema](../../record-package-schema.json), or view it in an [interactive browser](record_package).
+      This page presents the record package schema as tables. You can also download the canonical version of the record package schema as {download}`JSON Schema <../../record-package-schema.json>`, or view it in an [interactive browser](record_package).
 ```
 
 ## Package metadata

@@ -15,7 +15,7 @@ Publishers must use the codes in the codelists, unless no code is appropriate. I
       If you use new codes outside those in an open codelist, please document the codes in an [OCDS extension](../guidance/map/extensions) and in your [publication policy](../../guidance/publish/#finalize-your-publication-policy). Please also create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
 ```
 
-The release schema, in [JSON Schema](../../release-schema.json), has a `codelist` property to indicate the [CSV file](../../codelists/) that defines the codes in the codelist (shown as tables below). It also has an `openCodelist` property, to indicate whether the codelist is open or closed.
+The release schema, in {download}`JSON Schema <../../schema/release-schema.json>`, has a `codelist` property to indicate the <a href="../../codelists/">CSV File</a>) that defines the codes in the codelist (shown as tables below). It also has an `openCodelist` property, to indicate whether the codelist is open or closed.
 
 Codes are case-sensitive, and are generally provided as English language camelCase. Codes must not be translated, though the OCDS team will work with publishers to translate code titles and definitions.
 
