@@ -82,6 +82,11 @@ def add_translation_note(path, language, domain):
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
         replacement.make_links_absolute('{}/{}'.format(base_url, language))
 
+        # Remove any existing translation notes.
+        parent = replacement.xpath('//h1')[0].getparent()
+        for div in replacement.xpath('//h1/following-sibling::div[@class="admonition note"]'):
+            parent.remove(div)
+
         parent = document.xpath(xpath)[0].getparent()
         parent.getparent().replace(parent, replacement)
 

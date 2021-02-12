@@ -194,6 +194,9 @@
             }
           }
         },
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
         "procuringEntity": {
           "$ref": "#/definitions/OrganizationReferenceVersionedId"
         },
@@ -582,6 +585,9 @@
             }
           }
         },
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
         "date": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
@@ -712,6 +718,8 @@
                   "active",
                   "cancelled",
                   "terminated",
+                  "terminatedEarly",
+                  "terminatedSuccessfully",
                   null
                 ],
                 "codelist": "contractStatus.csv",
@@ -725,6 +733,9 @@
               }
             }
           }
+        },
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "period": {
           "$ref": "#/definitions/Period"
