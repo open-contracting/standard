@@ -40,7 +40,7 @@ In software development terms, releases are analogous to Git commits on a branch
 
 Releases follow the [release schema](../schema/reference). The schema covers the whole contracting process, but there are only a few mandatory fields. The box below shows an example.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/tender.json
    :jsonpointer: /releases
    :expand: 
@@ -90,19 +90,19 @@ The following example shows releases with minimal changes on each update.
 
 3. The third release presents award data, and ignores the tender section.
 
- ```eval_rst
+ ```{eval-rst}
 .. jsoninclude:: ../examples/minimal_updates/tender.json
    :jsonpointer: /releases/0
    :expand: tender
  ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/minimal_updates/tenderUpdate.json
    :jsonpointer: /releases/0
    :expand: tender
 ```
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/minimal_updates/award.json
    :jsonpointer: /releases/0
    :expand: award
@@ -114,7 +114,7 @@ The following example shows releases with minimal changes on each update.
 
 A record follows the structure defined in the [Records Reference](../schema/records_reference). Below is a full example.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0
    :expand: 
@@ -145,7 +145,7 @@ Compiled releases are not mandatory, but it helps to make OCDS data more accessi
 
 Consider how to calculate the **total value of active tenders** using compiled releases:
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
     :header-rows: 1
     :file: ../examples/compiledreleases_compiled.csv
@@ -155,7 +155,7 @@ Working with compiled releases, this metric can be calculated by filtering on th
 
 Compare that to how to calculate the **total value of active tenders** using releases:
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
     :header-rows: 1
     :file: ../examples/compiledreleases_releases.csv

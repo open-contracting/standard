@@ -11,7 +11,7 @@ On this page, you will find guidance on how to:
 * Understand your key decisions and publication goals
 * Include OCDS in requirements for software developers and technical consultants
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::

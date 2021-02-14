@@ -1,4 +1,4 @@
-## Users and use cases
+# Users and use cases
 
 Open data is a means, not an end in itself. The first stage of any work with OCDS is to consider who will use the data that is produced, and which fields and features of the data are important to them.
 
@@ -17,9 +17,9 @@ You can read more about how people around the world are using OCDS, and other co
 
 As you start implementing OCDS, consider how you will engage with data users, and how you will ensure the data and documents you make available will meet their needs. 
 
-### Four example use cases
+## Four example use cases
 
-#### Value for money in procurement
+### Value for money in procurement
 
 Open contracting data can help officials to get good value for money on the goods and services in the procurement process, and can also help in identifying whether value for money has been achieved in concluded contracts.
 
@@ -27,7 +27,7 @@ These users want to analyze trends in prices and supplier performance, including
 
 Comparable data using common codelists and the availability of unit prices are particularly important for value for money use cases.
 
-#### Detecting fraud and corruption
+### Detecting fraud and corruption
 
 All stakeholders (civil society, the private sector, government and donors) have an interest in identifying and combating corruption in public contracting. Open contracting data can be used to scrutinize procurement documents and data for ‘red flags’ that might indicate public monies are being mis-used.
 
@@ -37,7 +37,7 @@ A ‘systemic’ approach looks for suspicious patterns, and makes links between
 
 Data that can be linked up using globally unique identifiers for companies is particularly important for fraud and corruption detection use cases.
 
-#### Competing for public contracts
+### Competing for public contracts
 
 Open contracting data can be used by private firms to understand the potential pipeline of procurement opportunities. It is a core principle of open contracting that information ought to be made available at the early stages of a contracting process, including information on planned procurement, and invitations for tenders.
 
@@ -45,7 +45,7 @@ Information on past contracts can allow firms to identify upcoming opportunities
 
 Forward looking and timely information is particularly important for private sector users, as well as being able to uniquely identify procuring entities, geographic locations, sectors, and the kinds of items which are being procured. 
 
-#### Monitoring Service Delivery 
+### Monitoring Service Delivery 
  
 Monitoring groups want to ensure that public contracting delivers value to citizens in terms of quality of goods, works, and services provided. To monitor contracting effectively involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground.
 

@@ -1,6 +1,6 @@
 # Framework agreements
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
     :class: note
 

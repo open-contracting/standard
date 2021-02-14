@@ -26,7 +26,7 @@ This example goes through updates during the **tender** stage in a contracting p
 
 A publisher issues a tender for a "Data merge tool". A new release with the `tag` 'tender' is built, see the JSON example below.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-tender-example.json
    :jsonpointer: /records/0/releases/0
@@ -39,7 +39,7 @@ A publisher issues a tender for a "Data merge tool". A new release with the `tag
 
 Weeks later, the publisher expands the `description` of the tender to provide more details about the tool being procured. A new release with the `tag` 'tenderUpdate' is built. The publisher does not consider this to be a formal 'amendment' to the tender, so does not publish any amendment information. See the JSON release below.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-tender-example.json
    :jsonpointer: /records/0/releases/1
@@ -52,7 +52,7 @@ Weeks later, the publisher expands the `description` of the tender to provide mo
 
 A few days later, the publisher increases the value of the tender and extends the deadline for bid submissions. These changes are considered as an 'amendment' by the publisher (depending on jurisdiction, certain changes can need to be disclosed as amendments), and so the new release has the `tag` 'tenderAmendment' and an `amendments` block under `tender`. The release reflects the updated value (USD 2000 instead of USD 1000) and the updated closing date for bid submissions (`2012-02-20` instead of `2012-02-15`). See the JSON example below.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-tender-example.json
    :jsonpointer: /records/0/releases/2
@@ -65,7 +65,7 @@ A few days later, the publisher increases the value of the tender and extends th
 
 A full record is provided below, with all the releases for the process and a `compiledRelease` and `versionedRelease`. The `versionedRelease` block reflects all the changes made in the tender.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-tender-example.json
    :jsonpointer:
@@ -100,7 +100,7 @@ A contract notice is published for the purchase of domestic appliances. The publ
 
 See the JSON release below.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-contract-example.json
    :jsonpointer: /records/0/releases/0
@@ -115,7 +115,7 @@ A few days after the contract release, its scope is increased to include the pur
 
 See the example release below.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-contract-example.json
    :jsonpointer: /records/0/releases/1
@@ -134,7 +134,7 @@ An example record for the whole process is shown below. Consider downloading the
 
 Note that the `compiledRelease` contains all the items, included the latest one added in the contract amendment.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-contract-example.json
    :jsonpointer:
@@ -151,7 +151,7 @@ Where the source system stores a history of contract amendments, either as separ
 
 The table below shows an example of a contract notices table from a procurement system, with an original contract in the first row and an amendment of the same contract in the second. The amendment increases the value of the original contract and changes the contract period.
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :file: ../../examples/amendments-contract-notice.csv
    :header-rows: 1
@@ -159,7 +159,7 @@ The table below shows an example of a contract notices table from a procurement 
 
 This can be modelled as the separate releases in OCDS as shown below. The original `contract` release includes all the fields from the first entry in the contract notices table. A `contractAmendment` release is built for each contract amendment identified in the table (by verifying that the `amendmentId` column in the contract notices table is not empty).
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-easy-releases-example.json
    :jsonpointer: /records/0/releases/1
@@ -168,7 +168,7 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../_static/json/amendments/amendments-easy-releases-example.json
    :jsonpointer: /records/0/releases/2

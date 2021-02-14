@@ -1,19 +1,17 @@
 Open Contracting Data Standard: Documentation
 =============================================
 
-```eval_rst
-.. localization-note:: 
+```{localization-note}
 
-  TRANSLATORS: DO NOT TRANSLATE THIS MESSAGE DIRECTLY
+TRANSLATORS: DO NOT TRANSLATE THIS MESSAGE DIRECTLY
 
-  Instead if this is a **Community translation** translate the following:
+Instead if this is a **Community translation** translate the following:
 
-    This is a community translation of OCDS carried out by [ TRANSLATORS ]. 
+  This is a community translation of OCDS carried out by [ TRANSLATORS ]. 
 
-    This translation was last updated on [ DATE ]. If the source OCDS documentation has changed since this date, some strings in this documentation might not appear translated. 
+  This translation was last updated on [ DATE ]. If the source OCDS documentation has changed since this date, some strings in this documentation might not appear translated. 
 
-  If this is an officially supported translation (French and Spanish) please translate as a single dash '-'. 
-
+If this is an officially supported translation (French and Spanish) please translate as a single dash '-'. 
 ```
 
 Governments around the world spend an estimated US$9.5 trillion through contracts every year. Yet, contracting information is often unavailable for public scrutiny.
@@ -32,12 +30,10 @@ In this documentation, you will find:
 If you are interested to learn more about Open Contracting advocacy and how it can be used to support wider reform and measurable improvements in public contracting, please visit [www.open-contracting.org](https://www.open-contracting.org/).
 
 
-```eval_rst
-.. note:: 
+```{note}
+This is the 1.1 release of OCDS, published on 31st May 2017. Version 1.0 documentation is still available from the version switcher at the bottom left of the page.
 
-  This is the 1.1 release of OCDS, published on 31st May 2017. Version 1.0 documentation is still available from the version switcher at the bottom left of the page.
-
-  This is the English (and canonical) version of the OCDS documentation. You can switch to the Spanish, French, or Italian translations using the language switcher at the bottom left of the page.
+This is the English (and canonical) version of the OCDS documentation. You can switch to the Spanish, French, or Italian translations using the language switcher at the bottom left of the page.
 ```
 
 ## About
@@ -50,14 +46,13 @@ Version 1.0 of the standard was developed for the OCP by the [World Wide Web Fou
 
 A [free helpdesk service](support/index) is available to support implementation and use of OCDS.
 
-```eval_rst
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   getting_started/index
-   guidance/index
-   schema/index
-   support/index
-   history/index
-   governance/index
+getting_started/index
+guidance/index
+schema/index
+support/index
+history/index
+governance/index
 ```

@@ -1,5 +1,8 @@
-Privacy Notice
---------------
+---
+orphan: true
+---
+
+# Privacy Notice
 
 Open Contracting Partnership is committed to ensuring that your privacy is protected. This privacy notice sets out how we collect and process any personal data when you use this website.
 
@@ -22,7 +25,7 @@ We process personal data for the following purposes:
 
 We rely on [legitimate interests](https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/legitimate-interests/) ([GDPR Article 6(1)(f)](https://gdpr-info.eu/art-6-gdpr/)) as the lawful basis for this processing. Details about the type of data, the purpose of the processing and legitimate interests, and the storage and retention of the data are set out below.
 
-### Understanding website visitor and traffic patterns
+## Understanding website visitor and traffic patterns
 
 We collect data about your visits to the website, for the purpose of analysing how the website is used, so that we can improve it. We use Google Analytics for this.
 
@@ -42,7 +45,7 @@ Data is transferred to Google Analytics, who may transfer data to third countrie
 
 The data is kept indefinitely, in pseudonymised form.
 
-### Understanding server behaviour
+## Understanding server behaviour
 
 We collect data about your visits to the website in server logs. This is for the purpose of debugging network issues, monitoring server usage, and identifying malicious usage.
 

@@ -6,7 +6,7 @@ Each subsection refers to a stage or event in the contracting process lifetime.
 
 Refer to the [releases and records](../../getting_started/releases_and_records) guidance for an introduction to the concepts involved.
 
-### Planning
+## Planning
 
 The London Borough of Barnet plans to publish a tender for cycle lane improvements later in the year. To prepare the market they publish a *notice of planned procurement*. This is also known as *prior information notice*, or *future opportunity notice*.
 
@@ -15,7 +15,7 @@ The publisher creates an OCDS release to represent this notice. The release uses
 The publisher also creates an OCDS record for the new contracting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled version is expected look very much like this release. Compare the planning release and the record using the box below.
 
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/planning.json
    :jsonpointer: /releases
@@ -24,7 +24,7 @@ The publisher also creates an OCDS record for the new contracting process. The r
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/records/planning.json
    :jsonpointer: /records
@@ -33,7 +33,7 @@ The publisher also creates an OCDS record for the new contracting process. The r
 
 ```
 
-### Tender
+## Tender
 
 The London Borough of Barnet is ready to invite bids for the contract. They issue the tender via an *notice of intended procurement*. This is also known as *contract notice* or *opportunity notice*.
 
@@ -52,7 +52,7 @@ There are no changes to the planning release published before. But the new relea
 The publisher adds the new release to the record, in the releases list. Also they update the compiled and versioned releases with the new information. Note that the bid submission date has changed in the compiled release. Also, note that the versioned release has a list of changes for each field that has been updated.
 
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/tender.json
    :jsonpointer: /releases
@@ -61,7 +61,7 @@ The publisher adds the new release to the record, in the releases list. Also the
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/records/tender.json
    :jsonpointer: /records
@@ -70,7 +70,7 @@ The publisher adds the new release to the record, in the releases list. Also the
 
 ```
 
-### Tender Update
+## Tender Update
 
 The enquiry period has ended, and a few questions from potential suppliers have been received. The procuring entity issues a document with the responses to the enquiries received from bidders.
 
@@ -80,7 +80,7 @@ The previous releases of planning and tender are not changed. In the new release
 
 The record now has three immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. Also, the field `tender.hasEnquiries` has more than one entry in the versioned release.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/tenderUpdate.json
    :jsonpointer: /releases
@@ -89,7 +89,7 @@ The record now has three immutable releases, and updated compiled and versioned 
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/records/tenderUpdate.json
    :jsonpointer: /records
@@ -98,7 +98,7 @@ The record now has three immutable releases, and updated compiled and versioned 
 
 ```
 
-### Award
+## Award
 
 The procuring entity makes the decision to award the contract to Balfour Beatty. They issue an award notice. 
 
@@ -108,7 +108,7 @@ The `parties` array has a new entry with the supplier's information. The complet
 
 The publisher adds the new release to the record. They also update the compiled and versioned releases. The compiled release reflects the changes to the `awards`, `tender` and `parties` sections. The versioned release includes a new change for the `tender.status` field.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/award.json
    :jsonpointer: /releases
@@ -117,7 +117,7 @@ The publisher adds the new release to the record. They also update the compiled 
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/records/award.json
    :jsonpointer: /records
@@ -126,7 +126,7 @@ The publisher adds the new release to the record. They also update the compiled 
 
 ```
 
-### Contract
+## Contract
 
 By law, the procuring entity has to wait for complaints for a given period of time before signing a contract. Once the period ends with no complaints, the contract with the supplier is signed.
 
@@ -135,7 +135,7 @@ The publisher creates a new OCDS release using the 'contract' tag. They include 
 The record gets updated to include the new release. The compiled and versioned release now have the new `contract` section. There are no updates to other sections.
 
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/contract.json
    :jsonpointer: /releases
@@ -144,7 +144,7 @@ The record gets updated to include the new release. The compiled and versioned r
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/records/contract.json
    :jsonpointer: /records
@@ -154,7 +154,7 @@ The record gets updated to include the new release. The compiled and versioned r
 ```
 
 
-### Implementation
+## Implementation
 
 The supplier starts the construction work. After a while, the procuring entity makes the first payment to the supplier. The publisher creates a release to document this update in the process.
 
@@ -179,7 +179,7 @@ OCDS can be used to combine data from different systems. For more information re
 The publisher adds the new release from the finance system to the releases list in the OCDS record. The compiled and versioned releases get updated to include the new transaction.
 
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/implementation.json
    :jsonpointer: /releases
@@ -188,7 +188,7 @@ The publisher adds the new release from the finance system to the releases list 
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/records/implementation.json
    :jsonpointer: /records
@@ -197,7 +197,7 @@ The publisher adds the new release from the finance system to the releases list 
 
 ```
 
-### Contract Amendment
+## Contract Amendment
 
 Unexpected complications causes delays in the construction work. Because of them the procuring entity and the supplier agree to a contract extension. This will cover the extra time and cost needed to complete the works. 
 
@@ -208,7 +208,7 @@ Note that contract amendments in OCDS involves more modelling considerations. Re
 The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release shows new entries for the contract’s value and end date.
 
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/contractAmendment.json
    :jsonpointer: /releases
@@ -217,7 +217,7 @@ The publisher updates the record for the contracting process with the new releas
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/records/contractAmendment.json
    :jsonpointer: /records

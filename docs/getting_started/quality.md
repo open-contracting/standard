@@ -105,7 +105,7 @@ _Measures_: Whether the publisher calculates any key performance indicators or u
 _Indicates_: Whether it is possible to answer the most fundamental questions of priority use cases (who buys what from who, when and for how much).  
 _Measures_: Coverage of specific fields: tender value, tender period, tender title, buyer name, award value, award date, supplier name, contract period.
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::

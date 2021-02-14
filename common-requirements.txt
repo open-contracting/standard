@@ -4,18 +4,19 @@
 #
 #    pip-compile common-requirements.in
 #
--e git+https://github.com/readthedocs/commonmark.py.git@dafae75015cc342f3fddb499674bab97ac4a6a96#egg=commonmark
+-e git+https://github.com/sphinx-doc/sphinx.git@3207da1fa81a5d3171d3bbb15768e1c6f6b39b58#egg=sphinx
     # via
     #   -r common-requirements.in
-    #   recommonmark
--e git+https://github.com/jpmckinney/recommonmark.git@hotfix#egg=recommonmark
-    # via -r common-requirements.in
+    #   myst-parser
+    #   sphinx-intl
 -e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
     # via -r common-requirements.in
 alabaster==0.7.12
     # via sphinx
 attrs==19.3.0
-    # via pytest
+    # via
+    #   markdown-it-py
+    #   pytest
 babel==2.8.0
     # via
     #   sphinx
@@ -29,10 +30,11 @@ chardet==3.0.4
 click==7.0
     # via
     #   ocdsindex
+    #   pip-tools
     #   sphinx-intl
 docutils==0.16
     # via
-    #   recommonmark
+    #   myst-parser
     #   sphinx
 elasticsearch==7.10.1
     # via ocdsindex
@@ -45,17 +47,30 @@ importlib-metadata==1.4.0
     #   pluggy
     #   pytest
 jinja2==2.10.3
-    # via sphinx
+    # via
+    #   myst-parser
+    #   sphinx
 json-merge-patch==0.2
     # via ocdsextensionregistry
 jsonref==0.2
     # via ocdsextensionregistry
 lxml==4.6.2
     # via ocdsindex
+markdown-it-py==0.6.1
+    # via
+    #   mdit-py-plugins
+    #   myst-parser
 markupsafe==1.1.1
     # via jinja2
+mdit-py-plugins==0.2.5
+    # via
+    #   -r common-requirements.in
+    #   markdown-it-py
+    #   myst-parser
 more-itertools==8.1.0
     # via pytest
+myst-parser==0.13.3
+    # via -r common-requirements.in
 ocds-babel==0.2.1
     # via -r common-requirements.in
 ocdsextensionregistry==0.0.23
@@ -66,6 +81,8 @@ packaging==20.0
     # via
     #   pytest
     #   sphinx
+pip-tools==5.5.0
+    # via -r common-requirements.in
 pluggy==0.13.1
     # via pytest
 py==1.8.1
@@ -80,6 +97,8 @@ python-slugify==1.2.6
     # via transifex-client
 pytz==2019.3
     # via babel
+pyyaml==5.4.1
+    # via myst-parser
 requests-cache==0.5.2
     # via ocdsextensionregistry
 requests==2.22.0
@@ -99,11 +118,6 @@ snowballstemmer==2.0.0
     # via sphinx
 sphinx-intl==0.9.12
     # via -r common-requirements.in
-sphinx==2.4.4
-    # via
-    #   -r common-requirements.in
-    #   recommonmark
-    #   sphinx-intl
 sphinxcontrib-applehelp==1.0.1
     # via sphinx
 sphinxcontrib-devhelp==1.0.1
@@ -132,4 +146,5 @@ zipp==1.0.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
+# pip
 # setuptools

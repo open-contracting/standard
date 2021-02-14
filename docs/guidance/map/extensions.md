@@ -18,7 +18,7 @@ Extensions are applied by adding their URLs to the `extensions` array in the rel
 
 This version of OCDS uses these specific versions of core extensions:
 
-```eval_rst
+```{eval-rst}
  .. extensionexplorerlinklist::
 
 ```
