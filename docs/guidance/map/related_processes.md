@@ -14,7 +14,7 @@ A contracting process brings together, under a single identifier, the informatio
 * What was the total value of spending that resulted from this award?
 * Was a renewal of this contract signed?
 
-In some cases, complex contracting processes cannot be represented under a single identifier because, there are multiple initiation stages: for example, when a framework is setup, and then mini-competitions are used for purchases from the framework.
+In some cases, complex contracting processes cannot be represented under a single identifier because there are multiple initiation stages. For examples, this is the case when a framework is setup, and then mini-competitions are used for purchases from the framework.
 
 There are also cases when users want to know about related, but separate, contracting processes - such as the tender for renewal of a contract, or sub-contracting processes.
 
