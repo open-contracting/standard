@@ -2,7 +2,11 @@
 
 OCDS defines a contracting process as:
 
-> All the planning, tendering information, awards, contracts and contract implementation information related to a single initiation process.
+> All the actions aimed at concluding one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.
+
+> Procedures that failed and were restarted are considered as new processes.
+
+> Boundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots)."
 
 A contracting process brings together, under a single identifier, the information that users need to answer questions such as:
 
@@ -10,10 +14,7 @@ A contracting process brings together, under a single identifier, the informatio
 * What was the total value of spending that resulted from this award?
 * Was a renewal of this contract signed?
 
-In some cases, complex contracting processes cannot be represented under a single identifier because:
-
-* There are multiple initiation stages: for example, when a framework is setup, and then mini-competitions are used for purchases from the framework;
-* The procurement systems through which stages of the process are managed by different bodies, and are not integrated;
+In some cases, complex contracting processes cannot be represented under a single identifier because, there are multiple initiation stages: for example, when a framework is setup, and then mini-competitions are used for purchases from the framework.
 
 There are also cases when users want to know about related, but separate, contracting processes - such as the tender for renewal of a contract, or sub-contracting processes.
 
