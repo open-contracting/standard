@@ -44,7 +44,7 @@ extract_schema: $(POT_DIR)
 # See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.gettext.MessageCatalogBuilder
 .PHONY: extract_markdown
 extract_markdown: current_lang.en
-	sphinx-build -q -b gettext $(DOCS_DIR) $(POT_DIR)
+	sphinx-build -nW --keep-going -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
 .PHONY: extract
 extract: extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
@@ -96,11 +96,11 @@ clean_current_lang:
 # See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.html.DirectoryHTMLBuilder
 .PHONY: build_source
 build_source: current_lang.en
-	sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
+	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
 
 # Build the translated documentation. (Same as source, but with a language configuration setting.)
 $(TRANSLATIONS:.%=build.%): build.%: current_lang.%
-	sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
+	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
 
 .PHONY: source
 source: build_source clean_current_lang
