@@ -42,7 +42,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1210](https://github.com/open-contracting/standard/pull/1210) Add the 'CELEX' and 'LEXML' codes from the legal basis extension to the `itemClassificationScheme` codelist
 
 ### Schema
-
+* [#1216](https://github.com/open-contracting/standard/pull/1216) Update definition of ocid, update references to contracting process to take into account planning process.
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
 * [#1113](https://github.com/open-contracting/standard/pull/1113) Add recommendation to put hyphen after the ocid prefix
@@ -58,7 +58,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1165](https://github.com/open-contracting/standard/pull/1165) Add `statusDetails` to Tender, Award, Contract
 
 ### Documentation
-
+* [#1216](https://github.com/open-contracting/standard/pull/1216) Update definitions of contracting process, record, ocid, introduce definition of planning process.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
 * [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component
