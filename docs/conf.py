@@ -108,8 +108,6 @@ myst_enable_extensions = []
 
 
 def setup(app):
-    app.add_config_value('extension_versions', extension_versions, True)
-
     # The root of the repository.
     basedir = Path(os.path.realpath(__file__)).parents[1]
     # The `LOCALE_DIR` from `config.mk`.
