@@ -4,8 +4,6 @@
 #
 #    pip-compile common-requirements.in
 #
--e git+https://github.com/readthedocs/commonmark.py.git@dafae75015cc342f3fddb499674bab97ac4a6a96#egg=commonmark
-    # via -r common-requirements.in
 -e git+https://github.com/sphinx-doc/sphinx.git@3207da1fa81a5d3171d3bbb15768e1c6f6b39b58#egg=sphinx
     # via
     #   -r common-requirements.in
@@ -32,6 +30,7 @@ chardet==3.0.4
 click==7.0
     # via
     #   ocdsindex
+    #   pip-tools
     #   sphinx-intl
 docutils==0.16
     # via
@@ -82,6 +81,8 @@ packaging==20.0
     # via
     #   pytest
     #   sphinx
+pip-tools==5.5.0
+    # via -r common-requirements.in
 pluggy==0.13.1
     # via pytest
 py==1.8.1
@@ -145,4 +146,5 @@ zipp==1.0.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
+# pip
 # setuptools
