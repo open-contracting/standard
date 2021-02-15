@@ -56,6 +56,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of `tender.procuringEntity`
 * [#1165](https://github.com/open-contracting/standard/pull/1165) Add `statusDetails` to Tender, Award, Contract
+* [#1167](https://github.com/open-contracting/standard/pull/1167) Improve the description of `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`
 
 ### Documentation
 
