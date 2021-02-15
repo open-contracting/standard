@@ -36,8 +36,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 ### Codelists
 
 * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
+* `partyRole.csv`:
+  * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of `procuringEntity`
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
+* [#1210](https://github.com/open-contracting/standard/pull/1210) Add the 'CELEX' and 'LEXML' codes from the legal basis extension to the `itemClassificationScheme` codelist
 
 ### Schema
 
@@ -52,7 +55,9 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1125](https://github.com/open-contracting/standard/pull/1125) Add `weight` to `Item.unit`
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
 * [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
+* [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of `tender.procuringEntity`
 * [#1165](https://github.com/open-contracting/standard/pull/1165) Add `statusDetails` to Tender, Award, Contract
+* [#1167](https://github.com/open-contracting/standard/pull/1167) Improve the description of `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`
 
 ### Documentation
 
