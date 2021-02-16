@@ -166,14 +166,12 @@ That said, many organizations can be assigned the 'buyer' role in the `parties` 
 
 ## Examples
 
-```{eval-rst}
-.. toctree::
-   :maxdepth: 1
+```{toctree}
+:maxdepth: 1
 
-   award_notices_decisions
-   mapping_awards_contracts
-   consortia
-   frameworks
-   purchase_orders
-   
+award_notices_decisions
+mapping_awards_contracts
+consortia
+frameworks
+purchase_orders
 ```

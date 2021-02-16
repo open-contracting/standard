@@ -4,11 +4,10 @@ This phase is about creating a new IT system, or updating an existing IT system,
 
 Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../../support/#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
 
-```{eval-rst}
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   build/data_collection_tools
+build/data_collection_tools
 ```
 
 As you complete this phase, you can:
@@ -37,14 +36,13 @@ There are many ways to extract data from data sources, combine it, map it to OCD
 
 Your choice of architecture can determine how frequently your data is updated, whether you can publish a change history and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the design stage.**
 
-```{eval-rst}
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   build/system_architectures
-   build/change_history
-   build/easy_releases
-   build/merging
+build/system_architectures
+build/change_history
+build/easy_releases
+build/merging
 ```
 **Resource:** [Technical case studies: OCDS implementation insights report](https://www.open-contracting.org/resources/technical-case-studies-ocds-implementation-insights/) provides insights into the technical choices made in OCDS implementations in Paraguay, Zambia, Colombia, Moldova and Argentina's Road Agency Vialidad.
 
@@ -73,12 +71,11 @@ Where resources allow, it is also best practice to provide multiple access metho
 
 **Tool:** [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) can be used to convert OCDS data between JSON and CSV/spreadsheet formats.
 
-```{eval-rst}
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   build/serialization
-   build/hosting
+build/serialization
+build/hosting
 ```
 
 ## Build your data pipeline
