@@ -34,11 +34,10 @@ The record package metadata has two differences from the release package metadat
 
 The following example demonstrates all package metadata and record fields.
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer:
-   :expand: packages, records
-   :title: package
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer:
+:expand: packages, records
+:title: package
 ```
 
 ## Record structure
@@ -66,11 +65,10 @@ For each `url` value, it must be possible for a consuming application to retriev
 
 The following example demonstrates the use of linked releases.
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0
-   :expand: releases, tag
-   :title: releases
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer: /records/0
+:expand: releases, tag
+:title: releases
 ```
 
 Above, the first linked release has a `url` value of <https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json#ocds-213czf-000-00002-01-award1>. The first part (`https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json`) is the URL of the release package, and the fragment identifier (`ocds-213czf-000-00002-01-award1`) is the `id` of the release.
@@ -83,11 +81,10 @@ An embedded release follows the [release schema](reference). In other words, ins
 
 The following example demonstrates the use of embedded releases.
 
-```{eval-rst}
-.. jsoninclude:: ../examples/record-embedded-releases.json
-   :jsonpointer: /records/0
-   :expand: releases,tag
-   :title: releases
+```{jsoninclude} ../examples/record-embedded-releases.json
+:jsonpointer: /records/0
+:expand: releases,tag
+:title: releases
 ```
 
 #### Comparing options
@@ -116,9 +113,8 @@ If the versioned release is not provided, third parties can generate it by proce
 
 The following example displays a single field's [versioned values](../merging/#versioned-values). This shows that the amount changed between the planning stage and the tender stage, while the currency did not.
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0/versionedRelease/tender/value
-   :expand: amount, releaseTag
-   :title: versioned
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer: /records/0/versionedRelease/tender/value
+:expand: amount, releaseTag
+:title: versioned
 ```

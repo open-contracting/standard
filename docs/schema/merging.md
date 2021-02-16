@@ -25,52 +25,40 @@ At each release, the agency also updates the record, which combines all the rele
 * The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
 * The versioned release makes it easy to see how the description and total estimated value changed over time.
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merge-tender-1.json
-   :jsonpointer: /releases
-   :expand: releases, tag, tender
-   :title: tender
-
+```{jsoninclude} ../examples/merging/merge-tender-1.json
+:jsonpointer: /releases
+:expand: releases, tag, tender
+:title: tender
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merge-tender-3.json
-   :jsonpointer: /releases
-   :expand: releases, tag, tender
-   :title: tenderAmendment
-
+```{jsoninclude} ../examples/merging/merge-tender-3.json
+:jsonpointer: /releases
+:expand: releases, tag, tender
+:title: tenderAmendment
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merge-award-1.json
-   :jsonpointer: /releases
-   :expand: releases, tag, awards
-   :title: awardOne
-
+```{jsoninclude} ../examples/merging/merge-award-1.json
+:jsonpointer: /releases
+:expand: releases, tag, awards
+:title: awardOne
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merge-award-2.json
-   :jsonpointer: /releases
-   :expand: releases, tag, awards
-   :title: awardTwo
-
+```{jsoninclude} ../examples/merging/merge-award-2.json
+:jsonpointer: /releases
+:expand: releases, tag, awards
+:title: awardTwo
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merged.json
-   :jsonpointer:
-   :expand: records, compiledRelease, tag, tender, awards
-   :title: record
-
+```{jsoninclude} ../examples/merging/merged.json
+:jsonpointer:
+:expand: records, compiledRelease, tag, tender, awards
+:title: record
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer:
-   :expand: records, versionedRelease, tag, tender, awards
-   :title: versioned
-
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer:
+:expand: records, versionedRelease, tag, tender, awards
+:title: versioned
 ```
 
 </div>
@@ -125,20 +113,16 @@ In a **versioned release**, with a few exceptions, a field's value is replaced w
 
 For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0/versionedRelease/tender/value
-   :expand: value, amount
-   :title: Versioned_values
-
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer: /records/0/versionedRelease/tender/value
+:expand: value, amount
+:title: Versioned_values
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer:
-   :expand: records, versionedRelease
-   :title: Versioned_release
-
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer:
+:expand: records, versionedRelease
+:title: Versioned_release
 ```
 
 The structure of the versioned release is described by the {download}`versioned release schema <../../build/current_lang/versioned-release-validation-schema.json>`; note that the `ocid` field's value is not versioned.
