@@ -112,10 +112,9 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 The `tender` section is also used to disclose information about the procedure used by the contracting process. In particular, the `tender.procurementMethod` field classifies the procedure using the following codelist:
 
-```{eval-rst}
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../../build/current_lang/codelists/method.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../../build/current_lang/codelists/method.csv
 ```
 
 ## Example: Pre-qualification

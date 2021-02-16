@@ -60,11 +60,10 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 **csv**
 
-```{eval-rst}
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: ../examples/language.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: 20 65 15
+:file: ../examples/language.csv
 ```
 
 ## Release structure

@@ -140,20 +140,18 @@ Compiled releases are not mandatory, but it helps to make OCDS data more accessi
 
 Consider how to calculate the **total value of active tenders** using compiled releases:
 
-```{eval-rst}
-.. csv-table-no-translate::
-    :header-rows: 1
-    :file: ../examples/compiledreleases_compiled.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../examples/compiledreleases_compiled.csv
 ```
 
 Working with compiled releases, this metric can be calculated by filtering on the tender status and summing the tender value.
 
 Compare that to how to calculate the **total value of active tenders** using releases:
 
-```{eval-rst}
-.. csv-table-no-translate::
-    :header-rows: 1
-    :file: ../examples/compiledreleases_releases.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../examples/compiledreleases_releases.csv
 ```
 
 If a user has releases only, they need to first determine the final status before calculating the result.
