@@ -23,15 +23,14 @@ When you are done you could be producing data that looks something like the cont
 :expand: releases, tender, awards, contracts, period, value, items, tag, parties, documents
 ```
 
-```{eval-rst}
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   use_cases
-   contracting_process
-   building_blocks
-   releases_and_records
-   publication_patterns
-   validation
-   quality
+use_cases
+contracting_process
+building_blocks
+releases_and_records
+publication_patterns
+validation
+quality
 ```
