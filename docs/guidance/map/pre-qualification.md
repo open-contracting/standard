@@ -124,11 +124,9 @@ The Bank of England issues a [restricted procedure contract notice](https://ted.
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS:
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/pre-qualification/pre-qualification-package.json
-   :jsonpointer: /releases/0/tender
-   :title: Tender section
-
+```{jsoninclude} ../../examples/pre-qualification/pre-qualification-package.json
+:jsonpointer: /releases/0/tender
+:title: Tender section
 ```
 
 Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
@@ -151,11 +149,9 @@ The notice represents the initiation of the contracting process, so it is modell
 
 The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a tender at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) is used to disclose the criteria for choosing which suppliers to invite proposals from.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/pre-qualification/pre-selection-package.json
-   :jsonpointer: /releases/0/tender
-   :title: Tender section
-
+```{jsoninclude} ../../examples/pre-qualification/pre-selection-package.json
+:jsonpointer: /releases/0/tender
+:title: Tender section
 ```
 
 ## Example: Pre-qualification in Paraguay
@@ -166,10 +162,9 @@ The invitation represents the initiation of a contracting process to establish a
 
 Only qualified suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to ‘selective’.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/pre-qualification/pre-qualification-paraguay-package.json
-   :jsonpointer: /releases/0/tender
-   :title: Tender section
+```{jsoninclude} ../../examples/pre-qualification/pre-qualification-paraguay-package.json
+:jsonpointer: /releases/0/tender
+   :title: Tnder section
 
 ```
 

@@ -16,11 +16,8 @@ In the example below:
 * The same needs to be applied to each `OrganizationReference` instance.
 
 
-```{eval-rst}
-
-.. jsoninclude:: ../../examples/organization_reference.json
-   :jsonpointer:
-   :expand: releases, parties, tender, tenderers, awards, suppliers
-   :title: organizationReference
-
+```{jsoninclude} ../../examples/organization_reference.json
+:jsonpointer:
+:expand: releases, parties, tender, tenderers, awards, suppliers
+:title: organizationReference
 ```

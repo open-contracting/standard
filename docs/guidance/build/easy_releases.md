@@ -91,10 +91,9 @@ It is possible to use the date alone as the release identifier, but prepending t
 
 See the full JSON file below.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/easy-releases/worked-example-1/1-tender.json
-   :jsonpointer:
-   :expand: releases,tender
+```{jsoninclude} ../../examples/easy-releases/worked-example-1/1-tender.json
+:jsonpointer:
+:expand: releases,tender
 ```
 
 #### 2. Tender update
@@ -119,10 +118,9 @@ The `lastModifiedDate` value has changed as well, therefore the value of the rel
 
 See the full JSON below:
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/easy-releases/worked-example-1/2-tenderUpdate.json
-   :jsonpointer:
-   :expand: releases,tag,tender
+```{jsoninclude} ../../examples/easy-releases/worked-example-1/2-tenderUpdate.json
+:jsonpointer:
+:expand: releases,tag,tender
 ```
 
 Note that the 'tag' field is still 'tender'. 
@@ -157,10 +155,9 @@ As the 'ProcurementProcess' table has been updated, the related release will hav
 
 And the 'awards' section will be filled with the corresponding data. See the full JSON below.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/easy-releases/worked-example-1/3-award.json
-   :jsonpointer:
-   :expand: releases,awards
+```{jsoninclude} ../../examples/easy-releases/worked-example-1/3-award.json
+:jsonpointer:
+:expand: releases,awards
 ```
 
 Note that we are keeping the 'tender' tag from the previous step. 
@@ -195,10 +192,9 @@ A new release id is generated:
 
 See the full JSON below.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/easy-releases/worked-example-1/4-contract.json
-   :jsonpointer:
-   :expand: releases,contracts
+```{jsoninclude} ../../examples/easy-releases/worked-example-1/4-contract.json
+:jsonpointer:
+:expand: releases,contracts
 ```
 
 ### Scenario 2: when a last modified date is NOT stored
@@ -240,10 +236,9 @@ It is important to include *all* data fields that are included in OCDS data in t
 
 See the full JSON below.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/easy-releases/worked-example-2/1-tender.json
-   :jsonpointer:
-   :expand: releases,tender
+```{jsoninclude} ../../examples/easy-releases/worked-example-2/1-tender.json
+:jsonpointer:
+:expand: releases,tender
 ```
 
 #### 2. Tender update
@@ -268,10 +263,9 @@ The same hash operation is repeated over the updated row and the resulting value
 
 See the full JSON below.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/easy-releases/worked-example-2/2-tenderUpdate.json
-   :jsonpointer:
-   :expand: releases,tag,tender
+```{jsoninclude} ../../examples/easy-releases/worked-example-2/2-tenderUpdate.json
+:jsonpointer:
+:expand: releases,tag,tender
 ```
 
 #### 3. Award
@@ -317,10 +311,9 @@ The result of the query is `610d5900f947bcf67100449999ea49ce`, and the new relea
 
 See the full JSON below.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/easy-releases/worked-example-2/3-award.json
-   :jsonpointer:
-   :expand: releases,awards
+```{jsoninclude} ../../examples/easy-releases/worked-example-2/3-award.json
+:jsonpointer:
+:expand: releases,awards
 ```
 
 #### 4. Contract
@@ -369,8 +362,7 @@ The new hash value is `1a87b0662990c66e140e62e813165107`, and the new release id
 
 See the final JSON below.
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/easy-releases/worked-example-2/4-contract.json
-   :jsonpointer:
-   :expand: releases,contracts
+```{jsoninclude} ../../examples/easy-releases/worked-example-2/4-contract.json
+:jsonpointer:
+:expand: releases,contracts
 ```

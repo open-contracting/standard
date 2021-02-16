@@ -40,11 +40,9 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](http:
 
 **JSON**
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/serialization-flat.json
-   :jsonpointer: 
-   :expand: releases, tender, items
-
+```{jsoninclude} ../../examples/serialization-flat.json
+:jsonpointer: 
+:expand: releases, tender, items
 ```
 
 **CSV**
@@ -77,11 +75,9 @@ For example, to represent a tender release with two items, the CSV file would in
 
 The JSON equivalent of this would be:
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/serialization-flat-two-items.json
-   :jsonpointer: 
-   :expand: releases, tender, items
-
+```{jsoninclude} ../../examples/serialization-flat-two-items.json
+:jsonpointer: 
+:expand: releases, tender, items
 ```
 
 Whilst this allows complex data to be expressed in flat CSV, users will need to rebuild the structure in order to analyze the data.

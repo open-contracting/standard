@@ -53,11 +53,9 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 **json**
 
-```{eval-rst}
-.. jsoninclude:: ../examples/language.json
-   :jsonpointer:
-   :expand: tender,item
-
+```{jsoninclude} ../examples/language.json
+:jsonpointer:
+:expand: tender,item
 ```
 
 **csv**
