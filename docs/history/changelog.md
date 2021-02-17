@@ -40,6 +40,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'buyer'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
+  * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate all the codes of the `submissionMethod` codelist, because they were either not submission methods, or not supported by use cases.
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
