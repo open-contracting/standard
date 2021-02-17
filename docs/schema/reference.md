@@ -165,11 +165,6 @@ The planning section can be used to describe the background to a contracting pro
 
 ```
 
-```eval_rst
-.. extensionlist:: The following extensions are available for planning
-   :list: planning
-```
-
 Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 #### Budget 
@@ -381,11 +376,6 @@ OCDS allows summarizing information in the document description field. Providing
     
 ```
 
-```eval_rst
-.. extensionlist:: The following extensions are available for document
-   :list: document
-```
-
 ### Period
 
 A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
@@ -397,11 +387,6 @@ Periods can also include a `maxExtentDate` which indicates the latest possible e
     :pointer: /definitions/Period
     :collapse: 
     
-```
-
-```eval_rst
-.. extensionlist:: The following extensions are available for period
-   :list: period
 ```
 
 #### Date
@@ -499,11 +484,6 @@ Financial values should be published with a currency attached.
 ```
 
 Support for exchange rates, and tax information, can be provided using extensions.
-
-```eval_rst
-.. extensionlist:: The following extensions for value are available
-   :list: value
-```
 
 ### RelatedProcess
 
