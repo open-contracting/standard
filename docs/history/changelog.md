@@ -35,6 +35,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Codelists
 
+* [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
 * `partyRole.csv`:
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of `procuringEntity`
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
