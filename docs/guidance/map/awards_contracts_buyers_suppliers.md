@@ -50,13 +50,17 @@ In OCDS, the `Contract` object is intended to communicate a legally binding agre
 
 OCDS defines the buyer as:
 
-> *The organization aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.*
+```eval_rst
+.. field-description:: ../../../build/current_lang/release-schema.json /properties/buyer
+```
 
 ### Suppliers
 
 OCDS defines a supplier as:
 
-> *An entity awarded or contracted to provide goods, works or services.*
+```eval_rst
+.. code-description:: ../../../build/current_lang/codelists/partyRole.csv supplier
+```
 
 ### Electronic Catalog
 
