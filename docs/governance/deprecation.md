@@ -10,7 +10,7 @@ Deprecated fields are marked in the JSON schema with the presence of a `deprecat
 
 For example:
 
-```eval_rst
+```{eval-rst}
 .. code-block:: json
      
      {   

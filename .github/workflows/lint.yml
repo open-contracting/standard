@@ -17,4 +17,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
     - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
+    - run: sudo apt-get install shellcheck
     - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
+    - run: shellcheck script/*

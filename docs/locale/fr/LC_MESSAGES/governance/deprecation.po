@@ -7,16 +7,17 @@
 # Colin Maudry <colin@maudry.com>, 2020
 # samgoeta <samgoeta@gmail.com>, 2020
 # Cecile LG <cecile@datactivi.st>, 2020
+# Emeline Vandeven <emeline@datactivist.coop>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-29 21:20-0400\n"
+"POT-Creation-Date: 2020-12-11 21:23-0500\n"
 "PO-Revision-Date: 2020-06-30 01:23+0000\n"
-"Last-Translator: Cecile LG <cecile@datactivi.st>, 2020\n"
-"Language-Team: French (https://www.transifex.com/OpenDataServices/teams/59224/fr/)\n"
+"Last-Translator: Emeline Vandeven <emeline@datactivist.coop>, 2020\n"
+"Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,6 +51,11 @@ msgid ""
 "take place, subject to the [governance](../#deprecation-policy) process, in "
 "the next major version (e.g. 2.0)."
 msgstr ""
+"Avant qu'une valeur de champ ou de liste de codes ne soit supprimée, elle "
+"sera marquée dans un premier temps comme dépréciée dans une version majeure "
+"ou mineure (par exemple dans la version 1.1) et la suppression ne se fera "
+"que selon le processus de [gouvernance](../#deprecation-policy) dans la "
+"prochaine version majeure (par exemple 2.0)."
 
 #: ../../docs/governance/deprecation.md:9
 msgid ""
@@ -58,6 +64,10 @@ msgid ""
 "the field was first deprecated, and provides a description of the reason for"
 " this deprecation."
 msgstr ""
+"Les champs dépréciés sont marqués dans le schéma JSON par la présence d'une "
+"propriété `deprecated` et d'un objet qui déclare le numéro de version dans "
+"lequel le champ a été initialement déprécié et donne une description du "
+"motif de cette dépréciation."
 
 #: ../../docs/governance/deprecation.md:11
 msgid "For example:"
@@ -69,6 +79,10 @@ msgid ""
 "**should** report to the user the associated description of the reason for "
 "deprecation (which might provide guidance on how to replace the field)."
 msgstr ""
+"Les outils de validation **doivent** déclarer l'utilisation des champs "
+"obsolètes à l'utilisateur, et **devraient** signaler à l'utilisateur la "
+"description associée de la raison de la dépréciation (qui peut fournir des "
+"conseils sur la façon de remplacer le champ)."
 
 #: ../../docs/governance/deprecation.md:27
 msgid ""
@@ -76,3 +90,7 @@ msgid ""
 "standard (e.g. 1.1) **must** support fields that were deprecated in that "
 "minor version, and **may** support fields that were removed."
 msgstr ""
+"Les applications qui visent une compatibilité avec une version particulière "
+"du standard (par exemple, 1.1) **doivent** supporter les champs qui ont été "
+"dépréciés dans cette version décimale et **peuvent** supporter les champs "
+"obsolètes dans les versions décimales antérieures."

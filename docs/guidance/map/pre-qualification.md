@@ -4,7 +4,7 @@ In single-stage procedures, procuring entities invite suppliers to bid without s
 
 But, many jurisdictions also use multi-stage procedures. Such procedures follow a process like:
 
-```eval_rst
+```{eval-rst}
 .. csv-table::
    :file: ../../examples/pre-qualification/multi-stage.csv
    :widths: 50,50
@@ -27,7 +27,7 @@ The model law obliges procuring entities to publish an invitation to pre-qualify
 
 The procuring entity assesses the qualifications of the suppliers based on their responses. Only pre-qualified suppliers can take part in the later proceedings.
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::
@@ -43,7 +43,7 @@ The UNCITRAL model law defines pre-selection as a procedure to:
 
 Pre-selection follows the same process as pre-qualification, with some additional requirements. The invitation to pre-qualify needs to specify how many suppliers the procuring entity will later request proposals from. The invitation also needs to specify how the procuring entity will select the suppliers to request proposals from.
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::
@@ -112,7 +112,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 The `tender` section is also used to disclose information about the procedure used by the contracting process. In particular, the `tender.procurementMethod` field classifies the procedure using the following codelist:
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../../build/current_lang/codelists/method.csv
@@ -124,7 +124,7 @@ The Bank of England issues a [restricted procedure contract notice](https://ted.
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS:
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/pre-qualification/pre-qualification-package.json
    :jsonpointer: /releases/0/tender
    :title: Tender section
@@ -133,7 +133,7 @@ The notice represents the initiation of the contracting process, so it is modell
 
 Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown ::
@@ -151,7 +151,7 @@ The notice represents the initiation of the contracting process, so it is modell
 
 The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a tender at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) is used to disclose the criteria for choosing which suppliers to invite proposals from.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/pre-qualification/pre-selection-package.json
    :jsonpointer: /releases/0/tender
    :title: Tender section
@@ -166,14 +166,14 @@ The invitation represents the initiation of a contracting process to establish a
 
 Only qualified suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to ‘selective’.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/pre-qualification/pre-qualification-paraguay-package.json
    :jsonpointer: /releases/0/tender
    :title: Tender section
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown ::

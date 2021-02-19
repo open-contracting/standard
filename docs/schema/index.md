@@ -10,7 +10,7 @@ The [release schema reference](reference) provides guidance on using each of the
 
 OCDS data must follow the I-JSON (Internet JSON) specification in [RFC7493](https://tools.ietf.org/html/rfc7493), according to which JSON text must be encoded using [UTF-8](https://en.wikipedia.org/wiki/UTF-8), and which introduces a number of requirements for numbers, objects and dates.
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 
