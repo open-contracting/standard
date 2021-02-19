@@ -50,7 +50,7 @@ In OCDS, the `Contract` object is intended to communicate a legally binding agre
 
 OCDS defines the buyer as:
 
-```eval_rst
+```{eval-rst}
 .. field-description:: ../../../build/current_lang/release-schema.json /properties/buyer
 ```
 
@@ -72,13 +72,13 @@ OCDS defines the buyer as:
 
 OCDS defines a supplier as:
 
-```eval_rst
+```{eval-rst}
 .. code-description:: ../../../build/current_lang/codelists/partyRole.csv supplier
 ```
 
 ### Electronic catalog
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Hint
     :class: hint
 

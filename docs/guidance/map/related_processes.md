@@ -1,6 +1,6 @@
 # Framework Agreements and Related Processes
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
     :class: note
 
@@ -10,7 +10,7 @@
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
     :class: note
 
@@ -171,7 +171,7 @@ The  `tender.competitive` field is used to identify if the second stage is compe
 
 The techniques and competitive extensions should also be declared in the package metadata:
 
-```eval_rst
+```{eval-rst}
 
 .. literalinclude:: ../../examples/frameworks/extensions_block.json
     :language: json
@@ -201,7 +201,7 @@ The notice is modelled as an OCDS release with `tag` set to ‘tender’ and wit
 * Since the framework agreement is closed  `tenderPeriod` is set to the deadline for responses to the invitation to participate
 * Since there is only one buyer, the `buyer` is set to reference the entry for NSS in the `parties` array.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/frameworks/closed_single_first_stage.json
    :jsonpointer:
@@ -220,7 +220,7 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 * An `Organization` object is added to the `parties` array with the supplier’s details.
 * An `OrganizationReference` object is added to `award.suppliers` to reference the supplier’s details in the `parties` array.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/frameworks/closed_single_supplier.json
    :jsonpointer:
@@ -248,7 +248,7 @@ The release has the following properties:
 * The `awards` section is populated with the initial contract value, period and items
 * The `contracts` section is populated and linked to the award.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/frameworks/closed_single_award.json
    :jsonpointer:
@@ -275,7 +275,7 @@ The notice is modelled as an OCDS release with `tag` set to ‘tender’ and wit
 * Since there are two buyers, the ‘buyer’ object is not set, and the buyers are declared in the `parties` array.
 * Since Chile Compra is the entity who manages the procurement process, the `procuringEntity` is set to reference the entry for Chile Compra in the `parties` array.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/frameworks/open_multiple_first_stage.json
    :jsonpointer:
@@ -294,7 +294,7 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 * An `Organization` object per supplier is added to the `parties` array with the supplier’s details.
 * An `OrganizationReference` object per supplier is added to `award.suppliers` to reference the supplier’s details in the `parties` array.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/frameworks/open_multiple_supplier.json
    :jsonpointer:
@@ -317,7 +317,7 @@ The release has the following properties:
 * In this new process, we set the `buyer` to Servicio Local de Educación Pública Puerto Cordillera.
 * Related this process with the framework agreement set up using the `relatedProcess` block with `relationship` field set to ‘framework’.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/frameworks/open_multiple_second_stage.json
    :jsonpointer:
@@ -339,7 +339,7 @@ The release has the following properties:
 * The `relatedProcess` block is populated with a reference to the contracting process for the first stage
 * The `buyer`, `tender/procuringEntity`, `awards/suppliers` and `parties` sections are populated with the details of the buyer, procuring entity and supplier.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/frameworks/open_multiple_award.json
    :jsonpointer:
