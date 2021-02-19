@@ -25,7 +25,7 @@ jobs:
       run: |
         if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
         make
-      python util/add_translation_notes.py
+        python util/add_translation_notes.py
     - run: pytest
     - uses: shimataro/ssh-key-action@v2
       with:
