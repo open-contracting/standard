@@ -1,6 +1,3 @@
-# Compare this file to:
-# https://github.com/open-contracting/standard_profile_template/blob/main/include/config.mk
-
 # Edit these variables as appropriate.
 
 # The space-separated, period-prefixed translations to build (for easier substitutions).
