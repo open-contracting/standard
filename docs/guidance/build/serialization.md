@@ -102,7 +102,7 @@ The multi-table serialization separates  objects with many to one relationships 
 
 Multiple tables can be packaged together as the tabs of an Excel spreadsheet, or in a collection of CSV files.  
 
-An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/master/flat-template).
+An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/main/flat-template).
 
 For further information on multi-table serializations please see the [flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/).
 
