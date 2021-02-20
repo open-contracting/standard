@@ -5,11 +5,11 @@ function main {
   mkdir -p script include tests
 
   for f in Makefile common-requirements.in common-requirements.txt .github/workflows/lint.yml include/common.mk include/prologue.mk include/header.html script/diff script/update tests/conftest.py tests/test_common.py; do
-    curl -sS -o $f https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/$f
+    curl -sS -o $f https://raw.githubusercontent.com/open-contracting/standard_profile_template/main/$f
   done
 
   if [ ! -d schema/project-level ]; then
-    curl -sS -o .gitignore https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/.gitignore
+    curl -sS -o .gitignore https://raw.githubusercontent.com/open-contracting/standard_profile_template/main/.gitignore
   fi
 
   chmod +x script/*
