@@ -90,7 +90,7 @@ gettext_compact = False
 gettext_domain_prefix = ''
 
 # List the extension identifiers and versions that should be part of the standard. The extensions must be available in
-# the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
+# the extension registry: https://github.com/open-contracting/extension_registry/blob/main/extension_versions.csv
 default_extension_version = 'v{}'.format(release)
 extension_versions = {
     'bids': default_extension_version,

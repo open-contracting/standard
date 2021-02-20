@@ -1,5 +1,5 @@
 # Compare this file to:
-# https://github.com/open-contracting/standard_profile_template/blob/master/include/config.mk
+# https://github.com/open-contracting/standard_profile_template/blob/main/include/config.mk
 
 # Edit these variables as appropriate.
 
