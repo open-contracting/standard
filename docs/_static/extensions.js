@@ -14,7 +14,7 @@ if (document.querySelector('.extension_list')) {
 
   // Get the community extensions to add to the documentation.
   const request = new XMLHttpRequest()
-  request.open('GET', 'https://raw.githubusercontent.com/open-contracting/extension_registry/master/build/extensions.json')
+  request.open('GET', 'https://raw.githubusercontent.com/open-contracting/extension_registry/main/build/extensions.json')
   request.responseType = 'json'
 
   request.onload = () => {
