@@ -54,20 +54,6 @@ OCDS defines the buyer as:
 .. field-description:: ../../../build/current_lang/release-schema.json /properties/buyer
 ```
 
-```eval_rst
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
-      Elsewhere in the OCDS schema the buyer is described as:
-
-      > *The entity managing the procurement. This may be different from the buyer who pays for, **or uses**, the items being procured.*
-
-      There is a proposal to align this description with the above definition.
-
-```
-
 ### Suppliers
 
 OCDS defines a supplier as:
