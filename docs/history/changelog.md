@@ -35,7 +35,13 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Codelists
 
-* [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
+* `documentType.csv`
+  * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
+  * [#1219](https://github.com/open-contracting/standard/pull/1219) Add the codes from the tariffs extension:
+    * 'tarrifs'
+    * 'tarrifMethod'
+    * 'tarrifReview'
+    * 'tarrifIllustration'
 * `partyRole.csv`:
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'buyer'
@@ -45,7 +51,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 * [#1210](https://github.com/open-contracting/standard/pull/1210) Add the 'CELEX' and 'LEXML' codes from the legal basis extension to the `itemClassificationScheme` codelist.
-* [#1219](https://github.com/open-contracting/standard/pull/1219) Add the codes of the `+documentType` codelist from the tariffs extension.
 
 ### Schema
 
