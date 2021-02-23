@@ -35,7 +35,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Codelists
 
-* [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
+* `documentType.csv`:
+  * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
+  * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
+    * 'economicSelectionCriteria'
+    * 'technicalSelectionCriteria'
 * `partyRole.csv`:
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'buyer'
