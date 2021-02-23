@@ -194,6 +194,9 @@
             }
           }
         },
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
         "procuringEntity": {
           "$ref": "#/definitions/OrganizationReferenceVersionedId"
         },
@@ -372,7 +375,11 @@
                   "type": "string"
                 },
                 "codelist": "submissionMethod.csv",
-                "openCodelist": true
+                "openCodelist": true,
+                "deprecated": {
+                  "description": "This field is deprecated, because all codes from the submissionMethod codelist are deprecated. Refer to the Deprecation note of individual codes.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -582,6 +589,9 @@
             }
           }
         },
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
         "date": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
@@ -712,6 +722,8 @@
                   "active",
                   "cancelled",
                   "terminated",
+                  "terminatedEarly",
+                  "terminatedSuccessfully",
                   null
                 ],
                 "codelist": "contractStatus.csv",
@@ -725,6 +737,9 @@
               }
             }
           }
+        },
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "period": {
           "$ref": "#/definitions/Period"

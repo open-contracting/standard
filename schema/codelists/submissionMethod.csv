@@ -1,5 +1,5 @@
-Code,Title,Description,Deprecated
-electronicSubmission,Electronic submission,Bids will be received through an electronic procurement platform.,1.2
-electronicAuction,Electronic auction,Bids will be received through an electronic auction platform.,1.2
-written,Written,"Bids will be received via written documents, delivered as hard copies, via generic e-mail systems, or some similar mechanism.",1.2
-inPerson,In person,Bids will only be received if they are hand delivered at the time and place specified in submissionMethodDetails or attached documentation.,1.2
+Code,Title,Description,Deprecated,Deprecation note
+electronicSubmission,Electronic submission,Bids will be received through an electronic procurement platform.,1.2,This code distinguished electronic submission through a procurement platform from other forms of electronic submission. This distinction is not supported by use cases. Use the submission terms extension instead.
+electronicAuction,Electronic auction,Bids will be received through an electronic auction platform.,1.2,"An electronic auction is a technique, not a submission method. Use the techniques extension instead."
+written,Written,"Bids will be received via written documents, delivered as hard copies, via generic e-mail systems, or some similar mechanism.",1.2,"This code was based on a definition of 'written' for communication between parties, which distinguished between verbal and written communication, rather than between paper and electronic communication. Use the submission terms extension instead."
+inPerson,In person,Bids will only be received if they are hand delivered at the time and place specified in submissionMethodDetails or attached documentation.,1.2,This code distinguished paper submissions delivered in-person from paper submissions delivered by mail. This distinction is not supported by use cases.

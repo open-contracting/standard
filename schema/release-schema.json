@@ -76,7 +76,7 @@
     },
     "buyer": {
       "title": "Buyer",
-      "description": "A buyer is an entity whose budget will be used to pay for goods, works or services related to a contract. This may be different from the procuring entity who may be specified in the tender data.",
+      "description": "The organization aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "planning": {
@@ -232,9 +232,17 @@
             null
           ]
         },
+        "statusDetails": {
+          "title": "Status details",
+          "description": "Additional details on the status of the tender. This field can be used to provide the local name of the status.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "procuringEntity": {
           "title": "Procuring entity",
-          "description": "The entity managing the procurement. This may be different from the buyer who pays for, or uses, the items being procured.",
+          "description": "The organization managing the contracting process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
           "$ref": "#/definitions/OrganizationReference"
         },
         "items": {
@@ -347,7 +355,11 @@
             "type": "string"
           },
           "codelist": "submissionMethod.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "deprecated": {
+            "description": "This field is deprecated, because all codes from the submissionMethod codelist are deprecated. Refer to the Deprecation note of individual codes.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
@@ -533,6 +545,14 @@
           "codelist": "awardStatus.csv",
           "openCodelist": false
         },
+        "statusDetails": {
+          "title": "Status details",
+          "description": "Additional details on the status of the award. This field can be used to provide the local name of the status.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "date": {
           "title": "Award date",
           "description": "The date of the contract award. This is usually the date on which a decision to award was made.",
@@ -668,10 +688,20 @@
             "active",
             "cancelled",
             "terminated",
+            "terminatedEarly",
+            "terminatedSuccessfully",
             null
           ],
           "codelist": "contractStatus.csv",
           "openCodelist": false
+        },
+        "statusDetails": {
+          "title": "Status details",
+          "description": "Additional details on the status of the contract. This field can be used to provide the local name of the status.",
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "period": {
           "title": "Period",
@@ -969,7 +999,7 @@
         },
         "url": {
           "title": "URL",
-          "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+          "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
           "type": [
             "string",
             "null"
@@ -1029,11 +1059,11 @@
     "Budget": {
       "type": "object",
       "title": "Budget information",
-      "description": "This section contains information about the budget line, and associated projects, through which this contracting process is funded. It draws upon the data model of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+      "description": "This section contains basic information about the budget estimated for, or allocated to, this contracting process at the present time. Further documentation and data about how budgets have been allocated to a contracting process should be published outside of OCDS data, according to the best available standards.",
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source. Although an integer is allowed, it is recommended to use a string.",
+          "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against formal budget documents.",
           "type": [
             "string",
             "integer",
@@ -1042,7 +1072,7 @@
         },
         "description": {
           "title": "Budget Source",
-          "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.",
+          "description": "A short free-text description of the budget allocation for this contracting process. This may be used to provide human-readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
           "type": [
             "string",
             "null"
@@ -1050,7 +1080,7 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources, the budget breakdown extension can be used.",
+          "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
           "$ref": "#/definitions/Value"
         },
         "project": {

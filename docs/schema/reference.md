@@ -165,11 +165,6 @@ The planning section can be used to describe the background to a contracting pro
 
 ```
 
-```eval_rst
-.. extensionlist:: The following extensions are available for planning
-   :list: planning
-```
-
 Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 #### Budget 
@@ -366,20 +361,22 @@ If a contracting process represents a contract arranged by the department or bra
     :collapse: 
     
 ```
+
 ### Document
 
 Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../codelists/#document-type) codelist.
+
+Documents related to contracting processes should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
+
+Documents should be published at their own stable URLs, accessible for free and without the need to search or login, and available at the time of publication of the OCDS release that refers to them.
+
+OCDS allows summarizing information in the document's `description` field. Providing clear summaries is a good practice, as it allows applications to display this information in a user-interface and thus enables users to read key facts without having to search through the whole document.
 
 ```eval_rst
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Document
     :collapse: 
     
-```
-
-```eval_rst
-.. extensionlist:: The following extensions are available for document
-   :list: document
 ```
 
 ### Period
@@ -393,11 +390,6 @@ Periods can also include a `maxExtentDate` which indicates the latest possible e
     :pointer: /definitions/Period
     :collapse: 
     
-```
-
-```eval_rst
-.. extensionlist:: The following extensions are available for period
-   :list: period
 ```
 
 #### Date
@@ -495,11 +487,6 @@ Financial values should be published with a currency attached.
 ```
 
 Support for exchange rates, and tax information, can be provided using extensions.
-
-```eval_rst
-.. extensionlist:: The following extensions for value are available
-   :list: value
-```
 
 ### RelatedProcess
 
