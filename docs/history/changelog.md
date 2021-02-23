@@ -35,8 +35,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Codelists
 
-* `documentType.csv`
-  * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
+* `documentType.csv`:
+  * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate 'contractSchedule' and edit 'contractAnnexe'.
   * [#1219](https://github.com/open-contracting/standard/pull/1219) Add the codes from the tariffs extension:
     * 'tariffs'
     * 'tariffMethod'
