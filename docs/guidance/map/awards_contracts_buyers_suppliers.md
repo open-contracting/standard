@@ -10,20 +10,9 @@ In order to understand the modelling examples, it’s important to first clarify
 
 ### Award
 
-The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement) was developed through extensive consultations with governments and interested international organizations and therefore reflects the procurement practices and concepts used in many different jurisdictions. The  [UNCITRAL glossary](http://www.uncitral.org/pdf/english/texts/procurem/ml-procurement-2011/Glossary-e.pdf) defines the "Award of a procurement contract or framework agreement" as:
+OCDS defines an award as:
 
-> *A final stage of the procurement proceedings regulated by the Model Law, resulting in the conclusion and entry into force of a procurement contract or framework agreement between the procuring entity and selected supplier(s) or contractor(s).*
-
-In OCDS, the `Award` object is intended to communicate a direct relationship between items, suppliers, and values. It ought to be possible to know, at the award stage, in OCDS data, which items will later be supplied by which suppliers, and what the value of those contracts will be.
-
-```eval_rst
-.. admonition:: Note
-   :class: note
-
-   .. markdown::
-
-      The OCDS schema and documentation are not clear what, precisely, is meant by 'award'. A revision of the definition of `Award` in OCDS is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/895)).
-```
+> *Decision by the buyer or procuring entity on the supplier with whom it intends to conclude a contract, including the items the supplier should supply and their price. Typically, this decision leads to a contract, but not always (e.g. the award is appealed at court or the supplier refuses to sign the contract). Depending on the jurisdiction, a single decision may concern a single supplier, item and value; or batches of suppliers and/or items and/or values. Similarly, sometimes the award is published as soon as it is made and sometimes only together with a contract (including only being implicitly covered by the contract). As far as possible, the award should be published at the most granular level (i.e. a given supplier will deliver a given item at a given value) and as soon as it is made.*
 
 ### Contract
 
