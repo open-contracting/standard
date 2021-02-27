@@ -1,6 +1,10 @@
 # Record Reference
 
-Whereas there can be multiple releases about a contracting process, there should be a single **record** per contracting process, aggregating all the releases available for the contracting process.
+Whereas there can be multiple releases about a single contracting or planning process, there should be a single **record** per process, aggregating all the releases available for the given process.
+
+OCDS defines a record as: 
+
+> Information about a contracting process or a contracting planning process. Furthermore, a record may also inform about a single stage of a multi-stage procedure (e.g. a framework agreement with reopening of competition).
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 

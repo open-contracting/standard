@@ -2,7 +2,7 @@
 
 Consistent identifiers are essential to help join up open contracting data.
 
-* The Open Contracting ID (ocid) is a globally unique identifier used to join up data on all stages of a contracting process;
+* The Open Contracting ID (ocid) is a globally unique identifier used to join up all the data on single OCDS contracting process or a single  OCDS planning process;
 * Organization identifiers are important to know who is involved in each contract;
 * Release, award and contract identifiers are important to help cross-reference information.
 
@@ -52,16 +52,18 @@ Local identifiers must be used consistently. For example, if the `id` of an awar
 
 <img src="../../_static/svg/green_compilation.svg" width="150" align="right"/>
 
-An Open Contracting ID (ocid) is a **globally unique identifier** for a contracting process. Every OCDS release has an `ocid`.
+An Open Contracting ID (ocid) is a **globally unique identifier** for an OCDS contracting proces. Every OCDS release has an `ocid`. OCDS defines an `ocid` as: 
 
-It can be used to join up information published at different times, and in different places.
+> A globally unique identifier for this OCDS contracting process. Furthermore, this identifier can also refer to an OCDS planning process or a single stage of a multiple stage procedure.
+
+It can be used to join up information published at different times and in different places.
 
 Setting the `ocid` is usually a simple two step process:
 
-1. Identify the best **internal identifier** recorded against the contracting processes being disclosed;
+1. Identify the best **internal identifier** recorded against the processes being disclosed;
 2. Register an `ocid` prefix to prepend to this internal identifier.
 
-In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting processes have a common internal identifier to draw upon.
+In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting and planning processes have a common internal identifier to draw upon.
 
 <div class="example hint" markdown=1>
 
