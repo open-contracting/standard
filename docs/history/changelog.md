@@ -43,6 +43,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'tariffReview'
     * 'tariffIllustration'
 * `partyRole.csv`:
+  * [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of 'supplier'
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'buyer'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
