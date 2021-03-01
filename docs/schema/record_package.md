@@ -14,7 +14,7 @@ Click on schema elements to expand the tree, or use the '+' icon to expand all e
 
    .. markdown::
 
-      This page presents the record package schema in an interactive browser. You can also download the canonical version of the record package schema as {download}`JSON Schema <../../schema/record-package-schema.json>`), or view it as [tables](records_reference).
+      This page presents the record package schema in an interactive browser. You can also download the canonical version of the record package schema as {download}`JSON Schema <../../schema/record-package-schema.json>`, or view it as [tables](records_reference).
 ```
 
 <script src="../../_static/docson/public/js/widget.js" data-schema="../../../record-package-schema.json"></script>
