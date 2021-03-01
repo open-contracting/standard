@@ -24,12 +24,6 @@ If purchase orders were also disclosed in the `contracts` section of OCDS, by th
 
 Calculating the sum of the contract value in the above example gives an incorrect result of £2.4m - double the actual value of the contract.
 
-```{eval-rst}
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
-      The approach for modelling purchase orders in OCDS is under discussion ([GitHub issue](https://github.com/open-contracting/standard/issues/897))
-
+```{note}
+The approach for modelling purchase orders in OCDS is under discussion ([GitHub issue](https://github.com/open-contracting/standard/issues/897))
 ```

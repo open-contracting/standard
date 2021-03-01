@@ -32,11 +32,8 @@ There are no identifiers for the individual supplier/value pairings on the origi
 :file: ../../examples/award_decisions/identifiers.csv
 ```
 
-```{eval-rst}
-.. admonition:: View the example in JSON
-   :class: tip
+```{admonition} View the example in JSON
+:class: tip
 
-   .. markdown::
-
-      [View the example in Paraguay’s API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
+[View the example in Paraguay’s API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
 ```

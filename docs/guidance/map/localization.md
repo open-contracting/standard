@@ -29,13 +29,8 @@ To localize a field title or description, edit the values columns C or D. We rec
 
 This makes it easier for reviewers to check that localization has not changed the meaning of titles and descriptions. You can use the comments feature of Google Docs to discuss the proposed localization.
 
-```{eval-rst}
-.. admonition:: Warning
-   :class: warning
-
-   .. markdown::
-
-      Do not edit the values in column B. These are the OCDS field paths which cannot be edited.
+```{warning}
+Do not edit the values in column B. These are the OCDS field paths which cannot be edited.
 ```
 
 If you create your own mapping sheet, make sure to include the original OCDS field paths to link your mapping to the fields in OCDS.
@@ -46,13 +41,8 @@ Similarly, you can use the [codelist mapping template](https://www.open-contract
 
 To localize a code title or description, edit the values in columns B and C. As with field titles and descriptions,  we recommend that you keep the original title or description in brackets after your localized version.
 
-```{eval-rst}
-.. admonition:: Warning
-   :class: warning
-
-   .. markdown::
-
-      Do not edit the values in column A. These are the OCDS field paths which cannot be edited.
+```{warning}
+Do not edit the values in column A. These are the OCDS field paths which cannot be edited.
 ```
 
 You can ask the [OCDS Helpdesk](../../support/index) to review your localized mapping template before you put it to use.
