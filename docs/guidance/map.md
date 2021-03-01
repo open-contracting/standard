@@ -119,9 +119,9 @@ Some data elements might not match any field or code in OCDS. To cover such case
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
 
 ```{toctree}
-   :hidden:
+:hidden:
 
-   map/extensions
+map/extensions.md
 ```
 
 ## Wrapping up
