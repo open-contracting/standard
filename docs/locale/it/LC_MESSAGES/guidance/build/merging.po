@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"PO-Revision-Date: 2021-03-01 22:02+0000\n"
+"Language-Team: Italian (https://www.transifex.com/open-contracting-partnership-1/teams/112300/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/build/merging.md:1
+msgid "Updates and Deletions"
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:3
+msgid ""
+"The [merging documentation](../../schema/merging) specifies how individual "
+"releases are merged into compiled releases (the latest version of the "
+"contracting process) and versioned releases (the change history for each "
+"field), which form part of a "
+"[record](../../getting_started/releases_and_records)."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:5
+msgid ""
+"The merge routine also allows a publisher to correct a publication error by "
+"deleting a field, object or array entry from the compiled release. To do so,"
+" a publisher sets the field's value to `null` in an individual release (more"
+" on this below). As such, as a publisher, it is important to **never use a "
+"`null` value in an individual release, unless you intend to delete that "
+"field**. If you don't have a value to assign to a field, simply omit the "
+"field from the JSON, or assign an empty value like `\"\"`, `[]` or `{}`. "
+"Using `null` values correctly means that publishers and/or users can create "
+"compiled releases reliably."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:7
+msgid ""
+"The following examples show how updates and deletions are reflected in "
+"compiled and versioned releases."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:9
+msgid "Example 1: Updates"
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:11
+msgid ""
+"A public procurement agency publishes a release to announce an opportunity "
+"on January 1, 2016 in which the total estimated value of the procurement is "
+"$1,000. On January 31, it publishes a release to expand the description of "
+"the procurement. On February 5, it publishes a release to amend the "
+"opportunity, in which the total estimated value is increased to $2,000."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:13
+msgid ""
+"The agency decides to award the opportunity to two of the bidders. On March "
+"1, the agency publishes a release to announce that Company A is awarded a "
+"contract of $750. On March 3, the agency publishes a release to announce "
+"that Company B is awarded a contract of $750."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:15
+msgid ""
+"Through these individual releases, the agency provides real-time data about "
+"the contracting process."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:17
+msgid ""
+"In each release, the agency also updates the record, which combines all the "
+"releases to date. In the final record:"
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:19
+msgid ""
+"The compiled release contains all the information about the opportunity and "
+"awards, using the same schema as a release."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:20
+msgid ""
+"The versioned release makes it easy to see how the description and total "
+"estimated value changed over time."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:64
+msgid "Example 2: Deletion of fields and objects"
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:66
+msgid "Fields"
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:68
+msgid ""
+"A government agency in Colombia publishes the planning of a procurement "
+"opportunity, including draft data for the tender, as shown below."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:70
+msgid ""
+"After a few weeks, the tender is ready to be announced. The officer in "
+"charge notices that the rationale of the planning is a duplication of the "
+"budget description and decides to leave the `rationale` field blank, judging"
+" that the `budget/description` field has all the information needed. A "
+"release with a 'tender' tag is published, and the record for the process is "
+"updated."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:72
+msgid ""
+"In the final record, both the compiled and versioned releases show the "
+"changes. The `planning/rationale` field has disappeared from the "
+"`compiledRelease`, and the `versionedRelease` shows both its previous value "
+"and the `null` value used to delete the field. The entry with the `null` "
+"value can be used to determine when the field was deleted."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:95
+msgid "Objects"
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:97
+msgid ""
+"Another government agency in Colombia publishes a new procurement "
+"opportunity. Details are provided in an OCDS release, as shown below."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:99
+msgid ""
+"A few days after releasing the tender notice, the government agency receives"
+" feedback for potential bidders, and they realize that the estimated "
+"contract period set for the tender could be infeasible. They decide to "
+"instead negotiate the contract period with the awarded supplier, and they "
+"remove the contract period from the opportunity to avoid confusing potential"
+" bidders."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:101
+msgid ""
+"A release with a 'tenderAmendment' tag is published, in which both the "
+"`startDate` and `endDate` of the `contractPeriod` block have been set to "
+"`null`. Also, an `amendments` block is provided to explain the changes."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:103
+msgid ""
+"The final record is shown below. Note that the fields in the "
+"`contractPeriod` block have disappeared in the `compiledRelease`, and the "
+"`versionedRelease` contains the previous values."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:126
+msgid "Example 3: Deletion of array items"
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:128
+msgid ""
+"The public procurement authority in Zambia publishes an award notice, as "
+"well as an OCDS release with an 'award' tag. A NGO collects the individual "
+"releases published by the procurement authority on a weekly basis to merge "
+"into their own records, which they use to display information on their "
+"website."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:130
+msgid ""
+"Two weeks later, the authority publishes a new release. Due to negotiations "
+"with the awarded supplier, one of the items in the award is being deleted "
+"and two new ones have been added to replace it, as show below. The two new "
+"items have been added at the end of the `items` array, and the item to "
+"remove has all its fields set to `null`."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:132
+msgid ""
+"The NGO generates a record. In the record, all the fields of the removed "
+"item have disappeared, and only its `id` is left."
+msgstr ""
+
+#: ../../docs/guidance/build/merging.md:158
+msgid ""
+"The current `merge routine <../../../schema/merging#merge-routine>`__ does "
+"not include a strategy to completely remove an entry from an array. We "
+"invite discussion on how to remove objects from arrays in issue `#232 "
+"<https://github.com/open-contracting/standard/issues/232>`__."
+msgstr ""
