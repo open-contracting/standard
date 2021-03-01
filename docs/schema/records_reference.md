@@ -4,20 +4,20 @@ Whereas there can be multiple releases about a contracting process, there should
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Browsing the schema
    :class: note
 
    .. markdown::
 
-      This page presents the record package schema as tables. You can also download the canonical version of the record package schema as [JSON Schema](../../record-package-schema.json), or view it in an [interactive browser](record_package).
+      This page presents the record package schema as tables. You can also download the canonical version of the record package schema as {download}`JSON Schema <../../build/current_lang/record-package-schema.json>`, or view it in an [interactive browser](record_package).
 ```
 
 ## Package metadata
 
 Records must be published within a [record package](record_package). The record package provides metadata about the record(s) that it contains.
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/record-package-schema.json
     :include:
     :collapse: records
@@ -34,7 +34,7 @@ The record package metadata has two differences from the release package metadat
 
 The following example demonstrates all package metadata and record fields.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer:
    :expand: packages, records
@@ -57,7 +57,7 @@ Each release in a record can be provided as either a linked release or an embedd
 
 A linked release follows a simple schema:
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/record-package-schema.json
    :pointer: /definitions/record/properties/releases/oneOf/0/items
 ```
@@ -66,7 +66,7 @@ For each `url` value, it must be possible for a consuming application to retriev
 
 The following example demonstrates the use of linked releases.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0
    :expand: releases, tag
@@ -83,7 +83,7 @@ An embedded release follows the [release schema](reference). In other words, ins
 
 The following example demonstrates the use of embedded releases.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/record-embedded-releases.json
    :jsonpointer: /records/0
    :expand: releases,tag
@@ -116,7 +116,7 @@ If the versioned release is not provided, third parties can generate it by proce
 
 The following example displays a single field's [versioned values](../merging/#versioned-values). This shows that the amount changed between the planning stage and the tender stage, while the currency did not.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/merging/versioned.json
    :jsonpointer: /records/0/versionedRelease/tender/value
    :expand: amount, releaseTag

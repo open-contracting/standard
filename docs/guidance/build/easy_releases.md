@@ -65,7 +65,7 @@ The contracting process begins with a tender notice. The source tables contain t
 
 **ProcurementProcess**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
@@ -91,7 +91,7 @@ It is possible to use the date alone as the release identifier, but prepending t
 
 See the full JSON file below.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/easy-releases/worked-example-1/1-tender.json
    :jsonpointer:
    :expand: releases,tender
@@ -103,7 +103,7 @@ The tender has been updated: the value increased slighly and the description has
 
 **ProcurementProcess**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-1/2-tenderUpdate-procurementProcess.csv
@@ -119,7 +119,7 @@ The `lastModifiedDate` value has changed as well, therefore the value of the rel
 
 See the full JSON below:
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/easy-releases/worked-example-1/2-tenderUpdate.json
    :jsonpointer:
    :expand: releases,tag,tender
@@ -133,7 +133,7 @@ Now, the tender has been awarded. The related columns in 'ProcurementProcess' ta
 
 **ProcurementProcess**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-1/3-award-procurementProcess.csv
@@ -141,7 +141,7 @@ Now, the tender has been awarded. The related columns in 'ProcurementProcess' ta
 
 **Supplier**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-1/3-award-supplier.csv
@@ -157,7 +157,7 @@ As the 'ProcurementProcess' table has been updated, the related release will hav
 
 And the 'awards' section will be filled with the corresponding data. See the full JSON below.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/easy-releases/worked-example-1/3-award.json
    :jsonpointer:
    :expand: releases,awards
@@ -171,7 +171,7 @@ At the last stage there is a signed contract. The 'ProcurementProcess' table cha
 
 **ProcurementProcess**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-1/4-contract-procurementProcess.csv
@@ -179,7 +179,7 @@ At the last stage there is a signed contract. The 'ProcurementProcess' table cha
 
 **Contract**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-1/4-contract-contract.csv
@@ -195,7 +195,7 @@ A new release id is generated:
 
 See the full JSON below.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/easy-releases/worked-example-1/4-contract.json
    :jsonpointer:
    :expand: releases,contracts
@@ -215,7 +215,7 @@ The example starts with the tender, and the following data in the 'ProcurementPr
 
 **ProcurementProcess**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
@@ -240,7 +240,7 @@ It is important to include *all* data fields that are included in OCDS data in t
 
 See the full JSON below.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/easy-releases/worked-example-2/1-tender.json
    :jsonpointer:
    :expand: releases,tender
@@ -252,7 +252,7 @@ Now that tender data has changed: there are updates in the value and description
 
 **ProcurementProcess**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-2/2-tenderUpdate-procurementProcess.csv
@@ -268,7 +268,7 @@ The same hash operation is repeated over the updated row and the resulting value
 
 See the full JSON below.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/easy-releases/worked-example-2/2-tenderUpdate.json
    :jsonpointer:
    :expand: releases,tag,tender
@@ -280,7 +280,7 @@ The tender has been awarded, therefore the 'ProcurementProcess' table has been u
 
 **ProcurementProcess**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-2/3-award-procurementProcess.csv
@@ -288,7 +288,7 @@ The tender has been awarded, therefore the 'ProcurementProcess' table has been u
 
 **Supplier**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-2/3-award-supplier.csv
@@ -317,7 +317,7 @@ The result of the query is `610d5900f947bcf67100449999ea49ce`, and the new relea
 
 See the full JSON below.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/easy-releases/worked-example-2/3-award.json
    :jsonpointer:
    :expand: releases,awards
@@ -329,7 +329,7 @@ In the last stage the contract is signed, the 'ProcurementProcess' table is upda
 
 **ProcurementProcess**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-2/4-contract-procurementProcess.csv
@@ -337,7 +337,7 @@ In the last stage the contract is signed, the 'ProcurementProcess' table is upda
 
 **Contract**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/easy-releases/worked-example-2/4-contract-contract.csv
@@ -369,7 +369,7 @@ The new hash value is `1a87b0662990c66e140e62e813165107`, and the new release id
 
 See the final JSON below.
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/easy-releases/worked-example-2/4-contract.json
    :jsonpointer:
    :expand: releases,contracts

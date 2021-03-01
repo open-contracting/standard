@@ -124,7 +124,7 @@ There are two parts to expressing an **organization identifier** in open contrac
 
 The **organization register prefix** for UK Companies House is GB-COH. The organization **Development Initiatives** has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can then expressed as follows:
 
-```eval_rst
+```{eval-rst}
 .. code-block:: json
 
     {

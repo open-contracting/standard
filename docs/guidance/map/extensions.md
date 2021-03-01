@@ -18,7 +18,7 @@ Extensions are applied by adding their URLs to the `extensions` array in the rel
 
 This version of OCDS uses these specific versions of core extensions:
 
-```eval_rst
+```{eval-rst}
  .. extensionexplorerlinklist::
 
 ```
@@ -41,11 +41,11 @@ Groups of extensions can be combined into **profiles**. OCDS provides a common c
 
 ### OCDS for the European Union
 
-[OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/master/en/) describes how to express, in OCDS, the information in Tenders Electronic Daily (TED) notices as obliged by law within the EU.
+[OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/latest/en/) describes how to express, in OCDS, the information in Tenders Electronic Daily (TED) notices as obliged by law within the EU.
 
 ### OCDS for the Agreement on Government Procurement
 
-[OCDS for the Agreement on Government Procurement](https://standard.open-contracting.org/profiles/gpa/master/en/) (GPA) describes how to use OCDS to publish information as obliged by the World Trade Organization’s [Agreement on Government Procurement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
+[OCDS for the Agreement on Government Procurement](https://standard.open-contracting.org/profiles/gpa/latest/en/) (GPA) describes how to use OCDS to publish information as obliged by the World Trade Organization’s [Agreement on Government Procurement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
 
 ## Linked standards
 

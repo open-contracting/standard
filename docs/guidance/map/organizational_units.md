@@ -25,7 +25,7 @@ In the release below, the publisher adds the hospital name at the end of the pro
 
 An identifier for the hospital has been added using the "HN-ONCAE-UNIT" list code. The `address` and `contactPoint` information belongs to the hospital only.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/organizational-units/honduras-planning.json
    :jsonpointer: 
@@ -40,7 +40,7 @@ In Moldova, the national procurement agency needs to include a division code for
 
 In the release below, a branch of the Bank of Moldova announces a contract opportunity for the provision of consumables for electrical appliances.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/organizational-units/moldova-tender.json
    :jsonpointer: 
@@ -49,7 +49,7 @@ In the release below, a branch of the Bank of Moldova announces a contract oppor
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/organizational-units/ocds_divisionCode_extension/extension.json
    :jsonpointer: 
@@ -58,7 +58,7 @@ In the release below, a branch of the Bank of Moldova announces a contract oppor
 
 ```
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/organizational-units/ocds_divisionCode_extension/release-schema.json
    :jsonpointer: 
@@ -79,7 +79,7 @@ It is important to note that OCDS ought to not be used to publish organizational
 
 The release below shows how the publisher chooses to model the hospital as an organizational unit of the Medical School (*Facultad de Ciencias Médicas*). The source systems collect the name of the organizational unit only, and this is appended to the organization name.
 
-```eval_rst
+```{eval-rst}
 
 .. jsoninclude:: ../../examples/organizational-units/paraguay-planning.json
    :jsonpointer: 
@@ -90,7 +90,7 @@ The release below shows how the publisher chooses to model the hospital as an or
 
 In a separate dataset, the publisher discloses the organizational hierarchy. This dataset, in combination with the OCDS publication,  would allow users to summarize contracting information. The table below shows an extract of the dataset.
 
-```eval_rst
+```{eval-rst}
 
 .. csv-table-no-translate::
   :file: ../../examples/organizational-units/paraguay-organizations.csv

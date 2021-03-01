@@ -4,7 +4,7 @@ This phase is about creating a new IT system, or updating an existing IT system,
 
 Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../../support/#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 
@@ -23,7 +23,7 @@ To publish OCDS data, you need to register an ocid prefix.
 
 **Action**: Email <data@open-contracting.org> to request an OCID prefix. Provide the name of the publishing organization and the email address of a contact person at this organization.
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::
@@ -37,7 +37,7 @@ There are many ways to extract data from data sources, combine it, map it to OCD
 
 Your choice of architecture can determine how frequently your data is updated, whether you can publish a change history and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the design stage.**
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 
@@ -73,7 +73,7 @@ Where resources allow, it is also best practice to provide multiple access metho
 
 **Tool:** [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) can be used to convert OCDS data between JSON and CSV/spreadsheet formats.
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 
@@ -87,7 +87,7 @@ Having determined your system architecture, it's time to implement it. This is o
 
 Whether your current infrastructure is low tech or high tech, we have tools and resources to help you publish OCDS. Depending on your [data sources](../map/#identify-your-data-sources) and system architecture, you might be able to reuse some of these OCDS tools:
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::
@@ -118,7 +118,7 @@ Contact the [OCDS Helpdesk](../../support/#ocds-helpdesk) for support and guidan
 
 **Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([Part 1](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/), [Part 2](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/), [Part 3](https://www.open-contracting.org/2020/05/28/prototyping-ocds-data-using-spreadsheets-part-iii/)).
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::

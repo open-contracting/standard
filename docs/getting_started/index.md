@@ -18,14 +18,14 @@ To get started publishing OCDS data:
 
 When you are done you could be producing data that looks something like the contract release below, which is compatible with a growing range of OCDS aware tools (you will encounter a range of different OCDS release types in the following pages).
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/contract.json
    :jsonpointer: /releases
    :expand: releases, tender, awards, contracts, period, value, items, tag, parties, documents
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 

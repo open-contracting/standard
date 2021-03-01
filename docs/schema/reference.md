@@ -6,13 +6,13 @@ Releases are immutable – presenting information about a particular event in th
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Browsing the schema
    :class: note
 
    .. markdown::
 
-      This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as [JSON Schema](../../release-schema.json), download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
+      This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as {download}`JSON Schema <../../build/current_lang/release-schema.json>`, download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
 ```
 
 ## Release handling
@@ -53,7 +53,7 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 **json**
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../examples/language.json
    :jsonpointer:
    :expand: tender,item
@@ -62,7 +62,7 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 **csv**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :widths: 20 65 15
@@ -90,7 +90,7 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 Releases must be published within a [release package](release_package). The release package provides metadata about the release(s) that it contains.
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-package-schema.json
     :include: 
     :collapse: releases,publisher
@@ -105,14 +105,14 @@ See the [publication policy](../../guidance/publish/#finalize-your-publication-p
 
 All new information about a contracting process is described within a release. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :include: 
     :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for release
    :list: release
 ```
@@ -121,7 +121,7 @@ All new information about a contracting process is described within a release.
 
 Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Parties
    :class: note
 
@@ -135,21 +135,21 @@ Each of the parties (organizations or other participants) referenced in a releas
 
 The following details can be provided for each party.
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Organization
     :collapse: identifier,additionalIdentifiers,address,contactPoint
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for parties
    :list: parties
 ```
 
 Each party has a `details` object. Through extensions, this can be used to provide detailed classification of parties.
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for party details
    :list: partyDetail
 ```
@@ -158,30 +158,25 @@ Each party has a `details` object. Through extensions, this can be used to provi
 
 The planning section can be used to describe the background to a contracting process. This can include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Planning
     :collapse: budget,documents,milestones
 
 ```
 
-```eval_rst
-.. extensionlist:: The following extensions are available for planning
-   :list: planning
-```
-
 Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 #### Budget 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Budget
     :collapse: amount
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for budget
    :list: budget
 ```
@@ -192,14 +187,14 @@ The tender section includes details of the announcement that an organization int
 
 It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and can also be used to record details of a completed tender process, including details of bids received. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Tender
     :collapse: items,tenderPeriod,enquiryPeriod,awardPeriod,contractPeriod,tenderers,documents,milestones,amendment,amendments,minValue,value,procuringEntity
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for the tender section
    :list: tender
 ```
@@ -212,14 +207,14 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Award
     :collapse: items,value,suppliers,contractPeriod,documents,amendment,amendments
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for award
    :list: award
 ```
@@ -228,14 +223,14 @@ The award section is used to announce any awards issued for this tender. There c
 
 The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Contract
     :collapse: period,value,items,documents,implementation,relatedProcesses,milestones,amendment,amendments
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for contracts
    :list: contract
 ```
@@ -244,14 +239,14 @@ The contract section is used to provide details of contracts that have been ente
 
 Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to. Implementation blocks include the following elements:
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Implementation
     :collapse: transactions,milestones,documents
 
 ```
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for implementation
    :list: implementation
 ```
@@ -260,7 +255,7 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 
 #### Transaction
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Transaction
     :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
@@ -272,7 +267,7 @@ The transaction block is modelled on the [International Aid Transparency Initiat
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions are available for transactions
    :list: transaction
 ```
@@ -295,7 +290,7 @@ A release may amend values from a previous release. Whilst the release & record 
 
 The amendment array in a tender, award or contract block provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Amendment
     :collapse: changes
@@ -317,7 +312,7 @@ The following building blocks are commonly re-used throughout the standard.
 
 ### OrganizationReference
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Organizations
    :class: note
 
@@ -342,7 +337,7 @@ The identifier block provides a way to [identify the legal entities](../identifi
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Identifier
     :collapse: 
@@ -351,7 +346,7 @@ If a contracting process represents a contract arranged by the department or bra
 
 #### Address
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Address
     :collapse: 
@@ -360,7 +355,7 @@ If a contracting process represents a contract arranged by the department or bra
 
 #### ContactPoint
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/ContactPoint
     :collapse: 
@@ -370,16 +365,11 @@ If a contracting process represents a contract arranged by the department or bra
 
 Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../codelists/#document-type) codelist.
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Document
     :collapse: 
     
-```
-
-```eval_rst
-.. extensionlist:: The following extensions are available for document
-   :list: document
 ```
 
 ### Period
@@ -388,16 +378,11 @@ A period has a start date, end date, and/or duration. Start and end dates are re
 
 Periods can also include a `maxExtentDate` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Period
     :collapse: 
     
-```
-
-```eval_rst
-.. extensionlist:: The following extensions are available for period
-   :list: period
 ```
 
 #### Date
@@ -428,21 +413,21 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 The items block is used to list the line-items associated with a tender, award or contract. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Item
     :collapse: classification,additionalClassifications,unit
     
 ```
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: These are extensions related to Items.
    :list: item
 ```
 
 #### Classification
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Classification
     :collapse: 
@@ -456,7 +441,7 @@ If the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt
 
 Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](../codelists/#unit-classification-scheme).
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Item/properties/unit
     :collapse: value
@@ -467,7 +452,7 @@ Other unit classification schemes can be used, including those in the [unitClass
 
 Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Milestone
     :collapse: documents
@@ -478,7 +463,7 @@ Notes:
 
 * The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
-```eval_rst
+```{eval-rst}
 .. extensionlist:: The following extensions to milestone are available
    :list: milestones
 ```
@@ -487,7 +472,7 @@ Notes:
 
 Financial values should be published with a currency attached. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/Value
     :collapse: 
@@ -495,11 +480,6 @@ Financial values should be published with a currency attached.
 ```
 
 Support for exchange rates, and tax information, can be provided using extensions.
-
-```eval_rst
-.. extensionlist:: The following extensions for value are available
-   :list: value
-```
 
 ### RelatedProcess
 
@@ -512,7 +492,7 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 
 In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant open contracting processes using their `ocid`.
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-schema.json
     :pointer: /definitions/RelatedProcess
     :collapse: 
@@ -539,7 +519,7 @@ The [Location](https://extensions.open-contracting.org/en/extensions/location/v1
 
 The publisher block is used in release and record packages to identify the source of a dataset. 
 
-```eval_rst
+```{eval-rst}
 .. jsonschema:: ../../build/current_lang/release-package-schema.json
     :include: publisher
     :collapse: 

@@ -11,7 +11,7 @@ On this page, you will find guidance on how to:
 * Understand your key decisions and publication goals
 * Include OCDS in requirements for software developers and technical consultants
 
-```eval_rst
+```{eval-rst}
 .. note::
 
    .. markdown::
@@ -86,6 +86,7 @@ To achieve success, an OCDS implementation team ought to include the following r
 * A **procurement expert** who will identify where data put forward for publication in OCDS exists at a semantic level. They need to be familiar with procurement legislation and procedures.
 * A **policy champion** who can help navigate the policy decisions of publishing and using OCDS data
 * A **system architect** who will define the architecture for publishing OCDS data. They can be an internal team member or an external consultant.
+* A **software developer**, or developers, who will write the code for publishing OCDS data. They can be an internal team member or an external consultant. If you're updating an existing system, ideally the developer should be familiar with that system, or at least the relevant technologies, frameworks, and programming languages.
 * A **user champion** who will represent the needs of data users throughout the project. They can be an internal team member, an outside partner, or a representative of external stakeholders.
 
 **Action:** Identify your team members.

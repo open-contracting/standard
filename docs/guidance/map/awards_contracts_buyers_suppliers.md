@@ -16,7 +16,7 @@ The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en
 
 In OCDS, the `Award` object is intended to communicate a direct relationship between items, suppliers, and values. It ought to be possible to know, at the award stage, in OCDS data, which items will later be supplied by which suppliers, and what the value of those contracts will be.
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
    :class: note
 
@@ -36,7 +36,7 @@ Contracting processes can result in different types of contract between buyers a
 
 In OCDS, the `Contract` object is intended to communicate a legally binding agreement between a buyer and suppliers to provide items. This excludes agreements to set-up a structure through which contracts are later awarded to provide items, for example: a contract to set up or add suppliers to a framework agreement or dynamic purchasing system.
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
     :class: note
 
@@ -50,9 +50,11 @@ In OCDS, the `Contract` object is intended to communicate a legally binding agre
 
 OCDS defines the buyer as:
 
-> *an entity whose budget will be used to pay for goods, works or services related to a contract. This may be different from the procuring entity who may be specified in the tender data.*
+```{eval-rst}
+.. field-description:: ../../../build/current_lang/release-schema.json /properties/buyer
+```
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Note
     :class: note
 
@@ -70,17 +72,20 @@ OCDS defines the buyer as:
 
 OCDS defines a supplier as:
 
-> *An entity awarded or contracted to provide goods, works or services.*
+```{eval-rst}
+.. code-description:: ../../../build/current_lang/codelists/partyRole.csv supplier
+```
 
-### Electronic Catalog
+### Electronic catalog
 
-[EU directive 2014/24/EU](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32014L0024) on public procurement categorises an electronic catalog as a techniques, or instrument, for electronic and aggregated procurement and describes an electronic catalog as:
+```{eval-rst}
+.. admonition:: Hint
+    :class: hint
 
-> *...a format for the presentation and organisation of information in a manner that is common to all the participating bidders and which lends itself to electronic treatment*
+    .. markdown::
 
-The [Chartered Institute of Procurement and Supply](https://www.cips.org/en-NZ/knowledge/procurement-topics-and-skills/ecommerce---systems/e-sourcing--e-procurement-systems-p2p/catalogue-management/) describes an electronic catalog as:
-
-> *a web resource that provides information on products and services offered and sold by a vendor, and supports on-line ordering and payment capabilities.*
+      Electronic catalogs can often be found in more complicated procedures, usually together with framework agreements and involving multiple bidders. However, on their own, they are simply an electronic format (typically prescribed by the buyer) that participants in the contracting process must follow when exchaning information about technical specifications, evaluation criteria, bids, lots, etc. As such, catalogs do not influence the relationship between awards, contracts, buyers and suppliers. 
+```
 
 ### Purchase order
 
@@ -161,14 +166,13 @@ That said, many organizations can be assigned the 'buyer' role in the `parties` 
 
 ## Examples
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :maxdepth: 1
 
    award_notices_decisions
    mapping_awards_contracts
    consortia
-   catalogs
    frameworks
    purchase_orders
    

@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Alessio Dragoni <ad@sciamlab.com>, 2020
+# James McKinney, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-11 21:23-0500\n"
+"POT-Creation-Date: 2021-03-01 17:23-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2020\n"
+"Last-Translator: James McKinney, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/open-contracting-partnership-1/teams/112300/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +48,7 @@ msgid ""
 "the schema, the schema takes precedence.**"
 msgstr ""
 
-#: ../../docs/schema/reference.md:1
+#: ../../docs/schema/reference.md:10
 msgid "Browsing the schema"
 msgstr ""
 
@@ -55,9 +56,9 @@ msgstr ""
 msgid ""
 "This page presents the release schema in tables, with additional information"
 " in paragraphs. You can also download the canonical version of the release "
-"schema as [JSON Schema](../../release-schema.json), download it as a [CSV "
-"spreadsheet](https://toucan.open-contracting.org/mapping-"
-"sheet/?source=https://standard.open-contracting.org/1.1/en/release-"
+"schema as {download}`JSON Schema <../../schema/release-schema.json>`, "
+"download it as a [CSV spreadsheet](https://toucan.open-contracting.org"
+"/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-"
 "schema.json), view it in an [interactive browser](release), or access it "
 "through the [Field-Level Mapping Template](https://www.open-"
 "contracting.org/resources/ocds-field-level-mapping-template/)."
@@ -404,7 +405,7 @@ msgstr ""
 "Le seguenti sono estensioni della community e non sono mantenute da Open "
 "Contracting Partnership."
 
-#: ../../docs/schema/reference.md:120 ../../docs/schema/reference.md:1
+#: ../../docs/schema/reference.md:120 ../../docs/schema/reference.md:125
 msgid "Parties"
 msgstr "Parti"
 
@@ -416,7 +417,7 @@ msgstr ""
 "Ciascuna delle parti (organizzazioni o altri partecipanti) citate in una "
 "versione deve essere inclusa nella apposita sezione delle parti."
 
-#: ../../docs/schema/reference.md:4
+#: ../../docs/schema/reference.md:128
 msgid ""
 "Version 1.1 of OCDS introduces a new approach to describing the buyers,  "
 "suppliers, economic operators, and other participants in a contracting "
@@ -433,7 +434,7 @@ msgstr ""
 "raccolte insieme in una sezione di primo livello e le parti indicate da un "
 "riferimento incrociato alla loro identità in altri punti."
 
-#: ../../docs/schema/reference.md:6
+#: ../../docs/schema/reference.md:130
 msgid ""
 "This reduces repetition of information on parties who appear at multiple "
 "points in the contracting process, and supports publication of information "
@@ -446,7 +447,7 @@ msgstr ""
 "revisori, consorzi di acquirenti e parti di consorzi o associazioni di "
 "imprese offerenti o aggiudicatarie"
 
-#: ../../docs/schema/reference.md:8
+#: ../../docs/schema/reference.md:132
 msgid ""
 "The old, embedded data, approach to organization data is deprecated in OCDS "
 "1.1, and will be removed in version 2.0."
@@ -485,7 +486,7 @@ msgid ""
 "included in this section."
 msgstr ""
 
-#: ../../docs/schema/reference.md:173
+#: ../../docs/schema/reference.md:168
 msgid ""
 "Apart from documents, the majority of information is held within the budget "
 "block. This is designed to allow both machine-readable linkable data about "
@@ -498,7 +499,7 @@ msgid ""
 "even where linked data is not available."
 msgstr ""
 
-#: ../../docs/schema/reference.md:175
+#: ../../docs/schema/reference.md:170
 msgid "Budget"
 msgstr "Bilancio"
 
@@ -506,11 +507,11 @@ msgstr "Bilancio"
 msgid "The following extensions are available for budget"
 msgstr "Le seguenti estensioni sono disponibili per il budget"
 
-#: ../../docs/schema/reference.md:189
+#: ../../docs/schema/reference.md:184
 msgid "Tender"
 msgstr "Gara d'appalto."
 
-#: ../../docs/schema/reference.md:191
+#: ../../docs/schema/reference.md:186
 msgid ""
 "The tender section includes details of the announcement that an organization"
 " intends to source some particular goods, works or services, and to "
@@ -520,7 +521,7 @@ msgstr ""
 "un'organizzazione intende fornire per alcuni beni, lavori o servizi "
 "specifici e per stabilire uno o più contratti per questi."
 
-#: ../../docs/schema/reference.md:193
+#: ../../docs/schema/reference.md:188
 msgid ""
 "It can contain details of a forthcoming process to receive and evaluate "
 "proposals to supply these goods and services, and can also be used to record"
@@ -571,22 +572,22 @@ msgstr ""
 "documenti, presentare una proposta o aggiudicarsi un contratto, questa "
 "estensione può essere utilizzata per fornire dettagli di pagamento."
 
-#: ../../docs/schema/reference.md:207
+#: ../../docs/schema/reference.md:202
 msgid "Bids"
 msgstr "Offerte"
 
-#: ../../docs/schema/reference.md:209
+#: ../../docs/schema/reference.md:204
 msgid ""
 "The [Bid statistics and details](https://extensions.open-"
 "contracting.org/en/extensions/bids/v1.1.4/) extension can be used to provide"
 " bid statistics and detailed information about individual bids."
 msgstr ""
 
-#: ../../docs/schema/reference.md:211
+#: ../../docs/schema/reference.md:206
 msgid "Award"
 msgstr "Aggiudicazione"
 
-#: ../../docs/schema/reference.md:213
+#: ../../docs/schema/reference.md:208
 msgid ""
 "The award section is used to announce any awards issued for this tender. "
 "There can be multiple awards made. Releases can contain all, or a subset, of"
@@ -598,11 +599,11 @@ msgstr ""
 msgid "The following extensions are available for award"
 msgstr "Le seguenti estensioni sono disponibili per l'aggiudicazione"
 
-#: ../../docs/schema/reference.md:227
+#: ../../docs/schema/reference.md:222
 msgid "Contract"
 msgstr "Contratto"
 
-#: ../../docs/schema/reference.md:229
+#: ../../docs/schema/reference.md:224
 msgid ""
 "The contract section is used to provide details of contracts that have been "
 "entered into. Every contract must have a related award, linked via the "
@@ -615,11 +616,11 @@ msgstr ""
 msgid "The following extensions are available for contracts"
 msgstr "Le seguenti estensioni sono disponibili per i contratti"
 
-#: ../../docs/schema/reference.md:243
+#: ../../docs/schema/reference.md:238
 msgid "Implementation"
 msgstr "Attuazione"
 
-#: ../../docs/schema/reference.md:245
+#: ../../docs/schema/reference.md:240
 msgid ""
 "Implementation information can be updated over the course of a contract. It "
 "belongs nested within the contract it relates to. Implementation blocks "
@@ -634,18 +635,18 @@ msgstr ""
 msgid "The following extensions are available for implementation"
 msgstr "Le seguenti estensioni sono disponibili per l'attuazione"
 
-#: ../../docs/schema/reference.md:259
+#: ../../docs/schema/reference.md:254
 msgid ""
 "Information on subcontracts is not currently included in the core OCDS "
 "schema, but might be handled by [proposed "
 "extensions](conformance_and_extensions)"
 msgstr ""
 
-#: ../../docs/schema/reference.md:261
+#: ../../docs/schema/reference.md:256
 msgid "Transaction"
 msgstr "Transazione"
 
-#: ../../docs/schema/reference.md:270
+#: ../../docs/schema/reference.md:265
 msgid ""
 "The transaction block is modelled on the [International Aid Transparency "
 "Initiative (IATI) transaction element](http://iatistandard.org/activity-"
@@ -656,7 +657,7 @@ msgid ""
 " from that source."
 msgstr ""
 
-#: ../../docs/schema/reference.md:272
+#: ../../docs/schema/reference.md:267
 msgid ""
 "In most circumstances, the `payer` identifier will match that of the "
 "`buyer`, and the `payee` identifier will match that of the `supplier`."
@@ -666,15 +667,15 @@ msgstr ""
 msgid "The following extensions are available for transactions"
 msgstr ""
 
-#: ../../docs/schema/reference.md:280
+#: ../../docs/schema/reference.md:275
 msgid "Milestones"
 msgstr "Fasi"
 
-#: ../../docs/schema/reference.md:282
+#: ../../docs/schema/reference.md:277
 msgid "See [milestone](#milestone) reference below."
 msgstr "Vedi di seguito [fase (milestone)](#milestone)."
 
-#: ../../docs/schema/reference.md:284
+#: ../../docs/schema/reference.md:279
 msgid ""
 "The implementation milestones should be updated to reflect when they are "
 "met."
@@ -682,25 +683,25 @@ msgstr ""
 "Le fasi dell'attuazione dovrebbero essere aggiornate quando vengono "
 "raggiunte e completate."
 
-#: ../../docs/schema/reference.md:286
+#: ../../docs/schema/reference.md:281
 msgid "Documents"
 msgstr "Documenti"
 
-#: ../../docs/schema/reference.md:288
+#: ../../docs/schema/reference.md:283
 msgid ""
 "Documents related to contract implementation are stored here. This can "
 "include subcontracts."
 msgstr ""
 
-#: ../../docs/schema/reference.md:290
+#: ../../docs/schema/reference.md:285
 msgid "See [document](#document) reference below."
 msgstr "Vedere di seguito il [documento (document)](#document)."
 
-#: ../../docs/schema/reference.md:292
+#: ../../docs/schema/reference.md:287
 msgid "Amendment"
 msgstr "Variante"
 
-#: ../../docs/schema/reference.md:294
+#: ../../docs/schema/reference.md:289
 msgid ""
 "A release may amend values from a previous release. Whilst the release & "
 "record model of OCDS offers the opportunity to keep a full versioned history"
@@ -708,7 +709,7 @@ msgid ""
 " contract to be explicitly declared."
 msgstr ""
 
-#: ../../docs/schema/reference.md:296
+#: ../../docs/schema/reference.md:291
 msgid ""
 "The amendment array in a tender, award or contract block provides the "
 "ability to detail the amendments that have taken place with dates, rationale"
@@ -721,17 +722,17 @@ msgstr ""
 "libero che dettagliano i cambiamenti intercorsi, nonché contengono le "
 "versioni con le informazioni prima e dopo ciascuna variante."
 
-#: ../../docs/schema/reference.md:305
+#: ../../docs/schema/reference.md:300
 msgid "Changes"
 msgstr "Modifiche"
 
-#: ../../docs/schema/reference.md:307
+#: ../../docs/schema/reference.md:302
 msgid ""
 "The changes array was deprecated in OCDS 1.1. Structured information on the "
 "former value of specific fields may be provided by:"
 msgstr ""
 
-#: ../../docs/schema/reference.md:309
+#: ../../docs/schema/reference.md:304
 msgid ""
 "Including releases from **before** and **after** a change within a release "
 "package;"
@@ -739,7 +740,7 @@ msgstr ""
 "Comprese le versioni **prima** e **dopo** di una modifica all'interno di un "
 "pacchetto di versione;"
 
-#: ../../docs/schema/reference.md:310
+#: ../../docs/schema/reference.md:305
 msgid ""
 "Using the amendment array in tender, contract or award to explicitly relate "
 "these releases to an amendment."
@@ -748,32 +749,32 @@ msgstr ""
 "nell'aggiudicazione per correlare esplicitamente un rilascio ad una "
 "variante."
 
-#: ../../docs/schema/reference.md:312
+#: ../../docs/schema/reference.md:307
 msgid ""
 "See the [amendment implementation guidance](../guidance/map/amendments) for "
 "more details."
 msgstr ""
 
-#: ../../docs/schema/reference.md:314
+#: ../../docs/schema/reference.md:309
 msgid "Building block reference"
 msgstr "Riferimenti per gli elementi costituenti "
 
-#: ../../docs/schema/reference.md:316
+#: ../../docs/schema/reference.md:311
 msgid ""
 "The following building blocks are commonly re-used throughout the standard."
 msgstr ""
 "I seguenti elementi costituenti sono comunemente riutilizzati in tutto lo "
 "standard."
 
-#: ../../docs/schema/reference.md:318
+#: ../../docs/schema/reference.md:313
 msgid "OrganizationReference"
 msgstr "OrganizationReference"
 
-#: ../../docs/schema/reference.md:1
+#: ../../docs/schema/reference.md:316
 msgid "Organizations"
 msgstr "organizzazioni"
 
-#: ../../docs/schema/reference.md:4
+#: ../../docs/schema/reference.md:319
 msgid ""
 "The approach to including organizations information has changed in OCDS 1.1."
 " Instead of embedding all the details of an organization, publishers should "
@@ -787,13 +788,13 @@ msgstr ""
 " dedicata delle parti e che contiene i dettagli completi "
 "dell'organizzazione."
 
-#: ../../docs/schema/reference.md:328
+#: ../../docs/schema/reference.md:323
 msgid "An organization reference consists of two main components:"
 msgstr ""
 "Un riferimento ad una organizzazione è costituito da due componenti "
 "principali:"
 
-#: ../../docs/schema/reference.md:330
+#: ../../docs/schema/reference.md:325
 msgid ""
 "An `id` used to cross-reference the entry in the [parties](#parties) section"
 " that contains full information on this organization or entity;"
@@ -802,7 +803,7 @@ msgstr ""
 "[parti](#parties) che contiene le informazioni complete su questa "
 "organizzazione o entità;"
 
-#: ../../docs/schema/reference.md:331
+#: ../../docs/schema/reference.md:326
 msgid ""
 "A `name` field that repeats the name given in the [parties](#parties) "
 "section, provided for the convenience of users viewing the data, and to "
@@ -813,7 +814,7 @@ msgstr ""
 "utenti che visualizzano i dati e per supportare il rilevamento di errori nei"
 " riferimenti incrociati."
 
-#: ../../docs/schema/reference.md:333
+#: ../../docs/schema/reference.md:328
 msgid ""
 "The Organization Reference schema contains deprecated fields to prevent "
 "validation failures of OCDS 1.0 data."
@@ -821,26 +822,26 @@ msgstr ""
 "Lo schema di riferimento dell'organizzazione contiene campi deprecati per "
 "impedire errori di convalida dei dati OCDS 1.0."
 
-#: ../../docs/schema/reference.md:335
+#: ../../docs/schema/reference.md:330
 msgid "Organization"
 msgstr "Organizzazione"
 
-#: ../../docs/schema/reference.md:337
+#: ../../docs/schema/reference.md:332
 msgid "See the [parties](#parties) section"
 msgstr "Vedi la sezione [parti](#parties)"
 
-#: ../../docs/schema/reference.md:339
+#: ../../docs/schema/reference.md:334
 msgid "Identifier"
 msgstr "Identificatore"
 
-#: ../../docs/schema/reference.md:341
+#: ../../docs/schema/reference.md:336
 msgid ""
 "The identifier block provides a way to [identify the legal "
 "entities](../identifiers/#organization-ids) involved in a contracting "
 "process."
 msgstr ""
 
-#: ../../docs/schema/reference.md:343
+#: ../../docs/schema/reference.md:338
 msgid ""
 "If a contracting process represents a contract arranged by the department or"
 " branch of a larger organization, the legal entity (usually the registered "
@@ -855,19 +856,19 @@ msgstr ""
 "indicando nome,[indirizzo](#address) e [punto di contatto](#contactpoint) "
 "come pertinente."
 
-#: ../../docs/schema/reference.md:352
+#: ../../docs/schema/reference.md:347
 msgid "Address"
 msgstr "Indirizzo"
 
-#: ../../docs/schema/reference.md:361
+#: ../../docs/schema/reference.md:356
 msgid "ContactPoint"
 msgstr "Punto di contatto"
 
-#: ../../docs/schema/reference.md:369
+#: ../../docs/schema/reference.md:364
 msgid "Document"
 msgstr "Documento"
 
-#: ../../docs/schema/reference.md:371
+#: ../../docs/schema/reference.md:366
 msgid ""
 "Documents can be attached at a number of points within the standard: to "
 "planning, tenders, awards, contracts and implementation. Each document block"
@@ -875,11 +876,11 @@ msgid ""
 "[documentType](../codelists/#document-type) codelist."
 msgstr ""
 
-#: ../../docs/schema/reference.md:385
+#: ../../docs/schema/reference.md:375
 msgid "Period"
 msgstr "Periodo"
 
-#: ../../docs/schema/reference.md:387
+#: ../../docs/schema/reference.md:377
 msgid ""
 "A period has a start date, end date, and/or duration. Start and end dates "
 "are represented using date-times. Durations are represented as a number of "
@@ -889,18 +890,18 @@ msgstr ""
 "di inizio e fine sono rappresentate utilizzando il formato per le date. Le "
 "durate sono rappresentate da un numero di giorni."
 
-#: ../../docs/schema/reference.md:389
+#: ../../docs/schema/reference.md:379
 msgid ""
 "Periods can also include a `maxExtentDate` which indicates the latest "
 "possible end date of this period, or the latest date up until which the "
 "period could be extended without an amendment."
 msgstr ""
 
-#: ../../docs/schema/reference.md:403
+#: ../../docs/schema/reference.md:388
 msgid "Date"
 msgstr "Data"
 
-#: ../../docs/schema/reference.md:405
+#: ../../docs/schema/reference.md:390
 msgid ""
 "OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-"
 "times, following [RFC3339 "
@@ -910,19 +911,19 @@ msgstr ""
 "per le date e gli orari, seguendo quanto specificato sul [RFC3339 "
 "§5.6](http://tools.ietf.org/html/rfc3339#section-5.6)."
 
-#: ../../docs/schema/reference.md:407
+#: ../../docs/schema/reference.md:392
 msgid "A time and timezone/offset must be provided in a date-time."
 msgstr ""
 
-#: ../../docs/schema/reference.md:409
+#: ../../docs/schema/reference.md:394
 msgid "The following are valid date-times:"
 msgstr "Quelle di seguito sono date-orario valide:"
 
-#: ../../docs/schema/reference.md:411
+#: ../../docs/schema/reference.md:396
 msgid "'2014-10-21T09:30:00Z' - 9:30 am on the 21st October 2014, UTC"
 msgstr "'2014-10-21T09: 30: 00Z' - 9:30am per il 21 ottobre 2014, UTC"
 
-#: ../../docs/schema/reference.md:412
+#: ../../docs/schema/reference.md:397
 msgid ""
 "'2014-11-18T18:00:00-06:00' - 6pm on 18th November 2014 CST (Central "
 "Standard Time)"
@@ -930,27 +931,27 @@ msgstr ""
 "'2014-11-18T18: 00: 00-06: 00' - 18:00 del 18 novembre 2014 CST (Central "
 "Standard Time)"
 
-#: ../../docs/schema/reference.md:414
+#: ../../docs/schema/reference.md:399
 msgid "The following are not valid:"
 msgstr "Quanto segue non è valido:"
 
-#: ../../docs/schema/reference.md:416
+#: ../../docs/schema/reference.md:401
 msgid "'2014-10-21' - Missing time portion"
 msgstr "\"2014-10-21\" - Manca la parte relativa all'orario"
 
-#: ../../docs/schema/reference.md:417
+#: ../../docs/schema/reference.md:402
 msgid "'2014-10-21T18:00' - missing seconds in time portion."
 msgstr "'2014-10-21T18: 00' - mancano i secondi nellorario."
 
-#: ../../docs/schema/reference.md:418
+#: ../../docs/schema/reference.md:403
 msgid "'2014-11-18T18:00:00' - Missing timezone/offset portion"
 msgstr "'2014-11-18T18: 00: 00' - Manca il fuso orario nell'orario"
 
-#: ../../docs/schema/reference.md:419
+#: ../../docs/schema/reference.md:404
 msgid "'11/18/2014 18:00' - Not following the pattern at all!"
 msgstr "'11 / 18/2014 18:00 '- Non conforme al formato dello schema!"
 
-#: ../../docs/schema/reference.md:421
+#: ../../docs/schema/reference.md:406
 msgid ""
 "Accurately including the time and timezone offsets is particular important "
 "for tender deadlines and other dates which can have legal significance, and "
@@ -961,7 +962,7 @@ msgid ""
 "'+/-hh:mm' UTC on the end of the date-time value."
 msgstr ""
 
-#: ../../docs/schema/reference.md:423
+#: ../../docs/schema/reference.md:408
 msgid ""
 "In the event that the system from which data is drawn only includes dates, "
 "and does not include time information, publishers should use sensible "
@@ -974,7 +975,7 @@ msgid ""
 "17:00:00Z respectively."
 msgstr ""
 
-#: ../../docs/schema/reference.md:425
+#: ../../docs/schema/reference.md:410
 msgid ""
 "In the event that a date field is not bound to a specific time at all, "
 "publishers should choose a default time value of '23:59:59' and either 'Z' "
@@ -986,11 +987,11 @@ msgstr ""
 "predefinito di '23:59:59' e 'Z' (per UTC) o altro fuso orario dell'editore, "
 "indicando che il tempo si riferisce alla fine della data indicata."
 
-#: ../../docs/schema/reference.md:427
+#: ../../docs/schema/reference.md:412
 msgid "Item"
 msgstr "Articolo"
 
-#: ../../docs/schema/reference.md:429
+#: ../../docs/schema/reference.md:414
 msgid ""
 "The items block is used to list the line-items associated with a tender, "
 "award or contract."
@@ -1002,7 +1003,7 @@ msgstr ""
 msgid "These are extensions related to Items."
 msgstr "Queste sono estensioni relative agli Articoli."
 
-#: ../../extension_list_item:1 ../../docs/schema/reference.md:534
+#: ../../extension_list_item:1 ../../docs/schema/reference.md:514
 msgid "Location"
 msgstr "Posizione"
 
@@ -1012,21 +1013,21 @@ msgid ""
 "indicated in tender, award and contract objects."
 msgstr ""
 
-#: ../../docs/schema/reference.md:443
+#: ../../docs/schema/reference.md:428
 msgid "Classification"
 msgstr "Classificazione"
 
-#: ../../docs/schema/reference.md:451
+#: ../../docs/schema/reference.md:436
 msgid "Unit"
 msgstr "Unità"
 
-#: ../../docs/schema/reference.md:453
+#: ../../docs/schema/reference.md:438
 msgid ""
 "The `unit` block allows detailed specification of the parameters and price "
 "of units that make up a line-item."
 msgstr ""
 
-#: ../../docs/schema/reference.md:455
+#: ../../docs/schema/reference.md:440
 msgid ""
 "If the [Quantities, Units, Dimensions and Data Types "
 "Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification "
@@ -1034,18 +1035,18 @@ msgid ""
 "\"SquareMile\", in the `unit.name` field."
 msgstr ""
 
-#: ../../docs/schema/reference.md:457
+#: ../../docs/schema/reference.md:442
 msgid ""
 "Other unit classification schemes can be used, including those in the "
 "[unitClassificationScheme codelist](../codelists/#unit-classification-"
 "scheme)."
 msgstr ""
 
-#: ../../docs/schema/reference.md:466
+#: ../../docs/schema/reference.md:451
 msgid "Milestone"
 msgstr "Fase"
 
-#: ../../docs/schema/reference.md:468
+#: ../../docs/schema/reference.md:453
 msgid ""
 "Milestone information can be included in the [planning](#planning), "
 "[tender](#tender), [contract](#contract) and [contract "
@@ -1055,11 +1056,11 @@ msgstr ""
 "[pianificazione](#planning), [gara](#tender), [contratto](#contract) e "
 "[attuazione](#implementation)."
 
-#: ../../docs/schema/reference.md:477
+#: ../../docs/schema/reference.md:462
 msgid "Notes:"
 msgstr "Note:"
 
-#: ../../docs/schema/reference.md:479
+#: ../../docs/schema/reference.md:464
 msgid ""
 "The `dateModified` field should be changed whenever the progress towards a "
 "milestone is reviewed, and the `status` either updated, or re-confirmed."
@@ -1084,15 +1085,15 @@ msgstr ""
 "estensione reintroduce la capacità di allegare documenti a ogni singola fase"
 " principale."
 
-#: ../../docs/schema/reference.md:486
+#: ../../docs/schema/reference.md:471
 msgid "Value"
 msgstr "Valore"
 
-#: ../../docs/schema/reference.md:488
+#: ../../docs/schema/reference.md:473
 msgid "Financial values should be published with a currency attached."
 msgstr ""
 
-#: ../../docs/schema/reference.md:497
+#: ../../docs/schema/reference.md:482
 msgid ""
 "Support for exchange rates, and tax information, can be provided using "
 "extensions."
@@ -1100,11 +1101,11 @@ msgstr ""
 "Il supporto per i tassi di cambio e le informazioni fiscali possono essere "
 "forniti utilizzando le estensioni."
 
-#: ../../docs/schema/reference.md:504
+#: ../../docs/schema/reference.md:484
 msgid "RelatedProcess"
 msgstr "RelatedProcess"
 
-#: ../../docs/schema/reference.md:506
+#: ../../docs/schema/reference.md:486
 msgid ""
 "In OCDS each contracting process can have only one planning and tender "
 "stage. There are a number of cases where it is important to know about "
@@ -1114,11 +1115,11 @@ msgstr ""
 " di gara. Vi sono numerosi casi in cui è importante conoscere i relativi "
 "processi di pianificazione e appalto, tra cui:"
 
-#: ../../docs/schema/reference.md:508
+#: ../../docs/schema/reference.md:488
 msgid "When one planning process results in many tenders;"
 msgstr "Quando un processo di pianificazione porta a molte gare;"
 
-#: ../../docs/schema/reference.md:509
+#: ../../docs/schema/reference.md:489
 msgid ""
 "What a contract is awarded following two distinct, but related, tender "
 "processes, such as in national frameworks with locally run mini-"
@@ -1128,7 +1129,7 @@ msgstr ""
 "processi di gara, come nei quadri nazionali con mini-competizioni a gestione"
 " locale;"
 
-#: ../../docs/schema/reference.md:510
+#: ../../docs/schema/reference.md:490
 msgid ""
 "When a contract results in the award of sub-contracts - and those sub-"
 "contracts are also tracked using OCDS;"
@@ -1136,7 +1137,7 @@ msgstr ""
 "Quando un contratto dà luogo all'assegnazione di subappalti - e anche questi"
 " subappalti vengono tracciati utilizzando OCDS;"
 
-#: ../../docs/schema/reference.md:511
+#: ../../docs/schema/reference.md:491
 msgid ""
 "When a contract is coming up for renewal or replacement, and there is a "
 "contracting process to award  the renewal/replacement contract;"
@@ -1145,20 +1146,20 @@ msgstr ""
 "procedura di aggiudicazione per l'aggiudicazione del contratto di "
 "rinnovo/sostituzione;"
 
-#: ../../docs/schema/reference.md:513
+#: ../../docs/schema/reference.md:493
 msgid ""
 "In all these cases, the `relatedProcess` block should be used to cross-"
 "reference between the relevant open contracting processes using their "
 "`ocid`."
 msgstr ""
 
-#: ../../docs/schema/reference.md:522
+#: ../../docs/schema/reference.md:502
 msgid "A related process can be declared at two points in an OCDS release."
 msgstr ""
 "Un processo correlato può essere dichiarato in due punti in una versione "
 "OCDS."
 
-#: ../../docs/schema/reference.md:524
+#: ../../docs/schema/reference.md:504
 msgid ""
 "**(1) At the release level** - used to point backwards to prior processes, "
 "such as planning or framework establishment."
@@ -1166,14 +1167,14 @@ msgstr ""
 "**(1) Al livello di versione** - utilizzato per puntare indietro a processi "
 "precedenti, come la pianificazione o ancor prima."
 
-#: ../../docs/schema/reference.md:526
+#: ../../docs/schema/reference.md:506
 msgid ""
 "**(2) At the contract level** - used to point onward to sub-contracts, "
 "renewal or replacement processes that relate solely to the particular "
 "contract the field appears in."
 msgstr ""
 
-#: ../../docs/schema/reference.md:528
+#: ../../docs/schema/reference.md:508
 msgid ""
 "As well as providing this machine-readable link between processes, "
 "publishers may also provide links to human-readable documentation in the "
@@ -1184,7 +1185,7 @@ msgstr ""
 "documentazione leggibili dagli utenti umani indicandoli nei relativi blocchi"
 " `documents`. Per esempio:"
 
-#: ../../docs/schema/reference.md:530
+#: ../../docs/schema/reference.md:510
 msgid ""
 "When recording a `release/relatedProcess` pointing to the ocid of the "
 "planning process that resulted in a tender, a `tender/documents` entry with "
@@ -1197,7 +1198,7 @@ msgstr ""
 "anche un collegamento a pagine web che contengono documentazione aggiuntiva "
 "sul piano degli acquisti o di approvvigionamento;"
 
-#: ../../docs/schema/reference.md:531
+#: ../../docs/schema/reference.md:511
 msgid ""
 "When recording a `contract/relatedProcess` pointing to the ocid of a  sub-"
 "contracting process, a `contract/documents` entry with a `documentType` of "
@@ -1209,7 +1210,7 @@ msgstr ""
 "contenente un 'subContract' e un titolo che descrive il processo di "
 "subappalto;"
 
-#: ../../docs/schema/reference.md:532
+#: ../../docs/schema/reference.md:512
 msgid ""
 "When recording a `contract/relatedProcess` pointing to the ocid of a tender "
 "process to renew a given contract, a `contract/documents` entry with a "
@@ -1221,18 +1222,18 @@ msgstr ""
 "\"contratto/documenti\" con un \"documentType\" di \"tenderNotice\" e un "
 "titolo che la descrive come il processo successivo, potrebbe essere fornito;"
 
-#: ../../docs/schema/reference.md:536
+#: ../../docs/schema/reference.md:516
 msgid ""
 "The [Location](https://extensions.open-"
 "contracting.org/en/extensions/location/v1.1.4/) extension can be used to "
 "provide location information."
 msgstr ""
 
-#: ../../docs/schema/reference.md:538
+#: ../../docs/schema/reference.md:518
 msgid "Publisher"
 msgstr "Pubblicatore"
 
-#: ../../docs/schema/reference.md:540
+#: ../../docs/schema/reference.md:520
 msgid ""
 "The publisher block is used in release and record packages to identify the "
 "source of a dataset."

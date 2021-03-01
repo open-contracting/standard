@@ -6,13 +6,13 @@ For this version of OCDS, the canonical URL of the release schema is: <https://s
 
 Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section. Required fields are indicated in **bold**. [Deprecated fields](../governance/deprecation) and [multilingual fields](../reference/#language) are omitted.
 
-```eval_rst
+```{eval-rst}
 .. admonition:: Browsing the schema
    :class: note
 
    .. markdown::
 
-      This page presents the release schema in an interactive browser. You can also download the canonical version of the release schema as [JSON Schema](../../release-schema.json), download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it as [tables](reference), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
+      This page presents the release schema in an interactive browser. You can also download the canonical version of the release schema as {download}`JSON Schema <../../build/current_lang/release-schema.json>`, download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it as [tables](reference), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
 ```
 
 <script src="../../_static/docson/public/js/widget.js" data-schema="../../../release-schema.json"></script>

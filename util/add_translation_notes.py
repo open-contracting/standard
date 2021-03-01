@@ -22,6 +22,7 @@ from helper import base_dir
 localedir = os.path.join(base_dir, 'docs', 'locale')
 base_url = 'https://standard.open-contracting.org/1.1'
 supported_translations = ['es', 'fr']
+excluded = ('.doctrees', '_downloads', '_images', '_sources', '_static', 'codelists', 'genindex', 'search')
 
 
 def add_translation_notes():
@@ -31,7 +32,7 @@ def add_translation_notes():
 
         for root, dirs, files in os.walk(build_dir):
             # Skip Sphinx directories.
-            for directory in ('.doctrees', '_images', '_sources', '_static', 'codelists', 'genindex', 'search'):
+            for directory in excluded:
                 if directory in dirs:
                     dirs.remove(directory)
 
@@ -81,6 +82,11 @@ def add_translation_note(path, language, domain):
 
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
         replacement.make_links_absolute('{}/{}'.format(base_url, language))
+
+        # Remove any existing translation notes.
+        parent = replacement.xpath('//h1')[0].getparent()
+        for div in replacement.xpath('//h1/following-sibling::div[@class="admonition note"]'):
+            parent.remove(div)
 
         parent = document.xpath(xpath)[0].getparent()
         parent.getparent().replace(parent, replacement)

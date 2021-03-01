@@ -182,7 +182,7 @@ Any current or potential OCDS publisher or data user of the standard can be cons
 
 "The principle of consensus has its origins in the desire to achieve the general acceptance and application of a Standard within its intended sphere of influence. This entails trying to ensure that the interests of all those likely to be affected by it are taken into account, and that individual concerns are carefully and fairly balanced against the wider public interest." [BSI, 2012](http://www.bsigroup.com/Documents/about-bsi/NSB/BSI-pocket-guide-to-standards-development-UK-EN.pdf) 
 
-```eval_rst
+```{eval-rst}
 .. toctree::
    :hidden:
 

@@ -1,7 +1,7 @@
 name: Lint
 on: [push, pull_request]
 env:
-  BASEDIR: https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master
+  BASEDIR: https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,4 +17,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
     - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
+    - run: sudo apt-get install shellcheck
     - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
+    - run: shellcheck script/*

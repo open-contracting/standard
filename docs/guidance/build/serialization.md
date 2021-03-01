@@ -40,7 +40,7 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](http:
 
 **JSON**
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/serialization-flat.json
    :jsonpointer: 
    :expand: releases, tender, items
@@ -49,7 +49,7 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](http:
 
 **CSV**
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/serialization-flat.csv
@@ -68,7 +68,7 @@ It is, however, theoretically possible to represent a full release in a single f
 
 For example, to represent a tender release with two items, the CSV file would include:
 
-```eval_rst
+```{eval-rst}
 .. csv-table-no-translate::
    :header-rows: 1
    :file: ../../examples/serialization-flat-two-items.csv
@@ -77,7 +77,7 @@ For example, to represent a tender release with two items, the CSV file would in
 
 The JSON equivalent of this would be:
 
-```eval_rst
+```{eval-rst}
 .. jsoninclude:: ../../examples/serialization-flat-two-items.json
    :jsonpointer: 
    :expand: releases, tender, items
@@ -88,7 +88,7 @@ Whilst this allows complex data to be expressed in flat CSV, users will need to 
 
 Instead, data with a one-to-many relationship can be represented using a multi-table serialization. 
 
-```eval_rst
+```{eval-rst}
 .. admonition:: CSV encoding
    :class: note
 
@@ -102,7 +102,7 @@ The multi-table serialization separates  objects with many to one relationships 
 
 Multiple tables can be packaged together as the tabs of an Excel spreadsheet, or in a collection of CSV files.  
 
-An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/master/flat-template).
+An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/main/flat-template).
 
 For further information on multi-table serializations please see the [flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/).
 
