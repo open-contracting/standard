@@ -152,7 +152,7 @@ In the EU, contracts can be initiated through a number of different procedures i
 
 However, to support comparison across continents, the main OCDS procurement method codelist is a closed codelist with four values:
 
-```{codelisttable}
+```{csv-table}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/method.csv
 ```
