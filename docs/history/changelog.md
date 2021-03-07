@@ -14,6 +14,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 * Guidance section:
+  * [#1175](https://github.com/open-contracting/standard/pull/1175) Update description of `Award`
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
   * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
   * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
@@ -33,7 +34,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 ## [1.2] - YYYY-MM-DD
 
 ### Schema
-
+* [#1175](https://github.com/open-contracting/standard/pull/1175) Update description of `Award`
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Clarify the uniqueness of `Organization.id`
 * [#1113](https://github.com/open-contracting/standard/pull/1113) Add recommendation to put hyphen after the ocid prefix
