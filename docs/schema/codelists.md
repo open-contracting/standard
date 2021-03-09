@@ -21,6 +21,16 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 ## Open Codelists
 
+### Release Tag
+
+A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to.
+
+```eval_rst
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/releaseTag.csv
+```
+
 ### Party Role
 
 The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../reference/#parties). A single party can have one or more roles in the contracting process.
@@ -158,16 +168,6 @@ The extended procurement category codelist is used to provide additional detail 
 
 
 ## Closed Codelists 
-
-### Release Tag
-
-A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to. 
-
-```eval_rst
-.. codelisttable::
-   :header-rows: 1
-   :file: ../../build/current_lang/codelists/releaseTag.csv
-```
 
 ### Initiation Type
 

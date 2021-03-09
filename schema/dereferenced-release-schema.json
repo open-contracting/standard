@@ -27,31 +27,13 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the closed [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags can be used to filter releases and to understand the kind of information that releases might contain.",
+      "description": "One or more values from the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags can be used to filter releases and to understand the kind of information that releases might contain.",
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": [
-          "planning",
-          "planningUpdate",
-          "tender",
-          "tenderAmendment",
-          "tenderUpdate",
-          "tenderCancellation",
-          "award",
-          "awardUpdate",
-          "awardCancellation",
-          "contract",
-          "contractUpdate",
-          "contractAmendment",
-          "implementation",
-          "implementationUpdate",
-          "contractTermination",
-          "compiled"
-        ]
+        "type": "string"
       },
       "codelist": "releaseTag.csv",
-      "openCodelist": false,
+      "openCodelist": true,
       "minItems": 1,
       "omitWhenMerged": true
     },
