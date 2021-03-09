@@ -53,6 +53,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1210](https://github.com/open-contracting/standard/pull/1210) Add the 'CELEX' and 'LEXML' codes from the legal basis extension to the `itemClassificationScheme` codelist.
 * [#1218](https://github.com/open-contracting/standard/pull/1218) Add the 'COFOG' code from the organization classifiation extension to the `itemClassificationScheme` codelist.
 * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
+* [#1243](https://github.com/open-contracting/standard/pull/1243) Add the 'procurement' and 'contractClose' codes from the PPP extension to the `milestoneType` codelist.
 
 ### Schema
 
