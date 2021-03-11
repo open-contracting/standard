@@ -171,62 +171,58 @@
     },
     "LinkedRelease": {
       "title": "Linked release",
-      "description": "A object that identify the releases associated with this Open Contracting ID.",
-      "type": "array",
-      "items": {
-        "description": "Information to uniquely identify the release.",
-        "type": "object",
-        "properties": {
-          "url": {
-            "title": "Release URL",
-            "description": "The URL of the release which contains the URL of the package with the release `id` appended using a fragment identifier e.g. https://standard.open-contracting.org/{{version}}/{{lang}}/examples/tender.json#ocds-213czf-000-00001",
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "uri"
-          },
-          "date": {
-            "title": "Release Date",
-            "description": "The date of the release. It should match the value of the `date` field of the release. This is used to sort the releases in the list in chronological order.",
-            "type": "string",
-            "format": "date-time"
-          },
-          "tag": {
-            "title": "Release Tag",
-            "description": "The tags of the release. It should match the value of the `tag` field of the release. This provides additional context when reviewing a record to see what types of releases are included for this ocid.",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "planning",
-                "planningUpdate",
-                "tender",
-                "tenderAmendment",
-                "tenderUpdate",
-                "tenderCancellation",
-                "award",
-                "awardUpdate",
-                "awardCancellation",
-                "contract",
-                "contractUpdate",
-                "contractAmendment",
-                "implementation",
-                "implementationUpdate",
-                "contractTermination",
-                "compiled"
-              ]
-            },
-            "codelist": "releaseTag.csv",
-            "openCodelist": false,
-            "minItems": 1
-          }
+      "description": "A object that identifies the releases associated with a Open Contracting ID.",
+      "type": "object",
+      "properties": {
+        "url": {
+          "title": "Release URL",
+          "description": "The URL of the release which contains the URL of the package with the release `id` appended using a fragment identifier e.g. https://standard.open-contracting.org/{{version}}/{{lang}}/examples/tender.json#ocds-213czf-000-00001",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
         },
-        "required": [
-          "url",
-          "date"
-        ]
-      }
+        "date": {
+          "title": "Release Date",
+          "description": "The date of the release. It should match the value of the `date` field of the release. This is used to sort the releases in the list in chronological order.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "tag": {
+          "title": "Release Tag",
+          "description": "The tags of the release. It should match the value of the `tag` field of the release. This provides additional context when reviewing a record to see what types of releases are included for this ocid.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "planning",
+              "planningUpdate",
+              "tender",
+              "tenderAmendment",
+              "tenderUpdate",
+              "tenderCancellation",
+              "award",
+              "awardUpdate",
+              "awardCancellation",
+              "contract",
+              "contractUpdate",
+              "contractAmendment",
+              "implementation",
+              "implementationUpdate",
+              "contractTermination",
+              "compiled"
+            ]
+          },
+          "codelist": "releaseTag.csv",
+          "openCodelist": false,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "url",
+        "date"
+      ]
     }
   }
 }
