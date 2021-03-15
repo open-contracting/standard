@@ -59,7 +59,7 @@ A linked release follows a simple schema:
 
 ```eval_rst
 .. jsonschema:: ../../build/current_lang/record-package-schema.json
-   :pointer: /definitions/record/properties/releases/oneOf/0/items
+   :pointer: /definitions/LinkedRelease
 ```
 
 For each `url` value, it must be possible for a consuming application to retrieve the release package at the URL and identify the release within it. Since a release package can contain multiple releases, for a linked release to identify a specific release via its `url` field, the `id` of the release must be appended to the release package URL using a fragment identifier.

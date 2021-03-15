@@ -57,7 +57,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 ### Schema
 
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
-* [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
+* [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award.
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `tender.submissionMethod` field, because all codes from the `submissionMethod` codelist are deprecated.
 * Add new fields to the release schema:
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `weight` to `Item.unit`
@@ -74,6 +74,9 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available" ("may" replaced with "should")
   * `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
   * `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
+* Record package schema:
+  * [#1241](https://github.com/open-contracting/standard/pull/1241) In the definition section, rename record to `Record` and add `LinkedRelease`.
+  * [#1241](https://github.com/open-contracting/standard/pull/1241) Align descriptions of `Record` `releases`, linked releases and embedded releases.
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
