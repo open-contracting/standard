@@ -122,14 +122,10 @@ The notice represents the initiation of the contracting process, so it is modell
 
 Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
 
-```{eval-rst}
-.. note::
+```{note}
+OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github](https://github.com/open-contracting/standard/issues/440).
 
-   .. markdown ::
-
-      OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github](https://github.com/open-contracting/standard/issues/440).
-
-      Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
+Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
 ```
 
 ## Example: Pre-selection

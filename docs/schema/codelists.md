@@ -59,10 +59,8 @@ The Organization Identifier Scheme uses the codes from [org-id.guide](http://www
 
 To add new codes to the codelist, contact the [OCDS Helpdesk](../../support/index).
 
-```{eval-rst}
-.. note::
-
-   This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS documentation as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1.
+```{note}
+This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS documentation as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1.
 ```
 
 ### Document Type
@@ -83,11 +81,8 @@ Publishers must map their existing document codes to this list, where possible. 
 
 The award criteria codelist describes the basis on which contract awards will be made. 
 
-```{eval-rst}
-.. note:: 
-
-  This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers ought to review the mapping from their internal systems to this updated list of award criteria.
-
+```{note}
+This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers ought to review the mapping from their internal systems to this updated list of award criteria.
 ```
 
 ```{csv-table}
@@ -172,9 +167,8 @@ The `tender.status` field is used to indicate the current status of a tender pro
 :file: ../../build/current_lang/codelists/tenderStatus.csv
 ```
 
-```{eval-rst}
-.. note:: 
-   The 'planning' status was introduced in version 1.1.
+```{note} 
+The 'planning' status was introduced in version 1.1.
 ```
 
 ### Method
