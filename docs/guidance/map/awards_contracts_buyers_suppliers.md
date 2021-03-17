@@ -17,7 +17,7 @@ The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en
 In OCDS, the `Award` object is intended to communicate a direct relationship between items, suppliers, and values. It ought to be possible to know, at the award stage, in OCDS data, which items will later be supplied by which suppliers, and what the value of those contracts will be.
 
 ```{note}
-      The OCDS schema and documentation are not clear what, precisely, is meant by 'award'. A revision of the definition of `Award` in OCDS is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/895)).
+The OCDS schema and documentation are not clear what, precisely, is meant by 'award'. A revision of the definition of `Award` in OCDS is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/895)).
 ```
 
 ### Contract
@@ -59,7 +59,7 @@ OCDS defines a supplier as:
 
 ### Electronic catalog
 
-```{note}
+```{hint}
 Electronic catalogs can often be found in more complicated procedures, usually together with framework agreements and involving multiple bidders. However, on their own, they are simply an electronic format (typically prescribed by the buyer) that participants in the contracting process must follow when exchaning information about technical specifications, evaluation criteria, bids, lots, etc. As such, catalogs do not influence the relationship between awards, contracts, buyers and suppliers. 
 ```
 

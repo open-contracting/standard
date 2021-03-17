@@ -46,14 +46,14 @@ In the release below, a branch of the Bank of Moldova announces a contract oppor
 ```{jsoninclude} ../../examples/organizational-units/ocds_divisionCode_extension/extension.json
 :jsonpointer: 
 :expand: name, description, schemas, compatibility
-   :title: exension
+:title: extension
 
 ```
 
 ```{jsoninclude} ../../examples/organizational-units/ocds_divisionCode_extension/release-schema.json
 :jsonpointer: 
 :expand: definitions, Organization, properties, details, properties, divisionCode
-   :title: reease-schema
+:title: release-schema
 
 ```
 

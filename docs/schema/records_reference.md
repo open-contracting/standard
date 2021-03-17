@@ -5,6 +5,7 @@ Whereas there can be multiple releases about a contracting process, there should
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
 ```{admonition} Browsing the schema
+:class: note
 This page presents the record package schema as tables. You can also download the canonical version of the record package schema as {download}`JSON Schema <../../build/current_lang/record-package-schema.json>`, or view it in an [interactive browser](record_package).
 ```
 

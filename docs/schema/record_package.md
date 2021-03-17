@@ -9,6 +9,7 @@ For this version of OCDS, the canonical URL for the record package schema is <ht
 Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section. Required fields are indicated in **bold**. [Deprecated fields](../governance/deprecation) and [multilingual fields](../reference/#language) are omitted.
 
 ```{admonition} Browsing the schema
+:class: note
 This page presents the record package schema in an interactive browser. You can also download the canonical version of the record package schema as {download}`JSON Schema <../../build/current_lang/record-package-schema.json>`, or view it as [tables](records_reference).
 ```
 

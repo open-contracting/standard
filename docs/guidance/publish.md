@@ -35,16 +35,15 @@ When using custom licenses, publishers are encouraged to check that they are [co
 
 In structured data file you ought to embed a link to the license in the `license` field of the release or record package as indicated below:
 
-```{eval-rst}
-.. code-block:: json
-   :emphasize-lines: 4
+```{code-block} json
+:emphasize-lines: 4
 
-   {
-     "uri":"https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json",
-     "publishedDate":"2010-03-01T09:30:00Z",
-     "license":"http://opendatacommons.org/licenses/pddl/1.0/",
-     "...":"..."
-   }
+{
+  "uri":"https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json",
+  "publishedDate":"2010-03-01T09:30:00Z",
+  "license":"http://opendatacommons.org/licenses/pddl/1.0/",
+  "...":"..."
+}
 ```
 
 In individual CSV files or other models of publishing, it might not be possible to embed the license information. In these cases (and in the structured data case also) publishers ought to ensure that a clear statement is provided alongside files where they are provided for download linking to, and explaining, the license terms they are published under. Particular attention ought to be paid to ensuring license information on any data catalogues where open contracting data is listed are accurate.

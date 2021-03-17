@@ -155,16 +155,11 @@ Only qualified suppliers will be invited to bid in subsequent tenders that use t
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-qualification-paraguay-package.json
 :jsonpointer: /releases/0/tender
-   :title: Tnder section
-
+:title: Tender section
 ```
 
-```{eval-rst}
-.. note::
+```{note}
+OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github issue](https://github.com/open-contracting/standard/issues/440).
 
-   .. markdown ::
-
-      OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github issue](https://github.com/open-contracting/standard/issues/440).
-
-      Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
+Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
 ```
