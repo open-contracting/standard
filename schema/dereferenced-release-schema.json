@@ -27,31 +27,13 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the closed [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags can be used to filter releases and to understand the kind of information that releases might contain.",
+      "description": "One or more values from the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags can be used to filter releases and to understand the kind of information that releases might contain.",
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": [
-          "planning",
-          "planningUpdate",
-          "tender",
-          "tenderAmendment",
-          "tenderUpdate",
-          "tenderCancellation",
-          "award",
-          "awardUpdate",
-          "awardCancellation",
-          "contract",
-          "contractUpdate",
-          "contractAmendment",
-          "implementation",
-          "implementationUpdate",
-          "contractTermination",
-          "compiled"
-        ]
+        "type": "string"
       },
       "codelist": "releaseTag.csv",
-      "openCodelist": false,
+      "openCodelist": true,
       "minItems": 1,
       "omitWhenMerged": true
     },
@@ -600,11 +582,11 @@
         "budget": {
           "type": "object",
           "title": "Budget information",
-          "description": "This section contains information about the budget line, and associated projects, through which this contracting process is funded. It draws upon the data model of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+          "description": "This section contains basic information about the budget estimated for, or allocated to, this contracting process at the present time. Further documentation and data about how budgets have been allocated to a contracting process should be published outside of OCDS data, according to the best available standards.",
           "properties": {
             "id": {
               "title": "ID",
-              "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source. Although an integer is allowed, it is recommended to use a string.",
+              "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against formal budget documents.",
               "type": [
                 "string",
                 "integer",
@@ -613,7 +595,7 @@
             },
             "description": {
               "title": "Budget Source",
-              "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.",
+              "description": "A short free-text description of the budget allocation for this contracting process. This may be used to provide human-readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
               "type": [
                 "string",
                 "null"
@@ -1059,7 +1041,7 @@
               },
               "url": {
                 "title": "URL",
-                "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                 "type": [
                   "string",
                   "null"
@@ -1269,7 +1251,7 @@
                     },
                     "url": {
                       "title": "URL",
-                      "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                      "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                       "type": [
                         "string",
                         "null"
@@ -1407,6 +1389,14 @@
             "complete",
             "withdrawn",
             null
+          ]
+        },
+        "statusDetails": {
+          "title": "Status details",
+          "description": "Additional details on the status of the tender. This field can be used to provide the local name of the status.",
+          "type": [
+            "string",
+            "null"
           ]
         },
         "procuringEntity": {
@@ -2988,7 +2978,11 @@
             "type": "string"
           },
           "codelist": "submissionMethod.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "deprecated": {
+            "description": "This field is deprecated, because all codes from the submissionMethod codelist are deprecated. Refer to the Deprecation note of individual codes.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
@@ -3491,7 +3485,7 @@
               },
               "url": {
                 "title": "URL",
-                "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                 "type": [
                   "string",
                   "null"
@@ -3701,7 +3695,7 @@
                     },
                     "url": {
                       "title": "URL",
-                      "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                      "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                       "type": [
                         "string",
                         "null"
@@ -4065,6 +4059,14 @@
             ],
             "codelist": "awardStatus.csv",
             "openCodelist": false
+          },
+          "statusDetails": {
+            "title": "Status details",
+            "description": "Additional details on the status of the award. This field can be used to provide the local name of the status.",
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "date": {
             "title": "Award date",
@@ -5331,7 +5333,7 @@
                 },
                 "url": {
                   "title": "URL",
-                  "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                  "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                   "type": [
                     "string",
                     "null"
@@ -5668,6 +5670,14 @@
             ],
             "codelist": "contractStatus.csv",
             "openCodelist": false
+          },
+          "statusDetails": {
+            "title": "Status details",
+            "description": "Additional details on the status of the contract. This field can be used to provide the local name of the status.",
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "period": {
             "title": "Period",
@@ -6682,7 +6692,7 @@
                 },
                 "url": {
                   "title": "URL",
-                  "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                  "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                   "type": [
                     "string",
                     "null"
@@ -8202,7 +8212,7 @@
                           },
                           "url": {
                             "title": "URL",
-                            "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                            "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                             "type": [
                               "string",
                               "null"
@@ -8328,7 +8338,7 @@
                     },
                     "url": {
                       "title": "URL",
-                      "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                      "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                       "type": [
                         "string",
                         "null"
@@ -8607,7 +8617,7 @@
                       },
                       "url": {
                         "title": "URL",
-                        "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                        "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                         "type": [
                           "string",
                           "null"
@@ -8996,11 +9006,11 @@
         "budget": {
           "type": "object",
           "title": "Budget information",
-          "description": "This section contains information about the budget line, and associated projects, through which this contracting process is funded. It draws upon the data model of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+          "description": "This section contains basic information about the budget estimated for, or allocated to, this contracting process at the present time. Further documentation and data about how budgets have been allocated to a contracting process should be published outside of OCDS data, according to the best available standards.",
           "properties": {
             "id": {
               "title": "ID",
-              "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source. Although an integer is allowed, it is recommended to use a string.",
+              "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against formal budget documents.",
               "type": [
                 "string",
                 "integer",
@@ -9009,7 +9019,7 @@
             },
             "description": {
               "title": "Budget Source",
-              "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.",
+              "description": "A short free-text description of the budget allocation for this contracting process. This may be used to provide human-readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
               "type": [
                 "string",
                 "null"
@@ -9455,7 +9465,7 @@
               },
               "url": {
                 "title": "URL",
-                "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                 "type": [
                   "string",
                   "null"
@@ -9665,7 +9675,7 @@
                     },
                     "url": {
                       "title": "URL",
-                      "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                      "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                       "type": [
                         "string",
                         "null"
@@ -9803,6 +9813,14 @@
             "complete",
             "withdrawn",
             null
+          ]
+        },
+        "statusDetails": {
+          "title": "Status details",
+          "description": "Additional details on the status of the tender. This field can be used to provide the local name of the status.",
+          "type": [
+            "string",
+            "null"
           ]
         },
         "procuringEntity": {
@@ -11384,7 +11402,11 @@
             "type": "string"
           },
           "codelist": "submissionMethod.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "deprecated": {
+            "description": "This field is deprecated, because all codes from the submissionMethod codelist are deprecated. Refer to the Deprecation note of individual codes.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
@@ -11887,7 +11909,7 @@
               },
               "url": {
                 "title": "URL",
-                "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                 "type": [
                   "string",
                   "null"
@@ -12097,7 +12119,7 @@
                     },
                     "url": {
                       "title": "URL",
-                      "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                      "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                       "type": [
                         "string",
                         "null"
@@ -12457,6 +12479,14 @@
           ],
           "codelist": "awardStatus.csv",
           "openCodelist": false
+        },
+        "statusDetails": {
+          "title": "Status details",
+          "description": "Additional details on the status of the award. This field can be used to provide the local name of the status.",
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "date": {
           "title": "Award date",
@@ -13723,7 +13753,7 @@
               },
               "url": {
                 "title": "URL",
-                "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                 "type": [
                   "string",
                   "null"
@@ -14054,6 +14084,14 @@
           ],
           "codelist": "contractStatus.csv",
           "openCodelist": false
+        },
+        "statusDetails": {
+          "title": "Status details",
+          "description": "Additional details on the status of the contract. This field can be used to provide the local name of the status.",
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "period": {
           "title": "Period",
@@ -15068,7 +15106,7 @@
               },
               "url": {
                 "title": "URL",
-                "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                 "type": [
                   "string",
                   "null"
@@ -16588,7 +16626,7 @@
                         },
                         "url": {
                           "title": "URL",
-                          "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                          "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                           "type": [
                             "string",
                             "null"
@@ -16714,7 +16752,7 @@
                   },
                   "url": {
                     "title": "URL",
-                    "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                    "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                     "type": [
                       "string",
                       "null"
@@ -16993,7 +17031,7 @@
                     },
                     "url": {
                       "title": "URL",
-                      "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                      "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                       "type": [
                         "string",
                         "null"
@@ -18741,7 +18779,7 @@
                     },
                     "url": {
                       "title": "URL",
-                      "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                      "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                       "type": [
                         "string",
                         "null"
@@ -18867,7 +18905,7 @@
               },
               "url": {
                 "title": "URL",
-                "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                 "type": [
                   "string",
                   "null"
@@ -19076,7 +19114,7 @@
               },
               "url": {
                 "title": "URL",
-                "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+                "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
                 "type": [
                   "string",
                   "null"
@@ -19196,7 +19234,7 @@
         },
         "url": {
           "title": "URL",
-          "description": "A direct link to the document or attachment. The server providing access to this document ought to be configured to correctly report the document mime type.",
+          "description": "A web address for accessing the document. The server providing access to this document ought to be configured to report the correct IANA media type. If the relevant information is within a larger document, the first page should be indicated by adding a fragment identifier to the end of the URL, such as #page=32.",
           "type": [
             "string",
             "null"
@@ -19256,11 +19294,11 @@
     "Budget": {
       "type": "object",
       "title": "Budget information",
-      "description": "This section contains information about the budget line, and associated projects, through which this contracting process is funded. It draws upon the data model of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+      "description": "This section contains basic information about the budget estimated for, or allocated to, this contracting process at the present time. Further documentation and data about how budgets have been allocated to a contracting process should be published outside of OCDS data, according to the best available standards.",
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against the provided data source. Although an integer is allowed, it is recommended to use a string.",
+          "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against formal budget documents.",
           "type": [
             "string",
             "integer",
@@ -19269,7 +19307,7 @@
         },
         "description": {
           "title": "Budget Source",
-          "description": "A short free text description of the budget source. May be used to provide the title of the budget line, or the programme used to fund this project.",
+          "description": "A short free-text description of the budget allocation for this contracting process. This may be used to provide human-readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
           "type": [
             "string",
             "null"
@@ -22812,6 +22850,428 @@
           "format": "uri",
           "description": "A URI pointing to a machine-readable document, release or record package containing the identified related process.",
           "title": "Related process URI",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Unit": {
+      "title": "Unit",
+      "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "unitClassificationScheme.csv",
+          "openCodelist": true
+        },
+        "id": {
+          "title": "ID",
+          "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the unit.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "title": "Value",
+          "description": "Financial values should be published with a currency attached.",
+          "type": "object",
+          "properties": {
+            "amount": {
+              "title": "Amount",
+              "description": "Amount as a number.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "currency": {
+              "title": "Currency",
+              "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "currency.csv",
+              "openCodelist": false,
+              "enum": [
+                "ADP",
+                "AED",
+                "AFA",
+                "AFN",
+                "ALK",
+                "ALL",
+                "AMD",
+                "ANG",
+                "AOA",
+                "AOK",
+                "AON",
+                "AOR",
+                "ARA",
+                "ARP",
+                "ARS",
+                "ARY",
+                "ATS",
+                "AUD",
+                "AWG",
+                "AYM",
+                "AZM",
+                "AZN",
+                "BAD",
+                "BAM",
+                "BBD",
+                "BDT",
+                "BEC",
+                "BEF",
+                "BEL",
+                "BGJ",
+                "BGK",
+                "BGL",
+                "BGN",
+                "BHD",
+                "BIF",
+                "BMD",
+                "BND",
+                "BOB",
+                "BOP",
+                "BOV",
+                "BRB",
+                "BRC",
+                "BRE",
+                "BRL",
+                "BRN",
+                "BRR",
+                "BSD",
+                "BTN",
+                "BUK",
+                "BWP",
+                "BYB",
+                "BYN",
+                "BYR",
+                "BZD",
+                "CAD",
+                "CDF",
+                "CHC",
+                "CHE",
+                "CHF",
+                "CHW",
+                "CLF",
+                "CLP",
+                "CNY",
+                "COP",
+                "COU",
+                "CRC",
+                "CSD",
+                "CSJ",
+                "CSK",
+                "CUC",
+                "CUP",
+                "CVE",
+                "CYP",
+                "CZK",
+                "DDM",
+                "DEM",
+                "DJF",
+                "DKK",
+                "DOP",
+                "DZD",
+                "ECS",
+                "ECV",
+                "EEK",
+                "EGP",
+                "ERN",
+                "ESA",
+                "ESB",
+                "ESP",
+                "ETB",
+                "EUR",
+                "FIM",
+                "FJD",
+                "FKP",
+                "FRF",
+                "GBP",
+                "GEK",
+                "GEL",
+                "GHC",
+                "GHP",
+                "GHS",
+                "GIP",
+                "GMD",
+                "GNE",
+                "GNF",
+                "GNS",
+                "GQE",
+                "GRD",
+                "GTQ",
+                "GWE",
+                "GWP",
+                "GYD",
+                "HKD",
+                "HNL",
+                "HRD",
+                "HRK",
+                "HTG",
+                "HUF",
+                "IDR",
+                "IEP",
+                "ILP",
+                "ILR",
+                "ILS",
+                "INR",
+                "IQD",
+                "IRR",
+                "ISJ",
+                "ISK",
+                "ITL",
+                "JMD",
+                "JOD",
+                "JPY",
+                "KES",
+                "KGS",
+                "KHR",
+                "KMF",
+                "KPW",
+                "KRW",
+                "KWD",
+                "KYD",
+                "KZT",
+                "LAJ",
+                "LAK",
+                "LBP",
+                "LKR",
+                "LRD",
+                "LSL",
+                "LSM",
+                "LTL",
+                "LTT",
+                "LUC",
+                "LUF",
+                "LUL",
+                "LVL",
+                "LVR",
+                "LYD",
+                "MAD",
+                "MDL",
+                "MGA",
+                "MGF",
+                "MKD",
+                "MLF",
+                "MMK",
+                "MNT",
+                "MOP",
+                "MRO",
+                "MRU",
+                "MTL",
+                "MTP",
+                "MUR",
+                "MVQ",
+                "MVR",
+                "MWK",
+                "MXN",
+                "MXP",
+                "MXV",
+                "MYR",
+                "MZE",
+                "MZM",
+                "MZN",
+                "NAD",
+                "NGN",
+                "NIC",
+                "NIO",
+                "NLG",
+                "NOK",
+                "NPR",
+                "NZD",
+                "OMR",
+                "PAB",
+                "PEH",
+                "PEI",
+                "PEN",
+                "PES",
+                "PGK",
+                "PHP",
+                "PKR",
+                "PLN",
+                "PLZ",
+                "PTE",
+                "PYG",
+                "QAR",
+                "RHD",
+                "ROK",
+                "ROL",
+                "RON",
+                "RSD",
+                "RUB",
+                "RUR",
+                "RWF",
+                "SAR",
+                "SBD",
+                "SCR",
+                "SDD",
+                "SDG",
+                "SDP",
+                "SEK",
+                "SGD",
+                "SHP",
+                "SIT",
+                "SKK",
+                "SLL",
+                "SOS",
+                "SRD",
+                "SRG",
+                "SSP",
+                "STD",
+                "STN",
+                "SUR",
+                "SVC",
+                "SYP",
+                "SZL",
+                "THB",
+                "TJR",
+                "TJS",
+                "TMM",
+                "TMT",
+                "TND",
+                "TOP",
+                "TPE",
+                "TRL",
+                "TRY",
+                "TTD",
+                "TWD",
+                "TZS",
+                "UAH",
+                "UAK",
+                "UGS",
+                "UGW",
+                "UGX",
+                "USD",
+                "USN",
+                "USS",
+                "UYI",
+                "UYN",
+                "UYP",
+                "UYU",
+                "UYW",
+                "UZS",
+                "VEB",
+                "VEF",
+                "VES",
+                "VNC",
+                "VND",
+                "VUV",
+                "WST",
+                "XAF",
+                "XAG",
+                "XAU",
+                "XBA",
+                "XBB",
+                "XBC",
+                "XBD",
+                "XCD",
+                "XDR",
+                "XEU",
+                "XFO",
+                "XFU",
+                "XOF",
+                "XPD",
+                "XPF",
+                "XPT",
+                "XRE",
+                "XSU",
+                "XTS",
+                "XUA",
+                "XXX",
+                "YDD",
+                "YER",
+                "YUD",
+                "YUM",
+                "YUN",
+                "ZAL",
+                "ZAR",
+                "ZMK",
+                "ZMW",
+                "ZRN",
+                "ZRZ",
+                "ZWC",
+                "ZWD",
+                "ZWL",
+                "ZWN",
+                "ZWR",
+                null
+              ]
+            }
+          }
+        },
+        "uri": {
+          "title": "URI",
+          "description": "The machine-readable URI for the unit of measure, provided by the scheme.",
+          "format": "uri",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "weight": {
+          "title": "Weight",
+          "description": "The weight of one item unit.",
+          "type": "object",
+          "properties": {
+            "unit": {
+              "title": "Simple Unit",
+              "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
+              "type": "object",
+              "properties": {
+                "scheme": {
+                  "title": "Scheme",
+                  "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "codelist": "unitClassificationScheme.csv",
+                  "openCodelist": true
+                },
+                "id": {
+                  "title": "ID",
+                  "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "versionId": true
+                }
+              }
+            },
+            "quantity": {
+              "title": "Quantity",
+              "description": "The number of units.",
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "patternProperties": {
+        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
