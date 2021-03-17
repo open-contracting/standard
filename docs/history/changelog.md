@@ -36,7 +36,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 ### Codelists
 
 * `documentType.csv`:
-  * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate contractSchedule and edit contractAnnexe in the documentType codelist.
+  * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate 'contractSchedule' and edit 'contractAnnexe'.
+  * [#1219](https://github.com/open-contracting/standard/pull/1219) Add the codes from the tariffs extension:
+    * 'tariffs'
+    * 'tariffMethod'
+    * 'tariffReview'
+    * 'tariffIllustration'
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'economicSelectionCriteria'
     * 'technicalSelectionCriteria'
@@ -55,9 +60,9 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate all the codes of the `submissionMethod` codelist, because they were either not submission methods, or not supported by use cases.
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
-* [#1210](https://github.com/open-contracting/standard/pull/1210) Add the 'CELEX' and 'LEXML' codes from the legal basis extension to the `itemClassificationScheme` codelist
-* [1218](https://github.com/open-contracting/standard/pull/1218) Add the 'COFOG' code from the organization classifiation extension to the `itemClassificationScheme` codelist
-* [#1225](https://github.com/open-contracting/standard/pull/1225) Add 'securityClearanceDate' code from the EU extension to the `milestoneType`codelist
+* [#1210](https://github.com/open-contracting/standard/pull/1210) Add the 'CELEX' and 'LEXML' codes from the legal basis extension to the `itemClassificationScheme` codelist.
+* [#1218](https://github.com/open-contracting/standard/pull/1218) Add the 'COFOG' code from the organization classifiation extension to the `itemClassificationScheme` codelist.
+* [#1225](https://github.com/open-contracting/standard/pull/1225) Add 'securityClearanceDeadline' code from the EU extension to the `milestoneType` codelist.
 
 ### Schema
 
