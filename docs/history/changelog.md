@@ -51,7 +51,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
   * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
-    * 'centralPurchasingBody'
     * 'informationService'
     * 'mediationBody'
     * 'processContactPoint'
