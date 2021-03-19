@@ -77,15 +77,9 @@ OCDS defines a common model for disclosing structured data on public contracting
 
 In OCDS, **awards** and **contracts** are modelled as separate stages of the contracting process. This approach allows for the possibility that an award is made but a contract is never entered into. The model also allows for the possibility that there is a difference between the award and the signed contract, either in value, duration, items or otherwise. While such differences might be illegal in some jurisdictions, they can occur in some cases and are therefore possible in OCDS. Source systems can contain data on awards, on contracts, or on both.
 
-<style><!--
-.process-table { width:18%; float:left; font-size:10pt; }
-.process-table p { font-size:10pt; text-align: center; }
-.process-table img { width:80%; }
---></style>
-
 <div style="width:100%">
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Tender](../../_static/svg/grey_planning.svg)
 
@@ -93,7 +87,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Tender](../../_static/svg/grey_tendering.svg)
 
@@ -101,7 +95,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Award](../../_static/svg/green_awarded.svg)
 
@@ -109,7 +103,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Contract](../../_static/svg/green_signed.svg)
 
@@ -117,7 +111,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Implementation](../../_static/svg/grey_implementation.svg)
 

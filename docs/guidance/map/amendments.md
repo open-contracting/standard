@@ -62,13 +62,9 @@ A full record is provided below, with all the releases for the process and a `co
 :title: FullRecord
 ```
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Hint</p>
-
-It is encouraged to <a href="../../../_static/json/amendments/amendments-tender-example.json" target="_blank">download</a> the record example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
-
-</div>
+```{hint}
+It is encouraged to {download}`download <../../_static/json/amendments/amendments-tender-example.json>` the record example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
+```
 
 Note in this example that:
 
@@ -112,7 +108,7 @@ In certain scenarios there might not be a valid `amendsReleaseID` and so it can 
 
 #### Record
 
-An example record for the whole process is shown below. Consider downloading the <a href="../../../_static/json/amendments/amendments-contract-example.json" target="_blank">record example</a> and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
+An example record for the whole process is shown below. Consider downloading the {download}`record example <../../_static/json/amendments/amendments-contract-example.json>` and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
 
 Note that the `compiledRelease` contains all the items, included the latest one added in the contract amendment.
 
@@ -153,4 +149,4 @@ Note that the mapping of the fields remains the same for the contract amendments
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
 
-As in the previous examples, you can download a <a href="../../../_static/json/amendments/amendments-easy-releases-example.json" target="_blank">record</a> file for the example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.
+As in the previous examples, you can download a {download}`record <../../_static/json/amendments/amendments-easy-releases-example.json>` file for the example and use the [Data Review Tool](https://standard.open-contracting.org/review) to explore the changes in the contracting process.

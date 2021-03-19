@@ -4,79 +4,73 @@ There are several stages to a contracting process.
 
 OCDS covers:
 
-<style><!--
-.process-table { width:18%; float:left; font-size:10pt; }
-.process-table p { font-size:10pt; text-align: center; }
-.process-table img { width:80%; }
---></style>
-
 <div style="width:100%">
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Planning](../_static/svg/green_planning.svg)
 
-**Planning**<br/>
-*Including:*<br/>
-Budgets<br/>
-Project plans<br/>
-Procurement plans<br/>
-Market studies<br/>
-Public hearing info<br/>
+**Planning**\
+*Including:*\
+Budgets\
+Project plans\
+Procurement plans\
+Market studies\
+Public hearing info
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Tender](../_static/svg/green_tendering.svg)
 
-**Initiation (Tender)**<br/>
-*Including:*<br/>
-Tender notices<br/>
-Specifications<br/>
-Line items<br/>
-Values<br/>
+**Initiation (Tender)**\
+*Including:*\
+Tender notices\
+Specifications\
+Line items\
+Values\
 Enquiries
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Award](../_static/svg/green_awarded.svg)
 
-**Award**<br/>
-*Including:*<br/>
-Details of award<br/>
-Bidder information<br/>
-Bid evaluation<br/>
+**Award**\
+*Including:*\
+Details of award\
+Bidder information\
+Bid evaluation\
 Values
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Contract](../_static/svg/green_signed.svg)
 
-**Contract**<br/>
-*Including:*<br/>
-Final details<br/>
-Signed contract<br/>
-Amendments<br/>
+**Contract**\
+*Including:*\
+Final details\
+Signed contract\
+Amendments\
 Values
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Implementation](../_static/svg/green_implementation.svg)
 
-**Implementation**<br/>
-*Including:*<br/>
-Payments<br/>
-Progress updates<br/>
-Location<br/>
-Extensions<br/>
-Amendments<br/>
+**Implementation**\
+*Including:*\
+Payments\
+Progress updates\
+Location\
+Extensions\
+Amendments\
 Completion or Termination info
 
 </div>
@@ -106,9 +100,8 @@ To make sure the `ocid`s assigned in two different jurisdictions do not clash, p
 
 You can [register your ocid prefix here](../guidance/build).
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Worked Example</p>
+```{admonition} Worked Example
+:class: hint
 
 In [Mexico City](http://www.contratosabiertos.cdmx.gob.mx/), an initial mapping identified that identifiers were assigned to each tender process or direct award, using a pattern based on the initials or name of the department involved, a tender or contract number, and the year.
 
@@ -125,16 +118,13 @@ For example:
 > ocds-87sd3t-OM-DGRMSG-004-13
 
 All the award notices, contracts and transactions resulting from the tender with this identifier share this ocid - allowing Mexico City to bring together a complete picture of each contracting process.
+```
 
-</div>
-
-<div class="warning" markdown=1>
-
-<p class="first admonition-title">Note</p>
+```{admonition} Note
+:class: warning
 
 The `ocid` is case sensitive. Case needs to be used consistently whenever an `ocid` is presented.
-
-</div>
+```
 
 ## Mapping your systems
 

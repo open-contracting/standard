@@ -10,9 +10,8 @@ An OCDS [record](../schema/records_reference) aggregates all the releases availa
 * A compiled release is created by taking only the most recent values of fields from releases in a given contracting process.
 * A versioned release is created by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Worked Example</p>
+````{admonition} Worked Example
+:class: hint
 
 A public procurement agency publishes a release to announce an opportunity on January 1, in which the total estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the total estimated value of the procurement is increased to $2,000.
 
@@ -60,8 +59,7 @@ At each release, the agency also updates the record, which combines all the rele
 :expand: records, versionedRelease, tag, tender, awards
 :title: versioned
 ```
-
-</div>
+````
 
 ## Merging specification
 

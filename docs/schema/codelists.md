@@ -49,11 +49,6 @@ Item quantities can be provided using an established codelist for units of measu
 
 ### Organization Identifier Scheme
 
-<style><!--img[alt="org-id.guide"] {
-   width:200px;
-   float:right;
-}--></style>
-
 ![org-id.guide](../_static/png/org-id-logo-full.png)
 
 The Organization Identifier Scheme uses the codes from [org-id.guide](http://www.org-id.guide). The latest version of the codelist can be [downloaded](http://org-id.guide/download) or [browsed](http://org-id.guide/) from its website.

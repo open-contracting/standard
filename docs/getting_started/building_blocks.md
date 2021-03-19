@@ -27,7 +27,7 @@ An OCDS document is made up of a number of sections. These are:
 These are represented in a JSON document as follows:
 
 ```{code-block} json
-:emphasize-lines: 8-13
+:emphasize-lines: 10-21
 
 {
   "language": "en",
@@ -124,13 +124,11 @@ In some cases, publishers or users need building blocks and fields which are not
 
 We maintain a list of [extensions](../guidance/map/extensions) that provide additional building blocks and fields.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Field level mapping</p>
+```{admonition} Field level mapping
+:class: hint
 
 The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.  
-
-</div>
+```
 
 ## Codelists
 
@@ -144,9 +142,8 @@ Codelist values are case sensitive strings with associated labels, available in 
 
 Publishers need to map their existing classification systems to OCDS codes wherever possible. Many closed codelist fields are paired with a detail field where more detailed classification information can be provided. 
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Worked Example</p>
+````{admonition} Worked Example
+:class: hint
 
 In the EU, contracts can be initiated through a number of different procedures including:
 
@@ -177,5 +174,4 @@ For an Open Procedure, when a free-text justification of why the procedure was c
     
 }
 ```
-
-</div>
+````
