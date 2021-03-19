@@ -106,6 +106,7 @@ extension_versions = {
 # https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = []
 
+
 def setup(app):
     # The root of the repository.
     basedir = Path(os.path.realpath(__file__)).parents[1]
