@@ -50,15 +50,9 @@ In Paraguay, procuring entities can carry out a single pre-qualification for sev
 
 In OCDS, a contracting process has a single competitive stage, the `tender` section. This represents the initiation of the process, when procuring entities invite suppliers to take part:
 
-<style><!--
-.process-table { width:18%; float:left; font-size:10pt; }
-.process-table p { font-size:10pt; text-align: center; }
-.process-table img { width:80%; }
---></style>
-
 <div style="width:100%">
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Planning](../../_static/svg/grey_planning.svg)
 
@@ -66,7 +60,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Tender](../../_static/svg/green_tendering.svg)
 
@@ -74,7 +68,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Award](../../_static/svg/grey_awarded.svg)
 
@@ -82,7 +76,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Contract](../../_static/svg/grey_signed.svg)
 
@@ -90,7 +84,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Implementation](../../_static/svg/grey_implementation.svg)
 

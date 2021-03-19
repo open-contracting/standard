@@ -77,19 +77,16 @@ Releases can repeat unchanged data from previous releases, or include new inform
 
 It might be more appropriate to repeat data when processes have fewer releases. Consider as well that repeating previous information makes larger releases and larger datasets.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Example</p>
+````{admonition} Example
+:class: hint
 
 The following example shows releases with minimal changes on each update. 
 
 1. The first release presents tender data. 
+1. The second introduces a new document in the `tender` section with the 'tenderUpdate' tag. Note that the release ignores all the nonmandatory fields. The tender document present in the previous release is also ignored.
+1. The third release presents award data, and ignores the tender section.
 
-2. The second introduces a new document in the `tender` section with the 'tenderUpdate' tag. Note that the release ignores all the nonmandatory fields. The tender document present in the previous release is also ignored.
-
-3. The third release presents award data, and ignores the tender section.
-
- ```{jsoninclude} ../examples/minimal_updates/tender.json
+```{jsoninclude} ../examples/minimal_updates/tender.json
 :jsonpointer: /releases/0
 :expand: tender
 ```
@@ -103,6 +100,7 @@ The following example shows releases with minimal changes on each update.
 :jsonpointer: /releases/0
 :expand: award
 ```
+````
 
 </div>
 
@@ -132,10 +130,7 @@ Each time a new release is available:
 * The record adds the new release to the releases list, by either embedding it or adding a link to it.
 * The record updates the compiled and versioned releases using the new information. Repeating unchanged information does not affect the result.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Hint</p>
-
+````{hint}
 Compiled releases are not mandatory, but it helps to make OCDS data more accessible, especially for users that don’t need a detailed change history.
 
 Consider how to calculate the **total value of active tenders** using compiled releases:
@@ -157,8 +152,7 @@ Compare that to how to calculate the **total value of active tenders** using rel
 If a user has releases only, they need to first determine the final status before calculating the result.
 
 Compiled releases are useful for many scenarios. But users might need the full history to answer other questions. For example, how many amends there are for a tender's value.
-
-</div>
+````
 
 #### Packaging
 

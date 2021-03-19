@@ -20,7 +20,7 @@ The [identifiers](../../schema/identifiers) reference page describes the contrac
 
 To publish OCDS data, you need to register an ocid prefix.
 
-**Action**: Email <data@open-contracting.org> to request an OCID prefix. Provide the name of the publishing organization and the email address of a contact person at this organization.
+**Action**: Email [data@open-contracting.org](mailto:data@open-contracting.org) to request an OCID prefix. Provide the name of the publishing organization and the email address of a contact person at this organization.
 
 ```{note}
 All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pub?gid=506986894&single=true&output=csv).
@@ -84,8 +84,6 @@ Whether your current infrastructure is low tech or high tech, we have tools and 
 If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../support/index).
 ```
 
-<div class="spaced" markdown=1>
-
 * If you are creating (or upgrading) an **electronic government procurement (e-GP) system** or open contracting data portal, refer to our [Guide to Defining OCDS Functional Requirements for e-GP Systems](https://www.open-contracting.org/resources/guide-defining-open-contracting-data-standard-functional-requirements-electronic-government-procurement-systems/).
 * If your source data is in **CSV/Excel files**, you can rename the columns to match the JSON paths in OCDS (for example, `buyer/name`) and then [transform the CSV/Excel files to OCDS JSON](https://www.open-contracting.org/2016/08/08/open-contracting-data-structure-spreadsheets/) by using [Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/), a command-line tool.
 * If your source data is in **Excel files**, you can alternately transform Excel files to OCDS JSON by using the [Open Contracting Explorer](http://www.developmentgateway.org/expertise/contracting), which includes a web interface and web API for users to access and explore the OCDS data. (This tool is authored by Development Gateway.)
@@ -100,8 +98,6 @@ If you aren't creating or updating an IT system, but are instead reusing an exis
 * The [data collection form](https://www.open-contracting.org/resources/ocds-data-collection-form/) includes instructions describing how to add fields and how to customize descriptions and guidance.
 
 Contact the [OCDS Helpdesk](../../support/#ocds-helpdesk) for support and guidance on customizing a tool to meet your needs.
-
-</div>
 
 **Resource:** [Using tabular versions of JSON to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
 

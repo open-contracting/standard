@@ -134,13 +134,11 @@ The new release uses the 'implementation' tag. The `contracts.implementation.tra
 
 Because the new release uses the same `ocid`, it is possible to update the record with the information.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Combining data from different systems</p>
+```{admonition} Combining data from different systems
+:class: hint
 
 OCDS can be used to combine data from different systems. For more information refer to the guidance on system architectures.
-
-</div>
+```
 
 The publisher adds the new release from the finance system to the releases list in the OCDS record. The compiled and versioned releases get updated to include the new transaction.
 
