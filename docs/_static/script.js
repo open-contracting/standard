@@ -1,8 +1,8 @@
 /* global XMLHttpRequest, location, renderjson */
 
-var pathComponents = window.location.pathname.split('/')
-if (pathComponents[pathComponents.length - 2] == 'codelists') {
-  document.querySelector('.wy-nav-content').style.maxWidth = 'none';
+const pathComponents = window.location.pathname.split('/')
+if (pathComponents[pathComponents.length - 2] === 'codelists') {
+  document.querySelector('.wy-nav-content').style.maxWidth = 'none'
 }
 
 // FYI: extensionlist appears many times on /schema/reference/
