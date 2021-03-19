@@ -21,9 +21,9 @@ You can use the [field-level mapping template](https://www.open-contracting.org/
 To localize a field title or description, edit the values columns C or D. We recommend that you keep the original title or description in brackets after your localized version. For example:
 
 ```{csv-table}
-:file: ../../examples/localization.csv
-:widths: 30,70
 :header-rows: 1
+:widths: auto
+:file: ../../examples/localization.csv
 ```
 
 This makes it easier for reviewers to check that localization has not changed the meaning of titles and descriptions. You can use the comments feature of Google Docs to discuss the proposed localization.

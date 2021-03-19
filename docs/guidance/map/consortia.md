@@ -16,5 +16,6 @@ Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/consortia_simple.csv
 ```

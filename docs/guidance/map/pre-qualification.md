@@ -5,9 +5,9 @@ In single-stage procedures, procuring entities invite suppliers to bid without s
 But, many jurisdictions also use multi-stage procedures. Such procedures follow a process like:
 
 ```{csv-table}
-:file: ../../examples/pre-qualification/multi-stage.csv
-:widths: 50,50
 :header-rows: 1
+:widths: auto
+:file: ../../examples/pre-qualification/multi-stage.csv
 ```
 
 This worked example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
@@ -99,6 +99,7 @@ The `tender` section is also used to disclose information about the procedure us
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../../build/current_lang/codelists/method.csv
 ```
 
