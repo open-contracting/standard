@@ -11,14 +11,10 @@ On this page, you will find guidance on how to:
 * Understand your key decisions and publication goals
 * Include OCDS in requirements for software developers and technical consultants
 
-```{eval-rst}
-.. note::
+```{note}
+Open contracting is about more than just implementing OCDS.
 
-   .. markdown::
-
-      Open contracting is about more than just implementing OCDS.
-
-      Visit the Open Contracting Partnership's website for [help implementing wider open contracting reforms](https://www.open-contracting.org/implement/) and for [guidance on open contracting reform design and management](https://www.open-contracting.org/2020/04/29/open-contracting-reform-design-and-management-resources-new-guide/).
+Visit the Open Contracting Partnership's website for [help implementing wider open contracting reforms](https://www.open-contracting.org/implement/) and for [guidance on open contracting reform design and management](https://www.open-contracting.org/2020/04/29/open-contracting-reform-design-and-management-resources-new-guide/).
 ```
 
 ## Understand your context

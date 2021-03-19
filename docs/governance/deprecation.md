@@ -10,16 +10,13 @@ Deprecated fields are marked in the JSON schema with the presence of a `deprecat
 
 For example:
 
-```{eval-rst}
-.. code-block:: json
-     
-     {   
-         "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
-            "deprecatedVersion": "1.1"
-          }
-      }
-
+```{code-block} json
+{
+  "deprecated": {
+    "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+    "deprecatedVersion": "1.1"
+  }
+}
 ```
 
 Validation tools **must** report use of deprecated fields to the user, and **should** report to the user the associated description of the reason for deprecation (which might provide guidance on how to replace the field).

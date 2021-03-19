@@ -4,11 +4,10 @@ This phase is about creating a new IT system, or updating an existing IT system,
 
 Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../../support/#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
 
-```{eval-rst}
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   build/data_collection_tools
+build/data_collection_tools
 ```
 
 As you complete this phase, you can:
@@ -23,12 +22,8 @@ To publish OCDS data, you need to register an ocid prefix.
 
 **Action**: Email <data@open-contracting.org> to request an OCID prefix. Provide the name of the publishing organization and the email address of a contact person at this organization.
 
-```{eval-rst}
-.. note::
-
-   .. markdown::
-
-      All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pub?gid=506986894&single=true&output=csv).
+```{note}
+All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pub?gid=506986894&single=true&output=csv).
 ```
 
 ## Determine your system architecture
@@ -37,14 +32,13 @@ There are many ways to extract data from data sources, combine it, map it to OCD
 
 Your choice of architecture can determine how frequently your data is updated, whether you can publish a change history and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the design stage.**
 
-```{eval-rst}
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   build/system_architectures
-   build/change_history
-   build/easy_releases
-   build/merging
+build/system_architectures
+build/change_history
+build/easy_releases
+build/merging
 ```
 **Resource:** [Technical case studies: OCDS implementation insights report](https://www.open-contracting.org/resources/technical-case-studies-ocds-implementation-insights/) provides insights into the technical choices made in OCDS implementations in Paraguay, Zambia, Colombia, Moldova and Argentina's Road Agency Vialidad.
 
@@ -73,12 +67,11 @@ Where resources allow, it is also best practice to provide multiple access metho
 
 **Tool:** [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) can be used to convert OCDS data between JSON and CSV/spreadsheet formats.
 
-```{eval-rst}
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   build/serialization
-   build/hosting
+build/serialization
+build/hosting
 ```
 
 ## Build your data pipeline
@@ -87,12 +80,8 @@ Having determined your system architecture, it's time to implement it. This is o
 
 Whether your current infrastructure is low tech or high tech, we have tools and resources to help you publish OCDS. Depending on your [data sources](../map/#identify-your-data-sources) and system architecture, you might be able to reuse some of these OCDS tools:
 
-```{eval-rst}
-.. note::
-
-   .. markdown::
-
-      If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../support/index).
+```{note}
+If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../support/index).
 ```
 
 <div class="spaced" markdown=1>
@@ -118,16 +107,12 @@ Contact the [OCDS Helpdesk](../../support/#ocds-helpdesk) for support and guidan
 
 **Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([Part 1](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/), [Part 2](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/), [Part 3](https://www.open-contracting.org/2020/05/28/prototyping-ocds-data-using-spreadsheets-part-iii/)).
 
-```{eval-rst}
-.. note::
+```{note}
+If you want to use OCDS Kit or Flatten Tool, but don't have access to the command line or can't install new software on your computer, you can use [OCDS Toucan](https://toucan.open-contracting.org/), which gives access to these tools through a web browser.
 
-   .. markdown::
+Re-using tools isn't always easy. [Tool Re-Use in Open Contracting: A Primer](https://www.open-contracting.org/resources/tool-re-use-in-open-contracting-a-primer/) is a step-by-step guide to help you determine what you need, evaluate which tool is the right fit, and evaluate whether the right conditions are in place for successful re-use of a tool.
 
-      If you want to use OCDS Kit or Flatten Tool, but don't have access to the command line or can't install new software on your computer, you can use [OCDS Toucan](https://toucan.open-contracting.org/), which gives access to these tools through a web browser.
-
-      Re-using tools isn't always easy. [Tool Re-Use in Open Contracting: A Primer](https://www.open-contracting.org/resources/tool-re-use-in-open-contracting-a-primer/) is a step-by-step guide to help you determine what you need, evaluate which tool is the right fit, and evaluate whether the right conditions are in place for successful re-use of a tool.
-
-      New tools are continually being authored for publishing OCDS data. Please refer to our [Tools Directory](https://www.open-contracting.org/resources/open-contracting-tools-directory/) for a complete list.
+New tools are continually being authored for publishing OCDS data. Please refer to our [Tools Directory](https://www.open-contracting.org/resources/open-contracting-tools-directory/) for a complete list.
 ```
 
 ## Build your extensions

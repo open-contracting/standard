@@ -40,11 +40,10 @@ In software development terms, releases are analogous to Git commits on a branch
 
 Releases follow the [release schema](../schema/reference). The schema covers the whole contracting process, but there are only a few mandatory fields. The box below shows an example.
 
-```{eval-rst}
-.. jsoninclude:: ../examples/tender.json
-   :jsonpointer: /releases
-   :expand: 
-   :title: release
+```{jsoninclude} ../examples/tender.json
+:jsonpointer: /releases
+:expand:
+:title: release
 ```
 
 #### Identifiers
@@ -90,22 +89,19 @@ The following example shows releases with minimal changes on each update.
 
 3. The third release presents award data, and ignores the tender section.
 
- ```{eval-rst}
-.. jsoninclude:: ../examples/minimal_updates/tender.json
-   :jsonpointer: /releases/0
-   :expand: tender
- ```
-
-```{eval-rst}
-.. jsoninclude:: ../examples/minimal_updates/tenderUpdate.json
-   :jsonpointer: /releases/0
-   :expand: tender
+ ```{jsoninclude} ../examples/minimal_updates/tender.json
+:jsonpointer: /releases/0
+:expand: tender
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/minimal_updates/award.json
-   :jsonpointer: /releases/0
-   :expand: award
+```{jsoninclude} ../examples/minimal_updates/tenderUpdate.json
+:jsonpointer: /releases/0
+:expand: tender
+```
+
+```{jsoninclude} ../examples/minimal_updates/award.json
+:jsonpointer: /releases/0
+:expand: award
 ```
 
 </div>
@@ -114,10 +110,9 @@ The following example shows releases with minimal changes on each update.
 
 A record follows the structure defined in the [Records Reference](../schema/records_reference). Below is a full example.
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0
-   :expand: 
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer: /records/0
+:expand:
 ```
 
 #### Embedding or linking Releases
@@ -145,20 +140,18 @@ Compiled releases are not mandatory, but it helps to make OCDS data more accessi
 
 Consider how to calculate the **total value of active tenders** using compiled releases:
 
-```{eval-rst}
-.. csv-table-no-translate::
-    :header-rows: 1
-    :file: ../examples/compiledreleases_compiled.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../examples/compiledreleases_compiled.csv
 ```
 
 Working with compiled releases, this metric can be calculated by filtering on the tender status and summing the tender value.
 
 Compare that to how to calculate the **total value of active tenders** using releases:
 
-```{eval-rst}
-.. csv-table-no-translate::
-    :header-rows: 1
-    :file: ../examples/compiledreleases_releases.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../examples/compiledreleases_releases.csv
 ```
 
 If a user has releases only, they need to first determine the final status before calculating the result.
