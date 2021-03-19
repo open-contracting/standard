@@ -146,9 +146,13 @@ The planning section can be used to describe the background to a contracting pro
 :collapse: budget,documents,milestones
 ```
 
-Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
+```{extensionlist} The following extensions are available for planning
+:list: planning
+```
 
 #### Budget 
+
+Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Budget
@@ -320,6 +324,10 @@ Documents can be attached at a number of points within the standard: to planning
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Document
 :collapse:
+```
+
+```{extensionlist} The following extensions are available for document
+:list: document
 ```
 
 ### Period
