@@ -146,9 +146,8 @@ The planning section can be used to describe the background to a contracting pro
 :collapse: budget,documents,milestones
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for planning
-   :list: planning
+```{extensionlist} The following extensions are available for planning
+:list: planning
 ```
 
 #### Budget 
@@ -327,9 +326,8 @@ Documents can be attached at a number of points within the standard: to planning
 :collapse:
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for document
-   :list: document
+```{extensionlist} The following extensions are available for document
+:list: document
 ```
 
 ### Period
