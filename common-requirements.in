@@ -1,23 +1,22 @@
-Sphinx<4
-
-# Sphinx
-ocds-babel>=0.2.1
-# See https://ocds-babel.readthedocs.io/en/latest/api/translate.html#install-requirements-for-markdown-translation
+mdit-py-plugins
+myst-parser
+ocds-babel
+Sphinx
 -e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
-myst-parser~=0.13.3
-mdit-py-plugins~=0.2.5
-
-# Make
-sphinx-intl<1
-transifex-client
-
-# Build
-ocdsindex>=0.0.4
 
 # Profile
-ocdsextensionregistry>=0.0.23
+ocdsextensionregistry
+
+# Build
+sphinx-intl
+transifex-client
+
+# Deploy
+ocdsindex
 
 # Tests
-pip-tools
 pytest
 selenium
+
+# Development
+pip-tools
