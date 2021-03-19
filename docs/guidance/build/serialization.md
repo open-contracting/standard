@@ -40,20 +40,16 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](http:
 
 **JSON**
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/serialization-flat.json
-   :jsonpointer: 
-   :expand: releases, tender, items
-
+```{jsoninclude} ../../examples/serialization-flat.json
+:jsonpointer:
+:expand: releases, tender, items
 ```
 
 **CSV**
 
-```{eval-rst}
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../examples/serialization-flat.csv
-   
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/serialization-flat.csv
 ```
 
 [Beta open source tooling](http://flatten-tool.readthedocs.io/en/latest/usage-ocds/) exists for generating flat CSV OCDS templates, and converting in both directions between JSON spreadsheets following these templates. The OCDS Data Review Tool incorporates this tooling and will offer to convert files uploaded to it.
@@ -68,32 +64,26 @@ It is, however, theoretically possible to represent a full release in a single f
 
 For example, to represent a tender release with two items, the CSV file would include:
 
-```{eval-rst}
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../examples/serialization-flat-two-items.csv
-   
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/serialization-flat-two-items.csv
 ```
 
 The JSON equivalent of this would be:
 
-```{eval-rst}
-.. jsoninclude:: ../../examples/serialization-flat-two-items.json
-   :jsonpointer: 
-   :expand: releases, tender, items
-
+```{jsoninclude} ../../examples/serialization-flat-two-items.json
+:jsonpointer:
+:expand: releases, tender, items
 ```
 
 Whilst this allows complex data to be expressed in flat CSV, users will need to rebuild the structure in order to analyze the data.
 
 Instead, data with a one-to-many relationship can be represented using a multi-table serialization. 
 
-```{eval-rst}
-.. admonition:: CSV encoding
-   :class: note
+```{admonition} CSV encoding
+:class: note
 
-   OCDS CSV files ought to be encoded in either UTF-8 or Windows-1252.
-
+OCDS CSV files ought to be encoded in either UTF-8 or Windows-1252.
 ```
 
 ### Multi-table

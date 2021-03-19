@@ -26,26 +26,31 @@ An OCDS document is made up of a number of sections. These are:
 
 These are represented in a JSON document as follows:
 
-```{eval-rst}
-.. code-block:: json
-   :emphasize-lines: 8-13
-       
-       {
-            "language": "en",
-            "ocid": "contracting-process-identifier",
-            "id": "release-id",
-            "date": "ISO-date",
-            "tag": ["tag-from-codelist"],
-            "initiationType": "tender",
-            "parties": {},
-            "buyer": {},
-            "planning": {},
-            "tender": {},
-            "awards": [ {} ],
-            "contracts":[ {
-                "implementation":{}
-            }]
-        }
+```{code-block} json
+:emphasize-lines: 8-13
+
+{
+  "language": "en",
+  "ocid": "contracting-process-identifier",
+  "id": "release-id",
+  "date": "ISO-date",
+  "tag": [
+    "tag-from-codelist"
+  ],
+  "initiationType": "tender",
+  "parties": {},
+  "buyer": {},
+  "planning": {},
+  "tender": {},
+  "awards": [
+    {}
+  ],
+  "contracts": [
+    {
+      "implementation": {}
+    }
+  ]
+}
 ```
 
 ## Building blocks: fields
@@ -63,52 +68,40 @@ For example, common building blocks are provided for:
 
 ### Examples
 
-```{eval-rst}
-.. jsoninclude:: ../examples/record.json
-   :jsonpointer: /records/0/compiledRelease/parties/0
-   :expand: identifier, address, contactPoint
-   :title: party
-
+```{jsoninclude} ../examples/record.json
+:jsonpointer: /records/0/compiledRelease/parties/0
+:expand: identifier, address, contactPoint
+:title: party
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/record.json
-   :jsonpointer: /records/0/compiledRelease/awards/0/value
-   :expand: 
-   :title: amounts
-
+```{jsoninclude} ../examples/record.json
+:jsonpointer: /records/0/compiledRelease/awards/0/value
+:expand:
+:title: amounts
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/record.json
-   :jsonpointer: /records/0/compiledRelease/awards/0/items
-   :expand: classification, unit, additionalClassifications, value
-   :title: items
-
+```{jsoninclude} ../examples/record.json
+:jsonpointer: /records/0/compiledRelease/awards/0/items
+:expand: classification, unit, additionalClassifications, value
+:title: items
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/record.json
-   :jsonpointer: /records/0/compiledRelease/awards/0/contractPeriod
-   :expand: 
-   :title: period
-
+```{jsoninclude} ../examples/record.json
+:jsonpointer: /records/0/compiledRelease/awards/0/contractPeriod
+:expand:
+:title: period
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/record.json
-   :jsonpointer: /records/0/compiledRelease/awards/0/documents
-   :expand: 
-   :title: documents
-
+```{jsoninclude} ../examples/record.json
+:jsonpointer: /records/0/compiledRelease/awards/0/documents
+:expand:
+:title: documents
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/record.json
-   :jsonpointer: /records/0/compiledRelease/tender/milestones/0
-   :expand: 
-   :title: milestones
-
+```{jsoninclude} ../examples/record.json
+:jsonpointer: /records/0/compiledRelease/tender/milestones/0
+:expand:
+:title: milestones
 ```
 
 ### Using building blocks
@@ -165,10 +158,9 @@ In the EU, contracts can be initiated through a number of different procedures i
 
 However, to support comparison across continents, the main OCDS procurement method codelist is a closed codelist with four values:
 
-```{eval-rst}
-.. codelisttable::
-   :header-rows: 1
-   :file: ../../build/current_lang/codelists/method.csv
+```{csv-table}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/method.csv
 ```
 
 All procedures need to be mapped to one of these options. 
