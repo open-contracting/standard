@@ -76,7 +76,8 @@ The release below shows how the publisher chooses to model the hospital as an or
 In a separate dataset, the publisher discloses the organizational hierarchy. This dataset, in combination with the OCDS publication,  would allow users to summarize contracting information. The table below shows an extract of the dataset.
 
 ```{csv-table-no-translate}
-:file: ../../examples/organizational-units/paraguay-organizations.csv
 :header-rows: 1
+:widths: auto
+:file: ../../examples/organizational-units/paraguay-organizations.csv
 ```
 

@@ -127,8 +127,9 @@ Where the source system stores a history of contract amendments, either as separ
 The table below shows an example of a contract notices table from a procurement system, with an original contract in the first row and an amendment of the same contract in the second. The amendment increases the value of the original contract and changes the contract period.
 
 ```{csv-table-no-translate}
-:file: ../../examples/amendments-contract-notice.csv
 :header-rows: 1
+:widths: auto
+:file: ../../examples/amendments-contract-notice.csv
 ```
 
 This can be modelled as the separate releases in OCDS as shown below. The original `contract` release includes all the fields from the first entry in the contract notices table. A `contractAmendment` release is built for each contract amendment identified in the table (by verifying that the `amendmentId` column in the contract notices table is not empty).

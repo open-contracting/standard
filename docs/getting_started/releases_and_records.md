@@ -137,6 +137,7 @@ Consider how to calculate the **total value of active tenders** using compiled r
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../examples/compiledreleases_compiled.csv
 ```
 
@@ -146,6 +147,7 @@ Compare that to how to calculate the **total value of active tenders** using rel
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../examples/compiledreleases_releases.csv
 ```
 
