@@ -1,6 +1,6 @@
-## Publication Patterns
+# Publication Patterns
 
-### Packaging releases and records
+## Packaging releases and records
 
 When publishing releases and records, they need to be provided within a release package or record package. These act as an envelope for the data.
 
@@ -16,7 +16,7 @@ A package can contain one or more releases or records.
 
 Consult the [release package](../schema/release_package) and [record package](../schema/record_package) schemas to package up your data.
 
-#### Example release package
+### Example release package
 
 ```json
 {
@@ -36,7 +36,7 @@ Consult the [release package](../schema/release_package) and [record package](..
 }
 ```
 
-### Bulk and individual files
+## Bulk and individual files
 
 You are encouraged to:
 

@@ -4,11 +4,10 @@ In single-stage procedures, procuring entities invite suppliers to bid without s
 
 But, many jurisdictions also use multi-stage procedures. Such procedures follow a process like:
 
-```eval_rst
-.. csv-table::
-   :file: ../../examples/pre-qualification/multi-stage.csv
-   :widths: 50,50
-   :header-rows: 1
+```{csv-table}
+:file: ../../examples/pre-qualification/multi-stage.csv
+:widths: 50,50
+:header-rows: 1
 ```
 
 This worked example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
@@ -27,12 +26,8 @@ The model law obliges procuring entities to publish an invitation to pre-qualify
 
 The procuring entity assesses the qualifications of the suppliers based on their responses. Only pre-qualified suppliers can take part in the later proceedings.
 
-```eval_rst
-.. note::
-
-   .. markdown::
-
-      The European Union’s restricted procedure (see Article 28, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) uses pre-qualification.
+```{note}
+The European Union’s restricted procedure (see Article 28, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) uses pre-qualification.
 ```
 
 ### Pre-qualification with a limit on the number of qualified suppliers (pre-selection)
@@ -43,12 +38,8 @@ The UNCITRAL model law defines pre-selection as a procedure to:
 
 Pre-selection follows the same process as pre-qualification, with some additional requirements. The invitation to pre-qualify needs to specify how many suppliers the procuring entity will later request proposals from. The invitation also needs to specify how the procuring entity will select the suppliers to request proposals from.
 
-```eval_rst
-.. note::
-
-   .. markdown::
-
-      The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialog procedure and innovation partnership all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).  
+```{note}
+The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialog procedure and innovation partnership all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).
 ```
 
 ### Pre-qualification in Paraguay
@@ -59,15 +50,9 @@ In Paraguay, procuring entities can carry out a single pre-qualification for sev
 
 In OCDS, a contracting process has a single competitive stage, the `tender` section. This represents the initiation of the process, when procuring entities invite suppliers to take part:
 
-<style><!--
-.process-table { width:18%; float:left; font-size:10pt; }
-.process-table p { font-size:10pt; text-align: center; }
-.process-table img { width:80%; }
---></style>
-
 <div style="width:100%">
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Planning](../../_static/svg/grey_planning.svg)
 
@@ -75,7 +60,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Tender](../../_static/svg/green_tendering.svg)
 
@@ -83,7 +68,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Award](../../_static/svg/grey_awarded.svg)
 
@@ -91,7 +76,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Contract](../../_static/svg/grey_signed.svg)
 
@@ -99,7 +84,7 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Implementation](../../_static/svg/grey_implementation.svg)
 
@@ -112,10 +97,9 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 
 The `tender` section is also used to disclose information about the procedure used by the contracting process. In particular, the `tender.procurementMethod` field classifies the procedure using the following codelist:
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../../build/current_lang/codelists/method.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../../build/current_lang/codelists/method.csv
 ```
 
 ## Example: Pre-qualification
@@ -124,23 +108,17 @@ The Bank of England issues a [restricted procedure contract notice](https://ted.
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS:
 
-```eval_rst
-.. jsoninclude:: ../../examples/pre-qualification/pre-qualification-package.json
-   :jsonpointer: /releases/0/tender
-   :title: Tender section
-
+```{jsoninclude} ../../examples/pre-qualification/pre-qualification-package.json
+:jsonpointer: /releases/0/tender
+:title: Tender section
 ```
 
 Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
 
-```eval_rst
-.. note::
+```{note}
+OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github](https://github.com/open-contracting/standard/issues/440).
 
-   .. markdown ::
-
-      OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github](https://github.com/open-contracting/standard/issues/440).
-
-      Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
+Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
 ```
 
 ## Example: Pre-selection
@@ -151,11 +129,9 @@ The notice represents the initiation of the contracting process, so it is modell
 
 The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a tender at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) is used to disclose the criteria for choosing which suppliers to invite proposals from.
 
-```eval_rst
-.. jsoninclude:: ../../examples/pre-qualification/pre-selection-package.json
-   :jsonpointer: /releases/0/tender
-   :title: Tender section
-
+```{jsoninclude} ../../examples/pre-qualification/pre-selection-package.json
+:jsonpointer: /releases/0/tender
+:title: Tender section
 ```
 
 ## Example: Pre-qualification in Paraguay
@@ -166,19 +142,13 @@ The invitation represents the initiation of a contracting process to establish a
 
 Only qualified suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to ‘selective’.
 
-```eval_rst
-.. jsoninclude:: ../../examples/pre-qualification/pre-qualification-paraguay-package.json
-   :jsonpointer: /releases/0/tender
-   :title: Tender section
-
+```{jsoninclude} ../../examples/pre-qualification/pre-qualification-paraguay-package.json
+:jsonpointer: /releases/0/tender
+:title: Tender section
 ```
 
-```eval_rst
-.. note::
+```{note}
+OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github issue](https://github.com/open-contracting/standard/issues/440).
 
-   .. markdown ::
-
-      OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github issue](https://github.com/open-contracting/standard/issues/440).
-
-      Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
+Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
 ```

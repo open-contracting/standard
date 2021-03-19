@@ -40,11 +40,10 @@ In software development terms, releases are analogous to Git commits on a branch
 
 Releases follow the [release schema](../schema/reference). The schema covers the whole contracting process, but there are only a few mandatory fields. The box below shows an example.
 
-```eval_rst
-.. jsoninclude:: ../examples/tender.json
-   :jsonpointer: /releases
-   :expand: 
-   :title: release
+```{jsoninclude} ../examples/tender.json
+:jsonpointer: /releases
+:expand:
+:title: release
 ```
 
 #### Identifiers
@@ -78,35 +77,30 @@ Releases can repeat unchanged data from previous releases, or include new inform
 
 It might be more appropriate to repeat data when processes have fewer releases. Consider as well that repeating previous information makes larger releases and larger datasets.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Example</p>
+````{admonition} Example
+:class: hint
 
 The following example shows releases with minimal changes on each update. 
 
 1. The first release presents tender data. 
+1. The second introduces a new document in the `tender` section with the 'tenderUpdate' tag. Note that the release ignores all the nonmandatory fields. The tender document present in the previous release is also ignored.
+1. The third release presents award data, and ignores the tender section.
 
-2. The second introduces a new document in the `tender` section with the 'tenderUpdate' tag. Note that the release ignores all the nonmandatory fields. The tender document present in the previous release is also ignored.
-
-3. The third release presents award data, and ignores the tender section.
-
- ```eval_rst
-.. jsoninclude:: ../examples/minimal_updates/tender.json
-   :jsonpointer: /releases/0
-   :expand: tender
- ```
-
-```eval_rst
-.. jsoninclude:: ../examples/minimal_updates/tenderUpdate.json
-   :jsonpointer: /releases/0
-   :expand: tender
+```{jsoninclude} ../examples/minimal_updates/tender.json
+:jsonpointer: /releases/0
+:expand: tender
 ```
 
-```eval_rst
-.. jsoninclude:: ../examples/minimal_updates/award.json
-   :jsonpointer: /releases/0
-   :expand: award
+```{jsoninclude} ../examples/minimal_updates/tenderUpdate.json
+:jsonpointer: /releases/0
+:expand: tender
 ```
+
+```{jsoninclude} ../examples/minimal_updates/award.json
+:jsonpointer: /releases/0
+:expand: award
+```
+````
 
 </div>
 
@@ -114,10 +108,9 @@ The following example shows releases with minimal changes on each update.
 
 A record follows the structure defined in the [Records Reference](../schema/records_reference). Below is a full example.
 
-```eval_rst
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0
-   :expand: 
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer: /records/0
+:expand:
 ```
 
 #### Embedding or linking Releases
@@ -137,35 +130,29 @@ Each time a new release is available:
 * The record adds the new release to the releases list, by either embedding it or adding a link to it.
 * The record updates the compiled and versioned releases using the new information. Repeating unchanged information does not affect the result.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Hint</p>
-
+````{hint}
 Compiled releases are not mandatory, but it helps to make OCDS data more accessible, especially for users that don’t need a detailed change history.
 
 Consider how to calculate the **total value of active tenders** using compiled releases:
 
-```eval_rst
-.. csv-table-no-translate::
-    :header-rows: 1
-    :file: ../examples/compiledreleases_compiled.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../examples/compiledreleases_compiled.csv
 ```
 
 Working with compiled releases, this metric can be calculated by filtering on the tender status and summing the tender value.
 
 Compare that to how to calculate the **total value of active tenders** using releases:
 
-```eval_rst
-.. csv-table-no-translate::
-    :header-rows: 1
-    :file: ../examples/compiledreleases_releases.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../examples/compiledreleases_releases.csv
 ```
 
 If a user has releases only, they need to first determine the final status before calculating the result.
 
 Compiled releases are useful for many scenarios. But users might need the full history to answer other questions. For example, how many amends there are for a tender's value.
-
-</div>
+````
 
 #### Packaging
 

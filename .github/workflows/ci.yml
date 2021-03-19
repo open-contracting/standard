@@ -23,7 +23,10 @@ jobs:
     # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
     - name: Make
       run: |
-        if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
+        if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then
+          python schema/build-profile.py
+          make extract
+        fi
         make
         python util/add_translation_notes.py
     - run: pytest
@@ -31,15 +34,15 @@ jobs:
       with:
         key: ${{ secrets.PRIVATE_KEY }}
         known_hosts: standard.open-contracting.org ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWLziEiV46d9iInFXAR/PxPvotcpmMtbwO8GkTF2/AFUkyiSd8/Yg5HXUoWBz7hbRwg2O+q5F1QfD57vevBV7c+JKyBbKVOi/mXaf7uACxer419RTgKcpaMhNRi708XWhNlWiKp3Afs/MDMvMdWSrU+Ht7biNb1OMGjfNMDdlsJxPycxMQ7Fu7i+kdyMkKLYDIHNeEw0aW9PtMTReUE0y/Ghn44PDR2u9/oZsEhC0ELDQUfsjtCcoM91FH1tjRBZkOW/j5940nMoJpbVhFHTC3YY9Mh2kV+N6Whht5nghJ7Jl2vN5W0Uer+TNMVRV4QMu8xK5HXbjKFMpaK+j4gBs9
-    - uses: little-core-labs/netrc-creds@v2.0.1
+    - uses: little-core-labs/netrc-creds@v2.1.0
       with:
-        creds: |
-          [{
-            "machine": "standard.open-contracting.org",
-            "login": "manage",
-            "password": "${{ secrets.ELASTICSEARCH_PASSWORD }}"
-          }]
+        machine: standard.open-contracting.org
+        login: manage
+        password: ${{ secrets.ELASTICSEARCH_PASSWORD }}
     - if: success()
       env:
         PATH_PREFIX: ''
-      run: curl -Ss https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-docs.sh | bash -
+      run: |
+        if [ $GITHUB_REPOSITORY != 'open-contracting/standard_profile_template' ]; then
+          curl -sS https://raw.githubusercontent.com/open-contracting/deploy/main/deploy-docs.sh | bash -
+        fi
