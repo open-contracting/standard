@@ -4,11 +4,6 @@
 #
 #    pip-compile common-requirements.in
 #
--e git+https://github.com/sphinx-doc/sphinx.git@3207da1fa81a5d3171d3bbb15768e1c6f6b39b58#egg=sphinx
-    # via
-    #   -r common-requirements.in
-    #   myst-parser
-    #   sphinx-intl
 -e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
     # via -r common-requirements.in
 alabaster==0.7.12
@@ -118,6 +113,11 @@ snowballstemmer==2.0.0
     # via sphinx
 sphinx-intl==0.9.12
     # via -r common-requirements.in
+sphinx==3.5.2
+    # via
+    #   -r common-requirements.in
+    #   myst-parser
+    #   sphinx-intl
 sphinxcontrib-applehelp==1.0.1
     # via sphinx
 sphinxcontrib-devhelp==1.0.1
