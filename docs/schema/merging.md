@@ -121,7 +121,6 @@ For example, in the above worked example, the estimated value was $1,000 in a re
 
 The structure of the versioned release is described by the {download}`versioned release schema <../../build/current_lang/versioned-release-validation-schema.json>`; note that the `ocid` field's value is not versioned.
 
-(schema/merge-routine)=
 ### Merge routine
 
 To create a compiled or versioned release, you must:
