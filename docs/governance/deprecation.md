@@ -4,7 +4,7 @@ From time to time fields and codelist values might be removed from the Open Cont
 
 This will be either due to limited use, or because they have been replaced by alternative fields or codelists.
 
-Before a field or codelist value is removed, it will be first marked as deprecated in a major or minor release (e.g. in 1.1), and removal will only take place, subject to the [governance](../#deprecation-policy) process, in the next major version (e.g. 2.0).
+Before a field or codelist value is removed, it will be first marked as deprecated in a major or minor release (e.g. in 1.1), and removal will only take place, subject to the [governance](index.md#deprecation-policy) process, in the next major version (e.g. 2.0).
 
 Deprecated fields are marked in the JSON schema with the presence of a `deprecated` property and object which declares the version number in which the field was first deprecated, and provides a description of the reason for this deprecation.
 

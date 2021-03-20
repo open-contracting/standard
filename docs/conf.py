@@ -105,6 +105,7 @@ extension_versions = {
 # Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
 # https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = ['linkify']
+myst_heading_anchors = 6
 
 
 def setup(app):

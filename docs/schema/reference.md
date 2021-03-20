@@ -76,7 +76,7 @@ The majority of OCDS data is held within a release structure. One or more releas
     * [contract](#contract)
       * [implementation](#implementation)
 
-Releases are given a [tag](../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided.
+Releases are given a [tag](codelists.md#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided.
 
 For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 
@@ -89,9 +89,9 @@ Releases must be published within a [release package](release_package). The rele
 :collapse: releases,publisher
 ```
 
-See the [licensing guidance](../../guidance/publish/#license-your-data) for more details on selecting a license, and publishing license information.
+See the [licensing guidance](../guidance/publish.md#license-your-data) for more details on selecting a license, and publishing license information.
 
-See the [publication policy](../../guidance/publish/#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
+See the [publication policy](../guidance/publish.md#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
 
 ### Release
 
@@ -295,7 +295,7 @@ See the [parties](#parties) section
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../identifiers/#organization-ids) involved in a contracting process.
+The identifier block provides a way to [identify the legal entities](identifiers.md#organization-ids) involved in a contracting process.
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
@@ -320,7 +320,7 @@ If a contracting process represents a contract arranged by the department or bra
 
 ### Document
 
-Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../codelists/#document-type) codelist.
+Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
 
 Documents related to contracting processes should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
 
@@ -397,7 +397,7 @@ The `unit` block allows detailed specification of the parameters and price of un
 
 If the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
-Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](../codelists/#unit-classification-scheme).
+Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item/properties/unit

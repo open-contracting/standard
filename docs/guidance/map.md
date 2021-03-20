@@ -2,7 +2,7 @@
 
 This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process.
 
-If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the OCDS Helpdesk](../../support/#ocds-helpdesk) for guidance on how to identify which OCDS fields match your local concepts.
+If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for guidance on how to identify which OCDS fields match your local concepts.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
@@ -10,9 +10,9 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 * Identify [hard cases](#mapping-the-hard-cases) that need more attention
 * Get input from the [OCDS Helpdesk](../../support/index)
 
-The documentation you produce can also later be included in your [Data User Guide](../publish/#finalize-your-publication-policy).
+The documentation you produce can also later be included in your [Data User Guide](publish.md#finalize-your-publication-policy).
 
-As you make progress through this phase, we encourage you to update your [publication plan](../design/#develop-your-publication-plan), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the _Goals (design)_ section.
+As you make progress through this phase, we encourage you to update your [publication plan](design.md#develop-your-publication-plan), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the _Goals (design)_ section.
 
 ## Involve the right people
 
@@ -43,7 +43,7 @@ To make this step easier we provide templates to list the data elements within y
 
 If your contracting data is managed on paper or in unstructured electronic documents, you should use the templates to list the data elements in those data sources and map them to OCDS.
 
-You can [contact the OCDS Helpdesk](../../support/#ocds-helpdesk) for support and guidance on using the mapping templates.
+You can [contact the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on using the mapping templates.
 
 Before working on mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
 
@@ -55,7 +55,7 @@ map/localization
 
 ### Mapping organization identifiers
 
-[Organization identifiers](../../schema/identifiers/#organization-ids) in OCDS are made up of two parts:
+[Organization identifiers](../schema/identifiers.md#organization-ids) in OCDS are made up of two parts:
 
 * An org-id code, identifying the register from the which the identifier is drawn
 * The identifier for the organization, drawn from the register

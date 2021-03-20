@@ -19,9 +19,9 @@ Records must be published within a [record package](record_package). The record 
 :collapse: records
 ```
 
-See the [licensing guidance](../../guidance/publish/#license-your-data) for more details on selecting a license, and publishing license information.
+See the [licensing guidance](../guidance/publish.md#license-your-data) for more details on selecting a license, and publishing license information.
 
-See the [publication policy](../../guidance/publish/#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
+See the [publication policy](../guidance/publish.md#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
 
 The record package metadata has two differences from the release package metadata:
 
@@ -38,7 +38,7 @@ The following example demonstrates all package metadata and record fields.
 
 ## Record structure
 
-A record **must** contain an [ocid](../identifiers/#ocid) and all [releases](#releases) about the contracting process. As such, a record functions as an index of all releases about a contracting process.
+A record **must** contain an [ocid](identifiers.md#contracting-process-identifier-ocid) and all [releases](#releases) about the contracting process. As such, a record functions as an index of all releases about a contracting process.
 
 A record **should** contain a [compiledRelease](#compiled-release) object, which represents the state of the contracting process at the time of the record's publication.
 
@@ -106,7 +106,7 @@ This versioned information is relevant to many use cases relating to contract mo
 
 If the versioned release is not provided, third parties can generate it by processing the record's releases according to the [merging](merging) reference.
 
-The following example displays a single field's [versioned values](../merging/#versioned-values). This shows that the amount changed between the planning stage and the tender stage, while the currency did not.
+The following example displays a single field's [versioned values](merging.md#versioned-values). This shows that the amount changed between the planning stage and the tender stage, while the currency did not.
 
 ```{jsoninclude} ../examples/merging/versioned.json
 :jsonpointer: /records/0/versionedRelease/tender/value

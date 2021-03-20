@@ -23,7 +23,7 @@ In an 'Easy' releases scenario it is still necessary to package data. Therefore 
 
 ### Release tags
 
-Releases in OCDS have a [release tag](../../../schema/codelists/#release-tag) which indicates the stage of the contracting process they relate to.
+Releases in OCDS have a [release tag](../../schema/codelists.md#release-tag) which indicates the stage of the contracting process they relate to.
 
 When producing a single release for each contracting process, we can't use any tags that need other tags to be present in previous releases, e.g. 'tenderUpdate' which follows the 'tender' tag. 
 

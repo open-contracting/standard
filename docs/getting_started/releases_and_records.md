@@ -48,7 +48,7 @@ Releases follow the [release schema](../schema/reference). The schema covers the
 
 #### Identifiers
 
-Each release contains an [ocid](../../schema/identifiers/#contracting-process-identifier-ocid) to identify the contracting process it relates to. An ocid is composed of a prefix and an unique process identifier chosen by the publisher.
+Each release contains an [ocid](../schema/identifiers.md#contracting-process-identifier-ocid) to identify the contracting process it relates to. An ocid is composed of a prefix and an unique process identifier chosen by the publisher.
 
 A release also needs a release identifier, unique in the scope of the contracting process. A release id can be built in several ways. Publishers can use any generation strategy, as long as the ids don’t collide within the same process.
 
@@ -69,7 +69,7 @@ For example:
 * When an invitation to tender is published, the publisher uses the 'tender' tag . The release includes the relevant details in the `tender` section. It can also contain information about the budget in the planning section.
 * When a contract is awarded, the publisher uses the 'award' tag. The release includes the relevant details in the `award` section. It can also update the tender section with the list of tenderers that submitted a bid. 
 
-The [release tag codelist](../../schema/codelists/#release-tag) contains the list of all tags provided by OCDS. Note that it is allowed to use more than one tag in the same release. For example, a release with new data in the `tender` and `award` sections can use the 'tender' and 'award' tags together.
+The [release tag codelist](../schema/codelists.md#release-tag) contains the list of all tags provided by OCDS. Note that it is allowed to use more than one tag in the same release. For example, a release with new data in the `tender` and `award` sections can use the 'tender' and 'award' tags together.
 
 #### Repeating previous information
 
