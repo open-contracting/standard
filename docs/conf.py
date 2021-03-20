@@ -17,7 +17,6 @@ import os
 from glob import glob
 from pathlib import Path
 
-import standard_theme
 from ocds_babel.translate import translate
 
 # -- Project information -----------------------------------------------------
@@ -56,8 +55,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'standard_theme'
-html_theme_path = [standard_theme.get_html_theme_path()]
+html_theme = 'pydata_sphinx_theme'
 html_favicon = '_static/favicon-16x16.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -71,18 +69,27 @@ html_static_path = ['_static']
 repository_url = 'https://github.com/open-contracting/standard'
 smartquotes = False
 
+# TODO: remove these old theme options once the new theme looks correct
+# html_theme_options = {
+#     'display_version': True,
+#     'root_url': '',
+#     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
+#     'copyright': copyright,
+#     'license_name': 'Apache License 2.0',
+#     'license_url': '{}/blob/HEAD/LICENSE'.format(repository_url),
+#     'repository_url': repository_url,
+# }
 html_theme_options = {
-    'display_version': True,
-    'root_url': '',
-    'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
-    'copyright': copyright,
-    'license_name': 'Apache License 2.0',
-    'license_url': '{}/blob/HEAD/LICENSE'.format(repository_url),
-    'repository_url': repository_url,
+    "search_bar_position": "navbar"
+}
+
+html_sidebars = {
+    "index": [],
 }
 
 # The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
-locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+# TODO: figure out how this should be used if we are using the pydata theme
+# locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 
 gettext_compact = False
 

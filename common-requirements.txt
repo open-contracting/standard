@@ -4,8 +4,6 @@
 #
 #    pip-compile common-requirements.in
 #
--e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
-    # via -r common-requirements.in
 alabaster==0.7.12
     # via sphinx
 attrs==20.3.0
@@ -16,6 +14,8 @@ babel==2.9.0
     # via
     #   sphinx
     #   sphinx-intl
+beautifulsoup4==4.9.3
+    # via pydata-sphinx-theme
 certifi==2020.12.5
     # via
     #   elasticsearch
@@ -89,6 +89,8 @@ pluggy==0.13.1
     # via pytest
 py==1.10.0
     # via pytest
+pydata-sphinx-theme==0.5.0
+    # via -r common-requirements.in
 pygments==2.8.1
     # via sphinx
 pyparsing==2.4.7
@@ -117,12 +119,15 @@ smmap==3.0.5
     # via gitdb
 snowballstemmer==2.1.0
     # via sphinx
+soupsieve==2.2.1
+    # via beautifulsoup4
 sphinx-intl==2.0.1
     # via -r common-requirements.in
 sphinx==3.5.2
     # via
     #   -r common-requirements.in
     #   myst-parser
+    #   pydata-sphinx-theme
     #   sphinx-intl
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
