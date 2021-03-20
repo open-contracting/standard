@@ -9,7 +9,7 @@ Publishers must use the codes in the codelists, unless no code is appropriate. I
 ```{admonition} Extending open codelists
 :class: note
 
-If you use new codes outside those in an open codelist, please document the codes in an [OCDS extension](../guidance/map/extensions) and in your [publication policy](../../guidance/publish/#finalize-your-publication-policy). Please also create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
+If you use new codes outside those in an open codelist, please document the codes in an [OCDS extension](../guidance/map/extensions) and in your [publication policy](../guidance/publish.md#finalize-your-publication-policy). Please also create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
 ```
 
 The release schema, in {download}`JSON Schema <../../build/current_lang/release-schema.json>`, has a `codelist` property to indicate the <a href="../../codelists/">CSV File</a> that defines the codes in the codelist (shown as tables below). It also has an `openCodelist` property, to indicate whether the codelist is open or closed.
@@ -20,7 +20,7 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 ### Party Role
 
-The organizations, economic operators or other participants in a contracting process are listed in the [parties section](../reference/#parties). A single party can have one or more roles in the contracting process.
+The organizations, economic operators or other participants in a contracting process are listed in the [parties section](reference.md#parties). A single party can have one or more roles in the contracting process.
 
 ```{csv-table-no-translate}
 :header-rows: 1

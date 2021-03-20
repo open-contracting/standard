@@ -27,11 +27,11 @@ The contract milestones block is used to describe:
 The contract implementation milestones block is used to describe:
   * Any events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
 
-The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and those which relate to contract implementation.
+The nature of the milestone is indicated by the [milestone type codelist](../../schema/codelists.md#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and those which relate to contract implementation.
 
 At the point of contract signature, a comparison between `tender/milestones` and `contract/implementation/milestones` with a `milestone/type` of 'delivery' or 'reporting' should reveal how the negotiated contract differs from what was set out at tender time.
 
-The `dueDate`, `dateMet`, `dateModified` and [`status`](../../../schema/codelists/#milestone-status) fields are used to track the lifecycle of the milestone.
+The `dueDate`, `dateMet`, `dateModified` and [`status`](../../schema/codelists.md#milestone-status) fields are used to track the lifecycle of the milestone.
 
 ## Worked examples
 

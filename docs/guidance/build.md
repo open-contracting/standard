@@ -2,7 +2,7 @@
 
 This phase is about creating a new IT system, or updating an existing IT system, to implement your [mapping](map) and publish OCDS data.
 
-Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../../support/#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
+Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../support/index.md#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
 
 ```{toctree}
 :hidden:
@@ -12,7 +12,7 @@ build/data_collection_tools
 
 As you complete this phase, you can:
 
-* Fill in the *Publication architecture* sub-section of your [Publication Plan](../design/#develop-your-publication-plan).
+* Fill in the *Publication architecture* sub-section of your [Publication Plan](design.md#develop-your-publication-plan).
 
 ## Register an OCID prefix
 
@@ -78,7 +78,7 @@ build/hosting
 
 Having determined your system architecture, it's time to implement it. This is one of the longest steps of implementing OCDS.
 
-Whether your current infrastructure is low tech or high tech, we have tools and resources to help you publish OCDS. Depending on your [data sources](../map/#identify-your-data-sources) and system architecture, you might be able to reuse some of these OCDS tools:
+Whether your current infrastructure is low tech or high tech, we have tools and resources to help you publish OCDS. Depending on your [data sources](map.md#identify-your-data-sources) and system architecture, you might be able to reuse some of these OCDS tools:
 
 ```{note}
 If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../support/index).
@@ -97,7 +97,7 @@ If you aren't creating or updating an IT system, but are instead reusing an exis
 * The [data collection spreadsheet](https://www.open-contracting.org/resources/data-collection-spreadsheet/) includes instructions describing how to add fields and how to add and reformat sheets.
 * The [data collection form](https://www.open-contracting.org/resources/ocds-data-collection-form/) includes instructions describing how to add fields and how to customize descriptions and guidance.
 
-Contact the [OCDS Helpdesk](../../support/#ocds-helpdesk) for support and guidance on customizing a tool to meet your needs.
+Contact the [OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on customizing a tool to meet your needs.
 
 **Resource:** [Using tabular versions of JSON to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
 
@@ -115,7 +115,7 @@ New tools are continually being authored for publishing OCDS data. Please refer 
 
 If your [mapping](map) identified data elements which don't map to OCDS or an existing extension, you ought to develop your own extensions. Documenting your additional fields using extensions makes important information about the structure, format and meaning of your data available to users.
 
-**Action:** Read the guidance on [developing new extensions](../map/extensions/#developing-new-extensions), which includes links to useful tools and resources.
+**Action:** Read the guidance on [developing new extensions](map/extensions.md#developing-new-extensions), which includes links to useful tools and resources.
 
 **Action:** Request support from the [OCDS Helpdesk](../../support/index) to model your extensions.
 
@@ -125,7 +125,7 @@ If your [mapping](map) identified data elements which don't map to OCDS or an ex
 
 As covered in the [Design](design) phase, different users will need information in different ways. Some will need bulk downloads, some will need APIs, some will need CSVs, most will need change history published on a timely basis with individual releases and records.
 
-**Resource:** [Guidance on bulk downloads, APIs, individual releases and records, and flattened serializations](hosting/#data-files-and-apis)
+**Resource:** [Guidance on bulk downloads, APIs, individual releases and records, and flattened serializations](build/hosting)
 
 **Resource:** [Guidance on JSON and CSV serialization, including packaging files with metadata](build/serialization)
 

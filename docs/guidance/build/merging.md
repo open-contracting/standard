@@ -138,5 +138,5 @@ The NGO generates a record. In the record, all the fields of the removed item ha
 ```
 
 ```{note}
-The current [merge routine](schema/merge-routine) does not include a strategy to completely remove an entry from an array. We invite discussion on how to remove objects from arrays in issue [#232](https://github.com/open-contracting/standard/issues/232).
+The current [merge routine](../../schema/merging.md#merge-routine) does not include a strategy to completely remove an entry from an array. We invite discussion on how to remove objects from arrays in issue [#232](https://github.com/open-contracting/standard/issues/232).
 ```
