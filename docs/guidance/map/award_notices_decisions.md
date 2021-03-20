@@ -15,6 +15,7 @@ Using a single award object to model such a notice in OCDS would make it impossi
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/award_decisions/single_award.csv
 ```
 
@@ -22,6 +23,7 @@ For the award object in OCDS to communicate a direct relationship between items,
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/award_decisions/multi_award.csv
 ```
 
@@ -29,6 +31,7 @@ There are no identifiers for the individual supplier/value pairings on the origi
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/award_decisions/identifiers.csv
 ```
 

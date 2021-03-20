@@ -8,6 +8,7 @@ The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG to 
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/purchase_orders/parent_contract.csv
 ```
 
@@ -19,6 +20,7 @@ If purchase orders were also disclosed in the `contracts` section of OCDS, by th
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/purchase_orders/contracts_pos.csv
 ```
 

@@ -67,6 +67,7 @@ The contracting process begins with a tender notice. The source tables contain t
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
 ```
 
@@ -103,6 +104,7 @@ The tender has been updated: the value increased slighly and the description has
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-1/2-tenderUpdate-procurementProcess.csv
 ```
 
@@ -131,6 +133,7 @@ Now, the tender has been awarded. The related columns in 'ProcurementProcess' ta
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-1/3-award-procurementProcess.csv
 ```
 
@@ -138,6 +141,7 @@ Now, the tender has been awarded. The related columns in 'ProcurementProcess' ta
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-1/3-award-supplier.csv
 ```
 
@@ -166,6 +170,7 @@ At the last stage there is a signed contract. The 'ProcurementProcess' table cha
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-1/4-contract-procurementProcess.csv
 ```
 
@@ -173,6 +178,7 @@ At the last stage there is a signed contract. The 'ProcurementProcess' table cha
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-1/4-contract-contract.csv
 ```
 
@@ -207,6 +213,7 @@ The example starts with the tender, and the following data in the 'ProcurementPr
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
 ```
 
@@ -242,6 +249,7 @@ Now that tender data has changed: there are updates in the value and description
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-2/2-tenderUpdate-procurementProcess.csv
 ```
 
@@ -268,6 +276,7 @@ The tender has been awarded, therefore the 'ProcurementProcess' table has been u
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-2/3-award-procurementProcess.csv
 ```
 
@@ -275,6 +284,7 @@ The tender has been awarded, therefore the 'ProcurementProcess' table has been u
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-2/3-award-supplier.csv
 ```
 
@@ -314,6 +324,7 @@ In the last stage the contract is signed, the 'ProcurementProcess' table is upda
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-2/4-contract-procurementProcess.csv
 ```
 
@@ -321,6 +332,7 @@ In the last stage the contract is signed, the 'ProcurementProcess' table is upda
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:widths: auto
 :file: ../../examples/easy-releases/worked-example-2/4-contract-contract.csv
 ```
 
