@@ -19,6 +19,6 @@ The publisher also collects two extra identifiers, which are disclosed in the `a
 
 ## Party IDs
 
-Each of the parties (organizations or other participants) in the [parties section](../../../schema/reference/#parties) ought to have a [local party ID](../../../schema/identifiers/#party-ids) (`id`) used to reference it from elsewhere in the data. For parties with an organization identifier, you can construct `id` using `{identifier.scheme}-{identifier.id}`.
+Each of the parties (organizations or other participants) in the [parties section](../../schema/reference.md#parties) ought to have a [local party ID](../../schema/identifiers.md#party-ids) (`id`) used to reference it from elsewhere in the data. For parties with an organization identifier, you can construct `id` using `{identifier.scheme}-{identifier.id}`.
 
 For parties without an organization identifier, you can populate `id` with a fixed or sequential value. For example, you can set the buyer's `id` to '1' and set each supplier's `id` sequentially from '2' onwards. Alternatively, you can set the party's `id` to its `role` and add a sequential number for roles with multiple parties, e.g. 'buyer', 'tenderer-1', 'tenderer-2' etc. A party's `id` needs to remain consistent across all releases in a contracting process. For example, if the `id` of a party is 'tenderer-1' in one release, then the `id` of the same party in another release needs to also be 'tenderer-1'.
