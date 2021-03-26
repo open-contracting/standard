@@ -78,7 +78,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1125](https://github.com/open-contracting/standard/pull/1125) Add `weight` to `Item.unit`
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award
 * [#1067](https://github.com/open-contracting/standard/pull/1067) Clarify the description of `Publisher.name` to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
-* [#1242](https://github.com/open-contracting/standard/pull/1242) Expand the scope of release `id` to ocid and OCDS version (was ocid only), allowing the publication of datasets for different versions of OCDS.
+* [#1242](https://github.com/open-contracting/standard/pull/1242) Narrow the uniqueness scope of a release's `id` to its `ocid` and OCDS version (was `ocid` only), to allow the publication of the same release for different versions of OCDS.
 * [#1242](https://github.com/open-contracting/standard/pull/1242) Add OCDS version on top of ocid as a merging facet.
 * Record package schema:
   * [#1241](https://github.com/open-contracting/standard/pull/1241) In the definition section, rename record to `Record` and add `LinkedRelease`.
