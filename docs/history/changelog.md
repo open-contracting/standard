@@ -76,7 +76,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
   * `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
 * [#1242](https://github.com/open-contracting/standard/pull/1242) Narrow the uniqueness scope of a release's `id` to its `ocid` and OCDS version (was `ocid` only), to allow the publication of the same release for different versions of OCDS.
-* [#1242](https://github.com/open-contracting/standard/pull/1242) Add OCDS version on top of ocid as a merging facet.
+* [#1242](https://github.com/open-contracting/standard/pull/1242) Merging: Clarify that the releases to merge must use the same version of OCDS.
 * Record package schema:
   * [#1241](https://github.com/open-contracting/standard/pull/1241) In the definition section, rename record to `Record` and add `LinkedRelease`.
   * [#1241](https://github.com/open-contracting/standard/pull/1241) Align descriptions of `Record` `releases`, linked releases and embedded releases.
