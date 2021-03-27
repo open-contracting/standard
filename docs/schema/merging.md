@@ -5,7 +5,7 @@ An OCDS [record](../schema/records_reference) aggregates all the releases availa
 * a compiled release, which expresses the current state of the contracting process, by showing only the most recent field values
 * a versioned release, which expresses all historical states of the contracting process, by showing all the field values over time
 
-**Merging** is the process of combining individual releases into a compiled or versioned release, described in more detail below. At a high level:
+**Merging** is the process of combining individual releases with the same OCDS version into a compiled or versioned release, described in more detail below. At a high level:
 
 * A compiled release is created by taking only the most recent values of fields from releases in a given contracting process.
 * A versioned release is created by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
@@ -125,7 +125,7 @@ The structure of the versioned release is described by the {download}`versioned 
 
 To create a compiled or versioned release, you must:
 
-1. Get all releases with the same `ocid` value
+1. Get all releases with the same `ocid` value and same OCDS version
 1. Order the releases in chronological order by `date`
 1. Create an empty JSON object for the compiled or versioned release
 1. Merge each release (**input**), in order, into the JSON object (**output**), as follows:
