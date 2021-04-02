@@ -10,23 +10,23 @@ The UNCITRAL model law defines a framework agreement procedure as:
 
 In OCDS terms, a framework agreement procedure is a procedure involving at least one framework agreement. A framework agreement is defined in UNCITRAL as:
 
-> Agreement between the procuring entity and the selected supplier (or suppliers) or contractor (or contractors) concluded upon completion of the first stage of the framework agreement procedure._
+> Agreement between the procuring entity and the selected supplier (or suppliers) or contractor (or contractors) concluded upon completion of the first stage of the framework agreement procedure.
 
 In OCDS we treat “contractors” and “suppliers” as synonyms. One or more buyers and one or more suppliers can participate in a framework agreement.
 
-A procurement contract is defined as:
+A procurement contract is defined in UNCITRAL as:
 
-> Contract concluded between the procuring entity and a supplier  (or suppliers) or a contractor (or contractors) at the end of the procurement proceedings._
+> Contract concluded between the procuring entity and a supplier  (or suppliers) or a contractor (or contractors) at the end of the procurement proceedings.
 
 Framework agreements can be **open** or **closed**:
 
 **Closed framework agreement**
 
-> Framework agreement to which no supplier or contractor that is not initially a party to the framework agreement may subsequently become a party_
+> Framework agreement to which no supplier or contractor that is not initially a party to the framework agreement may subsequently become a party.
 
 **Open framework agreement**
 
-> Framework agreement to which a supplier (or suppliers) or a contractor (or contractors) in addition to the initial parties may subsequently become a party or parties._
+> Framework agreement to which a supplier (or suppliers) or a contractor (or contractors) in addition to the initial parties may subsequently become a party or parties.
 
 Procurement systems which provide for closed framework agreements include the EU (Framework Agreements, per Directive 2014/24/EU, Article 33) and the US federal system (Indefinite-delivery contracts, per Federal Acquisition Regulation, Subpart 16.5). An example of a procurement system which provides for open framework agreements is the EU (Dynamic Purchasing Systems, per Directive 2014/24/EU, Article 33).
 
