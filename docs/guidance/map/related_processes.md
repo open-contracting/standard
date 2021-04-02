@@ -48,11 +48,7 @@ The second stage of a framework agreement procedure is also known as a “call-o
 
 ## Modelling framework agreements in OCDS
 
-OCDS defines a contracting process as:
-
-> All the planning, tendering information, awards, contracts and contract implementation information related to a single initiation process.
-
-A contracting process brings together, under a single identifier, the information that users need to answer questions such as:
+In OCDS, a contracting process brings together, under a single identifier, the information that users need to answer questions such as:
 
 * Was a contract signed as a result of this tender?
 * What was the total value of spending that resulted from this award?
