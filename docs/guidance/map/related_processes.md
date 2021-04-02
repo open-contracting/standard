@@ -1,13 +1,7 @@
 # Framework Agreements and Related Processes
 
-```{eval-rst}
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
-      In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
-
+```{note}
+In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
 ```
 
 The UNCITRAL model law defines a framework agreement procedure as:
@@ -161,11 +155,8 @@ The  `tender.competitive` field is used to identify if the second stage is compe
 
 The techniques and competitive extensions should also be declared in the package metadata:
 
-```{eval-rst}
-
-.. literalinclude:: ../../examples/frameworks/extensions_block.json
-    :language: json
-
+```{literalinclude} ../../examples/frameworks/extensions_block.json
+:language: json
 ```
 
 ## Worked examples
@@ -191,12 +182,9 @@ The notice is modelled as an OCDS release with `tag` set to ‘tender’ and wit
 * Since the framework agreement is closed  `tenderPeriod` is set to the deadline for responses to the invitation to participate
 * Since there is only one buyer, the `buyer` is set to reference the entry for NSS in the `parties` array.
 
-```{eval-rst}
-
-.. jsoninclude:: ../../examples/frameworks/closed_single_first_stage.json
-   :jsonpointer:
-   :title: First Stage
-
+```{jsoninclude} ../../examples/frameworks/closed_single_first_stage.json
+:jsonpointer:
+:title: First Stage
 ```
 
 #### Adding a supplier as a party to the framework agreement
@@ -210,12 +198,9 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 * An `Organization` object is added to the `parties` array with the supplier’s details.
 * An `OrganizationReference` object is added to `award.suppliers` to reference the supplier’s details in the `parties` array.
 
-```{eval-rst}
-
-.. jsoninclude:: ../../examples/frameworks/closed_single_supplier.json
-   :jsonpointer:
-   :title: Adding a supplier
-
+```{jsoninclude} ../../examples/frameworks/closed_single_supplier.json
+:jsonpointer:
+:title: Adding a supplier
 ```
 
 The first stage of the framework agreement procedure is complete and NSS can now purchase services from the supplier.
@@ -238,12 +223,9 @@ The release has the following properties:
 * The `awards` section is populated with the initial contract value, period and items
 * The `contracts` section is populated and linked to the award.
 
-```{eval-rst}
-
-.. jsoninclude:: ../../examples/frameworks/closed_single_award.json
-   :jsonpointer:
-   :title: Award of a procurement contract
-
+```{jsoninclude} ../../examples/frameworks/closed_single_award.json
+:jsonpointer:
+:title: Award of a procurement contract
 ```
 
 Each purchase made under the framework agreement is represented by a new contracting process with a new `ocid`.
@@ -265,12 +247,9 @@ The notice is modelled as an OCDS release with `tag` set to ‘tender’ and wit
 * Since there are two buyers, the ‘buyer’ object is not set, and the buyers are declared in the `parties` array.
 * Since Chile Compra is the entity who manages the procurement process, the `procuringEntity` is set to reference the entry for Chile Compra in the `parties` array.
 
-```{eval-rst}
-
-.. jsoninclude:: ../../examples/frameworks/open_multiple_first_stage.json
-   :jsonpointer:
-   :title: First Stage
-
+```{jsoninclude} ../../examples/frameworks/open_multiple_first_stage.json
+:jsonpointer:
+:title: First Stage
 ```
 
 #### Adding a supplier as a party to the framework agreement
@@ -284,12 +263,9 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 * An `Organization` object per supplier is added to the `parties` array with the supplier’s details.
 * An `OrganizationReference` object per supplier is added to `award.suppliers` to reference the supplier’s details in the `parties` array.
 
-```{eval-rst}
-
-.. jsoninclude:: ../../examples/frameworks/open_multiple_supplier.json
-   :jsonpointer:
-   :title: Adding a supplier
-
+```{jsoninclude} ../../examples/frameworks/open_multiple_supplier.json
+:jsonpointer:
+:title: Adding a supplier
 ```
 
 The framework is now established, and both buyers can now purchase items from the suppliers.
@@ -307,12 +283,9 @@ The release has the following properties:
 * In this new process, we set the `buyer` to Servicio Local de Educación Pública Puerto Cordillera.
 * Related this process with the framework agreement set up using the `relatedProcess` block with `relationship` field set to ‘framework’.
 
-```{eval-rst}
-
-.. jsoninclude:: ../../examples/frameworks/open_multiple_second_stage.json
-   :jsonpointer:
-   :title: Second Stage
-
+```{jsoninclude} ../../examples/frameworks/open_multiple_second_stage.json
+:jsonpointer:
+:title: Second Stage
 ```
 
 #### Award of a procurement contract resulting from a second-stage competition
@@ -329,10 +302,7 @@ The release has the following properties:
 * The `relatedProcess` block is populated with a reference to the contracting process for the first stage
 * The `buyer`, `tender/procuringEntity`, `awards/suppliers` and `parties` sections are populated with the details of the buyer, procuring entity and supplier.
 
-```{eval-rst}
-
-.. jsoninclude:: ../../examples/frameworks/open_multiple_award.json
-   :jsonpointer:
-   :title: Award of a procurement contract
-
+```{jsoninclude} ../../examples/frameworks/open_multiple_award.json
+:jsonpointer:
+:title: Award of a procurement contract
 ```
