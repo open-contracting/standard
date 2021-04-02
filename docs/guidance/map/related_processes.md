@@ -59,27 +59,27 @@ In some cases, complex contracting processes cannot be represented under a singl
 * There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions.
 * The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated.
 
-OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field from the [techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension is used to identify contracting processes that represent the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` set to ‘framework’ is used to identify contracting processes that represent the second stage of a framework agreement procedure.
+OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` set to ‘framework’ is used to identify contracting processes that represent the second stage of a framework agreement procedure.
 
 The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
 
 ![OCDS framework agreement model](../../_static/png/framework_agreement_model.png)
 
-The `tender.competitive` field of the [competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension is used to distinguish whether the second stage of a framework agreement procedure involves competition.
+The `tender.competitive` field, from the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension, is used to indicate whether the second stage involves competition.
 
 The following guidance describes how to model the different stages of a framework agreement procedure in OCDS.  
 
 ### Invitation to participate in the first stage of a framework agreement procedure
 
-* Create a release and set `.tag` to 'tender'
-* For each buyer that will participate in the framework agreement, add an `Organization` object to `parties`, set `.role` to 'buyer' and populate its other fields.
-* If all public entities can participate, then omit them from the parties array and add a note in the publication policy to explain how users should interpret a contracting process with no buyers..
-* If only one buyer will participate in the framework agreement, add an `OrganizationReference` object to `buyer` and set `.id` and `.name` to the values from the buyer's `Organization` object. Otherwise, don't populate `buyer`.
+* Create a release and add 'tender' to the `tag` array
+* For each buyer that will participate in the framework agreement, add an `Organization` object to the `parties` array, add 'buyer' to its `.roles`, and populate its other fields.
+  * If all potential buyers can participate, don't add them to the `parties` array. Instead, add a note in the [publication policy](../publish) to explain how users should interpret a contracting process with no buyers.
+  * If a single buyer will participate in the framework agreement, set the `buyer.id` and `buyer.name` to match the buyer's object in the `parties` array. Otherwise, don't populate `buyer`.
 * In the `tender` section, set:
-    *   `.techniques.hasFrameworkAgreement` to 'True'.
-    *   `.contractPeriod` to the duration of the framework agreement.
-    *   If the framework agreement is closed, set `.tenderPeriod.endDate` to the deadline for responses to the invitation.
-    *   If the framework agreement is open, set `.tenderPeriod.endDate` to the last date that new suppliers can be added.
+  * `tender.techniques.hasFrameworkAgreement` to `true`.
+  * `tender.contractPeriod` to the duration of the framework agreement.
+  * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
+  * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
 
 #### Setting procurement method
 
@@ -87,69 +87,69 @@ The `tender.procurementMethod` field uses the [method codelist](../../schema/cod
 
 Use the following criteria to determine the procurement method:
 
-* If the contracting process will establish a framework agreement with a single supplier and if any supplier can submit a request to participate, i.e. there are no qualification criteria, then set `.procurementMethod` to 'open'.
-* If the contracting process limits the suppliers that can submit a request to participate in the framework agreement, then set `.procurementMethod` to 'limited'.
-* Otherwise, set `.procurementMethod` to ‘selective’.
+* If the contracting process will establish a framework agreement with a single supplier and if there are no conditions to participate in the contracting process, set `tender.procurementMethod` to 'open'.
+* If the contracting process limits the suppliers that can submit a request to participate in the framework agreement, set `tender.procurementMethod` to 'limited'.
+* Otherwise, set `tender.procurementMethod` to ‘selective’.
 
-### Addition of a supplier as a party to a framework agreement
+### Addition of a supplier to a framework agreement
 
-* Create a release with the same `ocid` as the 'tender' release and set `.tag` to ‘award’
-* Add an `Award` object to `awards`.
+* Create a release with the **same** `ocid` as the tender release and add 'award' to the `tag` array
+* Add an `Award` object to the `awards` array.
 * For each supplier:
-    *   Add an `Organization` object to `parties`, set `.role` to 'supplier' and populate its other fields.
-    *   Add an `OrganizationReference` object to `awards.suppliers` and set `.id` and `.name` to the values from supplier's `Organization` object.
+  * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
+  * Add an `OrganizationReference` object to the award's `.suppliers` array, and set its `.id` and `.name` to match the supplier's object in the `parties` array.
 * If no further suppliers will be added to the framework agreement, set `tender.status` to 'complete'.
 
 ### Award of a procurement contract without second-stage competition
 
-* Create a release with a new `ocid` and set `.tag` to 'award,contract’
+* Create a release with a **new** `ocid` and add 'award' and 'contract' to the `tag`
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage)
 * [Add a buyer](#add-a-buyer)
+* Set `tender.id` to the `award.id`, set `tender.competitive` to `false`, and set `tender.procuringEntity` if appropriate
 * [Add an award, contract and supplier](#add-an-award-contract-and-supplier)
-* Include the `tender` section with the `tender.id` set to the `award.id`, include the `procuringEntity` if it exists, and set `tender.competitive` to ‘false’  
 
 ### Invitation to participate in a second-stage competition
 
-* Create a release with a new `ocid` and set `.tag` to ‘tender’
+* Create a release with a **new** `ocid` and add 'tender' to the `.tag` array
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage)
 * [Add a buyer](#add-a-buyer)
-* Add a tender section and set `.procurementMethod` to the same value used in the first stage
+* Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage
 
 ### Award of a procurement contract resulting from a second-stage competition
 
-* Create a release with the same ocid as the tender release for the second stage and set `.tag` to 'award, contract'
+* Create a release with the **same** `ocid` as the tender release *for the second stage*, and add 'award' and 'contract' to the `tag`
 * [Add an award, contract and supplier](#add-an-award-contract-and-supplier)
 
 ### Updating the contract value, period or items
 
-* If the initial contract value, period or items are subsequently updated, populate `contracts.value`, `contracts.period` and `contracts.items` with the updated values.
+* If the initial contract value, period or items are subsequently updated, populate the contract's `.value`, `.period` and `.items` with the updated values.
 
 ### Common operations
 
 #### Relate the second stage to the first stage
 
-* Add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id` to '1', add 'framework' to its `.relationship` array, set its `.scheme` to 'ocid' and set `.identifier` to the `ocid` of the `ocid` of the invitation to participate in the framework agreement.
+* Add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id` (to '1', for example), add 'framework' to its `.relationship` array, set its `.scheme` to 'ocid' and set its `.identifier` to the `ocid` of the invitation to participate in the framework agreement.
 
 #### Add a buyer
 
-* Add an `Organization` object to `parties`, set `.role` to 'buyer' and populate its other fields with the details of the buyer for this specific contract.
-* Add an `OrganizationReference` object to `buyer` and set `.id` and `.name` to the values from the buyer's `Organization` object.
+* Add an `Organization` object to the `parties` array, add 'buyer' to its `.roles` and populate its other fields with the details of the buyer for this specific contract.
+* Set `buyer.id` and `buyer.name` to match the buyer's object in the `parties` array.
 
 #### Add an award, contract and supplier
 
-* Add an `Award` object to `awards` and a `Contract` object to `contracts`
-* Set `awards.id` and `contracts.id` to the same value
-* Add an `Organization` object to `parties`, set `.role` to 'supplier' and populate its other fields.
-* Add an `OrganizationReference` object to `awards.suppliers` and set `.id` and `.name` to the values from the supplier's `Organization` object.
-* Populate `awards.value`, `awards.contractPeriod` and `awards.items` with the initial contract value, period and items respectively
+* Add an `Award` object to the `awards` array and a `Contract` object to the `contracts` array.
+* Set the award's `.id` and the contract's `.id` to the same value.
+* Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
+* Add an `OrganizationReference` object to the award's `.suppliers` array and set `.id` and `.name` to match the supplier's object in the `parties` array.
+* Populate the award's `.value`, `.contractPeriod` and `.items` with the initial contract value, period and items.
 
 ### Extensions
 
-The `tender.techniques.hasFrameworkAgreement` field is used to identify contracting processes which represent the first stage of a framework agreement procedure. This field is added by the [Techniques Extension](https://github.com/open-contracting-extensions/ocds_techniques_extension). More information on the nature of the framework agreement can be provided in the ``FrameworkAgreement`` object.
+The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. More information on the nature of the framework agreement can be provided via the `tender.techniques.frameworkAgreement` object.
 
-The  `tender.competitive` field is used to identify if the second stage is competitive or not. This field is added by the [Competitive Extension](https://github.com/open-contracting-extensions/ocds_competitive_extension).
+The `tender.competitive` field, from the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension, is used to indicate whether the second stage involves competition.
 
-The techniques and competitive extensions should also be declared in the package metadata:
+The two extensions should be declared in the package metadata:
 
 ```{literalinclude} ../../examples/frameworks/extensions_block.json
 :language: json
@@ -173,7 +173,7 @@ NSS issues a [contract (tender) notice](https://ted.europa.eu/udl?uri=TED:NOTICE
 The notice is modelled as an OCDS release with `tag` set to ‘tender’ and with the following properties:
 
 * The techniques extension is declared in the package metadata.
-* `tender.techniques.hasFrameworkAgreement` is set to “true” to indicate that this contracting process is for the set-up of a framework agreement.
+* `tender.techniques.hasFrameworkAgreement` is set to `true` to indicate that this contracting process is for the set-up of a framework agreement.
 * Since the framework agreement will be concluded with a single supplier and since any supplier is able to submit a response to the invitation to participate, we set the `procurementMethod` to ‘open’.
 * Since the framework agreement is closed  `tenderPeriod` is set to the deadline for responses to the invitation to participate
 * Since there is only one buyer, the `buyer` is set to reference the entry for NSS in the `parties` array.
@@ -213,7 +213,7 @@ Because there was no competition at the second stage, the new contracting proces
 
 The release has the following properties:
 
-* A minimal  `tender` block is included, populating the `tender.id`, and with `tender/competitive` set to false.
+* A minimal  `tender` block is included, populating the `tender.id`, and with `tender/competitive` set to `false`.
 * The `relatedProcess` block is populated with a reference to the contracting process for the first stage
 * The `buyer`, `tender/procuringEntity`, `awards/suppliers` and `parties` sections are populated with the details of the buyer, procuring entity and supplier.
 * The `awards` section is populated with the initial contract value, period and items
@@ -237,7 +237,7 @@ Chile Compra publishes a [tender notice](https://www.mercadopublico.cl/Procureme
 The notice is modelled as an OCDS release with `tag` set to ‘tender’ and with the following properties:
 
 * The techniques extension is declared in the package metadata.
-* `tender.techniques.hasFrameworkAgreement` is set to “true” to indicate that this contracting process is for the set-up of a framework agreement.
+* `tender.techniques.hasFrameworkAgreement` is set to `true` to indicate that this contracting process is for the set-up of a framework agreement.
 * Since the framework agreement will be concluded with multiple suppliers and will involve second-stage competition, `tender.procurementMethod` is set to ‘selective’.
 * Since the framework agreement is open  `tenderPeriod` is set to the end of the framework agreement.
 * Since there are two buyers, the ‘buyer’ object is not set, and the buyers are declared in the `parties` array.
@@ -275,7 +275,7 @@ In OCDS the second stage of the framework agreement procedure is represented as 
 The release has the following properties:
 
 * The `tag` is set to ‘tender
-* Include the information about the competition as normal in the tender block, and set `competitive` to true.
+* Include the information about the competition as normal in the tender block, and set `competitive` to `true`.
 * In this new process, we set the `buyer` to Servicio Local de Educación Pública Puerto Cordillera.
 * Related this process with the framework agreement set up using the `relatedProcess` block with `relationship` field set to ‘framework’.
 
