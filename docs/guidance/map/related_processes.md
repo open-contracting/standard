@@ -157,42 +157,42 @@ The two extensions should be declared in the package metadata:
 
 ## Worked examples
 
-The following examples show how to model two types of framework agreement, covering a range characteristics::
+The following examples show how to model two framework agreements, covering a range of characteristics:
 
 1. A closed framework agreement established for a single buyer, with a single supplier and **without** second-stage competition
 2. A open framework agreement established for multiple buyers, with multiple suppliers and **with** second-stage competition
 
 ### Closed framework agreement with single buyer, single supplier and without second-stage competition
 
-NHS National Services Scotland (NSS) wants to establish a framework agreement for the receipt, storage and distribution of seasonal influenza vaccines to GP practices, social care premises, vaccine holding centres and community pharmacies across NHS Scotland.
+NHS National Services Scotland (NSS) wants to establish a framework agreement for the receipt, storage and distribution of seasonal influenza vaccines to general practitioner practices, social care premises, vaccine holding centres and community pharmacies across NHS Scotland.
 
 #### Invitation to participate in the first stage
 
-NSS issues a [contract (tender) notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) inviting suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
+NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
 
-The notice is modelled as an OCDS release with `tag` set to ‘tender’ and with the following properties:
+The notice is modelled as an OCDS release with a `tag` of ‘tender’ and the following properties:
 
 * The techniques extension is declared in the package metadata.
-* `tender.techniques.hasFrameworkAgreement` is set to `true` to indicate that this contracting process is for the set-up of a framework agreement.
-* Since the framework agreement will be concluded with a single supplier and since any supplier is able to submit a response to the invitation to participate, we set the `procurementMethod` to ‘open’.
-* Since the framework agreement is closed  `tenderPeriod` is set to the deadline for responses to the invitation to participate
-* Since there is only one buyer, the `buyer` is set to reference the entry for NSS in the `parties` array.
+* Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
+* Since the framework agreement will be concluded with a single supplier and since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'open'.
+* Since the framework agreement is closed, `tender.tenderPeriod` is set to the deadline for responses to the invitation to participate.
+* Since there is only one buyer, `buyer` is set to reference the buyer's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_first_stage.json
 :jsonpointer:
 :title: First Stage
 ```
 
-#### Adding a supplier as a party to the framework agreement
+#### Adding a supplier to the framework agreement
 
-NSS issues a [contract award notice](https://ted.europa.eu/udl?uri=TED:NOTICE:268595-2020:TEXT:EN:HTML&src=0) to announce that the framework agreement has concluded with a single supplier: Movianto UK.
+NSS issues a [contract award notice](https://ted.europa.eu/udl?uri=TED:NOTICE:268595-2020:TEXT:EN:HTML&src=0) to announce that the framework agreement has been concluded with a single supplier, Movianto UK.
 
-The notice is modelled as an OCDS release with the same `ocid` as the previous release and with `tag` set to ‘award’. The release has the following properties:
+The notice is modelled as an OCDS release with the same `ocid` as the previous release, a `tag` of ‘award’, and the following properties:
 
-* `tender.status` is set to ‘complete’ as no further suppliers will be added to the agreement.
+* Since no further suppliers will be added to the framework agreement, `tender.status` is set to 'complete'.
 * An `Award` object is added to the `awards` array.
 * An `Organization` object is added to the `parties` array with the supplier’s details.
-* An `OrganizationReference` object is added to `award.suppliers` to reference the supplier’s details in the `parties` array.
+* An `OrganizationReference` object is added to award's `.suppliers` array to reference the supplier's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_supplier.json
 :jsonpointer:
@@ -209,22 +209,20 @@ The order represents the award of a procurement contract at the second stage of 
 
 In OCDS the second stage of the framework agreement procedure is represented as a separate contracting process with a new OCID. The contracting process for the second stage is  linked to the contracting process for the first stage of the procedure using the `relatedProcess` section.
 
-Because there was no competition at the second stage, the new contracting process has only one release, with `tag` set to ‘award,contract’.
+Because there was no competition at the second stage, the new contracting process has only one release, with a `tag` of 'award' and 'contract'. The release has the following properties:
 
-The release has the following properties:
-
-* A minimal  `tender` block is included, populating the `tender.id`, and with `tender/competitive` set to `false`.
-* The `relatedProcess` block is populated with a reference to the contracting process for the first stage
-* The `buyer`, `tender/procuringEntity`, `awards/suppliers` and `parties` sections are populated with the details of the buyer, procuring entity and supplier.
-* The `awards` section is populated with the initial contract value, period and items
+* A minimal `tender` section sets `tender.id` and sets `tender.competitive` to `false`.
+* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
+* The `awards` section is populated with the initial contract value, period and items.
 * The `contracts` section is populated and linked to the award.
+* The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` fields are populated with the details of the buyer, procuring entity and supplier.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_award.json
 :jsonpointer:
 :title: Award of a procurement contract
 ```
 
-Each purchase made under the framework agreement is represented by a new contracting process with a new `ocid`.
+Each additional purchase made under the framework agreement is represented by a new contracting process with a new `ocid`.
 
 ### Open framework agreement with multiple buyers, with multiple suppliers and with second-stage competition
 
@@ -234,30 +232,30 @@ The National Procurement Agency in Chile (Chile Compra) wants to establish a fra
 
 Chile Compra publishes a [tender notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) inviting suppliers to participate in the framework agreement. The tender notice specifies that multiple suppliers can join the framework agreement. The framework agreement is open, since all the framework agreements in Chile involve the setting up of a dynamic purchasing system. The framework agreement is for multiple buyers, since the tender notice specifies two contracting authorities.
 
-The notice is modelled as an OCDS release with `tag` set to ‘tender’ and with the following properties:
+The notice is modelled as an OCDS release with a `tag` of ‘tender’ and the following properties:
 
 * The techniques extension is declared in the package metadata.
-* `tender.techniques.hasFrameworkAgreement` is set to `true` to indicate that this contracting process is for the set-up of a framework agreement.
+* Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
 * Since the framework agreement will be concluded with multiple suppliers and will involve second-stage competition, `tender.procurementMethod` is set to ‘selective’.
-* Since the framework agreement is open  `tenderPeriod` is set to the end of the framework agreement.
+* Since the framework agreement is open, `tender.tenderPeriod` is set to the end of the framework agreement.
 * Since there are two buyers, the ‘buyer’ object is not set, and the buyers are declared in the `parties` array.
-* Since Chile Compra is the entity who manages the procurement process, the `procuringEntity` is set to reference the entry for Chile Compra in the `parties` array.
+* Since Chile Compra is the entity that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_first_stage.json
 :jsonpointer:
 :title: First Stage
 ```
 
-#### Adding a supplier as a party to the framework agreement
+#### Adding a supplier to the framework agreement
 
-Chile Compra issues an [award notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/StepsProcessAward/PreviewAwardAct.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) to announce that the framework agreement has been awarded to two suppliers: RODRIGO ALEJANDRO VIDAL CAMPOS and COMERCIALIZADORA E IMPORTADORA GRUPO RAVC SPA.
+Chile Compra issues an [award notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/StepsProcessAward/PreviewAwardAct.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) to announce that the framework agreement has been awarded to two suppliers: Rodrigo Alejandro Vidal Campos and Comercializadora e Importadora Grupo RAVC SPA.
 
-The notice is modelled as an OCDS release with the same `ocid` as the previous release and with `tag` set to ‘award’. The release has the following properties:
+The notice is modelled as an OCDS release with the same `ocid` as the previous release, a `tag` of ‘award’, and the following properties:
 
-* No updates are made to `tender.status` since other suppliers are still able to submit a request to participate in the framework agreement
+* Since other suppliers are still able to submit a request to participate in the framework agreement, no change is made to `tender.status`.
 * An `Award` object is added to the `awards` array.
-* An `Organization` object per supplier is added to the `parties` array with the supplier’s details.
-* An `OrganizationReference` object per supplier is added to `award.suppliers` to reference the supplier’s details in the `parties` array.
+* An `Organization` object is added to the `parties` array for each supplier with its details.
+* An `OrganizationReference` object is added to the award's `.suppliers` array for each supplier to reference its object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_supplier.json
 :jsonpointer:
@@ -268,16 +266,16 @@ The framework is now established, and both buyers can now purchase items from th
 
 #### Invitation to participate in a second-stage competition
 
-Servicio Local de Educación Pública Puerto Cordillera invites suppliers on the framework to bid for a contract to buy 200 pencils with a [tender notice](https://www.mercadopublico.cl/CMII/Tienda/frm_GCV2_Ficha.aspx?IURL=uPteMZpbYBeM$07gdm9g$08EFecMSuZM0euS4Z$07cbeFMX_05ohEOMPbeteMZpbYBeM). This represents an invitation to participate in a second-stage competition.
+Servicio Local de Educación Pública Puerto Cordillera publishes a [tender notice](https://www.mercadopublico.cl/CMII/Tienda/frm_GCV2_Ficha.aspx?IURL=uPteMZpbYBeM$07gdm9g$08EFecMSuZM0euS4Z$07cbeFMX_05ohEOMPbeteMZpbYBeM), inviting suppliers on the framework agreement to bid to supply 200 pencils. This represents an invitation to participate in a second-stage competition.
 
 In OCDS the second stage of the framework agreement procedure is represented as a separate contracting process with a new OCID. The contracting process for the second stage is linked to the contracting process for the first stage of the procedure using the `relatedProcess` section.
 
 The release has the following properties:
 
-* The `tag` is set to ‘tender
-* Include the information about the competition as normal in the tender block, and set `competitive` to `true`.
-* In this new process, we set the `buyer` to Servicio Local de Educación Pública Puerto Cordillera.
-* Related this process with the framework agreement set up using the `relatedProcess` block with `relationship` field set to ‘framework’.
+* The `tag` is set to 'tender'
+* The tender section includes details about the competition, and `tender.competitive` is set to `true`.
+* Since this new contracting process has a single buyer, the `buyer` is set to Servicio Local de Educación Pública Puerto Cordillera.
+* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_second_stage.json
 :jsonpointer:
@@ -286,17 +284,17 @@ The release has the following properties:
 
 #### Award of a procurement contract resulting from a second-stage competition
 
-Following the invitation to participate in the second-stage competition, Servicio Local de Educación Pública Puerto Cordillera awards a contract to COMERCIALIZADORA E IMPORTADORA GRUPO RAVC SPA.
+Following the invitation to participate in the second-stage competition, Servicio Local de Educación Pública Puerto Cordillera awards a contract to Comercializadora e Importadora Grupo RAVC SPA.
 
 The release has the following properties:
 
 * The same `ocid` as the invitation to participate in the second-stage competition is used.
-* The `tender/status` is updated to ‘complete’
-* The `tag` is set to ‘award,contract’.
+* The `tender.status` is updated to ‘complete’.
+* The `tag` is set to ‘award' and 'contract’.
 * The `awards` section is populated with the initial contract value, period and items.
 * The `contracts` section is populated and linked to the award.
-* The `relatedProcess` block is populated with a reference to the contracting process for the first stage
-* The `buyer`, `tender/procuringEntity`, `awards/suppliers` and `parties` sections are populated with the details of the buyer, procuring entity and supplier.
+* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
+* The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` fields are populated with the details of the buyer, procuring entity and supplier.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_award.json
 :jsonpointer:
