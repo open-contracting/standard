@@ -33,7 +33,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ## [1.1.5] - 2020-08-20
 
-* The [Translation and localization policy](../../governance/#translation-and-localization-policy) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
+* The [Translation and localization policy](../governance/index.md#translation-and-localization-policy) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
 
 ### Codelists
 

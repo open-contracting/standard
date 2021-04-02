@@ -48,7 +48,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '_static/docson/integration/*.md']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -90,7 +90,7 @@ gettext_compact = False
 gettext_domain_prefix = ''
 
 # List the extension identifiers and versions that should be part of the standard. The extensions must be available in
-# the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
+# the extension registry: https://github.com/open-contracting/extension_registry/blob/main/extension_versions.csv
 default_extension_version = 'v{}'.format(release)
 extension_versions = {
     'bids': default_extension_version,
@@ -104,7 +104,8 @@ extension_versions = {
 
 # Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
 # https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
-myst_enable_extensions = []
+myst_enable_extensions = ['linkify']
+myst_heading_anchors = 6
 
 
 def setup(app):
