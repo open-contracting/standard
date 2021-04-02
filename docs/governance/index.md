@@ -12,7 +12,7 @@ OCP is led by an executive director, and is supported by a multi-stakeholder adv
 
 As of February 2016, OCP is fiscally hosted by the [Fund for the City of New York](https://www.fcny.org/fcny/) (FCNY). Under the terms of this agreement, Intellectual Property is held by FCNY on behalf of OCP, but will transfer to any future legal entity hosting OCP. 
 
-In the pursuit of a consensus and **community-driven process**, subscribers to the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) discussion list (join by sending an email to <a href="mailto:standard-discuss+subscribe@open-contracting.org">standard-discuss+subscribe@open-contracting.org</a>) and those watching and engaging with the [standard GitHub repository](https://github.com/open-contracting/standard) should be kept informed at all stages about planned revisions to OCDS, and should be offered clear and timely opportunities to input and comment.
+In the pursuit of a consensus and **community-driven process**, subscribers to the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) discussion list (join by sending an email to [standard-discuss+subscribe@open-contracting.org](mailto:standard-discuss+subscribe@open-contracting.org)) and those watching and engaging with the [standard GitHub repository](https://github.com/open-contracting/standard) should be kept informed at all stages about planned revisions to OCDS, and should be offered clear and timely opportunities to input and comment.
 
 To ensure the relevance, quality and effective implementation of proposed updates to the standard, new version releases are subjected to a process of **peer review** with invited reviewers from publisher and user communities, and an open review process. 
 
@@ -92,7 +92,7 @@ To release a new minor or major version upgrade will involve a number of stages 
 
 The standard development team is responsible for generating key documentation during the process, but should be guided by community consensus, submitting all decisions for discussion.
 
-* **Appeal:** Any party can appeal against decisions made during the process by writing to the standard governance working group, which can be reached through OCP's Director for Data & Engagement, <a href="mailto:lmarchessault@open-contracting.org">Lindsey Marchessault</a>. The working group has the authority to reject proposed revisions on the standard in response to appeals.
+* **Appeal:** Any party can appeal against decisions made during the process by writing to the standard governance working group, which can be reached through OCP's Director for Data & Engagement, [Lindsey Marchessault](mailto:lmarchessault@open-contracting.org). The working group has the authority to reject proposed revisions on the standard in response to appeals.
 
 ### Proposals
 
@@ -182,9 +182,8 @@ Any current or potential OCDS publisher or data user of the standard can be cons
 
 "The principle of consensus has its origins in the desire to achieve the general acceptance and application of a Standard within its intended sphere of influence. This entails trying to ensure that the interests of all those likely to be affected by it are taken into account, and that individual concerns are carefully and fairly balanced against the wider public interest." [BSI, 2012](http://www.bsigroup.com/Documents/about-bsi/NSB/BSI-pocket-guide-to-standards-development-UK-EN.pdf) 
 
-```eval_rst
-.. toctree::
-   :hidden:
+```{toctree}
+:hidden:
 
-   deprecation
+deprecation
 ```

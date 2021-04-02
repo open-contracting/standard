@@ -35,16 +35,15 @@ When using custom licenses, publishers are encouraged to check that they are [co
 
 In structured data file you ought to embed a link to the license in the `license` field of the release or record package as indicated below:
 
-```eval_rst
-.. code-block:: json
-   :emphasize-lines: 4
+```{code-block} json
+:emphasize-lines: 4
 
-   {
-     "uri":"https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json",
-     "publishedDate":"2010-03-01T09:30:00Z",
-     "license":"http://opendatacommons.org/licenses/pddl/1.0/",
-     "...":"..."
-   }
+{
+  "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json",
+  "publishedDate": "2010-03-01T09:30:00Z",
+  "license": "http://opendatacommons.org/licenses/pddl/1.0/",
+  "...": "..."
+}
 ```
 
 In individual CSV files or other models of publishing, it might not be possible to embed the license information. In these cases (and in the structured data case also) publishers ought to ensure that a clear statement is provided alongside files where they are provided for download linking to, and explaining, the license terms they are published under. Particular attention ought to be paid to ensuring license information on any data catalogues where open contracting data is listed are accurate.
@@ -53,9 +52,9 @@ In individual CSV files or other models of publishing, it might not be possible 
 
 Once you have published your data, it's time to share it with the world. It is also not the end of your OCDS journey. As users start using the data, there will likely be some requests for iterative improvements over time to improve the quality and usability of the data. You might even want to develop or adapt tools for displaying and using the data.
 
-**Action:** Share your publication on the [OCDS mailing list](../../support/#ocds-community).
+**Action:** Share your publication on the [OCDS mailing list](../support/index.md#ocds-community).
 
-**Action:** Request a data quality and usability feedback report from the [OCDS Helpdesk](../../support/#ocds-helpdesk).
+**Action:** Request a data quality and usability feedback report from the [OCDS Helpdesk](../support/index.md#ocds-helpdesk).
 
 **Action:** [Request support from OCP](mailto:data@open-contracting.org) to build capacity or tools for key stakeholders to start using the data.
 

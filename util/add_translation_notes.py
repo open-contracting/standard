@@ -22,6 +22,7 @@ from helper import base_dir
 localedir = os.path.join(base_dir, 'docs', 'locale')
 base_url = 'https://standard.open-contracting.org/1.1'
 supported_translations = ['es', 'fr']
+excluded = ('.doctrees', '_downloads', '_images', '_sources', '_static', 'codelists', 'genindex', 'search')
 
 
 def add_translation_notes():
@@ -31,7 +32,7 @@ def add_translation_notes():
 
         for root, dirs, files in os.walk(build_dir):
             # Skip Sphinx directories.
-            for directory in ('.doctrees', '_images', '_sources', '_static', 'codelists', 'genindex', 'search'):
+            for directory in excluded:
                 if directory in dirs:
                     dirs.remove(directory)
 
