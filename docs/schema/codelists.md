@@ -22,7 +22,7 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to.
 
-```{csv-table}
+```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
 :file: ../../build/current_lang/codelists/releaseTag.csv
