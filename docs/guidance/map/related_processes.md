@@ -65,7 +65,7 @@ The following diagram shows how OCDS models a framework agreement procedure with
 
 ![OCDS framework agreement model](../../_static/png/framework_agreement_model.png)
 
-The competitive extension is used to distinguish whether the second stage of a framework agreement procedure involves competition.
+The `tender.competitive` field of the [competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension is used to distinguish whether the second stage of a framework agreement procedure involves competition.
 
 The following guidance describes how to model the different stages of a framework agreement procedure in OCDS.  
 
