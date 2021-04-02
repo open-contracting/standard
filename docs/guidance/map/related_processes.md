@@ -6,16 +6,6 @@
 
     .. markdown::
 
-      The approach for modelling framework agreements in OCDS 1.2 is under discussion ([GitHub issue](https://github.com/open-contracting/standard/issues/440)).
-
-```
-
-```{eval-rst}
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
       In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
 
 ```
