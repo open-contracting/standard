@@ -56,8 +56,8 @@ In OCDS, a contracting process brings together, under a single identifier, the i
 
 In some cases, complex contracting processes cannot be represented under a single identifier under OCDS’ current model, because:
 
-* There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions;
-* The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated;
+* There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions.
+* The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated.
 
 OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The techniques extension is used to identify contracting processes which represent the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` set to ‘framework’ is used to identify contracting processes which represent the second stage of a framework agreement procedure.
 
