@@ -2,6 +2,9 @@
   "uri": "https://apis.mercadopublico.cl/OCDS/data/contract/54705",
   "version": "1.1",
   "publishedDate": "2020-02-04T16:30:52Z",
+  "publisher": {
+    "name": "Dirección de Compras y Contratación Pública"
+  },
   "releases": [
     {
       "ocid": "ocds-70d2nz-54705-contract-1",
@@ -40,6 +43,7 @@
         }
       ],
       "tender": {
+        "id": "2239-4-LP14",
         "status": "complete"
       },
       "awards": [
@@ -62,7 +66,7 @@
               "classification": {
                 "id": "38204627",
                 "description": "Lápiz pasta",
-                "schema": "UNSPC"
+                "scheme": "UNSPSC"
               },
               "quantity": 200,
               "unit": {
@@ -86,7 +90,9 @@
       "relatedProcesses": [
         {
           "id": "1",
-          "relationship": "framework",
+          "relationship": [
+            "framework"
+          ],
           "title": "CM Articulos de Escritorio y Papeleria",
           "scheme": "ocid",
           "identifier": "ocds-70d2nz-2239-4-LP14",

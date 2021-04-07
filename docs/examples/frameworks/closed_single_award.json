@@ -82,12 +82,12 @@
                 "value": {
                   "amount": 1000,
                   "currency": "GBP"
-                },
-                "classification": {
-                  "id": "63120000",
-                  "scheme": "CPV",
-                  "Description": "Storage and warehousing services"
                 }
+              },
+              "classification": {
+                "id": "63120000",
+                "scheme": "CPV",
+                "description": "Storage and warehousing services"
               }
             }
           ]
@@ -104,7 +104,9 @@
       "relatedProcesses": [
         {
           "id": "1",
-          "relationship": "framework",
+          "relationship": [
+            "framework"
+          ],
           "title": "Storage and Distribution of Seasonal Influenza Vaccine",
           "scheme": "ocid",
           "identifier": "ocds-r6ebe6-9af22e2f-5307-4e98-bff6-1ebffbff343d",
