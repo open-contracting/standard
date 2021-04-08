@@ -57,6 +57,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '
 #
 html_theme = 'pydata_sphinx_theme'
 html_favicon = '_static/favicon-16x16.ico'
+html_logo = "_static/png/logo-ocds.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -80,11 +81,16 @@ smartquotes = False
 #     'repository_url': repository_url,
 # }
 html_theme_options = {
-    "search_bar_position": "navbar"
+    "navbar_align": "left",
+    "navbar_end": ["search-field"],
+    "footer_items": ["custom-footer"],
 }
 
 html_sidebars = {
     "index": [],
+    "**": [
+        "sidebar-nav-bs.html",
+    ]
 }
 
 # The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
@@ -140,3 +146,8 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(standard_dir / 'codelists' / '*.csv')), standard_build_dir / 'codelists', codelists_domain),
     ], localedir, language, headers, version=branch)
+
+    # Add assets for website
+    app.add_css_file("basic.css")
+    app.add_js_file("renderjson.js")
+    app.add_js_file("script.js.css")

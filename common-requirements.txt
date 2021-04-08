@@ -30,6 +30,7 @@ click==7.1.2
 docutils==0.16
     # via
     #   myst-parser
+    #   pydata-sphinx-theme
     #   sphinx
 elasticsearch==7.11.0
     # via ocdsindex
@@ -56,6 +57,8 @@ json-merge-patch==0.2
     # via ocdsextensionregistry
 jsonref==0.2
     # via ocdsextensionregistry
+linkify-it-py==1.0.1
+    # via -r common-requirements.in
 lxml==4.6.2
     # via ocdsindex
 markdown-it-py==0.6.2
@@ -89,7 +92,7 @@ pluggy==0.13.1
     # via pytest
 py==1.10.0
     # via pytest
-pydata-sphinx-theme==0.5.0
+pydata-sphinx-theme==0.6.0
     # via -r common-requirements.in
 pygments==2.8.1
     # via sphinx
@@ -151,6 +154,8 @@ transifex-client==0.14.2
     # via -r common-requirements.in
 typing-extensions==3.7.4.3
     # via importlib-metadata
+uc-micro-py==1.0.1
+    # via linkify-it-py
 urllib3==1.26.4
     # via
     #   elasticsearch

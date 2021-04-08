@@ -54,4 +54,5 @@ schema/index
 support/index
 history/index
 governance/index
+Data Review Tool <https://standard.open-contracting.org/review/>
 ```
