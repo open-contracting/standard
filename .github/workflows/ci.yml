@@ -42,7 +42,7 @@ jobs:
           password: ${{ secrets.ELASTICSEARCH_PASSWORD }}
       - if: success()
         env:
-          PATH_PREFIX: ''
+          PATH_PREFIX: ""
         run: |
           if [ $GITHUB_REPOSITORY != 'open-contracting/standard_profile_template' ]; then
             curl -sS https://raw.githubusercontent.com/open-contracting/deploy/main/deploy-docs.sh | bash -
