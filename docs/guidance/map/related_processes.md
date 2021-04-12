@@ -209,8 +209,9 @@ The order represents the award of a procurement contract at the second stage of 
 
 Because there was no competition at the second stage, the new contracting process has only one release, with a `tag` of 'award' and 'contract'. The release has the following properties:
 
-* A minimal `tender` section sets `tender.id` and sets `tender.competitive` to `false`.
+* A new `ocid` is used.
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
+* A minimal `tender` section sets `tender.id` and sets `tender.competitive` to `false`.
 * The `awards` section is populated with the initial contract value, period and items.
 * The `contracts` section is populated and linked to the award.
 * The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` fields are populated with the details of the buyer, procuring entity and supplier.
@@ -268,10 +269,11 @@ Servicio Local de Educación Pública Puerto Cordillera publishes a [tender noti
 
 The release has the following properties:
 
+* A new `ocid` is used.
+* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * The `tag` is set to 'tender'.
 * The tender section includes details about the competition, and `tender.competitive` is set to `true`.
 * Since this new contracting process has a single buyer, the `buyer` is set to Servicio Local de Educación Pública Puerto Cordillera.
-* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_second_stage.json
 :jsonpointer:
@@ -285,11 +287,11 @@ Following the invitation to participate in the second-stage competition, Servici
 The release has the following properties:
 
 * The same `ocid` as the invitation to participate in the second-stage competition is used.
-* The `tender.status` is updated to 'complete'.
+* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * The `tag` is set to 'award' and 'contract'.
+* The `tender.status` is updated to 'complete'.
 * The `awards` section is populated with the initial contract value, period and items.
 * The `contracts` section is populated and linked to the award.
-* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` fields are populated with the details of the buyer, procuring entity and supplier.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_award.json
