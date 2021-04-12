@@ -142,6 +142,6 @@ That said, many organizations can be assigned the 'buyer' role in the `parties` 
 award_notices_decisions
 mapping_awards_contracts
 consortia
-frameworks
+related_processes
 purchase_orders
 ```

@@ -2,11 +2,12 @@ name: Lint JavaScript
 on: [push, pull_request]
 jobs:
   build:
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-    - run: npm install standard
-    - run: npx standard docs/_static/script.js
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - run: npm install standard
+      - run: npx standard docs/_static/script.js
