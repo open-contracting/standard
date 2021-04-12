@@ -207,8 +207,6 @@ NSS uses the framework agreement to place an order for the supplier to receive a
 
 The order represents the award of a procurement contract at the second stage of the framework agreement procedure.
 
-In OCDS the second stage of the framework agreement procedure is represented as a separate contracting process with a new OCID. The contracting process for the second stage is  linked to the contracting process for the first stage of the procedure using the `relatedProcess` section.
-
 Because there was no competition at the second stage, the new contracting process has only one release, with a `tag` of 'award' and 'contract'. The release has the following properties:
 
 * A minimal `tender` section sets `tender.id` and sets `tender.competitive` to `false`.
@@ -267,8 +265,6 @@ The framework is now established, and both buyers can now purchase items from th
 #### Invitation to participate in a second-stage competition
 
 Servicio Local de Educación Pública Puerto Cordillera publishes a [tender notice](https://www.mercadopublico.cl/CMII/Tienda/frm_GCV2_Ficha.aspx?IURL=uPteMZpbYBeM$07gdm9g$08EFecMSuZM0euS4Z$07cbeFMX_05ohEOMPbeteMZpbYBeM), inviting suppliers on the framework agreement to bid to supply 200 pencils. This represents an invitation to participate in a second-stage competition.
-
-In OCDS the second stage of the framework agreement procedure is represented as a separate contracting process with a new OCID. The contracting process for the second stage is linked to the contracting process for the first stage of the procedure using the `relatedProcess` section.
 
 The release has the following properties:
 
