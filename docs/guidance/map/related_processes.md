@@ -180,7 +180,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_first_stage.json
 :jsonpointer:
-:expand: extensions, releases, tender, buyer, parties
+:expand: extensions, releases, tender, buyer, parties, roles
 :title: First Stage
 ```
 
@@ -197,7 +197,7 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_supplier.json
 :jsonpointer:
-:expand: releases, tender, awards, suppliers, parties
+:expand: releases, tender, awards, suppliers, parties, roles
 :title: Adding a supplier
 ```
 
@@ -220,7 +220,7 @@ Because there was no competition at the second stage, the new contracting proces
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_award.json
 :jsonpointer:
-:expand: releases, tender, buyer, procuringEntity, awards, suppliers, contracts, parties, relatedProcesses
+:expand: releases, tender, buyer, procuringEntity, awards, suppliers, contracts, parties, roles, relatedProcesses, relationship
 :title: Award of a procurement contract
 ```
 
@@ -245,7 +245,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_first_stage.json
 :jsonpointer:
-:expand: extensions, releases, tender, procuringEntity, parties
+:expand: extensions, releases, tender, procuringEntity, parties, roles
 :title: First Stage
 ```
 
@@ -262,7 +262,7 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_supplier.json
 :jsonpointer:
-:expand: releases, tender, awards, suppliers, parties
+:expand: releases, awards, suppliers, parties, roles
 :title: Adding a supplier
 ```
 
@@ -282,7 +282,7 @@ The release has the following properties:
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_second_stage.json
 :jsonpointer:
-:expand: releases, tag, tender, buyer, parties, relatedProcesses
+:expand: releases, tag, tender, buyer, parties, roles, relatedProcesses, relationship
 :title: Second Stage
 ```
 
@@ -298,10 +298,10 @@ The release has the following properties:
 * The `tender.status` is updated to 'complete'.
 * The `awards` section is populated with the initial contract value, period and items.
 * The `contracts` section is populated and linked to the award.
-* The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` fields are populated with the details of the buyer, procuring entity and supplier.
+* The `awards.suppliers` and `parties` fields are populated with the details of the supplier.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_award.json
 :jsonpointer:
-:expand: releases, tag, tender, procuringEntity, awards, suppliers, contracts, parties, relatedProcesses
+:expand: releases, tag, tender, procuringEntity, awards, suppliers, contracts, parties, roles, relatedProcesses, relationship
 :title: Award of a procurement contract
 ```
