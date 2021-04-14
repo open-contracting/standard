@@ -82,12 +82,12 @@ smartquotes = False
 # }
 html_theme_options = {
     "navbar_align": "left",
-    "navbar_end": ["search-field"],
+    "navbar_end": ["version-switcher", "language-switcher", "search-field"],
     "footer_items": ["custom-footer"],
 }
 
 html_sidebars = {
-    "index": [],
+    "index": ["developed-by-ocp.html"],
     "**": [
         "sidebar-nav-bs.html",
     ]

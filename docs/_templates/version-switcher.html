@@ -1,0 +1,12 @@
+<form class="ocds-switcher" method="get" action="{{ theme_root_url }}/switcher">
+    <select class="oc-custom-select" name="branch" onchange="this.form.submit()">
+      {% block version_options %}
+      {# If the profile is versioned, use a server include #}
+      <option>Version</option>
+      <option value="latest">latest</option>
+      {% endblock %}
+    </select>  
+    <noscript>
+       <input class="oc-custom-submit" type="submit" value="{% trans %}Go{% endtrans %}" />
+    </noscript>
+</form>
