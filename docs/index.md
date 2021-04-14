@@ -29,7 +29,6 @@ In this documentation, you will find:
 
 If you are interested to learn more about Open Contracting advocacy and how it can be used to support wider reform and measurable improvements in public contracting, please visit [www.open-contracting.org](https://www.open-contracting.org/).
 
-
 ```{note}
 This is the 1.1 release of OCDS, published on 31st May 2017. Version 1.0 documentation is still available from the version switcher at the bottom left of the page.
 

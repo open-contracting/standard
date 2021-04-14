@@ -6,14 +6,13 @@ The four phases of implementation described in this guide have helped implemente
 
 Read the guidance to understand the main steps to implement OCDS and to find supporting resources. Detailed guidance on specific topics and tasks is provided in sub-pages.
 
-```{eval-rst}
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   design
-   map
-   build
-   publish
+design
+map
+build
+publish
 ```
 
 Do you have questions or need assistance? Contact the [OCDS Helpesk](../support/index).

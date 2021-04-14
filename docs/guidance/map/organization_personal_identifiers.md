@@ -27,10 +27,8 @@ In the example below:
 * The individual's ID card number is published in `.identifier.id`
 * `.identifier.scheme` is constructed from the ISO 3166-1 alpha-3 country code for Colombia ('COL') and the type of the identifier ('IDCARD')
 
-
-```{eval-rst}
-.. jsoninclude:: ../../examples/organization-personal-identifier.json
-   :jsonpointer:
-   :expand: releases, parties, identifier
-   :title: personal-identifiers
+```{jsoninclude} ../../examples/organization-personal-identifier.json
+:jsonpointer:
+:expand: releases, parties, identifier
+:title: personal-identifiers
 ```

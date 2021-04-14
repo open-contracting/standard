@@ -57,12 +57,15 @@ def test_broken_links(browser, server, lang, link_text):
         for element in browser.find_elements_by_xpath('//*[@href]|//*[@src]'):
             url = element.get_attribute('href') or element.get_attribute('src')
 
+            assert url is not None, element.get_attribute('outerHTML')
+
             # Don't test proxied or external URLs.
             if '/review/' in url or 'localhost' not in url:
                 continue
 
             url = re.sub(r'#.*$', '', url)
-            status_codes.setdefault(url, requests.get(url).status_code)
+            if url not in status_codes:
+                status_codes[url] = requests.get(url).status_code
 
             status_code = status_codes[url]
             if status_code != 200:

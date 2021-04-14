@@ -15,7 +15,7 @@ Helpdesk support is available in English and Spanish and delivered through colla
 
 Through funding from the Open Contracting Partnership, this support is provided free of charge.
 
-Please e-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with your questions, and a member of the OCDS Helpdesk will be in touch with you soon.
+Please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the OCDS Helpdesk will be in touch with you soon.
 
 ## OCDS Community
 

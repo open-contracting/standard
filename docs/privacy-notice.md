@@ -8,7 +8,7 @@ Open Contracting Partnership is committed to ensuring that your privacy is prote
 
 We may change this notice from time to time by updating this page. This notice is effective from 24th May 2018.
 
-Data controller: Open Contracting Partnership, <a href="mailto:data@open-contracting.org">data@open-contracting.org</a>, who are based in the USA. Contact us if would like a copy of the information held on you or if you believe that any information we are holding on you is incorrect or incomplete.
+Data controller: Open Contracting Partnership, [data@open-contracting.org](mailto:data@open-contracting.org), who are based in the USA. Contact us if would like a copy of the information held on you or if you believe that any information we are holding on you is incorrect or incomplete.
 
 You have the following rights concerning this data:
 

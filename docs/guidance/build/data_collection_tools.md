@@ -95,8 +95,8 @@ The tool is open source and is [documented in Spanish](https://github.com/INAIme
 
 ## What next?
 
-If you're collecting data using spreadsheets, then you need to [decide how to combine your data for publication](../../build#decide-how-to-collate-spreadsheet-data).
+If you're collecting data using spreadsheets, then you need to [decide how to combine your data for publication](../build.md#decide-how-to-combine-spreadsheet-data).
 
-However you choose to collect and structure your data, you need to [establish your publication formats and access methods](../../build#establish-your-publication-formats-and-access-methods), and [publish your data](../publish).
+However you choose to collect and structure your data, you need to [establish your publication formats and access methods](../build.md#establish-your-publication-formats-and-access-methods), and [publish your data](../publish).
 
 Consider how you will make it easy for users to discover the data you have published. For example, by publishing it on an existing procurement portal, on your organization’s website, or an open data portal.
