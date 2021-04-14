@@ -45,4 +45,4 @@ You are encouraged to:
 * Additionally, produce bulk packages of releases and records for users to download;
 * Additionally, produce 'flat' versions of the data for users to access in CSV for Excel formats
 
-You will need to make decisions about how to [segment the data in bulk files](../../guidance/build/hosting/#bulk-downloads), so that files are easy for users to work with. 
+You will need to make decisions about how to [segment the data in bulk files](../guidance/build/hosting.md#bulk-downloads), so that files are easy for users to work with. 
