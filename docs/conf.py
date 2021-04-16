@@ -72,6 +72,7 @@ repository_url = 'https://github.com/open-contracting/standard'
 smartquotes = False
 
 html_theme_options = {
+    'analytics_id': 'HTWZHRIZ',
     'display_version': True,
     'root_url': '',
     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
