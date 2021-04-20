@@ -76,7 +76,6 @@ For example, common building blocks are provided for:
 
 ```{jsoninclude} ../examples/record.json
 :jsonpointer: /records/0/compiledRelease/awards/0/value
-:expand:
 :title: amounts
 ```
 
@@ -88,19 +87,16 @@ For example, common building blocks are provided for:
 
 ```{jsoninclude} ../examples/record.json
 :jsonpointer: /records/0/compiledRelease/awards/0/contractPeriod
-:expand:
 :title: period
 ```
 
 ```{jsoninclude} ../examples/record.json
 :jsonpointer: /records/0/compiledRelease/awards/0/documents
-:expand:
 :title: documents
 ```
 
 ```{jsoninclude} ../examples/record.json
 :jsonpointer: /records/0/compiledRelease/tender/milestones/0
-:expand:
 :title: milestones
 ```
 

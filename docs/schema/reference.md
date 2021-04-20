@@ -85,7 +85,6 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 Releases must be published within a [release package](release_package). The release package provides metadata about the release(s) that it contains.
 
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
-:include:
 :collapse: releases,publisher
 ```
 
@@ -98,7 +97,6 @@ See the [publication policy](../guidance/publish.md#finalize-your-publication-po
 All new information about a contracting process is described within a release. 
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
-:include:
 :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
 ```
 
@@ -301,21 +299,18 @@ If a contracting process represents a contract arranged by the department or bra
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Identifier
-:collapse:
 ```
 
 #### Address
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Address
-:collapse:
 ```
 
 #### ContactPoint
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/ContactPoint
-:collapse:
 ```
 ### Document
 
@@ -323,7 +318,6 @@ Documents can be attached at a number of points within the standard: to planning
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Document
-:collapse:
 ```
 
 ```{extensionlist} The following extensions are available for document
@@ -338,7 +332,6 @@ Periods can also include a `maxExtentDate` which indicates the latest possible e
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Period
-:collapse:
 ```
 
 #### Date
@@ -382,7 +375,6 @@ The items block is used to list the line-items associated with a tender, award o
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Classification
-:collapse:
 ```
 #### Unit
 
@@ -420,7 +412,6 @@ Financial values should be published with a currency attached.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Value
-:collapse:
 ```
 
 Support for exchange rates, and tax information, can be provided using extensions.
@@ -438,7 +429,6 @@ In all these cases, the `relatedProcess` block should be used to cross-reference
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/RelatedProcess
-:collapse:
 ```
 
 A related process can be declared at two points in an OCDS release.
@@ -463,5 +453,4 @@ The publisher block is used in release and record packages to identify the sourc
 
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
 :include: publisher
-:collapse:
 ```

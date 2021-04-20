@@ -42,7 +42,6 @@ Releases follow the [release schema](../schema/reference). The schema covers the
 
 ```{jsoninclude} ../examples/tender.json
 :jsonpointer: /releases
-:expand:
 :title: release
 ```
 
@@ -110,7 +109,6 @@ A record follows the structure defined in the [Records Reference](../schema/reco
 
 ```{jsoninclude} ../examples/merging/versioned.json
 :jsonpointer: /records/0
-:expand:
 ```
 
 #### Embedding or linking Releases

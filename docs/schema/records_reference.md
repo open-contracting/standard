@@ -15,7 +15,6 @@ This page presents the record package schema as tables. You can also download th
 Records must be published within a [record package](record_package). The record package provides metadata about the record(s) that it contains.
 
 ```{jsonschema} ../../build/current_lang/record-package-schema.json
-:include:
 :collapse: records
 ```
 

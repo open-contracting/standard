@@ -35,10 +35,10 @@ release = '1.1.5'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'myst_parser',
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
-    'myst_parser',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -81,6 +81,7 @@ smartquotes = False
 #     'repository_url': repository_url,
 # }
 html_theme_options = {
+<<<<<<< HEAD
     "navbar_align": "left",
     "navbar_end": ["version-switcher", "language-switcher", "search-field"],
     "footer_items": ["custom-footer"],
@@ -91,6 +92,16 @@ html_sidebars = {
     "**": [
         "sidebar-nav-bs.html",
     ]
+=======
+    'analytics_id': 'HTWZHRIZ',
+    'display_version': True,
+    'root_url': '',
+    'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
+    'copyright': copyright,
+    'license_name': 'Apache License 2.0',
+    'license_url': '{}/blob/HEAD/LICENSE'.format(repository_url),
+    'repository_url': repository_url,
+>>>>>>> 1.1-dev
 }
 
 # The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
