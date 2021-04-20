@@ -27,11 +27,11 @@ The contract milestones block is used to describe:
 The contract implementation milestones block is used to describe:
   * Any events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
 
-The nature of the milestone is indicated by the [milestone type codelist](../../../schema/codelists#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and those which relate to contract implementation.
+The nature of the milestone is indicated by the [milestone type codelist](../../schema/codelists.md#milestone-type), for example, to distinguish between milestones in the planning section which relate to events in the pre-procurement phase and those which relate to contract implementation.
 
 At the point of contract signature, a comparison between `tender/milestones` and `contract/implementation/milestones` with a `milestone/type` of 'delivery' or 'reporting' should reveal how the negotiated contract differs from what was set out at tender time.
 
-The `dueDate`, `dateMet`, `dateModified` and [`status`](../../../schema/codelists/#milestone-status) fields are used to track the lifecycle of the milestone.
+The `dueDate`, `dateMet`, `dateModified` and [`status`](../../schema/codelists.md#milestone-status) fields are used to track the lifecycle of the milestone.
 
 ## Worked examples
 
@@ -54,18 +54,16 @@ In the tender release:
 * The `.dateMet` field in the tender notice milestone is updated with the actual date the notice was issued and `.status` is set to 'met'.
 To explore differences between the planned and actual date of the tender milestone, users can then compare the values of `tender/milestones/dueDate` and `tender/milestones/dateMet` in a single (compiled) release.
 
-```eval_rst
+```{jsoninclude} ../../examples/milestones/planning-tender-milestones.json
+:jsonpointer:
+:expand: releases, planning, milestones, tender, milestones
+:title: planning
+```
 
-.. jsoninclude:: ../../examples/milestones/planning-tender-milestones.json
-   :jsonpointer: 
-   :expand: releases, planning, milestones, tender, milestones
-   :title: planning
-
-.. jsoninclude:: ../../examples/milestones/planning-tender-milestones-2.json
-   :jsonpointer: 
-   :expand: releases, planning, milestones, tender, milestones
-   :title: tender
-
+```{jsoninclude} ../../examples/milestones/planning-tender-milestones-2.json
+:jsonpointer:
+:expand: releases, planning, milestones, tender, milestones
+:title: tender
 ```
 
 ### Contract implementation milestones
@@ -96,31 +94,22 @@ Users can compare the project commencement milestone's `.dueDate` and `.dateMet`
 In the second implementation update release, which is published after the project completes:
 * In the project completion milestone, `.dateMet` is set to the actual completion date for the project and `.status` is set to 'met'.
 
-```eval_rst
-
-.. jsoninclude:: ../../examples/milestones/implementation-milestones-1.json
-   :jsonpointer: 
-   :expand: releases, contracts, implementation, milestones
-   :title: implementation
-
+```{jsoninclude} ../../examples/milestones/implementation-milestones-1.json
+:jsonpointer:
+:expand: releases, contracts, implementation, milestones
+:title: implementation
 ```
 
-```eval_rst
-
-.. jsoninclude:: ../../examples/milestones/implementation-milestones-2.json
-   :jsonpointer: 
-   :expand: releases, contracts, implementation, milestones
-   :title: implementation-update-1
-
+```{jsoninclude} ../../examples/milestones/implementation-milestones-2.json
+:jsonpointer:
+:expand: releases, contracts, implementation, milestones
+:title: implementation-update-1
 ```
 
-```eval_rst
-
-.. jsoninclude:: ../../examples/milestones/implementation-milestones-3.json
-   :jsonpointer: 
-   :expand: releases, contracts, implementation, milestones
-   :title: implementation-update-2
-
+```{jsoninclude} ../../examples/milestones/implementation-milestones-3.json
+:jsonpointer:
+:expand: releases, contracts, implementation, milestones
+:title: implementation-update-2
 ```
 
 #### Delivery and financing data
@@ -145,29 +134,20 @@ In the second implementation update release:
 
 * The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'financing' is updated. A new `transaction` is disclosed, with the amount paid to the company.
 
-```eval_rst
-
-.. jsoninclude:: ../../examples/milestones/af-implementation-milestones-1.json
-   :jsonpointer: 
-   :expand: releases, contracts, implementation, milestones
-   :title: implementation
-
+```{jsoninclude} ../../examples/milestones/af-implementation-milestones-1.json
+:jsonpointer:
+:expand: releases, contracts, implementation, milestones
+:title: implementation
 ```
 
-```eval_rst
-
-.. jsoninclude:: ../../examples/milestones/af-implementation-milestones-2.json
-   :jsonpointer: 
-   :expand: releases, contracts, implementation, milestones
-   :title: implementation-update-1
-
+```{jsoninclude} ../../examples/milestones/af-implementation-milestones-2.json
+:jsonpointer:
+:expand: releases, contracts, implementation, milestones
+:title: implementation-update-1
 ```
 
-```eval_rst
-
-.. jsoninclude:: ../../examples/milestones/af-implementation-milestones-3.json
-   :jsonpointer: 
-   :expand: releases, contracts, implementation, milestones, transactions
-   :title: implementation-update-2
-
+```{jsoninclude} ../../examples/milestones/af-implementation-milestones-3.json
+:jsonpointer:
+:expand: releases, contracts, implementation, milestones, transactions
+:title: implementation-update-2
 ```

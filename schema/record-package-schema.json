@@ -107,7 +107,7 @@
       "type": "array",
       "minItems": 1,
       "items": {
-        "$ref": "#/definitions/record"
+        "$ref": "#/definitions/Record"
       },
       "uniqueItems": true
     }
@@ -120,9 +120,9 @@
     "version"
   ],
   "definitions": {
-    "record": {
+    "Record": {
       "title": "Record",
-      "description": "An OCDS record must provide a list of all the existing OCDS releases relating to a single contracting process and should provide a compiled release containing the current state of all fields in the release schema. An OCDS record may also provide a versioned history of all changes to the data in the compiled release.",
+      "description": "An OCDS record must provide a list of all the existing OCDS releases related to a single contracting process and should provide a compiled release containing the current state of all fields in the release schema. An OCDS record may also provide a versioned history of all changes to the data in the compiled release.",
       "type": "object",
       "properties": {
         "ocid": {
@@ -132,71 +132,20 @@
         },
         "releases": {
           "title": "Releases",
-          "description": "An array of linking identifiers or releases",
+          "description": "All the existing OCDS releases related to the contracting process. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
           "oneOf": [
             {
               "title": "Linked releases",
-              "description": "A list of objects that identify the releases associated with this Open Contracting ID. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
+              "description": "A list of references to releases.",
               "type": "array",
               "items": {
-                "description": "Information to uniquely identify the release.",
-                "type": "object",
-                "properties": {
-                  "url": {
-                    "title": "Release URL",
-                    "description": "The URL of the release which contains the URL of the package with the release `id` appended using a fragment identifier e.g. https://standard.open-contracting.org/{{version}}/{{lang}}/examples/tender.json#ocds-213czf-000-00001",
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "format": "uri"
-                  },
-                  "date": {
-                    "title": "Release Date",
-                    "description": "The date of the release. It should match the value of the `date` field of the release. This is used to sort the releases in the list in chronological order.",
-                    "type": "string",
-                    "format": "date-time"
-                  },
-                  "tag": {
-                    "title": "Release Tag",
-                    "description": "The tags of the release. It should match the value of the `tag` field of the release. This provides additional context when reviewing a record to see what types of releases are included for this ocid.",
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "enum": [
-                        "planning",
-                        "planningUpdate",
-                        "tender",
-                        "tenderAmendment",
-                        "tenderUpdate",
-                        "tenderCancellation",
-                        "award",
-                        "awardUpdate",
-                        "awardCancellation",
-                        "contract",
-                        "contractUpdate",
-                        "contractAmendment",
-                        "implementation",
-                        "implementationUpdate",
-                        "contractTermination",
-                        "compiled"
-                      ]
-                    },
-                    "codelist": "releaseTag.csv",
-                    "openCodelist": false,
-                    "minItems": 1
-                  }
-                },
-                "required": [
-                  "url",
-                  "date"
-                ]
+                "$ref": "#/definitions/LinkedRelease"
               },
               "minItems": 1
             },
             {
               "title": "Embedded releases",
-              "description": "A list of releases, with all the data. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
+              "description": "A list of releases, with all the data.",
               "type": "array",
               "items": {
                 "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
@@ -219,6 +168,61 @@
       "required": [
         "ocid",
         "releases"
+      ]
+    },
+    "LinkedRelease": {
+      "title": "Linked release",
+      "description": "A reference to a release.",
+      "type": "object",
+      "properties": {
+        "url": {
+          "title": "Release URL",
+          "description": "The URL of the release which contains the URL of the package with the release `id` appended using a fragment identifier e.g. https://standard.open-contracting.org/{{version}}/{{lang}}/examples/tender.json#ocds-213czf-000-00001",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "date": {
+          "title": "Release Date",
+          "description": "The date of the release. It should match the value of the `date` field of the release. This is used to sort the releases in the list in chronological order.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "tag": {
+          "title": "Release Tag",
+          "description": "The tags of the release. It should match the value of the `tag` field of the release. This provides additional context when reviewing a record to see what types of releases are included for this ocid.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "planning",
+              "planningUpdate",
+              "tender",
+              "tenderAmendment",
+              "tenderUpdate",
+              "tenderCancellation",
+              "award",
+              "awardUpdate",
+              "awardCancellation",
+              "contract",
+              "contractUpdate",
+              "contractAmendment",
+              "implementation",
+              "implementationUpdate",
+              "contractTermination",
+              "compiled"
+            ]
+          },
+          "codelist": "releaseTag.csv",
+          "openCodelist": false,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "url",
+        "date"
       ]
     }
   }

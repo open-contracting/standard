@@ -1,0 +1,351 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"PO-Revision-Date: 2021-03-01 22:02+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/map/milestones.md:1
+msgid "Milestones"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:3
+msgid ""
+"Milestones can be included within the planning, tender, contract and "
+"contract implementation sections."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:5
+msgid "Planning"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:7
+msgid "The planning milestones block is used for two types of milestones:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:8
+msgid ""
+"Key events in the planning stage, for example, the preparation of an "
+"environmental impact assessment, the approval to proceed with a project, or "
+"the date of a public consultation."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:9
+msgid ""
+"Anticipated milestones during the contract implementation stage, for "
+"example, the date by which goods delivery of the goods is required."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:11
+msgid ""
+"If during the planning stage you have information about tender process "
+"milestones, then you populate the tender milestones block instead."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:14
+msgid "Tender"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:16
+msgid ""
+"The tender milestones block is used to describe two types of milestone:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:17
+msgid ""
+"Key dates in the tender and award stages which are not covered by other "
+"fields, for example, the date by which procuring entity will respond to "
+"enquiries."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:18
+msgid ""
+"Anticipated milestones during the contract implementation stage, for "
+"example, the date by which goods need to be delivered."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:20
+msgid "Contract"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:22
+msgid "The contract milestones block is used to describe:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:23
+msgid ""
+"Events related to the signing of the contract, for example, the date of "
+"commercial close in a PPP contract."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:25
+msgid "Contract Implementation"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:27
+msgid "The contract implementation milestones block is used to describe:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:28
+msgid ""
+"Any events related to the delivery of the contract, for example, the agreed "
+"date by which goods will be delivered."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:30
+msgid ""
+"The nature of the milestone is indicated by the [milestone type "
+"codelist](../../../schema/codelists#milestone-type), for example, to "
+"distinguish between milestones in the planning section which relate to "
+"events in the pre-procurement phase and those which relate to contract "
+"implementation."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:32
+msgid ""
+"At the point of contract signature, a comparison between `tender/milestones`"
+" and `contract/implementation/milestones` with a `milestone/type` of "
+"'delivery' or 'reporting' should reveal how the negotiated contract differs "
+"from what was set out at tender time."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:34
+msgid ""
+"The `dueDate`, `dateMet`, `dateModified` and "
+"[`status`](../../../schema/codelists/#milestone-status) fields are used to "
+"track the lifecycle of the milestone."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:36
+msgid "Worked examples"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:38
+msgid ""
+"The following worked examples show how to use milestones in different "
+"scenarios."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:40
+msgid "Planning and tender milestones"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:42
+msgid "The example below includes two OCDS releases:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:44
+msgid ""
+"A planning release with details of a planned procurement, including the date"
+" the budget plan is expected to be ready and the date the tender notice is "
+"expected to be issued."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:45
+msgid "A tender release with the actual date the tender notice was issued."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:47
+msgid "In the planning release:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:49
+msgid ""
+"The date the budget plan is expected to be ready is represented using a "
+"milestone in `planning/milestones` with `.type` is set to 'preProcurement' "
+"because the milestone relates to the planning stage of the contracting "
+"process. `.dueDate` is set to the date and `.status` is set to 'scheduled'."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:50
+msgid ""
+"The date the tender notice is expected to be issued is represented using a "
+"milestone in `tender/milestones` because it relates to the tender stage of "
+"the contracting process. `.dueDate` is set to the date and `.status` is set "
+"to scheduled."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:52
+msgid "In the tender release:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:54
+msgid ""
+"The `.dateMet` field in the tender notice milestone is updated with the "
+"actual date the notice was issued and `.status` is set to 'met'. To explore "
+"differences between the planned and actual date of the tender milestone, "
+"users can then compare the values of `tender/milestones/dueDate` and "
+"`tender/milestones/dateMet` in a single (compiled) release."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:71
+msgid "Contract implementation milestones"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:73
+msgid ""
+"The following worked examples show how to use milestones in contract "
+"implementation releases"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:75
+msgid "Project data"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:77
+msgid ""
+"This worked example shows how to use milestones to model the planned and "
+"actual start and finish dates for a construction project."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:79
+#: ../../docs/guidance/map/milestones.md:130
+msgid "The example below includes three OCDS releases:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:81
+msgid ""
+"An implementation release which includes the scheduled start and end dates "
+"for the project."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:82
+msgid ""
+"An implementation update release with the actual start date of the project"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:83
+msgid ""
+"An implementation update release with the actual end date of the project"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:85
+msgid "In the award release:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:87
+msgid ""
+"The scheduled start and end dates for the project are represented using "
+"milestones in `contracts/implementation/milestones` with `.type` set to "
+"'delivery' because they relate to the delivery of the contract. The dates "
+"are provided in `.dueDate` and `.status` is set to 'scheduled'."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:88
+msgid ""
+"The publisher has defined their own values for the `.code` field so they can"
+" filter and compare start and end date milestones across different "
+"contracts."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:90
+msgid ""
+"In the first implementation update release, which is published after the "
+"project starts but before it completes:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:91
+msgid ""
+"In the project commencement milestone, `.dateMet` is set to the actual start"
+" date and `.status` is set to 'met'. `.dateModified` is set to the date the "
+"milestone was updated."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:92
+msgid ""
+"In the project completion milestone, `.status` is set to 'notMet' since the "
+"project is not yet complete and `.dateModified` is set to the date the "
+"milestone was updated."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:94
+msgid ""
+"Users can compare the project commencement milestone's `.dueDate` and "
+"`.dateMet` fields to determine if the project started on time. Users can "
+"also compare the project completion milestone's `.dueDate` and "
+"`.dateModified` fields to determine whether the `.status` has been updated "
+"since the scheduled completion date."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:96
+msgid ""
+"In the second implementation update release, which is published after the "
+"project completes:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:97
+msgid ""
+"In the project completion milestone, `.dateMet` is set to the actual "
+"completion date for the project and `.status` is set to 'met'."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:126
+msgid "Delivery and financing data"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:128
+msgid ""
+"This example shows how milestones can be used to keep track of delivery and "
+"financing (payment) data in a contracting process."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:132
+msgid ""
+"An implementation release with contract information including scheduled "
+"implementation milestones."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:133
+msgid ""
+"An implementation update release with the actual date the milestone was "
+"reached."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:134
+msgid "An implementation update release with payment information"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:136
+msgid "In the implementation release:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:138
+msgid ""
+"Milestones have been set for the delivery and payment of goods and services "
+"related to the project. Contract information is released along with the "
+"implementation milestones."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:140
+msgid "In the first implementation update release:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:142
+msgid ""
+"The milestone (\"Finish the exterior and interior walls\") has been met, so "
+"the `status` field is set to 'met' and the relevant dates are added to the "
+"`dateMet` and `dateModified` fields."
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:144
+msgid "In the second implementation update release:"
+msgstr ""
+
+#: ../../docs/guidance/map/milestones.md:146
+msgid ""
+"The construction company has received payment for the work done so far, so "
+"the milestone for the wall restoration with type 'financing' is updated. A "
+"new `transaction` is disclosed, with the amount paid to the company."
+msgstr ""
