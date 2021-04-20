@@ -126,20 +126,15 @@ map/extensions
 
 ## Linked standards
 
-OCDS data often refers to other datasets, like company registers, government budgets and infrastructure projects. These datasets contain information that is managed outside the lifecycle of a contracting process.
+Not all information that is related to a contracting process belongs in OCDS. For example, a company's annual filings and incorporation status are typically managed in a company registry, outside the lifecycle of a contracting process.
 
-### Open Contracting for Infrastructure Data Standards
+For guidance on integrating your OCDS data with these related datasets, refer to [Linked standards](map/linked_standards).
 
-The [Open Contracting for Infrastructure Data Standards](https://standard.open-contracting.org/infrastructure/latest/en/) (OC4IDS) describe what information to disclose and how to disclose it, at each stage of an infrastructure project. It connects previously siloed information to better publish and track infrastructure investment and delivery, providing data at the project level, at the contracting summary level, and at contract process detail level.
+```{toctree}
+:hidden:
 
-A joint effort by the [Infrastructure Transparency Initiative](http://infrastructuretransparency.org) (CoST) and the Open Contracting Partnership, it builds on best practice in open data and openness of public infrastructure procurement globally.
-
-The [Project](https://extensions.open-contracting.org/en/extensions/project/master/) extension describes how to connect OCDS and OC4IDS datasets.
-
-### Open Fiscal Data Package
-
-The [Open Fiscal Data Package](http://www.fiscaltransparency.net/ofdp/) (OFDP) describes government budget and spending data. The [Budget and spending classification](https://extensions.open-contracting.org/en/extensions/budget_and_spend/) extension describes how to connect OCDS and OFDP datasets.
-
+map/linked_standards
+```
 
 ## Wrapping up
 
