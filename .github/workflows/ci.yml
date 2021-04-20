@@ -29,7 +29,8 @@ jobs:
             make extract
           fi
           make
-          python util/add_translation_notes.py
+          # TODO: Update script for new theme
+          # python util/add_translation_notes.py
       - run: pytest
       - uses: shimataro/ssh-key-action@v2
         with:
