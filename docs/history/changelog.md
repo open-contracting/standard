@@ -67,7 +67,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Schema
 
-* [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of `award.suppliers`.
+* [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of `awards.suppliers`.
 * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award.
