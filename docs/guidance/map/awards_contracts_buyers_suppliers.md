@@ -10,14 +10,9 @@ In order to understand the modelling examples, it’s important to first clarify
 
 ### Award
 
-The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement) was developed through extensive consultations with governments and interested international organizations and therefore reflects the procurement practices and concepts used in many different jurisdictions. The  [UNCITRAL glossary](http://www.uncitral.org/pdf/english/texts/procurem/ml-procurement-2011/Glossary-e.pdf) defines the "Award of a procurement contract or framework agreement" as:
+OCDS defines an award as:
 
-> *A final stage of the procurement proceedings regulated by the Model Law, resulting in the conclusion and entry into force of a procurement contract or framework agreement between the procuring entity and selected supplier(s) or contractor(s).*
-
-In OCDS, the `Award` object is intended to communicate a direct relationship between items, suppliers, and values. It ought to be possible to know, at the award stage, in OCDS data, which items will later be supplied by which suppliers, and what the value of those contracts will be.
-
-```{note}
-The OCDS schema and documentation are not clear what, precisely, is meant by 'award'. A revision of the definition of `Award` in OCDS is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/895)).
+```{field-description} ../../../build/current_lang/release-schema.json /definitions/Award
 ```
 
 ### Contract
