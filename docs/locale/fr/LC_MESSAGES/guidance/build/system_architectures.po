@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-11 21:23-0500\n"
+"POT-Creation-Date: 2021-03-01 17:07-0500\n"
 "PO-Revision-Date: 2020-06-30 01:22+0000\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -36,19 +36,18 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:7
 msgid ""
-"Whether is possible to extend existing systems, or a new system will be "
-"built,"
+"Whether existing systems can be updated, or new systems need to be created,"
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:8
-msgid "The number and nature of the live systems,"
+msgid "The number and nature of the data sources,"
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:9
 msgid ""
 "The technical resources available to the publisher, like storage and "
 "processing capabilities. This includes the availability of technical "
-"personnel to maintain systems and modules."
+"personnel to maintain new and updated systems."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:11
@@ -82,16 +81,16 @@ msgid ""
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:19
-msgid "On-demand transformation from live systems"
+msgid "On-demand transformation from data sources"
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:21
 msgid ""
-"In this scenario, each source system converts data in OCDS format on demand."
-" Data is not stored but gets converted each time a user or third party "
-"invokes the conversion process. This is the easiest path when a single live "
-"system manages all contracting processes. But it involves modifications to "
-"the system to add an OCDS conversion module."
+"In this scenario, data from each source is converted to OCDS format on-"
+"demand. OCDS data is not stored, but is created each time a user or third-"
+"party invokes the conversion process. This is the easiest path when a single"
+" source manages the data for all contracting processes. But it involves "
+"adding an OCDS conversion module."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:23
@@ -127,7 +126,7 @@ msgstr ""
 #: ../../docs/guidance/build/system_architectures.md:33
 msgid ""
 "Bulk downloads can be provided as part of the API. Live queries can stress "
-"the live systems if they need to scan large portions of data."
+"the data sources if they need to scan large portions of data."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:35
@@ -142,12 +141,12 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:39
 msgid ""
-"It is possible to merge and centralize data from more than one system in a "
-"single datastore."
+"It is possible to merge and centralize data from more than one data source "
+"in a single datastore."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:40
-msgid "It can relieve live systems from expensive queries."
+msgid "It can relieve data sources from expensive queries."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:41
@@ -184,8 +183,8 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:52
 msgid ""
-"In this scenario an automated process pulls data from live systems to the "
-"middleware system. The middleware performs the conversion to OCDS and "
+"In this scenario an automated process pulls data from the data sources to "
+"the middleware system. The middleware performs the conversion to OCDS and "
 "maintains a datastore in OCDS format."
 msgstr ""
 
@@ -196,21 +195,21 @@ msgstr ""
 #: ../../docs/guidance/build/system_architectures.md:56
 msgid ""
 "The key benefit of this approach is that the middleware system can store the"
-" change history. This is especially good when source systems do not maintain"
-" historic data."
+" change history. This is especially good when data sources do not maintain "
+"historic data."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:58
 msgid ""
-"This approach might involve some changes to live systems to allow the "
+"This approach might involve some changes to data sources to allow the "
 "middleware to pull data. The middleware system merges and centralizes data "
 "in a single place."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:60
 msgid ""
-"To add more source systems, the OCDS conversion module needs to be updated "
-"to pull data from the new system(s)."
+"To add more data sources, the OCDS conversion module needs to be updated to "
+"pull data from the new source(s)."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:62
@@ -222,11 +221,10 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:64
 msgid ""
-"An alternative to the pull mechanism is to use a push mechanism in each "
-"source system. Specific events or changes to the data would trigger a data "
-"push to the middleware. This approach can mitigate the risk of losing "
-"individual changes. But this might involve bigger modifications to the "
-"source system(s)."
+"An alternative to the pull mechanism is to use a push mechanism in each data"
+" source. Specific events or changes to the data would trigger a data push to"
+" the middleware. This approach can mitigate the risk of losing individual "
+"changes. But this might involve bigger modifications to the data source(s)."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:66
@@ -242,7 +240,7 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:70
 msgid ""
-"This scenario is a combination of the two previous scenarios. Live systems "
+"This scenario is a combination of the two previous scenarios. Data sources "
 "perform the conversion of data to OCDS format. They push converted data to a"
 " middleware, which maintains an OCDS format datastore. An API in the "
 "middleware system serves the OCDS data."
@@ -254,16 +252,16 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:74
 msgid ""
-"This approach puts the burden of data conversion in live systems. Yet it "
-"might be a solution for publishers with a single source system which does "
-"not store the change history."
+"This approach puts the burden of data conversion on data sources. Yet it "
+"might be a solution for publishers with a single data source which does not "
+"store the change history."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:76
 msgid ""
-"This approach might also be suitable to combine data from many source "
-"systems. Each source system becomes an OCDS publisher. The middleware "
-"becomes less complex since it only ingests data in a single format."
+"This approach might also be suitable to combine data from many data sources."
+" Each source becomes an OCDS publisher. The middleware becomes less complex "
+"since it only ingests data in a single format."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:78
@@ -271,7 +269,7 @@ msgid ""
 "The [OpenProcurement](http://openprocurement.org/en/) system adopted a "
 "similar approach. This system was developed in Ukraine and it's the base for"
 " the [Prozorro](https://prozorro.gov.ua/en/) platform. Prozorro uses OCDS "
-"building blocks as the foundation for live systems data models."
+"building blocks as the foundation for data sources' data models."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:80
@@ -301,12 +299,12 @@ msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:88
 msgid ""
-"In this scenario a middleware system sits between live systems and the API."
+"In this scenario a middleware system sits between data sources and the API."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:90
 msgid ""
-"Data is manually exported from live systems into files. The files are "
+"Data is manually exported from data sources into files. The files are "
 "uploaded to the middleware system, which converts the data to OCDS. The "
 "system stores the data in OCDS format."
 msgstr ""
@@ -319,7 +317,7 @@ msgstr ""
 msgid ""
 "A disadvantage in this approach is the potential of failures. Input files "
 "might be corrupted or have unexpected formats due to changes or errors in "
-"the live systems."
+"the data sources."
 msgstr ""
 
 #: ../../docs/guidance/build/system_architectures.md:96

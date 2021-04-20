@@ -16,9 +16,8 @@ Across the whole universe of OCDS publishers these identifiers refer to one spec
 
 We create globally unique contracting process identifiers by adding a prefix to the internal identifiers held by publishers.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Worked Example</p>
+```{admonition} Worked Example
+:class: hint
 
 Two government publishers (Town A and Town B) number their contracting processes from 0 upwards.
 
@@ -33,8 +32,7 @@ Now Town A's contracting process has the `ocid` of 'ocds-fh349f-0005' and Town B
 There is now no chance of these getting mixed up in a system which imports data from both towns.
 
 And, if an independent civil society contract monitoring group want to publish a report about implementation of Town A's road project, or Town B's text-book procurement, they have distinct identifiers they can use in their own data to refer to these.
-
-</div>
+```
 
 You can read more about the OCDS approach to identify organizations below.
 
@@ -63,9 +61,8 @@ Setting the `ocid` is usually a simple two step process:
 
 In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting processes have a common internal identifier to draw upon.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Worked Example</p>
+```{admonition} Worked Example
+:class: hint
 
 In Mexico City, each time a tender or direct contract award process is initiated, the department responsible assigns an identifier.
 
@@ -80,8 +77,7 @@ This internal identifier can be exchanged with, and recorded in, any other syste
 Mexico City then registered a prefix with the OCDS helpdesk. They have been given the prefix ‘ocds-87sd3t’ which can be added to their unique process identifiers to give a globally unique `ocid`. E.g.
 
 > ocds-87sd3t-OM-DGRMSG-004-13
-
-</div>
+```
 
 The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data.
 
@@ -120,25 +116,20 @@ There are two parts to expressing an **organization identifier** in open contrac
 1. An **organization register prefix** identifying a **register** in which the organization is identified
 2. The **existing organizational ID** provided in that public register
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Worked Example</p>
+````{admonition} Worked Example
+:class: hint
 
 The **organization register prefix** for UK Companies House is GB-COH. The organization **Development Initiatives** has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can then expressed as follows:
 
-```eval_rst
-.. code-block:: json
-
-    {
-        "scheme":"GB-COH",
-        "id":"06368740",
-        "uri":"http://opencorporates.com/companies/gb/06368740",
-        "legalName":"Development Initiatives Poverty Research Limited"
-    }
-
+```{code-block} json
+{
+  "scheme": "GB-COH",
+  "id": "06368740",
+  "uri": "http://opencorporates.com/companies/gb/06368740",
+  "legalName": "Development Initiatives Poverty Research Limited"
+}
 ```
-
-</div>
+````
 
 In OCDS, the organization register prefix is included in the `scheme` field of an identifier block, with the existing organization id placed in the `id` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from [Open Corporates](https://opencorporates.com/)) this can also be given in the `uri` field.
 
@@ -160,13 +151,13 @@ If you want to disclose identifiers for natural persons, see the [personal ident
 
 ## Party IDs
 
-Each of the parties (organizations or other participants) involved in a contracting process is declared in the [parties section](../reference/#parties).
+Each of the parties (organizations or other participants) involved in a contracting process is declared in the [parties section](reference.md#parties).
 
 Each party has a local identifier (`id`) used to reference it from elsewhere in the data. For example, `buyer/id` references the buyer's entry in the parties section using `parties/id`.
 
 A party's `id` is separate from its organization identifier and need only be unique within the scope of the contracting process to which it is a party. A party’s `id` must be consistent across all releases with the same `ocid` value.
 
-See the [guidance](../../guidance/map/organization_identifiers/#party-ids) for more information on party IDs.
+See the [guidance](../guidance/map/organization_identifiers.md#party-ids) for more information on party IDs.
 
 ## Release ID
 

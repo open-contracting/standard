@@ -25,51 +25,29 @@ Contracting processes can result in different types of contract between buyers a
 
 In OCDS, the `Contract` object is intended to communicate a legally binding agreement between a buyer and suppliers to provide items. This excludes agreements to set-up a structure through which contracts are later awarded to provide items, for example: a contract to set up or add suppliers to a framework agreement or dynamic purchasing system.
 
-```eval_rst
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
-      The OCDS schema and documentation are not clear what, precisely, is meant by 'contract'. A revision of the definition of `Contract` is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/896)).
-
+```{note}
+The OCDS schema and documentation are not clear what, precisely, is meant by 'contract'. A revision of the definition of `Contract` is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/896)).
 ```
 
 ### Buyer
 
 OCDS defines the buyer as:
 
-> *an entity whose budget will be used to pay for goods, works or services related to a contract. This may be different from the procuring entity who may be specified in the tender data.*
-
-```eval_rst
-.. admonition:: Note
-    :class: note
-
-    .. markdown::
-
-      Elsewhere in the OCDS schema the buyer is described as:
-
-      > *The entity managing the procurement. This may be different from the buyer who pays for, **or uses**, the items being procured.*
-
-      There is a proposal to align this description with the above definition.
-
+```{field-description} ../../../build/current_lang/release-schema.json /properties/buyer
 ```
 
 ### Suppliers
 
 OCDS defines a supplier as:
 
-> *An entity awarded or contracted to provide goods, works or services.*
+```{code-description} ../../../build/current_lang/codelists/partyRole.csv supplier
+```
 
-### Electronic Catalog
+### Electronic catalog
 
-[EU directive 2014/24/EU](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32014L0024) on public procurement categorises an electronic catalog as a techniques, or instrument, for electronic and aggregated procurement and describes an electronic catalog as:
-
-> *...a format for the presentation and organisation of information in a manner that is common to all the participating bidders and which lends itself to electronic treatment*
-
-The [Chartered Institute of Procurement and Supply](https://www.cips.org/en-NZ/knowledge/procurement-topics-and-skills/ecommerce---systems/e-sourcing--e-procurement-systems-p2p/catalogue-management/) describes an electronic catalog as:
-
-> *a web resource that provides information on products and services offered and sold by a vendor, and supports on-line ordering and payment capabilities.*
+```{hint}
+Electronic catalogs can often be found in more complicated procedures, usually together with framework agreements and involving multiple bidders. However, on their own, they are simply an electronic format (typically prescribed by the buyer) that participants in the contracting process must follow when exchaning information about technical specifications, evaluation criteria, bids, lots, etc. As such, catalogs do not influence the relationship between awards, contracts, buyers and suppliers.
+```
 
 ### Purchase order
 
@@ -85,15 +63,9 @@ OCDS defines a common model for disclosing structured data on public contracting
 
 In OCDS, **awards** and **contracts** are modelled as separate stages of the contracting process. This approach allows for the possibility that an award is made but a contract is never entered into. The model also allows for the possibility that there is a difference between the award and the signed contract, either in value, duration, items or otherwise. While such differences might be illegal in some jurisdictions, they can occur in some cases and are therefore possible in OCDS. Source systems can contain data on awards, on contracts, or on both.
 
-<style><!--
-.process-table { width:18%; float:left; font-size:10pt; }
-.process-table p { font-size:10pt; text-align: center; }
-.process-table img { width:80%; }
---></style>
-
 <div style="width:100%">
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Tender](../../_static/svg/grey_planning.svg)
 
@@ -101,7 +73,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Tender](../../_static/svg/grey_tendering.svg)
 
@@ -109,7 +81,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Award](../../_static/svg/green_awarded.svg)
 
@@ -117,7 +89,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Contract](../../_static/svg/green_signed.svg)
 
@@ -125,7 +97,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 </div>
 
-<div class="process-table" markdown=1>
+<div class="process-table">
 
 ![Implementation](../../_static/svg/grey_implementation.svg)
 
@@ -150,15 +122,12 @@ That said, many organizations can be assigned the 'buyer' role in the `parties` 
 
 ## Examples
 
-```eval_rst
-.. toctree::
-   :maxdepth: 1
+```{toctree}
+:maxdepth: 1
 
-   award_notices_decisions
-   mapping_awards_contracts
-   consortia
-   catalogs
-   frameworks
-   purchase_orders
-   
+award_notices_decisions
+mapping_awards_contracts
+consortia
+frameworks
+purchase_orders
 ```
