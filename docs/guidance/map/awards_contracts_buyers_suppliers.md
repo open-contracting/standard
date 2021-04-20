@@ -12,7 +12,8 @@ In order to understand the modelling examples, it’s important to first clarify
 
 OCDS defines an award as:
 
-> *Decision by the buyer or procuring entity on the supplier with whom it intends to conclude a contract, including the items the supplier should supply and their price. Typically, this decision leads to a contract, but not always (e.g. the award is appealed at court or the supplier refuses to sign the contract). Depending on the jurisdiction, a single decision may concern a single supplier, item and value; or batches of suppliers and/or items and/or values. Similarly, sometimes the award is published as soon as it is made and sometimes only together with a contract (including only being implicitly covered by the contract). As far as possible, the award should be published at the most granular level (i.e. a given supplier will deliver a given item at a given value) and as soon as it is made.*
+```{field-description} ../../../build/current_lang/release-schema.json /definitions/Award
+```
 
 ### Contract
 
