@@ -88,8 +88,8 @@ def add_translation_note(path, language, domain):
         for div in replacement.xpath('//h1/following-sibling::div[@class="admonition note"]'):
             parent.remove(div)
 
-        parent = document.xpath(xpath)[0].getparent()
-        parent.getparent().replace(parent, replacement)
+        element = document.xpath(xpath)[0]
+        element.getparent().replace(element, replacement)
 
         message = _('This page was recently changed in the <a href="%(url)s">English documentation</a>. '
                     'The changes have not yet been translated.')

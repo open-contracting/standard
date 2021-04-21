@@ -1,6 +1,6 @@
 # Organization identifiers
 
-Normally, publishers collect *legal identifiers* from the organizations that are part of the contracting process. [Organization identifiers](../../schema/identifiers.md#organization-ids) can be provided in OCDS by identifying the **organization registers** used in the source data, choosing an appropiate **organization register prefix** for each one, and identifying the organizational ID for each registry or list and organization in the data.
+Normally, publishers collect *legal identifiers* from the organizations that are part of the contracting process. [Organization identifiers](../../schema/identifiers.md#organization-ids) can be provided in OCDS by identifying the **organization registers** used in the source data, choosing an appropriate **organization register prefix** for each one, and identifying the organizational ID for each registry or list and organization in the data.
 
 Use [org-id.guide](http://org-id.guide/) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index) to register an organization list.
 
