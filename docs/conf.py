@@ -95,7 +95,7 @@ html_sidebars = {
 
 # The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
 # TODO: figure out how this should be used if we are using the pydata theme
-locale_dirs = ['locale'] #, os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+locale_dirs = ['locale']  # os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 
 gettext_compact = False
 
