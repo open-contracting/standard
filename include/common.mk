@@ -98,6 +98,10 @@ clean_current_lang:
 build_source: current_lang.en
 	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
 
+.PHONY: autobuild
+autobuild: current_lang.en
+	sphinx-autobuild -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
+
 # Build the translated documentation. (Same as source, but with a language configuration setting.)
 $(TRANSLATIONS:.%=build.%): build.%: current_lang.%
 	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"

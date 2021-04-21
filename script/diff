@@ -5,11 +5,11 @@ set -uo pipefail
 curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/docs/conf.py | diff -u - docs/conf.py
 
 for f in .github/workflows/ci.yml .github/workflows/js.yml include/config.mk; do
-  curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/$f | diff -u - $f
+    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/$f | diff -u - $f
 done
 
 if [ -d util ] || [ -d schema/project-level ]; then
-  curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/.gitignore | diff -u - .gitignore
+    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/.gitignore | diff -u - .gitignore
 else
-  curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/schema/build-profile.py | diff -u - schema/build-profile.py
+    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/schema/build-profile.py | diff -u - schema/build-profile.py
 fi
