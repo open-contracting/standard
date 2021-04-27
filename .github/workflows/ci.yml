@@ -43,7 +43,7 @@ jobs:
           machine: standard.open-contracting.org
           login: manage
           password: ${{ secrets.ELASTICSEARCH_PASSWORD }}
-      - if: success()
+      - if: github.event_name == 'push' && success()
         env:
           PATH_PREFIX: ""
         run: |
