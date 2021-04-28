@@ -52,6 +52,6 @@ getting_started/index
 guidance/index
 schema/index
 support/index
-history/index
 governance/index
+history/index
 ```
