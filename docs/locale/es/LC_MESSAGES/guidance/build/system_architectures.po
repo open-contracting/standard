@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"POT-Creation-Date: 2021-04-28 13:13-0400\n"
 "PO-Revision-Date: 2020-06-30 01:22+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
@@ -225,42 +225,42 @@ msgstr ""
 "entregas](../../getting_started/releases_and_records) describe los registros"
 " y entregas y sus diferentes componentes."
 
-#: ../../docs/guidance/build/system_architectures.md:50
+#: ../../docs/guidance/build/system_architectures.md:49
 msgid "Pull and convert"
 msgstr "Extracción y Conversion"
 
-#: ../../docs/guidance/build/system_architectures.md:52
+#: ../../docs/guidance/build/system_architectures.md:51
 msgid ""
 "In this scenario an automated process pulls data from the data sources to "
 "the middleware system. The middleware performs the conversion to OCDS and "
 "maintains a datastore in OCDS format."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:54
+#: ../../docs/guidance/build/system_architectures.md:53
 msgid "![Pull and Convert](../../_static/png/pullAndConvert.png)"
 msgstr "![Extracción y Conversion](../../_static/png/pullAndConvert.png)"
 
-#: ../../docs/guidance/build/system_architectures.md:56
+#: ../../docs/guidance/build/system_architectures.md:55
 msgid ""
 "The key benefit of this approach is that the middleware system can store the"
 " change history. This is especially good when data sources do not maintain "
 "historic data."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:58
+#: ../../docs/guidance/build/system_architectures.md:57
 msgid ""
 "This approach might involve some changes to data sources to allow the "
 "middleware to pull data. The middleware system merges and centralizes data "
 "in a single place."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:60
+#: ../../docs/guidance/build/system_architectures.md:59
 msgid ""
 "To add more data sources, the OCDS conversion module needs to be updated to "
 "pull data from the new source(s)."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:62
+#: ../../docs/guidance/build/system_architectures.md:61
 msgid ""
 "An important decision in the implementation is the frequency to pull data. "
 "If the frequency is low, there is a risk of losing the detail of individual "
@@ -270,7 +270,7 @@ msgstr ""
 "extraen datos. Si la frecuencia es baja, existe el riesgo de perder el "
 "detalle de los cambios individuales."
 
-#: ../../docs/guidance/build/system_architectures.md:64
+#: ../../docs/guidance/build/system_architectures.md:63
 msgid ""
 "An alternative to the pull mechanism is to use a push mechanism in each data"
 " source. Specific events or changes to the data would trigger a data push to"
@@ -278,7 +278,7 @@ msgid ""
 "changes. But this might involve bigger modifications to the data source(s)."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:66
+#: ../../docs/guidance/build/system_architectures.md:65
 msgid ""
 "European Dynamics developed an e-procurement system with a similar approach "
 "for OCDS output. The system was built for the Zambian Public Procurement "
@@ -288,11 +288,11 @@ msgstr ""
 "enfoque similar para la producción de OCDS. El sistema fue construido para "
 "la Agencia de Contratación Pública de Zambia."
 
-#: ../../docs/guidance/build/system_architectures.md:68
+#: ../../docs/guidance/build/system_architectures.md:67
 msgid "Convert and push"
 msgstr "Conversión y \"push\""
 
-#: ../../docs/guidance/build/system_architectures.md:70
+#: ../../docs/guidance/build/system_architectures.md:69
 msgid ""
 "This scenario is a combination of the two previous scenarios. Data sources "
 "perform the conversion of data to OCDS format. They push converted data to a"
@@ -300,25 +300,25 @@ msgid ""
 "middleware system serves the OCDS data."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:72
+#: ../../docs/guidance/build/system_architectures.md:71
 msgid "![Convert and Push](../../_static/png/convertAndPush.png)"
 msgstr "![Conversión y Empuje](../../_static/png/convertAndPush.png)"
 
-#: ../../docs/guidance/build/system_architectures.md:74
+#: ../../docs/guidance/build/system_architectures.md:73
 msgid ""
 "This approach puts the burden of data conversion on data sources. Yet it "
 "might be a solution for publishers with a single data source which does not "
 "store the change history."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:76
+#: ../../docs/guidance/build/system_architectures.md:75
 msgid ""
 "This approach might also be suitable to combine data from many data sources."
 " Each source becomes an OCDS publisher. The middleware becomes less complex "
 "since it only ingests data in a single format."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:78
+#: ../../docs/guidance/build/system_architectures.md:77
 msgid ""
 "The [OpenProcurement](http://openprocurement.org/en/) system adopted a "
 "similar approach. This system was developed in Ukraine and it's the base for"
@@ -326,7 +326,7 @@ msgid ""
 "building blocks as the foundation for data sources' data models."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:80
+#: ../../docs/guidance/build/system_architectures.md:79
 msgid ""
 "A variant in this scenario is to store files in a web-accessible file "
 "system, as shown below. A periodical invocation of the conversion module "
@@ -337,11 +337,11 @@ msgstr ""
 "invocación periódica del módulo de conversión actualiza el sistema de "
 "archivos."
 
-#: ../../docs/guidance/build/system_architectures.md:82
+#: ../../docs/guidance/build/system_architectures.md:81
 msgid "![Direct Publication 1](../../_static/png/directPublication1.png)"
 msgstr "![Publicación directa 1](../../_static/png/directPublication1.png)"
 
-#: ../../docs/guidance/build/system_architectures.md:84
+#: ../../docs/guidance/build/system_architectures.md:83
 msgid ""
 "The file system ensures that each OCDS document has a persistent URL for "
 "access. But a downside is that the volume of data might grow fast, as plain "
@@ -359,54 +359,54 @@ msgstr ""
 "archivos. Los registros pueden ser imposibles de producir si hay más de un "
 "sistema."
 
-#: ../../docs/guidance/build/system_architectures.md:86
+#: ../../docs/guidance/build/system_architectures.md:85
 msgid "Manual import"
 msgstr "Importación manual"
 
-#: ../../docs/guidance/build/system_architectures.md:88
+#: ../../docs/guidance/build/system_architectures.md:87
 msgid ""
 "In this scenario a middleware system sits between data sources and the API."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:90
+#: ../../docs/guidance/build/system_architectures.md:89
 msgid ""
 "Data is manually exported from data sources into files. The files are "
 "uploaded to the middleware system, which converts the data to OCDS. The "
 "system stores the data in OCDS format."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:92
+#: ../../docs/guidance/build/system_architectures.md:91
 msgid "![Manual Import](../../_static/png/manualImport.png)"
 msgstr "![Importación Manual](../../_static/png/manualImport.png)"
 
-#: ../../docs/guidance/build/system_architectures.md:94
+#: ../../docs/guidance/build/system_architectures.md:93
 msgid ""
 "A disadvantage in this approach is the potential of failures. Input files "
 "might be corrupted or have unexpected formats due to changes or errors in "
 "the data sources."
 msgstr ""
 
-#: ../../docs/guidance/build/system_architectures.md:96
+#: ../../docs/guidance/build/system_architectures.md:95
 msgid ""
 "There’s a documented example of this approach in the work Development "
 "Gateway did in [Vietnam](https://developmentgateway.org/blog/under-hood-"
 "open-source-dashboard-procurement-vietnam)."
 msgstr ""
 "Hay un ejemplo documentado de este enfoque en el trabajo que hizo "
-"Development Gateway en [Vietnam](https://developmentgateway.org/blog"
-"/under-hood-open-source-dashboard-procurement-vietnam)."
+"Development Gateway en [Vietnam](https://developmentgateway.org/blog/under-"
+"hood-open-source-dashboard-procurement-vietnam)."
 
-#: ../../docs/guidance/build/system_architectures.md:98
+#: ../../docs/guidance/build/system_architectures.md:97
 msgid "Additional considerations"
 msgstr "Consideraciones adicionales"
 
-#: ../../docs/guidance/build/system_architectures.md:100
+#: ../../docs/guidance/build/system_architectures.md:99
 msgid ""
 "When designing an architecture, publishers ought to consider the following:"
 msgstr ""
 "Al diseñar una arquitectura, los publicadores deben considerar lo siguiente:"
 
-#: ../../docs/guidance/build/system_architectures.md:102
+#: ../../docs/guidance/build/system_architectures.md:101
 msgid ""
 "**Search endpoints**. An API can provide more than individual releases and "
 "records. Endpoints help to filter data by different parameters like "
@@ -421,7 +421,7 @@ msgstr ""
 "importante para los usuarios que están más familiarizados con las hojas de "
 "cálculo."
 
-#: ../../docs/guidance/build/system_architectures.md:103
+#: ../../docs/guidance/build/system_architectures.md:102
 msgid ""
 "**Documents**. OCDS includes the disclosure of documents. Often, systems "
 "link out to documents on external platforms, where link-rot can set-in. The "

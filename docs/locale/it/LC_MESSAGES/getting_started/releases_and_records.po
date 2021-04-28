@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"POT-Creation-Date: 2021-04-28 00:33-0400\n"
 "PO-Revision-Date: 2017-04-24 10:47+0000\n"
 "Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/open-contracting-partnership-1/teams/112300/it/)\n"
@@ -147,19 +147,19 @@ msgid ""
 "The box below shows an example."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:50
+#: ../../docs/getting_started/releases_and_records.md:48
 msgid "Identifiers"
 msgstr "Identificatori"
 
-#: ../../docs/getting_started/releases_and_records.md:52
+#: ../../docs/getting_started/releases_and_records.md:50
 msgid ""
-"Each release contains an [ocid](../../schema/identifiers/#contracting-"
+"Each release contains an [ocid](../schema/identifiers.md#contracting-"
 "process-identifier-ocid) to identify the contracting process it relates to. "
 "An ocid is composed of a prefix and an unique process identifier chosen by "
 "the publisher."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:54
+#: ../../docs/getting_started/releases_and_records.md:52
 msgid ""
 "A release also needs a release identifier, unique in the scope of the "
 "contracting process. A release id can be built in several ways. Publishers "
@@ -167,134 +167,138 @@ msgid ""
 " same process."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:56
+#: ../../docs/getting_started/releases_and_records.md:54
 msgid ""
 "The [easy releases](../guidance/build/easy_releases) section introduces two "
 "strategies that can be used in any scenario."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:58
-#: ../../docs/getting_started/releases_and_records.md:170
+#: ../../docs/getting_started/releases_and_records.md:56
+#: ../../docs/getting_started/releases_and_records.md:157
 msgid "Packaging"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:60
+#: ../../docs/getting_started/releases_and_records.md:58
 msgid ""
 "Releases are wrapped in a release package to provide context to the data. "
 "The `uri` package field contains a URI to an online copy of the same release"
 " package."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:62
+#: ../../docs/getting_started/releases_and_records.md:60
 msgid ""
 "See the [Release Package schema](../schema/release_package) for details."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:64
+#: ../../docs/getting_started/releases_and_records.md:62
 msgid "Tags"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:66
+#: ../../docs/getting_started/releases_and_records.md:64
 msgid ""
 "Each release also provides one or more tags. Tags provide information about "
 "the event the release relates to."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:68
+#: ../../docs/getting_started/releases_and_records.md:66
 msgid "For example:"
 msgstr "Per esempio:"
 
-#: ../../docs/getting_started/releases_and_records.md:70
+#: ../../docs/getting_started/releases_and_records.md:68
 msgid ""
 "When an invitation to tender is published, the publisher uses the 'tender' "
 "tag . The release includes the relevant details in the `tender` section. It "
 "can also contain information about the budget in the planning section."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:71
+#: ../../docs/getting_started/releases_and_records.md:69
 msgid ""
 "When a contract is awarded, the publisher uses the 'award' tag. The release "
 "includes the relevant details in the `award` section. It can also update the"
 " tender section with the list of tenderers that submitted a bid."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:73
+#: ../../docs/getting_started/releases_and_records.md:71
 msgid ""
-"The [release tag codelist](../../schema/codelists/#release-tag) contains the"
-" list of all tags provided by OCDS. Note that it is allowed to use more than"
-" one tag in the same release. For example, a release with new data in the "
+"The [release tag codelist](../schema/codelists.md#release-tag) contains the "
+"list of all tags provided by OCDS. Note that it is allowed to use more than "
+"one tag in the same release. For example, a release with new data in the "
 "`tender` and `award` sections can use the 'tender' and 'award' tags "
 "together."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:75
+#: ../../docs/getting_started/releases_and_records.md:73
 msgid "Repeating previous information"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:77
+#: ../../docs/getting_started/releases_and_records.md:75
 msgid ""
 "Releases can repeat unchanged data from previous releases, or include new "
 "information only. Publishers decide how much data to include as long as "
 "mandatory fields are present."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:79
+#: ../../docs/getting_started/releases_and_records.md:77
 msgid ""
 "It might be more appropriate to repeat data when processes have fewer "
 "releases. Consider as well that repeating previous information makes larger "
 "releases and larger datasets."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:85
+#: ../../docs/getting_started/releases_and_records.md:79
+msgid "Example"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:79
 msgid ""
 "The following example shows releases with minimal changes on each update."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:87
+#: ../../docs/getting_started/releases_and_records.md:81
 msgid "The first release presents tender data."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:89
+#: ../../docs/getting_started/releases_and_records.md:82
 msgid ""
 "The second introduces a new document in the `tender` section with the "
 "'tenderUpdate' tag. Note that the release ignores all the nonmandatory "
 "fields. The tender document present in the previous release is also ignored."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:91
+#: ../../docs/getting_started/releases_and_records.md:83
 msgid "The third release presents award data, and ignores the tender section."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:113
+#: ../../docs/getting_started/releases_and_records.md:106
 msgid "Records"
 msgstr "Descrittori (Records)"
 
-#: ../../docs/getting_started/releases_and_records.md:115
+#: ../../docs/getting_started/releases_and_records.md:108
 msgid ""
 "A record follows the structure defined in the [Records "
 "Reference](../schema/records_reference). Below is a full example."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:123
+#: ../../docs/getting_started/releases_and_records.md:114
 msgid "Embedding or linking Releases"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:125
+#: ../../docs/getting_started/releases_and_records.md:116
 msgid ""
 "Records contain the history of a contracting process as a list of releases, "
 "by either embedding or linkint to the releases."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:127
+#: ../../docs/getting_started/releases_and_records.md:118
 msgid ""
 "See the [Record reference](../schema/records_reference) for more details."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:129
+#: ../../docs/getting_started/releases_and_records.md:120
 msgid "Compiled and Versioned Releases"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:131
+#: ../../docs/getting_started/releases_and_records.md:122
 msgid ""
 "A **compiled release** follows the release structure. It contains the latest"
 " value for all fields present in the releases of a process. The example "
@@ -302,82 +306,211 @@ msgid ""
 "compiled release when producing records."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:133
+#: ../../docs/getting_started/releases_and_records.md:124
 msgid ""
 "A **versioned release** follows a similar structure. For each field in the "
 "release structure, the versioned release provides an object. This object "
 "contains the history of changes for the field."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:126
 msgid "Each time a new release is available:"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:137
+#: ../../docs/getting_started/releases_and_records.md:128
 msgid ""
 "The record adds the new release to the releases list, by either embedding it"
 " or adding a link to it."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:138
+#: ../../docs/getting_started/releases_and_records.md:129
 msgid ""
 "The record updates the compiled and versioned releases using the new "
 "information. Repeating unchanged information does not affect the result."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:144
+#: ../../docs/getting_started/releases_and_records.md:131
 msgid ""
 "Compiled releases are not mandatory, but it helps to make OCDS data more "
 "accessible, especially for users that don’t need a detailed change history."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:146
+#: ../../docs/getting_started/releases_and_records.md:133
 msgid ""
 "Consider how to calculate the **total value of active tenders** using "
 "compiled releases:"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:154
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocid"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "tag"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "tender/status"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "tender/value/amount"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-001"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:135
+msgid "compiled"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "complete"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "25,000.00"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-002"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "active"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "150,000.00"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-003"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "cancelled"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:135
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "3,500,000.00"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:141
 msgid ""
 "Working with compiled releases, this metric can be calculated by filtering "
 "on the tender status and summing the tender value."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:156
+#: ../../docs/getting_started/releases_and_records.md:143
 msgid ""
 "Compare that to how to calculate the **total value of active tenders** using"
 " releases:"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:164
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "id"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-001-001"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "tender"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "20,000.00"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-001-002"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "tenderAmendment"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-001-003"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "award"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-002-001"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-003-001"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "ocds-123456-003-002"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:145
+msgid "tenderCancellation"
+msgstr ""
+
+#: ../../docs/getting_started/releases_and_records.md:151
 msgid ""
 "If a user has releases only, they need to first determine the final status "
 "before calculating the result."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:166
+#: ../../docs/getting_started/releases_and_records.md:153
 msgid ""
 "Compiled releases are useful for many scenarios. But users might need the "
 "full history to answer other questions. For example, how many amends there "
 "are for a tender's value."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:172
+#: ../../docs/getting_started/releases_and_records.md:159
 msgid ""
 "Records are published wrapped in a record package. The `uri` field in the "
 "package leads to a copy of the same record package."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:174
+#: ../../docs/getting_started/releases_and_records.md:161
 msgid "How does all fit together?"
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:176
+#: ../../docs/getting_started/releases_and_records.md:163
 msgid ""
 "The following shows how to update a record as releases are published over "
 "time."
 msgstr ""
 
-#: ../../docs/getting_started/releases_and_records.md:178
+#: ../../docs/getting_started/releases_and_records.md:165
 msgid "![Record updates](../_static/change_history_animation.gif)"
 msgstr ""

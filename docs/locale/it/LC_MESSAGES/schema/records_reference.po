@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"POT-Creation-Date: 2021-04-28 00:33-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: Alessio Dragoni <ad@sciamlab.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/open-contracting-partnership-1/teams/112300/it/)\n"
@@ -38,23 +38,23 @@ msgid ""
 "the schema, the schema takes precedence.**"
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:8
+#: ../../docs/schema/records_reference.md:7
 msgid "Browsing the schema"
 msgstr ""
 
-#: ../../None:1
+#: ../../docs/schema/records_reference.md:7
 msgid ""
 "This page presents the record package schema as tables. You can also "
 "download the canonical version of the record package schema as "
-"{download}`JSON Schema <../../record-package-schema.json>`, or view it in an"
-" [interactive browser](record_package)."
+"{download}`JSON Schema <../../build/current_lang/record-package-"
+"schema.json>`, or view it in an [interactive browser](record_package)."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:16
+#: ../../docs/schema/records_reference.md:13
 msgid "Package metadata"
 msgstr "Metadati del pacchetto"
 
-#: ../../docs/schema/records_reference.md:18
+#: ../../docs/schema/records_reference.md:15
 msgid ""
 "Records must be published within a [record package](record_package). The "
 "record package provides metadata about the record(s) that it contains."
@@ -80,61 +80,62 @@ msgstr "Formato"
 msgid "Required"
 msgstr "Necessario"
 
-#: ../../docs/schema/records_reference.md:26
+#: ../../docs/schema/records_reference.md:21
 msgid ""
-"See the [licensing guidance](../../guidance/publish/#license-your-data) for "
+"See the [licensing guidance](../guidance/publish.md#license-your-data) for "
 "more details on selecting a license, and publishing license information."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:28
+#: ../../docs/schema/records_reference.md:23
 msgid ""
-"See the [publication policy](../../guidance/publish/#finalize-your-"
+"See the [publication policy](../guidance/publish.md#finalize-your-"
 "publication-policy) guidance for more details on what to include in a "
 "publication policy."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:30
+#: ../../docs/schema/records_reference.md:25
 msgid ""
 "The record package metadata has two differences from the release package "
 "metadata:"
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:32
+#: ../../docs/schema/records_reference.md:27
 msgid ""
 "Instead of a `releases` array, a record package has a `records` array "
 "containing one or more records."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:33
+#: ../../docs/schema/records_reference.md:28
 msgid ""
 "A record package has a `packages` array, to link to any release packages "
 "that were used to prepare the records."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:35
+#: ../../docs/schema/records_reference.md:30
 msgid ""
 "The following example demonstrates all package metadata and record fields."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:44
+#: ../../docs/schema/records_reference.md:38
 msgid "Record structure"
 msgstr "Struttura del descrittore"
 
-#: ../../docs/schema/records_reference.md:46
+#: ../../docs/schema/records_reference.md:40
 msgid ""
-"A record **must** contain an [ocid](../identifiers/#ocid) and all "
-"[releases](#releases) about the contracting process. As such, a record "
-"functions as an index of all releases about a contracting process."
+"A record **must** contain an [ocid](identifiers.md#contracting-process-"
+"identifier-ocid) and all [releases](#releases) about the contracting "
+"process. As such, a record functions as an index of all releases about a "
+"contracting process."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:48
+#: ../../docs/schema/records_reference.md:42
 msgid ""
 "A record **should** contain a [compiledRelease](#compiled-release) object, "
 "which represents the state of the contracting process at the time of the "
 "record's publication."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:50
+#: ../../docs/schema/records_reference.md:44
 msgid ""
 "A record **may** contain a [versionedRelease](#versioned-release) object, "
 "which aggregates, into a single object, all values of all fields from all "
@@ -143,25 +144,25 @@ msgid ""
 "data users, rather than by publishers."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:52
+#: ../../docs/schema/records_reference.md:46
 msgid "Releases"
 msgstr "Rilasci"
 
-#: ../../docs/schema/records_reference.md:54
+#: ../../docs/schema/records_reference.md:48
 msgid ""
 "Each release in a record can be provided as either a linked release or an "
 "embedded release."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:56
+#: ../../docs/schema/records_reference.md:50
 msgid "Linked releases"
 msgstr "Rilasci collegati"
 
-#: ../../docs/schema/records_reference.md:58
+#: ../../docs/schema/records_reference.md:52
 msgid "A linked release follows a simple schema:"
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:65
+#: ../../docs/schema/records_reference.md:58
 msgid ""
 "For each `url` value, it must be possible for a consuming application to "
 "retrieve the release package at the URL and identify the release within it. "
@@ -170,21 +171,21 @@ msgid ""
 "must be appended to the release package URL using a fragment identifier."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:67
+#: ../../docs/schema/records_reference.md:60
 msgid "The following example demonstrates the use of linked releases."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:76
+#: ../../docs/schema/records_reference.md:68
 msgid ""
-"Above, the first linked release has a `url` value of <https://standard.open-"
-"contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json#ocds-"
-"213czf-000-00002-01-award1>. The first part (`https://standard.open-"
+"Above, the first linked release has a `url` value of `https://standard"
+".open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json"
+"#ocds-213czf-000-00002-01-award1`. The first part (`https://standard.open-"
 "contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json`) is "
 "the URL of the release package, and the fragment identifier (`ocds-"
 "213czf-000-00002-01-award1`) is the `id` of the release."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:78
+#: ../../docs/schema/records_reference.md:70
 msgid ""
 "Release `id` values are only required to be unique within the scope of a "
 "contracting process: that is, within the scope of an `ocid` value. As such, "
@@ -193,77 +194,77 @@ msgid ""
 "within the release package."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:80
+#: ../../docs/schema/records_reference.md:72
 msgid "Embedded releases"
 msgstr "Versioni incorporate"
 
-#: ../../docs/schema/records_reference.md:82
+#: ../../docs/schema/records_reference.md:74
 msgid ""
 "An embedded release follows the [release schema](reference). In other words,"
 " instead of linking to a release within a release package as above, that "
 "release is entirely included in the record."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:84
+#: ../../docs/schema/records_reference.md:76
 msgid "The following example demonstrates the use of embedded releases."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:93
+#: ../../docs/schema/records_reference.md:84
 msgid "Comparing options"
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:95
+#: ../../docs/schema/records_reference.md:86
 msgid "The considerations are:"
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:97
+#: ../../docs/schema/records_reference.md:88
 msgid ""
 "Using linked releases yields smaller file sizes than using embedded "
 "releases."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:98
+#: ../../docs/schema/records_reference.md:89
 msgid ""
 "From a user's perspective, the contents of releases are easier to access as "
 "embedded releases than as linked releases (which involves the retrieval "
 "process described above)."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:99
+#: ../../docs/schema/records_reference.md:90
 msgid ""
 "From a publisher's perspective, using linked releases involves publishing "
 "release packages and constructing `url` values, whereas using embedded "
 "releases doesn't."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:101
+#: ../../docs/schema/records_reference.md:92
 msgid "Compiled release"
 msgstr "Rilascio compilato"
 
-#: ../../docs/schema/records_reference.md:103
+#: ../../docs/schema/records_reference.md:94
 msgid ""
 "The compiled release is the latest version of all the data about a "
 "contracting process. In other words, it provides a snapshot of the current "
 "state of a contracting process."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:105
+#: ../../docs/schema/records_reference.md:96
 msgid ""
 "The compiled release follows the [release schema](reference), with the "
 "exception of any fields on which `\"omitWhenMerged\": true` is declared."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:107
+#: ../../docs/schema/records_reference.md:98
 msgid ""
 "The process for creating a compiled release from individual releases is "
 "described in the [merging](merging) reference."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:109
+#: ../../docs/schema/records_reference.md:100
 msgid "Versioned release"
 msgstr "Rilascio versionato"
 
-#: ../../docs/schema/records_reference.md:111
+#: ../../docs/schema/records_reference.md:102
 msgid ""
 "A versioned release aggregates all values of all fields from all releases. "
 "For each field, it describes the history of values from the initial value to"
@@ -271,7 +272,7 @@ msgid ""
 "which it was changed."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:113
+#: ../../docs/schema/records_reference.md:104
 msgid ""
 "This versioned information is relevant to many use cases relating to "
 "contract monitoring. However, it can significantly increase file sizes. As "
@@ -279,16 +280,16 @@ msgid ""
 "versioned release."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:115
+#: ../../docs/schema/records_reference.md:106
 msgid ""
 "If the versioned release is not provided, third parties can generate it by "
 "processing the record's releases according to the [merging](merging) "
 "reference."
 msgstr ""
 
-#: ../../docs/schema/records_reference.md:117
+#: ../../docs/schema/records_reference.md:108
 msgid ""
 "The following example displays a single field's [versioned "
-"values](../merging/#versioned-values). This shows that the amount changed "
+"values](merging.md#versioned-values). This shows that the amount changed "
 "between the planning stage and the tender stage, while the currency did not."
 msgstr ""
