@@ -27,7 +27,7 @@ def test_basic(browser, server, lang, text):
 @pytest.mark.parametrize('lang,regex', test_search_params)
 def test_search(browser, server, lang, regex):
     browser.get('{}{}'.format(server, lang))
-    search_box = browser.find_element_by_id('search-input').find_element_by_tag_name('input')
+    search_box = browser.find_element_by_id('rtd-search-form').find_element_by_tag_name('input')
     search_box.send_keys('tender\n')
     time.sleep(2)
     assert re.search(regex, browser.find_element_by_tag_name('body').text)
