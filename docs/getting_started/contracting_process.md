@@ -103,7 +103,7 @@ You can [register your ocid prefix here](../guidance/build).
 ```{admonition} Worked Example
 :class: hint
 
-In [Mexico City](http://www.contratosabiertos.cdmx.gob.mx/), an initial mapping identified that identifiers were assigned to each tender process or direct award, using a pattern based on the initials or name of the department involved, a tender or contract number, and the year.
+In Mexico City, an initial mapping identified that identifiers were assigned to each tender process or direct award, using a pattern based on the initials or name of the department involved, a tender or contract number, and the year.
 
 For example:
 
@@ -128,4 +128,4 @@ The `ocid` is case sensitive. Case needs to be used consistently whenever an `oc
 
 ## Mapping your systems
 
-The Open Contracting Data Standard helpdesk provide [a technical assessment template](http://www.open-contracting.org/resources/ocds-technical-assessment-template/) that can be used to identify the different systems involved in managing data on each stage of the contracting process.
+The Open Contracting Data Standard helpdesk provide [a technical assessment template](https://www.open-contracting.org/resources/ocds-technical-assessment-template/) that can be used to identify the different systems involved in managing data on each stage of the contracting process.

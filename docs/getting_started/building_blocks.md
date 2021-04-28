@@ -123,7 +123,7 @@ We maintain a list of [extensions](../guidance/map/extensions) that provide addi
 ```{admonition} Field level mapping
 :class: hint
 
-The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.  
+The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.
 ```
 
 ## Codelists

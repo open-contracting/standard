@@ -108,6 +108,20 @@ extension_versions = {
 myst_enable_extensions = ['linkify']
 myst_heading_anchors = 6
 
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-the-linkcheck-builder
+# Ignore Google Sheets.
+linkcheck_anchors_ignore = [r'^gid=']
+linkcheck_ignore = [
+    # Avoid GitHub.com rate limiting.
+    r'^https://github.com/open-contracting/standard/(?:issues|pull)/\d+$',
+    # Ignore irreproducible false positives.
+    r'^https://www.fcny.org/fcny/$',
+    r'^http://www.eprocurementtoolkit.org/sites/default/files/2016-11/OCDS_Implemetation_Methodology_0.pdf#page=27$',
+    # Ignore unwanted links created by linkify.
+    r'^http://buyandsell.gc.ca$',
+    r'^http://release.id$',
+]
+
 
 def setup(app):
     # The root of the repository.

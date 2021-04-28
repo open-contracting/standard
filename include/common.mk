@@ -110,6 +110,24 @@ $(TRANSLATIONS:.%=%): %: build_source compile build.% clean_current_lang
 .PHONY: all
 all: build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
 
+### Development
+
+.PHONY: autobuild
+autobuild: current_lang.en
+	sphinx-autobuild -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
+
+### Test
+
+.PHONY: linkcheck_source
+linkcheck_source: current_lang.en
+	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/en
+
+$(TRANSLATIONS:.%=linkcheck.%): linkcheck.%: current_lang.%
+	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
+
+.PHONY: linkcheck
+linkcheck: linkcheck_source compile $(TRANSLATIONS:.%=linkcheck.%) clean_current_lang
+
 ### PDF generation
 
 $(LANGUAGES:.%=pdf.%): pdf.%: FORCE
