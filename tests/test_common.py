@@ -4,11 +4,9 @@ import time
 import warnings
 
 import pytest
-import requests
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import Select
 
-from tests import languages, last_path, test_basic_params, test_search_params
+from tests import languages, test_basic_params, test_search_params
 
 cwd = os.getcwd()
 

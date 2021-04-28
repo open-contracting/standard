@@ -15,5 +15,3 @@ test_search_params = [
     ('es', r'encontró \d+ página\(s\) acorde'),
     ('fr', r'\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
 ]
-
-last_path = '/history_and_development/'

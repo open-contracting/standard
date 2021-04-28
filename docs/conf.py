@@ -120,6 +120,8 @@ linkcheck_ignore = [
     # Ignore unwanted links created by linkify.
     r'^http://buyandsell.gc.ca$',
     r'^http://release.id$',
+    # Ignore expected redirects.
+    r'^https://docs.google.com/spreadsheets/d/[^/]+/pub?gid=\d+&single=true&output=csv$',
 ]
 
 
