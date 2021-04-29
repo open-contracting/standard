@@ -4,6 +4,8 @@
 #
 #    pip-compile common-requirements.in
 #
+-e git+https://github.com/jpmckinney/MyST-Parser.git@heading_slug_func#egg=myst-parser
+    # via -r common-requirements.in
 alabaster==0.7.12
     # via sphinx
 attrs==20.3.0
@@ -69,11 +71,8 @@ markupsafe==1.1.1
     # via jinja2
 mdit-py-plugins==0.2.6
     # via
-    #   -r common-requirements.in
     #   markdown-it-py
     #   myst-parser
-myst-parser==0.13.5
-    # via -r common-requirements.in
 ocds-babel==0.3.1
     # via -r common-requirements.in
 ocdsextensionregistry==0.1.3

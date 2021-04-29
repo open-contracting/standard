@@ -17,6 +17,7 @@ import os
 from glob import glob
 from pathlib import Path
 
+from docutils.nodes import make_id
 from ocds_babel.translate import translate
 
 # -- Project information -----------------------------------------------------
@@ -119,6 +120,7 @@ extension_versions = {
 # https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = ['linkify']
 myst_heading_anchors = 6
+myst_heading_slug_func = make_id
 suppress_warnings = ['myst.anchor']
 
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-the-linkcheck-builder
