@@ -22,6 +22,8 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to.
 
+Additional codes may be used to label releases, based on user needs: for example, to indicate the notice or form to which a release corresponds.
+
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
