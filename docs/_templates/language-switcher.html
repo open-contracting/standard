@@ -1,0 +1,11 @@
+<form class="ocds-switcher" method="get" action="{{ pathto('../switcher') }}">
+    <select class="oc-custom-select" name="lang" onchange="this.form.submit()">
+      {% block language_options %}
+      <option>Language</option>
+      <option value="en">English</option>
+      {% endblock %}
+    </select>  
+    <noscript>
+      <input class="oc-custom-submit" type="submit" value="{% trans %}Go{% endtrans %}" />
+    </noscript>
+</form>

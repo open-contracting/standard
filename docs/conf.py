@@ -17,7 +17,7 @@ import os
 from glob import glob
 from pathlib import Path
 
-import standard_theme
+from docutils.nodes import make_id
 from ocds_babel.translate import translate
 
 # -- Project information -----------------------------------------------------
@@ -56,9 +56,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'standard_theme'
-html_theme_path = [standard_theme.get_html_theme_path()]
+html_theme = 'pydata_sphinx_theme'
 html_favicon = '_static/favicon-16x16.ico'
+html_logo = "_static/png/logo-ocds.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -71,19 +71,32 @@ html_static_path = ['_static']
 repository_url = 'https://github.com/open-contracting/standard'
 smartquotes = False
 
+# TODO: remove these old theme options once the new theme looks correct
+# html_theme_options = {
+#     'display_version': True,
+#     'root_url': '',
+#     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
+#     'copyright': copyright,
+#     'license_name': 'Apache License 2.0',
+#     'license_url': '{}/blob/HEAD/LICENSE'.format(repository_url),
+#     'repository_url': repository_url,
+# }
 html_theme_options = {
-    'analytics_id': 'HTWZHRIZ',
-    'display_version': True,
-    'root_url': '',
-    'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
-    'copyright': copyright,
-    'license_name': 'Apache License 2.0',
-    'license_url': '{}/blob/HEAD/LICENSE'.format(repository_url),
-    'repository_url': repository_url,
+    "navbar_align": "left",
+    "navbar_end": ["version-switcher", "language-switcher", "search-field"],
+    "footer_items": ["custom-footer"],
+}
+
+html_sidebars = {
+    "index": ["developed-by-ocp.html"],
+    "**": [
+        "sidebar-nav-bs.html",
+    ]
 }
 
 # The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
-locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+# TODO: figure out how this should be used if we are using the pydata theme
+locale_dirs = ['locale']  # os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 
 gettext_compact = False
 
@@ -107,6 +120,7 @@ extension_versions = {
 # https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = ['linkify']
 myst_heading_anchors = 6
+myst_heading_slug_func = make_id
 suppress_warnings = ['myst.anchor']
 
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-the-linkcheck-builder
@@ -151,3 +165,8 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(standard_dir / 'codelists' / '*.csv')), standard_build_dir / 'codelists', codelists_domain),
     ], localedir, language, headers, version=branch)
+
+    # Add assets for website
+    app.add_css_file("basic.css")
+    app.add_js_file("renderjson.js")
+    app.add_js_file("script.js.css")

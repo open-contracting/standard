@@ -19,5 +19,7 @@ jobs:
             ${{ runner.os }}-pip-
       - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
       - run: sudo apt-get install shellcheck
+      - run: sudo snap install shfmt
       - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
-      - run: shellcheck script/*
+      - run: shellcheck $(shfmt -f .)
+      - run: shfmt -d -i 4 -sr $(shfmt -f .)

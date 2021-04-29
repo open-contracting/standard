@@ -1,5 +1,3 @@
-{% set css_files = css_files + ["_static/basic.css"] %}
-{% set script_files = script_files + ["_static/renderjson.js", "_static/script.js"] %}
 {% extends "!layout.html" %}
 
 {% block mobile_nav %}
@@ -20,12 +18,6 @@
 </a>
 {% endblock %}
 
-{% block extra_links %}
-<ul class="oc-extra-nav">
-   <li class="toctree-l1"><a class="reference internal" href="/review/">{%trans%}Data Review Tool{% endtrans %}</a></li>
-</ul>
-{% endblock %}
-
 {% block language_options %}
             <option>{%trans%}Language{% endtrans %}</option>
             <optgroup label="{%trans%}Supported translations{% endtrans %}">
@@ -36,8 +28,4 @@
             <optgroup label="{%trans%}Community translations{% endtrans %}">
                 <option value="it">Italiano</option>
             </optgroup>
-{% endblock %}
-
-{% block version_options %}
-<!--#include virtual="/includes/version-options.html" -->
 {% endblock %}
