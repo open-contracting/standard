@@ -4,85 +4,106 @@
 #
 #    pip-compile common-requirements.in
 #
--e git+https://github.com/readthedocs/commonmark.py.git@dafae75015cc342f3fddb499674bab97ac4a6a96#egg=commonmark
-    # via
-    #   -r common-requirements.in
-    #   recommonmark
--e git+https://github.com/jpmckinney/recommonmark.git@hotfix#egg=recommonmark
-    # via -r common-requirements.in
 -e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
     # via -r common-requirements.in
 alabaster==0.7.12
     # via sphinx
-attrs==19.3.0
-    # via pytest
-babel==2.8.0
+attrs==20.3.0
+    # via
+    #   markdown-it-py
+    #   pytest
+babel==2.9.0
     # via
     #   sphinx
     #   sphinx-intl
-certifi==2019.11.28
+certifi==2020.12.5
     # via
     #   elasticsearch
     #   requests
-chardet==3.0.4
+chardet==4.0.0
     # via requests
-click==7.0
+click==7.1.2
     # via
     #   ocdsindex
+    #   pip-tools
     #   sphinx-intl
 docutils==0.16
     # via
-    #   recommonmark
+    #   myst-parser
     #   sphinx
-elasticsearch==7.10.1
+elasticsearch==7.11.0
     # via ocdsindex
-idna==2.8
+gitdb==4.0.5
+    # via gitpython
+gitpython==3.1.14
+    # via transifex-client
+idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==1.4.0
+importlib-metadata==3.7.3
     # via
+    #   pep517
     #   pluggy
     #   pytest
-jinja2==2.10.3
-    # via sphinx
+iniconfig==1.1.1
+    # via pytest
+jinja2==2.11.3
+    # via
+    #   myst-parser
+    #   sphinx
 json-merge-patch==0.2
     # via ocdsextensionregistry
 jsonref==0.2
     # via ocdsextensionregistry
 lxml==4.6.2
     # via ocdsindex
+markdown-it-py==0.6.2
+    # via
+    #   mdit-py-plugins
+    #   myst-parser
 markupsafe==1.1.1
     # via jinja2
-more-itertools==8.1.0
-    # via pytest
-ocds-babel==0.2.1
+mdit-py-plugins==0.2.6
+    # via
+    #   -r common-requirements.in
+    #   markdown-it-py
+    #   myst-parser
+myst-parser==0.13.5
     # via -r common-requirements.in
-ocdsextensionregistry==0.0.23
+ocds-babel==0.3.1
+    # via -r common-requirements.in
+ocdsextensionregistry==0.1.3
     # via -r common-requirements.in
 ocdsindex==0.0.4
     # via -r common-requirements.in
-packaging==20.0
+packaging==20.9
     # via
     #   pytest
     #   sphinx
+pep517==0.10.0
+    # via pip-tools
+pip-tools==6.0.1
+    # via -r common-requirements.in
 pluggy==0.13.1
     # via pytest
-py==1.8.1
+py==1.10.0
     # via pytest
-pygments==2.5.2
+pygments==2.8.1
     # via sphinx
-pyparsing==2.4.6
+pyparsing==2.4.7
     # via packaging
-pytest==5.3.3
+pytest==6.2.2
     # via -r common-requirements.in
-python-slugify==1.2.6
+python-slugify==4.0.1
     # via transifex-client
-pytz==2019.3
+pytz==2021.1
     # via babel
+pyyaml==5.4.1
+    # via myst-parser
 requests-cache==0.5.2
     # via ocdsextensionregistry
-requests==2.22.0
+requests==2.25.1
     # via
     #   ocdsextensionregistry
     #   requests-cache
@@ -90,46 +111,52 @@ requests==2.22.0
     #   transifex-client
 selenium==3.141.0
     # via -r common-requirements.in
-six==1.14.0
-    # via
-    #   packaging
-    #   sphinx-intl
-    #   transifex-client
-snowballstemmer==2.0.0
+six==1.15.0
+    # via transifex-client
+smmap==3.0.5
+    # via gitdb
+snowballstemmer==2.1.0
     # via sphinx
-sphinx-intl==0.9.12
+sphinx-intl==2.0.1
     # via -r common-requirements.in
-sphinx==2.4.4
+sphinx==3.5.2
     # via
     #   -r common-requirements.in
-    #   recommonmark
+    #   myst-parser
     #   sphinx-intl
-sphinxcontrib-applehelp==1.0.1
+sphinxcontrib-applehelp==1.0.2
     # via sphinx
-sphinxcontrib-devhelp==1.0.1
+sphinxcontrib-devhelp==1.0.2
     # via sphinx
-sphinxcontrib-htmlhelp==1.0.2
+sphinxcontrib-htmlhelp==1.0.3
     # via sphinx
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
-sphinxcontrib-qthelp==1.0.2
+sphinxcontrib-qthelp==1.0.3
     # via sphinx
-sphinxcontrib-serializinghtml==1.1.3
+sphinxcontrib-serializinghtml==1.1.4
     # via sphinx
-transifex-client==0.13.7
-    # via -r common-requirements.in
-unidecode==1.1.1
+text-unidecode==1.3
     # via python-slugify
-urllib3==1.25.7
+toml==0.10.2
+    # via
+    #   pep517
+    #   pytest
+transifex-client==0.14.2
+    # via -r common-requirements.in
+typing-extensions==3.7.4.3
+    # via importlib-metadata
+urllib3==1.26.4
     # via
     #   elasticsearch
     #   requests
     #   selenium
     #   transifex-client
-wcwidth==0.1.8
-    # via pytest
-zipp==1.0.0
-    # via importlib-metadata
+zipp==3.4.1
+    # via
+    #   importlib-metadata
+    #   pep517
 
 # The following packages are considered to be unsafe in a requirements file:
+# pip
 # setuptools
