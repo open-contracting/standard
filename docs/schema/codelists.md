@@ -23,7 +23,9 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 ### Release Tag
 
-A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to. Additional codes can be used based on the publisher's use cases, such as the mapping of notice or event types.
+A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to.
+
+Additional codes may be used to label releases, based on user needs: for example, to indicate the notice or form to which a release corresponds.
 
 ```eval_rst
 .. codelisttable::
