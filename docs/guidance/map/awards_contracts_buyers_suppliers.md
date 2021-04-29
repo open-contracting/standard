@@ -10,7 +10,7 @@ In order to understand the modelling examples, it’s important to first clarify
 
 ### Award
 
-The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement) was developed through extensive consultations with governments and interested international organizations and therefore reflects the procurement practices and concepts used in many different jurisdictions. The  [UNCITRAL glossary](http://www.uncitral.org/pdf/english/texts/procurem/ml-procurement-2011/Glossary-e.pdf) defines the "Award of a procurement contract or framework agreement" as:
+The [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement) was developed through extensive consultations with governments and interested international organizations and therefore reflects the procurement practices and concepts used in many different jurisdictions. The  [UNCITRAL glossary](https://uncitral.un.org/sites/uncitral.un.org/files/media-documents/uncitral/en/glossary-e.pdf) defines the "Award of a procurement contract or framework agreement" as:
 
 > *A final stage of the procurement proceedings regulated by the Model Law, resulting in the conclusion and entry into force of a procurement contract or framework agreement between the procuring entity and selected supplier(s) or contractor(s).*
 

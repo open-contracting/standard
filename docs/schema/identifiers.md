@@ -119,11 +119,11 @@ There are two parts to expressing an **organization identifier** in open contrac
 
 The **organization register prefix** for UK Companies House is GB-COH. The organization **Development Initiatives** has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can then expressed as follows:
 
-```{code-block} json
+```json
 {
   "scheme": "GB-COH",
   "id": "06368740",
-  "uri": "http://opencorporates.com/companies/gb/06368740",
+  "uri": "https://opencorporates.com/companies/gb/06368740",
   "legalName": "Development Initiatives Poverty Research Limited"
 }
 ```

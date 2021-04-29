@@ -30,6 +30,7 @@ jobs:
           fi
           make
           python util/add_translation_notes.py
+      - run: make linkcheck
       - run: pytest
       # Deploy the built documentation to the staging directory.
       - if: github.event_name == 'push'

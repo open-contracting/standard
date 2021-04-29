@@ -48,7 +48,7 @@ If compressing packages, publishers ought to use the ZIP file format.
 
 ### Serving files
 
-The web server providing access to bulk files ought to correctly report the [HTTP Last-Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) header so that consuming applications only need to download updated files.
+The web server providing access to bulk files ought to correctly report the [HTTP Last-Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) header so that consuming applications only need to download updated files.
 
 ## Individual releases and records
 
