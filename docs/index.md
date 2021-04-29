@@ -37,9 +37,9 @@ This is the English (and canonical) version of the OCDS documentation. You can s
 
 ## About
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). 
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](https://www.open-contracting.org) (OCP).
 
-Version 1.0 of the standard was developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.com) and the [World Bank](http://www.worldbank.org).
+Version 1.0 of the standard was developed for the OCP by the [World Wide Web Foundation](https://webfoundation.org), through a project supported by the [Omidyar Network](https://omidyar.com) and the [World Bank](https://www.worldbank.org/en/home).
 
 ## Support
 
@@ -52,7 +52,7 @@ getting_started/index
 guidance/index
 schema/index
 support/index
-history/index
 governance/index
+history/index
 Data Review Tool <https://standard.open-contracting.org/review/>
 ```

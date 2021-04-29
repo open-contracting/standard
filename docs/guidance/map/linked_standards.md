@@ -6,7 +6,7 @@ OCDS data often refers to other datasets, like company registers, government bud
 
 The [Open Contracting for Infrastructure Data Standards](https://standard.open-contracting.org/infrastructure/latest/en/) (OC4IDS) describe what information to disclose and how to disclose it, at each stage of an infrastructure project. It connects previously siloed information to better publish and track infrastructure investment and delivery, providing data at the project level, at the contracting summary level, and at contract process detail level.
 
-A joint effort by the [Infrastructure Transparency Initiative](http://infrastructuretransparency.org) (CoST) and the Open Contracting Partnership, it builds on best practice in open data and openness of public infrastructure procurement globally.
+A joint effort by the [Infrastructure Transparency Initiative](https://infrastructuretransparency.org) (CoST) and the Open Contracting Partnership, it builds on best practice in open data and openness of public infrastructure procurement globally.
 
 The [Project](https://extensions.open-contracting.org/en/extensions/project/master/) extension describes how to connect OCDS and OC4IDS datasets.
 
