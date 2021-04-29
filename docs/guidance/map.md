@@ -112,8 +112,6 @@ Some data elements might not match any field or code in OCDS. To cover such case
 
 **Resource:** [What to do when fields don't map?](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/)
 
-**Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)
-
 **Action:** [Contact the OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
