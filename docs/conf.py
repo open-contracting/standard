@@ -107,6 +107,7 @@ extension_versions = {
 # https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = ['linkify']
 myst_heading_anchors = 6
+suppress_warnings = ['myst.anchor']
 
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-the-linkcheck-builder
 # Ignore Google Sheets.
