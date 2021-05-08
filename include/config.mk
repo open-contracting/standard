@@ -1,7 +1,7 @@
 # Edit these variables as appropriate.
 
 # The space-separated, period-prefixed translations to build (for easier substitutions).
-TRANSLATIONS=.es .fr .it
+TRANSLATIONS=.es .fr
 # The source language and translations to build.
 LANGUAGES=.en $(TRANSLATIONS)
 
