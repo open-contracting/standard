@@ -32,7 +32,7 @@ If you are interested to learn more about Open Contracting advocacy and how it c
 ```{note}
 This is the 1.1 release of OCDS, published on 31st May 2017. Version 1.0 documentation is still available from the version switcher at the bottom left of the page.
 
-This is the English (and canonical) version of the OCDS documentation. You can switch to the Spanish, French, or Italian translations using the language switcher at the bottom left of the page.
+This is the English (and canonical) version of the OCDS documentation. You can switch language at the bottom left of the page.
 ```
 
 ## About

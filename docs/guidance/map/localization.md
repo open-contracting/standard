@@ -74,7 +74,7 @@ Refer to the [extensions documentation](extensions) for more information on usin
 
 ## Translating the standard
 
-French and Spanish translations of the schema and documentation are maintained by OCP and a community translation to Italian is also available. Other community translations exist to various levels of completion.
+The OCDS standard development team maintains *supported* translations according to the [translation and localization policy](../../governance/index.md#translation-and-localization-policy). Volunteers contribute *community* translations.
 
 If the standard is not yet available in your language, you can propose a new translation of the schema and documentation, or collaborate on an existing community translation.
 
