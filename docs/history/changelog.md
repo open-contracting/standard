@@ -45,6 +45,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'economicSelectionCriteria'
     * 'technicalSelectionCriteria'
+  * [#1280](https://github.com/open-contracting/standard/pull/1280) Align the description of 'tenderNotice' and 'technicalSpecifications' with GPA.
 * `partyRole.csv`:
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'buyer'
@@ -70,7 +71,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1243](https://github.com/open-contracting/standard/pull/1243) Add the 'procurement' and 'contractClose' codes from the PPP extension to the `milestoneType` codelist.
 
 ### Schema
-
+* [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award.
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `tender.submissionMethod` field, because all codes from the `submissionMethod` codelist are deprecated.
@@ -97,6 +98,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1241](https://github.com/open-contracting/standard/pull/1241) Align descriptions of `Record` `releases`, linked releases and embedded releases.
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
+* [#1257](https://github.com/open-contracting/standard/pull/1257) Remove default value of `"en"` for `language` field.
 
 ### Documentation
 

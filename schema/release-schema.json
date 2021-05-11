@@ -95,8 +95,7 @@
       "type": [
         "string",
         "null"
-      ],
-      "default": "en"
+      ]
     },
     "relatedProcesses": {
       "uniqueItems": true,
@@ -136,7 +135,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "A list of documents related to the planning process.",
+          "description": "Documents related to the planning stage (for example, notices, needs assessments and market studies).",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -414,7 +413,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "All documents and attachments related to the tender, including any notices. See the [documentType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#document-type) codelist for details of potential documents to include. Common documents include official legal notices of tender, technical specifications, evaluation criteria, and, as a tender process progresses, clarifications and replies to queries.",
+          "description": "Documents related to the tender stage (for example, notices, technical specifications, evaluation criteria, questions and clarifications).",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -589,7 +588,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "All documents and attachments related to the award, including any notices.",
+          "description": "Documents related to the award (for example, notices, bids, evaluation reports).",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -730,7 +729,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "All documents and attachments related to the contract, including any notices.",
+          "description": "Documents related to the contract (for example, notices, signed contracts).",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -817,7 +816,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "Documents and reports that are part of the implementation phase e.g. audit and evaluation reports.",
+          "description": "Documents related to the implementation of the contract (for example, completion certificates, audits).",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
