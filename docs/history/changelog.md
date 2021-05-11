@@ -55,11 +55,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'leadBank'
     * 'lender'
     * 'equityInvestor'
-    * 'consortiaMember'
-    * 'grantor'
-    * 'socialWitness'
-    * 'otherWitness'
-    * 'notary'
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'informationService'
     * 'mediationBody'
