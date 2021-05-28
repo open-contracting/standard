@@ -5,27 +5,34 @@
 
    .. markdown::
 
-Open Contracting Data Standard (OCDS) data is published and updated over time as two JSON document formats: “releases” and “records”.  This page exists to:
+Open Contracting Data Standard (OCDS) data is published and updated over time using two JSON document types: “releases” and “records”.  This page will:
 
 *   Outline the purpose of releases and records
-*   Describe how to publish a change history using releases and records 
+*   Describe how to publish a change history using releases and records
 *   Show the components of an OCDS record
 ```
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OeDCLMWlY_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 The only thing that can be truly called “OCDS data” is a JSON document that validates against the OCDS schema. The JSON documents that OCDS uses are called “releases” and “records.”
 
-Within a contracting process, there are usually 5 stages associated with major events that mark the progress from one stage to another, like an award notice. Smaller events take place within a stage, like a deadline extension for bidding. In OCDS, all updates are published as immutable **releases**. Releases are JSON documents that are published each time there is an update in the process following the [release schema](https://standard.open-contracting.org/latest/en/schema/reference/). 
+OCDS publishers are encouraged to use releases and records to publish data in near real-time and to provide a change history. Tracking change over time is important to users of contracting data because there can be many changes in the life of a contracting process. Knowing how and when certain attributes have changed can help users to understand the process, identify inefficiencies, and spot red flags for corruption.
 
-Each change is published as a new immutable release, rather than by updating an existing one. The collection of releases for a contracting process composes its change history. Each release contains an ocid to identify the contracting process it relates to. An ocid is composed of a prefix registered by the publisher, and a unique process identifier chosen by the publisher.
+**Releases** are JSON documents that are published each time there is a change to a contracting process. Releases follow the OCDS [release schema](https://standard.open-contracting.org/latest/en/schema/reference/) and contain an OCID to identify the contracting process they relate to.
 
-Tracking changes over time is important to users of contracting data because there can be many changes in the life of a contracting process. Understanding how and when certain attributes changed can help users to understand the process, identify inefficiencies, and spot red flags for corruption.
+Releases are immutable, which means they cannot be changed once published. There can be many releases per contracting process and the collection of releases for a contracting process constitutes its change history.
 
-**Records** are JSON documents that act as an index of all releases for a single contracting process, following the [record schema](https://standard.open-contracting.org/latest/en/schema/records_reference/). While releases are never updated, records are updated each time there is a change, and there should be only one for each contracting process. A record is updated by adding a new release to this index.
+**Records** are JSON documents that act as an index of all releases for a single contracting process. While releases are never updated, records are updated each time there is a change to a contracting process by adding a new release to this index. Records follow the OCDS [record schema](https://standard.open-contracting.org/latest/en/schema/records_reference/) and, in addition to the release index, can also contain:
 
-Records and releases each contain several fields which can be used in different sections. OCDS’ schema sets out the fields that ought to be included in each section (where applicable), aiming to reuse simple structures to represent information. For example, a release may contain information about items being procured. OCDS’ schema sets out standard building blocks for items across releases, including the name of the item, a description, each item’s value, and the currency used.
+*   A **compiled release,** which follows the same structure as a release and provides the latest value of each field. The compiled release makes it easy for users to get the latest version of the data about a contracting process.
+*   A **versioned release,** which contains a history of changes for each field and allows users to see how a particular field has changed over time.
 
-Some schema fields refer to [codelists](https://standard.open-contracting.org/latest/en/schema/codelists/), to limit and standardize the possible values of the fields, in order to promote data interoperability.
+Each time a new release is published it is added to the index, the compiled release is updated with the latest values, and the versioned release is updated with any new changes.
 
-When you publish data, you are encouraged to:
+![Contracting Process with releases](../_static/png/changehistory_process2.png)
+
+Records and releases each contain several fields which can be used in different sections. The OCDS schema sets out the fields that ought to be included in each section (where applicable), aiming to reuse simple structures to represent information. For example, a release may contain information about items being procured. OCDS’ schema sets out standard building blocks for items across releases, including the name of the item, a description, each item’s value, and the currency used.
+
+When you publish OCDS releases and records, you are encouraged to:
 
 *   Ensure all documents referenced in OCDS releases are available online;
 *   Publish each release and record at its own persistent URL;
@@ -37,11 +44,10 @@ When you publish data, you are encouraged to:
 
    .. markdown::
 
-To learn more, go to the next page in the primer: How can I implement OCDS? You can also review the further resources below to go deeper into the subjects introduced on this page.
+**To learn more,** go to the next page in the primer: [How can I implement the OCDS?](how_can_i_implement_OCDS) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
+[OCP Learning: Publishing OCDS Data](https://www.open-contracting.org/learn/publish/)
+[Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
 [OCDS Schema Release Reference](https://standard.open-contracting.org/latest/en/schema/reference/)
 [OCDS Schema Record Reference](https://standard.open-contracting.org/latest/en/schema/records_reference/)
-[Using Open Contracting Data](https://www.open-contracting.org/data/data-use/#tools)
 ```
-
-[Button: previous page]					   		     [Button: next page]
