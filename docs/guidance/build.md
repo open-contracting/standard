@@ -61,7 +61,7 @@ OCDS data can be published in different formats and accessed using different met
 
 It is best practice to provide data in multiple formats, so that as many users as possible can use the data without first having to transform it to their preferred format. In OCDS terms, this means [publishing both structured JSON data and tabular CSV or spreadsheet data](build/serialization).
 
-Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means [providing both bulk downloads and an API](build/hosting). The [OCDS pagination extension](https://github.com/open-contracting-extensions/ocds_pagination_extension) describes how to paginate OCDS data via an API.
+Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means [providing both bulk downloads and an API](build/hosting). The [OCDS pagination extension](https://extensions.open-contracting.org/en/extensions/pagination/master/) describes how to paginate OCDS data via an API.
 
 **Remember to check that your chosen publication formats and access methods meet the needs you identified at the design stage.**
 
