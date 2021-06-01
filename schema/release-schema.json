@@ -30,12 +30,14 @@
       "description": "One or more values from the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. A tag labels the release: for example, as corresponding to a particular stage of the contracting process. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release.",
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       },
       "codelist": "releaseTag.csv",
       "openCodelist": true,
       "minItems": 1,
-      "omitWhenMerged": true
+      "omitWhenMerged": true,
+      "uniqueItems": true
     },
     "initiationType": {
       "title": "Initiation type",
@@ -54,7 +56,8 @@
       "items": {
         "$ref": "#/definitions/Organization"
       },
-      "uniqueItems": true
+      "uniqueItems": true,
+      "minItems": 1
     },
     "buyer": {
       "title": "Buyer",
@@ -78,7 +81,8 @@
       "items": {
         "$ref": "#/definitions/Award"
       },
-      "uniqueItems": true
+      "uniqueItems": true,
+      "minItems": 1
     },
     "contracts": {
       "title": "Contracts",
@@ -87,7 +91,8 @@
       "items": {
         "$ref": "#/definitions/Contract"
       },
-      "uniqueItems": true
+      "uniqueItems": true,
+      "minItems": 1
     },
     "language": {
       "title": "Release language",
@@ -95,7 +100,8 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "minLength": 1
     },
     "relatedProcesses": {
       "uniqueItems": true,
@@ -104,7 +110,8 @@
       },
       "description": "The details of related contracting processes: for example, if this process follows on from one or more other contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
       "title": "Related processes",
-      "type": "array"
+      "type": "array",
+      "minItems": 1
     }
   },
   "required": [
@@ -126,7 +133,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "budget": {
           "title": "Budget",
@@ -139,7 +147,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "milestones": {
           "title": "Planning milestones",
@@ -147,7 +157,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "patternProperties": {
@@ -155,9 +167,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Tender": {
       "title": "Tender",
@@ -183,7 +197,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "description": {
           "title": "Tender description",
@@ -191,7 +206,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "status": {
           "title": "Tender status",
@@ -219,7 +235,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "procuringEntity": {
           "title": "Procuring entity",
@@ -233,7 +250,8 @@
           "items": {
             "$ref": "#/definitions/Item"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "value": {
           "title": "Value",
@@ -268,7 +286,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "procurementMethodRationale": {
           "title": "Procurement method rationale",
@@ -276,7 +295,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "mainProcurementCategory": {
           "title": "Main procurement category",
@@ -302,10 +322,13 @@
             "null"
           ],
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "codelist": "extendedProcurementCategory.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
         },
         "awardCriteria": {
           "title": "Award criteria",
@@ -315,7 +338,8 @@
             "null"
           ],
           "codelist": "awardCriteria.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minLength": 1
         },
         "awardCriteriaDetails": {
           "title": "Award criteria details",
@@ -323,7 +347,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "submissionMethod": {
           "title": "Submission method",
@@ -333,14 +358,17 @@
             "null"
           ],
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "codelist": "submissionMethod.csv",
           "openCodelist": true,
           "deprecated": {
             "description": "This field is deprecated, because all codes from the submissionMethod codelist are deprecated. Refer to the Deprecation note of individual codes.",
             "deprecatedVersion": "1.2"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
@@ -348,7 +376,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "tenderPeriod": {
           "title": "Tender period",
@@ -374,7 +403,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "selectionCriteria": {
           "title": "Selection criteria",
@@ -382,7 +412,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
@@ -409,7 +440,8 @@
           "items": {
             "$ref": "#/definitions/OrganizationReference"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "documents": {
           "title": "Documents",
@@ -417,7 +449,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "milestones": {
           "title": "Milestones",
@@ -425,7 +459,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "amendments": {
           "description": "A tender amendment is a formal change to the tender, and generally involves the publication of a new tender notice/release. The rationale and a description of the changes made can be provided here.",
@@ -433,7 +469,9 @@
           "title": "Amendments",
           "items": {
             "$ref": "#/definitions/Amendment"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "amendment": {
           "title": "Amendment",
@@ -450,45 +488,53 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(procurementMethodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(awardCriteriaDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(submissionMethodDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(selectionCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Award": {
       "title": "Award",
@@ -513,7 +559,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "description": {
           "title": "Description",
@@ -521,7 +568,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "status": {
           "title": "Award status",
@@ -546,7 +594,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "date": {
           "title": "Award date",
@@ -569,7 +618,8 @@
           "items": {
             "$ref": "#/definitions/OrganizationReference"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "items": {
           "title": "Items awarded",
@@ -593,7 +643,8 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "amendments": {
           "description": "An award amendment is a formal change to the details of the award, and generally involves the publication of a new award notice/release. The rationale and a description of the changes made can be provided here.",
@@ -601,7 +652,9 @@
           "title": "Amendments",
           "items": {
             "$ref": "#/definitions/Amendment"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "amendment": {
           "title": "Amendment",
@@ -618,15 +671,18 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Contract": {
       "type": "object",
@@ -661,7 +717,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "description": {
           "title": "Contract description",
@@ -669,7 +726,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "status": {
           "title": "Contract status",
@@ -696,7 +754,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "period": {
           "title": "Period",
@@ -734,7 +793,8 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "implementation": {
           "title": "Implementation",
@@ -748,7 +808,8 @@
           },
           "description": "The details of related contracting processes: for example, if this process is followed by one or more other contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
-          "type": "array"
+          "type": "array",
+          "minItems": 1
         },
         "milestones": {
           "title": "Contract milestones",
@@ -756,7 +817,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "amendments": {
           "description": "A contract amendment is a formal change to, or extension of, a contract, and generally involves the publication of a new contract notice/release, or some other documents detailing the change. The rationale and a description of the changes made can be provided here.",
@@ -764,7 +827,9 @@
           "title": "Amendments",
           "items": {
             "$ref": "#/definitions/Amendment"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "amendment": {
           "title": "Amendment",
@@ -781,15 +846,18 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Implementation": {
       "type": "object",
@@ -803,7 +871,8 @@
           "items": {
             "$ref": "#/definitions/Transaction"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "milestones": {
           "title": "Milestones",
@@ -812,7 +881,8 @@
           "items": {
             "$ref": "#/definitions/Milestone"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "documents": {
           "title": "Documents",
@@ -821,9 +891,11 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Milestone": {
       "title": "Milestone",
@@ -848,7 +920,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "type": {
           "title": "Milestone type",
@@ -858,7 +931,8 @@
             "null"
           ],
           "codelist": "milestoneType.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minLength": 1
         },
         "description": {
           "title": "Description",
@@ -866,7 +940,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "code": {
           "title": "Milestone code",
@@ -874,7 +949,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "dueDate": {
           "title": "Due date",
@@ -931,7 +1007,8 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
       "patternProperties": {
@@ -939,15 +1016,18 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Document": {
       "type": "object",
@@ -974,7 +1054,8 @@
             "null"
           ],
           "codelist": "documentType.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minLength": 1
         },
         "title": {
           "title": "Title",
@@ -982,7 +1063,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "description": {
           "title": "Description",
@@ -990,7 +1072,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "url": {
           "title": "URL",
@@ -1025,7 +1108,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "language": {
           "title": "Language",
@@ -1033,7 +1117,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
       },
       "patternProperties": {
@@ -1041,15 +1126,18 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Budget": {
       "type": "object",
@@ -1063,7 +1151,8 @@
             "string",
             "integer",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "description": {
           "title": "Budget Source",
@@ -1071,7 +1160,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "amount": {
           "title": "Amount",
@@ -1084,7 +1174,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "projectID": {
           "title": "Project identifier",
@@ -1093,7 +1184,8 @@
             "string",
             "integer",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "uri": {
           "title": "Linked budget information",
@@ -1123,21 +1215,25 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "^(project_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Transaction": {
       "type": "object",
@@ -1225,7 +1321,8 @@
             "deprecatedVersion": "1.1"
           }
         }
-      }
+      },
+      "minProperties": 1
     },
     "OrganizationReference": {
       "properties": {
@@ -1244,7 +1341,8 @@
             "integer"
           ],
           "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-          "title": "Organization ID"
+          "title": "Organization ID",
+          "minLength": 1
         },
         "identifier": {
           "title": "Primary identifier",
@@ -1276,7 +1374,8 @@
           "title": "Additional identifiers",
           "uniqueItems": true,
           "wholeListMerge": true,
-          "description": "(Deprecated outside the parties section) A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
+          "description": "(Deprecated outside the parties section) A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
+          "minItems": 1
         },
         "contactPoint": {
           "deprecated": {
@@ -1290,7 +1389,8 @@
       },
       "type": "object",
       "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-      "title": "Organization reference"
+      "title": "Organization reference",
+      "minProperties": 1
     },
     "Organization": {
       "title": "Organization",
@@ -1303,12 +1403,14 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "id": {
           "type": "string",
           "description": "The ID used for cross-referencing to this party from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available.",
-          "title": "Entity ID"
+          "title": "Entity ID",
+          "minLength": 1
         },
         "identifier": {
           "title": "Primary identifier",
@@ -1323,7 +1425,8 @@
             "$ref": "#/definitions/Identifier"
           },
           "uniqueItems": true,
-          "wholeListMerge": true
+          "wholeListMerge": true,
+          "minItems": 1
         },
         "address": {
           "title": "Address",
@@ -1343,10 +1446,13 @@
             "null"
           ],
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "codelist": "partyRole.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
         },
         "details": {
           "type": [
@@ -1354,7 +1460,8 @@
             "null"
           ],
           "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular fields and classification schemes.",
-          "title": "Details"
+          "title": "Details",
+          "minProperties": 1
         }
       },
       "patternProperties": {
@@ -1362,9 +1469,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Item": {
       "title": "Item",
@@ -1389,7 +1498,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "classification": {
           "title": "Classification",
@@ -1404,7 +1514,8 @@
             "$ref": "#/definitions/Classification"
           },
           "uniqueItems": true,
-          "wholeListMerge": true
+          "wholeListMerge": true,
+          "minItems": 1
         },
         "quantity": {
           "title": "Quantity",
@@ -1425,9 +1536,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Amendment": {
       "title": "Amendment",
@@ -1449,7 +1562,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "id": {
           "description": "An identifier for this amendment: often the amendment number",
@@ -1457,7 +1571,8 @@
             "string",
             "null"
           ],
-          "title": "ID"
+          "title": "ID",
+          "minLength": 1
         },
         "description": {
           "description": "A free text, or semi-structured, description of the changes made in this amendment.",
@@ -1465,7 +1580,8 @@
             "string",
             "null"
           ],
-          "title": "Description"
+          "title": "Description",
+          "minLength": 1
         },
         "amendsReleaseID": {
           "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
@@ -1473,7 +1589,8 @@
             "string",
             "null"
           ],
-          "title": "Amended release (identifier)"
+          "title": "Amended release (identifier)",
+          "minLength": 1
         },
         "releaseID": {
           "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
@@ -1481,7 +1598,8 @@
             "string",
             "null"
           ],
-          "title": "Amending release (identifier)"
+          "title": "Amending release (identifier)",
+          "minLength": 1
         },
         "changes": {
           "title": "Amended fields",
@@ -1493,7 +1611,8 @@
               "property": {
                 "title": "Property",
                 "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in 1.1)",
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               },
               "former_value": {
                 "title": "Former Value",
@@ -1505,14 +1624,21 @@
                   "array",
                   "object",
                   "null"
-                ]
+                ],
+                "minLength": 1,
+                "minItems": 1,
+                "uniqueItems": true,
+                "minProperties": 1
               }
-            }
+            },
+            "minProperties": 1
           },
           "deprecated": {
             "description": "A free-text or semi-structured string describing the changes made in each amendment can be provided in the amendment.description field. To provide structured information on the fields that have changed, publishers should provide releases indicating the state of the contracting process before and after the amendment.",
             "deprecatedVersion": "1.1"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "patternProperties": {
@@ -1520,9 +1646,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Classification": {
       "title": "Classification",
@@ -1537,7 +1665,8 @@
             "null"
           ],
           "codelist": "itemClassificationScheme.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minLength": 1
         },
         "id": {
           "title": "ID",
@@ -1547,7 +1676,8 @@
             "integer",
             "null"
           ],
-          "versionId": true
+          "versionId": true,
+          "minLength": 1
         },
         "description": {
           "title": "Description",
@@ -1555,7 +1685,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "uri": {
           "title": "URI",
@@ -1572,9 +1703,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Identifier": {
       "title": "Identifier",
@@ -1587,7 +1720,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "id": {
           "title": "ID",
@@ -1597,7 +1731,8 @@
             "integer",
             "null"
           ],
-          "versionId": true
+          "versionId": true,
+          "minLength": 1
         },
         "legalName": {
           "title": "Legal Name",
@@ -1605,7 +1740,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "uri": {
           "title": "URI",
@@ -1622,9 +1758,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Address": {
       "title": "Address",
@@ -1637,7 +1775,8 @@
             "string",
             "null"
           ],
-          "description": "The street address. For example, 1600 Amphitheatre Pkwy."
+          "description": "The street address. For example, 1600 Amphitheatre Pkwy.",
+          "minLength": 1
         },
         "locality": {
           "title": "Locality",
@@ -1645,7 +1784,8 @@
             "string",
             "null"
           ],
-          "description": "The locality. For example, Mountain View."
+          "description": "The locality. For example, Mountain View.",
+          "minLength": 1
         },
         "region": {
           "title": "Region",
@@ -1653,7 +1793,8 @@
             "string",
             "null"
           ],
-          "description": "The region. For example, CA."
+          "description": "The region. For example, CA.",
+          "minLength": 1
         },
         "postalCode": {
           "title": "Postal code",
@@ -1661,7 +1802,8 @@
             "string",
             "null"
           ],
-          "description": "The postal code. For example, 94043."
+          "description": "The postal code. For example, 94043.",
+          "minLength": 1
         },
         "countryName": {
           "title": "Country name",
@@ -1669,7 +1811,8 @@
             "string",
             "null"
           ],
-          "description": "The country name. For example, United States."
+          "description": "The country name. For example, United States.",
+          "minLength": 1
         }
       },
       "patternProperties": {
@@ -1677,9 +1820,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "ContactPoint": {
       "title": "Contact point",
@@ -1692,7 +1837,8 @@
             "string",
             "null"
           ],
-          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process.",
+          "minLength": 1
         },
         "email": {
           "title": "Email",
@@ -1700,7 +1846,8 @@
             "string",
             "null"
           ],
-          "description": "The e-mail address of the contact point/person."
+          "description": "The e-mail address of the contact point/person.",
+          "minLength": 1
         },
         "telephone": {
           "title": "Telephone",
@@ -1708,7 +1855,8 @@
             "string",
             "null"
           ],
-          "description": "The telephone number of the contact point/person. This should include the international dialing code."
+          "description": "The telephone number of the contact point/person. This should include the international dialing code.",
+          "minLength": 1
         },
         "faxNumber": {
           "title": "Fax number",
@@ -1716,7 +1864,8 @@
             "string",
             "null"
           ],
-          "description": "The fax number of the contact point/person. This should include the international dialing code."
+          "description": "The fax number of the contact point/person. This should include the international dialing code.",
+          "minLength": 1
         },
         "url": {
           "title": "URL",
@@ -1733,9 +1882,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Value": {
       "title": "Value",
@@ -2065,7 +2216,8 @@
             null
           ]
         }
-      }
+      },
+      "minProperties": 1
     },
     "Period": {
       "title": "Period",
@@ -2107,7 +2259,8 @@
             "null"
           ]
         }
-      }
+      },
+      "minProperties": 1
     },
     "SimpleUnit": {
       "title": "Simple Unit",
@@ -2122,7 +2275,8 @@
             "null"
           ],
           "codelist": "unitClassificationScheme.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minLength": 1
         },
         "id": {
           "title": "ID",
@@ -2131,9 +2285,11 @@
             "string",
             "null"
           ],
-          "versionId": true
+          "versionId": true,
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "RelatedProcess": {
       "description": "A reference to a related contracting process: generally one preceding or following on from the current contracting process.",
@@ -2143,11 +2299,13 @@
         "id": {
           "title": "Relationship ID",
           "description": "A local identifier for this relationship, unique within this array.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "relationship": {
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "description": "The type of relationship, using the open [relatedProcess](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process) codelist.",
           "title": "Relationship",
@@ -2156,7 +2314,9 @@
             "null"
           ],
           "codelist": "relatedProcess.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
         },
         "title": {
           "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
@@ -2164,7 +2324,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "scheme": {
           "title": "Scheme",
@@ -2174,7 +2335,8 @@
             "null"
           ],
           "codelist": "relatedProcessScheme.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minLength": 1
         },
         "identifier": {
           "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
@@ -2182,7 +2344,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "uri": {
           "format": "uri",
@@ -2193,7 +2356,8 @@
             "null"
           ]
         }
-      }
+      },
+      "minProperties": 1
     },
     "Unit": {
       "title": "Unit",
@@ -2208,7 +2372,8 @@
             "null"
           ],
           "codelist": "unitClassificationScheme.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "minLength": 1
         },
         "id": {
           "title": "ID",
@@ -2217,7 +2382,8 @@
             "string",
             "null"
           ],
-          "versionId": true
+          "versionId": true,
+          "minLength": 1
         },
         "name": {
           "title": "Name",
@@ -2225,7 +2391,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "value": {
           "title": "Value",
@@ -2259,7 +2426,8 @@
                 "null"
               ]
             }
-          }
+          },
+          "minProperties": 1
         }
       },
       "patternProperties": {
@@ -2267,9 +2435,12 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     }
-  }
+  },
+  "minProperties": 1
 }
