@@ -96,11 +96,11 @@
       }
     },
     "relatedProcesses": {
+      "type": "array",
       "uniqueItems": true,
       "items": {
         "$ref": "#/definitions/RelatedProcess"
       },
-      "type": "array",
       "minItems": 1
     },
     "ocid": {
@@ -1244,11 +1244,11 @@
           "$ref": "#/definitions/Implementation"
         },
         "relatedProcesses": {
+          "type": "array",
           "uniqueItems": true,
           "items": {
             "$ref": "#/definitions/RelatedProcess"
           },
-          "type": "array",
           "minItems": 1
         },
         "milestones": {
@@ -1946,6 +1946,7 @@
       "minProperties": 1
     },
     "OrganizationReference": {
+      "type": "object",
       "properties": {
         "name": {
           "type": "array",
@@ -2037,7 +2038,6 @@
           "$ref": "#/definitions/ContactPoint"
         }
       },
-      "type": "object",
       "minProperties": 1
     },
     "Organization": {
@@ -3459,14 +3459,14 @@
                 "type": "string"
               },
               "value": {
-                "items": {
-                  "type": "string",
-                  "minLength": 1
-                },
                 "type": [
                   "array",
                   "null"
                 ],
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
                 "codelist": "relatedProcess.csv",
                 "openCodelist": true,
                 "minItems": 1,
@@ -3844,6 +3844,7 @@
       "minProperties": 1
     },
     "OrganizationReferenceVersionedId": {
+      "type": "object",
       "properties": {
         "name": {
           "type": "array",
@@ -3956,7 +3957,6 @@
           "$ref": "#/definitions/ContactPoint"
         }
       },
-      "type": "object",
       "minProperties": 1
     },
     "ClassificationUnversioned": {
