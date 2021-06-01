@@ -104,13 +104,13 @@
       "minLength": 1
     },
     "relatedProcesses": {
+      "title": "Related processes",
+      "description": "The details of related contracting processes: for example, if this process follows on from one or more other contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
+      "type": "array",
       "uniqueItems": true,
       "items": {
         "$ref": "#/definitions/RelatedProcess"
       },
-      "description": "The details of related contracting processes: for example, if this process follows on from one or more other contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
-      "title": "Related processes",
-      "type": "array",
       "minItems": 1
     }
   },
@@ -421,8 +421,8 @@
           "$ref": "#/definitions/Period"
         },
         "contractPeriod": {
-          "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
           "title": "Contract period",
+          "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
           "$ref": "#/definitions/Period"
         },
         "numberOfTenderers": {
@@ -464,9 +464,9 @@
           "uniqueItems": true
         },
         "amendments": {
+          "title": "Amendments",
           "description": "A tender amendment is a formal change to the tender, and generally involves the publication of a new tender notice/release. The rationale and a description of the changes made can be provided here.",
           "type": "array",
-          "title": "Amendments",
           "items": {
             "$ref": "#/definitions/Amendment"
           },
@@ -647,9 +647,9 @@
           "minItems": 1
         },
         "amendments": {
+          "title": "Amendments",
           "description": "An award amendment is a formal change to the details of the award, and generally involves the publication of a new award notice/release. The rationale and a description of the changes made can be provided here.",
           "type": "array",
-          "title": "Amendments",
           "items": {
             "$ref": "#/definitions/Amendment"
           },
@@ -685,9 +685,9 @@
       "minProperties": 1
     },
     "Contract": {
-      "type": "object",
       "title": "Contract",
       "description": "Information regarding the signed contract between the buyer and supplier(s).",
+      "type": "object",
       "required": [
         "id",
         "awardID"
@@ -802,13 +802,13 @@
           "$ref": "#/definitions/Implementation"
         },
         "relatedProcesses": {
+          "title": "Related processes",
+          "description": "The details of related contracting processes: for example, if this process is followed by one or more other contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
+          "type": "array",
           "uniqueItems": true,
           "items": {
             "$ref": "#/definitions/RelatedProcess"
           },
-          "description": "The details of related contracting processes: for example, if this process is followed by one or more other contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
-          "title": "Related processes",
-          "type": "array",
           "minItems": 1
         },
         "milestones": {
@@ -822,9 +822,9 @@
           "uniqueItems": true
         },
         "amendments": {
+          "title": "Amendments",
           "description": "A contract amendment is a formal change to, or extension of, a contract, and generally involves the publication of a new contract notice/release, or some other documents detailing the change. The rationale and a description of the changes made can be provided here.",
           "type": "array",
-          "title": "Amendments",
           "items": {
             "$ref": "#/definitions/Amendment"
           },
@@ -860,9 +860,9 @@
       "minProperties": 1
     },
     "Implementation": {
-      "type": "object",
       "title": "Implementation",
       "description": "Information regarding the performance / implementation stage of the contract.",
+      "type": "object",
       "properties": {
         "transactions": {
           "title": "Transactions",
@@ -962,13 +962,13 @@
           "format": "date-time"
         },
         "dateMet": {
-          "format": "date-time",
           "title": "Date met",
           "description": "The date on which the milestone was met.",
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "format": "date-time"
         },
         "dateModified": {
           "title": "Date modified",
@@ -1030,9 +1030,9 @@
       "minProperties": 1
     },
     "Document": {
-      "type": "object",
       "title": "Document",
       "description": "Links to, or descriptions of, external documents can be attached at various locations within the standard. Documents can be supporting information, formal notices, downloadable forms, or any other kind of resource that ought to be made public as part of full open contracting.",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1140,9 +1140,9 @@
       "minProperties": 1
     },
     "Budget": {
-      "type": "object",
       "title": "Budget information",
       "description": "This section contains basic information about the budget estimated for, or allocated to, this contracting process at the present time. Further documentation and data about how budgets have been allocated to a contracting process should be published outside of OCDS data, according to the best available standards.",
+      "type": "object",
       "properties": {
         "id": {
           "title": "ID",
@@ -1236,9 +1236,9 @@
       "minProperties": 1
     },
     "Transaction": {
-      "type": "object",
       "title": "Transaction information",
       "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1271,19 +1271,19 @@
           "format": "date-time"
         },
         "value": {
-          "$ref": "#/definitions/Value",
           "title": "Value",
-          "description": "The value of the transaction."
+          "description": "The value of the transaction.",
+          "$ref": "#/definitions/Value"
         },
         "payer": {
-          "$ref": "#/definitions/OrganizationReference",
           "title": "Payer",
-          "description": "An organization reference for the organization from which the funds in this transaction originate."
+          "description": "An organization reference for the organization from which the funds in this transaction originate.",
+          "$ref": "#/definitions/OrganizationReference"
         },
         "payee": {
-          "$ref": "#/definitions/OrganizationReference",
           "title": "Payee",
-          "description": "An organization reference for the organization which receives the funds in this transaction."
+          "description": "An organization reference for the organization which receives the funds in this transaction.",
+          "$ref": "#/definitions/OrganizationReference"
         },
         "uri": {
           "title": "Linked spending information",
@@ -1325,6 +1325,9 @@
       "minProperties": 1
     },
     "OrganizationReference": {
+      "title": "Organization reference",
+      "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
+      "type": "object",
       "properties": {
         "name": {
           "type": [
@@ -1387,9 +1390,6 @@
           "title": "Contact point"
         }
       },
-      "type": "object",
-      "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-      "title": "Organization reference",
       "minProperties": 1
     },
     "Organization": {
@@ -1455,12 +1455,12 @@
           "uniqueItems": true
         },
         "details": {
+          "title": "Details",
+          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular fields and classification schemes.",
           "type": [
             "object",
             "null"
           ],
-          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular fields and classification schemes.",
-          "title": "Details",
           "minProperties": 1
         }
       },
@@ -1477,8 +1477,8 @@
     },
     "Item": {
       "title": "Item",
-      "type": "object",
       "description": "A good, service, or work to be contracted.",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1544,8 +1544,8 @@
     },
     "Amendment": {
       "title": "Amendment",
-      "type": "object",
       "description": "Amendment information",
+      "type": "object",
       "properties": {
         "date": {
           "title": "Amendment date",
@@ -1566,30 +1566,30 @@
           "minLength": 1
         },
         "id": {
+          "title": "ID",
           "description": "An identifier for this amendment: often the amendment number",
           "type": [
             "string",
             "null"
           ],
-          "title": "ID",
           "minLength": 1
         },
         "description": {
+          "title": "Description",
           "description": "A free text, or semi-structured, description of the changes made in this amendment.",
           "type": [
             "string",
             "null"
           ],
-          "title": "Description",
           "minLength": 1
         },
         "amendsReleaseID": {
+          "title": "Amended release (identifier)",
           "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
           "type": [
             "string",
             "null"
           ],
-          "title": "Amended release (identifier)",
           "minLength": 1
         },
         "releaseID": {
@@ -1771,47 +1771,47 @@
       "properties": {
         "streetAddress": {
           "title": "Street address",
+          "description": "The street address. For example, 1600 Amphitheatre Pkwy.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The street address. For example, 1600 Amphitheatre Pkwy.",
           "minLength": 1
         },
         "locality": {
           "title": "Locality",
+          "description": "The locality. For example, Mountain View.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The locality. For example, Mountain View.",
           "minLength": 1
         },
         "region": {
           "title": "Region",
+          "description": "The region. For example, CA.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The region. For example, CA.",
           "minLength": 1
         },
         "postalCode": {
           "title": "Postal code",
+          "description": "The postal code. For example, 94043.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The postal code. For example, 94043.",
           "minLength": 1
         },
         "countryName": {
           "title": "Country name",
+          "description": "The country name. For example, United States.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The country name. For example, United States.",
           "minLength": 1
         }
       },
@@ -1828,52 +1828,52 @@
     },
     "ContactPoint": {
       "title": "Contact point",
-      "type": "object",
       "description": "A person, contact point or department to contact in relation to this contracting process.",
+      "type": "object",
       "properties": {
         "name": {
           "title": "Name",
+          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process.",
           "minLength": 1
         },
         "email": {
           "title": "Email",
+          "description": "The e-mail address of the contact point/person.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The e-mail address of the contact point/person.",
           "minLength": 1
         },
         "telephone": {
           "title": "Telephone",
+          "description": "The telephone number of the contact point/person. This should include the international dialing code.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The telephone number of the contact point/person. This should include the international dialing code.",
           "minLength": 1
         },
         "faxNumber": {
           "title": "Fax number",
+          "description": "The fax number of the contact point/person. This should include the international dialing code.",
           "type": [
             "string",
             "null"
           ],
-          "description": "The fax number of the contact point/person. This should include the international dialing code.",
           "minLength": 1
         },
         "url": {
           "title": "URL",
+          "description": "A web address for the contact point/person.",
           "type": [
             "string",
             "null"
           ],
-          "description": "A web address for the contact point/person.",
           "format": "uri"
         }
       },
@@ -2243,17 +2243,17 @@
           "format": "date-time"
         },
         "maxExtentDate": {
-          "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
-          "format": "date-time",
           "title": "Maximum extent",
+          "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "format": "date-time"
         },
         "durationInDays": {
-          "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, must be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
+          "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, must be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate.",
           "type": [
             "integer",
             "null"
@@ -2292,9 +2292,9 @@
       "minProperties": 1
     },
     "RelatedProcess": {
+      "title": "Related Process",
       "description": "A reference to a related contracting process: generally one preceding or following on from the current contracting process.",
       "type": "object",
-      "title": "Related Process",
       "properties": {
         "id": {
           "title": "Relationship ID",
@@ -2303,24 +2303,24 @@
           "minLength": 1
         },
         "relationship": {
-          "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "description": "The type of relationship, using the open [relatedProcess](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process) codelist.",
           "title": "Relationship",
+          "description": "The type of relationship, using the open [relatedProcess](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#related-process) codelist.",
           "type": [
             "array",
             "null"
           ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
           "codelist": "relatedProcess.csv",
           "openCodelist": true,
           "minItems": 1,
           "uniqueItems": true
         },
         "title": {
-          "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
           "title": "Related process title",
+          "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
           "type": [
             "string",
             "null"
@@ -2339,8 +2339,8 @@
           "minLength": 1
         },
         "identifier": {
-          "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
           "title": "Identifier",
+          "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
           "type": [
             "string",
             "null"
@@ -2348,13 +2348,13 @@
           "minLength": 1
         },
         "uri": {
-          "format": "uri",
-          "description": "A URI pointing to a machine-readable document, release or record package containing the identified related process.",
           "title": "Related process URI",
+          "description": "A URI pointing to a machine-readable document, release or record package containing the identified related process.",
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "format": "uri"
         }
       },
       "minProperties": 1
