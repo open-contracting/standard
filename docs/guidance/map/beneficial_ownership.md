@@ -15,7 +15,7 @@ Publishing the beneficial owners of tenderers and suppliers can help users to:
 *   Identify companies with debarred or sanctioned owners
 *   Assess risk
 
-For more information on the uses of beneficial ownership data in the context of procurement, see [Connecting the dots between beneficial ownership and procurement data](https://medium.com/opendatacoop/connecting-the-dots-between-beneficial-ownership-and-procurement-data-improving-processes-and-2fd0df9d9653). 
+For more information on the uses of beneficial ownership data in the context of procurement, see [Beneficial ownership data in procurement](https://www.openownership.org/uploads/OO%20BO%20Data%20in%20Procurement.pdf). 
 
 OCDS encourages the publication of company names, identifiers, and addresses. But, the OCDS schema doesn’t cover beneficial ownership data.
 
