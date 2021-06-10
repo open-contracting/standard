@@ -36,7 +36,11 @@
     },
     "versionId": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "deprecated": {
+        "description": "This field is deprecated, because it is an incomplete means of getting the correct versioning behavior.",
+        "deprecatedVersion": "1.2"
+      }
     }
   },
   "additionalProperties": false

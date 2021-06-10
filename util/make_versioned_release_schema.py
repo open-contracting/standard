@@ -94,7 +94,6 @@ keywords_to_remove = (
     # http://os4d.opendataservices.coop/development/schema/#extended-json-schema
     'omitWhenMerged',
     'wholeListMerge',
-    'versionId',
 )
 
 
