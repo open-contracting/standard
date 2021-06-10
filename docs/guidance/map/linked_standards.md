@@ -16,4 +16,4 @@ The [Open Fiscal Data Package](http://www.fiscaltransparency.net/ofdp/) (OFDP) d
 
 ## Beneficial Ownership Data Standard
 
-The [Beneficial Ownership Data Standard](http://standard.openownership.org/) (BODS) provides a structured data format, along with guidance for collecting, sharing and using data on beneficial ownership. The [beneficial ownership worked example](beneficial_ownership) describes how to connect OCDS and BODS datasets.
+The [Beneficial Ownership Data Standard](https://standard.openownership.org/en/0.2.0/) (BODS) provides a structured data format for collecting, sharing and using data on beneficial ownership. The [beneficial ownership worked example](beneficial_ownership) describes how to connect OCDS and BODS datasets.
