@@ -62,7 +62,7 @@ map/localization
 
 The [organization identifiers worked example](../guidance/map/organization_identifiers) shows how this works in practice.
 
-Use [org-id.guide](http://org-id.guide/) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index).
+Use [org-id.guide](http://org-id.guide) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index).
 
 ### Working in parallel
 
@@ -122,6 +122,18 @@ Some data elements might not match any field or code in OCDS. To cover such case
 :hidden:
 
 map/extensions
+```
+
+## Linked standards
+
+Not all information that is related to a contracting process belongs in OCDS. For example, a company's annual filings and incorporation status are typically managed in a company registry, outside the lifecycle of a contracting process.
+
+For guidance on integrating your OCDS data with these related datasets, refer to [Linked standards](map/linked_standards).
+
+```{toctree}
+:hidden:
+
+map/linked_standards
 ```
 
 ## Wrapping up

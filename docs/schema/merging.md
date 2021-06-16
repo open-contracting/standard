@@ -186,4 +186,4 @@ In the release schema, `"versionId": true` is declared on `id` fields that must 
 
 ### Reference implementation
 
-A reference implementation of the merge routine [is available in Python on GitHub](https://github.com/open-contracting/ocds-merge). We strongly encourage any re-implementations to [read its commented code and use its test cases](https://github.com/open-contracting/ocds-merge#reference-implementation), to ensure correctness.
+A reference implementation of the merge routine [is available in Python on GitHub](https://github.com/open-contracting/ocds-merge). We strongly encourage any re-implementations to [read its commented code and use its test cases](https://ocds-merge.readthedocs.io/en/latest/#reference-implementation), to ensure correctness.
