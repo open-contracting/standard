@@ -64,7 +64,7 @@ def add_translation_note(path, language, domain):
     with open(path) as f:
         document = lxml.html.fromstring(f.read())
 
-    translator = gettext.translation('notes', localedir, languages=[language])
+    translator = gettext.translation('theme', localedir, languages=[language])
     _ = translator.gettext
 
     pattern = '{}/{{}}/{}/'.format(base_url, domain)

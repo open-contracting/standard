@@ -39,6 +39,3 @@ compile:
 	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)codelists
 
 # Put local targets below.
-.PHONY: extract_notes
-extract_notes: $(POT_DIR)
-	pybabel extract -F babel_ocds_notes.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)notes.pot
