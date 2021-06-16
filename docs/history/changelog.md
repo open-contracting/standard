@@ -47,10 +47,16 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'technicalSelectionCriteria'
   * [#1280](https://github.com/open-contracting/standard/pull/1280) Align the description of 'tenderNotice' and 'technicalSpecifications' with GPA.
 * `partyRole.csv`:
+  * [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of 'supplier'
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'buyer'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
   * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
+  * [#1243](https://github.com/open-contracting/standard/pull/1243) Add the codes from the PPP extension:
+    * 'privateParty'
+    * 'leadBank'
+    * 'lender'
+    * 'equityInvestor'
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'informationService'
     * 'mediationBody'
@@ -63,8 +69,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1218](https://github.com/open-contracting/standard/pull/1218) Add the 'COFOG' code from the organization classifiation extension to the `itemClassificationScheme` codelist.
 * [#1225](https://github.com/open-contracting/standard/pull/1225) Add 'securityClearanceDeadline' code from the EU extension to the `milestoneType` codelist.
 * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
+* [#1243](https://github.com/open-contracting/standard/pull/1243) Add the 'procurement' and 'contractClose' codes from the PPP extension to the `milestoneType` codelist.
 
 ### Schema
+
+* [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of `awards.suppliers`.
 * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award.
