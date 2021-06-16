@@ -74,7 +74,7 @@ Refer to the [extensions documentation](extensions) for more information on usin
 
 ## Translating the standard
 
-French and Spanish translations of the schema and documentation are maintained by OCP and a community translation to Italian is also available. Other community translations exist to various levels of completion.
+The OCDS standard development team maintains *supported* translations according to the [translation and localization policy](../../governance/index.md#translation-and-localization-policy). Volunteers contribute *community* translations.
 
 If the standard is not yet available in your language, you can propose a new translation of the schema and documentation, or collaborate on an existing community translation.
 
@@ -86,4 +86,4 @@ Contact the [OCDS Helpdesk](../../support/index) to get access to Transifex or t
 
 Whatever you do to localize the OCDS, it’s important to provide clear documentation. For example, you could set-up a page on your website with links to the main standard documentation, and details of your localization.
 
-It’s also important to share updates with the OCDS community, through the [standard-discuss mailing list](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) and the [GitHub issue tracker](https://github.com/open-contracting/standard). Without doing this, there is a chance that you might be duplicating work that others have already undertaken, or missing out on insights from other projects working on similar issues.
+It’s also important to share updates with the OCDS community, through the [standard-discuss mailing list](https://groups.google.com/a/open-contracting.org/g/standard-discuss) and the [GitHub issue tracker](https://github.com/open-contracting/standard). Without doing this, there is a chance that you might be duplicating work that others have already undertaken, or missing out on insights from other projects working on similar issues.

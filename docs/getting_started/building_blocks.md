@@ -76,7 +76,6 @@ For example, common building blocks are provided for:
 
 ```{jsoninclude} ../examples/record.json
 :jsonpointer: /records/0/compiledRelease/awards/0/value
-:expand:
 :title: amounts
 ```
 
@@ -88,19 +87,16 @@ For example, common building blocks are provided for:
 
 ```{jsoninclude} ../examples/record.json
 :jsonpointer: /records/0/compiledRelease/awards/0/contractPeriod
-:expand:
 :title: period
 ```
 
 ```{jsoninclude} ../examples/record.json
 :jsonpointer: /records/0/compiledRelease/awards/0/documents
-:expand:
 :title: documents
 ```
 
 ```{jsoninclude} ../examples/record.json
 :jsonpointer: /records/0/compiledRelease/tender/milestones/0
-:expand:
 :title: milestones
 ```
 
@@ -127,7 +123,7 @@ We maintain a list of [extensions](../guidance/map/extensions) that provide addi
 ```{admonition} Field level mapping
 :class: hint
 
-The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](http://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.  
+The Open Contracting Data Standard helpdesk maintain a [field-level mapping template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) that can be used to cross-walk between your internal data systems and OCDS.
 ```
 
 ## Codelists

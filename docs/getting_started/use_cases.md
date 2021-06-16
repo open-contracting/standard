@@ -13,7 +13,7 @@ We focused on four main groups of user need:
 
 Some user needs are served by direct access to bulk data. Other user needs are served by tools built on top of OCDS data that provide interfaces, visualizations, and links to spaces where users can engage with contracting bodies and data publishers. 
 
-You can read more about how people around the world are using OCDS, and other contracting data, on the [Open Contracting Partnership website](http://www.open-contracting.org). 
+You can read more about how people around the world are using OCDS, and other contracting data, on the [Open Contracting Partnership website](https://www.open-contracting.org).
 
 As you start implementing OCDS, consider how you will engage with data users, and how you will ensure the data and documents you make available will meet their needs. 
 

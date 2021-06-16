@@ -20,19 +20,23 @@ Consult the [release package](../schema/release_package) and [record package](..
 
 ```json
 {
-"uri":"https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-01-planning.json",
-"publishedDate":"2009-03-15T14:45:00Z",
-"version":"1.1",
-"extensions":[],
-"publisher": {
-        "scheme": "GB-COH",
-        "uid": "09506232",
-        "name": "Open Data Services Co-operative Limited",
-        "uri": "https://standard.open-contracting.org/examples/"
-    },
-"license":"http://opendatacommons.org/licenses/pddl/1.0/",
-"publicationPolicy":"https://github.com/open-contracting/sample-data/",
-"releases":[{"...":"..."}]
+  "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-01-planning.json",
+  "publishedDate": "2009-03-15T14:45:00Z",
+  "version": "1.1",
+  "extensions": [],
+  "publisher": {
+    "scheme": "GB-COH",
+    "uid": "09506232",
+    "name": "Open Data Services Co-operative Limited",
+    "uri": "https://standard.open-contracting.org/examples/"
+  },
+  "license": "https://opendatacommons.org/licenses/pddl/1.0/",
+  "publicationPolicy": "https://github.com/open-contracting/sample-data/",
+  "releases": [
+    {
+      "...": "..."
+    }
+  ]
 }
 ```
 
