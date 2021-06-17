@@ -92,7 +92,7 @@ Data is manually exported from data sources into files. The files are uploaded t
 
 A disadvantage in this approach is the potential of failures. Input files might be corrupted or have unexpected formats due to changes or errors in the data sources.
 
-There’s a documented example of this approach in the work Development Gateway did in [Vietnam](https://www.developmentgateway.org/blog/under-hood-open-source-dashboard-procurement-vietnam).
+There’s a documented example of this approach in the work Development Gateway did in [Vietnam](https://developmentgateway.org/blog/under-hood-open-source-dashboard-procurement-vietnam).
 
 ## Additional considerations
 

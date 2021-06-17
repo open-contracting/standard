@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"POT-Creation-Date: 2021-04-28 00:33-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
@@ -48,27 +48,28 @@ msgstr ""
 "**Remarque : si ce texte est en contradiction avec le texte du schéma, le "
 "texte du schéma prévaut**"
 
-#: ../../docs/schema/records_reference.md:8
+#: ../../docs/schema/records_reference.md:7
 msgid "Browsing the schema"
 msgstr "Parcourir le schéma"
 
-#: ../../None:1
+#: ../../docs/schema/records_reference.md:7
 msgid ""
 "This page presents the record package schema as tables. You can also "
 "download the canonical version of the record package schema as "
-"{download}`JSON Schema <../../build/current_lang/record-package-schema.json>`, or view it in an"
-" [interactive browser](record_package)."
+"{download}`JSON Schema <../../build/current_lang/record-package-"
+"schema.json>`, or view it in an [interactive browser](record_package)."
 msgstr ""
 "Cette page présente le schéma de paquet d'archives sous forme de tableaux. "
 "Vous pouvez également télécharger la version canonique du schéma de paquet "
-"d'archives au format {download}`JSON Schema <../../build/current_lang/record-package-"
-"schema.json>`, ou le consulter dans un [outil interactif](record_package)."
+"d'archives au format {download}`JSON Schema <../../build/current_lang"
+"/record-package-schema.json>`, ou le consulter dans un [outil "
+"interactif](record_package)."
 
-#: ../../docs/schema/records_reference.md:16
+#: ../../docs/schema/records_reference.md:13
 msgid "Package metadata"
 msgstr "Métadonnées des paquets"
 
-#: ../../docs/schema/records_reference.md:18
+#: ../../docs/schema/records_reference.md:15
 msgid ""
 "Records must be published within a [record package](record_package). The "
 "record package provides metadata about the record(s) that it contains."
@@ -97,26 +98,20 @@ msgstr "Format"
 msgid "Required"
 msgstr "Requis"
 
-#: ../../docs/schema/records_reference.md:26
+#: ../../docs/schema/records_reference.md:21
 msgid ""
-"See the [licensing guidance](../../guidance/publish/#license-your-data) for "
+"See the [licensing guidance](../guidance/publish.md#license-your-data) for "
 "more details on selecting a license, and publishing license information."
 msgstr ""
-"Pour plus d'informations sur la sélection d'une licence et la publication "
-"d'informations sur les licences, reportez-vous aux [instructions de "
-"licence](../../guidance/publish/#license-your-data)."
 
-#: ../../docs/schema/records_reference.md:28
+#: ../../docs/schema/records_reference.md:23
 msgid ""
-"See the [publication policy](../../guidance/publish/#finalize-your-"
+"See the [publication policy](../guidance/publish.md#finalize-your-"
 "publication-policy) guidance for more details on what to include in a "
 "publication policy."
 msgstr ""
-"Pour plus de détails sur ce qu'il convient d'inclure dans une politique de "
-"publication, consultez la page [politique de "
-"publication](../../guidance/publish/#finalize-your-publication-policy)."
 
-#: ../../docs/schema/records_reference.md:30
+#: ../../docs/schema/records_reference.md:25
 msgid ""
 "The record package metadata has two differences from the release package "
 "metadata:"
@@ -124,7 +119,7 @@ msgstr ""
 "Les métadonnées du paquet d'archives comportent deux différences par rapport"
 " aux métadonnées du paquet d'instances."
 
-#: ../../docs/schema/records_reference.md:32
+#: ../../docs/schema/records_reference.md:27
 msgid ""
 "Instead of a `releases` array, a record package has a `records` array "
 "containing one or more records."
@@ -133,7 +128,7 @@ msgstr ""
 "d'archives a un champ de liste `records` contenant une ou plusieurs archives"
 " :"
 
-#: ../../docs/schema/records_reference.md:33
+#: ../../docs/schema/records_reference.md:28
 msgid ""
 "A record package has a `packages` array, to link to any release packages "
 "that were used to prepare the records."
@@ -141,29 +136,26 @@ msgstr ""
 "Un paquet d'archives comporte un champ de liste 'packages', pour relier les "
 "paquets d'instances qui ont été utilisés pour constituer les archives."
 
-#: ../../docs/schema/records_reference.md:35
+#: ../../docs/schema/records_reference.md:30
 msgid ""
 "The following example demonstrates all package metadata and record fields."
 msgstr ""
 "L'exemple suivant illustre l'ensemble des metadonnées des paquets et des "
 "champs d'archives."
 
-#: ../../docs/schema/records_reference.md:44
+#: ../../docs/schema/records_reference.md:38
 msgid "Record structure"
 msgstr "Structure d'une archive"
 
-#: ../../docs/schema/records_reference.md:46
+#: ../../docs/schema/records_reference.md:40
 msgid ""
-"A record **must** contain an [ocid](../identifiers/#ocid) and all "
-"[releases](#releases) about the contracting process. As such, a record "
-"functions as an index of all releases about a contracting process."
+"A record **must** contain an [ocid](identifiers.md#contracting-process-"
+"identifier-ocid) and all [releases](#releases) about the contracting "
+"process. As such, a record functions as an index of all releases about a "
+"contracting process."
 msgstr ""
-"Une archive **doit** contenir l'[ocid](../identifiers/#ocid) et toutes les "
-"[instances](#releases) d'une procédure de passation du marché.  En tant que "
-"tel, une archive fonctionne de la même manière qu'un index de toutes les "
-"instances relatives à la procédure de passation du marché."
 
-#: ../../docs/schema/records_reference.md:48
+#: ../../docs/schema/records_reference.md:42
 msgid ""
 "A record **should** contain a [compiledRelease](#compiled-release) object, "
 "which represents the state of the contracting process at the time of the "
@@ -173,7 +165,7 @@ msgstr ""
 "release), qui représente l'état de la procédure de passation de marché au "
 "moment de la publication de l'archive."
 
-#: ../../docs/schema/records_reference.md:50
+#: ../../docs/schema/records_reference.md:44
 msgid ""
 "A record **may** contain a [versionedRelease](#versioned-release) object, "
 "which aggregates, into a single object, all values of all fields from all "
@@ -188,11 +180,11 @@ msgstr ""
 " à l'autre, et sera souvent générée par les utilisateurs des données plutôt "
 "que par les producteurs."
 
-#: ../../docs/schema/records_reference.md:52
+#: ../../docs/schema/records_reference.md:46
 msgid "Releases"
 msgstr "Instances"
 
-#: ../../docs/schema/records_reference.md:54
+#: ../../docs/schema/records_reference.md:48
 msgid ""
 "Each release in a record can be provided as either a linked release or an "
 "embedded release."
@@ -200,15 +192,15 @@ msgstr ""
 "Dans une archive, chaque instance peut être fournie comme une instance liée,"
 " ou bien comme une instance intégrée."
 
-#: ../../docs/schema/records_reference.md:56
+#: ../../docs/schema/records_reference.md:50
 msgid "Linked releases"
 msgstr "Instances liées"
 
-#: ../../docs/schema/records_reference.md:58
+#: ../../docs/schema/records_reference.md:52
 msgid "A linked release follows a simple schema:"
 msgstr "Une instance liée suit un schéma simple :"
 
-#: ../../docs/schema/records_reference.md:65
+#: ../../docs/schema/records_reference.md:58
 msgid ""
 "For each `url` value, it must be possible for a consuming application to "
 "retrieve the release package at the URL and identify the release within it. "
@@ -223,28 +215,21 @@ msgstr ""
 "instance spécifique via son champs `url`, l'`id` de l'instance doit être "
 "ajouté à l'URL de paquet en utilisant un identifiant de fragment."
 
-#: ../../docs/schema/records_reference.md:67
+#: ../../docs/schema/records_reference.md:60
 msgid "The following example demonstrates the use of linked releases."
 msgstr "L'exemple suivant illustre l'utilisation des instances liées."
 
-#: ../../docs/schema/records_reference.md:76
+#: ../../docs/schema/records_reference.md:68
 msgid ""
-"Above, the first linked release has a `url` value of <https://standard.open-"
-"contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json#ocds-"
-"213czf-000-00002-01-award1>. The first part (`https://standard.open-"
+"Above, the first linked release has a `url` value of `https://standard"
+".open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json"
+"#ocds-213czf-000-00002-01-award1`. The first part (`https://standard.open-"
 "contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json`) is "
 "the URL of the release package, and the fragment identifier (`ocds-"
 "213czf-000-00002-01-award1`) is the `id` of the release."
 msgstr ""
-"Ci-dessus, la première instance liée a la valeur du champ `url` de "
-"<https://standard.open-contracting.org/examples/releases/ocds-"
-"213czf-000-00002-01-award1.json#ocds-213czf-000-00002-01-award1>. La "
-"première partie (`https://standard.open-contracting.org/examples/releases"
-"/ocds-213czf-000-00002-01-award1.json`) est l'URL du paquet d'instances, et "
-"l'identifiant de fragment (`ocds-213czf-000-00002-01-award1`) est le `id` de"
-" l'instance."
 
-#: ../../docs/schema/records_reference.md:78
+#: ../../docs/schema/records_reference.md:70
 msgid ""
 "Release `id` values are only required to be unique within the scope of a "
 "contracting process: that is, within the scope of an `ocid` value. As such, "
@@ -260,11 +245,11 @@ msgstr ""
 "combiner à l'`ocid` de l'archive afin d'identifier l'instance correspondante"
 " dans le paquet d'instance lié."
 
-#: ../../docs/schema/records_reference.md:80
+#: ../../docs/schema/records_reference.md:72
 msgid "Embedded releases"
 msgstr "Instances intégrées"
 
-#: ../../docs/schema/records_reference.md:82
+#: ../../docs/schema/records_reference.md:74
 msgid ""
 "An embedded release follows the [release schema](reference). In other words,"
 " instead of linking to a release within a release package as above, that "
@@ -275,19 +260,19 @@ msgstr ""
 "d'instances comme ci-dessus, cette instance est entièrement incluse dans "
 "l'archive."
 
-#: ../../docs/schema/records_reference.md:84
+#: ../../docs/schema/records_reference.md:76
 msgid "The following example demonstrates the use of embedded releases."
 msgstr "L'exemple suivant démontre l'utilisation des instances intégrées."
 
-#: ../../docs/schema/records_reference.md:93
+#: ../../docs/schema/records_reference.md:84
 msgid "Comparing options"
 msgstr "Comparaison des options"
 
-#: ../../docs/schema/records_reference.md:95
+#: ../../docs/schema/records_reference.md:86
 msgid "The considerations are:"
 msgstr "Voici quelques éléments de reflexion :"
 
-#: ../../docs/schema/records_reference.md:97
+#: ../../docs/schema/records_reference.md:88
 msgid ""
 "Using linked releases yields smaller file sizes than using embedded "
 "releases."
@@ -295,7 +280,7 @@ msgstr ""
 "Utiliser des instances liées produit des fichiers de taille plus petite que "
 "les fichiers des instances intégrées."
 
-#: ../../docs/schema/records_reference.md:98
+#: ../../docs/schema/records_reference.md:89
 msgid ""
 "From a user's perspective, the contents of releases are easier to access as "
 "embedded releases than as linked releases (which involves the retrieval "
@@ -305,7 +290,7 @@ msgstr ""
 "accessible avec des instances intégrées qu'avec des instances liées, car ce "
 "dernier implique une extraction décrite ci-dessus."
 
-#: ../../docs/schema/records_reference.md:99
+#: ../../docs/schema/records_reference.md:90
 msgid ""
 "From a publisher's perspective, using linked releases involves publishing "
 "release packages and constructing `url` values, whereas using embedded "
@@ -315,11 +300,11 @@ msgstr ""
 "publication des paquets d'instances et l'élaboration de la valeur des champs"
 " `url`, alors que ce n'est pas nécessaires avec des instances embarquées."
 
-#: ../../docs/schema/records_reference.md:101
+#: ../../docs/schema/records_reference.md:92
 msgid "Compiled release"
 msgstr "Instance compilée"
 
-#: ../../docs/schema/records_reference.md:103
+#: ../../docs/schema/records_reference.md:94
 msgid ""
 "The compiled release is the latest version of all the data about a "
 "contracting process. In other words, it provides a snapshot of the current "
@@ -329,7 +314,7 @@ msgstr ""
 "à un processus de passation de marché. En d'autres termes, c'est un "
 "instantané de l'état actuel d'une procédure de passation de marché."
 
-#: ../../docs/schema/records_reference.md:105
+#: ../../docs/schema/records_reference.md:96
 msgid ""
 "The compiled release follows the [release schema](reference), with the "
 "exception of any fields on which `\"omitWhenMerged\": true` is declared."
@@ -337,7 +322,7 @@ msgstr ""
 "Une instance compilée est conforme au [schéma d'instance](reference) à "
 "l'exception des champs pour lesquels `\"omitWhenMerged\": true` est déclaré."
 
-#: ../../docs/schema/records_reference.md:107
+#: ../../docs/schema/records_reference.md:98
 msgid ""
 "The process for creating a compiled release from individual releases is "
 "described in the [merging](merging) reference."
@@ -345,11 +330,11 @@ msgstr ""
 "Le processus de création d'une instance compilée à partir d'instances "
 "individuelles est décrit dans la partie relative à [la fusion](merging)."
 
-#: ../../docs/schema/records_reference.md:109
+#: ../../docs/schema/records_reference.md:100
 msgid "Versioned release"
 msgstr "Instance versionnée"
 
-#: ../../docs/schema/records_reference.md:111
+#: ../../docs/schema/records_reference.md:102
 msgid ""
 "A versioned release aggregates all values of all fields from all releases. "
 "For each field, it describes the history of values from the initial value to"
@@ -362,7 +347,7 @@ msgstr ""
 "incluant les champs `id`, `date` et `tag` de l'instance dans laquelle la "
 "valeur a été modifiée."
 
-#: ../../docs/schema/records_reference.md:113
+#: ../../docs/schema/records_reference.md:104
 msgid ""
 "This versioned information is relevant to many use cases relating to "
 "contract monitoring. However, it can significantly increase file sizes. As "
@@ -375,7 +360,7 @@ msgstr ""
 "producteurs peuvent donc choisir de publier des archives avec et des "
 "archives sans instance versionnée."
 
-#: ../../docs/schema/records_reference.md:115
+#: ../../docs/schema/records_reference.md:106
 msgid ""
 "If the versioned release is not provided, third parties can generate it by "
 "processing the record's releases according to the [merging](merging) "
@@ -385,12 +370,9 @@ msgstr ""
 "traitement des instances des archives conforme à la partie relative à [la "
 "fusion](merging)."
 
-#: ../../docs/schema/records_reference.md:117
+#: ../../docs/schema/records_reference.md:108
 msgid ""
 "The following example displays a single field's [versioned "
-"values](../merging/#versioned-values). This shows that the amount changed "
+"values](merging.md#versioned-values). This shows that the amount changed "
 "between the planning stage and the tender stage, while the currency did not."
 msgstr ""
-"L'exemple suivant montre les [valeurs versionnées](../merging/#versioned-"
-"values) d'un champ. On peut voir que le montant a changé entre l'étape de "
-"planification et l'appel d'offres, mais que la devise n'a pas changé."

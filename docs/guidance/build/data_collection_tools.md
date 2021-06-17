@@ -75,7 +75,7 @@ Read more about OpenContractR in its [introduction](https://drive.google.com/fil
 
 ## Contrataciones Abiertas tool
 
-[Contrataciones Abiertas](https://github.com/INAImexico/Contrataciones_abiertas_v2) is a tool developed by the Mexican government and it is made up of two main modules:
+[Contrataciones Abiertas](https://github.com/datosabiertosmx/contrataciones-abiertas-infraestructura) is a tool developed by the Mexican government and it is made up of two main modules:
 
 * Information capture module
 * Visualization module
@@ -84,14 +84,14 @@ The objective of the tool is to enable the monitoring of contracting processes b
 
 Consider using Contrataciones Abiertas if:
 
-* You have the resources and technical capacity to [set up the tool](https://github.com/INAImexico/Contrataciones_abiertas_v2/raw/master/Manual%20de%20instalaci%C3%B3n.docx)
+* You have the resources and technical capacity to [set up the tool](https://raw.githubusercontent.com/datosabiertosmx/contrataciones-abiertas-infraestructura/master/Manual%20de%20instalaci%C3%B3n.docx)
 * Data entry will be done by **many** different users
 * You want to **validate** your data before publication
 * You want to minimize the work required to collate and publish data
 * You want a [**dashboard and visualizations**](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/) of your data
 * **Spanish** is your (and your users') main language
 
-The tool is open source and is [documented in Spanish](https://github.com/INAImexico/Contrataciones_abiertas_v2). You can also find an introduction to the tool in [our blog](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/).
+The tool is open source and is [documented in Spanish](https://github.com/datosabiertosmx/contrataciones-abiertas-infraestructura). You can also find an introduction to the tool in [our blog](https://www.open-contracting.org/2020/06/12/mexicos-inai-launches-new-open-source-tool-to-upload-and-visualize-open-contracting-data/).
 
 ## What next?
 
