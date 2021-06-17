@@ -122,7 +122,7 @@
   "definitions": {
     "Record": {
       "title": "Record",
-      "description": "A record aggregates the releases related to a contracting process. A record must include a `releases` list, should include a `compiledRelease` and may include a `versionedRelease`.",
+      "description": "A record aggregates the releases related to a contracting process. A record must include a `releases` list, should include a `compiledRelease` and may include a `versionedRelease`. There should be a single record per contracting process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.",
       "type": "object",
       "properties": {
         "ocid": {
