@@ -76,11 +76,11 @@ This list was formerly maintained by the International Aid Transparency Initiati
 
 ### Document Type
 
-The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates whether documents are considered 'basic', 'intermediate' or 'advanced', and the section of an OCDS release they are most likely to be applicable within.
+The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates whether documents are considered 'basic', 'intermediate' or 'advanced', and the section of an OCDS release they are most likely to be applicable within. 
 
-The code descriptions are necessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts.
+The code descriptions are necessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
 
-Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in.
+Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -90,7 +90,7 @@ Publishers must map their existing document codes to this list, where possible. 
 
 ### Award Criteria
 
-The award criteria codelist describes the basis on which contract awards will be made.
+The award criteria codelist describes the basis on which contract awards will be made. 
 
 ```{note}
 This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers ought to review the mapping from their internal systems to this updated list of award criteria.
@@ -104,7 +104,7 @@ This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing
 
 ### Submission Method
 
-The submission method codelist is used to identify the mechanism through which a submission can be made.
+The submission method codelist is used to identify the mechanism through which a submission can be made. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -124,7 +124,7 @@ The related process block is used at the release level to point backwards to pri
 
 ### Related Process Scheme
 
-The related process scheme describes the kind of identifier used to cross-reference another process.
+The related process scheme describes the kind of identifier used to cross-reference another process. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -144,7 +144,7 @@ The milestone block can be used to represent a wide variety of events in the lif
 
 ### Extended Procurement Category
 
-The extended procurement category codelist is used to provide additional detail about the focus of a contracting process.
+The extended procurement category codelist is used to provide additional detail about the focus of a contracting process. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -152,17 +152,7 @@ The extended procurement category codelist is used to provide additional detail 
 :file: ../../build/current_lang/codelists/extendedProcurementCategory.csv
 ```
 
-### Document Format
-
-The document format codelist is based on the [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) with one additional code for offline documents: 'offline/print'.
-
-```{csv-table-no-translate}
-:header-rows: 1
-:widths: auto
-:file: ../../build/current_lang/codelists/documentFormat.csv
-```
-
-## Closed Codelists
+## Closed Codelists 
 
 ### Initiation Type
 
@@ -212,7 +202,7 @@ The procurement category codelist is used to indicate the **primary** focus of a
 
 ### Award Status
 
-An award moves through multiple states. Releases over time can update the status of an award.
+An award moves through multiple states. Releases over time can update the status of an award. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
