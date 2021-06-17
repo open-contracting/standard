@@ -1,8 +1,9 @@
 """
-Updates the document format codelist from the IANA media types CSV files.
+Updates the media type codelist from the IANA media types CSV files.
 """
 
 import csv
+import logging
 import os
 import requests
 
@@ -33,27 +34,25 @@ if __name__ == '__main__':
     codes = {}
 
     for registry in registries:
-        csvreader = get_and_parse_csv(f'https://www.iana.org/assignments/media-types/{registry}.csv')
-        next(csvreader)
+        response = requests.get(f'https://www.iana.org/assignments/media-types/{registry}.csv')
+        response.raise_for_status()
+        content = response.content.decode('utf-8')
+        csvreader = csv.DictReader(content.splitlines(), delimiter=',')
         for row in csvreader:
             code = row['Template']
             title = row['Name']
             # If the type has no value in the template column, construct a code from the registry and name
             if code == "":
+                logging.warning(f'{registry}/{title} has no value in the Template column.')
                 code = f'{registry}/{title}'
-            # Some titles contain notes, separated by ' - ', except vnd.geo+json, in which the notes are in parentheses
-            if ' - ' in title:
-                title, notes = title.split(' - ', 1)
-            elif ' (' in title:
-                title, notes = title.split(' (', 1)
-            else:
-                notes = None
-            codes[code] = {'Title': title, 'Notes': notes}
+            # Remove deprecated and obsoleted codes
+            if 'DEPRECATED' not in title and 'OBSOLETE' not in title:
+                codes[code] = title
 
-    with open(os.path.join(schema_dir, 'codelists', 'documentFormat.csv'), 'w') as fp:
+    with open(os.path.join(schema_dir, 'codelists', 'mediaType.csv'), 'w') as fp:
         writer = csv.writer(fp, lineterminator='\n')
-        writer.writerow(['Code', 'Title', 'Notes'])
+        writer.writerow(['Code', 'Title'])
         for code in codes.keys():
-            writer.writerow([code, codes[code]['Title'], codes[code]['Notes']])
+            writer.writerow([code, codes[code]])
         # Add the 'offline/print' code specified in the schema
-        writer.writerow(['offline/print', 'print', None])
+        writer.writerow(['offline/print', 'print'])
