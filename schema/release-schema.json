@@ -30,14 +30,12 @@
       "description": "One or more values from the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. A tag labels the release: for example, as corresponding to a particular stage of the contracting process. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release.",
       "type": "array",
       "items": {
-        "type": "string",
-        "minLength": 1
+        "type": "string"
       },
       "codelist": "releaseTag.csv",
       "openCodelist": true,
       "minItems": 1,
-      "omitWhenMerged": true,
-      "uniqueItems": true
+      "omitWhenMerged": true
     },
     "initiationType": {
       "title": "Initiation type",
@@ -56,8 +54,7 @@
       "items": {
         "$ref": "#/definitions/Organization"
       },
-      "uniqueItems": true,
-      "minItems": 1
+      "uniqueItems": true
     },
     "buyer": {
       "title": "Buyer",
@@ -81,8 +78,7 @@
       "items": {
         "$ref": "#/definitions/Award"
       },
-      "uniqueItems": true,
-      "minItems": 1
+      "uniqueItems": true
     },
     "contracts": {
       "title": "Contracts",
@@ -91,8 +87,7 @@
       "items": {
         "$ref": "#/definitions/Contract"
       },
-      "uniqueItems": true,
-      "minItems": 1
+      "uniqueItems": true
     },
     "language": {
       "title": "Release language",
@@ -100,8 +95,7 @@
       "type": [
         "string",
         "null"
-      ],
-      "minLength": 1
+      ]
     },
     "relatedProcesses": {
       "title": "Related processes",
@@ -110,8 +104,7 @@
       "uniqueItems": true,
       "items": {
         "$ref": "#/definitions/RelatedProcess"
-      },
-      "minItems": 1
+      }
     }
   },
   "required": [
@@ -133,8 +126,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "budget": {
           "title": "Budget",
@@ -147,9 +139,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "milestones": {
           "title": "Planning milestones",
@@ -157,9 +147,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         }
       },
       "patternProperties": {
@@ -167,11 +155,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Tender": {
       "title": "Tender",
@@ -197,8 +183,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "description": {
           "title": "Tender description",
@@ -206,8 +191,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "status": {
           "title": "Tender status",
@@ -235,8 +219,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "procuringEntity": {
           "title": "Procuring entity",
@@ -250,8 +233,7 @@
           "items": {
             "$ref": "#/definitions/Item"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "value": {
           "title": "Value",
@@ -286,8 +268,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "procurementMethodRationale": {
           "title": "Procurement method rationale",
@@ -295,8 +276,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "mainProcurementCategory": {
           "title": "Main procurement category",
@@ -322,13 +302,10 @@
             "null"
           ],
           "items": {
-            "type": "string",
-            "minLength": 1
+            "type": "string"
           },
           "codelist": "extendedProcurementCategory.csv",
-          "openCodelist": true,
-          "minItems": 1,
-          "uniqueItems": true
+          "openCodelist": true
         },
         "awardCriteria": {
           "title": "Award criteria",
@@ -338,8 +315,7 @@
             "null"
           ],
           "codelist": "awardCriteria.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "awardCriteriaDetails": {
           "title": "Award criteria details",
@@ -347,8 +323,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "submissionMethod": {
           "title": "Submission method",
@@ -358,17 +333,14 @@
             "null"
           ],
           "items": {
-            "type": "string",
-            "minLength": 1
+            "type": "string"
           },
           "codelist": "submissionMethod.csv",
           "openCodelist": true,
           "deprecated": {
             "description": "This field is deprecated, because all codes from the submissionMethod codelist are deprecated. Refer to the Deprecation note of individual codes.",
             "deprecatedVersion": "1.2"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
@@ -376,8 +348,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "tenderPeriod": {
           "title": "Tender period",
@@ -403,8 +374,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "selectionCriteria": {
           "title": "Selection criteria",
@@ -412,8 +382,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
@@ -440,8 +409,7 @@
           "items": {
             "$ref": "#/definitions/OrganizationReference"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "documents": {
           "title": "Documents",
@@ -449,9 +417,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "milestones": {
           "title": "Milestones",
@@ -459,9 +425,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendments": {
           "title": "Amendments",
@@ -469,9 +433,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Amendment"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendment": {
           "title": "Amendment",
@@ -488,53 +450,45 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(procurementMethodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(awardCriteriaDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(submissionMethodDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(selectionCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Award": {
       "title": "Award",
@@ -559,8 +513,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "description": {
           "title": "Description",
@@ -568,8 +521,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "status": {
           "title": "Award status",
@@ -594,8 +546,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "date": {
           "title": "Award date",
@@ -618,8 +569,7 @@
           "items": {
             "$ref": "#/definitions/OrganizationReference"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "items": {
           "title": "Items awarded",
@@ -643,8 +593,7 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "amendments": {
           "title": "Amendments",
@@ -652,9 +601,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Amendment"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendment": {
           "title": "Amendment",
@@ -671,18 +618,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Contract": {
       "title": "Contract",
@@ -717,8 +661,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "description": {
           "title": "Contract description",
@@ -726,8 +669,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "status": {
           "title": "Contract status",
@@ -754,8 +696,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "period": {
           "title": "Period",
@@ -793,8 +734,7 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "implementation": {
           "title": "Implementation",
@@ -808,8 +748,7 @@
           "uniqueItems": true,
           "items": {
             "$ref": "#/definitions/RelatedProcess"
-          },
-          "minItems": 1
+          }
         },
         "milestones": {
           "title": "Contract milestones",
@@ -817,9 +756,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendments": {
           "title": "Amendments",
@@ -827,9 +764,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Amendment"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendment": {
           "title": "Amendment",
@@ -846,18 +781,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Implementation": {
       "title": "Implementation",
@@ -871,8 +803,7 @@
           "items": {
             "$ref": "#/definitions/Transaction"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "milestones": {
           "title": "Milestones",
@@ -881,8 +812,7 @@
           "items": {
             "$ref": "#/definitions/Milestone"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "documents": {
           "title": "Documents",
@@ -891,11 +821,9 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         }
-      },
-      "minProperties": 1
+      }
     },
     "Milestone": {
       "title": "Milestone",
@@ -920,8 +848,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "type": {
           "title": "Milestone type",
@@ -931,8 +858,7 @@
             "null"
           ],
           "codelist": "milestoneType.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "description": {
           "title": "Description",
@@ -940,8 +866,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "code": {
           "title": "Milestone code",
@@ -949,8 +874,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "dueDate": {
           "title": "Due date",
@@ -1007,8 +931,7 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         }
       },
       "patternProperties": {
@@ -1016,18 +939,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Document": {
       "title": "Document",
@@ -1054,8 +974,7 @@
             "null"
           ],
           "codelist": "documentType.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "title": {
           "title": "Title",
@@ -1063,8 +982,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "description": {
           "title": "Description",
@@ -1072,8 +990,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "url": {
           "title": "URL",
@@ -1108,8 +1025,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "language": {
           "title": "Language",
@@ -1117,8 +1033,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
       },
       "patternProperties": {
@@ -1126,18 +1041,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Budget": {
       "title": "Budget information",
@@ -1151,8 +1063,7 @@
             "string",
             "integer",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "description": {
           "title": "Budget Source",
@@ -1160,8 +1071,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "amount": {
           "title": "Amount",
@@ -1174,8 +1084,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "projectID": {
           "title": "Project identifier",
@@ -1184,8 +1093,7 @@
             "string",
             "integer",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "uri": {
           "title": "Linked budget information",
@@ -1215,25 +1123,21 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(project_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Transaction": {
       "title": "Transaction information",
@@ -1321,8 +1225,7 @@
             "deprecatedVersion": "1.1"
           }
         }
-      },
-      "minProperties": 1
+      }
     },
     "OrganizationReference": {
       "title": "Organization reference",
@@ -1344,8 +1247,7 @@
             "integer"
           ],
           "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-          "title": "Organization ID",
-          "minLength": 1
+          "title": "Organization ID"
         },
         "identifier": {
           "title": "Primary identifier",
@@ -1377,8 +1279,7 @@
           "title": "Additional identifiers",
           "uniqueItems": true,
           "wholeListMerge": true,
-          "description": "(Deprecated outside the parties section) A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
-          "minItems": 1
+          "description": "(Deprecated outside the parties section) A list of additional / supplemental identifiers for the organization, using the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier."
         },
         "contactPoint": {
           "deprecated": {
@@ -1389,8 +1290,7 @@
           "description": "(Deprecated outside the parties section)",
           "title": "Contact point"
         }
-      },
-      "minProperties": 1
+      }
     },
     "Organization": {
       "title": "Organization",
@@ -1403,14 +1303,12 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "id": {
           "type": "string",
           "description": "The ID used for cross-referencing to this party from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available.",
-          "title": "Entity ID",
-          "minLength": 1
+          "title": "Entity ID"
         },
         "identifier": {
           "title": "Primary identifier",
@@ -1425,8 +1323,7 @@
             "$ref": "#/definitions/Identifier"
           },
           "uniqueItems": true,
-          "wholeListMerge": true,
-          "minItems": 1
+          "wholeListMerge": true
         },
         "address": {
           "title": "Address",
@@ -1446,13 +1343,10 @@
             "null"
           ],
           "items": {
-            "type": "string",
-            "minLength": 1
+            "type": "string"
           },
           "codelist": "partyRole.csv",
-          "openCodelist": true,
-          "minItems": 1,
-          "uniqueItems": true
+          "openCodelist": true
         },
         "details": {
           "title": "Details",
@@ -1460,8 +1354,7 @@
           "type": [
             "object",
             "null"
-          ],
-          "minProperties": 1
+          ]
         }
       },
       "patternProperties": {
@@ -1469,11 +1362,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Item": {
       "title": "Item",
@@ -1498,8 +1389,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "classification": {
           "title": "Classification",
@@ -1514,8 +1404,7 @@
             "$ref": "#/definitions/Classification"
           },
           "uniqueItems": true,
-          "wholeListMerge": true,
-          "minItems": 1
+          "wholeListMerge": true
         },
         "quantity": {
           "title": "Quantity",
@@ -1536,11 +1425,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Amendment": {
       "title": "Amendment",
@@ -1562,8 +1449,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "id": {
           "title": "ID",
@@ -1571,8 +1457,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "description": {
           "title": "Description",
@@ -1580,8 +1465,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "amendsReleaseID": {
           "title": "Amended release (identifier)",
@@ -1589,8 +1473,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "releaseID": {
           "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
@@ -1598,8 +1481,7 @@
             "string",
             "null"
           ],
-          "title": "Amending release (identifier)",
-          "minLength": 1
+          "title": "Amending release (identifier)"
         },
         "changes": {
           "title": "Amended fields",
@@ -1611,8 +1493,7 @@
               "property": {
                 "title": "Property",
                 "description": "The property name that has been changed relative to the place the amendment is. For example if the contract value has changed, then the property under changes within the contract.amendment would be value.amount. (Deprecated in 1.1)",
-                "type": "string",
-                "minLength": 1
+                "type": "string"
               },
               "former_value": {
                 "title": "Former Value",
@@ -1624,21 +1505,14 @@
                   "array",
                   "object",
                   "null"
-                ],
-                "minLength": 1,
-                "minItems": 1,
-                "uniqueItems": true,
-                "minProperties": 1
+                ]
               }
-            },
-            "minProperties": 1
+            }
           },
           "deprecated": {
             "description": "A free-text or semi-structured string describing the changes made in each amendment can be provided in the amendment.description field. To provide structured information on the fields that have changed, publishers should provide releases indicating the state of the contracting process before and after the amendment.",
             "deprecatedVersion": "1.1"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         }
       },
       "patternProperties": {
@@ -1646,11 +1520,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Classification": {
       "title": "Classification",
@@ -1665,8 +1537,7 @@
             "null"
           ],
           "codelist": "itemClassificationScheme.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "id": {
           "title": "ID",
@@ -1676,8 +1547,7 @@
             "integer",
             "null"
           ],
-          "versionId": true,
-          "minLength": 1
+          "versionId": true
         },
         "description": {
           "title": "Description",
@@ -1685,8 +1555,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "uri": {
           "title": "URI",
@@ -1703,11 +1572,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Identifier": {
       "title": "Identifier",
@@ -1720,8 +1587,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "id": {
           "title": "ID",
@@ -1731,8 +1597,7 @@
             "integer",
             "null"
           ],
-          "versionId": true,
-          "minLength": 1
+          "versionId": true
         },
         "legalName": {
           "title": "Legal Name",
@@ -1740,8 +1605,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "uri": {
           "title": "URI",
@@ -1758,11 +1622,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Address": {
       "title": "Address",
@@ -1775,8 +1637,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "locality": {
           "title": "Locality",
@@ -1784,8 +1645,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "region": {
           "title": "Region",
@@ -1793,8 +1653,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "postalCode": {
           "title": "Postal code",
@@ -1802,8 +1661,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "countryName": {
           "title": "Country name",
@@ -1811,8 +1669,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
       },
       "patternProperties": {
@@ -1820,11 +1677,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "ContactPoint": {
       "title": "Contact point",
@@ -1837,8 +1692,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "email": {
           "title": "Email",
@@ -1846,8 +1700,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "telephone": {
           "title": "Telephone",
@@ -1855,8 +1708,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "faxNumber": {
           "title": "Fax number",
@@ -1864,8 +1716,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "url": {
           "title": "URL",
@@ -1882,11 +1733,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Value": {
       "title": "Value",
@@ -2216,8 +2065,7 @@
             null
           ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Period": {
       "title": "Period",
@@ -2259,8 +2107,7 @@
             "null"
           ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "SimpleUnit": {
       "title": "Simple Unit",
@@ -2275,8 +2122,7 @@
             "null"
           ],
           "codelist": "unitClassificationScheme.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "id": {
           "title": "ID",
@@ -2285,11 +2131,9 @@
             "string",
             "null"
           ],
-          "versionId": true,
-          "minLength": 1
+          "versionId": true
         }
-      },
-      "minProperties": 1
+      }
     },
     "RelatedProcess": {
       "title": "Related Process",
@@ -2299,8 +2143,7 @@
         "id": {
           "title": "Relationship ID",
           "description": "A local identifier for this relationship, unique within this array.",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "relationship": {
           "title": "Relationship",
@@ -2314,9 +2157,7 @@
             "minLength": 1
           },
           "codelist": "relatedProcess.csv",
-          "openCodelist": true,
-          "minItems": 1,
-          "uniqueItems": true
+          "openCodelist": true
         },
         "title": {
           "title": "Related process title",
@@ -2324,8 +2165,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "scheme": {
           "title": "Scheme",
@@ -2335,8 +2175,7 @@
             "null"
           ],
           "codelist": "relatedProcessScheme.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "identifier": {
           "title": "Identifier",
@@ -2344,8 +2183,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "uri": {
           "title": "Related process URI",
@@ -2356,8 +2194,7 @@
           ],
           "format": "uri"
         }
-      },
-      "minProperties": 1
+      }
     },
     "Unit": {
       "title": "Unit",
@@ -2372,8 +2209,7 @@
             "null"
           ],
           "codelist": "unitClassificationScheme.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "id": {
           "title": "ID",
@@ -2382,8 +2218,7 @@
             "string",
             "null"
           ],
-          "versionId": true,
-          "minLength": 1
+          "versionId": true
         },
         "name": {
           "title": "Name",
@@ -2391,8 +2226,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "value": {
           "title": "Value",
@@ -2426,8 +2260,7 @@
                 "null"
               ]
             }
-          },
-          "minProperties": 1
+          }
         }
       },
       "patternProperties": {
@@ -2435,12 +2268,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     }
-  },
-  "minProperties": 1
+  }
 }

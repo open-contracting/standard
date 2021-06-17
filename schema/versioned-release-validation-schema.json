@@ -39,8 +39,7 @@
       "items": {
         "$ref": "#/definitions/Organization"
       },
-      "uniqueItems": true,
-      "minItems": 1
+      "uniqueItems": true
     },
     "buyer": {
       "$ref": "#/definitions/OrganizationReferenceVersionedId"
@@ -56,52 +55,24 @@
       "items": {
         "$ref": "#/definitions/Award"
       },
-      "uniqueItems": true,
-      "minItems": 1
+      "uniqueItems": true
     },
     "contracts": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/Contract"
       },
-      "uniqueItems": true,
-      "minItems": 1
+      "uniqueItems": true
     },
     "language": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "releaseDate": {
-            "format": "date-time",
-            "type": "string"
-          },
-          "releaseID": {
-            "type": "string"
-          },
-          "value": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "minLength": 1
-          },
-          "releaseTag": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      }
+      "$ref": "#/definitions/StringNullVersioned"
     },
     "relatedProcesses": {
       "type": "array",
       "uniqueItems": true,
       "items": {
         "$ref": "#/definitions/RelatedProcess"
-      },
-      "minItems": 1
+      }
     },
     "ocid": {
       "type": "string",
@@ -117,32 +88,7 @@
       "type": "object",
       "properties": {
         "rationale": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "budget": {
           "$ref": "#/definitions/Budget"
@@ -151,17 +97,13 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "milestones": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         }
       },
       "patternProperties": {
@@ -169,11 +111,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Tender": {
       "type": "object",
@@ -210,60 +150,10 @@
           }
         },
         "title": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "status": {
           "type": "array",
@@ -305,32 +195,7 @@
           }
         },
         "statusDetails": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "procuringEntity": {
           "$ref": "#/definitions/OrganizationReferenceVersionedId"
@@ -340,8 +205,7 @@
           "items": {
             "$ref": "#/definitions/Item"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "value": {
           "$ref": "#/definitions/Value"
@@ -386,60 +250,10 @@
           }
         },
         "procurementMethodDetails": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "procurementMethodRationale": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "mainProcurementCategory": {
           "type": "array",
@@ -494,13 +308,10 @@
                   "null"
                 ],
                 "items": {
-                  "type": "string",
-                  "minLength": 1
+                  "type": "string"
                 },
                 "codelist": "extendedProcurementCategory.csv",
-                "openCodelist": true,
-                "minItems": 1,
-                "uniqueItems": true
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -529,8 +340,7 @@
                   "null"
                 ],
                 "codelist": "awardCriteria.csv",
-                "openCodelist": true,
-                "minLength": 1
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -542,32 +352,7 @@
           }
         },
         "awardCriteriaDetails": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "submissionMethod": {
           "type": "array",
@@ -587,17 +372,14 @@
                   "null"
                 ],
                 "items": {
-                  "type": "string",
-                  "minLength": 1
+                  "type": "string"
                 },
                 "codelist": "submissionMethod.csv",
                 "openCodelist": true,
                 "deprecated": {
                   "description": "This field is deprecated, because all codes from the submissionMethod codelist are deprecated. Refer to the Deprecation note of individual codes.",
                   "deprecatedVersion": "1.2"
-                },
-                "minItems": 1,
-                "uniqueItems": true
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -609,32 +391,7 @@
           }
         },
         "submissionMethodDetails": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "tenderPeriod": {
           "$ref": "#/definitions/Period"
@@ -670,60 +427,10 @@
           }
         },
         "eligibilityCriteria": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "selectionCriteria": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "awardPeriod": {
           "$ref": "#/definitions/Period"
@@ -763,32 +470,25 @@
           "items": {
             "$ref": "#/definitions/OrganizationReference"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "documents": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "milestones": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendments": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Amendment"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendment": {
           "$ref": "#/definitions/Amendment",
@@ -803,53 +503,45 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(procurementMethodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(awardCriteriaDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(submissionMethodDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(selectionCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Award": {
       "type": "object",
@@ -865,60 +557,10 @@
           "minLength": 1
         },
         "title": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "status": {
           "type": "array",
@@ -957,32 +599,7 @@
           }
         },
         "statusDetails": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "date": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
@@ -995,8 +612,7 @@
           "items": {
             "$ref": "#/definitions/OrganizationReference"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "items": {
           "type": "array",
@@ -1014,16 +630,13 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "amendments": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Amendment"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendment": {
           "$ref": "#/definitions/Amendment",
@@ -1038,18 +651,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Contract": {
       "type": "object",
@@ -1094,60 +704,10 @@
           }
         },
         "title": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "status": {
           "type": "array",
@@ -1188,32 +748,7 @@
           }
         },
         "statusDetails": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "period": {
           "$ref": "#/definitions/Period"
@@ -1237,8 +772,7 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "implementation": {
           "$ref": "#/definitions/Implementation"
@@ -1248,24 +782,19 @@
           "uniqueItems": true,
           "items": {
             "$ref": "#/definitions/RelatedProcess"
-          },
-          "minItems": 1
+          }
         },
         "milestones": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendments": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Amendment"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "amendment": {
           "$ref": "#/definitions/Amendment",
@@ -1280,18 +809,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Implementation": {
       "type": "object",
@@ -1301,27 +827,23 @@
           "items": {
             "$ref": "#/definitions/Transaction"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "milestones": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "documents": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         }
-      },
-      "minProperties": 1
+      }
     },
     "Milestone": {
       "type": "object",
@@ -1337,32 +859,7 @@
           "minLength": 1
         },
         "title": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "type": {
           "type": "array",
@@ -1382,8 +879,7 @@
                   "null"
                 ],
                 "codelist": "milestoneType.csv",
-                "openCodelist": true,
-                "minLength": 1
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -1395,60 +891,10 @@
           }
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "code": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "dueDate": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
@@ -1504,8 +950,7 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         }
       },
       "patternProperties": {
@@ -1513,18 +958,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Document": {
       "type": "object",
@@ -1557,8 +999,7 @@
                   "null"
                 ],
                 "codelist": "documentType.csv",
-                "openCodelist": true,
-                "minLength": 1
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -1570,60 +1011,10 @@
           }
         },
         "title": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "url": {
           "$ref": "#/definitions/StringNullUriVersioned"
@@ -1635,60 +1026,10 @@
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
         "format": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "language": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         }
       },
       "patternProperties": {
@@ -1696,18 +1037,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Budget": {
       "type": "object",
@@ -1729,8 +1067,7 @@
                   "string",
                   "integer",
                   "null"
-                ],
-                "minLength": 1
+                ]
               },
               "releaseTag": {
                 "type": "array",
@@ -1742,63 +1079,13 @@
           }
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "amount": {
           "$ref": "#/definitions/Value"
         },
         "project": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "projectID": {
           "type": "array",
@@ -1817,8 +1104,7 @@
                   "string",
                   "integer",
                   "null"
-                ],
-                "minLength": 1
+                ]
               },
               "releaseTag": {
                 "type": "array",
@@ -1870,25 +1156,21 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "^(project_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Transaction": {
       "type": "object",
@@ -1942,8 +1224,7 @@
             "deprecatedVersion": "1.1"
           }
         }
-      },
-      "minProperties": 1
+      }
     },
     "OrganizationReference": {
       "type": "object",
@@ -1980,8 +1261,7 @@
           "type": [
             "string",
             "integer"
-          ],
-          "minLength": 1
+          ]
         },
         "identifier": {
           "deprecated": {
@@ -2018,8 +1298,7 @@
                 "items": {
                   "$ref": "#/definitions/IdentifierUnversioned"
                 },
-                "uniqueItems": true,
-                "minItems": 1
+                "uniqueItems": true
               },
               "releaseTag": {
                 "type": "array",
@@ -2037,43 +1316,16 @@
           },
           "$ref": "#/definitions/ContactPoint"
         }
-      },
-      "minProperties": 1
+      }
     },
     "Organization": {
       "type": "object",
       "properties": {
         "name": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "id": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "identifier": {
           "$ref": "#/definitions/Identifier"
@@ -2095,8 +1347,7 @@
                 "items": {
                   "$ref": "#/definitions/IdentifierUnversioned"
                 },
-                "uniqueItems": true,
-                "minItems": 1
+                "uniqueItems": true
               },
               "releaseTag": {
                 "type": "array",
@@ -2131,13 +1382,10 @@
                   "null"
                 ],
                 "items": {
-                  "type": "string",
-                  "minLength": 1
+                  "type": "string"
                 },
                 "codelist": "partyRole.csv",
-                "openCodelist": true,
-                "minItems": 1,
-                "uniqueItems": true
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -2164,8 +1412,7 @@
                 "type": [
                   "object",
                   "null"
-                ],
-                "minProperties": 1
+                ]
               },
               "releaseTag": {
                 "type": "array",
@@ -2182,11 +1429,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Item": {
       "type": "object",
@@ -2202,32 +1447,7 @@
           "minLength": 1
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "classification": {
           "$ref": "#/definitions/Classification"
@@ -2249,8 +1469,7 @@
                 "items": {
                   "$ref": "#/definitions/ClassificationUnversioned"
                 },
-                "uniqueItems": true,
-                "minItems": 1
+                "uniqueItems": true
               },
               "releaseTag": {
                 "type": "array",
@@ -2297,11 +1516,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Amendment": {
       "type": "object",
@@ -2310,123 +1527,22 @@
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
         "rationale": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "id": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "amendsReleaseID": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "releaseID": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "changes": {
           "type": "array",
@@ -2434,8 +1550,7 @@
             "type": "object",
             "properties": {
               "property": {
-                "type": "string",
-                "minLength": 1
+                "type": "string"
               },
               "former_value": {
                 "type": [
@@ -2445,21 +1560,14 @@
                   "array",
                   "object",
                   "null"
-                ],
-                "minLength": 1,
-                "minItems": 1,
-                "uniqueItems": true,
-                "minProperties": 1
+                ]
               }
-            },
-            "minProperties": 1
+            }
           },
           "deprecated": {
             "description": "A free-text or semi-structured string describing the changes made in each amendment can be provided in the amendment.description field. To provide structured information on the fields that have changed, publishers should provide releases indicating the state of the contracting process before and after the amendment.",
             "deprecatedVersion": "1.1"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         }
       },
       "patternProperties": {
@@ -2467,11 +1575,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Classification": {
       "type": "object",
@@ -2494,8 +1600,7 @@
                   "null"
                 ],
                 "codelist": "itemClassificationScheme.csv",
-                "openCodelist": true,
-                "minLength": 1
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -2523,8 +1628,7 @@
                   "string",
                   "integer",
                   "null"
-                ],
-                "minLength": 1
+                ]
               },
               "releaseTag": {
                 "type": "array",
@@ -2536,32 +1640,7 @@
           }
         },
         "description": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "uri": {
           "$ref": "#/definitions/StringNullUriVersioned"
@@ -2572,42 +1651,15 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Identifier": {
       "type": "object",
       "properties": {
         "scheme": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "id": {
           "type": "array",
@@ -2626,8 +1678,7 @@
                   "string",
                   "integer",
                   "null"
-                ],
-                "minLength": 1
+                ]
               },
               "releaseTag": {
                 "type": "array",
@@ -2639,32 +1690,7 @@
           }
         },
         "legalName": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "uri": {
           "$ref": "#/definitions/StringNullUriVersioned"
@@ -2675,154 +1701,27 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Address": {
       "type": "object",
       "properties": {
         "streetAddress": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "locality": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "region": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "postalCode": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "countryName": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         }
       },
       "patternProperties": {
@@ -2830,126 +1729,24 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "ContactPoint": {
       "type": "object",
       "properties": {
         "name": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "email": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "telephone": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "faxNumber": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "url": {
           "$ref": "#/definitions/StringNullUriVersioned"
@@ -2960,11 +1757,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Value": {
       "type": "object",
@@ -3330,8 +2125,7 @@
             }
           }
         }
-      },
-      "minProperties": 1
+      }
     },
     "Period": {
       "type": "object",
@@ -3372,8 +2166,7 @@
             }
           }
         }
-      },
-      "minProperties": 1
+      }
     },
     "SimpleUnit": {
       "type": "object",
@@ -3396,8 +2189,7 @@
                   "null"
                 ],
                 "codelist": "unitClassificationScheme.csv",
-                "openCodelist": true,
-                "minLength": 1
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -3409,42 +2201,15 @@
           }
         },
         "id": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         }
-      },
-      "minProperties": 1
+      }
     },
     "RelatedProcess": {
       "type": "object",
       "properties": {
         "id": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "relationship": {
           "type": "array",
@@ -3468,9 +2233,7 @@
                   "minLength": 1
                 },
                 "codelist": "relatedProcess.csv",
-                "openCodelist": true,
-                "minItems": 1,
-                "uniqueItems": true
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -3482,32 +2245,7 @@
           }
         },
         "title": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "scheme": {
           "type": "array",
@@ -3527,8 +2265,7 @@
                   "null"
                 ],
                 "codelist": "relatedProcessScheme.csv",
-                "openCodelist": true,
-                "minLength": 1
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -3540,38 +2277,12 @@
           }
         },
         "identifier": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "uri": {
           "$ref": "#/definitions/StringNullUriVersioned"
         }
-      },
-      "minProperties": 1
+      }
     },
     "Unit": {
       "type": "object",
@@ -3594,8 +2305,7 @@
                   "null"
                 ],
                 "codelist": "unitClassificationScheme.csv",
-                "openCodelist": true,
-                "minLength": 1
+                "openCodelist": true
               },
               "releaseTag": {
                 "type": "array",
@@ -3607,60 +2317,10 @@
           }
         },
         "id": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "name": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "minLength": 1
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/StringNullVersioned"
         },
         "value": {
           "$ref": "#/definitions/Value"
@@ -3701,8 +2361,7 @@
                 }
               }
             }
-          },
-          "minProperties": 1
+          }
         }
       },
       "patternProperties": {
@@ -3710,11 +2369,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "StringNullUriVersioned": {
       "type": "array",
@@ -3806,23 +2463,20 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "id": {
           "type": [
             "string",
             "integer",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "legalName": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "uri": {
           "type": [
@@ -3837,11 +2491,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "OrganizationReferenceVersionedId": {
       "type": "object",
@@ -3890,8 +2542,7 @@
                 "type": [
                   "string",
                   "integer"
-                ],
-                "minLength": 1
+                ]
               },
               "releaseTag": {
                 "type": "array",
@@ -3937,8 +2588,7 @@
                 "items": {
                   "$ref": "#/definitions/IdentifierUnversioned"
                 },
-                "uniqueItems": true,
-                "minItems": 1
+                "uniqueItems": true
               },
               "releaseTag": {
                 "type": "array",
@@ -3956,8 +2606,7 @@
           },
           "$ref": "#/definitions/ContactPoint"
         }
-      },
-      "minProperties": 1
+      }
     },
     "ClassificationUnversioned": {
       "type": "object",
@@ -3968,23 +2617,20 @@
             "null"
           ],
           "codelist": "itemClassificationScheme.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "id": {
           "type": [
             "string",
             "integer",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "description": {
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "uri": {
           "type": [
@@ -3999,12 +2645,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     }
-  },
-  "minProperties": 1
+  }
 }
