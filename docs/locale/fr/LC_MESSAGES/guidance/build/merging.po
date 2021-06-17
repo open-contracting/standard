@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"POT-Creation-Date: 2021-04-28 00:33-0400\n"
 "PO-Revision-Date: 2021-03-01 22:02+0000\n"
 "Last-Translator: Colin Maudry <colin@maudry.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
@@ -108,21 +108,21 @@ msgid ""
 "estimated value changed over time."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:64
+#: ../../docs/guidance/build/merging.md:58
 msgid "Example 2: Deletion of fields and objects"
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:66
+#: ../../docs/guidance/build/merging.md:60
 msgid "Fields"
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:68
+#: ../../docs/guidance/build/merging.md:62
 msgid ""
 "A government agency in Colombia publishes the planning of a procurement "
 "opportunity, including draft data for the tender, as shown below."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:70
+#: ../../docs/guidance/build/merging.md:64
 msgid ""
 "After a few weeks, the tender is ready to be announced. The officer in "
 "charge notices that the rationale of the planning is a duplication of the "
@@ -132,7 +132,7 @@ msgid ""
 "updated."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:72
+#: ../../docs/guidance/build/merging.md:66
 msgid ""
 "In the final record, both the compiled and versioned releases show the "
 "changes. The `planning/rationale` field has disappeared from the "
@@ -141,17 +141,17 @@ msgid ""
 "value can be used to determine when the field was deleted."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:95
+#: ../../docs/guidance/build/merging.md:86
 msgid "Objects"
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:97
+#: ../../docs/guidance/build/merging.md:88
 msgid ""
 "Another government agency in Colombia publishes a new procurement "
 "opportunity. Details are provided in an OCDS release, as shown below."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:99
+#: ../../docs/guidance/build/merging.md:90
 msgid ""
 "A few days after releasing the tender notice, the government agency receives"
 " feedback for potential bidders, and they realize that the estimated "
@@ -161,25 +161,25 @@ msgid ""
 " bidders."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:101
+#: ../../docs/guidance/build/merging.md:92
 msgid ""
 "A release with a 'tenderAmendment' tag is published, in which both the "
 "`startDate` and `endDate` of the `contractPeriod` block have been set to "
 "`null`. Also, an `amendments` block is provided to explain the changes."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:103
+#: ../../docs/guidance/build/merging.md:94
 msgid ""
 "The final record is shown below. Note that the fields in the "
 "`contractPeriod` block have disappeared in the `compiledRelease`, and the "
 "`versionedRelease` contains the previous values."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:126
+#: ../../docs/guidance/build/merging.md:114
 msgid "Example 3: Deletion of array items"
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:128
+#: ../../docs/guidance/build/merging.md:116
 msgid ""
 "The public procurement authority in Zambia publishes an award notice, as "
 "well as an OCDS release with an 'award' tag. A NGO collects the individual "
@@ -188,7 +188,7 @@ msgid ""
 "website."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:130
+#: ../../docs/guidance/build/merging.md:118
 msgid ""
 "Two weeks later, the authority publishes a new release. Due to negotiations "
 "with the awarded supplier, one of the items in the award is being deleted "
@@ -197,16 +197,16 @@ msgid ""
 "remove has all its fields set to `null`."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:132
+#: ../../docs/guidance/build/merging.md:120
 msgid ""
 "The NGO generates a record. In the record, all the fields of the removed "
 "item have disappeared, and only its `id` is left."
 msgstr ""
 
-#: ../../docs/guidance/build/merging.md:158
+#: ../../docs/guidance/build/merging.md:140
 msgid ""
-"The current `merge routine <../../../schema/merging#merge-routine>`__ does "
-"not include a strategy to completely remove an entry from an array. We "
-"invite discussion on how to remove objects from arrays in issue `#232 "
-"<https://github.com/open-contracting/standard/issues/232>`__."
+"The current [merge routine](../../schema/merging.md#merge-routine) does not "
+"include a strategy to completely remove an entry from an array. We invite "
+"discussion on how to remove objects from arrays in issue "
+"[#232](https://github.com/open-contracting/standard/issues/232)."
 msgstr ""

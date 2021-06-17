@@ -427,6 +427,37 @@
           }
         },
         "eligibilityCriteria": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "deprecated": {
+                  "description": "This field had unclear semantics and used ambiguous terms, and is deprecated in favor of exclusionGrounds.",
+                  "deprecatedVersion": "1.2"
+                }
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "exclusionGrounds": {
           "$ref": "#/definitions/StringNullVersioned"
         },
         "selectionCriteria": {

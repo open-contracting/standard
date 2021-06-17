@@ -14,7 +14,7 @@ To maximize the interoperability of data published using the Open Contracting Da
 
 Whenever using terms from outside the OCDS standard, we encourage the publisher or user responsible to consult with the community on the best approach to adopt. 
 
-(Our publication conformance section is [based on the Popolo Project](http://www.popoloproject.com/specs/#conformance) approach.)
+(Our publication conformance section is [based on the Popolo Project](https://www.popoloproject.com/specs/#conformance) approach.)
 
 ### Validator and application conformance
 
