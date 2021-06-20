@@ -46,7 +46,9 @@ if __name__ == '__main__':
                 logging.warning(f'{registry}/{title} has no value in the Template column.')
                 code = f'{registry}/{title}'
             # Remove deprecated and obsoleted codes
-            if 'DEPRECATED' not in title and 'OBSOLETE' not in title:
+            if 'DEPRECATED' in title or 'OBSOLETE' in title:
+                logging.warning(f'Removed deprecated or obsolete code: {registry}/{title}')
+            else:
                 codes[code] = title
 
     with open(os.path.join(schema_dir, 'codelists', 'mediaType.csv'), 'w') as fp:
