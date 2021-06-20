@@ -66,7 +66,7 @@ Item quantities can be provided using an established codelist for units of measu
 
 ![org-id.guide](../_static/png/org-id-logo-full.png)
 
-The Organization Identifier Scheme uses the codes from [org-id.guide](http://www.org-id.guide). The latest version of the codelist can be [downloaded](http://org-id.guide/download) or [browsed](http://org-id.guide/) from its website.
+The Organization Identifier Scheme uses the codes from [org-id.guide](http://org-id.guide). The latest version of the codelist can be [downloaded](http://org-id.guide/download.csv) or [browsed](http://org-id.guide) from its website.
 
 To add new codes to the codelist, contact the [OCDS Helpdesk](../../support/index).
 
@@ -190,7 +190,7 @@ The 'planning' status was introduced in version 1.1.
 
 ### Method
 
-A contracting process aims to fulfill the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](http://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
+A contracting process aims to fulfill the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -242,7 +242,7 @@ Contracts can move through multiple states. Releases over time can update the st
 
 ### Currency
 
-The currency for each amount must be specified using the uppercase 3-letter currency code from [ISO4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+The currency for each amount must be specified using the uppercase 3-letter currency code from [ISO4217](https://www.iso.org/iso-4217-currency-codes.html).
 
 ```{csv-table-no-translate}
 :header-rows: 1
