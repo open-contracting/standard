@@ -10,13 +10,6 @@ import requests
 from helper import schema_dir
 
 
-def get_and_parse_csv(url):
-    response = requests.get(url)
-    response.raise_for_status()
-    content = response.content.decode('utf-8')
-    return csv.DictReader(content.splitlines(), delimiter=',')
-
-
 if __name__ == '__main__':
     # https://www.iana.org/assignments/media-types lists CSV files for each registry
     registries = [
