@@ -65,7 +65,33 @@
       "uniqueItems": true
     },
     "language": {
-      "$ref": "#/definitions/StringNullVersioned"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "releaseDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "releaseID": {
+            "type": "string"
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "codelist": "iso639-1.csv",
+            "openCodelist": true
+          },
+          "releaseTag": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
     },
     "relatedProcesses": {
       "uniqueItems": true,
@@ -1060,7 +1086,33 @@
           "$ref": "#/definitions/StringNullVersioned"
         },
         "language": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "iso639-1.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       },
       "patternProperties": {

@@ -152,6 +152,16 @@ The extended procurement category codelist is used to provide additional detail 
 :file: ../../build/current_lang/codelists/extendedProcurementCategory.csv
 ```
 
+### ISO639-1
+
+The [ISO639-1 codelist](https://id.loc.gov/vocabulary/iso639-1.html) is used to provide the default language used in text fields and the language of linked documents.
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/codelists/iso639-1.csv
+```
+
 ## Closed Codelists 
 
 ### Initiation Type
