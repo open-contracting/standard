@@ -84,6 +84,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
 * Update and improve the clarity of field descriptions in the release schema:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
+  * [#]() `id` and `date`, to add rules for compiled releases.
   * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
@@ -109,6 +110,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
 * [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component
 * [#1189](https://github.com/open-contracting/standard/pull/1189) Add recommendations about publishing and referencing documents in the document reference section
+* [#]() Add rules for setting `id` and `date` for compiled releases to the merging specification.
 
 ## [1.1.5] - 2020-08-20
 
