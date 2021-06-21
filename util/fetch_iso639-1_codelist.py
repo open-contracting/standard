@@ -1,5 +1,5 @@
 """
-Updates the ISO639-1 codelist from the Library of Congress TSV file.
+Updates the language codelist from the Library of Congress ISO639-1 TSV file.
 """
 
 import csv
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         uri = row['URI']
         codes[code] = {'Title': title, 'URI': uri}
 
-    with open(os.path.join(schema_dir, 'codelists', 'iso639-1.csv'), 'w') as fp:
+    with open(os.path.join(schema_dir, 'codelists', 'language.csv'), 'w') as fp:
         writer = csv.writer(fp, lineterminator='\n')
         writer.writerow(['Code', 'Title', 'URI'])
         for code in codes.keys():
