@@ -91,7 +91,7 @@
     },
     "language": {
       "title": "Release language",
-      "description": "The default language of the data using either two-letter codes from the from the open [ISO639-1](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#iso639-1) codelist, or extended [BCP47 language tags](https://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from the ISO639-1 codelist is recommended.",
+      "description": "The default language of the data, from the open [language](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. A [BCP47 language tag](https://www.w3.org/International/articles/language-tags/) is allowed, if there is a user need for the additional information.",
       "type": [
         "string",
         "null"
@@ -1043,7 +1043,7 @@
         },
         "language": {
           "title": "Language",
-          "description": "The language of the linked document using either two-letter codes from the [ISO639-1](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#iso639-1) codelist, or extended [BCP47 language tags](https://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from ISO639-1 is recommended unless there is a clear user need for distinguishing the language subtype.",
+          "description": "The language of the linked document, from the open [language](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. A [BCP47 language tag](https://www.w3.org/International/articles/language-tags/) is allowed, if there is a user need for the additional information.",
           "type": [
             "string",
             "null"
