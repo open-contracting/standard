@@ -154,7 +154,7 @@ The extended procurement category codelist is used to provide additional detail 
 
 ### Media type
 
-The media type codelist is based on the [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) with one additional code for offline documents: 'offline/print'. The codelist omits deprecated and obsoleted media types.
+The media type codelist is based on the [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) list. The media type codelist adds an exceptional code for printed documents ('offline/print'), and omits any media type that is marked as deprecated or obsolete by IANA.
 
 ```{csv-table-no-translate}
 :header-rows: 1
