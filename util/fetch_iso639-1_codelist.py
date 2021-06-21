@@ -20,11 +20,10 @@ if __name__ == '__main__':
     for row in csvreader:
         code = row['code']
         title = row['Label (English)']
-        uri = row['URI']
-        codes[code] = {'Title': title, 'URI': uri}
+        codes[code] = title
 
     with open(os.path.join(schema_dir, 'codelists', 'language.csv'), 'w') as fp:
         writer = csv.writer(fp, lineterminator='\n')
-        writer.writerow(['Code', 'Title', 'URI'])
+        writer.writerow(['Code', 'Title'])
         for code in codes.keys():
-            writer.writerow([code, codes[code]['Title'], codes[code]['URI']])
+            writer.writerow([code, codes[code]])
