@@ -10,7 +10,7 @@ Deprecated fields are marked in the JSON schema with the presence of a `deprecat
 
 For example:
 
-```{code-block} json
+```json
 {
   "deprecated": {
     "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",

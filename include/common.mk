@@ -31,6 +31,10 @@ $(POT_DIR):
 
 ### Message catalogs
 
+.PHONY: extract_theme
+extract_theme: $(POT_DIR)
+	pybabel extract . -o $(POT_DIR)/$(DOMAIN_PREFIX)theme.pot
+
 .PHONY: extract_codelists
 extract_codelists: $(POT_DIR)
 	pybabel extract -F babel_ocds_codelist.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)codelists.pot
@@ -47,7 +51,7 @@ extract_markdown: current_lang.en
 	sphinx-build -nW --keep-going -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
 .PHONY: extract
-extract: extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
+extract: extract_theme extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
 
 ### Transifex
 
@@ -65,10 +69,13 @@ update_txconfig:
 push: extract
 	tx push -s
 
+force_push.%: extract
+	tx push -s -t -f --no-interactive -l $*
+
 # Also pushes the translation .po files (`file_filter` in .tx/config) to Transifex.
-.PHONY: force_push_all
-force_push_all: extract
-	tx push -s -t -f -l $(COMMA_SEPARATED_TRANSLATIONS) --no-interactive
+.PHONY: force_push
+force_push: extract
+	tx push -s -t -f --no-interactive -l $(COMMA_SEPARATED_TRANSLATIONS)
 
 pull.%: FORCE
 	tx pull -f -l $*
@@ -109,6 +116,30 @@ $(TRANSLATIONS:.%=%): %: build_source compile build.% clean_current_lang
 
 .PHONY: all
 all: build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
+
+### Development
+
+.PHONY: autobuild
+autobuild: current_lang.en
+	sphinx-autobuild -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
+
+.PHONY: update
+update: clean_dist
+	python manage.py update
+
+### Test
+
+# "-" ignores the exit status. Schema files might contain old URLs that redirect, which can only be updated in a new version.
+
+.PHONY: linkcheck_source
+linkcheck_source: current_lang.en
+	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/en
+
+$(TRANSLATIONS:.%=linkcheck.%): linkcheck.%: current_lang.%
+	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
+
+.PHONY: linkcheck
+linkcheck: linkcheck_source compile $(TRANSLATIONS:.%=linkcheck.%) clean_current_lang
 
 ### PDF generation
 
