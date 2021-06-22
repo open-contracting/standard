@@ -550,9 +550,9 @@ def add_translation_notes():
     """
     Implements the localization policy.
 
-    "Minor, non-normative, documentation updates will be translated promptly, but may not always be translated before the
-    updates are released. The documentation will clearly display when the English documentation is 'ahead' of translations
-    for a particular version."
+    "Minor, non-normative, documentation updates will be translated promptly, but may not always be translated before
+    the updates are released. The documentation will clearly display when the English documentation is 'ahead' of
+    translations for a particular version."
 
     https://standard.open-contracting.org/1.1/en/governance/#translation-and-localization-policy
     """
