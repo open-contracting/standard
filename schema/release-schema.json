@@ -1035,11 +1035,13 @@
         },
         "format": {
           "title": "Format",
-          "description": "The format of the document, using the open [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) codelist (see the values in the 'Template' column), or using the 'offline/print' code if the described document is published offline. For example, web pages have a format of 'text/html'.",
+          "description": "The format of the document, using the open [media type](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#media-type) codelist. For example, a web page has a format of 'text/html'. The 'offline/print' code is reserved for printed documents not available in other formats.",
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "codelist": "mediaType.csv",
+          "openCodelist": true
         },
         "language": {
           "title": "Language",
@@ -1547,12 +1549,12 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The scheme or codelist from which the classification code is taken. For line item classifications, this uses the open [itemClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) codelist.",
+          "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#classification-scheme) codelist.",
           "type": [
             "string",
             "null"
           ],
-          "codelist": "itemClassificationScheme.csv",
+          "codelist": "classificationScheme.csv",
           "openCodelist": true
         },
         "id": {
