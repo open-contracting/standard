@@ -180,10 +180,6 @@ This case is encountered if the above conditions aren't met. If the array is emp
 In this case, to remove an object from an array, you need to instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue [#232](https://github.com/open-contracting/standard/issues/232).
 ```
 
-```{note}
-In the release schema, `"versionId": true` is declared on `id` fields that must be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue [#812](https://github.com/open-contracting/standard/issues/812)). If `"versionId": true` is declared on the `id` field of an object within an array, it is ignored. `"versionId": false` has no meaning and is ignored.
-```
-
 ### Reference implementation
 
 A reference implementation of the merge routine [is available in Python on GitHub](https://github.com/open-contracting/ocds-merge). We strongly encourage any re-implementations to [read its commented code and use its test cases](https://ocds-merge.readthedocs.io/en/latest/#reference-implementation), to ensure correctness.
