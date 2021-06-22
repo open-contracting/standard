@@ -1,14 +1,25 @@
+#!/usr/bin/env python
+import csv
 import json
 import os.path
+import re
 import sys
 import warnings
 from copy import deepcopy
+from glob import glob
+from pathlib import Path
 
+import click
+import json_merge_patch
+import jsonref
+import requests
 from jsonref import JsonRef, JsonRefError
+from lxml import etree
 
-from helper import base_dir, json_dump, json_load
+basedir = Path(__file__).resolve().parent
+schemadir = basedir / 'schema'
 
-sys.path.append(os.path.join(base_dir, 'docs'))
+sys.path.append(str(basedir / 'docs'))
 
 from conf import release  # noqa isort:skip
 
@@ -19,7 +30,7 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 
 warnings.formatwarning = custom_warning_formatter
 
-versioned_template_json = '''
+versioned_template = json.loads('''
 {
   "type": "array",
   "items": {
@@ -42,8 +53,7 @@ versioned_template_json = '''
     }
   }
 }
-'''
-versioned_template = json.loads(versioned_template_json)
+''')
 
 common_versioned_definitions = {
     'StringNullUriVersioned': {
@@ -98,18 +108,55 @@ keywords_to_remove = (
 )
 
 
-def _get_types(prop):
+def json_load(filename, library=json):
     """
-    Returns a property's `type` as a list.
+    Loads JSON data from the given filename.
     """
-    if 'type' not in prop:
-        return []
-    if isinstance(prop['type'], str):
-        return [prop['type']]
-    return prop['type']
+    with open(os.path.join(schemadir, filename)) as f:
+        return library.load(f)
 
 
-def get_definition_ref(item):
+def json_dump(filename, data):
+    """
+    Writes JSON data to the given filename.
+    """
+    with open(os.path.join(schemadir, filename), 'w') as f:
+        json.dump(data, f, indent=2)
+        f.write('\n')
+
+
+def get(url):
+    """
+    GETs a URL and returns the response. Raises an exception if the status code is not successful.
+    """
+    response = requests.get(url)
+    response.raise_for_status()
+    return response
+
+
+def coerce_to_list(data, key):
+    """
+    Returns the value of the ``key`` key in the ``data`` mapping. If the value is a string, wraps it in an array.
+    """
+    item = data.get(key, [])
+    if isinstance(item, str):
+        return [item]
+    return item
+
+
+def get_metaschema():
+    """
+    Patches and returns the JSON Schema Draft 4 metaschema.
+    """
+    return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4.json'),
+                                  json_load('metaschema/meta-schema-patch.json'))
+
+
+def get_common_definition_ref(item):
+    """
+    Returns a schema that references the common definition that the ``item`` matches: "StringNullUriVersioned",
+    "StringNullDateTimeVersioned" or "StringNullVersioned".
+    """
     for name, keywords in common_versioned_definitions.items():
         # If the item matches the definition.
         if any(item.get(keyword) != value for keyword, value in keywords.items()):
@@ -117,42 +164,54 @@ def get_definition_ref(item):
         # And adds no keywords to the definition.
         if any(keyword not in (*keywords, *keywords_to_remove) for keyword in item):
             continue
-        return {'$ref': '#/definitions/{}'.format(name)}
+        return {'$ref': f'#/definitions/{name}'}
 
 
 def add_versioned(schema, unversioned_pointers, pointer=''):
+    """
+    An outer function that calls ``_add_versioned`` on each field.
+    """
     for key, value in schema['properties'].items():
-        new_pointer = '{}/properties/{}'.format(pointer, key)
+        new_pointer = f'{pointer}/properties/{key}'
         _add_versioned(schema, unversioned_pointers, new_pointer, key, value)
 
     for key, value in schema.get('definitions', {}).items():
-        new_pointer = '{}/definitions/{}'.format(pointer, key)
+        new_pointer = f'{pointer}/definitions/{key}'
         add_versioned(value, unversioned_pointers, pointer=new_pointer)
 
 
 def _add_versioned(schema, unversioned_pointers, pointer, key, value):
+    """
+    An inner function that performs the changes to the schema to refer to versioned/unversioned definitions.
+
+    :param schema dict: the schema of the object on which the field is defined
+    :param unversioned_pointers set: JSON Pointers to ``id`` fields to leave unversioned if the object is in an array
+    :param pointer str: the field's pointer
+    :param key str: the field's name
+    :param value str: the field's schema
+    """
     # Skip unversioned fields.
     if pointer in unversioned_pointers:
         return
 
-    types = _get_types(value)
+    types = coerce_to_list(value, 'type')
 
     # If a type is unrecognized, we might need to update this script.
     if '$ref' not in value and types not in recognized_types:
-        warnings.warn('{} has unrecognized type {}'.format(pointer, types))
+        warnings.warn(f'{pointer} has unrecognized type {types}')
 
     # For example, if $ref is used.
     if not types:
         # Ignore the `amendment` field, which had no `id` field in OCDS 1.0.
         if 'deprecated' not in value:
-            versioned_pointer = '{}/properties/id'.format(value['$ref'][1:])
-            # If the `id` field is on an object not in an array, it is versioned.
+            versioned_pointer = f"{value['$ref'][1:]}/properties/id"
+            # If the `id` field is on an object not in an array, it needs to be versioned (e.g. buyer/properties/id).
             if versioned_pointer in unversioned_pointers:
                 value['$ref'] = value['$ref'] + 'VersionedId'
         return
 
     # Reference a common versioned definition if possible, to limit the size of the schema.
-    ref = get_definition_ref(value)
+    ref = get_common_definition_ref(value)
     if ref:
         schema['properties'][key] = ref
 
@@ -165,7 +224,7 @@ def _add_versioned(schema, unversioned_pointers, pointer, key, value):
         new_value = deepcopy(value)
 
         if types == ['array']:
-            item_types = _get_types(value['items'])
+            item_types = coerce_to_list(value['items'], 'type')
 
             # See https://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
             if value.get('wholeListMerge'):
@@ -184,7 +243,7 @@ def _add_versioned(schema, unversioned_pointers, pointer, key, value):
             elif item_types != ['string']:
                 # Note: Versioning the properties of un-$ref'erenced objects in arrays isn't implemented. However,
                 # this combination hasn't occurred, with the exception of `Amendment/changes`.
-                warnings.warn("{}/items has unexpected type {}".format(pointer, item_types))
+                warnings.warn(f"{pointer}/items has unexpected type {item_types}")
 
         versioned = deepcopy(versioned_template)
         versioned['items']['properties']['value'] = new_value
@@ -192,6 +251,9 @@ def _add_versioned(schema, unversioned_pointers, pointer, key, value):
 
 
 def update_refs_to_unversioned_definitions(schema):
+    """
+    Replaces ``$ref`` values with unversioned definitions.
+    """
     for key, value in schema.items():
         if key == '$ref':
             schema[key] = value + 'Unversioned'
@@ -200,18 +262,21 @@ def update_refs_to_unversioned_definitions(schema):
 
 
 def get_unversioned_pointers(schema, fields, pointer=''):
+    """
+    Returns the JSON Pointers to ``id`` fields that must not be versioned if the object is in an array.
+    """
     if isinstance(schema, list):
         for index, item in enumerate(schema):
-            get_unversioned_pointers(item, fields, pointer='{}/{}'.format(pointer, index))
+            get_unversioned_pointers(item, fields, pointer=f'{pointer}/{index}')
     elif isinstance(schema, dict):
         # Follows the logic of _get_merge_rules in merge.py from ocds-merge.
-        types = _get_types(schema)
+        types = coerce_to_list(schema, 'type')
 
         # If an array is whole list merge, its items are unversioned.
         if 'array' in types and schema.get('wholeListMerge'):
             return
         if 'array' in types and 'items' in schema:
-            item_types = _get_types(schema['items'])
+            item_types = coerce_to_list(schema['items'], 'type')
             # If an array mixes objects and non-objects, it is whole list merge.
             if any(item_type != 'object' for item_type in item_types):
                 return
@@ -221,43 +286,52 @@ def get_unversioned_pointers(schema, fields, pointer=''):
                     reference = schema['items'].__reference__['$ref'][1:]
                 else:
                     reference = pointer
-                fields.add('{}/properties/{}'.format(reference, 'id'))
+                fields.add(f'{reference}/properties/id')
 
         for key, value in schema.items():
-            get_unversioned_pointers(value, fields, pointer='{}/{}'.format(pointer, key))
+            get_unversioned_pointers(value, fields, pointer=f'{pointer}/{key}')
 
 
 def remove_omit_when_merged(schema):
+    """
+    Removes properties that set ``omitWhenMerged``.
+    """
     if isinstance(schema, list):
         for item in schema:
             remove_omit_when_merged(item)
     elif isinstance(schema, dict):
         for key, value in schema.items():
             if key == 'properties':
-                for k, v in list(value.items()):
-                    if v.get('omitWhenMerged'):
-                        value.pop(k)
-                        schema['required'].remove(k)
+                for prop in list(value):
+                    if value[prop].get('omitWhenMerged'):
+                        del value[prop]
+                        schema['required'].remove(prop)
             remove_omit_when_merged(value)
 
 
 def remove_metadata_and_extended_keywords(schema):
+    """
+    Removes metadata and extended keywords from properties and definitions.
+    """
     if isinstance(schema, list):
         for item in schema:
             remove_metadata_and_extended_keywords(item)
     elif isinstance(schema, dict):
         for key, value in schema.items():
             if key in ('definitions', 'properties'):
-                for v in value.values():
+                for subschema in value.values():
                     for keyword in keywords_to_remove:
-                        v.pop(keyword, None)
+                        subschema.pop(keyword, None)
             remove_metadata_and_extended_keywords(value)
 
 
 def get_versioned_release_schema(schema):
+    """
+    Returns the versioned release schema.
+    """
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
-    schema['id'] = 'https://standard.open-contracting.org/schema/{}/versioned-release-validation-schema.json'.format(release_with_underscores)  # noqa
+    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'  # noqa
     schema['title'] = 'Schema for a compiled, versioned Open Contracting Release.'
 
     # Release IDs, dates and tags appear alongside values in the versioned release schema.
@@ -296,7 +370,7 @@ def get_versioned_release_schema(schema):
             if name.endswith('VersionedId'):
                 # Add a copy of an definition with a versioned `id` field, using the same logic as before.
                 definition = deepcopy(schema['definitions'][name[:-11]])
-                pointer = '/definitions/{}/properties/id'.format(name[:-11])
+                pointer = f'/definitions/{name[:-11]}/properties/id'
                 pointers = unversioned_pointers - {pointer}
                 _add_versioned(definition, pointers, pointer, 'id', definition['properties']['id'])
             else:
@@ -311,6 +385,110 @@ def get_versioned_release_schema(schema):
     return schema
 
 
-if __name__ == '__main__':
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
+@click.argument('filename')
+def unused_terms(filename):
+    """
+    Prints terms from the provided filename that do not occur in the documentation.
+    """
+    paths = []
+    for extension in ('csv', 'json', 'md'):
+        paths.extend(glob(str(basedir / 'docs' / '**' / f'*.{extension}'), recursive=True))
+
+    corpus = []
+    for path in paths:
+        with open(path) as f:
+            # Replace punctuation with whitespace, except in abbreviations like "e.g.".
+            corpus.append(re.sub(r'(?<!\b[a-z])[.,:"’[\]]', ' ', f.read()).lower())
+    corpus = ' '.join(corpus)
+
+    with open(filename) as f:
+        for line in f:
+            if f' {line.strip().lower()} ' not in corpus:
+                click.echo(line, nl=False)
+
+
+@cli.command()
+def pre_commit():
+    """
+    Updates meta-schema.json, dereferenced-release-schema.json and versioned-release-validation-schema.json.
+    """
     release_schema = json_load('release-schema.json')
+
+    json_dump('meta-schema.json', get_metaschema())
+    json_dump('dereferenced-release-schema.json', json_load('release-schema.json', jsonref))
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
+
+
+@cli.command()
+def update_currency():
+    """
+    Updates schema/codelists/currency.csv from ISO 4217.
+    """
+    # https://www.iso.org/iso-4217-currency-codes.html
+    # https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes
+
+    # "List One: Current Currency & Funds"
+    current_codes = {}
+    url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_one.xml'  # noqa: E501
+    tree = etree.fromstring(get(url).content)
+    for node in tree.xpath('//CcyNtry'):
+        match = node.xpath('./Ccy')
+        # Entries like Antarctica have no universal currency.
+        if match:
+            code = node.xpath('./Ccy')[0].text
+            title = node.xpath('./CcyNm')[0].text.strip()
+            if code not in current_codes:
+                current_codes[code] = title
+            # We should expect currency titles to be consistent across countries.
+            elif current_codes[code] != title:
+                raise Exception(f'expected {current_codes[code]}, got {title}')
+
+    # "List Three: Historic Denominations (Currencies & Funds)"
+    historic_codes = {}
+    url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_three.xml'  # noqa: E501
+    tree = etree.fromstring(get(url).content)
+    for node in tree.xpath('//HstrcCcyNtry'):
+        code = node.xpath('./Ccy')[0].text
+        title = node.xpath('./CcyNm')[0].text.strip()
+        valid_until = node.xpath('./WthdrwlDt')[0].text
+        # Use ISO8601 interval notation.
+        valid_until = re.sub(r'^(\d{4})-(\d{4})$', r'\1/\2', valid_until.replace(' to ', '/'))
+        if code not in current_codes:
+            if code not in historic_codes:
+                historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
+            # If the code is historical, use the most recent title and valid date.
+            elif valid_until > historic_codes[code]['Valid Until']:
+                historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
+
+    with (schemadir / 'codelists' / 'currency.csv').open('w') as fp:
+        writer = csv.writer(fp, lineterminator='\n')
+        writer.writerow(['Code', 'Title', 'Valid Until'])
+        for code in sorted(current_codes.keys()):
+            writer.writerow([code, current_codes[code], None])
+        for code in sorted(historic_codes.keys()):
+            writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
+
+    release_schema = json_load('release-schema.json')
+    codes = sorted(list(current_codes.keys()) + list(historic_codes.keys()))
+    release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
+
+    json_dump('release-schema.json', release_schema)
+
+
+@cli.command()
+@click.pass_context
+def update(ctx):
+    """
+    Updates external codelists (currency).
+    """
+    ctx.invoke(update_currency)
+
+
+if __name__ == '__main__':
+    cli()

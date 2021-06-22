@@ -8,10 +8,9 @@ import sys
 
 import jsonref
 
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'util'))
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
 
-from make_metaschema import get_metaschema  # noqa isort:skip
-from make_versioned_release_schema import get_versioned_release_schema  # noqa isort:skip
+from manage import get_metaschema, get_versioned_release_schema  # noqa isort:skip
 
 
 def test_versioned_release_schema_is_in_sync():
