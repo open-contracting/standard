@@ -78,7 +78,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award.
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `tender.submissionMethod` field, because all codes from the `submissionMethod` codelist are deprecated.
-* [#1240](https://github.com/open-contracting/standard/pull/1240) Move `Unit` from https://github.com/open-contracting/standard/pull/1318Item.unit` to the schema definitions
+* [#1240](https://github.com/open-contracting/standard/pull/1240) Move `Unit` from `Item.unit` to the schema definitions
 * [#1318](https://github.com/open-contracting/standard/pull/1318) Remove the `versionId` field, because it is an incomplete means of getting the correct versioning behavior
 * Add new fields to the release schema:
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `weight` to `Item.unit`
