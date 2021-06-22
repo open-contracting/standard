@@ -46,5 +46,7 @@ jobs:
       - if: github.event_name == 'push' && success() && github.repository != 'open-contracting/standard_profile_template'
         env:
           PATH_PREFIX: ""
-          PRODUCTION: ${{ github.ref == 'refs/heads/latest' || github.ref == 'refs/heads/1.0' || github.ref == 'refs/heads/1.1' }}
+          PRODUCTION: ${{ startsWith(github.ref, 'refs/tags') || github.ref == 'refs/heads/latest' || github.ref == 'refs/heads/1.0' || github.ref == 'refs/heads/1.1' }}
+          RELEASE: ${{ startsWith(github.ref, 'refs/tags') }}
+          VERSION: "1.1"
         run: curl -sS https://raw.githubusercontent.com/open-contracting/deploy/main/deploy-docs.sh | bash -
