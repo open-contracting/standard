@@ -70,6 +70,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1225](https://github.com/open-contracting/standard/pull/1225) Add 'securityClearanceDeadline' code from the EU extension to the `milestoneType` codelist.
 * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
 * [#1243](https://github.com/open-contracting/standard/pull/1243) Add the 'procurement' and 'contractClose' codes from the PPP extension to the `milestoneType` codelist.
+* [#1319](https://github.com/open-contracting/standard/pull/1319) Rename `itemClassificationScheme` to `classificationScheme`
 
 ### Schema
 
