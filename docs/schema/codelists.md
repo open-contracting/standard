@@ -150,6 +150,16 @@ The extended procurement category codelist is used to provide additional detail 
 :file: ../../build/current_lang/codelists/extendedProcurementCategory.csv
 ```
 
+### Media type
+
+The media type codelist is based on the [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) list. The media type codelist adds an exceptional code for printed documents ('offline/print'), and omits any media type that is marked as deprecated or obsolete by IANA.
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/codelists/mediaType.csv
+```
+
 ## Closed Codelists 
 
 ### Initiation Type
