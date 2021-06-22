@@ -578,9 +578,9 @@ def add_translation_notes():
                 domain = relative_path(build_dir, source)
 
                 path = language_dir / domain / 'index.po'
-                if not path.isfile():
+                if not path.is_file():
                     path = language_dir / f'{domain}.po'
-                if not os.path.isfile(path):
+                if not path.is_file():
                     add_translation_note(os.path.join(root, name), language, domain)
                     continue
 
