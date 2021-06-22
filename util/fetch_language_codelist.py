@@ -21,9 +21,14 @@ if __name__ == '__main__':
     csvreader = csv.DictReader(content.splitlines(), delimiter='\t')
     for row in csvreader:
         code = row['code']
-        titles = re.split(r' *\| *', row['Label (English)'])
-        title = ', '.join({' '.join(reversed(title.split(', '))): None for title in titles})
-        codes[code] = title
+        titles = row['Label (English)']
+        # Change entries like "Ndebele, North |  North Ndebele", but not like "Greek, Modern (1453-)".
+        if '|' in titles:
+            titles = re.split(r' *\| *', row['Label (English)'])
+            # Remove duplication like "Ndebele, North |  North Ndebele" and use a comma instead of a pipe for
+            # alternatives. To preserve order, a dict without values is used instead of a set.
+            titles = ', '.join({' '.join(reversed(title.split(', '))): None for title in titles})
+        codes[code] = titles
 
     with open(os.path.join(schema_dir, 'codelists', 'language.csv'), 'w') as fp:
         writer = csv.writer(fp, lineterminator='\n')
