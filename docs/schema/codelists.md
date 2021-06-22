@@ -40,16 +40,14 @@ The organizations, economic operators or other participants in a contracting pro
 :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
-### Item Classification Scheme
+### Classification Scheme
 
-Items should be classified using existing item classification schemes, such as the [EC Common Procurement Vocabulary (CPV)](https://simap.ted.europa.eu/web/simap/cpv).
-
-The `itemClassificationScheme` codelist is referenced by the `scheme` field of the `Classification` object, which can be used in multiple contexts. You can find the codes relevant to a given context by filtering the codelist by its `Category` column.
+The `classificationScheme` codelist is referenced by the `scheme` field of the `Classification` object, which can be used in multiple contexts. You can find the codes relevant to a given context by filtering the codelist by its `Category` column.
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../build/current_lang/codelists/itemClassificationScheme.csv
+:file: ../../build/current_lang/codelists/classificationScheme.csv
 ```
 
 ### Unit Classification Scheme
