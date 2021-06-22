@@ -340,7 +340,7 @@ See the changelogs for:
 
 * [#386](https://github.com/open-contracting/standard/issues/386) **[Document type](../schema/codelists.md#document-type)** - New codes have been added to the documentType codelist, and definitions of codes updated.
 * [#322](https://github.com/open-contracting/standard/issues/322) **[Submission Method Codelist](../schema/codelists.md#submission-method)** - The submissionMethod codelist has been updated.
-* [#387](https://github.com/open-contracting/standard/issues/387) **[Codelist updates: Item Classification Scheme](../schema/codelists.md#item-classification-scheme)** - New entries have been added to the itemClassificationScheme codelist.
+* [#387](https://github.com/open-contracting/standard/issues/387) **[Codelist updates: Item Classification Scheme](../schema/codelists.md#classification-scheme)** - New entries have been added to the itemClassificationScheme codelist.
 * [#385](https://github.com/open-contracting/standard/issues/385) **[Codelist updates: awardCriteria](../schema/codelists.md#award-criteria)** - Revising the awardCriteria codelist, with all existing codes deprecated and a new set of codes introduced.
 
 ### Added

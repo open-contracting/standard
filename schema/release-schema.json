@@ -1405,7 +1405,7 @@
         },
         "classification": {
           "title": "Classification",
-          "description": "The primary classification for the item.",
+          "description": "The primary classification for the item. Items should be classified using existing item classification schemes, such as the [EC Common Procurement Vocabulary (CPV)](https://simap.ted.europa.eu/web/simap/cpv).",
           "$ref": "#/definitions/Classification"
         },
         "additionalClassifications": {
@@ -1543,12 +1543,12 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The scheme or codelist from which the classification code is taken. For line item classifications, this uses the open [itemClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) codelist.",
+          "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#classification-scheme) codelist.",
           "type": [
             "string",
             "null"
           ],
-          "codelist": "itemClassificationScheme.csv",
+          "codelist": "classificationScheme.csv",
           "openCodelist": true
         },
         "id": {
