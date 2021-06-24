@@ -26,7 +26,7 @@ jobs:
         run: make update extract
       - run: |
           make
-          python util/add_translation_notes.py
+          python manage.py add-translation-notes
       - run: |
           make linkcheck
           rm -f output.json output.txt
