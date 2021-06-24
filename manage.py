@@ -568,7 +568,7 @@ def add_translation_notes():
                 if directory in dirs:
                     dirs.remove(directory)
 
-            if root == build_dir:
+            if root == str(build_dir):
                 continue
 
             for name in files:
