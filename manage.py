@@ -2,12 +2,15 @@
 import csv
 import gettext
 import json
+import logging
 import os
 import re
 import sys
 import warnings
+from contextlib import contextmanager
 from copy import deepcopy
 from glob import glob
+from io import StringIO
 from pathlib import Path
 
 import click
@@ -117,7 +120,7 @@ def json_load(filename, library=json):
     """
     Loads JSON data from the given filename.
     """
-    with open(os.path.join(schemadir, filename)) as f:
+    with (schemadir / filename).open() as f:
         return library.load(f)
 
 
@@ -125,9 +128,31 @@ def json_dump(filename, data):
     """
     Writes JSON data to the given filename.
     """
-    with open(os.path.join(schemadir, filename), 'w') as f:
+    with (schemadir / filename).open('w') as f:
         json.dump(data, f, indent=2)
         f.write('\n')
+
+
+def csv_load(url, delimiter=','):
+    """
+    Loads CSV data into a ``csv.DictReader`` from the given URL.
+    """
+    reader = csv.DictReader(StringIO(get(url).text), delimiter=delimiter)
+    return reader
+
+
+@contextmanager
+def csv_dump(filename, fieldnames):
+    """
+    Writes CSV headers to the given filename, and yields a ``csv.writer``.
+    """
+    f = (schemadir / 'codelists' / filename).open('w')
+    writer = csv.writer(f, lineterminator='\n')
+    writer.writerow(fieldnames)
+    try:
+        yield writer
+    finally:
+        f.close()
 
 
 def get(url):
@@ -399,7 +424,7 @@ def cli():
 @click.argument('filename')
 def unused_terms(filename):
     """
-    Prints terms from the provided filename that do not occur in the documentation.
+    Print terms from the provided filename that do not occur in the documentation.
     """
     paths = []
     for extension in ('csv', 'json', 'md'):
@@ -421,7 +446,7 @@ def unused_terms(filename):
 @cli.command()
 def pre_commit():
     """
-    Updates meta-schema.json, dereferenced-release-schema.json and versioned-release-validation-schema.json.
+    Update meta-schema.json, dereferenced-release-schema.json and versioned-release-validation-schema.json.
     """
     release_schema = json_load('release-schema.json')
 
@@ -433,7 +458,7 @@ def pre_commit():
 @cli.command()
 def update_currency():
     """
-    Updates schema/codelists/currency.csv from ISO 4217.
+    Update schema/codelists/currency.csv from ISO 4217.
     """
     # https://www.iso.org/iso-4217-currency-codes.html
     # https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes
@@ -471,9 +496,7 @@ def update_currency():
             elif valid_until > historic_codes[code]['Valid Until']:
                 historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
 
-    with (schemadir / 'codelists' / 'currency.csv').open('w') as fp:
-        writer = csv.writer(fp, lineterminator='\n')
-        writer.writerow(['Code', 'Title', 'Valid Until'])
+    with csv_dump('currency.csv', ['Code', 'Title', 'Valid Until']) as writer:
         for code in sorted(current_codes.keys()):
             writer.writerow([code, current_codes[code], None])
         for code in sorted(historic_codes.keys()):
@@ -487,12 +510,78 @@ def update_currency():
 
 
 @cli.command()
+def update_language():
+    """
+    Update schema/codelists/language.csv from ISO 639-1.
+    """
+    # https://www.iso.org/iso-639-language-codes.html
+    # https://id.loc.gov/vocabulary/iso639-1.html
+
+    with csv_dump('language.csv', ['Code', 'Title']) as writer:
+        reader = csv_load('https://id.loc.gov/vocabulary/iso639-1.tsv', delimiter='\t')
+        for row in reader:
+            # Remove parentheses, like "Greek, Modern (1453-)", and split alternatives.
+            titles = re.split(r' *\| *', re.sub(r' \(.+\)', '', row['Label (English)']))
+            # Remove duplication like "Ndebele, North |  North Ndebele" and join alternatives using a comma instead of
+            # a pipe. To preserve order, a dict without values is used instead of a set.
+            titles = ', '.join({' '.join(reversed(title.split(', '))): None for title in titles})
+            writer.writerow([row['code'], titles])
+
+
+@cli.command()
+def update_media_type():
+    """
+    Update schema/codelists/mediaType.csv from IANA.
+
+    Ignores deprecated and obsolete media types.
+    """
+    # https://www.iana.org/assignments/media-types/media-types.xhtml
+
+    # See "Registries included below".
+    registries = [
+        'application',
+        'audio',
+        'font',
+        'image',
+        'message',
+        'model',
+        'multipart',
+        'text',
+        'video',
+    ]
+
+    with csv_dump('mediaType.csv', ['Code', 'Title']) as writer:
+        for registry in registries:
+            # See "Available Formats" under each heading.
+            reader = csv_load(f'https://www.iana.org/assignments/media-types/{registry}.csv')
+            for row in reader:
+                if ' ' in row['Name']:
+                    name, message = row['Name'].split(' ', 1)
+                else:
+                    name, message = row['Name'], None
+                code = f"{registry}/{name}"
+                template = row['Template']
+                # All messages are expected to be about deprecation and obsoletion.
+                if message:
+                    logging.warning(f'{message}: {code}')
+                # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
+                elif template and template != code:
+                    raise Exception(f"expected {code}, got {template}")
+                else:
+                    writer.writerow([code, name])
+
+        writer.writerow(['offline/print', 'print'])
+
+
+@cli.command()
 @click.pass_context
 def update(ctx):
     """
-    Updates external codelists (currency).
+    Update external codelists (currency, language, media type).
     """
     ctx.invoke(update_currency)
+    ctx.invoke(update_language)
+    ctx.invoke(update_media_type)
 
 
 def add_translation_note(path, language, domain):
@@ -547,7 +636,7 @@ def add_translation_note(path, language, domain):
 @cli.command()
 def add_translation_notes():
     """
-    Implements the localization policy.
+    Implement the localization policy.
 
     "Minor, non-normative, documentation updates will be translated promptly, but may not always be translated before
     the updates are released. The documentation will clearly display when the English documentation is 'ahead' of
