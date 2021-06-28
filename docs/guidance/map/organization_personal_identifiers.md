@@ -14,7 +14,7 @@ There are two components to an identifier in OCDS:
 * a code indicating the list or register from which the identifier is drawn (the `scheme`); and
 * the identifier itself (the `id`).
 
-Follow the [guidance](http://standard.openownership.org/en/0.2.0/schema/guidance/identifiers.html#shared-identifiers) from the Beneficial Ownership Data Standard to construct a `scheme` value for the personal identifier:
+Follow the [guidance](https://standard.openownership.org/en/0.2.0/schema/guidance/identifiers.html#shared-identifiers) from the Beneficial Ownership Data Standard to construct a `scheme` value for the personal identifier:
 
 > the scheme should have the pattern {JURISDICTION}-{TYPE} where JURISDICTION is an uppercase ISO 3166-1 alpha-3 country code and TYPE is one of PASSPORT, TAXID or IDCARD
 
@@ -27,10 +27,8 @@ In the example below:
 * The individual's ID card number is published in `.identifier.id`
 * `.identifier.scheme` is constructed from the ISO 3166-1 alpha-3 country code for Colombia ('COL') and the type of the identifier ('IDCARD')
 
-
-```eval_rst
-.. jsoninclude:: ../../examples/organization-personal-identifier.json
-   :jsonpointer:
-   :expand: releases, parties, identifier
-   :title: personal-identifiers
+```{jsoninclude} ../../examples/organization-personal-identifier.json
+:jsonpointer:
+:expand: releases, parties, identifier
+:title: personal-identifiers
 ```

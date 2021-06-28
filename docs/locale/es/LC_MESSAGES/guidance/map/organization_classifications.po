@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2020
+# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2020
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
+# James McKinney, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-11 21:23-0500\n"
+"POT-Creation-Date: 2021-04-28 13:13-0400\n"
 "PO-Revision-Date: 2020-06-29 22:59+0000\n"
-"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Last-Translator: James McKinney, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,37 +94,37 @@ msgid ""
 "ownership, publishers ought to use the [organization classification "
 "extension](https://github.com/open-contracting-"
 "extensions/ocds_organizationClassification_extension). This extension adds a"
-" [`classifications`](../../../schema/reference/#classification) array to the"
-" `parties.details` block to enable the categorization of organizations. Each"
-" `classification.id` field ought to contain a code from the particular "
-"scheme given in the `classification.scheme` field. Details about the "
-"particular organization characteristic that is being disclosed ought to be "
-"provided in the `classification.description` field. The given "
-"`classification.scheme` can be an existing scheme (drawn from the open "
-"[itemClassificationScheme codelist](../../../schema/codelists/#item-"
-"classification-scheme)), or a local scheme for a particular publisher. In "
-"both cases, we encourage publishers to provide details of all schemes and "
-"classification codes used in their [publication policy](../../publish"
-"/#finalize-your-publication-policy), to help users understand the data."
+" [`classifications`](../../schema/reference.md#classification) array to the "
+"`parties.details` block to enable the categorization of organizations. Each "
+"`classification.id` field ought to contain a code from the particular scheme"
+" given in the `classification.scheme` field. Details about the particular "
+"organization characteristic that is being disclosed ought to be provided in "
+"the `classification.description` field. The given `classification.scheme` "
+"can be an existing scheme (drawn from the open [itemClassificationScheme "
+"codelist](../../schema/codelists.md#item-classification-scheme)), or a local"
+" scheme for a particular publisher. In both cases, we encourage publishers "
+"to provide details of all schemes and classification codes used in their "
+"[publication policy](../publish.md#finalize-your-publication-policy), to "
+"help users understand the data."
 msgstr ""
 "Para opciones no estandarizadas, como clasificar los tipos de dueños de una "
 "organización, los publicadores deberían usar la extensión [organization "
 "classification](https://github.com/open-contracting-"
 "extensions/ocds_organizationClassification_extension). Esta extensión agrega"
-" una lista de [`classifications`](../../../schema/reference/#classification)"
-" al bloque `parties.details` para permitir la categorización de "
+" una lista de [`classifications`](../../schema/reference.md#classification) "
+"al bloque `parties.details` para permitir la categorización de "
 "organizaciones. Cada campo `classification.id` debería contener un código de"
 " un esquema dado en el campo `classification.scheme`. Los detalles de la "
 "característica particular que está siendo publicada de la organización "
 "debería ser proveída en el campo `classification.description`. El "
 "`classification.scheme` dado puede ser un esquema existente (extraído de la "
 "lista de códigos abierta "
-"[itemClassificationScheme](../../../schema/codelists/#item-classification-"
+"[itemClassificationScheme](../../schema/codelists.md#item-classification-"
 "scheme)), o un esquema local para un publicador particular. En ambos casos, "
 "recomendamos a los publicadores a proveer detalles de todos los esquemas y "
 "códigos de clasificación usados en su  [política de "
-"publicación](../../publish/#finalize-your-publication-policy), para ayudar a"
-" los usuarios a entender los datos."
+"publicación](../publish.md#finalize-your-publication-policy), para ayudar a "
+"los usuarios a entender los datos."
 
 #: ../../docs/guidance/map/organization_classifications.md:12
 msgid ""
@@ -175,11 +176,11 @@ msgstr ""
 "'micro', de la [lista de códigos de partyScale](https://extensions.open-"
 "contracting.org/en/extensions/partyScale/master/codelists/)"
 
-#: ../../docs/guidance/map/organization_classifications.md:33
+#: ../../docs/guidance/map/organization_classifications.md:30
 msgid "Option 2: Organization classification extension"
 msgstr "Opción 2: Extensión de clasificación de organización"
 
-#: ../../docs/guidance/map/organization_classifications.md:35
+#: ../../docs/guidance/map/organization_classifications.md:32
 msgid ""
 "In the examples below, two different publishers have disclosed information "
 "about organizations involved in their contracting processes. An organization"
@@ -187,38 +188,23 @@ msgid ""
 "the list (scheme) from which the classification is taken, and an identifier "
 "for the category from that list being applied. It is useful to also publish "
 "a text label and/or URI that users can draw on to interpret the "
-"classification. In the [first example](#example-2-1-disclosing-data-using-"
-"existing-schemes), the publisher re-uses an existing "
-"`classification.scheme`. In the [second example](#example-2-2-disclosing-"
-"data-using-a-local-scheme), where a publisher wishes to track specific "
-"policy-related data, a local list of categories is used in preference to "
-"mapping to a generic set."
+"classification. In the first example below, the publisher re-uses an "
+"existing `classification.scheme`. In the second example below, where a "
+"publisher wishes to track specific policy-related data, a local list of "
+"categories is used in preference to mapping to a generic set."
 msgstr ""
-"En los ejemplos siguientes, dos publicadores diferentes han publicado "
-"información sobre las organizaciones involucradas en sus procesos de "
-"contratación. Una clasificación de organización necesita estar formada por "
-"al menos dos partes: un identificador de la lista (esquema) de la cual la "
-"clasificación es tomada, y un identificador para la categoría de esa lista "
-"que se aplica. Es también útil publicar un texto y/o URI que los usuarios "
-"puedan extraer para interpretar la clasificación. En el primer "
-"[ejemplo](#example-2-1-disclosing-data-using-existing-schemes), el "
-"publicador reutiliza un `classification.scheme` existente. En el [segundo "
-"ejemplo](#example-2-2-disclosing-data-using-a-local-scheme), donde un "
-"publicador desea realizar seguimiento de datos específicos relacionados a "
-"políticas, se prefiere utilizar una lista local de categorías en lugar de "
-"mapear a un conjunto genérico."
 
-#: ../../docs/guidance/map/organization_classifications.md:37
+#: ../../docs/guidance/map/organization_classifications.md:34
 msgid "Classification schemes"
 msgstr "Esquemas de clasificación"
 
-#: ../../docs/guidance/map/organization_classifications.md:39
+#: ../../docs/guidance/map/organization_classifications.md:36
 msgid ""
 "Each `classification` block contains fields to provide information about the"
 " `description` (a textual description or title for the classification code),"
 " `id` (the classification code), `uri` (to uniquely identify the "
 "classification code) and `scheme`. The `scheme` value can be drawn from the "
-"open [itemClassificationScheme codelist](../../../schema/codelists/#item-"
+"open [itemClassificationScheme codelist](../../schema/codelists.md#item-"
 "classification-scheme) (where the `Category` value is \"organization\"), or "
 "it can be a local scheme. Schemes are given to classify the activities of "
 "procuring authorities (i.e. procuring entities and/or buyers)."
@@ -228,25 +214,25 @@ msgstr ""
 "clasificación), `id` (el código de clasificación), la `uri` (para "
 "identificar unívocamente el código de clasificación) y `scheme`. El valor de"
 " `scheme` puede ser extraído de la lista de códigos abierta de "
-"[itemClassificationScheme](../../../schema/codelists/#item-classification-"
+"[itemClassificationScheme](../../schema/codelists.md#item-classification-"
 "scheme), o se puede usar un esquema local. Los esquemas son dados para "
 "clasificar las actividades de las autoridades contratantes (es decir, las "
 "entidades contratantes y/o compradores)."
 
-#: ../../docs/guidance/map/organization_classifications.md:41
+#: ../../docs/guidance/map/organization_classifications.md:38
 msgid ""
 "Where an appropriate scheme is not listed in the [itemClassificationScheme "
-"codelist](../../../schema/codelists/#item-classification-scheme), publishers"
-" can specify their own scheme. Publishers can either re-use an alternative "
+"codelist](../../schema/codelists.md#item-classification-scheme), publishers "
+"can specify their own scheme. Publishers can either re-use an alternative "
 "scheme, or provide their own. Where publishers provide their own local "
 "schemes, they ought to prefix their `scheme` code with an [ISO-3166-1 "
 "alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1) to preserve "
 "its global uniqueness. Details of this local scheme, and a list of possible "
-"codes, ought to be described in the [publication policy](../../publish"
-"/#finalize-your-publication-policy)."
+"codes, ought to be described in the [publication policy](../publish.md"
+"#finalize-your-publication-policy)."
 msgstr ""
 "Cuando un esquema apropiado no es listado en la lista de códigos "
-"[itemClassificationScheme](../../../schema/codelists/#item-classification-"
+"[itemClassificationScheme](../../schema/codelists.md#item-classification-"
 "scheme), los publicadores pueden especificar su propio esquema. Los "
 "publicadores pueden o reutilizar un esquema alternativo, o proveer el suyo "
 "propio. Cuando los proveedores proveen su propio esquema local, deberían "
@@ -254,29 +240,29 @@ msgstr ""
 "[ISO-3166-1](https://es.wikipedia.org/wiki/ISO_3166-1) para preservar su "
 "unicidad global. Los detalles de este esquema local, y la lista de los "
 "códigos posibles, deben ser descritas en la [política de "
-"publicación](../../publish/#finalize-your-publication-policy)."
+"publicación](../publish.md#finalize-your-publication-policy)."
 
-#: ../../docs/guidance/map/organization_classifications.md:43
+#: ../../docs/guidance/map/organization_classifications.md:40
 msgid "Example 2.1 disclosing data using existing schemes"
 msgstr "Ejemplo 2.1 publicando datos usando esquemas existentes"
 
-#: ../../docs/guidance/map/organization_classifications.md:45
+#: ../../docs/guidance/map/organization_classifications.md:42
 msgid ""
 "In the first fictional example below, the UK has disclosed a code from two "
 "different European Commission (EC) schemes, 'TED_CE_ACTIVITY' and "
 "'TED_CA_TYPE' to classify the organization whose name is \"London Borough of"
 " Haringey\". Refer to the  [itemClassificationScheme "
-"codelist](../../../schema/codelists/#item-classification-scheme) for further"
-" details of these schemes."
+"codelist](../../schema/codelists.md#item-classification-scheme) for further "
+"details of these schemes."
 msgstr ""
 "En el primer ejemplo ficticio siguiente, el Reino Unido ha publicado un "
 "código de dos diferentes esquemas de la Comisión Europea (EC), "
 "'TED_CE_ACTIVITY' y 'TED_CA_TYPE' para clasificar las organización cuyo "
 "nombre es \"London Borough of Haringey\". Refiérase a la lista de códigos "
-"[itemClassificationScheme](../../../schema/codelists/#item-classification-"
+"[itemClassificationScheme](../../schema/codelists.md#item-classification-"
 "scheme) para más detalles sobre estos esquemas."
 
-#: ../../docs/guidance/map/organization_classifications.md:47
+#: ../../docs/guidance/map/organization_classifications.md:44
 msgid ""
 "Note that the `classification.id` relates to the id of the code in the "
 "`classification.scheme` given, rather than its position in the "
@@ -292,11 +278,11 @@ msgstr ""
 "'REGIONAL_AUTHORITY', y la segunda `classification` indica que el `id` de "
 "'General public services' en el esquema 'COFOG' es '01'."
 
-#: ../../docs/guidance/map/organization_classifications.md:58
+#: ../../docs/guidance/map/organization_classifications.md:52
 msgid "Example 2.2 disclosing data using a local scheme"
 msgstr "Ejemplo 2.2 publicando datos usando un esquema local"
 
-#: ../../docs/guidance/map/organization_classifications.md:60
+#: ../../docs/guidance/map/organization_classifications.md:54
 msgid ""
 "The second example below is set in the fictional city of Ciudad Ficticia in "
 "Colombia. The procurement team wishes to monitor the participation of women-"
@@ -320,7 +306,7 @@ msgstr ""
 "contiene el código de clasificación relevante para el esquema dado, en lugar"
 " de un identificador interno en la lista de `classifications`."
 
-#: ../../docs/guidance/map/organization_classifications.md:62
+#: ../../docs/guidance/map/organization_classifications.md:56
 msgid ""
 "In their publication policy, the procurement team documents all possible "
 "codes for COL-CF-MON with definitions of each code, including explaining "
@@ -333,11 +319,11 @@ msgstr ""
 "en la Cámara de Comercio local donde la propiedad y el control son al menos "
 "51% de mujeres."
 
-#: ../../docs/guidance/map/organization_classifications.md:73
+#: ../../docs/guidance/map/organization_classifications.md:64
 msgid "Option 3: Local extensions"
 msgstr "Opción 3: Extensiones locales"
 
-#: ../../docs/guidance/map/organization_classifications.md:75
+#: ../../docs/guidance/map/organization_classifications.md:66
 msgid ""
 "A third, discouraged, option is for publishers to use local extensions to "
 "disclose organization classification information. This option is discouraged"
@@ -361,7 +347,7 @@ msgstr ""
 "adicionales que esta describe: por favor refiérase a la [documentación de "
 "extensiones](extensions)."
 
-#: ../../docs/guidance/map/organization_classifications.md:77
+#: ../../docs/guidance/map/organization_classifications.md:68
 msgid ""
 "For example, although tracking women-owned organizations is shown example "
 "2.2 above, this data only provides information on entities that have been "
@@ -376,7 +362,7 @@ msgstr ""
 "pertenecer a mujeres pero no estar registradas como tales, o la información "
 "puede no ser conocida."
 
-#: ../../docs/guidance/map/organization_classifications.md:79
+#: ../../docs/guidance/map/organization_classifications.md:70
 msgid ""
 "To disambiguate these cases, a publisher can choose to publish a flag field "
 "for the relevant organization classification. In the fictional example "
