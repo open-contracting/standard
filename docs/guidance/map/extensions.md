@@ -14,7 +14,7 @@ All registered extensions are listed in the [Extension Explorer](https://extensi
 
 Extensions are applied by adding their URLs to the `extensions` array in the release package or record package. You can discover extensions, read their documentation and find the URL to add using the [Extension Explorer](https://extensions.open-contracting.org/en/).
 
-This version of OCDS uses these specific versions of extensions:
+This version of OCDS uses these specific versions of the following extensions:
 
 ```eval_rst
  .. extensionexplorerlinklist::
