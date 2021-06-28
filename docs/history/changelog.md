@@ -23,6 +23,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007) [#1123](https://github.com/open-contracting/standard/pull/1123).
   * Add worked examples for the Build phase [#951](https://github.com/open-contracting/standard/pull/951) [#997](https://github.com/open-contracting/standard/pull/997).
   * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
+  * [#833](https://github.com/open-contracting/standard/issues/833) Removed language distinguishing "core", "community", and "local" extensions.
 * [#960](https://github.com/open-contracting/standard/pull/960) Support section: Merge Tools page into Support page.
 * [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
@@ -224,12 +225,12 @@ See the changelogs for:
 
 ### Changed
 
-#### Structural updates 
+#### Structural updates
 
 * [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](../schema/reference.md#parties)** - We have updated the approach to include organization information in the standard from having embedded blocks of organization information, to using embedded cross-references to a top-level 'parties' array where full organization details are stored. This change reduces duplication of organization information, and enables more flexible disclosure of information on all the parties to a contracting process, including multiple buyers.
-* [#357](https://github.com/open-contracting/standard/issues/357) **[Amendment handling](../guidance/map/amendments)** - We have replace amendment with an array of amendments, and have updated schema and guidance to remove the option of providing semi-structured changes in an amendment object. Changes between amendments should now be provided using multiple releases, with the option to explicitly declare how releases relate to an amendment included in the new amendments array. 
+* [#357](https://github.com/open-contracting/standard/issues/357) **[Amendment handling](../guidance/map/amendments)** - We have replace amendment with an array of amendments, and have updated schema and guidance to remove the option of providing semi-structured changes in an amendment object. Changes between amendments should now be provided using multiple releases, with the option to explicitly declare how releases relate to an amendment included in the new amendments array.
 
-#### Schema validation updates 
+#### Schema validation updates
 
 * [#329](https://github.com/open-contracting/standard/issues/329) **[Float for Item.quantity](../schema/reference.md#item)** - Item quantities has been updated to 'number' to support decimal values (e.g 10.5 rather than just 10)
 * [#253](https://github.com/open-contracting/standard/issues/253) **[Negative amounts](../schema/reference.md#budget)** - We have added support for negative amounts in transactions
@@ -239,7 +240,7 @@ See the changelogs for:
 * [#301](https://github.com/open-contracting/standard/issues/301) **[Specifying versions and extensions in package metadata](../schema/records_reference.md#package-metadata)** - We have updated the package schemas to require that version is declared, and to provide a means of declaring extensions in use. This will be used in future versions of the validator to support validation against extensions.
 * [#287](https://github.com/open-contracting/standard/issues/287) **[Remove all ocdsMerge strategies](../schema/merging)** - We have remove all 'merge strategies' from the schema as these are no longer required, now that all objects in arrays contain an id element.
 
-#### Schema definition updates 
+#### Schema definition updates
 
 * [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](../schema/reference.md#transaction)** - We have replaced receiverOrganization and providerOrganization with payee and payer, to align with more familiar terminology, and have replaced 'amount' with 'value' for consistency with other areas of the standard.
 * [#378](https://github.com/open-contracting/standard/issues/378) **[Updates to core budget block](../schema/reference.md#budget)** - We have updated references to the Fiscal Data Package in the schema.
@@ -259,7 +260,7 @@ See the changelogs for:
 * [#386](https://github.com/open-contracting/standard/issues/386) **[Document type](../schema/codelists.md#document-type)** - New codes have been added to the documentType codelist, and definitions of codes updated.
 * [#322](https://github.com/open-contracting/standard/issues/322) **[Submission Method Codelist](../schema/codelists.md#submission-method)** - The submissionMethod codelist has been updated
 * [#387](https://github.com/open-contracting/standard/issues/387) **[Codelist updates: Item Classification Scheme](../schema/codelists.md#item-classification-scheme)** - New entries have been added to the itemClassificationScheme codelist
-* [#385](https://github.com/open-contracting/standard/issues/385) **[Codelist updates: awardCriteria](../schema/codelists.md#award-criteria)** - Revising the awardCriteria codelist, with all existing codes deprecated and a new set of codes introduced. 
+* [#385](https://github.com/open-contracting/standard/issues/385) **[Codelist updates: awardCriteria](../schema/codelists.md#award-criteria)** - Revising the awardCriteria codelist, with all existing codes deprecated and a new set of codes introduced.
 
 ### Added
 
