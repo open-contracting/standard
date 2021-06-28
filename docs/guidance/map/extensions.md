@@ -4,7 +4,7 @@ OCDS provides a common core of [sections and building blocks](../../getting_star
 
 Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard.
 
-Some extensions are maintained by the Open Contracting Partnership (OCP) as part of the [standard governance process](../../governance/index), documented as part of the standard, and reviewed by the OCDS technical team with each version upgrade of OCDS. They are likely to be relevant to a large number of publishers and users.
+Some extensions are maintained by the Open Contracting Partnership (OCP). Those that are likely to be relevant to a large number of publishers and users follow the [governance process](../../governance/index). The standard development team decides which extensions follow the governance process.
 
 Other extensions are maintained outside of the standard governance process, or are maintained by third parties such as the OCDS community or an OCDS publisher. These extensions might provide features which are needed by only a small number of publishers or users, or they might be used to document a specific publisher's additional fields or codelist values.
 
