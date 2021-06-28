@@ -6,7 +6,7 @@ Many publishers will have additional data that they could publish. Instead of ig
 
 Some extensions are maintained by the Open Contracting Partnership (OCP). Those that are likely to be relevant to a large number of publishers and users follow the [governance process](../../governance/index). The standard development team decides which extensions follow the governance process.
 
-Other extensions are maintained outside of the standard governance process, or are maintained by third parties such as the OCDS community or an OCDS publisher. These extensions might provide features which are needed by only a small number of publishers or users, or they might be used to document a specific publisher's additional fields or codelist values.
+Other extensions are maintained by third parties, like OCDS publishers, and do not follow the governance process. These extensions might provide features which are needed by only a small number of publishers or users, or they might be used to document a specific publisher's additional fields or codelist values.
 
 All OCP extensions and many third-party extensions are documented in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard development team](../../governance/index) decides which extensions are registered in the [Extension Registry](https://github.com/open-contracting/extension_registry#readme), which controls which extensions appear in the Extension Explorer.
 
