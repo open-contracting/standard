@@ -23,7 +23,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007).
   * Add worked examples for the Build phase [#951](https://github.com/open-contracting/standard/pull/951) [#997](https://github.com/open-contracting/standard/pull/997).
   * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
-  * [#833](https://github.com/open-contracting/standard/issues/833) Removed language distinguishing 'core', 'community', and 'local' extensions.
+  * [#833](https://github.com/open-contracting/standard/issues/833) Removed language distinguishing "core", "community", and "local" extensions.
 * [#960](https://github.com/open-contracting/standard/pull/960) Support section: Merge Tools page into Support page.
 * [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
