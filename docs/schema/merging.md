@@ -75,9 +75,9 @@ In the release schema, `"omitWhenMerged": true` is declared on fields that must 
 If `omitWhenMerged` is set to `false`, ignore it.
 
 ```{note}
-The compiled release presently uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue [#330](https://github.com/open-contracting/standard/issues/330), and on how to identify and date compiled and versioned releases in issue [#834](https://github.com/open-contracting/standard/issues/834).
+The compiled release presently uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue [#330](https://github.com/open-contracting/standard/issues/330).
 
-In the meantime, an intermediate solution is to set `tag` to `["compiled"]`, `date` to the date of the most recent release, and `id` to `{ocid}-{date}`, like in the [reference implementation](#reference-implementation) of the merge routine.
+In the meantime, an intermediate solution is to set `tag` to `["compiled"]`, `date` to the maximum `date` among the individual releases used to create the compiled release, and `id` to `{ocid}-{date}`, like in the [reference implementation](#reference-implementation) of the merge routine.
 ```
 
 ### Versioned values
@@ -128,6 +128,9 @@ To create a compiled or versioned release, you must:
 1. Get all releases with the same `ocid` value and same OCDS version
 1. Order the releases in chronological order by `date`
 1. Create an empty JSON object for the compiled or versioned release
+1. For a compiled release:
+  1. Set `date` to the maximum `date` among the releases.
+  1. Set `id` to `{ocid}-{date}`.
 1. Merge each release (**input**), in order, into the JSON object (**output**), as follows:
 
 #### Object values
