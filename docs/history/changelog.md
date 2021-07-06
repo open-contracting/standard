@@ -107,7 +107,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 * [#1257](https://github.com/open-contracting/standard/pull/1257) Remove default value of `"en"` for `language` field.
-* [#1296](https://github.com/open-contracting/standard/pull/1296) Deprecate the `tender.eligibilityCriteria` field in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics. 
+* [#1296](https://github.com/open-contracting/standard/pull/1296) Deprecate the `tender.eligibilityCriteria` field in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics.
+* [#](https://github.com/open-contracting/standard/pull/) Add the `tender.datePublished` field.
 
 ### Documentation
 
