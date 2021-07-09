@@ -75,9 +75,9 @@ In the release schema, `"omitWhenMerged": true` is declared on fields that must 
 If `omitWhenMerged` is set to `false`, ignore it.
 
 ```{note}
-The compiled release presently uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue [#330](https://github.com/open-contracting/standard/issues/330), and on how to identify and date compiled and versioned releases in issue [#834](https://github.com/open-contracting/standard/issues/834).
+The compiled release presently uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue [#330](https://github.com/open-contracting/standard/issues/330).
 
-In the meantime, an intermediate solution is to set `tag` to `["compiled"]`, `date` to the date of the most recent release, and `id` to `{ocid}-{date}`, like in the [reference implementation](#reference-implementation) of the merge routine.
+In the meantime, an intermediate solution is to set `tag` to `["compiled"]`, `date` to the maximum `date` among the individual releases used to create the compiled release, and `id` to `{ocid}-{date}`, like in the [reference implementation](#reference-implementation) of the merge routine.
 ```
 
 ### Versioned values
@@ -128,6 +128,9 @@ To create a compiled or versioned release, you must:
 1. Get all releases with the same `ocid` value and same OCDS version
 1. Order the releases in chronological order by `date`
 1. Create an empty JSON object for the compiled or versioned release
+1. For a compiled release:
+  1. Set `date` to the maximum `date` among the releases.
+  1. Set `id` to `{ocid}-{date}`.
 1. Merge each release (**input**), in order, into the JSON object (**output**), as follows:
 
 #### Object values
@@ -178,10 +181,6 @@ This case is encountered if the above conditions aren't met. If the array is emp
 
 ```{note}
 In this case, to remove an object from an array, you need to instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue [#232](https://github.com/open-contracting/standard/issues/232).
-```
-
-```{note}
-In the release schema, `"versionId": true` is declared on `id` fields that must be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue [#812](https://github.com/open-contracting/standard/issues/812)). If `"versionId": true` is declared on the `id` field of an object within an array, it is ignored. `"versionId": false` has no meaning and is ignored.
 ```
 
 ### Reference implementation

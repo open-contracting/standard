@@ -40,16 +40,14 @@ The organizations, economic operators or other participants in a contracting pro
 :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
-### Item Classification Scheme
+### Classification Scheme
 
-Items should be classified using existing item classification schemes, such as the [EC Common Procurement Vocabulary (CPV)](https://simap.ted.europa.eu/web/simap/cpv).
-
-The `itemClassificationScheme` codelist is referenced by the `scheme` field of the `Classification` object, which can be used in multiple contexts. You can find the codes relevant to a given context by filtering the codelist by its `Category` column.
+The `classificationScheme` codelist is referenced by the `scheme` field of the `Classification` object, which can be used in multiple contexts. You can find the codes relevant to a given context by filtering the codelist by its `Category` column.
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../build/current_lang/codelists/itemClassificationScheme.csv
+:file: ../../build/current_lang/codelists/classificationScheme.csv
 ```
 
 ### Unit Classification Scheme
@@ -150,6 +148,26 @@ The extended procurement category codelist is used to provide additional detail 
 :header-rows: 1
 :widths: auto
 :file: ../../build/current_lang/codelists/extendedProcurementCategory.csv
+```
+
+### Language
+
+The language codelist is used to provide the default language used in text fields and the language of linked documents, using two-letter codes from [ISO639-1](https://id.loc.gov/vocabulary/iso639-1.html).
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/codelists/language.csv
+```
+
+### Media type
+
+The media type codelist is based on the [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) list. The media type codelist adds an exceptional code for printed documents ('offline/print'), and omits any media type that is marked as deprecated or obsolete by IANA.
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/codelists/mediaType.csv
 ```
 
 ## Closed Codelists 

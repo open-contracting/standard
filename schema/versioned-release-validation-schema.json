@@ -65,7 +65,33 @@
       "uniqueItems": true
     },
     "language": {
-      "$ref": "#/definitions/StringNullVersioned"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "releaseDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "releaseID": {
+            "type": "string"
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "codelist": "language.csv",
+            "openCodelist": true
+          },
+          "releaseTag": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
     },
     "relatedProcesses": {
       "uniqueItems": true,
@@ -427,6 +453,37 @@
           }
         },
         "eligibilityCriteria": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "deprecated": {
+                  "description": "This field had unclear semantics and used ambiguous terms, and is deprecated in favor of exclusionGrounds.",
+                  "deprecatedVersion": "1.2"
+                }
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "exclusionGrounds": {
           "$ref": "#/definitions/StringNullVersioned"
         },
         "selectionCriteria": {
@@ -1026,10 +1083,62 @@
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
         "format": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "mediaType.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "language": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "language.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       },
       "patternProperties": {
@@ -1599,7 +1708,7 @@
                   "string",
                   "null"
                 ],
-                "codelist": "itemClassificationScheme.csv",
+                "codelist": "classificationScheme.csv",
                 "openCodelist": true
               },
               "releaseTag": {
@@ -2615,7 +2724,7 @@
             "string",
             "null"
           ],
-          "codelist": "itemClassificationScheme.csv",
+          "codelist": "classificationScheme.csv",
           "openCodelist": true
         },
         "id": {

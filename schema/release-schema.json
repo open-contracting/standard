@@ -13,14 +13,14 @@
     },
     "id": {
       "title": "Release ID",
-      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process identified by the Open Contracting ID (ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#).",
+      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process identified by the Open Contracting ID (ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
     },
     "date": {
       "title": "Release Date",
-      "description": "The date on which the information contained in the release was first recorded in, or published by, any system.",
+      "description": "The date on which the information contained in the release was first recorded in, or published by, any system. For a compiled release, the maximum `date` among the individual releases used to create the compiled release.",
       "type": "string",
       "format": "date-time",
       "omitWhenMerged": true
@@ -91,11 +91,13 @@
     },
     "language": {
       "title": "Release language",
-      "description": "The default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](https://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended.",
+      "description": "The default language of the data, from the open [language](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. A [BCP47 language tag](https://www.w3.org/International/articles/language-tags/) is allowed, if there is a user need for the additional information.",
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "codelist": "language.csv",
+      "openCodelist": true
     },
     "relatedProcesses": {
       "uniqueItems": true,
@@ -174,8 +176,7 @@
             "string",
             "integer"
           ],
-          "minLength": 1,
-          "versionId": true
+          "minLength": 1
         },
         "title": {
           "title": "Tender title",
@@ -371,6 +372,18 @@
         "eligibilityCriteria": {
           "title": "Eligibility criteria",
           "description": "A description of any eligibility criteria for potential suppliers.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "deprecated": {
+            "description": "This field had unclear semantics and used ambiguous terms, and is deprecated in favor of exclusionGrounds.",
+            "deprecatedVersion": "1.2"
+          }
+        },
+        "exclusionGrounds": {
+          "title": "Exclusion grounds",
+          "description": "The criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
           "type": [
             "string",
             "null"
@@ -1021,19 +1034,23 @@
         },
         "format": {
           "title": "Format",
-          "description": "The format of the document, using the open [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) codelist (see the values in the 'Template' column), or using the 'offline/print' code if the described document is published offline. For example, web pages have a format of 'text/html'.",
+          "description": "The format of the document, using the open [media type](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#media-type) codelist. For example, a web page has a format of 'text/html'. The 'offline/print' code is reserved for printed documents not available in other formats.",
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "codelist": "mediaType.csv",
+          "openCodelist": true
         },
         "language": {
           "title": "Language",
-          "description": "The language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](https://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended unless there is a clear user need for distinguishing the language subtype.",
+          "description": "The language of the linked document, from the open [language](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. A [BCP47 language tag](https://www.w3.org/International/articles/language-tags/) is allowed, if there is a user need for the additional information.",
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "codelist": "language.csv",
+          "openCodelist": true
         }
       },
       "patternProperties": {
@@ -1531,12 +1548,12 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The scheme or codelist from which the classification code is taken. For line item classifications, this uses the open [itemClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#item-classification-scheme) codelist.",
+          "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#classification-scheme) codelist.",
           "type": [
             "string",
             "null"
           ],
-          "codelist": "itemClassificationScheme.csv",
+          "codelist": "classificationScheme.csv",
           "openCodelist": true
         },
         "id": {
@@ -1546,8 +1563,7 @@
             "string",
             "integer",
             "null"
-          ],
-          "versionId": true
+          ]
         },
         "description": {
           "title": "Description",
@@ -1596,8 +1612,7 @@
             "string",
             "integer",
             "null"
-          ],
-          "versionId": true
+          ]
         },
         "legalName": {
           "title": "Legal Name",
@@ -2130,8 +2145,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "versionId": true
+          ]
         }
       }
     },
@@ -2216,8 +2230,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "versionId": true
+          ]
         },
         "name": {
           "title": "Name",
