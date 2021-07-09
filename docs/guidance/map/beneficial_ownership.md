@@ -1,8 +1,9 @@
 # Beneficial ownership information
 
 This worked example describes how to:
-*   publish separate contracting and beneficial ownership datasets
-*   publish beneficial ownership data in OCDS
+
+* publish separate contracting and beneficial ownership datasets
+* publish beneficial ownership data in OCDS
 
 The Beneficial Ownership Data Standard (BODS) [defines](https://standard.openownership.org/en/0.2.0/primer/whatisbo.html) “beneficial ownership” as:
 
@@ -10,10 +11,10 @@ The Beneficial Ownership Data Standard (BODS) [defines](https://standard.openown
 
 Publishing the beneficial owners of tenderers and suppliers can help users to:
 
-*   Identify collusion or deception
-*   Detect undeclared conflicts of interest
-*   Identify companies with debarred or sanctioned owners
-*   Assess risk
+* Identify collusion or deception
+* Detect undeclared conflicts of interest
+* Identify companies with debarred or sanctioned owners
+* Assess risk
 
 For more information on the uses of beneficial ownership data in the context of procurement, see [Beneficial ownership data in procurement](https://www.openownership.org/uploads/OO%20BO%20Data%20in%20Procurement.pdf). 
 
@@ -23,17 +24,17 @@ Some procurement systems collect beneficial ownership data, usually when compani
 
 Therefore, the preferred approach is to **publish separate contracting and beneficial ownership datasets**:
 
-*   Publish contracting data using OCDS.
-*   Collect beneficial ownership data in a separate beneficial ownership register.
-*   Periodically confirm the accuracy of data in the register and record changes as they happen.
-*   Publish beneficial ownership data using BODS, including a history of changes.
+* Publish contracting data using OCDS.
+* Collect beneficial ownership data in a separate beneficial ownership register.
+* Periodically confirm the accuracy of data in the register and record changes as they happen.
+* Publish beneficial ownership data using BODS, including a history of changes.
 
 To allow users to connect contracting data and beneficial ownership data, you should use the same [organization identifiers](https://standard.open-contracting.org/latest/en/schema/identifiers/#organization-ids) in both datasets.
 
 Alternatively, you can **publish beneficial ownership data in OCDS** using the [beneficial owners extension](https://extensions.open-contracting.org/en/extensions/beneficialOwners/master/) if:
 
-*   You cannot implement a separate beneficial ownership register; or
-*   You collect data in both a beneficial ownership register and a procurement system **and** the threshold for disclosure in the procurement system is lower than in the beneficial ownership register.
+* You cannot implement a separate beneficial ownership register; or
+* You collect data in both a beneficial ownership register and a procurement system **and** the threshold for disclosure in the procurement system is lower than in the beneficial ownership register.
 
 ## Publish separate contracting and beneficial ownership datasets
 
@@ -61,9 +62,9 @@ This example shows the beneficial ownership data for the supplier from the contr
 
 BODS is based on statements, where each statement describes ownership or control, entities, or natural persons. For more information, see the [BODS documentation](http://standard.openownership.org/). The example includes:
 
-*   An entity statement that describes the company and includes the company number: 00507062. This is the same organization identifier used in the OCDS data.
-*   An ownership/control statement that describes the relationship between an interested party and the company.
-*   A person statement that includes the details of the beneficial owner of the company. 
+* An entity statement that describes the company and includes the company number: 00507062. This is the same organization identifier used in the OCDS data.
+* An ownership/control statement that describes the relationship between an interested party and the company.
+* A person statement that includes the details of the beneficial owner of the company. 
 
 ```{jsoninclude} ../../examples/beneficial_ownership/beneficial_ownership_statement_entity.json
 :jsonpointer:
@@ -91,10 +92,10 @@ Therefore, Moldova can use the beneficial owners extension to publish the data i
 
 This example shows a fictional contract award to Microsoft Moldova:
 
-*   In the package metadata, the `extensions` array includes the beneficial owners extension.
-*   In the `parties` array:
-    *   `beneficialOwners.name` is set to the name of the beneficial owner
-    *   `beneficialOwners.nationality` is set to the country code for the nationality of the beneficial owner
+* In the package metadata, the `extensions` array includes the beneficial owners extension.
+* In the `parties` array:
+  * `beneficialOwners.name` is set to the name of the beneficial owner
+  * `beneficialOwners.nationality` is set to the country code for the nationality of the beneficial owner
 
 ```{jsoninclude} ../../examples/beneficial_ownership/beneficial_owners_extension.json
 :jsonpointer:
