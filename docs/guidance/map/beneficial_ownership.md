@@ -3,7 +3,7 @@
 This worked example describes how to:
 
 * publish separate contracting and beneficial ownership datasets
-* publish beneficial ownership data in OCDS
+* publish beneficial ownership data using OCDS
 
 The Beneficial Ownership Data Standard (BODS) [defines](https://standard.openownership.org/en/0.2.0/primer/whatisbo.html) “beneficial ownership” as:
 
@@ -16,9 +16,9 @@ Publishing the beneficial owners of tenderers and suppliers can help users to:
 * Identify companies with debarred or sanctioned owners
 * Assess risk
 
+```{note}
 For more information on the uses of beneficial ownership data in the context of procurement, see [Beneficial ownership data in procurement](https://www.openownership.org/uploads/OO%20BO%20Data%20in%20Procurement.pdf). 
-
-OCDS encourages the publication of company names, identifiers, and addresses. But, the OCDS schema doesn’t cover beneficial ownership data.
+```
 
 Some procurement systems collect beneficial ownership data, usually when companies submit bids. This data is true at the time of collection. But, procurement systems don’t track later changes to the ownership and control of suppliers. This limitation is especially challenging for users interested in long-standing contracts, in which there may have been many changes.
 
@@ -31,9 +31,10 @@ Therefore, the preferred approach is to **publish separate contracting and benef
 
 To allow users to connect contracting data and beneficial ownership data, you should use the same [organization identifiers](https://standard.open-contracting.org/latest/en/schema/identifiers/#organization-ids) in both datasets.
 
-Alternatively, you can **publish beneficial ownership data in OCDS** using the [beneficial owners extension](https://extensions.open-contracting.org/en/extensions/beneficialOwners/master/) if:
+At the same time, you can **publish beneficial ownership data in OCDS** using the [beneficial owners extension](https://extensions.open-contracting.org/en/extensions/beneficialOwners/master/), in particular if:
 
-* You cannot implement a separate beneficial ownership register; or
+* You cannot implement a separate beneficial ownership register.
+* The companies are not included in any beneficial ownership register: for example, companies based in another country.
 * You collect data in both a beneficial ownership register and a procurement system **and** the threshold for disclosure in the procurement system is lower than in the beneficial ownership register.
 
 ## Publish separate contracting and beneficial ownership datasets
@@ -46,7 +47,9 @@ The UK publishes OCDS data from [Contracts Finder](https://www.contractsfinder.s
 
 This example shows a contract award to T.M. ENGINEERS (MIDLANDS) LIMITED. `parties.identifier.id` is set to the supplier’s company number (00507062) and `parties.identifier.scheme` is set to ‘GB-COH’ to identify the register the number is drawn from. 
 
+```{note}
 For more information on publishing organization identifiers in OCDS, see [Organization IDs](https://standard.open-contracting.org/latest/en/schema/identifiers/#organization-ids).
+```
 
 ```{jsoninclude} ../../examples/beneficial_ownership/award.json
 :jsonpointer:
