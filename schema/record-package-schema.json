@@ -122,7 +122,7 @@
   "definitions": {
     "Record": {
       "title": "Record",
-      "description": "A record aggregates the releases about a contracting process. A record must include a `releases` list, should include a `compiledRelease` and may include a `versionedRelease`. There should be a single record per contracting process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.",
+      "description": "A record aggregates the releases about a contracting process. There should be a single record per contracting process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.",
       "type": "object",
       "properties": {
         "ocid": {
@@ -156,7 +156,7 @@
         },
         "compiledRelease": {
           "title": "Compiled release",
-          "description": "The latest value of each field at the time of the record's publication. It follows the same schema as a release.",
+          "description": "The latest value of each field at the time of the record's publication. It follows the same schema as a release. A record should contain a compiled release.",
           "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
         },
         "versionedRelease": {
