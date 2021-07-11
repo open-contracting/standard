@@ -1,6 +1,6 @@
 # Record Reference
 
-A record aggregates the releases related to a contracting process. There should be a single record per contracting process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.
+A record aggregates the releases about a contracting process. There should be a single record per contracting process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
