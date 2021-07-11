@@ -37,7 +37,7 @@ The following example demonstrates all package metadata and record fields.
 
 ## Record structure
 
-A record **must** contain an [ocid](identifiers.md#contracting-process-identifier-ocid) and all [releases](#releases) about the contracting process. As such, a record functions as an index of all releases about a contracting process at the time of the record's publication.
+A record **must** contain an [ocid](identifiers.md#contracting-process-identifier-ocid) and all [releases](#releases) about the contracting process at the time of the record's publication. As such, a record functions as an index of releases about a contracting process.
 
 A record **should** contain a [compiledRelease](#compiled-release) object, which represents the state of the contracting process at the time of the record's publication.
 
@@ -91,7 +91,7 @@ The considerations are:
 
 ### Compiled release
 
-The compiled release is the latest version of all the data about a contracting process at the time of the record's publication. In other words, it provides a snapshot of the current state of a contracting process at the time of the record's publication.
+The compiled release is the latest version of all the data about a contracting process at the time of the record's publication. In other words, it provides a snapshot of the contracting process at a given point in time.
 
 The compiled release follows the [release schema](reference), with the exception of any fields on which `"omitWhenMerged": true` is declared.
 
