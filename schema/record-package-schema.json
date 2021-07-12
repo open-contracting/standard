@@ -2,7 +2,7 @@
   "id": "https://standard.open-contracting.org/schema/1__1__5/record-package-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Record package",
-  "description": "The record package contains a list of records along with some publishing metadata. The records pull together all the releases under a single Open Contracting ID and compile them into the latest version of the information along with the history of any data changes.",
+  "description": "The record package contains a list of records along with some publishing metadata.",
   "type": "object",
   "properties": {
     "uri": {
@@ -122,7 +122,7 @@
   "definitions": {
     "Record": {
       "title": "Record",
-      "description": "An OCDS record must provide a list of all the existing OCDS releases related to a single contracting process and should provide a compiled release containing the current state of all fields in the release schema. An OCDS record may also provide a versioned history of all changes to the data in the compiled release.",
+      "description": "A record aggregates the releases about a contracting process. There should be a single record per contracting process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.",
       "type": "object",
       "properties": {
         "ocid": {
@@ -132,7 +132,7 @@
         },
         "releases": {
           "title": "Releases",
-          "description": "All the existing OCDS releases related to the contracting process. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
+          "description": "All the releases about the contracting process at the time of the record's publication. The releases must be sorted in date order, from oldest to newest.",
           "oneOf": [
             {
               "title": "Linked releases",
@@ -156,12 +156,12 @@
         },
         "compiledRelease": {
           "title": "Compiled release",
-          "description": "This is the latest version of all the contracting data, it has the same schema as an open contracting release.",
+          "description": "The latest value of each field at the time of the record's publication. It follows the same schema as a release. A record should contain a compiled release.",
           "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
         },
         "versionedRelease": {
           "title": "Versioned release",
-          "description": "This contains the history of all the data in the compiled release.",
+          "description": "The history of values of each field up to the time of the record's publication.",
           "$ref": "https://standard.open-contracting.org/schema/1__1__5/versioned-release-validation-schema.json"
         }
       },
