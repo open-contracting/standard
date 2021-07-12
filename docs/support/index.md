@@ -19,7 +19,7 @@ Please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with
 
 ## OCDS Community
 
-The Open Contracting community is a great source of input and support. You can ask questions, discuss ideas, and share news on your projects on the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) mailing list.
+The Open Contracting community is a great source of input and support. You can ask questions, discuss ideas, and share news on your projects on the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/g/standard-discuss) mailing list.
 
 You can also contribute directly to public discussions about implementing the standard and give feedback on its development, via the issue tracker of its [GitHub repository](https://github.com/open-contracting/standard).
 

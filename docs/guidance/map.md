@@ -62,7 +62,7 @@ map/localization
 
 The [organization identifiers worked example](../guidance/map/organization_identifiers) shows how this works in practice.
 
-Use [org-id.guide](http://org-id.guide/) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index).
+Use [org-id.guide](http://org-id.guide) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index).
 
 ### Working in parallel
 
@@ -93,6 +93,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 
 map/amendments
 map/awards_contracts_buyers_suppliers
+map/beneficial_ownership
 map/milestones
 map/organization_classifications
 map/organization_identifiers

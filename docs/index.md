@@ -32,14 +32,14 @@ If you are interested to learn more about Open Contracting advocacy and how it c
 ```{note}
 This is the 1.1 release of OCDS, published on 31st May 2017. Version 1.0 documentation is still available from the version switcher at the bottom left of the page.
 
-This is the English (and canonical) version of the OCDS documentation. You can switch to the Spanish, French, or Italian translations using the language switcher at the bottom left of the page.
+This is the English (and canonical) version of the OCDS documentation. You can switch language at the bottom left of the page.
 ```
 
 ## About
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](http://www.open-contracting.org) (OCP). 
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](https://www.open-contracting.org) (OCP).
 
-Version 1.0 of the standard was developed for the OCP by the [World Wide Web Foundation](http://www.webfoundation.org), through a project supported by the [Omidyar Network](http://www.omidyar.com) and the [World Bank](http://www.worldbank.org).
+Version 1.0 of the standard was developed for the OCP by the [World Wide Web Foundation](https://webfoundation.org), through a project supported by the [Omidyar Network](https://omidyar.com) and the [World Bank](https://www.worldbank.org/en/home).
 
 ## Support
 
@@ -52,6 +52,6 @@ getting_started/index
 guidance/index
 schema/index
 support/index
-history/index
 governance/index
+history/index
 ```

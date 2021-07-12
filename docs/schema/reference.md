@@ -40,7 +40,7 @@ E.g. `title` and `title_es`
 
 In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the `language` field.
 
-Languages must be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
+Languages must be identified using language tags taken from [BCP47](https://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
 
 To include a language variation of a field, the field name must be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
 
@@ -150,7 +150,7 @@ The planning section can be used to describe the background to a contracting pro
 
 #### Budget 
 
-Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
+Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Budget
@@ -228,7 +228,7 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source. 
+The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source.
 
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
@@ -336,7 +336,7 @@ Periods can also include a `maxExtentDate` which indicates the latest possible e
 
 #### Date
 
-OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339#section-5.6).
+OCDS makes use of [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 A time and timezone/offset must be provided in a date-time.
 
@@ -352,7 +352,7 @@ The following are not valid:
 * '2014-11-18T18:00:00' - Missing timezone/offset portion
 * '11/18/2014 18:00' - Not following the pattern at all!
 
-Accurately including the time and timezone offsets is particular important for tender deadlines and other dates which can have legal significance, and where users of the data might be from different timezones. The character Z on the end of a date-time indicates the [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset) timezone, whereas other timezones are indicated by their value '+/-hh:mm' UTC on the end of the date-time value. 
+Accurately including the time and timezone offsets is particular important for tender deadlines and other dates which can have legal significance, and where users of the data might be from different timezones. The character Z on the end of a date-time indicates the [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset) timezone, whereas other timezones are indicated by their value '+/-hh:mm' UTC on the end of the date-time value.
 
 In the event that the system from which data is drawn only includes dates, and does not include time information, publishers should use sensible defaults for each field. For example, the startDate time of a clarification period can be set to '00:00:00Z' to indicate that clarifications can be requested from any time on the date stated, with the endDate time set to 23:59:59Z to indicate that clarifications can be sent up until the end of the endDate given. Alternatively, if clarification requests are only accepted in standard office hours, these values might be 09:00:00Z and 17:00:00Z respectively.
 
@@ -380,7 +380,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
 
-If the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
+If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
 Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
 
