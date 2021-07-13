@@ -9,7 +9,7 @@ If your contracting processes are managed on paper, using local spreadsheets or 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
 * Catch errors early on
-* Identify [hard cases](#mapping-the-hard-cases) that need more attention
+* Identify [hard cases](#deal-with-the-hard-cases) that need more attention
 * Get input from the [OCDS Helpdesk](../../support/index)
 
 The documentation you produce can also later be included in your [Data User Guide](publish.md#finalize-your-publication-policy).
