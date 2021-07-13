@@ -36,7 +36,28 @@ Once complete, you can:
 * Fill in the _Source systems_ sub-section of your [Publication Plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
 * Fill in the _Systems_ sheet of your Field-Level Mapping (introduced below).
 
-## Splitting up the work
+## Localize OCDS to your context
+
+Before mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
+
+```{toctree}
+:hidden:
+
+map/localization
+```
+
+## Download the mapping templates
+
+To make the mapping easier we provide templates to list the data elements within your data sources, and map them to either:
+
+* OCDS [fields](../../schema/reference), using the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-guidance/))
+* OCDS [codes](../../schema/codelists), using the [Codelist Mapping Template](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template-guidance/))
+
+If your contracting data is managed on paper or in unstructured electronic documents, you should use the templates to list the data elements in those data sources and map them to OCDS.
+
+You can [contact the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on using the mapping templates.
+
+## Split up the work
 
 You can complete the mapping in parts. For example, you might choose to split your mapping by any of the following:
 
@@ -50,27 +71,6 @@ The preferred approach is to eventually list *all* the data elements within your
 It is also important to focus on the data elements whose disclosure was prioritized by users during the [design](design) phase. If you have not determined which data elements are a priority, you ought to do this now, based on your user needs.
 
 Whichever approach you take, it's important that your eventual OCDS publication contain at least as much information as your other public datasets of contracting data; otherwise, users are less likely to use your OCDS publication.
-
-## Localize OCDS to your context
-
-Before mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
-
-```{toctree}
-:hidden:
-
-map/localization
-```
-
-## Use the mapping templates
-
-To make the mapping easier we provide templates to list the data elements within your data sources, and map them to either:
-
-* OCDS [fields](../../schema/reference), using the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-guidance/))
-* OCDS [codes](../../schema/codelists), using the [Codelist Mapping Template](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template/) ([read the tutorial](https://www.open-contracting.org/resources/ocds-1-1-codelist-mapping-template-guidance/))
-
-If your contracting data is managed on paper or in unstructured electronic documents, you should use the templates to list the data elements in those data sources and map them to OCDS.
-
-You can [contact the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on using the mapping templates.
 
 ## Deal with the hard cases
 
