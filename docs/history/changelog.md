@@ -15,7 +15,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 
 * Guidance section:
-  * [#1333](https://github.com/open-contracting/standard/pull/1334) Improve the structure of the Guidance/Map/Map your data to OCDS/Mapping the Hard Cases
+  * [#1334](https://github.com/open-contracting/standard/pull/1334) Improve the structure of the Guidance/Map/Map your data to OCDS/Mapping the Hard Cases
   * [#1330](https://github.com/open-contracting/standard/pull/1330) Improve the structure of the Guidance/Map section of the Documentation. 
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
   * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
