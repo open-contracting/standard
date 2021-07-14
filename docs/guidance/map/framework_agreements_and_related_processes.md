@@ -123,7 +123,7 @@ Use the following criteria to determine the procurement method:
 * Create a release with a **new** `ocid` and add 'tender' to the `.tag` array
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage)
 * [Add a buyer](#add-a-buyer)
-* Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage
+* Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage, and set `tender.competitive` to `true`
 
 ### Award of a procurement contract resulting from a second-stage competition
 
