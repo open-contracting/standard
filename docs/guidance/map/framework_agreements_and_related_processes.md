@@ -91,16 +91,6 @@ The following guidance describes how to model the different stages of a framewor
   * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
   * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
 
-#### Setting procurement method
-
-The `tender.procurementMethod` field uses the [method codelist](../../schema/codelists.md#method) to describe the competitive conditions of the framework agreement procedure as a whole, not only the first stage.
-
-Use the following criteria to determine the procurement method:
-
-* If the contracting process will establish a framework agreement with a single supplier and if there are no conditions to participate in the contracting process, set `tender.procurementMethod` to 'open'.
-* If the contracting process limits the suppliers that can submit a request to participate in the framework agreement, set `tender.procurementMethod` to 'limited'.
-* Otherwise, set `tender.procurementMethod` to 'selective'.
-
 ### Addition of a supplier to a framework agreement
 
 * Create a release with the **same** `ocid` as the tender release and add 'award' to the `tag` array
