@@ -94,6 +94,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 map/amendments
 map/awards_contracts_buyers_suppliers
 map/beneficial_ownership
+map/framework_agreements_and_related_processes
 map/milestones
 map/organization_classifications
 map/organization_identifiers
@@ -101,7 +102,6 @@ map/organization_personal_identifiers
 map/organization_reference
 map/organizational_units
 map/pre-qualification
-map/related_processes
 map/unsuccessful_tender
 ```
 
