@@ -122,6 +122,14 @@
       "description": "Information from the planning phase of the contracting process. Note that many other fields can be filled in a planning release, in the appropriate fields in other schema sections; these would likely be estimates at this stage, e.g. value in tender.",
       "type": "object",
       "properties": {
+        "id": {
+          "title": "Planning ID",
+          "description": "An identifier for this planning process. This may be the same as the ocid, or may be an internal identifier for this planning.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "rationale": {
           "title": "Rationale",
           "description": "The rationale for the procurement provided in free text. More detail can be provided in an attached document.",
