@@ -80,18 +80,20 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 :maxdepth: 2
 :titlesonly:
 
+map/contracting_process
+map/related_processes
+map/pre-qualification
+map/awards_contracts
+map/electronic_catalogues
 map/amendments
-map/awards_contracts_buyers_suppliers
-map/beneficial_ownership
 map/milestones
-map/organization_classifications
+map/buyers_suppliers
+map/organization_reference
 map/organization_identifiers
 map/organization_personal_identifiers
-map/organization_reference
 map/organizational_units
-map/pre-qualification
-map/related_processes
-map/unsuccessful_tender
+map/organization_classifications
+map/beneficial_ownership
 ```
 
 ## Consider using extensions

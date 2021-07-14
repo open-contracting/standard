@@ -1,4 +1,4 @@
-# Organizational Units
+# Organizational units
 
 For some use cases, publishers might need to disclose the organizational units involved in the contracting process, e.g agency branches or divisions.
 
