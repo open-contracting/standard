@@ -65,7 +65,17 @@ The following diagram shows how OCDS models a framework agreement procedure with
 
 ![OCDS framework agreement model](../../_static/png/framework_agreement_model.png)
 
+### Extensions
+
+The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. More information on the nature of the framework agreement can be provided via the `tender.techniques.frameworkAgreement` object.
+
 The `tender.competitive` field, from the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension, is used to indicate whether the second stage involves competition.
+
+The two extensions should be declared in the package metadata:
+
+```{literalinclude} ../../examples/frameworks/extensions_block.json
+:language: json
+```
 
 The following guidance describes how to model the different stages of a framework agreement procedure in OCDS.  
 
@@ -142,18 +152,6 @@ Use the following criteria to determine the procurement method:
 * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
 * Add an `OrganizationReference` object to the award's `.suppliers` array and set `.id` and `.name` to match the supplier's object in the `parties` array.
 * Populate the award's `.value`, `.contractPeriod` and `.items` with the initial contract value, period and items.
-
-### Extensions
-
-The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. More information on the nature of the framework agreement can be provided via the `tender.techniques.frameworkAgreement` object.
-
-The `tender.competitive` field, from the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension, is used to indicate whether the second stage involves competition.
-
-The two extensions should be declared in the package metadata:
-
-```{literalinclude} ../../examples/frameworks/extensions_block.json
-:language: json
-```
 
 ## Worked examples
 
