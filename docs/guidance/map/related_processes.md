@@ -117,7 +117,7 @@ Use the following criteria to determine the procurement method:
 
 ### Award of a procurement contract resulting from a second-stage competition
 
-* Create a release with the **same** `ocid` as the tender release *for the second stage*, and add 'award' and 'contract' to the `tag`
+* Create a release with the **same** `ocid` as the tender release *for the invitation to participate in a second-stage competition*, and add 'award' and 'contract' to the `tag`
 * [Add an award, contract and supplier](#add-an-award-contract-and-supplier)
 
 ### Updating the contract value, period or items
