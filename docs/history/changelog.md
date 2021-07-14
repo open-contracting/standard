@@ -86,6 +86,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Add new fields to the release schema:
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `weight` to `Item.unit`
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
+  * [#1331](https://github.com/open-contracting/standard/pull/1331) `date` to `Value`
 * Update and improve the clarity of field descriptions in the release schema:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
   * [#1315](https://github.com/open-contracting/standard/pull/1315) `id` and `date`, to add rules for compiled releases.
