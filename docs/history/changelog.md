@@ -46,6 +46,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'economicSelectionCriteria'
     * 'technicalSelectionCriteria'
   * [#1280](https://github.com/open-contracting/standard/pull/1280) Align the description of 'tenderNotice' and 'technicalSpecifications' with GPA.
+  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
 * `partyRole.csv`:
   * [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of 'supplier'
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
