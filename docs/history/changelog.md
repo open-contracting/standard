@@ -105,7 +105,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1241](https://github.com/open-contracting/standard/pull/1241) In the definition section, rename record to `Record` and add `LinkedRelease`.
   * [#1241](https://github.com/open-contracting/standard/pull/1241) Align descriptions of `Record` `releases`, linked releases and embedded releases.
   * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
-  * [#1339](https://github.com/open-contracting/standard/pull/1339) Deprecate `packages`
+  * [#1339](https://github.com/open-contracting/standard/pull/1339) Deprecate `packages`.
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 * [#1257](https://github.com/open-contracting/standard/pull/1257) Remove default value of `"en"` for `language` field.
