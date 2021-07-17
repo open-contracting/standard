@@ -1,4 +1,4 @@
-# Framework Agreements and Related Processes
+# Framework agreements
 
 ```{note}
 In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
