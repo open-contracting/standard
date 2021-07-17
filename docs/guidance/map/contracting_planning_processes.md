@@ -19,7 +19,7 @@ and a planning process as:
 # _!!! TO-DO: Update the image below. Main point should be: planning and tender are part of planning processes, tender to implementation of contracting processes. I have removed the mentions of "initiating" from the text, so I suggest removing them from the image as well._  
 ![Contracting Process](../../_static/png/contracting_process.png)
 
-The two processes should be linked together using the `relatedProcesses` array in the releases concerning the contracting process, with `.relationship` set to 'planning'. 
+A planning process ought to have `releaseTag` set to 'planning' (or 'planningUpdate'). A contracting process can have `releaseTag` set to [any other value from the codelist](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag). A planning process should not contain the `releaseTag` 'tender' even if it contains the `Tender` block. The two processes ought to be linked together using the `relatedProcesses` array in the releases concerning the contracting process, with `.relationship` set to 'planning'.
 
 ```{note}
 When publishing data, we recommend separating data about the planning and contracting processes in line with the definitions above. However, publications of both planning and contracting data within a single contracting process continue to be conformant with OCDS 1.2 and earlier. Requiring the publication of this data in separate planning and contracting processes is being considered for a future, backwards uncompatible version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/866)).
