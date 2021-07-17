@@ -52,7 +52,7 @@ Local identifiers must be used consistently. For example, if the `id` of an awar
 
 <img src="../../_static/svg/green_compilation.svg" width="150" align="right"/>
 
-An Open Contracting ID (ocid) is a **globally unique identifier** for an OCDS contracting proces. Every OCDS release has an `ocid`. OCDS defines an `ocid` as: 
+An Open Contracting ID (ocid) is a **globally unique identifier** for an OCDS contracting process. Every OCDS release has an `ocid`. OCDS defines an `ocid` as: 
 
 > A globally unique identifier for this OCDS contracting process. Furthermore, this identifier can also refer to an OCDS planning process or a single stage of a multiple stage procedure.
 
@@ -64,6 +64,10 @@ Setting the `ocid` is usually a simple two step process:
 2. Register an `ocid` prefix to prepend to this internal identifier.
 
 In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting and planning processes have a common internal identifier to draw upon.
+
+```{note}
+OCID is primarily an identifier for an OCDS contracting process. However, under OCDS 1.2 and earlier, it is [also used as an identifier for planning processes and single stages of multiple stage procedures](https://standard.open-contracting.org/latest/en/guidance/map/unsuccessful_tender/). For a future, backwards uncompatible version of the standard introducing a separate identifier for contracting planning processes and publishing data on multiple stage procedures under one OCID is being considered ([GitHub issue](https://github.com/open-contracting/standard/issues/866)).
+```
 
 <div class="example hint" markdown=1>
 

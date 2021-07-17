@@ -1,4 +1,4 @@
-# Pre-qualification and pre-selection
+# Processes with pre-qualification and pre-selection
 
 In single-stage procedures, procuring entities invite suppliers to bid without submitting any prior information.  Such procedures are straightforward to model in OCDS.
 

@@ -93,6 +93,9 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
    :maxdepth: 2
    :titlesonly:
 
+   map/contracting_planning_processes
+   map/unsuccessful_processes
+   map/processes_with_pre-qualification
    map/amendments
    map/awards_contracts_buyers_suppliers
    map/milestones
@@ -101,9 +104,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
    map/organization_personal_identifiers
    map/organization_reference
    map/organizational_units
-   map/pre-qualification
    map/related_processes
-   map/unsuccessful_tender
 ```
 
 ## Extensions

@@ -1,13 +1,5 @@
 # Frameworks and related processes
 
-OCDS defines a contracting process as:
-
-> All the actions aimed at concluding one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.
-
-> Procedures that failed and were restarted are considered new processes.
-
-> Boundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).
-
 A contracting process brings together, under a single identifier, the information that users need to answer questions such as:
 
 * Was a contract signed as a result of this tender?
