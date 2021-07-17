@@ -22,7 +22,7 @@ and a planning process as:
 The two processes should be linked together using the `relatedProcesses` array in the releases concerning the contracting process, with `.relationship` set to 'planning'. 
 
 ```{note}
-When publishing data, we recommend separating data about the planning and contracting processes in line with the definitions above. However, publications of both planning and contracting data within a single contracting process continue to be conformant with OCDS 1.2 and earlier. Publishing this data in separate planning and contracting processes as requirement for conformity is being considered for a future, backwards uncompatible version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/866)).
+When publishing data, we recommend separating data about the planning and contracting processes in line with the definitions above. However, publications of both planning and contracting data within a single contracting process continue to be conformant with OCDS 1.2 and earlier. Requiring the publication of this data in separate planning and contracting processes is being considered for a future, backwards uncompatible version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/866)).
 ```
 
 ```{note}
