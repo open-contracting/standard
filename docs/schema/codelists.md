@@ -172,7 +172,7 @@ The media type codelist is based on the [IANA Media Types](https://www.iana.org/
 
 ### Link Relation Type
 
-The link relation type codelist is a subset of the [IANA Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) list.
+The link relation type codelist is based on a subset of the [IANA Link Relation Types](https://www.iana.org/assignments/link-relations/link-relations.xhtml) list.
 
 ```{csv-table-no-translate}
 :header-rows: 1

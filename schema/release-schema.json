@@ -110,7 +110,7 @@
     },
     "links": {
       "title": "Links",
-      "description": "Links to related resources. In a release, links relate to the individual release. For example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process. For example, a link to a non-OCDS publication that represents the entire contracting process.",
+      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Link"
@@ -2301,14 +2301,14 @@
       "properties": {
         "rel": {
           "title": "Link Relation Type",
-          "description": "The semantics of the link, using the open [link relation type](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#link-relation-type) codelist.",
+          "description": "The relationship with the related resource, using the open [link relation type](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#link-relation-type) codelist.",
           "type": "string",
           "codelist": "linkRelationType.csv",
           "openCodelist": true
         },
         "href": {
           "title": "Link Target",
-          "description": "The target URI of the link.",
+          "description": "The URL of the related resource.",
           "type": "string",
           "format": "uri"
         }
