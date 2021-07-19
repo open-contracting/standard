@@ -22,16 +22,13 @@ See the [licensing guidance](../guidance/publish.md#license-your-data) for more 
 
 See the [publication policy](../guidance/publish.md#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
 
-The record package metadata has two differences from the release package metadata:
+The record package metadata has one difference from the release package metadata: instead of a `releases` array, a record package has a `records` array containing one or more records.
 
-* Instead of a `releases` array, a record package has a `records` array containing one or more records.
-* A record package has a `packages` array, to link to any release packages that were used to prepare the records.
-
-The following example demonstrates all package metadata and record fields.
+The following example demonstrates the package metadata and record fields.
 
 ```{jsoninclude} ../examples/merging/versioned.json
 :jsonpointer:
-:expand: packages, records
+:expand: records
 :title: package
 ```
 
