@@ -18,7 +18,7 @@ There are major events that mark the progress from one stage to another, like an
 
 Releases are **immutable**. Each change is documented in a **new** release, rather than by updating an existing one. The collection of releases for a particular process makes its change history.
 
-**Records** are JSON documents that act as an index of all releases for a single contracting process. While releases are never updated, records are updated each time there is a change. A record is updated by adding a new release to this index.
+**Records** are JSON documents that act as an index of releases for a single contracting process. While releases are never updated, records can be updated each time there is a change. A record is updated by adding a new release to this index.
 
 ![Contracting Process with releases and a record](../_static/png/changehistory_process_record.png)
 
@@ -29,7 +29,7 @@ Records can also contain:
 
 These structures are designed to help users to access:
 
-* The current state of the contracting process 
+* The current state of the contracting process
 * The detailed history of changes for individual fields
 
 In accounting terms, releases are analogous to individual transactions in an account. A record represents both the ledger of all transactions and the closing balance. The ledger is the releases list, and the closing balance is the compiled release.
@@ -51,7 +51,7 @@ Each release contains an [ocid](../schema/identifiers.md#contracting-process-ide
 
 A release also needs a release identifier, unique in the scope of the contracting process. A release id can be built in several ways. Publishers can use any generation strategy, as long as the ids don’t collide within the same process.
 
-The [easy releases](../guidance/build/easy_releases) section introduces two strategies that can be used in any scenario. 
+The [easy releases](../guidance/build/easy_releases) section introduces two strategies that can be used in any scenario.
 
 #### Packaging
 
@@ -66,7 +66,7 @@ Each release also provides one or more tags. Tags provide information about the 
 For example:
 
 * When an invitation to tender is published, the publisher uses the 'tender' tag . The release includes the relevant details in the `tender` section. It can also contain information about the budget in the planning section.
-* When a contract is awarded, the publisher uses the 'award' tag. The release includes the relevant details in the `award` section. It can also update the tender section with the list of tenderers that submitted a bid. 
+* When a contract is awarded, the publisher uses the 'award' tag. The release includes the relevant details in the `award` section. It can also update the tender section with the list of tenderers that submitted a bid.
 
 The [release tag codelist](../schema/codelists.md#release-tag) contains the list of all tags provided by OCDS. Note that it is allowed to use more than one tag in the same release. For example, a release with new data in the `tender` and `award` sections can use the 'tender' and 'award' tags together.
 
@@ -79,9 +79,9 @@ It might be more appropriate to repeat data when processes have fewer releases. 
 ````{admonition} Example
 :class: hint
 
-The following example shows releases with minimal changes on each update. 
+The following example shows releases with minimal changes on each update.
 
-1. The first release presents tender data. 
+1. The first release presents tender data.
 1. The second introduces a new document in the `tender` section with the 'tenderUpdate' tag. Note that the release ignores all the nonmandatory fields. The tender document present in the previous release is also ignored.
 1. The third release presents award data, and ignores the tender section.
 
