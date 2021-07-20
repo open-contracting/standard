@@ -335,7 +335,8 @@ def remove_omit_when_merged(schema):
                 for prop in list(value):
                     if value[prop].get('omitWhenMerged'):
                         del value[prop]
-                        schema['required'].remove(prop)
+                        if prop in schema['required']:
+                            schema['required'].remove(prop)
             remove_omit_when_merged(value)
 
 

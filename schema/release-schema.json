@@ -107,6 +107,16 @@
       "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate open contracting identifier (ocid). This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
       "title": "Related processes",
       "type": "array"
+    },
+    "links": {
+      "title": "Links",
+      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Link"
+      },
+      "uniqueItems": true,
+      "omitWhenMerged": true
     }
   },
   "required": [
@@ -2290,6 +2300,26 @@
             "string",
             "null"
           ]
+        }
+      }
+    },
+    "Link": {
+      "title": "Link",
+      "description": "A reference to a related resource.",
+      "type": "object",
+      "properties": {
+        "rel": {
+          "title": "Link relation type",
+          "description": "The relationship with the related resource, using the open [link relation type](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#link-relation-type) codelist.",
+          "type": "string",
+          "codelist": "linkRelationType.csv",
+          "openCodelist": true
+        },
+        "href": {
+          "title": "Link target",
+          "description": "The URL of the related resource.",
+          "type": "string",
+          "format": "uri"
         }
       }
     }
