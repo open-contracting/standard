@@ -101,6 +101,7 @@ map/organization_reference
 map/organizational_units
 map/pre-qualification
 map/related_processes
+map/contract_suspension
 map/unsuccessful_tender
 ```
 
