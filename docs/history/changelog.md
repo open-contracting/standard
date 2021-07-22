@@ -118,7 +118,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1189](https://github.com/open-contracting/standard/pull/1189) Add recommendations about publishing and referencing documents in the document reference section
 * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records
 * [#1315](https://github.com/open-contracting/standard/pull/1315) Add rules on setting `id` and `date` for compiled releases to the merging specification
-* []() Add contract suspension worked example
+* [#1344](https://github.com/open-contracting/standard/pull/1344) Add contract suspension worked example
 
 ## [1.1.5] - 2020-08-20
 
