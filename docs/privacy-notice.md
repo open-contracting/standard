@@ -8,7 +8,7 @@ Open Contracting Partnership is committed to ensuring that your privacy is prote
 
 We may change this notice from time to time by updating this page. This notice is effective from 24th May 2018.
 
-Data controller: Open Contracting Partnership, <a href="mailto:data@open-contracting.org">data@open-contracting.org</a>, who are based in the USA. Contact us if would like a copy of the information held on you or if you believe that any information we are holding on you is incorrect or incomplete.
+Data controller: Open Contracting Partnership, [data@open-contracting.org](mailto:data@open-contracting.org), who are based in the USA. Contact us if would like a copy of the information held on you or if you believe that any information we are holding on you is incorrect or incomplete.
 
 You have the following rights concerning this data:
 
@@ -23,7 +23,7 @@ We process personal data for the following purposes:
 *   Understanding website visitor and traffic patterns
 *   Understanding server behaviour
 
-We rely on [legitimate interests](https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/legitimate-interests/) ([GDPR Article 6(1)(f)](https://gdpr-info.eu/art-6-gdpr/)) as the lawful basis for this processing. Details about the type of data, the purpose of the processing and legitimate interests, and the storage and retention of the data are set out below.
+We rely on [legitimate interests](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/legitimate-interests/) ([GDPR Article 6(1)(f)](https://gdpr-info.eu/art-6-gdpr/)) as the lawful basis for this processing. Details about the type of data, the purpose of the processing and legitimate interests, and the storage and retention of the data are set out below.
 
 ## Understanding website visitor and traffic patterns
 

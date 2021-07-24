@@ -20,22 +20,16 @@ You can use the [field-level mapping template](https://www.open-contracting.org/
 
 To localize a field title or description, edit the values columns C or D. We recommend that you keep the original title or description in brackets after your localized version. For example:
 
-```{eval-rst}
-.. csv-table::
-   :file: ../../examples/localization.csv
-   :widths: 30,70
-   :header-rows: 1
+```{csv-table}
+:header-rows: 1
+:widths: auto
+:file: ../../examples/localization.csv
 ```
 
 This makes it easier for reviewers to check that localization has not changed the meaning of titles and descriptions. You can use the comments feature of Google Docs to discuss the proposed localization.
 
-```{eval-rst}
-.. admonition:: Warning
-   :class: warning
-
-   .. markdown::
-
-      Do not edit the values in column B. These are the OCDS field paths which cannot be edited.
+```{warning}
+Do not edit the values in column B. These are the OCDS field paths which cannot be edited.
 ```
 
 If you create your own mapping sheet, make sure to include the original OCDS field paths to link your mapping to the fields in OCDS.
@@ -46,13 +40,8 @@ Similarly, you can use the [codelist mapping template](https://www.open-contract
 
 To localize a code title or description, edit the values in columns B and C. As with field titles and descriptions,  we recommend that you keep the original title or description in brackets after your localized version.
 
-```{eval-rst}
-.. admonition:: Warning
-   :class: warning
-
-   .. markdown::
-
-      Do not edit the values in column A. These are the OCDS field paths which cannot be edited.
+```{warning}
+Do not edit the values in column A. These are the OCDS field paths which cannot be edited.
 ```
 
 You can ask the [OCDS Helpdesk](../../support/index) to review your localized mapping template before you put it to use.
@@ -85,7 +74,7 @@ Refer to the [extensions documentation](extensions) for more information on usin
 
 ## Translating the standard
 
-French and Spanish translations of the schema and documentation are maintained by OCP and a community translation to Italian is also available. Other community translations exist to various levels of completion.
+The OCDS standard development team maintains *supported* translations according to the [translation and localization policy](../../governance/index.md#translation-and-localization-policy). Volunteers contribute *community* translations.
 
 If the standard is not yet available in your language, you can propose a new translation of the schema and documentation, or collaborate on an existing community translation.
 
@@ -97,4 +86,4 @@ Contact the [OCDS Helpdesk](../../support/index) to get access to Transifex or t
 
 Whatever you do to localize the OCDS, it’s important to provide clear documentation. For example, you could set-up a page on your website with links to the main standard documentation, and details of your localization.
 
-It’s also important to share updates with the OCDS community, through the [standard-discuss mailing list](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) and the [GitHub issue tracker](https://github.com/open-contracting/standard). Without doing this, there is a chance that you might be duplicating work that others have already undertaken, or missing out on insights from other projects working on similar issues.
+It’s also important to share updates with the OCDS community, through the [standard-discuss mailing list](https://groups.google.com/a/open-contracting.org/g/standard-discuss) and the [GitHub issue tracker](https://github.com/open-contracting/standard). Without doing this, there is a chance that you might be duplicating work that others have already undertaken, or missing out on insights from other projects working on similar issues.

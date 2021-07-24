@@ -6,13 +6,10 @@ Releases are immutable – presenting information about a particular event in th
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
-```{eval-rst}
-.. admonition:: Browsing the schema
-   :class: note
+```{admonition} Browsing the schema
+:class: note
 
-   .. markdown::
-
-      This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as {download}`JSON Schema <../../build/current_lang/release-schema.json>`, download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
+This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as {download}`JSON Schema <../../build/current_lang/release-schema.json>`, download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
 ```
 
 ## Release handling
@@ -43,7 +40,7 @@ E.g. `title` and `title_es`
 
 In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the `language` field.
 
-Languages must be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
+Languages must be identified using language tags taken from [BCP47](https://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
 
 To include a language variation of a field, the field name must be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
 
@@ -53,20 +50,17 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 **json**
 
-```{eval-rst}
-.. jsoninclude:: ../examples/language.json
-   :jsonpointer:
-   :expand: tender,item
-
+```{jsoninclude} ../examples/language.json
+:jsonpointer:
+:expand: tender,item
 ```
 
 **csv**
 
-```{eval-rst}
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: 20 65 15
-   :file: ../examples/language.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../examples/language.csv
 ```
 
 ## Release structure
@@ -82,7 +76,7 @@ The majority of OCDS data is held within a release structure. One or more releas
     * [contract](#contract)
       * [implementation](#implementation)
 
-Releases are given a [tag](../codelists/#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided.
+Releases are given a [tag](codelists.md#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided.
 
 For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 
@@ -90,95 +84,81 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 Releases must be published within a [release package](release_package). The release package provides metadata about the release(s) that it contains.
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-package-schema.json
-    :include: 
-    :collapse: releases,publisher
-
+```{jsonschema} ../../build/current_lang/release-package-schema.json
+:collapse: releases,publisher
 ```
 
-See the [licensing guidance](../../guidance/publish/#license-your-data) for more details on selecting a license, and publishing license information.
+See the [licensing guidance](../guidance/publish.md#license-your-data) for more details on selecting a license, and publishing license information.
 
-See the [publication policy](../../guidance/publish/#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
+See the [publication policy](../guidance/publish.md#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
 
 ### Release
 
 All new information about a contracting process is described within a release. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :include: 
-    :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
-
+```{jsonschema} ../../build/current_lang/release-schema.json
+:collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for release
-   :list: release
+```{extensionlist} The following extensions are available for release
+:list: release
 ```
 
 ### Parties
 
 Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
 
-```{eval-rst}
-.. admonition:: Parties
-   :class: note
+```{admonition} Parties
+:class: note
 
-   Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points. 
+Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points.
 
-   This reduces repetition of information on parties who appear at multiple points in the contracting process, and supports publication of information about additional parties to the contracting process, including auditors, multiple buyers, and consortia partners of a winning bidder.
+This reduces repetition of information on parties who appear at multiple points in the contracting process, and supports publication of information about additional parties to the contracting process, including auditors, multiple buyers, and consortia partners of a winning bidder.
 
-   The old, embedded data, approach to organization data is deprecated in OCDS 1.1, and will be removed in version 2.0. 
-
+The old, embedded data, approach to organization data is deprecated in OCDS 1.1, and will be removed in version 2.0.
 ```
 
 The following details can be provided for each party.
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Organization
-    :collapse: identifier,additionalIdentifiers,address,contactPoint
-
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Organization
+:collapse: identifier,additionalIdentifiers,address,contactPoint
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for parties
-   :list: parties
+```{extensionlist} The following extensions are available for parties
+:list: parties
 ```
 
 Each party has a `details` object. Through extensions, this can be used to provide detailed classification of parties.
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for party details
-   :list: partyDetail
+```{extensionlist} The following extensions are available for party details
+:list: partyDetail
 ```
 
 ### Planning
 
 The planning section can be used to describe the background to a contracting process. This can include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Planning
-    :collapse: budget,documents,milestones
-
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Planning
+:collapse: budget,documents,milestones
 ```
 
-Apart from documents, the majority of information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
+```{extensionlist} The following extensions are available for planning
+:list: planning
+```
 
 #### Budget 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Budget
-    :collapse: amount
+Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Budget
+:collapse: amount
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for budget
-   :list: budget
+```{extensionlist} The following extensions are available for budget
+:list: budget
 ```
 
 ### Tender
@@ -187,16 +167,13 @@ The tender section includes details of the announcement that an organization int
 
 It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and can also be used to record details of a completed tender process, including details of bids received. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Tender
-    :collapse: items,tenderPeriod,enquiryPeriod,awardPeriod,contractPeriod,tenderers,documents,milestones,amendment,amendments,minValue,value,procuringEntity
-
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Tender
+:collapse: items,tenderPeriod,enquiryPeriod,awardPeriod,contractPeriod,tenderers,documents,milestones,amendment,amendments,minValue,value,procuringEntity
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for the tender section
-   :list: tender
+```{extensionlist} The following extensions are available for the tender section
+:list: tender
 ```
 
 ### Bids
@@ -207,69 +184,56 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Award
-    :collapse: items,value,suppliers,contractPeriod,documents,amendment,amendments
-
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Award
+:collapse: items,value,suppliers,contractPeriod,documents,amendment,amendments
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for award
-   :list: award
+```{extensionlist} The following extensions are available for award
+:list: award
 ```
 
 ### Contract
 
 The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. The framework contract details below help illustrate the reasons for this. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Contract
-    :collapse: period,value,items,documents,implementation,relatedProcesses,milestones,amendment,amendments
-
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Contract
+:collapse: period,value,items,documents,implementation,relatedProcesses,milestones,amendment,amendments
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for contracts
-   :list: contract
+```{extensionlist} The following extensions are available for contracts
+:list: contract
 ```
 
 ### Implementation
 
 Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to. Implementation blocks include the following elements:
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Implementation
-    :collapse: transactions,milestones,documents
-
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Implementation
+:collapse: transactions,milestones,documents
 ```
 
-```{eval-rst}
-.. extensionlist:: The following extensions are available for implementation
-   :list: implementation
+```{extensionlist} The following extensions are available for implementation
+:list: implementation
 ```
 
 Information on subcontracts is not currently included in the core OCDS schema, but might be handled by [proposed extensions](conformance_and_extensions)
 
 #### Transaction
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Transaction
-    :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
-
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Transaction
+:collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source. 
+The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source.
 
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
-
-```{eval-rst}
-.. extensionlist:: The following extensions are available for transactions
-   :list: transaction
+```{extensionlist} The following extensions are available for transactions
+:list: transaction
 ```
 
 #### Milestones
@@ -290,11 +254,9 @@ A release may amend values from a previous release. Whilst the release & record 
 
 The amendment array in a tender, award or contract block provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Amendment
-    :collapse: changes
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Amendment
+:collapse: changes
 ```
 
 #### Changes
@@ -312,12 +274,10 @@ The following building blocks are commonly re-used throughout the standard.
 
 ### OrganizationReference
 
-```{eval-rst}
-.. admonition:: Organizations
-   :class: note
+```{admonition} Organizations
+:class: note
 
-   The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
-
+The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
 ```
 
 An organization reference consists of two main components:
@@ -333,43 +293,35 @@ See the [parties](#parties) section
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](../identifiers/#organization-ids) involved in a contracting process.
+The identifier block provides a way to [identify the legal entities](identifiers.md#organization-ids) involved in a contracting process.
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Identifier
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Identifier
 ```
 
 #### Address
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Address
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Address
 ```
 
 #### ContactPoint
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/ContactPoint
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/ContactPoint
 ```
 ### Document
 
-Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](../codelists/#document-type) codelist.
+Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Document
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Document
+```
+
+```{extensionlist} The following extensions are available for document
+:list: document
 ```
 
 ### Period
@@ -378,16 +330,13 @@ A period has a start date, end date, and/or duration. Start and end dates are re
 
 Periods can also include a `maxExtentDate` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Period
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Period
 ```
 
 #### Date
 
-OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339#section-5.6).
+OCDS makes use of [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 A time and timezone/offset must be provided in a date-time.
 
@@ -403,7 +352,7 @@ The following are not valid:
 * '2014-11-18T18:00:00' - Missing timezone/offset portion
 * '11/18/2014 18:00' - Not following the pattern at all!
 
-Accurately including the time and timezone offsets is particular important for tender deadlines and other dates which can have legal significance, and where users of the data might be from different timezones. The character Z on the end of a date-time indicates the [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset) timezone, whereas other timezones are indicated by their value '+/-hh:mm' UTC on the end of the date-time value. 
+Accurately including the time and timezone offsets is particular important for tender deadlines and other dates which can have legal significance, and where users of the data might be from different timezones. The character Z on the end of a date-time indicates the [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset) timezone, whereas other timezones are indicated by their value '+/-hh:mm' UTC on the end of the date-time value.
 
 In the event that the system from which data is drawn only includes dates, and does not include time information, publishers should use sensible defaults for each field. For example, the startDate time of a clarification period can be set to '00:00:00Z' to indicate that clarifications can be requested from any time on the date stated, with the endDate time set to 23:59:59Z to indicate that clarifications can be sent up until the end of the endDate given. Alternatively, if clarification requests are only accepted in standard office hours, these values might be 09:00:00Z and 17:00:00Z respectively.
 
@@ -413,70 +362,56 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 The items block is used to list the line-items associated with a tender, award or contract. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Item
-    :collapse: classification,additionalClassifications,unit
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Item
+:collapse: classification,additionalClassifications,unit
 ```
 
-```{eval-rst}
-.. extensionlist:: These are extensions related to Items.
-   :list: item
+```{extensionlist} These are extensions related to Items.
+:list: item
 ```
 
 #### Classification
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Classification
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Classification
 ```
 #### Unit
 
 The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
 
-If the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
+If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
-Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](../codelists/#unit-classification-scheme).
+Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Item/properties/unit
-    :collapse: value
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Item/properties/unit
+:collapse: value
 ```
 
 ### Milestone
 
 Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Milestone
-    :collapse: documents
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Milestone
+:collapse: documents
 ```
 
 Notes:
 
 * The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
-```{eval-rst}
-.. extensionlist:: The following extensions to milestone are available
-   :list: milestones
+```{extensionlist} The following extensions to milestone are available
+:list: milestones
 ```
 
 ### Value
 
 Financial values should be published with a currency attached. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/Value
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Value
 ```
 
 Support for exchange rates, and tax information, can be provided using extensions.
@@ -492,11 +427,8 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 
 In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant open contracting processes using their `ocid`.
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-schema.json
-    :pointer: /definitions/RelatedProcess
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/RelatedProcess
 ```
 
 A related process can be declared at two points in an OCDS release.
@@ -519,9 +451,6 @@ The [Location](https://extensions.open-contracting.org/en/extensions/location/v1
 
 The publisher block is used in release and record packages to identify the source of a dataset. 
 
-```{eval-rst}
-.. jsonschema:: ../../build/current_lang/release-package-schema.json
-    :include: publisher
-    :collapse: 
-    
+```{jsonschema} ../../build/current_lang/release-package-schema.json
+:include: publisher
 ```

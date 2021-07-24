@@ -10,9 +10,8 @@ An OCDS [record](../schema/records_reference) aggregates all the releases availa
 * A compiled release is created by taking only the most recent values of fields from releases in a given contracting process.
 * A versioned release is created by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Worked Example</p>
+````{admonition} Worked Example
+:class: hint
 
 A public procurement agency publishes a release to announce an opportunity on January 1, in which the total estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the total estimated value of the procurement is increased to $2,000.
 
@@ -25,55 +24,42 @@ At each release, the agency also updates the record, which combines all the rele
 * The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
 * The versioned release makes it easy to see how the description and total estimated value changed over time.
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merge-tender-1.json
-   :jsonpointer: /releases
-   :expand: releases, tag, tender
-   :title: tender
-
+```{jsoninclude} ../examples/merging/merge-tender-1.json
+:jsonpointer: /releases
+:expand: releases, tag, tender
+:title: tender
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merge-tender-3.json
-   :jsonpointer: /releases
-   :expand: releases, tag, tender
-   :title: tenderAmendment
-
+```{jsoninclude} ../examples/merging/merge-tender-3.json
+:jsonpointer: /releases
+:expand: releases, tag, tender
+:title: tenderAmendment
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merge-award-1.json
-   :jsonpointer: /releases
-   :expand: releases, tag, awards
-   :title: awardOne
-
+```{jsoninclude} ../examples/merging/merge-award-1.json
+:jsonpointer: /releases
+:expand: releases, tag, awards
+:title: awardOne
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merge-award-2.json
-   :jsonpointer: /releases
-   :expand: releases, tag, awards
-   :title: awardTwo
-
+```{jsoninclude} ../examples/merging/merge-award-2.json
+:jsonpointer: /releases
+:expand: releases, tag, awards
+:title: awardTwo
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/merged.json
-   :jsonpointer:
-   :expand: records, compiledRelease, tag, tender, awards
-   :title: record
-
+```{jsoninclude} ../examples/merging/merged.json
+:jsonpointer:
+:expand: records, compiledRelease, tag, tender, awards
+:title: record
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer:
-   :expand: records, versionedRelease, tag, tender, awards
-   :title: versioned
-
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer:
+:expand: records, versionedRelease, tag, tender, awards
+:title: versioned
 ```
-
-</div>
+````
 
 ## Merging specification
 
@@ -88,14 +74,10 @@ In the release schema, `"omitWhenMerged": true` is declared on fields that must 
 
 If `omitWhenMerged` is set to `false`, ignore it.
 
-```{eval-rst}
-.. note::
+```{note}
+The compiled release presently uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue [#330](https://github.com/open-contracting/standard/issues/330), and on how to identify and date compiled and versioned releases in issue [#834](https://github.com/open-contracting/standard/issues/834).
 
-   .. markdown::
-
-      The compiled release presently uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue [#330](https://github.com/open-contracting/standard/issues/330), and on how to identify and date compiled and versioned releases in issue [#834](https://github.com/open-contracting/standard/issues/834).
-
-      In the meantime, an intermediate solution is to set `tag` to `["compiled"]`, `date` to the date of the most recent release, and `id` to `{ocid}-{date}`, like in the [reference implementation](#reference-implementation) of the merge routine.
+In the meantime, an intermediate solution is to set `tag` to `["compiled"]`, `date` to the date of the most recent release, and `id` to `{ocid}-{date}`, like in the [reference implementation](#reference-implementation) of the merge routine.
 ```
 
 ### Versioned values
@@ -125,20 +107,16 @@ In a **versioned release**, with a few exceptions, a field's value is replaced w
 
 For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0/versionedRelease/tender/value
-   :expand: value, amount
-   :title: Versioned_values
-
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer: /records/0/versionedRelease/tender/value
+:expand: value, amount
+:title: Versioned_values
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer:
-   :expand: records, versionedRelease
-   :title: Versioned_release
-
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer:
+:expand: records, versionedRelease
+:title: Versioned_release
 ```
 
 The structure of the versioned release is described by the {download}`versioned release schema <../../build/current_lang/versioned-release-validation-schema.json>`; note that the `ocid` field's value is not versioned.
@@ -198,24 +176,14 @@ This case is encountered if the above conditions aren't met. If the array is emp
   * If there is an object in the array in **output** with the same `id` value as the object in **input**, merge the matching objects in **input** and **output** according to the [merge routine](#merge-routine) *except for the `id` field*, which is not versioned and instead kept as-is
   * Otherwise, merge an empty JSON object and the object in **input** according to the [merge routine](#merge-routine) *except for the `id` field*, which is not versioned and instead kept as-is, and append the result to the array in **output**
 
-```{eval-rst}
-.. note::
-
-   .. markdown::
-
-      In this case, to remove an object from an array, you need to instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue [#232](https://github.com/open-contracting/standard/issues/232).
-
+```{note}
+In this case, to remove an object from an array, you need to instead set each of its fields to `null`. We invite discussion on how to remove objects from arrays in issue [#232](https://github.com/open-contracting/standard/issues/232).
 ```
 
-```{eval-rst}
-.. note::
-
-   .. markdown::
-
-      In the release schema, `"versionId": true` is declared on `id` fields that must be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue [#812](https://github.com/open-contracting/standard/issues/812)). If `"versionId": true` is declared on the `id` field of an object within an array, it is ignored. `"versionId": false` has no meaning and is ignored.
-
+```{note}
+In the release schema, `"versionId": true` is declared on `id` fields that must be versioned. This is only for convenience and might be removed in future versions of OCDS (see issue [#812](https://github.com/open-contracting/standard/issues/812)). If `"versionId": true` is declared on the `id` field of an object within an array, it is ignored. `"versionId": false` has no meaning and is ignored.
 ```
 
 ### Reference implementation
 
-A reference implementation of the merge routine [is available in Python on GitHub](https://github.com/open-contracting/ocds-merge). We strongly encourage any re-implementations to [read its commented code and use its test cases](https://github.com/open-contracting/ocds-merge#reference-implementation), to ensure correctness.
+A reference implementation of the merge routine [is available in Python on GitHub](https://github.com/open-contracting/ocds-merge). We strongly encourage any re-implementations to [read its commented code and use its test cases](https://ocds-merge.readthedocs.io/en/latest/#reference-implementation), to ensure correctness.
