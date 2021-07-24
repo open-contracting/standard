@@ -33,7 +33,7 @@ To facilitate publication of contracting data to meet a variety of needs, the OC
 * A free global [helpdesk](https://standard.open-contracting.org/latest/en/support/#ocds-helpdesk).
 
 ```{note}
-**To learn more,** go to the next page in the primer: [How does the OCDS work?](how_does_OCDS_work) You can also review the further resources below to go deeper into the subjects introduced on this page.
+**To learn more,** go to the next page in the primer: [How does the OCDS work?](how) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
 * [Implement Open Contracting](https://www.open-contracting.org/implement/)
 * [Impact of Open Contracting](https://www.open-contracting.org/impact/)

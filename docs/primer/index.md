@@ -8,10 +8,10 @@ This Primer to the Open Contracting Data Standard (OCDS) will help you get start
 
 In this Primer, you will find resources to help you answer these questions:
 
-* [What is OCDS and why use it?](what_is_OCDS)
-* [How does the OCDS work?](how_does_OCDS_work)
-* [How is OCDS data published?](how_is_OCDS_data_published)
-* [How can I implement the OCDS?](how_can_i_implement_OCDS)
+* [What is OCDS and why use it?](what)
+* [How does the OCDS work?](how)
+* [How is OCDS data published?](releases_and_records)
+* [How can I implement the OCDS?](next)
 
 Beyond the Primer, the OCDS provides detailed documentation to guide you in implementing the standard. It provides you with access to the [latest authoritative version](https://standard.open-contracting.org/latest/en/) of the data standard, [guidance](https://standard.open-contracting.org/latest/en/guidance/) on data publication, and other relevant resources.
 
@@ -25,9 +25,17 @@ The OCDS also provides tools and detailed documentation to guide you in implemen
 * [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly.
 
 ```{note}
-
-**To learn more about the OCDS,** go to the next page in the primer: [What is OCDS and why use it?](what_is_OCDS) To learn more about open contracting in general, go to:
+**To learn more about the OCDS,** go to the next page in the primer: [What is OCDS and why use it?](what) To learn more about open contracting in general, go to:
 
 * [OCP Website](https://www.open-contracting.org/
 * [OCP Learning]https://www.open-contracting.org/learn/)
+```
+
+```{toctree}
+:hidden:
+
+what
+how
+releases_and_records
+next
 ```

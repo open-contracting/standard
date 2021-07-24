@@ -113,7 +113,7 @@ No matter what type of contracting data you are working with or format you publi
 * Check the structure, format and quality of your data against the OCDS schema
 
 ```{note}
-**To learn more,** go to the next page in the primer: [How is OCDS data published?](how_is_OCDS_data_published) You can also review the further resources below to go deeper into the subjects introduced on this page.
+**To learn more,** go to the next page in the primer: [How is OCDS data published?](releases_and_records) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
 * [Guidance to implementing OCDS](https://standard.open-contracting.org/latest/en/guidance/)
 * [Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
