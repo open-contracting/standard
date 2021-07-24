@@ -1,16 +1,15 @@
 # How is OCDS data published?
-```{eval-rst}
-.. admonition:: Objectives
-   :class: note
 
-   .. markdown::
+```{admonition} Objectives
+:class: note
 
 Open Contracting Data Standard (OCDS) data is published and updated over time using two JSON document types: “releases” and “records”.  This page will:
 
-*   Outline the purpose of releases and records
-*   Describe how to publish a change history using releases and records
-*   Show the components of an OCDS record
+* Outline the purpose of releases and records
+* Describe how to publish a change history using releases and records
+* Show the components of an OCDS record
 ```
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OeDCLMWlY_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The only thing that can be truly called “OCDS data” is a JSON document that validates against the OCDS schema. The JSON documents that OCDS uses are called “releases” and “records.”
@@ -23,8 +22,8 @@ Releases are immutable, which means they cannot be changed once published. There
 
 **Records** are JSON documents that act as an index of all releases for a single contracting process. While releases are never updated, records are updated each time there is a change to a contracting process by adding a new release to this index. Records follow the OCDS [record schema](https://standard.open-contracting.org/latest/en/schema/records_reference/) and, in addition to the release index, can also contain:
 
-*   A **compiled release,** which follows the same structure as a release and provides the latest value of each field. The compiled release makes it easy for users to get the latest version of the data about a contracting process.
-*   A **versioned release,** which contains a history of changes for each field and allows users to see how a particular field has changed over time.
+* A **compiled release,** which follows the same structure as a release and provides the latest value of each field. The compiled release makes it easy for users to get the latest version of the data about a contracting process.
+* A **versioned release,** which contains a history of changes for each field and allows users to see how a particular field has changed over time.
 
 Each time a new release is published it is added to the index, the compiled release is updated with the latest values, and the versioned release is updated with any new changes.
 
@@ -34,20 +33,16 @@ Records and releases each contain several fields which can be used in different 
 
 When you publish OCDS releases and records, you are encouraged to:
 
-*   Ensure all documents referenced in OCDS releases are available online;
-*   Publish each release and record at its own persistent URL;
-*   Produce bulk packages of releases and records for users to download;
-*   Publish versions of the data for users to access in CSV for Excel formats
+* Ensure all documents referenced in OCDS releases are available online;
+* Publish each release and record at its own persistent URL;
+* Produce bulk packages of releases and records for users to download;
+* Publish versions of the data for users to access in CSV for Excel formats
 
-```{eval-rst}
-.. note::
-
-   .. markdown::
-
+```{note}
 **To learn more,** go to the next page in the primer: [How can I implement the OCDS?](how_can_i_implement_OCDS) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
-[OCP Learning: Publishing OCDS Data](https://www.open-contracting.org/learn/publish/)
-[Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
-[OCDS Schema Release Reference](https://standard.open-contracting.org/latest/en/schema/reference/)
-[OCDS Schema Record Reference](https://standard.open-contracting.org/latest/en/schema/records_reference/)
+* [OCP Learning: Publishing OCDS Data](https://www.open-contracting.org/learn/publish/)
+* [Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
+* [OCDS Schema Release Reference](https://standard.open-contracting.org/latest/en/schema/reference/)
+* [OCDS Schema Record Reference](https://standard.open-contracting.org/latest/en/schema/records_reference/)
 ```
