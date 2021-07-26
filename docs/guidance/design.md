@@ -31,7 +31,13 @@ If your contracting data is mostly on paper, in local spreadsheets or in unstruc
 
 ## Set your goals and priorities
 
-The most useful OCDS implementations are those that were designed around real-world goals and priorities. To achieve success, you need to understand your policy goals and user needs, and use them to inform the design of your OCDS implementation.
+The most useful OCDS implementations are those that were designed around real-world goals and priorities. To achieve success, you need to understand your policy goals and [user needs](design/user_needs), and use them to inform the design of your OCDS implementation.
+
+```{toctree}
+:hidden:
+
+design/user_needs
+```
 
 ### Identify stakeholders
 
@@ -87,7 +93,7 @@ To achieve success, an OCDS implementation team ought to include the following r
 
 **Action:** Identify your team members.
 
-**Action:** Ask everyone in your team to read the [getting started documentation](../../getting_started/index).
+**Action:** Ask everyone in your team to [read the Primer](../../primer/index).
 
 **Action:** [Contact the OCDS Helpdesk](../../support/index) to arrange an online introductory training for your technical team, in English or Spanish.
 
