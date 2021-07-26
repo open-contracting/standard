@@ -40,6 +40,7 @@ build/change_history
 build/easy_releases
 build/merging
 ```
+
 **Resource:** [Technical case studies: OCDS implementation insights report](https://www.open-contracting.org/resources/technical-case-studies-ocds-implementation-insights/) provides insights into the technical choices made in OCDS implementations in Paraguay, Zambia, Colombia, Moldova and Argentina's Road Agency Vialidad.
 
 ### Decide how to combine spreadsheet data
@@ -133,17 +134,15 @@ As covered in the [Design](design) phase, different users will need information 
 
 Throughout the build phase you ought to regularly use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check the structure and format of your data.
 
-OCDS data needs to be published as part of a release package or a record package. You can use [OCDSKit](https://pypi.org/project/ocdskit/) to reformat your data before submitting it to the review tool, but any data you publish needs to be correctly packaged.
+OCDS data needs to be published as part of a release package or a record package. You can use [OCDS Kit](https://pypi.org/project/ocdskit/) to reformat your data before submitting it to the review tool, but any data you publish needs to be correctly packaged.
 
-The Data Review Tool reports any structural issues with your data. It checks whether your data makes sense and uses [OCDS Show](https://open-contracting.github.io/ocds-show/) to display a preview of your data, so that you can check whether the information is appearing in the correct place within the schema. You can also use [OCDS Show](https://open-contracting.github.io/ocds-show/) directly.
+The Data Review Tool reports any structural issues with your data. It checks whether your data makes sense and displays a preview of your data, so that you can check whether the information is appearing in the correct place within the schema.
 
 **Action:** Upload some data to the [OCDS Data Review Tool](https://standard.open-contracting.org/review/).
 
 **Action:** Request feedback on your draft data from the [OCDS Helpdesk](../../support/index).
 
 **Tool:** The [jOCDS Validator](https://developmentgateway.org/blog/your-data-ocds-compliant-introducing-jocds-validator) can be used for bulk checking of the structure and format of OCDS data
-
-**Tool:** [OCDS Show](https://open-contracting.github.io/ocds-show/)
 
 **Resource:** [How to check your OCDS data validates](https://www.open-contracting.org/2018/05/09/check-ocds-data-validates/)
 
