@@ -27,8 +27,8 @@ The OCDS also provides tools and detailed documentation to guide you in implemen
 ```{note}
 **To learn more about the OCDS,** go to the next page in the primer: [What is OCDS and why use it?](what) To learn more about open contracting in general, go to:
 
-* [OCP Website](https://www.open-contracting.org/
-* [OCP Learning]https://www.open-contracting.org/learn/)
+* [OCP Website](https://www.open-contracting.org/)
+* [OCP Learning](https://www.open-contracting.org/learn/)
 ```
 
 ```{toctree}
