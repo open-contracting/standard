@@ -4,7 +4,7 @@ Congratulations! You are almost ready to publish your OCDS data.
 
 ## Perform final checks
 
-Before publishing, check that your publication meets the small number of [basic criteria](../publish/quality.md#basic-criteria).
+Before publishing, check that your publication meets the small number of [basic criteria](publish/quality.md#basic-criteria).
 
 ```{toctree}
 :hidden:
