@@ -101,8 +101,6 @@ The following example shows releases with minimal changes on each update.
 ```
 ````
 
-</div>
-
 ### Records
 
 A record follows the structure defined in the [Records Reference](../schema/records_reference). Below is a full example.
