@@ -1,10 +1,12 @@
 # Contract suspension
 
-A contract can be suspended after it is signed. A suspended contract is still legally in force, but work has been suspended. For example, a contract might be suspended in the following scenarios:
+A contract can be suspended after it is signed. A suspended contract is still legally in force, but work has been temporarily suspended. For example, a contract might be suspended in the following scenarios:
 
 * the buyer suspends a contract because the supplier fails to perform.
 * the supplier suspends a contract because the buyer fails to pay.
 * either party suspends a contract due to force majeure.
+
+Contract suspension is not the same as termination, which is a permanent cessation of performance.
 
 In OCDS, the `contracts.status` field describes the status of a contract, using codes from the [contract status codelist](https://standard.open-contracting.org/latest/en/schema/codelists/#contract-status). The `contracts.statusDetails` field can be used to provide additional details on the status of a contract.
 
