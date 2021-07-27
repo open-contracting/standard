@@ -27,7 +27,7 @@ The model law obliges procuring entities to publish an invitation to pre-qualify
 The procuring entity assesses the qualifications of the suppliers based on their responses. Only pre-qualified suppliers can take part in the later proceedings.
 
 ```{note}
-The European Union’s restricted procedure (see Article 28, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) uses pre-qualification.
+The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialog and innovation partnership (see Articles 28-31, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) use pre-qualification.
 ```
 
 ### Pre-qualification with a limit on the number of qualified suppliers (pre-selection)
