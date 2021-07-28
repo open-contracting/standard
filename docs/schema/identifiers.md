@@ -66,7 +66,7 @@ Setting the `ocid` is usually a simple two step process:
 In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting and planning processes have a common internal identifier to draw upon.
 
 ```{note}
-OCID is primarily an identifier for an OCDS contracting process. However, under OCDS 1.2 and earlier, it is [also used as an identifier for planning processes and single stages of multiple stage procedures](https://standard.open-contracting.org/latest/en/guidance/map/unsuccessful_tender/). For a future, backwards incompatible version of the standard introducing a separate identifier for contracting planning processes and publishing data on multiple stage procedures under one OCID is being considered ([GitHub issue](https://github.com/open-contracting/standard/issues/866)).
+OCID is primarily an identifier for an OCDS contracting process. However, in OCDS 1.2 and earlier, it is [also used as an identifier for planning processes and single stages of multiple stage procedures](https://standard.open-contracting.org/latest/en/guidance/map/unsuccessful_tender/). For a future, backwards incompatible version of the standard introducing a separate identifier for contracting planning processes and publishing data on multiple stage procedures under one OCID is being considered ([GitHub issue](https://github.com/open-contracting/standard/issues/866)).
 ```
 
 <div class="example hint" markdown=1>
