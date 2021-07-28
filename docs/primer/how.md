@@ -77,7 +77,7 @@ Completion or Termination info
 
 The OCDS brings together the data published at each stage using a single contracting process identifier: the **OCID.** An OCID is composed of a prefix [registered by the publisher with OCP](https://standard.open-contracting.org/latest/en/guidance/build/#register-an-ocid-prefix), and a unique process identifier chosen by the publisher.
 
-<!-- ![ocid](../_static/png/OCID.png) -->
+![ocid](../_static/png/ocid_en.png)
 
 The OCID helps users to join up data across the whole contracting process – a key feature and benefit of publishing and using OCDS data.
 
