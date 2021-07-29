@@ -80,7 +80,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 :maxdepth: 2
 :titlesonly:
 
-map/contracting_process
+map/unsuccessful_processes
 map/related_processes
 map/pre-qualification
 map/awards_contracts
