@@ -13,6 +13,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1017](https://github.com/open-contracting/standard/pull/1017) Add link to bulk downloads in Guidance section.
 
 * Guidance section:
+  * [#1345](https://github.com/open-contracting/standard/pull/1345) Update legal references in pre-gualification guidance.
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
   * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007) [#1123](https://github.com/open-contracting/standard/pull/1123).
   * Add worked examples for the Build phase [#951](https://github.com/open-contracting/standard/pull/951) [#997](https://github.com/open-contracting/standard/pull/997).
