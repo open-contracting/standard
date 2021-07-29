@@ -1,6 +1,10 @@
 # Buyers and Suppliers
 
-## Buyer
+## Definitions
+
+In order to understand the modelling examples, it’s important to first clarify the definitions of some key concepts.
+
+### Buyer
 
 OCDS defines the buyer as:
 
@@ -19,7 +23,7 @@ In OCDS, the **buyer** is modelled as relating to the contracting process as a w
 
 That said, many organizations can be assigned the 'buyer' role in the `parties` section, making it possible to represent contracting processes with a 'lead' buyer and other buyers.
 
-## Suppliers
+### Suppliers
 
 OCDS defines a supplier as:
 
