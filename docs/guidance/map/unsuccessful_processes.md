@@ -1,4 +1,4 @@
-# Unsuccessful tenders
+# Unsuccessful processes
 
 In the case of procurement, a contracting process can be defined as a procurement procedure. There is a one-to-one correspondence between the first stage of a procurement procedure (tender) and a contracting process.
 

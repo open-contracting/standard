@@ -1,4 +1,4 @@
-# Personal Identifiers
+# Personal identifiers
 
 Suppliers and tenderers can be organizations or individuals (natural persons). Such individuals are often referred to as "sole traders" or "self-employed individuals".
 
