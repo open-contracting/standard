@@ -14,6 +14,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 * Guidance section:
+  * [#1345](https://github.com/open-contracting/standard/pull/1345) Update legal references in pre-gualification guidance.
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
   * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
   * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
