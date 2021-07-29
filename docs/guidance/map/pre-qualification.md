@@ -114,7 +114,7 @@ The notice represents the initiation of the contracting process, so it is modell
 :title: Tender section
 ```
 
-Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
+Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a bid for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
 
 ```{note}
 OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github](https://github.com/open-contracting/standard/issues/440).
@@ -128,7 +128,7 @@ The National Nuclear Laboratory issues a [restricted procedure contract notice](
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
-The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a tender at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which suppliers to invite proposals from.
+The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a bid at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which suppliers to invite proposals from.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-selection-package.json
 :jsonpointer: /releases/0/tender
