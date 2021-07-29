@@ -730,10 +730,14 @@
             "null"
           ]
         },
-        "period": {
-          "title": "Period",
-          "description": "The start and end date for the contract.",
-          "$ref": "#/definitions/Period"
+        "dateSigned": {
+          "title": "Date signed",
+          "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "value": {
           "title": "Value",
@@ -750,14 +754,10 @@
           },
           "uniqueItems": true
         },
-        "dateSigned": {
-          "title": "Date signed",
-          "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
+        "period": {
+          "title": "Period",
+          "description": "The start and end date for the contract.",
+          "$ref": "#/definitions/Period"
         },
         "documents": {
           "title": "Documents",
