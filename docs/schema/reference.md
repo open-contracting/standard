@@ -106,19 +106,19 @@ All new information about a contracting process is described within a release.
 
 ### Parties
 
-Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
+Each of the organizations referenced in a release must be included in the parties section. 
 
 ```{admonition} Parties
 :class: note
 
-Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points.
+Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the organizations involved in a contracting process is collected together in a top-level section, and the organizations indicated by a cross-reference to their id at other points.
 
-This reduces repetition of information on parties who appear at multiple points in the contracting process, and supports publication of information about additional parties to the contracting process, including auditors, multiple buyers, and consortia partners of a winning bidder.
+This reduces repetition of information on organizations who appear at multiple points in the contracting process, and supports publication of information about additional organizations, including auditors, multiple buyers, and consortia partners of a winning bidder.
 
 The old, embedded data, approach to organization data is deprecated in OCDS 1.1, and will be removed in version 2.0.
 ```
 
-The following details can be provided for each party.
+The following details can be provided for each organization.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Organization
@@ -129,7 +129,7 @@ The following details can be provided for each party.
 :list: parties
 ```
 
-Each party has a `details` object. Through extensions, this can be used to provide detailed classification of parties.
+Each organization has a `details` object. Through extensions, this can be used to provide detailed classification of organizations.
 
 ```{extensionlist} The following extensions are available for party details
 :list: partyDetail
@@ -282,7 +282,7 @@ The approach to including organizations information has changed in OCDS 1.1. Ins
 
 An organization reference consists of two main components:
 
-* An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization or entity;
+* An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization;
 * A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
 
 The Organization Reference schema contains deprecated fields to prevent validation failures of OCDS 1.0 data. 

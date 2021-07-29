@@ -30,14 +30,14 @@ Additional codes may be used to label releases, based on user needs: for example
 :file: ../../build/current_lang/codelists/releaseTag.csv
 ```
 
-### Party Role
+### Organization Role
 
-The organizations, economic operators or other participants in a contracting process are listed in the [parties section](reference.md#parties). A single party can have one or more roles in the contracting process.
+The organizations participating in a contracting process are listed in the [parties section](reference.md#parties). A single organization can have one or more roles in the contracting process.
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../build/current_lang/codelists/partyRole.csv
+:file: ../../build/current_lang/codelists/organizationRole.csv
 ```
 
 ### Classification Scheme

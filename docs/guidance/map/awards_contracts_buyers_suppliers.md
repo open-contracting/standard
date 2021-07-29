@@ -46,7 +46,7 @@ OCDS defines the buyer as:
 
 OCDS defines a supplier as:
 
-```{code-description} ../../../build/current_lang/codelists/partyRole.csv supplier
+```{code-description} ../../../build/current_lang/codelists/organizationRole.csv supplier
 ```
 
 ### Electronic catalog
