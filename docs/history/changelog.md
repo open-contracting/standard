@@ -14,6 +14,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
 * Guidance section:
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
   * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
   * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
@@ -35,6 +36,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Codelists
 
+* `milestoneType.csv`:
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
+* `method.csv`: 
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 * `documentType.csv`:
   * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate 'contractSchedule' and edit 'contractAnnexe'.
   * [#1219](https://github.com/open-contracting/standard/pull/1219) Add the codes from the tariffs extension:
@@ -48,6 +53,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1280](https://github.com/open-contracting/standard/pull/1280) Align the description of 'tenderNotice' and 'technicalSpecifications' with GPA.
   * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
 * `partyRole.csv`:
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
   * [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of 'supplier'
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'buyer'
@@ -77,6 +83,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Schema
 
+* [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
 * [#1354](https://github.com/open-contracting/standard/pull/1354) Switch position of `contract.dateSigned` and `contract.period` to correspond with the order in `Award`
 * [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of `awards.suppliers`.
 * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
