@@ -1,4 +1,4 @@
-# Buyers and Suppliers
+# Buyers and suppliers
 
 ## Definitions
 
