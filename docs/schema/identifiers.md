@@ -14,7 +14,7 @@ In OCDS there are two kinds of identifiers: globally unique and local.
 
 Across the whole universe of OCDS publishers these identifiers refer to one specific contracting process or organization.
 
-We create globally unique contracting process identifiers by adding a prefix to the internal identifiers held by publishers.
+We create globally unique process identifiers by adding a prefix to the internal identifiers held by publishers.
 
 ```{admonition} Worked Example
 :class: hint
