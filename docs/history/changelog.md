@@ -14,7 +14,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * Guidance section:
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
-  * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007) [#1123](https://github.com/open-contracting/standard/pull/1123).
+  * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007) [#1123](https://github.com/open-contracting/standard/pull/1123) [#1216](https://github.com/open-contracting/standard/pull/1216).
   * Add worked examples for the Build phase [#951](https://github.com/open-contracting/standard/pull/951) [#997](https://github.com/open-contracting/standard/pull/997).
   * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
   * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
@@ -101,6 +101,13 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Schema
 
+* Clarify core concepts:
+  * [#1216](https://github.com/open-contracting/standard/pull/1216) Define contracting process and planning process in the schema description. Update definition of release, record and ocid. Update references to contracting process so that it takes take the planning process into account.
+  * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
+  * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
+  * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
+  * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
+
 * Add new fields:
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
@@ -116,17 +123,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
   * [#1296](https://github.com/open-contracting/standard/pull/1296) `tender.eligibilityCriteria` in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics. 
-
-* Clarify core concepts:
-  * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
-  * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
-  * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
-  * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
-
-* Clarify merging behavior:
-  * [#1242](https://github.com/open-contracting/standard/pull/1242) Clarify that the releases to merge must use the same version of OCDS.
-  * [#1242](https://github.com/open-contracting/standard/pull/1242) Narrow the uniqueness scope of a release's `id` to its `ocid` and OCDS version (was `ocid` only), to allow the publication of the same release for different versions of OCDS.
-  * [#1315](https://github.com/open-contracting/standard/pull/1315) Update the descriptions of `id` and `date`, to add rules for compiled releases.
 
 * Update and clarify field descriptions:
   * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
@@ -144,6 +140,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1112](https://github.com/open-contracting/standard/pull/1112) `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available" ("may" replaced with "should")
   * [#1112](https://github.com/open-contracting/standard/pull/1112) `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
   * [#1112](https://github.com/open-contracting/standard/pull/1112) `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
+
+* Clarify merging behavior:
+  * [#1242](https://github.com/open-contracting/standard/pull/1242) Clarify that the releases to merge must use the same version of OCDS.
+  * [#1242](https://github.com/open-contracting/standard/pull/1242) Narrow the uniqueness scope of a release's `id` to its `ocid` and OCDS version (was `ocid` only), to allow the publication of the same release for different versions of OCDS.
+  * [#1315](https://github.com/open-contracting/standard/pull/1315) Update the descriptions of `id` and `date`, to add rules for compiled releases.
 
 * Make minor changes to the schema's organization:
   * [#1240](https://github.com/open-contracting/standard/pull/1240) Move `Unit` from `Item.unit` to the schema definitions.
@@ -169,6 +170,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component.
 * [#1189](https://github.com/open-contracting/standard/pull/1189) Add recommendations about publishing and referencing documents in the document reference section.
 * [#1208](https://github.com/open-contracting/standard/pull/1208) Update guidance with new field definitions.
+* [#1216](https://github.com/open-contracting/standard/pull/1216) Update definitions of contracting process, record, and ocid. Introduce definition of planning process.
 * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
 * [#1315](https://github.com/open-contracting/standard/pull/1315) Add rules on setting `id` and `date` for compiled releases to the merging specification.
 

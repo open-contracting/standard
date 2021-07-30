@@ -16,7 +16,7 @@ As you complete this phase, you can:
 
 ## Register an OCID prefix
 
-The [identifiers](../../schema/identifiers) reference page describes the contracting process identifier (`ocid`) and how ocid prefixes are used to ensure `ocid`s are globally unique.
+The [identifiers](../../schema/identifiers) reference page describes the open contracting process identifier (`ocid`) and how ocid prefixes are used to ensure `ocid`s are globally unique.
 
 To publish OCDS data, you need to register an ocid prefix.
 

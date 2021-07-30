@@ -2,7 +2,7 @@
 
 Consistent identifiers are essential to help join up open contracting data.
 
-* The Open Contracting ID (ocid) is a globally unique identifier used to join up data on all stages of a contracting process;
+* The open contracting process identifier (ocid) is a globally unique identifier used to join up all the data about a single contracting or planning process;
 * Organization identifiers are important to know who is involved in each contract;
 * Release, award and contract identifiers are important to help cross-reference information.
 
@@ -12,9 +12,9 @@ In OCDS there are two kinds of identifiers: globally unique and local.
 
 ### Globally unique identifiers
 
-Across the whole universe of OCDS publishers these identifiers refer to one specific contracting process or organization.
+Across the whole universe of OCDS publishers these identifiers refer to one specific process or organization.
 
-We create globally unique contracting process identifiers by adding a prefix to the internal identifiers held by publishers.
+We create globally unique process identifiers by adding a prefix to the internal identifiers held by publishers.
 
 ```{admonition} Worked Example
 :class: hint
@@ -40,26 +40,29 @@ You can read more about the OCDS approach to identify organizations below.
 
 Not all the identifiers in OCDS need to be globally unique. Most only need to be unique among the identifiers used for the same type of object within the same scope. For example:
 
-* A release ID must be unique within the scope of the contracting process of which it is a part;
-* Award and contract identifiers must be unique within the scope of the contracting process of which they are a part;
+* A release ID must be unique within the scope of the process of which it is a part;
+* Award and contract identifiers must be unique within the scope of the process of which they are a part;
 * An item, milestone or document ID must be unique within the array it is part of.
 
 Local identifiers must be used consistently. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
 
-## Contracting Process Identifier (ocid)
+## Open contracting process identifier (ocid)
 
 <img src="../../_static/svg/green_compilation.svg" width="150" align="right"/>
 
-An Open Contracting ID (ocid) is a **globally unique identifier** for a contracting process. Every OCDS release has an `ocid`.
+An open contracting process identifier (ocid) is a **globally unique identifier**. Every release has an `ocid`. OCDS defines an `ocid` as:
 
-It can be used to join up information published at different times, and in different places.
+```{field-description} ../../build/current_lang/release-schema.json /properties/ocid
+```
+
+It can be used to join up information published at different times and in different places.
 
 Setting the `ocid` is usually a simple two step process:
 
-1. Identify the best **internal identifier** recorded against the contracting processes being disclosed;
+1. Identify the best **internal identifier** recorded against the processes being disclosed;
 2. Register an `ocid` prefix to prepend to this internal identifier.
 
-In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting processes have a common internal identifier to draw upon.
+In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting and planning processes have a common internal identifier to draw upon.
 
 ```{admonition} Worked Example
 :class: hint
@@ -161,13 +164,13 @@ See the [guidance](../guidance/map/organization_identifiers.md#party-ids) for mo
 
 ## Release ID
 
-A release identifier must be unique within the scope of the contracting process of which it is a part. In other words, across all OCDS releases with the same `ocid` value, each release identifier refers to exactly one release; no two releases use the same release identifier.
+A release identifier must be unique within the scope of the contracting process of which it is a part. In other words, across all releases with the same `ocid` value, each release identifier refers to exactly one release; no two releases use the same release identifier.
 
 A release identifier must also be consistent within this scope. For example, if the `id` of a release is "12345" in one release package, then the `id` of the same release in another release package must also be "12345".
 
 ## Award and Contract IDs
 
-Award and contract identifiers must be unique within the scope of the contracting process of which they are a part. In other words, across all OCDS releases with the same `ocid` value, each contract identifier refers to exactly one contract; no two contracts use the same contract identifier.
+Award and contract identifiers must be unique within the scope of the contracting process of which they are a part. In other words, across all releases with the same `ocid` value, each contract identifier refers to exactly one contract; no two contracts use the same contract identifier.
 
 Award and contract identifiers must also be consistent within this scope. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
 
