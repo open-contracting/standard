@@ -27,7 +27,7 @@ The model law obliges procuring entities to publish an invitation to pre-qualify
 The procuring entity assesses the qualifications of the suppliers based on their responses. Only pre-qualified suppliers can take part in the later proceedings.
 
 ```{note}
-The European Union’s restricted procedure (see Article 28, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)) uses pre-qualification.
+The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialogue and innovation partnership use pre-qualification (see Articles 28-31, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).
 ```
 
 ### Pre-qualification with a limit on the number of qualified suppliers (pre-selection)
@@ -39,7 +39,7 @@ The UNCITRAL model law defines pre-selection as a procedure to:
 Pre-selection follows the same process as pre-qualification, with some additional requirements. The invitation to pre-qualify needs to specify how many suppliers the procuring entity will later request proposals from. The invitation also needs to specify how the procuring entity will select the suppliers to request proposals from.
 
 ```{note}
-The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialog procedure and innovation partnership all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).
+The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialogue procedure and innovation partnership all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).
 ```
 
 ### Pre-qualification in Paraguay
@@ -114,7 +114,7 @@ The notice represents the initiation of the contracting process, so it is modell
 :title: Tender section
 ```
 
-Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a tender for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
+Any supplier can submit a request to take part in the first stage, but only qualified suppliers will be invited to submit a bid for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
 
 ```{note}
 OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [Github](https://github.com/open-contracting/standard/issues/440).
@@ -128,7 +128,7 @@ The National Nuclear Laboratory issues a [restricted procedure contract notice](
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
-The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a tender at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which suppliers to invite proposals from.
+The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a bid at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which suppliers to invite proposals from.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-selection-package.json
 :jsonpointer: /releases/0/tender
