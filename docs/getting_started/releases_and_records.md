@@ -18,7 +18,7 @@ There are major events that mark the progress from one stage to another, like an
 
 Releases are **immutable**. Each change is documented in a **new** release, rather than by updating an existing one. The collection of releases for a particular process makes its change history.
 
-**Records** are JSON documents that act as an index of all releases for a single contracting process. While releases are never updated, records are updated each time there is a change. A record is updated by adding a new release to this index.
+**Records** are JSON documents that act as an index of releases for a single contracting process. While releases are never updated, records can be updated each time there is a change. A record is updated by adding a new release to this index.
 
 ![Contracting Process with releases and a record](../_static/png/changehistory_process_record.png)
 
@@ -29,7 +29,7 @@ Records can also contain:
 
 These structures are designed to help users to access:
 
-* The current state of the contracting process 
+* The current state of the contracting process
 * The detailed history of changes for individual fields
 
 In accounting terms, releases are analogous to individual transactions in an account. A record represents both the ledger of all transactions and the closing balance. The ledger is the releases list, and the closing balance is the compiled release.
@@ -40,20 +40,18 @@ In software development terms, releases are analogous to Git commits on a branch
 
 Releases follow the [release schema](../schema/reference). The schema covers the whole contracting process, but there are only a few mandatory fields. The box below shows an example.
 
-```eval_rst
-.. jsoninclude:: ../examples/tender.json
-   :jsonpointer: /releases
-   :expand: 
-   :title: release
+```{jsoninclude} ../examples/tender.json
+:jsonpointer: /releases
+:title: release
 ```
 
 #### Identifiers
 
-Each release contains an [ocid](../../schema/identifiers/#contracting-process-identifier-ocid) to identify the contracting process it relates to. An ocid is composed of a prefix and an unique process identifier chosen by the publisher.
+Each release contains an [ocid](../schema/identifiers.md#contracting-process-identifier-ocid) to identify the contracting process it relates to. An ocid is composed of a prefix and an unique process identifier chosen by the publisher.
 
 A release also needs a release identifier, unique in the scope of the contracting process. A release id can be built in several ways. Publishers can use any generation strategy, as long as the ids don’t collide within the same process.
 
-The [easy releases](../guidance/build/easy_releases) section introduces two strategies that can be used in any scenario. 
+The [easy releases](../guidance/build/easy_releases) section introduces two strategies that can be used in any scenario.
 
 #### Packaging
 
@@ -68,9 +66,9 @@ Each release also provides one or more tags. Tags provide information about the 
 For example:
 
 * When an invitation to tender is published, the publisher uses the 'tender' tag . The release includes the relevant details in the `tender` section. It can also contain information about the budget in the planning section.
-* When a contract is awarded, the publisher uses the 'award' tag. The release includes the relevant details in the `award` section. It can also update the tender section with the list of tenderers that submitted a bid. 
+* When a contract is awarded, the publisher uses the 'award' tag. The release includes the relevant details in the `award` section. It can also update the tender section with the list of tenderers that submitted a bid.
 
-The [release tag codelist](../../schema/codelists/#release-tag) contains the list of all tags provided by OCDS. Note that it is allowed to use more than one tag in the same release. For example, a release with new data in the `tender` and `award` sections can use the 'tender' and 'award' tags together.
+The [release tag codelist](../schema/codelists.md#release-tag) contains the list of all tags provided by OCDS. Note that it is allowed to use more than one tag in the same release. For example, a release with new data in the `tender` and `award` sections can use the 'tender' and 'award' tags together.
 
 #### Repeating previous information
 
@@ -78,46 +76,37 @@ Releases can repeat unchanged data from previous releases, or include new inform
 
 It might be more appropriate to repeat data when processes have fewer releases. Consider as well that repeating previous information makes larger releases and larger datasets.
 
-<div class="example hint" markdown=1>
+````{admonition} Example
+:class: hint
 
-<p class="first admonition-title">Example</p>
+The following example shows releases with minimal changes on each update.
 
-The following example shows releases with minimal changes on each update. 
+1. The first release presents tender data.
+1. The second introduces a new document in the `tender` section with the 'tenderUpdate' tag. Note that the release ignores all the nonmandatory fields. The tender document present in the previous release is also ignored.
+1. The third release presents award data, and ignores the tender section.
 
-1. The first release presents tender data. 
-
-2. The second introduces a new document in the `tender` section with the 'tenderUpdate' tag. Note that the release ignores all the nonmandatory fields. The tender document present in the previous release is also ignored.
-
-3. The third release presents award data, and ignores the tender section.
-
- ```eval_rst
-.. jsoninclude:: ../examples/minimal_updates/tender.json
-   :jsonpointer: /releases/0
-   :expand: tender
- ```
-
-```eval_rst
-.. jsoninclude:: ../examples/minimal_updates/tenderUpdate.json
-   :jsonpointer: /releases/0
-   :expand: tender
+```{jsoninclude} ../examples/minimal_updates/tender.json
+:jsonpointer: /releases/0
+:expand: tender
 ```
 
-```eval_rst
-.. jsoninclude:: ../examples/minimal_updates/award.json
-   :jsonpointer: /releases/0
-   :expand: award
+```{jsoninclude} ../examples/minimal_updates/tenderUpdate.json
+:jsonpointer: /releases/0
+:expand: tender
 ```
 
-</div>
+```{jsoninclude} ../examples/minimal_updates/award.json
+:jsonpointer: /releases/0
+:expand: award
+```
+````
 
 ### Records
 
 A record follows the structure defined in the [Records Reference](../schema/records_reference). Below is a full example.
 
-```eval_rst
-.. jsoninclude:: ../examples/merging/versioned.json
-   :jsonpointer: /records/0
-   :expand: 
+```{jsoninclude} ../examples/merging/versioned.json
+:jsonpointer: /records/0
 ```
 
 #### Embedding or linking Releases
@@ -137,35 +126,31 @@ Each time a new release is available:
 * The record adds the new release to the releases list, by either embedding it or adding a link to it.
 * The record updates the compiled and versioned releases using the new information. Repeating unchanged information does not affect the result.
 
-<div class="example hint" markdown=1>
-
-<p class="first admonition-title">Hint</p>
-
+````{hint}
 Compiled releases are not mandatory, but it helps to make OCDS data more accessible, especially for users that don’t need a detailed change history.
 
 Consider how to calculate the **total value of active tenders** using compiled releases:
 
-```eval_rst
-.. csv-table-no-translate::
-    :header-rows: 1
-    :file: ../examples/compiledreleases_compiled.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../examples/compiledreleases_compiled.csv
 ```
 
 Working with compiled releases, this metric can be calculated by filtering on the tender status and summing the tender value.
 
 Compare that to how to calculate the **total value of active tenders** using releases:
 
-```eval_rst
-.. csv-table-no-translate::
-    :header-rows: 1
-    :file: ../examples/compiledreleases_releases.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../examples/compiledreleases_releases.csv
 ```
 
 If a user has releases only, they need to first determine the final status before calculating the result.
 
 Compiled releases are useful for many scenarios. But users might need the full history to answer other questions. For example, how many amends there are for a tender's value.
-
-</div>
+````
 
 #### Packaging
 

@@ -1,4 +1,4 @@
-## Validation
+# Validation
 
 You can validate your OCDS documents at [standard.open-contracting.org/review/](https://standard.open-contracting.org/review/).
 
@@ -8,7 +8,7 @@ However, this is just one step of checking your data.
 
 The OCDS helpdesk team can provide additional support to check the quality of the data you are producing, and to check for other common errors and omissions. 
 
-###  Quality checks
+##  Quality checks
 
 Assessing how good your open contracting data is involves a number of elements:
 
