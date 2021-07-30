@@ -16,7 +16,6 @@ and a planning process as:
 
 > Planning processes are often less structured than contracting processes, so one or more planning process may end up leading to one or more contracting process.'
 
-# _!!! TO-DO: Update the image below. Main point should be: planning and tender are part of planning processes, tender to implementation of contracting processes. I have removed the mentions of "initiating" from the text, so I suggest removing them from the image as well._  
 ![Contracting Process](../../_static/png/contracting_process.png)
 
 A planning process ought to have `releaseTag` set to 'planning' (or 'planningUpdate'). A contracting process can have `releaseTag` set to [any other value from the codelist](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag). A planning process should not contain the `releaseTag` 'tender' even if it contains the `Tender` block. The two processes ought to be linked together using the `relatedProcesses` array in the releases concerning the contracting process, with `.relationship` set to 'planning'.
