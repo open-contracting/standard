@@ -6,14 +6,14 @@
   "type": "object",
   "properties": {
     "ocid": {
-      "title": "Open Contracting ID",
+      "title": "Open contracting process identifier",
       "description": "A globally unique identifier for the contracting process that the release describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
       "type": "string",
       "minLength": 1
     },
     "id": {
       "title": "Release ID",
-      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process identified by the Open Contracting ID (ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
+      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process (identified by the ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
@@ -10131,7 +10131,7 @@
                   "openCodelist": true
                 },
                 "identifier": {
-                  "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
+                  "description": "The identifier of the related process. If the scheme is 'ocid', this must be an open contracting process identifier (ocid).",
                   "title": "Identifier",
                   "type": [
                     "string",
@@ -10149,7 +10149,7 @@
                 }
               }
             },
-            "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
+            "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
             "title": "Related processes",
             "type": "array"
           },
@@ -10652,7 +10652,7 @@
             "openCodelist": true
           },
           "identifier": {
-            "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
+            "description": "The identifier of the related process. If the scheme is 'ocid', this must be an open contracting process identifier (ocid).",
             "title": "Identifier",
             "type": [
               "string",
@@ -10670,7 +10670,7 @@
           }
         }
       },
-      "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate open contracting identifier (ocid). This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
+      "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate ocid. This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
       "title": "Related processes",
       "type": "array"
     },
@@ -20269,7 +20269,7 @@
                 "openCodelist": true
               },
               "identifier": {
-                "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
+                "description": "The identifier of the related process. If the scheme is 'ocid', this must be an open contracting process identifier (ocid).",
                 "title": "Identifier",
                 "type": [
                   "string",
@@ -20287,7 +20287,7 @@
               }
             }
           },
-          "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
+          "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
           "type": "array"
         },
@@ -26248,7 +26248,7 @@
           "openCodelist": true
         },
         "identifier": {
-          "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
+          "description": "The identifier of the related process. If the scheme is 'ocid', this must be an open contracting process identifier (ocid).",
           "title": "Identifier",
           "type": [
             "string",
