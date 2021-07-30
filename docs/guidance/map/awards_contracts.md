@@ -18,18 +18,13 @@ The OCDS schema and documentation are not clear what, precisely, is meant by 'aw
 
 ### Contract
 
-Contracting processes can result in different types of contract between buyers and suppliers, which can include:
+Contracting processes can result in different types of contracts between buyers and suppliers, such as:
 
-* A contract establishing the relationship, like the set-up of a framework agreement
-* A contract within the relationship, like a call-off contract under a framework agreement
-* Purchase orders
-* Catalog purchases
+* Contract describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery)
+* Contracts only describing the general contractual conditions, such as a framework agreement
+* Contracts only describing the specific contractual conditions, such as a contract within a framework agreement
 
-In OCDS, the `Contract` object is intended to communicate a legally binding agreement between a buyer and suppliers to provide items. This excludes agreements to set-up a structure through which contracts are later awarded to provide items, for example: a contract to set up or add suppliers to a framework agreement or dynamic purchasing system.
-
-```{note}
-The OCDS schema and documentation are not clear what, precisely, is meant by 'contract'. A revision of the definition of `Contract` is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/896)).
-```
+Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also govern the granting of prizes or other rewards (e.g. a follow-up contract) resulting from a design contest.
 
 ## Awards and contracts
 
@@ -82,7 +77,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 Each contracting process can have many awards and each award can have many related contracts.
 
-OCDS separates data about the contract award and data about the signed contract into the `awards` and `contracts` sections respectively. Source systems can contain data on awards, on contracts, or on both.
+OCDS separates data about the contract award and data about the contract into the `awards` and `contracts` sections respectively. Source systems can contain data on awards, on contracts, or on both.
 
 If the data in the source system relates only to contract awards, then only the `award` section of OCDS ought to be populated, unless the law governing procurement permits no changes between award and signature of a contract, in which case the `contract` section can be populated.
 

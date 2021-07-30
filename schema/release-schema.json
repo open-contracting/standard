@@ -82,7 +82,7 @@
     },
     "contracts": {
       "title": "Contracts",
-      "description": "Information from the contract creation phase of the procurement process.",
+      "description": "Information from the contract creation and implementation phase of the contracting process.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Contract"
@@ -248,12 +248,17 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total upper estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "$ref": "#/definitions/Value"
         },
         "minValue": {
           "title": "Minimum value",
-          "description": "The minimum estimated value of the procurement.  A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated minimum value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The estimated maximum value of the framework agreement, as estimated when publishing the tender information.",
           "$ref": "#/definitions/Value"
         },
         "procurementMethod": {
@@ -591,7 +596,17 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total value of this award. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The estimated maximum value of the framework agreement, as a whole, as estimated when making the award.",
+          "$ref": "#/definitions/Value"
+        },
+        "estimatedValue": {
+          "title": "Estimated value",
+          "description": "The estimated value of the framework agreement, as a whole, as estimated when making the award.",
           "$ref": "#/definitions/Value"
         },
         "suppliers": {
@@ -663,7 +678,7 @@
     "Contract": {
       "type": "object",
       "title": "Contract",
-      "description": "Information regarding the signed contract between the buyer and supplier(s).",
+      "description": "Information regarding the contract, typically between the buyer and supplier. This includes contracts describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery), as well as contracts only describing the general contractual conditions (such as a framework agreement) and those only describing the specific contractual conditions (such as a contract within a framework agreement). Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts are also used when giving prizes or other rewards (e.g. a follow-up contract) resulting from a design contest.",
       "required": [
         "id",
         "awardID"
@@ -731,8 +746,8 @@
           ]
         },
         "dateSigned": {
-          "title": "Date signed",
-          "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
+          "title": "Date concluded",
+          "description": "The date the contract was concluded. Typically, this is the date when the last buyer or supplier signed the contract. However, if no contract is signed, then the date of contract conclusion may correspond to other dates (e.g. the date when the buyer notified the supplier, which had the legal effect of concluding the contract).",
           "type": [
             "string",
             "null"
@@ -741,7 +756,17 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The maximum value of the framework agreement, as a whole.",
+          "$ref": "#/definitions/Value"
+        },
+        "estimatedValue": {
+          "title": "Estimated value",
+          "description": "The estimated value of the framework agreement, as a whole, as estimated when the framework agreement is concluded (e.g. signed).",
           "$ref": "#/definitions/Value"
         },
         "items": {
