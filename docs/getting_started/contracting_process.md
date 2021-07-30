@@ -86,7 +86,7 @@ This might involve generating output from a range of different systems. Data pub
 
 ## Defining a contracting process
 
-For public procurement, OCDS defines a unique contracting process as:
+For public procurement OCDS defines a unique contracting process as:
 
 > All the planning, tendering information, awards, contracts and contract implementation information related to a single initiation process.
 

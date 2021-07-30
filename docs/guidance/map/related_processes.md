@@ -1,7 +1,5 @@
 # Framework agreements and related processes
 
-A contracting process brings together, under a single identifier, the information that users need to answer questions such as:
-
 ```{note}
 In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
 ```
