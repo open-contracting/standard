@@ -2,18 +2,18 @@
   "id": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
-  "description": "Each release provides data about a single contracting process at a particular point in time. Releases can be used to notify users of new tenders, awards, contracts and other updates. Releases may repeat or update information provided previously in this contracting process. One contracting process may have many releases. A 'record' of a contracting process follows the same structure as a release, but combines information from multiple points in time into a single summary.",
+  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, establishing the rationale for the procurement, giving the market a general description of the purchase, getting the necessary budget, forecasting and conducting market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
   "type": "object",
   "properties": {
     "ocid": {
-      "title": "Open Contracting ID",
-      "description": "A globally unique identifier for this Open Contracting Process. Composed of an ocid prefix and an identifier for the contracting process. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information see the [Open Contracting Identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
+      "title": "Open contracting process identifier",
+      "description": "A globally unique identifier for the contracting process that the release describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
       "type": "string",
       "minLength": 1
     },
     "id": {
       "title": "Release ID",
-      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process identified by the Open Contracting ID (ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
+      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process (identified by the ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
@@ -104,7 +104,7 @@
       "items": {
         "$ref": "#/definitions/RelatedProcess"
       },
-      "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate open contracting identifier (ocid). This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
+      "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate ocid. This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
       "title": "Related processes",
       "type": "array"
     },
@@ -811,7 +811,7 @@
           "items": {
             "$ref": "#/definitions/RelatedProcess"
           },
-          "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
+          "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
           "type": "array"
         },
@@ -2243,7 +2243,7 @@
           "openCodelist": true
         },
         "identifier": {
-          "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
+          "description": "The identifier of the related process. If the scheme is 'ocid', this must be an open contracting process identifier (ocid).",
           "title": "Identifier",
           "type": [
             "string",
