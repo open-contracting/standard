@@ -15,11 +15,11 @@ Helpdesk support is available in English and Spanish and delivered through colla
 
 Through funding from the Open Contracting Partnership, this support is provided free of charge.
 
-Please e-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with your questions, and a member of the OCDS Helpdesk will be in touch with you soon.
+Please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the OCDS Helpdesk will be in touch with you soon.
 
 ## OCDS Community
 
-The Open Contracting community is a great source of input and support. You can ask questions, discuss ideas, and share news on your projects on the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) mailing list.
+The Open Contracting community is a great source of input and support. You can ask questions, discuss ideas, and share news on your projects on the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/g/standard-discuss) mailing list.
 
 You can also contribute directly to public discussions about implementing the standard and give feedback on its development, via the issue tracker of its [GitHub repository](https://github.com/open-contracting/standard).
 

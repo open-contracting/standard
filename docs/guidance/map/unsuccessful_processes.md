@@ -1,4 +1,4 @@
-## Unsuccessful processes
+# Unsuccessful processes
 
 In most jurisdictions, if a procedure is cancelled or unsuccessful, and a **new procedure** is started to procure the same items, the two procedures are considered two **different** contracting processes. This is in keeping with the OCDS definition of a contracting process.
 
@@ -6,28 +6,24 @@ However, in some jurisdictions, such as Paraguay, the planning stage is consider
 
 ![Unsuccessful Tender](../../_static/png/unsuccessful-tender.png)
 
-### Example: Modelling unsuccessful tenders in Paraguay
+## Example: Modelling unsuccessful tenders in Paraguay
 
 The [Sistema de Información de las Contrataciones Públicas (SICP)](https://contrataciones.gov.py/) discloses information about contracting processes for all public entities in Paraguay. SICP is managed by the National Directorate of Public Procurement (DNCP in Spanish).
 
 Paraguay discloses all stages of the contracting process, from planning to implementation. The first data disclosed is about the planning stage. Planning data includes an estimate of what an entity is going to buy, when and for how much. SICP assigns an `ocid` when the planning data is first disclosed, before the tender stage. In this example, the ocid is 'ocds-03ad3f-331547-1'.
 
-```eval_rst
-.. jsoninclude:: ../../examples/unsuccessful-tender-planning.json
-   :jsonpointer:
-   :expand: releases, planning
-   :title: unsuccessful-tender-planning
-
+```{jsoninclude} ../../examples/unsuccessful-tender-planning.json
+:jsonpointer:
+:expand: releases, planning
+:title: unsuccessful-tender-planning
 ```
 
 Next, the tender data is disclosed, but the tender was unsuccessful, so the tender status is ‘unsuccessful’.
 
-```eval_rst
-.. jsoninclude:: ../../examples/unsuccessful-tender-tender.json
-   :jsonpointer:
-   :expand: releases, tender, status
-   :title: unsuccessful-tender-tender
-
+```{jsoninclude} ../../examples/unsuccessful-tender-tender.json
+:jsonpointer:
+:expand: releases, tender, status
+:title: unsuccessful-tender-tender
 ```
 
 The buyer issues another tender to buy the same item, based on the same planning as the first tender.
@@ -40,10 +36,8 @@ Paraguay could also have used the identifier for the second tender as the `ocid`
 
 The `relatedProcess` block links the two processes, with the relationship set to ‘unsuccessfulProcess’.
 
-```eval_rst
-.. jsoninclude:: ../../examples/unsuccessful-tender-related-process.json
-   :jsonpointer:
-   :expand: releases, relatedProcesses, relationship
-   :title: unsuccessful-tender-related-process
-
+```{jsoninclude} ../../examples/unsuccessful-tender-related-process.json
+:jsonpointer:
+:expand: releases, relatedProcesses, relationship
+:title: unsuccessful-tender-related-process
 ```

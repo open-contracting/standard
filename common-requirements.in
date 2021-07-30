@@ -1,22 +1,25 @@
-Sphinx<3
-
-# Sphinx
-ocds-babel>=0.2.1
-# See https://ocds-babel.readthedocs.io/en/latest/api/translate.html#install-requirements-for-markdown-translation
--e git+https://github.com/readthedocs/commonmark.py.git@dafae75015cc342f3fddb499674bab97ac4a6a96#egg=commonmark
--e git+https://github.com/jpmckinney/recommonmark.git@hotfix#egg=recommonmark
+# https://github.com/executablebooks/MyST-Parser/issues/331 waiting for > 0.14.0
+-e git+https://github.com/executablebooks/MyST-Parser.git@a39d2363a161b7f1d4427c6f3011203b560cb302#egg=myst-parser
+linkify-it-py
+ocds-babel
+Sphinx
 -e git+https://github.com/open-contracting/standard_theme.git@open_contracting#egg=standard_theme
 
-# Make
-sphinx-intl<1
+# Profile
+ocdsextensionregistry
+
+# Translations
+sphinx-intl
 transifex-client
 
-# Build
-ocdsindex>=0.0.4
-
-# Profile
-ocdsextensionregistry>=0.0.23
+# Deploy
+ocdsindex
 
 # Tests
 pytest
 selenium
+
+# Development
+click
+pip-tools
+sphinx-autobuild
