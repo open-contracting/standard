@@ -1,22 +1,8 @@
-# Unsuccessful tenders
-
-In the case of procurement, a contracting process can be defined as a procurement procedure. There is a one-to-one correspondence between the first stage of a procurement procedure (tender) and a contracting process.
-
-In OCDS, at a conceptual level, a contracting process is intended to match each concrete attempt to start a procedure that leads to one or more contracts. Attempts can include: an invitation to tender (in open procedure); an invitation to request to participate; a competition for a concession; a direct award, etc.
-
-![Contracting Process](../../_static/png/contracting_process.png)
-
-In OCDS, the `ocid` is the unique identifier for a contracting process. As the initiation of the procurement process is the tender, normally the identifier for a tender can be used as the `ocid`.
+# Unsuccessful processes
 
 In most jurisdictions, if a procedure is cancelled or unsuccessful, and a **new procedure** is started to procure the same items, the two procedures are considered two **different** contracting processes. This is in keeping with the OCDS definition of a contracting process.
 
-But in other jurisdictions, such as Paraguay, the planning stage is considered as the initiation of the process. In these jurisdictions when a tender fails and a new tender is started, the two tenders are considered part of the same contracting process. This differs from the OCDS definition of a contracting process.
-
-In OCDS, it is relevant and desirable to include the planning information that relates to the process, but the contracting process is not interpreted as ‘starting’ with the planning stage. In OCDS, the planning stage is something that comes **before** the initiation of a contracting process. The initiation of the procedure is not the planning stage, because at least one of the following is true of a planning stage: it is not a concrete attempt to award one or more contracts like a request for tender, etc.; it is not a concrete opportunity for potential suppliers to participate in; it does not describe the competitive conditions.
-
-However a jurisdiction treats unsuccessful tenders and subsequent tenders, in OCDS they are considered separate but related contracting processes.
-
-This relationship can be modelled using the `relatedProcess` array at the release level, with the ‘unsuccessfulProcess’ relationship type.  
+However, in some jurisdictions, such as Paraguay, the planning stage is considered as the initiation of the process. In these jurisdictions, when a tender fails and a new tender is started, the two tenders are considered part of the same contracting process. This differs from the OCDS definition of a contracting process. OCDS, instead, records the cancelled procedure in the `relatedProcesses` array of the new procedure, with the 'unsuccessfulProcess' code in the related process' `relationship` array.  
 
 ![Unsuccessful Tender](../../_static/png/unsuccessful-tender.png)
 
@@ -48,7 +34,7 @@ To construct an `ocid` for the second contracting process, Paraguay adds a conse
 
 Paraguay could also have used the identifier for the second tender as the `ocid` for the second contracting process.
 
-The `relatedProcess` block links the two processes, with the relationship set to ‘unsuccessfulProcess’.
+The `relatedProcesses` block links the two processes, with the relationship set to ‘unsuccessfulProcess’.
 
 ```{jsoninclude} ../../examples/unsuccessful-tender-related-process.json
 :jsonpointer:

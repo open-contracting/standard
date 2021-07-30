@@ -11,21 +11,28 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Getting Started section:
   * [#980](https://github.com/open-contracting/standard/pull/980) Remove references to ☆ levels.
   * [#1017](https://github.com/open-contracting/standard/pull/1017) Add link to bulk downloads in Guidance section.
-* [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
-* [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
+
 * Guidance section:
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
-  * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
+  * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007) [#1123](https://github.com/open-contracting/standard/pull/1123) [#1216](https://github.com/open-contracting/standard/pull/1216).
+  * Add worked examples for the Build phase [#951](https://github.com/open-contracting/standard/pull/951) [#997](https://github.com/open-contracting/standard/pull/997).
   * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
-  * [#1016](https://github.com/open-contracting/standard/pull/1016) Add links to OCDS profiles and linked standards.
   * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
   * [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012) Merge Publication policy and Licensing pages into Publish page.
-  * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007) [#1123](https://github.com/open-contracting/standard/pull/1123).
-  * Add worked examples for the Build phase [#951](https://github.com/open-contracting/standard/pull/951) [#997](https://github.com/open-contracting/standard/pull/997).
+  * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
+  * [#1016](https://github.com/open-contracting/standard/pull/1016) Add links to OCDS profiles and linked standards.
   * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
-* [#960](https://github.com/open-contracting/standard/pull/960) Support section: Merge Tools page into Support page.
-* [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
+  * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
+  * [#1337](https://github.com/open-contracting/standard/pull/1337) Improve the structure of the Map page.
+  * [#1338](https://github.com/open-contracting/standard/pull/1338) Improve the structure of the worked examples on the Map page.
+  * [#1345](https://github.com/open-contracting/standard/pull/1345) Update legal references in pre-gualification guidance.
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
+
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
+* [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
+* [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
+* [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
+* [#960](https://github.com/open-contracting/standard/pull/960) Support section: Merge Tools page into Support page.
 * [#975](https://github.com/open-contracting/standard/pull/975) Add a Make target to generate PDFs of the documentation.
 * Copy-edit and re-organize non-normative pages [#979](https://github.com/open-contracting/standard/pull/979) [#1018](https://github.com/open-contracting/standard/issues/1018) [#1023](https://github.com/open-contracting/standard/pull/1023).
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932) [#976](https://github.com/open-contracting/standard/pull/976).
@@ -35,9 +42,21 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ### Codelists
 
+* Add new codelists:
+  * [#1316](https://github.com/open-contracting/standard/pull/1316) `language`
+  * [#1308](https://github.com/open-contracting/standard/pull/1308) `mediaType`
+
+* `classificationScheme.csv`:
+  * [#1319](https://github.com/open-contracting/standard/pull/1319) Rename from `itemClassificationScheme.csv`.
+  * [#1210](https://github.com/open-contracting/standard/pull/1210) Add codes from the legal basis extension:
+    * 'CELEX'
+    * 'LEXML'
+  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classifiation extension:
+    * 'COFOG'
+
 * `documentType.csv`:
-  * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate 'contractSchedule' and edit 'contractAnnexe'.
-  * [#1219](https://github.com/open-contracting/standard/pull/1219) Add the codes from the tariffs extension:
+  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
+  * [#1219](https://github.com/open-contracting/standard/pull/1219) Add codes from the tariffs extension:
     * 'tariffs'
     * 'tariffMethod'
     * 'tariffReview'
@@ -45,80 +64,116 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'economicSelectionCriteria'
     * 'technicalSelectionCriteria'
+  * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate 'contractSchedule' and edit 'contractAnnexe'.
   * [#1280](https://github.com/open-contracting/standard/pull/1280) Align the description of 'tenderNotice' and 'technicalSpecifications' with GPA.
+
+* `milestoneType.csv`:
+  * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
+    * 'securityClearanceDeadline'
+  * [#1243](https://github.com/open-contracting/standard/pull/1243) Add codes from the PPP extension:
+    * 'procurement'
+    * 'contractClose'
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
+
 * `partyRole.csv`:
-  * [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of 'supplier'
-  * [#1163](https://github.com/open-contracting/standard/pull/1163) Improve the description of 'procuringEntity'
-  * [#1182](https://github.com/open-contracting/standard/pull/1182) Update the description of 'buyer'
-  * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
   * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
-  * [#1243](https://github.com/open-contracting/standard/pull/1243) Add the codes from the PPP extension:
-    * 'privateParty'
-    * 'leadBank'
-    * 'lender'
-    * 'equityInvestor'
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'informationService'
     * 'mediationBody'
     * 'processContactPoint'
     * 'reviewContactPoint'
-* [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate all the codes of the `submissionMethod` codelist, because they were either not submission methods, or not supported by use cases.
+  * [#1243](https://github.com/open-contracting/standard/pull/1243) Add codes from the PPP extension:
+    * 'privateParty'
+    * 'leadBank'
+    * 'lender'
+    * 'equityInvestor'
+  * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
+  * [#1163](https://github.com/open-contracting/standard/pull/1163) Clarify the description of 'procuringEntity'.
+  * [#1182](https://github.com/open-contracting/standard/pull/1182) Clarify the description of 'buyer'.
+  * [#1232](https://github.com/open-contracting/standard/pull/1232) Clarify the description of 'supplier'.
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
+
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
-* [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
-* [#1210](https://github.com/open-contracting/standard/pull/1210) Add the 'CELEX' and 'LEXML' codes from the legal basis extension to the `itemClassificationScheme` codelist.
-* [#1218](https://github.com/open-contracting/standard/pull/1218) Add the 'COFOG' code from the organization classifiation extension to the `itemClassificationScheme` codelist.
-* [#1225](https://github.com/open-contracting/standard/pull/1225) Add 'securityClearanceDeadline' code from the EU extension to the `milestoneType` codelist.
+* [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate all the codes of the `submissionMethod` codelist, because they were either not submission methods, or not supported by use cases.
 * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
-* [#1243](https://github.com/open-contracting/standard/pull/1243) Add the 'procurement' and 'contractClose' codes from the PPP extension to the `milestoneType` codelist.
-* [#1316](https://github.com/open-contracting/standard/pull/1316) Add the `language` codelist.
-* [#1308](https://github.com/open-contracting/standard/pull/1308) Add the `mediaType` codelist.
-* [#1319](https://github.com/open-contracting/standard/pull/1319) Rename `itemClassificationScheme` to `classificationScheme`.
+* [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid" in the `method` codelist.
+* [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 
 ### Schema
 
-* [#1232](https://github.com/open-contracting/standard/pull/1232) Update the description of `awards.suppliers`.
-* [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
-* [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
-* [#1115](https://github.com/open-contracting/standard/pull/1115) Clarify when to have multiple suppliers per award.
-* [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `tender.submissionMethod` field, because all codes from the `submissionMethod` codelist are deprecated.
-* [#1240](https://github.com/open-contracting/standard/pull/1240) Move `Unit` from `Item.unit` to the schema definitions.
-* [#1318](https://github.com/open-contracting/standard/pull/1318) Remove the `versionId` field, because it is an incomplete means of getting the correct versioning behavior.
-* Add new fields to the release schema:
-  * [#1125](https://github.com/open-contracting/standard/pull/1125) `weight` to `Item.unit`
-  * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
-* Update and improve the clarity of field descriptions in the release schema:
-  * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
-  * [#1315](https://github.com/open-contracting/standard/pull/1315) `id` and `date`, to add rules for compiled releases.
-  * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
+* Clarify core concepts:
+  * [#1216](https://github.com/open-contracting/standard/pull/1216) Define contracting process and planning process in the schema description. Update definition of release, record and ocid. Update references to contracting process so that it takes take the planning process into account.
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
-  * [#1109](https://github.com/open-contracting/standard/pull/1109) `tender.awardCriteriaDetails`, to remove "selection criteria".
+  * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
+  * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
+
+* Add new fields:
+  * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
+  * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
+  * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1326](https://github.com/open-contracting/standard/pull/1326) `links`
+  * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
+    * `tender.maximumValue`. Previously, `tender.value` was used for the maximum value. However, this led to double-counting.
+    * `awards.maximumValue`. Previously, `awards.value` was used for the maximum value. However, this led to double-counting.
+    * `awards.estimatedValue`
+    * `contracts.maximumValue`
+    * `contracts.estimatedValue`
+
+* Deprecate some fields:
+  * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
+  * [#1296](https://github.com/open-contracting/standard/pull/1296) `tender.eligibilityCriteria` in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics. 
+
+* Update and clarify field descriptions:
+  * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
+  * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
   * [#1167](https://github.com/open-contracting/standard/pull/1167) `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`
   * [#1189](https://github.com/open-contracting/standard/pull/1189) `Document.url`
-* [#1112](https://github.com/open-contracting/standard/pull/1112) Strengthen normative statements in the descriptions of the following fields:
-  * `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available" ("may" replaced with "should")
-  * `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
-  * `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
-* [#1242](https://github.com/open-contracting/standard/pull/1242) Narrow the uniqueness scope of a release's `id` to its `ocid` and OCDS version (was `ocid` only), to allow the publication of the same release for different versions of OCDS.
-* [#1242](https://github.com/open-contracting/standard/pull/1242) Merging: Clarify that the releases to merge must use the same version of OCDS.
+  * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
+
+* Remove confusing terminology:
+  * [#1109](https://github.com/open-contracting/standard/pull/1109) `tender.awardCriteriaDetails`, to remove "selection criteria".
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
+
+* Add or strengthen normative statements in field descriptions:
+  * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
+  * [#1112](https://github.com/open-contracting/standard/pull/1112) `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available" ("may" replaced with "should")
+  * [#1112](https://github.com/open-contracting/standard/pull/1112) `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
+  * [#1112](https://github.com/open-contracting/standard/pull/1112) `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
+
+* Clarify merging behavior:
+  * [#1242](https://github.com/open-contracting/standard/pull/1242) Clarify that the releases to merge must use the same version of OCDS.
+  * [#1242](https://github.com/open-contracting/standard/pull/1242) Narrow the uniqueness scope of a release's `id` to its `ocid` and OCDS version (was `ocid` only), to allow the publication of the same release for different versions of OCDS.
+  * [#1315](https://github.com/open-contracting/standard/pull/1315) Update the descriptions of `id` and `date`, to add rules for compiled releases.
+
+* Make minor changes to the schema's organization:
+  * [#1240](https://github.com/open-contracting/standard/pull/1240) Move `Unit` from `Item.unit` to the schema definitions.
+  * [#1354](https://github.com/open-contracting/standard/pull/1354) Switch the positions of `contract.dateSigned` and `contract.period` to correspond with the order in `Award`.
+
+* Make minor changes to the JSON Schema properties:
+  * [#1257](https://github.com/open-contracting/standard/pull/1257) Remove the default value (was `"en"`) for the `language` field.
+  * [#1318](https://github.com/open-contracting/standard/pull/1318) Remove the `versionId` field, because it is an incomplete means of getting the correct versioning behavior.
+
 * Record package schema:
   * [#1241](https://github.com/open-contracting/standard/pull/1241) In the definition section, rename record to `Record` and add `LinkedRelease`.
   * [#1241](https://github.com/open-contracting/standard/pull/1241) Align descriptions of `Record` `releases`, linked releases and embedded releases.
   * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
+  * [#1339](https://github.com/open-contracting/standard/pull/1339) Deprecate `packages`.
+
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
-* [#1257](https://github.com/open-contracting/standard/pull/1257) Remove default value of `"en"` for `language` field.
-* [#1296](https://github.com/open-contracting/standard/pull/1296) Deprecate the `tender.eligibilityCriteria` field in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics. 
 
 ### Documentation
 
-* [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier
-* [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award
-* [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component
-* [#1189](https://github.com/open-contracting/standard/pull/1189) Add recommendations about publishing and referencing documents in the document reference section
-* [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records
-* [#1315](https://github.com/open-contracting/standard/pull/1315) Add rules on setting `id` and `date` for compiled releases to the merging specification
-* [#1344](https://github.com/open-contracting/standard/pull/1344) Add contract suspension worked example
+* [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier.
+* [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award.
+* [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component.
+* [#1189](https://github.com/open-contracting/standard/pull/1189) Add recommendations about publishing and referencing documents in the document reference section.
+* [#1208](https://github.com/open-contracting/standard/pull/1208) Update guidance with new field definitions.
+* [#1216](https://github.com/open-contracting/standard/pull/1216) Update definitions of contracting process, record, and ocid. Introduce definition of planning process.
+* [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
+* [#1315](https://github.com/open-contracting/standard/pull/1315) Add rules on setting `id` and `date` for compiled releases to the merging specification.
+* [#1344](https://github.com/open-contracting/standard/pull/1344) Add contract suspension worked example.
 
 ## [1.1.5] - 2020-08-20
 

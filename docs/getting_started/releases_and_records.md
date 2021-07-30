@@ -47,7 +47,7 @@ Releases follow the [release schema](../schema/reference). The schema covers the
 
 #### Identifiers
 
-Each release contains an [ocid](../schema/identifiers.md#contracting-process-identifier-ocid) to identify the contracting process it relates to. An ocid is composed of a prefix and an unique process identifier chosen by the publisher.
+Each release contains an [ocid](../schema/identifiers.md#open-contracting-process-identifier-ocid) to identify the contracting process it relates to. An ocid is composed of a prefix and an unique process identifier chosen by the publisher.
 
 A release also needs a release identifier, unique in the scope of the contracting process. A release id can be built in several ways. Publishers can use any generation strategy, as long as the ids don’t collide within the same process.
 
@@ -100,8 +100,6 @@ The following example shows releases with minimal changes on each update.
 :expand: award
 ```
 ````
-
-</div>
 
 ### Records
 

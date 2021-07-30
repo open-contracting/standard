@@ -1,4 +1,4 @@
-# Framework Agreements and Related Processes
+# Framework agreements and related processes
 
 ```{note}
 In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
@@ -54,10 +54,7 @@ In OCDS, a contracting process brings together, under a single identifier, the i
 * What was the total value of spending that resulted from this award?
 * Was a renewal of this contract signed?
 
-In some cases, complex contracting processes cannot be represented under a single identifier under OCDS' model, because:
-
-* There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions.
-* The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated.
+In some cases, complex contracting processes cannot be represented under a single identifier, because there are multiple stages. For example, this is the case when a framework is set up, and then mini-competitions are used for purchases from the framework.
 
 OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` set to 'framework' is used to identify contracting processes that represent the second stage of a framework agreement procedure.
 

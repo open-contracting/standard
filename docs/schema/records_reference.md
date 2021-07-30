@@ -1,6 +1,8 @@
 # Record Reference
 
-A record aggregates the releases about a contracting process. There should be a single record per contracting process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.
+A record aggregates releases with the same [open contracting process identifier (ocid)](identifiers.md#open-contracting-process-identifier-ocid).
+
+There should be a single record per ocid per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
@@ -22,22 +24,19 @@ See the [licensing guidance](../guidance/publish.md#license-your-data) for more 
 
 See the [publication policy](../guidance/publish.md#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
 
-The record package metadata has two differences from the release package metadata:
+The record package metadata has one difference from the release package metadata: instead of a `releases` array, a record package has a `records` array containing one or more records.
 
-* Instead of a `releases` array, a record package has a `records` array containing one or more records.
-* A record package has a `packages` array, to link to any release packages that were used to prepare the records.
-
-The following example demonstrates all package metadata and record fields.
+The following example demonstrates the package metadata and record fields.
 
 ```{jsoninclude} ../examples/merging/versioned.json
 :jsonpointer:
-:expand: packages, records
+:expand: records
 :title: package
 ```
 
 ## Record structure
 
-A record **must** contain an [ocid](identifiers.md#contracting-process-identifier-ocid) and all [releases](#releases) about the contracting process at the time of the record's publication. As such, a record functions as an index of releases about a contracting process.
+A record **must** contain an [ocid](identifiers.md#open-contracting-process-identifier-ocid) and all [releases](#releases) about the contracting process at the time of the record's publication. As such, a record functions as an index of releases about a contracting process.
 
 A record **should** contain a [compiledRelease](#compiled-release) object, which represents the state of the contracting process at the time of the record's publication.
 

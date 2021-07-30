@@ -160,7 +160,7 @@ The language codelist is used to provide the default language used in text field
 :file: ../../build/current_lang/codelists/language.csv
 ```
 
-### Media type
+### Media Type
 
 The media type codelist is based on the [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) list. The media type codelist adds an exceptional code for printed documents ('offline/print'), and omits any media type that is marked as deprecated or obsolete by IANA.
 
@@ -168,6 +168,16 @@ The media type codelist is based on the [IANA Media Types](https://www.iana.org/
 :header-rows: 1
 :widths: auto
 :file: ../../build/current_lang/codelists/mediaType.csv
+```
+
+### Link Relation Type
+
+The link relation type codelist is based on a subset of the [IANA Link Relation Types](https://www.iana.org/assignments/link-relations/link-relations.xhtml) list.
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/codelists/linkRelationType.csv
 ```
 
 ## Closed Codelists 

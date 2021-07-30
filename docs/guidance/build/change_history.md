@@ -128,7 +128,7 @@ So far, the council used a single procurement system to manage the process. The 
 
 The council now uses a separate financial system to manage payments. The financial system publishes the new OCDS release.
 
-The procurement system and the financial system share a common contracting process identifier. This means that the two systems can publish releases using the same `ocid`.
+The procurement system and the financial system share a common identifier for contracting processes. This means that the two systems can publish releases using the same `ocid`.
 
 The new release uses the 'implementation' tag. The `contracts.implementation.transactions` section includes the details of the payment.
 
