@@ -1,6 +1,6 @@
 # Contracting processes and planning processes
 
-There are two types of processes in OCDS: contracting processes and planning processes. Each process has a [unique open contracting process identifier](../../schema/identifiers.md#contracting-process-identifier-ocid) (`ocid`). This section helps map your contracting activities (most often procurement procedures) to the OCDS processes. 
+OCDS recognizes two types of processes: contracting processes and planning processes. In OCDS, a given process is uniquely identified by an [open contracting process identifier](../../schema/identifiers.md#contracting-process-identifier-ocid) (`ocid`). This section helps map your contracting activities (most often procurement procedures) to their OCDS representation.
 
 OCDS defines a contracting process as:
 

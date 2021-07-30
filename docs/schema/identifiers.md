@@ -2,7 +2,7 @@
 
 Consistent identifiers are essential to help join up open contracting data.
 
-* The Open Contracting ID (ocid) is a globally unique identifier used to join up all the data on a single OCDS contracting process or a single OCDS planning process;
+* The Open Contracting ID (ocid) is a globally unique identifier used to join up all the data about a single contracting or planning process;
 * Organization identifiers are important to know who is involved in each contract;
 * Release, award and contract identifiers are important to help cross-reference information.
 
