@@ -2,7 +2,7 @@
 
 In most jurisdictions, if a procedure is cancelled or unsuccessful, and a **new procedure** is started to procure the same items, the two procedures are considered two **different** contracting processes. This is in keeping with the OCDS definition of a contracting process.
 
-However, in some jurisdictions, such as Paraguay, the planning stage is considered as the initiation of the process. In these jurisdictions when a tender fails and a new tender is started, the two tenders are considered part of the same contracting process. This differs from the OCDS definition of a contracting process. OCDS, instead, records the cancelled procedure as a `relatedProcess` to the new procedure with the 'unsuccessfulProcess' relationship type.  
+However, in some jurisdictions, such as Paraguay, the planning stage is considered as the initiation of the process. In these jurisdictions, when a tender fails and a new tender is started, the two tenders are considered part of the same contracting process. This differs from the OCDS definition of a contracting process. OCDS, instead, records the cancelled procedure in the `relatedProcesses` array of the new procedure, with the 'unsuccessfulProcess' code in the related process' `relationship` array.  
 
 ![Unsuccessful Tender](../../_static/png/unsuccessful-tender.png)
 
@@ -34,7 +34,7 @@ To construct an `ocid` for the second contracting process, Paraguay adds a conse
 
 Paraguay could also have used the identifier for the second tender as the `ocid` for the second contracting process.
 
-The `relatedProcess` block links the two processes, with the relationship set to ‘unsuccessfulProcess’.
+The `relatedProcesses` block links the two processes, with the relationship set to ‘unsuccessfulProcess’.
 
 ```{jsoninclude} ../../examples/unsuccessful-tender-related-process.json
 :jsonpointer:

@@ -18,7 +18,7 @@ OCDS defines a planning process as:
 
 ![Contracting Process](../../_static/png/contracting_process.png)
 
-A planning process ought to have its `releaseTag` set to 'planning' (or 'planningUpdate'). A contracting process can have `releaseTag` set to [any other value from the codelist](../../schema/codelists.md#release-tag). A planning process should not contain the `releaseTag` 'tender' even if it contains a `tender` object. The two processes ought to be linked together using the `relatedProcesses` array in the releases for the contracting process, with the 'planning' code in the related process's `relationship` array.
+A planning process ought to have its `releaseTag` set to 'planning' (or 'planningUpdate'). A contracting process can have `releaseTag` set to [any other value from the codelist](../../schema/codelists.md#release-tag). A planning process should not contain the `releaseTag` 'tender' even if it contains a `tender` object. The two processes ought to be linked together using the `relatedProcesses` array in the releases for the contracting process, with the 'planning' code in the related process' `relationship` array.
 
 ```{note}
 We recommend publishing data about planning and contracting processes under separate `ocid`s, following the definitions above. That said, publications that combine planning and contracting data under a single `ocid` remain conformant in OCDS 1.2. A required separation can be considered for OCDS 2.0.
