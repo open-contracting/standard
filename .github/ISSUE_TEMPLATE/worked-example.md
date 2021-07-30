@@ -3,7 +3,6 @@ name: Worked example
 about: Request to add a new worked example
 title: 'Worked example: [Name]'
 labels: Focus - Documentation
-assignees: yolile
 
 ---
 
