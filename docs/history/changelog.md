@@ -123,6 +123,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
   * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
   * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
+  * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning` and its fields
 
 * Clarify merging behavior:
   * [#1242](https://github.com/open-contracting/standard/pull/1242) Clarify that the releases to merge must use the same version of OCDS.
