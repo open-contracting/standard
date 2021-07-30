@@ -1,8 +1,8 @@
 # Record Reference
 
-A record aggregates the releases about a contracting process, a planning process, or a single stage of a multi-stage procedure (e.g. a framework agreement with reopening of competition).
+A record aggregates releases with the same [open contracting process identifier (ocid)](identifiers.md#contracting-process-identifier-ocid).
 
-There should be a single record per process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.
+There should be a single record per ocid per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
