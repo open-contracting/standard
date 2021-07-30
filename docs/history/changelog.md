@@ -106,6 +106,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) `links`
+  * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
+    * `tender.maximumValue`. Previously, `tender.value` was used for the maximum value. However, this led to double-counting.
+    * `awards.maximumValue`. Previously, `awards.value` was used for the maximum value. However, this led to double-counting.
+    * `awards.estimatedValue`
+    * `contracts.maximumValue`
+    * `contracts.estimatedValue`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
