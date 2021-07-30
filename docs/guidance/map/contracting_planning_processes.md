@@ -10,20 +10,20 @@ OCDS defines a contracting process as:
 
 > Boundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).
 
-and a planning process as: 
+OCDS defines a planning process as: 
 
 > All the actions aimed at planning one or more contracting processes. This covers, for example, establishing the rationale for the procurement, giving the market a general description of the purchase, getting the necessary budget, forecasting and conducting market research.
 
-> Planning processes are often less structured than contracting processes, so one or more planning process may end up leading to one or more contracting process.'
+> Planning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.
 
 ![Contracting Process](../../_static/png/contracting_process.png)
 
-A planning process ought to have `releaseTag` set to 'planning' (or 'planningUpdate'). A contracting process can have `releaseTag` set to [any other value from the codelist](../../schema/codelists.md#release-tag). A planning process should not contain the `releaseTag` 'tender' even if it contains the `Tender` block. The two processes ought to be linked together using the `relatedProcesses` array in the releases concerning the contracting process, with `.relationship` set to 'planning'.
+A planning process ought to have its `releaseTag` set to 'planning' (or 'planningUpdate'). A contracting process can have `releaseTag` set to [any other value from the codelist](../../schema/codelists.md#release-tag). A planning process should not contain the `releaseTag` 'tender' even if it contains a `tender` object. The two processes ought to be linked together using the `relatedProcesses` array in the releases for the contracting process, with the 'planning' code in the related process's `relationship` array.
 
 ```{note}
-When publishing data, we recommend separating data about the planning and contracting processes in line with the definitions above. However, publications of both planning and contracting data within a single contracting process continue to be conformant with OCDS 1.2 and earlier. Requiring the publication of this data in separate planning and contracting processes is being considered for a future, backwards incompatible version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/866)).
+We recommend publishing data about planning and contracting processes under separate `ocid`s, following the definitions above. That said, publications that combine planning and contracting data under a single `ocid` remain conformant in OCDS 1.2. A required separation can be considered for OCDS 2.0.
 ```
 
 ```{note}
-In OCDS 1.2 and earlier, it is not possible to publish all information about multi-stage procedures under a single contracting process. There is guidance on how to deal with this for [framework agreements guidance](related_processes) and [pre-qualification and pre-selection](pre-qualification). If you want to disclose this type of information (including other types of multi-stage procedures, such as competitive dialogues and innovation partnerships), contact the [helpdesk](../../support/index.md). The approach to modelling multi-stage procedures in a future, backwards incompatible version of the standard is under discussion on [Github](https://github.com/open-contracting/standard/issues/440).
+In OCDS 1.2 and earlier, it is not possible to publish all information about multi-stage procedures under a single `ocid`. There is guidance on how to deal with this for [framework agreements](related_processes) and for [pre-qualification and pre-selection](pre-qualification). If you want to disclose this type of information (including other types of multi-stage procedures, such as competitive dialogues and innovation partnerships), [contact the OCDS Helpdesk](../../support/index). The approach to modelling multi-stage procedures in a future, backwards-incompatible version of the standard is under discussion on [GitHub](https://github.com/open-contracting/standard/issues/440).
 ```
