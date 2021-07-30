@@ -1,5 +1,7 @@
 # Framework agreements
 
+## Definition of framework agreement
+
 ```{note}
 In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
 ```
@@ -17,6 +19,8 @@ In OCDS we treat “contractors” and “suppliers” as synonyms. One or more 
 A procurement contract is defined in UNCITRAL as:
 
 > Contract concluded between the procuring entity and a supplier  (or suppliers) or a contractor (or contractors) at the end of the procurement proceedings.
+
+## Types of framework agreements
 
 Framework agreements can be **open** or **closed**:
 
