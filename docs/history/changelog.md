@@ -109,9 +109,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
 
 * Add new fields:
-  * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
-  * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
+  * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
+  * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) `links`
   * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
     * `tender.maximumValue`. Previously, `tender.value` was used for the maximum value. However, this led to double-counting.
@@ -130,6 +131,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1167](https://github.com/open-contracting/standard/pull/1167) `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`
   * [#1189](https://github.com/open-contracting/standard/pull/1189) `Document.url`
   * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
+  * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
 
 * Remove confusing terminology:
   * [#1109](https://github.com/open-contracting/standard/pull/1109) `tender.awardCriteriaDetails`, to remove "selection criteria".

@@ -564,12 +564,20 @@
     },
     "planning": {
       "title": "Planning",
-      "description": "Information from the planning phase of the contracting process. Note that many other fields can be filled in a planning release, in the appropriate fields in other schema sections; these would likely be estimates at this stage, e.g. value in tender.",
+      "description": "Information from the planning process. Note that many other fields can be filled in a planning release, in the appropriate fields in the tender section; these would likely be estimates at this stage, e.g. value in tender.",
       "type": "object",
       "properties": {
+        "id": {
+          "title": "Planning ID",
+          "description": "An identifier for this planning process.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "rationale": {
           "title": "Rationale",
-          "description": "The rationale for the procurement provided in free text. More detail can be provided in an attached document.",
+          "description": "The rationale for the planned procurement provided in free text. More detail can be provided in an attached document.",
           "type": [
             "string",
             "null"
@@ -990,7 +998,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "Documents related to the planning stage (for example, notices, needs assessments and market studies).",
+          "description": "Documents related to the planning process (for example, notices, needs assessments and market studies).",
           "type": "array",
           "items": {
             "type": "object",
@@ -1101,7 +1109,7 @@
         },
         "milestones": {
           "title": "Planning milestones",
-          "description": "A list of milestones associated with the planning stage.",
+          "description": "A list of milestones associated with the planning process.",
           "type": "array",
           "items": {
             "title": "Milestone",
@@ -10712,12 +10720,20 @@
   "definitions": {
     "Planning": {
       "title": "Planning",
-      "description": "Information from the planning phase of the contracting process. Note that many other fields can be filled in a planning release, in the appropriate fields in other schema sections; these would likely be estimates at this stage, e.g. value in tender.",
+      "description": "Information from the planning process. Note that many other fields can be filled in a planning release, in the appropriate fields in the tender section; these would likely be estimates at this stage, e.g. value in tender.",
       "type": "object",
       "properties": {
+        "id": {
+          "title": "Planning ID",
+          "description": "An identifier for this planning process.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "rationale": {
           "title": "Rationale",
-          "description": "The rationale for the procurement provided in free text. More detail can be provided in an attached document.",
+          "description": "The rationale for the planned procurement provided in free text. More detail can be provided in an attached document.",
           "type": [
             "string",
             "null"
@@ -11138,7 +11154,7 @@
         },
         "documents": {
           "title": "Documents",
-          "description": "Documents related to the planning stage (for example, notices, needs assessments and market studies).",
+          "description": "Documents related to the planning process (for example, notices, needs assessments and market studies).",
           "type": "array",
           "items": {
             "type": "object",
@@ -11249,7 +11265,7 @@
         },
         "milestones": {
           "title": "Planning milestones",
-          "description": "A list of milestones associated with the planning stage.",
+          "description": "A list of milestones associated with the planning process.",
           "type": "array",
           "items": {
             "title": "Milestone",
