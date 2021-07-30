@@ -11,23 +11,28 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Getting Started section:
   * [#980](https://github.com/open-contracting/standard/pull/980) Remove references to ☆ levels.
   * [#1017](https://github.com/open-contracting/standard/pull/1017) Add link to bulk downloads in Guidance section.
-* [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
-* [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
+
 * Guidance section:
+  * [#1345](https://github.com/open-contracting/standard/pull/1345) Update legal references in pre-gualification guidance.
   * [#986](https://github.com/open-contracting/standard/pull/986) Add implementation guidance from OCP website.
-  * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
-  * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
-  * [#1016](https://github.com/open-contracting/standard/pull/1016) Add links to OCDS profiles and linked standards.
-  * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
-  * [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012) Merge Publication policy and Licensing pages into Publish page.
   * Add worked examples for the Map phase [#947](https://github.com/open-contracting/standard/pull/947) [#948](https://github.com/open-contracting/standard/pull/948) [#950](https://github.com/open-contracting/standard/pull/950) [#974](https://github.com/open-contracting/standard/pull/974) [#990](https://github.com/open-contracting/standard/pull/990) [#999](https://github.com/open-contracting/standard/pull/999) [#1007](https://github.com/open-contracting/standard/pull/1007) [#1123](https://github.com/open-contracting/standard/pull/1123).
   * Add worked examples for the Build phase [#951](https://github.com/open-contracting/standard/pull/951) [#997](https://github.com/open-contracting/standard/pull/997).
+  * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
+  * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
+  * [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012) Merge Publication policy and Licensing pages into Publish page.
+  * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
+  * [#1016](https://github.com/open-contracting/standard/pull/1016) Add links to OCDS profiles and linked standards.
   * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
-  * [#833](https://github.com/open-contracting/standard/issues/833) Removed language distinguishing "core", "community", and "local" extensions.
+  * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
+  * [#1337](https://github.com/open-contracting/standard/pull/1337) Improve the structure of the Map page.
+  * [#1338](https://github.com/open-contracting/standard/pull/1338) Improve the structure of the worked examples on the Map page.
   * [#1332](https://github.com/open-contracting/standard/pull/1332) Improve guidance on framework agreements
-* [#960](https://github.com/open-contracting/standard/pull/960) Support section: Merge Tools page into Support page.
-* [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
+
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
+* [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
+* [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
+* [#959](https://github.com/open-contracting/standard/pull/959) History section: Merge Credits and History of OCDS pages into Development and Appreciation page. Update history from present perspective.
+* [#960](https://github.com/open-contracting/standard/pull/960) Support section: Merge Tools page into Support page.
 * [#975](https://github.com/open-contracting/standard/pull/975) Add a Make target to generate PDFs of the documentation.
 * Copy-edit and re-organize non-normative pages [#979](https://github.com/open-contracting/standard/pull/979) [#1018](https://github.com/open-contracting/standard/issues/1018) [#1023](https://github.com/open-contracting/standard/pull/1023).
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932) [#976](https://github.com/open-contracting/standard/pull/976).
