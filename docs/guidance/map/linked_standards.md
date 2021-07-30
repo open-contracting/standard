@@ -13,3 +13,7 @@ The [Project](https://extensions.open-contracting.org/en/extensions/project/mast
 ## Open Fiscal Data Package
 
 The [Open Fiscal Data Package](http://www.fiscaltransparency.net/ofdp/) (OFDP) describes government budget and spending data. The [Budget and spending classification](https://extensions.open-contracting.org/en/extensions/budget_and_spend/) extension describes how to connect OCDS and OFDP datasets.
+
+## Beneficial Ownership Data Standard
+
+The [Beneficial Ownership Data Standard](https://standard.openownership.org/en/0.2.0/) (BODS) provides a structured data format for collecting, sharing and using data on beneficial ownership. The [beneficial ownership worked example](beneficial_ownership) describes how to connect OCDS and BODS datasets.
