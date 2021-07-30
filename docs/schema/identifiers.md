@@ -52,7 +52,7 @@ Local identifiers must be used consistently. For example, if the `id` of an awar
 
 An Open Contracting ID (ocid) is a **globally unique identifier**. Every OCDS release has an `ocid`. OCDS defines an `ocid` as: 
 
-```{field-description} ../../../build/current_lang/release-schema.json /properties/ocid
+```{field-description} ../../build/current_lang/release-schema.json /properties/ocid
 ```
 
 It can be used to join up information published at different times and in different places.
