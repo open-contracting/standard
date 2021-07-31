@@ -29,6 +29,21 @@ img[alt="org-id.guide"] {
   width: 80%;
 }
 
+/* https://css-tricks.com/fluid-width-video/ */
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Extensions */
 .hide {
   display: none;
