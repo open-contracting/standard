@@ -10,7 +10,7 @@ The Open Contracting Data Standard (OCDS) is a free, non-proprietary open data s
 ```
 
 <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ucPEID4DsyI?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ucPEID4DsyI?start=1" title="Introduction to OCDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 There are three concepts behind the OCDS: **Open Contracting, Open Data,** and **Data Standard**.

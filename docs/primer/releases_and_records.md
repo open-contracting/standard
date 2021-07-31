@@ -11,7 +11,7 @@ Open Contracting Data Standard (OCDS) data is published and updated over time us
 ```
 
 <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OeDCLMWlY_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OeDCLMWlY_U" title="Introducing releases and records" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 The only thing that can be truly called “OCDS data” is a JSON document that validates against the OCDS schema. The JSON documents that OCDS uses are called “releases” and “records.”
