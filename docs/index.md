@@ -10,14 +10,14 @@ Governments around the world spend an estimated [US$13 trillion](https://www.ope
 
 The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting process by defining a common data model. It was created to support organizations to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.
 
-In this documentation, you will find:
+The OCDS is made up of several parts, designed to help you use OCDS effectively.
 
 * [Primer](primer/index): Introducing the key concepts and features of the OCDS
-* [Reference](schema/index): Describing the specific rules that need to be followed to publish OCDS data
-* [Guidance](guidance/index): Step-by-step instructions on how to design and implement an OCDS publication, including helpful tools and examples 
-* [Getting Help](support/index): Outlining how you can get Helpdesk support and how you can participate in the OCDS community
-* [History](history/index): Information about the changes in each version of the OCDS 
-* [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly. 
+* [Guidance](../guidance/index): Step-by-step instructions on how to design and implement an OCDS publication, including practical examples
+* [Reference](../schema/index): The OCDS data model (schemas, codelists and validation rules) as well as specific rules that need to be followed to publish OCDS data
+* [Getting help](../support/index): How you can get Helpdesk support, tools that can help you use OCDS, and how you can participate in the OCDS community
+* [History](../history/index): Information about the changes in each version of the OCDS
+* [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly.
 
 The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](https://www.open-contracting.org/) (OCP). If you are interested to learn more about Open Contracting advocacy and how it can be used to support wider reform and measurable improvements in public contracting, please visit www.open-contracting.org.
 
