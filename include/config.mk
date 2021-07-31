@@ -22,7 +22,7 @@ DOMAIN_PREFIX=
 # The Transifex project name.
 TRANSIFEX_PROJECT=open-contracting-standard-1-1
 # Any additional extract targets.
-EXTRACT_TARGETS=extract_notes
+EXTRACT_TARGETS=
 
 # The path to the branch of the documentation to print to PDF.
 PDF_ROOT=/1.1-dev

@@ -12,7 +12,7 @@ The [Project](https://extensions.open-contracting.org/en/extensions/project/mast
 
 ## Open Fiscal Data Package
 
-The [Open Fiscal Data Package](http://www.fiscaltransparency.net/ofdp/) (OFDP) describes government budget and spending data. The [Budget and spending classification](https://extensions.open-contracting.org/en/extensions/budget_and_spend/) extension describes how to connect OCDS and OFDP datasets.
+The [Open Fiscal Data Package](https://www.fiscaltransparency.net/open-fiscal-data-package/) (OFDP) describes government budget and spending data. The [Budget and spending classification](https://extensions.open-contracting.org/en/extensions/budget_and_spend/) extension describes how to connect OCDS and OFDP datasets.
 
 ## Beneficial Ownership Data Standard
 
