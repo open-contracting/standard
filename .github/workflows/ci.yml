@@ -24,12 +24,10 @@ jobs:
       # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
       - if: github.repository == 'open-contracting/standard_profile_template'
         run: make update extract
-      - run: |
-          make
-          python manage.py add-translation-notes
-      - run: |
-          make linkcheck
-          rm -f output.json output.txt
+      - run: make
+      # - run: |
+      #     make linkcheck
+      #     rm -f output.json output.txt
       - run: pytest
       # Deploy the built documentation to the staging directory.
       - if: github.event_name == 'push'

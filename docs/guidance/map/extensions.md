@@ -1,6 +1,6 @@
 # Extensions
 
-OCDS provides a common core of [sections and building blocks](../../getting_started/building_blocks) for describing contracting processes.
+OCDS provides a common core of [sections](../../schema/reference.md#release-structure) and [building blocks](../../schema/reference.md#building-block-reference) for describing contracting processes.
 
 Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard.
 
