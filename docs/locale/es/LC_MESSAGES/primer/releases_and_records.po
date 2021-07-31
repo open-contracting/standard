@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-31 13:56-0400\n"
+"POT-Creation-Date: 2021-07-31 16:11-0400\n"
 "PO-Revision-Date: 2021-07-31 18:32+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:1
 msgid "How is OCDS data published?"
-msgstr ""
+msgstr "¿Cómo son publicados los datos OCDS?"
 
 #: ../../docs/primer/releases_and_records.md:3
 msgid "Objectives"
-msgstr ""
+msgstr "Objetivos"
 
 #: ../../docs/primer/releases_and_records.md:1
 msgid ""
@@ -35,18 +35,24 @@ msgid ""
 "time using two JSON document types: “releases” and “records”.  This page "
 "will:"
 msgstr ""
+"Los datos en el Estándar de Datos para las Contrataciones Abiertas (OCDS), "
+"son publicados y actualizados en el tiempo utilizando dos tipos de "
+"documentos en formato JSON: “entregas” (releases) y “registros” (records). "
+"En esta página se:"
 
 #: ../../docs/primer/releases_and_records.md:3
 msgid "Outline the purpose of releases and records"
-msgstr ""
+msgstr "Define el propósito de las entregas y registros."
 
 #: ../../docs/primer/releases_and_records.md:4
 msgid "Describe how to publish a change history using releases and records"
 msgstr ""
+"Describe cómo publicar un historial de cambios utilizando entregas y "
+"registros."
 
 #: ../../docs/primer/releases_and_records.md:5
 msgid "Show the components of an OCDS record"
-msgstr ""
+msgstr "Señalan los componentes de un registro OCDS."
 
 #: ../../docs/primer/releases_and_records.md:17
 msgid ""
@@ -54,6 +60,10 @@ msgid ""
 "validates against the OCDS schema. The JSON documents that OCDS uses are "
 "called “releases” and “records.”"
 msgstr ""
+"Lo único que verdaderamente se puede llamar \"dato OCDS\" es un documento en"
+" formato JSON que valida frente al esquema OCDS. Los documentos en formato "
+"JSON que utilizan OCDS son denominados \"entregas\" (releases) y "
+"\"registros\" (records)."
 
 #: ../../docs/primer/releases_and_records.md:19
 msgid ""
@@ -64,14 +74,25 @@ msgid ""
 "attributes have changed can help users to understand the process, identify "
 "inefficiencies, and spot red flags for corruption."
 msgstr ""
+"Los publicadores de OCDS son animados a utilizar las entregas y registros "
+"para publicar datos en tiempo real y proveer un historial de cambios. El "
+"seguimiento del cambio en el tiempo es importante para los usuarios de datos"
+" de contrataciones, debido a que pueden existir muchos cambios en el proceso"
+" de contratación. Sabiendo cómo y cuándo ciertos atributos han cambiado "
+"puede ayudar a que los usuarios comprendan el proceso, identificando "
+"ineficiencias, y detectando alarmas de corrupción."
 
 #: ../../docs/primer/releases_and_records.md:21
 msgid ""
 "**Releases** are JSON documents that are published each time there is a "
 "change to a contracting process. Releases follow the OCDS [release "
-"schema](https://standard.open-contracting.org/latest/en/schema/reference/) "
-"and contain an OCID to identify the contracting process they relate to."
+"schema](../schema/reference) and contain an OCID to identify the contracting"
+" process they relate to."
 msgstr ""
+"Las **entregas** (releases) son documentos en  formato JSON, que son "
+"publicados cada vez que existe un cambio en el proceso de contratación. Las "
+"entregas siguen el [esquema de entregas](../schema/reference) de OCDS y "
+"contienen un OCID para identificar los procesos de contratación asociados."
 
 #: ../../docs/primer/releases_and_records.md:23
 msgid ""
@@ -79,6 +100,10 @@ msgid ""
 "There can be many releases per contracting process and the collection of "
 "releases for a contracting process constitutes its change history."
 msgstr ""
+"De esta manera, las entregas son inalterables, esto quiere decir que una vez"
+" publicadas no pueden ser cambiadas. Pueden existir muchas entregas por cada"
+" proceso de contratación y esa colección de entregas de un proceso de "
+"contratación constituye su historial de cambios."
 
 #: ../../docs/primer/releases_and_records.md:25
 msgid ""
@@ -86,10 +111,16 @@ msgid ""
 "single contracting process. While releases are never updated, records are "
 "updated each time there is a change to a contracting process by adding a new"
 " release to this index. Records follow the OCDS [record "
-"schema](https://standard.open-"
-"contracting.org/latest/en/schema/records_reference/) and, in addition to the"
-" release index, can also contain:"
+"schema](../schema/records_reference) and, in addition to the release index, "
+"can also contain:"
 msgstr ""
+"Los **registros** (records) son documentos en formato JSON, que actúan como "
+"un índice de todas las entregas para un proceso de contratación. Mientras "
+"que las entregas nunca son actualizadas, los registros son modificados cada "
+"vez que existe un cambio en un proceso de contratación añadiendo una nueva "
+"entrega al índice. Los registros siguen el [esquema de "
+"registros](../schema/records_reference) de OCDS y, en adición al índice de "
+"entregas, también pueden contener:"
 
 #: ../../docs/primer/releases_and_records.md:27
 msgid ""
@@ -97,12 +128,19 @@ msgid ""
 "provides the latest value of each field. The compiled release makes it easy "
 "for users to get the latest version of the data about a contracting process."
 msgstr ""
+"Una **entrega compilada,** la cual sigue la misma estructura de las entregas"
+" y provee el último valor de cada campo. La entrega compilada facilita a los"
+" usuarios obtener la última versión de los datos sobre un proceso de "
+"contratación."
 
 #: ../../docs/primer/releases_and_records.md:28
 msgid ""
 "A **versioned release,** which contains a history of changes for each field "
 "and allows users to see how a particular field has changed over time."
 msgstr ""
+"Una **entrega versionada,** la cual contiene un historial de cambios por "
+"cada atributo y que permite a los usuarios observar cómo un atributo en "
+"particular ha cambiado con el tiempo."
 
 #: ../../docs/primer/releases_and_records.md:30
 msgid ""
@@ -110,6 +148,9 @@ msgid ""
 "release is updated with the latest values, and the versioned release is "
 "updated with any new changes."
 msgstr ""
+"Cada vez que una nueva entrega es publicada es añadida al índice, la entrega"
+" compilada es actualizada con los últimos valores, y la entrega versionada "
+"es actualizada con los nuevos cambios."
 
 #: ../../docs/primer/releases_and_records.md:32
 msgid ""
@@ -129,27 +170,41 @@ msgid ""
 "building blocks for items across releases, including the name of the item, a"
 " description, each item’s value, and the currency used."
 msgstr ""
+"Las entregas y los registros contiene varios campos que pueden ser "
+"utilizados en diferentes secciones. El esquema OCDS define los campos que "
+"deben ser incluidos en cada sección (donde corresponda), ayudando a "
+"reutilizar estructuras simples para representar la información. Por ejemplo,"
+" una entrega puede contener información acerca de los artículos adquiridos. "
+"El esquema OCDS define los componentes fundamentales de los artículos en "
+"toda la entrega, incluyendo el nombre, descripción, valor de cada artículo y"
+" la moneda utilizada."
 
 #: ../../docs/primer/releases_and_records.md:36
 msgid "When you publish OCDS releases and records, you are encouraged to:"
-msgstr ""
+msgstr "Cuando usted publica entregas y registros OCDS, se le recomienda:"
 
 #: ../../docs/primer/releases_and_records.md:38
 msgid "Ensure all documents referenced in OCDS releases are available online"
 msgstr ""
+"Asegurarse que todos los documentos referentes a OCDS, entregas y registros "
+"se encuentren disponibles en línea."
 
 #: ../../docs/primer/releases_and_records.md:39
 msgid "Publish each release and record at its own persistent URL"
-msgstr ""
+msgstr "Publicar cada entrega y registro con su propia URL."
 
 #: ../../docs/primer/releases_and_records.md:40
 msgid "Produce bulk packages of releases and records for users to download"
 msgstr ""
+"Producir archivos de descarga masiva de paquetes de entregas y registros "
+"para la descarga de los mismos por los usuarios."
 
 #: ../../docs/primer/releases_and_records.md:41
 msgid ""
 "Publish versions of the data for users to access in CSV for Excel formats"
 msgstr ""
+"Publicar versiones de datos para que los usuarios accedan en formato CSV "
+"para Excel."
 
 #: ../../docs/primer/releases_and_records.md:1
 msgid ""
@@ -157,27 +212,32 @@ msgid ""
 "the OCDS?](next) You can also review the further resources below to go "
 "deeper into the subjects introduced on this page."
 msgstr ""
+"**Para aprender más,** puede dirigirse a la siguiente página del manual de "
+"introducción. [¿Cómo funciona OCDS?](next) Así también usted revisar fuentes"
+" adicionales que se encuentran a continuación, a fin de profundizar en los "
+"temas introducidos en esta página."
 
 #: ../../docs/primer/releases_and_records.md:3
 msgid ""
 "[OCP Learning: Publishing OCDS Data](https://www.open-"
 "contracting.org/learn/publish/)"
 msgstr ""
+"[Aprende con OCP: publicación de datos OCDS](https://www.open-"
+"contracting.org/es/learn/publish/)"
 
 #: ../../docs/primer/releases_and_records.md:4
 msgid ""
 "[Video Learning Guide to the "
 "OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)"
 msgstr ""
+"[Vídeo Guía de "
+"OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)"
 
 #: ../../docs/primer/releases_and_records.md:5
-msgid ""
-"[OCDS Schema Release Reference](https://standard.open-"
-"contracting.org/latest/en/schema/reference/)"
-msgstr ""
+msgid "[OCDS Schema Release Reference](../schema/reference)"
+msgstr "[Esquema de Referencia de Entradas OCDS](../schema/reference)"
 
 #: ../../docs/primer/releases_and_records.md:6
-msgid ""
-"[OCDS Schema Record Reference](https://standard.open-"
-"contracting.org/latest/en/schema/records_reference/)"
+msgid "[OCDS Schema Record Reference](../schema/records_reference)"
 msgstr ""
+"[Esquema de Referencia de Registros OCDS](../schema/records_reference)"

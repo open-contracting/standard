@@ -34,6 +34,6 @@ Helpdesk support is available in English and Spanish and delivered through colla
 
 To learn more about Open Contracting and how it can be used to support wider reform and measurable improvements in public contracting, please visit www.open-contracting.org. You may also be interested in:
 
-* [Worldwide - who is implementing open contracting and OCDS?](https://www.open-contracting.org/worldwide/#/)
+* [Worldwide - who is implementing open contracting and OCDS?](https://www.open-contracting.org/worldwide/)
 * [OCP Learning](https://www.open-contracting.org/learn/)
 ```
