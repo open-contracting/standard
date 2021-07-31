@@ -22,7 +22,7 @@ The OCDS defines a unique contracting process as all the actions aimed at conclu
 
 ![Tender](../_static/svg/green_tendering.svg)
 
-**Initiation (Tender)**\
+**Tender**\
 *Including:*\
 Tender notices\
 Specifications\
@@ -77,7 +77,7 @@ Completion or Termination info
 
 <br clear="all"/>
 
-The OCDS brings together the data published at each stage using a single contracting process identifier: the **OCID.** An OCID is composed of a prefix [registered by the publisher with OCP](https://standard.open-contracting.org/latest/en/guidance/build/#register-an-ocid-prefix), and a unique process identifier chosen by the publisher.
+The OCDS brings together the data published at each stage using a single open contracting process identifier: the **OCID.** An OCID is composed of a prefix [registered by the publisher with OCP](../guidance/build.md#register-an-ocid-prefix), and a unique process identifier chosen by the publisher.
 
 ![ocid](../_static/png/ocid_en.png)
 
@@ -85,7 +85,7 @@ The OCID helps users to join up data across the whole contracting process – a 
 
 In designing the OCDS, we explored a range of different user needs and use cases for data about public contracting. Each use case has different data needs in terms of data fields, documents, publication frequency, and data quality. The OCDS provides a common framework to maximize the number of user needs that can be met through data and document disclosure.
 
-The OCDS provides a common framework, in addition to the OCID, through the OCDS **schema.** The schema sets out the fields, structure, data types and validation rules for OCDS data. The schema is described using JSON Schema, and the default format of the data is JSON (JavaScript Object Notation). The schema is documented in the [Reference](https://standard.open-contracting.org/latest/en/schema/) section of the OCDS.
+The OCDS provides a common framework, in addition to the OCID, through the OCDS **schema.** The schema sets out the fields, structure, data types and validation rules for OCDS data. The schema is described using JSON Schema, and the default format of the data is JSON (JavaScript Object Notation). The schema is documented in the [Reference](../schema/index) section of the OCDS.
 
 When mapping your data to the OCDS our sing OCDS data, you will encounter a number of common data fields and structures, which are described by the schema:
 
@@ -97,7 +97,7 @@ When mapping your data to the OCDS our sing OCDS data, you will encounter a numb
 * **contract** - information on contracts signed as part of a contracting process;
 * **implementation** - information on the progress of each contract towards completion.
 
-Some schema fields refer to [codelists](https://standard.open-contracting.org/latest/en/schema/codelists/), to limit and standardize the possible values of the fields, in order to promote data interoperability.
+Some schema fields refer to [codelists](../schema/codelists), to limit and standardize the possible values of the fields, in order to promote data interoperability.
 
 When you publish OCDS data, the default format of the data is JSON. In addition to JSON format, OCDS can be published as Excel and CSV (comma-separated values) files.
 
@@ -119,7 +119,7 @@ No matter what type of contracting data you are working with or format you publi
 ```{note}
 **To learn more,** go to the next page in the primer: [How is OCDS data published?](releases_and_records) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
-* [Guidance to implementing OCDS](https://standard.open-contracting.org/latest/en/guidance/)
+* [Guidance to implementing OCDS](../guidance/index)
 * [Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
 * [OCP Learning: Publishing OCDS Data](https://www.open-contracting.org/learn/publish/)
 * [Open Contracting Playbook: Component 2](https://docs.google.com/document/d/1Y_sYOqUfdRdnvU6P8-aJFqWw9LaTNbbIPS0oJtmskCQ/edit#heading=h.44c3tmyw3edx)
