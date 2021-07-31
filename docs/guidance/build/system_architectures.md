@@ -44,7 +44,7 @@ On the other hand, there is a cost of maintaining a separate datastore. In these
 
 Publishers need to consider how to store OCDS data. Releases are immutable so can be stored as they are, but records change over time. The process can build records on each API call, or store and update them each time a new release is created. The API needs to return OCDS data wrapped in a release or record package. Usually there is no need to store wrapped OCDS data, since package data can be generated in real time.
 
-The [releases and records](../../getting_started/releases_and_records) guidance describes OCDS releases and records and their different components.
+The [releases and records](../../primer/releases_and_records) guidance describes OCDS releases and records and their different components.
 
 ### Pull and convert
 

@@ -1,5 +1,9 @@
 # Design
 
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/h6v3BGTai-M" title="Designing your OCDS implementation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 This phase is about setting up your OCDS implementation to be a success.
 
 On this page, you will find guidance on how to:
@@ -31,7 +35,13 @@ If your contracting data is mostly on paper, in local spreadsheets or in unstruc
 
 ## Set your goals and priorities
 
-The most useful OCDS implementations are those that were designed around real-world goals and priorities. To achieve success, you need to understand your policy goals and user needs, and use them to inform the design of your OCDS implementation.
+The most useful OCDS implementations are those that were designed around real-world goals and priorities. To achieve success, you need to understand your policy goals and [user needs](design/user_needs), and use them to inform the design of your OCDS implementation.
+
+```{toctree}
+:hidden:
+
+design/user_needs
+```
 
 ### Identify stakeholders
 
@@ -87,7 +97,7 @@ To achieve success, an OCDS implementation team ought to include the following r
 
 **Action:** Identify your team members.
 
-**Action:** Ask everyone in your team to read the [getting started documentation](../../getting_started/index).
+**Action:** Ask everyone in your team to [read the Primer](../../primer/index).
 
 **Action:** [Contact the OCDS Helpdesk](../../support/index) to arrange an online introductory training for your technical team, in English or Spanish.
 

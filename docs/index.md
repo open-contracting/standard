@@ -20,7 +20,7 @@ The Open Contracting Data Standard (OCDS) enables disclosure of data and documen
 
 In this documentation, you will find:
 
-* [Getting Started](getting_started/index): Introducing the key concepts and features of the OCDS
+* [Primer](primer/index): Introducing the key concepts and features of the OCDS
 * [Reference](schema/index): Describing the specific rules that need to be followed to publish OCDS data
 * [Guidance](guidance/index): Step-by-step instructions on how to design and implement an OCDS publication, including helpful tools and examples 
 * [Getting Help](support/index): Outlining how you can get Helpdesk support and how you can participate in the OCDS community
@@ -48,7 +48,7 @@ A [free helpdesk service](support/index) is available to support implementation 
 ```{toctree}
 :hidden:
 
-getting_started/index
+primer/index
 guidance/index
 schema/index
 support/index

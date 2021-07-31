@@ -1,5 +1,9 @@
 # Map
 
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3Q_fQBsju6Y" title="Matching your data to OCDS fields" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process. 
 
 When starting out, consider working in parallel on the map and build phases, because the choices you make at the build stage might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
@@ -47,6 +51,10 @@ map/localization
 ```
 
 ## Download the mapping templates
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gVk-Gw-3iP0" title="The field-level mapping template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 To make the mapping easier we provide templates to list the data elements within your data sources, and map them to either:
 
@@ -108,7 +116,7 @@ Some data elements might not match any field or code in OCDS. To cover such case
 
 **Action:** [Contact the OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
 
-**Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [Github tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
+**Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [GitHub tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
 
 ```{toctree}
 :hidden:

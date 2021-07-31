@@ -2,6 +2,16 @@
 
 Congratulations! You are almost ready to publish your OCDS data.
 
+## Perform final checks
+
+Before publishing, check that your publication meets the small number of [basic criteria](publish/quality.md#basic-criteria).
+
+```{toctree}
+:hidden:
+
+publish/quality
+```
+
 ## Finalize your publication policy
 
 In OCDS, a publication policy is an essential data guide for users. Each OCDS publisher ought to have a publication policy that covers:
@@ -22,7 +32,7 @@ The publication policy ought to also contain information about future plans for 
 
 ## License your data
 
-Publishing data under an open licenses is an important part of open contracting. Without this, restrictions on re-use can prevent many of the important [use cases](../../getting_started/use_cases) for open contracting information being realized.
+Publishing data under an open license is an important part of open contracting. Without this, restrictions on re-use can prevent many of the important [use cases](design/user_needs) for open contracting information being realized.
 
 A license statement sets out the permission that users have to access, use and re-use the data. This can take the form of a [Public Domain Dedication or Certification](https://creativecommons.org/publicdomain/) which transfers a dataset into the public domain, or re-asserts that there are no existing copyrights or database rights inherent in the dataset (which is the case for government datasets in some jurisdictions), or the application of a license which sets out the terms under which a dataset can be re-used.
 

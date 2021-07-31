@@ -21,7 +21,7 @@ Regulations or policies might need to be changed to enable publication of additi
 
 In addition, you might have challenges collecting complete and accurate information. This challenge might have a variety of causes (poor compliance rates, lack of access to the internet, lack of incentives). If you are experiencing these challenges, OCP can help you think through approaches to improving the quality and completeness of the information you collect.
 
-Finally, you might have challenges transforming that information into the OCDS format and publishing it in a manner that is accessible and user friendly. For this, you can reach out to our [OCDS Helpdesk](../support/index) for support.
+Finally, you might have challenges transforming that information into the OCDS format and publishing it in a manner that is accessible and user friendly. For this, you can reach out to our [OCDS Helpdesk](../../support/index) for support.
 
 Understanding all of the challenges above, we understand that increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement. Therefore, we describe an iterative framework for assessing the quality and completeness of OCDS publications below.
 
@@ -29,7 +29,7 @@ Understanding all of the challenges above, we understand that increasing the tra
 
 All OCDS publications ought to meet the following criteria:
 
-1. **Registered**: The data uses a [registered OCID prefix](../schema/identifiers.md#contracting-process-identifier-ocid).
+1. **Registered**: The data uses a [registered OCID prefix](../../schema/identifiers.md#contracting-process-identifier-ocid).
 1. **Discoverable**: It is possible to discover the data by navigating a website whose homepage is indexed by popular web search engines.
 1. **Retrievable**: It is possible to automate the download of all the data, either using an HTML page listing bulk download URLs, or using only machine-readable data as input.
 1. **Reviewable**: The [OCDS Data Review Tool](https://standard.open-contracting.org/review/) is able to report results on the data.
