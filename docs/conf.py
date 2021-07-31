@@ -40,7 +40,7 @@ release = '1.1.5'
 extensions = [
     'myst_parser',
     'sphinx.ext.ifconfig',
-    'sphinx_panels',
+    # 'sphinx_panels',
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
