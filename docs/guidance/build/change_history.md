@@ -4,7 +4,13 @@ The following example shows how to publish data about a contracting process. Pub
 
 Each subsection refers to a stage or event in the contracting process lifetime.
 
-Refer to the [releases and records](../../primer/releases_and_records) guidance for an introduction to the concepts involved.
+```{note}
+For an introduction to the concepts involved in a change history, refer to the [releases and records](../../primer/releases_and_records) primer.
+```
+
+```{note}
+For guidance on how to set the `id` field on each release, follow the [easy releases](easy_releases) worked example.
+```
 
 ## Planning
 
