@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-28 13:13-0400\n"
+"POT-Creation-Date: 2021-07-30 00:08-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
@@ -34,7 +34,7 @@ msgid ""
 "An OCDS [record](../schema/records_reference) aggregates all the releases "
 "available for a contracting process at a given time, and can include:"
 msgstr ""
-"Un [registro](../primer/releases_and_records) OCDS une todos las "
+"Un [registro](../getting_started/releases_and_records) OCDS une todos las "
 "entregas disponibles para un proceso de contrataciones en un momento dado, y"
 " puede incluir: "
 
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Worked Example"
 msgstr "Ejemplo"
 
-#: ../../docs/schema/merging.md:13
+#: ../../docs/schema/merging.md:1
 msgid ""
 "A public procurement agency publishes a release to announce an opportunity "
 "on January 1, in which the total estimated value of the procurement is "
@@ -100,7 +100,7 @@ msgstr ""
 "publica un release con una enmienda a la oportunidad, en la cual el valor "
 "total estimado de la compra ha aumentado a $2,000. "
 
-#: ../../docs/schema/merging.md:15
+#: ../../docs/schema/merging.md:3
 msgid ""
 "The agency decides to award the opportunity to two of the bidders. On March "
 "1, the agency publishes a release to announce that Company A is awarded a "
@@ -112,7 +112,7 @@ msgstr ""
 " de $750 a la Compañía A. El 3 de Marzo, la agencia publica una entrega "
 "anunciando que se adjudicó la compañía B un contrato de $750."
 
-#: ../../docs/schema/merging.md:17
+#: ../../docs/schema/merging.md:5
 msgid ""
 "Through these individual releases, the agency provides real-time data about "
 "the contracting process."
@@ -120,7 +120,7 @@ msgstr ""
 "A través de estas entregas individuales, la agencia da datos en tiempo real "
 "sobre el proceso de contrataciones."
 
-#: ../../docs/schema/merging.md:19
+#: ../../docs/schema/merging.md:7
 msgid ""
 "At each release, the agency also updates the record, which combines all the "
 "releases to date. In the final record:"
@@ -128,7 +128,7 @@ msgstr ""
 "En cada entrega la agencia actualiza el registro, que combina todos las "
 "entregas a la fecha. En el registro final: "
 
-#: ../../docs/schema/merging.md:21
+#: ../../docs/schema/merging.md:9
 msgid ""
 "The compiled release contains all the information about the opportunity and "
 "awards, using the same schema as a release."
@@ -136,7 +136,7 @@ msgstr ""
 "El release compilado contiene toda la información sobre la oportunidad y "
 "adjudicaciones, utilizando el mismo esquema que utiliza una entrega."
 
-#: ../../docs/schema/merging.md:22
+#: ../../docs/schema/merging.md:10
 msgid ""
 "The versioned release makes it easy to see how the description and total "
 "estimated value changed over time."
@@ -194,7 +194,7 @@ msgstr ""
 msgid "If `omitWhenMerged` is set to `false`, ignore it."
 msgstr "Si `omitWhenMerged` es `false`, ignórelo."
 
-#: ../../docs/schema/merging.md:77
+#: ../../docs/schema/merging.md:1
 msgid ""
 "The compiled release presently uses the same schema as the release schema, "
 "which means that the `id`, `date` and `tag` fields are required in a "
@@ -212,7 +212,7 @@ msgstr ""
 "cómo identificar y poner fecha a releases compilados y versionados en el "
 "issue [#834](https://github.com/open-contracting/standard/issues/834)."
 
-#: ../../docs/schema/merging.md:79
+#: ../../docs/schema/merging.md:3
 msgid ""
 "In the meantime, an intermediate solution is to set `tag` to "
 "`[\"compiled\"]`, `date` to the date of the most recent release, and `id` to"
@@ -526,7 +526,7 @@ msgstr ""
 "no está versionado y se debe mantener igual, y adjunte el resultado a la "
 "lista en **output**"
 
-#: ../../docs/schema/merging.md:179
+#: ../../docs/schema/merging.md:1
 msgid ""
 "In this case, to remove an object from an array, you need to instead set "
 "each of its fields to `null`. We invite discussion on how to remove objects "
@@ -538,7 +538,7 @@ msgstr ""
 "de listas en el issue [#232](https://github.com/open-"
 "contracting/standard/issues/232)."
 
-#: ../../docs/schema/merging.md:183
+#: ../../docs/schema/merging.md:1
 msgid ""
 "In the release schema, `\"versionId\": true` is declared on `id` fields that"
 " must be versioned. This is only for convenience and might be removed in "

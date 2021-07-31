@@ -4,7 +4,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2020
 # James McKinney, 2021
 # 
 #, fuzzy
@@ -12,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-28 13:13-0400\n"
-"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"POT-Creation-Date: 2021-07-30 00:08-0400\n"
+"PO-Revision-Date: 2021-07-31 17:58+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +21,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:1
-msgid "Unsuccessful tenders"
-msgstr "Licitaciones no exitosas"
+#: ../../docs/guidance/map/unsuccessful_processes.md:1
+msgid "Unsuccessful processes"
+msgstr ""
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:3
+#: ../../docs/guidance/map/unsuccessful_processes.md:3
 msgid ""
 "In the case of procurement, a contracting process can be defined as a "
 "procurement procedure. There is a one-to-one correspondence between the "
@@ -37,7 +36,7 @@ msgstr ""
 "entre la primera etapa de un procedimiento de adquisición (licitación) y un "
 "proceso de contratación."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:5
+#: ../../docs/guidance/map/unsuccessful_processes.md:5
 msgid ""
 "In OCDS, at a conceptual level, a contracting process is intended to match "
 "each concrete attempt to start a procedure that leads to one or more "
@@ -52,11 +51,11 @@ msgstr ""
 "participar; una competencia por una concesión; una adjudicación directa, "
 "etc."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:7
+#: ../../docs/guidance/map/unsuccessful_processes.md:7
 msgid "![Contracting Process](../../_static/png/contracting_process.png)"
 msgstr "![Proceso de contratación](../../_static/png/contracting_process.png)"
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:9
+#: ../../docs/guidance/map/unsuccessful_processes.md:9
 msgid ""
 "In OCDS, the `ocid` is the unique identifier for a contracting process. As "
 "the initiation of the procurement process is the tender, normally the "
@@ -66,7 +65,7 @@ msgstr ""
 "contratación. Como el inicio del proceso de adquisición es la licitación, "
 "normalmente el identificador de una licitación se puede usar como `ocid`."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:11
+#: ../../docs/guidance/map/unsuccessful_processes.md:11
 msgid ""
 "In most jurisdictions, if a procedure is cancelled or unsuccessful, and a "
 "**new procedure** is started to procure the same items, the two procedures "
@@ -79,7 +78,7 @@ msgstr ""
 "contratación **diferentes**. Esto está en línea con la definición de OCDS de"
 " un proceso de contratación."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:13
+#: ../../docs/guidance/map/unsuccessful_processes.md:13
 msgid ""
 "But in other jurisdictions, such as Paraguay, the planning stage is "
 "considered as the initiation of the process. In these jurisdictions when a "
@@ -93,7 +92,7 @@ msgstr ""
 "consideran parte del mismo proceso de contratación. Esto difiere de la "
 "definición de OCDS de un proceso de contratación."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:15
+#: ../../docs/guidance/map/unsuccessful_processes.md:15
 msgid ""
 "In OCDS, it is relevant and desirable to include the planning information "
 "that relates to the process, but the contracting process is not interpreted "
@@ -116,7 +115,7 @@ msgstr ""
 " que participen proveedores potenciales; no describe las condiciones "
 "competitivas."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:17
+#: ../../docs/guidance/map/unsuccessful_processes.md:17
 msgid ""
 "However a jurisdiction treats unsuccessful tenders and subsequent tenders, "
 "in OCDS they are considered separate but related contracting processes."
@@ -125,7 +124,7 @@ msgstr ""
 "licitaciones posteriores, en OCDS se consideran procesos de contratación "
 "separados pero relacionados."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:19
+#: ../../docs/guidance/map/unsuccessful_processes.md:19
 msgid ""
 "This relationship can be modelled using the `relatedProcess` array at the "
 "release level, with the ‘unsuccessfulProcess’ relationship type."
@@ -133,15 +132,15 @@ msgstr ""
 "Esta relación se puede modelar utilizando la lista `relatedProcess` al nivel"
 " de entrega, con el tipo de relación `unsuccessfulProcess`."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:21
+#: ../../docs/guidance/map/unsuccessful_processes.md:21
 msgid "![Unsuccessful Tender](../../_static/png/unsuccessful-tender.png)"
 msgstr "![Licitación no exitosa](../../_static/png/unsuccessful-tender.png)"
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:23
+#: ../../docs/guidance/map/unsuccessful_processes.md:23
 msgid "Example: Modelling unsuccessful tenders in Paraguay"
 msgstr "Ejemplo: modelado de licitaciones no exitosas en Paraguay"
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:25
+#: ../../docs/guidance/map/unsuccessful_processes.md:25
 msgid ""
 "The [Sistema de Información de las Contrataciones Públicas "
 "(SICP)](https://contrataciones.gov.py/) discloses information about "
@@ -154,7 +153,7 @@ msgstr ""
 "SICP es administrado por la Dirección Nacional de Contratación Pública "
 "(DNCP)."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:27
+#: ../../docs/guidance/map/unsuccessful_processes.md:27
 msgid ""
 "Paraguay discloses all stages of the contracting process, from planning to "
 "implementation. The first data disclosed is about the planning stage. "
@@ -171,7 +170,7 @@ msgstr ""
 "publican por primera vez, antes de la etapa de licitación. En este ejemplo, "
 "el ocid es `ocds-03ad3f-331547-1`."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:35
+#: ../../docs/guidance/map/unsuccessful_processes.md:35
 msgid ""
 "Next, the tender data is disclosed, but the tender was unsuccessful, so the "
 "tender status is ‘unsuccessful’."
@@ -179,7 +178,7 @@ msgstr ""
 "A continuación, se publican los datos de la licitación, pero la licitación "
 "no tuvo éxito, por lo que el estado de la licitación es ‘unsuccessful’."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:43
+#: ../../docs/guidance/map/unsuccessful_processes.md:43
 msgid ""
 "The buyer issues another tender to buy the same item, based on the same "
 "planning as the first tender."
@@ -187,7 +186,7 @@ msgstr ""
 "El comprador lanza otra licitación para comprar el mismo artículo, basándose"
 " en la misma planificación que la primera licitación."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:45
+#: ../../docs/guidance/map/unsuccessful_processes.md:45
 msgid ""
 "Paraguay considers the two tenders part of the same contracting process. "
 "But, in OCDS the two tenders are separate contracting processes."
@@ -196,7 +195,7 @@ msgstr ""
 "contratación. Pero, en OCDS, las dos licitaciones son procesos de "
 "contratación separados."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:47
+#: ../../docs/guidance/map/unsuccessful_processes.md:47
 msgid ""
 "To construct an `ocid` for the second contracting process, Paraguay adds a "
 "consecutive number to the `ocid` of the first process. In this example the "
@@ -206,7 +205,7 @@ msgstr ""
 "agrega un número consecutivo al `ocid` del primer proceso. En este ejemplo, "
 "el nuevo `ocid` es 'ocds-03ad3f-331547-2'"
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:49
+#: ../../docs/guidance/map/unsuccessful_processes.md:49
 msgid ""
 "Paraguay could also have used the identifier for the second tender as the "
 "`ocid` for the second contracting process."
@@ -214,7 +213,7 @@ msgstr ""
 "Paraguay también podría haber utilizado el identificador para la segunda "
 "licitación como el `ocid` para el segundo proceso de contratación."
 
-#: ../../docs/guidance/map/unsuccessful_tender.md:51
+#: ../../docs/guidance/map/unsuccessful_processes.md:51
 msgid ""
 "The `relatedProcess` block links the two processes, with the relationship "
 "set to ‘unsuccessfulProcess’."
