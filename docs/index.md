@@ -12,12 +12,73 @@ The Open Contracting Data Standard (OCDS) enables disclosure of data and documen
 
 The OCDS is made up of several parts, designed to help you use OCDS effectively.
 
-* [Primer](primer/index): Introducing the key concepts and features of the OCDS
-* [Guidance](../guidance/index): Step-by-step instructions on how to design and implement an OCDS publication, including practical examples
-* [Reference](../schema/index): The OCDS data model (schemas, codelists and validation rules) as well as specific rules that need to be followed to publish OCDS data
-* [Getting help](../support/index): How you can get Helpdesk support, tools that can help you use OCDS, and how you can participate in the OCDS community
-* [History](../history/index): Information about the changes in each version of the OCDS
-* [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly.
+````{panels}
+:card: shadow text-center
+
+Primer
+^^^
+
+```{link-button} primer/index
+:type: ref
+:text: Learn about key concepts and features of the OCDS
+:classes: btn-link stretched-link
+```
+
+---
+
+Guidance
+^^^
+
+```{link-button} guidance/index
+:type: ref
+:text: Follow step-by-step instructions to design and implement the OCDS
+:classes: btn-link stretched-link
+```
+
+---
+
+Reference
+^^^
+
+```{link-button} schema/index
+:type: ref
+:text: Review the OCDS schema – the specific rules that need to be followed to publish OCDS data
+:classes: btn-link stretched-link
+```
+
+---
+
+Getting Help
+^^^
+
+```{link-button} support/index
+:type: ref
+:text: Get support from the free OCDS Helpdesk and learn how to participate in the OCDS community
+:classes: btn-link stretched-link
+```
+
+---
+
+History
+^^^
+
+```{link-button} history/index
+:type: ref
+:text: See how the OCDS has changed over time
+:classes: btn-link stretched-link
+```
+
+---
+
+Data Review Tool
+^^^
+
+```{link-button} https://standard.open-contracting.org/review/
+:type: url
+:text: Check whether your data is following the OCDS correctly
+:classes: btn-link stretched-link
+```
+````
 
 The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](https://www.open-contracting.org/) (OCP). If you are interested to learn more about Open Contracting advocacy and how it can be used to support wider reform and measurable improvements in public contracting, please visit www.open-contracting.org.
 
