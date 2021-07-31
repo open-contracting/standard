@@ -11,11 +11,11 @@ To implement the Open Contracting Data Standard (OCDS) you should follow the ste
 
 Beyond the Primer, you can use the following resources contained in the OCDS documentation to help you implement the OCDS. The remainder of the documentation covers:
 
-* [Guidance](https://standard.open-contracting.org/latest/en/guidance/): Step-by-step instructions on how to design and implement an OCDS publication, including helpful tools and examples
-* [Reference](https://standard.open-contracting.org/latest/en/schema/): Describing the specific rules that need to be followed to publish OCDS data
-* [Getting help](https://standard.open-contracting.org/latest/en/support/): Outlining how you can get Helpdesk support and how you can participate in the OCDS community
-* [Governance](https://standard.open-contracting.org/latest/en/governance/): Details about the stewardships, development, and revisions process for OCDS
-* [History](https://standard.open-contracting.org/latest/en/history/): Information about the changes in each version of the OCDS
+* [Guidance](../guidance/index): Step-by-step instructions on how to design and implement an OCDS publication, including helpful tools and examples
+* [Reference](../schema/index): Describing the specific rules that need to be followed to publish OCDS data
+* [Getting help](../support/index): Outlining how you can get Helpdesk support and how you can participate in the OCDS community
+* [Governance](../governance/index): Details about the stewardships, development, and revisions process for OCDS
+* [History](../history/index): Information about the changes in each version of the OCDS
 * [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly.
 
 **Have a question? Ask us!**
@@ -30,7 +30,7 @@ OCP and the OCDS offers a free Helpdesk service to support you in publishing or 
 Helpdesk support is available in English and Spanish and delivered through collaboration with Open Data Services Cooperative in the United Kingdom and Centro de Desarrollo Sostenible in Paraguay. If you have a question about OCDS implementation, e-mail [data@open-contracting.org](mailto:data@open-contracting.org) and a member of the OCDS Helpdesk will be in touch with you soon.
 
 ```{note}
-**To continue learning about OCDS implementation,** go to the next page in the documentation: [Guidance](https://standard.open-contracting.org/latest/en/guidance/). You can also review the resources below to go deeper into the subjects introduced on this page.
+**To continue learning about OCDS implementation,** go to the next page in the documentation: [Guidance](../guidance/index). You can also review the resources below to go deeper into the subjects introduced on this page.
 
 To learn more about Open Contracting and how it can be used to support wider reform and measurable improvements in public contracting, please visit www.open-contracting.org. You may also be interested in:
 
