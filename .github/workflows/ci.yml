@@ -24,6 +24,7 @@ jobs:
       # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
       - if: github.repository == 'open-contracting/standard_profile_template'
         run: make update extract
+      - run: make
       # - run: |
       #     make linkcheck
       #     rm -f output.json output.txt
