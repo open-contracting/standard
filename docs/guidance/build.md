@@ -1,5 +1,9 @@
 # Build
 
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NSiIIH2-GJM" title="Getting your data ready to publish" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 This phase is about creating a new IT system, or updating an existing IT system, to implement your [mapping](map) and publish OCDS data.
 
 Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../support/index.md#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
@@ -59,6 +63,10 @@ Otherwise, you can consider the following methods:
 * If you aren't comfortable with the above methods, you can consider using a spreadsheet add-on for combining data from multiple sheets.
 
 ## Establish your publication formats and access methods
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/njw7H4UKPsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 OCDS data can be published in different formats and accessed using different methods.
 
