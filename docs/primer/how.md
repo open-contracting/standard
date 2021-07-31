@@ -22,7 +22,7 @@ The OCDS defines a unique contracting process as all the actions aimed at conclu
 
 ![Tender](../_static/svg/green_tendering.svg)
 
-**Initiation (Tender)**\
+**Tender**\
 *Including:*\
 Tender notices\
 Specifications\
@@ -77,7 +77,7 @@ Completion or Termination info
 
 <br clear="all"/>
 
-The OCDS brings together the data published at each stage using a single contracting process identifier: the **OCID.** An OCID is composed of a prefix [registered by the publisher with OCP](https://standard.open-contracting.org/latest/en/guidance/build/#register-an-ocid-prefix), and a unique process identifier chosen by the publisher.
+The OCDS brings together the data published at each stage using a single open contracting process identifier: the **OCID.** An OCID is composed of a prefix [registered by the publisher with OCP](https://standard.open-contracting.org/latest/en/guidance/build/#register-an-ocid-prefix), and a unique process identifier chosen by the publisher.
 
 ![ocid](../_static/png/ocid_en.png)
 
