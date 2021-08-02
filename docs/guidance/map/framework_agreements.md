@@ -48,8 +48,6 @@ Competition at the second stage is limited to suppliers that are party to the fr
 
 The second stage of a framework agreement procedure is also known as a “call-off.” Non-competitive second stages are also known as “direct call-offs.” Competitive second stages are also known as “mini-competitions.”
 
-![Types of framework agreement](../../_static/png/framework_agreement_types.png)
-
 ## Modelling framework agreements in OCDS
 
 In OCDS, a contracting process brings together, under a single identifier, the information that users need to answer questions such as:
@@ -95,7 +93,7 @@ The following guidance describes how to model the different stages of a framewor
   * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
   * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
 
-### Addition of a supplier to a framework agreement
+### First-stage selection and addition of suppliers for the framework agreement
 
 * Create a release with the **same** `ocid` as the tender release and add 'award' to the `tag` array
 * Add an `Award` object to the `awards` array.
