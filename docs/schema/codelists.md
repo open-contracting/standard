@@ -250,6 +250,8 @@ Contracts can move through multiple states. Releases over time can update the st
 :file: ../../build/current_lang/codelists/contractStatus.csv
 ```
 
+To disclose that a contract is suspended, set the contract's `status` field to 'active' and use its `statusDetails` field to record that the contract is suspended. For more information, see the [contract suspension](../../guidance/map/contract_suspension) worked example.
+
 ### Milestone Status
 
 ```{csv-table-no-translate}
