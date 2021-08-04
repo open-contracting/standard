@@ -2,7 +2,7 @@
 
 The [merging documentation](../../schema/merging) specifies how individual releases are merged into compiled releases (the latest version of the contracting process) and versioned releases (the change history for each field), which form part of a [record](../../getting_started/releases_and_records). 
 
-The merge routine also allows a publisher to correct a publication error by deleting a field, object or array entry from the compiled release. To do so, a publisher sets the field's value to `null` in an individual release (more on this below). As such, as a publisher, it is important to **never use a `null` value in an individual release, unless you intend to delete that field**. If you don't have a value to assign to a field, simply omit the field from the JSON, or assign an empty value like `""`, `[]` or `{}`. Using `null` values correctly means that publishers and/or users can create compiled releases reliably.
+The merge routine also allows a publisher to correct a publication error by deleting a field, object or array entry from the compiled release. To do so, a publisher sets the field's value to `null` in an individual release (more on this below). As such, as a publisher, it is important to **never use a `null` value in an individual release, unless you intend to delete that field**. If you don't have a value to assign to a field, simply omit the field from the JSON. Using `null` values correctly means that publishers and/or users can create compiled releases reliably.
 
 The following examples show how updates and deletions are reflected in compiled and versioned releases.
 
