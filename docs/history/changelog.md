@@ -66,6 +66,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'technicalSelectionCriteria'
   * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate 'contractSchedule' and edit 'contractAnnexe'.
   * [#1280](https://github.com/open-contracting/standard/pull/1280) Align the description of 'tenderNotice' and 'technicalSpecifications' with GPA.
+  * [#1378](https://github.com/open-contracting/standard/pull/1378) Remove the Category column.
 
 * `milestoneType.csv`:
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
