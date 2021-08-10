@@ -1132,6 +1132,38 @@
             }
           }
         },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                },
+                "codelist": "language.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
         "language": {
           "type": "array",
           "items": {
@@ -1150,7 +1182,11 @@
                   "null"
                 ],
                 "codelist": "language.csv",
-                "openCodelist": true
+                "openCodelist": true,
+                "deprecated": {
+                  "description": "This field is deprecated in favor of `languages` in order to support documents that contain multiple languages.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",

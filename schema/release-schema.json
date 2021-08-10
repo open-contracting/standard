@@ -1094,6 +1094,19 @@
           "codelist": "mediaType.csv",
           "openCodelist": true
         },
+        "languages": {
+          "title": "Languages",
+          "description": "The languages of the linked document, from the open [language](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. A [BCP47 language tag](https://www.w3.org/International/articles/language-tags/) is allowed, if there is a user need for the additional information.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "language.csv",
+          "openCodelist": true
+        },
         "language": {
           "title": "Language",
           "description": "The language of the linked document, from the open [language](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. A [BCP47 language tag](https://www.w3.org/International/articles/language-tags/) is allowed, if there is a user need for the additional information.",
@@ -1102,7 +1115,11 @@
             "null"
           ],
           "codelist": "language.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "deprecated": {
+            "description": "This field is deprecated in favor of `languages` in order to support documents that contain multiple languages.",
+            "deprecatedVersion": "1.2"
+          }
         }
       },
       "patternProperties": {
