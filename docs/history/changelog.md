@@ -122,10 +122,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * `awards.estimatedValue`
     * `contracts.maximumValue`
     * `contracts.estimatedValue`
+  * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.languages`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
-  * [#1296](https://github.com/open-contracting/standard/pull/1296) `tender.eligibilityCriteria` in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics. 
+  * [#1296](https://github.com/open-contracting/standard/pull/1296) `tender.eligibilityCriteria` in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics.
+  * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, in order to support documents that contain multiple languages.
 
 * Update and clarify field descriptions:
   * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
