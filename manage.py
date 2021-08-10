@@ -7,6 +7,7 @@ import os
 import re
 import sys
 import warnings
+from collections import OrderedDict
 from contextlib import contextmanager
 from copy import deepcopy
 from glob import glob
@@ -116,12 +117,12 @@ keywords_to_remove = (
 )
 
 
-def json_load(filename, library=json):
+def json_load(filename, library=json, **kwargs):
     """
     Loads JSON data from the given filename.
     """
     with (schemadir / filename).open() as f:
-        return library.load(f)
+        return library.load(f, **kwargs)
 
 
 def json_dump(filename, data):
@@ -175,15 +176,15 @@ def coerce_to_list(data, key):
 
 
 def traverse(block):
-    def method(schema, pointer='', **kwargs):
+    def method(schema, pointer=(), **kwargs):
         if isinstance(schema, list):
             for index, item in enumerate(schema):
-                method(item, pointer=f'{pointer}/{index}', **kwargs)
+                method(item, pointer=pointer + (index,), **kwargs)
         elif isinstance(schema, dict):
             block(schema, pointer=pointer, **kwargs)
 
             for key, value in schema.items():
-                method(value, pointer=f'{pointer}/{key}', **kwargs)
+                method(value, pointer=pointer + (key,), **kwargs)
 
     return method
 
@@ -194,6 +195,53 @@ def get_metaschema():
     """
     return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4.json'),
                                   json_load('metaschema/meta-schema-patch.json'))
+
+
+def sort_keywords(schema):
+    """
+    Returns the schema with its keywords in a consistent order.
+    """
+    schema = deepcopy(schema)
+
+    # https://datatracker.ietf.org/doc/html/draft-fge-json-schema-validation-00
+    keywords = (
+        # Initial keywords that only appear at the top level.
+        'id', '$schema',
+        # Metadata and deprecation keywords, so that the user first learns about the semantics and deprecation.
+        # Note: The `deprecated` object itself has a `description` field. `$ref` only co-occurs with these keywords.
+        'title', 'deprecatedVersion', 'description', 'deprecated', '$ref',
+        # Validation keywords for any instance type.
+        'type',
+        # Validation keywords for strings.
+        'format', 'minLength',
+        # Validation keywords for arrays. Simple keywords are before "items"; otherwise, they're easy to miss.
+        'minItems', 'uniqueItems', 'items',
+        # Validation keywords for objects. "required" is before "properties"; otherwise, it's easy to miss.
+        'required', 'properties', 'patternProperties',
+        # Codelist keywords. Simple keywords are before "enum"; otherwise, they're easy to miss.
+        'codelist', 'openCodelist', 'enum',
+        # Merge strategy keywords.
+        'omitWhenMerged', 'wholeListMerge',
+        # Final keywords that only appear at the top level.
+        'definitions',
+    )
+
+    def block(schema, pointer=(), **kwargs):
+        if pointer and pointer[-1] not in ('definitions', 'properties', 'patternProperties'):
+            for keyword in keywords:
+                if keyword in schema:
+                    schema.move_to_end(keyword)
+            for keyword in schema:
+                if keyword not in keywords:
+                    raise Exception(f'unexpected keyword: {keyword}')
+            if '$ref' in schema:
+                difference = set(schema) - {'title', 'description', 'deprecated', '$ref'}
+                if difference:
+                    raise Exception(f"unexpected keywords in $ref schema: {', '.join(difference)}")
+
+    traverse(block)(schema)
+
+    return schema
 
 
 def get_common_definition_ref(item):
@@ -326,7 +374,7 @@ def get_unversioned_pointers(schema, fields):
                 if hasattr(schema['items'], '__reference__'):
                     reference = schema['items'].__reference__['$ref'][1:]
                 else:
-                    reference = pointer
+                    reference = '/'.join(pointer)
                 fields.add(f'{reference}/properties/id')
 
     traverse(block)(schema, fields=fields)
@@ -478,11 +526,12 @@ def pre_commit():
     """
     Update meta-schema.json, dereferenced-release-schema.json and versioned-release-validation-schema.json.
     """
-    release_schema = json_load('release-schema.json')
-    jsonref_schema = json_load('release-schema.json', jsonref)
+    release_schema = json_load('release-schema.json', object_pairs_hook=OrderedDict)
+    jsonref_schema = json_load('release-schema.json', jsonref, object_pairs_hook=OrderedDict)
 
     json_dump('meta-schema.json', get_metaschema())
-    json_dump('dereferenced-release-schema.json', get_dereferenced_release_schema(jsonref_schema))
+    json_dump('release-schema.json', sort_keywords(release_schema))
+    json_dump('dereferenced-release-schema.json', sort_keywords(get_dereferenced_release_schema(jsonref_schema)))
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
 
 
