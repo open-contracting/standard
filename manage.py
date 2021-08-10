@@ -482,14 +482,10 @@ def update_country(path):
             assert d[str(offset + 9)] == d[str(offset + 15)]
 
     with open(directory / 'schema' / 'codelists' / 'country.csv', 'w') as f:
-        writer = csv.DictWriter(f, fieldnames=['Code', 'Title'], lineterminator='\n')
-        writer.writeheader()
-
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(['Code', 'Title'])
         for code in sorted(codes):
-            writer.writerow({
-                'Code': code,
-                'Title': codes[code],
-            })
+            writer.writerow([code, codes[code]])
 
 
 @cli.command()

@@ -184,7 +184,7 @@ The link relation type codelist is based on a subset of the [IANA Link Relation 
 
 ### Country
 
-The country codelist is used to provide the country where an address is located, using two-letter codes from [ISO3166-1](https://www.iso.org/iso-3166-country-codes.html). The country codelist adds an exceptional code for Kosovo ('XK').
+The country codelist is used to provide the country component of an address, using uppercase two-letter codes from [ISO3166-1](https://www.iso.org/iso-3166-country-codes.html). The country codelist adds a user-assigned code for Kosovo ('XK').
 
 ```{csv-table-no-translate}
 :header-rows: 1
