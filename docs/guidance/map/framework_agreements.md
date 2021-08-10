@@ -22,6 +22,8 @@ A procurement contract is defined in UNCITRAL as:
 
 ## Types of framework agreements
 
+![Framework agreement types](../../_static/png/framework_agreement_types.png)
+
 Framework agreements can be **open** or **closed**:
 
 **Closed framework agreement**
