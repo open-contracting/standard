@@ -457,31 +457,29 @@ def pre_commit():
 
 
 @cli.command()
-@click.argument('path')
-def update_country(path):
+@click.argument('file', type=click.File())
+def update_country(file):
     """
     Update schema/codelists/country.csv from PATH.
     """
     # https://www.iso.org/iso-3166-country-codes.html
     # https://www.iso.org/obp/ui/#search
-    directory = Path(os.path.dirname(os.path.realpath(__file__)))
 
     codes = {
         # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#User-assigned_code_elements
         'XK': 'Kosovo',
     }
 
-    with open(path) as f:
-        rpc = json.load(f)[0]['rpc'][0]
-        offset = int(rpc[0])
+    rpc = json.load(file)[0]['rpc'][0]
+    offset = int(rpc[0])
 
-        for entry in rpc[3][1]:
-            d = entry['d']
-            codes[d[str(offset + 9)]] = re.sub(r' \(the\)|\*', '', d[str(offset + 13)])
+    for entry in rpc[3][1]:
+        d = entry['d']
+        codes[d[str(offset + 9)]] = re.sub(r' \(the\)|\*', '', d[str(offset + 13)])
 
-            assert d[str(offset + 9)] == d[str(offset + 15)]
+        assert d[str(offset + 9)] == d[str(offset + 15)]
 
-    with open(directory / 'schema' / 'codelists' / 'country.csv', 'w') as f:
+    with open(schemadir / 'codelists' / 'country.csv', 'w') as f:
         writer = csv.writer(f, lineterminator='\n')
         writer.writerow(['Code', 'Title'])
         for code in sorted(codes):
@@ -607,15 +605,11 @@ def update_media_type():
 
 
 @cli.command()
-@click.argument('country_path')
 @click.pass_context
-def update(ctx, country_path):
+def update(ctx):
     """
-    Update external codelists (country, currency, language, media type).
-
-    COUNTRY_PATH is the path to the file containing the ISO3166 codes.
+    Update external codelists (currency, language, media type).
     """
-    ctx.invoke(update_country, path=country_path)
     ctx.invoke(update_currency)
     ctx.invoke(update_language)
     ctx.invoke(update_media_type)
