@@ -51,7 +51,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1210](https://github.com/open-contracting/standard/pull/1210) Add codes from the legal basis extension:
     * 'CELEX'
     * 'LEXML'
-  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classifiation extension:
+  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
     * 'COFOG'
 
 * `documentType.csv`:
