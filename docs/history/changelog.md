@@ -125,7 +125,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
   * [#1296](https://github.com/open-contracting/standard/pull/1296) `tender.eligibilityCriteria` in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics. 
-  * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.countryName` in favor of the new `Address.country` field, because OCDS isn't the place to annotate a country with additional information like its human-readable name.
+  * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.countryName` in favor of the new `Address.country` field, to promote standardized country codes instead of non-standardized country names.
 
 * Update and clarify field descriptions:
   * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
