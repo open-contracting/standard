@@ -28,22 +28,7 @@
     "publisher": {
       "title": "Publisher",
       "description": "The original publisher of this release.",
-      "type": "object",
-      "properties": {
-        "name": {
-          "title": "Name",
-          "description": "The name of the organization or department responsible for publishing this OCDS release.",
-          "type": "string"
-        },
-        "identifier": {
-          "title": "Identifier",
-          "description": "The identifier for this organization.",
-          "$ref": "#/definitions/Identifier"
-        }
-      },
-      "required": [
-        "name"
-      ]
+      "$ref": "#/definitions/Identifier"
     },
     "tag": {
       "title": "Release Tag",

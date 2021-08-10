@@ -6,39 +6,7 @@
   "type": "object",
   "properties": {
     "publisher": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "identifier": {
-          "$ref": "#/definitions/Identifier"
-        }
-      },
-      "required": [
-        "name"
-      ]
+      "$ref": "#/definitions/Identifier"
     },
     "initiationType": {
       "type": "array",
