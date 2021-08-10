@@ -1730,18 +1730,6 @@
           ],
           "description": "The postal code. For example, 94043."
         },
-        "countryName": {
-          "title": "Country name",
-          "type": [
-            "string",
-            "null"
-          ],
-          "description": "The country name. For example, United States.",
-          "deprecated": {
-            "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
-            "deprecatedVersion": "1.2"
-          }
-        },
         "country": {
           "title": "Country code",
           "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
@@ -2004,6 +1992,18 @@
             "ZW",
             null
           ]
+        },
+        "countryName": {
+          "title": "Country name",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The country name. For example, United States.",
+          "deprecated": {
+            "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+            "deprecatedVersion": "1.2"
+          }
         }
       },
       "patternProperties": {

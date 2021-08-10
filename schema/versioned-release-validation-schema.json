@@ -1850,37 +1850,6 @@
         "postalCode": {
           "$ref": "#/definitions/StringNullVersioned"
         },
-        "countryName": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "deprecated": {
-                  "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                  "deprecatedVersion": "1.2"
-                }
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
         "country": {
           "type": "array",
           "items": {
@@ -2153,6 +2122,37 @@
                   "ZW",
                   null
                 ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "countryName": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "deprecated": {
+                  "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",

@@ -211,21 +211,9 @@
                 ],
                 "description": "The postal code. For example, 94043."
               },
-              "countryName": {
-                "title": "Country name",
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "description": "The country name. For example, United States.",
-                "deprecated": {
-                  "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                  "deprecatedVersion": "1.2"
-                }
-              },
               "country": {
                 "title": "Country code",
-                "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                 "type": [
                   "string",
                   "null"
@@ -485,6 +473,18 @@
                   "ZW",
                   null
                 ]
+              },
+              "countryName": {
+                "title": "Country name",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "The country name. For example, United States.",
+                "deprecated": {
+                  "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                  "deprecatedVersion": "1.2"
+                }
               }
             },
             "patternProperties": {
@@ -690,21 +690,9 @@
               ],
               "description": "The postal code. For example, 94043."
             },
-            "countryName": {
-              "title": "Country name",
-              "type": [
-                "string",
-                "null"
-              ],
-              "description": "The country name. For example, United States.",
-              "deprecated": {
-                "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                "deprecatedVersion": "1.2"
-              }
-            },
             "country": {
               "title": "Country code",
-              "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
               "type": [
                 "string",
                 "null"
@@ -964,6 +952,18 @@
                 "ZW",
                 null
               ]
+            },
+            "countryName": {
+              "title": "Country name",
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "The country name. For example, United States.",
+              "deprecated": {
+                "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                "deprecatedVersion": "1.2"
+              }
             }
           },
           "patternProperties": {
@@ -2049,21 +2049,9 @@
                   ],
                   "description": "The postal code. For example, 94043."
                 },
-                "countryName": {
-                  "title": "Country name",
-                  "type": [
-                    "string",
-                    "null"
-                  ],
-                  "description": "The country name. For example, United States.",
-                  "deprecated": {
-                    "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                    "deprecatedVersion": "1.2"
-                  }
-                },
                 "country": {
                   "title": "Country code",
-                  "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                   "type": [
                     "string",
                     "null"
@@ -2323,6 +2311,18 @@
                     "ZW",
                     null
                   ]
+                },
+                "countryName": {
+                  "title": "Country name",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The country name. For example, United States.",
+                  "deprecated": {
+                    "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                    "deprecatedVersion": "1.2"
+                  }
                 }
               },
               "patternProperties": {
@@ -4458,21 +4458,9 @@
                     ],
                     "description": "The postal code. For example, 94043."
                   },
-                  "countryName": {
-                    "title": "Country name",
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "description": "The country name. For example, United States.",
-                    "deprecated": {
-                      "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                      "deprecatedVersion": "1.2"
-                    }
-                  },
                   "country": {
                     "title": "Country code",
-                    "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                     "type": [
                       "string",
                       "null"
@@ -4732,6 +4720,18 @@
                       "ZW",
                       null
                     ]
+                  },
+                  "countryName": {
+                    "title": "Country name",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "The country name. For example, United States.",
+                    "deprecated": {
+                      "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                      "deprecatedVersion": "1.2"
+                    }
                   }
                 },
                 "patternProperties": {
@@ -6620,21 +6620,9 @@
                       ],
                       "description": "The postal code. For example, 94043."
                     },
-                    "countryName": {
-                      "title": "Country name",
-                      "type": [
-                        "string",
-                        "null"
-                      ],
-                      "description": "The country name. For example, United States.",
-                      "deprecated": {
-                        "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                        "deprecatedVersion": "1.2"
-                      }
-                    },
                     "country": {
                       "title": "Country code",
-                      "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                      "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                       "type": [
                         "string",
                         "null"
@@ -6894,6 +6882,18 @@
                         "ZW",
                         null
                       ]
+                    },
+                    "countryName": {
+                      "title": "Country name",
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "The country name. For example, United States.",
+                      "deprecated": {
+                        "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                        "deprecatedVersion": "1.2"
+                      }
                     }
                   },
                   "patternProperties": {
@@ -10259,21 +10259,9 @@
                               ],
                               "description": "The postal code. For example, 94043."
                             },
-                            "countryName": {
-                              "title": "Country name",
-                              "type": [
-                                "string",
-                                "null"
-                              ],
-                              "description": "The country name. For example, United States.",
-                              "deprecated": {
-                                "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                                "deprecatedVersion": "1.2"
-                              }
-                            },
                             "country": {
                               "title": "Country code",
-                              "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                               "type": [
                                 "string",
                                 "null"
@@ -10533,6 +10521,18 @@
                                 "ZW",
                                 null
                               ]
+                            },
+                            "countryName": {
+                              "title": "Country name",
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The country name. For example, United States.",
+                              "deprecated": {
+                                "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                                "deprecatedVersion": "1.2"
+                              }
                             }
                           },
                           "patternProperties": {
@@ -10770,21 +10770,9 @@
                               ],
                               "description": "The postal code. For example, 94043."
                             },
-                            "countryName": {
-                              "title": "Country name",
-                              "type": [
-                                "string",
-                                "null"
-                              ],
-                              "description": "The country name. For example, United States.",
-                              "deprecated": {
-                                "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                                "deprecatedVersion": "1.2"
-                              }
-                            },
                             "country": {
                               "title": "Country code",
-                              "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                               "type": [
                                 "string",
                                 "null"
@@ -11044,6 +11032,18 @@
                                 "ZW",
                                 null
                               ]
+                            },
+                            "countryName": {
+                              "title": "Country name",
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "The country name. For example, United States.",
+                              "deprecated": {
+                                "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                                "deprecatedVersion": "1.2"
+                              }
                             }
                           },
                           "patternProperties": {
@@ -13540,21 +13540,9 @@
                   ],
                   "description": "The postal code. For example, 94043."
                 },
-                "countryName": {
-                  "title": "Country name",
-                  "type": [
-                    "string",
-                    "null"
-                  ],
-                  "description": "The country name. For example, United States.",
-                  "deprecated": {
-                    "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                    "deprecatedVersion": "1.2"
-                  }
-                },
                 "country": {
                   "title": "Country code",
-                  "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                   "type": [
                     "string",
                     "null"
@@ -13814,6 +13802,18 @@
                     "ZW",
                     null
                   ]
+                },
+                "countryName": {
+                  "title": "Country name",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The country name. For example, United States.",
+                  "deprecated": {
+                    "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                    "deprecatedVersion": "1.2"
+                  }
                 }
               },
               "patternProperties": {
@@ -15949,21 +15949,9 @@
                     ],
                     "description": "The postal code. For example, 94043."
                   },
-                  "countryName": {
-                    "title": "Country name",
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "description": "The country name. For example, United States.",
-                    "deprecated": {
-                      "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                      "deprecatedVersion": "1.2"
-                    }
-                  },
                   "country": {
                     "title": "Country code",
-                    "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                     "type": [
                       "string",
                       "null"
@@ -16223,6 +16211,18 @@
                       "ZW",
                       null
                     ]
+                  },
+                  "countryName": {
+                    "title": "Country name",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "The country name. For example, United States.",
+                    "deprecated": {
+                      "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                      "deprecatedVersion": "1.2"
+                    }
                   }
                 },
                 "patternProperties": {
@@ -18107,21 +18107,9 @@
                     ],
                     "description": "The postal code. For example, 94043."
                   },
-                  "countryName": {
-                    "title": "Country name",
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "description": "The country name. For example, United States.",
-                    "deprecated": {
-                      "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                      "deprecatedVersion": "1.2"
-                    }
-                  },
                   "country": {
                     "title": "Country code",
-                    "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                     "type": [
                       "string",
                       "null"
@@ -18381,6 +18369,18 @@
                       "ZW",
                       null
                     ]
+                  },
+                  "countryName": {
+                    "title": "Country name",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "The country name. For example, United States.",
+                    "deprecated": {
+                      "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                      "deprecatedVersion": "1.2"
+                    }
                   }
                 },
                 "patternProperties": {
@@ -21740,21 +21740,9 @@
                             ],
                             "description": "The postal code. For example, 94043."
                           },
-                          "countryName": {
-                            "title": "Country name",
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "description": "The country name. For example, United States.",
-                            "deprecated": {
-                              "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                              "deprecatedVersion": "1.2"
-                            }
-                          },
                           "country": {
                             "title": "Country code",
-                            "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                            "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                             "type": [
                               "string",
                               "null"
@@ -22014,6 +22002,18 @@
                               "ZW",
                               null
                             ]
+                          },
+                          "countryName": {
+                            "title": "Country name",
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "description": "The country name. For example, United States.",
+                            "deprecated": {
+                              "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                              "deprecatedVersion": "1.2"
+                            }
                           }
                         },
                         "patternProperties": {
@@ -22251,21 +22251,9 @@
                             ],
                             "description": "The postal code. For example, 94043."
                           },
-                          "countryName": {
-                            "title": "Country name",
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "description": "The country name. For example, United States.",
-                            "deprecated": {
-                              "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                              "deprecatedVersion": "1.2"
-                            }
-                          },
                           "country": {
                             "title": "Country code",
-                            "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                            "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                             "type": [
                               "string",
                               "null"
@@ -22525,6 +22513,18 @@
                               "ZW",
                               null
                             ]
+                          },
+                          "countryName": {
+                            "title": "Country name",
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "description": "The country name. For example, United States.",
+                            "deprecated": {
+                              "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                              "deprecatedVersion": "1.2"
+                            }
                           }
                         },
                         "patternProperties": {
@@ -24433,21 +24433,9 @@
                         ],
                         "description": "The postal code. For example, 94043."
                       },
-                      "countryName": {
-                        "title": "Country name",
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "description": "The country name. For example, United States.",
-                        "deprecated": {
-                          "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                          "deprecatedVersion": "1.2"
-                        }
-                      },
                       "country": {
                         "title": "Country code",
-                        "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                        "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                         "type": [
                           "string",
                           "null"
@@ -24707,6 +24695,18 @@
                           "ZW",
                           null
                         ]
+                      },
+                      "countryName": {
+                        "title": "Country name",
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "description": "The country name. For example, United States.",
+                        "deprecated": {
+                          "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                          "deprecatedVersion": "1.2"
+                        }
                       }
                     },
                     "patternProperties": {
@@ -24944,21 +24944,9 @@
                         ],
                         "description": "The postal code. For example, 94043."
                       },
-                      "countryName": {
-                        "title": "Country name",
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "description": "The country name. For example, United States.",
-                        "deprecated": {
-                          "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                          "deprecatedVersion": "1.2"
-                        }
-                      },
                       "country": {
                         "title": "Country code",
-                        "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                        "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                         "type": [
                           "string",
                           "null"
@@ -25218,6 +25206,18 @@
                           "ZW",
                           null
                         ]
+                      },
+                      "countryName": {
+                        "title": "Country name",
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "description": "The country name. For example, United States.",
+                        "deprecated": {
+                          "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                          "deprecatedVersion": "1.2"
+                        }
                       }
                     },
                     "patternProperties": {
@@ -27354,21 +27354,9 @@
                   ],
                   "description": "The postal code. For example, 94043."
                 },
-                "countryName": {
-                  "title": "Country name",
-                  "type": [
-                    "string",
-                    "null"
-                  ],
-                  "description": "The country name. For example, United States.",
-                  "deprecated": {
-                    "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                    "deprecatedVersion": "1.2"
-                  }
-                },
                 "country": {
                   "title": "Country code",
-                  "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                   "type": [
                     "string",
                     "null"
@@ -27628,6 +27616,18 @@
                     "ZW",
                     null
                   ]
+                },
+                "countryName": {
+                  "title": "Country name",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The country name. For example, United States.",
+                  "deprecated": {
+                    "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                    "deprecatedVersion": "1.2"
+                  }
                 }
               },
               "patternProperties": {
@@ -27865,21 +27865,9 @@
                   ],
                   "description": "The postal code. For example, 94043."
                 },
-                "countryName": {
-                  "title": "Country name",
-                  "type": [
-                    "string",
-                    "null"
-                  ],
-                  "description": "The country name. For example, United States.",
-                  "deprecated": {
-                    "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                    "deprecatedVersion": "1.2"
-                  }
-                },
                 "country": {
                   "title": "Country code",
-                  "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                   "type": [
                     "string",
                     "null"
@@ -28139,6 +28127,18 @@
                     "ZW",
                     null
                   ]
+                },
+                "countryName": {
+                  "title": "Country name",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The country name. For example, United States.",
+                  "deprecated": {
+                    "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                    "deprecatedVersion": "1.2"
+                  }
                 }
               },
               "patternProperties": {
@@ -28815,21 +28815,9 @@
               ],
               "description": "The postal code. For example, 94043."
             },
-            "countryName": {
-              "title": "Country name",
-              "type": [
-                "string",
-                "null"
-              ],
-              "description": "The country name. For example, United States.",
-              "deprecated": {
-                "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                "deprecatedVersion": "1.2"
-              }
-            },
             "country": {
               "title": "Country code",
-              "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
               "type": [
                 "string",
                 "null"
@@ -29089,6 +29077,18 @@
                 "ZW",
                 null
               ]
+            },
+            "countryName": {
+              "title": "Country name",
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "The country name. For example, United States.",
+              "deprecated": {
+                "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                "deprecatedVersion": "1.2"
+              }
             }
           },
           "patternProperties": {
@@ -29381,21 +29381,9 @@
               ],
               "description": "The postal code. For example, 94043."
             },
-            "countryName": {
-              "title": "Country name",
-              "type": [
-                "string",
-                "null"
-              ],
-              "description": "The country name. For example, United States.",
-              "deprecated": {
-                "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-                "deprecatedVersion": "1.2"
-              }
-            },
             "country": {
               "title": "Country code",
-              "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
               "type": [
                 "string",
                 "null"
@@ -29655,6 +29643,18 @@
                 "ZW",
                 null
               ]
+            },
+            "countryName": {
+              "title": "Country name",
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "The country name. For example, United States.",
+              "deprecated": {
+                "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                "deprecatedVersion": "1.2"
+              }
             }
           },
           "patternProperties": {
@@ -30557,21 +30557,9 @@
           ],
           "description": "The postal code. For example, 94043."
         },
-        "countryName": {
-          "title": "Country name",
-          "type": [
-            "string",
-            "null"
-          ],
-          "description": "The country name. For example, United States.",
-          "deprecated": {
-            "description": "This field is deprecated, because OCDS isn't the place to annotate a country with additional information like its human-readable name. ISO3166-1 alpha-2 country codes can be provided in `.country`.",
-            "deprecatedVersion": "1.2"
-          }
-        },
         "country": {
           "title": "Country code",
-          "description": "The country where the address is located, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If you need to use a user-assigned code from ISO 3166-1 alpha-2, [create an issue](https://github.com/open-contracting/standard/issues) to discuss its addition to the country codelist.",
+          "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
           "type": [
             "string",
             "null"
@@ -30831,6 +30819,18 @@
             "ZW",
             null
           ]
+        },
+        "countryName": {
+          "title": "Country name",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The country name. For example, United States.",
+          "deprecated": {
+            "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+            "deprecatedVersion": "1.2"
+          }
         }
       },
       "patternProperties": {
