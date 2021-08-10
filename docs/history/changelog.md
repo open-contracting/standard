@@ -51,7 +51,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1210](https://github.com/open-contracting/standard/pull/1210) Add codes from the legal basis extension:
     * 'CELEX'
     * 'LEXML'
-  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classifiation extension:
+  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
     * 'COFOG'
 
 * `documentType.csv`:
@@ -100,6 +100,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
 * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid" in the `method` codelist.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
+* [#1381](https://github.com/open-contracting/standard/pull/1381) Update the QUDT URL from the `unitClassificationScheme` codelist to point to the main QUDT page.
 
 ### Schema
 
