@@ -27,7 +27,7 @@
     },
     "publisher": {
       "title": "Publisher",
-      "description": "The original publisher of this release. Use this field to identify the original publisher of a release published as part of a package containing releases from different publishers.",
+      "description": "The original publisher of this release.",
       "type": "object",
       "properties": {
         "name": {
@@ -35,30 +35,10 @@
           "description": "The name of the organization or department responsible for publishing this OCDS release.",
           "type": "string"
         },
-        "scheme": {
-          "title": "Scheme",
-          "description": "The scheme that holds the unique identifiers used to identify the publisher being identified.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "uid": {
-          "title": "uid",
-          "description": "The unique ID for this publisher under the given ID scheme.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "uri": {
-          "title": "URI",
-          "description": "A URI to identify the publisher.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "uri"
+        "identifier": {
+          "title": "Identifier",
+          "description": "The identifier for this organization.",
+          "$ref": "#/definitions/Identifier"
         }
       },
       "required": [

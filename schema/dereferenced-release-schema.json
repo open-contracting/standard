@@ -27,7 +27,7 @@
     },
     "publisher": {
       "title": "Publisher",
-      "description": "The original publisher of this release. Use this field to identify the original publisher of a release published as part of a package containing releases from different publishers.",
+      "description": "The original publisher of this release.",
       "type": "object",
       "properties": {
         "name": {
@@ -35,30 +35,54 @@
           "description": "The name of the organization or department responsible for publishing this OCDS release.",
           "type": "string"
         },
-        "scheme": {
-          "title": "Scheme",
-          "description": "The scheme that holds the unique identifiers used to identify the publisher being identified.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "uid": {
-          "title": "uid",
-          "description": "The unique ID for this publisher under the given ID scheme.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "uri": {
-          "title": "URI",
-          "description": "A URI to identify the publisher.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "uri"
+        "identifier": {
+          "title": "Identifier",
+          "description": "A unique identifier for a party (organization).",
+          "type": "object",
+          "properties": {
+            "scheme": {
+              "title": "Scheme",
+              "description": "Organization identifiers should be taken from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is taken. This value should be taken from the [Organization Identifier Scheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#organization-identifier-scheme) codelist.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "title": "ID",
+              "description": "The identifier of the organization in the selected scheme. Although an integer is allowed, it is recommended to use a string.",
+              "type": [
+                "string",
+                "integer",
+                "null"
+              ]
+            },
+            "legalName": {
+              "title": "Legal Name",
+              "description": "The legally registered name of the organization.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "uri": {
+              "title": "URI",
+              "description": "A URI to identify the organization, such as those provided by [Open Corporates](https://opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "uri"
+            }
+          },
+          "patternProperties": {
+            "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
         }
       },
       "required": [
