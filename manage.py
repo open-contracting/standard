@@ -448,7 +448,9 @@ def cli():
 @click.argument('filename')
 def unused_terms(filename):
     """
-    Print terms from the provided filename that do not occur in the documentation.
+    Print terms in FILENAME that don't occur in the documentation.
+
+    Can be used to remove unused terms from a glossary.
     """
     paths = []
     for extension in ('csv', 'json', 'md'):
@@ -470,7 +472,12 @@ def unused_terms(filename):
 @cli.command()
 def pre_commit():
     """
-    Update meta-schema.json, dereferenced-release-schema.json and versioned-release-validation-schema.json.
+    Update derivative schema files.
+
+    \b
+    - meta-schema.json
+    - dereferenced-release-schema.json
+    - versioned-release-validation-schema.json
     """
     release_schema = json_load('release-schema.json')
     jsonref_release_schema = json_load('release-schema.json', jsonref)
@@ -481,9 +488,48 @@ def pre_commit():
 
 
 @cli.command()
+@click.argument('file', type=click.File())
+def update_country(file):
+    """
+    Update country.csv from ISO 3166-1 using FILE.
+
+    To retrieve the file:
+
+    \b
+    1. Open https://www.iso.org/obp/ui/#search/code/
+    2. Open the "Network" tab of the "Web Inspector" utility (Option-Cmd-I in Safari)
+    3. Set "Results per page:" to 300
+    4. Click the last "UIDL" entry in the "Network" tab
+    5. Copy its contents, excluding the for-loop, into a file
+    """
+    # https://www.iso.org/iso-3166-country-codes.html
+    # https://www.iso.org/obp/ui/#search
+
+    codes = {
+        # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#User-assigned_code_elements
+        'XK': 'Kosovo',
+    }
+
+    rpc = json.load(file)[0]['rpc'][0]
+    offset = int(rpc[0])
+    for entry in rpc[3][1]:
+        d = entry['d']
+        # Clean "Western Sahara*", "United Arab Emirates (the)", etc.
+        codes[d[str(offset + 9)]] = re.sub(r' \(the\)|\*', '', d[str(offset + 13)])
+        # The country code appears at offsets 9 and 15. Check that they are always the same.
+        assert d[str(offset + 9)] == d[str(offset + 15)]
+
+    with open(schemadir / 'codelists' / 'country.csv', 'w') as f:
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(['Code', 'Title'])
+        for code in sorted(codes):
+            writer.writerow([code, codes[code]])
+
+
+@cli.command()
 def update_currency():
     """
-    Update schema/codelists/currency.csv from ISO 4217.
+    Update currency.csv from ISO 4217.
     """
     # https://www.iso.org/iso-4217-currency-codes.html
     # https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes
@@ -522,13 +568,13 @@ def update_currency():
                 historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
 
     with csv_dump('currency.csv', ['Code', 'Title', 'Valid Until']) as writer:
-        for code in sorted(current_codes.keys()):
+        for code in sorted(current_codes):
             writer.writerow([code, current_codes[code], None])
-        for code in sorted(historic_codes.keys()):
+        for code in sorted(historic_codes):
             writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
     release_schema = json_load('release-schema.json')
-    codes = sorted(list(current_codes.keys()) + list(historic_codes.keys()))
+    codes = sorted(list(current_codes) + list(historic_codes))
     release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
 
     json_dump('release-schema.json', release_schema)
@@ -537,7 +583,7 @@ def update_currency():
 @cli.command()
 def update_language():
     """
-    Update schema/codelists/language.csv from ISO 639-1.
+    Update language.csv from ISO 639-1.
     """
     # https://www.iso.org/iso-639-language-codes.html
     # https://id.loc.gov/vocabulary/iso639-1.html
@@ -556,7 +602,7 @@ def update_language():
 @cli.command()
 def update_media_type():
     """
-    Update schema/codelists/mediaType.csv from IANA.
+    Update mediaType.csv from IANA.
 
     Ignores deprecated and obsolete media types.
     """
@@ -602,7 +648,7 @@ def update_media_type():
 @click.pass_context
 def update(ctx):
     """
-    Update external codelists (currency, language, media type).
+    Update codelists except country.csv.
     """
     ctx.invoke(update_currency)
     ctx.invoke(update_language)
