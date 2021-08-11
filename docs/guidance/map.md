@@ -24,8 +24,8 @@ As you make progress through this phase, we encourage you to update your [public
 
 As described in the [Field-Level Mapping Template Guidance](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-guidance/) (introduced below), you will need at least:
 
-* A technical expert who is familiar with the **IT systems** that capture and store contracting data and related documents, to identify the data elements within those systems.
-* A policy expert who is familiar with **procurement legislation** and procurement processes, to help identify which data elements match which OCDS fields, at a *semantic* level.
+* A data expert who is familiar with the **IT systems** that capture and store contracting data and related documents, to identify the data elements within those systems.
+* A procurement expert who is familiar with **procurement legislation** and procedures, to identify which data elements match which OCDS fields, at a *semantic* level.
 * A technical expert who understands the **data structures** in OCDS, to help identify which data elements match which OCDS fields, at a *technical* level.
 
 ## Identify your data sources

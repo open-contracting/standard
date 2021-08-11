@@ -88,9 +88,9 @@ Implementing OCDS is easier when your team combines both policy and technology e
 To achieve success, an OCDS implementation team ought to include the following roles, though one individual might play several roles:
 
 * A **project manager** who will oversee the project timeline and deliverables.
-* A **data expert** who will identify where data put forward for publication in OCDS exists at a technical level. They need to be familiar with the IT systems that capture and store contracting data and related documents.
-* A **procurement expert** who will identify where data put forward for publication in OCDS exists at a semantic level. They need to be familiar with procurement legislation and procedures.
-* A **policy champion** who can help navigate the policy decisions of publishing and using OCDS data
+* A **data expert** who will identify where data put forward for publication in OCDS exists at a *technical* level. They need to be familiar with the IT systems that capture and store contracting data and related documents.
+* A **procurement expert** who will identify which procurement information matches which OCDS fields, at a *semantic* level. They need to be familiar with procurement legislation and procedures.
+* A **policy champion** who can help navigate the policy decisions of publishing and using OCDS data.
 * A **system architect** who will define the architecture for publishing OCDS data. They can be an internal team member or an external consultant.
 * A **software developer**, or developers, who will write the code for publishing OCDS data. They can be an internal team member or an external consultant. If you're updating an existing system, ideally the developer should be familiar with that system, or at least the relevant technologies, frameworks, and programming languages.
 * A **user champion** who will represent the needs of data users throughout the project. They can be an internal team member, an outside partner, or a representative of external stakeholders.
