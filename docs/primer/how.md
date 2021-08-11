@@ -79,8 +79,6 @@ Completion or Termination info
 
 The OCDS brings together the data published at each stage using a single open contracting process identifier: the **OCID.** An OCID is composed of a prefix [registered by the publisher with OCP](../guidance/build.md#register-an-ocid-prefix), and a unique process identifier chosen by the publisher.
 
-![ocid](../_static/png/ocid_en.png)
-
 The OCID helps users to join up data across the whole contracting process – a key feature and benefit of publishing and using OCDS data.
 
 In designing the OCDS, we explored a range of different user needs and use cases for data about public contracting. Each use case has different data needs in terms of data fields, documents, publication frequency, and data quality. The OCDS provides a common framework to maximize the number of user needs that can be met through data and document disclosure.
