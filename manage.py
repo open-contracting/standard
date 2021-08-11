@@ -7,6 +7,7 @@ import os
 import re
 import sys
 import warnings
+from collections import OrderedDict
 from contextlib import contextmanager
 from copy import deepcopy
 from glob import glob
@@ -116,12 +117,12 @@ keywords_to_remove = (
 )
 
 
-def json_load(filename, library=json):
+def json_load(filename, library=json, **kwargs):
     """
     Loads JSON data from the given filename.
     """
     with (schemadir / filename).open() as f:
-        return library.load(f)
+        return library.load(f, **kwargs)
 
 
 def json_dump(filename, data):
@@ -174,12 +175,73 @@ def coerce_to_list(data, key):
     return item
 
 
+def traverse(block):
+    def method(schema, pointer=(), **kwargs):
+        if isinstance(schema, list):
+            for index, item in enumerate(schema):
+                method(item, pointer=pointer + (index,), **kwargs)
+        elif isinstance(schema, dict):
+            block(schema, pointer=pointer, **kwargs)
+
+            for key, value in schema.items():
+                method(value, pointer=pointer + (key,), **kwargs)
+
+    return method
+
+
 def get_metaschema():
     """
     Patches and returns the JSON Schema Draft 4 metaschema.
     """
     return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4.json'),
                                   json_load('metaschema/meta-schema-patch.json'))
+
+
+def sort_keywords(schema):
+    """
+    Returns the schema with its keywords in a consistent order.
+    """
+    schema = deepcopy(schema)
+
+    # https://datatracker.ietf.org/doc/html/draft-fge-json-schema-validation-00
+    keywords = (
+        # Initial keywords that only appear at the top level.
+        'id', '$schema',
+        # Metadata and deprecation keywords, so that the user first learns about the semantics and deprecation.
+        # Note: The `deprecated` object itself has a `description` field. `$ref` only co-occurs with these keywords.
+        'title', 'deprecatedVersion', 'description', 'deprecated', '$ref',
+        # Validation keywords for any instance type.
+        'type',
+        # Validation keywords for strings.
+        'format', 'minLength',
+        # Validation keywords for arrays. Simple keywords are before "items"; otherwise, they're easy to miss.
+        'minItems', 'uniqueItems', 'items',
+        # Validation keywords for objects. "required" is before "properties"; otherwise, it's easy to miss.
+        'required', 'properties', 'patternProperties',
+        # Codelist keywords. Simple keywords are before "enum"; otherwise, they're easy to miss.
+        'codelist', 'openCodelist', 'enum',
+        # Merge strategy keywords.
+        'omitWhenMerged', 'wholeListMerge',
+        # Final keywords that only appear at the top level.
+        'definitions',
+    )
+
+    def block(schema, pointer=(), **kwargs):
+        if pointer and pointer[-1] not in ('definitions', 'properties', 'patternProperties'):
+            for keyword in keywords:
+                if keyword in schema:
+                    schema.move_to_end(keyword)
+            for keyword in schema:
+                if keyword not in keywords:
+                    raise Exception(f'unexpected keyword: {keyword}')
+            if '$ref' in schema:
+                difference = set(schema) - {'title', 'description', 'deprecated', '$ref'}
+                if difference:
+                    raise Exception(f"unexpected keywords in $ref schema: {', '.join(difference)}")
+
+    traverse(block)(schema)
+
+    return schema
 
 
 def get_common_definition_ref(item):
@@ -291,14 +353,11 @@ def update_refs_to_unversioned_definitions(schema):
             update_refs_to_unversioned_definitions(value)
 
 
-def get_unversioned_pointers(schema, fields, pointer=''):
+def get_unversioned_pointers(schema, fields):
     """
     Returns the JSON Pointers to ``id`` fields that must not be versioned if the object is in an array.
     """
-    if isinstance(schema, list):
-        for index, item in enumerate(schema):
-            get_unversioned_pointers(item, fields, pointer=f'{pointer}/{index}')
-    elif isinstance(schema, dict):
+    def block(schema, pointer='', fields=()):
         # Follows the logic of _get_merge_rules in merge.py from ocds-merge.
         types = coerce_to_list(schema, 'type')
 
@@ -315,21 +374,17 @@ def get_unversioned_pointers(schema, fields, pointer=''):
                 if hasattr(schema['items'], '__reference__'):
                     reference = schema['items'].__reference__['$ref'][1:]
                 else:
-                    reference = pointer
+                    reference = '/'.join(pointer)
                 fields.add(f'{reference}/properties/id')
 
-        for key, value in schema.items():
-            get_unversioned_pointers(value, fields, pointer=f'{pointer}/{key}')
+    traverse(block)(schema, fields=fields)
 
 
 def remove_omit_when_merged(schema):
     """
     Removes properties that set ``omitWhenMerged``.
     """
-    if isinstance(schema, list):
-        for item in schema:
-            remove_omit_when_merged(item)
-    elif isinstance(schema, dict):
+    def block(schema, **kwargs):
         for key, value in schema.items():
             if key == 'properties':
                 for prop in list(value):
@@ -337,31 +392,30 @@ def remove_omit_when_merged(schema):
                         del value[prop]
                         if prop in schema['required']:
                             schema['required'].remove(prop)
-            remove_omit_when_merged(value)
+
+    traverse(block)(schema)
 
 
 def remove_metadata_and_extended_keywords(schema):
     """
     Removes metadata and extended keywords from properties and definitions.
     """
-    if isinstance(schema, list):
-        for item in schema:
-            remove_metadata_and_extended_keywords(item)
-    elif isinstance(schema, dict):
+    def block(schema, **kwargs):
         for key, value in schema.items():
             if key in ('definitions', 'properties'):
                 for subschema in value.values():
                     for keyword in keywords_to_remove:
                         subschema.pop(keyword, None)
-            remove_metadata_and_extended_keywords(value)
+
+    traverse(block)(schema)
 
 
 def get_dereferenced_release_schema(schema, output=None):
     """
     Returns the dereferenced release schema.
     """
-    # Without a deepcopy, changes to referenced objects are copied across referring objects. However, the deepcopy does
-    # not retain the `__reference__` property.
+    # Without a deepcopy, all referring objects will share the same referenced objects. However, the deepcopy does not
+    # retain the `__reference__` property. So, we need to pass both when recursing.
     if not output:
         output = deepcopy(schema)
 
@@ -479,11 +533,12 @@ def pre_commit():
     - dereferenced-release-schema.json
     - versioned-release-validation-schema.json
     """
-    release_schema = json_load('release-schema.json')
-    jsonref_release_schema = json_load('release-schema.json', jsonref)
+    release_schema = json_load('release-schema.json', object_pairs_hook=OrderedDict)
+    jsonref_schema = json_load('release-schema.json', jsonref, object_pairs_hook=OrderedDict)
 
     json_dump('meta-schema.json', get_metaschema())
-    json_dump('dereferenced-release-schema.json', get_dereferenced_release_schema(jsonref_release_schema))
+    json_dump('release-schema.json', sort_keywords(release_schema))
+    json_dump('dereferenced-release-schema.json', sort_keywords(get_dereferenced_release_schema(jsonref_schema)))
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
 
 
