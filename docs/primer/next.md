@@ -5,8 +5,8 @@
 
 To implement the Open Contracting Data Standard (OCDS) you should follow the steps in the implementation guidance and rules in the reference section. This page will:
 
-* Outline next steps you can follow to start implementing OCDS documentation
-* Direct you to resources for getting help on implementing OCDS
+* Outline next steps you can follow to start implementing the OCDS
+* Direct you to resources for getting help on implementing the OCDS
 ```
 
 Beyond the Primer, you can use the following resources contained in the OCDS documentation to help you implement the OCDS. The remainder of the documentation covers:
@@ -14,9 +14,9 @@ Beyond the Primer, you can use the following resources contained in the OCDS doc
 * [Guidance](../guidance/index): Step-by-step instructions on how to design and implement an OCDS publication, including helpful tools and examples
 * [Reference](../schema/index): Describing the specific rules that need to be followed to publish OCDS data
 * [Getting help](../support/index): Outlining how you can get Helpdesk support and how you can participate in the OCDS community
-* [Governance](../governance/index): Details about the stewardships, development, and revisions process for OCDS
+* [Governance](../governance/index): Details about the stewardships, development, and revisions process for the OCDS
 * [History](../history/index): Information about the changes in each version of the OCDS
-* [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly.
+* [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly
 
 **Have a question? Ask us!**
 

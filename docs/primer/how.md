@@ -99,7 +99,7 @@ When mapping your data to the OCDS our sing OCDS data, you will encounter a numb
 
 Some schema fields refer to [codelists](../schema/codelists), to limit and standardize the possible values of the fields, in order to promote data interoperability.
 
-When you publish OCDS data, the default format of the data is JSON. In addition to JSON format, OCDS can be published as Excel and CSV (comma-separated values) files.
+When you publish OCDS data, the default format of the data is JSON. In addition to JSON format, OCDS data can be published as Excel and CSV (comma-separated values) files.
 
 ```{admonition} Publication formats: JSON and Excel/CSV
 :class: hint

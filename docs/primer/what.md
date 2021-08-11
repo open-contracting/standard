@@ -1,4 +1,4 @@
-# What is OCDS and why use it?
+# What is the OCDS and why use it?
 
 ```{admonition} Objectives
 :class: note
