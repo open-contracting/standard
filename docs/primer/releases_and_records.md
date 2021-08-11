@@ -41,7 +41,7 @@ When you publish OCDS releases and records, you are encouraged to:
 * Publish versions of the data for users to access in CSV for Excel formats
 
 ```{note}
-**To learn more,** go to the next page in the primer: [How can I implement the OCDS?](next) You can also review the further resources below to go deeper into the subjects introduced on this page.
+**To learn more,** go to the next page in the Primer: [How can I implement the OCDS?](next) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
 * [OCP Learning: Publishing OCDS Data](https://www.open-contracting.org/learn/publish/)
 * [Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)

@@ -3,7 +3,7 @@
 ```{admonition} Objectives
 :class: note
 
-To implement the Open Contracting Data Standard (OCDS) you should follow the steps in the implementation guidance and rules in the reference section. This page will:
+To implement the Open Contracting Data Standard (OCDS) you should follow the steps in the implementation guidance and the rules in the reference section. This page will:
 
 * Outline next steps you can follow to start implementing the OCDS
 * Direct you to resources for getting help on implementing the OCDS
