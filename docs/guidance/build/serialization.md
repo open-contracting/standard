@@ -22,7 +22,7 @@ Most programming languages provide tools for output data as JSON.
 
 Most programming languages provide tools for reading JSON.
 
-A number of [JSON native databases](https://en.wikipedia.org/wiki/NoSQL) are available for working directly with large collections of JSON documents, and command line tools such as [jq](https://stedolan.github.io/jq/) support advanced query and data retrieval with JSON files.
+A number of [JSON native databases](https://en.wikipedia.org/wiki/NoSQL) are available for working directly with large collections of JSON texts, and command line tools such as [jq](https://stedolan.github.io/jq/) support advanced query and data retrieval with JSON files.
 
 There are also a range of generic tools which can convert JSON into flat CSV structures, including:
 
