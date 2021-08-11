@@ -11,10 +11,11 @@ import jsonref
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
-from manage import (get_dereferenced_release_schema, get_metaschema, get_versioned_release_schema,
-                    sort_keywords)  # noqa isort:skip
+from manage import (get_dereferenced_release_schema, get_metaschema, get_versioned_release_schema,  # noqa isort:skip
+                    sort_keywords)
 
 message = 'Run: python manage.py pre-commit'
+
 
 def test_release_schema_is_ordered():
     with open('schema/release-schema.json') as f:
