@@ -14,15 +14,16 @@ publish/quality
 
 ## Finalize your publication policy
 
-In OCDS, a publication policy is an essential data guide for users. Each OCDS publisher ought to have a publication policy that covers:
+In OCDS, a publication policy is an essential data guide for users. Each OCDS publisher ought to have a publication policy that describes:
 
 * What information is and is not covered within the scope of the publication
 * Any custom codelists used - or custom codes added to existing codelists
-* How timely or frequent is publication
+* How timely or frequent the publication is
 * Where the data comes from and how it is generated
-* The format(s) of the publication and where to access the data
+* The formats of the publication and where to access the data
+* Any differences in the contracting processes or fields covered by different formats or access methods
 * License information for data reuse
-* Contact information for the publisher
+* Contact information of the publisher
 
 The publication policy ought to be made available as a public web page, with links to the policy added to OCDS release packages and record packages and any OCDS web portal.
 
