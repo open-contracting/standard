@@ -65,7 +65,7 @@ If your contracting data is managed on paper or in unstructured electronic docum
 
 You can [contact the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on using the mapping templates.
 
-## Split up the work
+## Complete the mapping
 
 You can complete the mapping in parts. For example, you might choose to split your mapping by any of the following:
 
