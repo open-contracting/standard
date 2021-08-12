@@ -14,7 +14,7 @@ The Open Contracting Data Standards (OCDS) is designed to support publishing dat
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ibq0vEmDDzQ" title="Diving in to OCDS specifics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The OCDS defines a unique contracting process as all the actions aimed at concluding one or more contracts. An individual contracting process has several different stages: **tendering, awarding, contracting** and **implementation.** The OCDS describes a way to model and publish data in a standardized way along entire public contracting processes.
+The OCDS defines a unique contracting process as all the actions aimed at implementing one or more contracts. An individual contracting process has several different stages: **tendering, awarding, contracting** and **implementation.** The OCDS describes a way to model and publish data in a standardized way along entire public contracting processes.
 
 <div style="width:100%">
 
@@ -77,15 +77,15 @@ Completion or Termination info
 
 <br clear="all"/>
 
-The OCDS brings together the data published at each stage using a single open contracting process identifier: the **OCID.** An OCID is composed of a prefix [registered by the publisher with OCP](../guidance/build.md#register-an-ocid-prefix), and a unique process identifier chosen by the publisher.
+The OCDS brings together the data published at each stage using a single open contracting process identifier: the **OCID.** An OCID is composed of a prefix, [registered by the publisher with OCP](../guidance/build.md#register-an-ocid-prefix), and a unique process identifier chosen by the publisher.
 
 The OCID helps users to join up data across the whole contracting process – a key feature and benefit of publishing and using OCDS data.
 
-In designing the OCDS, we explored a range of different user needs and use cases for data about public contracting. Each use case has different data needs in terms of data fields, documents, publication frequency, and data quality. The OCDS provides a common framework to maximize the number of user needs that can be met through data and document disclosure.
+In designing the OCDS, we [explored](https://www.open-contracting.org/resources/demand-side-assessment-report/) a range of different user needs and use cases for data about public contracting. Each use case has different data needs in terms of data fields, documents, publication frequency, and data quality. The OCDS provides a common framework to maximize the number of user needs that can be met through data and document disclosure.
 
-The OCDS provides a common framework, in addition to the OCID, through the OCDS **schema.** The schema sets out the fields, structure, data types and validation rules for OCDS data. The schema is described using JSON Schema, and the default format of the data is JSON (JavaScript Object Notation). The schema is documented in the [Reference](../schema/index) section of the OCDS.
+In addition to the OCID, another component of OCDS' common framework is the OCDS **schema.** The schema sets out the fields, structure, data types and validation rules for OCDS data. The schema is described using JSON Schema, and the default format of the data is JSON (JavaScript Object Notation). The schema is documented in the [Reference](../schema/index) section of the OCDS.
 
-When mapping your data to the OCDS our sing OCDS data, you will encounter a number of common data fields and structures, which are described by the schema:
+When mapping your data to the OCDS or when using OCDS data, you will encounter a number of common data fields and structures, which are described by the schema:
 
 * **release metadata** - contextual information about each release of data;
 * **parties** - information about the organizations and participants in the contracting process;
@@ -97,12 +97,12 @@ When mapping your data to the OCDS our sing OCDS data, you will encounter a numb
 
 Some schema fields refer to [codelists](../schema/codelists), to limit and standardize the possible values of the fields, in order to promote data interoperability.
 
-When you publish OCDS data, the default format of the data is JSON. In addition to JSON format, OCDS data can be published as Excel and CSV (comma-separated values) files.
+In addition to the default format of JSON, you can convert and publish your OCDS data as Excel and CSV (comma-separated values) files.
 
 ```{admonition} Publication formats: JSON and Excel/CSV
 :class: hint
 
-While the OCDS schema is described using JSON Schema, OCDS data can be published in both JSON format and in tabular formats such as CSV files or spreadsheets. JSON is favored by developers because it uses human-readable text to exchange complex information, such as nested objects. It can contain large volumes of information and is particularly good at handling one-to-many relationships (such as multiple bids per tender notice).
+While the OCDS schema is described using JSON Schema, OCDS data can be converted from its JSON format to tabular formats such as CSV files or spreadsheets. JSON is favored by developers because it uses human-readable text to exchange complex information, such as nested objects. It can contain large volumes of information and is particularly good at handling one-to-many relationships (such as multiple bids per tender notice).
 
 Tabular formats, such as CSV (or comma separated values) are commonly used in spreadsheets applications and other analysis tools. Many people are comfortable working with spreadsheets using tools like Excel. While JSON is the default format, a good publication will publish tabular formats as well both so that more users’ needs can be satisfied.
 ```
@@ -115,7 +115,7 @@ No matter what type of contracting data you are working with or format you publi
 * Check the structure, format and quality of your data against the OCDS schema
 
 ```{note}
-**To learn more,** go to the next page in the primer: [How is OCDS data published?](releases_and_records) You can also review the further resources below to go deeper into the subjects introduced on this page.
+**To learn more,** go to the next page in the Primer: [How is OCDS data published?](releases_and_records) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
 * [Guidance to implementing OCDS](../guidance/index)
 * [Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
