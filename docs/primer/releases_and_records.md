@@ -35,10 +35,8 @@ Records and releases each contain several fields which can be used in different 
 
 When you publish OCDS releases and records, you are encouraged to:
 
-* Ensure all documents referenced in OCDS releases are available online
 * Publish each release and record at its own persistent URL
 * Produce bulk packages of releases and records for users to download
-* Publish versions of the data for users to access in CSV for Excel formats
 
 ```{note}
 **To learn more,** go to the next page in the Primer: [How can I implement the OCDS?](next) You can also review the further resources below to go deeper into the subjects introduced on this page.
