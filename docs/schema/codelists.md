@@ -184,7 +184,9 @@ The link relation type codelist is based on a subset of the [IANA Link Relation 
 
 ### Initiation Type
 
-Contracting processes can be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard might support other initiation types. The initiation type is used to provide information to consuming applications on the different blocks of data and releases they can expect from a contracting process.
+```{note}
+The 'initiationType' codelist was deprecated in version 1.2.
+```
 
 ```{csv-table-no-translate}
 :header-rows: 1
