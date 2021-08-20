@@ -194,8 +194,7 @@ The country codelist is used to provide the country component of an address, usi
 
 ### Initiation Type
 
-```{note}
-The 'initiationType' codelist was deprecated in version 1.2.
+```{deprecated} 1.2
 ```
 
 ```{csv-table-no-translate}
