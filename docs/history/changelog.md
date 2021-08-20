@@ -367,7 +367,7 @@ See the changelogs for:
 
 ### Documentation
 
-* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) Align the tables and text in the [publication levels](../getting_started/quality) guidance.
+* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) Align the tables and text in the [publication levels](../guidance/publish/quality) guidance.
 * [#489](https://github.com/open-contracting/standard/issues/489) Change the milestone documents extension to a core extension. This extension is only needed by publishers with legacy data containing documents within milestones.
 * [#493](https://github.com/open-contracting/standard/issues/493) Update the description of the [Organization Identifier Scheme codelist](../schema/codelists.md#organization-identifier-scheme), to reflect that it is now maintained by [org-id.guide](http://org-id.guide).
 * [#506](https://github.com/open-contracting/standard/issues/506) Remove `make_field_definitions.py` from the utility scripts, as it is no longer required.
