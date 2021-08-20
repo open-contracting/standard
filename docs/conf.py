@@ -39,6 +39,8 @@ release = '1.1.5'
 # ones.
 extensions = [
     'myst_parser',
+    'sphinx.ext.ifconfig',
+    'sphinx_panels',
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
@@ -133,7 +135,8 @@ linkcheck_ignore = [
     r'^http://www.eprocurementtoolkit.org/sites/default/files/2016-11/OCDS_Implemetation_Methodology_0.pdf#page=27$',
     # Ignore unwanted links created by linkify.
     r'^http://buyandsell.gc.ca$',
-    r'^http://release.id$',
+    r'^http://(?:identifier|release).id$',
+    r'^http://vnd\.',
     # Ignore expected redirects.
     r'^https://docs.google.com/spreadsheets/d/[^/]+/pub?gid=\d+&single=true&output=csv$',
 ]
