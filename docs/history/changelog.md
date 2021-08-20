@@ -100,6 +100,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
 * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid" in the `method` codelist.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
+* [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the code of the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
 
 ### Schema
 
@@ -129,7 +130,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
   * [#1296](https://github.com/open-contracting/standard/pull/1296) `tender.eligibilityCriteria` in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics. 
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.countryName` in favor of the new `Address.country` field, to promote standardized country codes instead of non-standardized country names.
-  * [#1389](https://github.com/open-contracting/standard/pull/1389) `initiationType`, because all of the known types of contracting processes can be modeled with 'tender' as the initiation.
+  * [#1389](https://github.com/open-contracting/standard/pull/1389) `initiationType`, because the approach to data modelling that it supports was not pursued.
 
 * Update and clarify field descriptions:
   * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
