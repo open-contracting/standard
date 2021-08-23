@@ -51,7 +51,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1210](https://github.com/open-contracting/standard/pull/1210) Add codes from the legal basis extension:
     * 'CELEX'
     * 'LEXML'
-  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classifiation extension:
+  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
     * 'COFOG'
 
 * `documentType.csv`:
@@ -96,10 +96,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
-* [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate all the codes of the `submissionMethod` codelist, because they were either not submission methods, or not supported by use cases.
+* [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
 * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid" in the `method` codelist.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
+* [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
 
 ### Schema
 
@@ -116,17 +117,21 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) `links`
+  * [#1376](https://github.com/open-contracting/standard/pull/1376) `publisher`
   * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
     * `tender.maximumValue`. Previously, `tender.value` was used for the maximum value. However, this led to double-counting.
     * `awards.maximumValue`. Previously, `awards.value` was used for the maximum value. However, this led to double-counting.
     * `awards.estimatedValue`
     * `contracts.maximumValue`
     * `contracts.estimatedValue`
+  * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.languages`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
-  * [#1296](https://github.com/open-contracting/standard/pull/1296) `tender.eligibilityCriteria` in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics.
+  * [#1296](https://github.com/open-contracting/standard/pull/1296) `tender.eligibilityCriteria` in favor of the new `tender.exclusionGrounds` field, in order to use more common terminology and improve semantics. 
+  * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.countryName` in favor of the new `Address.country` field, to promote standardized country codes instead of non-standardized country names.
+  * [#1389](https://github.com/open-contracting/standard/pull/1389) `initiationType`, because the approach to data modelling that it supports was not pursued.
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, in order to support documents that contain multiple languages.
 
 * Update and clarify field descriptions:
@@ -165,6 +170,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1241](https://github.com/open-contracting/standard/pull/1241) Align descriptions of `Record` `releases`, linked releases and embedded releases.
   * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
   * [#1339](https://github.com/open-contracting/standard/pull/1339) Deprecate `packages`.
+  * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `records.minItems` requirement.
+ 
+* Release package schema:
+  * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `releases.minItems` requirement.
 
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
@@ -362,7 +371,7 @@ See the changelogs for:
 
 ### Documentation
 
-* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) Align the tables and text in the [publication levels](../getting_started/quality) guidance.
+* [#480](https://github.com/open-contracting/standard/pull/480/commits/c3c41225639a06b0b0552016b32e2fe2e901a8fe) Align the tables and text in the [publication levels](../guidance/publish/quality) guidance.
 * [#489](https://github.com/open-contracting/standard/issues/489) Change the milestone documents extension to a core extension. This extension is only needed by publishers with legacy data containing documents within milestones.
 * [#493](https://github.com/open-contracting/standard/issues/493) Update the description of the [Organization Identifier Scheme codelist](../schema/codelists.md#organization-identifier-scheme), to reflect that it is now maintained by [org-id.guide](http://org-id.guide).
 * [#506](https://github.com/open-contracting/standard/issues/506) Remove `make_field_definitions.py` from the utility scripts, as it is no longer required.
