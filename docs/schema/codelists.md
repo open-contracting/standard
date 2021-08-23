@@ -194,7 +194,8 @@ The country codelist is used to provide the country component of an address, usi
 
 ### Initiation Type
 
-Contracting processes can be formed under a number of different processes. Currently, only 'tender' is supported in this codelist. Future versions of the standard might support other initiation types. The initiation type is used to provide information to consuming applications on the different blocks of data and releases they can expect from a contracting process.
+```{deprecated} 1.2
+```
 
 ```{csv-table-no-translate}
 :header-rows: 1
