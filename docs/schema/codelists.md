@@ -24,6 +24,10 @@ A contracting process can result in a number of releases of information over tim
 
 Additional codes may be used to label releases, based on user needs: for example, to indicate the notice or form to which a release corresponds.
 
+```{versionchanged} 1.1
+Added the 'planningUpdate' code.
+```
+
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
@@ -31,6 +35,9 @@ Additional codes may be used to label releases, based on user needs: for example
 ```
 
 ### Party Role
+
+```{versionadded} 1.1
+```
 
 The organizations, economic operators or other participants in a contracting process are listed in the [parties section](reference.md#parties). A single party can have one or more roles in the contracting process.
 
@@ -52,6 +59,9 @@ The `classificationScheme` codelist is referenced by the `scheme` field of the `
 
 ### Unit Classification Scheme
 
+```{versionadded} 1.1
+```
+
 Item quantities can be provided using an established codelist for units of measurement. Codelists might provide human-readable descriptions of units, or symbols for use in input and display interfaces.
 
 ```{csv-table-no-translate}
@@ -68,8 +78,8 @@ The Organization Identifier Scheme uses the codes from [org-id.guide](http://org
 
 To add new codes to the codelist, contact the [OCDS Helpdesk](../../support/index).
 
-```{note}
-This list was formerly maintained by the International Aid Transparency Initiative and contained in OCDS documentation as organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS 1.1.1.
+```{versionchanged} 1.1
+The `organizationIdentifierRegistrationAgency_iati.csv` file was removed. This list was formerly maintained by the International Aid Transparency Initiative.
 ```
 
 ### Document Type
@@ -90,8 +100,8 @@ Publishers must map their existing document codes to this list, where possible. 
 
 The award criteria codelist describes the basis on which contract awards will be made. 
 
-```{note}
-This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing a new set of codelist entries. Publishers ought to review the mapping from their internal systems to this updated list of award criteria.
+```{versionchanged} 1.1
+Added all new codes. Deprecated all old codes, which were undefined.
 ```
 
 ```{csv-table-no-translate}
@@ -101,6 +111,9 @@ This codelist was revised in OCDS 1.1, deprecating earlier codes and introducing
 ```
 
 ### Submission Method
+
+```{deprecated} 1.2
+```
 
 The submission method codelist is used to identify the mechanism through which a submission can be made. 
 
@@ -112,6 +125,9 @@ The submission method codelist is used to identify the mechanism through which a
 
 ### Related Process
 
+```{versionadded} 1.1
+```
+
 The related process block is used at the release level to point backwards to prior processes, such as planning or framework establishment, and at the contract level to point onwards to subcontracts or to renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
 
 ```{csv-table-no-translate}
@@ -121,6 +137,9 @@ The related process block is used at the release level to point backwards to pri
 ```
 
 ### Related Process Scheme
+
+```{versionadded} 1.1
+```
 
 The related process scheme describes the kind of identifier used to cross-reference another process. 
 
@@ -132,6 +151,9 @@ The related process scheme describes the kind of identifier used to cross-refere
 
 ### Milestone Type
 
+```{versionadded} 1.1
+```
+
 The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.
 
 ```{csv-table-no-translate}
@@ -141,6 +163,9 @@ The milestone block can be used to represent a wide variety of events in the lif
 ```
 
 ### Extended Procurement Category
+
+```{versionadded} 1.1
+```
 
 The extended procurement category codelist is used to provide additional detail about the focus of a contracting process. 
 
@@ -152,6 +177,9 @@ The extended procurement category codelist is used to provide additional detail 
 
 ### Language
 
+```{versionadded} 1.2
+```
+
 The language codelist is used to provide the default language used in text fields and the language of linked documents, using two-letter codes from [ISO639-1](https://id.loc.gov/vocabulary/iso639-1.html).
 
 ```{csv-table-no-translate}
@@ -162,6 +190,9 @@ The language codelist is used to provide the default language used in text field
 
 ### Media Type
 
+```{versionadded} 1.2
+```
+
 The media type codelist is based on the [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) list. The media type codelist adds an exceptional code for printed documents ('offline/print'), and omits any media type that is marked as deprecated or obsolete by IANA.
 
 ```{csv-table-no-translate}
@@ -171,6 +202,9 @@ The media type codelist is based on the [IANA Media Types](https://www.iana.org/
 ```
 
 ### Link Relation Type
+
+```{versionadded} 1.2
+```
 
 The link relation type codelist is based on a subset of the [IANA Link Relation Types](https://www.iana.org/assignments/link-relations/link-relations.xhtml) list.
 
@@ -183,6 +217,9 @@ The link relation type codelist is based on a subset of the [IANA Link Relation 
 ## Closed Codelists 
 
 ### Country
+
+```{versionadded} 1.2
+```
 
 The country codelist is used to provide the country component of an address, using uppercase two-letter codes from [ISO3166-1](https://www.iso.org/iso-3166-country-codes.html). The country codelist adds a user-assigned code for Kosovo ('XK').
 
@@ -207,19 +244,23 @@ The country codelist is used to provide the country component of an address, usi
 
 The `tender.status` field is used to indicate the current status of a tender process. The following options are available:
 
+```{versionchanged} 1.1
+Added the 'planning' and 'withdrawn' codes.
+```
+
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
 :file: ../../build/current_lang/codelists/tenderStatus.csv
 ```
 
-```{note}
-The 'planning' status was introduced in version 1.1.
-```
-
 ### Method
 
 A contracting process aims to fulfill the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
+
+```{versionchanged} 1.1
+Added the 'direct' code.
+```
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -227,9 +268,10 @@ A contracting process aims to fulfill the requirements identified at the plannin
 :file: ../../build/current_lang/codelists/method.csv
 ```
 
-Note: The 'direct' code was introduced in Version 1.1. Publishers who completed a codelist mapping prior to 1.1 might have included direct procurement within limited, and ought to review their mappings.
-
 ### Procurement Category
+
+```{versionadded} 1.1
+```
 
 The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers should use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
 
@@ -243,17 +285,23 @@ The procurement category codelist is used to indicate the **primary** focus of a
 
 An award moves through multiple states. Releases over time can update the status of an award. 
 
+The `awardStatus` field and codelist is used to indicate when a tender did not result in an award (through the `"awardStatus":"unsuccessful"` value).
+
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
 :file: ../../build/current_lang/codelists/awardStatus.csv
 ```
 
-The `awardStatus` field and codelist is used to indicate when a tender did not result in an award (through the `"awardStatus":"unsuccessful"` value)
-
 ### Contract Status
 
 Contracts can move through multiple states. Releases over time can update the status of a contract.
+
+To disclose that a contract is suspended, set the contract's `status` field to 'active' and use its `statusDetails` field to record that the contract is suspended. For more information, see the [contract suspension](../../guidance/map/contract_suspension) worked example.
+
+```{versionchanged} 1.2
+Added the 'terminatedEarly' and 'terminatedSuccessfully' codes.
+```
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -261,9 +309,11 @@ Contracts can move through multiple states. Releases over time can update the st
 :file: ../../build/current_lang/codelists/contractStatus.csv
 ```
 
-To disclose that a contract is suspended, set the contract's `status` field to 'active' and use its `statusDetails` field to record that the contract is suspended. For more information, see the [contract suspension](../../guidance/map/contract_suspension) worked example.
-
 ### Milestone Status
+
+```{versionchanged} 1.1
+Added the 'scheduled' code.
+```
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -272,6 +322,9 @@ To disclose that a contract is suspended, set the contract's `status` field to '
 ```
 
 ### Currency
+
+```{versionadded} 1.1
+```
 
 The currency for each amount must be specified using the uppercase 3-letter currency code from [ISO4217](https://www.iso.org/iso-4217-currency-codes.html).
 

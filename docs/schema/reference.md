@@ -108,14 +108,10 @@ All new information about a contracting process is described within a release.
 
 Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
 
-```{admonition} Parties
-:class: note
+```{versionadded} 1.1
+In OCDS 1.0, the details (address, contact point, etc.) of the parties involved in a contracting process were repeated across many fields (`tenderers`, `suppliers`, etc.). In OCDS 1.1, these details are instead collected under a top-level `parties` array, with the other fields referencing entries in this array, using [organization references](#organizationreference). This reduces repetition and supports publication of information about additional parties: for example, multiple buyers.
 
-Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points.
-
-This reduces repetition of information on parties who appear at multiple points in the contracting process, and supports publication of information about additional parties to the contracting process, including auditors, multiple buyers, and consortia partners of a winning bidder.
-
-The old, embedded data, approach to organization data is deprecated in OCDS 1.1, and will be removed in version 2.0.
+Note that the organization references allow, but deprecate, the fields for organization details.
 ```
 
 The following details can be provided for each party.
@@ -261,12 +257,14 @@ The amendment array in a tender, award or contract block provides the ability to
 
 #### Changes
 
-The changes array was deprecated in OCDS 1.1. Structured information on the former value of specific fields may be provided by:
+```{deprecated} 1.1
+Structured information on the former value of specific fields may be provided instead by:
 
 * Including releases from **before** and **after** a change within a release package;
 * Using the amendment array in tender, contract or award to explicitly relate these releases to an amendment.
 
 See the [amendment implementation guidance](../guidance/map/amendments) for more details.
+```
 
 ## Building block reference
 
@@ -274,10 +272,8 @@ The following building blocks are commonly re-used throughout the standard.
 
 ### OrganizationReference
 
-```{admonition} Organizations
-:class: note
-
-The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
+```{versionadded} 1.1
+See the [parties](#parties) section.
 ```
 
 An organization reference consists of two main components:
@@ -285,11 +281,9 @@ An organization reference consists of two main components:
 * An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization or entity;
 * A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
 
-The Organization Reference schema contains deprecated fields to prevent validation failures of OCDS 1.0 data. 
-
 ### Organization
 
-See the [parties](#parties) section
+See the [parties](#parties) section.
 
 #### Identifier
 
