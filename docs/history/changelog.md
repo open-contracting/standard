@@ -26,6 +26,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
   * [#1337](https://github.com/open-contracting/standard/pull/1337) Improve the structure of the Map page.
   * [#1338](https://github.com/open-contracting/standard/pull/1338) Improve the structure of the worked examples on the Map page.
+  * [#1332](https://github.com/open-contracting/standard/pull/1332) Improve guidance on framework agreements.
   * [#1386](https://github.com/open-contracting/standard/pull/1386) Add link to OCDS Implementation Checklist.
 
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
