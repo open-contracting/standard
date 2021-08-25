@@ -1,6 +1,6 @@
 # Framework agreements
 
-## Definition of framework agreement
+## Definitions
 
 ```{note}
 In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
@@ -20,7 +20,7 @@ A procurement contract is defined in UNCITRAL as:
 
 > Contract concluded between the procuring entity and a supplier  (or suppliers) or a contractor (or contractors) at the end of the procurement proceedings.
 
-## Types of framework agreements
+## Types of framework agreement
 
 ![Framework agreement types](../../_static/png/framework_agreement_types.png)
 
@@ -95,7 +95,7 @@ The following guidance describes how to model the different stages of a framewor
   * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
   * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
 
-### First-stage selection and addition of suppliers for the framework agreement
+### First-stage selection and addition of suppliers to the framework agreement
 
 * Create a release with the **same** `ocid` as the tender release and add 'award' to the `tag` array
 * Add an `Award` object to the `awards` array.
@@ -117,7 +117,7 @@ The following guidance describes how to model the different stages of a framewor
 * Create a release with a **new** `ocid` and add 'tender' to the `.tag` array
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage)
 * [Add a buyer](#add-a-buyer)
-* Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage, and set `tender.competitive` to `true`
+* Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage, and `tender.competitive` to `true`
 
 ### Award of a procurement contract resulting from a second-stage competition
 
@@ -165,7 +165,7 @@ NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2
 The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
 
 * The techniques extension is declared in the package metadata.
-* Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to 'true'.
+* Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
 * Since the framework agreement will be concluded with a single supplier and since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'open'.
 * Since the framework agreement is closed, `tender.tenderPeriod` is set to the deadline for responses to the invitation to participate.
 * Since there is only one buyer, `buyer` is set to reference the buyer's object in the `parties` array.
@@ -229,7 +229,7 @@ Chile Compra publishes a [tender notice](https://www.mercadopublico.cl/Procureme
 The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
 
 * The techniques extension is declared in the package metadata.
-* Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to 'true'.
+* Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
 * Since the framework agreement will be concluded with multiple suppliers and will involve second-stage competition, `tender.procurementMethod` is set to 'selective'.
 * Since the framework agreement is open, `tender.tenderPeriod` is set to the end of the framework agreement.
 * Since there are two buyers, the 'buyer' object is not set, and the buyers are declared in the `parties` array.
@@ -269,7 +269,7 @@ The release has the following properties:
 * A new `ocid` is used.
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * The `tag` is set to 'tender'.
-* The tender section includes details about the competition, and `tender.competitive` is set to 'true'.
+* The tender section includes details about the competition, and `tender.competitive` is set to `true`.
 * Since this new contracting process has a single buyer, the `buyer` is set to Servicio Local de Educación Pública Puerto Cordillera.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_second_stage.json
