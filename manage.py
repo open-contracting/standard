@@ -432,7 +432,7 @@ def missing_changelog(ignore_base):
         ignore.append(ignore_base)
 
     # Ignore PRs to unmerged branches.
-    url = f'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=open'
+    url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=open'
     response = requests.get(url)
     response.raise_for_status()
     ignore.extend(pr['head']['ref'] for pr in response.json())
@@ -452,7 +452,7 @@ def missing_changelog(ignore_base):
 
     count = 0
 
-    url = f'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=closed'
+    url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=closed'
     while url:
         response = requests.get(url)
         response.raise_for_status()
