@@ -13,7 +13,7 @@ An OCDS [record](../schema/records_reference) aggregates all the releases availa
 ````{admonition} Worked Example
 :class: hint
 
-A public procurement agency publishes a release to announce an opportunity on January 1, in which the total estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the total estimated value of the procurement is increased to $2,000.
+A public procurement agency publishes a release to announce an opportunity on January 1, in which the estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the estimated value of the procurement is increased to $2,000.
 
 The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
 
@@ -22,7 +22,7 @@ Through these individual releases, the agency provides real-time data about the 
 At each release, the agency also updates the record, which combines all the releases to date. In the final record:
 
 * The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
-* The versioned release makes it easy to see how the description and total estimated value changed over time.
+* The versioned release makes it easy to see how the description and estimated value changed over time.
 
 ```{jsoninclude} ../examples/merging/merge-tender-1.json
 :jsonpointer: /releases
