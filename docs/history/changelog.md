@@ -143,7 +143,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Remove confusing terminology:
   * [#1109](https://github.com/open-contracting/standard/pull/1109) `tender.awardCriteriaDetails`, to remove "selection criteria".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
-  * [xxxx](xxxx) Replace "total value" with "value"
+  * [#1401](https://github.com/open-contracting/standard/pull/1401) Replace "total value" with "value".
 
 
 * Add or strengthen normative statements in field descriptions:
@@ -190,7 +190,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1315](https://github.com/open-contracting/standard/pull/1315) Add rules on setting `id` and `date` for compiled releases to the merging specification.
 * [#1344](https://github.com/open-contracting/standard/pull/1344) Add contract suspension worked example.
 * [#1375](https://github.com/open-contracting/standard/pull/1375) Update guidance for empty fields in the merging documentation.
-* [xxxx](xxxx) Replace "total value" with "value"
+* [#1401](https://github.com/open-contracting/standard/pull/1401) Replace "total value" with "value".
 
 
 ## [1.1.5] - 2020-08-20
