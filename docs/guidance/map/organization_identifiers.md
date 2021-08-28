@@ -19,6 +19,6 @@ The publisher also collects two extra identifiers, which are disclosed in the `a
 
 ## Organization IDs
 
-Each of the organizations in the [parties section](../../schema/reference.md#parties) ought to have a [local party ID](../../schema/identifiers.md#party-ids) (`id`) used to reference it from elsewhere in the data. For organizations with an organization identifier, you can construct `id` using `{identifier.scheme}-{identifier.id}`.
+Each of the organizations in the [parties section](../../schema/reference.md#parties) ought to have a [local party ID](../../schema/identifiers.md#organization-ids) (`id`) used to reference it from elsewhere in the data. For organizations with an organization identifier, you can construct `id` using `{identifier.scheme}-{identifier.id}`.
 
 For organizations without an organization identifier, you can populate `id` with a fixed or sequential value. For example, you can set the buyer's `id` to '1' and set each supplier's `id` sequentially from '2' onwards. Alternatively, you can set the organization's `id` to its `role` and add a sequential number for roles with multiple organizations, e.g. 'buyer', 'tenderer-1', 'tenderer-2' etc. An organization's `id` needs to remain consistent across all releases in a contracting process. For example, if the `id` of an organization is 'tenderer-1' in one release, then the `id` of the same organization in another release needs to also be 'tenderer-1'.

@@ -157,7 +157,7 @@ Each organization has a local identifier (`id`) used to reference it from elsewh
 
 An organization's `id` is separate from its organization identifier and need only be unique within the scope of the contracting process to which it is a party. An organization’s `id` must be consistent across all releases with the same `ocid` value.
 
-See the [guidance](../guidance/map/organization_identifiers.md#party-ids) for more information on organization IDs.
+See the [guidance](../guidance/map/organization_identifiers.md#organization-ids) for more information on organization IDs.
 
 ## Release ID
 
