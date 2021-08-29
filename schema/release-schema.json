@@ -27,7 +27,7 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. A tag labels the release: for example, as corresponding to a particular stage of the contracting process. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release.",
+      "description": "A label for the release (for example, a stage of the contracting process), using the the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release.",
       "type": "array",
       "items": {
         "type": "string"
@@ -39,7 +39,7 @@
     },
     "initiationType": {
       "title": "Initiation type",
-      "description": "The type of initiation process used for this contract, from the closed [initiationType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#initiation-type) codelist.",
+      "description": "The type of initiation process used for this contract, using the closed [initiationType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#initiation-type) codelist.",
       "type": "string",
       "enum": [
         "tender"
@@ -195,7 +195,7 @@
         },
         "status": {
           "title": "Tender status",
-          "description": "The current status of the tender, from the closed [tenderStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status) codelist. See also the statusDetails field.",
+          "description": "The current status of the tender, using the closed [tenderStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status) codelist. See also the statusDetails field.",
           "type": [
             "string",
             "null"
@@ -247,7 +247,7 @@
         },
         "procurementMethod": {
           "title": "Procurement method",
-          "description": "The procurement method, from the closed [method](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist. See also the procurementMethodDetails field.",
+          "description": "The procurement method, using the closed [method](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist. See also the procurementMethodDetails field.",
           "type": [
             "string",
             "null"
@@ -280,7 +280,7 @@
         },
         "mainProcurementCategory": {
           "title": "Main procurement category",
-          "description": "The primary category describing the main object of this contracting process, from the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
+          "description": "The primary category describing the main object of this contracting process, using the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
           "type": [
             "string",
             "null"
@@ -537,7 +537,7 @@
         },
         "status": {
           "title": "Award status",
-          "description": "The current status of the award, from the closed [awardStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-status) codelist.",
+          "description": "The current status of the award, using the closed [awardStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-status) codelist.",
           "type": [
             "string",
             "null"
@@ -685,7 +685,7 @@
         },
         "status": {
           "title": "Contract status",
-          "description": "The current status of the contract, from the closed [contractStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status) codelist. See also the statusDetails field.",
+          "description": "The current status of the contract, using the closed [contractStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status) codelist. See also the statusDetails field.",
           "type": [
             "string",
             "null"
@@ -917,7 +917,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status that was realized on the date provided in `dateModified`, from the closed [milestoneStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-status) codelist.",
+          "description": "The status that was realized on the date provided in `dateModified`, using the closed [milestoneStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#milestone-status) codelist.",
           "type": [
             "string",
             "null"
@@ -1595,7 +1595,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "Organization identifiers should be taken from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is taken. This value should be taken from the [Organization Identifier Scheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#organization-identifier-scheme) codelist.",
+          "description": "The list or register (a "scheme") from which the identifier is taken, using the open [Organization Identifier Scheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#organization-identifier-scheme) codelist.",
           "type": [
             "string",
             "null"
@@ -1764,7 +1764,7 @@
         },
         "currency": {
           "title": "Currency",
-          "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+          "description": "The currency of the amount, using the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
           "type": [
             "string",
             "null"
