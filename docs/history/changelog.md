@@ -169,7 +169,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
   * [#1339](https://github.com/open-contracting/standard/pull/1339) Deprecate `packages`.
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `records.minItems` requirement.
-  * [#1393](https://github.com/open-contracting/standard/pull/1393) Remove `records.releases` requirement.
+  * [#1393](https://github.com/open-contracting/standard/pull/1393) Remove `releases` as a required field of the `Record` object.
  
 * Release package schema:
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `releases.minItems` requirement.
