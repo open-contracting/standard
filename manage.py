@@ -470,6 +470,69 @@ def unused_terms(filename):
 
 
 @cli.command()
+@click.option('--ignore-base', help='A base branch to ignore, e.g. 1.2-dev')
+def missing_changelog(ignore_base):
+    """
+    Print pull requests not mentioned in the changelog.
+    """
+
+    # Ignore PRs to the ppp-extension branch, which became OCDS for PPPs.
+    ignore = ['ppp-extension']
+    if ignore_base:
+        ignore.append(ignore_base)
+
+    # Ignore PRs to unmerged branches.
+    url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=open'
+    response = requests.get(url)
+    response.raise_for_status()
+    ignore.extend(pr['head']['ref'] for pr in response.json())
+
+    with open(basedir / 'docs' / 'history' / 'changelog.md') as f:
+        prs = [int(n) for n in re.findall(r'https://github.com/open-contracting/standard/pull/(\d+)', f.read())]
+
+    prs.extend([
+        # Reverted
+        971, 977,
+        # Obsoleted by the Primer
+        1017,
+    ])
+
+    # Ignore PRs that sync branches or that release versions/
+    pattern = re.compile(r'^(?:Merge \S+ into \S+|\S+ Release)$')
+
+    count = 0
+
+    url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=closed'
+    while url:
+        response = requests.get(url)
+        response.raise_for_status()
+        url = response.links.get('next', {}).get('url')
+
+        for pr in response.json():
+            number = pr['number']
+            merged_at = pr['merged_at']
+            milestone = pr['milestone'] or {}
+            milestone_number = milestone.get('number')
+            milestone_title = milestone.get('title')
+            title = pr['title']
+            base_ref = pr['base']['ref']
+
+            # Include merged PRs, not in the "Minor:" or "1.0-RC" milestones, not syncing branches, and not ignored.
+            if not merged_at or milestone_number in (26, 27, 28, 29, 2) or pattern.search(title) or base_ref in ignore:
+                if number in prs:
+                    print(f'WARNING: #{number} should not be in changelog', file=sys.stderr)
+                continue
+
+            if number not in prs:
+                count += 1
+                print(f"[#{number}](https://github.com/open-contracting/standard/pull/{number}) ({milestone_title}) "
+                      f"{merged_at[:10]}: {title} ({base_ref}:{pr['head']['ref']})")
+
+    if count:
+        print(count)
+
+
+@cli.command()
 def pre_commit():
     """
     Update derivative schema files.
