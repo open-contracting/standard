@@ -1,4 +1,6 @@
-# Framework agreements and related processes
+# Framework agreements
+
+## Definitions
 
 ```{note}
 In this guidance we defer to the definitions given in the [UNCITRAL Model Law on Public Procurement (2011)](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement). The model law was developed through extensive consultation and reflects the procurement practices and concepts used in many different jurisdictions.
@@ -17,6 +19,10 @@ In OCDS we treat “contractors” and “suppliers” as synonyms. One or more 
 A procurement contract is defined in UNCITRAL as:
 
 > Contract concluded between the procuring entity and a supplier  (or suppliers) or a contractor (or contractors) at the end of the procurement proceedings.
+
+## Types of framework agreement
+
+![Framework agreement types](../../_static/png/framework_agreement_types.png)
 
 Framework agreements can be **open** or **closed**:
 
@@ -44,8 +50,6 @@ Competition at the second stage is limited to suppliers that are party to the fr
 
 The second stage of a framework agreement procedure is also known as a “call-off.” Non-competitive second stages are also known as “direct call-offs.” Competitive second stages are also known as “mini-competitions.”
 
-![Types of framework agreement](../../_static/png/framework_agreement_types.png)
-
 ## Modelling framework agreements in OCDS
 
 In OCDS, a contracting process brings together, under a single identifier, the information that users need to answer questions such as:
@@ -62,7 +66,17 @@ The following diagram shows how OCDS models a framework agreement procedure with
 
 ![OCDS framework agreement model](../../_static/png/framework_agreement_model.png)
 
+### Extensions
+
+The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. More information on the nature of the framework agreement can be provided via the `tender.techniques.frameworkAgreement` object.
+
 The `tender.competitive` field, from the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension, is used to indicate whether the second stage involves competition.
+
+The two extensions should be declared in the package metadata:
+
+```{literalinclude} ../../examples/frameworks/extensions_block.json
+:language: json
+```
 
 The following guidance describes how to model the different stages of a framework agreement procedure in OCDS.  
 
@@ -78,17 +92,7 @@ The following guidance describes how to model the different stages of a framewor
   * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
   * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
 
-#### Setting procurement method
-
-The `tender.procurementMethod` field uses the [method codelist](../../schema/codelists.md#method) to describe the competitive conditions of the framework agreement procedure as a whole, not only the first stage.
-
-Use the following criteria to determine the procurement method:
-
-* If the contracting process will establish a framework agreement with a single supplier and if there are no conditions to participate in the contracting process, set `tender.procurementMethod` to 'open'.
-* If the contracting process limits the suppliers that can submit a request to participate in the framework agreement, set `tender.procurementMethod` to 'limited'.
-* Otherwise, set `tender.procurementMethod` to 'selective'.
-
-### Addition of a supplier to a framework agreement
+### First-stage selection and addition of suppliers to the framework agreement
 
 * Create a release with the **same** `ocid` as the tender release and add 'award' to the `tag` array
 * Add an `Award` object to the `awards` array.
@@ -110,11 +114,11 @@ Use the following criteria to determine the procurement method:
 * Create a release with a **new** `ocid` and add 'tender' to the `.tag` array
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage)
 * [Add a buyer](#add-a-buyer)
-* Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage
+* Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage, and `tender.competitive` to `true`
 
 ### Award of a procurement contract resulting from a second-stage competition
 
-* Create a release with the **same** `ocid` as the tender release *for the second stage*, and add 'award' and 'contract' to the `tag`
+* Create a release with the **same** `ocid` as the tender release *for the invitation to participate in a second-stage competition*, and add 'award' and 'contract' to the `tag`
 * [Add an award, contract and supplier](#add-an-award-contract-and-supplier)
 
 ### Updating the contract value, period or items
@@ -139,18 +143,6 @@ Use the following criteria to determine the procurement method:
 * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
 * Add an `OrganizationReference` object to the award's `.suppliers` array and set `.id` and `.name` to match the supplier's object in the `parties` array.
 * Populate the award's `.value`, `.contractPeriod` and `.items` with the initial contract value, period and items.
-
-### Extensions
-
-The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. More information on the nature of the framework agreement can be provided via the `tender.techniques.frameworkAgreement` object.
-
-The `tender.competitive` field, from the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension, is used to indicate whether the second stage involves competition.
-
-The two extensions should be declared in the package metadata:
-
-```{literalinclude} ../../examples/frameworks/extensions_block.json
-:language: json
-```
 
 ## Worked examples
 
