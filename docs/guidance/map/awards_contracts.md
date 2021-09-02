@@ -10,10 +10,13 @@ In order to understand the modelling examples, it’s important to first clarify
 
 ### Award
 
-In OCDS, the `Award` object is intended to communicate a direct relationship between items, suppliers, and values. It ought to be possible to know, at the award stage, in OCDS data, which items will later be supplied by which suppliers, and what the value of those contracts will be.
+OCDS defines an award as:
+
+```{field-description} ../../../build/current_lang/release-schema.json /definitions/Award
+```
 
 ```{note}
-The OCDS schema and documentation are not clear what, precisely, is meant by 'award'. A revision of the definition of `Award` in OCDS is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/895)).
+In OCDS 1.2 and earlier, a single contract cannot be linked to more than one award. Consequently, in cases where real-world awards are more detailed than the resulting real-world contract (e.g. two lots are awarded to a single supplier and only a single contract is signed), this cannot be represented fully accurately in OCDS. There are two possible workarounds: 1) summarizing the real-world awards into one OCDS award (e.g. summing up the values of individual lots, choosing the most common award date), 2) splitting the single real-world contract into multiple OCDS contracts. If you want to disclose this type of information, we recommend using approach 1) or contacting the [helpdesk](../../support/index.md). The approach to modelling many-to-one awards to contracts in a future, backwards incompatible version of the standard is under discussion on [Github](https://github.com/open-contracting/standard/issues/891).
 ```
 
 ### Contract
