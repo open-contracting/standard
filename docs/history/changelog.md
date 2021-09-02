@@ -27,6 +27,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1338](https://github.com/open-contracting/standard/pull/1338) Improve the structure of the worked examples on the Map page.
   * [#1345](https://github.com/open-contracting/standard/pull/1345) Update legal references in pre-gualification guidance.
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
+  * [#1386](https://github.com/open-contracting/standard/pull/1386) Add link to OCDS Implementation Checklist.
 
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
 * [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
