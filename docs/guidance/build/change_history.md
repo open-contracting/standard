@@ -4,7 +4,13 @@ The following example shows how to publish data about a contracting process. Pub
 
 Each subsection refers to a stage or event in the contracting process lifetime.
 
-Refer to the [releases and records](../../getting_started/releases_and_records) guidance for an introduction to the concepts involved.
+```{note}
+For an introduction to the concept of a change history, see the [releases and records](../../primer/releases_and_records) primer.
+```
+
+```{note}
+For guidance on how to set the `id` field on each release, see the [easy releases](easy_releases) worked example.
+```
 
 ## Planning
 
@@ -128,7 +134,7 @@ So far, the council used a single procurement system to manage the process. The 
 
 The council now uses a separate financial system to manage payments. The financial system publishes the new OCDS release.
 
-The procurement system and the financial system share a common contracting process identifier. This means that the two systems can publish releases using the same `ocid`.
+The procurement system and the financial system share a common identifier for contracting processes. This means that the two systems can publish releases using the same `ocid`.
 
 The new release uses the 'implementation' tag. The `contracts.implementation.transactions` section includes the details of the payment.
 

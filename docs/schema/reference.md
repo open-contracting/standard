@@ -40,7 +40,7 @@ E.g. `title` and `title_es`
 
 In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the `language` field.
 
-Languages must be identified using language tags taken from [BCP47](http://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
+Languages must be identified using language tags taken from [BCP47](https://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
 
 To include a language variation of a field, the field name must be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
 
@@ -85,7 +85,6 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 Releases must be published within a [release package](release_package). The release package provides metadata about the release(s) that it contains.
 
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
-:include:
 :collapse: releases,publisher
 ```
 
@@ -98,7 +97,6 @@ See the [publication policy](../guidance/publish.md#finalize-your-publication-po
 All new information about a contracting process is described within a release. 
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
-:include:
 :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
 ```
 
@@ -110,14 +108,10 @@ All new information about a contracting process is described within a release.
 
 Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
 
-```{admonition} Parties
-:class: note
+```{versionadded} 1.1
+In OCDS 1.0, the details (address, contact point, etc.) of the parties involved in a contracting process were repeated across many fields (`tenderers`, `suppliers`, etc.). In OCDS 1.1, these details are instead collected under a top-level `parties` array, with the other fields referencing entries in this array, using [organization references](#organizationreference). This reduces repetition and supports publication of information about additional parties: for example, multiple buyers.
 
-Version 1.1 of OCDS introduces a new approach to describing the buyers,  suppliers, economic operators, and other participants in a contracting process. Instead of embedding organization information at various points within an OCDS release, information on all the parties involved in a contracting process is collected together in a top-level section, and the parties indicated by a cross-reference to their id at other points.
-
-This reduces repetition of information on parties who appear at multiple points in the contracting process, and supports publication of information about additional parties to the contracting process, including auditors, multiple buyers, and consortia partners of a winning bidder.
-
-The old, embedded data, approach to organization data is deprecated in OCDS 1.1, and will be removed in version 2.0.
+Note that the organization references allow, but deprecate, the fields for organization details.
 ```
 
 The following details can be provided for each party.
@@ -152,7 +146,7 @@ The planning section can be used to describe the background to a contracting pro
 
 #### Budget 
 
-Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) or [International Aid Transparency Initiative Standard](http://www.iatistandard.org), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
+Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Budget
@@ -184,7 +178,7 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 ### Award
 
-The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/consortia) and in [framework agreements](../guidance/map/related_processes).
+The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/related_processes).
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Award
@@ -230,7 +224,7 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source. 
+The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source.
 
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
@@ -263,12 +257,14 @@ The amendment array in a tender, award or contract block provides the ability to
 
 #### Changes
 
-The changes array was deprecated in OCDS 1.1. Structured information on the former value of specific fields may be provided by:
+```{deprecated} 1.1
+Structured information on the former value of specific fields may be provided instead by:
 
 * Including releases from **before** and **after** a change within a release package;
 * Using the amendment array in tender, contract or award to explicitly relate these releases to an amendment.
 
 See the [amendment implementation guidance](../guidance/map/amendments) for more details.
+```
 
 ## Building block reference
 
@@ -276,10 +272,8 @@ The following building blocks are commonly re-used throughout the standard.
 
 ### OrganizationReference
 
-```{admonition} Organizations
-:class: note
-
-The approach to including organizations information has changed in OCDS 1.1. Instead of embedding all the details of an organization, publishers should use an organization reference to indicate the entry in the parties section that contains full details of this organization.
+```{versionadded} 1.1
+See the [parties](#parties) section.
 ```
 
 An organization reference consists of two main components:
@@ -287,11 +281,9 @@ An organization reference consists of two main components:
 * An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization or entity;
 * A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
 
-The Organization Reference schema contains deprecated fields to prevent validation failures of OCDS 1.0 data. 
-
 ### Organization
 
-See the [parties](#parties) section
+See the [parties](#parties) section.
 
 #### Identifier
 
@@ -301,21 +293,18 @@ If a contracting process represents a contract arranged by the department or bra
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Identifier
-:collapse:
 ```
 
 #### Address
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Address
-:collapse:
 ```
 
 #### ContactPoint
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/ContactPoint
-:collapse:
 ```
 
 ### Document
@@ -330,7 +319,6 @@ OCDS allows summarizing information in the document's `description` field. Provi
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Document
-:collapse:
 ```
 
 ```{extensionlist} The following extensions are available for document
@@ -345,12 +333,11 @@ Periods can also include a `maxExtentDate` which indicates the latest possible e
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Period
-:collapse:
 ```
 
 #### Date
 
-OCDS makes use of [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](http://tools.ietf.org/html/rfc3339#section-5.6).
+OCDS makes use of [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date-times, following [RFC3339 §5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 A time and timezone/offset must be provided in a date-time.
 
@@ -366,7 +353,7 @@ The following are not valid:
 * '2014-11-18T18:00:00' - Missing timezone/offset portion
 * '11/18/2014 18:00' - Not following the pattern at all!
 
-Accurately including the time and timezone offsets is particular important for tender deadlines and other dates which can have legal significance, and where users of the data might be from different timezones. The character Z on the end of a date-time indicates the [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset) timezone, whereas other timezones are indicated by their value '+/-hh:mm' UTC on the end of the date-time value. 
+Accurately including the time and timezone offsets is particular important for tender deadlines and other dates which can have legal significance, and where users of the data might be from different timezones. The character Z on the end of a date-time indicates the [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (or Zero offset) timezone, whereas other timezones are indicated by their value '+/-hh:mm' UTC on the end of the date-time value.
 
 In the event that the system from which data is drawn only includes dates, and does not include time information, publishers should use sensible defaults for each field. For example, the startDate time of a clarification period can be set to '00:00:00Z' to indicate that clarifications can be requested from any time on the date stated, with the endDate time set to 23:59:59Z to indicate that clarifications can be sent up until the end of the endDate given. Alternatively, if clarification requests are only accepted in standard office hours, these values might be 09:00:00Z and 17:00:00Z respectively.
 
@@ -389,13 +376,12 @@ The items block is used to list the line-items associated with a tender, award o
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Classification
-:collapse:
 ```
 #### Unit
 
 The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
 
-If the [Quantities, Units, Dimensions and Data Types Ontologies](http://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
+If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
 Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
 
@@ -427,7 +413,6 @@ Financial values should be published with a currency attached.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Value
-:collapse:
 ```
 
 Support for exchange rates, and tax information, can be provided using extensions.
@@ -445,7 +430,6 @@ In all these cases, the `relatedProcess` block should be used to cross-reference
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/RelatedProcess
-:collapse:
 ```
 
 A related process can be declared at two points in an OCDS release.
@@ -470,5 +454,4 @@ The publisher block is used in release and record packages to identify the sourc
 
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
 :include: publisher
-:collapse:
 ```

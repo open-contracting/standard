@@ -34,9 +34,9 @@ When the suggested limits entail publication of multiple files, publishers ought
 For releases, publishers can:
 
 1. Segment by **release date** - placing all the releases from a given day, month or year in the same file;
-1. Segment by **contracting process identifier** - placing all the releases related to a given set of contract process identifiers together in the same package;
+1. Segment by **open contracting process identifier** - placing all the releases related to a given set of process identifiers together in the same package;
 
-For records, publishers can segment by the first **release date** associated with a contracting process, or by **contracting process identifier.**
+For records, publishers can segment by the first **release date** associated with a contracting process, or by **open contracting process identifier.**
 
 Following these approaches will avoid release and records 'jumping' between files when the bulk files are updated. 
 
@@ -48,7 +48,7 @@ If compressing packages, publishers ought to use the ZIP file format.
 
 ### Serving files
 
-The web server providing access to bulk files ought to correctly report the [HTTP Last-Modified](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) header so that consuming applications only need to download updated files.
+The web server providing access to bulk files ought to correctly report the [HTTP Last-Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) header so that consuming applications only need to download updated files.
 
 ## Individual releases and records
 

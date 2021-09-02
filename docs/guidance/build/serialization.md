@@ -22,12 +22,12 @@ Most programming languages provide tools for output data as JSON.
 
 Most programming languages provide tools for reading JSON.
 
-A number of [JSON native databases](http://en.wikipedia.org/wiki/NoSQL) are available for working directly with large collections of JSON documents, and command line tools such as [jq](http://stedolan.github.io/jq/) support advanced query and data retrieval with JSON files.
+A number of [JSON native databases](https://en.wikipedia.org/wiki/NoSQL) are available for working directly with large collections of JSON texts, and command line tools such as [jq](https://stedolan.github.io/jq/) support advanced query and data retrieval with JSON files.
 
 There are also a range of generic tools which can convert JSON into flat CSV structures, including:
 
-* [JSON -> CSV](http://konklone.io/json/) - online tool for converting small documents.
-* [Open Refine](http://openrefine.org/) - desktop tool that can handle large documents, and supports advanced data manipulation.
+* [JSON -> CSV](https://konklone.io/json/) - online tool for converting small documents.
+* [Open Refine](https://openrefine.org/) - desktop tool that can handle large documents, and supports advanced data manipulation.
 
 ## CSV 
 
@@ -36,7 +36,7 @@ JSON is based on a tree structure, with data elements nested inside one another.
 * **Simplified single table** - for cases where there are no one-to-many relationships in the data (e.g. each tender has only one award and contract, and each has only one line-item).
 * **Multi-table** - where more advanced structures are needed, but where it is desirable to be able to work with data in spreadsheet-style layouts
 
-In each case, fields are identified in CSV headers by their [JSON Pointer](http://tools.ietf.org/html/rfc6901). For example:
+In each case, fields are identified in CSV headers by their [JSON Pointer](https://tools.ietf.org/html/rfc6901). For example:
 
 **JSON**
 
@@ -53,7 +53,7 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](http:
 :file: ../../examples/serialization-flat.csv
 ```
 
-[Beta open source tooling](http://flatten-tool.readthedocs.io/en/latest/usage-ocds/) exists for generating flat CSV OCDS templates, and converting in both directions between JSON spreadsheets following these templates. The OCDS Data Review Tool incorporates this tooling and will offer to convert files uploaded to it.
+[Beta open source tooling](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) exists for generating flat CSV OCDS templates, and converting in both directions between JSON spreadsheets following these templates. The OCDS Data Review Tool incorporates this tooling and will offer to convert files uploaded to it.
 
 ### Simplified single table 
 
@@ -96,7 +96,7 @@ Multiple tables can be packaged together as the tabs of an Excel spreadsheet, or
 
 An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/main/flat-template).
 
-For further information on multi-table serializations please see the [flatten tool documentation](http://flatten-tool.readthedocs.io/en/latest/).
+For further information on multi-table serializations please see the [flatten tool documentation](https://flatten-tool.readthedocs.io/en/latest/).
 
 ## Packaging files with metadata
 

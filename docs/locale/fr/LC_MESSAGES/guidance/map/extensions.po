@@ -6,7 +6,6 @@
 # Translators:
 # samgoeta <samgoeta@gmail.com>, 2020
 # Cecile LG <cecile@datactivi.st>, 2020
-# Colin Maudry <colin@maudry.com>, 2021
 # James McKinney, 2021
 # 
 #, fuzzy
@@ -14,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"POT-Creation-Date: 2021-07-31 13:56-0400\n"
 "PO-Revision-Date: 2020-06-29 22:59+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
@@ -30,13 +29,10 @@ msgstr "Extensions"
 
 #: ../../docs/guidance/map/extensions.md:3
 msgid ""
-"OCDS provides a common core of [sections and building "
-"blocks](../../getting_started/building_blocks) for describing contracting "
-"processes."
+"OCDS provides a common core of [sections](../../schema/reference.md#release-"
+"structure) and [building blocks](../../schema/reference.md#building-block-"
+"reference) for describing contracting processes."
 msgstr ""
-"OCDS fournit un tronc commun de [sections et de composants "
-"essentiels](../../getting_started/building_blocks) pour décrire les "
-"processus de passation de marché."
 
 #: ../../docs/guidance/map/extensions.md:5
 msgid ""
@@ -50,50 +46,37 @@ msgstr ""
 "création d'**extensions** au standard."
 
 #: ../../docs/guidance/map/extensions.md:7
-msgid "Extensions are divided into two types:"
-msgstr "Les extensions sont divisées en deux types :"
+msgid ""
+"Some extensions are maintained by the Open Contracting Partnership (OCP). "
+"Those that are likely to be relevant to a large number of publishers and "
+"users follow the [governance process](../../governance/index). The standard "
+"development team decides which extensions follow the governance process."
+msgstr ""
 
 #: ../../docs/guidance/map/extensions.md:9
 msgid ""
-"**Core** extensions are maintained as part of the standard governance "
-"process, documented as part of the standard and reviewed by the OCDS "
-"technical team with each version upgrade of OCDS. They are likely to be "
-"relevant to a large number of publishers and users."
+"Other extensions are maintained by third parties, like OCDS publishers, and "
+"do not follow the governance process. These extensions might provide "
+"features which are needed by only a small number of publishers or users, or "
+"they might be used to document a specific publisher's additional fields or "
+"codelist values."
 msgstr ""
-"Les extensions **de base** sont maintenues comme une partie du processus de "
-"la gouvernance du standard, documentées comme une partie du standard et "
-"revues par l'équipe technique d'OCDS à chaque mise à jour d'OCDS. Elles sont"
-" censées être utiles à un grand nombre de producteurs et d'usagers des "
-"données."
 
 #: ../../docs/guidance/map/extensions.md:11
 msgid ""
-"**Community** and local extension are maintained by third-parties, or are "
-"maintained outside of the standard governance process. They might provide "
-"features needed by only a small number of publishers or users, or might be "
-"used to document a publisher's additional fields or codelist values."
+"All OCP extensions and many third-party extensions are documented in the "
+"[Extension Explorer](https://extensions.open-contracting.org/en/). The "
+"[standard development team](../../governance/index) decides which extensions"
+" are registered in the [Extension Registry](https://github.com/open-"
+"contracting/extension_registry#readme), which controls which extensions "
+"appear in the Extension Explorer."
 msgstr ""
-"**Les communautés** et les extensions locales sont gérées par des tiers ou "
-"sont maintenues en dehors du processus de gouvernance habituel. Ils peuvent "
-"fournir des fonctionnalités nécessaires à un nombre restreint de producteurs"
-" de données ou d'utilisateurs, ou peuvent être utilisés pour documenter les "
-"champs supplémentaires ou les valeurs d'une liste d'options."
 
 #: ../../docs/guidance/map/extensions.md:13
-msgid ""
-"All core and community extensions are listed in the [Extension "
-"Explorer](https://extensions.open-contracting.org/en/). The [standard "
-"technical team](../../governance/index) approves extensions for inclusion in"
-" the Extension Explorer (distinguishing community from local extensions) and"
-" for inclusion in the governance process (distinguishing core from community"
-" extensions)."
-msgstr ""
-
-#: ../../docs/guidance/map/extensions.md:15
 msgid "Using existing extensions"
 msgstr "Utiliser des extensions existantes"
 
-#: ../../docs/guidance/map/extensions.md:17
+#: ../../docs/guidance/map/extensions.md:15
 msgid ""
 "Extensions are applied by adding their URLs to the `extensions` array in the"
 " release package or record package. You can discover extensions, read their "
@@ -104,17 +87,19 @@ msgstr ""
 "`extensions` dans le package de la version ou le package d'enregistrement. "
 "Vous pouvez trouver les extensions, lire leur documentation et trouver l'URL"
 " à ajouter à l'aide de [Extension Explorer](https://extensions.open-"
-"contracting.org/en/)."
+"contracting.org/fr/)."
 
-#: ../../docs/guidance/map/extensions.md:19
-msgid "This version of OCDS uses these specific versions of core extensions:"
-msgstr "Cette version d'OCDS utilise ces versions d'extensions natives :"
+#: ../../docs/guidance/map/extensions.md:17
+msgid ""
+"This version of OCDS uses these specific versions of the following "
+"extensions:"
+msgstr ""
 
-#: ../../docs/guidance/map/extensions.md:26
+#: ../../docs/guidance/map/extensions.md:22
 msgid "Developing new extensions"
 msgstr "Développement de nouvelles extensions"
 
-#: ../../docs/guidance/map/extensions.md:28
+#: ../../docs/guidance/map/extensions.md:24
 msgid ""
 "If you have additional fields which cannot be mapped to the OCDS schema or "
 "an existing extension, you ought to include these in your OCDS data and "
@@ -125,11 +110,11 @@ msgstr ""
 " et créer une nouvelle extension pour documenter leur structure et leur "
 "signification."
 
-#: ../../docs/guidance/map/extensions.md:30
+#: ../../docs/guidance/map/extensions.md:26
 msgid "Extension template"
 msgstr "Modèle d'extension"
 
-#: ../../docs/guidance/map/extensions.md:32
+#: ../../docs/guidance/map/extensions.md:28
 msgid ""
 "You can find the [extension template](https://github.com/open-"
 "contracting/standard_extension_template) on GitHub. It contains guidance on "
@@ -139,11 +124,11 @@ msgstr ""
 "contracting/standard_extension_template). Il contient des indications sur la"
 " création d'une extension."
 
-#: ../../docs/guidance/map/extensions.md:34
+#: ../../docs/guidance/map/extensions.md:30
 msgid "Profiles"
 msgstr ""
 
-#: ../../docs/guidance/map/extensions.md:36
+#: ../../docs/guidance/map/extensions.md:32
 msgid ""
 "Groups of extensions can be combined into **profiles**. OCDS provides a "
 "common core for describing contracting processes, which profiles expand to "
@@ -151,26 +136,26 @@ msgid ""
 "legal framework."
 msgstr ""
 
-#: ../../docs/guidance/map/extensions.md:38
+#: ../../docs/guidance/map/extensions.md:34
 msgid "OCDS for Public-Private Partnerships"
 msgstr ""
 
-#: ../../docs/guidance/map/extensions.md:40
+#: ../../docs/guidance/map/extensions.md:36
 msgid ""
 "[OCDS for Public-Private Partnerships](https://standard.open-"
 "contracting.org/profiles/ppp/latest/en/) (PPPs) describes how to use OCDS to"
 " publish information about PPPs. The profile extends OCDS to offer a data "
 "format that follows the World Bank Group’s [Framework for Disclosure in "
 "Public-Private Partnership "
-"Projects](http://www.worldbank.org/en/topic/publicprivatepartnerships/brief"
+"Projects](https://www.worldbank.org/en/topic/publicprivatepartnerships/brief"
 "/ppp-tools#T1)."
 msgstr ""
 
-#: ../../docs/guidance/map/extensions.md:42
+#: ../../docs/guidance/map/extensions.md:38
 msgid "OCDS for the European Union"
 msgstr ""
 
-#: ../../docs/guidance/map/extensions.md:44
+#: ../../docs/guidance/map/extensions.md:40
 msgid ""
 "[OCDS for the European Union](https://standard.open-"
 "contracting.org/profiles/eu/latest/en/) describes how to express, in OCDS, "
@@ -178,62 +163,15 @@ msgid ""
 "within the EU."
 msgstr ""
 
-#: ../../docs/guidance/map/extensions.md:46
+#: ../../docs/guidance/map/extensions.md:42
 msgid "OCDS for the Agreement on Government Procurement"
 msgstr ""
 
-#: ../../docs/guidance/map/extensions.md:48
+#: ../../docs/guidance/map/extensions.md:44
 msgid ""
 "[OCDS for the Agreement on Government Procurement](https://standard.open-"
 "contracting.org/profiles/gpa/latest/en/) (GPA) describes how to use OCDS to "
 "publish information as obliged by the World Trade Organization’s [Agreement "
 "on Government Procurement](https://www.wto.org/english/docs_e/legal_e/rev-"
 "gpr-94_01_e.htm)."
-msgstr ""
-
-#: ../../docs/guidance/map/extensions.md:50
-msgid "Linked standards"
-msgstr ""
-
-#: ../../docs/guidance/map/extensions.md:52
-msgid ""
-"OCDS data often refers to other datasets, like company registers, government"
-" budgets and infrastructure projects. These datasets contain information "
-"that is managed outside the lifecycle of a contracting process."
-msgstr ""
-
-#: ../../docs/guidance/map/extensions.md:54
-msgid "Open Contracting for Infrastructure Data Standards"
-msgstr ""
-
-#: ../../docs/guidance/map/extensions.md:56
-msgid ""
-"The [Open Contracting for Infrastructure Data Standards](https://standard"
-".open-contracting.org/infrastructure/latest/en/) (OC4IDS) describe what "
-"information to disclose and how to disclose it, at each stage of an "
-"infrastructure project. It connects previously siloed information to better "
-"publish and track infrastructure investment and delivery, providing data at "
-"the project level, at the contracting summary level, and at contract process"
-" detail level."
-msgstr ""
-
-#: ../../docs/guidance/map/extensions.md:58
-msgid ""
-"A joint effort by the [Infrastructure Transparency "
-"Initiative](http://infrastructuretransparency.org) (CoST) and the Open "
-"Contracting Partnership, it builds on best practice in open data and "
-"openness of public infrastructure procurement globally."
-msgstr ""
-
-#: ../../docs/guidance/map/extensions.md:60
-msgid "Open Fiscal Data Package"
-msgstr ""
-
-#: ../../docs/guidance/map/extensions.md:62
-msgid ""
-"The [Open Fiscal Data Package](http://www.fiscaltransparency.net/ofdp/) "
-"(OFDP) describes government budget and spending data. The [Budget and "
-"spending classification](https://extensions.open-"
-"contracting.org/en/extensions/budget_and_spend/) extension describes how to "
-"connect OCDS and OFDP datasets."
 msgstr ""

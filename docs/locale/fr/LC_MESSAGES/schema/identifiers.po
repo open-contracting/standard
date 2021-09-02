@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 17:07-0500\n"
+"POT-Creation-Date: 2021-07-30 00:08-0400\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
@@ -92,7 +92,12 @@ msgstr ""
 "de marchés en ajoutant un préfixe aux identifiants internes détenus par les "
 "producteurs de données."
 
-#: ../../docs/schema/identifiers.md:23
+#: ../../docs/schema/identifiers.md:19 ../../docs/schema/identifiers.md:64
+#: ../../docs/schema/identifiers.md:117
+msgid "Worked Example"
+msgstr ""
+
+#: ../../docs/schema/identifiers.md:1
 msgid ""
 "Two government publishers (Town A and Town B) number their contracting "
 "processes from 0 upwards."
@@ -100,7 +105,7 @@ msgstr ""
 "Deux producteurs de données publiques (ville A et ville B) numérotent leurs "
 "processus de passation de marché de 0 à la suite."
 
-#: ../../docs/schema/identifiers.md:25
+#: ../../docs/schema/identifiers.md:3
 msgid ""
 "Town A publishes information on a contracting process to build a new road. "
 "Internally they know this as contract 0005."
@@ -109,7 +114,7 @@ msgstr ""
 "pour construire une nouvelle route. En interne, ils savent que c'est le "
 "contrat 0005."
 
-#: ../../docs/schema/identifiers.md:27
+#: ../../docs/schema/identifiers.md:5
 msgid ""
 "Town B publishes information on a contracting process to buy textbooks for a"
 " school. Internally they also know this as contract 0005."
@@ -118,7 +123,7 @@ msgstr ""
 " pour acheter des manuels scolaires pour une école. En interne, ils le "
 "connaissant aussi sous l'identifiant 0005."
 
-#: ../../docs/schema/identifiers.md:29
+#: ../../docs/schema/identifiers.md:7
 msgid ""
 "When they publish their OCDS data, each government adds a unique prefix onto"
 " their internal identifiers."
@@ -126,7 +131,7 @@ msgstr ""
 "Quand ils publient leurs données OCDS, chaque administration ajoute un "
 "préfixe unique à leurs identifiants internes."
 
-#: ../../docs/schema/identifiers.md:31
+#: ../../docs/schema/identifiers.md:9
 msgid ""
 "Now Town A's contracting process has the `ocid` of 'ocds-fh349f-0005' and "
 "Town B's contracting process has the `ocid` of 'ocds-twb234-0005'."
@@ -134,7 +139,7 @@ msgstr ""
 "Maintenant, les processus de passation de marchés de la ville A ont l'`ocid`"
 " 'ocds-fh349f-0005' et ceux de la ville B ont l'`ocid` 'ocds-twb234-0005'."
 
-#: ../../docs/schema/identifiers.md:33
+#: ../../docs/schema/identifiers.md:11
 msgid ""
 "There is now no chance of these getting mixed up in a system which imports "
 "data from both towns."
@@ -142,7 +147,7 @@ msgstr ""
 "Il n'est maintenant plus possible que ces identifiants soient confondus par "
 "un système qui importe les données des deux villes."
 
-#: ../../docs/schema/identifiers.md:35
+#: ../../docs/schema/identifiers.md:13
 msgid ""
 "And, if an independent civil society contract monitoring group want to "
 "publish a report about implementation of Town A's road project, or Town B's "
@@ -155,18 +160,18 @@ msgstr ""
 "des identifiants distincts qu'ils peuvent utiliser dans leurs propres "
 "données pour y faire référence."
 
-#: ../../docs/schema/identifiers.md:39
+#: ../../docs/schema/identifiers.md:37
 msgid ""
 "You can read more about the OCDS approach to identify organizations below."
 msgstr ""
 "Le chapitre suivant décrit l'approche OCDS pour identifier les "
 "organisations."
 
-#: ../../docs/schema/identifiers.md:41
+#: ../../docs/schema/identifiers.md:39
 msgid "Local identifiers"
 msgstr "Identifiants locaux"
 
-#: ../../docs/schema/identifiers.md:43
+#: ../../docs/schema/identifiers.md:41
 msgid ""
 "Not all the identifiers in OCDS need to be globally unique. Most only need "
 "to be unique among the identifiers used for the same type of object within "
@@ -177,7 +182,7 @@ msgstr ""
 "type d'objet 'à l'échelle d'un même processus de passation de marché. Par "
 "exemple :"
 
-#: ../../docs/schema/identifiers.md:45
+#: ../../docs/schema/identifiers.md:43
 msgid ""
 "A release ID must be unique within the scope of the contracting process of "
 "which it is a part;"
@@ -185,7 +190,7 @@ msgstr ""
 "Un identifiant d'instance doit être unique dans le processus de passation de"
 " marchés dont il fait partie ;"
 
-#: ../../docs/schema/identifiers.md:46
+#: ../../docs/schema/identifiers.md:44
 msgid ""
 "Award and contract identifiers must be unique within the scope of the "
 "contracting process of which they are a part;"
@@ -194,7 +199,7 @@ msgstr ""
 "(`contract`) doivent être uniques au sein du processus de passation de "
 "marché dont ils font partie ;"
 
-#: ../../docs/schema/identifiers.md:47
+#: ../../docs/schema/identifiers.md:45
 msgid ""
 "An item, milestone or document ID must be unique within the array it is part"
 " of."
@@ -203,7 +208,7 @@ msgstr ""
 "document (`document`) doivent être uniques dans l'ensemble de données auquel"
 " ils appartiennent. "
 
-#: ../../docs/schema/identifiers.md:49
+#: ../../docs/schema/identifiers.md:47
 msgid ""
 "Local identifiers must be used consistently. For example, if the `id` of an "
 "award is \"22\" in one release, then the `id` of the same award in another "
@@ -214,11 +219,11 @@ msgstr ""
 "même attribution doit avoir le même identifiant (22) dans toutes les "
 "instances ultérieures qui s'y rapportent."
 
-#: ../../docs/schema/identifiers.md:51
+#: ../../docs/schema/identifiers.md:49
 msgid "Contracting Process Identifier (ocid)"
 msgstr "Identifiant de processus de passation de marché (ocid)"
 
-#: ../../docs/schema/identifiers.md:55
+#: ../../docs/schema/identifiers.md:53
 msgid ""
 "An Open Contracting ID (ocid) is a **globally unique identifier** for a "
 "contracting process. Every OCDS release has an `ocid`."
@@ -227,7 +232,7 @@ msgstr ""
 "unique** de processus de passation de marché. Chaque instance OCDS possède "
 "son propre `ocid`."
 
-#: ../../docs/schema/identifiers.md:57
+#: ../../docs/schema/identifiers.md:55
 msgid ""
 "It can be used to join up information published at different times, and in "
 "different places."
@@ -235,13 +240,13 @@ msgstr ""
 "Il peut être utilisé pour croiser des informations publiées à des moments "
 "différents et à des lieux différents."
 
-#: ../../docs/schema/identifiers.md:59
+#: ../../docs/schema/identifiers.md:57
 msgid "Setting the `ocid` is usually a simple two step process:"
 msgstr ""
 "La mise en place de l'`ocid` est habituellement un processus en deux étapes "
 "simples :"
 
-#: ../../docs/schema/identifiers.md:61
+#: ../../docs/schema/identifiers.md:59
 msgid ""
 "Identify the best **internal identifier** recorded against the contracting "
 "processes being disclosed;"
@@ -249,13 +254,13 @@ msgstr ""
 "Identifier le meilleur **identifiant interne** avec lequel le processus de "
 "passation de marchés est enregistré ;"
 
-#: ../../docs/schema/identifiers.md:62
+#: ../../docs/schema/identifiers.md:60
 msgid "Register an `ocid` prefix to prepend to this internal identifier."
 msgstr ""
 "Se procurer un préfixe `ocid` à préfixer à cet identifiant interne auprès de"
 " l'assistance technique OCDS."
 
-#: ../../docs/schema/identifiers.md:64
+#: ../../docs/schema/identifiers.md:62
 msgid ""
 "In some cases, you might need to consider changes to existing systems to "
 "ensure that different systems handling information about your contracting "
@@ -266,7 +271,7 @@ msgstr ""
 "l'information sur vos processus de passation de marchés aient un identifiant"
 " interne commun."
 
-#: ../../docs/schema/identifiers.md:70
+#: ../../docs/schema/identifiers.md:1
 msgid ""
 "In Mexico City, each time a tender or direct contract award process is "
 "initiated, the department responsible assigns an identifier."
@@ -275,7 +280,7 @@ msgstr ""
 "qu'un marché direct est lancé, le ministère responsable attribue un "
 "identifiant."
 
-#: ../../docs/schema/identifiers.md:72
+#: ../../docs/schema/identifiers.md:3
 msgid ""
 "These are made up of an identifier for the department responsible for the "
 "procurement, a tender number, and the year."
@@ -283,15 +288,15 @@ msgstr ""
 "Ceux-ci sont constitués d'un identifiant pour le département responsable du "
 "marché, du numéro d'appel d'offres et de l'année."
 
-#: ../../docs/schema/identifiers.md:74 ../../docs/schema/identifiers.md:181
+#: ../../docs/schema/identifiers.md:5 ../../docs/schema/identifiers.md:172
 msgid "For example:"
 msgstr "Par exemple : "
 
-#: ../../docs/schema/identifiers.md:76
+#: ../../docs/schema/identifiers.md:7
 msgid "OM-DGRMSG-004-13"
 msgstr "OM-DGRMSG-004-13"
 
-#: ../../docs/schema/identifiers.md:78
+#: ../../docs/schema/identifiers.md:9
 msgid ""
 "This internal identifier can be exchanged with, and recorded in, any other "
 "systems which process information about this contracting process. For "
@@ -303,7 +308,7 @@ msgstr ""
 "marché. Par exemple, des systèmes de notification ou d'enregistrement des "
 "transactions de paiement des fournisseurs."
 
-#: ../../docs/schema/identifiers.md:80
+#: ../../docs/schema/identifiers.md:11
 msgid ""
 "Mexico City then registered a prefix with the OCDS helpdesk. They have been "
 "given the prefix ‘ocds-87sd3t’ which can be added to their unique process "
@@ -313,11 +318,11 @@ msgstr ""
 "ont reçu le préfixe 'OCDS-87sd3t' qui peut être ajouté à leurs identifiants "
 "uniques pour donner un `ocid` mondialement unique. Par exemple :"
 
-#: ../../docs/schema/identifiers.md:82
+#: ../../docs/schema/identifiers.md:13
 msgid "ocds-87sd3t-OM-DGRMSG-004-13"
 msgstr "ocds-87sd3t-OM-DGRMSG-004-13"
 
-#: ../../docs/schema/identifiers.md:86
+#: ../../docs/schema/identifiers.md:82
 msgid ""
 "The ocid prefix itself is made up of two parts: a prefix agency identifier "
 "(currently only 'ocds' is used), and a random six-character alphanumeric "
@@ -328,7 +333,7 @@ msgstr ""
 "alphanumérique à six caractères généré de manière aléatoire pour chaque "
 "producteur de données."
 
-#: ../../docs/schema/identifiers.md:88
+#: ../../docs/schema/identifiers.md:84
 msgid ""
 "The ocid is case-sensitive; in other words, the letter case of an ocid must "
 "be consistent."
@@ -336,11 +341,11 @@ msgstr ""
 "Le champ `ocid` est sensible aux majuscules et minuscules. La casse doit "
 "être utilisée de manière régulière quand il s'agit d'un ocid."
 
-#: ../../docs/schema/identifiers.md:90
+#: ../../docs/schema/identifiers.md:86
 msgid "Registered prefixes"
 msgstr "Préfixes enregistrés"
 
-#: ../../docs/schema/identifiers.md:92
+#: ../../docs/schema/identifiers.md:88
 msgid ""
 "Publishers must register an ocid prefix. See the [registration "
 "pages](../guidance/build) for details of how to obtain your ocid prefix."
@@ -349,7 +354,7 @@ msgstr ""
 "Consultez les [pages d'inscription](../guidance/build) pour vous informer "
 "sur la façon d'obtenir votre préfixes ocid."
 
-#: ../../docs/schema/identifiers.md:94
+#: ../../docs/schema/identifiers.md:90
 msgid ""
 "Prefix are randomly generated lowercase alpha-numeric strings. A prefix is "
 "assigned to each organization that holds the existing internal identifier "
@@ -359,7 +364,7 @@ msgstr ""
 "hasard. Un préfixe est attribué à chaque organisation chargée de gérer les "
 "identifiants internes existants pour les processus de passation de marchés."
 
-#: ../../docs/schema/identifiers.md:96
+#: ../../docs/schema/identifiers.md:92
 msgid ""
 "Currently, only the Open Contracting Partnership issues valid prefixes. In "
 "future, other organizations might be able to issue prefixes, each with their"
@@ -370,7 +375,7 @@ msgstr ""
 "mesure d'émettre des préfixes, avec leurs propres préfixes d'identifiants "
 "d'agence."
 
-#: ../../docs/schema/identifiers.md:98
+#: ../../docs/schema/identifiers.md:94
 msgid ""
 "You can find a [list of registered prefixes here along with a registration "
 "form for creating new prefixes](../guidance/build)."
@@ -378,7 +383,7 @@ msgstr ""
 "Vous pouvez trouver ici la [liste des préfixes ainsi que le formulaire "
 "d'inscription pour la demande de nouveaux préfixes](../guidance/build)."
 
-#: ../../docs/schema/identifiers.md:100
+#: ../../docs/schema/identifiers.md:96
 msgid ""
 "The registered prefixes are dumb identifiers. They are not intended to carry"
 " any semantics, and their sole purpose is to turn internal identifiers into "
@@ -388,11 +393,11 @@ msgstr ""
 " seul but est de transformer les identifiants internes en identifiants "
 "mondialement uniques qui peuvent être croisés entre les systèmes."
 
-#: ../../docs/schema/identifiers.md:102
+#: ../../docs/schema/identifiers.md:98
 msgid "Publisher namespace"
 msgstr "Espace de noms du producteur de données"
 
-#: ../../docs/schema/identifiers.md:104
+#: ../../docs/schema/identifiers.md:100
 msgid ""
 "Earlier versions of this documentation imposed a stricter pattern on how "
 "internal identifiers ought to be combined with the ocid prefix, including a "
@@ -405,7 +410,7 @@ msgstr ""
 "Cette exigence a été assouplie dans la pratique et doit être considérée "
 "comme dépréciée."
 
-#: ../../docs/schema/identifiers.md:106
+#: ../../docs/schema/identifiers.md:102
 msgid ""
 "However, publishers are encouraged to consider whether there are any risks "
 "of clashes in local identifiers (e.g. the possibility that two parts of the "
@@ -419,11 +424,11 @@ msgstr ""
 " identifiant pour différents processus de passation de marchés) et de "
 "prévoir d'harmoniser leurs propres modèles pour générer leur `ocid`."
 
-#: ../../docs/schema/identifiers.md:108
+#: ../../docs/schema/identifiers.md:104
 msgid "Organization IDs"
 msgstr "Identifiants de l'organisation"
 
-#: ../../docs/schema/identifiers.md:112
+#: ../../docs/schema/identifiers.md:108
 msgid ""
 "Reliably identifying the legal entities involved in a contracting process is"
 " vital for transparency and accountability, and for carrying out analysis to"
@@ -434,7 +439,7 @@ msgstr ""
 "responsabilité, et pour réaliser des analyses qui permettront d'améliorer la"
 " commande publique et la gestion des contrats."
 
-#: ../../docs/schema/identifiers.md:114
+#: ../../docs/schema/identifiers.md:110
 msgid ""
 "Publishers should seek to collect and record the **legal identifier** from "
 "an official register of any organizations involved in a contracting process "
@@ -447,7 +452,7 @@ msgstr ""
 "compris les acheteurs, les soumissionnaires et les titulaires), et devraient"
 " les inclure dans leurs fichiers OCDS."
 
-#: ../../docs/schema/identifiers.md:116
+#: ../../docs/schema/identifiers.md:112
 msgid ""
 "There are two parts to expressing an **organization identifier** in open "
 "contracting data."
@@ -455,7 +460,7 @@ msgstr ""
 "Il y a deux composantes de **l'identifiant  d'une organisation** dans les "
 "données ouvertes sur la commande publique."
 
-#: ../../docs/schema/identifiers.md:118
+#: ../../docs/schema/identifiers.md:114
 msgid ""
 "An **organization register prefix** identifying a **register** in which the "
 "organization is identified"
@@ -463,12 +468,12 @@ msgstr ""
 "Un **préfixe de registre**  identifiant un **registre** dans lequel "
 "l'organisation est identifiée."
 
-#: ../../docs/schema/identifiers.md:119
+#: ../../docs/schema/identifiers.md:115
 msgid "The **existing organizational ID** provided in that public register"
 msgstr ""
 "L'**identifiant existant de l'organisation** prévu dans ce registre public"
 
-#: ../../docs/schema/identifiers.md:125
+#: ../../docs/schema/identifiers.md:1
 msgid ""
 "The **organization register prefix** for UK Companies House is GB-COH. The "
 "organization **Development Initiatives** has been assigned the company "
@@ -481,7 +486,7 @@ msgstr ""
 "'06368740' par Companies House. L'identifiant mondialement unique de "
 "l'organisation Development Initiatives peut alors être exprimé ainsi :"
 
-#: ../../docs/schema/identifiers.md:141
+#: ../../docs/schema/identifiers.md:132
 msgid ""
 "In OCDS, the organization register prefix is included in the `scheme` field "
 "of an identifier block, with the existing organization id placed in the `id`"
@@ -497,11 +502,11 @@ msgstr ""
 "d'[Open Corporates](https://opencorporates.com/)), celle-ci peut également "
 "être donné dans le champ `uri`."
 
-#: ../../docs/schema/identifiers.md:143
+#: ../../docs/schema/identifiers.md:134
 msgid "Choosing an identifier"
 msgstr "Choisir un identifiant"
 
-#: ../../docs/schema/identifiers.md:145
+#: ../../docs/schema/identifiers.md:136
 msgid ""
 "The **organization register prefix** is used to refer to a register from "
 "which the organization identifier is drawn. There are a range of different "
@@ -511,7 +516,7 @@ msgstr ""
 "registre à partir duquel l'identifiant d'organisation est conçu. Il existe "
 "une gamme de différents types de **listes d'organisations** :"
 
-#: ../../docs/schema/identifiers.md:147
+#: ../../docs/schema/identifiers.md:138
 msgid ""
 "**Primary registers** - such as national or state company registrars. An "
 "identifier issued by these bodies has a specific legal meaning. There is a "
@@ -531,7 +536,7 @@ msgstr ""
 "cet identifiant dans un registre officiel. **L'utilisation d'identifiants "
 "issus d'un registre primaire sont fortement recommandés dans OCDS**."
 
-#: ../../docs/schema/identifiers.md:149
+#: ../../docs/schema/identifiers.md:140
 msgid ""
 "**Secondary registers** - which record a particular property of an "
 "organization, such as being registered for VAT, or registered as an "
@@ -550,7 +555,7 @@ msgstr ""
 " ; ou les différentes branches de la même entité juridique pourraient "
 "s'enregistrer avec différents numéros de TVA."
 
-#: ../../docs/schema/identifiers.md:151
+#: ../../docs/schema/identifiers.md:142
 msgid ""
 "**Third-party databases** - which compile a list of organizations, and "
 "sometimes their sub-units, on an on-demand basis. These databases do not "
@@ -573,7 +578,7 @@ msgstr ""
 "ceux tirés de bases de données non-propriétaires qui permettent aux "
 "utilisateurs de rechercher des informations d'identification."
 
-#: ../../docs/schema/identifiers.md:153
+#: ../../docs/schema/identifiers.md:144
 msgid ""
 "**Local lists** - Some publishers do not map their data to external "
 "identifiers, maintaining instead a local list of suppliers. In these cases, "
@@ -593,7 +598,7 @@ msgstr ""
 " les chances que les utilisateurs de données établissent des correspondances"
 " avec un registre plus fiable."
 
-#: ../../docs/schema/identifiers.md:155
+#: ../../docs/schema/identifiers.md:146
 msgid ""
 "See the [full worked example](../guidance/map/organization_identifiers) for "
 "more information on implementing identifiers from these different kinds of "
@@ -603,20 +608,20 @@ msgstr ""
 " plus d'informations sur l'implémentation d'identifiants à partir de ces "
 "différents types de listes d'organisations."
 
-#: ../../docs/schema/identifiers.md:157
+#: ../../docs/schema/identifiers.md:148
 msgid ""
 "If you want to disclose identifiers for natural persons, see the [personal "
 "identifiers guidance](../guidance/map/organization_personal_identifiers)."
 msgstr ""
 "Si vous souhaitez divulguer des identifiants de personnes physiques, "
-"consultez le [guide sur les identifiants personnels]"
-"(../guidance/map/organization_personal_identifiers)."
+"consultez le [guide sur les identifiants "
+"personnels](../guidance/map/organization_personal_identifiers)."
 
-#: ../../docs/schema/identifiers.md:159
+#: ../../docs/schema/identifiers.md:150
 msgid "Release ID"
 msgstr "Identifiant d'instance"
 
-#: ../../docs/schema/identifiers.md:161
+#: ../../docs/schema/identifiers.md:152
 msgid ""
 "A release identifier must be unique within the scope of the contracting "
 "process of which it is a part. In other words, across all OCDS releases with"
@@ -629,7 +634,7 @@ msgstr ""
 "référence à une seule instance ; aucune autre instance n'utilise le même "
 "identifiant."
 
-#: ../../docs/schema/identifiers.md:163
+#: ../../docs/schema/identifiers.md:154
 msgid ""
 "A release identifier must also be consistent within this scope. For example,"
 " if the `id` of a release is \"12345\" in one release package, then the `id`"
@@ -640,11 +645,11 @@ msgstr ""
 "d'instances, alors l'`id` de la même instance dans un autre paquet "
 "d'instances doit également être \"12345\"."
 
-#: ../../docs/schema/identifiers.md:165
+#: ../../docs/schema/identifiers.md:156
 msgid "Award and Contract IDs"
 msgstr "Identifiants d'attribution et de contrat"
 
-#: ../../docs/schema/identifiers.md:167
+#: ../../docs/schema/identifiers.md:158
 msgid ""
 "Award and contract identifiers must be unique within the scope of the "
 "contracting process of which they are a part. In other words, across all "
@@ -657,7 +662,7 @@ msgstr ""
 "valeur `ocid`, chaque identifiant de contrat fait référence à un seul "
 "contrat ; aucun autre contrat n'utilise le même identifiant."
 
-#: ../../docs/schema/identifiers.md:169
+#: ../../docs/schema/identifiers.md:160
 msgid ""
 "Award and contract identifiers must also be consistent within this scope. "
 "For example, if the `id` of an award is \"22\" in one release, then the `id`"
@@ -668,7 +673,7 @@ msgstr ""
 " dans une instance, la même attribution doit avoir le même identifiant (22) "
 "dans toutes les instances ultérieures qui s'y rapportent."
 
-#: ../../docs/schema/identifiers.md:171
+#: ../../docs/schema/identifiers.md:162
 msgid ""
 "Contracts must cross-reference a related award (using the `awardID` field), "
 "as key information such as suppliers can be contained in the related award. "
@@ -682,11 +687,11 @@ msgstr ""
 " même attribution, par exemple dans le cas d'un accord-cadre, où plusieurs "
 "contrats sont créés en lien avec une seule attribution."
 
-#: ../../docs/schema/identifiers.md:173
+#: ../../docs/schema/identifiers.md:164
 msgid "Item, Document and Milestone IDs"
 msgstr "Identifiants de livrables, de documents et d'étapes"
 
-#: ../../docs/schema/identifiers.md:175
+#: ../../docs/schema/identifiers.md:166
 msgid ""
 "An item, document or milestone identifier must be unique within a given "
 "array of items, and must be used consistently across all the releases in a "
@@ -697,7 +702,7 @@ msgstr ""
 "manière uniforme parmi toutes les instances d'un même processus de passation"
 " de marché."
 
-#: ../../docs/schema/identifiers.md:177
+#: ../../docs/schema/identifiers.md:168
 msgid ""
 "The same `id` value may be re-used in another array of items within the same"
 " release, and no cross-reference between these identifiers is implied."
@@ -706,7 +711,7 @@ msgstr ""
 "même instance, et aucune référence croisée entre ces identifiants n'est "
 "implicite."
 
-#: ../../docs/schema/identifiers.md:179
+#: ../../docs/schema/identifiers.md:170
 msgid ""
 "The use of an identifier means that subsequent releases can update prior "
 "identified items, documents or milestones, without needing to republish all "
@@ -716,7 +721,7 @@ msgstr ""
 " mettre à jour les livrables, documents ou étapes identifiés auparavant sans"
 " avoir besoin de republier tous les livrables, documents ou étapes."
 
-#: ../../docs/schema/identifiers.md:183
+#: ../../docs/schema/identifiers.md:174
 msgid ""
 "A first release sets the items to be procured in `tender/items` and the "
 "items awarded in one award in `awards/0/items`:"
@@ -725,19 +730,19 @@ msgstr ""
 "`tender/items` et les livrables attribués dans une attribution dans "
 "`awards/0/items` :"
 
-#: ../../docs/schema/identifiers.md:184
+#: ../../docs/schema/identifiers.md:175
 msgid "`tender/items` contains three items, with `id` values of \"1\", \"2\", and \"3\""
 msgstr ""
 "`tender/items` contient trois livrables, avec des champs `id` dont les "
 "valeurs sont \"1\", \"2\", et \"3\""
 
-#: ../../docs/schema/identifiers.md:185
+#: ../../docs/schema/identifiers.md:176
 msgid "`awards/0/items` contains two items, with `id` values of \"3\" and \"4\""
 msgstr ""
 "`awards/0/items` contient deux livrables avec des champs `id` dont les "
 "valeurs sont \"3\" et \"4\""
 
-#: ../../docs/schema/identifiers.md:187
+#: ../../docs/schema/identifiers.md:178
 msgid ""
 "There is *no* relationship between the item to be procured with `id` \"3\" "
 "and the item awarded with `id` \"3\"; these can be different items. "
@@ -747,7 +752,7 @@ msgstr ""
 "\"3\" et le livrable attribué avec l'identifiant \"3\". Ceux-ci peuvent être"
 " des livrables différents. Continuons l'exemple : "
 
-#: ../../docs/schema/identifiers.md:189
+#: ../../docs/schema/identifiers.md:180
 msgid ""
 "A second release updates the items awarded in the single award in "
 "`awards/0/items`:"
@@ -755,13 +760,13 @@ msgstr ""
 "Une deuxième instance met à jour les livrables attribués dans "
 "`awards/0/items` :"
 
-#: ../../docs/schema/identifiers.md:190
+#: ../../docs/schema/identifiers.md:181
 msgid "`awards/0/items` contains three items, with `id` values of \"3\", \"4\", \"5\""
 msgstr ""
 "`awards/0/items` contient trois livrables avec des champs `id` dont les "
 "valeurs sont \"3\", \"4\" et \"5\""
 
-#: ../../docs/schema/identifiers.md:192
+#: ../../docs/schema/identifiers.md:183
 msgid ""
 "Here, there *is* a relationship between the items awarded with `id` \"3\" "
 "and \"4\" in the first release and the items awarded with `id` \"3\" and "

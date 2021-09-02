@@ -1,5 +1,5 @@
 """
-Ensures that `make_versioned_release_schema.py` and `make_metaschema.py` have been run.
+Ensures that `manage.py pre-commit` has been run.
 """
 
 import json
@@ -8,10 +8,9 @@ import sys
 
 import jsonref
 
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'util'))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
-from make_metaschema import get_metaschema  # noqa isort:skip
-from make_versioned_release_schema import get_versioned_release_schema  # noqa isort:skip
+from manage import get_dereferenced_release_schema, get_metaschema, get_versioned_release_schema  # noqa isort:skip
 
 
 def test_versioned_release_schema_is_in_sync():
@@ -21,7 +20,7 @@ def test_versioned_release_schema_is_in_sync():
     with open('schema/release-schema.json') as f:
         expected = get_versioned_release_schema(json.load(f))
 
-    assert actual == expected, 'Run: python utils/make_versioned_release_schema.py'
+    assert actual == expected, 'Run: python manage.py pre-commit'
 
 
 def test_dereferenced_release_schema_is_in_sync():
@@ -29,13 +28,13 @@ def test_dereferenced_release_schema_is_in_sync():
         actual = json.load(f)
 
     with open('schema/release-schema.json') as f:
-        expected = jsonref.load(f)
+        expected = get_dereferenced_release_schema(jsonref.load(f))
 
-    assert actual == expected, 'Run: python utils/make_dereferenced_release_schema.py'
+    assert actual == expected, 'Run: python manage.py pre-commit'
 
 
-def test_metaschema_is_in_sync():
+def test_meta_schema_is_in_sync():
     with open('schema/meta-schema.json') as f:
         actual = json.load(f)
 
-    assert actual == get_metaschema()
+    assert actual == get_metaschema(), 'Run: python manage.py pre-commit'
