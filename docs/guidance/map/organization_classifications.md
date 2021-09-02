@@ -65,9 +65,7 @@ In their publication policy, the procurement team documents all possible codes f
 
 A third, discouraged, option is for publishers to use local extensions to disclose organization classification information. This option is discouraged because it is difficult for data users to compare organization classifications across multiple data sets that use many different approaches to disclosing similar information. However, in the absence of standardized options, where there is a specific use case for the data, this can be the most appropriate short-term option. Local extensions ought to document the structure and meaning of the additional fields they describe: please refer to the [extensions documentation](extensions).
 
-For example, although tracking women-owned organizations is shown example 2.2 above, this data only provides information on organizations that have been registered as women-owned. Organizations without the classification can be not women-owned, women-owned but not registered as such, or the information might not be known.
-
-To disambiguate these cases, a publisher can choose to publish a flag field for the relevant organization classification. In the fictional example below, Dhanghadi has created a local extension so they can publish data in the `parties.details` block on an organization that is `femaleChaired`, with the values of the field being either `true` or `false`. The publisher would document the structure of this field and its meaning in the local extension files.
+In the fictional example below, Dhanghadi has created a local extension so they can publish data in the `parties.details` block on an organization that is `femaleChaired`, with the values of the field being either `true` or `false`. The publisher would document the structure of this field and its meaning in the local extension files.
 
 ```{jsoninclude} ../../examples/organization-classification/dhangadhi_female_chaired_example.json
 :jsonpointer:
