@@ -44,7 +44,7 @@ The organizations participating in a contracting process are listed in the [part
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../build/current_lang/codelists/organizationRole.csv
+:file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
 ### Classification Scheme
