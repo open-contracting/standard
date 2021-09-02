@@ -1,5 +1,9 @@
 # Build
 
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NSiIIH2-GJM" title="Getting your data ready to publish" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 This phase is about creating a new IT system, or updating an existing IT system, to implement your [mapping](map) and publish OCDS data.
 
 Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../support/index.md#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
@@ -16,11 +20,13 @@ As you complete this phase, you can:
 
 ## Register an OCID prefix
 
-The [identifiers](../../schema/identifiers) reference page describes the contracting process identifier (`ocid`) and how ocid prefixes are used to ensure `ocid`s are globally unique.
+In OCDS, the open contracting process identifier (`ocid`) uniquely identifies a contracting process. As a publisher, you will assign a unique `ocid` to each contracting process.
 
-To publish OCDS data, you need to register an ocid prefix.
+To ensure that your `ocid`s do not conflict with those of another publisher, you need to register an ocid prefix.
 
 **Action**: Email [data@open-contracting.org](mailto:data@open-contracting.org) to request an OCID prefix. Provide the name of the publishing organization and the email address of a contact person at this organization.
+
+**Resource**: To learn more about the `ocid` and its prefixes, refer to the [identifiers](../../schema/identifiers) reference.
 
 ```{note}
 All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pub?gid=506986894&single=true&output=csv).
@@ -40,6 +46,7 @@ build/change_history
 build/easy_releases
 build/merging
 ```
+
 **Resource:** [Technical case studies: OCDS implementation insights report](https://www.open-contracting.org/resources/technical-case-studies-ocds-implementation-insights/) provides insights into the technical choices made in OCDS implementations in Paraguay, Zambia, Colombia, Moldova and Argentina's Road Agency Vialidad.
 
 ### Decide how to combine spreadsheet data
@@ -56,6 +63,10 @@ Otherwise, you can consider the following methods:
 * If you aren't comfortable with the above methods, you can consider using a spreadsheet add-on for combining data from multiple sheets.
 
 ## Establish your publication formats and access methods
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/njw7H4UKPsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 OCDS data can be published in different formats and accessed using different methods.
 
@@ -89,7 +100,7 @@ If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../suppo
 * If your source data is in **Excel files**, you can alternately transform Excel files to OCDS JSON by using the [Open Contracting Explorer](https://developmentgateway.org/expertise/open-contracting-procurement/), which includes a web interface and web API for users to access and explore the OCDS data. (This tool is authored by Development Gateway.)
 * If your source data is in **SQL tables**, you can use [Kavure'i](https://gitlab.com/dncp-opendata/opendata-etl/-/blob/master/README_en.md) to transform it to OCDS. To use it, you write SQL queries to extract data from SQL tables, setting the columns for the query results to match the JSON paths in OCDS (for example, `buyer/name`). The query results are saved to CSV files, which are transformed to OCDS JSON using [Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/). (Kavure'i is authored by Paraguay's Dirección Nacional de Contrataciones Públicas (DNCP).)
 * To **make OCDS data available via an API**, you can use another component of [Kavure'i](https://gitlab.com/dncp-opendata/opendata-etl/-/blob/master/README_en.md) to load OCDS data into [ElasticSearch](https://www.elastic.co/), and then use [Pitogüé](https://gitlab.com/dncp-opendata/opendata-api-v3/blob/master/README_en.md) to make it available via an API. (Both tools are authored by Paraguay's Dirección Nacional de Contrataciones Públicas (DNCP).)
-* If you intend to **publish [record packages](../../schema/record_package)**, [OCDS Merge](https://ocds-merge.readthedocs.io/en/latest/) is the best software library for creating OCDS [records](../../getting_started/releases_and_records). If you use the [Python](https://www.python.org/) programming language, you can use it directly. If not, you can use its [test cases](https://ocds-merge.readthedocs.io/en/latest/#test-cases) to test your implementation of the [merge routine](../../schema/merging), and you can read its [commented code](https://github.com/open-contracting/ocds-merge) as inspiration for your implementation.
+* If you intend to **publish [record packages](../../schema/record_package)**, [OCDS Merge](https://ocds-merge.readthedocs.io/en/latest/) is the best software library for creating OCDS [records](../../primer/releases_and_records). If you use the [Python](https://www.python.org/) programming language, you can use it directly. If not, you can use its [test cases](https://ocds-merge.readthedocs.io/en/latest/#test-cases) to test your implementation of the [merge routine](../../schema/merging), and you can read its [commented code](https://github.com/open-contracting/ocds-merge) as inspiration for your implementation.
 * If you have [release packages](../../schema/release_package) and want to have [record packages](../../schema/record_package), if you have data that follows an older version of OCDS, or if you otherwise need to transform your OCDS data, you can use [OCDS Kit](https://ocdskit.readthedocs.io/en/latest/) as a command-line tool or [Python](https://www.python.org/) library.
 
 If you aren't creating or updating an IT system, but are instead reusing an existing [data collection tool](build/data_collection_tools), you can customize it:
@@ -119,7 +130,7 @@ If your [mapping](map) identified data elements which don't map to OCDS or an ex
 
 **Action:** Request support from the [OCDS Helpdesk](../../support/index) to model your extensions.
 
-**Action:** Share your extensions with the OCDS community on [Github](https://github.com/open-contracting/standard/issues).
+**Action:** Share your extensions with the OCDS community on [GitHub](https://github.com/open-contracting/standard/issues).
 
 ## Keep users in mind as you build
 
@@ -131,19 +142,17 @@ As covered in the [Design](design) phase, different users will need information 
 
 ## Check your data
 
-Throughout the build phase you ought to regularly use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check the structure and format of your data.
+Throughout the build phase you ought to regularly use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check the structure and format of your data. This ensures that your data is compatible with OCDS tools and is comparable with other OCDS data.
 
-OCDS data needs to be published as part of a release package or a record package. You can use [OCDSKit](https://pypi.org/project/ocdskit/) to reformat your data before submitting it to the review tool, but any data you publish needs to be correctly packaged.
+OCDS data needs to be published as part of a release package or a record package. You can use [OCDS Kit](https://pypi.org/project/ocdskit/) to reformat your data before submitting it to the review tool, but any data you publish needs to be correctly packaged.
 
-The Data Review Tool reports any structural issues with your data. It checks whether your data makes sense and uses [OCDS Show](https://open-contracting.github.io/ocds-show/) to display a preview of your data, so that you can check whether the information is appearing in the correct place within the schema. You can also use [OCDS Show](https://open-contracting.github.io/ocds-show/) directly.
+The Data Review Tool reports any structural issues with your data. It checks whether your data makes sense and displays a preview of your data, so that you can check whether the information is appearing in the correct place within the schema.
 
 **Action:** Upload some data to the [OCDS Data Review Tool](https://standard.open-contracting.org/review/).
 
 **Action:** Request feedback on your draft data from the [OCDS Helpdesk](../../support/index).
 
 **Tool:** The [jOCDS Validator](https://developmentgateway.org/blog/your-data-ocds-compliant-introducing-jocds-validator) can be used for bulk checking of the structure and format of OCDS data
-
-**Tool:** [OCDS Show](https://open-contracting.github.io/ocds-show/)
 
 **Resource:** [How to check your OCDS data validates](https://www.open-contracting.org/2018/05/09/check-ocds-data-validates/)
 

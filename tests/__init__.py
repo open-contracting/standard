@@ -6,7 +6,7 @@ languages = {
 
 test_basic_params = {
     'en': 'Open Contracting Data Standard',
-    'es': 'Estándar de Datos de Contrataciones Abiertas',
+    'es': 'Estándar de Datos para las Contrataciones Abiertas',
     'fr': 'Standard de Données sur la Commande Publique Ouverte',
 }
 

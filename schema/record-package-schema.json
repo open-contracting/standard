@@ -109,7 +109,6 @@
       "title": "Records",
       "description": "The records for this data package.",
       "type": "array",
-      "minItems": 1,
       "items": {
         "$ref": "#/definitions/Record"
       },
@@ -126,12 +125,12 @@
   "definitions": {
     "Record": {
       "title": "Record",
-      "description": "A record aggregates the releases about a contracting process. There should be a single record per contracting process per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.",
+      "description": "A record aggregates releases with the same open contracting process identifier (ocid). There should be a single record per ocid per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.",
       "type": "object",
       "properties": {
         "ocid": {
-          "title": "Open Contracting ID",
-          "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: https://standard.open-contracting.org/{{version}}/{{lang}}/getting_started/contracting_process/",
+          "title": "Open contracting process identifier",
+          "description": "A globally unique identifier for the contracting process that the record describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
           "type": "string"
         },
         "releases": {
@@ -170,8 +169,7 @@
         }
       },
       "required": [
-        "ocid",
-        "releases"
+        "ocid"
       ]
     },
     "LinkedRelease": {

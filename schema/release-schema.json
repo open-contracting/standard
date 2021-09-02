@@ -2,18 +2,18 @@
   "id": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
-  "description": "Each release provides data about a single contracting process at a particular point in time. Releases can be used to notify users of new tenders, awards, contracts and other updates. Releases may repeat or update information provided previously in this contracting process. One contracting process may have many releases. A 'record' of a contracting process follows the same structure as a release, but combines information from multiple points in time into a single summary.",
+  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, establishing the rationale for the procurement, giving the market a general description of the purchase, getting the necessary budget, forecasting and conducting market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
   "type": "object",
   "properties": {
     "ocid": {
-      "title": "Open Contracting ID",
-      "description": "A globally unique identifier for this Open Contracting Process. Composed of an ocid prefix and an identifier for the contracting process. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information see the [Open Contracting Identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/)",
+      "title": "Open contracting process identifier",
+      "description": "A globally unique identifier for the contracting process that the release describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
       "type": "string",
       "minLength": 1
     },
     "id": {
       "title": "Release ID",
-      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process identified by the Open Contracting ID (ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
+      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process (identified by the ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
@@ -24,6 +24,11 @@
       "type": "string",
       "format": "date-time",
       "omitWhenMerged": true
+    },
+    "publisher": {
+      "title": "Publisher",
+      "description": "The original publisher of this release.",
+      "$ref": "#/definitions/Identifier"
     },
     "tag": {
       "title": "Release Tag",
@@ -45,7 +50,11 @@
         "tender"
       ],
       "codelist": "initiationType.csv",
-      "openCodelist": false
+      "openCodelist": false,
+      "deprecated": {
+        "description": "This field is deprecated, because the approach to data modelling that it supports was not pursued.",
+        "deprecatedVersion": "1.2"
+      }
     },
     "parties": {
       "title": "Parties",
@@ -63,7 +72,7 @@
     },
     "planning": {
       "title": "Planning",
-      "description": "Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract, when and how.",
+      "description": "Information from the planning process. This includes information related to the process of deciding what to contract, when and how.",
       "$ref": "#/definitions/Planning"
     },
     "tender": {
@@ -82,7 +91,7 @@
     },
     "contracts": {
       "title": "Contracts",
-      "description": "Information from the contract creation phase of the procurement process.",
+      "description": "Information from the contract creation and implementation phase of the contracting process.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Contract"
@@ -104,7 +113,7 @@
       "items": {
         "$ref": "#/definitions/RelatedProcess"
       },
-      "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate open contracting identifier (ocid). This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
+      "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate ocid. This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
       "title": "Related processes",
       "type": "array"
     },
@@ -129,12 +138,20 @@
   "definitions": {
     "Planning": {
       "title": "Planning",
-      "description": "Information from the planning phase of the contracting process. Note that many other fields can be filled in a planning release, in the appropriate fields in other schema sections; these would likely be estimates at this stage, e.g. value in tender.",
+      "description": "Information from the planning process. Note that many other fields can be filled in a planning release, in the appropriate fields in the tender section; these would likely be estimates at this stage, e.g. value in tender.",
       "type": "object",
       "properties": {
+        "id": {
+          "title": "Planning ID",
+          "description": "An identifier for this planning process.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "rationale": {
           "title": "Rationale",
-          "description": "The rationale for the procurement provided in free text. More detail can be provided in an attached document.",
+          "description": "The rationale for the planned procurement provided in free text. More detail can be provided in an attached document.",
           "type": [
             "string",
             "null"
@@ -142,12 +159,12 @@
         },
         "budget": {
           "title": "Budget",
-          "description": "Details of the budget that funds this contracting process.",
+          "description": "Details of the budget that funds the planned contracting process.",
           "$ref": "#/definitions/Budget"
         },
         "documents": {
           "title": "Documents",
-          "description": "Documents related to the planning stage (for example, notices, needs assessments and market studies).",
+          "description": "Documents related to the planning process (for example, notices, needs assessments and market studies).",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -155,7 +172,7 @@
         },
         "milestones": {
           "title": "Planning milestones",
-          "description": "A list of milestones associated with the planning stage.",
+          "description": "A list of milestones associated with the planning process.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
@@ -248,12 +265,17 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total upper estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "$ref": "#/definitions/Value"
         },
         "minValue": {
           "title": "Minimum value",
-          "description": "The minimum estimated value of the procurement.  A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated minimum value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The estimated maximum value of the framework agreement, as estimated when publishing the tender information.",
           "$ref": "#/definitions/Value"
         },
         "procurementMethod": {
@@ -372,7 +394,7 @@
         },
         "tenderPeriod": {
           "title": "Tender period",
-          "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
+          "description": "The period when the tender is open for submissions. The end date is the closing date for bid submissions.",
           "$ref": "#/definitions/Period"
         },
         "enquiryPeriod": {
@@ -591,7 +613,17 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total value of this award. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The estimated maximum value of the framework agreement, as a whole, as estimated when making the award.",
+          "$ref": "#/definitions/Value"
+        },
+        "estimatedValue": {
+          "title": "Estimated value",
+          "description": "The estimated value of the framework agreement, as a whole, as estimated when making the award.",
           "$ref": "#/definitions/Value"
         },
         "suppliers": {
@@ -663,7 +695,7 @@
     "Contract": {
       "type": "object",
       "title": "Contract",
-      "description": "Information regarding the signed contract between the buyer and supplier(s).",
+      "description": "Information regarding the contract, typically between the buyer and supplier. This includes contracts describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery), as well as contracts only describing the general contractual conditions (such as a framework agreement) and those only describing the specific contractual conditions (such as a contract within a framework agreement). Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts are also used when giving prizes or other rewards (e.g. a follow-up contract) resulting from a design contest.",
       "required": [
         "id",
         "awardID"
@@ -730,14 +762,28 @@
             "null"
           ]
         },
-        "period": {
-          "title": "Period",
-          "description": "The start and end date for the contract.",
-          "$ref": "#/definitions/Period"
+        "dateSigned": {
+          "title": "Date concluded",
+          "description": "The date the contract was concluded. Typically, this is the date when the last buyer or supplier signed the contract. However, if no contract is signed, then the date of contract conclusion may correspond to other dates (e.g. the date when the buyer notified the supplier, which had the legal effect of concluding the contract).",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "value": {
           "title": "Value",
-          "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "title": "Maximum value",
+          "description": "The maximum value of the framework agreement, as a whole.",
+          "$ref": "#/definitions/Value"
+        },
+        "estimatedValue": {
+          "title": "Estimated value",
+          "description": "The estimated value of the framework agreement, as a whole, as estimated when the framework agreement is concluded (e.g. signed).",
           "$ref": "#/definitions/Value"
         },
         "items": {
@@ -750,14 +796,10 @@
           },
           "uniqueItems": true
         },
-        "dateSigned": {
-          "title": "Date signed",
-          "description": "The date the contract was signed. In the case of multiple signatures, the date of the last signature.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
+        "period": {
+          "title": "Period",
+          "description": "The start and end date for the contract.",
+          "$ref": "#/definitions/Period"
         },
         "documents": {
           "title": "Documents",
@@ -778,7 +820,7 @@
           "items": {
             "$ref": "#/definitions/RelatedProcess"
           },
-          "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate open contracting identifier (ocid). This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
+          "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
           "type": "array"
         },
@@ -1697,13 +1739,280 @@
           ],
           "description": "The postal code. For example, 94043."
         },
+        "country": {
+          "title": "Country code",
+          "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "country.csv",
+          "openCodelist": false,
+          "enum": [
+            "AD",
+            "AE",
+            "AF",
+            "AG",
+            "AI",
+            "AL",
+            "AM",
+            "AO",
+            "AQ",
+            "AR",
+            "AS",
+            "AT",
+            "AU",
+            "AW",
+            "AX",
+            "AZ",
+            "BA",
+            "BB",
+            "BD",
+            "BE",
+            "BF",
+            "BG",
+            "BH",
+            "BI",
+            "BJ",
+            "BL",
+            "BM",
+            "BN",
+            "BO",
+            "BQ",
+            "BR",
+            "BS",
+            "BT",
+            "BV",
+            "BW",
+            "BY",
+            "BZ",
+            "CA",
+            "CC",
+            "CD",
+            "CF",
+            "CG",
+            "CH",
+            "CI",
+            "CK",
+            "CL",
+            "CM",
+            "CN",
+            "CO",
+            "CR",
+            "CU",
+            "CV",
+            "CW",
+            "CX",
+            "CY",
+            "CZ",
+            "DE",
+            "DJ",
+            "DK",
+            "DM",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "EH",
+            "ER",
+            "ES",
+            "ET",
+            "FI",
+            "FJ",
+            "FK",
+            "FM",
+            "FO",
+            "FR",
+            "GA",
+            "GB",
+            "GD",
+            "GE",
+            "GF",
+            "GG",
+            "GH",
+            "GI",
+            "GL",
+            "GM",
+            "GN",
+            "GP",
+            "GQ",
+            "GR",
+            "GS",
+            "GT",
+            "GU",
+            "GW",
+            "GY",
+            "HK",
+            "HM",
+            "HN",
+            "HR",
+            "HT",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IM",
+            "IN",
+            "IO",
+            "IQ",
+            "IR",
+            "IS",
+            "IT",
+            "JE",
+            "JM",
+            "JO",
+            "JP",
+            "KE",
+            "KG",
+            "KH",
+            "KI",
+            "KM",
+            "KN",
+            "KP",
+            "KR",
+            "KW",
+            "KY",
+            "KZ",
+            "LA",
+            "LB",
+            "LC",
+            "LI",
+            "LK",
+            "LR",
+            "LS",
+            "LT",
+            "LU",
+            "LV",
+            "LY",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MF",
+            "MG",
+            "MH",
+            "MK",
+            "ML",
+            "MM",
+            "MN",
+            "MO",
+            "MP",
+            "MQ",
+            "MR",
+            "MS",
+            "MT",
+            "MU",
+            "MV",
+            "MW",
+            "MX",
+            "MY",
+            "MZ",
+            "NA",
+            "NC",
+            "NE",
+            "NF",
+            "NG",
+            "NI",
+            "NL",
+            "NO",
+            "NP",
+            "NR",
+            "NU",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PF",
+            "PG",
+            "PH",
+            "PK",
+            "PL",
+            "PM",
+            "PN",
+            "PR",
+            "PS",
+            "PT",
+            "PW",
+            "PY",
+            "QA",
+            "RE",
+            "RO",
+            "RS",
+            "RU",
+            "RW",
+            "SA",
+            "SB",
+            "SC",
+            "SD",
+            "SE",
+            "SG",
+            "SH",
+            "SI",
+            "SJ",
+            "SK",
+            "SL",
+            "SM",
+            "SN",
+            "SO",
+            "SR",
+            "SS",
+            "ST",
+            "SV",
+            "SX",
+            "SY",
+            "SZ",
+            "TC",
+            "TD",
+            "TF",
+            "TG",
+            "TH",
+            "TJ",
+            "TK",
+            "TL",
+            "TM",
+            "TN",
+            "TO",
+            "TR",
+            "TT",
+            "TV",
+            "TW",
+            "TZ",
+            "UA",
+            "UG",
+            "UM",
+            "US",
+            "UY",
+            "UZ",
+            "VA",
+            "VC",
+            "VE",
+            "VG",
+            "VI",
+            "VN",
+            "VU",
+            "WF",
+            "WS",
+            "XK",
+            "YE",
+            "YT",
+            "ZA",
+            "ZM",
+            "ZW",
+            null
+          ]
+        },
         "countryName": {
           "title": "Country name",
           "type": [
             "string",
             "null"
           ],
-          "description": "The country name. For example, United States."
+          "description": "The country name. For example, United States.",
+          "deprecated": {
+            "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+            "deprecatedVersion": "1.2"
+          }
         }
       },
       "patternProperties": {
@@ -1711,7 +2020,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "deprecated": {
+            "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+            "deprecatedVersion": "1.2"
+          }
         }
       }
     },
@@ -2210,7 +2523,7 @@
           "openCodelist": true
         },
         "identifier": {
-          "description": "The identifier of the related process. If the scheme is 'ocid', this must be an Open Contracting ID (ocid).",
+          "description": "The identifier of the related process. If the scheme is 'ocid', this must be an open contracting process identifier (ocid).",
           "title": "Identifier",
           "type": [
             "string",
