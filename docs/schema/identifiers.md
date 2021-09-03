@@ -106,23 +106,23 @@ Earlier versions of this documentation imposed a stricter pattern on how interna
 
 However, publishers are encouraged to consider whether there are any risks of clashes in local identifiers (e.g. the possibility that two parts of the publishing body might use the same identifier for different contracting processes) and to plan to mitigate this when establishing their own patterns to generate their `ocid`
 
-## Organization IDs
+## Organization identifiers
 
 <img src="../../_static/svg/green_organisation.svg" width="150" align="right"/>
 
 Reliably identifying the legal entities involved in a contracting process is vital for transparency and accountability, and for carrying out analysis to improve procurement and contract management.
 
-Publishers should seek to collect and record the **legal identifier** from an official register of any organizations involved in a contracting process (including procuring organizations, bidders and suppliers), and should include this in their OCDS files.
+Publishers should seek to collect and record the **legal identifier** from an official register of any organization involved in a contracting process (including buyers, tenderers and suppliers), and should include this in their OCDS files.
 
 There are two parts to expressing an **organization identifier** in open contracting data.
 
-1. An **organization register prefix** identifying a **register** in which the organization is identified
-2. The **existing organizational ID** provided in that public register
+* A prefix for the organization list (also known as registry or register) from which the identifier is drawn: for example, a company register.
+* The existing identifier for the organization within that list.
 
 ````{admonition} Worked Example
 :class: hint
 
-The **organization register prefix** for UK Companies House is GB-COH. The organization **Development Initiatives** has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can then expressed as follows:
+The prefix for the UK's Companies House is "GB-COH". The organization Development Initiatives has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can be expressed as below:
 
 ```json
 {
@@ -134,33 +134,33 @@ The **organization register prefix** for UK Companies House is GB-COH. The organ
 ```
 ````
 
-In OCDS, the organization register prefix is included in the `scheme` field of an identifier block, with the existing organization id placed in the `id` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from [Open Corporates](https://opencorporates.com/)) this can also be given in the `uri` field.
+In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier object, with the existing identifier in the `id` field. If there is a recognized public URL that uniquely identifies the organization (for example, drawn from [Open Corporates](https://opencorporates.com/)) this can be disclosed via the `uri` field.
 
-### Choosing an identifier
+### Organization lists
 
-The **organization register prefix** is used to refer to a register from which the organization identifier is drawn. There are a range of different kinds of **organization list**:
+There are many kinds of organization lists:
 
-* **Primary registers** - such as national or state company registrars. An identifier issued by these bodies has a specific legal meaning. There is a one to one equivalence between the identifier and a legal entity of a particular form in a given jurisdiction. The identifier is created at the same time that the organization is formally constituted, and changes to the status of the organization are recorded against this identifier in an official register. **Identifiers from a primary register are strongly preferred in OCDS.**
+* **Primary registers** - such as national or state company registrars. An identifier issued by these bodies has a specific legal meaning. There is a one to one equivalence between the identifier and a legal entity of a particular form in a given jurisdiction. The identifier is created at the same time that the organization is formally constituted. Changes to the status of the organization are recorded against this identifier in an official register. **Identifiers from a primary register are encouraged in OCDS.**
 
-* **Secondary registers** - which record a particular property of an organization, such as being registered for VAT, or registered as an employer. An organizations identifier in such a registry might change without the organization itself changing in nature. For example, in some jurisdictions, an organization might de-register from VAT, and then re-register, gaining a new number in the process; or different branches of the same legal entity might register for different VAT numbers.
+* **Secondary registers** - which record a particular property of an organization, such as being registered for VAT, or registered as an employer. An organization's identifier in such a registry might change without the organization itself changing in nature. For example, in some jurisdictions, an organization might de-register from VAT, and then re-register, being assigned a new number in the process; or different branches of the same legal entity might register for different VAT numbers.
 
-* **Third-party databases** - which compile a list of organizations, and sometimes their sub-units, on an on-demand basis. These databases do not confer any legal status or special properties on the organizations, but might record a mapping between their own identifiers and other primary or secondary register identifiers for the organization. A common examples of a third-party database is the proprietary Dun&Bradstreet number. The OCDS organizational identifier scheme will recognize identifiers from third-party databases, but strongly prefers those drawn from non-proprietary databases, which allow users to lookup identifier information.
+* **Third-party databases** - which compile a list of organizations, and sometimes their sub-units, on an on-demand basis. These databases do not confer any legal status or special properties on the organizations, but might record a mapping between their own identifiers and other primary or secondary registers' identifiers for the organization. A common example of a third-party database is the proprietary Dun & Bradstreet number. Identifiers from *non-proprietary* databases are preferred, so that users can lookup the identifiers.
 
-* **Local lists** - Some publishers do not map their data to external identifiers, maintaining instead a local list of suppliers. In these cases, the publisher may use their internal identifiers, and should adopt their own **organization list prefix**. Where possible, the publisher should also provide their local list on the web, with as much additional data about each supplier as possible, in order to maximize the chance of data users matching their local list to some more authoritative register.
+* **Local lists** - Some publishers do not map their data to external identifiers, maintaining instead a local list of suppliers. In these cases, the publisher may use their internal identifiers, and should assign a prefix for their organization list. Where possible, the publisher should also provide their local list on the web, with as much additional data about each supplier as possible, in order to maximize the chance of data users matching their local list to some more authoritative register.
 
 See the [full worked example](../guidance/map/organization_identifiers) for more information on implementing identifiers from these different kinds of organization lists.
 
 If you want to disclose identifiers for natural persons, see the [personal identifiers guidance](../guidance/map/organization_personal_identifiers).
 
-## Organization IDs
+## Local organization IDs
 
 Each of the organizations involved in a contracting process is declared in the [parties section](reference.md#parties).
 
-Each organization has a local identifier (`id`) used to reference it from elsewhere in the data. For example, `buyer/id` references the buyer's entry in the parties section using `parties/id`.
+Each organization has a local identifier (`id`) used to reference it from elsewhere in the data. For example, `buyer/id` references the buyer's entry in the parties section at `parties/id`.
 
-An organization's `id` is separate from its organization identifier and need only be unique within the scope of the contracting process to which it is a party. An organization’s `id` must be consistent across all releases with the same `ocid` value.
+An organization's `id` is distinct from its organization identifier and need only be unique within the scope of the contracting process to which it is a party. An organization’s `id` must be consistent across all releases with the same `ocid` value.
 
-See the [guidance](../guidance/map/organization_identifiers.md#organization-ids) for more information on organization IDs.
+See the [guidance](../guidance/map/organization_identifiers.md#organization-identifiers) for more information on organization identifiers and local IDs.
 
 ## Release ID
 
