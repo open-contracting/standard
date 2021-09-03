@@ -121,13 +121,13 @@ The following details can be provided for each organization.
 :collapse: identifier,additionalIdentifiers,address,contactPoint
 ```
 
-```{extensionlist} The following extensions are available for parties
+```{extensionlist} The following extensions are available for organizations
 :list: parties
 ```
 
 Each organization has a `details` object. Through extensions, this can be used to provide detailed classification of organizations.
 
-```{extensionlist} The following extensions are available for party details
+```{extensionlist} The following extensions are available for organization details
 :list: partyDetail
 ```
 

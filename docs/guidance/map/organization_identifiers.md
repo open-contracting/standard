@@ -1,6 +1,6 @@
 # Organization identifiers
 
-Publishers regularly collect the *legal identifiers* of the organizations that participate in a contracting process. These [organization identifiers](../../schema/identifiers.md#organization-identifiers) can be disclosed using OCDS. An organization identifier is composed of two parts:
+Publishers regularly collect the *legal identifiers* of the organizations involved in a contracting process. These [organization identifiers](../../schema/identifiers.md#organization-identifiers) can be disclosed using OCDS. An organization identifier is composed of two parts:
 
 * A prefix for the organization list (also known as registry or register) from which the identifier is drawn: for example, the company register.
 * The existing identifier for the organization within that list.

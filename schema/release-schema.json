@@ -450,7 +450,7 @@
         },
         "numberOfTenderers": {
           "title": "Number of tenderers",
-          "description": "The number of tenderers who submit a bid.",
+          "description": "The number of tenderers that submit a bid.",
           "type": [
             "integer",
             "null"
@@ -458,7 +458,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All organizations who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the bid extension.",
+          "description": "All organizations that submit a bid. More detailed information on bids and the bidding organization can be provided using the bid extension.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -1414,8 +1414,8 @@
           "$ref": "#/definitions/ContactPoint"
         },
         "roles": {
-          "title": "Organization roles",
-          "description": "The organization's role(s) in the contracting process, using the open [organizationRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#organization-role) codelist.",
+          "title": "Roles",
+          "description": "The organization's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
           "type": [
             "array",
             "null"
@@ -1431,7 +1431,7 @@
             "object",
             "null"
           ],
-          "description": "Additional classification information about organizations can be provided using OrganizationDetails extensions that define particular fields and classification schemes.",
+          "description": "Additional classification information about organizations can be provided using organization details extensions that define particular fields and classification schemes.",
           "title": "Details"
         }
       },
