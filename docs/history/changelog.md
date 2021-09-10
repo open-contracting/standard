@@ -68,7 +68,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1280](https://github.com/open-contracting/standard/pull/1280) Align the description of 'tenderNotice' and 'technicalSpecifications' with GPA.
   * [#1377](https://github.com/open-contracting/standard/pull/1377) Clarify the description of 'completionCertificate' and align it with the description of 'paymentCertificate' in OC4IDS.
   * [#1378](https://github.com/open-contracting/standard/pull/1378) Remove the Category column.
-  * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice", add synonyms to all notice codes ('planning', 'tender', 'award', 'contract') and standardize the descriptions.
+  * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice", add synonyms to all notice codes ('plannedProcurementNotice', 'tenderNotice', 'awardNotice', 'contractNotice') and standardize the descriptions.
 
 * `milestoneType.csv`:
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
