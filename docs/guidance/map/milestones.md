@@ -5,10 +5,10 @@ Milestones can be included within the planning, tender, contract and contract im
 ## Planning
 
 The planning milestones block is used for two types of milestones:
- * Key events in the planning stage, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
+ * Key events in the planning process, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
  * Anticipated milestones during the contract implementation stage, for example, the date by which goods delivery of the goods is required.
 
-If during the planning stage you have information about tender process milestones, then you
+If during the planning process you have information about tender process milestones, then you
 populate the tender milestones block instead.
 
 ## Tender
