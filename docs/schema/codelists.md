@@ -90,8 +90,6 @@ The code descriptions are necessarily broad, to cover their usage in a range of 
 
 Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
-Documents can be published as links to downloadable documents, to web pages, or - in particular in case of notices - to  official gazettes in which they have been published.
-
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
