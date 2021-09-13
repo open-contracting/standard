@@ -10,16 +10,16 @@ Open Contracting Data Standard (OCDS) data is published and updated over time us
 * Show the components of an OCDS record
 ```
 
-````{ifconfig} language and language not in ('es') or not language
+```{ifconfig} language != 'es'
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OeDCLMWlY_U" title="Introducing releases and records" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-````
-````{ifconfig} language and language == 'es'
+```
+```{ifconfig} language == 'es'
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wFf5KAv3LMs" title="Presentación de entregas y registros" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-````
+```
 
 The only thing that can be truly called “OCDS data” is JSON data that validates against the OCDS schema. There are two schemas for OCDS data: “releases” and “records.”
 
