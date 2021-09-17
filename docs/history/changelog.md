@@ -23,11 +23,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1013](https://github.com/open-contracting/standard/pull/1013) Replace guidance on publication levels.
   * [#1016](https://github.com/open-contracting/standard/pull/1016) Add links to OCDS profiles and linked standards.
   * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
-  * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
+  * [#1193](https://github.com/open-contracting/standard/pull/1193) Remove language distinguishing "core", "community", and "local" extensions.
   * [#1337](https://github.com/open-contracting/standard/pull/1337) Improve the structure of the Map page.
   * [#1338](https://github.com/open-contracting/standard/pull/1338) Improve the structure of the worked examples on the Map page.
   * [#1332](https://github.com/open-contracting/standard/pull/1332) Improve guidance on framework agreements.
   * [#1386](https://github.com/open-contracting/standard/pull/1386) Add link to OCDS Implementation Checklist.
+  * [#1414](https://github.com/open-contracting/standard/pull/1414) Remove the planning section from non-planning related sections and JSON examples. Rephrase planning stage to planning process in worked examples.
 
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
 * [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
