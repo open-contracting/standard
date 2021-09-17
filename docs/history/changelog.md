@@ -166,6 +166,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Remove confusing terminology:
   * [#1109](https://github.com/open-contracting/standard/pull/1109) `tender.awardCriteriaDetails`, to remove "selection criteria".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
+  * [#1401](https://github.com/open-contracting/standard/pull/1401) Replace "total value" with "value".
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice".
 
 * Add or strengthen normative statements in field descriptions:
