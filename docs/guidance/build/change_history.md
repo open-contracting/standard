@@ -14,7 +14,7 @@ For guidance on how to set the `id` field on each release, see the [easy release
 
 ## Planning
 
-The London Borough of Barnet plans to publish a tender for cycle lane improvements later in the year. To prepare the market they publish a *notice of planned procurement*. This is also known as *prior information notice*, or *future opportunity notice*.
+The London Borough of Barnet plans to publish a tender for cycle lane improvements later in the year. To prepare the market they publish a *notice of planned procurement*.
 
 The publisher creates an OCDS release to represent this notice. The release uses the 'planning' tag and includes data about the planned procurement. The `tender` section holds the estimated values and publication date. The tender status is 'planned'.
 
@@ -34,7 +34,7 @@ The publisher also creates an OCDS record for the new contracting process. The r
 
 ## Tender
 
-The London Borough of Barnet is ready to invite bids for the contract. They issue the tender via an *notice of intended procurement*. This is also known as *contract notice* or *opportunity notice*.
+The London Borough of Barnet is ready to invite bids for the contract. They issue the tender via an *notice of intended procurement*.
 
 The publisher creates a new release to represent this notice. The release uses the 'tender' tag and provides the details in the `tender` section.
 
