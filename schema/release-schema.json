@@ -72,17 +72,17 @@
     },
     "planning": {
       "title": "Planning",
-      "description": "Information from the planning process. This includes information related to the process of deciding what to contract, when and how.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
       "$ref": "#/definitions/Planning"
     },
     "tender": {
       "title": "Tender",
-      "description": "The activities undertaken in order to enter into a contract.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
       "$ref": "#/definitions/Tender"
     },
     "awards": {
       "title": "Awards",
-      "description": "Information from the award phase of the contracting process. There can be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
+      "description": "Information about the awards. This information concerns the contracting process. This information typically concerns the period after the bid submission deadline and ending with the award or, if there is a standstill period, the end of the standstill period.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Award"
@@ -91,7 +91,7 @@
     },
     "contracts": {
       "title": "Contracts",
-      "description": "Information from the contract creation and implementation phase of the contracting process.",
+      "description": "Information about the contracts and their implementation. This information concerns the contracting process. This information typically concerns the period after the award or, if there was a standstill period, after the end of the standstill period.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Contract"
@@ -138,7 +138,7 @@
   "definitions": {
     "Planning": {
       "title": "Planning",
-      "description": "Information from the planning process. Note that many other fields can be filled in a planning release, in the appropriate fields in the tender section; these would likely be estimates at this stage, e.g. value in tender.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
       "type": "object",
       "properties": {
         "id": {
@@ -190,7 +190,7 @@
     },
     "Tender": {
       "title": "Tender",
-      "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
       "type": "object",
       "required": [
         "id"
