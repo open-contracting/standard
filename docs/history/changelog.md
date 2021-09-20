@@ -116,6 +116,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1163](https://github.com/open-contracting/standard/pull/1163) Clarify the description of 'procuringEntity'.
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Clarify the description of 'buyer'.
   * [#1232](https://github.com/open-contracting/standard/pull/1232) Clarify the description of 'supplier'.
+  * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
@@ -166,13 +167,14 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * Remove confusing terminology:
   * [#1109](https://github.com/open-contracting/standard/pull/1109) `tender.awardCriteriaDetails`, to remove "selection criteria".
+  * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
   * [#1401](https://github.com/open-contracting/standard/pull/1401) Replace "total value" with "value".
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice".
 
 * Add or strengthen normative statements in field descriptions:
   * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
-  * [#1112](https://github.com/open-contracting/standard/pull/1112) `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available" ("may" replaced with "should")
+  * [#1112](https://github.com/open-contracting/standard/pull/1112) `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available" ("may" replaced with "should")
   * [#1112](https://github.com/open-contracting/standard/pull/1112) `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
   * [#1112](https://github.com/open-contracting/standard/pull/1112) `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
 

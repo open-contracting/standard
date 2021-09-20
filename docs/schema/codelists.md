@@ -34,12 +34,12 @@ Added the 'planningUpdate' code.
 :file: ../../build/current_lang/codelists/releaseTag.csv
 ```
 
-### Party Role
+### Organization Role
 
 ```{versionadded} 1.1
 ```
 
-The organizations, economic operators or other participants in a contracting process are listed in the [parties section](reference.md#parties). A single party can have one or more roles in the contracting process.
+The organizations participating in a contracting process are listed in the [parties section](reference.md#parties). A single organization can have one or more roles in the contracting process.
 
 ```{csv-table-no-translate}
 :header-rows: 1
