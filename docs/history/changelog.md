@@ -132,10 +132,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1216](https://github.com/open-contracting/standard/pull/1216) Define contracting process and planning process in the schema description. Update definition of release, record and ocid. Update references to contracting process so that it takes take the planning process into account.
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
+  * [#1395](https://github.com/open-contracting/standard/pull/1417) `tender.procurementMethod`
   * [#1175](https://github.com/open-contracting/standard/pull/1175) `Award`
   * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
   * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
-  * [#1395](https://github.com/open-contracting/standard/pull/1417) `procurementMethod`
 
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
