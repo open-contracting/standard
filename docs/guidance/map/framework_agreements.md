@@ -230,7 +230,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 * Since the framework agreement will be concluded with multiple suppliers and will involve second-stage competition, `tender.procurementMethod` is set to 'selective'.
 * Since the framework agreement is open, `tender.tenderPeriod` is set to the end of the framework agreement.
 * Since there are two buyers, the 'buyer' object is not set, and the buyers are declared in the `parties` array.
-* Since Chile Compra is the entity that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
+* Since Chile Compra is the organization that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_first_stage.json
 :jsonpointer:

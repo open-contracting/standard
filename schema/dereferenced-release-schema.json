@@ -102,16 +102,16 @@
     },
     "parties": {
       "title": "Parties",
-      "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
+      "description": "Information on the organizations who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
       "type": "array",
       "items": {
         "title": "Organization",
-        "description": "A party (organization)",
+        "description": "An organization",
         "type": "object",
         "properties": {
           "name": {
             "title": "Common name",
-            "description": "A common name for this organization or other participant in the contracting process. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+            "description": "A common name for this organization. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization is known. This field may also include details of the department or sub-unit involved in this contracting process.",
             "type": [
               "string",
               "null"
@@ -119,12 +119,12 @@
           },
           "id": {
             "type": "string",
-            "description": "The ID used for cross-referencing to this party from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available.",
-            "title": "Entity ID"
+            "description": "The ID used for cross-referencing to this organization from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available.",
+            "title": "ID"
           },
           "identifier": {
             "title": "Primary identifier",
-            "description": "The primary identifier for this organization or participant. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
+            "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
             "type": "object",
             "properties": {
               "scheme": {
@@ -177,7 +177,7 @@
             "type": "array",
             "items": {
               "title": "Identifier",
-              "description": "A unique identifier for a party (organization).",
+              "description": "A unique identifier for an organization.",
               "type": "object",
               "properties": {
                 "scheme": {
@@ -556,7 +556,7 @@
           "contactPoint": {
             "title": "Contact point",
             "type": "object",
-            "description": "Contact details that can be used for this party.",
+            "description": "Contact details that can be used for this organization.",
             "properties": {
               "name": {
                 "title": "Name",
@@ -610,8 +610,8 @@
             }
           },
           "roles": {
-            "title": "Party roles",
-            "description": "The party's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
+            "title": "Roles",
+            "description": "The organization's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
             "type": [
               "array",
               "null"
@@ -627,7 +627,7 @@
               "object",
               "null"
             ],
-            "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular fields and classification schemes.",
+            "description": "Additional classification information about organizations can be provided using organization details extensions that define particular fields and classification schemes.",
             "title": "Details"
           }
         },
@@ -649,7 +649,7 @@
             "string",
             "null"
           ],
-          "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+          "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
           "title": "Organization name",
           "minLength": 1
         },
@@ -658,8 +658,8 @@
             "string",
             "integer"
           ],
-          "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-          "title": "Organization ID"
+          "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+          "title": "ID"
         },
         "identifier": {
           "title": "Primary identifier",
@@ -1052,7 +1052,7 @@
           },
           "items": {
             "title": "Identifier",
-            "description": "A unique identifier for a party (organization).",
+            "description": "A unique identifier for an organization.",
             "type": "object",
             "properties": {
               "scheme": {
@@ -2024,7 +2024,7 @@
                 "string",
                 "null"
               ],
-              "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+              "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
               "title": "Organization name",
               "minLength": 1
             },
@@ -2033,8 +2033,8 @@
                 "string",
                 "integer"
               ],
-              "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-              "title": "Organization ID"
+              "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+              "title": "ID"
             },
             "identifier": {
               "title": "Primary identifier",
@@ -2427,7 +2427,7 @@
               },
               "items": {
                 "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "description": "A unique identifier for an organization.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -4114,7 +4114,7 @@
         },
         "procurementMethod": {
           "title": "Procurement method",
-          "description": "The procurement method, from the closed [method](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist.",
+          "description": "The method describing which organizations can submit a bid, using the closed [method](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist. In releases concerning second stages (e.g. in framework agreements) or other subsequent stages, the procurement method always refers to the first stage of the contracting process.",
           "type": [
             "string",
             "null"
@@ -4270,7 +4270,7 @@
         },
         "enquiryPeriod": {
           "title": "Enquiry period",
-          "description": "The period during which potential bidders may submit questions and requests for clarification to the entity managing procurement. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
+          "description": "The period during which potential bidders may submit questions and requests for clarification to the buyer or the procuring entity. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -4432,7 +4432,7 @@
         },
         "numberOfTenderers": {
           "title": "Number of tenderers",
-          "description": "The number of parties who submit a bid.",
+          "description": "The number of tenderers that submit a bid.",
           "type": [
             "integer",
             "null"
@@ -4440,7 +4440,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the bid extension.",
+          "description": "All organizations that submit a bid. More detailed information on bids and the bidding organization can be provided using the bid extension.",
           "type": "array",
           "items": {
             "properties": {
@@ -4449,7 +4449,7 @@
                   "string",
                   "null"
                 ],
-                "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                 "title": "Organization name",
                 "minLength": 1
               },
@@ -4458,8 +4458,8 @@
                   "string",
                   "integer"
                 ],
-                "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                "title": "Organization ID"
+                "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                "title": "ID"
               },
               "identifier": {
                 "title": "Primary identifier",
@@ -4852,7 +4852,7 @@
                 },
                 "items": {
                   "title": "Identifier",
-                  "description": "A unique identifier for a party (organization).",
+                  "description": "A unique identifier for an organization.",
                   "type": "object",
                   "properties": {
                     "scheme": {
@@ -4966,7 +4966,7 @@
               }
             },
             "type": "object",
-            "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
+            "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference"
           },
           "uniqueItems": true
@@ -6622,7 +6622,7 @@
           },
           "suppliers": {
             "title": "Suppliers",
-            "description": "Entities with which a buyer or a procuring entity decided to conclude a contract.",
+            "description": "Organizations with which a buyer or a procuring entity decided to conclude a contract.",
             "type": "array",
             "items": {
               "properties": {
@@ -6631,7 +6631,7 @@
                     "string",
                     "null"
                   ],
-                  "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                  "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                   "title": "Organization name",
                   "minLength": 1
                 },
@@ -6640,8 +6640,8 @@
                     "string",
                     "integer"
                   ],
-                  "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                  "title": "Organization ID"
+                  "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                  "title": "ID"
                 },
                 "identifier": {
                   "title": "Primary identifier",
@@ -7034,7 +7034,7 @@
                   },
                   "items": {
                     "title": "Identifier",
-                    "description": "A unique identifier for a party (organization).",
+                    "description": "A unique identifier for an organization.",
                     "type": "object",
                     "properties": {
                       "scheme": {
@@ -7148,7 +7148,7 @@
                 }
               },
               "type": "object",
-              "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
+              "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
               "title": "Organization reference"
             },
             "uniqueItems": true
@@ -10290,7 +10290,7 @@
                             "string",
                             "null"
                           ],
-                          "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                          "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                           "title": "Organization name",
                           "minLength": 1
                         },
@@ -10299,8 +10299,8 @@
                             "string",
                             "integer"
                           ],
-                          "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                          "title": "Organization ID"
+                          "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                          "title": "ID"
                         },
                         "identifier": {
                           "title": "Primary identifier",
@@ -10693,7 +10693,7 @@
                           },
                           "items": {
                             "title": "Identifier",
-                            "description": "A unique identifier for a party (organization).",
+                            "description": "A unique identifier for an organization.",
                             "type": "object",
                             "properties": {
                               "scheme": {
@@ -10817,7 +10817,7 @@
                             "string",
                             "null"
                           ],
-                          "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                          "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                           "title": "Organization name",
                           "minLength": 1
                         },
@@ -10826,8 +10826,8 @@
                             "string",
                             "integer"
                           ],
-                          "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                          "title": "Organization ID"
+                          "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                          "title": "ID"
                         },
                         "identifier": {
                           "title": "Primary identifier",
@@ -11220,7 +11220,7 @@
                           },
                           "items": {
                             "title": "Identifier",
-                            "description": "A unique identifier for a party (organization).",
+                            "description": "A unique identifier for an organization.",
                             "type": "object",
                             "properties": {
                               "scheme": {
@@ -13619,7 +13619,7 @@
                 "string",
                 "null"
               ],
-              "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+              "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
               "title": "Organization name",
               "minLength": 1
             },
@@ -13628,8 +13628,8 @@
                 "string",
                 "integer"
               ],
-              "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-              "title": "Organization ID"
+              "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+              "title": "ID"
             },
             "identifier": {
               "title": "Primary identifier",
@@ -14022,7 +14022,7 @@
               },
               "items": {
                 "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "description": "A unique identifier for an organization.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -15709,7 +15709,7 @@
         },
         "procurementMethod": {
           "title": "Procurement method",
-          "description": "The procurement method, from the closed [method](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist.",
+          "description": "The method describing which organizations can submit a bid, using the closed [method](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#method) codelist. In releases concerning second stages (e.g. in framework agreements) or other subsequent stages, the procurement method always refers to the first stage of the contracting process.",
           "type": [
             "string",
             "null"
@@ -15865,7 +15865,7 @@
         },
         "enquiryPeriod": {
           "title": "Enquiry period",
-          "description": "The period during which potential bidders may submit questions and requests for clarification to the entity managing procurement. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
+          "description": "The period during which potential bidders may submit questions and requests for clarification to the buyer or the procuring entity. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -16027,7 +16027,7 @@
         },
         "numberOfTenderers": {
           "title": "Number of tenderers",
-          "description": "The number of parties who submit a bid.",
+          "description": "The number of tenderers that submit a bid.",
           "type": [
             "integer",
             "null"
@@ -16035,7 +16035,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the bid extension.",
+          "description": "All organizations that submit a bid. More detailed information on bids and the bidding organization can be provided using the bid extension.",
           "type": "array",
           "items": {
             "properties": {
@@ -16044,7 +16044,7 @@
                   "string",
                   "null"
                 ],
-                "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                 "title": "Organization name",
                 "minLength": 1
               },
@@ -16053,8 +16053,8 @@
                   "string",
                   "integer"
                 ],
-                "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                "title": "Organization ID"
+                "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                "title": "ID"
               },
               "identifier": {
                 "title": "Primary identifier",
@@ -16447,7 +16447,7 @@
                 },
                 "items": {
                   "title": "Identifier",
-                  "description": "A unique identifier for a party (organization).",
+                  "description": "A unique identifier for an organization.",
                   "type": "object",
                   "properties": {
                     "scheme": {
@@ -16561,7 +16561,7 @@
               }
             },
             "type": "object",
-            "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
+            "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference"
           },
           "uniqueItems": true
@@ -18213,7 +18213,7 @@
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "Entities with which a buyer or a procuring entity decided to conclude a contract.",
+          "description": "Organizations with which a buyer or a procuring entity decided to conclude a contract.",
           "type": "array",
           "items": {
             "properties": {
@@ -18222,7 +18222,7 @@
                   "string",
                   "null"
                 ],
-                "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                 "title": "Organization name",
                 "minLength": 1
               },
@@ -18231,8 +18231,8 @@
                   "string",
                   "integer"
                 ],
-                "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                "title": "Organization ID"
+                "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                "title": "ID"
               },
               "identifier": {
                 "title": "Primary identifier",
@@ -18625,7 +18625,7 @@
                 },
                 "items": {
                   "title": "Identifier",
-                  "description": "A unique identifier for a party (organization).",
+                  "description": "A unique identifier for an organization.",
                   "type": "object",
                   "properties": {
                     "scheme": {
@@ -18739,7 +18739,7 @@
               }
             },
             "type": "object",
-            "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
+            "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference"
           },
           "uniqueItems": true
@@ -21875,7 +21875,7 @@
                           "string",
                           "null"
                         ],
-                        "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                        "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                         "title": "Organization name",
                         "minLength": 1
                       },
@@ -21884,8 +21884,8 @@
                           "string",
                           "integer"
                         ],
-                        "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                        "title": "Organization ID"
+                        "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                        "title": "ID"
                       },
                       "identifier": {
                         "title": "Primary identifier",
@@ -22278,7 +22278,7 @@
                         },
                         "items": {
                           "title": "Identifier",
-                          "description": "A unique identifier for a party (organization).",
+                          "description": "A unique identifier for an organization.",
                           "type": "object",
                           "properties": {
                             "scheme": {
@@ -22402,7 +22402,7 @@
                           "string",
                           "null"
                         ],
-                        "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                        "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                         "title": "Organization name",
                         "minLength": 1
                       },
@@ -22411,8 +22411,8 @@
                           "string",
                           "integer"
                         ],
-                        "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                        "title": "Organization ID"
+                        "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                        "title": "ID"
                       },
                       "identifier": {
                         "title": "Primary identifier",
@@ -22805,7 +22805,7 @@
                         },
                         "items": {
                           "title": "Identifier",
-                          "description": "A unique identifier for a party (organization).",
+                          "description": "A unique identifier for an organization.",
                           "type": "object",
                           "properties": {
                             "scheme": {
@@ -24616,7 +24616,7 @@
                       "string",
                       "null"
                     ],
-                    "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                    "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                     "title": "Organization name",
                     "minLength": 1
                   },
@@ -24625,8 +24625,8 @@
                       "string",
                       "integer"
                     ],
-                    "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                    "title": "Organization ID"
+                    "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                    "title": "ID"
                   },
                   "identifier": {
                     "title": "Primary identifier",
@@ -25019,7 +25019,7 @@
                     },
                     "items": {
                       "title": "Identifier",
-                      "description": "A unique identifier for a party (organization).",
+                      "description": "A unique identifier for an organization.",
                       "type": "object",
                       "properties": {
                         "scheme": {
@@ -25143,7 +25143,7 @@
                       "string",
                       "null"
                     ],
-                    "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+                    "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
                     "title": "Organization name",
                     "minLength": 1
                   },
@@ -25152,8 +25152,8 @@
                       "string",
                       "integer"
                     ],
-                    "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-                    "title": "Organization ID"
+                    "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+                    "title": "ID"
                   },
                   "identifier": {
                     "title": "Primary identifier",
@@ -25546,7 +25546,7 @@
                     },
                     "items": {
                       "title": "Identifier",
-                      "description": "A unique identifier for a party (organization).",
+                      "description": "A unique identifier for an organization.",
                       "type": "object",
                       "properties": {
                         "scheme": {
@@ -27581,7 +27581,7 @@
                 "string",
                 "null"
               ],
-              "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+              "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
               "title": "Organization name",
               "minLength": 1
             },
@@ -27590,8 +27590,8 @@
                 "string",
                 "integer"
               ],
-              "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-              "title": "Organization ID"
+              "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+              "title": "ID"
             },
             "identifier": {
               "title": "Primary identifier",
@@ -27984,7 +27984,7 @@
               },
               "items": {
                 "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "description": "A unique identifier for an organization.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -28108,7 +28108,7 @@
                 "string",
                 "null"
               ],
-              "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+              "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
               "title": "Organization name",
               "minLength": 1
             },
@@ -28117,8 +28117,8 @@
                 "string",
                 "integer"
               ],
-              "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-              "title": "Organization ID"
+              "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+              "title": "ID"
             },
             "identifier": {
               "title": "Primary identifier",
@@ -28511,7 +28511,7 @@
               },
               "items": {
                 "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "description": "A unique identifier for an organization.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -29086,7 +29086,7 @@
             "string",
             "null"
           ],
-          "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+          "description": "The name of the organization being referenced. This must match the name of an entry in the parties section.",
           "title": "Organization name",
           "minLength": 1
         },
@@ -29095,8 +29095,8 @@
             "string",
             "integer"
           ],
-          "description": "The id of the party being referenced. This must match the id of an entry in the parties section. Although an integer is allowed, it is recommended to use a string.",
-          "title": "Organization ID"
+          "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
+          "title": "ID"
         },
         "identifier": {
           "title": "Primary identifier",
@@ -29489,7 +29489,7 @@
           },
           "items": {
             "title": "Identifier",
-            "description": "A unique identifier for a party (organization).",
+            "description": "A unique identifier for an organization.",
             "type": "object",
             "properties": {
               "scheme": {
@@ -29603,17 +29603,17 @@
         }
       },
       "type": "object",
-      "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
+      "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
       "title": "Organization reference"
     },
     "Organization": {
       "title": "Organization",
-      "description": "A party (organization)",
+      "description": "An organization",
       "type": "object",
       "properties": {
         "name": {
           "title": "Common name",
-          "description": "A common name for this organization or other participant in the contracting process. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+          "description": "A common name for this organization. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization is known. This field may also include details of the department or sub-unit involved in this contracting process.",
           "type": [
             "string",
             "null"
@@ -29621,12 +29621,12 @@
         },
         "id": {
           "type": "string",
-          "description": "The ID used for cross-referencing to this party from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) where an organization identifier is available.",
-          "title": "Entity ID"
+          "description": "The ID used for cross-referencing to this organization from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available.",
+          "title": "ID"
         },
         "identifier": {
           "title": "Primary identifier",
-          "description": "The primary identifier for this organization or participant. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
+          "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
           "type": "object",
           "properties": {
             "scheme": {
@@ -29679,7 +29679,7 @@
           "type": "array",
           "items": {
             "title": "Identifier",
-            "description": "A unique identifier for a party (organization).",
+            "description": "A unique identifier for an organization.",
             "type": "object",
             "properties": {
               "scheme": {
@@ -30058,7 +30058,7 @@
         "contactPoint": {
           "title": "Contact point",
           "type": "object",
-          "description": "Contact details that can be used for this party.",
+          "description": "Contact details that can be used for this organization.",
           "properties": {
             "name": {
               "title": "Name",
@@ -30112,8 +30112,8 @@
           }
         },
         "roles": {
-          "title": "Party roles",
-          "description": "The party's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
+          "title": "Roles",
+          "description": "The organization's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
           "type": [
             "array",
             "null"
@@ -30129,7 +30129,7 @@
             "object",
             "null"
           ],
-          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular fields and classification schemes.",
+          "description": "Additional classification information about organizations can be provided using organization details extensions that define particular fields and classification schemes.",
           "title": "Details"
         }
       },
@@ -30862,7 +30862,7 @@
     },
     "Identifier": {
       "title": "Identifier",
-      "description": "A unique identifier for a party (organization).",
+      "description": "A unique identifier for an organization.",
       "type": "object",
       "properties": {
         "scheme": {

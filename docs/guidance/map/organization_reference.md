@@ -1,6 +1,6 @@
 # Organization references
 
-Many parties can be involved in the lifecycle of a contracting process. Sometimes the same party can have multiple roles. For example, an organization can first be a tenderer and then become a supplier.
+Many organizations can be involved in the lifecycle of a contracting process. Sometimes the same organization can have multiple roles. For example, an organization can first be a tenderer and then become a supplier.
 
 To avoid data repetition, OCDS 1.1 introduced a top-level parties array, where the detailed information about all the organizations and other participants involved in a particular contracting process is declared.
 
