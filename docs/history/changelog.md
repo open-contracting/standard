@@ -120,7 +120,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
 * `method.csv`:
-  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid" in the `method` codelist.
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
   * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "(interested) supplier" to "potential supplier".
 
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
