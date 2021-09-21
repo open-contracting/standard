@@ -78,6 +78,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * `documentType.csv`:
   * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
+  * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
+    * 'otherParticipationRequirements'
+    * 'procurementMethodRationale'
+    * 'noStandstillPeriodJustification'. 
   * [#1219](https://github.com/open-contracting/standard/pull/1219) Add codes from the tariffs extension:
     * 'tariffs'
     * 'tariffMethod'
@@ -91,7 +95,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1377](https://github.com/open-contracting/standard/pull/1377) Clarify the description of 'completionCertificate' and align it with the description of 'paymentCertificate' in OC4IDS.
   * [#1378](https://github.com/open-contracting/standard/pull/1378) Remove the Category column.
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice", add synonyms to all notice codes ('plannedProcurementNotice', 'tenderNotice', 'awardNotice', 'contractNotice') and standardize the descriptions.
-  * [#1419](https://github.com/open-contracting/standard/pull/1419) Add 'otherParticipationRequirements', 'procurementMethodRationale' and 'noStandstillPeriodJustification'. 
 
 * `milestoneType.csv`:
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
