@@ -90,6 +90,10 @@ The code descriptions are necessarily broad, to cover their usage in a range of 
 
 Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
+```{versionchanged} 1.2
+Added the 'otherParticipationRequirements', 'procurementMethodRationale' and 'noStandstillPeriodJustification' codes.
+```
+
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
