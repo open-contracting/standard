@@ -78,6 +78,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * `documentType.csv`:
   * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
+  * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
+    * 'otherParticipationRequirements'
+    * 'procurementMethodRationale'
+    * 'noStandstillPeriodJustification'
   * [#1219](https://github.com/open-contracting/standard/pull/1219) Add codes from the tariffs extension:
     * 'tariffs'
     * 'tariffMethod'
