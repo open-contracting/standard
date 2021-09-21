@@ -92,6 +92,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1378](https://github.com/open-contracting/standard/pull/1378) Remove the Category column.
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice", add synonyms to all notice codes ('plannedProcurementNotice', 'tenderNotice', 'awardNotice', 'contractNotice') and standardize the descriptions.
 
+* `method.csv`:
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
+  * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "(interested) supplier" to "potential supplier".
+  * [#1418](https://github.com/open-contracting/standard/pull/1418) Standardize the codes' phrasing.
+
 * `milestoneType.csv`:
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'securityClearanceDeadline'
@@ -119,11 +124,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
-* `method.csv`:
-  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
-  * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "(interested) supplier" to "potential supplier".
-  * [#1418](https://github.com/open-contracting/standard/pull/1418) Standardize the codes' phrasing.
-
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
@@ -136,6 +136,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1216](https://github.com/open-contracting/standard/pull/1216) Define contracting process and planning process in the schema description. Update definition of release, record and ocid. Update references to contracting process so that it takes take the planning process into account.
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
+  * [#1395](https://github.com/open-contracting/standard/pull/1417) `tender.procurementMethod`
   * [#1175](https://github.com/open-contracting/standard/pull/1175) `Award`
   * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
   * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields

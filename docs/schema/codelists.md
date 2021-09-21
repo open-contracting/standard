@@ -256,7 +256,7 @@ Added the 'planning' and 'withdrawn' codes.
 
 ### Method
 
-A contracting process aims to fulfill the requirements identified at the planning stage. The procurement method is the procedure used to purchase the relevant works, goods or services. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
+The procurement method describes which organizations can submit a bid. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
 
 ```{versionchanged} 1.1
 Added the 'direct' code.
