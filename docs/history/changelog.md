@@ -92,6 +92,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1378](https://github.com/open-contracting/standard/pull/1378) Remove the Category column.
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice", add synonyms to all notice codes ('plannedProcurementNotice', 'tenderNotice', 'awardNotice', 'contractNotice') and standardize the descriptions.
 
+* `method.csv`:
+  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
+  * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "(interested) supplier" to "potential supplier".
+  * [#1418](https://github.com/open-contracting/standard/pull/1418) Standardize the codes' phrasing.
+
 * `milestoneType.csv`:
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'securityClearanceDeadline'
@@ -118,11 +123,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1232](https://github.com/open-contracting/standard/pull/1232) Clarify the description of 'supplier'.
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
-
-* `method.csv`:
-  * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
-  * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "(interested) supplier" to "potential supplier".
-  * [#1418](https://github.com/open-contracting/standard/pull/1418) Standardize the codes' phrasing.
 
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
