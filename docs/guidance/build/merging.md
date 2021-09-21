@@ -87,7 +87,7 @@ In the final record, both the compiled and versioned releases show the changes. 
 
 Another government agency in Colombia publishes a new procurement opportunity. Details are provided in an OCDS release, as shown below.
 
-A few days after releasing the tender notice, the government agency receives feedback for potential bidders, and they realize that the estimated contract period set for the tender could be infeasible. They decide to instead negotiate the contract period with the awarded supplier, and they remove the contract period from the opportunity to avoid confusing potential bidders.
+A few days after releasing the tender notice, the government agency receives feedback for potential bidders, and they realize that the estimated contract period set for the tender could be infeasible. They decide to instead negotiate the contract period with the supplier, and they remove the contract period from the opportunity to avoid confusing potential bidders.
 
 A release with a 'tenderAmendment' tag is published, in which both the `startDate` and `endDate` of the `contractPeriod` block have been set to `null`. Also, an `amendments` block is provided to explain the changes.
 
@@ -115,7 +115,7 @@ The final record is shown below. Note that the fields in the `contractPeriod` bl
 
 The public procurement authority in Zambia publishes an award notice, as well as an OCDS release with an 'award' tag. A NGO collects the individual releases published by the procurement authority on a weekly basis to merge into their own records, which they use to display information on their website.
 
-Two weeks later, the authority publishes a new release. Due to negotiations with the awarded supplier, one of the items in the award is being deleted and two new ones have been added to replace it, as show below. The two new items have been added at the end of the `items` array, and the item to remove has all its fields set to `null`.
+Two weeks later, the authority publishes a new release. Due to negotiations with the supplier, one of the items in the award is being deleted and two new ones have been added to replace it, as show below. The two new items have been added at the end of the `items` array, and the item to remove has all its fields set to `null`.
 
 The NGO generates a record. In the record, all the fields of the removed item have disappeared, and only its `id` is left.
 
