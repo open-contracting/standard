@@ -10,9 +10,9 @@ In OCDS, the `ocid` is the unique identifier for a contracting process. As the i
 
 In most jurisdictions, if a procedure is cancelled or unsuccessful, and a **new procedure** is started to procure the same items, the two procedures are considered two **different** contracting processes. This is in keeping with the OCDS definition of a contracting process.
 
-But in other jurisdictions, such as Paraguay, the planning is considered as the initiation of the process. In these jurisdictions when a tender fails and a new tender is started, the two tenders are considered part of the same contracting process. This differs from the OCDS definition of a contracting process.
+But in other jurisdictions, such as Paraguay, planning is considered as initiating the process. In these jurisdictions when a tender fails and a new tender is started, the two tenders are considered part of the same contracting process. This differs from the OCDS definition of a contracting process.
 
-In OCDS, it is relevant and desirable to include the planning information that relates to the process, but the contracting process is not interpreted as ‘starting’ with the planning. In OCDS, the planning process is something that comes **before** the initiation of a contracting process. The initiation of the procedure is not the planning process, because at least one of the following is true of a planning process: it is not a concrete attempt to award one or more contracts like a request for tender, etc.; it is not a concrete opportunity for potential suppliers to participate in; it does not describe the competitive conditions.
+In OCDS, it is relevant and desirable to disclose information about planning, but the contracting process is not interpreted as "starting" with planning. In OCDS, the planning process is something that comes **before** the initiation of a contracting process. The initiation of the procedure is not the planning process, because at least one of the following is true of a planning process: it is not a concrete attempt to award one or more contracts like a request for tender, etc.; it is not a concrete opportunity for potential suppliers to participate in; it does not describe the competitive conditions.
 
 However a jurisdiction treats unsuccessful tenders and subsequent tenders, in OCDS they are considered separate but related contracting processes.
 
@@ -32,7 +32,7 @@ The first data disclosed is about the planning process. Planning data includes a
 :title: unsuccessful-tender-planning
 ```
 
-Next, the tender process is disclosed, using a new `ocid`, 'ocds-03ad3f-331547-1'. The `relatedProcess` block links the planning process and the tender process, with the relationship set to 'planning'.
+Next, the contracting process is disclosed, using a new `ocid`, 'ocds-03ad3f-331547-1'. The `relatedProcess` block links the planning process and the contracting process, with the relationship set to 'planning'.
 
 The tender was unsuccessful, so the tender status is set to ‘unsuccessful’.
 
@@ -42,7 +42,7 @@ The tender was unsuccessful, so the tender status is set to ‘unsuccessful’.
 :title: unsuccessful-tender-tender
 ```
 
-The buyer issues another tender to buy the same item, based on the same planning and the first tender.
+The buyer issues another tender to buy the same item, following from the same planning process.
 
 Paraguay considers the two tenders part of the same contracting process. But, in OCDS the two tenders are separate contracting processes.
 
@@ -50,7 +50,7 @@ To construct an `ocid` for the second contracting process, Paraguay adds a conse
 
 Paraguay could also have used the identifier for the second tender as the `ocid` for the second contracting process.
 
-The `relatedProcess` block links the two tender processes, with the relationship set to ‘unsuccessfulProcess’, and the initial planning process, with the relationship set to ‘planning’ 
+The `relatedProcess` block links to the unsuccessful contracting process with the relationship set to ‘unsuccessfulProcess’, and to the initial planning process with the relationship set to ‘planning’.
 
 ```{jsoninclude} ../../examples/unsuccessful-tender-related-process.json
 :jsonpointer:

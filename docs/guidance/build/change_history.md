@@ -14,11 +14,11 @@ For guidance on how to set the `id` field on each release, see the [easy release
 
 ## Tender
 
-The London Borough of Barnet publishes a tender for cycle lane improvements. They issue the tender via an *notice of intended procurement*. This is also known as *contract notice* or *opportunity notice*.
+The London Borough of Barnet publishes a tender for cycle lane improvements. They issue the tender via a *notice of intended procurement*. This is also known as *contract notice* or *opportunity notice*.
 
 The publisher creates a release to represent this notice. The release uses the 'tender' tag and provides the details in the `tender` section.
 
-The publisher adds the release to the record, in the releases list. Also they update the compiled and versioned releases with the new information.
+The publisher also creates a record for the new contracting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled release is nearly identical to this release. Compare the release and the record using the box below.
 
 ```{jsoninclude} ../../examples/tender.json
 :jsonpointer: /releases
@@ -38,7 +38,7 @@ The enquiry period has ended, and a few questions from potential suppliers have 
 
 The publisher creates a new OCDS release with the 'tenderUpdate' tag.
 
-The previous release of tender is not changed. In the new release, the publisher adds a link to the new document in the `tender.documents` section. The `tender.hasEnquiries` field is also set to true. The publisher has decided to keep unchanged fields from the previous releases in the new one.
+The previous release is not changed. In the new release, the publisher adds a link to the new document in the `tender.documents` section. The `tender.hasEnquiries` field is also set to true. The publisher has decided to keep unchanged fields from the previous releases in the new one.
 
 The record now has two immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. Also, the field `tender.hasEnquiries` has more than one entry in the versioned release.
 

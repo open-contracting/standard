@@ -39,9 +39,9 @@ The following worked examples show how to use milestones in different scenarios.
 
 ### Planning milestones
 
-The example below includes a planning release with details of a planned procurement, including the date the budget plan is expected to be ready and the date the tender notice is expected to be issued.
+The example below includes a planning release with details of a planned procurement, including the date the budget plan is expected to be ready.
 
-The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning stage of the contracting process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
+The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
 
 ```{jsoninclude} ../../examples/milestones/planning-tender-milestones.json
 :jsonpointer:
