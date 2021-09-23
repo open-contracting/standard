@@ -4388,6 +4388,48 @@
             }
           }
         },
+        "standstillPeriod": {
+          "title": "Standstill period",
+          "description": "The period starting from the dispatch of the notice of intention to award, during which suppliers can challenge the award decision.",
+          "type": "object",
+          "properties": {
+            "startDate": {
+              "title": "Start date",
+              "description": "The start date for the period. When known, a precise start date must be provided.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "endDate": {
+              "title": "End date",
+              "description": "The end date for the period. When known, a precise end date must be provided.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "maxExtentDate": {
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
+              "format": "date-time",
+              "title": "Maximum extent",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "durationInDays": {
+              "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, must be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate.",
+              "title": "Duration (days)",
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          }
+        },
         "contractPeriod": {
           "title": "Contract period",
           "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
@@ -15944,6 +15986,48 @@
         "awardPeriod": {
           "title": "Evaluation and award period",
           "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalized. The start date may be used to indicate the start of an evaluation period.",
+          "type": "object",
+          "properties": {
+            "startDate": {
+              "title": "Start date",
+              "description": "The start date for the period. When known, a precise start date must be provided.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "endDate": {
+              "title": "End date",
+              "description": "The end date for the period. When known, a precise end date must be provided.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "maxExtentDate": {
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
+              "format": "date-time",
+              "title": "Maximum extent",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "durationInDays": {
+              "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, must be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate.",
+              "title": "Duration (days)",
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          }
+        },
+        "standstillPeriod": {
+          "title": "Standstill period",
+          "description": "The period starting from the dispatch of the notice of intention to award, during which suppliers can challenge the award decision.",
           "type": "object",
           "properties": {
             "startDate": {
