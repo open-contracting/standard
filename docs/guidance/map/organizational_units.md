@@ -55,7 +55,7 @@ In the release below, a branch of the Bank of Moldova announces a contract oppor
 :title: release-schema
 ```
 
-The branch name (*Chişinău Branch*) is appended at the end of the name of the procuring entity. A new extension called "Division code" has been defined to add the `divisionCode` field in the `parties/details` section. The branch code in the example is "101".
+The branch name (*Chişinău Branch*) is appended at the end of the name of the buyer. A new extension called "Division code" has been defined to add the `divisionCode` field in the `parties/details` section. The branch code in the example is "101".
 
 The `extension.json` and `release-schema.json` files for the Division code extension can be displayed using the combo box above the JSON example. Instructions on how to create an OCDS extension can be found [here](https://github.com/open-contracting/standard_extension_template).
 

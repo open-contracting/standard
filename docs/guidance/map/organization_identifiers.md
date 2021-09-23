@@ -1,24 +1,29 @@
 # Organization identifiers
 
-Normally, publishers collect *legal identifiers* from the organizations that are part of the contracting process. [Organization identifiers](../../schema/identifiers.md#organization-ids) can be provided in OCDS by identifying the **organization registers** used in the source data, choosing an appropriate **organization register prefix** for each one, and identifying the organizational ID for each registry or list and organization in the data.
+Publishers regularly collect the *legal identifiers* of the organizations involved in a contracting process. These [organization identifiers](../../schema/identifiers.md#organization-identifiers) can be disclosed using OCDS. An organization identifier is composed of two parts:
 
-Use [org-id.guide](http://org-id.guide) to find the code for the register your identifiers are drawn from. If no code exists for the register, contact the [OCDS Helpdesk](../../support/index) to register an organization list.
+* A prefix for the organization list (also known as registry or register) from which the identifier is drawn: for example, the company register.
+* The existing identifier for the organization within that list.
 
-If a publisher chooses not to register an organization list with org-id.guide, the publisher ought to describe the organization list in a [publication policy](../publish.md#finalize-your-publication-policy), and needs to ensure that its prefix doesn't collide with a list code in org-id.guide.
+To disclose an organization identifier, first, use [org-id.guide](http://org-id.guide) to find the prefix for the organization list. If the list is not described by org-id.guide, contact the [OCDS Helpdesk](../../support/index) to register the list.
+
+If you choose not to register an organization list with org-id.guide, you ought to describe the list in a [publication policy](../publish.md#finalize-your-publication-policy), and select a prefix that is not in use by another list in org-id.guide, by following the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code).
 
 ## Worked example
 
-The Government of UK uses identifiers from the UK Companies House to uniquely identify suppliers. The UK Companies House has an entry in [org-id.guide](http://org-id.guide/list/GB-COH), which specifies the "GB-COH" code for the registry. IBM has been assigned the company number ‘04336774’ by the Companies House.  The globally unique organization identifier for IBM can then be expressed as in the `identifier` section in the sample below:
+The Government of the United Kingdom uses identifiers from its Companies House to identify suppliers. Companies House is assigned the "GB-COH" prefix in [org-id.guide](http://org-id.guide/list/GB-COH). IBM has been assigned the company number ‘04336774’ by the Companies House.  The globally unique organization identifier for IBM can be disclosed in the organization's `identifier` section, as below:
 
 ```{jsoninclude} ../../examples/organization-identifiers.json
 :jsonpointer: /releases/0/parties/1
 :expand: identifier, additionalIdentifiers
 ```
 
-The publisher also collects two extra identifiers, which are disclosed in the `additionalIdentifiers` block. The first one is the VAT identification number for suppliers. Note that the VAT registry is not present in org-id.guide, but the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to build the "GB-VAT" code used in the `scheme` field: the two-letter country prefix ("GB") plus a short abbreviation for the registry ("VAT"). The publisher checked that it does not conflict with any list code in org-id.guide.
+The publisher collects two additional identifiers, which are disclosed using the `additionalIdentifiers` array. The first one is the VAT identification number for the supplier. The VAT list is not described by org-id.guide, so the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to assign the "GB-VAT" prefix. This prefix is composed of the two-letter country code ("GB") and a short abbreviation for the list ("VAT"). The publisher checked that this prefix was not in use by another list in org-id.guide.
 
-## Party IDs
+## Local IDs
 
-Each of the parties (organizations or other participants) in the [parties section](../../schema/reference.md#parties) ought to have a [local party ID](../../schema/identifiers.md#party-ids) (`id`) used to reference it from elsewhere in the data. For parties with an organization identifier, you can construct `id` using `{identifier.scheme}-{identifier.id}`.
+Each of the organizations in the [parties section](../../schema/reference.md#parties) ought to have a [local ID](../../schema/identifiers.md#local-identifiers) (`id`), which is used to reference the organization from elsewhere in the data.
 
-For parties without an organization identifier, you can populate `id` with a fixed or sequential value. For example, you can set the buyer's `id` to '1' and set each supplier's `id` sequentially from '2' onwards. Alternatively, you can set the party's `id` to its `role` and add a sequential number for roles with multiple parties, e.g. 'buyer', 'tenderer-1', 'tenderer-2' etc. A party's `id` needs to remain consistent across all releases in a contracting process. For example, if the `id` of a party is 'tenderer-1' in one release, then the `id` of the same party in another release needs to also be 'tenderer-1'.
+For organizations with an organization identifier, you ought to construct the local `id` following the pattern `{identifier.scheme}-{identifier.id}`.
+
+For organizations without an organization identifier, you can populate the local `id` with a fixed or sequential value. For example, you can set the buyer's `id` to "1" and set each supplier's `id` sequentially from "2" onwards. Alternatively, you can set the organization's `id` to its `role` and add a sequential number for roles with multiple organizations, e.g. "buyer", "tenderer-1", "tenderer-2", etc. An organization's local `id` needs to be consistent across all releases in a contracting process. For example, if the `id` of an organization is "tenderer-1" in one release, then the `id` of the same organization in another release needs to also be "tenderer-1".
