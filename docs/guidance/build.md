@@ -16,7 +16,7 @@ build/data_collection_tools
 
 As you complete this phase, you can:
 
-* Fill in the *Technical options for implementing OCDS* sub-section of your [Technical Assessment Template](map.md#identify-your-data-source).
+* Fill in the *Technical options for implementing OCDS* sub-section of your [Technical Assessment Template](map.md#identify-your-data-sources).
 
 ## Register an OCID prefix
 
