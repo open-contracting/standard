@@ -25,6 +25,8 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 
 The documentation you produce can also later be included in your [Data User Guide](publish.md#finalize-your-publication-policy).
 
+As you make progress through this phase, we encourage you to maintain a project plan, in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk.
+
 ## Involve the right people
 
 As described in the [Field-Level Mapping Template Guidance](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-guidance/) (introduced below), you will need at least:
