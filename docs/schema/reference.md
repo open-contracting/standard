@@ -106,28 +106,28 @@ All new information about a contracting process is described within a release.
 
 ### Parties
 
-Each of the parties (organizations or other participants) referenced in a release must be included in the parties section. 
+Each of the organizations referenced in a release must be included in the parties section. 
 
 ```{versionadded} 1.1
-In OCDS 1.0, the details (address, contact point, etc.) of the parties involved in a contracting process were repeated across many fields (`tenderers`, `suppliers`, etc.). In OCDS 1.1, these details are instead collected under a top-level `parties` array, with the other fields referencing entries in this array, using [organization references](#organizationreference). This reduces repetition and supports publication of information about additional parties: for example, multiple buyers.
+In OCDS 1.0, the details (address, contact point, etc.) of the organizations involved in a contracting process were repeated across many fields (`tenderers`, `suppliers`, etc.). In OCDS 1.1, these details are instead collected under a top-level `parties` array, with the other fields referencing entries in this array, using [organization references](#organizationreference). This reduces repetition and supports publication of information about additional organizations: for example, multiple buyers.
 
 Note that the organization references allow, but deprecate, the fields for organization details.
 ```
 
-The following details can be provided for each party.
+The following details can be provided for each organization.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Organization
 :collapse: identifier,additionalIdentifiers,address,contactPoint
 ```
 
-```{extensionlist} The following extensions are available for parties
+```{extensionlist} The following extensions are available for organizations
 :list: parties
 ```
 
-Each party has a `details` object. Through extensions, this can be used to provide detailed classification of parties.
+Each organization has a `details` object. Through extensions, this can be used to provide detailed classification of organizations.
 
-```{extensionlist} The following extensions are available for party details
+```{extensionlist} The following extensions are available for organization details
 :list: partyDetail
 ```
 
@@ -278,7 +278,7 @@ See the [parties](#parties) section.
 
 An organization reference consists of two main components:
 
-* An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization or entity;
+* An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization;
 * A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
 
 ### Organization
@@ -287,7 +287,7 @@ See the [parties](#parties) section.
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](identifiers.md#organization-ids) involved in a contracting process.
+The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting process.
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 

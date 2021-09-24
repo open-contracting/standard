@@ -157,13 +157,13 @@ NHS National Services Scotland (NSS) wants to establish a framework agreement fo
 
 #### Invitation to participate in the first stage
 
-NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
+NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting potential suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
 
 The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
 
 * The techniques extension is declared in the package metadata.
 * Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
-* Since the framework agreement will be concluded with a single supplier and since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'open'.
+* Since the framework agreement will be concluded with a single supplier and since any potential supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'open'.
 * Since the framework agreement is closed, `tender.tenderPeriod` is set to the deadline for responses to the invitation to participate.
 * Since there is only one buyer, `buyer` is set to reference the buyer's object in the `parties` array.
 
@@ -230,7 +230,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 * Since the framework agreement will be concluded with multiple suppliers and will involve second-stage competition, `tender.procurementMethod` is set to 'selective'.
 * Since the framework agreement is open, `tender.tenderPeriod` is set to the end of the framework agreement.
 * Since there are two buyers, the 'buyer' object is not set, and the buyers are declared in the `parties` array.
-* Since Chile Compra is the entity that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
+* Since Chile Compra is the organization that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_first_stage.json
 :jsonpointer:
