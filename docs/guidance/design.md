@@ -29,8 +29,6 @@ The answers to these questions will help you to develop a robust publication pla
 
 **Resource**: [Methodology for Open Contracting Scoping Studies](https://www.open-contracting.org/resources/methodology-open-contracting-scoping-studies/)
 
-**Action:** Develop your [publication plan](#develop-your-publication-plan)
-
 If your contracting data is mostly on paper, in local spreadsheets or in unstructured electronic documents, and you don’t have the capacity to create a new IT system to collect data, consider reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools).
 
 ## Set your goals and priorities
@@ -52,8 +50,6 @@ Consult stakeholders early in the design of your OCDS implementation to identify
 **Resource:** [How to make sure open contracting data gets used: A guide to defining the use case](https://www.open-contracting.org/2016/08/18/use-case-guide/)
 
 **Action:** Identify your stakeholders and their use cases.
-
-**Action:** Document your stakeholders and goals in your [publication plan](#develop-your-publication-plan).
 
 ### Set goals
 
@@ -81,6 +77,8 @@ Each of the goals above have different data needs. These needs ought to inform y
 
 **Resource:** [Indicators to diagnose the performance of a procurement market guide](https://www.open-contracting.org/resources/indicators-to-diagnose-the-performance-of-a-procurement-market/) ([procurement indicators to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222))
 
+**Action:** Prioritize your goals based on the recommendations in the [Technical Assessment Template](https://www.open-contracting.org/resources/technical-assessment-template/).
+
 ## Build your team
 
 Implementing OCDS is easier when your team combines both policy and technology experience. Team members might be part of your own organization, or you might need to identify partners who can bring extra insights and skills.
@@ -102,17 +100,6 @@ To achieve success, an OCDS implementation team ought to include the following r
 **Action:** [Contact the OCDS Helpdesk](../../support/index) to arrange an online introductory training for your technical team, in English or Spanish.
 
 **Action:** [Join the OCDS discussion group](../../support/index) to keep up to date and engage with other implementers.
-
-## Develop your publication plan
-
-A publication plan is a useful resource when you need to:
-
-* Present a summary of your OCDS mapping to key stakeholders;
-* Confirm shared understanding of key decisions and publication priorities across an open contracting project team;
-* Set out the goals that you will measure data publication against;
-* Access in-depth support from the OCDS Helpdesk. A clear publication plan will assist the helpdesk in providing the most relevant input.
-
-**Resource:** [OCDS Publication Plan Template](https://www.open-contracting.org/resources/ocds-publication-plan-template/)
 
 ## Writing OCDS requirements for eGP developers
 
