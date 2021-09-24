@@ -149,7 +149,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1175](https://github.com/open-contracting/standard/pull/1175) `Award`
   * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
   * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
-  * [#1415](https://github.com/open-contracting/standard/pull/1415) `planning`, `Planning`, `tender`, `Tender`,`awards`,`contracts` and minor alignment of "planning process" (part of the description of `$schema`) with `planning`.
+  * [#1415](https://github.com/open-contracting/standard/pull/1415) `planning`, `Planning`, `tender`, `Tender`, `awards`, `contracts` and minor alignment of "planning process" (part of the description of the schema) with `planning`.
 
 
 * Add new fields:
