@@ -2,7 +2,7 @@
 
 ## Pagination
 
-The top-level `links` object in release packages and record packages has two fields:
+To support pagination, the top-level `links` object in release packages and record packages has two fields:
 
 * `next`: A URL to the next sequential package
 * `prev`: A URL to the previous sequential package
