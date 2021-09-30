@@ -1,8 +1,15 @@
 # Map
 
+```{ifconfig} language != 'es'
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3Q_fQBsju6Y" title="Matching your data to OCDS fields" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+```
+```{ifconfig} language == 'es'
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wL0wiTaEpW4" title="Mapeo de sus datos con los campos OCDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+```
 
 This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process. 
 
@@ -18,26 +25,25 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 
 The documentation you produce can also later be included in your [Data User Guide](publish.md#finalize-your-publication-policy).
 
-As you make progress through this phase, we encourage you to update your [publication plan](design.md#develop-your-publication-plan), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the _Goals (design)_ section.
+As you make progress through this phase, we encourage you to maintain a project plan, in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk.
 
 ## Involve the right people
 
 As described in the [Field-Level Mapping Template Guidance](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-guidance/) (introduced below), you will need at least:
 
-* A technical expert who is familiar with the **IT systems** that capture and store contracting data and related documents, to identify the data elements within those systems.
-* A policy expert who is familiar with **procurement legislation** and procurement processes, to help identify which data elements match which OCDS fields, at a *semantic* level.
+* A data expert who is familiar with the **IT systems** that capture and store contracting data and related documents, to identify the data elements within those systems.
+* A procurement expert who is familiar with **procurement legislation** and procedures, to identify which data elements match which OCDS fields, at a *semantic* level.
 * A technical expert who understands the **data structures** in OCDS, to help identify which data elements match which OCDS fields, at a *technical* level.
 
 ## Identify your data sources
 
-To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/ocds-technical-assessment-template/) guides you through this process.
+To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/technical-assessment-template/) guides you through this process.
 
 If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, you should use the template to identify those data sources, too.
 
 Once complete, you can:
 
 * Ask the [OCDS Helpdesk](../../support/index) to review your Technical Assessment.
-* Fill in the _Source systems_ sub-section of your [Publication Plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
 * Fill in the _Systems_ sheet of your Field-Level Mapping (introduced below).
 
 ## Localize OCDS to your context
@@ -65,7 +71,7 @@ If your contracting data is managed on paper or in unstructured electronic docum
 
 You can [contact the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on using the mapping templates.
 
-## Split up the work
+## Complete the mapping
 
 You can complete the mapping in parts. For example, you might choose to split your mapping by any of the following:
 
@@ -89,7 +95,7 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 :titlesonly:
 
 map/unsuccessful_processes
-map/related_processes
+map/framework_agreements
 map/pre-qualification
 map/awards_contracts
 map/electronic_catalogues
@@ -140,7 +146,6 @@ map/linked_standards
 
 Once complete, you can:
 
-* Fill in the *Priority data (map)* and *Priority documents* sections of your [Publication Plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
-* Ask the [OCDS Helpdesk](../../support/index) to review your Field-Level Mapping and Publication Plan.
+* Ask the [OCDS Helpdesk](../../support/index) to review your Field-Level Mapping and Technical Assessment Template.
 
 [Next phase: Build](build)

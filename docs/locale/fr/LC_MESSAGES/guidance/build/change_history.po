@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-31 13:56-0400\n"
+"POT-Creation-Date: 2021-09-24 09:10-0400\n"
 "PO-Revision-Date: 2020-06-30 01:22+0000\n"
 "Last-Translator: Tim Davies <tim.davies@opendataservices.coop>, 2020\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
@@ -52,139 +52,86 @@ msgid ""
 msgstr ""
 
 #: ../../docs/guidance/build/change_history.md:15
-msgid "Planning"
-msgstr "Planification"
+msgid "Tender"
+msgstr "Appel d'offre"
 
 #: ../../docs/guidance/build/change_history.md:17
 msgid ""
-"The London Borough of Barnet plans to publish a tender for cycle lane "
-"improvements later in the year. To prepare the market they publish a *notice"
-" of planned procurement*. This is also known as *prior information notice*, "
-"or *future opportunity notice*."
+"The London Borough of Barnet publishes a tender for cycle lane improvements."
+" They issue the tender via a *notice of intended procurement*. This is also "
+"known as *contract notice* or *opportunity notice*."
 msgstr ""
 
 #: ../../docs/guidance/build/change_history.md:19
 msgid ""
-"The publisher creates an OCDS release to represent this notice. The release "
-"uses the 'planning' tag and includes data about the planned procurement. The"
-" `tender` section holds the estimated values and publication date. The "
-"tender status is 'planned'."
+"The publisher creates a release to represent this notice. The release uses "
+"the 'tender' tag and provides the details in the `tender` section."
 msgstr ""
 
 #: ../../docs/guidance/build/change_history.md:21
 msgid ""
-"The publisher also creates an OCDS record for the new contracting process. "
-"The releases list includes the new and only release so far. The compiled and"
-" versioned releases are also created for the record. Since there is only one"
-" release, the compiled version is expected look very much like this release."
-" Compare the planning release and the record using the box below."
+"The publisher also creates a record for the new contracting process. The "
+"releases list includes the new and only release so far. The compiled and "
+"versioned releases are also created for the record. Since there is only one "
+"release, the compiled release is nearly identical to this release. Compare "
+"the release and the record using the box below."
 msgstr ""
 
 #: ../../docs/guidance/build/change_history.md:35
-msgid "Tender"
-msgstr "Appel d'offre"
-
-#: ../../docs/guidance/build/change_history.md:37
-msgid ""
-"The London Borough of Barnet is ready to invite bids for the contract. They "
-"issue the tender via an *notice of intended procurement*. This is also known"
-" as *contract notice* or *opportunity notice*."
-msgstr ""
-
-#: ../../docs/guidance/build/change_history.md:39
-msgid ""
-"The publisher creates a new release to represent this notice. The release "
-"uses the 'tender' tag and provides the details in the `tender` section."
-msgstr ""
-
-#: ../../docs/guidance/build/change_history.md:41
-msgid ""
-"There are no changes to the planning release published before. But the new "
-"release has the updated information about the tender. This includes the "
-"actual publication date, and the following new information:"
-msgstr ""
-
-#: ../../docs/guidance/build/change_history.md:43
-msgid "The deadline for bid submission"
-msgstr ""
-
-#: ../../docs/guidance/build/change_history.md:45
-msgid "The items to buy"
-msgstr ""
-
-#: ../../docs/guidance/build/change_history.md:47
-msgid "Links to copies of tender documents"
-msgstr ""
-
-#: ../../docs/guidance/build/change_history.md:49
-msgid "The estimated tender value"
-msgstr ""
-
-#: ../../docs/guidance/build/change_history.md:51
-msgid ""
-"The publisher adds the new release to the record, in the releases list. Also"
-" they update the compiled and versioned releases with the new information. "
-"Note that the bid submission date has changed in the compiled release. Also,"
-" note that the versioned release has a list of changes for each field that "
-"has been updated."
-msgstr ""
-
-#: ../../docs/guidance/build/change_history.md:65
 msgid "Tender Update"
 msgstr "Mise à jour de l'appel d'offres"
 
-#: ../../docs/guidance/build/change_history.md:67
+#: ../../docs/guidance/build/change_history.md:37
 msgid ""
 "The enquiry period has ended, and a few questions from potential suppliers "
 "have been received. The procuring entity issues a document with the "
 "responses to the enquiries received from bidders."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:69
+#: ../../docs/guidance/build/change_history.md:39
 msgid "The publisher creates a new OCDS release with the 'tenderUpdate' tag."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:71
+#: ../../docs/guidance/build/change_history.md:41
 msgid ""
-"The previous releases of planning and tender are not changed. In the new "
-"release, the publisher adds a link to the new document in the "
-"`tender.documents` section. The `tender.hasEnquiries` field is also set to "
-"true. The publisher has decided to keep unchanged fields from the previous "
-"releases in the new one."
+"The previous release is not changed. In the new release, the publisher adds "
+"a link to the new document in the `tender.documents` section. The "
+"`tender.hasEnquiries` field is also set to true. The publisher has decided "
+"to keep unchanged fields from the previous releases in the new one."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:73
+#: ../../docs/guidance/build/change_history.md:43
 msgid ""
-"The record now has three immutable releases, and updated compiled and "
+"The record now has two immutable releases, and updated compiled and "
 "versioned releases. Note that the compiled release includes the enquiries "
 "document in the tender section. Also, the field `tender.hasEnquiries` has "
 "more than one entry in the versioned release."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:87
+#: ../../docs/guidance/build/change_history.md:57
 msgid "Award"
 msgstr "Attribution"
 
-#: ../../docs/guidance/build/change_history.md:89
+#: ../../docs/guidance/build/change_history.md:59
 msgid ""
 "The procuring entity makes the decision to award the contract to Balfour "
 "Beatty. They issue an award notice."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:91
+#: ../../docs/guidance/build/change_history.md:61
 msgid ""
 "The publisher creates a new OCDS release for the award. The record has the "
 "relevant information in the award section and uses the 'award' tag."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:93
+#: ../../docs/guidance/build/change_history.md:63
 msgid ""
 "The `parties` array has a new entry with the supplier's information. The "
 "complete `tender` section is repeated, with the `status` field set to "
 "'complete'. Previous releases remain unchanged."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:95
+#: ../../docs/guidance/build/change_history.md:65
 msgid ""
 "The publisher adds the new release to the record. They also update the "
 "compiled and versioned releases. The compiled release reflects the changes "
@@ -192,74 +139,74 @@ msgid ""
 "includes a new change for the `tender.status` field."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:109
+#: ../../docs/guidance/build/change_history.md:79
 msgid "Contract"
 msgstr "Contrat"
 
-#: ../../docs/guidance/build/change_history.md:111
+#: ../../docs/guidance/build/change_history.md:81
 msgid ""
 "By law, the procuring entity has to wait for complaints for a given period "
 "of time before signing a contract. Once the period ends with no complaints, "
 "the contract with the supplier is signed."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:113
+#: ../../docs/guidance/build/change_history.md:83
 msgid ""
 "The publisher creates a new OCDS release using the 'contract' tag. They "
 "include all the relevant information in the `contracts` section."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:115
+#: ../../docs/guidance/build/change_history.md:85
 msgid ""
 "The record gets updated to include the new release. The compiled and "
 "versioned release now have the new `contract` section. There are no updates "
 "to other sections."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:129
+#: ../../docs/guidance/build/change_history.md:99
 msgid "Implementation"
 msgstr "Exécution"
 
-#: ../../docs/guidance/build/change_history.md:131
+#: ../../docs/guidance/build/change_history.md:101
 msgid ""
 "The supplier starts the construction work. After a while, the procuring "
 "entity makes the first payment to the supplier. The publisher creates a "
 "release to document this update in the process."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:133
+#: ../../docs/guidance/build/change_history.md:103
 msgid ""
 "So far, the council used a single procurement system to manage the process. "
 "The procurement system published the previous OCDS releases."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:135
+#: ../../docs/guidance/build/change_history.md:105
 msgid ""
 "The council now uses a separate financial system to manage payments. The "
 "financial system publishes the new OCDS release."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:137
+#: ../../docs/guidance/build/change_history.md:107
 msgid ""
 "The procurement system and the financial system share a common contracting "
 "process identifier. This means that the two systems can publish releases "
 "using the same `ocid`."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:139
+#: ../../docs/guidance/build/change_history.md:109
 msgid ""
 "The new release uses the 'implementation' tag. The "
 "`contracts.implementation.transactions` section includes the details of the "
 "payment."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:141
+#: ../../docs/guidance/build/change_history.md:111
 msgid ""
 "Because the new release uses the same `ocid`, it is possible to update the "
 "record with the information."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:143
+#: ../../docs/guidance/build/change_history.md:113
 msgid "Combining data from different systems"
 msgstr ""
 
@@ -269,39 +216,39 @@ msgid ""
 "information refer to the guidance on system architectures."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:149
+#: ../../docs/guidance/build/change_history.md:119
 msgid ""
 "The publisher adds the new release from the finance system to the releases "
 "list in the OCDS record. The compiled and versioned releases get updated to "
 "include the new transaction."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:163
+#: ../../docs/guidance/build/change_history.md:133
 msgid "Contract Amendment"
 msgstr "Modifications du contrat"
 
-#: ../../docs/guidance/build/change_history.md:165
+#: ../../docs/guidance/build/change_history.md:135
 msgid ""
 "Unexpected complications causes delays in the construction work. Because of "
 "them the procuring entity and the supplier agree to a contract extension. "
 "This will cover the extra time and cost needed to complete the works."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:167
+#: ../../docs/guidance/build/change_history.md:137
 msgid ""
 "The publisher updates their procurement system with the new contract value "
 "and period. They issue a modification notice through the system. They also "
 "create a new OCDS with the 'contractAmendment' tag to represent the notice."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:169
+#: ../../docs/guidance/build/change_history.md:139
 msgid ""
 "Note that contract amendments in OCDS involves more modelling "
 "considerations. Refer to the amendments worked example for guidance on the "
 "topic."
 msgstr ""
 
-#: ../../docs/guidance/build/change_history.md:171
+#: ../../docs/guidance/build/change_history.md:141
 msgid ""
 "The publisher updates the record for the contracting process with the new "
 "release. The compiled release has the new values. The versioned release "
