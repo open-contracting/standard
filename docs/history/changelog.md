@@ -49,6 +49,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * Publish:
     * Merge Publication policy and Licensing pages into Publish page [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012).
     * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).
+  * [#1428](https://github.com/open-contracting/standard/pull/1428) Integrate content from [what to do with fields that don't map](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/).
   * Various minor improvements [#1051](https://github.com/open-contracting/standard/pull/1051) [#1080](https://github.com/open-contracting/standard/pull/1080) [#1083](https://github.com/open-contracting/standard/pull/1083) [#1085](https://github.com/open-contracting/standard/pull/1085) [#1091](https://github.com/open-contracting/standard/pull/1091) [#1130](https://github.com/open-contracting/standard/pull/1130) [#1227](https://github.com/open-contracting/standard/pull/1227) [#1299](https://github.com/open-contracting/standard/pull/1299) [#1337](https://github.com/open-contracting/standard/pull/1337) [#1384](https://github.com/open-contracting/standard/pull/1384).
 
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
