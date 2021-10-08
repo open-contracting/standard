@@ -114,9 +114,11 @@ map/beneficial_ownership
 
 Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using [extensions](map/extensions).
 
-**Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
+Before using extensions, you should decide whether the additional data that you want to disclose affects how users should interpret fields in the OCDS schema. If so, consider whether you can include extra information in an existing field to alert users who only know about fields in the OCDS schema. For example, to disclose data about the disposal of state assets, in addition to using an extension, you can prefix `tender.title` with 'Disposal:'.
 
-**Resource:** [What to do when fields don't map?](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/)
+You should also double-check whether the additional data that you want to disclose can be modelled using an existing field. For example, to disclose the date by which the procuring entity will respond to enquiries, rather than adding a field, you can use `tender.milestones`.
+
+**Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
 
 **Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)
 
