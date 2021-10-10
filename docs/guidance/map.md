@@ -114,9 +114,16 @@ map/beneficial_ownership
 
 Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using [extensions](map/extensions).
 
-Before using extensions, you should decide whether the additional data that you want to disclose affects how users should interpret fields in the OCDS schema. If so, consider whether you can include extra information in an existing field to alert users who only know about fields in the OCDS schema. For example, to disclose data about the disposal of state assets, in addition to using an extension, you can prefix `tender.title` with 'Disposal:'.
+Before using extensions, double-check whether the data elements can be disclosed using existing fields. For example, to disclose the date by which the buyer or procuring entity will respond to enquiries, you can use the `tender.milestones` field, instead of adding a new field.
 
-You should also double-check whether the additional data that you want to disclose can be modelled using an existing field. For example, to disclose the date by which the procuring entity will respond to enquiries, rather than adding a field, you can use `tender.milestones`.
+```{seealso}
+* [Worked example: Milestones](map/organization_classifications)
+* [Worked example: Organization classification](map/organization_classifications)
+```
+
+If you do need to use an extension, consider whether the new fields will affect how users interpret existing fields. If so, you can add information to existing fields, to avoid misinterpretation – in addition to adding the new fields.
+
+For example, you have created an extension to add a new field to indicate whether a contracting process is about the disposal of a state asset (like a vehicle). If the `tender.title` field refers only to the vehicle, then users who are unaware of the new field might misinterpret the contracting process as being about its purchase. To avoid misinterpretation, you can add a "Disposal: " prefix to the `tender.title` field.
 
 **Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
 
