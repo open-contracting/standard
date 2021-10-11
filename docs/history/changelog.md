@@ -18,7 +18,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * Add examples [#1338](https://github.com/open-contracting/standard/pull/1338):
       * Organization references [#947](https://github.com/open-contracting/standard/pull/947)
       * Organization identifiers [#948](https://github.com/open-contracting/standard/pull/948)
-        [#](https://github.com/open-contracting/standard/pull/)
+        [#1429](https://github.com/open-contracting/standard/pull/1429)
       * Amendments [#950](https://github.com/open-contracting/standard/pull/950)
       * Personal identifiers [#952](https://github.com/open-contracting/standard/pull/952)
       * Organizational units [#961](https://github.com/open-contracting/standard/pull/961)
@@ -52,7 +52,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).
   * Various minor improvements [#1051](https://github.com/open-contracting/standard/pull/1051) [#1080](https://github.com/open-contracting/standard/pull/1080) [#1083](https://github.com/open-contracting/standard/pull/1083) [#1085](https://github.com/open-contracting/standard/pull/1085) [#1091](https://github.com/open-contracting/standard/pull/1091) [#1130](https://github.com/open-contracting/standard/pull/1130) [#1227](https://github.com/open-contracting/standard/pull/1227) [#1299](https://github.com/open-contracting/standard/pull/1299) [#1337](https://github.com/open-contracting/standard/pull/1337) [#1384](https://github.com/open-contracting/standard/pull/1384).
 * Reference
-  * [#](https://github.com/open-contracting/standard/pull/) Update organization identifier worked example.
+  * [#1429](https://github.com/open-contracting/standard/pull/1429) Update organization identifier reference.
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
 * [#955](https://github.com/open-contracting/standard/pull/955) Split the Guidance section into sub-sections. Add a new History section, and move the Changelog, Credits, and History and Development pages to it.
 * [#958](https://github.com/open-contracting/standard/pull/958) Governance page: Change responsibility for prioritization review to OCP's Head of Data Products & Services. Change "technical team" to "standard development team".
