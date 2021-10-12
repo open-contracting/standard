@@ -95,6 +95,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1377](https://github.com/open-contracting/standard/pull/1377) Clarify the description of 'completionCertificate' and align it with the description of 'paymentCertificate' in OC4IDS.
   * [#1378](https://github.com/open-contracting/standard/pull/1378) Remove the Category column.
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice", add synonyms to all notice codes ('plannedProcurementNotice', 'tenderNotice', 'awardNotice', 'contractNotice') and standardize the descriptions.
+  * [#1415](https://github.com/open-contracting/standard/pull/1415) Change 'evaluationReports' section from "tender" to "award".
   * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "interested supplier" to "potential supplier".
 
 * `method.csv`:
@@ -129,9 +130,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
+* `releaseTag`:
+  * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
+  * [#1415](https://github.com/open-contracting/standard/pull/1415) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
+
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
-* [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
 
@@ -145,6 +149,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1175](https://github.com/open-contracting/standard/pull/1175) `Award`
   * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
   * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
+  * [#1415](https://github.com/open-contracting/standard/pull/1415) `planning`, `Planning`, `tender`, `Tender`, `awards`, `contracts` and minor alignment of "planning process" (part of the description of the schema) with `planning`.
+
 
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`

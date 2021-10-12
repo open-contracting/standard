@@ -2,7 +2,7 @@
   "id": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
-  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, establishing the rationale for the procurement, giving the market a general description of the purchase, getting the necessary budget, forecasting and conducting market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
+  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
   "type": "object",
   "properties": {
     "ocid": {
@@ -76,7 +76,7 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. A tag labels the release: for example, as corresponding to a particular stage of the contracting process. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release.",
+      "description": "A tag labeling the release (for example, as corresponding to a stage of the contracting process), using the the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release. Planning processes must not use the 'tender' code, even if they use `tender` fields.",
       "type": "array",
       "items": {
         "type": "string"
@@ -1171,7 +1171,7 @@
     },
     "planning": {
       "title": "Planning",
-      "description": "Information from the planning process. This includes information related to the process of deciding what to contract, when and how.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
       "type": "object",
       "properties": {
         "id": {
@@ -1992,7 +1992,7 @@
     },
     "tender": {
       "title": "Tender",
-      "description": "The activities undertaken in order to enter into a contract.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
       "type": "object",
       "required": [
         "id"
@@ -5629,7 +5629,7 @@
     },
     "awards": {
       "title": "Awards",
-      "description": "Information from the award phase of the contracting process. There can be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
+      "description": "Information about the awards. This information concerns the contracting process. This information typically concerns the period after the bid submission deadline and ending with the award or, if there is a standstill period, the end of the standstill period.",
       "type": "array",
       "items": {
         "title": "Award",
@@ -8190,7 +8190,7 @@
     },
     "contracts": {
       "title": "Contracts",
-      "description": "Information from the contract creation and implementation phase of the contracting process.",
+      "description": "Information about the contracts and their implementation. This information concerns the contracting process. This information typically concerns the period after the award or, if there was a standstill period, after the end of the standstill period.",
       "type": "array",
       "items": {
         "type": "object",
@@ -12919,7 +12919,7 @@
   "definitions": {
     "Planning": {
       "title": "Planning",
-      "description": "Information from the planning process. Note that many other fields can be filled in a planning release, in the appropriate fields in the tender section; these would likely be estimates at this stage, e.g. value in tender.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
       "type": "object",
       "properties": {
         "id": {
@@ -13740,7 +13740,7 @@
     },
     "Tender": {
       "title": "Tender",
-      "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
       "type": "object",
       "required": [
         "id"

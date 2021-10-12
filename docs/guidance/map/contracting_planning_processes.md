@@ -12,7 +12,7 @@ OCDS defines a contracting process as:
 
 OCDS defines a planning process as: 
 
-> All the actions aimed at planning one or more contracting processes. This covers, for example, establishing the rationale for the procurement, giving the market a general description of the purchase, getting the necessary budget, forecasting and conducting market research.
+> All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.
 
 > Planning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.
 
