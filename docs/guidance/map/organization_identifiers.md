@@ -8,7 +8,7 @@ If a publisher chooses not to register an organization list with org-id.guide, t
 
 ## Worked example
 
-The Government of UK uses identifiers from the UK Companies House to uniquely identify suppliers. The UK Companies House has an entry in [org-id.guide](http://org-id.guide/list/GB-COH), which specifies the "GB-COH" code for the registry. IBM has been assigned the company number ‘04336774’ by the Companies House.  The globally unique organization identifier for IBM can then be expressed as in the `identifier` section in the sample below:
+The Government of the UK uses identifiers from [Companies House](https://www.gov.uk/government/organisations/companies-house) to uniquely identify suppliers. Companies House has an entry in [org-id.guide](http://org-id.guide/list/GB-COH), which specifies the "GB-COH" code for the registry. IBM has been assigned the company number ‘04336774’ by Companies House.  The globally unique organization identifier for IBM can then be expressed as in the `identifier` section in the sample below:
 
 ```{jsoninclude} ../../examples/organization-identifiers.json
 :jsonpointer: /releases/0/parties/1

@@ -123,13 +123,13 @@ The **organization register prefix** for UK Companies House is GB-COH. The organ
 {
   "scheme": "GB-COH",
   "id": "06368740",
-  "uri": "https://find-and-update.company-information.service.gov.uk/company/06368740",
+  "uri": "http://data.companieshouse.gov.uk/doc/company/06368740",
   "legalName": "Development Initiatives Poverty Research Limited"
 }
 ```
 ````
 
-In OCDS, the organization register prefix is included in the `scheme` field of an identifier block, with the existing organization id placed in the `id` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from the [UK's Company House register](https://find-and-update.company-information.service.gov.uk/), or from [Open Corporates](https://opencorporates.com/)) this can also be given in the `uri` field.
+In OCDS, the organization register prefix is included in the `scheme` field of an identifier block, with the existing organization id placed in the `id` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from the [UK's Company House](https://www.gov.uk/government/organisations/companies-house) register, or from [Open Corporates](https://opencorporates.com/)) this can also be given in the `uri` field.
 
 ### Choosing an identifier
 
