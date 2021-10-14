@@ -18,7 +18,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * Add examples [#1338](https://github.com/open-contracting/standard/pull/1338):
       * Organization references [#947](https://github.com/open-contracting/standard/pull/947)
       * Organization identifiers [#948](https://github.com/open-contracting/standard/pull/948)
-        [#1429](https://github.com/open-contracting/standard/pull/1429)
       * Amendments [#950](https://github.com/open-contracting/standard/pull/950)
       * Personal identifiers [#952](https://github.com/open-contracting/standard/pull/952)
       * Organizational units [#961](https://github.com/open-contracting/standard/pull/961)
