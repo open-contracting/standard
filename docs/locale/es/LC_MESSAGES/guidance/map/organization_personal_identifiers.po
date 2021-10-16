@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the Open Contracting Data Standard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-31 14:33-0400\n"
+"POT-Creation-Date: 2021-09-24 09:10-0400\n"
 "PO-Revision-Date: 2021-03-01 22:02+0000\n"
+"Last-Translator: Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:1
 msgid "Personal identifiers"
-msgstr ""
+msgstr "Identificadores personales"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:3
 msgid ""
@@ -27,40 +31,50 @@ msgid ""
 "persons). Such individuals are often referred to as \"sole traders\" or "
 "\"self-employed individuals\"."
 msgstr ""
+"Los proveedores y licitantes pueden ser organizaciones o individuos "
+"(personas físicas). Estas personas suelen denominarse \"comerciantes "
+"individuales\" o \"trabajadores autónomos\"."
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:5
 msgid ""
 "Details of natural persons can be disclosed using the `parties` section in "
 "OCDS only if:"
 msgstr ""
+"Los detalles de las personas físicas se pueden revelar utilizando la sección"
+" `parties` en OCDS solo si:"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:7
 msgid "The natural person is a tenderer or supplier; and"
-msgstr ""
+msgstr "La persona física es un licitante o proveedor; y"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:8
 msgid "The laws in your jurisdiction permit the publication of such details"
 msgstr ""
+"Las leyes de su jurisdicción permiten la publicación de dichos detalles."
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:10
 msgid ""
 "Subject to the above, you can disclose identifiers for natural persons using"
 " the `Identifier` building block."
 msgstr ""
+"Sujeto a lo anterior, puede revelar identificadores para personas físicas "
+"utilizando el bloque central `Identifier`."
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:12
 msgid "There are two components to an identifier in OCDS:"
-msgstr ""
+msgstr "Hay dos componentes para un identificador en OCDS:"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:14
 msgid ""
 "a code indicating the list or register from which the identifier is drawn "
 "(the `scheme`); and"
 msgstr ""
+"un código que indica la lista o el registro del que se extrae el "
+"identificador (el `scheme`); y"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:15
 msgid "the identifier itself (the `id`)."
-msgstr ""
+msgstr "el propio identificador (el `id`)"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:17
 msgid ""
@@ -69,6 +83,10 @@ msgid ""
 "#shared-identifiers) from the Beneficial Ownership Data Standard to "
 "construct a `scheme` value for the personal identifier:"
 msgstr ""
+"Siga la "
+"[guía](https://standard.openownership.org/en/0.2.0/schema/guidance/identifiers.html"
+"#shared-identifiers) del Estándar de Datos sobre Beneficiarios Finales para "
+"construir un valor  `scheme` para el identificador personal:"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:19
 msgid ""
@@ -76,31 +94,41 @@ msgid ""
 "is an uppercase ISO 3166-1 alpha-3 country code and TYPE is one of PASSPORT,"
 " TAXID or IDCARD"
 msgstr ""
+"el esquema debe tener el patrón  {JURISDICTION}-{TYPE} donde JURISDICCIÓN es"
+" una mayúscula ISO 3166-1 alpha-3 el código de país y el TIPO son PASAPORTE,"
+" IMPUESTO o TARJETA DE IDENTIFICACIÓN"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:21
 msgid "Worked example"
-msgstr ""
+msgstr "Ejemplo práctico"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:23
 msgid "In the example below:"
-msgstr ""
+msgstr "En el siguiente ejemplo:"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:25
 msgid "A self-employed individual submits a bid for a tender in Colombia"
 msgstr ""
+"Un trabajador autónomo presenta una oferta para una licitación en Colombia"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:26
 msgid ""
 "The individual is listed in the `parties` section with 'tenderer' in "
 "`.roles`"
 msgstr ""
+"La persona figura en la lista de la sección `parties` con 'tenderer' en "
+"`.roles`"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:27
 msgid "The individual's ID card number is published in `.identifier.id`"
 msgstr ""
+"El número de la tarjeta de identificación de la persona se publica en "
+"`.identifier.id`"
 
 #: ../../docs/guidance/map/organization_personal_identifiers.md:28
 msgid ""
 "`.identifier.scheme` is constructed from the ISO 3166-1 alpha-3 country code"
 " for Colombia ('COL') and the type of the identifier ('IDCARD')"
 msgstr ""
+"`.identifier.scheme` está construido a partir del ISO 3166-1 alpha-3 código "
+"de país para Colombia ('COL') y el tipo de identificador ('IDCARD')"

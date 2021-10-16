@@ -1,8 +1,15 @@
 # Map
 
+```{ifconfig} language != 'es'
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3Q_fQBsju6Y" title="Matching your data to OCDS fields" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+```
+```{ifconfig} language == 'es'
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wL0wiTaEpW4" title="Mapeo de sus datos con los campos OCDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+```
 
 This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process. 
 
@@ -18,7 +25,7 @@ Mapping data to OCDS is not always easy. Before writing any software, this phase
 
 The documentation you produce can also later be included in your [Data User Guide](publish.md#finalize-your-publication-policy).
 
-As you make progress through this phase, we encourage you to update your [publication plan](design.md#develop-your-publication-plan), in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk. You can start by filling in the _Goals (design)_ section.
+As you make progress through this phase, we encourage you to maintain a project plan, in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk.
 
 ## Involve the right people
 
@@ -30,14 +37,13 @@ As described in the [Field-Level Mapping Template Guidance](https://www.open-con
 
 ## Identify your data sources
 
-To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/ocds-technical-assessment-template/) guides you through this process.
+To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/technical-assessment-template/) guides you through this process.
 
 If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, you should use the template to identify those data sources, too.
 
 Once complete, you can:
 
 * Ask the [OCDS Helpdesk](../../support/index) to review your Technical Assessment.
-* Fill in the _Source systems_ sub-section of your [Publication Plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
 * Fill in the _Systems_ sheet of your Field-Level Mapping (introduced below).
 
 ## Localize OCDS to your context
@@ -110,9 +116,18 @@ map/beneficial_ownership
 
 Some data elements might not match any field or code in OCDS. To cover such cases, you can add fields and codes to OCDS using [extensions](map/extensions).
 
-**Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
+Before using extensions, double-check whether the data elements can be disclosed using existing fields. For example, to disclose the date by which the buyer or procuring entity will respond to enquiries, you can use the `tender.milestones` field, instead of adding a new field.
 
-**Resource:** [What to do when fields don't map?](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/)
+```{seealso}
+* [Worked example: Milestones](map/organization_classifications)
+* [Worked example: Organization classification](map/organization_classifications)
+```
+
+If you do need to use an extension, consider whether the new fields will affect how users interpret existing fields. If so, you can add information to existing fields, to avoid misinterpretation – in addition to adding the new fields.
+
+For example, you have created an extension to add a new field to indicate whether a contracting process is about the disposal of a state asset (like a vehicle). If the `tender.title` field refers only to the vehicle, then users who are unaware of the new field might misinterpret the contracting process as being about its purchase. To avoid misinterpretation, you can add a "Disposal: " prefix to the `tender.title` field.
+
+**Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
 
 **Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)
 
@@ -142,7 +157,6 @@ map/linked_standards
 
 Once complete, you can:
 
-* Fill in the *Priority data (map)* and *Priority documents* sections of your [Publication Plan](https://www.open-contracting.org/resources/ocds-publication-plan-template/).
-* Ask the [OCDS Helpdesk](../../support/index) to review your Field-Level Mapping and Publication Plan.
+* Ask the [OCDS Helpdesk](../../support/index) to review your Field-Level Mapping and Technical Assessment Template.
 
 [Next phase: Build](build)
