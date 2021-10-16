@@ -128,13 +128,13 @@ The prefix for the UK's Companies House is "GB-COH". The organization Developmen
 {
   "scheme": "GB-COH",
   "id": "06368740",
-  "uri": "https://opencorporates.com/companies/gb/06368740",
+  "uri": "http://data.companieshouse.gov.uk/doc/company/06368740",
   "legalName": "Development Initiatives Poverty Research Limited"
 }
 ```
 ````
 
-In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier object, with the existing identifier in the `id` field. If there is a recognized public URL that uniquely identifies the organization (for example, drawn from [Open Corporates](https://opencorporates.com/)) this can be disclosed via the `uri` field.
+In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier object, with the existing identifier in the `id` field. If there is a recognized public URL that uniquely identifies the organization (like in the above example), this can be disclosed via the `uri` field.
 
 ### Organization lists
 

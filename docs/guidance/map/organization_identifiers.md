@@ -11,14 +11,14 @@ If you choose not to register an organization list with org-id.guide, you ought 
 
 ## Worked example
 
-The Government of the United Kingdom uses identifiers from its Companies House to identify suppliers. Companies House is assigned the "GB-COH" prefix in [org-id.guide](http://org-id.guide/list/GB-COH). IBM has been assigned the company number ‘04336774’ by the Companies House.  The globally unique organization identifier for IBM can be disclosed in the organization's `identifier` section, as below:
+The Government of the United Kingdom uses identifiers from [Companies House](https://www.gov.uk/government/organisations/companies-house) to identify suppliers. Companies House is assigned the "GB-COH" prefix in [org-id.guide](http://org-id.guide/list/GB-COH). IBM has been assigned the company number ‘04336774’ by the Companies House.  The globally unique organization identifier for IBM can be disclosed in the organization's `identifier` section, as below:
 
 ```{jsoninclude} ../../examples/organization-identifiers.json
 :jsonpointer: /releases/0/parties/1
 :expand: identifier, additionalIdentifiers
 ```
 
-The publisher collects two additional identifiers, which are disclosed using the `additionalIdentifiers` array. The first one is the VAT identification number for the supplier. The VAT list is not described by org-id.guide, so the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to assign the "GB-VAT" prefix. This prefix is composed of the two-letter country code ("GB") and a short abbreviation for the list ("VAT"). The publisher checked that this prefix was not in use by another list in org-id.guide.
+The publisher collects an additional identifier, which is disclosed using the `additionalIdentifiers` array. This is the VAT identification number for the supplier. The VAT list is not described by org-id.guide, so the publisher followed the instructions in the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code) to assign the "GB-VAT" prefix. This prefix is composed of the two-letter country code ("GB") and a short abbreviation for the list ("VAT"). The publisher checked that this prefix was not in use by another list in org-id.guide.
 
 ## Local IDs
 
