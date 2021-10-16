@@ -29,11 +29,13 @@ Per the [normative and non-normative content and changes policy](https://docs.go
       * Framework agreements [#1123](https://github.com/open-contracting/standard/pull/1123) [#1269](https://github.com/open-contracting/standard/pull/1269) [#1332](https://github.com/open-contracting/standard/pull/1332)
       * Electronic catalogs [#1223](https://github.com/open-contracting/standard/pull/1223)
       * Beneficial ownership information [#1305](https://github.com/open-contracting/standard/pull/1305)
+      * [#1414](https://github.com/open-contracting/standard/pull/1414) Rephrase planning stage to planning process in worked examples.
     * Add pages:
       * Localizing OCDS [#1043](https://github.com/open-contracting/standard/pull/1043)
       * Linked standards [#1278](https://github.com/open-contracting/standard/pull/1278)
     * [#1016](https://github.com/open-contracting/standard/pull/1016) [#1140](https://github.com/open-contracting/standard/pull/1140) Add links to OCDS profiles and linked standards.
     * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
+    * [#1428](https://github.com/open-contracting/standard/pull/1428) Integrate content from [what to do with fields that don't map](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/).
   * Build:
     * Add pages:
       * "Easy" releases [#951](https://github.com/open-contracting/standard/pull/951)
@@ -44,6 +46,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * [#963](https://github.com/open-contracting/standard/pull/963) Remove guidance on web discovery.
     * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
     * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
+    * [#1414](https://github.com/open-contracting/standard/pull/1414) Remove the planning section from Easy releases and Change history.
   * Publish:
     * Merge Publication policy and Licensing pages into Publish page [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012).
     * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).
