@@ -467,4 +467,4 @@ The `Link` object is used in the `links` field:
 :pointer: /definitions/Link
 ```
 
-Links are used to reference related resources that describe the same release or contracting process. Links should not be used to reference related contracting processes. To reference related processes, see [RelatedProcess](#relatedprocess).
+Links are used to reference related resources that describe the *same* release or contracting process. Links should not be used to reference related contracting processes. To reference related processes, see [RelatedProcess](#relatedprocess).
