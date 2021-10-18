@@ -69,16 +69,16 @@ The majority of OCDS data is held within a release structure. One or more releas
 
 * [package](#package-metadata)
   * [release](#release)
-    * [parties](#parties) 
+    * [parties](#parties)
     * [planning](#planning)
-    * [tender](#tender) 
+    * [tender](#tender)
     * [award](#award)
     * [contract](#contract)
       * [implementation](#implementation)
 
 Releases are given a [tag](codelists.md#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided.
 
-For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
+For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed.
 
 ### Package Metadata
 
@@ -94,7 +94,7 @@ See the [publication policy](../guidance/publish.md#finalize-your-publication-po
 
 ### Release
 
-All new information about a contracting process is described within a release. 
+All new information about a contracting process is described within a release.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
@@ -106,7 +106,7 @@ All new information about a contracting process is described within a release.
 
 ### Parties
 
-Each of the organizations referenced in a release must be included in the parties section. 
+Each of the organizations referenced in a release must be included in the parties section.
 
 ```{versionadded} 1.1
 In OCDS 1.0, the details (address, contact point, etc.) of the organizations involved in a contracting process were repeated across many fields (`tenderers`, `suppliers`, etc.). In OCDS 1.1, these details are instead collected under a top-level `parties` array, with the other fields referencing entries in this array, using [organization references](#organizationreference). This reduces repetition and supports publication of information about additional organizations: for example, multiple buyers.
@@ -144,7 +144,7 @@ The planning section can be used to describe the background to a contracting pro
 :list: planning
 ```
 
-#### Budget 
+#### Budget
 
 Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
 
@@ -161,7 +161,7 @@ Apart from documents, the majority of planning information is held within the bu
 
 The tender section includes details of the announcement that an organization intends to source some particular goods, works or services, and to establish one or more contract(s) for these.
 
-It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and can also be used to record details of a completed tender process, including details of bids received. 
+It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and can also be used to record details of a completed tender process, including details of bids received.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Tender
@@ -191,7 +191,7 @@ The award section is used to announce any awards issued for this tender. There c
 
 ### Contract
 
-The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. 
+The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Contract
@@ -226,7 +226,7 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 
 The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source.
 
-In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
+In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`.
 
 ```{extensionlist} The following extensions are available for transactions
 :list: transaction
@@ -236,13 +236,13 @@ In most circumstances, the `payer` identifier will match that of the `buyer`, an
 
 See [milestone](#milestone) reference below.
 
-The implementation milestones should be updated to reflect when they are met. 
+The implementation milestones should be updated to reflect when they are met.
 
 #### Documents
 
 Documents related to contract implementation are stored here. This can include subcontracts.
 
-See [document](#document) reference below. 
+See [document](#document) reference below.
 
 ### Amendment
 
@@ -279,7 +279,7 @@ See the [parties](#parties) section.
 An organization reference consists of two main components:
 
 * An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization;
-* A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
+* A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing.
 
 ### Organization
 
@@ -289,7 +289,7 @@ See the [parties](#parties) section.
 
 The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting process.
 
-If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
+If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Identifier
@@ -317,7 +317,7 @@ Documents should be published at their own stable URLs, accessible for free and 
 
 OCDS allows summarizing information in the document's `description` field. Providing clear summaries is a good practice, as it allows applications to display this information in a user-interface and thus enables users to read key facts without having to search through the whole document.
 
-For documents that contain multiple languages, use the `languages` field to list the languages used in the document. For documents published in multiple languages, add a separate `Document` object for each language.
+If a document contains multiple languages, use the `languages` field to list the languages used in the document. If multiple versions of a document are published, each in a different language, add a separate `Document` object for each version of the document.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Document
@@ -329,7 +329,7 @@ For documents that contain multiple languages, use the `languages` field to list
 
 ### Period
 
-A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
+A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days.
 
 Periods can also include a `maxExtentDate` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
 
@@ -363,7 +363,7 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 ### Item
 
-The items block is used to list the line-items associated with a tender, award or contract. 
+The items block is used to list the line-items associated with a tender, award or contract.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item
@@ -394,7 +394,7 @@ Other unit classification schemes can be used, including those in the [unitClass
 
 ### Milestone
 
-Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks. 
+Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Milestone
@@ -403,7 +403,7 @@ Milestone information can be included in the [planning](#planning), [tender](#te
 
 Notes:
 
-* The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
+* The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed.
 
 ```{extensionlist} The following extensions to milestone are available
 :list: milestones
@@ -411,7 +411,7 @@ Notes:
 
 ### Value
 
-Financial values should be published with a currency attached. 
+Financial values should be published with a currency attached.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Value
@@ -452,7 +452,7 @@ The [Location](https://extensions.open-contracting.org/en/extensions/location/v1
 
 ### Publisher
 
-The publisher block is used in release and record packages to identify the source of a dataset. 
+The publisher block is used in release and record packages to identify the source of a dataset.
 
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
 :include: publisher
