@@ -149,6 +149,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) `links`
@@ -160,7 +161,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * `contracts.maximumValue`
     * `contracts.estimatedValue`
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
-  * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.languages`
 
 * Deprecate some fields:
