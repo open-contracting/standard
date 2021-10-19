@@ -466,5 +466,3 @@ The entries of the top-level `links` array are `Link` objects:
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Link
 ```
-
-Links are used to reference related resources that describe the *same* release or contracting process. Links must not be used to reference related contracting processes. To reference related processes, see [RelatedProcess](#relatedprocess).
