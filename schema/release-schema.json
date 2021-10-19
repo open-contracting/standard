@@ -1132,7 +1132,7 @@
         },
         "relatedItems": {
           "title": "Related items",
-          "description": "If the document relates to one or more items, the IDs of the related item(s) in the items array of the parent object. For example, for a document in `tender.documents`, the `.id` of the related item(s) in `tender.items`.",
+          "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
           "type": [
             "array",
             "null"
