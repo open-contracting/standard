@@ -404,7 +404,12 @@ Milestone information can be included in the [planning](#planning), [tender](#te
 Notes:
 
 * The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
-* To represent a planned payment, set `.type` to 'payment' and set `.value` to the payment's value. Once the milestone is met, add a [Transaction](#transaction) to `contracts/implementation/transactions` and set its `.id` and `.value`. For implementation milestones, the transaction can refer back to the milestone using the [transaction related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/).
+
+```{admonition} Planned payments
+:class: seealso
+
+To learn about how to represent planned payments, see the [Delivery and payment data worked example](../guidance/map/milestones.md#delivery-and-payment-data)
+```
 
 ```{extensionlist} The following extensions to milestone are available
 :list: milestones
