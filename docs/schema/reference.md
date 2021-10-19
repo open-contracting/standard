@@ -458,7 +458,7 @@ The publisher block is used in release and record packages to identify the sourc
 
 ### Link
 
-The `Link` object is used in the `links` field:
+The entries of the top-level `links` array are `Link` objects:
 
 ```{field-description} ../../build/current_lang/release-schema.json /properties/links
 ```
@@ -467,4 +467,4 @@ The `Link` object is used in the `links` field:
 :pointer: /definitions/Link
 ```
 
-Links are used to reference related resources that describe the *same* release or contracting process. Links should not be used to reference related contracting processes. To reference related processes, see [RelatedProcess](#relatedprocess).
+Links are used to reference related resources that describe the *same* release or contracting process. Links must not be used to reference related contracting processes. To reference related processes, see [RelatedProcess](#relatedprocess).
