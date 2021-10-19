@@ -10,7 +10,7 @@ Other extensions are maintained by third parties, like OCDS publishers, and do n
 
 All OCP extensions and many third-party extensions are documented in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard development team](../../governance/index) decides which extensions are registered in the [Extension Registry](https://github.com/open-contracting/extension_registry#readme), which controls which extensions appear in the Extension Explorer.
 
-Extensions that follow the governance process are tagged as **Recommended** in the Extension Explorer. You are encouraged to consider whether you can collect and publish the data covered by recommended extensions.
+You are encouraged to consider using the extensions tagged as *Recommended* in the Extension Explorer.
 
 ## Using existing extensions
 
