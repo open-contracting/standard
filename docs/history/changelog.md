@@ -62,6 +62,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Change how the documentation is built ([milestone](https://github.com/open-contracting/standard/milestone/26?closed=1)).
 * Update translations ([milestone](https://github.com/open-contracting/standard/milestone/27?closed=1))
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932) [#976](https://github.com/open-contracting/standard/pull/976).
+* [#1444](https://github.com/open-contracting/standard/pull/1444) Governance page: Remove reference to FCNY as OCP fiscal sponsor.
 
 ## [1.1.5] - 2020-08-20
 
