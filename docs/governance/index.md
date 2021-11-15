@@ -10,8 +10,6 @@ The [Open Contracting Partnership (OCP)](https://www.open-contracting.org) was e
 
 OCP is led by an executive director, and is supported by a multi-stakeholder advisory board with representation from governments, multilateral organizations, academia, NGOs and business. 
 
-As of February 2016, OCP is fiscally hosted by the [Fund for the City of New York](https://www.fcny.org/fcny/) (FCNY). Under the terms of this agreement, Intellectual Property is held by FCNY on behalf of OCP, but will transfer to any future legal entity hosting OCP. 
-
 In the pursuit of a consensus and **community-driven process**, subscribers to the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/g/standard-discuss) discussion list (join by sending an email to [standard-discuss+subscribe@open-contracting.org](mailto:standard-discuss+subscribe@open-contracting.org)) and those watching and engaging with the [standard GitHub repository](https://github.com/open-contracting/standard) should be kept informed at all stages about planned revisions to OCDS, and should be offered clear and timely opportunities to input and comment.
 
 To ensure the relevance, quality and effective implementation of proposed updates to the standard, new version releases are subjected to a process of **peer review** with invited reviewers from publisher and user communities, and an open review process. 
@@ -24,7 +22,7 @@ In the future, the Open Contracting Data Standard may be submitted to a formal s
 
 The Open Contracting Data Standard is the Intellectual Property of the Open Contracting Partnership. The schema is licensed under the **[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)** license, with accompanying documentation under a **[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)** where stated.
 
-Contributors to the standard agree to transfer any copyright in their contributions to the Open Contracting Partnership (via its fiscal sponsor) through a contributor agreement process, in order that those contributions are held in trust as part of the standard.
+Contributors to the standard agree to transfer any copyright in their contributions to the Open Contracting Partnership through a contributor agreement process, in order that those contributions are held in trust as part of the standard.
 
 No content infringing upon third-party Intellectual Property Rights will be included in the standard. 
 
