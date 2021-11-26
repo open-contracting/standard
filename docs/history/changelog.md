@@ -210,7 +210,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
-* [#XXXX] Replace a repeated example in schema/merging with a link to reference/build/merging. 
+* [#1450](https://github.com/open-contracting/standard/pull/1450) Replace a repeated example in schema/merging with a link to reference/build/merging. 
 
 ### Documentation
 
