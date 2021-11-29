@@ -87,7 +87,7 @@ OCDS separates data about the contract award and data about the signed contract 
 If the data in the source systems relates: 
 * to both awards and contracts, then both `awards` and `contracts` ought to be populated. 
 * only to contract awards, then only `awards` ought to be populated.
-* only to the contract, then `contracts`, `awards.id`, and `awards.suppliers` ought to be populated.  
+* only to contracts, then `contracts`, `awards.id`, and `awards.suppliers` ought to be populated.  
 
 If the contract (e.g. its value, period or items) is subsequently updated or amended, update only the corresponding fields in `contracts`. The fields in `awards` stay the same. 
 
