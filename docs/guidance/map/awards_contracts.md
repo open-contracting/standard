@@ -82,7 +82,7 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 Each contracting process can have many awards and each award can have many related contracts.
 
-OCDS separates data about the contract award and data about the signed contract into the `awards` and `contracts` sections respectively. `Award` objects (within `awards`) and `Contract` objects (within `contracts`) are connected by setting `awards.id` and `contracts.id` to the same value. Source systems can contain data on awards, on contracts, or on both.
+OCDS separates data about the contract award and data about the signed contract into the `awards` and `contracts` sections respectively. `Award` objects (within `awards`) and `Contract` objects (within `contracts`) are connected by setting `awards.id` and `contracts.awardID` to the same value. Source systems can contain data on awards, on contracts, or on both.
 
 If the data in the source systems relates: 
 * to both awards and contracts, then both `awards` and `contracts` ought to be populated. 
