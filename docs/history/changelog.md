@@ -36,6 +36,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * [#1016](https://github.com/open-contracting/standard/pull/1016) [#1140](https://github.com/open-contracting/standard/pull/1140) Add links to OCDS profiles and linked standards.
     * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
     * [#1428](https://github.com/open-contracting/standard/pull/1428) Integrate content from [what to do with fields that don't map](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/).
+  * In Awards and Contracts, clarify when to fill `awards` and when `contracts`, simplify. [#XYZ]()
   * Build:
     * Add pages:
       * "Easy" releases [#951](https://github.com/open-contracting/standard/pull/951)
