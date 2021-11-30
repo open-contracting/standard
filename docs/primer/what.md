@@ -10,9 +10,16 @@ This page will:
 * Describe the relationship between the OCDS and open contracting
 ```
 
+```{ifconfig} language != 'es'
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ucPEID4DsyI?start=1" title="Introduction to OCDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+```
+```{ifconfig} language == 'es'
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_gVCTxlFsDs?start=1" title="Introducción al OCDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+```
 
 The Open Contracting Data Standard (OCDS) is a free, non-proprietary open data standard for public contracting, implemented by over 30 governments around the world. It describes how to publish data and documents about contracting processes for goods, works and services.
 
