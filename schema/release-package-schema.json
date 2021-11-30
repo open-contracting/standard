@@ -31,7 +31,9 @@
       "items": {
         "type": "string",
         "format": "uri"
-      }
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "publishedDate": {
       "title": "Published date",
@@ -46,7 +48,8 @@
       "items": {
         "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
       },
-      "uniqueItems": true
+      "uniqueItems": true,
+      "minItems": 1
     },
     "publisher": {
       "title": "Publisher",
@@ -56,7 +59,8 @@
         "name": {
           "title": "Name",
           "description": "The name of the organization or department responsible for publishing this OCDS data.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "scheme": {
           "title": "Scheme",
@@ -64,7 +68,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "uid": {
           "title": "uid",
@@ -72,7 +77,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "uri": {
           "title": "URI",
@@ -86,7 +92,8 @@
       },
       "required": [
         "name"
-      ]
+      ],
+      "minProperties": 1
     },
     "license": {
       "title": "License",
@@ -106,5 +113,6 @@
       ],
       "format": "uri"
     }
-  }
+  },
+  "minProperties": 1
 }

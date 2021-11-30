@@ -24,7 +24,9 @@
       "items": {
         "type": "string",
         "format": "uri"
-      }
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "publisher": {
       "title": "Publisher",
@@ -34,7 +36,8 @@
         "name": {
           "title": "Name",
           "description": "The name of the organization or department responsible for publishing this OCDS data.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "scheme": {
           "title": "Scheme",
@@ -42,7 +45,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "uid": {
           "title": "uid",
@@ -50,7 +54,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "uri": {
           "title": "URI",
@@ -64,7 +69,8 @@
       },
       "required": [
         "name"
-      ]
+      ],
+      "minProperties": 1
     },
     "license": {
       "title": "License",
@@ -112,7 +118,8 @@
       "items": {
         "$ref": "#/definitions/Record"
       },
-      "uniqueItems": true
+      "uniqueItems": true,
+      "minItems": 1
     }
   },
   "required": [
@@ -131,7 +138,8 @@
         "ocid": {
           "title": "Open contracting process identifier",
           "description": "A globally unique identifier for the contracting process that the record describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "releases": {
           "title": "Releases",
@@ -144,7 +152,8 @@
               "items": {
                 "$ref": "#/definitions/LinkedRelease"
               },
-              "minItems": 1
+              "minItems": 1,
+              "uniqueItems": true
             },
             {
               "title": "Embedded releases",
@@ -153,7 +162,8 @@
               "items": {
                 "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
               },
-              "minItems": 1
+              "minItems": 1,
+              "uniqueItems": true
             }
           ]
         },
@@ -170,7 +180,8 @@
       },
       "required": [
         "ocid"
-      ]
+      ],
+      "minProperties": 1
     },
     "LinkedRelease": {
       "title": "Linked release",
@@ -219,13 +230,16 @@
           },
           "codelist": "releaseTag.csv",
           "openCodelist": false,
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "required": [
         "url",
         "date"
-      ]
+      ],
+      "minProperties": 1
     }
-  }
+  },
+  "minProperties": 1
 }
