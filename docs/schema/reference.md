@@ -457,3 +457,14 @@ The publisher block is used in release and record packages to identify the sourc
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
 :include: publisher
 ```
+
+### Link
+
+The entries of the top-level `links` array are `Link` objects:
+
+```{field-description} ../../build/current_lang/release-schema.json /properties/links
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Link
+```
