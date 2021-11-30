@@ -11,7 +11,7 @@ An OCDS [record](../schema/records_reference) aggregates all the releases availa
 * A versioned release is created by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
 
 ```{seealso}
-* Guidance: [Updates and deletions](../guidance/build/merging)
+Guidance: [Updates and deletions](../guidance/build/merging)
 ```
 
 ## Merging specification
