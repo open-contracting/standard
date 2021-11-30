@@ -78,6 +78,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'LEXML'
   * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
     * 'COFOG'
+  * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
 
 * `documentType.csv`:
   * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
