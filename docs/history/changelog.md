@@ -171,7 +171,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * `contracts.maximumValue`
     * `contracts.estimatedValue`
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
-  * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.languages`
+  * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
