@@ -317,6 +317,8 @@ Documents should be published at their own stable URLs, accessible for free and 
 
 OCDS allows summarizing information in the document's `description` field. Providing clear summaries is a good practice, as it allows applications to display this information in a user-interface and thus enables users to read key facts without having to search through the whole document.
 
+If a document contains multiple languages, use the `languages` field to list the languages used in the document. If there are multiple versions of a document, each in a different language, add a separate `Document` object for each version of the document.
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Document
 ```
@@ -454,4 +456,15 @@ The publisher block is used in release and record packages to identify the sourc
 
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
 :include: publisher
+```
+
+### Link
+
+The entries of the top-level `links` array are `Link` objects:
+
+```{field-description} ../../build/current_lang/release-schema.json /properties/links
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Link
 ```
