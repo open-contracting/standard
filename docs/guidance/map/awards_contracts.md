@@ -84,10 +84,10 @@ Each contracting process can have many awards and each award can have many relat
 
 OCDS separates data about the contract award and data about the signed contract into the `awards` and `contracts` sections respectively. `Award` objects (within `awards`) and `Contract` objects (within `contracts`) are connected by setting `awards.id` and `contracts.awardID` to the same value. Source systems can contain data on awards, on contracts, or on both.
 
-If the data in the source systems relates: 
-* to both awards and contracts, then both `awards` and `contracts` ought to be populated. 
-* only to contract awards, then only `awards` ought to be populated.
-* only to contracts, then `contracts`, `awards.id`, and `awards.suppliers` ought to be populated.  
+If the data in the source systems relates to: 
+* both awards and contracts, then both `awards` and `contracts` ought to be populated. 
+* only awards, then only `awards` ought to be populated.
+* only contracts, then `contracts`, `awards.id`, and `awards.suppliers` ought to be populated.  
 
 If the contract (e.g. its value, period or items) is subsequently updated or amended, update only the corresponding fields in `contracts`. The fields in `awards` stay the same. 
 
