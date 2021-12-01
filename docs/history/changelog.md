@@ -21,7 +21,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
       * Amendments [#950](https://github.com/open-contracting/standard/pull/950)
       * Personal identifiers [#952](https://github.com/open-contracting/standard/pull/952)
       * Organizational units [#961](https://github.com/open-contracting/standard/pull/961)
-      * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974)
+      * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974) [#1451](https://github.com/open-contracting/standard/pull/1451).
       * Organization classifications [#990](https://github.com/open-contracting/standard/pull/990)
       * Pre-qualification and pre-selection [#999](https://github.com/open-contracting/standard/pull/999) [#1345](https://github.com/open-contracting/standard/pull/1345)
       * Unsuccessful processes [#1007](https://github.com/open-contracting/standard/pull/1007)
@@ -36,7 +36,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * [#1016](https://github.com/open-contracting/standard/pull/1016) [#1140](https://github.com/open-contracting/standard/pull/1140) Add links to OCDS profiles and linked standards.
     * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
     * [#1428](https://github.com/open-contracting/standard/pull/1428) Integrate content from [what to do with fields that don't map](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/).
-  * In Awards and Contracts, clarify when to fill `awards` and when `contracts`, simplify. [#1451](https://github.com/open-contracting/standard/pull/1451).
   * Build:
     * Add pages:
       * "Easy" releases [#951](https://github.com/open-contracting/standard/pull/951)
