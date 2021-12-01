@@ -21,7 +21,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
       * Amendments [#950](https://github.com/open-contracting/standard/pull/950)
       * Personal identifiers [#952](https://github.com/open-contracting/standard/pull/952)
       * Organizational units [#961](https://github.com/open-contracting/standard/pull/961)
-      * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974)
+      * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974) [#1451](https://github.com/open-contracting/standard/pull/1451).
       * Organization classifications [#990](https://github.com/open-contracting/standard/pull/990)
       * Pre-qualification and pre-selection [#999](https://github.com/open-contracting/standard/pull/999) [#1345](https://github.com/open-contracting/standard/pull/1345)
       * Unsuccessful processes [#1007](https://github.com/open-contracting/standard/pull/1007)
