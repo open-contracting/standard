@@ -1,8 +1,8 @@
-# Amendments
+# Updates and amendments
 
 Information about a contracting process will often change over time.
 
-Each time information changes, a new OCDS release ought to be published.
+Each time information changes, a new OCDS release ought to be published. The new release can either contain only newly published information or all the information valid at the time of publication (i.e. old information that is still valid and new information).  
 
 There are three kinds of changes:
 
