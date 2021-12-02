@@ -81,7 +81,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
 
 * `documentType.csv`:
-  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
+  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
@@ -101,7 +101,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice", add synonyms to all notice codes ('plannedProcurementNotice', 'tenderNotice', 'awardNotice', 'contractNotice') and standardize the descriptions.
   * [#1415](https://github.com/open-contracting/standard/pull/1415) Change 'evaluationReports' section from "tender" to "award".
   * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "interested supplier" to "potential supplier".
-  * [#xyz]() Add 'market engagement notice'
+  * [#1453](https://github.com/open-contracting/standard/pull/1453) Add 'market engagement notice'.
 
 * `method.csv`:
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
