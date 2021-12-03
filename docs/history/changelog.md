@@ -18,7 +18,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * Add examples [#1338](https://github.com/open-contracting/standard/pull/1338):
       * Organization references [#947](https://github.com/open-contracting/standard/pull/947)
       * Organization identifiers [#948](https://github.com/open-contracting/standard/pull/948) [#1429](https://github.com/open-contracting/standard/pull/1429)
-      * Amendments [#950](https://github.com/open-contracting/standard/pull/950)
+      * Updates and amendments [#950](https://github.com/open-contracting/standard/pull/950) [#1454](https://github.com/open-contracting/standard/pull/1454)
       * Personal identifiers [#952](https://github.com/open-contracting/standard/pull/952)
       * Organizational units [#961](https://github.com/open-contracting/standard/pull/961)
       * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974) [#1451](https://github.com/open-contracting/standard/pull/1451).
@@ -36,7 +36,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * [#1016](https://github.com/open-contracting/standard/pull/1016) [#1140](https://github.com/open-contracting/standard/pull/1140) Add links to OCDS profiles and linked standards.
     * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
     * [#1428](https://github.com/open-contracting/standard/pull/1428) Integrate content from [what to do with fields that don't map](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/).
-    * [#1454](https://github.com/open-contracting/standard/pull/1454) Rename and clarify Guidance/Map/Amendments.
   * Build:
     * Add pages:
       * "Easy" releases [#951](https://github.com/open-contracting/standard/pull/951)
