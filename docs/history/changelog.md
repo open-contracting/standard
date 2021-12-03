@@ -81,7 +81,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
 
 * `documentType.csv`:
-  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
+  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
+  * [#1453](https://github.com/open-contracting/standard/pull/1453) Add 'marketEngagementNotice'.
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
