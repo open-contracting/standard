@@ -164,6 +164,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
+  * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) [#1431](https://github.com/open-contracting/standard/pull/1431) `links`
   * [#1376](https://github.com/open-contracting/standard/pull/1376) `publisher`
   * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
