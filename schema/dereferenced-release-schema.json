@@ -1713,6 +1713,19 @@
                   "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                   "deprecatedVersion": "1.2"
                 }
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
+                }
               }
             },
             "patternProperties": {
@@ -1943,6 +1956,19 @@
                       "deprecated": {
                         "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                         "deprecatedVersion": "1.2"
+                      }
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ]
                       }
                     }
                   },
@@ -4575,7 +4601,7 @@
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
-          "description": "Any detailed or further information on the submission method. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions.",
+          "description": "Information about the methods by which bids are submitted. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions. More structured information can be provided using the submission terms extension.",
           "type": [
             "string",
             "null"
@@ -5445,6 +5471,19 @@
                   "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                   "deprecatedVersion": "1.2"
                 }
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
+                }
               }
             },
             "patternProperties": {
@@ -5675,6 +5714,19 @@
                       "deprecated": {
                         "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                         "deprecatedVersion": "1.2"
+                      }
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ]
                       }
                     }
                   },
@@ -8612,6 +8664,19 @@
                     "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                     "deprecatedVersion": "1.2"
                   }
+                },
+                "relatedItems": {
+                  "title": "Related items",
+                  "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": [
+                      "string"
+                    ]
+                  }
                 }
               },
               "patternProperties": {
@@ -10651,6 +10716,19 @@
                   "deprecated": {
                     "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                     "deprecatedVersion": "1.2"
+                  }
+                },
+                "relatedItems": {
+                  "title": "Related items",
+                  "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": [
+                      "string"
+                    ]
                   }
                 }
               },
@@ -12765,6 +12843,19 @@
                               "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                               "deprecatedVersion": "1.2"
                             }
+                          },
+                          "relatedItems": {
+                            "title": "Related items",
+                            "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                            "type": [
+                              "array",
+                              "null"
+                            ],
+                            "items": {
+                              "type": [
+                                "string"
+                              ]
+                            }
                           }
                         },
                         "patternProperties": {
@@ -13242,6 +13333,19 @@
                         "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                         "deprecatedVersion": "1.2"
                       }
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ]
+                      }
                     }
                   },
                   "patternProperties": {
@@ -13541,6 +13645,19 @@
                         "deprecated": {
                           "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                           "deprecatedVersion": "1.2"
+                        }
+                      },
+                      "relatedItems": {
+                        "title": "Related items",
+                        "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "items": {
+                          "type": [
+                            "string"
+                          ]
                         }
                       }
                     },
@@ -14203,7 +14320,7 @@
     },
     "links": {
       "title": "Links",
-      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process.",
+      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process. For references to related processes, see the `relatedProcesses` array.",
       "type": "array",
       "items": {
         "title": "Link",
@@ -14781,6 +14898,19 @@
                   "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                   "deprecatedVersion": "1.2"
                 }
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
+                }
               }
             },
             "patternProperties": {
@@ -15011,6 +15141,19 @@
                       "deprecated": {
                         "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                         "deprecatedVersion": "1.2"
+                      }
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ]
                       }
                     }
                   },
@@ -17643,7 +17786,7 @@
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
-          "description": "Any detailed or further information on the submission method. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions.",
+          "description": "Information about the methods by which bids are submitted. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions. More structured information can be provided using the submission terms extension.",
           "type": [
             "string",
             "null"
@@ -18513,6 +18656,19 @@
                   "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                   "deprecatedVersion": "1.2"
                 }
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
+                }
               }
             },
             "patternProperties": {
@@ -18743,6 +18899,19 @@
                       "deprecated": {
                         "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                         "deprecatedVersion": "1.2"
+                      }
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ]
                       }
                     }
                   },
@@ -21676,6 +21845,19 @@
                   "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                   "deprecatedVersion": "1.2"
                 }
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
+                }
               }
             },
             "patternProperties": {
@@ -23709,6 +23891,19 @@
                 "deprecated": {
                   "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                   "deprecatedVersion": "1.2"
+                }
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
                 }
               }
             },
@@ -25823,6 +26018,19 @@
                             "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                             "deprecatedVersion": "1.2"
                           }
+                        },
+                        "relatedItems": {
+                          "title": "Related items",
+                          "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": [
+                              "string"
+                            ]
+                          }
                         }
                       },
                       "patternProperties": {
@@ -26300,6 +26508,19 @@
                       "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                       "deprecatedVersion": "1.2"
                     }
+                  },
+                  "relatedItems": {
+                    "title": "Related items",
+                    "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string"
+                      ]
+                    }
                   }
                 },
                 "patternProperties": {
@@ -26599,6 +26820,19 @@
                       "deprecated": {
                         "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                         "deprecatedVersion": "1.2"
+                      }
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ]
                       }
                     }
                   },
@@ -29275,6 +29509,19 @@
                         "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                         "deprecatedVersion": "1.2"
                       }
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ]
+                      }
                     }
                   },
                   "patternProperties": {
@@ -29752,6 +29999,19 @@
                   "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                   "deprecatedVersion": "1.2"
                 }
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
+                }
               }
             },
             "patternProperties": {
@@ -29981,6 +30241,19 @@
                 "deprecated": {
                   "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
                   "deprecatedVersion": "1.2"
+                }
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
                 }
               }
             },
@@ -30452,6 +30725,19 @@
           "deprecated": {
             "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
             "deprecatedVersion": "1.2"
+          }
+        },
+        "relatedItems": {
+          "title": "Related items",
+          "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string"
+            ]
           }
         }
       },
