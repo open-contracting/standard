@@ -400,17 +400,17 @@ Other unit classification schemes can be used, including those in the [unitClass
 
 Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks.
 
+The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
+
+```{seealso}
+[How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
+```
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Milestone
 :collapse: documents
 ```
 
-Notes:
-
-* The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
-
-```{seealso}
-[How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
 ```{extensionlist} The following extensions to milestone are available
 :list: milestones
 ```
