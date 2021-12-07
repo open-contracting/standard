@@ -174,6 +174,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * `contracts.estimatedValue`
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
+  * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
 
 * Deprecate some fields:

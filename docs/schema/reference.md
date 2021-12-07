@@ -226,6 +226,10 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 
 The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source.
 
+```{note}
+To represent planned payments, use [Milestones](#milestones) instead.
+```
+
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
 ```{extensionlist} The following extensions are available for transactions
@@ -394,16 +398,18 @@ Other unit classification schemes can be used, including those in the [unitClass
 
 ### Milestone
 
-Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks. 
+Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks.
+
+The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
+
+```{seealso}
+[How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
+```
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Milestone
 :collapse: documents
 ```
-
-Notes:
-
-* The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
 ```{extensionlist} The following extensions to milestone are available
 :list: milestones
