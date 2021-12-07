@@ -406,6 +406,8 @@ The `dateModified` field should be changed whenever the progress towards a miles
 [How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
 ```
 
+For delivery milestones, if there is a time frame for delivery, use `.dueAfterDate` for the start date and `.dueDate` for the end date.
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Milestone
 :collapse: documents
