@@ -33,7 +33,7 @@ At the point of contract signature, a comparison between `tender/milestones` and
 
 The `dueDate`, `dateMet`, `dateModified` and [`status`](../../schema/codelists.md#milestone-status) fields are used to track the lifecycle of the milestone.
 
-To represent a planned payment, add a `Milestone`, set its `.type` to 'payment' and set its `.value` to the payment's value. Once the milestone's `.status` is met, add a [Transaction](../../schema/reference.md#transaction) to `contracts/implementation/transactions` and set its `.id` and `.value`. For implementation milestones, the transaction can refer back to the milestone using the [transaction related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/).
+To represent a planned payment, add a `Milestone`, set its `.type` to 'payment' and set its `.value` to the payment's value. Once the milestone is met, add a [Transaction](../../schema/reference.md#transaction) to `contracts/implementation/transactions`. For implementation milestones, the transaction can refer back to the milestone using the [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/).
 
 ## Worked examples
 
@@ -117,7 +117,7 @@ In the first implementation update release:
 
 In the second implementation update release:
 
-* The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'payment' is updated. A new `transaction` is disclosed, with the amount paid to the company. The [transaction related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/) is used to link the transaction to the milestone.
+* The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'payment' is updated. A new `transaction` is disclosed, with the amount paid to the company. The [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/) is used to link the transaction to the milestone.
 
 ```{jsoninclude} ../../examples/milestones/af-implementation-milestones-1.json
 :jsonpointer:

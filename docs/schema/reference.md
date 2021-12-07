@@ -226,7 +226,9 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 
 The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source.
 
-To represent planned payments, use [Milestones](#milestones).
+```{note}
+To represent planned payments, use [Milestones](#milestones) instead.
+```
 
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
@@ -407,12 +409,8 @@ Notes:
 
 * The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
-```{admonition} Planned payments
-:class: seealso
-
-To learn about how to represent planned payments, see the [Delivery and payment data worked example](../guidance/map/milestones.md#delivery-and-payment-data)
-```
-
+```{seealso}
+[How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
 ```{extensionlist} The following extensions to milestone are available
 :list: milestones
 ```
