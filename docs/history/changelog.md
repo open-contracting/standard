@@ -162,6 +162,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
