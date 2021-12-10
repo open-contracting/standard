@@ -127,8 +127,6 @@ For example, you have created an extension to add a new field to indicate whethe
 
 **Resource:** [Localizing OCDS: Translations, Terminology & Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
 
-**Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)
-
 **Action:** [Contact the OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [GitHub tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!

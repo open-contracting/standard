@@ -17,7 +17,6 @@ import os
 from glob import glob
 from pathlib import Path
 
-import standard_theme
 from docutils.nodes import make_id
 from ocds_babel.translate import translate
 from sphinx.locale import get_translation
@@ -60,9 +59,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'standard_theme'
-html_theme_path = [standard_theme.get_html_theme_path()]
+html_theme = 'pydata_sphinx_theme'
 html_favicon = '_static/favicon-16x16.ico'
+html_logo = "_static/png/logo-ocds.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -81,7 +80,8 @@ repository_url = 'https://github.com/open-contracting/standard'
 gettext_compact = False
 # `DOMAIN_PREFIX` from `config.mk`.
 gettext_domain_prefix = f'{profile_identifier}-' if profile_identifier else ''
-locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+# TODO: figure out how this should be used if we are using the pydata theme
+locale_dirs = ['locale/']  # os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 # We use single quotes for codes, which docutils will change to double quotes.
 # https://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/docutils/utils/smartquotes.py
 smartquotes = False
@@ -100,15 +100,27 @@ navigation_with_keys = False  # restore the Sphinx default
 html_context = {
     'analytics_id': 'HTWZHRIZ',
 }
+# TODO: remove these old theme options once the new theme looks correct
+# html_theme_options = {
+#     'display_version': True,
+#     'root_url': f'/profiles/{profile_identifier}' if profile_identifier else '',
+#     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
+#     'copyright': copyright,
+#     'license_name': 'Apache License 2.0',
+#     'license_url': f'{repository_url}/blob/HEAD/LICENSE',
+#     'repository_url': repository_url,
+# }
 html_theme_options = {
-    'analytics_id': 'HTWZHRIZ',
-    'display_version': True,
-    'root_url': f'/profiles/{profile_identifier}' if profile_identifier else '',
-    'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
-    'copyright': copyright,
-    'license_name': 'Apache License 2.0',
-    'license_url': f'{repository_url}/blob/HEAD/LICENSE',
-    'repository_url': repository_url,
+    "navbar_align": "left",
+    "navbar_end": ["version-switcher", "language-switcher", "search-field"],
+    "footer_items": ["custom-footer"],
+}
+
+html_sidebars = {
+    "index": ["developed-by-ocp.html"],
+    "**": [
+        "sidebar-nav-bs.html",
+    ]
 }
 
 # List the extension identifiers and versions that should be part of this specification. The extensions must be in
@@ -167,3 +179,8 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(standard_dir / 'codelists' / '*.csv')), standard_build_dir / 'codelists', codelists_domain),
     ], localedir, language, headers, version=branch)
+
+    # Add assets for website
+    app.add_css_file("basic.css")
+    app.add_js_file("renderjson.js")
+    app.add_js_file("script.js.css")
