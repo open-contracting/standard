@@ -81,7 +81,7 @@ gettext_compact = False
 # `DOMAIN_PREFIX` from `config.mk`.
 gettext_domain_prefix = f'{profile_identifier}-' if profile_identifier else ''
 # TODO: figure out how this should be used if we are using the pydata theme
-locale_dirs = ['locale/']  #, os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+locale_dirs = ['locale/']  # os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 # We use single quotes for codes, which docutils will change to double quotes.
 # https://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/docutils/utils/smartquotes.py
 smartquotes = False
@@ -102,13 +102,13 @@ html_context = {
 }
 # TODO: remove these old theme options once the new theme looks correct
 # html_theme_options = {
-    # 'display_version': True,
-    # 'root_url': f'/profiles/{profile_identifier}' if profile_identifier else '',
-    # 'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
-    # 'copyright': copyright,
-    # 'license_name': 'Apache License 2.0',
-    # 'license_url': f'{repository_url}/blob/HEAD/LICENSE',
-    # 'repository_url': repository_url,
+#     'display_version': True,
+#     'root_url': f'/profiles/{profile_identifier}' if profile_identifier else '',
+#     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
+#     'copyright': copyright,
+#     'license_name': 'Apache License 2.0',
+#     'license_url': f'{repository_url}/blob/HEAD/LICENSE',
+#     'repository_url': repository_url,
 # }
 html_theme_options = {
     "navbar_align": "left",
