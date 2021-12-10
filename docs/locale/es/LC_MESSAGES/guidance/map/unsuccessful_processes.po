@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# James McKinney, 2021
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-22 23:26-0400\n"
+"PO-Revision-Date: 2021-07-31 17:58+0000\n"
+"Last-Translator: Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:1
+msgid "Unsuccessful processes"
+msgstr "Procesos no exitosos"
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:3
+msgid ""
+"In the case of procurement, a contracting process can be defined as a "
+"procurement procedure. There is a one-to-one correspondence between the "
+"first stage of a procurement procedure (tender) and a contracting process."
+msgstr ""
+"Dentro de las contrataciones, un proceso de contratación puede definirse "
+"como un procedimiento de adquisición. Existe una correspondencia uno a uno "
+"entre la primera etapa de un procedimiento de adquisición (licitación) y un "
+"proceso de contratación."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:5
+msgid ""
+"In OCDS, at a conceptual level, a contracting process is intended to match "
+"each concrete attempt to start a procedure that leads to one or more "
+"contracts. Attempts can include: an invitation to tender (in open "
+"procedure); an invitation to request to participate; a competition for a "
+"concession; a direct award, etc."
+msgstr ""
+"En OCDS, a nivel conceptual, un proceso de contratación está destinado a "
+"coincidir con cada intento concreto de iniciar un procedimiento que conduzca"
+" a uno o más contratos. Los intentos pueden incluir: una invitación a "
+"licitar (en procedimiento abierto); una invitación para solicitar "
+"participar; una competencia por una concesión; una adjudicación directa, "
+"etc."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:7
+msgid "![Contracting Process](../../_static/png/contracting_process.png)"
+msgstr "![Proceso de contratación](../../_static/png/contracting_process.png)"
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:9
+msgid ""
+"In OCDS, the `ocid` is the unique identifier for a contracting process. As "
+"the initiation of the procurement process is the tender, normally the "
+"identifier for a tender can be used as the `ocid`."
+msgstr ""
+"En OCDS, el `ocid` es el identificador único para un proceso de "
+"contratación. Como el inicio del proceso de adquisición es la licitación, "
+"normalmente el identificador de una licitación se puede usar como `ocid`."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:11
+msgid ""
+"In most jurisdictions, if a procedure is cancelled or unsuccessful, and a "
+"**new procedure** is started to procure the same items, the two procedures "
+"are considered two **different** contracting processes. This is in keeping "
+"with the OCDS definition of a contracting process."
+msgstr ""
+"En la mayoría de las jurisdicciones, si un procedimiento se cancela o no "
+"tiene éxito, y se inicia un **nuevo procedimiento** para adquirir los mismos"
+" artículos, los dos procedimientos se consideran dos procesos de "
+"contratación **diferentes**. Esto está en línea con la definición de OCDS de"
+" un proceso de contratación."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:13
+msgid ""
+"But in other jurisdictions, such as Paraguay, planning is considered as "
+"initiating the process. In these jurisdictions when a tender fails and a new"
+" tender is started, the two tenders are considered part of the same "
+"contracting process. This differs from the OCDS definition of a contracting "
+"process."
+msgstr ""
+"Pero en otras jurisdicciones, como en Paraguay, se considera que la "
+"planeación inicia el proceso. En estas jurisdicciones, cuando una licitación"
+" fracasa y se inicia una nueva, las dos licitaciones se consideran parte del"
+" mismo proceso de contratación. Esto difiere de la definición de proceso de "
+"contratación del OCDS."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:15
+msgid ""
+"In OCDS, it is relevant and desirable to disclose information about "
+"planning, but the contracting process is not interpreted as \"starting\" "
+"with planning. In OCDS, the planning process is something that comes "
+"**before** the initiation of a contracting process. The initiation of the "
+"procedure is not the planning process, because at least one of the following"
+" is true of a planning process: it is not a concrete attempt to award one or"
+" more contracts like a request for tender, etc.; it is not a concrete "
+"opportunity for potential suppliers to participate in; it does not describe "
+"the competitive conditions."
+msgstr ""
+"En el OCDS, es pertinente y deseable divulgar información sobre la "
+"planeación, pero no se interpreta que el proceso de contratación "
+"\"comience\" con la planeación. En el OCDS, el proceso de planeación es algo"
+" que viene **antes** del inicio de un procedimiento de contratación. El "
+"inicio del procedimiento no es el proceso de planeación, porque al menos una"
+" de las siguientes cosas es cierta un proceso de planeación: no es un "
+"intento concreto de adjudicar uno o más contratos como una solicitud de "
+"licitación, etc.; no es una oportunidad concreta para que los proveedores "
+"potenciales participen; no describe las condiciones de la competencia."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:17
+msgid ""
+"However a jurisdiction treats unsuccessful tenders and subsequent tenders, "
+"in OCDS they are considered separate but related contracting processes."
+msgstr ""
+"Como sea que una jurisdicción trate las licitaciones fallidas y las "
+"licitaciones posteriores, en OCDS se consideran procesos de contratación "
+"separados pero relacionados."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:19
+msgid ""
+"This relationship can be modelled using the `relatedProcess` array at the "
+"release level, with the ‘unsuccessfulProcess’ relationship type."
+msgstr ""
+"Esta relación se puede modelar utilizando la lista `relatedProcess` al nivel"
+" de entrega, con el tipo de relación `unsuccessfulProcess`."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:21
+msgid "![Unsuccessful Tender](../../_static/png/unsuccessful-tender.png)"
+msgstr "![Licitación no exitosa](../../_static/png/unsuccessful-tender.png)"
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:23
+msgid "Example: Modelling unsuccessful tenders in Paraguay"
+msgstr "Ejemplo: modelado de licitaciones no exitosas en Paraguay"
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:25
+msgid ""
+"The [Sistema de Información de las Contrataciones Públicas "
+"(SICP)](https://contrataciones.gov.py/) discloses information about "
+"contracting processes for all public entities in Paraguay. SICP is managed "
+"by the National Directorate of Public Procurement (DNCP in Spanish)."
+msgstr ""
+"El [Sistema de Información de las Contrataciones Públicas "
+"(SICP)](https://contrataciones.gov.py/) divulga información sobre los "
+"procesos de contratación para todas las entidades públicas en Paraguay. El "
+"SICP es administrado por la Dirección Nacional de Contratación Pública "
+"(DNCP)."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:27
+msgid ""
+"The first data disclosed is about the planning process. Planning data "
+"includes an estimate of what an entity is going to buy, when and for how "
+"much. SICP assigns an `ocid` when the planning data is first disclosed, "
+"before the tender stage. In this example, the ocid is 'ocds-03ad3f-331547'."
+msgstr ""
+"El primer dato que se revela es sobre el proceso de planeación. Los datos de"
+" planeación incluyen una estimación de lo que una entidad va a comprar, "
+"cuándo y por cuánto. El SICP asigna un `ocid` cuando los datos de planeación"
+" se revelan por primera vez, antes de la fase de licitación. En este "
+"ejemplo, el ocid es 'ocds-03ad3f-331547'."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:35
+msgid ""
+"Next, the contracting process is disclosed, using a new `ocid`, 'ocds-"
+"03ad3f-331547-1'. The `relatedProcess` block links the planning process and "
+"the contracting process, with the relationship set to 'planning'."
+msgstr ""
+"Luego, se revela el proceso de contratación, utilizando un nuevo `ocid`, "
+"'ocds-03ad3f-331547-1'. El bloque `relatedProcess` vincula el proceso de "
+"planeación y el proceso de contratación, con la relación establecida a "
+"'planning'."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:37
+msgid ""
+"The tender was unsuccessful, so the tender status is set to ‘unsuccessful’."
+msgstr ""
+"La licitación no fue exitosa, entonces el estado de la licitación es "
+"establecido a ‘unsuccessful’."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:45
+msgid ""
+"The buyer issues another tender to buy the same item, following from the "
+"same planning process."
+msgstr ""
+"El comprador emite otra licitación para comprar el mismo artículo, siguiendo"
+" el mismo proceso de planeación."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:47
+msgid ""
+"Paraguay considers the two tenders part of the same contracting process. "
+"But, in OCDS the two tenders are separate contracting processes."
+msgstr ""
+"Paraguay considera las dos licitaciones parte del mismo proceso de "
+"contratación. Pero, en OCDS, las dos licitaciones son procesos de "
+"contratación separados."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:49
+msgid ""
+"To construct an `ocid` for the second contracting process, Paraguay adds a "
+"consecutive number to the `ocid` of the first process. In this example the "
+"new `ocid` is 'ocds-03ad3f-331547-2'"
+msgstr ""
+"Para construir un `ocid` para el segundo proceso de contratación, Paraguay "
+"agrega un número consecutivo al `ocid` del primer proceso. En este ejemplo, "
+"el nuevo `ocid` es 'ocds-03ad3f-331547-2'"
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:51
+msgid ""
+"Paraguay could also have used the identifier for the second tender as the "
+"`ocid` for the second contracting process."
+msgstr ""
+"Paraguay también podría haber utilizado el identificador para la segunda "
+"licitación como el `ocid` para el segundo proceso de contratación."
+
+#: ../../docs/guidance/map/unsuccessful_processes.md:53
+msgid ""
+"The `relatedProcess` block links to the unsuccessful contracting process "
+"with the relationship set to ‘unsuccessfulProcess’, and to the initial "
+"planning process with the relationship set to ‘planning’."
+msgstr ""
+"El bloque `relatedProcess` se vincula al proceso de contratación no exitoso "
+"o fallido con la relación establecida a ‘unsuccessfulProcess’, y al proceso "
+"de planeación inicial con la relación establecida a ‘planning’."

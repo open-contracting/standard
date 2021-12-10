@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# James McKinney, 2021
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-24 09:10-0400\n"
+"PO-Revision-Date: 2021-07-31 17:57+0000\n"
+"Last-Translator: Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/map/buyers_suppliers.md:1
+msgid "Buyers and suppliers"
+msgstr "Compradores y proveedores"
+
+#: ../../docs/guidance/map/buyers_suppliers.md:3
+msgid "Definitions"
+msgstr "Definiciones"
+
+#: ../../docs/guidance/map/buyers_suppliers.md:5
+msgid ""
+"In order to understand the modelling examples, it’s important to first "
+"clarify the definitions of some key concepts."
+msgstr ""
+"Para comprender los ejemplos de modelado, es importante aclarar primero las "
+"definiciones de algunos conceptos clave."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:7
+msgid "Buyer"
+msgstr "Comprador"
+
+#: ../../docs/guidance/map/buyers_suppliers.md:9
+msgid "OCDS defines the buyer as:"
+msgstr "El OCDS define comprador como: "
+
+#: ../../notset:1
+msgid ""
+"A buyer is an entity whose budget will be used to pay for goods, works or "
+"services related to a contract. This may be different from the procuring "
+"entity who may be specified in the tender data."
+msgstr ""
+"Un comprador es una entidad cuyo presupuesto se utilizará para pagar los "
+"bienes, obras o servicios relacionados con un contrato. Puede ser diferente "
+"de la entidad contratante, que puede estar especificada en los datos de la "
+"licitación."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:1
+msgid "Elsewhere in the OCDS schema the buyer is described as:"
+msgstr "En otras partes del esquema OCDS, el comprador se describe como:"
+
+#: ../../docs/guidance/map/buyers_suppliers.md:3
+msgid ""
+"*The entity managing the procurement. This may be different from the buyer "
+"who pays for, **or uses**, the items being procured.*"
+msgstr ""
+"La entidad que gestiona el proceso de contratación. Esta puede ser distinta "
+"del comprador que paga, **o usa**, los artículos adquiridos."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:5
+msgid ""
+"There is a proposal to align this description with the above definition."
+msgstr ""
+"Hay una propuesta para alinear esta descripción con la definición anterior."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:22
+msgid ""
+"In OCDS, the **buyer** is modelled as relating to the contracting process as"
+" a whole and each contracting process has only a single `buyer` field, i.e. "
+"all awards and contracts resulting from the contracting process share the "
+"same buyer."
+msgstr ""
+"En OCDS, el **comprador** se modela en relación al proceso de contratación "
+"en su totalidad y cada proceso de contratación tiene un solo campo de "
+"`buyer`, es decir, todas las adjudicaciones y contratos resultantes del "
+"proceso de contratación comparten el mismo comprador."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:24
+msgid ""
+"That said, many organizations can be assigned the 'buyer' role in the "
+"`parties` section, making it possible to represent contracting processes "
+"with a 'lead' buyer and other buyers."
+msgstr ""
+"Dicho esto, a muchas organizaciones se les puede asignar el rol de 'buyer' "
+"en la sección de `parties`, lo que hace posible representar los procesos de "
+"contratación con un comprador 'principal'  y otros compradores."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:26
+msgid "Suppliers"
+msgstr "Proveedores"
+
+#: ../../docs/guidance/map/buyers_suppliers.md:28
+msgid "OCDS defines a supplier as:"
+msgstr "El OCDS define proveedor como: "
+
+#: ../../notset:1
+msgid "An entity awarded or contracted to provide goods, works or services."
+msgstr ""
+"Una entidad adjudicada o contratada para proporcionar bienes, obras o "
+"servicios."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:33
+msgid ""
+"**Suppliers** are modelled as relating to awards in OCDS and there can be "
+"multiple suppliers per award, i.e. all contracts relating to the same award "
+"share the same suppliers."
+msgstr ""
+"**Los proveedores** se modelan en relación a las adjudicaciones en OCDS y "
+"puede haber múltiples proveedores por adjudicación, es decir, todos los "
+"contratos relacionados con la misma adjudicación comparten los mismos "
+"proveedores."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:35
+msgid "Consortia suppliers"
+msgstr "Proveedores en consorcios"
+
+#: ../../docs/guidance/map/buyers_suppliers.md:37
+msgid ""
+"When multiple suppliers put together a single bid, and are awarded as a "
+"group, this is known as a consortium."
+msgstr ""
+"Cuando varios proveedores hacen una sola oferta y son adjudicados como un "
+"grupo, esto se conoce como un consorcio."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:39
+msgid ""
+"In some countries, these suppliers only create a legal entity after the "
+"award, to sign the contract; or, they decide on a prime contractor, with the"
+" others being subcontractors."
+msgstr ""
+"En algunos países, estos proveedores sólo crean una entidad legal después de"
+" la adjudicación, para firmar el contrato; o, eligen un contratista "
+"principal, y los demás son subcontratistas."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:41
+msgid ""
+"In such cases, the `Award` object in OCDS can have multiple suppliers "
+"associated with it, one for each member of the consortium."
+msgstr ""
+"En tales casos, el objeto `Award` en OCDS puede tener múltiples proveedores "
+"asociados, uno para cada miembro del consorcio."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:43
+msgid "Example: Consortia suppliers"
+msgstr "Ejemplo: Proveedores en consorcios"
+
+#: ../../docs/guidance/map/buyers_suppliers.md:45
+msgid ""
+"Siemens and Microsoft bid as a consortium for a contract to develop a new "
+"medical imaging device for the Department of Health and Social Care."
+msgstr ""
+"Siemens y Microsoft ofertaron como consorcio para un contrato para "
+"desarrollar un nuevo dispositivo de imágenes médicas para el Departamento de"
+" Salud y Atención Social."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:47
+msgid ""
+"The contract is awarded to the consortium; however, the legal entity for the"
+" consortium is not created until after the contract award."
+msgstr ""
+"El contrato se adjudica al consorcio; sin embargo, la entidad legal para el "
+"consorcio no se crea hasta después de la adjudicación del contrato."
+
+#: ../../docs/guidance/map/buyers_suppliers.md:49
+msgid ""
+"Both Siemens and Microsoft are listed as suppliers on the contract award in "
+"OCDS, with the respective legal entity identifiers for each organization:"
+msgstr ""
+"Tanto Siemens como Microsoft figuran como proveedores en la adjudicación del"
+" contrato en OCDS, con los respectivos identificadores de entidad legal para"
+" cada organización:"

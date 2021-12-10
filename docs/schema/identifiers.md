@@ -123,13 +123,13 @@ The **organization register prefix** for UK Companies House is GB-COH. The organ
 {
   "scheme": "GB-COH",
   "id": "06368740",
-  "uri": "https://opencorporates.com/companies/gb/06368740",
+  "uri": "http://data.companieshouse.gov.uk/doc/company/06368740",
   "legalName": "Development Initiatives Poverty Research Limited"
 }
 ```
 ````
 
-In OCDS, the organization register prefix is included in the `scheme` field of an identifier block, with the existing organization id placed in the `id` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from [Open Corporates](https://opencorporates.com/)) this can also be given in the `uri` field.
+In OCDS, the organization register prefix is included in the `scheme` field of an identifier block, with the existing organization id placed in the `id` field. If there is a recognized public URI that uniquely identifies this organization (for example, drawn from the [UK's Company House](https://www.gov.uk/government/organisations/companies-house) register, or from [Open Corporates](https://opencorporates.com/)) this can also be given in the `uri` field.
 
 ### Choosing an identifier
 
@@ -137,7 +137,7 @@ The **organization register prefix** is used to refer to a register from which t
 
 * **Primary registers** - such as national or state company registrars. An identifier issued by these bodies has a specific legal meaning. There is a one to one equivalence between the identifier and a legal entity of a particular form in a given jurisdiction. The identifier is created at the same time that the organization is formally constituted, and changes to the status of the organization are recorded against this identifier in an official register. **Identifiers from a primary register are strongly preferred in OCDS.**
 
-* **Secondary registers** - which record a particular property of an organization, such as being registered for VAT, or registered as an employer. An organizations identifier in such a registry might change without the organization itself changing in nature. For example, in some jurisdictions, an organization might de-register from VAT, and then re-register, gaining a new number in the process; or different branches of the same legal entity might register for different VAT numbers.
+* **Secondary registers** - which record a particular property of an organization, such as being registered for VAT, or registered as an employer. An organization's identifier in such a registry might change without the organization itself changing in nature. For example, in some jurisdictions, an organization might de-register from VAT, and then re-register, gaining a new number in the process; or different branches of the same legal entity might register for different VAT numbers.
 
 * **Third-party databases** - which compile a list of organizations, and sometimes their sub-units, on an on-demand basis. These databases do not confer any legal status or special properties on the organizations, but might record a mapping between their own identifiers and other primary or secondary register identifiers for the organization. A common examples of a third-party database is the proprietary Dun&Bradstreet number. The OCDS organizational identifier scheme will recognize identifiers from third-party databases, but strongly prefers those drawn from non-proprietary databases, which allow users to lookup identifier information.
 

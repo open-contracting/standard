@@ -1,4 +1,4 @@
-# Organizational Units
+# Organizational units
 
 For some use cases, publishers might need to disclose the organizational units involved in the contracting process, e.g agency branches or divisions.
 
@@ -61,7 +61,7 @@ The `extension.json` and `release-schema.json` files for the Division code exten
 
 ### 3. Using the Organization building block with an organizational hierarchy
 
-The *Hospital de Clínicas* is in the planning stage of procuring supplies for their Blood Center.  The Hospital is part of the Medical School in the National University of Asuncion. Since the hospital is key in the provision of healthcare for low income groups in the community, it is in the interest of many to clearly identify the procurement of the Hospital only. It is also important for the publisher that users can group the data following organizational hierarchies.
+The *Hospital de Clínicas* is planning to procure supplies for their Blood Center. The Hospital is part of the Medical School in the National University of Asuncion. Since the hospital is key in the provision of healthcare for low income groups in the community, it is in the interest of many to clearly identify the procurement of the Hospital only. It is also important for the publisher that users can group the data following organizational hierarchies.
 
 It is important to note that OCDS ought to not be used to publish organizational hierarchies unless there is a strong case to support it. Organizational hierarchies can be disclosed in additional datasets. Publishers can refer to the [W3C Organization Ontology](https://www.w3.org/TR/vocab-org/) to design a hierarchy-oriented dataset.
 

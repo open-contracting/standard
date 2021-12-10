@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Ben Webb <ben.webb@opendataservices.coop>, 2020
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2020
-# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2020
 # James McKinney, 2021
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-28 13:13-0400\n"
+"POT-Creation-Date: 2021-09-24 09:10-0400\n"
 "PO-Revision-Date: 2020-06-29 22:58+0000\n"
-"Last-Translator: James McKinney, 2021\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Map"
 msgstr "Mapeo"
 
-#: ../../docs/guidance/map.md:3
+#: ../../docs/guidance/map.md:14
 msgid ""
 "This phase is about documenting your sources of contracting data, and "
 "documenting how that data \"maps\" to OCDS – that is, identifying which "
@@ -44,7 +44,20 @@ msgstr ""
 "[códigos](../../schema/codelists) OCDS. La fase de mapeo es uno de los pasos"
 " más largos e importantes en el proceso de implementación."
 
-#: ../../docs/guidance/map.md:5
+#: ../../docs/guidance/map.md:16
+msgid ""
+"When starting out, consider working in parallel on the map and build phases,"
+" because the choices you make at the build stage might affect how you need "
+"to map your data. For example, your choice of architecture might determine "
+"whether you are able to publish a change history using releases and records."
+msgstr ""
+"Al empezar, considere la posibilidad de trabajar en paralelo en las fases de"
+" mapeo e implementación, porque las decisiones que tome en la fase de "
+"implementación podrían afectar a la forma en que necesite mapear sus datos. "
+"Por ejemplo, su elección de arquitectura podría determinar si puede publicar"
+" un historial de cambios utilizando entregas y registros."
+
+#: ../../docs/guidance/map.md:18
 msgid ""
 "If your contracting processes are managed on paper, using local spreadsheets"
 " or via unstructured electronic documents, and you’re reusing one of the "
@@ -53,8 +66,15 @@ msgid ""
 "helpdesk) for guidance on how to identify which OCDS fields match your local"
 " concepts."
 msgstr ""
+"Si sus procesos de contratación se gestionan en papel, mediante hojas de "
+"cálculo locales o a través de documentos electrónicos no estructurados, y "
+"está reutilizando una de las existentes [herramientas de recolección de "
+"datos OCDS](build/data_collection_tools), entonces favor [póngase en "
+"contacto con la Mesa de Ayuda de OCDS](../support/index.md#ocds-helpdesk) "
+"para obtener guía sobre cómo identificar los campos OCDS que coinciden con "
+"sus conceptos locales."
 
-#: ../../docs/guidance/map.md:7
+#: ../../docs/guidance/map.md:20
 msgid ""
 "Mapping data to OCDS is not always easy. Before writing any software, this "
 "phase is an opportunity to:"
@@ -62,22 +82,22 @@ msgstr ""
 "Mapear datos a OCDS no siempre es fácil. Antes de escribir cualquier "
 "software, esta fase es una oportunidad para:"
 
-#: ../../docs/guidance/map.md:9
+#: ../../docs/guidance/map.md:22
 msgid "Catch errors early on"
 msgstr "Detectar errores lo antes posible"
 
-#: ../../docs/guidance/map.md:10
+#: ../../docs/guidance/map.md:23
 msgid ""
-"Identify [hard cases](#mapping-the-hard-cases) that need more attention"
+"Identify [hard cases](#deal-with-the-hard-cases) that need more attention"
 msgstr ""
-"Identificar [casos complicados](#mapping-the-hard-cases) que necesiten más "
-"atención"
+"Identificar [casos complicados](#deal-with-the-hard-cases) que necesiten más"
+" atención"
 
-#: ../../docs/guidance/map.md:11
+#: ../../docs/guidance/map.md:24
 msgid "Get input from the [OCDS Helpdesk](../../support/index)"
 msgstr "Obtener retroalimentación del [Helpdesk OCDS](../../support/index)"
 
-#: ../../docs/guidance/map.md:13
+#: ../../docs/guidance/map.md:26
 msgid ""
 "The documentation you produce can also later be included in your [Data User "
 "Guide](publish.md#finalize-your-publication-policy)."
@@ -85,25 +105,22 @@ msgstr ""
 "La documentación que produzca también se puede incluir más adelante en su "
 "[Guía del usuario de datos](publish.md#finalize-your-publication-policy)."
 
-#: ../../docs/guidance/map.md:15
+#: ../../docs/guidance/map.md:28
 msgid ""
-"As you make progress through this phase, we encourage you to update your "
-"[publication plan](design.md#develop-your-publication-plan), in order to "
-"help set priorities and ease communication within your team, with your "
-"stakeholders, and with the OCDS Helpdesk. You can start by filling in the "
-"_Goals (design)_ section."
+"As you make progress through this phase, we encourage you to maintain a "
+"project plan, in order to help set priorities and ease communication within "
+"your team, with your stakeholders, and with the OCDS Helpdesk."
 msgstr ""
-"A medida que avanza en esta fase, lo alentamos a actualizar su [plan de "
-"publicación](design.md#develop-your-publication-plan), para ayudarlo a "
-"establecer prioridades y facilitar la comunicación dentro de su equipo, con "
-"sus partes interesadas y con el servicio de asistencia de OCDS. Puede "
-"comenzar llenando la sección  _Goals (design)_."
+"A medida que avanza en esta fase, le animamos a que mantenga un plan de "
+"proyecto, con el fin de ayudar a establecer prioridades y facilitar la "
+"comunicación dentro de su equipo, con las partes interesadas y con la Mesa "
+"de Ayuda OCDS."
 
-#: ../../docs/guidance/map.md:17
+#: ../../docs/guidance/map.md:30
 msgid "Involve the right people"
 msgstr "Involucre a las personas adecuadas"
 
-#: ../../docs/guidance/map.md:19
+#: ../../docs/guidance/map.md:32
 msgid ""
 "As described in the [Field-Level Mapping Template Guidance](https://www"
 ".open-contracting.org/resources/ocds-1-1-mapping-template-guidance/) "
@@ -113,28 +130,27 @@ msgstr ""
 "campo](https://www.open-contracting.org/resources/ocds-1-1-mapping-template-"
 "guidance/) (presentada a continuación), necesitará al menos :"
 
-#: ../../docs/guidance/map.md:21
+#: ../../docs/guidance/map.md:34
 msgid ""
-"A technical expert who is familiar with the **IT systems** that capture and "
-"store contracting data and related documents, to identify the data elements "
+"A data expert who is familiar with the **IT systems** that capture and store"
+" contracting data and related documents, to identify the data elements "
 "within those systems."
 msgstr ""
-"Un experto técnico que esté familiarizado con los **sistemas de TI** que "
+"Un experto en datos que esté familiarizado con los **sistemas de TI** que "
 "capturan y almacenan datos de contratación y documentos relacionados, para "
 "identificar los elementos de datos dentro de esos sistemas."
 
-#: ../../docs/guidance/map.md:22
+#: ../../docs/guidance/map.md:35
 msgid ""
-"A policy expert who is familiar with **procurement legislation** and "
-"procurement processes, to help identify which data elements match which OCDS"
-" fields, at a *semantic* level."
+"A procurement expert who is familiar with **procurement legislation** and "
+"procedures, to identify which data elements match which OCDS fields, at a "
+"*semantic* level."
 msgstr ""
-"Un experto en políticas que está familiarizado con **la legislación de "
-"adquisiciones** y los procesos de adquisiciones, para ayudar a identificar "
-"qué elementos de datos coinciden con los campos de OCDS, a nivel "
-"*semántico*."
+"Un experto en contrataciones que esté familiarizado con **la legislación de "
+"compras** y los procesos de adquisiciones, para ayudar a identificar qué "
+"elementos de datos coinciden con los campos de OCDS, a nivel *semántico*."
 
-#: ../../docs/guidance/map.md:23
+#: ../../docs/guidance/map.md:36
 msgid ""
 "A technical expert who understands the **data structures** in OCDS, to help "
 "identify which data elements match which OCDS fields, at a *technical* "
@@ -144,75 +160,86 @@ msgstr ""
 "ayudar a identificar qué elementos de datos coinciden con los campos OCDS, a"
 " un nivel *técnico*."
 
-#: ../../docs/guidance/map.md:25
+#: ../../docs/guidance/map.md:38
 msgid "Identify your data sources"
 msgstr "Identifique sus fuentes de datos"
 
-#: ../../docs/guidance/map.md:27
+#: ../../docs/guidance/map.md:40
 msgid ""
 "To implement OCDS you need to first identify which IT systems capture and "
 "store contracting data and related documents. You also need to identify how "
 "to connect data held in different systems, to get a complete picture of the "
 "contracting process. The [Technical Assessment Template](https://www.open-"
-"contracting.org/resources/ocds-technical-assessment-template/) guides you "
-"through this process."
+"contracting.org/resources/technical-assessment-template/) guides you through"
+" this process."
 msgstr ""
-"Para implementar OCDS, primero debe identificar qué sistemas de TI capturan "
-"y almacenan datos de contratación y documentos relacionados. También debe "
-"identificar cómo conectar los datos almacenados en diferentes sistemas para "
-"obtener una imagen completa del proceso de contratación. La [Plantilla de "
-"evaluación técnica](https://www.open-contracting.org/resources/ocds-"
-"technical-assessment-template/) lo guía a través de este proceso."
+"Para implantar el OCDS es necesario identificar primero qué sistemas "
+"informáticos capturan y almacenan los datos de contratación y los documentos"
+" relacionados. También es necesario identificar cómo conectar los datos que "
+"se mantienen en los diferentes sistemas, para obtener una imagen completa "
+"del proceso de contratación. La [Plantilla de Evaluación "
+"Técnica](https://www.open-contracting.org/resources/technical-assessment-"
+"template/) le guía a través de este proceso."
 
-#: ../../docs/guidance/map.md:29
+#: ../../docs/guidance/map.md:42
 msgid ""
 "If your contracting processes are managed on paper, using local spreadsheets"
 " or via unstructured electronic documents, you should use the template to "
 "identify those data sources, too."
 msgstr ""
+"Si sus procesos de contratación se gestionan en papel, mediante hojas de "
+"cálculo locales o a través de documentos electrónicos no estructurados, "
+"debería utilizar la plantilla para identificar también esas fuentes de "
+"datos."
 
-#: ../../docs/guidance/map.md:31 ../../docs/guidance/map.md:141
+#: ../../docs/guidance/map.md:44 ../../docs/guidance/map.md:147
 msgid "Once complete, you can:"
 msgstr "Una vez completado, puede:"
 
-#: ../../docs/guidance/map.md:33
+#: ../../docs/guidance/map.md:46
 msgid ""
 "Ask the [OCDS Helpdesk](../../support/index) to review your Technical "
 "Assessment."
 msgstr ""
-"Pedir al  [Helpdesk OCDS](../../support/index) que revise la plantilla de "
-"evaluación técnica."
+"Pida a la [Mesa de Ayuda OCDS](../../support/index) que revise la plantilla "
+"de evaluación técnica."
 
-#: ../../docs/guidance/map.md:34
-msgid ""
-"Fill in the _Source systems_ sub-section of your [Publication "
-"Plan](https://www.open-contracting.org/resources/ocds-publication-plan-"
-"template/)."
-msgstr ""
-"Complete la sub-sección _Source systems_ de su [Plan de "
-"publicación](https://www.open-contracting.org/resources/ocds-publication-"
-"plan-template/)."
-
-#: ../../docs/guidance/map.md:35
+#: ../../docs/guidance/map.md:47
 msgid ""
 "Fill in the _Systems_ sheet of your Field-Level Mapping (introduced below)."
 msgstr ""
 "Complete la hoja  _Systems_ de su mapeo a nivel de campo (presentado a "
 "continuación)."
 
-#: ../../docs/guidance/map.md:37
-msgid "Map your data to OCDS"
-msgstr "Haga el mapeo de sus datos a OCDS"
+#: ../../docs/guidance/map.md:49
+msgid "Localize OCDS to your context"
+msgstr "Localice OCDS a su contexto"
 
-#: ../../docs/guidance/map.md:39
+#: ../../docs/guidance/map.md:51
 msgid ""
-"To make this step easier we provide templates to list the data elements "
+"Before mapping individual fields and codes, consider whether to first "
+"[localize OCDS](map/localization) to your context. Localization can be "
+"useful when you need to map several different systems, or when multiple "
+"organizations will work on implementing OCDS in your country."
+msgstr ""
+"Antes de mapear campos y códigos individuales, considere si primero "
+"[localizar OCDS](map/localization) a su contexto. La localización puede ser "
+"útil cuando necesita mapear varios sistemas diferentes o cuando varias "
+"organizaciones trabajarán en la implementación de OCDS en su país."
+
+#: ../../docs/guidance/map.md:59
+msgid "Download the mapping templates"
+msgstr "Descargar las plantillas de mapeo"
+
+#: ../../docs/guidance/map.md:65
+msgid ""
+"To make the mapping easier we provide templates to list the data elements "
 "within your data sources, and map them to either:"
 msgstr ""
-"Para facilitar este paso, proporcionamos plantillas para enumerar los "
-"elementos de datos dentro de sus fuentes de datos y asignarlos a:"
+"Para facilitar el mapeo, proporcionamos plantillas para listar los elementos"
+" de datos dentro de sus fuentes de datos, y mapearlos a cualquiera de ellas:"
 
-#: ../../docs/guidance/map.md:41
+#: ../../docs/guidance/map.md:67
 msgid ""
 "OCDS [fields](../../schema/reference), using the [Field-Level Mapping "
 "Template](https://www.open-contracting.org/resources/ocds-field-level-"
@@ -224,7 +251,7 @@ msgstr ""
 "mapping-template/) ([lea el tutorial](https://www.open-"
 "contracting.org/resources/ocds-1-1-mapping-template-guidance/))"
 
-#: ../../docs/guidance/map.md:42
+#: ../../docs/guidance/map.md:68
 msgid ""
 "OCDS [codes](../../schema/codelists), using the [Codelist Mapping "
 "Template](https://www.open-contracting.org/resources/ocds-1-1-codelist-"
@@ -236,101 +263,38 @@ msgstr ""
 "-codelist-mapping-template/) ([lea el tutorial(https://www.open-"
 "contracting.org/resources/ocds-1-1-codelist-mapping-template-guidance/))"
 
-#: ../../docs/guidance/map.md:44
+#: ../../docs/guidance/map.md:70
 msgid ""
 "If your contracting data is managed on paper or in unstructured electronic "
 "documents, you should use the templates to list the data elements in those "
 "data sources and map them to OCDS."
 msgstr ""
+"Si sus datos de contratación se gestionan en papel o en documentos "
+"electrónicos no estructurados, debe utilizar las plantillas para enumerar "
+"los elementos de datos en esas fuentes de datos y mapearlos a OCDS."
 
-#: ../../docs/guidance/map.md:46
+#: ../../docs/guidance/map.md:72
 msgid ""
 "You can [contact the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for "
 "support and guidance on using the mapping templates."
 msgstr ""
+"Usted puede [contactar con la Mesa de ayuda de OCDS](../support/index.md"
+"#ocds-helpdesk) para obtener apoyo y guía sobre el uso de las plantillas de "
+"mapeo."
 
-#: ../../docs/guidance/map.md:48
+#: ../../docs/guidance/map.md:74
+msgid "Complete the mapping"
+msgstr "Completar el mapeo"
+
+#: ../../docs/guidance/map.md:76
 msgid ""
-"Before working on mapping individual fields and codes, consider whether to "
-"first [localize OCDS](map/localization) to your context. Localization can be"
-" useful when you need to map several different systems, or when multiple "
-"organizations will work on implementing OCDS in your country."
+"You can complete the mapping in parts. For example, you might choose to "
+"split your mapping by any of the following:"
 msgstr ""
+"Puede completar el mapeo por partes. Por ejemplo, puede optar por dividir su"
+" mapeo por cualquiera de los siguientes:"
 
-#: ../../docs/guidance/map.md:56
-msgid "Mapping organization identifiers"
-msgstr "Mapeando los identificadores de organización"
-
-#: ../../docs/guidance/map.md:58
-msgid ""
-"[Organization identifiers](../schema/identifiers.md#organization-ids) in "
-"OCDS are made up of two parts:"
-msgstr ""
-"Los [Identificadores de organización](../schema/identifiers.md#organization-"
-"ids) en el OCDS se componen de dos partes"
-
-#: ../../docs/guidance/map.md:60
-msgid ""
-"An org-id code, identifying the register from the which the identifier is "
-"drawn"
-msgstr ""
-"Un código org-id, que identifica el registro del que se extrae el "
-"identificador"
-
-#: ../../docs/guidance/map.md:61
-msgid "The identifier for the organization, drawn from the register"
-msgstr "El identificador de la organización, extraído del registro."
-
-#: ../../docs/guidance/map.md:63
-msgid ""
-"The [organization identifiers worked "
-"example](../guidance/map/organization_identifiers) shows how this works in "
-"practice."
-msgstr ""
-"El [ejemplo desarrollado de los identificadores de la "
-"organización](../guidance/map/organization_identifiers) muestra cómo "
-"funciona esto en la práctica."
-
-#: ../../docs/guidance/map.md:65
-msgid ""
-"Use [org-id.guide](http://org-id.guide) to find the code for the register "
-"your identifiers are drawn from. If no code exists for the register, contact"
-" the [OCDS Helpdesk](../../support/index)."
-msgstr ""
-"Utilice [org-id.guide](http://org-id.guide) para encontrar el código del "
-"registro del que se extraen sus identificadores. Si no existe un código para"
-" el registro, comuníquese con el [Helpdesk OCDS](../../support/index)."
-
-#: ../../docs/guidance/map.md:67
-msgid "Working in parallel"
-msgstr "Trabajando en paralelo"
-
-#: ../../docs/guidance/map.md:69
-msgid ""
-"Working in parallel on the map and build phases can be useful, because the "
-"choices you make at the build stage might affect how you need to map your "
-"data. For example, your choice of architecture might determine whether you "
-"are able to publish a change history using releases and records."
-msgstr ""
-"Trabajar en paralelo en el mapeo y las fases de desarrollo puede ser útil, "
-"porque las elecciones que realice en la etapa de desarrollo pueden afectar "
-"la forma en que necesita mapear sus datos. Por ejemplo, su elección de "
-"arquitectura podría determinar si puede publicar un historial de cambios "
-"utilizando registros y entregas"
-
-#: ../../docs/guidance/map.md:71
-msgid "Splitting up the work"
-msgstr "Dividir el trabajo"
-
-#: ../../docs/guidance/map.md:73
-msgid ""
-"You can complete this step in parts. For example, you might choose to split "
-"your mapping by any of the following:"
-msgstr ""
-"Puede completar este paso en etapas. Por ejemplo, puede optar por dividir su"
-" mapeo en cualquiera de las siguientes maneras:"
-
-#: ../../docs/guidance/map.md:75
+#: ../../docs/guidance/map.md:78
 msgid ""
 "**data source** (e-procurement system, contract management system, "
 "[financial management information "
@@ -342,7 +306,7 @@ msgstr ""
 "financiera](https://www.worldbank.org/en/topic/governance/brief/financial-"
 "management-information-systems-fmis), etc.)"
 
-#: ../../docs/guidance/map.md:76
+#: ../../docs/guidance/map.md:79
 msgid ""
 "**contracting process type** (open procedure, selective procedure, "
 "concession contract, framework agreement, etc.)"
@@ -350,7 +314,7 @@ msgstr ""
 "**tipo de proceso de contrataciones** (procedimiento abierto, procedimiento "
 "selectivo, contrato de concesión, acuerdo marco, etc.)"
 
-#: ../../docs/guidance/map.md:77
+#: ../../docs/guidance/map.md:80
 msgid ""
 "**contracting process stage** (planning, tender, award, contract, "
 "implementation)"
@@ -358,11 +322,11 @@ msgstr ""
 "**etapa del proceso de contratación** (planeación, licitación, adjudicación,"
 " contrato, implementación)"
 
-#: ../../docs/guidance/map.md:78
+#: ../../docs/guidance/map.md:81
 msgid "**public notice** (tender notice, award notice, etc.)"
 msgstr "**aviso público** (aviso de licitación, aviso de adjudicación, etc.)"
 
-#: ../../docs/guidance/map.md:80
+#: ../../docs/guidance/map.md:83
 msgid ""
 "The preferred approach is to eventually list *all* the data elements within "
 "your data sources in your Field-Level Mapping, decide whether to publish "
@@ -375,7 +339,7 @@ msgstr ""
 "elemento de datos depende de usted; no es necesario mapear todos sus datos "
 "de contrataciones."
 
-#: ../../docs/guidance/map.md:82
+#: ../../docs/guidance/map.md:85
 msgid ""
 "It is also important to focus on the data elements whose disclosure was "
 "prioritized by users during the [design](design) phase. If you have not "
@@ -387,7 +351,7 @@ msgstr ""
 "determinado qué elementos de datos son prioritarios, debe hacerlo ahora, en "
 "función de las necesidades de sus usuarios."
 
-#: ../../docs/guidance/map.md:84
+#: ../../docs/guidance/map.md:87
 msgid ""
 "Whichever approach you take, it's important that your eventual OCDS "
 "publication contain at least as much information as your other public "
@@ -399,23 +363,24 @@ msgstr ""
 "conjuntos de datos públicos de datos de contrataciones; de lo contrario, es "
 "menos probable que los usuarios usen su publicación OCDS."
 
-#: ../../docs/guidance/map.md:86
-msgid "Mapping the hard cases"
-msgstr "Mapeando los casos complejos"
+#: ../../docs/guidance/map.md:89
+msgid "Deal with the hard cases"
+msgstr "Lidiar con los casos complicados"
 
-#: ../../docs/guidance/map.md:88
+#: ../../docs/guidance/map.md:91
 msgid ""
 "Mapping data to OCDS is not always obvious. Please refer to our how-to "
-"guides and worked examples to learn how to map data for specific cases:"
+"guides and worked examples to learn how to map data for specific hard cases:"
 msgstr ""
-"El mapeo de datos a OCDS no siempre es obvio. Consulte nuestras guías y "
-"ejemplos prácticos para aprender a mapear datos para casos específicos:"
+"El Mapeo de datos a OCDS no siempre es obvio. Consulte nuestras guías y "
+"ejemplos prácticos para aprender a mapear datos para casos complicados "
+"específicos:"
 
-#: ../../docs/guidance/map.md:107
-msgid "Extensions"
-msgstr "Extensiones"
+#: ../../docs/guidance/map.md:113
+msgid "Consider using extensions"
+msgstr "Considere usar extensiones"
 
-#: ../../docs/guidance/map.md:109
+#: ../../docs/guidance/map.md:115
 msgid ""
 "Some data elements might not match any field or code in OCDS. To cover such "
 "cases, you can add fields and codes to OCDS using "
@@ -425,7 +390,7 @@ msgstr ""
 "código en OCDS. Para cubrir tales casos, puede agregar campos y códigos a "
 "OCDS usando [extensiones](map/extensions)."
 
-#: ../../docs/guidance/map.md:111
+#: ../../docs/guidance/map.md:117
 msgid ""
 "**Resource:** [Localizing OCDS: Translations, Terminology & "
 "Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-"
@@ -435,7 +400,7 @@ msgstr ""
 "extensiones](https://www.open-contracting.org/2016/07/26/localising-ocds-"
 "translations-terminology-extensions/)"
 
-#: ../../docs/guidance/map.md:113
+#: ../../docs/guidance/map.md:119
 msgid ""
 "**Resource:** [What to do when fields don't map?](https://www.open-"
 "contracting.org/2018/01/30/fields-dont-map-first/)"
@@ -443,74 +408,71 @@ msgstr ""
 "**Recurso:** [¿Qué hacer cuando los campos no pueden mapearse?](https://www"
 ".open-contracting.org/2018/01/30/fields-dont-map-first/)"
 
-#: ../../docs/guidance/map.md:115
+#: ../../docs/guidance/map.md:121
 msgid ""
 "**Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)"
 msgstr ""
 "**Recurso** [Glosario OCDS](https://github.com/open-contracting/glossary)"
 
-#: ../../docs/guidance/map.md:117
+#: ../../docs/guidance/map.md:123
 msgid ""
 "**Action:** [Contact the OCDS Helpdesk](../../support/index) to get help "
 "with mapping data or authoring extensions."
 msgstr ""
-"**Acción:** [Contacte al Helpdesk OCDS](../../support/index) para obtener "
-"ayuda mapeando datos o creando extensiones."
+"**Acción:** [Contacte a la Mesa de Ayuda de OCDS](../../support/index) para "
+"obtener ayuda mapeando datos o creando extensiones."
 
-#: ../../docs/guidance/map.md:119
+#: ../../docs/guidance/map.md:125
 msgid ""
 "**Action:** If you are stuck on a particular concept and are concerned about"
-" how it is modelled in OCDS, search the issues in our [Github "
+" how it is modelled in OCDS, search the issues in our [GitHub "
 "tracker](https://github.com/open-contracting/standard/issues) to see what "
 "others in the community are saying about the topic. If you do not see your "
 "issue, create a new one!"
 msgstr ""
-"**Acción:** Si está estancado en un concepto en particular y le preocupa "
-"cómo se modela en OCDS, busque issues en nuestro [Github "
-"tracker](https://github.com/open-contracting/standard/issues ) para ver lo "
+"**Acción:** Si está atascado en un concepto en particular y le preocupa cómo"
+" se modela en OCDS, puede buscar los issues en nuestro [GitHub "
+"tracker](https://github.com/open-contracting/standard/issues) para ver lo "
 "que otros miembros de la comunidad están diciendo sobre el tema. Si no ve su"
-" problema, cree uno nuevo."
+" issue, ¡cree uno nuevo!"
 
-#: ../../docs/guidance/map.md:127
-msgid "Linked standards"
-msgstr ""
+#: ../../docs/guidance/map.md:133
+msgid "Link OCDS with other standards"
+msgstr "Vincular OCDS con otros estándares"
 
-#: ../../docs/guidance/map.md:129
+#: ../../docs/guidance/map.md:135
 msgid ""
 "Not all information that is related to a contracting process belongs in "
 "OCDS. For example, a company's annual filings and incorporation status are "
 "typically managed in a company registry, outside the lifecycle of a "
 "contracting process."
 msgstr ""
+"No toda la información relacionada con un proceso de contratación pertenece "
+"a OCDS. Por ejemplo, las presentaciones anuales y el estado de incorporación"
+" de una empresa generalmente se administran en un registro de la empresa, "
+"fuera del ciclo de vida de un proceso de contratación."
 
-#: ../../docs/guidance/map.md:131
+#: ../../docs/guidance/map.md:137
 msgid ""
 "For guidance on integrating your OCDS data with these related datasets, "
 "refer to [Linked standards](map/linked_standards)."
 msgstr ""
+"Para obtener guía sobre la integración de sus datos OCDS con estos conjuntos"
+" de datos relacionados, consulte [Estándares "
+"vinculados](map/linked_standards)"
 
-#: ../../docs/guidance/map.md:139
-msgid "Wrapping up"
-msgstr "Concluyendo"
+#: ../../docs/guidance/map.md:145
+msgid "Wrap up"
+msgstr "Al concluir"
 
-#: ../../docs/guidance/map.md:143
-msgid ""
-"Fill in the *Priority data (map)* and *Priority documents* sections of your "
-"[Publication Plan](https://www.open-contracting.org/resources/ocds-"
-"publication-plan-template/)."
-msgstr ""
-"Complete las secciones *Datos proritarios (mapeo)* y *Documentos "
-"prioritarios* de su [Plan de publicación](https://www.open-"
-"contracting.org/resources/ocds-publication-plan-template/)."
-
-#: ../../docs/guidance/map.md:144
+#: ../../docs/guidance/map.md:149
 msgid ""
 "Ask the [OCDS Helpdesk](../../support/index) to review your Field-Level "
-"Mapping and Publication Plan."
+"Mapping and Technical Assessment Template."
 msgstr ""
-"Solicite al [Helpdesk OCDS](../../support/index) que revise su mapeo a nivel"
-" de campo y su plan de publicación."
+"Pida a la [Mesa de Ayuda OCDS](../../support/index) que revise su Plantilla "
+"de Mapeo a nivel de campo y la de Evaluación Técnica."
 
-#: ../../docs/guidance/map.md:146
+#: ../../docs/guidance/map.md:151
 msgid "[Next phase: Build](build)"
 msgstr "[Siguiente fase: Implementación](build)"

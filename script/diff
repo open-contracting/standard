@@ -11,5 +11,5 @@ done
 if [ -d util ] || [ -d schema/project-level ]; then
     curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/.gitignore | diff -u - .gitignore
 else
-    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/schema/build-profile.py | diff -u - schema/build-profile.py
+    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/manage.py | diff -u - manage.py
 fi

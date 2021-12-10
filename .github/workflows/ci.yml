@@ -22,15 +22,12 @@ jobs:
       - run: pip install --src $GITHUB_WORKSPACE/../src -r requirements.txt
       # Google Chrome and ChromeDriver are already included.
       # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
-      - name: Make
-        run: |
-          if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then
-            python schema/build-profile.py
-            make extract
-          fi
-          make
-          python util/add_translation_notes.py
-      - run: make linkcheck
+      - if: github.repository == 'open-contracting/standard_profile_template'
+        run: make update extract
+      - run: make
+      # - run: |
+      #     make linkcheck
+      #     rm -f output.json output.txt
       - run: pytest
       # Deploy the built documentation to the staging directory.
       - if: github.event_name == 'push'
@@ -44,10 +41,10 @@ jobs:
           machine: standard.open-contracting.org
           login: manage
           password: ${{ secrets.ELASTICSEARCH_PASSWORD }}
-      - if: github.event_name == 'push' && success()
+      - if: github.event_name == 'push' && success() && github.repository != 'open-contracting/standard_profile_template'
         env:
           PATH_PREFIX: ""
-        run: |
-          if [ $GITHUB_REPOSITORY != 'open-contracting/standard_profile_template' ]; then
-            curl -sS https://raw.githubusercontent.com/open-contracting/deploy/main/deploy-docs.sh | bash -
-          fi
+          PRODUCTION: ${{ startsWith(github.ref, 'refs/tags') || github.ref == 'refs/heads/latest' || github.ref == 'refs/heads/1.0' || github.ref == 'refs/heads/1.1' }}
+          RELEASE: ${{ startsWith(github.ref, 'refs/tags') }}
+          VERSION: "1.1"
+        run: curl -sS https://raw.githubusercontent.com/open-contracting/deploy/main/deploy-docs.sh | bash -

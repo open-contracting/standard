@@ -5,10 +5,10 @@ Milestones can be included within the planning, tender, contract and contract im
 ## Planning
 
 The planning milestones block is used for two types of milestones:
- * Key events in the planning stage, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
+ * Key events in the planning process, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
  * Anticipated milestones during the contract implementation stage, for example, the date by which goods delivery of the goods is required.
 
-If during the planning stage you have information about tender process milestones, then you
+If during the planning process you have information about tender process milestones, then you
 populate the tender milestones block instead.
 
 ## Tender
@@ -37,33 +37,16 @@ The `dueDate`, `dateMet`, `dateModified` and [`status`](../../schema/codelists.m
 
 The following worked examples show how to use milestones in different scenarios.
 
-### Planning and tender milestones
+### Planning milestones
 
-The example below includes two OCDS releases:
+The example below includes a planning release with details of a planned procurement, including the date the budget plan is expected to be ready.
 
-* A planning release with details of a planned procurement, including the date the budget plan is expected to be ready and the date the tender notice is expected to be issued.
-* A tender release with the actual date the tender notice was issued.
-
-In the planning release:
-
-* The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning stage of the contracting process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
-* The date the tender notice is expected to be issued is represented using a milestone in `tender/milestones` because it relates to the tender stage of the contracting process. `.dueDate` is set to the date and `.status` is set to scheduled.
-
-In the tender release:
-
-* The `.dateMet` field in the tender notice milestone is updated with the actual date the notice was issued and `.status` is set to 'met'.
-To explore differences between the planned and actual date of the tender milestone, users can then compare the values of `tender/milestones/dueDate` and `tender/milestones/dateMet` in a single (compiled) release.
+The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
 
 ```{jsoninclude} ../../examples/milestones/planning-tender-milestones.json
 :jsonpointer:
-:expand: releases, planning, milestones, tender, milestones
+:expand: releases, planning, milestones
 :title: planning
-```
-
-```{jsoninclude} ../../examples/milestones/planning-tender-milestones-2.json
-:jsonpointer:
-:expand: releases, planning, milestones, tender, milestones
-:title: tender
 ```
 
 ### Contract implementation milestones

@@ -4,7 +4,7 @@ set -euo pipefail
 function main {
     mkdir -p script include tests
 
-    for f in Makefile common-requirements.in common-requirements.txt .github/workflows/lint.yml include/common.mk include/prologue.mk include/header.html script/diff script/update tests/conftest.py tests/test_common.py; do
+    for f in Makefile common-requirements.in common-requirements.txt .github/workflows/lint.yml docs/_static/favicon-16x16.ico include/common.mk include/prologue.mk include/header.html script/diff script/update tests/conftest.py tests/test_common.py; do
         curl -sS -o $f https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/$f
     done
 
