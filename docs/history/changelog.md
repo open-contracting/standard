@@ -70,6 +70,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Add new codelists:
   * [#1316](https://github.com/open-contracting/standard/pull/1316) `language`
   * [#1308](https://github.com/open-contracting/standard/pull/1308) `mediaType`
+  * [#1459](https://github.com/open-contracting/standard/pull/1459) `partyScale`
 
 * `classificationScheme.csv`:
   * [#1319](https://github.com/open-contracting/standard/pull/1319) Rename from `itemClassificationScheme.csv`.
@@ -174,6 +175,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * `awards.estimatedValue`
     * `contracts.maximumValue`
     * `contracts.estimatedValue`
+  * [#1459](https://github.com/open-contracting/standard/pull/1459) `Organization.details.scale`
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
