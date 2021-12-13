@@ -1626,7 +1626,26 @@
                 "type": [
                   "object",
                   "null"
-                ]
+                ],
+                "properties": {
+                  "scale": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      "micro",
+                      "sme",
+                      "small",
+                      "medium",
+                      "large",
+                      "selfEmployed",
+                      null
+                    ],
+                    "codelist": "partyScale.csv",
+                    "openCodelist": false
+                  }
+                }
               },
               "releaseTag": {
                 "type": "array",

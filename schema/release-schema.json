@@ -1481,7 +1481,28 @@
             "null"
           ],
           "description": "Additional classification information about organizations can be provided using organization details extensions that define particular fields and classification schemes.",
-          "title": "Details"
+          "title": "Details",
+          "properties": {
+            "scale": {
+              "title": "Scale",
+              "description": "The size or scale of the organization.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "micro",
+                "sme",
+                "small",
+                "medium",
+                "large",
+                "selfEmployed",
+                null
+              ],
+              "codelist": "partyScale.csv",
+              "openCodelist": false
+            }
+          }
         }
       },
       "patternProperties": {
