@@ -90,7 +90,7 @@ The following guidance describes how to model the different stages of a framewor
   * If all potential buyers can participate, don't add them to the `parties` array. Instead, add a note in the [publication policy](../publish) to explain how users should interpret a contracting process with no buyers.
   * If a single buyer will participate in the framework agreement, set the `buyer.id` and `buyer.name` to match the buyer's object in the `parties` array. Otherwise, don't populate `buyer`.
 * In the `tender` section, set:
-  * `tender.procurementMethod` in line with the competitive conditions of the first stage of the framework agreement. Since framework agreements usually involve qualification, this is most often 'selective'.
+  * `tender.procurementMethod` according to the competitive conditions of the first stage of the framework agreement. Since framework agreements typically involve qualification, this is most often 'selective'.
   * `tender.techniques.hasFrameworkAgreement` to `true`.
   * `tender.contractPeriod` to the duration of the framework agreement.
   * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
