@@ -159,7 +159,7 @@ The following examples show how to model two framework agreements, covering a ra
 
 NHS National Services Scotland (NSS) wants to establish a framework agreement for the receipt, storage and distribution of seasonal influenza vaccines to general practitioner practices, social care premises, vaccine holding centres and community pharmacies across NHS Scotland.
 
-#### Invitation to participate in the first stage
+#### Invitation to participate in the first stage of a framework agreement procedure
 
 NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
 
@@ -177,7 +177,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 :title: First Stage
 ```
 
-#### Adding a supplier to the framework agreement
+#### First-stage selection and addition of a supplier to the framework agreement
 
 NSS issues a [contract award notice](https://ted.europa.eu/udl?uri=TED:NOTICE:268595-2020:TEXT:EN:HTML&src=0) to announce that the framework agreement has been concluded with a single supplier, Movianto UK.
 
@@ -223,7 +223,7 @@ Each additional purchase made under the framework agreement is represented by a 
 
 The National Procurement Agency in Chile (Chile Compra) wants to establish a framework agreement for the purchase of office supplies, including paper and stationery items for the different public entities across Chile.
 
-#### Invitation to participate in the first stage
+#### Invitation to participate in the first stage of a framework agreement procedure
 
 Chile Compra publishes a [tender notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) inviting suppliers to participate in the framework agreement. The tender notice specifies that multiple suppliers can join the framework agreement. The framework agreement is open, since all the framework agreements in Chile involve the setting up of a dynamic purchasing system. The framework agreement is for multiple buyers, since the tender notice specifies two contracting authorities.
 
@@ -242,7 +242,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 :title: First Stage
 ```
 
-#### Adding a supplier to the framework agreement
+#### First-stage selection and addition of suppliers to the framework agreement
 
 Chile Compra issues an [award notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/StepsProcessAward/PreviewAwardAct.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) to announce that the framework agreement has been awarded to two suppliers: Rodrigo Alejandro Vidal Campos and Comercializadora e Importadora Grupo RAVC SPA.
 
