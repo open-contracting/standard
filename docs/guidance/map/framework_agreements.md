@@ -36,13 +36,13 @@ Framework agreements can be **open** or **closed**:
 
 Procurement systems which provide for closed framework agreements include the EU (Framework Agreements, per Directive 2014/24/EU, Article 33) and the US federal system (Indefinite-delivery contracts, per Federal Acquisition Regulation, Subpart 16.5). An example of a procurement system which provides for open framework agreements is the EU (Dynamic Purchasing Systems, per Directive 2014/24/EU, Article 33).
 
-Framework agreement procedures can involve second stage competition, or not:
+Framework agreement procedures can involve second-stage competition, or not:
 
-**Framework agreement procedure with second stage competition**
+**Framework agreement procedure with second-stage competition**
 
-> Procedure under an open framework agreement or a closed framework agreement with more than one supplier or contractor in which certain terms and conditions of the procurement that cannot be established with sufficient precision when the framework agreement is concluded are to be established or refined through a second stage competition.
+> Procedure under an open framework agreement or a closed framework agreement with more than one supplier or contractor in which certain terms and conditions of the procurement that cannot be established with sufficient precision when the framework agreement is concluded are to be established or refined through a second-stage competition.
 
-**Framework agreement procedure without second stage competition**
+**Framework agreement procedure without second-stage competition**
 
 > Procedure under a closed framework agreement in which all terms and conditions of the procurement are established when the framework agreement is concluded.
 
@@ -60,7 +60,7 @@ In OCDS, a contracting process brings together, under a single identifier, the i
 
 In some cases, complex contracting processes cannot be represented under a single identifier under OCDS' model, because:
 
-* There are multiple competitive stages: for example, when a framework agreement involves second stage competitions.
+* There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions.
 * The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated.
 
 OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` set to 'framework' is used to identify contracting processes that represent the second stage of a framework agreement procedure.
@@ -105,7 +105,7 @@ The following guidance describes how to model the different stages of a framewor
   * Add an `OrganizationReference` object to the award's `.suppliers` array, and set its `.id` and `.name` to match the supplier's object in the `parties` array.
 * If no further suppliers will be added to the framework agreement, set `tender.status` to 'complete'.
 
-### Award of a procurement contract without second stage competition
+### Award of a procurement contract without second-stage competition
 
 * Create a release with a **new** `ocid` and add 'award' and 'contract' to the `tag`.
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage).
@@ -113,16 +113,16 @@ The following guidance describes how to model the different stages of a framewor
 * Set `tender.id` to the `award.id`, set `tender.competitive` to `false`, and set `tender.procuringEntity` if appropriate.
 * [Add an award, contract and supplier](#add-an-award-contract-and-supplier).
 
-### Invitation to participate in a second stage competition
+### Invitation to participate in a second-stage competition
 
 * Create a release with a **new** `ocid` and add 'tender' to the `.tag` array. 
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage).
 * [Add a buyer](#add-a-buyer).
 * Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage, and `tender.competitive` to `true`.
 
-### Award of a procurement contract resulting from a second stage competition
+### Award of a procurement contract resulting from a second-stage competition
 
-* Create a release with the **same** `ocid` as the tender release *for the invitation to participate in a second stage competition*, and add 'award' and 'contract' to the `tag`.
+* Create a release with the **same** `ocid` as the tender release *for the invitation to participate in a second-stage competition*, and add 'award' and 'contract' to the `tag`.
 * [Add an award, contract and supplier](#add-an-award-contract-and-supplier).
 
 ### Updating the contract value, period or items
@@ -152,10 +152,10 @@ The following guidance describes how to model the different stages of a framewor
 
 The following examples show how to model two framework agreements, covering a range of characteristics:
 
-1. A closed framework agreement established for a single buyer, with a single supplier and **without** second stage competition
-2. A open framework agreement established for multiple buyers, with multiple suppliers and **with** second stage competition
+1. A closed framework agreement established for a single buyer, with a single supplier and **without** second-stage competition
+2. A open framework agreement established for multiple buyers, with multiple suppliers and **with** second-stage competition
 
-### Example 1: Closed framework agreement with single buyer, single supplier and without second stage competition
+### Example 1: Closed framework agreement with single buyer, single supplier and without second-stage competition
 
 NHS National Services Scotland (NSS) wants to establish a framework agreement for the receipt, storage and distribution of seasonal influenza vaccines to general practitioner practices, social care premises, vaccine holding centres and community pharmacies across NHS Scotland.
 
@@ -196,7 +196,7 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 
 The first stage of the framework agreement procedure is complete and NSS can now purchase services from the supplier.
 
-#### Award of a procurement contract without second stage competition
+#### Award of a procurement contract without second-stage competition
 
 NSS uses the framework agreement to place an order for the supplier to receive and store ten pallets of seasonal flu vaccine. Under the terms of the agreement the cost for this service is £10,000.
 
@@ -219,7 +219,7 @@ Because there was no competition at the second stage, the new contracting proces
 
 Each additional purchase made under the framework agreement is represented by a new contracting process with a new `ocid`.
 
-### Example 2: Open framework agreement with multiple buyers, with multiple suppliers and with second stage competition
+### Example 2: Open framework agreement with multiple buyers, with multiple suppliers and with second-stage competition
 
 The National Procurement Agency in Chile (Chile Compra) wants to establish a framework agreement for the purchase of office supplies, including paper and stationery items for the different public entities across Chile.
 
@@ -261,9 +261,9 @@ The notice is modelled as an OCDS release with the same `ocid` as the previous r
 
 The framework is now established, and both buyers can now purchase items from the suppliers.
 
-#### Invitation to participate in a second stage competition
+#### Invitation to participate in a second-stage competition
 
-Servicio Local de Educación Pública Puerto Cordillera publishes a [tender notice](https://www.mercadopublico.cl/CMII/Tienda/frm_GCV2_Ficha.aspx?IURL=uPteMZpbYBeM$07gdm9g$08EFecMSuZM0euS4Z$07cbeFMX_05ohEOMPbeteMZpbYBeM), inviting suppliers on the framework agreement to bid to supply 200 pencils. This represents an invitation to participate in a second stage competition.
+Servicio Local de Educación Pública Puerto Cordillera publishes a [tender notice](https://www.mercadopublico.cl/CMII/Tienda/frm_GCV2_Ficha.aspx?IURL=uPteMZpbYBeM$07gdm9g$08EFecMSuZM0euS4Z$07cbeFMX_05ohEOMPbeteMZpbYBeM), inviting suppliers on the framework agreement to bid to supply 200 pencils. This represents an invitation to participate in a second-stage competition.
 
 The release has the following properties:
 
@@ -279,13 +279,13 @@ The release has the following properties:
 :title: Second Stage
 ```
 
-#### Award of a procurement contract resulting from a second stage competition
+#### Award of a procurement contract resulting from a second-stage competition
 
-Following the invitation to participate in the second stage competition, Servicio Local de Educación Pública Puerto Cordillera awards a contract to Comercializadora e Importadora Grupo RAVC SPA.
+Following the invitation to participate in the second-stage competition, Servicio Local de Educación Pública Puerto Cordillera awards a contract to Comercializadora e Importadora Grupo RAVC SPA.
 
 The release has the following properties:
 
-* The same `ocid` as the invitation to participate in the second stage competition is used.
+* The same `ocid` as the invitation to participate in the second-stage competition is used.
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * The `tag` is set to 'award' and 'contract'.
 * The `tender.status` is updated to 'complete'.
