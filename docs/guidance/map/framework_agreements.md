@@ -143,7 +143,7 @@ The following guidance describes how to model the different stages of a framewor
 #### Add an award, contract and supplier
 
 * Add an `Award` object to the `awards` array and a `Contract` object to the `contracts` array.
-* Set the award's `.id` and the contract's `.awardID` to the same value.
+* Set the award's `.id` and the contract's `.awardID` to the same value, and set the contract's `.id`.
 * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
 * Add an `OrganizationReference` object to the award's `.suppliers` array and set `.id` and `.name` to match the supplier's object in the `parties` array.
 * Populate `awards` and `contracts`.
