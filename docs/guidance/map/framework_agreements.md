@@ -155,7 +155,7 @@ The following examples show how to model two framework agreements, covering a ra
 1. A closed framework agreement established for a single buyer, with a single supplier and **without** second stage competition
 2. A open framework agreement established for multiple buyers, with multiple suppliers and **with** second stage competition
 
-### Closed framework agreement with single buyer, single supplier and without second stage competition
+### Example 1: Closed framework agreement with single buyer, single supplier and without second stage competition
 
 NHS National Services Scotland (NSS) wants to establish a framework agreement for the receipt, storage and distribution of seasonal influenza vaccines to general practitioner practices, social care premises, vaccine holding centres and community pharmacies across NHS Scotland.
 
@@ -219,7 +219,7 @@ Because there was no competition at the second stage, the new contracting proces
 
 Each additional purchase made under the framework agreement is represented by a new contracting process with a new `ocid`.
 
-### Open framework agreement with multiple buyers, with multiple suppliers and with second stage competition
+### Example 2: Open framework agreement with multiple buyers, with multiple suppliers and with second stage competition
 
 The National Procurement Agency in Chile (Chile Compra) wants to establish a framework agreement for the purchase of office supplies, including paper and stationery items for the different public entities across Chile.
 
