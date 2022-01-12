@@ -80,7 +80,7 @@ These are captured by a version number in the format MAJOR.MINOR
 
 To release a new minor or major version upgrade will involve a number of stages outlined in the flowchart below, and described in more depth in the following sections. 
 
-![image alt text](../_static/png/upgrade_process_feb_2016.png)
+![image alt text](../_static/png/upgrade_process.png)
 
 **General principles:**
 
