@@ -22,7 +22,7 @@ A procurement contract is defined in UNCITRAL as:
 
 ## Types of framework agreement
 
-![Framework agreement types](../../_static/png/framework_agreement_types.png)
+![Framework agreement types](../../_static/png/framework_agreement/types.png)
 
 Framework agreements can be **open** or **closed**:
 
@@ -67,7 +67,7 @@ OCDS models the first and second stages of framework agreement procedures as sep
 
 The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
 
-![OCDS framework agreement model](../../_static/png/framework_agreement_model.png)
+![OCDS framework agreement model](../../_static/png/framework_agreement/model.png)
 
 ### Extensions
 

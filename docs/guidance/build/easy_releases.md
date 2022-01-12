@@ -45,7 +45,7 @@ This makes more sense if we realize that a release is always the "first release"
 
 For the examples in the present section, the architecture in the image below is assumed.
 
-![Example architecture](../../_static/png/easyreleases-example-architecture.png)
+![Example architecture](../../_static/png/easy_releases/example_architecture.png)
 
 Data is extracted from the source and transformed to OCDS each time there is a request, and resulting JSON files are not stored by the owner.
 
@@ -53,7 +53,7 @@ Data is extracted from the source and transformed to OCDS each time there is a r
 
 The sample database structure used for the present example is illustrated in the image below.
 
-![Sample database 1](../../_static/png/easyreleases-sampledb-1.png)
+![Sample database 1](../../_static/png/easy_releases/sample_db1.png)
 
 The 'ProcurementProcess' table contains one single row for each contracting process in the system, and the row is updated with each change. Contracts and suppliers are saved in separate tables. For both 'ProcurementProcess' and 'Contract' tables there is a `lastModifiedDate` column, with a timestamp of the last change made for the row.
 
@@ -201,7 +201,7 @@ See the full JSON below.
 
 This approach can be used when there is no last modified date in the source data. Below there is an updated image from the previous example:
 
-![Sample database 2](../../_static/png/easyreleases-sampledb-2.png)
+![Sample database 2](../../_static/png/easy_releases/sample_db2.png)
 
 The example is almost the same as the previous one, with the same steps, but with no last modified date in the tables as seen in the image above.
 
