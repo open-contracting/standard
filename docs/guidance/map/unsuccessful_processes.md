@@ -18,7 +18,7 @@ However a jurisdiction treats unsuccessful tenders and subsequent tenders, in OC
 
 This relationship can be modelled using the `relatedProcess` array at the release level, with the ‘unsuccessfulProcess’ relationship type.  
 
-![Unsuccessful Tender](../../_static/png/unsuccessful-tender.png)
+![Unsuccessful Tender](../../_static/png/unsuccessful_tender.png)
 
 ## Example: Modelling unsuccessful tenders in Paraguay
 
