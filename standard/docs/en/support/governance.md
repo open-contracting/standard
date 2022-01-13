@@ -204,11 +204,8 @@ Anyone who is a current or potential publisher or user of the standard can be co
 
 Extensions are governed and versioned independently of the standard, with the exception of core extensions, where:
 
-* A MAJOR or MINOR release of a core extension will only take place as part of the governance process for a MAJOR or MINOR release of OCDS. 
+* MAJOR or MINOR releases of core extensions only take place as part of the governance process for a MAJOR or MINOR release of OCDS. 
 
-* Each version of the standard will explicitly declare the version number of each core extension for that version of the standard. 
+* Each version of the standard explicitly declares the version number of each core extension for that version of the standard. 
 
-Changes to core extensions between standard versions may be staged with -alpha, or -beta suffixes to indicate these are under development or proposed for adoption in the next version of OCDS, but that their adoption has not yet been formally agreed. 
-
-
-
+Changes to core extensions between standard versions may be staged with labels (like `-alpha` or `-beta`) to indicate these are under development or proposed for adoption in the next version of OCDS, but that their adoption has not yet been formally agreed. 
