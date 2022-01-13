@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tim Davies <tim.davies@opendataservices.coop>, 2017
+# samgoeta <samgoeta@gmail.com>, 2017
+# Cecile LG <cecile@datactivi.st>, 2019
+# Emeline Vandeven <emeline@datactivist.coop>, 2020
+# Colin Maudry <colin@maudry.com>, 2021
+# James McKinney, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-22 23:26-0400\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: James McKinney, 2021\n"
+"Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/schema/conformance_and_extensions.md:1
+msgid "Conformance and extensions"
+msgstr "Conformité et extensions"
+
+#: ../../docs/schema/conformance_and_extensions.md:3
+msgid ""
+"To maximize the interoperability of data published using the Open "
+"Contracting Data Standard we have set out key principles for **conforming** "
+"to the standard. These also create space for **extensions** of the standard "
+"to respond to particular publisher or user needs."
+msgstr ""
+"Afin de maximiser l'interopérabilité des données publiées en utilisant le "
+"standard OCDS, nous avons établi des principes clés pour être en "
+"**conformité** avec le standard. Il est ainsi possible de créer des "
+"**extensions** du standard grâce auxquelles les producteurs de données "
+"peuvent répondre à des besoins d'utilisateurs particuliers."
+
+#: ../../docs/schema/conformance_and_extensions.md:5
+msgid "Conformance"
+msgstr "Conformité"
+
+#: ../../docs/schema/conformance_and_extensions.md:7
+msgid "Publication conformance"
+msgstr "Conformité de la publication des données"
+
+#: ../../docs/schema/conformance_and_extensions.md:9
+msgid ""
+"A conforming implementation *may* use only a subset of this specification's "
+"terms."
+msgstr ""
+"Une implémentation conforme au standard *peut* n'utiliser qu'un sous-"
+"ensemble des termes de cette spécification."
+
+#: ../../docs/schema/conformance_and_extensions.md:10
+msgid ""
+"It *must not* use terms from outside this specification's terms where this "
+"specification's terms would suffice."
+msgstr ""
+"Elle *ne doit pas* utiliser des termes extérieurs à ces spécifications "
+"lorsque les termes de ces spécifications suffisent."
+
+#: ../../docs/schema/conformance_and_extensions.md:11
+msgid ""
+"Its usage of this specification's terms *must* be consistent with the "
+"semantics of those terms."
+msgstr ""
+"Son utilisation des termes de cette spécification *doit* être compatible "
+"avec la sémantique de ces termes."
+
+#: ../../docs/schema/conformance_and_extensions.md:12
+msgid ""
+"It *may* use terms from outside this specification's terms where this "
+"specification's terms are insufficient."
+msgstr ""
+"Elle *peut* utiliser des termes extérieurs aux termes de ces spécifications "
+"lorsque les termes de ces spécifications sont insuffisants."
+
+#: ../../docs/schema/conformance_and_extensions.md:13
+msgid ""
+"If an implementation serializes to JSON, its serializations *must* "
+"[validate](https://standard.open-contracting.org/review/) against this "
+"specification's JSON Schema."
+msgstr ""
+"Si une implémentation du standard produit des données au format JSON, ces "
+"données *doivent* [être en conformité](https://standard.open-"
+"contracting.org/review/) avec le schéma JSON correspondant à ces "
+"spécifications."
+
+#: ../../docs/schema/conformance_and_extensions.md:15
+msgid ""
+"Whenever using terms from outside the OCDS standard, we encourage the "
+"publisher or user responsible to consult with the community on the best "
+"approach to adopt."
+msgstr ""
+"Chaque fois que vous utilisez des termes en dehors de la norme OCDS, nous "
+"encourageons le producteur ou l'utilisateur responsable à consulter la "
+"communauté sur la meilleure approche à adopter."
+
+#: ../../docs/schema/conformance_and_extensions.md:17
+msgid ""
+"(Our publication conformance section is [based on the Popolo "
+"Project](https://www.popoloproject.com/specs/#conformance) approach.)"
+msgstr ""
+
+#: ../../docs/schema/conformance_and_extensions.md:19
+msgid "Validator and application conformance"
+msgstr "Validateur et conformité des applications"
+
+#: ../../docs/schema/conformance_and_extensions.md:21
+msgid ""
+"As of OCDS 1.1, release/record packages must include a `version` field to "
+"explicitly declare their version. All packages without an explicit version "
+"declared should be validated against the version 1.0 schema unless otherwise"
+" instructed by the user."
+msgstr ""
+"À partir d'OCDS 1.1, les packages d'instances et d'archives devraient "
+"inclure un champ 'version' pour déclarer explicitement leur version d'OCDS. "
+"Tous les packages sans une version explicitement déclarée devraient être "
+"validés par rapport au schéma de la version 1.0, sauf indication contraire "
+"de l'utilisateur."
+
+#: ../../docs/schema/conformance_and_extensions.md:23
+msgid "Validators and applications should:"
+msgstr "Les validateurs et les applications devraient :"
+
+#: ../../docs/schema/conformance_and_extensions.md:25
+msgid ""
+"Report to the user when it encounters a version of the data it does not "
+"support;"
+msgstr ""
+"Signaler à l'utilisateur lorsqu'il rencontre une version des données qu'il "
+"ne supporte pas ;"
+
+#: ../../docs/schema/conformance_and_extensions.md:27
+msgid ""
+"Reject data from a higher integer version than it supports, unless otherwise"
+" instructed by the user;"
+msgstr ""
+"Rejeter les données d'une version d'un entier supérieure à celle qu'elle "
+"prend en charge, sauf indication contraire de l'utilisateur ;"
+
+#: ../../docs/schema/conformance_and_extensions.md:29
+msgid "Report to the user when it encounters extensions it does not support;"
+msgstr ""
+"Signaler à l'utilisateur lorsqu'il rencontre des extensions qu'il ne "
+"supporte pas ;"
+
+#: ../../docs/schema/conformance_and_extensions.md:31
+msgid ""
+"Validators **must** report a warning to the user when they encounter fields "
+"not covered by the version of the schema and extensions that they are "
+"validating against."
+msgstr ""
+"Les outils de validation **doivent** avertir l'utilisateur lorsqu'ils "
+"rencontrent des champs non couverts par la version du schéma et des "
+"extensions par rapport auxquels ils valident."
+
+#: ../../docs/schema/conformance_and_extensions.md:33
+msgid ""
+"Applications **may** report a warning to use the user when they encounter "
+"fields they do not support, or **may** discard these fields."
+msgstr ""
+"Les applications **peuvent** émettre un avertissement lorsqu'elles "
+"rencontrent des champs non-supportés, ou bien elles **peuvent** ignorer ces "
+"champs."
+
+#: ../../docs/schema/conformance_and_extensions.md:35
+msgid ""
+"The handling of additional fields and deprecated fields is implementation "
+"defined."
+msgstr ""
+"La gestion des champs supplémentaires et des champs dépréciées est propre à "
+"chaque implémentation."
+
+#: ../../docs/schema/conformance_and_extensions.md:37
+msgid ""
+"For behaviours that are implementation defined, applications should clearly "
+"document their chosen approach."
+msgstr ""
+"Pour les comportements propres à l'implémentation choisie par le "
+"développeur, les applications devraient clairement documenter l'approche "
+"choisie."
+
+#: ../../docs/schema/conformance_and_extensions.md:39
+msgid "See also the [deprecation guidance](../governance/deprecation)."
+msgstr ""
+"Voir aussi [la section sur la dépréciation](../governance/deprecation)."
+
+#: ../../docs/schema/conformance_and_extensions.md:41
+msgid "Extensions"
+msgstr "Extensions"
+
+#: ../../docs/schema/conformance_and_extensions.md:43
+msgid ""
+"If you have additional fields which cannot be mapped to the OCDS schema or "
+"an existing extension, you should include these in your OCDS data and "
+"[create a new extension](../guidance/map/extensions) to document their "
+"structure and meaning."
+msgstr ""
+"Si vous avez des champs qui n'ont pas de correspondance avec le schéma OCDS "
+"ou sur une extension existante, vous devriez les inclure dans vos données "
+"OCDS et [créer une nouvelle extension](../guidance/map/extensions) pour "
+"documenter leur structure et leur signification."
+
+#: ../../docs/schema/conformance_and_extensions.md:45
+msgid ""
+"Extensions to the standard can add new objects and fields to accommodate "
+"specific local requirements. An extension must not be created if it is "
+"possible to use existing terms from the standard."
+msgstr ""
+"Des extensions au standard peuvent ajouter de nouveaux objets et propriétés "
+"pour répondre à des besoins locaux spécifiques. Une nouvelle extension ne "
+"doit être créée que lorsqu'il est impossible de modéliser les données "
+"nécessaires en utilisant les termes existants du standard."
+
+#: ../../docs/schema/conformance_and_extensions.md:47
+msgid ""
+"Extensions ought to be documented and shared so that other publishers and "
+"users can draw upon them, and so that extensions can be considered for "
+"inclusion in a future version of the standard."
+msgstr ""
+"Les extensions doivent être documentées et partagées afin que les autres "
+"producteurs de données et utilisateurs puissent les utiliser, et qu'elles "
+"puissent être incluses dans une future version du standard."
+
+#: ../../docs/schema/conformance_and_extensions.md:49
+msgid ""
+"The [Extension Explorer](../guidance/map/extensions) publishes details of "
+"known extensions."
+msgstr ""
+"Le [registre des extensions](../guidance/map/extensions) publie des "
+"informations détaillées sur les extensions connues."
+
+#: ../../docs/schema/conformance_and_extensions.md:51
+msgid ""
+"The schema for the standard by default allows for new fields, and does not "
+"fail validation of a file which contains unknown fields."
+msgstr ""
+"Le schéma du standard permet par défaut de nouveaux champs, et ne met pas en"
+" échec la validation d'un fichier qui contient des champs inconnus."

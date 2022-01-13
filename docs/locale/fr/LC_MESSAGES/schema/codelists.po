@@ -1,0 +1,817 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Tim Davies <tim.davies@opendataservices.coop>, 2020
+# Cecile LG <cecile@datactivi.st>, 2020
+# Joel Gombin <joel.gombin@gmail.com>, 2020
+# samgoeta <samgoeta@gmail.com>, 2020
+# Emeline Vandeven <emeline@datactivist.coop>, 2020
+# Colin Maudry <colin@maudry.com>, 2021
+# James McKinney, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-22 23:26-0400\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: James McKinney, 2021\n"
+"Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Codelists"
+msgstr "Listes de codes"
+
+#: ../../docs/schema/codelists.md:3
+msgid ""
+"Some schema fields refer to codelists, to limit and standardize the possible"
+" values of the fields, in order to promote data interoperability."
+msgstr ""
+"Certains champs du schéma font référence à des listes de codes pour limiter "
+"et harmoniser les valeurs possibles des champs pour augmenter "
+"l'interopérabilité des données."
+
+#: ../../docs/schema/codelists.md:5
+msgid ""
+"Codelists can either be open or closed. **Closed codelists** are intended to"
+" be comprehensive; for example, the [currency](#currency) codelist covers "
+"all currencies in the world. **Open codelists** are intended to be "
+"representative, but not comprehensive."
+msgstr ""
+"Les listes de codes peuvent être soit ouvertes, soit fermées. Les **listes "
+"de codes fermées** sont prévues pour être exhaustives ; par exemple la liste"
+" des codes relative aux [devises](#currency) couvre les unités monétaires du"
+" monde entier. Les **listes de codes ouvertes** sont prévues pour être "
+"représentative, mais pas exhaustives."
+
+#: ../../docs/schema/codelists.md:7
+msgid ""
+"Publishers must use the codes in the codelists, unless no code is "
+"appropriate. If no code is appropriate and the codelist is **open**, then a "
+"publisher may use a new code outside those in the codelist. If no code is "
+"appropriate and the codelist is **closed**, then a publisher is encouraged "
+"to create an issue in the [OCDS GitHub repository](https://github.com/open-"
+"contracting/standard/issues) about adding a new code."
+msgstr ""
+"Les producteurs de données doivent utiliser les codes des listes de codes, à"
+" moins qu'aucun code ne convienne. Si aucun code ne convient et que la liste"
+" de codes est **ouverte**, alors un producteur de donnée peut utiliser un "
+"nouveau code. Si aucun code n'est approprié et que la liste de codes est "
+"**fermée**, alors le producteur de données est encouragé à créer une "
+"question dans le [dépôt GitHub OCDS](https://github.com/open-"
+"contracting/standard/issues) à propos de l'ajout d'un nouveau code."
+
+#: ../../docs/schema/codelists.md:9
+msgid "Extending open codelists"
+msgstr "Extension des listes de codes ouvertes"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"If you use new codes outside those in an open codelist, please document the "
+"codes in an [OCDS extension](../guidance/map/extensions) and in your "
+"[publication policy](../guidance/publish.md#finalize-your-publication-"
+"policy). Please also create an issue in the [OCDS GitHub "
+"repository](https://github.com/open-contracting/standard/issues), so that "
+"the codes can be considered for inclusion in the codelist."
+msgstr ""
+
+#: ../../docs/schema/codelists.md:15
+msgid ""
+"The release schema, in {download}`JSON Schema <../../build/current_lang"
+"/release-schema.json>`, has a `codelist` property to indicate the <a "
+"href=\"../../codelists/\">CSV File</a> that defines the codes in the "
+"codelist (shown as tables below). It also has an `openCodelist` property, to"
+" indicate whether the codelist is open or closed."
+msgstr ""
+"Le schéma d'instance, dans {download}`JSON Schema <../../build/current_lang"
+"/release-schema.json>`,  a une propriété de la `liste de codes` pour "
+"indiquer le <a href=\"../../codelists/\">fichier CSV</a> qui définit les "
+"codes dans la liste de codes (présentée dans les tableaux ci-dessous). Cela "
+"concerne également la propriété d'une liste de codes ouverte, afin "
+"d'indiquer si la liste de codes est ouverte ou fermée."
+
+#: ../../docs/schema/codelists.md:17
+msgid ""
+"Codes are case-sensitive, and are generally provided as English language "
+"camelCase. Codes must not be translated, though the OCDS team will work with"
+" publishers to translate code titles and definitions."
+msgstr ""
+"Les codes sont sensibles à la casse, et sont généralement en anglais et au "
+"format camelCase. La valeur des codes ne doit pas être traduite. L'équipe "
+"OCDS travaille avec les producteurs de données pour la publication de la "
+"traduction des titres et des définitions des codes."
+
+#: ../../docs/schema/codelists.md:19
+msgid "Open Codelists"
+msgstr "Listes de codes ouvertes"
+
+#: ../../docs/schema/codelists.md:21
+msgid "Party Role"
+msgstr "Rôle de chaque partie"
+
+#: ../../docs/schema/codelists.md:23
+msgid ""
+"The organizations, economic operators or other participants in a contracting"
+" process are listed in the [parties section](reference.md#parties). A single"
+" party can have one or more roles in the contracting process."
+msgstr ""
+
+#: ../../docs/schema/codelists.md:31
+msgid "Item Classification Scheme"
+msgstr "Schéma de classification des éléments"
+
+#: ../../docs/schema/codelists.md:33
+msgid ""
+"Items should be classified using existing item classification schemes, such "
+"as the [EC Common Procurement Vocabulary "
+"(CPV)](https://simap.ted.europa.eu/web/simap/cpv)."
+msgstr ""
+"Les livrables qui composent le marché doivent être classés selon les "
+"nomenclatures et les listes de codes existantes, telles que le [Vocabulaire "
+"Commun des Marchés de l'Union Européenne "
+"(CPV)](https://simap.ted.europa.eu/web/simap/cpv)."
+
+#: ../../docs/schema/codelists.md:35
+msgid ""
+"The `itemClassificationScheme` codelist is referenced by the `scheme` field "
+"of the `Classification` object, which can be used in multiple contexts. You "
+"can find the codes relevant to a given context by filtering the codelist by "
+"its `Category` column."
+msgstr ""
+"La liste de code `itemClassificationScheme` est référencée par le champs "
+"`schéma` de l'objet `Classification`, lequel peut être utilisé dans de "
+"multiples contextes. Vous pouvez trouver les codes adéquats à une situation "
+"donnée en filtrant la liste de codes dans la colonne `catégorie`."
+
+#: ../../docs/schema/codelists.md:43
+msgid "Unit Classification Scheme"
+msgstr "Schéma de classification des unités"
+
+#: ../../docs/schema/codelists.md:45
+msgid ""
+"Item quantities can be provided using an established codelist for units of "
+"measurement. Codelists might provide human-readable descriptions of units, "
+"or symbols for use in input and display interfaces."
+msgstr ""
+"Les quantités de livrables (*items*) peuvent être fournies en utilisant une "
+"liste de codes établie pour les unités de mesure. Les listes de codes "
+"peuvent fournir des descriptions lisibles par l'utilisateur des unités ou "
+"des symboles à utiliser dans les interfaces de saisie et d'affichage."
+
+#: ../../docs/schema/codelists.md:53
+msgid "Organization Identifier Scheme"
+msgstr "Schéma d'identification des organisations"
+
+#: ../../docs/schema/codelists.md:55
+msgid "![org-id.guide](../_static/png/org-id-logo-full.png)"
+msgstr "![org-id.guide](../_static/png/org-id-logo-full.png)"
+
+#: ../../docs/schema/codelists.md:57
+msgid ""
+"The Organization Identifier Scheme uses the codes from [org-id.guide](http"
+"://org-id.guide). The latest version of the codelist can be "
+"[downloaded](http://org-id.guide/download.csv) or [browsed](http://org-"
+"id.guide) from its website."
+msgstr ""
+
+#: ../../docs/schema/codelists.md:59
+msgid ""
+"To add new codes to the codelist, contact the [OCDS "
+"Helpdesk](../../support/index)."
+msgstr ""
+"Pour ajouter de nouveaux codes dans les listes de codes, contacter "
+"l'[Assistance OCDS](../../support/index)."
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"This list was formerly maintained by the International Aid Transparency "
+"Initiative and contained in OCDS documentation as "
+"organizationIdentifierRegistrationAgency_iati.csv. This was removed in OCDS "
+"1.1.1."
+msgstr ""
+"Cette liste était auparavant maintenue par l'International Aid Transparency "
+"Initiative et comprise dans la documentation d'OCDS dans le fichier "
+"`organizationIdentifierRegistrationAgency_iati.csv`. Elle a été retirée dans"
+" OCDS 1.1.1."
+
+#: ../../docs/schema/codelists.md:65
+msgid "Document Type"
+msgstr "Type de document"
+
+#: ../../docs/schema/codelists.md:67
+msgid ""
+"The following list describes documents and documentation recommended for "
+"publication as part of an open contracting implementation. The codelist "
+"indicates whether documents are considered 'basic', 'intermediate' or "
+"'advanced', and the section of an OCDS release they are most likely to be "
+"applicable within."
+msgstr ""
+"La liste suivante décrit les documents et la documentation recommandés pour "
+"la publication dans le cadre d'une mise en œuvre d'OCDS. La liste des codes "
+"indique si les documents sont considérés comme «basiques», «intermédiaires» "
+"ou «avancés» et la section d'une instance OCDS dans laquelle ils sont les "
+"plus susceptibles d'être applicables."
+
+#: ../../docs/schema/codelists.md:69
+msgid ""
+"The code descriptions are necessarily broad, to cover their usage in a range"
+" of contracting processes, including for goods, works and services, and in "
+"other contexts, such as public private partnerships, infrastructure or "
+"concession contracts."
+msgstr ""
+"Les descriptions de codes sont généralement larges pour permettre leur "
+"utilisation dans une variété de processus de passation de marché y compris "
+"pour les biens, les travaux et les services et dans d'autres contextes tels "
+"que les partenariats public-privé, l'infrastructure ou les contrats de "
+"concession."
+
+#: ../../docs/schema/codelists.md:71
+msgid ""
+"Publishers must map their existing document codes to this list, where "
+"possible. If using this list within a user interface, publishers can re-"
+"write the codelist titles and descriptions appropriately for the context "
+"they are being used in."
+msgstr ""
+"Les organisations qui publient des données doivent, autant que possible, "
+"faire correspondre leurs codes de document aux codes présents dans cette "
+"liste. Si vous utilisez cette liste dans une interface utilisateur, vous "
+"pouvez réécrire les titres et les descriptions de codes en fonction du "
+"contexte dans lequel ils sont utilisés."
+
+#: ../../docs/schema/codelists.md:79
+msgid "Award Criteria"
+msgstr "Critères d'attribution"
+
+#: ../../docs/schema/codelists.md:81
+msgid ""
+"The award criteria codelist describes the basis on which contract awards "
+"will be made."
+msgstr ""
+"La liste de codes des critères d'attribution décrit les fondements sur "
+"lesquels les marchés sont attribués."
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"This codelist was revised in OCDS 1.1, deprecating earlier codes and "
+"introducing a new set of codelist entries. Publishers ought to review the "
+"mapping from their internal systems to this updated list of award criteria."
+msgstr ""
+"Cette liste de codes a été révisée dans la version 1.1 d'OCDS en supprimant "
+"les codes précédents et en introduisant un nouvel ensemble d'entrées dans la"
+" liste de codes. Les producteurs de données peuvent avoir besoin de réviser "
+"la correspondance (\"mapping\") de leurs systèmes internes par rapport à "
+"cette liste mise à jour des critères d'attribution."
+
+#: ../../docs/schema/codelists.md:93
+msgid "Submission Method"
+msgstr "Méthode de soumission des offres"
+
+#: ../../docs/schema/codelists.md:95
+msgid ""
+"The submission method codelist is used to identify the mechanism through "
+"which a submission can be made."
+msgstr ""
+"La liste de codes sur les méthodes de soumission des offres est utilisée "
+"pour identifier le mécanisme par lequel une offre peut être soumise."
+
+#: ../../docs/schema/codelists.md:103
+msgid "Related Process"
+msgstr "Processus associés"
+
+#: ../../docs/schema/codelists.md:105
+msgid ""
+"The related process block is used at the release level to point backwards to"
+" prior processes, such as planning or framework establishment, and at the "
+"contract level to point onwards to subcontracts or to renewal or replacement"
+" processes. The related process codelist determines the kind of relationship"
+" that is being described."
+msgstr ""
+"Le bloc sur les processus connexes est utilisé au niveau de l'instance pour "
+"pointer vers des processus antérieurs tels que la planification ou "
+"l'établissement d'un accord-cadre, et au niveau du contrat pour démarrer les"
+" processus de sous-contrats, de renouvellement ou de remplacement. La liste "
+"de codes de processus connexes détermine le type de relation qui est "
+"décrite."
+
+#: ../../docs/schema/codelists.md:113
+msgid "Related Process Scheme"
+msgstr "Schéma sur les processus associés"
+
+#: ../../docs/schema/codelists.md:115
+msgid ""
+"The related process scheme describes the kind of identifier used to cross-"
+"reference another process."
+msgstr ""
+"Le schéma sur les processus associés décrit le type d'identifiant utilisé "
+"pour renvoyer vers un autre processus."
+
+#: ../../docs/schema/codelists.md:123
+msgid "Milestone Type"
+msgstr "Type d'étapes"
+
+#: ../../docs/schema/codelists.md:125
+msgid ""
+"The milestone block can be used to represent a wide variety of events in the"
+" lifetime of a contracting process. The milestone type codelist is used to "
+"indicate the nature of each milestone."
+msgstr ""
+"Le bloc sur les étapes peut être utilisé pour représenter une grande variété"
+" d'événements au cours de la durée d'un processus de passation des marchés. "
+"La liste de codes de types d'étapes est utilisée pour indiquer la nature de "
+"chaque étape."
+
+#: ../../docs/schema/codelists.md:133
+msgid "Extended Procurement Category"
+msgstr "Catégorie étendue de passation de marché"
+
+#: ../../docs/schema/codelists.md:135
+msgid ""
+"The extended procurement category codelist is used to provide additional "
+"detail about the focus of a contracting process."
+msgstr ""
+"La liste de codes sur les catégories étendues de commande publique est "
+"utilisée pour fournir des détails additionnels sur l'étendue d'un processus "
+"de passation de marché. "
+
+#: ../../docs/schema/codelists.md:143
+msgid "Closed Codelists"
+msgstr "Listes de codes fermées"
+
+#: ../../docs/schema/codelists.md:145
+msgid "Release Tag"
+msgstr "Tag d'instance"
+
+#: ../../docs/schema/codelists.md:147
+msgid ""
+"A contracting process can result in a number of releases of information over"
+" time. These must be tagged to indicate the stage of the contracting process"
+" they relate to."
+msgstr ""
+"Un processus contractuel peut, avec le temps, entraîner la publication d'un "
+"certain nombre d'instances de données. Celles-ci doivent avoir un tag pour "
+"indiquer l'étape de processus de passation des marchés à laquelle elles se "
+"rapportent."
+
+#: ../../docs/schema/codelists.md:1
+msgid "Code"
+msgstr "Code"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Title"
+msgstr "Titre"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Description"
+msgstr "Description"
+
+#: ../../docs/schema/codelists.md:1
+msgid "planning"
+msgstr "planning"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Planning"
+msgstr "Planification"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"A contracting process is proposed or planned. Information in the tender "
+"section describes the proposed process. The tender.status field should be "
+"used to identify whether the planning is at an early pipeline stage, or "
+"whether there are detailed plans for a tender developed."
+msgstr ""
+"Un processus de passation de marchés est proposé ou planifié. L'information "
+"dans la section `tender` décrit le processus proposé. Le champ "
+"`tender.status` devrait être utilisé pour identifier si la planification se "
+"trouve à un stade précoce du processus ou s'il existe des plans détaillés "
+"pour le développement de l'appel d'offres."
+
+#: ../../docs/schema/codelists.md:1
+msgid "planningUpdate"
+msgstr "planningUpdate"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Planning update"
+msgstr "Mise à jour du planning"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"Details of a proposed or planned contracting process are being updated. This"
+" might include addition of information and documents from consultation "
+"engagement activities, revised details or timelines for a proposed "
+"contracting process, or a tender.status update to indicate that a pipeline "
+"proposal has been withdrawn."
+msgstr ""
+"Les détails d'un processus de passation de marchés proposé ou prévu sont mis"
+" à jour. Cela peut inclure l'ajout d'informations et de documents tirés de "
+"la consultation de la société civile, des détails révisés ou des étapes pour"
+" un processus de passation de marché proposé ou une mise à jour du champ "
+"`tender.status` pour indiquer qu'une proposition a été retirée."
+
+#: ../../docs/schema/codelists.md:1
+msgid "tender"
+msgstr "tender"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Tender"
+msgstr "Appel d'offre"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"Providing information about a new tender (call for proposals) process. "
+"Tender release should contain details of the goods or services being sought."
+msgstr ""
+"Fournit des informations sur un nouveau processus d'appel d'offres (appel à "
+"propositions). L'instance sur l'appel d'offres devrait contenir des détails "
+"sur les produits ou services recherchés."
+
+#: ../../docs/schema/codelists.md:1
+msgid "tenderAmendment"
+msgstr "tenderAmendment"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Tender amendment"
+msgstr "Modification d'un appel d'offres"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"An amendment to an existing tender release. There should be at least one "
+"tender release with the same ocid, but an earlier release date, before a "
+"tenderAmendment is published. The term amendment has legal meaning in many "
+"jurisdictions."
+msgstr ""
+"La modification d'une instance existante d'appel d'offres. Il devrait y "
+"avoir au moins une instance d'appel d'offres avec le même `ocid`, mais avec "
+"une date d'instance antérieure avant qu'une modification `tenderAmendment` "
+"ne soit publiée. Le terme \"modification\" a une signification juridique "
+"dans de nombreux systèmes juridiques."
+
+#: ../../docs/schema/codelists.md:1
+msgid "tenderUpdate"
+msgstr "tenderUpdate"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Tender update"
+msgstr "Mise à jour de l'appel d'offre"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"An update to an existing tender release. There should be at least one tender"
+" release with the same ocid, but an earlier release date, before a "
+"tenderUpdate is published. An update may add new information or make "
+"corrections to prior published information. It should not be used for formal"
+" legal amendments to a tender, for which the tenderAmendment tag should be "
+"used."
+msgstr ""
+"Une mise à jour d'une instance d'appel d'offres existante. Il devrait y "
+"avoir au moins une instance d'appel d'offres avec le même ocid mais une date"
+" d'instance antérieure, avant qu'une instance tenderUpdate ne soit publiée. "
+"Une mise à jour peut ajouter de nouvelles informations ou apporter des "
+"corrections aux informations publiées de manière antérieure. Ce tag ne "
+"devrait pas être utilisé pour des modifications légales formelles à un appel"
+" d'offres, pour lequel le tag tenderAmendment doit être utilisé."
+
+#: ../../docs/schema/codelists.md:1
+msgid "tenderCancellation"
+msgstr "tenderCancellation"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Tender cancellation"
+msgstr "Annulation de l'appel d'offre"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"The cancellation of an existing tender. There should be at least one release"
+" with the same ocid, but an earlier release date, which provides details of "
+"the tender being cancelled."
+msgstr ""
+"L'annulation d'un appel d'offre existant. Il devrait y avoir au moins une "
+"instance avec le même ocid, mais à une date d'instance antérieure, qui "
+"fournit des détails sur l'appel d'offres annulé."
+
+#: ../../docs/schema/codelists.md:1
+msgid "award"
+msgstr "award"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Award"
+msgstr "Attribution"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"Providing information about the award of a contract. One or more award "
+"sections will be present, and the tender section might be populated with "
+"details of the process leading up to the award."
+msgstr ""
+"Fournit des informations sur l'attribution d'un contrat. Une ou plusieurs "
+"sections `awards` peuvent être présentes, et la section `tender` peut "
+"contenir des détails sur le processus menant à l’attribution."
+
+#: ../../docs/schema/codelists.md:1
+msgid "awardUpdate"
+msgstr "awardUpdate"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Award update"
+msgstr "Mise à jour de l'attribution"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"An update to an existing award release. There should be at least one award "
+"release with the same ocid, but an earlier release date before an "
+"awardUpdate is published. An update may add new information or make "
+"corrections."
+msgstr ""
+"Une mise à jour d'une instance d'attribution existante. Il devrait y avoir "
+"au moins une instance d'attribution avec le même ocid, mais à une date "
+"d'instance antérieure avant la publication d'un awardUpdate. Une mise à jour"
+" peut ajouter de nouvelles informations ou apporter des corrections."
+
+#: ../../docs/schema/codelists.md:1
+msgid "awardCancellation"
+msgstr "awardCancellation"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Award cancellation"
+msgstr "Annulation de l'attribution du marché"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Providing information about the cancellation of an award."
+msgstr "Fournit des informations sur l'annulation d'une attribution."
+
+#: ../../docs/schema/codelists.md:1
+msgid "contract"
+msgstr "contract"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Contract"
+msgstr "Contrat"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"Providing information about the details of a contract that has been, or will"
+" be, entered into. The tender section might be populated with details of the"
+" process leading up to the contract, and the award section might contain "
+"details of the award on the basis of which this contract will be signed."
+msgstr ""
+"Fournit des informations sur les détails d'un contrat qui a été ou sera "
+"conclu. La section sur l'appel d'offres pourrait être remplie de détails sur"
+" le processus menant au contrat et la section d'attribution peut contenir "
+"des détails sur l'attribution sur la base de laquelle ce contrat sera signé."
+
+#: ../../docs/schema/codelists.md:1
+msgid "contractUpdate"
+msgstr "contractUpdate"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Contract update"
+msgstr "Mise à jour du contrat"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"Providing information about updates to a contract. There should be at least "
+"one contract release with the same ocid, but an earlier release date, before"
+" a contractUpdate is published. An update may add new information or make "
+"corrections to prior published information. It should not be used for formal"
+" legal amendments to a contract, for which the contractAmendment tag should "
+"be used."
+msgstr ""
+"Fournit des informations sur les mises à jour d'un contrat. Il devrait y "
+"avoir au moins une instance de contrat avec le même ocid, mais à une date "
+"d'instance antérieure, avant qu'un contractUpdate ne soit publié. Une mise à"
+" jour peut ajouter de nouvelles informations ou apporter des corrections aux"
+" informations publiées antérieurement. Ce tag ne devrait pas être utilisé "
+"pour des modifications légales formelles à un contrat, pour lequel le tag "
+"`contractAmendment` doit être utilisé."
+
+#: ../../docs/schema/codelists.md:1
+msgid "contractAmendment"
+msgstr "contractAmendment"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Contract amendment"
+msgstr "Modifications du contrat"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"An amendment to an existing contract release. There should be at least one "
+"contract release with the same ocid, but an earlier release date, before a "
+"contractAmendment is published. The term amendment has legal meaning in many"
+" jurisdictions."
+msgstr ""
+"Une modification à une instance existante de contrat. Il devrait y avoir au "
+"moins une instance de contrat avec le même ocid, mais avec une date "
+"d'instance antérieure avant qu'une modification contractAmendment ne soit "
+"publiée. Le terme modification a une signification juridique dans de "
+"nombreux systèmes juridiques."
+
+#: ../../docs/schema/codelists.md:1
+msgid "implementation"
+msgstr "implementation"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Implementation"
+msgstr "Exécution"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"Providing new information on the implementation of a contracting process."
+msgstr ""
+"Fournit de nouvelles informations sur la phase d'exécution d'un processus de"
+" passation de marchés."
+
+#: ../../docs/schema/codelists.md:1
+msgid "implementationUpdate"
+msgstr "implementationUpdate"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Implementation update"
+msgstr "Mise à jour de l'exécution"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"Updating existing information provided about the implementation of a "
+"contracting process."
+msgstr ""
+"Met à jour des informations existantes fournies sur l'exécution d'un "
+"processus de passation de marchés."
+
+#: ../../docs/schema/codelists.md:1
+msgid "contractTermination"
+msgstr "contractTermination"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Contract termination"
+msgstr "Fin d'un contrat"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Providing information at the end of a contracting process."
+msgstr "Fournit des informations sur la fin d'un contrat."
+
+#: ../../docs/schema/codelists.md:1
+msgid "compiled"
+msgstr "compiled"
+
+#: ../../docs/schema/codelists.md:1
+msgid "Compiled record"
+msgstr "Archive compilée"
+
+#: ../../docs/schema/codelists.md:1
+msgid ""
+"This tag is used only in compiled records, which have merged together "
+"multiple releases to provide a snapshot view of the contract, and a version "
+"history."
+msgstr ""
+"Ce tag est utilisé seulement dans des archives compilées qui ont fusionné "
+"plusieurs instances pour fournir un instantané du contrat et de l'historique"
+" des versions. "
+
+#: ../../docs/schema/codelists.md:155
+msgid "Initiation Type"
+msgstr "Type de lancement du marché"
+
+#: ../../docs/schema/codelists.md:157
+msgid ""
+"Contracting processes can be formed under a number of different processes. "
+"Currently, only 'tender' is supported in this codelist. Future versions of "
+"the standard might support other initiation types. The initiation type is "
+"used to provide information to consuming applications on the different "
+"blocks of data and releases they can expect from a contracting process."
+msgstr ""
+"Les processus de commande publique peuvent être initiés à travers un certain"
+" nombre de procédures. Actuellement, la seule valeur valide dans cette liste"
+" de codes est 'tender'. Les futures versions du standard prendront en charge"
+" d'autres types de lancement de marché. Le type de lancement de marché peut "
+"fournir des informations aux applications sur les différents composants de "
+"données et les instances qu'ils devraient attendre d'un processus de "
+"commande publique."
+
+#: ../../docs/schema/codelists.md:165
+msgid "Tender Status"
+msgstr "État de l'appel d'offres"
+
+#: ../../docs/schema/codelists.md:167
+msgid ""
+"The `tender.status` field is used to indicate the current status of a tender"
+" process. The following options are available:"
+msgstr ""
+"Le champ `tender.status` sert à indiquer l'état actuel d'un processus "
+"d'appel d'offres. Les options suivantes sont disponibles :"
+
+#: ../../docs/schema/codelists.md:1
+msgid "The 'planning' status was introduced in version 1.1."
+msgstr "Le statut \"planning\" a été introduit dans la version 1.1. "
+
+#: ../../docs/schema/codelists.md:179
+msgid "Method"
+msgstr "Procédure"
+
+#: ../../docs/schema/codelists.md:181
+msgid ""
+"A contracting process aims to fulfill the requirements identified at the "
+"planning stage. The procurement method is the procedure used to purchase the"
+" relevant works, goods or services. The method codelist draws upon [the "
+"definitions of open, selective and limited provided by the WTO Government "
+"Procurement Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-"
+"94_01_e.htm), and adds an additional 'direct' code for awards without "
+"competition."
+msgstr ""
+"Un processus de passation de marchés vise à satisfaire les exigences "
+"identifiées au stade de la planification. La procédure de passation de "
+"marchés est la procédure utilisée pour commander les travaux, les biens ou "
+"les services nécessaires. La liste de codes de procédure s'appuie sur [les "
+"définitions d'un marché ouvert, sélectif et limité fournies par l'Accord sur"
+" les marchés publics de l'OMC](https://www.wto.org/french/docs_f/legal_f"
+"/rev-gpr-94_01_f.htm) et ajoute un code \"direct\" supplémentaire pour les "
+"attributions sans concurrence."
+
+#: ../../docs/schema/codelists.md:189
+msgid ""
+"Note: The 'direct' code was introduced in Version 1.1. Publishers who "
+"completed a codelist mapping prior to 1.1 might have included direct "
+"procurement within limited, and ought to review their mappings."
+msgstr ""
+"Remarque : le code \"direct\" a été introduit dans la version 1.1. Les "
+"producteurs de données qui ont utilisée une concordance de codes avant la "
+"version 1.1 peuvent avoir publié des procédures directes avec le code "
+"'limited' et peuvent avoir besoin de revoir leur concordance."
+
+#: ../../docs/schema/codelists.md:191
+msgid "Procurement Category"
+msgstr "Catégorie de passation de marché"
+
+#: ../../docs/schema/codelists.md:193
+msgid ""
+"The procurement category codelist is used to indicate the **primary** focus "
+"of a contracting process. Where a contracting process covers more than one "
+"of the options below, publishers should use the "
+"`additionalProcurementCategories` field with an array of entries from the "
+"open [extendedProcurementCategory](#extended-procurement-category) codelist."
+msgstr ""
+"La liste de codes sur la catégorie de passation de marché sert à indiquer "
+"l'objectif **principal** d'un processus de passation de marchés. Lorsqu'un "
+"processus de passation de marchés couvre plus d'une des options ci-dessous, "
+"les producteurs de données peuvent utiliser le champ "
+"`additionalProcurementCategories` avec une liste de valeurs tirées de la "
+"liste de codes ouverte [extendedProcurementCategory](#extended-procurement-"
+"category)."
+
+#: ../../docs/schema/codelists.md:201
+msgid "Award Status"
+msgstr "État de l'attribution"
+
+#: ../../docs/schema/codelists.md:203
+msgid ""
+"An award moves through multiple states. Releases over time can update the "
+"status of an award."
+msgstr ""
+"Une attribution de marché passe par plusieurs étapes. L'état d'une "
+"attribution peut être mis à jour via la publication de nouvelles instances."
+
+#: ../../docs/schema/codelists.md:211
+msgid ""
+"The `awardStatus` field and codelist is used to indicate when a tender did "
+"not result in an award (through the `\"awardStatus\":\"unsuccessful\"` "
+"value)"
+msgstr ""
+"Le champ `awardStatus` et la liste de codes associée sont utilisés pour "
+"indiquer qu'un appel d'offres n'a pas abouti à une attribution (avec la "
+"valeur `\"awardStatus\":\"unsuccessful\"`)"
+
+#: ../../docs/schema/codelists.md:213
+msgid "Contract Status"
+msgstr "État du contrat"
+
+#: ../../docs/schema/codelists.md:215
+msgid ""
+"Contracts can move through multiple states. Releases over time can update "
+"the status of a contract."
+msgstr ""
+"Les contrats peuvent passer par plusieurs status. Le statut d'un contrat "
+"peut être mis à jour via la publication de nouvelles instances."
+
+#: ../../docs/schema/codelists.md:223
+msgid "Milestone Status"
+msgstr "État de l'étape"
+
+#: ../../docs/schema/codelists.md:231
+msgid "Currency"
+msgstr "Devise"
+
+#: ../../docs/schema/codelists.md:233
+msgid ""
+"The currency for each amount must be specified using the uppercase 3-letter "
+"currency code from [ISO4217](https://www.iso.org/iso-4217-currency-"
+"codes.html)."
+msgstr ""
+"La devise de chaque montant doit être indiquée au moyen d'un code composé de"
+" 3 lettres majuscules, tiré du standard [ISO "
+"4217](https://www.iso.org/iso-4217-currency-codes.html)."

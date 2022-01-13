@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-24 09:10-0400\n"
+"PO-Revision-Date: 2021-03-01 22:02+0000\n"
+"Last-Translator: Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/build/merging.md:1
+msgid "Updates and Deletions"
+msgstr "Actualizaciones y Eliminaciones"
+
+#: ../../docs/guidance/build/merging.md:3
+msgid ""
+"The [merging documentation](../../schema/merging) specifies how individual "
+"releases are merged into compiled releases (the latest version of the "
+"contracting process) and versioned releases (the change history for each "
+"field), which form part of a [record](../../primer/releases_and_records)."
+msgstr ""
+"La [documentación de fusión](../../schema/merging) especifica cómo se "
+"fusionan las entregas individuales en entregas compiladas (la última versión"
+" del proceso de contratación) y entregas versionadas (el historial de "
+"cambios de cada campo), que forman parte de un "
+"[registro](../../primer/releases_and_records)."
+
+#: ../../docs/guidance/build/merging.md:5
+msgid ""
+"The merge routine also allows a publisher to correct a publication error by "
+"deleting a field, object or array entry from the compiled release. To do so,"
+" a publisher sets the field's value to `null` in an individual release (more"
+" on this below). As such, as a publisher, it is important to **never use a "
+"`null` value in an individual release, unless you intend to delete that "
+"field**. If you don't have a value to assign to a field, simply omit the "
+"field from the JSON, or assign an empty value like `\"\"`, `[]` or `{}`. "
+"Using `null` values correctly means that publishers and/or users can create "
+"compiled releases reliably."
+msgstr ""
+"La rutina de fusión también permite a un publicador corregir un error de "
+"publicación eliminando un campo, objeto o entrada de lista de la entrega "
+"compilada. Para ello, el publicador establece el valor del campo como `null`"
+" en una entrega individual (más información sobre esto a continuación). Por "
+"lo tanto, como publicador, es importante **nunca utilizar un valor `null` en"
+" una entrega individual, a menos que tenga la intención de eliminar ese "
+"campo**. Si no tiene un valor que asignar a un campo, simplemente omita el "
+"campo en el JSON, o asigne un valor vacío como `\"\"`, `[]` or `{}`.Utilizar"
+" correctamente los valores `null` significa que los publicadores y/o "
+"usuarios pueden crear entregas compiladas de forma fiable."
+
+#: ../../docs/guidance/build/merging.md:7
+msgid ""
+"The following examples show how updates and deletions are reflected in "
+"compiled and versioned releases."
+msgstr ""
+"Los siguientes ejemplos muestran cómo las actualizaciones y eliminaciones se"
+" reflejan en las entregas compiladas y versionadas."
+
+#: ../../docs/guidance/build/merging.md:9
+msgid "Example 1: Updates"
+msgstr "Ejemplo 1: Actualizaciones"
+
+#: ../../docs/guidance/build/merging.md:11
+msgid ""
+"A public procurement agency publishes a release to announce an opportunity "
+"on January 1, 2016 in which the total estimated value of the procurement is "
+"$1,000. On January 31, it publishes a release to expand the description of "
+"the procurement. On February 5, it publishes a release to amend the "
+"opportunity, in which the total estimated value is increased to $2,000."
+msgstr ""
+"Una agencia de compras públicas publica un comunicado para anunciar una "
+"oportunidad el 1 de enero de 2016 en el que el valor total estimado de la "
+"contratación es de $ 1,000. El 31 de enero, publica una entrega para ampliar"
+" la descripción de la contratación. El 5 de febrero publica una entrega para"
+" enmendar la oportunidad, en el que el valor total estimado se incrementa a "
+"$ 2,000."
+
+#: ../../docs/guidance/build/merging.md:13
+msgid ""
+"The agency decides to award the opportunity to two of the bidders. On March "
+"1, the agency publishes a release to announce that Company A is awarded a "
+"contract of $750. On March 3, the agency publishes a release to announce "
+"that Company B is awarded a contract of $750."
+msgstr ""
+"La agencia decide adjudicar la oportunidad a dos de los oferentes. El 1 de "
+"marzo, la agencia publica una entrega para anunciar que la Compañía A se le "
+"adjudica un contrato de $ 750. El 3 de marzo, la agencia publica una entrega"
+" para anunciar que a la Compañía B se le adjudica un contrato de $ 750."
+
+#: ../../docs/guidance/build/merging.md:15
+msgid ""
+"Through these individual releases, the agency provides real-time data about "
+"the contracting process."
+msgstr ""
+"A través de estas entregas individuales, la agencia proporciona datos en "
+"tiempo real sobre el proceso de contratación."
+
+#: ../../docs/guidance/build/merging.md:17
+msgid ""
+"In each release, the agency also updates the record, which combines all the "
+"releases to date. In the final record:"
+msgstr ""
+"En cada entrega, la agencia también actualiza el registro, que combina todas"
+" las entregas hasta la fecha. En el registro final:"
+
+#: ../../docs/guidance/build/merging.md:19
+msgid ""
+"The compiled release contains all the information about the opportunity and "
+"awards, using the same schema as a release."
+msgstr ""
+"La entrega compilada contiene toda la información sobre la oportunidad y las"
+" adjudicaciones, utilizando el mismo esquema que una entrega."
+
+#: ../../docs/guidance/build/merging.md:20
+msgid ""
+"The versioned release makes it easy to see how the description and total "
+"estimated value changed over time."
+msgstr ""
+"La entrega versionada facilita ver cómo la descripción y el valor estimado "
+"total cambiaron con el tiempo."
+
+#: ../../docs/guidance/build/merging.md:58
+msgid "Example 2: Deletion of fields and objects"
+msgstr "Ejemplo 2: Eliminación de campos y objetos"
+
+#: ../../docs/guidance/build/merging.md:60
+msgid "Fields"
+msgstr "Campos"
+
+#: ../../docs/guidance/build/merging.md:62
+msgid ""
+"A government agency in Colombia publishes a procurement opportunity, "
+"including information about the tender, as shown below."
+msgstr ""
+"Una agencia gubernamental en Colombia publica una oportunidad de "
+"contratación, incluyendo información sobre la licitación, como se muestra a "
+"continuación."
+
+#: ../../docs/guidance/build/merging.md:64
+msgid ""
+"After a few days, the officer in charge notices that the description of the "
+"tender is a duplication of the tender title and decides to leave the "
+"`description` field blank, judging that the `tender/title` field has all the"
+" information needed. A release with a 'tenderUpdate' tag is published, and "
+"the record for the process is updated."
+msgstr ""
+"Al cabo de unos días, el responsable se da cuenta que la descripción de la "
+"licitación es una duplicación del título de la misma y decide dejar el campo"
+" `description` en blanco, al considerar que el campo `tender/title` tiene "
+"toda la información necesaria. Se publica una entrega con la etiqueta "
+"'tenderUpdate', y el registro para este proceso es actualizado."
+
+#: ../../docs/guidance/build/merging.md:66
+msgid ""
+"In the final record, both the compiled and versioned releases show the "
+"changes. The `tender/description` field has disappeared from the "
+"`compiledRelease`, and the `versionedRelease` shows both its previous value "
+"and the `null` value used to delete the field. The entry with the `null` "
+"value can be used to determine when the field was deleted."
+msgstr ""
+"En el registro final, tanto la entrega compilada como la versionada muestran"
+" los cambios. El campo `tender/description` ha desaparecido de la "
+"`compiledRelease`, y la `versionedRelease` muestra tanto el valor anterior "
+"como el valor `null` utilizado para eliminar el campo. La entrada con el "
+"valor `null` puede utilizarse para determinar cuándo se eliminó el campo."
+
+#: ../../docs/guidance/build/merging.md:86
+msgid "Objects"
+msgstr "Objetos"
+
+#: ../../docs/guidance/build/merging.md:88
+msgid ""
+"Another government agency in Colombia publishes a new procurement "
+"opportunity. Details are provided in an OCDS release, as shown below."
+msgstr ""
+"Otra agencia gubernamental en Colombia publica una nueva oportunidad de "
+"contratación. Los detalles se proporcionan en una entrega del OCDS, como se "
+"muestra a continuación."
+
+#: ../../docs/guidance/build/merging.md:90
+msgid ""
+"A few days after releasing the tender notice, the government agency receives"
+" feedback for potential bidders, and they realize that the estimated "
+"contract period set for the tender could be infeasible. They decide to "
+"instead negotiate the contract period with the awarded supplier, and they "
+"remove the contract period from the opportunity to avoid confusing potential"
+" bidders."
+msgstr ""
+"Unos días después de publicar el anuncio de licitación, la agencia "
+"gubernamental recibe información de los posibles licitantes y se da cuenta "
+"que el periodo del contrato estimado para la licitación podría ser inviable."
+" En su lugar, deciden negociar el periodo del contrato con el proveedor "
+"adjudicado, y eliminan el periodo del contrato de la oportunidad para evitar"
+" confundir a los posibles licitantes."
+
+#: ../../docs/guidance/build/merging.md:92
+msgid ""
+"A release with a 'tenderAmendment' tag is published, in which both the "
+"`startDate` and `endDate` of the `contractPeriod` block have been set to "
+"`null`. Also, an `amendments` block is provided to explain the changes."
+msgstr ""
+"Se publica una entrega con la etiqueta 'tenderAmendment', en la que tanto "
+"`startDate` como `endDate` del bloque `contractPeriod` se han establecido a "
+"`null`. Además, se incluye un bloque  `amendments` para explicar los "
+"cambios."
+
+#: ../../docs/guidance/build/merging.md:94
+msgid ""
+"The final record is shown below. Note that the fields in the "
+"`contractPeriod` block have disappeared in the `compiledRelease`, and the "
+"`versionedRelease` contains the previous values."
+msgstr ""
+"El registro final se muestra a continuación. Observe que los campos del "
+"bloque `contractPeriod` han desaparecido del `compiledRelease`, y el "
+"`versionedRelease` contiene los valores anteriores."
+
+#: ../../docs/guidance/build/merging.md:114
+msgid "Example 3: Deletion of array items"
+msgstr "Ejemplo 3: Eliminación de elementos de la lista"
+
+#: ../../docs/guidance/build/merging.md:116
+msgid ""
+"The public procurement authority in Zambia publishes an award notice, as "
+"well as an OCDS release with an 'award' tag. A NGO collects the individual "
+"releases published by the procurement authority on a weekly basis to merge "
+"into their own records, which they use to display information on their "
+"website."
+msgstr ""
+"El organismo de contratación pública de Zambia publica un anuncio de "
+"adjudicación, así como una entrega OCDS con una etiqueta de 'award'. Una ONG"
+" recopila semanalmente las entregas individuales publicadas por la autoridad"
+" de contratación para fusionarlos en sus propios registros, que utilizan "
+"para mostrar la información en su sitio web."
+
+#: ../../docs/guidance/build/merging.md:118
+msgid ""
+"Two weeks later, the authority publishes a new release. Due to negotiations "
+"with the awarded supplier, one of the items in the award is being deleted "
+"and two new ones have been added to replace it, as show below. The two new "
+"items have been added at the end of the `items` array, and the item to "
+"remove has all its fields set to `null`."
+msgstr ""
+"Dos semanas después, la autoridad publica una nueva entrega. Debido a las "
+"negociaciones con el proveedor adjudicado, se elimina uno de los artículos "
+"de la adjudicación y se añaden dos nuevos para sustituirlo, como se muestra "
+"a continuación. Los dos nuevos artículos se han añadido al final de la lista"
+" `items`, y el artículo a eliminar tiene todos sus campos establecidos en "
+"`null`."
+
+#: ../../docs/guidance/build/merging.md:120
+msgid ""
+"The NGO generates a record. In the record, all the fields of the removed "
+"item have disappeared, and only its `id` is left."
+msgstr ""
+"La ONG genera un registro. En el registro, todos los campos del artículo "
+"eliminado han desaparecido, y sólo queda su `id`."
+
+#: ../../docs/guidance/build/merging.md:1
+msgid ""
+"The current [merge routine](../../schema/merging.md#merge-routine) does not "
+"include a strategy to completely remove an entry from an array. We invite "
+"discussion on how to remove objects from arrays in issue "
+"[#232](https://github.com/open-contracting/standard/issues/232)."
+msgstr ""
+"La actual [rutina de fusión](../../schema/merging.md#merge-routine) no "
+"incluye una estrategia para eliminar completamente una entrada de una lista."
+" Invitamos a debatir sobre cómo eliminar objetos de las listas en el tema "
+"[#232](https://github.com/open-contracting/standard/issues/232)."

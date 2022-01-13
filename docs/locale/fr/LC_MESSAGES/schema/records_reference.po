@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# samgoeta <samgoeta@gmail.com>, 2017
+# Tim Davies <tim.davies@opendataservices.coop>, 2020
+# Joel Gombin <joel.gombin@gmail.com>, 2020
+# Emeline Vandeven <emeline@datactivist.coop>, 2020
+# Colin Maudry <colin@maudry.com>, 2021
+# James McKinney, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-22 23:26-0400\n"
+"PO-Revision-Date: 2017-04-24 10:48+0000\n"
+"Last-Translator: James McKinney, 2021\n"
+"Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../docs/schema/records_reference.md:1
+msgid "Record Reference"
+msgstr "Documentation sur les archives"
+
+#: ../../docs/schema/records_reference.md:3
+msgid ""
+"Whereas there can be multiple releases about a contracting process, there "
+"should be a single **record** per contracting process, aggregating all the "
+"releases available for the contracting process."
+msgstr ""
+"Il peut y avoir plusieurs instances décrivant un même processus de passation"
+" de marché, mais il ne devrait y avoir qu'une seule **archive**, rassemblant"
+" toutes les données pour ce processus."
+
+#: ../../docs/schema/records_reference.md:5
+msgid ""
+"**Note: If any conflicts are found between this text, and the text within "
+"the schema, the schema takes precedence.**"
+msgstr ""
+"**Remarque : si ce texte est en contradiction avec le texte du schéma, le "
+"texte du schéma prévaut**"
+
+#: ../../docs/schema/records_reference.md:7
+msgid "Browsing the schema"
+msgstr "Parcourir le schéma"
+
+#: ../../docs/schema/records_reference.md:1
+msgid ""
+"This page presents the record package schema as tables. You can also "
+"download the canonical version of the record package schema as "
+"{download}`JSON Schema <../../build/current_lang/record-package-"
+"schema.json>`, or view it in an [interactive browser](record_package)."
+msgstr ""
+"Cette page présente le schéma de paquet d'archives sous forme de tableaux. "
+"Vous pouvez également télécharger la version canonique du schéma de paquet "
+"d'archives au format {download}`JSON Schema <../../build/current_lang"
+"/record-package-schema.json>`, ou le consulter dans un [outil "
+"interactif](record_package)."
+
+#: ../../docs/schema/records_reference.md:13
+msgid "Package metadata"
+msgstr "Métadonnées des paquets"
+
+#: ../../docs/schema/records_reference.md:15
+msgid ""
+"Records must be published within a [record package](record_package). The "
+"record package provides metadata about the record(s) that it contains."
+msgstr ""
+"Les archives doivent être intégrées dans un [paquet "
+"d'archives](record_package). Le paquet d'archives fournit des métadonnées à "
+"propos de la ou des archives qu'il contient."
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+msgid "Title"
+msgstr "Titre"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+msgid "Description"
+msgstr "Description"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+msgid "Type"
+msgstr "Type"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+msgid "Format"
+msgstr "Format"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+msgid "Required"
+msgstr "Requis"
+
+#: ../../docs/schema/records_reference.md:21
+msgid ""
+"See the [licensing guidance](../guidance/publish.md#license-your-data) for "
+"more details on selecting a license, and publishing license information."
+msgstr ""
+
+#: ../../docs/schema/records_reference.md:23
+msgid ""
+"See the [publication policy](../guidance/publish.md#finalize-your-"
+"publication-policy) guidance for more details on what to include in a "
+"publication policy."
+msgstr ""
+
+#: ../../docs/schema/records_reference.md:25
+msgid ""
+"The record package metadata has two differences from the release package "
+"metadata:"
+msgstr ""
+"Les métadonnées du paquet d'archives comportent deux différences par rapport"
+" aux métadonnées du paquet d'instances."
+
+#: ../../docs/schema/records_reference.md:27
+msgid ""
+"Instead of a `releases` array, a record package has a `records` array "
+"containing one or more records."
+msgstr ""
+"En lieu et place d'un champ de liste (*array*) `releases`, un paquet "
+"d'archives a un champ de liste `records` contenant une ou plusieurs archives"
+" :"
+
+#: ../../docs/schema/records_reference.md:28
+msgid ""
+"A record package has a `packages` array, to link to any release packages "
+"that were used to prepare the records."
+msgstr ""
+"Un paquet d'archives comporte un champ de liste 'packages', pour relier les "
+"paquets d'instances qui ont été utilisés pour constituer les archives."
+
+#: ../../docs/schema/records_reference.md:30
+msgid ""
+"The following example demonstrates all package metadata and record fields."
+msgstr ""
+"L'exemple suivant illustre l'ensemble des metadonnées des paquets et des "
+"champs d'archives."
+
+#: ../../docs/schema/records_reference.md:38
+msgid "Record structure"
+msgstr "Structure d'une archive"
+
+#: ../../docs/schema/records_reference.md:40
+msgid ""
+"A record **must** contain an [ocid](identifiers.md#contracting-process-"
+"identifier-ocid) and all [releases](#releases) about the contracting "
+"process. As such, a record functions as an index of all releases about a "
+"contracting process."
+msgstr ""
+
+#: ../../docs/schema/records_reference.md:42
+msgid ""
+"A record **should** contain a [compiledRelease](#compiled-release) object, "
+"which represents the state of the contracting process at the time of the "
+"record's publication."
+msgstr ""
+"Une archive **devrait** contenir un objet [`compiledRelease`](#compiled-"
+"release), qui représente l'état de la procédure de passation de marché au "
+"moment de la publication de l'archive."
+
+#: ../../docs/schema/records_reference.md:44
+msgid ""
+"A record **may** contain a [versionedRelease](#versioned-release) object, "
+"which aggregates, into a single object, all values of all fields from all "
+"releases. The versioned release is designed to make it easy to see how "
+"values change from one release to another, and will often be generated by "
+"data users, rather than by publishers."
+msgstr ""
+"Une archive **peut** contenir un objet [`versionedRelease`](#versioned-"
+"release), qui agrège, dans un seul objet, toutes les valeurs de tous les "
+"champs provenant de toutes les instances. La publication versionnée est "
+"conçue pour voir plus facilement comment les valeurs changent d'une instance"
+" à l'autre, et sera souvent générée par les utilisateurs des données plutôt "
+"que par les producteurs."
+
+#: ../../docs/schema/records_reference.md:46
+msgid "Releases"
+msgstr "Instances"
+
+#: ../../docs/schema/records_reference.md:48
+msgid ""
+"Each release in a record can be provided as either a linked release or an "
+"embedded release."
+msgstr ""
+"Dans une archive, chaque instance peut être fournie comme une instance liée,"
+" ou bien comme une instance intégrée."
+
+#: ../../docs/schema/records_reference.md:50
+msgid "Linked releases"
+msgstr "Instances liées"
+
+#: ../../docs/schema/records_reference.md:52
+msgid "A linked release follows a simple schema:"
+msgstr "Une instance liée suit un schéma simple :"
+
+#: ../../docs/schema/records_reference.md:58
+msgid ""
+"For each `url` value, it must be possible for a consuming application to "
+"retrieve the release package at the URL and identify the release within it. "
+"Since a release package can contain multiple releases, for a linked release "
+"to identify a specific release via its `url` field, the `id` of the release "
+"must be appended to the release package URL using a fragment identifier."
+msgstr ""
+"Pour chaque valeur de `url`, il doit être possible pour une application "
+"réutilisant les données de télécharger un paquet d'instances via l'URL et "
+"d'identifier l'instance dans le paquet. Un paquet d'instances pouvant "
+"contenir de multiples instances, pour une instance liée à identifier une "
+"instance spécifique via son champs `url`, l'`id` de l'instance doit être "
+"ajouté à l'URL de paquet en utilisant un identifiant de fragment."
+
+#: ../../docs/schema/records_reference.md:60
+msgid "The following example demonstrates the use of linked releases."
+msgstr "L'exemple suivant illustre l'utilisation des instances liées."
+
+#: ../../docs/schema/records_reference.md:68
+msgid ""
+"Above, the first linked release has a `url` value of `https://standard.open-"
+"contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json#ocds-"
+"213czf-000-00002-01-award1`. The first part (`https://standard.open-"
+"contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json`) is "
+"the URL of the release package, and the fragment identifier (`ocds-"
+"213czf-000-00002-01-award1`) is the `id` of the release."
+msgstr ""
+
+#: ../../docs/schema/records_reference.md:70
+msgid ""
+"Release `id` values are only required to be unique within the scope of a "
+"contracting process: that is, within the scope of an `ocid` value. As such, "
+"a consuming application needs to use that fragment identifier in combination"
+" with the `ocid` of the record in order to identify the matching release "
+"within the release package."
+msgstr ""
+"Les `id` d'instance ne doivent être uniques que dans le contexte d'une "
+"procédure de passation de marché. Autrement dit il ne doit pas y avoir deux "
+"`id` d'instances identiques pour un même ocid, mais il peut y avoir deux "
+"`id` d'instances identiques avec des ocid différents. Une application "
+"consommatrice de données a besoin de l'identifiant de fragment et de le "
+"combiner à l'`ocid` de l'archive afin d'identifier l'instance correspondante"
+" dans le paquet d'instance lié."
+
+#: ../../docs/schema/records_reference.md:72
+msgid "Embedded releases"
+msgstr "Instances intégrées"
+
+#: ../../docs/schema/records_reference.md:74
+msgid ""
+"An embedded release follows the [release schema](reference). In other words,"
+" instead of linking to a release within a release package as above, that "
+"release is entirely included in the record."
+msgstr ""
+"Une instance intégrée est conforme au [schéma d'instance](reference). En "
+"d'autres termes, au lieu de lier une instance au sein d'un paquet "
+"d'instances comme ci-dessus, cette instance est entièrement incluse dans "
+"l'archive."
+
+#: ../../docs/schema/records_reference.md:76
+msgid "The following example demonstrates the use of embedded releases."
+msgstr "L'exemple suivant démontre l'utilisation des instances intégrées."
+
+#: ../../docs/schema/records_reference.md:84
+msgid "Comparing options"
+msgstr "Comparaison des options"
+
+#: ../../docs/schema/records_reference.md:86
+msgid "The considerations are:"
+msgstr "Voici quelques éléments de reflexion :"
+
+#: ../../docs/schema/records_reference.md:88
+msgid ""
+"Using linked releases yields smaller file sizes than using embedded "
+"releases."
+msgstr ""
+"Utiliser des instances liées produit des fichiers de taille plus petite que "
+"les fichiers des instances intégrées."
+
+#: ../../docs/schema/records_reference.md:89
+msgid ""
+"From a user's perspective, the contents of releases are easier to access as "
+"embedded releases than as linked releases (which involves the retrieval "
+"process described above)."
+msgstr ""
+"Du point du vue de l'utilisateur, le contenu des instances est plus "
+"accessible avec des instances intégrées qu'avec des instances liées, car ce "
+"dernier implique une extraction décrite ci-dessus."
+
+#: ../../docs/schema/records_reference.md:90
+msgid ""
+"From a publisher's perspective, using linked releases involves publishing "
+"release packages and constructing `url` values, whereas using embedded "
+"releases doesn't."
+msgstr ""
+"Du point de vue du producteur, utiliser des instances liées implique la "
+"publication des paquets d'instances et l'élaboration de la valeur des champs"
+" `url`, alors que ce n'est pas nécessaires avec des instances embarquées."
+
+#: ../../docs/schema/records_reference.md:92
+msgid "Compiled release"
+msgstr "Instance compilée"
+
+#: ../../docs/schema/records_reference.md:94
+msgid ""
+"The compiled release is the latest version of all the data about a "
+"contracting process. In other words, it provides a snapshot of the current "
+"state of a contracting process."
+msgstr ""
+"L'instance compilée est la dernière version de toutes les données relatives "
+"à un processus de passation de marché. En d'autres termes, c'est un "
+"instantané de l'état actuel d'une procédure de passation de marché."
+
+#: ../../docs/schema/records_reference.md:96
+msgid ""
+"The compiled release follows the [release schema](reference), with the "
+"exception of any fields on which `\"omitWhenMerged\": true` is declared."
+msgstr ""
+"Une instance compilée est conforme au [schéma d'instance](reference) à "
+"l'exception des champs pour lesquels `\"omitWhenMerged\": true` est déclaré."
+
+#: ../../docs/schema/records_reference.md:98
+msgid ""
+"The process for creating a compiled release from individual releases is "
+"described in the [merging](merging) reference."
+msgstr ""
+"Le processus de création d'une instance compilée à partir d'instances "
+"individuelles est décrit dans la partie relative à [la fusion](merging)."
+
+#: ../../docs/schema/records_reference.md:100
+msgid "Versioned release"
+msgstr "Instance versionnée"
+
+#: ../../docs/schema/records_reference.md:102
+msgid ""
+"A versioned release aggregates all values of all fields from all releases. "
+"For each field, it describes the history of values from the initial value to"
+" the current value, including the `id`, `date` and `tag` of the release in "
+"which it was changed."
+msgstr ""
+"Une instance versionnée agrège toutes les valeurs de tous les champs "
+"provenant de toutes les instances. Pour chaque champ, elle décrit "
+"l’historique des valeurs, de la valeur initiale à la valeur actuelle, en "
+"incluant les champs `id`, `date` et `tag` de l'instance dans laquelle la "
+"valeur a été modifiée."
+
+#: ../../docs/schema/records_reference.md:104
+msgid ""
+"This versioned information is relevant to many use cases relating to "
+"contract monitoring. However, it can significantly increase file sizes. As "
+"such, publishers can consider publishing records both with and without the "
+"versioned release."
+msgstr ""
+"Cette information versionnée est importante pour de nombreux cas "
+"d'utilisation des données liées au suivi et à la surveillance des contrats. "
+"Cependant, elle peut considérablement accroître la taille des fichiers. Les "
+"producteurs peuvent donc choisir de publier des archives avec et des "
+"archives sans instance versionnée."
+
+#: ../../docs/schema/records_reference.md:106
+msgid ""
+"If the versioned release is not provided, third parties can generate it by "
+"processing the record's releases according to the [merging](merging) "
+"reference."
+msgstr ""
+"Si l'instance versionnée n'est pas fournie, un tiers peut la générer par un "
+"traitement des instances des archives conforme à la partie relative à [la "
+"fusion](merging)."
+
+#: ../../docs/schema/records_reference.md:108
+msgid ""
+"The following example displays a single field's [versioned "
+"values](merging.md#versioned-values). This shows that the amount changed "
+"between the planning stage and the tender stage, while the currency did not."
+msgstr ""

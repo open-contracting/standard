@@ -1,6 +1,3 @@
-# Update this file from a profile with:
-# curl -O https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/include/common.mk
-
 # See https://github.com/datamade/data-making-guidelines
 
 # See http://clarkgrubb.com/makefile-style-guide#phony-target-arg
@@ -34,23 +31,27 @@ $(POT_DIR):
 
 ### Message catalogs
 
+.PHONY: extract_theme
+extract_theme: $(POT_DIR)
+	pybabel extract . -o $(POT_DIR)/$(DOMAIN_PREFIX)theme.pot
+
 .PHONY: extract_codelists
 extract_codelists: $(POT_DIR)
-	pybabel extract -F .babel_codelists . -o $(POT_DIR)/$(DOMAIN_PREFIX)codelists.pot
+	pybabel extract -F babel_ocds_codelist.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)codelists.pot
 
 .PHONY: extract_schema
 extract_schema: $(POT_DIR)
-	pybabel extract -F .babel_schema . -o $(POT_DIR)/$(DOMAIN_PREFIX)schema.pot
+	pybabel extract -F babel_ocds_schema.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)schema.pot
 
 # The codelist CSV files and JSON Schema files must be present for the `csv-table-no-translate` and `jsonschema`
 # directives to succeed, but the contents of the files have no effect on the generated .pot files.
 # See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.gettext.MessageCatalogBuilder
 .PHONY: extract_markdown
 extract_markdown: current_lang.en
-	sphinx-build -q -b gettext $(DOCS_DIR) $(POT_DIR)
+	sphinx-build -nW --keep-going -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
 .PHONY: extract
-extract: extract_codelists extract_schema extract_markdown clean_current_lang
+extract: extract_theme extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
 
 ### Transifex
 
@@ -68,10 +69,13 @@ update_txconfig:
 push: extract
 	tx push -s
 
+force_push.%: extract
+	tx push -s -t -f --no-interactive -l $*
+
 # Also pushes the translation .po files (`file_filter` in .tx/config) to Transifex.
-.PHONY: force_push_all
-force_push_all: extract
-	tx push -s -t -f -l $(COMMA_SEPARATED_TRANSLATIONS) --no-interactive
+.PHONY: force_push
+force_push: extract
+	tx push -s -t -f --no-interactive -l $(COMMA_SEPARATED_TRANSLATIONS)
 
 pull.%: FORCE
 	tx pull -f -l $*
@@ -84,18 +88,14 @@ pull:
 
 # Create a symlink for the language, so that file paths in `jsonschema` directives resolve.
 # (Don't use clean_current_lang as a prerequisite, as then it won't run as a prerequisite later.)
-$(LANGUAGES:.%=current_lang.%): current_lang.%: FORCE
+$(LANGUAGES:.%=current_lang.%): current_lang.%: $(BUILD_DIR)
 	rm -f $(BUILD_DIR)/current_lang
-	rm -f $(BUILD_DIR)/codelists/current_lang
-	mkdir -p $(BUILD_DIR)/codelists
 	ln -s $* $(BUILD_DIR)/current_lang
-	ln -s $* $(BUILD_DIR)/codelists/current_lang
 
 # Deploy script complains if current_lang is present.
 .PHONY: clean_current_lang
 clean_current_lang:
 	rm $(BUILD_DIR)/current_lang
-	rm $(BUILD_DIR)/codelists/current_lang
 
 ### Build
 
@@ -103,21 +103,54 @@ clean_current_lang:
 # See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.html.DirectoryHTMLBuilder
 .PHONY: build_source
 build_source: current_lang.en
-	sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
+	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
 
 # Build the translated documentation. (Same as source, but with a language configuration setting.)
 $(TRANSLATIONS:.%=build.%): build.%: current_lang.%
-	sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
-
-# Copy the assets into the build directory.
-.PHONY: assets
-assets: $(BUILD_DIR)
-	if [ -n "$(ASSETS_DIR)" ]; then cp -r $(ASSETS_DIR) $(BUILD_DIR); fi
+	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
 
 .PHONY: source
-source: assets | build_source clean_current_lang
+source: build_source clean_current_lang
 
-$(TRANSLATIONS:.%=%): %: assets | build_source compile build.% clean_current_lang
+$(TRANSLATIONS:.%=%): %: build_source compile build.% clean_current_lang
 
 .PHONY: all
-all: assets | build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
+all: build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
+
+### Development
+
+.PHONY: autobuild
+autobuild: current_lang.en
+	sphinx-autobuild -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
+
+.PHONY: update
+update: clean_dist
+	python manage.py update
+
+### Test
+
+# "-" ignores the exit status. Schema files might contain old URLs that redirect, which can only be updated in a new version.
+
+.PHONY: linkcheck_source
+linkcheck_source: current_lang.en
+	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/en
+
+$(TRANSLATIONS:.%=linkcheck.%): linkcheck.%: current_lang.%
+	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
+
+.PHONY: linkcheck
+linkcheck: linkcheck_source compile $(TRANSLATIONS:.%=linkcheck.%) clean_current_lang
+
+### PDF generation
+
+$(LANGUAGES:.%=pdf.%): pdf.%: FORCE
+	wkhtmltopdf \
+		--no-stop-slow-scripts \
+		--javascript-delay $(PDF_DELAY) \
+		--disable-smart-shrinking \
+		--print-media-type \
+		--header-html include/header.html \
+		toc https://standard.open-contracting.org$(PDF_ROOT)/$*/$(PDF_PAGES) $*.pdf
+
+.PHONY: pdf
+pdf: $(LANGUAGES:.%=pdf.%)

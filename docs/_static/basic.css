@@ -1,0 +1,75 @@
+#build-your-data-pipeline li {
+  margin-bottom: 1em;
+}
+
+.directive--field-description,
+.directive--code-description {
+  font-style: italic;
+}
+
+#item-classification-scheme td:nth-child(4) {
+  word-break: break-all;
+}
+
+img[alt="org-id.guide"] {
+   width: 200px;
+   float: right;
+}
+
+.process-table {
+  float: left;
+  width: 18%;
+  font-size: 13px;
+}
+.process-table p {
+  text-align: center;
+  font-size: 13px;
+}
+.process-table img {
+  width: 80%;
+}
+
+/* https://css-tricks.com/fluid-width-video/ */
+
+.video-wrapper {
+  position: relative;
+  margin-bottom: 1em;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Extensions */
+.hide {
+  display: none;
+}
+
+.community-list {
+  margin-top: 1em;
+}
+
+/* Media */
+@media only print {
+    .wy-table-responsive {
+        overflow: visible !important;
+    }
+}
+
+/* renderjson.js */
+pre.renderjson { overflow: scroll; font-size:smaller; border: 1px solid grey;}
+.renderjson a { text-decoration: none; }
+.renderjson .disclosure { color: crimson; font-size: 150%; }
+.renderjson .syntax { color: grey; }
+.renderjson .string { color: darkred; }
+.renderjson .number { color: darkcyan; }
+.renderjson .boolean { color: blueviolet; }
+.renderjson .key    { color: darkblue; }
+.renderjson .keyword { color: blue; }
+.renderjson .object.syntax { color: lightseagreen; }
+.renderjson .array.syntax  { color: orange; }

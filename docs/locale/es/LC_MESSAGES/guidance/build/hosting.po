@@ -1,0 +1,326 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting Data Standard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Oscar Montiel <oscar.montiel@okfn.org>, 2020
+# Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2020
+# Maria Esther Cervantes <mcervantes@cds.com.py>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# James McKinney, 2021
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-24 09:10-0400\n"
+"PO-Revision-Date: 2020-06-29 22:59+0000\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/build/hosting.md:1
+msgid "Data files and APIs"
+msgstr "Archivos de datos y APIs"
+
+#: ../../docs/guidance/build/hosting.md:3
+msgid ""
+"Different users have different needs when it comes to accessing OCDS data. "
+"It also needs to be possible to automate the download of all the OCDS data, "
+"in some form."
+msgstr ""
+"Los diferentes usuarios tienen diferentes necesidades cuando se trata de "
+"acceder a los datos OCDS. También debe ser posible automatizar la descarga "
+"de todos los datos OCDS, de alguna forma."
+
+#: ../../docs/guidance/build/hosting.md:5
+msgid ""
+"[Data on the Web Best "
+"Practices](https://www.w3.org/TR/dwbp/#MultipleFormats) suggests that \"Data"
+" should be available in multiple data formats\" in order to increases the "
+"number of different users, tools and applications that can process the data."
+msgstr ""
+"[Los datos sobre La Mejores Prácticas en la "
+"Web](https://www.w3.org/TR/dwbp/#MultipleFormats) sugiere que \"los datos "
+"deben estar disponibles en múltiples formatos de datos\" con el fin de "
+"aumentar el número de usuarios diferentes, las herramientas y aplicaciones "
+"que pueden procesar estos datos."
+
+#: ../../docs/guidance/build/hosting.md:7
+msgid ""
+"Which formats are most important will depend on the priority use cases for "
+"each OCDS implementation, but you are encouraged to consider:"
+msgstr ""
+"La importancia de ciertos formatos sobre otros va a depender de la prioridad"
+" de los casos de uso para cada implementación OCDS, pero lo invitamos a "
+"considerar:"
+
+#: ../../docs/guidance/build/hosting.md:9
+msgid ""
+"**Bulk downloads** - packaging together multiple releases or multiple "
+"records in one or more files for users to download and import into local "
+"tools."
+msgstr ""
+"**Descargas masivas** - empaquetando múltiples entregas o registros en uno o"
+" más archivos para que los usuarios los descarguen e importen en las "
+"herramientas locales."
+
+#: ../../docs/guidance/build/hosting.md:10
+msgid ""
+"**Individual release and record downloads** - providing a URI at which each "
+"release or record can be obtained."
+msgstr ""
+"**Descargas de entregas y registros individuales**: proporcionando una URI "
+"en la que se puede obtener cada entrega o registro."
+
+#: ../../docs/guidance/build/hosting.md:11
+msgid ""
+"**CSV and spreadsheet serializations** - providing multiple releases or "
+"compiled records for download, enabling users to work with data directly in "
+"spreadsheet software or other tools."
+msgstr ""
+"**CSV y serializaciones en hojas de cálculo** - proveer múltiples entregas o"
+" records compilados para descargar, permitiendo a los usuarios trabajar con "
+"los datos directamente en un software de hojas de cálculo u otras "
+"herramientas"
+
+#: ../../docs/guidance/build/hosting.md:12
+msgid "**API access** - enabling interactive access to your data."
+msgstr ""
+"**Acceso a través de APIs** - permite el acceso interactivo a sus datos."
+
+#: ../../docs/guidance/build/hosting.md:14
+msgid "Bulk downloads"
+msgstr "Descargas masivas"
+
+#: ../../docs/guidance/build/hosting.md:16
+msgid ""
+"The release package and record package can provide **bulk access** to "
+"releases and records, respectively."
+msgstr ""
+"El paquete de entregas y el paquete de registros pueden dar **acceso "
+"masivo** a las entregas y registros, respectivamente."
+
+#: ../../docs/guidance/build/hosting.md:18
+msgid ""
+"However, very large files can be difficult for users to download and "
+"process. The following section provides suggested good practices which will "
+"assist users in accessing data. These are not requirements of the standard, "
+"but are based on experiences of maximizing the number of users able to work "
+"with datasets with their existing hardware and software."
+msgstr ""
+"Sin embargo, los archivos muy grandes pueden ser difíciles de descargar y "
+"procesar. En la siguiente sección se ofrecen buenas prácticas sugeridas que "
+"ayudarán a los usuarios a acceder a estos datos. Estas prácticas no son "
+"requisitos del estándar, sino que se basan en experiencias para maximizar el"
+" número de usuarios capaces de trabajar con conjuntos de datos con hardware "
+"y software existentes."
+
+#: ../../docs/guidance/build/hosting.md:20
+msgid "File size limits"
+msgstr "Límites de tamaño de archivo"
+
+#: ../../docs/guidance/build/hosting.md:22
+msgid ""
+"When generating packages for bulk download, apply the following limits:"
+msgstr ""
+"Cuando se generan paquetes para descarga masiva, se aplican los siguientes "
+"límites:"
+
+#: ../../docs/guidance/build/hosting.md:24
+msgid "Unzipped OCDS packages ought to not exceed 1Gb each;"
+msgstr ""
+"Los paquetes OCDS descomprimidos no deberían de exceder 1 GB cada uno;"
+
+#: ../../docs/guidance/build/hosting.md:25
+msgid "Zipped OCDS packages ought to not exceed 10 Mb each;"
+msgstr "Los paquetes OCDS comprimidos no deben exceder 10 mb cada uno;"
+
+#: ../../docs/guidance/build/hosting.md:26
+msgid ""
+"A single OCDS package ought to contain a maximum of 250,000 awards or "
+"contracts;"
+msgstr ""
+"Un paquete OCDS único debe contener un máximo de 250,000 adjudicaciones o "
+"contratos;"
+
+#: ../../docs/guidance/build/hosting.md:28
+msgid ""
+"When a file is likely to exceed one of these limits, release or records "
+"ought to be split across multiple files. Dynamically generated bulk "
+"downloads do not have to apply these limits, though publishers ought to "
+"consider ways to advise users when a query is likely to generate a very "
+"large file."
+msgstr ""
+"Cuando es probable que un archivo exceda estos límites, las entregas o "
+"registros deben de dividirse en múltiples documentos. Las descargas masivas "
+"que se generan dinámicamente no están obligados a aplicar estos límites, "
+"aunque los publicadores deben considerar guiar a los usuarios cuando una "
+"consulta puede generar un archivo muy grande."
+
+#: ../../docs/guidance/build/hosting.md:30
+msgid "Segmenting files"
+msgstr "Segmentación de archivos"
+
+#: ../../docs/guidance/build/hosting.md:32
+msgid ""
+"When the suggested limits entail publication of multiple files, publishers "
+"ought to consider ways to split data across available files."
+msgstr ""
+"Cuando los límites sugeridos comprenden la publicación de muchos archivos, "
+"los publicadores deben considerar la manera de dividir los datos en "
+"múltiples archivos."
+
+#: ../../docs/guidance/build/hosting.md:34
+msgid "For releases, publishers can:"
+msgstr "Para entregas, los publicadores pueden:"
+
+#: ../../docs/guidance/build/hosting.md:36
+msgid ""
+"Segment by **release date** - placing all the releases from a given day, "
+"month or year in the same file;"
+msgstr ""
+"Segmentar por **fecha de entrega**- poniendo todas las entregas que salieron"
+" en un mismo día, mes o año en el mismo archivo;"
+
+#: ../../docs/guidance/build/hosting.md:37
+msgid ""
+"Segment by **contracting process identifier** - placing all the releases "
+"related to a given set of contract process identifiers together in the same "
+"package;"
+msgstr ""
+"Segmentar por **identificador de proceso de contrataciones**- poniendo todas"
+" las entregas relacionadas a un conjunto de identificadores de proceso de "
+"contrataciones en el mismo paquete; "
+
+#: ../../docs/guidance/build/hosting.md:39
+msgid ""
+"For records, publishers can segment by the first **release date** associated"
+" with a contracting process, or by **contracting process identifier.**"
+msgstr ""
+"Para registros, los publicadores pueden segmentar por la primera **fecha de "
+"entrega** asociada con un proceso de contrataciones, o por **identificador "
+"de proceso de contrataciones**."
+
+#: ../../docs/guidance/build/hosting.md:41
+msgid ""
+"Following these approaches will avoid release and records 'jumping' between "
+"files when the bulk files are updated."
+msgstr ""
+"Seguir estos enfoques evitará los 'saltos' entre los archivos de entregas y "
+"registros cuando se actualicen los archivos masivos."
+
+#: ../../docs/guidance/build/hosting.md:43
+msgid "Compression"
+msgstr "Compresión"
+
+#: ../../docs/guidance/build/hosting.md:45
+msgid ""
+"OCDS packages can be compressed in order to save on disk space and "
+"bandwidth."
+msgstr ""
+"Los paquetes OCDS pueden comprimirse para ahorrar en espacio de disco y en "
+"ancho de banda."
+
+#: ../../docs/guidance/build/hosting.md:47
+msgid "If compressing packages, publishers ought to use the ZIP file format."
+msgstr ""
+"Si se comprimen paquetes, los publicadores deben de usar el formato ZIP."
+
+#: ../../docs/guidance/build/hosting.md:49
+msgid "Serving files"
+msgstr "Servir archivos"
+
+#: ../../docs/guidance/build/hosting.md:51
+msgid ""
+"The web server providing access to bulk files ought to correctly report the "
+"[HTTP Last-"
+"Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) "
+"header so that consuming applications only need to download updated files."
+msgstr ""
+"El servidor web que da acceso a archivos masivos debe de reportar "
+"correctamente el header HTTP Last-"
+"Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) "
+"para que al consumir aplicaciones solo se necesite descargar los archivos "
+"actualizados."
+
+#: ../../docs/guidance/build/hosting.md:53
+msgid "Individual releases and records"
+msgstr "Entregas y registros individuales"
+
+#: ../../docs/guidance/build/hosting.md:55
+msgid ""
+"Each release and record can be made accessible at a permanent URI. This can "
+"be achieved by:"
+msgstr ""
+"Cada entrega y registro se puede disponibilizar en una URI permanente. Esto "
+"se puede lograr:"
+
+#: ../../docs/guidance/build/hosting.md:57
+msgid ""
+"(a) Archiving a single-release release package for each release to a web "
+"accessible file system as it is created, and then regularly merging these "
+"releases to compile individual record files in the same file system. One "
+"approach might be to have a folder for each `ocid` and to place the releases"
+" and record related to that process into that folder."
+msgstr ""
+"(a) Archivando un paquete de entregas con una única entrega en un sistema de"
+" archivos accesible a través de la Web al momento de ser creada, y después "
+"fusionar regularmente estas entregas para compilar archivos de registro "
+"individuales en el mismo sistema de archivos. Una manera de hacer esto "
+"podría ser tener una carpeta para cada `ocid` y poner las entregas y "
+"registro relacionados con ese proceso en esa carpeta."
+
+#: ../../docs/guidance/build/hosting.md:59
+msgid "(b) Providing access to releases and records through an API."
+msgstr ""
+"(B) Proporcionando acceso a las entregas y registros a través de una API."
+
+#: ../../docs/guidance/build/hosting.md:61
+msgid ""
+"Note that the second approach needs the API to maintain a full revision "
+"history of each contracting process, so that releases from each stage of a "
+"contracting process can be provided."
+msgstr ""
+"Note que el segundo enfoque necesita un API para mantener un historial de "
+"revisión completo en cada proceso de contrataciones, para que se puedan dar "
+"entregas de cada etapa del proceso de contrataciones."
+
+#: ../../docs/guidance/build/hosting.md:63
+msgid ""
+"Publishers ought to consider how to [ensure URIs can remain "
+"stable](https://www.w3.org/Provider/Style/URI.html), even across a change of"
+" systems."
+msgstr ""
+"Los publicadores deben considerar cómo [asegurar que las URIs se mantengan "
+"estables](https://www.w3.org/Provider/Style/URI.html), incluso si ocurre un "
+"cambio de sistemas."
+
+#: ../../docs/guidance/build/hosting.md:65
+msgid "Flattened serializations"
+msgstr "Serializaciones planas"
+
+#: ../../docs/guidance/build/hosting.md:67
+msgid ""
+"The [serialization](serialization) page provides details of how to generate "
+"'flat' versions of OCDS data for use in spreadsheet software."
+msgstr ""
+"La página [serialización](serialization) proporciona detalles sobre cómo "
+"generar 'flat' versiones de datos OCDS para su uso en un software de hoja de"
+" cálculo."
+
+#: ../../docs/guidance/build/hosting.md:69
+msgid ""
+"The same principles discussed for bulk files above ought to be applied to "
+"CSV or Excel downloads of data."
+msgstr ""
+"Los mismos principios que se discutieron anteriormente sobre archivos "
+"masivos deben aplicarse a descargas CSV o Excel de los datos."
