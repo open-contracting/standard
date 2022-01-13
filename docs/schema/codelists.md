@@ -344,7 +344,7 @@ The party scale codelist is used to indicate the size or scale of an organizatio
 The codes in the codelist do not have precise definitions. Instead, they defer to local laws and regulations, for example:
 
 * [OECD: Small and Medium-Sized Enterprises (SMEs) definition](https://stats.oecd.org/glossary/detail.asp?ID=3123)
-* [European Commission: What is an SME?](https://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition_en)
+* [European Commission: What is an SME?](https://ec.europa.eu/growth/smes/sme-definition_en)
 
 For small and medium-sized enterprises, if you can distinguish between the two sizes, use the 'small' and 'medium' codes. Otherwise, use the 'sme' code.
 

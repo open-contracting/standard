@@ -6,7 +6,7 @@ Some organization classifications, such as organization scale, can be published 
 
 There are therefore two options that are encouraged for publishing organization classifications.
 
-1. For classifications that have become standardized, there are specific OCDS fields and codes that ought to be used. At present, this only applies to organization scale, which ought to be disclosed in `parties.details.scale`, using a code from the [party scale codelist](../../schema/codelists.md#party-scale).
+1. For classifications that have become standardized, there are specific OCDS fields and codes that ought to be used. At present, this only applies to organization scale, which ought to be disclosed using the `parties.details.scale` field, using a code from the [party scale codelist](../../schema/codelists.md#party-scale).
 1. For non-standardized options, such as classifying forms of organization ownership, publishers ought to use the [organization classification extension](https://extensions.open-contracting.org/en/extensions/organizationClassification/1.1/). This extension adds a [`classifications`](../../schema/reference.md#classification) array to the `parties.details` block to enable the categorization of organizations. Each `classification.id` field ought to contain a code from the particular scheme given in the `classification.scheme` field. Details about the particular organization characteristic that is being disclosed ought to be provided in the `classification.description` field. The given `classification.scheme` can be an existing scheme (drawn from the open [classificationScheme codelist](../../schema/codelists.md#classification-scheme)), or a local scheme for a particular publisher. In both cases, we encourage publishers to provide details of all schemes and classification codes used in their [publication policy](../publish.md#finalize-your-publication-policy), to help users understand the data.
 
 As fields become standardized through the use of option 2, the information can be migrated to _also_ be published via OCDS fields and codes as in option 1. Publishers can continue to publish the information in the organization classification extension to preserve backwards compatibility in data sets.
@@ -19,7 +19,7 @@ A third, discouraged, example approach using local extensions is also given belo
 
 #### Organization scale
 
-In the example below, Moldova has disclosed information about the 'Companie mică' organization using `parties.details.scale`. The scale is given as 'micro', from the [partyScale codelist](../../schema/codelists.md#party-scale).
+In the example below, Moldova has disclosed information about the 'Companie mică' organization using the `parties.details.scale` field, to which it has assigned the 'micro' code from the [partyScale codelist](../../schema/codelists.md#party-scale).
 
 ```{jsoninclude} ../../examples/organization-classification/moldova_organization_scale.json
 :jsonpointer:
