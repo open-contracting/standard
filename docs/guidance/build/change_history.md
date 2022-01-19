@@ -1,3 +1,6 @@
+```{workedexample} Change history
+:tags: release,record
+```
 # Change history
 
 The following example shows how to publish data about a contracting process. Publish a release for each event in the process and update the record each time you publish a release.

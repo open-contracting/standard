@@ -1,3 +1,6 @@
+```{workedexample} Milestones
+:tags: milestone,planning,tender,contract,implementation
+```
 # Milestones
 
 Milestones can be included within the planning, tender, contract and contract implementation sections. 

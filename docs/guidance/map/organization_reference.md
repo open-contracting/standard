@@ -1,3 +1,6 @@
+```{workedexample} Organization references
+:tags: parties,organization_reference
+```
 # Organization references
 
 Many organizations can be involved in the lifecycle of a contracting process. Sometimes the same organization can have multiple roles. For example, an organization can first be a tenderer and then become a supplier.

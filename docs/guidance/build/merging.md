@@ -1,3 +1,6 @@
+```{workedexample} Updates and Deletions
+:tags: release,record
+```
 # Updates and Deletions
 
 The [merging documentation](../../schema/merging) specifies how individual releases are merged into compiled releases (the latest version of the contracting process) and versioned releases (the change history for each field), which form part of a [record](../../primer/releases_and_records).

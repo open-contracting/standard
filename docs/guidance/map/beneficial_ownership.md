@@ -1,3 +1,6 @@
+```{workedexample} Beneficial ownership information
+:tags: parties
+```
 # Beneficial ownership information
 
 This worked example describes how to:

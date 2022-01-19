@@ -1,3 +1,6 @@
+```{workedexample} Unsuccessful processes
+:tags: tender
+```
 # Unsuccessful processes
 
 In most jurisdictions, if a procedure is cancelled or unsuccessful, and a **new procedure** is started to procure the same items, the two procedures are considered two **different** contracting processes. This is in keeping with the OCDS definition of a contracting process.
