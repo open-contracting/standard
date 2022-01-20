@@ -107,6 +107,7 @@ All new information about a contracting process is described within a release.
 ```{workedexamplelist} The following worked examples are available for releases
 :tag: release
 ```
+
 ### Parties
 
 Each of the organizations referenced in a release must be included in the parties section. 
@@ -137,6 +138,7 @@ Each organization has a `details` object. Through extensions, this can be used t
 ```{workedexamplelist} The following worked examples are available for organizations
 :tag: parties
 ```
+
 ### Planning
 
 The planning section can be used to describe the background to a contracting process. This can include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
@@ -318,6 +320,7 @@ An organization reference consists of two main components:
 ```{workedexamplelist} The following worked examples are available for organization reference
 :tag: organization_reference
 ```
+
 ### Organization
 
 See the [parties](#parties) section.

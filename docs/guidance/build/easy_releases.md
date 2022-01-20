@@ -1,6 +1,7 @@
 ```{workedexample} 'Easy' Releases
 :tags: release
 ```
+
 # 'Easy' Releases
 
 OCDS encourages the use of the [releases and records](../../primer/releases_and_records) model in order to publish up-to-date, timely data. However, sometimes publishers can't fully support the model, because historic data of contracting processes is not stored in the source system(s). In such case, the publisher can produce only one release for each contracting process, and the release gets overridden with new updates.
