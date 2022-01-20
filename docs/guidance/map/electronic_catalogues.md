@@ -1,5 +1,5 @@
 ```{workedexample} Electronic catalogs
-:tags: tender,award,contract,buyer,supplier
+:tags: tender,award,contract
 ```
 
 # Electronic catalogs
