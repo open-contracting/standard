@@ -1,3 +1,7 @@
+```{workedexample} Framework agreements
+:tags: tender,award,contract
+```
+
 # Framework agreements
 
 ## Definitions

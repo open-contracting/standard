@@ -1,3 +1,7 @@
+```{workedexample} Processes with pre-qualification and pre-selection
+:tags: tender
+```
+
 # Processes with pre-qualification and pre-selection
 
 In single-stage procedures, buyers or procuring entities invite potential suppliers to bid without submitting any prior information.  Such procedures are straightforward to model in OCDS.

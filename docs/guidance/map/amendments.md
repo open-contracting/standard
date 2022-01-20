@@ -1,3 +1,7 @@
+```{workedexample} Amendments
+:tags: amendment,tender,contract
+```
+
 # Amendments
 
 Information about a contracting process will often change over time.

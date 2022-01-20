@@ -1,3 +1,7 @@
+```{workedexample} Contract suspension
+:tags: contract
+```
+
 # Contract suspension
 
 A contract suspension is a temporary cessation of performance. A contract can be suspended after it is signed, and the contract is legally in force until it is terminated. Contract suspension is different from early termination, which is a permanent cessation of performance.

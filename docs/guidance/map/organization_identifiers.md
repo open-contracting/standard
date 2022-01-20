@@ -1,3 +1,7 @@
+```{workedexample} Organization identifiers
+:tags: parties
+```
+
 # Organization identifiers
 
 Publishers regularly collect the *legal identifiers* of the organizations involved in a contracting process. These [organization identifiers](../../schema/identifiers.md#organization-identifiers) can be disclosed using OCDS. An organization identifier is composed of two parts:

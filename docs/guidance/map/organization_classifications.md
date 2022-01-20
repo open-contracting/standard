@@ -1,3 +1,7 @@
+```{workedexample} Organization classifications
+:tags: parties
+```
+
 # Organization classifications
 
 Many publishers wish to disclose and monitor information about different classifications of organizations involved in contracting processes. Example classifications include organization ownership, incorporation, sector, location, and number of employees. We recognise that publishing information about a variety of organization characteristics, for example women-owned and/or indigenous-owned organizations, is an important part of monitoring participation in public procurement.

@@ -1,3 +1,7 @@
+```{workedexample} Awards and contracts
+:tags: award,contract
+```
+
 # Awards and contracts
 
 Contracting processes can take many forms and follow many different types of procedure, from a simple contracting process resulting in a single contract between a buyer and supplier, to a multi-buyer, multi-supplier framework agreement implemented as an electronic catalog.

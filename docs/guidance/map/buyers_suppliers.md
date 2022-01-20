@@ -1,3 +1,7 @@
+```{workedexample} Buyers and suppliers
+:tags: parties,tender,award
+```
+
 # Buyers and suppliers
 
 ## Definitions

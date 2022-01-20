@@ -104,6 +104,10 @@ All new information about a contracting process is described within a release.
 :list: release
 ```
 
+```{workedexamplelist} The following worked examples are available for releases
+:tag: release
+```
+
 ### Parties
 
 Each of the organizations referenced in a release must be included in the parties section. 
@@ -131,6 +135,10 @@ Each organization has a `details` object. Through extensions, this can be used t
 :list: partyDetail
 ```
 
+```{workedexamplelist} The following worked examples are available for organizations
+:tag: parties
+```
+
 ### Planning
 
 The planning section can be used to describe the background to a contracting process. This can include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
@@ -142,6 +150,10 @@ The planning section can be used to describe the background to a contracting pro
 
 ```{extensionlist} The following extensions are available for planning
 :list: planning
+```
+
+```{workedexamplelist} The following worked examples are available for plannings
+:tag: planning
 ```
 
 #### Budget 
@@ -172,6 +184,10 @@ It can contain details of a forthcoming process to receive and evaluate proposal
 :list: tender
 ```
 
+```{workedexamplelist} The following worked examples are available for tenders
+:tag: tender
+```
+
 ### Bids
 
 The [Bid statistics and details](https://extensions.open-contracting.org/en/extensions/bids/v1.1.4/) extension can be used to provide bid statistics and detailed information about individual bids.
@@ -189,6 +205,10 @@ The award section is used to announce any awards issued for this tender. There c
 :list: award
 ```
 
+```{workedexamplelist} The following worked examples are available for awards
+:tag: award
+```
+
 ### Contract
 
 The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. 
@@ -200,6 +220,10 @@ The contract section is used to provide details of contracts that have been ente
 
 ```{extensionlist} The following extensions are available for contracts
 :list: contract
+```
+
+```{workedexamplelist} The following worked examples are available for contracts
+:tag: contract
 ```
 
 ### Implementation
@@ -216,6 +240,10 @@ Implementation information can be updated over the course of a contract. It belo
 ```
 
 Information on subcontracts is not currently included in the core OCDS schema, but might be handled by [proposed extensions](conformance_and_extensions)
+
+```{workedexamplelist} The following worked examples are available for implementations
+:tag: implementation
+```
 
 #### Transaction
 
@@ -259,6 +287,10 @@ The amendment array in a tender, award or contract block provides the ability to
 :collapse: changes
 ```
 
+```{workedexamplelist} The following worked examples are available for amendments
+:tag: amendment
+```
+
 #### Changes
 
 ```{deprecated} 1.1
@@ -284,6 +316,10 @@ An organization reference consists of two main components:
 
 * An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization;
 * A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
+
+```{workedexamplelist} The following worked examples are available for organization reference
+:tag: organization_reference
+```
 
 ### Organization
 
@@ -415,6 +451,10 @@ For delivery milestones, if there is a time frame for delivery, use `.dueAfterDa
 
 ```{extensionlist} The following extensions to milestone are available
 :list: milestones
+```
+
+```{workedexamplelist} The following worked examples are available for milestones
+:tag: milestone
 ```
 
 ### Value
