@@ -17,11 +17,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * Map:
     * Add examples [#1338](https://github.com/open-contracting/standard/pull/1338):
       * Organization references [#947](https://github.com/open-contracting/standard/pull/947)
-      * Organization identifiers [#948](https://github.com/open-contracting/standard/pull/948)
-      * Amendments [#950](https://github.com/open-contracting/standard/pull/950)
+      * Organization identifiers [#948](https://github.com/open-contracting/standard/pull/948) [#1429](https://github.com/open-contracting/standard/pull/1429)
+      * Updates and amendments [#950](https://github.com/open-contracting/standard/pull/950) [#1454](https://github.com/open-contracting/standard/pull/1454)
       * Personal identifiers [#952](https://github.com/open-contracting/standard/pull/952)
       * Organizational units [#961](https://github.com/open-contracting/standard/pull/961)
-      * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974)
+      * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974) [#1451](https://github.com/open-contracting/standard/pull/1451).
       * Organization classifications [#990](https://github.com/open-contracting/standard/pull/990)
       * Pre-qualification and pre-selection [#999](https://github.com/open-contracting/standard/pull/999) [#1345](https://github.com/open-contracting/standard/pull/1345)
       * Unsuccessful processes [#1007](https://github.com/open-contracting/standard/pull/1007)
@@ -35,6 +35,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
       * Linked standards [#1278](https://github.com/open-contracting/standard/pull/1278)
     * [#1016](https://github.com/open-contracting/standard/pull/1016) [#1140](https://github.com/open-contracting/standard/pull/1140) Add links to OCDS profiles and linked standards.
     * [#1193](https://github.com/open-contracting/standard/pull/1193) Removed language distinguishing "core", "community", and "local" extensions.
+    * [#1428](https://github.com/open-contracting/standard/pull/1428) Integrate content from [what to do with fields that don't map](https://www.open-contracting.org/2018/01/30/fields-dont-map-first/).
   * Build:
     * Add pages:
       * "Easy" releases [#951](https://github.com/open-contracting/standard/pull/951)
@@ -49,6 +50,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * Publish:
     * Merge Publication policy and Licensing pages into Publish page [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012).
     * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).
+  * [#1427](https://github.com/open-contracting/standard/pull/1427) Add guidance about recommended extensions.
   * Various minor improvements [#1051](https://github.com/open-contracting/standard/pull/1051) [#1080](https://github.com/open-contracting/standard/pull/1080) [#1083](https://github.com/open-contracting/standard/pull/1083) [#1085](https://github.com/open-contracting/standard/pull/1085) [#1091](https://github.com/open-contracting/standard/pull/1091) [#1130](https://github.com/open-contracting/standard/pull/1130) [#1227](https://github.com/open-contracting/standard/pull/1227) [#1299](https://github.com/open-contracting/standard/pull/1299) [#1337](https://github.com/open-contracting/standard/pull/1337) [#1384](https://github.com/open-contracting/standard/pull/1384).
 
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
@@ -61,6 +63,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Change how the documentation is built ([milestone](https://github.com/open-contracting/standard/milestone/26?closed=1)).
 * Update translations ([milestone](https://github.com/open-contracting/standard/milestone/27?closed=1))
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932) [#976](https://github.com/open-contracting/standard/pull/976).
+* [#1444](https://github.com/open-contracting/standard/pull/1444) Governance page: OCP is now a 501(c)(3) organization, and FCNY is no longer its fiscal sponsor.
 
 ## [1.1.5] - 2020-08-20
 
