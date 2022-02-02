@@ -8,7 +8,7 @@ In most jurisdictions, if a procedure is cancelled or unsuccessful, and a **new 
 
 However, in some jurisdictions, such as Paraguay, planning activity is considered as initiating the contracting process. Furthermore, if a first attempt is Unsuccessful in procuring items, the second attempt is considered to be part of the same contracting process. This differs from the OCDS definition of a contracting process. OCDS, instead, records the cancelled procedure in the `relatedProcesses` array of the new procedure, with the 'unsuccessfulProcess' code in the related process' `relationship` array.  
 
-![Unsuccessful Tender](../../_static/png/unsuccessful-tender.png)
+![Unsuccessful Tender](../../_static/png/unsuccessful_tender.png)
 
 ## Example: Modelling unsuccessful tenders in Paraguay
 
