@@ -109,7 +109,7 @@ This versioned information is relevant to many use cases relating to contract mo
 
 If the versioned release is not provided, third parties can generate it by processing the record's releases according to the [merging](merging) reference.
 
-The following example displays a single field's [versioned values](merging.md#versioned-values). This shows that the amount changed between the planning stage and the tender stage, while the currency did not.
+The following example displays a single field's [versioned values](merging.md#versioned-values). This shows that the amount changed between the tender stage and a tender amendment while the currency did not.
 
 ```{jsoninclude} ../examples/merging/versioned.json
 :jsonpointer: /records/0/versionedRelease/tender/value
