@@ -237,7 +237,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
 * [#1450](https://github.com/open-contracting/standard/pull/1450) Replace a repeated example in schema/merging/ with a link to guidance/build/merging/.
-* [#1450](https://github.com/open-contracting/standard/pull/1472) Remove planning reference from the versioned release example.
 
 ### Documentation
 
