@@ -75,7 +75,7 @@ An embedded release follows the [release schema](reference). In other words, ins
 
 The following example demonstrates the use of embedded releases.
 
-```{jsoninclude} ../examples/record/embedded_releases.json
+```{jsoninclude} ../examples/merging/embedded_releases.json
 :jsonpointer: /records/0
 :expand: releases,tag
 :title: releases
