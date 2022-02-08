@@ -43,7 +43,7 @@ The example below includes a planning release with details of a planned procurem
 
 The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
 
-```{jsoninclude} ../../examples/milestones/planning-tender-milestones.json
+```{jsoninclude} ../../examples/milestones/planning_milestone.json
 :jsonpointer:
 :expand: releases, planning, milestones
 :title: planning
@@ -77,19 +77,19 @@ Users can compare the project commencement milestone's `.dueDate` and `.dateMet`
 In the second implementation update release, which is published after the project completes:
 * In the project completion milestone, `.dateMet` is set to the actual completion date for the project and `.status` is set to 'met'.
 
-```{jsoninclude} ../../examples/milestones/implementation-milestones-1.json
+```{jsoninclude} ../../examples/milestones/implementation_milestones_scheduled.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation
 ```
 
-```{jsoninclude} ../../examples/milestones/implementation-milestones-2.json
+```{jsoninclude} ../../examples/milestones/implementation_milestones_partially_met.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation-update-1
 ```
 
-```{jsoninclude} ../../examples/milestones/implementation-milestones-3.json
+```{jsoninclude} ../../examples/milestones/implementation_milestones_met.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation-update-2
@@ -117,19 +117,19 @@ In the second implementation update release:
 
 * The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'financing' is updated. A new `transaction` is disclosed, with the amount paid to the company.
 
-```{jsoninclude} ../../examples/milestones/af-implementation-milestones-1.json
+```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_not_met.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation
 ```
 
-```{jsoninclude} ../../examples/milestones/af-implementation-milestones-2.json
+```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_partially_met.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation-update-1
 ```
 
-```{jsoninclude} ../../examples/milestones/af-implementation-milestones-3.json
+```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_transaction.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones, transactions
 :title: implementation-update-2

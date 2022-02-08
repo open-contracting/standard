@@ -24,37 +24,37 @@ At each release, the agency also updates the record, which combines all the rele
 * The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
 * The versioned release makes it easy to see how the description and total estimated value changed over time.
 
-```{jsoninclude} ../examples/merging/merge-tender-1.json
+```{jsoninclude} ../examples/merging/updates/tender1.json
 :jsonpointer: /releases
 :expand: releases, tag, tender
 :title: tender
 ```
 
-```{jsoninclude} ../examples/merging/merge-tender-3.json
+```{jsoninclude} ../examples/merging/updates/tender3.json
 :jsonpointer: /releases
 :expand: releases, tag, tender
 :title: tenderAmendment
 ```
 
-```{jsoninclude} ../examples/merging/merge-award-1.json
+```{jsoninclude} ../examples/merging/updates/award1.json
 :jsonpointer: /releases
 :expand: releases, tag, awards
 :title: awardOne
 ```
 
-```{jsoninclude} ../examples/merging/merge-award-2.json
+```{jsoninclude} ../examples/merging/updates/award2.json
 :jsonpointer: /releases
 :expand: releases, tag, awards
 :title: awardTwo
 ```
 
-```{jsoninclude} ../examples/merging/merged.json
+```{jsoninclude} ../examples/merging/updates/merged.json
 :jsonpointer:
 :expand: records, compiledRelease, tag, tender, awards
 :title: record
 ```
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer:
 :expand: records, versionedRelease, tag, tender, awards
 :title: versioned
@@ -107,13 +107,13 @@ In a **versioned release**, with a few exceptions, a field's value is replaced w
 
 For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer: /records/0/versionedRelease/tender/value
 :expand: value, amount
 :title: Versioned_values
 ```
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer:
 :expand: records, versionedRelease
 :title: Versioned_release
