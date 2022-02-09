@@ -12,7 +12,7 @@ Update the examples in `docs/examples/merging`:
 
 ```shell
 cat docs/examples/merging/updates/{tender*,award*}.json | ocdskit --pretty compile --published-date 2016-03-05T13:02:00Z --uri https://standard.open-contracting.org/examples/records/ocds-213czf-000-00002-merge.json --package --linked-releases > docs/examples/merging/updates/merged.json
-cat docs/examples/merging/updates/{tender*,award*}.json | ocdskit --pretty compile --published-date 2016-03-05T13:02:00Z --uri https://standard.open-contracting.org/examples/records/ocds-213czf-000-00002-merge.json --package --linked-releases --versioned > docs/examples/merging/versioned.json
+cat docs/examples/merging/updates/{tender*,award*}.json | ocdskit --pretty compile --published-date 2016-03-05T13:02:00Z --uri https://standard.open-contracting.org/examples/records/ocds-213czf-000-00002-merge.json --package --linked-releases --versioned > docs/examples/merging/updates/versioned.json
 ```
 
 ```shell
