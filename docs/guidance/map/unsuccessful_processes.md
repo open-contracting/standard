@@ -16,7 +16,7 @@ The [Sistema de Información de las Contrataciones Públicas (SICP)](https://con
 
 The first data disclosed is about the planning process. Planning data includes an estimate of what an entity is going to buy, when and for how much. SICP assigns an `ocid` when the planning data is first disclosed, before the tender stage. In this example, the ocid is 'ocds-03ad3f-331547'.
 
-```{jsoninclude} ../../examples/unsuccessful-tender-planning.json
+```{jsoninclude} ../../examples/unsuccessful_tender/planning.json
 :jsonpointer:
 :expand: releases, planning
 :title: unsuccessful-tender-planning
@@ -26,7 +26,7 @@ Next, the contracting process is disclosed, using a new `ocid`, 'ocds-03ad3f-331
 
 The tender was unsuccessful, so the tender status is set to ‘unsuccessful’.
 
-```{jsoninclude} ../../examples/unsuccessful-tender-tender.json
+```{jsoninclude} ../../examples/unsuccessful_tender/tender.json
 :jsonpointer:
 :expand: releases, relatedProcesses, tender, status
 :title: unsuccessful-tender-tender
@@ -42,7 +42,7 @@ Paraguay could also have used the identifier for the second tender as the `ocid`
 
 The `relatedProcesses` block links to the unsuccessful contracting process with the relationship set to ‘unsuccessfulProcess’, and to the initial planning process with the relationship set to ‘planning’.
 
-```{jsoninclude} ../../examples/unsuccessful-tender-related-process.json
+```{jsoninclude} ../../examples/unsuccessful_tender/related_process.json
 :jsonpointer:
 :expand: releases, relatedProcesses, relationship
 :title: unsuccessful-tender-related-process

@@ -60,13 +60,13 @@ In a **versioned release**, with a few exceptions, a field's value is replaced w
 
 For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer: /records/0/versionedRelease/tender/value
 :expand: value, amount
 :title: Versioned_values
 ```
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer:
 :expand: records, versionedRelease
 :title: Versioned_release

@@ -17,7 +17,7 @@ If you choose not to register an organization list with org-id.guide, you ought 
 
 The Government of the United Kingdom uses identifiers from [Companies House](https://www.gov.uk/government/organisations/companies-house) to identify suppliers. Companies House is assigned the "GB-COH" prefix in [org-id.guide](http://org-id.guide/list/GB-COH). IBM has been assigned the company number ‘04336774’ by the Companies House.  The globally unique organization identifier for IBM can be disclosed in the organization's `identifier` section, as below:
 
-```{jsoninclude} ../../examples/organization-identifiers.json
+```{jsoninclude} ../../examples/organizations/identifiers.json
 :jsonpointer: /releases/0/parties/1
 :expand: identifier, additionalIdentifiers
 ```
