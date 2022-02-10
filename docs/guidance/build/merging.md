@@ -1,3 +1,7 @@
+```{workedexample} Updates and Deletions
+:tags: release,record
+```
+
 # Updates and Deletions
 
 The [merging documentation](../../schema/merging) specifies how individual releases are merged into compiled releases (the latest version of the contracting process) and versioned releases (the change history for each field), which form part of a [record](../../primer/releases_and_records).
@@ -19,37 +23,37 @@ In each release, the agency also updates the record, which combines all the rele
 * The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
 * The versioned release makes it easy to see how the description and estimated value changed over time.
 
-```{jsoninclude} ../../examples/merging/merge-tender-1.json
+```{jsoninclude} ../../examples/merging/updates/tender1.json
 :jsonpointer:
 :expand: releases, tag, tender
 :title: tender
 ```
 
-```{jsoninclude} ../../examples/merging/merge-tender-2.json
+```{jsoninclude} ../../examples/merging/updates/tender2.json
 :jsonpointer:
 :expand: releases, tag, tender
 :title: tenderUpdate
 ```
 
-```{jsoninclude} ../../examples/merging/merge-tender-3.json
+```{jsoninclude} ../../examples/merging/updates/tender3.json
 :jsonpointer:
 :expand: releases, tag, tender
 :title: tenderAmendment
 ```
 
-```{jsoninclude} ../../examples/merging/merge-award-1.json
+```{jsoninclude} ../../examples/merging/updates/award1.json
 :jsonpointer:
 :expand: releases, tag, awards
 :title: awardOne
 ```
 
-```{jsoninclude} ../../examples/merging/merge-award-2.json
+```{jsoninclude} ../../examples/merging/updates/award2.json
 :jsonpointer:
 :expand: releases, tag, awards
 :title: awardTwo
 ```
 
-```{jsoninclude} ../../examples/merging/versioned.json
+```{jsoninclude} ../../examples/merging/updates/versioned.json
 :jsonpointer:
 :expand: records, compiledRelease, versionedRelease, tag, tender, awards
 :title: record
@@ -65,19 +69,19 @@ After a few days, the officer in charge notices that the description of the tend
 
 In the final record, both the compiled and versioned releases show the changes. The `tender/description` field has disappeared from the `compiledRelease`, and the `versionedRelease` shows both its previous value and the `null` value used to delete the field. The entry with the `null` value can be used to determine when the field was deleted.
 
-```{jsoninclude} ../../examples/merging/example02-field-tender.json
+```{jsoninclude} ../../examples/merging/deletions/field_tender.json
 :jsonpointer:
 :expand: releases, tag, tender
 :title: tender
 ```
 
-```{jsoninclude} ../../examples/merging/example02-field-tenderUpdate.json
+```{jsoninclude} ../../examples/merging/deletions/field_tenderUpdate.json
 :jsonpointer:
 :expand: releases, tag, tender
 :title: tenderUpdate
 ```
 
-```{jsoninclude} ../../examples/merging/example02-field-record.json
+```{jsoninclude} ../../examples/merging/deletions/field_record.json
 :jsonpointer:
 :expand: records, compiledRelease, versionedRelease
 :title: record
@@ -93,19 +97,19 @@ A release with a 'tenderAmendment' tag is published, in which both the `startDat
 
 The final record is shown below. Note that the fields in the `contractPeriod` block have disappeared in the `compiledRelease`, and the `versionedRelease` contains the previous values.
 
-```{jsoninclude} ../../examples/merging/example02-object-tender.json
+```{jsoninclude} ../../examples/merging/deletions/object_tender.json
 :jsonpointer:
 :expand: releases, tag, tender
 :title: tender
 ```
 
-```{jsoninclude} ../../examples/merging/example02-object-tenderAmendment.json
+```{jsoninclude} ../../examples/merging/deletions/object_tenderAmendment.json
 :jsonpointer:
 :expand: releases, tag, tender, amendments
 :title: tenderAmendment
 ```
 
-```{jsoninclude} ../../examples/merging/example02-object-record.json
+```{jsoninclude} ../../examples/merging/deletions/object_record.json
 :jsonpointer:
 :expand: records, compiledRelease, versionedRelease
 :title: record
@@ -119,19 +123,19 @@ Two weeks later, the authority publishes a new release. Due to negotiations with
 
 The NGO generates a record. In the record, all the fields of the removed item have disappeared, and only its `id` is left.
 
-```{jsoninclude} ../../examples/merging/example03-award.json
+```{jsoninclude} ../../examples/merging/deletions/array_award.json
 :jsonpointer:
 :expand: releases, tag, awards
 :title: award
 ```
 
-```{jsoninclude} ../../examples/merging/example03-awardAmendment.json
+```{jsoninclude} ../../examples/merging/deletions/array_awardAmendment.json
 :jsonpointer:
 :expand: releases, tag, awards, amendments, items
 :title: awardAmendment
 ```
 
-```{jsoninclude} ../../examples/merging/example03-record.json
+```{jsoninclude} ../../examples/merging/deletions/array_record.json
 :jsonpointer:
 :expand: records, compiledRelease, versionedRelease, tender
 :title: record

@@ -1,3 +1,7 @@
+```{workedexample} Awards and contracts
+:tags: award,contract
+```
+
 # Awards and contracts
 
 Contracting processes can take many forms and follow many different types of procedure, from a simple contracting process resulting in a single contract between a buyer and supplier, to a multi-buyer, multi-supplier framework agreement implemented as an electronic catalog.
@@ -80,18 +84,14 @@ In OCDS, **awards** and **contracts** are modelled as separate stages of the con
 
 Each contracting process can have many awards and each award can have many related contracts.
 
-OCDS separates data about the contract award and data about the contract into the `awards` and `contracts` sections respectively. Source systems can contain data on awards, on contracts, or on both.
+OCDS separates data about the contract award and data about the signed contract into the `awards` and `contracts` sections respectively. `Award` objects (within `awards`) and `Contract` objects (within `contracts`) are connected by setting `awards.id` and `contracts.awardID` to the same value. Source systems can contain data on awards, on contracts, or on both.
 
-If the data in the source system relates only to contract awards, then only the `award` section of OCDS ought to be populated, unless the law governing procurement permits no changes between award and signature of a contract, in which case the `contract` section can be populated.
+If the data in the source systems relates to: 
+* both awards and contracts, then both `awards` and `contracts` ought to be populated. 
+* only awards, then only `awards` ought to be populated.
+* only contracts, then `contracts`, `awards.id`, and `awards.suppliers` ought to be populated.  
 
-If the data in the source system relates only to the signed contract and no changes are permitted between the award and signature of a contract, then:
-
-* Add an `Award` object to `awards` and a `Contract` object to `contracts`
-* Set `awards.id` and `contracts.id` to the same value
-* Populate the `awards.value`, `awards.contractPeriod` and `awards.items` fields with the initial contract value, period and items respectively
-* If the contract value, period or items are subsequently updated, populate the `contracts.value`, `contracts.period` and `contracts.items` fields with the updated value
-
-The above approach is also applicable to direct call-offs from framework agreements with multiple suppliers, since the call-off is, conceptually, an award.
+If the contract (e.g. its value, period or items) is subsequently updated or amended, update only the corresponding fields in `contracts`. The fields in `awards` stay the same. 
 
 ### Example: Changes between award and contract
 
@@ -109,7 +109,7 @@ If both the `award` and `contract` sections of OCDS had been populated when the 
 
 ## Awards and award notices
 
-Award notices are used by procuring entities to disclose award decisions, i.e. the value and/or items awarded to each supplier.
+Award notices are used by buyers and procuring entities to disclose award decisions, i.e. the value and/or items awarded to each supplier.
 
 A single award notice can be used to disclose many award decisions; however in order for an award in OCDS to communicate a direct relationship between the items being purchased, the supplier providing the items, and the value of the items, such notices ought to be split into multiple awards in OCDS.
 

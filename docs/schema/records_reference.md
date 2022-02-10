@@ -12,6 +12,10 @@ There should be a single record per ocid per [distribution](https://www.w3.org/T
 This page presents the record package schema as tables. You can also download the canonical version of the record package schema as {download}`JSON Schema <../../build/current_lang/record-package-schema.json>`, or view it in an [interactive browser](record_package).
 ```
 
+```{workedexamplelist} The following worked examples are available for records
+:tag: record
+```
+
 ## Package metadata
 
 Records must be published within a [record package](record_package). The record package provides metadata about the record(s) that it contains.
@@ -28,7 +32,7 @@ The record package metadata has one difference from the release package metadata
 
 The following example demonstrates the package metadata and record fields.
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer:
 :expand: records
 :title: package
@@ -59,7 +63,7 @@ For each `url` value, it must be possible for a consuming application to retriev
 
 The following example demonstrates the use of linked releases.
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer: /records/0
 :expand: releases, tag
 :title: releases
@@ -75,7 +79,7 @@ An embedded release follows the [release schema](reference). In other words, ins
 
 The following example demonstrates the use of embedded releases.
 
-```{jsoninclude} ../examples/record-embedded-releases.json
+```{jsoninclude} ../examples/merging/embedded_releases.json
 :jsonpointer: /records/0
 :expand: releases,tag
 :title: releases
@@ -105,9 +109,9 @@ This versioned information is relevant to many use cases relating to contract mo
 
 If the versioned release is not provided, third parties can generate it by processing the record's releases according to the [merging](merging) reference.
 
-The following example displays a single field's [versioned values](merging.md#versioned-values). This shows that the amount changed between the planning stage and the tender stage, while the currency did not.
+The following example displays a single field's [versioned values](merging.md#versioned-values). This shows that the amount changed between the tender stage and a tender amendment, while the currency did not.
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer: /records/0/versionedRelease/tender/value
 :expand: amount, releaseTag
 :title: versioned

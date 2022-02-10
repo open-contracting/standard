@@ -18,10 +18,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * Add examples [#1338](https://github.com/open-contracting/standard/pull/1338):
       * Organization references [#947](https://github.com/open-contracting/standard/pull/947)
       * Organization identifiers [#948](https://github.com/open-contracting/standard/pull/948) [#1429](https://github.com/open-contracting/standard/pull/1429)
-      * Amendments [#950](https://github.com/open-contracting/standard/pull/950)
+      * Updates and amendments [#950](https://github.com/open-contracting/standard/pull/950) [#1454](https://github.com/open-contracting/standard/pull/1454)
       * Personal identifiers [#952](https://github.com/open-contracting/standard/pull/952)
       * Organizational units [#961](https://github.com/open-contracting/standard/pull/961)
-      * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974) [#1175](https://github.com/open-contracting/standard/pull/1175)
+      * Awards and contracts [#974](https://github.com/open-contracting/standard/pull/974) [#1175](https://github.com/open-contracting/standard/pull/1175) [#1451](https://github.com/open-contracting/standard/pull/1451)
       * Organization classifications [#990](https://github.com/open-contracting/standard/pull/990)
       * Pre-qualification and pre-selection [#999](https://github.com/open-contracting/standard/pull/999) [#1345](https://github.com/open-contracting/standard/pull/1345)
       * Unsuccessful processes [#1007](https://github.com/open-contracting/standard/pull/1007)
@@ -50,6 +50,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * Publish:
     * Merge Publication policy and Licensing pages into Publish page [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012).
     * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).
+  * [#1427](https://github.com/open-contracting/standard/pull/1427) Add guidance about recommended extensions.
   * Various minor improvements [#1051](https://github.com/open-contracting/standard/pull/1051) [#1080](https://github.com/open-contracting/standard/pull/1080) [#1083](https://github.com/open-contracting/standard/pull/1083) [#1085](https://github.com/open-contracting/standard/pull/1085) [#1091](https://github.com/open-contracting/standard/pull/1091) [#1130](https://github.com/open-contracting/standard/pull/1130) [#1227](https://github.com/open-contracting/standard/pull/1227) [#1299](https://github.com/open-contracting/standard/pull/1299) [#1337](https://github.com/open-contracting/standard/pull/1337) [#1384](https://github.com/open-contracting/standard/pull/1384).
 
 * [#908](https://github.com/open-contracting/standard/pull/908) Rename Validator to Data Review Tool.
@@ -62,6 +63,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Change how the documentation is built ([milestone](https://github.com/open-contracting/standard/milestone/26?closed=1)).
 * Update translations ([milestone](https://github.com/open-contracting/standard/milestone/27?closed=1))
 * Update the changelog [#932](https://github.com/open-contracting/standard/pull/932) [#976](https://github.com/open-contracting/standard/pull/976).
+* [#1444](https://github.com/open-contracting/standard/pull/1444) Governance page: OCP is now a 501(c)(3) organization, and FCNY is no longer its fiscal sponsor.
 
 ## [1.2] - YYYY-MM-DD
 
@@ -78,9 +80,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'LEXML'
   * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
     * 'COFOG'
+  * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
 
 * `documentType.csv`:
-  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'
+  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
+  * [#1453](https://github.com/open-contracting/standard/pull/1453) Add 'marketEngagementNotice'.
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
@@ -116,6 +120,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * `partyRole.csv`:
   * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
+  * [#1474](https://github.com/open-contracting/standard/pull/1474) Add 'notifiedPotentialSupplier'
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'informationService'
     * 'mediationBody'
@@ -150,6 +155,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
   * [#1395](https://github.com/open-contracting/standard/pull/1417) `tender.procurementMethod`
+  * [#1442](https://github.com/open-contracting/standard/pull/1442) `tender.submissionMethodDetails`
   * [#1175](https://github.com/open-contracting/standard/pull/1175) `Award`
   * [#1232](https://github.com/open-contracting/standard/pull/1232) `awards.suppliers`
   * [#1208](https://github.com/open-contracting/standard/pull/1208) `contracts` and its fields
@@ -159,9 +165,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
   * [#1125](https://github.com/open-contracting/standard/pull/1125) `Item.unit.weight`
-  * [#1326](https://github.com/open-contracting/standard/pull/1326) `links`
+  * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
+  * [#1326](https://github.com/open-contracting/standard/pull/1326) [#1431](https://github.com/open-contracting/standard/pull/1431) `links`
   * [#1376](https://github.com/open-contracting/standard/pull/1376) `publisher`
   * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
     * `tender.maximumValue`. Previously, `tender.value` was used for the maximum value. However, this led to double-counting.
@@ -170,7 +178,9 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * `contracts.maximumValue`
     * `contracts.estimatedValue`
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
-  * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.languages`
+  * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
+  * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
+  * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
@@ -227,6 +237,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
+* [#1450](https://github.com/open-contracting/standard/pull/1450) Replace a repeated example in schema/merging/ with a link to guidance/build/merging/.
+
 ### Documentation
 
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier.
@@ -239,6 +251,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1315](https://github.com/open-contracting/standard/pull/1315) Add rules on setting `id` and `date` for compiled releases to the merging specification.
 * [#1344](https://github.com/open-contracting/standard/pull/1344) Add contract suspension worked example.
 * [#1375](https://github.com/open-contracting/standard/pull/1375) Update guidance for empty fields in the merging documentation.
+* [#1466](https://github.com/open-contracting/standard/pull/1466) Reference worked examples in release and record reference documentation.
 
 ## [1.1.5] - 2020-08-20
 

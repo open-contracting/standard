@@ -36,7 +36,7 @@ A **record** is JSON data that acts as an index of all releases for a single con
 
 Each time a new release is published it is added to the index, the compiled release is updated with the latest values, and the versioned release is updated with any new changes.
 
-![A contracting process is described by many releases, which are aggregated into a single record](../_static/png/changehistory_process_record.png)
+![A contracting process is described by many releases, which are aggregated into a single record](../_static/png/change_history_process_record.png)
 
 Records and releases each contain several fields which can be used in different sections. The OCDS schema sets out the fields that ought to be included in each section (where applicable), aiming to reuse simple structures to represent information. For example, a release may contain information about items being procured. OCDS’ schema sets out standard building blocks for items across releases, including the name of the item, a description, each item’s value, and the currency used.
 

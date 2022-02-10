@@ -6,8 +6,8 @@ from . import languages
 
 @pytest.mark.parametrize('lang', list(languages))
 def test_examples(browser, server, lang):
-    browser.get('{}{}/schema/merging'.format(server, lang))
-    examples = browser.find_element_by_id('merging')
+    browser.get('{}{}/guidance/build/merging'.format(server, lang))
+    examples = browser.find_element_by_id('updates-and-deletions')
     select = Select(examples.find_element_by_tag_name('select'))
 
     assert '"date": "2016-01-01T09:30:00Z"' in examples.text
