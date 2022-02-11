@@ -1,8 +1,8 @@
 {
-  "id": "https://standard.open-contracting.org/schema/1__1__5/record-package-schema.json",
+  "id": "https://standard.open-contracting.org/schema/1__1__5/strict/record-package-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Schema for an Open Contracting Record package",
-  "description": "The record package contains a list of records along with some publishing metadata.",
+  "title": "Strict schema for an Open Contracting Record package",
+  "description": "The record package contains a list of records along with some publishing metadata. The strict schema adds additional validation rules planned for inclusion in OCDS 2.0. Use of the strict schema is a voluntary opportunity to improve data quality.",
   "type": "object",
   "properties": {
     "uri": {
@@ -24,7 +24,9 @@
       "items": {
         "type": "string",
         "format": "uri"
-      }
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "publisher": {
       "title": "Publisher",
@@ -34,44 +36,44 @@
         "name": {
           "title": "Name",
           "description": "The name of the organization or department responsible for publishing this OCDS data.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "scheme": {
           "title": "Scheme",
           "description": "The scheme that holds the unique identifiers used to identify the item being identified.",
           "type": [
-            "string",
-            "null"
-          ]
+            "string"
+          ],
+          "minLength": 1
         },
         "uid": {
           "title": "uid",
           "description": "The unique ID for this entity under the given ID scheme.",
           "type": [
-            "string",
-            "null"
-          ]
+            "string"
+          ],
+          "minLength": 1
         },
         "uri": {
           "title": "URI",
           "description": "A URI to identify the publisher.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "uri"
         }
       },
       "required": [
         "name"
-      ]
+      ],
+      "minProperties": 1
     },
     "license": {
       "title": "License",
       "description": "A link to the license that applies to the data in this package. A Public Domain Dedication or [Open Definition Conformant](https://opendefinition.org/licenses/) license is recommended. The canonical URI of the license should be used. Documents linked from this file may be under other license conditions.",
       "type": [
-        "string",
-        "null"
+        "string"
       ],
       "format": "uri"
     },
@@ -79,8 +81,7 @@
       "title": "Publication policy",
       "description": "A link to a document describing the publishers publication policy.",
       "type": [
-        "string",
-        "null"
+        "string"
       ],
       "format": "uri"
     },
@@ -112,7 +113,8 @@
       "items": {
         "$ref": "#/definitions/Record"
       },
-      "uniqueItems": true
+      "uniqueItems": true,
+      "minItems": 1
     }
   },
   "required": [
@@ -131,7 +133,8 @@
         "ocid": {
           "title": "Open contracting process identifier",
           "description": "A globally unique identifier for the contracting process that the record describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "releases": {
           "title": "Releases",
@@ -144,7 +147,8 @@
               "items": {
                 "$ref": "#/definitions/LinkedRelease"
               },
-              "minItems": 1
+              "minItems": 1,
+              "uniqueItems": true
             },
             {
               "title": "Embedded releases",
@@ -153,7 +157,8 @@
               "items": {
                 "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
               },
-              "minItems": 1
+              "minItems": 1,
+              "uniqueItems": true
             }
           ]
         },
@@ -170,7 +175,8 @@
       },
       "required": [
         "ocid"
-      ]
+      ],
+      "minProperties": 1
     },
     "LinkedRelease": {
       "title": "Linked release",
@@ -181,8 +187,7 @@
           "title": "Release URL",
           "description": "The URL of the release which contains the URL of the package with the release `id` appended using a fragment identifier e.g. https://standard.open-contracting.org/{{version}}/{{lang}}/examples/tender.json#ocds-213czf-000-00001",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "uri"
         },
@@ -219,13 +224,16 @@
           },
           "codelist": "releaseTag.csv",
           "openCodelist": false,
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "required": [
         "url",
         "date"
-      ]
+      ],
+      "minProperties": 1
     }
-  }
+  },
+  "minProperties": 1
 }

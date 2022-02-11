@@ -440,25 +440,44 @@ def get_versioned_release_schema(schema):
     return schema
 
 
-def get_strict_release_schema(schema):
+def get_strict_schema(schema):
     """
-    Returns the strict release schema.
+    Returns the strict version of the schema.
     """
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
-    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/strict-release-schema.json'  # noqa
-    schema['title'] = 'Strict schema for an Open Contracting Release.'
+    schema['id'] = schema['id'].replace(release_with_underscores,
+                                        f'{release_with_underscores}/strict')
+    schema['title'] = f'Strict {schema["title"][0].lower()}{schema["title"][1:]}'
     schema['description'] = f'{schema["description"]} The strict schema adds additional validation rules planned for inclusion in OCDS 2.0. Use of the strict schema is a voluntary opportunity to improve data quality.' # noqa
 
     # Add validation properties
     add_validation_properties(schema)
 
-    # Add UnitValue definition
-    unitvalue = json_load('strict/unitvalue-schema.json')
-    schema['definitions']['UnitValue'] = unitvalue
-    schema['definitions']['Unit']['properties']['value']['$ref'] = '#/definitions/UnitValue'
+    # Remove null types from package schemas
+    if 'package' in schema['id']:
+        remove_nulls(schema)
+
+    else:
+        # Add UnitValue definition
+        unitvalue = json_load('strict/unitvalue-schema.json')
+        schema['definitions']['UnitValue'] = unitvalue
+        schema['definitions']['Unit']['properties']['value']['$ref'] = '#/definitions/UnitValue'
 
     return schema
+
+
+def remove_nulls(schema):
+    """
+    Removes null types
+    """
+    if isinstance(schema, dict):
+        for key, value in schema.items():
+            if key == 'type' and isinstance(value, list):
+                if 'null' in value:
+                    value.remove('null')
+
+            remove_nulls(value)
 
 
 @click.group()
@@ -574,15 +593,15 @@ def pre_commit():
     record_package_schema = json_load('record-package-schema.json')
     jsonref_release_schema = json_load('release-schema.json', jsonref)
 
-    strict_release_schema = get_strict_release_schema(deepcopy(release_schema))
+    strict_release_schema = get_strict_schema(deepcopy(release_schema))
 
     json_dump('meta-schema.json', get_metaschema())
     json_dump('dereferenced-release-schema.json', get_dereferenced_release_schema(jsonref_release_schema))
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
 
     json_dump('strict/release-schema.json', strict_release_schema)
-    json_dump('strict/release-package-schema.json', release_package_schema)
-    json_dump('strict/record-package-schema.json', record_package_schema)
+    json_dump('strict/release-package-schema.json', get_strict_schema(release_package_schema))
+    json_dump('strict/record-package-schema.json', get_strict_schema(record_package_schema))
     strict_jsonref_release_schema = json_load('strict/release-schema.json', jsonref)
     json_dump('strict/dereferenced-release-schema.json',
               get_dereferenced_release_schema(strict_jsonref_release_schema))
