@@ -23,6 +23,7 @@ from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from jsonref import JsonRef, JsonRefError
 from lxml import etree
+from ocdskit.schema import add_validation_properties
 
 basedir = Path(__file__).resolve().parent
 schemadir = basedir / 'schema'
@@ -439,6 +440,27 @@ def get_versioned_release_schema(schema):
     return schema
 
 
+def get_strict_release_schema(schema):
+    """
+    Returns the strict release schema.
+    """
+    # Update schema metadata.
+    release_with_underscores = release.replace('.', '__')
+    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/strict-release-schema.json'  # noqa
+    schema['title'] = 'Strict schema for an Open Contracting Release.'
+    schema['description'] = f'{schema["description"]} The strict schema adds additional validation rules planned for inclusion in OCDS 2.0. Use of the strict schema is a voluntary opportunity to improve data quality.' # noqa
+    
+    # Add validation properties
+    add_validation_properties(schema)
+    
+    # Add UnitValue definition
+    unitvalue = json_load('strict/unitvalue-schema.json')
+    schema['definitions']['UnitValue'] = unitvalue
+    schema['definitions']['Unit']['properties']['value']['$ref'] = '#/definitions/UnitValue'
+
+    return schema
+
+
 @click.group()
 def cli():
     pass
@@ -541,13 +563,29 @@ def pre_commit():
     - meta-schema.json
     - dereferenced-release-schema.json
     - versioned-release-validation-schema.json
+    - strict-release-schema.json
+    - strict-release-package.json
+    - strict-record-package.jso
+    - strict-dereferenced-release-schema.json
+    - strict-versioned-release-validation-schema.json
     """
     release_schema = json_load('release-schema.json')
+    release_package_schema = json_load('release-package-schema.json')
+    record_package_schema = json_load('record-package-schema.json')
     jsonref_release_schema = json_load('release-schema.json', jsonref)
-
+    
+    strict_release_schema = get_strict_release_schema(deepcopy(release_schema))
+    
     json_dump('meta-schema.json', get_metaschema())
     json_dump('dereferenced-release-schema.json', get_dereferenced_release_schema(jsonref_release_schema))
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
+    
+    json_dump('strict/release-schema.json', strict_release_schema)
+    json_dump('strict/release-package-schema.json', release_package_schema)
+    json_dump('strict/record-package-schema.json', record_package_schema)
+    strict_jsonref_release_schema = json_load('strict/release-schema.json', jsonref)
+    json_dump('strict/dereferenced-release-schema.json', get_dereferenced_release_schema(strict_jsonref_release_schema))
+    json_dump('strict/versioned-release-validation-schema.json', get_versioned_release_schema(strict_release_schema))
 
 
 @cli.command()

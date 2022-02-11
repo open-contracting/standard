@@ -1,8 +1,8 @@
 {
-  "id": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json",
+  "id": "https://standard.open-contracting.org/schema/1__1__5/strict-release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Schema for an Open Contracting Release",
-  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
+  "title": "Strict schema for an Open Contracting Release.",
+  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\" The strict schema adds additional validation rules planned for inclusion in OCDS 2.0. Use of the strict schema is a voluntary opportunity to improve data quality.",
   "type": "object",
   "properties": {
     "ocid": {
@@ -115,10 +115,6 @@
         "title": "Organization",
         "description": "An organization",
         "type": "object",
-        "required": [
-          "id",
-          "name"
-        ],
         "properties": {
           "name": {
             "title": "Common name",
@@ -602,7 +598,6 @@
                   "null"
                 ],
                 "description": "The e-mail address of the contact point/person.",
-                "minLength": 1,
                 "format": "email"
               },
               "telephone": {
@@ -679,16 +674,16 @@
             "minLength": 1
           }
         },
+        "required": [
+          "id",
+          "name"
+        ],
         "minProperties": 1
       },
       "uniqueItems": true,
       "minItems": 1
     },
     "buyer": {
-      "required": [
-        "id",
-        "name"
-      ],
       "properties": {
         "name": {
           "type": "string",
@@ -697,10 +692,7 @@
           "minLength": 1
         },
         "id": {
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
           "title": "ID",
           "minLength": 1
@@ -1187,7 +1179,6 @@
                 "null"
               ],
               "description": "The e-mail address of the contact point/person.",
-              "minLength": 1,
               "format": "email"
             },
             "telephone": {
@@ -1237,6 +1228,10 @@
       "type": "object",
       "description": "The organization aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.",
       "title": "Buyer",
+      "required": [
+        "id",
+        "name"
+      ],
       "minProperties": 1
     },
     "planning": {
@@ -1802,6 +1797,22 @@
                   "deprecatedVersion": "1.2"
                 },
                 "minLength": 1
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ],
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
               }
             },
             "patternProperties": {
@@ -1883,6 +1894,15 @@
                   "null"
                 ],
                 "minLength": 1
+              },
+              "dueAfterDate": {
+                "title": "Due after date",
+                "description": "The date after which the milestone is due.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
               },
               "dueDate": {
                 "title": "Due date",
@@ -2050,6 +2070,22 @@
                         "deprecatedVersion": "1.2"
                       },
                       "minLength": 1
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ],
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
                     }
                   },
                   "patternProperties": {
@@ -2072,6 +2108,337 @@
                 },
                 "uniqueItems": true,
                 "minItems": 1
+              },
+              "value": {
+                "title": "Value",
+                "description": "The payment's value, if the milestone represents a planned payment.",
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "title": "Amount",
+                    "description": "Amount as a number.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "currency": {
+                    "title": "Currency",
+                    "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "codelist": "currency.csv",
+                    "openCodelist": false,
+                    "enum": [
+                      "ADP",
+                      "AED",
+                      "AFA",
+                      "AFN",
+                      "ALK",
+                      "ALL",
+                      "AMD",
+                      "ANG",
+                      "AOA",
+                      "AOK",
+                      "AON",
+                      "AOR",
+                      "ARA",
+                      "ARP",
+                      "ARS",
+                      "ARY",
+                      "ATS",
+                      "AUD",
+                      "AWG",
+                      "AYM",
+                      "AZM",
+                      "AZN",
+                      "BAD",
+                      "BAM",
+                      "BBD",
+                      "BDT",
+                      "BEC",
+                      "BEF",
+                      "BEL",
+                      "BGJ",
+                      "BGK",
+                      "BGL",
+                      "BGN",
+                      "BHD",
+                      "BIF",
+                      "BMD",
+                      "BND",
+                      "BOB",
+                      "BOP",
+                      "BOV",
+                      "BRB",
+                      "BRC",
+                      "BRE",
+                      "BRL",
+                      "BRN",
+                      "BRR",
+                      "BSD",
+                      "BTN",
+                      "BUK",
+                      "BWP",
+                      "BYB",
+                      "BYN",
+                      "BYR",
+                      "BZD",
+                      "CAD",
+                      "CDF",
+                      "CHC",
+                      "CHE",
+                      "CHF",
+                      "CHW",
+                      "CLF",
+                      "CLP",
+                      "CNY",
+                      "COP",
+                      "COU",
+                      "CRC",
+                      "CSD",
+                      "CSJ",
+                      "CSK",
+                      "CUC",
+                      "CUP",
+                      "CVE",
+                      "CYP",
+                      "CZK",
+                      "DDM",
+                      "DEM",
+                      "DJF",
+                      "DKK",
+                      "DOP",
+                      "DZD",
+                      "ECS",
+                      "ECV",
+                      "EEK",
+                      "EGP",
+                      "ERN",
+                      "ESA",
+                      "ESB",
+                      "ESP",
+                      "ETB",
+                      "EUR",
+                      "FIM",
+                      "FJD",
+                      "FKP",
+                      "FRF",
+                      "GBP",
+                      "GEK",
+                      "GEL",
+                      "GHC",
+                      "GHP",
+                      "GHS",
+                      "GIP",
+                      "GMD",
+                      "GNE",
+                      "GNF",
+                      "GNS",
+                      "GQE",
+                      "GRD",
+                      "GTQ",
+                      "GWE",
+                      "GWP",
+                      "GYD",
+                      "HKD",
+                      "HNL",
+                      "HRD",
+                      "HRK",
+                      "HTG",
+                      "HUF",
+                      "IDR",
+                      "IEP",
+                      "ILP",
+                      "ILR",
+                      "ILS",
+                      "INR",
+                      "IQD",
+                      "IRR",
+                      "ISJ",
+                      "ISK",
+                      "ITL",
+                      "JMD",
+                      "JOD",
+                      "JPY",
+                      "KES",
+                      "KGS",
+                      "KHR",
+                      "KMF",
+                      "KPW",
+                      "KRW",
+                      "KWD",
+                      "KYD",
+                      "KZT",
+                      "LAJ",
+                      "LAK",
+                      "LBP",
+                      "LKR",
+                      "LRD",
+                      "LSL",
+                      "LSM",
+                      "LTL",
+                      "LTT",
+                      "LUC",
+                      "LUF",
+                      "LUL",
+                      "LVL",
+                      "LVR",
+                      "LYD",
+                      "MAD",
+                      "MDL",
+                      "MGA",
+                      "MGF",
+                      "MKD",
+                      "MLF",
+                      "MMK",
+                      "MNT",
+                      "MOP",
+                      "MRO",
+                      "MRU",
+                      "MTL",
+                      "MTP",
+                      "MUR",
+                      "MVQ",
+                      "MVR",
+                      "MWK",
+                      "MXN",
+                      "MXP",
+                      "MXV",
+                      "MYR",
+                      "MZE",
+                      "MZM",
+                      "MZN",
+                      "NAD",
+                      "NGN",
+                      "NIC",
+                      "NIO",
+                      "NLG",
+                      "NOK",
+                      "NPR",
+                      "NZD",
+                      "OMR",
+                      "PAB",
+                      "PEH",
+                      "PEI",
+                      "PEN",
+                      "PES",
+                      "PGK",
+                      "PHP",
+                      "PKR",
+                      "PLN",
+                      "PLZ",
+                      "PTE",
+                      "PYG",
+                      "QAR",
+                      "RHD",
+                      "ROK",
+                      "ROL",
+                      "RON",
+                      "RSD",
+                      "RUB",
+                      "RUR",
+                      "RWF",
+                      "SAR",
+                      "SBD",
+                      "SCR",
+                      "SDD",
+                      "SDG",
+                      "SDP",
+                      "SEK",
+                      "SGD",
+                      "SHP",
+                      "SIT",
+                      "SKK",
+                      "SLL",
+                      "SOS",
+                      "SRD",
+                      "SRG",
+                      "SSP",
+                      "STD",
+                      "STN",
+                      "SUR",
+                      "SVC",
+                      "SYP",
+                      "SZL",
+                      "THB",
+                      "TJR",
+                      "TJS",
+                      "TMM",
+                      "TMT",
+                      "TND",
+                      "TOP",
+                      "TPE",
+                      "TRL",
+                      "TRY",
+                      "TTD",
+                      "TWD",
+                      "TZS",
+                      "UAH",
+                      "UAK",
+                      "UGS",
+                      "UGW",
+                      "UGX",
+                      "USD",
+                      "USN",
+                      "USS",
+                      "UYI",
+                      "UYN",
+                      "UYP",
+                      "UYU",
+                      "UYW",
+                      "UZS",
+                      "VEB",
+                      "VEF",
+                      "VES",
+                      "VNC",
+                      "VND",
+                      "VUV",
+                      "WST",
+                      "XAF",
+                      "XAG",
+                      "XAU",
+                      "XBA",
+                      "XBB",
+                      "XBC",
+                      "XBD",
+                      "XCD",
+                      "XDR",
+                      "XEU",
+                      "XFO",
+                      "XFU",
+                      "XOF",
+                      "XPD",
+                      "XPF",
+                      "XPT",
+                      "XRE",
+                      "XSU",
+                      "XTS",
+                      "XUA",
+                      "XXX",
+                      "YDD",
+                      "YER",
+                      "YUD",
+                      "YUM",
+                      "YUN",
+                      "ZAL",
+                      "ZAR",
+                      "ZMK",
+                      "ZMW",
+                      "ZRN",
+                      "ZRZ",
+                      "ZWC",
+                      "ZWD",
+                      "ZWL",
+                      "ZWN",
+                      "ZWR",
+                      null
+                    ]
+                  }
+                },
+                "minProperties": 1
               }
             },
             "patternProperties": {
@@ -2126,7 +2493,7 @@
         },
         "title": {
           "title": "Tender title",
-          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement.",
+          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement. The title should be less than 150 characters in length.",
           "type": [
             "string",
             "null"
@@ -2172,10 +2539,6 @@
           "minLength": 1
         },
         "procuringEntity": {
-          "required": [
-            "id",
-            "name"
-          ],
           "properties": {
             "name": {
               "type": "string",
@@ -2184,10 +2547,7 @@
               "minLength": 1
             },
             "id": {
-              "type": [
-                "string",
-                "integer"
-              ],
+              "type": "string",
               "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
               "title": "ID",
               "minLength": 1
@@ -2674,7 +3034,6 @@
                     "null"
                   ],
                   "description": "The e-mail address of the contact point/person.",
-                  "minLength": 1,
                   "format": "email"
                 },
                 "telephone": {
@@ -2724,6 +3083,10 @@
           "type": "object",
           "description": "The organization managing the contracting process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
           "title": "Procuring entity",
+          "required": [
+            "id",
+            "name"
+          ],
           "minProperties": 1
         },
         "items": {
@@ -2882,7 +3245,8 @@
                 "type": [
                   "number",
                   "null"
-                ]
+                ],
+                "minimum": 0
               },
               "unit": {
                 "title": "Unit",
@@ -2929,7 +3293,8 @@
                         "type": [
                           "number",
                           "null"
-                        ]
+                        ],
+                        "minimum": 0
                       },
                       "currency": {
                         "title": "Currency",
@@ -3297,7 +3662,8 @@
                         "type": [
                           "number",
                           "null"
-                        ]
+                        ],
+                        "minimum": 0
                       }
                     },
                     "minProperties": 1
@@ -4431,7 +4797,7 @@
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
-          "description": "Any detailed or further information on the submission method. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions.",
+          "description": "Information about the methods by which bids are submitted. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions. More structured information can be provided using the submission terms extension.",
           "type": [
             "string",
             "null"
@@ -4618,6 +4984,50 @@
           },
           "minProperties": 1
         },
+        "standstillPeriod": {
+          "title": "Standstill period",
+          "description": "The period before the contract signature during which the award decision can be challenged. This period typically starts on the date on which the tenderers are informed about the award decision.",
+          "type": "object",
+          "properties": {
+            "startDate": {
+              "title": "Start date",
+              "description": "The start date for the period. When known, a precise start date must be provided.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "endDate": {
+              "title": "End date",
+              "description": "The end date for the period. When known, a precise end date must be provided.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "maxExtentDate": {
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
+              "format": "date-time",
+              "title": "Maximum extent",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "durationInDays": {
+              "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, must be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate.",
+              "title": "Duration (days)",
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "minProperties": 1
+        },
         "contractPeriod": {
           "title": "Contract period",
           "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
@@ -4676,10 +5086,6 @@
           "description": "All organizations that submit a bid. More detailed information on bids and the bidding organization can be provided using the bid extension.",
           "type": "array",
           "items": {
-            "required": [
-              "id",
-              "name"
-            ],
             "properties": {
               "name": {
                 "type": "string",
@@ -4688,10 +5094,7 @@
                 "minLength": 1
               },
               "id": {
-                "type": [
-                  "string",
-                  "integer"
-                ],
+                "type": "string",
                 "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                 "title": "ID",
                 "minLength": 1
@@ -5178,7 +5581,6 @@
                       "null"
                     ],
                     "description": "The e-mail address of the contact point/person.",
-                    "minLength": 1,
                     "format": "email"
                   },
                   "telephone": {
@@ -5228,6 +5630,10 @@
             "type": "object",
             "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference",
+            "required": [
+              "id",
+              "name"
+            ],
             "minProperties": 1
           },
           "uniqueItems": true,
@@ -5351,6 +5757,22 @@
                   "deprecatedVersion": "1.2"
                 },
                 "minLength": 1
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ],
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
               }
             },
             "patternProperties": {
@@ -5432,6 +5854,15 @@
                   "null"
                 ],
                 "minLength": 1
+              },
+              "dueAfterDate": {
+                "title": "Due after date",
+                "description": "The date after which the milestone is due.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
               },
               "dueDate": {
                 "title": "Due date",
@@ -5599,6 +6030,22 @@
                         "deprecatedVersion": "1.2"
                       },
                       "minLength": 1
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ],
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
                     }
                   },
                   "patternProperties": {
@@ -5621,6 +6068,337 @@
                 },
                 "uniqueItems": true,
                 "minItems": 1
+              },
+              "value": {
+                "title": "Value",
+                "description": "The payment's value, if the milestone represents a planned payment.",
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "title": "Amount",
+                    "description": "Amount as a number.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "currency": {
+                    "title": "Currency",
+                    "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "codelist": "currency.csv",
+                    "openCodelist": false,
+                    "enum": [
+                      "ADP",
+                      "AED",
+                      "AFA",
+                      "AFN",
+                      "ALK",
+                      "ALL",
+                      "AMD",
+                      "ANG",
+                      "AOA",
+                      "AOK",
+                      "AON",
+                      "AOR",
+                      "ARA",
+                      "ARP",
+                      "ARS",
+                      "ARY",
+                      "ATS",
+                      "AUD",
+                      "AWG",
+                      "AYM",
+                      "AZM",
+                      "AZN",
+                      "BAD",
+                      "BAM",
+                      "BBD",
+                      "BDT",
+                      "BEC",
+                      "BEF",
+                      "BEL",
+                      "BGJ",
+                      "BGK",
+                      "BGL",
+                      "BGN",
+                      "BHD",
+                      "BIF",
+                      "BMD",
+                      "BND",
+                      "BOB",
+                      "BOP",
+                      "BOV",
+                      "BRB",
+                      "BRC",
+                      "BRE",
+                      "BRL",
+                      "BRN",
+                      "BRR",
+                      "BSD",
+                      "BTN",
+                      "BUK",
+                      "BWP",
+                      "BYB",
+                      "BYN",
+                      "BYR",
+                      "BZD",
+                      "CAD",
+                      "CDF",
+                      "CHC",
+                      "CHE",
+                      "CHF",
+                      "CHW",
+                      "CLF",
+                      "CLP",
+                      "CNY",
+                      "COP",
+                      "COU",
+                      "CRC",
+                      "CSD",
+                      "CSJ",
+                      "CSK",
+                      "CUC",
+                      "CUP",
+                      "CVE",
+                      "CYP",
+                      "CZK",
+                      "DDM",
+                      "DEM",
+                      "DJF",
+                      "DKK",
+                      "DOP",
+                      "DZD",
+                      "ECS",
+                      "ECV",
+                      "EEK",
+                      "EGP",
+                      "ERN",
+                      "ESA",
+                      "ESB",
+                      "ESP",
+                      "ETB",
+                      "EUR",
+                      "FIM",
+                      "FJD",
+                      "FKP",
+                      "FRF",
+                      "GBP",
+                      "GEK",
+                      "GEL",
+                      "GHC",
+                      "GHP",
+                      "GHS",
+                      "GIP",
+                      "GMD",
+                      "GNE",
+                      "GNF",
+                      "GNS",
+                      "GQE",
+                      "GRD",
+                      "GTQ",
+                      "GWE",
+                      "GWP",
+                      "GYD",
+                      "HKD",
+                      "HNL",
+                      "HRD",
+                      "HRK",
+                      "HTG",
+                      "HUF",
+                      "IDR",
+                      "IEP",
+                      "ILP",
+                      "ILR",
+                      "ILS",
+                      "INR",
+                      "IQD",
+                      "IRR",
+                      "ISJ",
+                      "ISK",
+                      "ITL",
+                      "JMD",
+                      "JOD",
+                      "JPY",
+                      "KES",
+                      "KGS",
+                      "KHR",
+                      "KMF",
+                      "KPW",
+                      "KRW",
+                      "KWD",
+                      "KYD",
+                      "KZT",
+                      "LAJ",
+                      "LAK",
+                      "LBP",
+                      "LKR",
+                      "LRD",
+                      "LSL",
+                      "LSM",
+                      "LTL",
+                      "LTT",
+                      "LUC",
+                      "LUF",
+                      "LUL",
+                      "LVL",
+                      "LVR",
+                      "LYD",
+                      "MAD",
+                      "MDL",
+                      "MGA",
+                      "MGF",
+                      "MKD",
+                      "MLF",
+                      "MMK",
+                      "MNT",
+                      "MOP",
+                      "MRO",
+                      "MRU",
+                      "MTL",
+                      "MTP",
+                      "MUR",
+                      "MVQ",
+                      "MVR",
+                      "MWK",
+                      "MXN",
+                      "MXP",
+                      "MXV",
+                      "MYR",
+                      "MZE",
+                      "MZM",
+                      "MZN",
+                      "NAD",
+                      "NGN",
+                      "NIC",
+                      "NIO",
+                      "NLG",
+                      "NOK",
+                      "NPR",
+                      "NZD",
+                      "OMR",
+                      "PAB",
+                      "PEH",
+                      "PEI",
+                      "PEN",
+                      "PES",
+                      "PGK",
+                      "PHP",
+                      "PKR",
+                      "PLN",
+                      "PLZ",
+                      "PTE",
+                      "PYG",
+                      "QAR",
+                      "RHD",
+                      "ROK",
+                      "ROL",
+                      "RON",
+                      "RSD",
+                      "RUB",
+                      "RUR",
+                      "RWF",
+                      "SAR",
+                      "SBD",
+                      "SCR",
+                      "SDD",
+                      "SDG",
+                      "SDP",
+                      "SEK",
+                      "SGD",
+                      "SHP",
+                      "SIT",
+                      "SKK",
+                      "SLL",
+                      "SOS",
+                      "SRD",
+                      "SRG",
+                      "SSP",
+                      "STD",
+                      "STN",
+                      "SUR",
+                      "SVC",
+                      "SYP",
+                      "SZL",
+                      "THB",
+                      "TJR",
+                      "TJS",
+                      "TMM",
+                      "TMT",
+                      "TND",
+                      "TOP",
+                      "TPE",
+                      "TRL",
+                      "TRY",
+                      "TTD",
+                      "TWD",
+                      "TZS",
+                      "UAH",
+                      "UAK",
+                      "UGS",
+                      "UGW",
+                      "UGX",
+                      "USD",
+                      "USN",
+                      "USS",
+                      "UYI",
+                      "UYN",
+                      "UYP",
+                      "UYU",
+                      "UYW",
+                      "UZS",
+                      "VEB",
+                      "VEF",
+                      "VES",
+                      "VNC",
+                      "VND",
+                      "VUV",
+                      "WST",
+                      "XAF",
+                      "XAG",
+                      "XAU",
+                      "XBA",
+                      "XBB",
+                      "XBC",
+                      "XBD",
+                      "XCD",
+                      "XDR",
+                      "XEU",
+                      "XFO",
+                      "XFU",
+                      "XOF",
+                      "XPD",
+                      "XPF",
+                      "XPT",
+                      "XRE",
+                      "XSU",
+                      "XTS",
+                      "XUA",
+                      "XXX",
+                      "YDD",
+                      "YER",
+                      "YUD",
+                      "YUM",
+                      "YUN",
+                      "ZAL",
+                      "ZAR",
+                      "ZMK",
+                      "ZMW",
+                      "ZRN",
+                      "ZRZ",
+                      "ZWC",
+                      "ZWD",
+                      "ZWL",
+                      "ZWN",
+                      "ZWR",
+                      null
+                    ]
+                  }
+                },
+                "minProperties": 1
               }
             },
             "patternProperties": {
@@ -5753,10 +6531,10 @@
                 "minLength": 1
               }
             },
-            "minProperties": 1,
             "required": [
               "id"
-            ]
+            ],
+            "minProperties": 1
           },
           "minItems": 1,
           "uniqueItems": true
@@ -5866,10 +6644,10 @@
               "minLength": 1
             }
           },
-          "minProperties": 1,
           "required": [
             "id"
           ],
+          "minProperties": 1,
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
@@ -7001,10 +7779,6 @@
             "description": "Organizations with which a buyer or a procuring entity decided to conclude a contract.",
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "name"
-              ],
               "properties": {
                 "name": {
                   "type": "string",
@@ -7013,10 +7787,7 @@
                   "minLength": 1
                 },
                 "id": {
-                  "type": [
-                    "string",
-                    "integer"
-                  ],
+                  "type": "string",
                   "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                   "title": "ID",
                   "minLength": 1
@@ -7503,7 +8274,6 @@
                         "null"
                       ],
                       "description": "The e-mail address of the contact point/person.",
-                      "minLength": 1,
                       "format": "email"
                     },
                     "telephone": {
@@ -7553,6 +8323,10 @@
               "type": "object",
               "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
               "title": "Organization reference",
+              "required": [
+                "id",
+                "name"
+              ],
               "minProperties": 1
             },
             "uniqueItems": true,
@@ -7715,7 +8489,8 @@
                   "type": [
                     "number",
                     "null"
-                  ]
+                  ],
+                  "minimum": 0
                 },
                 "unit": {
                   "title": "Unit",
@@ -7762,7 +8537,8 @@
                           "type": [
                             "number",
                             "null"
-                          ]
+                          ],
+                          "minimum": 0
                         },
                         "currency": {
                           "title": "Currency",
@@ -8130,7 +8906,8 @@
                           "type": [
                             "number",
                             "null"
-                          ]
+                          ],
+                          "minimum": 0
                         }
                       },
                       "minProperties": 1
@@ -8323,6 +9100,22 @@
                     "deprecatedVersion": "1.2"
                   },
                   "minLength": 1
+                },
+                "relatedItems": {
+                  "title": "Related items",
+                  "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": [
+                      "string"
+                    ],
+                    "minLength": 1
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
                 }
               },
               "patternProperties": {
@@ -8455,10 +9248,10 @@
                   "minLength": 1
                 }
               },
-              "minProperties": 1,
               "required": [
                 "id"
-              ]
+              ],
+              "minProperties": 1
             },
             "minItems": 1,
             "uniqueItems": true
@@ -8568,10 +9361,10 @@
                 "minLength": 1
               }
             },
-            "minProperties": 1,
             "required": [
               "id"
             ],
+            "minProperties": 1,
             "deprecated": {
               "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
               "deprecatedVersion": "1.1"
@@ -9835,7 +10628,8 @@
                   "type": [
                     "number",
                     "null"
-                  ]
+                  ],
+                  "minimum": 0
                 },
                 "unit": {
                   "title": "Unit",
@@ -9882,7 +10676,8 @@
                           "type": [
                             "number",
                             "null"
-                          ]
+                          ],
+                          "minimum": 0
                         },
                         "currency": {
                           "title": "Currency",
@@ -10250,7 +11045,8 @@
                           "type": [
                             "number",
                             "null"
-                          ]
+                          ],
+                          "minimum": 0
                         }
                       },
                       "minProperties": 1
@@ -10443,6 +11239,22 @@
                     "deprecatedVersion": "1.2"
                   },
                   "minLength": 1
+                },
+                "relatedItems": {
+                  "title": "Related items",
+                  "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "type": [
+                      "string"
+                    ],
+                    "minLength": 1
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
                 }
               },
               "patternProperties": {
@@ -10842,10 +11654,6 @@
                       "minProperties": 1
                     },
                     "payer": {
-                      "required": [
-                        "id",
-                        "name"
-                      ],
                       "properties": {
                         "name": {
                           "type": "string",
@@ -10854,10 +11662,7 @@
                           "minLength": 1
                         },
                         "id": {
-                          "type": [
-                            "string",
-                            "integer"
-                          ],
+                          "type": "string",
                           "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                           "title": "ID",
                           "minLength": 1
@@ -11344,7 +12149,6 @@
                                 "null"
                               ],
                               "description": "The e-mail address of the contact point/person.",
-                              "minLength": 1,
                               "format": "email"
                             },
                             "telephone": {
@@ -11394,13 +12198,13 @@
                       "type": "object",
                       "description": "An organization reference for the organization from which the funds in this transaction originate.",
                       "title": "Payer",
-                      "minProperties": 1
-                    },
-                    "payee": {
                       "required": [
                         "id",
                         "name"
                       ],
+                      "minProperties": 1
+                    },
+                    "payee": {
                       "properties": {
                         "name": {
                           "type": "string",
@@ -11409,10 +12213,7 @@
                           "minLength": 1
                         },
                         "id": {
-                          "type": [
-                            "string",
-                            "integer"
-                          ],
+                          "type": "string",
                           "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                           "title": "ID",
                           "minLength": 1
@@ -11899,7 +12700,6 @@
                                 "null"
                               ],
                               "description": "The e-mail address of the contact point/person.",
-                              "minLength": 1,
                               "format": "email"
                             },
                             "telephone": {
@@ -11949,6 +12749,10 @@
                       "type": "object",
                       "description": "An organization reference for the organization which receives the funds in this transaction.",
                       "title": "Payee",
+                      "required": [
+                        "id",
+                        "name"
+                      ],
                       "minProperties": 1
                     },
                     "uri": {
@@ -12476,6 +13280,15 @@
                       ],
                       "minLength": 1
                     },
+                    "dueAfterDate": {
+                      "title": "Due after date",
+                      "description": "The date after which the milestone is due.",
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date-time"
+                    },
                     "dueDate": {
                       "title": "Due date",
                       "description": "The date the milestone is due.",
@@ -12642,6 +13455,22 @@
                               "deprecatedVersion": "1.2"
                             },
                             "minLength": 1
+                          },
+                          "relatedItems": {
+                            "title": "Related items",
+                            "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                            "type": [
+                              "array",
+                              "null"
+                            ],
+                            "items": {
+                              "type": [
+                                "string"
+                              ],
+                              "minLength": 1
+                            },
+                            "minItems": 1,
+                            "uniqueItems": true
                           }
                         },
                         "patternProperties": {
@@ -12664,6 +13493,337 @@
                       },
                       "uniqueItems": true,
                       "minItems": 1
+                    },
+                    "value": {
+                      "title": "Value",
+                      "description": "The payment's value, if the milestone represents a planned payment.",
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "title": "Amount",
+                          "description": "Amount as a number.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "currency": {
+                          "title": "Currency",
+                          "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "codelist": "currency.csv",
+                          "openCodelist": false,
+                          "enum": [
+                            "ADP",
+                            "AED",
+                            "AFA",
+                            "AFN",
+                            "ALK",
+                            "ALL",
+                            "AMD",
+                            "ANG",
+                            "AOA",
+                            "AOK",
+                            "AON",
+                            "AOR",
+                            "ARA",
+                            "ARP",
+                            "ARS",
+                            "ARY",
+                            "ATS",
+                            "AUD",
+                            "AWG",
+                            "AYM",
+                            "AZM",
+                            "AZN",
+                            "BAD",
+                            "BAM",
+                            "BBD",
+                            "BDT",
+                            "BEC",
+                            "BEF",
+                            "BEL",
+                            "BGJ",
+                            "BGK",
+                            "BGL",
+                            "BGN",
+                            "BHD",
+                            "BIF",
+                            "BMD",
+                            "BND",
+                            "BOB",
+                            "BOP",
+                            "BOV",
+                            "BRB",
+                            "BRC",
+                            "BRE",
+                            "BRL",
+                            "BRN",
+                            "BRR",
+                            "BSD",
+                            "BTN",
+                            "BUK",
+                            "BWP",
+                            "BYB",
+                            "BYN",
+                            "BYR",
+                            "BZD",
+                            "CAD",
+                            "CDF",
+                            "CHC",
+                            "CHE",
+                            "CHF",
+                            "CHW",
+                            "CLF",
+                            "CLP",
+                            "CNY",
+                            "COP",
+                            "COU",
+                            "CRC",
+                            "CSD",
+                            "CSJ",
+                            "CSK",
+                            "CUC",
+                            "CUP",
+                            "CVE",
+                            "CYP",
+                            "CZK",
+                            "DDM",
+                            "DEM",
+                            "DJF",
+                            "DKK",
+                            "DOP",
+                            "DZD",
+                            "ECS",
+                            "ECV",
+                            "EEK",
+                            "EGP",
+                            "ERN",
+                            "ESA",
+                            "ESB",
+                            "ESP",
+                            "ETB",
+                            "EUR",
+                            "FIM",
+                            "FJD",
+                            "FKP",
+                            "FRF",
+                            "GBP",
+                            "GEK",
+                            "GEL",
+                            "GHC",
+                            "GHP",
+                            "GHS",
+                            "GIP",
+                            "GMD",
+                            "GNE",
+                            "GNF",
+                            "GNS",
+                            "GQE",
+                            "GRD",
+                            "GTQ",
+                            "GWE",
+                            "GWP",
+                            "GYD",
+                            "HKD",
+                            "HNL",
+                            "HRD",
+                            "HRK",
+                            "HTG",
+                            "HUF",
+                            "IDR",
+                            "IEP",
+                            "ILP",
+                            "ILR",
+                            "ILS",
+                            "INR",
+                            "IQD",
+                            "IRR",
+                            "ISJ",
+                            "ISK",
+                            "ITL",
+                            "JMD",
+                            "JOD",
+                            "JPY",
+                            "KES",
+                            "KGS",
+                            "KHR",
+                            "KMF",
+                            "KPW",
+                            "KRW",
+                            "KWD",
+                            "KYD",
+                            "KZT",
+                            "LAJ",
+                            "LAK",
+                            "LBP",
+                            "LKR",
+                            "LRD",
+                            "LSL",
+                            "LSM",
+                            "LTL",
+                            "LTT",
+                            "LUC",
+                            "LUF",
+                            "LUL",
+                            "LVL",
+                            "LVR",
+                            "LYD",
+                            "MAD",
+                            "MDL",
+                            "MGA",
+                            "MGF",
+                            "MKD",
+                            "MLF",
+                            "MMK",
+                            "MNT",
+                            "MOP",
+                            "MRO",
+                            "MRU",
+                            "MTL",
+                            "MTP",
+                            "MUR",
+                            "MVQ",
+                            "MVR",
+                            "MWK",
+                            "MXN",
+                            "MXP",
+                            "MXV",
+                            "MYR",
+                            "MZE",
+                            "MZM",
+                            "MZN",
+                            "NAD",
+                            "NGN",
+                            "NIC",
+                            "NIO",
+                            "NLG",
+                            "NOK",
+                            "NPR",
+                            "NZD",
+                            "OMR",
+                            "PAB",
+                            "PEH",
+                            "PEI",
+                            "PEN",
+                            "PES",
+                            "PGK",
+                            "PHP",
+                            "PKR",
+                            "PLN",
+                            "PLZ",
+                            "PTE",
+                            "PYG",
+                            "QAR",
+                            "RHD",
+                            "ROK",
+                            "ROL",
+                            "RON",
+                            "RSD",
+                            "RUB",
+                            "RUR",
+                            "RWF",
+                            "SAR",
+                            "SBD",
+                            "SCR",
+                            "SDD",
+                            "SDG",
+                            "SDP",
+                            "SEK",
+                            "SGD",
+                            "SHP",
+                            "SIT",
+                            "SKK",
+                            "SLL",
+                            "SOS",
+                            "SRD",
+                            "SRG",
+                            "SSP",
+                            "STD",
+                            "STN",
+                            "SUR",
+                            "SVC",
+                            "SYP",
+                            "SZL",
+                            "THB",
+                            "TJR",
+                            "TJS",
+                            "TMM",
+                            "TMT",
+                            "TND",
+                            "TOP",
+                            "TPE",
+                            "TRL",
+                            "TRY",
+                            "TTD",
+                            "TWD",
+                            "TZS",
+                            "UAH",
+                            "UAK",
+                            "UGS",
+                            "UGW",
+                            "UGX",
+                            "USD",
+                            "USN",
+                            "USS",
+                            "UYI",
+                            "UYN",
+                            "UYP",
+                            "UYU",
+                            "UYW",
+                            "UZS",
+                            "VEB",
+                            "VEF",
+                            "VES",
+                            "VNC",
+                            "VND",
+                            "VUV",
+                            "WST",
+                            "XAF",
+                            "XAG",
+                            "XAU",
+                            "XBA",
+                            "XBB",
+                            "XBC",
+                            "XBD",
+                            "XCD",
+                            "XDR",
+                            "XEU",
+                            "XFO",
+                            "XFU",
+                            "XOF",
+                            "XPD",
+                            "XPF",
+                            "XPT",
+                            "XRE",
+                            "XSU",
+                            "XTS",
+                            "XUA",
+                            "XXX",
+                            "YDD",
+                            "YER",
+                            "YUD",
+                            "YUM",
+                            "YUN",
+                            "ZAL",
+                            "ZAR",
+                            "ZMK",
+                            "ZMW",
+                            "ZRN",
+                            "ZRZ",
+                            "ZWC",
+                            "ZWD",
+                            "ZWL",
+                            "ZWN",
+                            "ZWR",
+                            null
+                          ]
+                        }
+                      },
+                      "minProperties": 1
                     }
                   },
                   "patternProperties": {
@@ -12805,6 +13965,22 @@
                         "deprecatedVersion": "1.2"
                       },
                       "minLength": 1
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ],
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
                     }
                   },
                   "patternProperties": {
@@ -12899,10 +14075,10 @@
                   ]
                 }
               },
-              "minProperties": 1,
               "required": [
                 "id"
-              ]
+              ],
+              "minProperties": 1
             },
             "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
             "title": "Related processes",
@@ -12967,6 +14143,15 @@
                     "null"
                   ],
                   "minLength": 1
+                },
+                "dueAfterDate": {
+                  "title": "Due after date",
+                  "description": "The date after which the milestone is due.",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
                 },
                 "dueDate": {
                   "title": "Due date",
@@ -13134,6 +14319,22 @@
                           "deprecatedVersion": "1.2"
                         },
                         "minLength": 1
+                      },
+                      "relatedItems": {
+                        "title": "Related items",
+                        "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "items": {
+                          "type": [
+                            "string"
+                          ],
+                          "minLength": 1
+                        },
+                        "minItems": 1,
+                        "uniqueItems": true
                       }
                     },
                     "patternProperties": {
@@ -13156,6 +14357,337 @@
                   },
                   "uniqueItems": true,
                   "minItems": 1
+                },
+                "value": {
+                  "title": "Value",
+                  "description": "The payment's value, if the milestone represents a planned payment.",
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "title": "Amount",
+                      "description": "Amount as a number.",
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "currency": {
+                      "title": "Currency",
+                      "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "codelist": "currency.csv",
+                      "openCodelist": false,
+                      "enum": [
+                        "ADP",
+                        "AED",
+                        "AFA",
+                        "AFN",
+                        "ALK",
+                        "ALL",
+                        "AMD",
+                        "ANG",
+                        "AOA",
+                        "AOK",
+                        "AON",
+                        "AOR",
+                        "ARA",
+                        "ARP",
+                        "ARS",
+                        "ARY",
+                        "ATS",
+                        "AUD",
+                        "AWG",
+                        "AYM",
+                        "AZM",
+                        "AZN",
+                        "BAD",
+                        "BAM",
+                        "BBD",
+                        "BDT",
+                        "BEC",
+                        "BEF",
+                        "BEL",
+                        "BGJ",
+                        "BGK",
+                        "BGL",
+                        "BGN",
+                        "BHD",
+                        "BIF",
+                        "BMD",
+                        "BND",
+                        "BOB",
+                        "BOP",
+                        "BOV",
+                        "BRB",
+                        "BRC",
+                        "BRE",
+                        "BRL",
+                        "BRN",
+                        "BRR",
+                        "BSD",
+                        "BTN",
+                        "BUK",
+                        "BWP",
+                        "BYB",
+                        "BYN",
+                        "BYR",
+                        "BZD",
+                        "CAD",
+                        "CDF",
+                        "CHC",
+                        "CHE",
+                        "CHF",
+                        "CHW",
+                        "CLF",
+                        "CLP",
+                        "CNY",
+                        "COP",
+                        "COU",
+                        "CRC",
+                        "CSD",
+                        "CSJ",
+                        "CSK",
+                        "CUC",
+                        "CUP",
+                        "CVE",
+                        "CYP",
+                        "CZK",
+                        "DDM",
+                        "DEM",
+                        "DJF",
+                        "DKK",
+                        "DOP",
+                        "DZD",
+                        "ECS",
+                        "ECV",
+                        "EEK",
+                        "EGP",
+                        "ERN",
+                        "ESA",
+                        "ESB",
+                        "ESP",
+                        "ETB",
+                        "EUR",
+                        "FIM",
+                        "FJD",
+                        "FKP",
+                        "FRF",
+                        "GBP",
+                        "GEK",
+                        "GEL",
+                        "GHC",
+                        "GHP",
+                        "GHS",
+                        "GIP",
+                        "GMD",
+                        "GNE",
+                        "GNF",
+                        "GNS",
+                        "GQE",
+                        "GRD",
+                        "GTQ",
+                        "GWE",
+                        "GWP",
+                        "GYD",
+                        "HKD",
+                        "HNL",
+                        "HRD",
+                        "HRK",
+                        "HTG",
+                        "HUF",
+                        "IDR",
+                        "IEP",
+                        "ILP",
+                        "ILR",
+                        "ILS",
+                        "INR",
+                        "IQD",
+                        "IRR",
+                        "ISJ",
+                        "ISK",
+                        "ITL",
+                        "JMD",
+                        "JOD",
+                        "JPY",
+                        "KES",
+                        "KGS",
+                        "KHR",
+                        "KMF",
+                        "KPW",
+                        "KRW",
+                        "KWD",
+                        "KYD",
+                        "KZT",
+                        "LAJ",
+                        "LAK",
+                        "LBP",
+                        "LKR",
+                        "LRD",
+                        "LSL",
+                        "LSM",
+                        "LTL",
+                        "LTT",
+                        "LUC",
+                        "LUF",
+                        "LUL",
+                        "LVL",
+                        "LVR",
+                        "LYD",
+                        "MAD",
+                        "MDL",
+                        "MGA",
+                        "MGF",
+                        "MKD",
+                        "MLF",
+                        "MMK",
+                        "MNT",
+                        "MOP",
+                        "MRO",
+                        "MRU",
+                        "MTL",
+                        "MTP",
+                        "MUR",
+                        "MVQ",
+                        "MVR",
+                        "MWK",
+                        "MXN",
+                        "MXP",
+                        "MXV",
+                        "MYR",
+                        "MZE",
+                        "MZM",
+                        "MZN",
+                        "NAD",
+                        "NGN",
+                        "NIC",
+                        "NIO",
+                        "NLG",
+                        "NOK",
+                        "NPR",
+                        "NZD",
+                        "OMR",
+                        "PAB",
+                        "PEH",
+                        "PEI",
+                        "PEN",
+                        "PES",
+                        "PGK",
+                        "PHP",
+                        "PKR",
+                        "PLN",
+                        "PLZ",
+                        "PTE",
+                        "PYG",
+                        "QAR",
+                        "RHD",
+                        "ROK",
+                        "ROL",
+                        "RON",
+                        "RSD",
+                        "RUB",
+                        "RUR",
+                        "RWF",
+                        "SAR",
+                        "SBD",
+                        "SCR",
+                        "SDD",
+                        "SDG",
+                        "SDP",
+                        "SEK",
+                        "SGD",
+                        "SHP",
+                        "SIT",
+                        "SKK",
+                        "SLL",
+                        "SOS",
+                        "SRD",
+                        "SRG",
+                        "SSP",
+                        "STD",
+                        "STN",
+                        "SUR",
+                        "SVC",
+                        "SYP",
+                        "SZL",
+                        "THB",
+                        "TJR",
+                        "TJS",
+                        "TMM",
+                        "TMT",
+                        "TND",
+                        "TOP",
+                        "TPE",
+                        "TRL",
+                        "TRY",
+                        "TTD",
+                        "TWD",
+                        "TZS",
+                        "UAH",
+                        "UAK",
+                        "UGS",
+                        "UGW",
+                        "UGX",
+                        "USD",
+                        "USN",
+                        "USS",
+                        "UYI",
+                        "UYN",
+                        "UYP",
+                        "UYU",
+                        "UYW",
+                        "UZS",
+                        "VEB",
+                        "VEF",
+                        "VES",
+                        "VNC",
+                        "VND",
+                        "VUV",
+                        "WST",
+                        "XAF",
+                        "XAG",
+                        "XAU",
+                        "XBA",
+                        "XBB",
+                        "XBC",
+                        "XBD",
+                        "XCD",
+                        "XDR",
+                        "XEU",
+                        "XFO",
+                        "XFU",
+                        "XOF",
+                        "XPD",
+                        "XPF",
+                        "XPT",
+                        "XRE",
+                        "XSU",
+                        "XTS",
+                        "XUA",
+                        "XXX",
+                        "YDD",
+                        "YER",
+                        "YUD",
+                        "YUM",
+                        "YUN",
+                        "ZAL",
+                        "ZAR",
+                        "ZMK",
+                        "ZMW",
+                        "ZRN",
+                        "ZRZ",
+                        "ZWC",
+                        "ZWD",
+                        "ZWL",
+                        "ZWN",
+                        "ZWR",
+                        null
+                      ]
+                    }
+                  },
+                  "minProperties": 1
                 }
               },
               "patternProperties": {
@@ -13288,10 +14820,10 @@
                   "minLength": 1
                 }
               },
-              "minProperties": 1,
               "required": [
                 "id"
-              ]
+              ],
+              "minProperties": 1
             },
             "minItems": 1,
             "uniqueItems": true
@@ -13401,10 +14933,10 @@
                 "minLength": 1
               }
             },
-            "minProperties": 1,
             "required": [
               "id"
             ],
+            "minProperties": 1,
             "deprecated": {
               "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
               "deprecatedVersion": "1.1"
@@ -13511,10 +15043,10 @@
             ]
           }
         },
-        "minProperties": 1,
         "required": [
           "id"
-        ]
+        ],
+        "minProperties": 1
       },
       "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate ocid. This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
       "title": "Related processes",
@@ -13523,7 +15055,7 @@
     },
     "links": {
       "title": "Links",
-      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process.",
+      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process. For references to related processes, see the `relatedProcesses` array.",
       "type": "array",
       "items": {
         "title": "Link",
@@ -14123,6 +15655,22 @@
                   "deprecatedVersion": "1.2"
                 },
                 "minLength": 1
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ],
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
               }
             },
             "patternProperties": {
@@ -14204,6 +15752,15 @@
                   "null"
                 ],
                 "minLength": 1
+              },
+              "dueAfterDate": {
+                "title": "Due after date",
+                "description": "The date after which the milestone is due.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
               },
               "dueDate": {
                 "title": "Due date",
@@ -14371,6 +15928,22 @@
                         "deprecatedVersion": "1.2"
                       },
                       "minLength": 1
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ],
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
                     }
                   },
                   "patternProperties": {
@@ -14393,6 +15966,337 @@
                 },
                 "uniqueItems": true,
                 "minItems": 1
+              },
+              "value": {
+                "title": "Value",
+                "description": "The payment's value, if the milestone represents a planned payment.",
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "title": "Amount",
+                    "description": "Amount as a number.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "currency": {
+                    "title": "Currency",
+                    "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "codelist": "currency.csv",
+                    "openCodelist": false,
+                    "enum": [
+                      "ADP",
+                      "AED",
+                      "AFA",
+                      "AFN",
+                      "ALK",
+                      "ALL",
+                      "AMD",
+                      "ANG",
+                      "AOA",
+                      "AOK",
+                      "AON",
+                      "AOR",
+                      "ARA",
+                      "ARP",
+                      "ARS",
+                      "ARY",
+                      "ATS",
+                      "AUD",
+                      "AWG",
+                      "AYM",
+                      "AZM",
+                      "AZN",
+                      "BAD",
+                      "BAM",
+                      "BBD",
+                      "BDT",
+                      "BEC",
+                      "BEF",
+                      "BEL",
+                      "BGJ",
+                      "BGK",
+                      "BGL",
+                      "BGN",
+                      "BHD",
+                      "BIF",
+                      "BMD",
+                      "BND",
+                      "BOB",
+                      "BOP",
+                      "BOV",
+                      "BRB",
+                      "BRC",
+                      "BRE",
+                      "BRL",
+                      "BRN",
+                      "BRR",
+                      "BSD",
+                      "BTN",
+                      "BUK",
+                      "BWP",
+                      "BYB",
+                      "BYN",
+                      "BYR",
+                      "BZD",
+                      "CAD",
+                      "CDF",
+                      "CHC",
+                      "CHE",
+                      "CHF",
+                      "CHW",
+                      "CLF",
+                      "CLP",
+                      "CNY",
+                      "COP",
+                      "COU",
+                      "CRC",
+                      "CSD",
+                      "CSJ",
+                      "CSK",
+                      "CUC",
+                      "CUP",
+                      "CVE",
+                      "CYP",
+                      "CZK",
+                      "DDM",
+                      "DEM",
+                      "DJF",
+                      "DKK",
+                      "DOP",
+                      "DZD",
+                      "ECS",
+                      "ECV",
+                      "EEK",
+                      "EGP",
+                      "ERN",
+                      "ESA",
+                      "ESB",
+                      "ESP",
+                      "ETB",
+                      "EUR",
+                      "FIM",
+                      "FJD",
+                      "FKP",
+                      "FRF",
+                      "GBP",
+                      "GEK",
+                      "GEL",
+                      "GHC",
+                      "GHP",
+                      "GHS",
+                      "GIP",
+                      "GMD",
+                      "GNE",
+                      "GNF",
+                      "GNS",
+                      "GQE",
+                      "GRD",
+                      "GTQ",
+                      "GWE",
+                      "GWP",
+                      "GYD",
+                      "HKD",
+                      "HNL",
+                      "HRD",
+                      "HRK",
+                      "HTG",
+                      "HUF",
+                      "IDR",
+                      "IEP",
+                      "ILP",
+                      "ILR",
+                      "ILS",
+                      "INR",
+                      "IQD",
+                      "IRR",
+                      "ISJ",
+                      "ISK",
+                      "ITL",
+                      "JMD",
+                      "JOD",
+                      "JPY",
+                      "KES",
+                      "KGS",
+                      "KHR",
+                      "KMF",
+                      "KPW",
+                      "KRW",
+                      "KWD",
+                      "KYD",
+                      "KZT",
+                      "LAJ",
+                      "LAK",
+                      "LBP",
+                      "LKR",
+                      "LRD",
+                      "LSL",
+                      "LSM",
+                      "LTL",
+                      "LTT",
+                      "LUC",
+                      "LUF",
+                      "LUL",
+                      "LVL",
+                      "LVR",
+                      "LYD",
+                      "MAD",
+                      "MDL",
+                      "MGA",
+                      "MGF",
+                      "MKD",
+                      "MLF",
+                      "MMK",
+                      "MNT",
+                      "MOP",
+                      "MRO",
+                      "MRU",
+                      "MTL",
+                      "MTP",
+                      "MUR",
+                      "MVQ",
+                      "MVR",
+                      "MWK",
+                      "MXN",
+                      "MXP",
+                      "MXV",
+                      "MYR",
+                      "MZE",
+                      "MZM",
+                      "MZN",
+                      "NAD",
+                      "NGN",
+                      "NIC",
+                      "NIO",
+                      "NLG",
+                      "NOK",
+                      "NPR",
+                      "NZD",
+                      "OMR",
+                      "PAB",
+                      "PEH",
+                      "PEI",
+                      "PEN",
+                      "PES",
+                      "PGK",
+                      "PHP",
+                      "PKR",
+                      "PLN",
+                      "PLZ",
+                      "PTE",
+                      "PYG",
+                      "QAR",
+                      "RHD",
+                      "ROK",
+                      "ROL",
+                      "RON",
+                      "RSD",
+                      "RUB",
+                      "RUR",
+                      "RWF",
+                      "SAR",
+                      "SBD",
+                      "SCR",
+                      "SDD",
+                      "SDG",
+                      "SDP",
+                      "SEK",
+                      "SGD",
+                      "SHP",
+                      "SIT",
+                      "SKK",
+                      "SLL",
+                      "SOS",
+                      "SRD",
+                      "SRG",
+                      "SSP",
+                      "STD",
+                      "STN",
+                      "SUR",
+                      "SVC",
+                      "SYP",
+                      "SZL",
+                      "THB",
+                      "TJR",
+                      "TJS",
+                      "TMM",
+                      "TMT",
+                      "TND",
+                      "TOP",
+                      "TPE",
+                      "TRL",
+                      "TRY",
+                      "TTD",
+                      "TWD",
+                      "TZS",
+                      "UAH",
+                      "UAK",
+                      "UGS",
+                      "UGW",
+                      "UGX",
+                      "USD",
+                      "USN",
+                      "USS",
+                      "UYI",
+                      "UYN",
+                      "UYP",
+                      "UYU",
+                      "UYW",
+                      "UZS",
+                      "VEB",
+                      "VEF",
+                      "VES",
+                      "VNC",
+                      "VND",
+                      "VUV",
+                      "WST",
+                      "XAF",
+                      "XAG",
+                      "XAU",
+                      "XBA",
+                      "XBB",
+                      "XBC",
+                      "XBD",
+                      "XCD",
+                      "XDR",
+                      "XEU",
+                      "XFO",
+                      "XFU",
+                      "XOF",
+                      "XPD",
+                      "XPF",
+                      "XPT",
+                      "XRE",
+                      "XSU",
+                      "XTS",
+                      "XUA",
+                      "XXX",
+                      "YDD",
+                      "YER",
+                      "YUD",
+                      "YUM",
+                      "YUN",
+                      "ZAL",
+                      "ZAR",
+                      "ZMK",
+                      "ZMW",
+                      "ZRN",
+                      "ZRZ",
+                      "ZWC",
+                      "ZWD",
+                      "ZWL",
+                      "ZWN",
+                      "ZWR",
+                      null
+                    ]
+                  }
+                },
+                "minProperties": 1
               }
             },
             "patternProperties": {
@@ -14447,7 +16351,7 @@
         },
         "title": {
           "title": "Tender title",
-          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement.",
+          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement. The title should be less than 150 characters in length.",
           "type": [
             "string",
             "null"
@@ -14493,10 +16397,6 @@
           "minLength": 1
         },
         "procuringEntity": {
-          "required": [
-            "id",
-            "name"
-          ],
           "properties": {
             "name": {
               "type": "string",
@@ -14505,10 +16405,7 @@
               "minLength": 1
             },
             "id": {
-              "type": [
-                "string",
-                "integer"
-              ],
+              "type": "string",
               "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
               "title": "ID",
               "minLength": 1
@@ -14995,7 +16892,6 @@
                     "null"
                   ],
                   "description": "The e-mail address of the contact point/person.",
-                  "minLength": 1,
                   "format": "email"
                 },
                 "telephone": {
@@ -15045,6 +16941,10 @@
           "type": "object",
           "description": "The organization managing the contracting process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
           "title": "Procuring entity",
+          "required": [
+            "id",
+            "name"
+          ],
           "minProperties": 1
         },
         "items": {
@@ -15203,7 +17103,8 @@
                 "type": [
                   "number",
                   "null"
-                ]
+                ],
+                "minimum": 0
               },
               "unit": {
                 "title": "Unit",
@@ -15250,7 +17151,8 @@
                         "type": [
                           "number",
                           "null"
-                        ]
+                        ],
+                        "minimum": 0
                       },
                       "currency": {
                         "title": "Currency",
@@ -15618,7 +17520,8 @@
                         "type": [
                           "number",
                           "null"
-                        ]
+                        ],
+                        "minimum": 0
                       }
                     },
                     "minProperties": 1
@@ -16752,7 +18655,7 @@
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
-          "description": "Any detailed or further information on the submission method. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions.",
+          "description": "Information about the methods by which bids are submitted. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions. More structured information can be provided using the submission terms extension.",
           "type": [
             "string",
             "null"
@@ -16939,6 +18842,50 @@
           },
           "minProperties": 1
         },
+        "standstillPeriod": {
+          "title": "Standstill period",
+          "description": "The period before the contract signature during which the award decision can be challenged. This period typically starts on the date on which the tenderers are informed about the award decision.",
+          "type": "object",
+          "properties": {
+            "startDate": {
+              "title": "Start date",
+              "description": "The start date for the period. When known, a precise start date must be provided.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "endDate": {
+              "title": "End date",
+              "description": "The end date for the period. When known, a precise end date must be provided.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "maxExtentDate": {
+              "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
+              "format": "date-time",
+              "title": "Maximum extent",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "durationInDays": {
+              "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, must be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, must be equal to the difference between startDate and maxExtentDate.",
+              "title": "Duration (days)",
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "minProperties": 1
+        },
         "contractPeriod": {
           "title": "Contract period",
           "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
@@ -16997,10 +18944,6 @@
           "description": "All organizations that submit a bid. More detailed information on bids and the bidding organization can be provided using the bid extension.",
           "type": "array",
           "items": {
-            "required": [
-              "id",
-              "name"
-            ],
             "properties": {
               "name": {
                 "type": "string",
@@ -17009,10 +18952,7 @@
                 "minLength": 1
               },
               "id": {
-                "type": [
-                  "string",
-                  "integer"
-                ],
+                "type": "string",
                 "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                 "title": "ID",
                 "minLength": 1
@@ -17499,7 +19439,6 @@
                       "null"
                     ],
                     "description": "The e-mail address of the contact point/person.",
-                    "minLength": 1,
                     "format": "email"
                   },
                   "telephone": {
@@ -17549,6 +19488,10 @@
             "type": "object",
             "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference",
+            "required": [
+              "id",
+              "name"
+            ],
             "minProperties": 1
           },
           "uniqueItems": true,
@@ -17672,6 +19615,22 @@
                   "deprecatedVersion": "1.2"
                 },
                 "minLength": 1
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ],
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
               }
             },
             "patternProperties": {
@@ -17753,6 +19712,15 @@
                   "null"
                 ],
                 "minLength": 1
+              },
+              "dueAfterDate": {
+                "title": "Due after date",
+                "description": "The date after which the milestone is due.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
               },
               "dueDate": {
                 "title": "Due date",
@@ -17920,6 +19888,22 @@
                         "deprecatedVersion": "1.2"
                       },
                       "minLength": 1
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ],
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
                     }
                   },
                   "patternProperties": {
@@ -17942,6 +19926,337 @@
                 },
                 "uniqueItems": true,
                 "minItems": 1
+              },
+              "value": {
+                "title": "Value",
+                "description": "The payment's value, if the milestone represents a planned payment.",
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "title": "Amount",
+                    "description": "Amount as a number.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "currency": {
+                    "title": "Currency",
+                    "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "codelist": "currency.csv",
+                    "openCodelist": false,
+                    "enum": [
+                      "ADP",
+                      "AED",
+                      "AFA",
+                      "AFN",
+                      "ALK",
+                      "ALL",
+                      "AMD",
+                      "ANG",
+                      "AOA",
+                      "AOK",
+                      "AON",
+                      "AOR",
+                      "ARA",
+                      "ARP",
+                      "ARS",
+                      "ARY",
+                      "ATS",
+                      "AUD",
+                      "AWG",
+                      "AYM",
+                      "AZM",
+                      "AZN",
+                      "BAD",
+                      "BAM",
+                      "BBD",
+                      "BDT",
+                      "BEC",
+                      "BEF",
+                      "BEL",
+                      "BGJ",
+                      "BGK",
+                      "BGL",
+                      "BGN",
+                      "BHD",
+                      "BIF",
+                      "BMD",
+                      "BND",
+                      "BOB",
+                      "BOP",
+                      "BOV",
+                      "BRB",
+                      "BRC",
+                      "BRE",
+                      "BRL",
+                      "BRN",
+                      "BRR",
+                      "BSD",
+                      "BTN",
+                      "BUK",
+                      "BWP",
+                      "BYB",
+                      "BYN",
+                      "BYR",
+                      "BZD",
+                      "CAD",
+                      "CDF",
+                      "CHC",
+                      "CHE",
+                      "CHF",
+                      "CHW",
+                      "CLF",
+                      "CLP",
+                      "CNY",
+                      "COP",
+                      "COU",
+                      "CRC",
+                      "CSD",
+                      "CSJ",
+                      "CSK",
+                      "CUC",
+                      "CUP",
+                      "CVE",
+                      "CYP",
+                      "CZK",
+                      "DDM",
+                      "DEM",
+                      "DJF",
+                      "DKK",
+                      "DOP",
+                      "DZD",
+                      "ECS",
+                      "ECV",
+                      "EEK",
+                      "EGP",
+                      "ERN",
+                      "ESA",
+                      "ESB",
+                      "ESP",
+                      "ETB",
+                      "EUR",
+                      "FIM",
+                      "FJD",
+                      "FKP",
+                      "FRF",
+                      "GBP",
+                      "GEK",
+                      "GEL",
+                      "GHC",
+                      "GHP",
+                      "GHS",
+                      "GIP",
+                      "GMD",
+                      "GNE",
+                      "GNF",
+                      "GNS",
+                      "GQE",
+                      "GRD",
+                      "GTQ",
+                      "GWE",
+                      "GWP",
+                      "GYD",
+                      "HKD",
+                      "HNL",
+                      "HRD",
+                      "HRK",
+                      "HTG",
+                      "HUF",
+                      "IDR",
+                      "IEP",
+                      "ILP",
+                      "ILR",
+                      "ILS",
+                      "INR",
+                      "IQD",
+                      "IRR",
+                      "ISJ",
+                      "ISK",
+                      "ITL",
+                      "JMD",
+                      "JOD",
+                      "JPY",
+                      "KES",
+                      "KGS",
+                      "KHR",
+                      "KMF",
+                      "KPW",
+                      "KRW",
+                      "KWD",
+                      "KYD",
+                      "KZT",
+                      "LAJ",
+                      "LAK",
+                      "LBP",
+                      "LKR",
+                      "LRD",
+                      "LSL",
+                      "LSM",
+                      "LTL",
+                      "LTT",
+                      "LUC",
+                      "LUF",
+                      "LUL",
+                      "LVL",
+                      "LVR",
+                      "LYD",
+                      "MAD",
+                      "MDL",
+                      "MGA",
+                      "MGF",
+                      "MKD",
+                      "MLF",
+                      "MMK",
+                      "MNT",
+                      "MOP",
+                      "MRO",
+                      "MRU",
+                      "MTL",
+                      "MTP",
+                      "MUR",
+                      "MVQ",
+                      "MVR",
+                      "MWK",
+                      "MXN",
+                      "MXP",
+                      "MXV",
+                      "MYR",
+                      "MZE",
+                      "MZM",
+                      "MZN",
+                      "NAD",
+                      "NGN",
+                      "NIC",
+                      "NIO",
+                      "NLG",
+                      "NOK",
+                      "NPR",
+                      "NZD",
+                      "OMR",
+                      "PAB",
+                      "PEH",
+                      "PEI",
+                      "PEN",
+                      "PES",
+                      "PGK",
+                      "PHP",
+                      "PKR",
+                      "PLN",
+                      "PLZ",
+                      "PTE",
+                      "PYG",
+                      "QAR",
+                      "RHD",
+                      "ROK",
+                      "ROL",
+                      "RON",
+                      "RSD",
+                      "RUB",
+                      "RUR",
+                      "RWF",
+                      "SAR",
+                      "SBD",
+                      "SCR",
+                      "SDD",
+                      "SDG",
+                      "SDP",
+                      "SEK",
+                      "SGD",
+                      "SHP",
+                      "SIT",
+                      "SKK",
+                      "SLL",
+                      "SOS",
+                      "SRD",
+                      "SRG",
+                      "SSP",
+                      "STD",
+                      "STN",
+                      "SUR",
+                      "SVC",
+                      "SYP",
+                      "SZL",
+                      "THB",
+                      "TJR",
+                      "TJS",
+                      "TMM",
+                      "TMT",
+                      "TND",
+                      "TOP",
+                      "TPE",
+                      "TRL",
+                      "TRY",
+                      "TTD",
+                      "TWD",
+                      "TZS",
+                      "UAH",
+                      "UAK",
+                      "UGS",
+                      "UGW",
+                      "UGX",
+                      "USD",
+                      "USN",
+                      "USS",
+                      "UYI",
+                      "UYN",
+                      "UYP",
+                      "UYU",
+                      "UYW",
+                      "UZS",
+                      "VEB",
+                      "VEF",
+                      "VES",
+                      "VNC",
+                      "VND",
+                      "VUV",
+                      "WST",
+                      "XAF",
+                      "XAG",
+                      "XAU",
+                      "XBA",
+                      "XBB",
+                      "XBC",
+                      "XBD",
+                      "XCD",
+                      "XDR",
+                      "XEU",
+                      "XFO",
+                      "XFU",
+                      "XOF",
+                      "XPD",
+                      "XPF",
+                      "XPT",
+                      "XRE",
+                      "XSU",
+                      "XTS",
+                      "XUA",
+                      "XXX",
+                      "YDD",
+                      "YER",
+                      "YUD",
+                      "YUM",
+                      "YUN",
+                      "ZAL",
+                      "ZAR",
+                      "ZMK",
+                      "ZMW",
+                      "ZRN",
+                      "ZRZ",
+                      "ZWC",
+                      "ZWD",
+                      "ZWL",
+                      "ZWN",
+                      "ZWR",
+                      null
+                    ]
+                  }
+                },
+                "minProperties": 1
               }
             },
             "patternProperties": {
@@ -18074,10 +20389,10 @@
                 "minLength": 1
               }
             },
-            "minProperties": 1,
             "required": [
               "id"
-            ]
+            ],
+            "minProperties": 1
           },
           "minItems": 1,
           "uniqueItems": true
@@ -18187,10 +20502,10 @@
               "minLength": 1
             }
           },
-          "minProperties": 1,
           "required": [
             "id"
           ],
+          "minProperties": 1,
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
@@ -19318,10 +21633,6 @@
           "description": "Organizations with which a buyer or a procuring entity decided to conclude a contract.",
           "type": "array",
           "items": {
-            "required": [
-              "id",
-              "name"
-            ],
             "properties": {
               "name": {
                 "type": "string",
@@ -19330,10 +21641,7 @@
                 "minLength": 1
               },
               "id": {
-                "type": [
-                  "string",
-                  "integer"
-                ],
+                "type": "string",
                 "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                 "title": "ID",
                 "minLength": 1
@@ -19820,7 +22128,6 @@
                       "null"
                     ],
                     "description": "The e-mail address of the contact point/person.",
-                    "minLength": 1,
                     "format": "email"
                   },
                   "telephone": {
@@ -19870,6 +22177,10 @@
             "type": "object",
             "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference",
+            "required": [
+              "id",
+              "name"
+            ],
             "minProperties": 1
           },
           "uniqueItems": true,
@@ -20032,7 +22343,8 @@
                 "type": [
                   "number",
                   "null"
-                ]
+                ],
+                "minimum": 0
               },
               "unit": {
                 "title": "Unit",
@@ -20079,7 +22391,8 @@
                         "type": [
                           "number",
                           "null"
-                        ]
+                        ],
+                        "minimum": 0
                       },
                       "currency": {
                         "title": "Currency",
@@ -20447,7 +22760,8 @@
                         "type": [
                           "number",
                           "null"
-                        ]
+                        ],
+                        "minimum": 0
                       }
                     },
                     "minProperties": 1
@@ -20640,6 +22954,22 @@
                   "deprecatedVersion": "1.2"
                 },
                 "minLength": 1
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ],
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
               }
             },
             "patternProperties": {
@@ -20772,10 +23102,10 @@
                 "minLength": 1
               }
             },
-            "minProperties": 1,
             "required": [
               "id"
-            ]
+            ],
+            "minProperties": 1
           },
           "minItems": 1,
           "uniqueItems": true
@@ -20885,10 +23215,10 @@
               "minLength": 1
             }
           },
-          "minProperties": 1,
           "required": [
             "id"
           ],
+          "minProperties": 1,
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
@@ -22145,7 +24475,8 @@
                 "type": [
                   "number",
                   "null"
-                ]
+                ],
+                "minimum": 0
               },
               "unit": {
                 "title": "Unit",
@@ -22192,7 +24523,8 @@
                         "type": [
                           "number",
                           "null"
-                        ]
+                        ],
+                        "minimum": 0
                       },
                       "currency": {
                         "title": "Currency",
@@ -22560,7 +24892,8 @@
                         "type": [
                           "number",
                           "null"
-                        ]
+                        ],
+                        "minimum": 0
                       }
                     },
                     "minProperties": 1
@@ -22753,6 +25086,22 @@
                   "deprecatedVersion": "1.2"
                 },
                 "minLength": 1
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ],
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
               }
             },
             "patternProperties": {
@@ -23152,10 +25501,6 @@
                     "minProperties": 1
                   },
                   "payer": {
-                    "required": [
-                      "id",
-                      "name"
-                    ],
                     "properties": {
                       "name": {
                         "type": "string",
@@ -23164,10 +25509,7 @@
                         "minLength": 1
                       },
                       "id": {
-                        "type": [
-                          "string",
-                          "integer"
-                        ],
+                        "type": "string",
                         "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                         "title": "ID",
                         "minLength": 1
@@ -23654,7 +25996,6 @@
                               "null"
                             ],
                             "description": "The e-mail address of the contact point/person.",
-                            "minLength": 1,
                             "format": "email"
                           },
                           "telephone": {
@@ -23704,13 +26045,13 @@
                     "type": "object",
                     "description": "An organization reference for the organization from which the funds in this transaction originate.",
                     "title": "Payer",
-                    "minProperties": 1
-                  },
-                  "payee": {
                     "required": [
                       "id",
                       "name"
                     ],
+                    "minProperties": 1
+                  },
+                  "payee": {
                     "properties": {
                       "name": {
                         "type": "string",
@@ -23719,10 +26060,7 @@
                         "minLength": 1
                       },
                       "id": {
-                        "type": [
-                          "string",
-                          "integer"
-                        ],
+                        "type": "string",
                         "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                         "title": "ID",
                         "minLength": 1
@@ -24209,7 +26547,6 @@
                               "null"
                             ],
                             "description": "The e-mail address of the contact point/person.",
-                            "minLength": 1,
                             "format": "email"
                           },
                           "telephone": {
@@ -24259,6 +26596,10 @@
                     "type": "object",
                     "description": "An organization reference for the organization which receives the funds in this transaction.",
                     "title": "Payee",
+                    "required": [
+                      "id",
+                      "name"
+                    ],
                     "minProperties": 1
                   },
                   "uri": {
@@ -24786,6 +27127,15 @@
                     ],
                     "minLength": 1
                   },
+                  "dueAfterDate": {
+                    "title": "Due after date",
+                    "description": "The date after which the milestone is due.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "date-time"
+                  },
                   "dueDate": {
                     "title": "Due date",
                     "description": "The date the milestone is due.",
@@ -24952,6 +27302,22 @@
                             "deprecatedVersion": "1.2"
                           },
                           "minLength": 1
+                        },
+                        "relatedItems": {
+                          "title": "Related items",
+                          "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": [
+                              "string"
+                            ],
+                            "minLength": 1
+                          },
+                          "minItems": 1,
+                          "uniqueItems": true
                         }
                       },
                       "patternProperties": {
@@ -24974,6 +27340,337 @@
                     },
                     "uniqueItems": true,
                     "minItems": 1
+                  },
+                  "value": {
+                    "title": "Value",
+                    "description": "The payment's value, if the milestone represents a planned payment.",
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "title": "Amount",
+                        "description": "Amount as a number.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "currency": {
+                        "title": "Currency",
+                        "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "codelist": "currency.csv",
+                        "openCodelist": false,
+                        "enum": [
+                          "ADP",
+                          "AED",
+                          "AFA",
+                          "AFN",
+                          "ALK",
+                          "ALL",
+                          "AMD",
+                          "ANG",
+                          "AOA",
+                          "AOK",
+                          "AON",
+                          "AOR",
+                          "ARA",
+                          "ARP",
+                          "ARS",
+                          "ARY",
+                          "ATS",
+                          "AUD",
+                          "AWG",
+                          "AYM",
+                          "AZM",
+                          "AZN",
+                          "BAD",
+                          "BAM",
+                          "BBD",
+                          "BDT",
+                          "BEC",
+                          "BEF",
+                          "BEL",
+                          "BGJ",
+                          "BGK",
+                          "BGL",
+                          "BGN",
+                          "BHD",
+                          "BIF",
+                          "BMD",
+                          "BND",
+                          "BOB",
+                          "BOP",
+                          "BOV",
+                          "BRB",
+                          "BRC",
+                          "BRE",
+                          "BRL",
+                          "BRN",
+                          "BRR",
+                          "BSD",
+                          "BTN",
+                          "BUK",
+                          "BWP",
+                          "BYB",
+                          "BYN",
+                          "BYR",
+                          "BZD",
+                          "CAD",
+                          "CDF",
+                          "CHC",
+                          "CHE",
+                          "CHF",
+                          "CHW",
+                          "CLF",
+                          "CLP",
+                          "CNY",
+                          "COP",
+                          "COU",
+                          "CRC",
+                          "CSD",
+                          "CSJ",
+                          "CSK",
+                          "CUC",
+                          "CUP",
+                          "CVE",
+                          "CYP",
+                          "CZK",
+                          "DDM",
+                          "DEM",
+                          "DJF",
+                          "DKK",
+                          "DOP",
+                          "DZD",
+                          "ECS",
+                          "ECV",
+                          "EEK",
+                          "EGP",
+                          "ERN",
+                          "ESA",
+                          "ESB",
+                          "ESP",
+                          "ETB",
+                          "EUR",
+                          "FIM",
+                          "FJD",
+                          "FKP",
+                          "FRF",
+                          "GBP",
+                          "GEK",
+                          "GEL",
+                          "GHC",
+                          "GHP",
+                          "GHS",
+                          "GIP",
+                          "GMD",
+                          "GNE",
+                          "GNF",
+                          "GNS",
+                          "GQE",
+                          "GRD",
+                          "GTQ",
+                          "GWE",
+                          "GWP",
+                          "GYD",
+                          "HKD",
+                          "HNL",
+                          "HRD",
+                          "HRK",
+                          "HTG",
+                          "HUF",
+                          "IDR",
+                          "IEP",
+                          "ILP",
+                          "ILR",
+                          "ILS",
+                          "INR",
+                          "IQD",
+                          "IRR",
+                          "ISJ",
+                          "ISK",
+                          "ITL",
+                          "JMD",
+                          "JOD",
+                          "JPY",
+                          "KES",
+                          "KGS",
+                          "KHR",
+                          "KMF",
+                          "KPW",
+                          "KRW",
+                          "KWD",
+                          "KYD",
+                          "KZT",
+                          "LAJ",
+                          "LAK",
+                          "LBP",
+                          "LKR",
+                          "LRD",
+                          "LSL",
+                          "LSM",
+                          "LTL",
+                          "LTT",
+                          "LUC",
+                          "LUF",
+                          "LUL",
+                          "LVL",
+                          "LVR",
+                          "LYD",
+                          "MAD",
+                          "MDL",
+                          "MGA",
+                          "MGF",
+                          "MKD",
+                          "MLF",
+                          "MMK",
+                          "MNT",
+                          "MOP",
+                          "MRO",
+                          "MRU",
+                          "MTL",
+                          "MTP",
+                          "MUR",
+                          "MVQ",
+                          "MVR",
+                          "MWK",
+                          "MXN",
+                          "MXP",
+                          "MXV",
+                          "MYR",
+                          "MZE",
+                          "MZM",
+                          "MZN",
+                          "NAD",
+                          "NGN",
+                          "NIC",
+                          "NIO",
+                          "NLG",
+                          "NOK",
+                          "NPR",
+                          "NZD",
+                          "OMR",
+                          "PAB",
+                          "PEH",
+                          "PEI",
+                          "PEN",
+                          "PES",
+                          "PGK",
+                          "PHP",
+                          "PKR",
+                          "PLN",
+                          "PLZ",
+                          "PTE",
+                          "PYG",
+                          "QAR",
+                          "RHD",
+                          "ROK",
+                          "ROL",
+                          "RON",
+                          "RSD",
+                          "RUB",
+                          "RUR",
+                          "RWF",
+                          "SAR",
+                          "SBD",
+                          "SCR",
+                          "SDD",
+                          "SDG",
+                          "SDP",
+                          "SEK",
+                          "SGD",
+                          "SHP",
+                          "SIT",
+                          "SKK",
+                          "SLL",
+                          "SOS",
+                          "SRD",
+                          "SRG",
+                          "SSP",
+                          "STD",
+                          "STN",
+                          "SUR",
+                          "SVC",
+                          "SYP",
+                          "SZL",
+                          "THB",
+                          "TJR",
+                          "TJS",
+                          "TMM",
+                          "TMT",
+                          "TND",
+                          "TOP",
+                          "TPE",
+                          "TRL",
+                          "TRY",
+                          "TTD",
+                          "TWD",
+                          "TZS",
+                          "UAH",
+                          "UAK",
+                          "UGS",
+                          "UGW",
+                          "UGX",
+                          "USD",
+                          "USN",
+                          "USS",
+                          "UYI",
+                          "UYN",
+                          "UYP",
+                          "UYU",
+                          "UYW",
+                          "UZS",
+                          "VEB",
+                          "VEF",
+                          "VES",
+                          "VNC",
+                          "VND",
+                          "VUV",
+                          "WST",
+                          "XAF",
+                          "XAG",
+                          "XAU",
+                          "XBA",
+                          "XBB",
+                          "XBC",
+                          "XBD",
+                          "XCD",
+                          "XDR",
+                          "XEU",
+                          "XFO",
+                          "XFU",
+                          "XOF",
+                          "XPD",
+                          "XPF",
+                          "XPT",
+                          "XRE",
+                          "XSU",
+                          "XTS",
+                          "XUA",
+                          "XXX",
+                          "YDD",
+                          "YER",
+                          "YUD",
+                          "YUM",
+                          "YUN",
+                          "ZAL",
+                          "ZAR",
+                          "ZMK",
+                          "ZMW",
+                          "ZRN",
+                          "ZRZ",
+                          "ZWC",
+                          "ZWD",
+                          "ZWL",
+                          "ZWN",
+                          "ZWR",
+                          null
+                        ]
+                      }
+                    },
+                    "minProperties": 1
                   }
                 },
                 "patternProperties": {
@@ -25115,6 +27812,22 @@
                       "deprecatedVersion": "1.2"
                     },
                     "minLength": 1
+                  },
+                  "relatedItems": {
+                    "title": "Related items",
+                    "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string"
+                      ],
+                      "minLength": 1
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
                   }
                 },
                 "patternProperties": {
@@ -25209,10 +27922,10 @@
                 ]
               }
             },
-            "minProperties": 1,
             "required": [
               "id"
-            ]
+            ],
+            "minProperties": 1
           },
           "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
@@ -25277,6 +27990,15 @@
                   "null"
                 ],
                 "minLength": 1
+              },
+              "dueAfterDate": {
+                "title": "Due after date",
+                "description": "The date after which the milestone is due.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
               },
               "dueDate": {
                 "title": "Due date",
@@ -25444,6 +28166,22 @@
                         "deprecatedVersion": "1.2"
                       },
                       "minLength": 1
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ],
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
                     }
                   },
                   "patternProperties": {
@@ -25466,6 +28204,337 @@
                 },
                 "uniqueItems": true,
                 "minItems": 1
+              },
+              "value": {
+                "title": "Value",
+                "description": "The payment's value, if the milestone represents a planned payment.",
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "title": "Amount",
+                    "description": "Amount as a number.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "currency": {
+                    "title": "Currency",
+                    "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "codelist": "currency.csv",
+                    "openCodelist": false,
+                    "enum": [
+                      "ADP",
+                      "AED",
+                      "AFA",
+                      "AFN",
+                      "ALK",
+                      "ALL",
+                      "AMD",
+                      "ANG",
+                      "AOA",
+                      "AOK",
+                      "AON",
+                      "AOR",
+                      "ARA",
+                      "ARP",
+                      "ARS",
+                      "ARY",
+                      "ATS",
+                      "AUD",
+                      "AWG",
+                      "AYM",
+                      "AZM",
+                      "AZN",
+                      "BAD",
+                      "BAM",
+                      "BBD",
+                      "BDT",
+                      "BEC",
+                      "BEF",
+                      "BEL",
+                      "BGJ",
+                      "BGK",
+                      "BGL",
+                      "BGN",
+                      "BHD",
+                      "BIF",
+                      "BMD",
+                      "BND",
+                      "BOB",
+                      "BOP",
+                      "BOV",
+                      "BRB",
+                      "BRC",
+                      "BRE",
+                      "BRL",
+                      "BRN",
+                      "BRR",
+                      "BSD",
+                      "BTN",
+                      "BUK",
+                      "BWP",
+                      "BYB",
+                      "BYN",
+                      "BYR",
+                      "BZD",
+                      "CAD",
+                      "CDF",
+                      "CHC",
+                      "CHE",
+                      "CHF",
+                      "CHW",
+                      "CLF",
+                      "CLP",
+                      "CNY",
+                      "COP",
+                      "COU",
+                      "CRC",
+                      "CSD",
+                      "CSJ",
+                      "CSK",
+                      "CUC",
+                      "CUP",
+                      "CVE",
+                      "CYP",
+                      "CZK",
+                      "DDM",
+                      "DEM",
+                      "DJF",
+                      "DKK",
+                      "DOP",
+                      "DZD",
+                      "ECS",
+                      "ECV",
+                      "EEK",
+                      "EGP",
+                      "ERN",
+                      "ESA",
+                      "ESB",
+                      "ESP",
+                      "ETB",
+                      "EUR",
+                      "FIM",
+                      "FJD",
+                      "FKP",
+                      "FRF",
+                      "GBP",
+                      "GEK",
+                      "GEL",
+                      "GHC",
+                      "GHP",
+                      "GHS",
+                      "GIP",
+                      "GMD",
+                      "GNE",
+                      "GNF",
+                      "GNS",
+                      "GQE",
+                      "GRD",
+                      "GTQ",
+                      "GWE",
+                      "GWP",
+                      "GYD",
+                      "HKD",
+                      "HNL",
+                      "HRD",
+                      "HRK",
+                      "HTG",
+                      "HUF",
+                      "IDR",
+                      "IEP",
+                      "ILP",
+                      "ILR",
+                      "ILS",
+                      "INR",
+                      "IQD",
+                      "IRR",
+                      "ISJ",
+                      "ISK",
+                      "ITL",
+                      "JMD",
+                      "JOD",
+                      "JPY",
+                      "KES",
+                      "KGS",
+                      "KHR",
+                      "KMF",
+                      "KPW",
+                      "KRW",
+                      "KWD",
+                      "KYD",
+                      "KZT",
+                      "LAJ",
+                      "LAK",
+                      "LBP",
+                      "LKR",
+                      "LRD",
+                      "LSL",
+                      "LSM",
+                      "LTL",
+                      "LTT",
+                      "LUC",
+                      "LUF",
+                      "LUL",
+                      "LVL",
+                      "LVR",
+                      "LYD",
+                      "MAD",
+                      "MDL",
+                      "MGA",
+                      "MGF",
+                      "MKD",
+                      "MLF",
+                      "MMK",
+                      "MNT",
+                      "MOP",
+                      "MRO",
+                      "MRU",
+                      "MTL",
+                      "MTP",
+                      "MUR",
+                      "MVQ",
+                      "MVR",
+                      "MWK",
+                      "MXN",
+                      "MXP",
+                      "MXV",
+                      "MYR",
+                      "MZE",
+                      "MZM",
+                      "MZN",
+                      "NAD",
+                      "NGN",
+                      "NIC",
+                      "NIO",
+                      "NLG",
+                      "NOK",
+                      "NPR",
+                      "NZD",
+                      "OMR",
+                      "PAB",
+                      "PEH",
+                      "PEI",
+                      "PEN",
+                      "PES",
+                      "PGK",
+                      "PHP",
+                      "PKR",
+                      "PLN",
+                      "PLZ",
+                      "PTE",
+                      "PYG",
+                      "QAR",
+                      "RHD",
+                      "ROK",
+                      "ROL",
+                      "RON",
+                      "RSD",
+                      "RUB",
+                      "RUR",
+                      "RWF",
+                      "SAR",
+                      "SBD",
+                      "SCR",
+                      "SDD",
+                      "SDG",
+                      "SDP",
+                      "SEK",
+                      "SGD",
+                      "SHP",
+                      "SIT",
+                      "SKK",
+                      "SLL",
+                      "SOS",
+                      "SRD",
+                      "SRG",
+                      "SSP",
+                      "STD",
+                      "STN",
+                      "SUR",
+                      "SVC",
+                      "SYP",
+                      "SZL",
+                      "THB",
+                      "TJR",
+                      "TJS",
+                      "TMM",
+                      "TMT",
+                      "TND",
+                      "TOP",
+                      "TPE",
+                      "TRL",
+                      "TRY",
+                      "TTD",
+                      "TWD",
+                      "TZS",
+                      "UAH",
+                      "UAK",
+                      "UGS",
+                      "UGW",
+                      "UGX",
+                      "USD",
+                      "USN",
+                      "USS",
+                      "UYI",
+                      "UYN",
+                      "UYP",
+                      "UYU",
+                      "UYW",
+                      "UZS",
+                      "VEB",
+                      "VEF",
+                      "VES",
+                      "VNC",
+                      "VND",
+                      "VUV",
+                      "WST",
+                      "XAF",
+                      "XAG",
+                      "XAU",
+                      "XBA",
+                      "XBB",
+                      "XBC",
+                      "XBD",
+                      "XCD",
+                      "XDR",
+                      "XEU",
+                      "XFO",
+                      "XFU",
+                      "XOF",
+                      "XPD",
+                      "XPF",
+                      "XPT",
+                      "XRE",
+                      "XSU",
+                      "XTS",
+                      "XUA",
+                      "XXX",
+                      "YDD",
+                      "YER",
+                      "YUD",
+                      "YUM",
+                      "YUN",
+                      "ZAL",
+                      "ZAR",
+                      "ZMK",
+                      "ZMW",
+                      "ZRN",
+                      "ZRZ",
+                      "ZWC",
+                      "ZWD",
+                      "ZWL",
+                      "ZWN",
+                      "ZWR",
+                      null
+                    ]
+                  }
+                },
+                "minProperties": 1
               }
             },
             "patternProperties": {
@@ -25598,10 +28667,10 @@
                 "minLength": 1
               }
             },
-            "minProperties": 1,
             "required": [
               "id"
-            ]
+            ],
+            "minProperties": 1
           },
           "minItems": 1,
           "uniqueItems": true
@@ -25711,10 +28780,10 @@
               "minLength": 1
             }
           },
-          "minProperties": 1,
           "required": [
             "id"
           ],
+          "minProperties": 1,
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
@@ -26115,10 +29184,6 @@
                 "minProperties": 1
               },
               "payer": {
-                "required": [
-                  "id",
-                  "name"
-                ],
                 "properties": {
                   "name": {
                     "type": "string",
@@ -26127,10 +29192,7 @@
                     "minLength": 1
                   },
                   "id": {
-                    "type": [
-                      "string",
-                      "integer"
-                    ],
+                    "type": "string",
                     "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                     "title": "ID",
                     "minLength": 1
@@ -26617,7 +29679,6 @@
                           "null"
                         ],
                         "description": "The e-mail address of the contact point/person.",
-                        "minLength": 1,
                         "format": "email"
                       },
                       "telephone": {
@@ -26667,13 +29728,13 @@
                 "type": "object",
                 "description": "An organization reference for the organization from which the funds in this transaction originate.",
                 "title": "Payer",
-                "minProperties": 1
-              },
-              "payee": {
                 "required": [
                   "id",
                   "name"
                 ],
+                "minProperties": 1
+              },
+              "payee": {
                 "properties": {
                   "name": {
                     "type": "string",
@@ -26682,10 +29743,7 @@
                     "minLength": 1
                   },
                   "id": {
-                    "type": [
-                      "string",
-                      "integer"
-                    ],
+                    "type": "string",
                     "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
                     "title": "ID",
                     "minLength": 1
@@ -27172,7 +30230,6 @@
                           "null"
                         ],
                         "description": "The e-mail address of the contact point/person.",
-                        "minLength": 1,
                         "format": "email"
                       },
                       "telephone": {
@@ -27222,6 +30279,10 @@
                 "type": "object",
                 "description": "An organization reference for the organization which receives the funds in this transaction.",
                 "title": "Payee",
+                "required": [
+                  "id",
+                  "name"
+                ],
                 "minProperties": 1
               },
               "uri": {
@@ -27749,6 +30810,15 @@
                 ],
                 "minLength": 1
               },
+              "dueAfterDate": {
+                "title": "Due after date",
+                "description": "The date after which the milestone is due.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
               "dueDate": {
                 "title": "Due date",
                 "description": "The date the milestone is due.",
@@ -27915,6 +30985,22 @@
                         "deprecatedVersion": "1.2"
                       },
                       "minLength": 1
+                    },
+                    "relatedItems": {
+                      "title": "Related items",
+                      "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string"
+                        ],
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
                     }
                   },
                   "patternProperties": {
@@ -27937,6 +31023,337 @@
                 },
                 "uniqueItems": true,
                 "minItems": 1
+              },
+              "value": {
+                "title": "Value",
+                "description": "The payment's value, if the milestone represents a planned payment.",
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "title": "Amount",
+                    "description": "Amount as a number.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "currency": {
+                    "title": "Currency",
+                    "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "codelist": "currency.csv",
+                    "openCodelist": false,
+                    "enum": [
+                      "ADP",
+                      "AED",
+                      "AFA",
+                      "AFN",
+                      "ALK",
+                      "ALL",
+                      "AMD",
+                      "ANG",
+                      "AOA",
+                      "AOK",
+                      "AON",
+                      "AOR",
+                      "ARA",
+                      "ARP",
+                      "ARS",
+                      "ARY",
+                      "ATS",
+                      "AUD",
+                      "AWG",
+                      "AYM",
+                      "AZM",
+                      "AZN",
+                      "BAD",
+                      "BAM",
+                      "BBD",
+                      "BDT",
+                      "BEC",
+                      "BEF",
+                      "BEL",
+                      "BGJ",
+                      "BGK",
+                      "BGL",
+                      "BGN",
+                      "BHD",
+                      "BIF",
+                      "BMD",
+                      "BND",
+                      "BOB",
+                      "BOP",
+                      "BOV",
+                      "BRB",
+                      "BRC",
+                      "BRE",
+                      "BRL",
+                      "BRN",
+                      "BRR",
+                      "BSD",
+                      "BTN",
+                      "BUK",
+                      "BWP",
+                      "BYB",
+                      "BYN",
+                      "BYR",
+                      "BZD",
+                      "CAD",
+                      "CDF",
+                      "CHC",
+                      "CHE",
+                      "CHF",
+                      "CHW",
+                      "CLF",
+                      "CLP",
+                      "CNY",
+                      "COP",
+                      "COU",
+                      "CRC",
+                      "CSD",
+                      "CSJ",
+                      "CSK",
+                      "CUC",
+                      "CUP",
+                      "CVE",
+                      "CYP",
+                      "CZK",
+                      "DDM",
+                      "DEM",
+                      "DJF",
+                      "DKK",
+                      "DOP",
+                      "DZD",
+                      "ECS",
+                      "ECV",
+                      "EEK",
+                      "EGP",
+                      "ERN",
+                      "ESA",
+                      "ESB",
+                      "ESP",
+                      "ETB",
+                      "EUR",
+                      "FIM",
+                      "FJD",
+                      "FKP",
+                      "FRF",
+                      "GBP",
+                      "GEK",
+                      "GEL",
+                      "GHC",
+                      "GHP",
+                      "GHS",
+                      "GIP",
+                      "GMD",
+                      "GNE",
+                      "GNF",
+                      "GNS",
+                      "GQE",
+                      "GRD",
+                      "GTQ",
+                      "GWE",
+                      "GWP",
+                      "GYD",
+                      "HKD",
+                      "HNL",
+                      "HRD",
+                      "HRK",
+                      "HTG",
+                      "HUF",
+                      "IDR",
+                      "IEP",
+                      "ILP",
+                      "ILR",
+                      "ILS",
+                      "INR",
+                      "IQD",
+                      "IRR",
+                      "ISJ",
+                      "ISK",
+                      "ITL",
+                      "JMD",
+                      "JOD",
+                      "JPY",
+                      "KES",
+                      "KGS",
+                      "KHR",
+                      "KMF",
+                      "KPW",
+                      "KRW",
+                      "KWD",
+                      "KYD",
+                      "KZT",
+                      "LAJ",
+                      "LAK",
+                      "LBP",
+                      "LKR",
+                      "LRD",
+                      "LSL",
+                      "LSM",
+                      "LTL",
+                      "LTT",
+                      "LUC",
+                      "LUF",
+                      "LUL",
+                      "LVL",
+                      "LVR",
+                      "LYD",
+                      "MAD",
+                      "MDL",
+                      "MGA",
+                      "MGF",
+                      "MKD",
+                      "MLF",
+                      "MMK",
+                      "MNT",
+                      "MOP",
+                      "MRO",
+                      "MRU",
+                      "MTL",
+                      "MTP",
+                      "MUR",
+                      "MVQ",
+                      "MVR",
+                      "MWK",
+                      "MXN",
+                      "MXP",
+                      "MXV",
+                      "MYR",
+                      "MZE",
+                      "MZM",
+                      "MZN",
+                      "NAD",
+                      "NGN",
+                      "NIC",
+                      "NIO",
+                      "NLG",
+                      "NOK",
+                      "NPR",
+                      "NZD",
+                      "OMR",
+                      "PAB",
+                      "PEH",
+                      "PEI",
+                      "PEN",
+                      "PES",
+                      "PGK",
+                      "PHP",
+                      "PKR",
+                      "PLN",
+                      "PLZ",
+                      "PTE",
+                      "PYG",
+                      "QAR",
+                      "RHD",
+                      "ROK",
+                      "ROL",
+                      "RON",
+                      "RSD",
+                      "RUB",
+                      "RUR",
+                      "RWF",
+                      "SAR",
+                      "SBD",
+                      "SCR",
+                      "SDD",
+                      "SDG",
+                      "SDP",
+                      "SEK",
+                      "SGD",
+                      "SHP",
+                      "SIT",
+                      "SKK",
+                      "SLL",
+                      "SOS",
+                      "SRD",
+                      "SRG",
+                      "SSP",
+                      "STD",
+                      "STN",
+                      "SUR",
+                      "SVC",
+                      "SYP",
+                      "SZL",
+                      "THB",
+                      "TJR",
+                      "TJS",
+                      "TMM",
+                      "TMT",
+                      "TND",
+                      "TOP",
+                      "TPE",
+                      "TRL",
+                      "TRY",
+                      "TTD",
+                      "TWD",
+                      "TZS",
+                      "UAH",
+                      "UAK",
+                      "UGS",
+                      "UGW",
+                      "UGX",
+                      "USD",
+                      "USN",
+                      "USS",
+                      "UYI",
+                      "UYN",
+                      "UYP",
+                      "UYU",
+                      "UYW",
+                      "UZS",
+                      "VEB",
+                      "VEF",
+                      "VES",
+                      "VNC",
+                      "VND",
+                      "VUV",
+                      "WST",
+                      "XAF",
+                      "XAG",
+                      "XAU",
+                      "XBA",
+                      "XBB",
+                      "XBC",
+                      "XBD",
+                      "XCD",
+                      "XDR",
+                      "XEU",
+                      "XFO",
+                      "XFU",
+                      "XOF",
+                      "XPD",
+                      "XPF",
+                      "XPT",
+                      "XRE",
+                      "XSU",
+                      "XTS",
+                      "XUA",
+                      "XXX",
+                      "YDD",
+                      "YER",
+                      "YUD",
+                      "YUM",
+                      "YUN",
+                      "ZAL",
+                      "ZAR",
+                      "ZMK",
+                      "ZMW",
+                      "ZRN",
+                      "ZRZ",
+                      "ZWC",
+                      "ZWD",
+                      "ZWL",
+                      "ZWN",
+                      "ZWR",
+                      null
+                    ]
+                  }
+                },
+                "minProperties": 1
               }
             },
             "patternProperties": {
@@ -28078,6 +31495,22 @@
                   "deprecatedVersion": "1.2"
                 },
                 "minLength": 1
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ],
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
               }
             },
             "patternProperties": {
@@ -28158,6 +31591,15 @@
             "null"
           ],
           "minLength": 1
+        },
+        "dueAfterDate": {
+          "title": "Due after date",
+          "description": "The date after which the milestone is due.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "dueDate": {
           "title": "Due date",
@@ -28325,6 +31767,22 @@
                   "deprecatedVersion": "1.2"
                 },
                 "minLength": 1
+              },
+              "relatedItems": {
+                "title": "Related items",
+                "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ],
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
               }
             },
             "patternProperties": {
@@ -28347,6 +31805,337 @@
           },
           "uniqueItems": true,
           "minItems": 1
+        },
+        "value": {
+          "title": "Value",
+          "description": "The payment's value, if the milestone represents a planned payment.",
+          "type": "object",
+          "properties": {
+            "amount": {
+              "title": "Amount",
+              "description": "Amount as a number.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "currency": {
+              "title": "Currency",
+              "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "currency.csv",
+              "openCodelist": false,
+              "enum": [
+                "ADP",
+                "AED",
+                "AFA",
+                "AFN",
+                "ALK",
+                "ALL",
+                "AMD",
+                "ANG",
+                "AOA",
+                "AOK",
+                "AON",
+                "AOR",
+                "ARA",
+                "ARP",
+                "ARS",
+                "ARY",
+                "ATS",
+                "AUD",
+                "AWG",
+                "AYM",
+                "AZM",
+                "AZN",
+                "BAD",
+                "BAM",
+                "BBD",
+                "BDT",
+                "BEC",
+                "BEF",
+                "BEL",
+                "BGJ",
+                "BGK",
+                "BGL",
+                "BGN",
+                "BHD",
+                "BIF",
+                "BMD",
+                "BND",
+                "BOB",
+                "BOP",
+                "BOV",
+                "BRB",
+                "BRC",
+                "BRE",
+                "BRL",
+                "BRN",
+                "BRR",
+                "BSD",
+                "BTN",
+                "BUK",
+                "BWP",
+                "BYB",
+                "BYN",
+                "BYR",
+                "BZD",
+                "CAD",
+                "CDF",
+                "CHC",
+                "CHE",
+                "CHF",
+                "CHW",
+                "CLF",
+                "CLP",
+                "CNY",
+                "COP",
+                "COU",
+                "CRC",
+                "CSD",
+                "CSJ",
+                "CSK",
+                "CUC",
+                "CUP",
+                "CVE",
+                "CYP",
+                "CZK",
+                "DDM",
+                "DEM",
+                "DJF",
+                "DKK",
+                "DOP",
+                "DZD",
+                "ECS",
+                "ECV",
+                "EEK",
+                "EGP",
+                "ERN",
+                "ESA",
+                "ESB",
+                "ESP",
+                "ETB",
+                "EUR",
+                "FIM",
+                "FJD",
+                "FKP",
+                "FRF",
+                "GBP",
+                "GEK",
+                "GEL",
+                "GHC",
+                "GHP",
+                "GHS",
+                "GIP",
+                "GMD",
+                "GNE",
+                "GNF",
+                "GNS",
+                "GQE",
+                "GRD",
+                "GTQ",
+                "GWE",
+                "GWP",
+                "GYD",
+                "HKD",
+                "HNL",
+                "HRD",
+                "HRK",
+                "HTG",
+                "HUF",
+                "IDR",
+                "IEP",
+                "ILP",
+                "ILR",
+                "ILS",
+                "INR",
+                "IQD",
+                "IRR",
+                "ISJ",
+                "ISK",
+                "ITL",
+                "JMD",
+                "JOD",
+                "JPY",
+                "KES",
+                "KGS",
+                "KHR",
+                "KMF",
+                "KPW",
+                "KRW",
+                "KWD",
+                "KYD",
+                "KZT",
+                "LAJ",
+                "LAK",
+                "LBP",
+                "LKR",
+                "LRD",
+                "LSL",
+                "LSM",
+                "LTL",
+                "LTT",
+                "LUC",
+                "LUF",
+                "LUL",
+                "LVL",
+                "LVR",
+                "LYD",
+                "MAD",
+                "MDL",
+                "MGA",
+                "MGF",
+                "MKD",
+                "MLF",
+                "MMK",
+                "MNT",
+                "MOP",
+                "MRO",
+                "MRU",
+                "MTL",
+                "MTP",
+                "MUR",
+                "MVQ",
+                "MVR",
+                "MWK",
+                "MXN",
+                "MXP",
+                "MXV",
+                "MYR",
+                "MZE",
+                "MZM",
+                "MZN",
+                "NAD",
+                "NGN",
+                "NIC",
+                "NIO",
+                "NLG",
+                "NOK",
+                "NPR",
+                "NZD",
+                "OMR",
+                "PAB",
+                "PEH",
+                "PEI",
+                "PEN",
+                "PES",
+                "PGK",
+                "PHP",
+                "PKR",
+                "PLN",
+                "PLZ",
+                "PTE",
+                "PYG",
+                "QAR",
+                "RHD",
+                "ROK",
+                "ROL",
+                "RON",
+                "RSD",
+                "RUB",
+                "RUR",
+                "RWF",
+                "SAR",
+                "SBD",
+                "SCR",
+                "SDD",
+                "SDG",
+                "SDP",
+                "SEK",
+                "SGD",
+                "SHP",
+                "SIT",
+                "SKK",
+                "SLL",
+                "SOS",
+                "SRD",
+                "SRG",
+                "SSP",
+                "STD",
+                "STN",
+                "SUR",
+                "SVC",
+                "SYP",
+                "SZL",
+                "THB",
+                "TJR",
+                "TJS",
+                "TMM",
+                "TMT",
+                "TND",
+                "TOP",
+                "TPE",
+                "TRL",
+                "TRY",
+                "TTD",
+                "TWD",
+                "TZS",
+                "UAH",
+                "UAK",
+                "UGS",
+                "UGW",
+                "UGX",
+                "USD",
+                "USN",
+                "USS",
+                "UYI",
+                "UYN",
+                "UYP",
+                "UYU",
+                "UYW",
+                "UZS",
+                "VEB",
+                "VEF",
+                "VES",
+                "VNC",
+                "VND",
+                "VUV",
+                "WST",
+                "XAF",
+                "XAG",
+                "XAU",
+                "XBA",
+                "XBB",
+                "XBC",
+                "XBD",
+                "XCD",
+                "XDR",
+                "XEU",
+                "XFO",
+                "XFU",
+                "XOF",
+                "XPD",
+                "XPF",
+                "XPT",
+                "XRE",
+                "XSU",
+                "XTS",
+                "XUA",
+                "XXX",
+                "YDD",
+                "YER",
+                "YUD",
+                "YUM",
+                "YUN",
+                "ZAL",
+                "ZAR",
+                "ZMK",
+                "ZMW",
+                "ZRN",
+                "ZRZ",
+                "ZWC",
+                "ZWD",
+                "ZWL",
+                "ZWN",
+                "ZWR",
+                null
+              ]
+            }
+          },
+          "minProperties": 1
         }
       },
       "patternProperties": {
@@ -28481,6 +32270,22 @@
             "deprecatedVersion": "1.2"
           },
           "minLength": 1
+        },
+        "relatedItems": {
+          "title": "Related items",
+          "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string"
+            ],
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "patternProperties": {
@@ -29290,10 +33095,6 @@
           "minProperties": 1
         },
         "payer": {
-          "required": [
-            "id",
-            "name"
-          ],
           "properties": {
             "name": {
               "type": "string",
@@ -29302,10 +33103,7 @@
               "minLength": 1
             },
             "id": {
-              "type": [
-                "string",
-                "integer"
-              ],
+              "type": "string",
               "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
               "title": "ID",
               "minLength": 1
@@ -29792,7 +33590,6 @@
                     "null"
                   ],
                   "description": "The e-mail address of the contact point/person.",
-                  "minLength": 1,
                   "format": "email"
                 },
                 "telephone": {
@@ -29842,13 +33639,13 @@
           "type": "object",
           "description": "An organization reference for the organization from which the funds in this transaction originate.",
           "title": "Payer",
-          "minProperties": 1
-        },
-        "payee": {
           "required": [
             "id",
             "name"
           ],
+          "minProperties": 1
+        },
+        "payee": {
           "properties": {
             "name": {
               "type": "string",
@@ -29857,10 +33654,7 @@
               "minLength": 1
             },
             "id": {
-              "type": [
-                "string",
-                "integer"
-              ],
+              "type": "string",
               "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
               "title": "ID",
               "minLength": 1
@@ -30347,7 +34141,6 @@
                     "null"
                   ],
                   "description": "The e-mail address of the contact point/person.",
-                  "minLength": 1,
                   "format": "email"
                 },
                 "telephone": {
@@ -30397,6 +34190,10 @@
           "type": "object",
           "description": "An organization reference for the organization which receives the funds in this transaction.",
           "title": "Payee",
+          "required": [
+            "id",
+            "name"
+          ],
           "minProperties": 1
         },
         "uri": {
@@ -30863,10 +34660,6 @@
       "minProperties": 1
     },
     "OrganizationReference": {
-      "required": [
-        "id",
-        "name"
-      ],
       "properties": {
         "name": {
           "type": "string",
@@ -30875,10 +34668,7 @@
           "minLength": 1
         },
         "id": {
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "description": "The `id` of the organization's entry in the parties array. Although an integer is allowed, it is recommended to use a string.",
           "title": "ID",
           "minLength": 1
@@ -31365,7 +35155,6 @@
                 "null"
               ],
               "description": "The e-mail address of the contact point/person.",
-              "minLength": 1,
               "format": "email"
             },
             "telephone": {
@@ -31415,16 +35204,16 @@
       "type": "object",
       "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
       "title": "Organization reference",
+      "required": [
+        "id",
+        "name"
+      ],
       "minProperties": 1
     },
     "Organization": {
       "title": "Organization",
       "description": "An organization",
       "type": "object",
-      "required": [
-        "id",
-        "name"
-      ],
       "properties": {
         "name": {
           "title": "Common name",
@@ -31908,7 +35697,6 @@
                 "null"
               ],
               "description": "The e-mail address of the contact point/person.",
-              "minLength": 1,
               "format": "email"
             },
             "telephone": {
@@ -31985,6 +35773,10 @@
           "minLength": 1
         }
       },
+      "required": [
+        "id",
+        "name"
+      ],
       "minProperties": 1
     },
     "Item": {
@@ -32139,7 +35931,8 @@
           "type": [
             "number",
             "null"
-          ]
+          ],
+          "minimum": 0
         },
         "unit": {
           "title": "Unit",
@@ -32186,7 +35979,8 @@
                   "type": [
                     "number",
                     "null"
-                  ]
+                  ],
+                  "minimum": 0
                 },
                 "currency": {
                   "title": "Currency",
@@ -32554,7 +36348,8 @@
                   "type": [
                     "number",
                     "null"
-                  ]
+                  ],
+                  "minimum": 0
                 }
               },
               "minProperties": 1
@@ -32688,10 +36483,10 @@
           "minLength": 1
         }
       },
-      "minProperties": 1,
       "required": [
         "id"
-      ]
+      ],
+      "minProperties": 1
     },
     "Classification": {
       "title": "Classification",
@@ -33157,7 +36952,6 @@
             "null"
           ],
           "description": "The e-mail address of the contact point/person.",
-          "minLength": 1,
           "format": "email"
         },
         "telephone": {
@@ -33211,338 +37005,6 @@
             "number",
             "null"
           ]
-        },
-        "currency": {
-          "title": "Currency",
-          "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "currency.csv",
-          "openCodelist": false,
-          "enum": [
-            "ADP",
-            "AED",
-            "AFA",
-            "AFN",
-            "ALK",
-            "ALL",
-            "AMD",
-            "ANG",
-            "AOA",
-            "AOK",
-            "AON",
-            "AOR",
-            "ARA",
-            "ARP",
-            "ARS",
-            "ARY",
-            "ATS",
-            "AUD",
-            "AWG",
-            "AYM",
-            "AZM",
-            "AZN",
-            "BAD",
-            "BAM",
-            "BBD",
-            "BDT",
-            "BEC",
-            "BEF",
-            "BEL",
-            "BGJ",
-            "BGK",
-            "BGL",
-            "BGN",
-            "BHD",
-            "BIF",
-            "BMD",
-            "BND",
-            "BOB",
-            "BOP",
-            "BOV",
-            "BRB",
-            "BRC",
-            "BRE",
-            "BRL",
-            "BRN",
-            "BRR",
-            "BSD",
-            "BTN",
-            "BUK",
-            "BWP",
-            "BYB",
-            "BYN",
-            "BYR",
-            "BZD",
-            "CAD",
-            "CDF",
-            "CHC",
-            "CHE",
-            "CHF",
-            "CHW",
-            "CLF",
-            "CLP",
-            "CNY",
-            "COP",
-            "COU",
-            "CRC",
-            "CSD",
-            "CSJ",
-            "CSK",
-            "CUC",
-            "CUP",
-            "CVE",
-            "CYP",
-            "CZK",
-            "DDM",
-            "DEM",
-            "DJF",
-            "DKK",
-            "DOP",
-            "DZD",
-            "ECS",
-            "ECV",
-            "EEK",
-            "EGP",
-            "ERN",
-            "ESA",
-            "ESB",
-            "ESP",
-            "ETB",
-            "EUR",
-            "FIM",
-            "FJD",
-            "FKP",
-            "FRF",
-            "GBP",
-            "GEK",
-            "GEL",
-            "GHC",
-            "GHP",
-            "GHS",
-            "GIP",
-            "GMD",
-            "GNE",
-            "GNF",
-            "GNS",
-            "GQE",
-            "GRD",
-            "GTQ",
-            "GWE",
-            "GWP",
-            "GYD",
-            "HKD",
-            "HNL",
-            "HRD",
-            "HRK",
-            "HTG",
-            "HUF",
-            "IDR",
-            "IEP",
-            "ILP",
-            "ILR",
-            "ILS",
-            "INR",
-            "IQD",
-            "IRR",
-            "ISJ",
-            "ISK",
-            "ITL",
-            "JMD",
-            "JOD",
-            "JPY",
-            "KES",
-            "KGS",
-            "KHR",
-            "KMF",
-            "KPW",
-            "KRW",
-            "KWD",
-            "KYD",
-            "KZT",
-            "LAJ",
-            "LAK",
-            "LBP",
-            "LKR",
-            "LRD",
-            "LSL",
-            "LSM",
-            "LTL",
-            "LTT",
-            "LUC",
-            "LUF",
-            "LUL",
-            "LVL",
-            "LVR",
-            "LYD",
-            "MAD",
-            "MDL",
-            "MGA",
-            "MGF",
-            "MKD",
-            "MLF",
-            "MMK",
-            "MNT",
-            "MOP",
-            "MRO",
-            "MRU",
-            "MTL",
-            "MTP",
-            "MUR",
-            "MVQ",
-            "MVR",
-            "MWK",
-            "MXN",
-            "MXP",
-            "MXV",
-            "MYR",
-            "MZE",
-            "MZM",
-            "MZN",
-            "NAD",
-            "NGN",
-            "NIC",
-            "NIO",
-            "NLG",
-            "NOK",
-            "NPR",
-            "NZD",
-            "OMR",
-            "PAB",
-            "PEH",
-            "PEI",
-            "PEN",
-            "PES",
-            "PGK",
-            "PHP",
-            "PKR",
-            "PLN",
-            "PLZ",
-            "PTE",
-            "PYG",
-            "QAR",
-            "RHD",
-            "ROK",
-            "ROL",
-            "RON",
-            "RSD",
-            "RUB",
-            "RUR",
-            "RWF",
-            "SAR",
-            "SBD",
-            "SCR",
-            "SDD",
-            "SDG",
-            "SDP",
-            "SEK",
-            "SGD",
-            "SHP",
-            "SIT",
-            "SKK",
-            "SLL",
-            "SOS",
-            "SRD",
-            "SRG",
-            "SSP",
-            "STD",
-            "STN",
-            "SUR",
-            "SVC",
-            "SYP",
-            "SZL",
-            "THB",
-            "TJR",
-            "TJS",
-            "TMM",
-            "TMT",
-            "TND",
-            "TOP",
-            "TPE",
-            "TRL",
-            "TRY",
-            "TTD",
-            "TWD",
-            "TZS",
-            "UAH",
-            "UAK",
-            "UGS",
-            "UGW",
-            "UGX",
-            "USD",
-            "USN",
-            "USS",
-            "UYI",
-            "UYN",
-            "UYP",
-            "UYU",
-            "UYW",
-            "UZS",
-            "VEB",
-            "VEF",
-            "VES",
-            "VNC",
-            "VND",
-            "VUV",
-            "WST",
-            "XAF",
-            "XAG",
-            "XAU",
-            "XBA",
-            "XBB",
-            "XBC",
-            "XBD",
-            "XCD",
-            "XDR",
-            "XEU",
-            "XFO",
-            "XFU",
-            "XOF",
-            "XPD",
-            "XPF",
-            "XPT",
-            "XRE",
-            "XSU",
-            "XTS",
-            "XUA",
-            "XXX",
-            "YDD",
-            "YER",
-            "YUD",
-            "YUM",
-            "YUN",
-            "ZAL",
-            "ZAR",
-            "ZMK",
-            "ZMW",
-            "ZRN",
-            "ZRZ",
-            "ZWC",
-            "ZWD",
-            "ZWL",
-            "ZWN",
-            "ZWR",
-            null
-          ]
-        }
-      },
-      "minProperties": 1
-    },
-    "UnitValue": {
-      "title": "Unit value",
-      "description": "The monetary value of a single unit.",
-      "type": "object",
-      "properties": {
-        "amount": {
-          "title": "Amount",
-          "description": "Amount as a number.",
-          "type": [
-            "number",
-            "null"
-          ],
-          "minimum": 0
         },
         "currency": {
           "title": "Currency",
@@ -34000,10 +37462,10 @@
           ]
         }
       },
-      "minProperties": 1,
       "required": [
         "id"
-      ]
+      ],
+      "minProperties": 1
     },
     "Unit": {
       "title": "Unit",
@@ -34050,7 +37512,8 @@
               "type": [
                 "number",
                 "null"
-              ]
+              ],
+              "minimum": 0
             },
             "currency": {
               "title": "Currency",
@@ -34418,7 +37881,8 @@
               "type": [
                 "number",
                 "null"
-              ]
+              ],
+              "minimum": 0
             }
           },
           "minProperties": 1
@@ -34453,6 +37917,338 @@
           "description": "The URL of the related resource.",
           "type": "string",
           "format": "uri"
+        }
+      },
+      "minProperties": 1
+    },
+    "UnitValue": {
+      "title": "Unit value",
+      "description": "The monetary value of a single unit.",
+      "type": "object",
+      "properties": {
+        "amount": {
+          "title": "Amount",
+          "description": "Amount as a number.",
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "title": "Currency",
+          "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#currency) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "currency.csv",
+          "openCodelist": false,
+          "enum": [
+            "ADP",
+            "AED",
+            "AFA",
+            "AFN",
+            "ALK",
+            "ALL",
+            "AMD",
+            "ANG",
+            "AOA",
+            "AOK",
+            "AON",
+            "AOR",
+            "ARA",
+            "ARP",
+            "ARS",
+            "ARY",
+            "ATS",
+            "AUD",
+            "AWG",
+            "AYM",
+            "AZM",
+            "AZN",
+            "BAD",
+            "BAM",
+            "BBD",
+            "BDT",
+            "BEC",
+            "BEF",
+            "BEL",
+            "BGJ",
+            "BGK",
+            "BGL",
+            "BGN",
+            "BHD",
+            "BIF",
+            "BMD",
+            "BND",
+            "BOB",
+            "BOP",
+            "BOV",
+            "BRB",
+            "BRC",
+            "BRE",
+            "BRL",
+            "BRN",
+            "BRR",
+            "BSD",
+            "BTN",
+            "BUK",
+            "BWP",
+            "BYB",
+            "BYN",
+            "BYR",
+            "BZD",
+            "CAD",
+            "CDF",
+            "CHC",
+            "CHE",
+            "CHF",
+            "CHW",
+            "CLF",
+            "CLP",
+            "CNY",
+            "COP",
+            "COU",
+            "CRC",
+            "CSD",
+            "CSJ",
+            "CSK",
+            "CUC",
+            "CUP",
+            "CVE",
+            "CYP",
+            "CZK",
+            "DDM",
+            "DEM",
+            "DJF",
+            "DKK",
+            "DOP",
+            "DZD",
+            "ECS",
+            "ECV",
+            "EEK",
+            "EGP",
+            "ERN",
+            "ESA",
+            "ESB",
+            "ESP",
+            "ETB",
+            "EUR",
+            "FIM",
+            "FJD",
+            "FKP",
+            "FRF",
+            "GBP",
+            "GEK",
+            "GEL",
+            "GHC",
+            "GHP",
+            "GHS",
+            "GIP",
+            "GMD",
+            "GNE",
+            "GNF",
+            "GNS",
+            "GQE",
+            "GRD",
+            "GTQ",
+            "GWE",
+            "GWP",
+            "GYD",
+            "HKD",
+            "HNL",
+            "HRD",
+            "HRK",
+            "HTG",
+            "HUF",
+            "IDR",
+            "IEP",
+            "ILP",
+            "ILR",
+            "ILS",
+            "INR",
+            "IQD",
+            "IRR",
+            "ISJ",
+            "ISK",
+            "ITL",
+            "JMD",
+            "JOD",
+            "JPY",
+            "KES",
+            "KGS",
+            "KHR",
+            "KMF",
+            "KPW",
+            "KRW",
+            "KWD",
+            "KYD",
+            "KZT",
+            "LAJ",
+            "LAK",
+            "LBP",
+            "LKR",
+            "LRD",
+            "LSL",
+            "LSM",
+            "LTL",
+            "LTT",
+            "LUC",
+            "LUF",
+            "LUL",
+            "LVL",
+            "LVR",
+            "LYD",
+            "MAD",
+            "MDL",
+            "MGA",
+            "MGF",
+            "MKD",
+            "MLF",
+            "MMK",
+            "MNT",
+            "MOP",
+            "MRO",
+            "MRU",
+            "MTL",
+            "MTP",
+            "MUR",
+            "MVQ",
+            "MVR",
+            "MWK",
+            "MXN",
+            "MXP",
+            "MXV",
+            "MYR",
+            "MZE",
+            "MZM",
+            "MZN",
+            "NAD",
+            "NGN",
+            "NIC",
+            "NIO",
+            "NLG",
+            "NOK",
+            "NPR",
+            "NZD",
+            "OMR",
+            "PAB",
+            "PEH",
+            "PEI",
+            "PEN",
+            "PES",
+            "PGK",
+            "PHP",
+            "PKR",
+            "PLN",
+            "PLZ",
+            "PTE",
+            "PYG",
+            "QAR",
+            "RHD",
+            "ROK",
+            "ROL",
+            "RON",
+            "RSD",
+            "RUB",
+            "RUR",
+            "RWF",
+            "SAR",
+            "SBD",
+            "SCR",
+            "SDD",
+            "SDG",
+            "SDP",
+            "SEK",
+            "SGD",
+            "SHP",
+            "SIT",
+            "SKK",
+            "SLL",
+            "SOS",
+            "SRD",
+            "SRG",
+            "SSP",
+            "STD",
+            "STN",
+            "SUR",
+            "SVC",
+            "SYP",
+            "SZL",
+            "THB",
+            "TJR",
+            "TJS",
+            "TMM",
+            "TMT",
+            "TND",
+            "TOP",
+            "TPE",
+            "TRL",
+            "TRY",
+            "TTD",
+            "TWD",
+            "TZS",
+            "UAH",
+            "UAK",
+            "UGS",
+            "UGW",
+            "UGX",
+            "USD",
+            "USN",
+            "USS",
+            "UYI",
+            "UYN",
+            "UYP",
+            "UYU",
+            "UYW",
+            "UZS",
+            "VEB",
+            "VEF",
+            "VES",
+            "VNC",
+            "VND",
+            "VUV",
+            "WST",
+            "XAF",
+            "XAG",
+            "XAU",
+            "XBA",
+            "XBB",
+            "XBC",
+            "XBD",
+            "XCD",
+            "XDR",
+            "XEU",
+            "XFO",
+            "XFU",
+            "XOF",
+            "XPD",
+            "XPF",
+            "XPT",
+            "XRE",
+            "XSU",
+            "XTS",
+            "XUA",
+            "XXX",
+            "YDD",
+            "YER",
+            "YUD",
+            "YUM",
+            "YUN",
+            "ZAL",
+            "ZAR",
+            "ZMK",
+            "ZMW",
+            "ZRN",
+            "ZRZ",
+            "ZWC",
+            "ZWD",
+            "ZWL",
+            "ZWN",
+            "ZWR",
+            null
+          ]
         }
       },
       "minProperties": 1
