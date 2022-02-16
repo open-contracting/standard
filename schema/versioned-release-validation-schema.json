@@ -2696,43 +2696,6 @@
         }
       }
     },
-    "SimpleUnit": {
-      "type": "object",
-      "properties": {
-        "scheme": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "codelist": "unitClassificationScheme.csv",
-                "openCodelist": true
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "id": {
-          "$ref": "#/definitions/StringNullVersioned"
-        }
-      }
-    },
     "RelatedProcess": {
       "type": "object",
       "properties": {
@@ -2854,41 +2817,6 @@
         },
         "uri": {
           "$ref": "#/definitions/StringNullUriVersioned"
-        },
-        "weight": {
-          "type": "object",
-          "properties": {
-            "unit": {
-              "$ref": "#/definitions/SimpleUnit"
-            },
-            "quantity": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "releaseDate": {
-                    "format": "date-time",
-                    "type": "string"
-                  },
-                  "releaseID": {
-                    "type": "string"
-                  },
-                  "value": {
-                    "type": [
-                      "number",
-                      "null"
-                    ]
-                  },
-                  "releaseTag": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "patternProperties": {
