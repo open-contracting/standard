@@ -439,6 +439,42 @@ def get_versioned_release_schema(schema):
 
     return schema
 
+def add_key_based_validation_properties(schema):
+    """
+    Adds:
+    * "format": "email" if the key is "email"
+    * "minimum": 0 to "quantity", "durationInDays" and "numberOfTenderers fields
+    * "required": ["id", "name"] to "Organization" and "OrganizationReference"
+    * "required": ["id"] to "Amendment" and "RelatedProcess"
+    * "$ref": "#/definitions/UnitValue" to "Unit.value"
+
+    Removes "integer" from "type" for ID fields.
+
+    :param dict schema: a JSON schema
+    """
+    if isinstance(schema, list):
+        for item in schema:
+            add_key_based_validation_properties(item)
+    elif isinstance(schema, dict):
+        for key, value in schema.items():
+            if key == 'email':
+                value['format'] = 'email'
+            elif key in ['quantity', 'durationInDays', 'numberOfTenderers']:
+                value['minimum'] = 0
+            elif key in ['Organization', 'OrganizationReference']:
+                value['required'] = ['id', 'name']
+                value['properties']['name']['type'] = "string"
+                value['properties']['id']['type'] = "string"
+            elif key in ['Amendment', 'RelatedProcess']:
+                value['required'] = ['id']
+                value['properties']['id']['type'] = "string"
+            elif key == 'id':
+                if 'type' in value:
+                    if 'integer' in value['type']:
+                        value['type'].remove('integer')
+
+            add_key_based_validation_properties(value)
+    
 
 def get_strict_schema(schema):
     """
@@ -453,6 +489,9 @@ def get_strict_schema(schema):
 
     # Add validation properties
     add_validation_properties(schema)
+    
+    # Add key-based validation properties
+    add_key_based_validation_properties(schema)
 
     # Remove null types from package schemas
     if 'package' in schema['id']:
