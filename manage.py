@@ -439,6 +439,7 @@ def get_versioned_release_schema(schema):
 
     return schema
 
+
 def add_key_based_validation_properties(schema):
     """
     Adds:
@@ -476,7 +477,7 @@ def add_key_based_validation_properties(schema):
                 value['properties']['value']['$ref'] = '#/definitions/UnitValue'
 
             add_key_based_validation_properties(value)
-    
+
 
 def get_strict_schema(schema):
     """
@@ -491,7 +492,7 @@ def get_strict_schema(schema):
 
     # Add validation properties
     add_validation_properties(schema)
-    
+
     # Add key-based validation properties
     add_key_based_validation_properties(schema)
 
