@@ -449,7 +449,7 @@ def add_key_based_validation_properties(schema):
     * "required": ["id"] to "Amendment" and "RelatedProcess"
     * "$ref": "#/definitions/UnitValue" to "Unit.value"
 
-    Removes "integer" from "type" for ID fields.
+    Removes "integer" type from "id" and "projectID" fields.
 
     :param dict schema: a JSON schema
     """
@@ -469,7 +469,7 @@ def add_key_based_validation_properties(schema):
             elif key in ['Amendment', 'RelatedProcess']:
                 value['required'] = ['id']
                 value['properties']['id']['type'] = "string"
-            elif key == 'id':
+            elif key in ['id', 'projectID']:
                 if 'type' in value:
                     if 'integer' in value['type']:
                         value['type'].remove('integer')
