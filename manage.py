@@ -472,6 +472,8 @@ def add_key_based_validation_properties(schema):
                 if 'type' in value:
                     if 'integer' in value['type']:
                         value['type'].remove('integer')
+            elif key == 'Unit':
+                value['properties']['value']['$ref'] = '#/definitions/UnitValue'
 
             add_key_based_validation_properties(value)
     
@@ -496,12 +498,6 @@ def get_strict_schema(schema):
     # Remove null types from package schemas
     if 'package' in schema['id']:
         remove_nulls(schema)
-
-    else:
-        # Add UnitValue definition
-        unitvalue = json_load('strict/unitvalue-schema.json')
-        schema['definitions']['UnitValue'] = unitvalue
-        schema['definitions']['Unit']['properties']['value']['$ref'] = '#/definitions/UnitValue'
 
     return schema
 
