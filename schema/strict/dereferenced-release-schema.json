@@ -595,6 +595,7 @@
                   "null"
                 ],
                 "description": "The e-mail address of the contact point/person.",
+                "minLength": 1,
                 "format": "email"
               },
               "telephone": {
@@ -671,11 +672,11 @@
             "minLength": 1
           }
         },
+        "minProperties": 1,
         "required": [
           "id",
           "name"
-        ],
-        "minProperties": 1
+        ]
       },
       "uniqueItems": true,
       "minItems": 1
@@ -1174,6 +1175,7 @@
                 "null"
               ],
               "description": "The e-mail address of the contact point/person.",
+              "minLength": 1,
               "format": "email"
             },
             "telephone": {
@@ -1223,11 +1225,11 @@
       "type": "object",
       "description": "The organization aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.",
       "title": "Buyer",
+      "minProperties": 1,
       "required": [
         "id",
         "name"
-      ],
-      "minProperties": 1
+      ]
     },
     "planning": {
       "title": "Planning",
@@ -3022,6 +3024,7 @@
                     "null"
                   ],
                   "description": "The e-mail address of the contact point/person.",
+                  "minLength": 1,
                   "format": "email"
                 },
                 "telephone": {
@@ -3071,11 +3074,11 @@
           "type": "object",
           "description": "The organization managing the contracting process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
           "title": "Procuring entity",
+          "minProperties": 1,
           "required": [
             "id",
             "name"
-          ],
-          "minProperties": 1
+          ]
         },
         "items": {
           "title": "Items to be procured",
@@ -5564,6 +5567,7 @@
                       "null"
                     ],
                     "description": "The e-mail address of the contact point/person.",
+                    "minLength": 1,
                     "format": "email"
                   },
                   "telephone": {
@@ -5613,11 +5617,11 @@
             "type": "object",
             "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference",
+            "minProperties": 1,
             "required": [
               "id",
               "name"
-            ],
-            "minProperties": 1
+            ]
           },
           "uniqueItems": true,
           "minItems": 1
@@ -6511,10 +6515,10 @@
                 "minLength": 1
               }
             },
+            "minProperties": 1,
             "required": [
               "id"
-            ],
-            "minProperties": 1
+            ]
           },
           "minItems": 1,
           "uniqueItems": true
@@ -6624,10 +6628,10 @@
               "minLength": 1
             }
           },
+          "minProperties": 1,
           "required": [
             "id"
           ],
-          "minProperties": 1,
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
@@ -8251,6 +8255,7 @@
                         "null"
                       ],
                       "description": "The e-mail address of the contact point/person.",
+                      "minLength": 1,
                       "format": "email"
                     },
                     "telephone": {
@@ -8300,11 +8305,11 @@
               "type": "object",
               "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
               "title": "Organization reference",
+              "minProperties": 1,
               "required": [
                 "id",
                 "name"
-              ],
-              "minProperties": 1
+              ]
             },
             "uniqueItems": true,
             "minItems": 1
@@ -9221,10 +9226,10 @@
                   "minLength": 1
                 }
               },
+              "minProperties": 1,
               "required": [
                 "id"
-              ],
-              "minProperties": 1
+              ]
             },
             "minItems": 1,
             "uniqueItems": true
@@ -9334,10 +9339,10 @@
                 "minLength": 1
               }
             },
+            "minProperties": 1,
             "required": [
               "id"
             ],
-            "minProperties": 1,
             "deprecated": {
               "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
               "deprecatedVersion": "1.1"
@@ -12114,6 +12119,7 @@
                                 "null"
                               ],
                               "description": "The e-mail address of the contact point/person.",
+                              "minLength": 1,
                               "format": "email"
                             },
                             "telephone": {
@@ -12163,11 +12169,11 @@
                       "type": "object",
                       "description": "An organization reference for the organization from which the funds in this transaction originate.",
                       "title": "Payer",
+                      "minProperties": 1,
                       "required": [
                         "id",
                         "name"
-                      ],
-                      "minProperties": 1
+                      ]
                     },
                     "payee": {
                       "properties": {
@@ -12663,6 +12669,7 @@
                                 "null"
                               ],
                               "description": "The e-mail address of the contact point/person.",
+                              "minLength": 1,
                               "format": "email"
                             },
                             "telephone": {
@@ -12712,11 +12719,11 @@
                       "type": "object",
                       "description": "An organization reference for the organization which receives the funds in this transaction.",
                       "title": "Payee",
+                      "minProperties": 1,
                       "required": [
                         "id",
                         "name"
-                      ],
-                      "minProperties": 1
+                      ]
                     },
                     "uri": {
                       "title": "Linked spending information",
@@ -14033,10 +14040,10 @@
                   ]
                 }
               },
+              "minProperties": 1,
               "required": [
                 "id"
-              ],
-              "minProperties": 1
+              ]
             },
             "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
             "title": "Related processes",
@@ -14776,10 +14783,10 @@
                   "minLength": 1
                 }
               },
+              "minProperties": 1,
               "required": [
                 "id"
-              ],
-              "minProperties": 1
+              ]
             },
             "minItems": 1,
             "uniqueItems": true
@@ -14889,10 +14896,10 @@
                 "minLength": 1
               }
             },
+            "minProperties": 1,
             "required": [
               "id"
             ],
-            "minProperties": 1,
             "deprecated": {
               "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
               "deprecatedVersion": "1.1"
@@ -14999,10 +15006,10 @@
             ]
           }
         },
+        "minProperties": 1,
         "required": [
           "id"
-        ],
-        "minProperties": 1
+        ]
       },
       "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate ocid. This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
       "title": "Related processes",
@@ -16841,6 +16848,7 @@
                     "null"
                   ],
                   "description": "The e-mail address of the contact point/person.",
+                  "minLength": 1,
                   "format": "email"
                 },
                 "telephone": {
@@ -16890,11 +16898,11 @@
           "type": "object",
           "description": "The organization managing the contracting process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
           "title": "Procuring entity",
+          "minProperties": 1,
           "required": [
             "id",
             "name"
-          ],
-          "minProperties": 1
+          ]
         },
         "items": {
           "title": "Items to be procured",
@@ -19383,6 +19391,7 @@
                       "null"
                     ],
                     "description": "The e-mail address of the contact point/person.",
+                    "minLength": 1,
                     "format": "email"
                   },
                   "telephone": {
@@ -19432,11 +19441,11 @@
             "type": "object",
             "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference",
+            "minProperties": 1,
             "required": [
               "id",
               "name"
-            ],
-            "minProperties": 1
+            ]
           },
           "uniqueItems": true,
           "minItems": 1
@@ -20330,10 +20339,10 @@
                 "minLength": 1
               }
             },
+            "minProperties": 1,
             "required": [
               "id"
-            ],
-            "minProperties": 1
+            ]
           },
           "minItems": 1,
           "uniqueItems": true
@@ -20443,10 +20452,10 @@
               "minLength": 1
             }
           },
+          "minProperties": 1,
           "required": [
             "id"
           ],
-          "minProperties": 1,
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
@@ -22066,6 +22075,7 @@
                       "null"
                     ],
                     "description": "The e-mail address of the contact point/person.",
+                    "minLength": 1,
                     "format": "email"
                   },
                   "telephone": {
@@ -22115,11 +22125,11 @@
             "type": "object",
             "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
             "title": "Organization reference",
+            "minProperties": 1,
             "required": [
               "id",
               "name"
-            ],
-            "minProperties": 1
+            ]
           },
           "uniqueItems": true,
           "minItems": 1
@@ -23036,10 +23046,10 @@
                 "minLength": 1
               }
             },
+            "minProperties": 1,
             "required": [
               "id"
-            ],
-            "minProperties": 1
+            ]
           },
           "minItems": 1,
           "uniqueItems": true
@@ -23149,10 +23159,10 @@
               "minLength": 1
             }
           },
+          "minProperties": 1,
           "required": [
             "id"
           ],
-          "minProperties": 1,
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
@@ -25922,6 +25932,7 @@
                               "null"
                             ],
                             "description": "The e-mail address of the contact point/person.",
+                            "minLength": 1,
                             "format": "email"
                           },
                           "telephone": {
@@ -25971,11 +25982,11 @@
                     "type": "object",
                     "description": "An organization reference for the organization from which the funds in this transaction originate.",
                     "title": "Payer",
+                    "minProperties": 1,
                     "required": [
                       "id",
                       "name"
-                    ],
-                    "minProperties": 1
+                    ]
                   },
                   "payee": {
                     "properties": {
@@ -26471,6 +26482,7 @@
                               "null"
                             ],
                             "description": "The e-mail address of the contact point/person.",
+                            "minLength": 1,
                             "format": "email"
                           },
                           "telephone": {
@@ -26520,11 +26532,11 @@
                     "type": "object",
                     "description": "An organization reference for the organization which receives the funds in this transaction.",
                     "title": "Payee",
+                    "minProperties": 1,
                     "required": [
                       "id",
                       "name"
-                    ],
-                    "minProperties": 1
+                    ]
                   },
                   "uri": {
                     "title": "Linked spending information",
@@ -27841,10 +27853,10 @@
                 ]
               }
             },
+            "minProperties": 1,
             "required": [
               "id"
-            ],
-            "minProperties": 1
+            ]
           },
           "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
@@ -28584,10 +28596,10 @@
                 "minLength": 1
               }
             },
+            "minProperties": 1,
             "required": [
               "id"
-            ],
-            "minProperties": 1
+            ]
           },
           "minItems": 1,
           "uniqueItems": true
@@ -28697,10 +28709,10 @@
               "minLength": 1
             }
           },
+          "minProperties": 1,
           "required": [
             "id"
           ],
-          "minProperties": 1,
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
@@ -29593,6 +29605,7 @@
                           "null"
                         ],
                         "description": "The e-mail address of the contact point/person.",
+                        "minLength": 1,
                         "format": "email"
                       },
                       "telephone": {
@@ -29642,11 +29655,11 @@
                 "type": "object",
                 "description": "An organization reference for the organization from which the funds in this transaction originate.",
                 "title": "Payer",
+                "minProperties": 1,
                 "required": [
                   "id",
                   "name"
-                ],
-                "minProperties": 1
+                ]
               },
               "payee": {
                 "properties": {
@@ -30142,6 +30155,7 @@
                           "null"
                         ],
                         "description": "The e-mail address of the contact point/person.",
+                        "minLength": 1,
                         "format": "email"
                       },
                       "telephone": {
@@ -30191,11 +30205,11 @@
                 "type": "object",
                 "description": "An organization reference for the organization which receives the funds in this transaction.",
                 "title": "Payee",
+                "minProperties": 1,
                 "required": [
                   "id",
                   "name"
-                ],
-                "minProperties": 1
+                ]
               },
               "uri": {
                 "title": "Linked spending information",
@@ -33490,6 +33504,7 @@
                     "null"
                   ],
                   "description": "The e-mail address of the contact point/person.",
+                  "minLength": 1,
                   "format": "email"
                 },
                 "telephone": {
@@ -33539,11 +33554,11 @@
           "type": "object",
           "description": "An organization reference for the organization from which the funds in this transaction originate.",
           "title": "Payer",
+          "minProperties": 1,
           "required": [
             "id",
             "name"
-          ],
-          "minProperties": 1
+          ]
         },
         "payee": {
           "properties": {
@@ -34039,6 +34054,7 @@
                     "null"
                   ],
                   "description": "The e-mail address of the contact point/person.",
+                  "minLength": 1,
                   "format": "email"
                 },
                 "telephone": {
@@ -34088,11 +34104,11 @@
           "type": "object",
           "description": "An organization reference for the organization which receives the funds in this transaction.",
           "title": "Payee",
+          "minProperties": 1,
           "required": [
             "id",
             "name"
-          ],
-          "minProperties": 1
+          ]
         },
         "uri": {
           "title": "Linked spending information",
@@ -35049,6 +35065,7 @@
                 "null"
               ],
               "description": "The e-mail address of the contact point/person.",
+              "minLength": 1,
               "format": "email"
             },
             "telephone": {
@@ -35098,11 +35115,11 @@
       "type": "object",
       "description": "The id and name of the organization being referenced. Used to cross-reference to the parties section",
       "title": "Organization reference",
+      "minProperties": 1,
       "required": [
         "id",
         "name"
-      ],
-      "minProperties": 1
+      ]
     },
     "Organization": {
       "title": "Organization",
@@ -35589,6 +35606,7 @@
                 "null"
               ],
               "description": "The e-mail address of the contact point/person.",
+              "minLength": 1,
               "format": "email"
             },
             "telephone": {
@@ -35665,11 +35683,11 @@
           "minLength": 1
         }
       },
+      "minProperties": 1,
       "required": [
         "id",
         "name"
-      ],
-      "minProperties": 1
+      ]
     },
     "Item": {
       "title": "Item",
@@ -36372,10 +36390,10 @@
           "minLength": 1
         }
       },
+      "minProperties": 1,
       "required": [
         "id"
-      ],
-      "minProperties": 1
+      ]
     },
     "Classification": {
       "title": "Classification",
@@ -36839,6 +36857,7 @@
             "null"
           ],
           "description": "The e-mail address of the contact point/person.",
+          "minLength": 1,
           "format": "email"
         },
         "telephone": {
@@ -37349,10 +37368,10 @@
           ]
         }
       },
+      "minProperties": 1,
       "required": [
         "id"
-      ],
-      "minProperties": 1
+      ]
     },
     "Unit": {
       "title": "Unit",

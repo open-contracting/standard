@@ -2200,11 +2200,11 @@
         }
       },
       "type": "object",
+      "minProperties": 1,
       "required": [
         "id",
         "name"
-      ],
-      "minProperties": 1
+      ]
     },
     "Organization": {
       "type": "object",
@@ -2349,11 +2349,11 @@
           "minLength": 1
         }
       },
+      "minProperties": 1,
       "required": [
         "id",
         "name"
-      ],
-      "minProperties": 1
+      ]
     },
     "Item": {
       "type": "object",
@@ -2635,10 +2635,10 @@
           "minLength": 1
         }
       },
+      "minProperties": 1,
       "required": [
         "id"
-      ],
-      "minProperties": 1
+      ]
     },
     "Classification": {
       "type": "object",
@@ -3339,6 +3339,7 @@
                   "string",
                   "null"
                 ],
+                "minLength": 1,
                 "format": "email"
               },
               "releaseTag": {
@@ -4027,10 +4028,10 @@
           "$ref": "#/definitions/StringNullUriVersioned"
         }
       },
+      "minProperties": 1,
       "required": [
         "id"
-      ],
-      "minProperties": 1
+      ]
     },
     "Unit": {
       "type": "object",
@@ -4836,11 +4837,11 @@
         }
       },
       "type": "object",
+      "minProperties": 1,
       "required": [
         "id",
         "name"
-      ],
-      "minProperties": 1
+      ]
     },
     "ClassificationUnversioned": {
       "type": "object",
