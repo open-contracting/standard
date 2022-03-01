@@ -118,6 +118,14 @@ In OCDS 1.0, the details (address, contact point, etc.) of the organizations inv
 Note that the organization references allow, but deprecate, the fields for organization details.
 ```
 
+#### Example
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer:
+:expand: releases, parties
+:title: parties
+```
+
 The following details can be provided for each organization.
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
