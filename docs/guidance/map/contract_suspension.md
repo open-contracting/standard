@@ -26,7 +26,7 @@ If you want to publish structured data about contract suspension, you can contri
 
 In the following example, a contract in the [Afghanistan Government Electronic and Open Procurement System](https://ageops.net) is suspended.
 
-```{jsoninclude} ../../examples/suspendedcontract.json
+```{jsoninclude} ../../examples/contract_suspension/suspended_contract.json
 :jsonpointer:
 :expand: releases, contracts
 :title: Suspended Contract
