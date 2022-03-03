@@ -131,6 +131,14 @@
         },
         "items": [
           {
+            "id": "0001",
+            "description": "Construction work for highways",
+            "classification": {
+              "description": "Construction work for highways",
+              "id": "45233130",
+              "scheme": "CPV",
+              "uri": "http://cpv.data.ac.uk/code-45233130"
+            },
             "additionalClassifications": [
               {
                 "description": "Cycle path construction work",
@@ -139,16 +147,10 @@
                 "uri": "http://cpv.data.ac.uk/code-45233162.html"
               }
             ],
-            "classification": {
-              "description": "Construction work for highways",
-              "id": "45233130",
-              "scheme": "CPV",
-              "uri": "http://cpv.data.ac.uk/code-45233130"
-            },
-            "description": "string",
-            "id": "0001",
             "quantity": 8,
             "unit": {
+              "scheme": "UNCEFACT",
+              "id": "SMI",
               "name": "Miles",
               "value": {
                 "amount": 120000,
@@ -158,7 +160,7 @@
           }
         ],
         "value": {
-          "amount": 1210000,
+          "amount": 960000,
           "currency": "GBP"
         },
         "minValue": {
@@ -214,40 +216,14 @@
         ],
         "documents": [
           {
-            "dateModified": "2015-02-15T00:00:00Z",
-            "datePublished": "2015-02-15T00:00:00Z",
-            "description": "A consultation document inviting citizen input into cycle provision.",
-            "documentType": "x_consultationDocument",
-            "format": "text/html",
-            "id": "0003",
-            "title": "Consultation on cycle provision",
-            "url": "http://example.com/consultations/cycle-provision/"
-          },
-          {
-            "datePublished": "2015-02-15T00:00:00Z",
-            "description": "A map showing areas affected by the planned highway updates. Available from local libraries.",
-            "documentType": "x_map",
-            "format": "offline/print",
-            "id": "0004",
-            "title": "Map of affected areas"
-          },
-          {
-            "datePublished": "2010-03-01T09:00:00Z",
-            "description": "Official tender notice.",
-            "documentType": "notice",
-            "format": "text/html",
-            "id": "0005",
-            "title": "Tender Notice",
-            "url": "http://example.com/tender-notices/ocds-213czf-000-00001-01.html"
-          },
-          {
-            "datePublished": "2010-03-20T11:30:15Z",
-            "description": "Responses to enquiries asked by interested parties.",
-            "documentType": "enquiryResponses",
-            "format": "text/html",
-            "id": "0006",
+            "id": "0001",
+            "documentType": "tenderNotice",
             "title": "Enquiry Responses",
-            "url": "http://example.com/enquiry-response/ocds-213czf-000-00001-01.html"
+            "description": "Tender Notice",
+            "url": "http://example.com/tenderNotice/ocds-213czf-000-00001-01.html",
+            "datePublished": "2010-03-20T11:30:15Z",
+            "format": "text/html",
+            "language": "en"
           }
         ],
         "milestones": [
@@ -268,7 +244,7 @@
           "statusDetails": "Awarded",
           "date": "2010-05-10T10:30:00Z",
           "value": {
-            "amount": 11000000,
+            "amount": 1096000,
             "currency": "GBP"
           },
           "suppliers": [
@@ -332,7 +308,7 @@
           "statusDetails": "Signed",
           "dateSigned": "2015-06-10T14:23:12Z",
           "value": {
-            "amount": 11000000,
+            "amount": 1096000,
             "currency": "GBP"
           },
           "items": [
@@ -419,11 +395,32 @@
                 "dueDate": "2010-08-01T00:00:00Z",
                 "status": "scheduled"
               }
+            ],
+            "documents": [
+              {
+                "datePublished": "2015-06-10T16:43:12Z",
+                "description": "Physical progress of the Cycle Path Construction",
+                "documentType": "physicalProgressReport",
+                "format": "application/pdf",
+                "id": "0008",
+                "title": "Progress report",
+                "url": "http://example.com/implementation/ocds-213czf-000-00001"
+              }
             ]
           }
         }
       ],
-      "language": "en"
+      "language": "en",
+      "relatedProcesses": [
+        {
+          "id": "related-1",
+          "relationship": "unsuccessful",
+          "title": "Improved cycle route in the centre of town.",
+          "scheme": "ocid",
+          "identifier": "ocds-213czf-01",
+          "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-01.json"
+        }
+      ]
     }
   ],
   "publisher": {
