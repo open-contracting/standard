@@ -526,8 +526,7 @@ Periods can also include a `maxExtentDate` which indicates the latest possible e
 :class: hint
 
 ```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/awards/0
-:expand: contractPeriod
+:jsonpointer: /releases/0/awards/0/contractPeriod
 :title: period
 ```
 ````
@@ -582,21 +581,6 @@ The items block is used to list the line-items associated with a tender, award o
 :list: item
 ```
 
-#### Classification
-
-````{admonition} Example
-:class: hint
-
-```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/tender/items/0
-:expand: classification
-:title: classification
-```
-````
-
-```{jsonschema} ../../build/current_lang/release-schema.json
-:pointer: /definitions/Classification
-```
 #### Unit
 
 The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
@@ -618,6 +602,21 @@ Other unit classification schemes can be used, including those in the [unitClass
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item/properties/unit
 :collapse: value
+```
+
+### Classification
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/items/0/classification
+:title: classification
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Classification
 ```
 
 ### Milestone
@@ -662,8 +661,7 @@ Financial values should be published with a currency attached.
 :class: hint
 
 ```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/awards/0
-:expand: value
+:jsonpointer: /releases/0/awards/0/value
 :title: value
 ```
 ````

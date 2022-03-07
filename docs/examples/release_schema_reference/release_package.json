@@ -134,9 +134,9 @@
             "id": "0001",
             "description": "Construction work for highways",
             "classification": {
-              "description": "Construction work for highways",
-              "id": "45233130",
               "scheme": "CPV",
+              "id": "45233130",
+              "description": "Construction work for highways",
               "uri": "http://cpv.data.ac.uk/code-45233130"
             },
             "additionalClassifications": [
@@ -282,8 +282,10 @@
             }
           ],
           "contractPeriod": {
+            "startDate": "2010-07-01T00:00:00Z",
             "endDate": "2011-08-01T23:59:00Z",
-            "startDate": "2010-07-01T00:00:00Z"
+            "maxExtentDate": "2011-09-01T23:59:00Z",
+            "durationInDays":397
           },
           "documents": [
             {
@@ -414,7 +416,7 @@
       "relatedProcesses": [
         {
           "id": "related-1",
-          "relationship": "unsuccessful",
+          "relationship": ["unsuccessful"],
           "title": "Improved cycle route in the centre of town.",
           "scheme": "ocid",
           "identifier": "ocds-213czf-01",
