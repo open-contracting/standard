@@ -6,7 +6,7 @@ from . import languages
 
 @pytest.mark.parametrize('lang', list(languages))
 def test_examples(browser, server, lang):
-    browser.get('{}{}/guidance/build/merging'.format(server, lang))
+    browser.get(f'{server}{lang}/guidance/build/merging')
     examples = browser.find_element_by_id('updates-and-deletions')
     select = Select(examples.find_element_by_tag_name('select'))
 
