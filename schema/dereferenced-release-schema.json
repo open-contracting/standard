@@ -1373,6 +1373,30 @@
           "minLength": 1,
           "versionId": true
         },
+        "identifier": {
+          "title": "Simple identifier",
+          "description": "An unambiguous reference to a resource within a given context.",
+          "type": "object",
+          "properties": {
+            "scheme": {
+              "title": "Scheme",
+              "description": "The list, register or system from which identifiers are taken.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "title": "A description of the goods, services to be provided.",
+              "description": "The identifier taken from the scheme.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "versionID": true
+            }
+          }
+        },
         "title": {
           "title": "Tender title",
           "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement.",
@@ -5543,6 +5567,30 @@
             ],
             "minLength": 1
           },
+          "identifier": {
+            "title": "Simple identifier",
+            "description": "An unambiguous reference to a resource within a given context.",
+            "type": "object",
+            "properties": {
+              "scheme": {
+                "title": "Scheme",
+                "description": "The list, register or system from which identifiers are taken.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "title": "A description of the goods, services to be provided.",
+                "description": "The identifier taken from the scheme.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionID": true
+              }
+            }
+          },
           "awardID": {
             "title": "Award ID",
             "description": "The award.id against which this contract is being issued.",
@@ -9643,6 +9691,30 @@
           ],
           "minLength": 1,
           "versionId": true
+        },
+        "identifier": {
+          "title": "Simple identifier",
+          "description": "An unambiguous reference to a resource within a given context.",
+          "type": "object",
+          "properties": {
+            "scheme": {
+              "title": "Scheme",
+              "description": "The list, register or system from which identifiers are taken.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "title": "A description of the goods, services to be provided.",
+              "description": "The identifier taken from the scheme.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "versionID": true
+            }
+          }
         },
         "title": {
           "title": "Tender title",
@@ -13803,6 +13875,30 @@
             "integer"
           ],
           "minLength": 1
+        },
+        "identifier": {
+          "title": "Simple identifier",
+          "description": "An unambiguous reference to a resource within a given context.",
+          "type": "object",
+          "properties": {
+            "scheme": {
+              "title": "Scheme",
+              "description": "The list, register or system from which identifiers are taken.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "title": "A description of the goods, services to be provided.",
+              "description": "The identifier taken from the scheme.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "versionID": true
+            }
+          }
         },
         "awardID": {
           "title": "Award ID",
@@ -22499,6 +22595,30 @@
             "string",
             "null"
           ]
+        }
+      }
+    },
+    "SimpleIdentifier": {
+      "title": "Simple identifier",
+      "description": "An unambiguous reference to a resource within a given context.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list, register or system from which identifiers are taken.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "title": "A description of the goods, services to be provided.",
+          "description": "The identifier taken from the scheme.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionID": true
         }
       }
     }

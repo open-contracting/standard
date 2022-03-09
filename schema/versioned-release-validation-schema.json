@@ -149,6 +149,9 @@
             }
           }
         },
+        "identifier": {
+          "$ref": "#/definitions/SimpleIdentifier"
+        },
         "title": {
           "$ref": "#/definitions/StringNullVersioned"
         },
@@ -655,6 +658,9 @@
             "integer"
           ],
           "minLength": 1
+        },
+        "identifier": {
+          "$ref": "#/definitions/SimpleIdentifier"
         },
         "awardID": {
           "type": "array",
@@ -2270,6 +2276,42 @@
         },
         "uri": {
           "$ref": "#/definitions/StringNullUriVersioned"
+        }
+      }
+    },
+    "SimpleIdentifier": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "id": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionID": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
