@@ -730,7 +730,7 @@ def add_translation_note(path, language, domain):
     translator = gettext.translation('theme', localedir, languages=[language])
     _ = translator.gettext
 
-    pattern = '{}/{{}}/{}/'.format(base_url, domain)
+    pattern = f'{base_url}/{{}}/{domain}/'
     response = requests.get(pattern.format(language))
 
     # If it's a new page, add the note to the current version of the page.
@@ -744,7 +744,7 @@ def add_translation_note(path, language, domain):
         xpath = '//div[@itemprop="articleBody"]'
 
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
-        replacement.make_links_absolute('{}/{}'.format(base_url, language))
+        replacement.make_links_absolute(f'{base_url}/{language}')
 
         # Remove any existing translation notes.
         parent = replacement.xpath('//h1')[0].getparent()
