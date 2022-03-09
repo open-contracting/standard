@@ -20,13 +20,13 @@ warnings.formatwarning = custom_warning_formatter
 
 @pytest.mark.parametrize('lang,text', test_basic_params.items())
 def test_basic(browser, server, lang, text):
-    browser.get('{}{}'.format(server, lang))
+    browser.get(f'{server}{lang}')
     assert text in browser.find_element_by_tag_name('body').text
 
 
 @pytest.mark.parametrize('lang,regex', test_search_params)
 def test_search(browser, server, lang, regex):
-    browser.get('{}{}'.format(server, lang))
+    browser.get(f'{server}{lang}')
     search_box = browser.find_element_by_id('rtd-search-form').find_element_by_tag_name('input')
     search_box.send_keys('tender\n')
     time.sleep(2)
@@ -37,10 +37,10 @@ def test_language_switcher(browser, server):
     if 'localhost' in server:
         pytest.skip()
 
-    browser.get('{}en'.format(server))
+    browser.get(f'{server}en/')
 
     for lang, lang_name in languages.items():
         select = Select(browser.find_element_by_xpath("//select[@name='lang']"))
         select.select_by_visible_text(lang_name)
-        assert browser.current_url == '{}{}/'.format(server, lang)
+        assert browser.current_url == f'{server}{lang}/'
         assert test_basic_params[lang] in browser.find_element_by_tag_name('body').text

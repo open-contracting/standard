@@ -7,19 +7,15 @@ jobs:
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
         with:
-          python-version: 3.6
-      - uses: actions/cache@v1
+          python-version: 3.8
+      - uses: actions/cache@v2
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('.github/workflows/lint.yml') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt', 'setup.py') }}
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
-      - run: sudo apt-get install shellcheck
-      - run: sudo snap install shfmt
       - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
-      - run: shellcheck $(shfmt -f .)
-      - run: shfmt -d -i 4 -sr $(shfmt -f .)
