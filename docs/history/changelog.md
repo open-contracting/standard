@@ -197,12 +197,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
 
 * Remove confusing terminology:
+  * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
   * [#1109](https://github.com/open-contracting/standard/pull/1109) `tender.awardCriteriaDetails`, to remove "selection criteria".
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
   * [#1401](https://github.com/open-contracting/standard/pull/1401) Replace "total value" with "value".
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice".
-  * [](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove no translation option rationale.
 
 * Add or strengthen normative statements in field descriptions:
   * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
