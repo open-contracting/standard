@@ -64,7 +64,7 @@ We use **version numbers** to indicate the nature of changes made to normative c
 
 * **A MINOR version (e.g. 1.0.0 -> 1.1.0)** makes backward-compatible changes. Systems written to input or output data with a previous minor version should be reviewed to assess whether they can implement any concepts added in the new minor version. Data that is valid against the 1.0 schema is also valid against the 1.1 schema, for example. Where relevant, changes should apply a principle of progressive enhancement, such that updated systems can take advantage of the added concepts, while non-updated systems experience no substantive changes in behavior. 
 
-* **A PATCH version (e.g. 1.1.0 -> 1.1.1)** updates open codelists or external closed codelists, or makes backwards-compatible bug fixes or improvements to normative content. Users are encouraged to upgrade to the latest patch version. Unless they were affected by a fixed bug, they should not see any substantive changes after the upgrade. Data that is valid against the 1.1.0 schema will be valid against the 1.1.1 schema, for example.
+* **A PATCH version (e.g. 1.1.0 -> 1.1.1)** updates open codelists or external closed codelists, or makes backwards-compatible bug fixes or improvements to normative content. Users are encouraged to upgrade to the latest patch version. Unless they were affected by a fixed bug, they should not see any substantive changes after the upgrade. Data that is valid against the 1.1.0 schema is also valid against the 1.1.1 schema, for example.
 
 MAJOR and MINOR updates to normative content trigger the governance process. PATCH updates to normative content have a short review period to give users an opportunity to confirm that changes are backwards-compatible and non-substantive.
 
