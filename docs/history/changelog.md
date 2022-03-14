@@ -94,9 +94,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'tariffMethod'
     * 'tariffReview'
     * 'tariffIllustration'
-  * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
-    * 'economicSelectionCriteria'
-    * 'technicalSelectionCriteria'
   * [#1186](https://github.com/open-contracting/standard/pull/1186) Deprecate 'contractSchedule' and edit 'contractAnnexe'.
   * [#1280](https://github.com/open-contracting/standard/pull/1280) Align the description of 'tenderNotice' and 'technicalSpecifications' with GPA.
   * [#1377](https://github.com/open-contracting/standard/pull/1377) Clarify the description of 'completionCertificate' and align it with the description of 'paymentCertificate' in OC4IDS.
@@ -104,6 +101,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1403](https://github.com/open-contracting/standard/pull/1403) Replace "contract notice" with "contract signature notice", add synonyms to all notice codes ('plannedProcurementNotice', 'tenderNotice', 'awardNotice', 'contractNotice') and standardize the descriptions.
   * [#1415](https://github.com/open-contracting/standard/pull/1415) Change 'evaluationReports' section from "tender" to "award".
   * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "interested supplier" to "potential supplier".
+  * [#1464](https://github.com/open-contracting/standard/pull/1464) Deprecate 'eligibilityCriteria', add 'exclusionGrounds' and 'selectionCriteria'.
 
 * `method.csv`:
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
