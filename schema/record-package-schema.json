@@ -2,7 +2,7 @@
   "id": "https://standard.open-contracting.org/schema/1__1__5/record-package-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Record package",
-  "description": "The record package contains a list of records along with some publishing metadata. The records pull together all the releases under a single Open Contracting ID and compile them into the latest version of the information along with the history of any data changes.",
+  "description": "The record package contains a list of records along with some publishing metadata.",
   "type": "object",
   "properties": {
     "uri": {
@@ -33,7 +33,7 @@
       "properties": {
         "name": {
           "title": "Name",
-          "description": "The name of the organization or department responsible for publishing this data.",
+          "description": "The name of the organization or department responsible for publishing this OCDS data.",
           "type": "string"
         },
         "scheme": {
@@ -99,15 +99,18 @@
         "type": "string",
         "format": "uri"
       },
-      "uniqueItems": true
+      "uniqueItems": true,
+      "deprecated": {
+        "description": "This field is deprecated, because it is rarely implemented, is rarely used, and depends on a publication pattern in which release packages are published at stable URLs.",
+        "deprecatedVersion": "1.2"
+      }
     },
     "records": {
       "title": "Records",
       "description": "The records for this data package.",
       "type": "array",
-      "minItems": 1,
       "items": {
-        "$ref": "#/definitions/record"
+        "$ref": "#/definitions/Record"
       },
       "uniqueItems": true
     }
@@ -120,83 +123,32 @@
     "version"
   ],
   "definitions": {
-    "record": {
+    "Record": {
       "title": "Record",
-      "description": "An OCDS record must provide a list of all the existing OCDS releases relating to a single contracting process and should provide a compiled release containing the current state of all fields in the release schema. An OCDS record may also provide a versioned history of all changes to the data in the compiled release.",
+      "description": "A record aggregates releases with the same open contracting process identifier (ocid). There should be a single record per ocid per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.",
       "type": "object",
       "properties": {
         "ocid": {
-          "title": "Open Contracting ID",
-          "description": "A unique identifier that identifies the unique Open Contracting Process. For more information see: https://standard.open-contracting.org/{{version}}/{{lang}}/getting_started/contracting_process/",
+          "title": "Open contracting process identifier",
+          "description": "A globally unique identifier for the contracting process that the record describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
           "type": "string"
         },
         "releases": {
           "title": "Releases",
-          "description": "An array of linking identifiers or releases",
+          "description": "All the releases about the contracting process at the time of the record's publication. The releases must be sorted in date order, from oldest to newest.",
           "oneOf": [
             {
               "title": "Linked releases",
-              "description": "A list of objects that identify the releases associated with this Open Contracting ID. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
+              "description": "A list of references to releases.",
               "type": "array",
               "items": {
-                "description": "Information to uniquely identify the release.",
-                "type": "object",
-                "properties": {
-                  "url": {
-                    "title": "Release URL",
-                    "description": "The URL of the release which contains the URL of the package with the release `id` appended using a fragment identifier e.g. https://standard.open-contracting.org/{{version}}/{{lang}}/examples/tender.json#ocds-213czf-000-00001",
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "format": "uri"
-                  },
-                  "date": {
-                    "title": "Release Date",
-                    "description": "The date of the release. It should match the value of the `date` field of the release. This is used to sort the releases in the list in chronological order.",
-                    "type": "string",
-                    "format": "date-time"
-                  },
-                  "tag": {
-                    "title": "Release Tag",
-                    "description": "The tags of the release. It should match the value of the `tag` field of the release. This provides additional context when reviewing a record to see what types of releases are included for this ocid.",
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "enum": [
-                        "planning",
-                        "planningUpdate",
-                        "tender",
-                        "tenderAmendment",
-                        "tenderUpdate",
-                        "tenderCancellation",
-                        "award",
-                        "awardUpdate",
-                        "awardCancellation",
-                        "contract",
-                        "contractUpdate",
-                        "contractAmendment",
-                        "implementation",
-                        "implementationUpdate",
-                        "contractTermination",
-                        "compiled"
-                      ]
-                    },
-                    "codelist": "releaseTag.csv",
-                    "openCodelist": false,
-                    "minItems": 1
-                  }
-                },
-                "required": [
-                  "url",
-                  "date"
-                ]
+                "$ref": "#/definitions/LinkedRelease"
               },
               "minItems": 1
             },
             {
               "title": "Embedded releases",
-              "description": "A list of releases, with all the data. The releases MUST be sorted into date order in the array, from oldest (at position 0) to newest (last).",
+              "description": "A list of releases, with all the data.",
               "type": "array",
               "items": {
                 "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
@@ -207,18 +159,72 @@
         },
         "compiledRelease": {
           "title": "Compiled release",
-          "description": "This is the latest version of all the contracting data, it has the same schema as an open contracting release.",
+          "description": "The latest value of each field at the time of the record's publication. It follows the same schema as a release. A record should contain a compiled release.",
           "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
         },
         "versionedRelease": {
           "title": "Versioned release",
-          "description": "This contains the history of all the data in the compiled release.",
+          "description": "The history of values of each field up to the time of the record's publication.",
           "$ref": "https://standard.open-contracting.org/schema/1__1__5/versioned-release-validation-schema.json"
         }
       },
       "required": [
-        "ocid",
-        "releases"
+        "ocid"
+      ]
+    },
+    "LinkedRelease": {
+      "title": "Linked release",
+      "description": "A reference to a release.",
+      "type": "object",
+      "properties": {
+        "url": {
+          "title": "Release URL",
+          "description": "The URL of the release which contains the URL of the package with the release `id` appended using a fragment identifier e.g. https://standard.open-contracting.org/{{version}}/{{lang}}/examples/tender.json#ocds-213czf-000-00001",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "date": {
+          "title": "Release Date",
+          "description": "The date of the release. It should match the value of the `date` field of the release. This is used to sort the releases in the list in chronological order.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "tag": {
+          "title": "Release Tag",
+          "description": "The tags of the release. It should match the value of the `tag` field of the release. This provides additional context when reviewing a record to see what types of releases are included for this ocid.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "planning",
+              "planningUpdate",
+              "tender",
+              "tenderAmendment",
+              "tenderUpdate",
+              "tenderCancellation",
+              "award",
+              "awardUpdate",
+              "awardCancellation",
+              "contract",
+              "contractUpdate",
+              "contractAmendment",
+              "implementation",
+              "implementationUpdate",
+              "contractTermination",
+              "compiled"
+            ]
+          },
+          "codelist": "releaseTag.csv",
+          "openCodelist": false,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "url",
+        "date"
       ]
     }
   }

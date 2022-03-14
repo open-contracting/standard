@@ -2,12 +2,15 @@
 import csv
 import gettext
 import json
+import logging
 import os
 import re
 import sys
 import warnings
+from contextlib import contextmanager
 from copy import deepcopy
 from glob import glob
+from io import StringIO
 from pathlib import Path
 
 import click
@@ -110,7 +113,6 @@ keywords_to_remove = (
     # http://os4d.opendataservices.coop/development/schema/#extended-json-schema
     'omitWhenMerged',
     'wholeListMerge',
-    'versionId',
 )
 
 
@@ -118,7 +120,7 @@ def json_load(filename, library=json):
     """
     Loads JSON data from the given filename.
     """
-    with open(os.path.join(schemadir, filename)) as f:
+    with (schemadir / filename).open() as f:
         return library.load(f)
 
 
@@ -126,9 +128,31 @@ def json_dump(filename, data):
     """
     Writes JSON data to the given filename.
     """
-    with open(os.path.join(schemadir, filename), 'w') as f:
+    with (schemadir / filename).open('w') as f:
         json.dump(data, f, indent=2)
         f.write('\n')
+
+
+def csv_load(url, delimiter=','):
+    """
+    Loads CSV data into a ``csv.DictReader`` from the given URL.
+    """
+    reader = csv.DictReader(StringIO(get(url).text), delimiter=delimiter)
+    return reader
+
+
+@contextmanager
+def csv_dump(filename, fieldnames):
+    """
+    Writes CSV headers to the given filename, and yields a ``csv.writer``.
+    """
+    f = (schemadir / 'codelists' / filename).open('w')
+    writer = csv.writer(f, lineterminator='\n')
+    writer.writerow(fieldnames)
+    try:
+        yield writer
+    finally:
+        f.close()
 
 
 def get(url):
@@ -311,7 +335,8 @@ def remove_omit_when_merged(schema):
                 for prop in list(value):
                     if value[prop].get('omitWhenMerged'):
                         del value[prop]
-                        schema['required'].remove(prop)
+                        if prop in schema['required']:
+                            schema['required'].remove(prop)
             remove_omit_when_merged(value)
 
 
@@ -329,6 +354,29 @@ def remove_metadata_and_extended_keywords(schema):
                     for keyword in keywords_to_remove:
                         subschema.pop(keyword, None)
             remove_metadata_and_extended_keywords(value)
+
+
+def get_dereferenced_release_schema(schema, output=None):
+    """
+    Returns the dereferenced release schema.
+    """
+    # Without a deepcopy, changes to referenced objects are copied across referring objects. However, the deepcopy does
+    # not retain the `__reference__` property.
+    if not output:
+        output = deepcopy(schema)
+
+    if isinstance(schema, list):
+        for index, item in enumerate(schema):
+            get_dereferenced_release_schema(item, output[index])
+    elif isinstance(schema, dict):
+        for key, value in schema.items():
+            get_dereferenced_release_schema(value, output[key])
+        if hasattr(schema, '__reference__'):
+            for prop in schema.__reference__:
+                if prop != '$ref':
+                    output[prop] = schema.__reference__[prop]
+
+    return output
 
 
 def get_versioned_release_schema(schema):
@@ -400,7 +448,9 @@ def cli():
 @click.argument('filename')
 def unused_terms(filename):
     """
-    Prints terms from the provided filename that do not occur in the documentation.
+    Print terms in FILENAME that don't occur in the documentation.
+
+    Can be used to remove unused terms from a glossary.
     """
     paths = []
     for extension in ('csv', 'json', 'md'):
@@ -485,19 +535,64 @@ def missing_changelog(ignore_base):
 @cli.command()
 def pre_commit():
     """
-    Updates meta-schema.json, dereferenced-release-schema.json and versioned-release-validation-schema.json.
+    Update derivative schema files.
+
+    \b
+    - meta-schema.json
+    - dereferenced-release-schema.json
+    - versioned-release-validation-schema.json
     """
     release_schema = json_load('release-schema.json')
+    jsonref_release_schema = json_load('release-schema.json', jsonref)
 
     json_dump('meta-schema.json', get_metaschema())
-    json_dump('dereferenced-release-schema.json', json_load('release-schema.json', jsonref))
+    json_dump('dereferenced-release-schema.json', get_dereferenced_release_schema(jsonref_release_schema))
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
+
+
+@cli.command()
+@click.argument('file', type=click.File())
+def update_country(file):
+    """
+    Update country.csv from ISO 3166-1 using FILE.
+
+    To retrieve the file:
+
+    \b
+    1. Open https://www.iso.org/obp/ui/#search/code/
+    2. Open the "Network" tab of the "Web Inspector" utility (Option-Cmd-I in Safari)
+    3. Set "Results per page:" to 300
+    4. Click the last "UIDL" entry in the "Network" tab
+    5. Copy its contents, excluding the for-loop, into a file
+    """
+    # https://www.iso.org/iso-3166-country-codes.html
+    # https://www.iso.org/obp/ui/#search
+
+    codes = {
+        # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#User-assigned_code_elements
+        'XK': 'Kosovo',
+    }
+
+    rpc = json.load(file)[0]['rpc'][0]
+    offset = int(rpc[0])
+    for entry in rpc[3][1]:
+        d = entry['d']
+        # Clean "Western Sahara*", "United Arab Emirates (the)", etc.
+        codes[d[str(offset + 9)]] = re.sub(r' \(the\)|\*', '', d[str(offset + 13)])
+        # The country code appears at offsets 9 and 15. Check that they are always the same.
+        assert d[str(offset + 9)] == d[str(offset + 15)]
+
+    with open(schemadir / 'codelists' / 'country.csv', 'w') as f:
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(['Code', 'Title'])
+        for code in sorted(codes):
+            writer.writerow([code, codes[code]])
 
 
 @cli.command()
 def update_currency():
     """
-    Updates schema/codelists/currency.csv from ISO 4217.
+    Update currency.csv from ISO 4217.
     """
     # https://www.iso.org/iso-4217-currency-codes.html
     # https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes
@@ -535,28 +630,92 @@ def update_currency():
             elif valid_until > historic_codes[code]['Valid Until']:
                 historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
 
-    with (schemadir / 'codelists' / 'currency.csv').open('w') as fp:
-        writer = csv.writer(fp, lineterminator='\n')
-        writer.writerow(['Code', 'Title', 'Valid Until'])
-        for code in sorted(current_codes.keys()):
+    with csv_dump('currency.csv', ['Code', 'Title', 'Valid Until']) as writer:
+        for code in sorted(current_codes):
             writer.writerow([code, current_codes[code], None])
-        for code in sorted(historic_codes.keys()):
+        for code in sorted(historic_codes):
             writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
     release_schema = json_load('release-schema.json')
-    codes = sorted(list(current_codes.keys()) + list(historic_codes.keys()))
+    codes = sorted(list(current_codes) + list(historic_codes))
     release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
 
     json_dump('release-schema.json', release_schema)
 
 
 @cli.command()
+def update_language():
+    """
+    Update language.csv from ISO 639-1.
+    """
+    # https://www.iso.org/iso-639-language-codes.html
+    # https://id.loc.gov/vocabulary/iso639-1.html
+
+    with csv_dump('language.csv', ['Code', 'Title']) as writer:
+        reader = csv_load('https://id.loc.gov/vocabulary/iso639-1.tsv', delimiter='\t')
+        for row in reader:
+            # Remove parentheses, like "Greek, Modern (1453-)", and split alternatives.
+            titles = re.split(r' *\| *', re.sub(r' \(.+\)', '', row['Label (English)']))
+            # Remove duplication like "Ndebele, North |  North Ndebele" and join alternatives using a comma instead of
+            # a pipe. To preserve order, a dict without values is used instead of a set.
+            titles = ', '.join({' '.join(reversed(title.split(', '))): None for title in titles})
+            writer.writerow([row['code'], titles])
+
+
+@cli.command()
+def update_media_type():
+    """
+    Update mediaType.csv from IANA.
+
+    Ignores deprecated and obsolete media types.
+    """
+    # https://www.iana.org/assignments/media-types/media-types.xhtml
+
+    # See "Registries included below".
+    registries = [
+        'application',
+        'audio',
+        'font',
+        'image',
+        'message',
+        'model',
+        'multipart',
+        'text',
+        'video',
+    ]
+
+    with csv_dump('mediaType.csv', ['Code', 'Title']) as writer:
+        for registry in registries:
+            # See "Available Formats" under each heading.
+            reader = csv_load(f'https://www.iana.org/assignments/media-types/{registry}.csv')
+            for row in reader:
+                if ' ' in row['Name']:
+                    name, message = row['Name'].split(' ', 1)
+                else:
+                    name, message = row['Name'], None
+                code = f"{registry}/{name}"
+                template = row['Template']
+                # All messages are expected to be about deprecation and obsoletion.
+                if message:
+                    logging.warning(f'{message}: {code}')
+                # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
+                elif template and template != code:
+                    raise Exception(f"expected {code}, got {template}")
+                else:
+                    writer.writerow([code, name])
+
+        writer.writerow(['offline/print', 'print'])
+
+
+@cli.command()
 @click.pass_context
 def update(ctx):
     """
-    Updates external codelists (currency).
+    Update codelists except country.csv.
     """
     ctx.invoke(update_currency)
+    ctx.invoke(update_language)
+    ctx.invoke(update_media_type)
 
 
 def add_translation_note(path, language, domain):
@@ -571,7 +730,7 @@ def add_translation_note(path, language, domain):
     translator = gettext.translation('theme', localedir, languages=[language])
     _ = translator.gettext
 
-    pattern = '{}/{{}}/{}/'.format(base_url, domain)
+    pattern = f'{base_url}/{{}}/{domain}/'
     response = requests.get(pattern.format(language))
 
     # If it's a new page, add the note to the current version of the page.
@@ -585,7 +744,7 @@ def add_translation_note(path, language, domain):
         xpath = '//div[@itemprop="articleBody"]'
 
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
-        replacement.make_links_absolute('{}/{}'.format(base_url, language))
+        replacement.make_links_absolute(f'{base_url}/{language}')
 
         # Remove any existing translation notes.
         parent = replacement.xpath('//h1')[0].getparent()
@@ -611,7 +770,7 @@ def add_translation_note(path, language, domain):
 @cli.command()
 def add_translation_notes():
     """
-    Implements the localization policy.
+    Implement the localization policy.
 
     "Minor, non-normative, documentation updates will be translated promptly, but may not always be translated before
     the updates are released. The documentation will clearly display when the English documentation is 'ahead' of

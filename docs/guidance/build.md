@@ -20,7 +20,7 @@ As you complete this phase, you can:
 
 ## Register an OCID prefix
 
-In OCDS, the contracting process identifier (`ocid`) uniquely identifies a contracting process. As a publisher, you will assign a unique `ocid` to each contracting process.
+In OCDS, the open contracting process identifier (`ocid`) uniquely identifies a contracting process. As a publisher, you will assign a unique `ocid` to each contracting process.
 
 To ensure that your `ocid`s do not conflict with those of another publisher, you need to register an ocid prefix.
 

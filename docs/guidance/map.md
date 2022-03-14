@@ -94,10 +94,12 @@ Mapping data to OCDS is not always obvious. Please refer to our how-to guides an
 :maxdepth: 2
 :titlesonly:
 
+map/contracting_planning_processes
 map/unsuccessful_processes
 map/framework_agreements
 map/pre-qualification
 map/awards_contracts
+map/contract_suspension
 map/electronic_catalogues
 map/amendments
 map/milestones

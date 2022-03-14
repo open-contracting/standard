@@ -36,4 +36,4 @@ def server(request):
         p.terminate()
     request.addfinalizer(stop)
 
-    return 'http://{}:{}/'.format(host, port_number)
+    return f'http://{host}:{port_number}/'

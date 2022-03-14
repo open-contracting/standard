@@ -1,3 +1,7 @@
+```{workedexample} Framework agreements
+:tags: tender,award,contract
+```
+
 # Framework agreements
 
 ## Definitions
@@ -22,7 +26,7 @@ A procurement contract is defined in UNCITRAL as:
 
 ## Types of framework agreement
 
-![Framework agreement types](../../_static/png/framework_agreement_types.png)
+![Framework agreement types](../../_static/png/framework_agreement/types.png)
 
 Framework agreements can be **open** or **closed**:
 
@@ -58,16 +62,13 @@ In OCDS, a contracting process brings together, under a single identifier, the i
 * What was the total value of spending that resulted from this award?
 * Was a renewal of this contract signed?
 
-In some cases, complex contracting processes cannot be represented under a single identifier under OCDS' model, because:
-
-* There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions.
-* The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated.
+In some cases, complex contracting processes cannot be represented under a single identifier, because there are multiple stages. For example, this is the case when a framework is set up, and then mini-competitions are used for purchases from the framework.
 
 OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` set to 'framework' is used to identify contracting processes that represent the second stage of a framework agreement procedure.
 
 The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
 
-![OCDS framework agreement model](../../_static/png/framework_agreement_model.png)
+![OCDS framework agreement model](../../_static/png/framework_agreement/model.png)
 
 ### Extensions
 
@@ -160,13 +161,13 @@ NHS National Services Scotland (NSS) wants to establish a framework agreement fo
 
 #### Invitation to participate in the first stage
 
-NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
+NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting potential suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
 
 The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
 
 * The techniques extension is declared in the package metadata.
 * Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
-* Since the framework agreement will be concluded with a single supplier and since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'open'.
+* Since the framework agreement will be concluded with a single supplier and since any potential supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'open'.
 * Since the framework agreement is closed, `tender.tenderPeriod` is set to the deadline for responses to the invitation to participate.
 * Since there is only one buyer, `buyer` is set to reference the buyer's object in the `parties` array.
 
@@ -233,7 +234,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 * Since the framework agreement will be concluded with multiple suppliers and will involve second-stage competition, `tender.procurementMethod` is set to 'selective'.
 * Since the framework agreement is open, `tender.tenderPeriod` is set to the end of the framework agreement.
 * Since there are two buyers, the 'buyer' object is not set, and the buyers are declared in the `parties` array.
-* Since Chile Compra is the entity that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
+* Since Chile Compra is the organization that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_first_stage.json
 :jsonpointer:

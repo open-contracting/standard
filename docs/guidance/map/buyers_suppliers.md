@@ -1,3 +1,7 @@
+```{workedexample} Buyers and suppliers
+:tags: parties,tender,award
+```
+
 # Buyers and suppliers
 
 ## Definitions
@@ -34,7 +38,7 @@ OCDS defines a supplier as:
 
 ## Consortia suppliers
 
-When multiple suppliers put together a single bid, and are awarded as a group, this is known as a consortium.
+When multiple potential suppliers put together a single bid, and are awarded as a group, this is known as a consortium.
 
 In some countries, these suppliers only create a legal entity after the award, to sign the contract; or, they decide on a prime contractor, with the others being subcontractors.
 
@@ -51,5 +55,5 @@ Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/consortia_simple.csv
+:file: ../../examples/organizations/consortia_simple.csv
 ```
