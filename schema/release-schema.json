@@ -196,10 +196,14 @@
           "minLength": 1,
           "versionId": true
         },
-        "identifier": {
-          "title": "Additional tender identifier",
-          "description": "Additional identifier for this tender. This field can be used to provide a local identifier for the tender.",
-          "$ref": "#/definitions/SimpleIdentifier"
+        "identifiers": {
+          "title": "Additional tender identifiers",
+          "description": "Additional identifiers for this tender. This field can be used to provide local identifiers for the tender.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleIdentifier"
+          },
+          "uniqueItems": true
         },
         "title": {
           "title": "Tender title",
@@ -636,10 +640,14 @@
           ],
           "minLength": 1
         },
-        "identifier": {
-          "title": "Additional contract identifier",
-          "description": "Additional identifier for this contract. This field can be used to provide a local identifier for the contract.",
-          "$ref": "#/definitions/SimpleIdentifier"
+        "identifiers": {
+          "title": "Additional contract identifiers",
+          "description": "Additional identifiers for this contract. This field can be used to provide local identifiers for the contract.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleIdentifier"
+          },
+          "uniqueItems": true
         },
         "awardID": {
           "title": "Award ID",
@@ -2225,7 +2233,7 @@
             "string",
             "null"
           ],
-          "versionID": true
+          "versionId": true
         }
       }
     }

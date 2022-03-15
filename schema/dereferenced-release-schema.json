@@ -1373,29 +1373,35 @@
           "minLength": 1,
           "versionId": true
         },
-        "identifier": {
-          "title": "Simple identifier",
-          "description": "An unambiguous reference to a resource within a given context.",
-          "type": "object",
-          "properties": {
-            "scheme": {
-              "title": "Scheme",
-              "description": "The list, register or system from which identifiers are taken.",
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "id": {
-              "title": "A description of the goods, services to be provided.",
-              "description": "The identifier taken from the scheme.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "versionID": true
+        "identifiers": {
+          "title": "Additional tender identifiers",
+          "description": "Additional identifiers for this tender. This field can be used to provide local identifiers for the tender.",
+          "type": "array",
+          "items": {
+            "title": "Simple identifier",
+            "description": "An unambiguous reference to a resource within a given context.",
+            "type": "object",
+            "properties": {
+              "scheme": {
+                "title": "Scheme",
+                "description": "The list, register or system from which identifiers are taken.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "title": "A description of the goods, services to be provided.",
+                "description": "The identifier taken from the scheme.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              }
             }
-          }
+          },
+          "uniqueItems": true
         },
         "title": {
           "title": "Tender title",
@@ -5567,29 +5573,35 @@
             ],
             "minLength": 1
           },
-          "identifier": {
-            "title": "Simple identifier",
-            "description": "An unambiguous reference to a resource within a given context.",
-            "type": "object",
-            "properties": {
-              "scheme": {
-                "title": "Scheme",
-                "description": "The list, register or system from which identifiers are taken.",
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "id": {
-                "title": "A description of the goods, services to be provided.",
-                "description": "The identifier taken from the scheme.",
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "versionID": true
+          "identifiers": {
+            "title": "Additional contract identifiers",
+            "description": "Additional identifiers for this contract. This field can be used to provide local identifiers for the contract.",
+            "type": "array",
+            "items": {
+              "title": "Simple identifier",
+              "description": "An unambiguous reference to a resource within a given context.",
+              "type": "object",
+              "properties": {
+                "scheme": {
+                  "title": "Scheme",
+                  "description": "The list, register or system from which identifiers are taken.",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "id": {
+                  "title": "A description of the goods, services to be provided.",
+                  "description": "The identifier taken from the scheme.",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "versionId": true
+                }
               }
-            }
+            },
+            "uniqueItems": true
           },
           "awardID": {
             "title": "Award ID",
@@ -9692,29 +9704,35 @@
           "minLength": 1,
           "versionId": true
         },
-        "identifier": {
-          "title": "Simple identifier",
-          "description": "An unambiguous reference to a resource within a given context.",
-          "type": "object",
-          "properties": {
-            "scheme": {
-              "title": "Scheme",
-              "description": "The list, register or system from which identifiers are taken.",
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "id": {
-              "title": "A description of the goods, services to be provided.",
-              "description": "The identifier taken from the scheme.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "versionID": true
+        "identifiers": {
+          "title": "Additional tender identifiers",
+          "description": "Additional identifiers for this tender. This field can be used to provide local identifiers for the tender.",
+          "type": "array",
+          "items": {
+            "title": "Simple identifier",
+            "description": "An unambiguous reference to a resource within a given context.",
+            "type": "object",
+            "properties": {
+              "scheme": {
+                "title": "Scheme",
+                "description": "The list, register or system from which identifiers are taken.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "title": "A description of the goods, services to be provided.",
+                "description": "The identifier taken from the scheme.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              }
             }
-          }
+          },
+          "uniqueItems": true
         },
         "title": {
           "title": "Tender title",
@@ -13876,29 +13894,35 @@
           ],
           "minLength": 1
         },
-        "identifier": {
-          "title": "Simple identifier",
-          "description": "An unambiguous reference to a resource within a given context.",
-          "type": "object",
-          "properties": {
-            "scheme": {
-              "title": "Scheme",
-              "description": "The list, register or system from which identifiers are taken.",
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "id": {
-              "title": "A description of the goods, services to be provided.",
-              "description": "The identifier taken from the scheme.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "versionID": true
+        "identifiers": {
+          "title": "Additional contract identifiers",
+          "description": "Additional identifiers for this contract. This field can be used to provide local identifiers for the contract.",
+          "type": "array",
+          "items": {
+            "title": "Simple identifier",
+            "description": "An unambiguous reference to a resource within a given context.",
+            "type": "object",
+            "properties": {
+              "scheme": {
+                "title": "Scheme",
+                "description": "The list, register or system from which identifiers are taken.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "title": "A description of the goods, services to be provided.",
+                "description": "The identifier taken from the scheme.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              }
             }
-          }
+          },
+          "uniqueItems": true
         },
         "awardID": {
           "title": "Award ID",
@@ -22618,7 +22642,7 @@
             "string",
             "null"
           ],
-          "versionID": true
+          "versionId": true
         }
       }
     }
