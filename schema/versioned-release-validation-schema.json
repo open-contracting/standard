@@ -185,6 +185,13 @@
             }
           }
         },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleIdentifier"
+          },
+          "uniqueItems": true
+        },
         "title": {
           "$ref": "#/definitions/StringNullVersioned"
         },
@@ -756,6 +763,13 @@
             "integer"
           ],
           "minLength": 1
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleIdentifier"
+          },
+          "uniqueItems": true
         },
         "awardID": {
           "type": "array",
@@ -2881,6 +2895,21 @@
               }
             }
           }
+        }
+      }
+    },
+    "SimpleIdentifier": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
         }
       }
     },
