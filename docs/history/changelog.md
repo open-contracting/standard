@@ -178,6 +178,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
+  * [#1492](https://github.com/open-contracting/standard/pull/1492) `awards.datePublished`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
