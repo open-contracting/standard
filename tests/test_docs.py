@@ -6,6 +6,8 @@ from . import languages
 
 
 @pytest.mark.parametrize('lang', list(languages))
+# This seems to be an issue in Selenium and/or ChromeDriver.
+@pytest.mark.filterwarnings("ignore:unclosed <socket.socket fd=:ResourceWarning")
 def test_examples(browser, server, lang):
     browser.get(f'{server}{lang}/guidance/build/merging')
     examples = browser.find_element(By.ID, 'updates-and-deletions')
