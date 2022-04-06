@@ -697,7 +697,7 @@ def update_media_type():
                 template = row['Template']
                 # All messages are expected to be about deprecation and obsoletion.
                 if message:
-                    logging.warning(f'{message}: {code}')
+                    logging.warning('%s: %s', message, code)
                 # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
                 elif template and template != code:
                     raise Exception(f"expected {code}, got {template}")
