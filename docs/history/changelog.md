@@ -164,20 +164,21 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
   * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
+  * [#1492](https://github.com/open-contracting/standard/pull/1492) `awards.datePublished`
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
-  * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
-  * [#1326](https://github.com/open-contracting/standard/pull/1326) [#1431](https://github.com/open-contracting/standard/pull/1431) `links`
-  * [#1376](https://github.com/open-contracting/standard/pull/1376) `publisher`
   * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
     * `tender.maximumValue`. Previously, `tender.value` was used for the maximum value. However, this led to double-counting.
     * `awards.maximumValue`. Previously, `awards.value` was used for the maximum value. However, this led to double-counting.
     * `awards.estimatedValue`
     * `contracts.maximumValue`
     * `contracts.estimatedValue`
+  * [#1326](https://github.com/open-contracting/standard/pull/1326) [#1431](https://github.com/open-contracting/standard/pull/1431) `links`
+  * [#1376](https://github.com/open-contracting/standard/pull/1376), [#1489](https://github.com/open-contracting/standard/pull/1489) `publisher`
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
-  * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
+  * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
+  * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
 
 * Deprecate some fields:

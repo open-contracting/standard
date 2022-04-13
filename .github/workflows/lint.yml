@@ -11,11 +11,7 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: 3.8
-      - uses: actions/cache@v2
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt', 'setup.py') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          cache: pip
+          cache-dependency-path: '**/requirements*.txt'
       - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
       - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -

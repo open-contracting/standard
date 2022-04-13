@@ -72,7 +72,8 @@
             "null"
           ]
         }
-      }
+      },
+      "omitWhenMerged": true
     },
     "tag": {
       "title": "Release Tag",
@@ -6454,6 +6455,15 @@
           "date": {
             "title": "Award date",
             "description": "The date of the contract award. This is usually the date on which a decision to award was made.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "datePublished": {
+            "title": "Date published",
+            "description": "The date on which the award was published.",
             "type": [
               "string",
               "null"
@@ -19653,6 +19663,15 @@
         "date": {
           "title": "Award date",
           "description": "The date of the contract award. This is usually the date on which a decision to award was made.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "datePublished": {
+          "title": "Date published",
+          "description": "The date on which the award was published.",
           "type": [
             "string",
             "null"
