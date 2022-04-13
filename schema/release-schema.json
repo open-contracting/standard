@@ -213,7 +213,8 @@
           "items": {
             "$ref": "#/definitions/SimpleIdentifier"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "wholeListMerge": true
         },
         "title": {
           "title": "Tender title",
@@ -741,7 +742,8 @@
           "items": {
             "$ref": "#/definitions/SimpleIdentifier"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "wholeListMerge": true
         },
         "awardID": {
           "title": "Award ID",
@@ -2675,7 +2677,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The list, register or system from which identifiers are taken.",
+          "description": "The list, register or system from which the identifier is taken.",
           "type": [
             "string",
             "null"

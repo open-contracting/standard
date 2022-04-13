@@ -185,9 +185,30 @@
         "identifiers": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SimpleIdentifier"
-          },
-          "uniqueItems": true
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/SimpleIdentifierUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "title": {
           "$ref": "#/definitions/StringNullVersioned"
@@ -767,9 +788,30 @@
         "identifiers": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SimpleIdentifier"
-          },
-          "uniqueItems": true
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/SimpleIdentifierUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "awardID": {
           "type": "array",
@@ -2905,11 +2947,32 @@
           "$ref": "#/definitions/StringNullVersioned"
         },
         "id": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "versionId": true
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -3147,6 +3210,24 @@
         }
       },
       "type": "object"
+    },
+    "SimpleIdentifierUnversioned": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
+        }
+      }
     },
     "ClassificationUnversioned": {
       "type": "object",
