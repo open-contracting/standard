@@ -182,6 +182,34 @@
             }
           }
         },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/SimpleIdentifierUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
         "title": {
           "$ref": "#/definitions/StringNullVersioned"
         },
@@ -756,6 +784,34 @@
             "integer"
           ],
           "minLength": 1
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/SimpleIdentifierUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "awardID": {
           "type": "array",
@@ -2884,6 +2940,42 @@
         }
       }
     },
+    "SimpleIdentifier": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "id": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "StringNullUriVersioned": {
       "type": "array",
       "items": {
@@ -3118,6 +3210,24 @@
         }
       },
       "type": "object"
+    },
+    "SimpleIdentifierUnversioned": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
+        }
+      }
     },
     "ClassificationUnversioned": {
       "type": "object",
