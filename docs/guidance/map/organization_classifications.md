@@ -1,3 +1,7 @@
+```{workedexample} Organization classifications
+:tags: parties
+```
+
 # Organization classifications
 
 Many publishers wish to disclose and monitor information about different classifications of organizations involved in contracting processes. Example classifications include organization ownership, incorporation, sector, location, and number of employees. We recognise that publishing information about a variety of organization characteristics, for example women-owned and/or indigenous-owned organizations, is an important part of monitoring participation in public procurement.
@@ -21,7 +25,7 @@ A third, discouraged, example approach using local extensions is also given belo
 
 In the example below, Moldova has disclosed information about the 'Companie mică' organization using the `parties.details.scale` field, to which it has assigned the 'micro' code from the [partyScale codelist](../../schema/codelists.md#party-scale).
 
-```{jsoninclude} ../../examples/organization-classification/moldova_organization_scale.json
+```{jsoninclude} ../../examples/organizations/organization_classification/moldova_organization_scale.json
 :jsonpointer:
 :expand: releases, parties, details
 :title: party_scale
@@ -49,7 +53,7 @@ In the first fictional example below, the UK has disclosed a code from two diffe
 
 Note that the `classification.id` relates to the id of the code in the `classification.scheme` given, rather than its position in the `classifications` array. Therefore, the first `classification` shows that the `id` of 'Regional or local authority' in the 'TED_CA_TYPE' scheme is 'REGIONAL_AUTHORITY', and the second `classification` shows that the `id` of 'General public services' in the 'COFOG' scheme is '01'.
 
-```{jsoninclude} ../../examples/organization-classification/uk_organization_classification.json
+```{jsoninclude} ../../examples/organizations/organization_classification/uk_organization_classification.json
 :jsonpointer:
 :expand: releases, parties, details, classifications
 :title: organization_classifications
@@ -61,7 +65,7 @@ The second example below is set in the fictional city of Ciudad Ficticia in Colo
 
 In their publication policy, the procurement team documents all possible codes for COL-CF-MON with definitions of each code, including explaining that 'NPDM' is for businesses registered with the local Chamber of Commerce where ownership and control is at least 51% women.
 
-```{jsoninclude} ../../examples/organization-classification/fictional_wob_organization_classification.json
+```{jsoninclude} ../../examples/organizations/organization_classification/fictional_wob_organization_classification.json
 :jsonpointer:
 :expand: releases, parties, details, classifications
 :title: organization_classification
@@ -73,7 +77,7 @@ A third, discouraged, option is for publishers to use local extensions to disclo
 
 In the fictional example below, Dhanghadi has created a local extension so they can publish data in the `parties.details` block on an organization that is `femaleChaired`, with the values of the field being either `true` or `false`. The publisher would document the structure of this field and its meaning in the local extension files.
 
-```{jsoninclude} ../../examples/organization-classification/dhangadhi_female_chaired_example.json
+```{jsoninclude} ../../examples/organizations/organization_classification/dhangadhi_female_chaired_example.json
 :jsonpointer:
 :expand: releases, parties, details
 :title: femaleChaired

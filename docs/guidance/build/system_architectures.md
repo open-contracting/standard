@@ -22,7 +22,7 @@ In this scenario, data from each source is converted to OCDS format on-demand. O
 
 An API performs data transformation on the fly each time it receives a request.
 
-![Direct Publication 2](../../_static/png/directPublication2.png)
+![Direct Publication 2](../../_static/png/system_architectures/direct_publication2.png)
 
 The conversion module produces OCDS releases and/or records wrapped in packages.
 
@@ -50,7 +50,7 @@ The [releases and records](../../primer/releases_and_records) guidance describes
 
 In this scenario an automated process pulls data from the data sources to the middleware system. The middleware performs the conversion to OCDS and maintains a datastore in OCDS format.
 
-![Pull and Convert](../../_static/png/pullAndConvert.png)
+![Pull and Convert](../../_static/png/system_architectures/pull_and_convert.png)
 
 The key benefit of this approach is that the middleware system can store the change history. This is especially good when data sources do not maintain historic data.
 
@@ -68,7 +68,7 @@ European Dynamics developed an e-procurement system with a similar approach for 
 
 This scenario is a combination of the two previous scenarios. Data sources perform the conversion of data to OCDS format. They push converted data to a middleware, which maintains an OCDS format datastore. An API in the middleware system serves the OCDS data.
 
-![Convert and Push](../../_static/png/convertAndPush.png)
+![Convert and Push](../../_static/png/system_architectures/convert_and_push.png)
 
 This approach puts the burden of data conversion on data sources. Yet it might be a solution for publishers with a single data source which does not store the change history.
 
@@ -78,7 +78,7 @@ The [OpenProcurement](http://openprocurement.org/en/) system adopted a similar a
 
 A variant in this scenario is to store files in a web-accessible file system, as shown below. A periodical invocation of the conversion module updates the file system.
 
-![Direct Publication 1](../../_static/png/directPublication1.png)
+![Direct Publication 1](../../_static/png/system_architectures/direct_publication1.png)
 
 The file system ensures that each OCDS document has a persistent URL for access. But a downside is that the volume of data might grow fast, as plain files can take significant space. The file system can provide a change history as long as releases are never overwritten. Bulk downloads can be generated periodically and stored in the file system. Records might be impossible to produce if there is more than one system.
 
@@ -88,7 +88,7 @@ In this scenario a middleware system sits between data sources and the API.
 
 Data is manually exported from data sources into files. The files are uploaded to the middleware system, which converts the data to OCDS. The system stores the data in OCDS format.
 
-![Manual Import](../../_static/png/manualImport.png)
+![Manual Import](../../_static/png/system_architectures/manual_import.png)
 
 A disadvantage in this approach is the potential of failures. Input files might be corrupted or have unexpected formats due to changes or errors in the data sources.
 

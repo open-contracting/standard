@@ -1,3 +1,7 @@
+```{workedexample} Personal identifiers
+:tags: parties
+```
+
 # Personal identifiers
 
 Suppliers and tenderers can be organizations or individuals (natural persons). Such individuals are often referred to as "sole traders" or "self-employed individuals".
@@ -27,7 +31,7 @@ In the example below:
 * The individual's ID card number is published in `.identifier.id`
 * `.identifier.scheme` is constructed from the ISO 3166-1 alpha-3 country code for Colombia ('COL') and the type of the identifier ('IDCARD')
 
-```{jsoninclude} ../../examples/organization-personal-identifier.json
+```{jsoninclude} ../../examples/organizations/personal_identifier.json
 :jsonpointer:
 :expand: releases, parties, identifier
 :title: personal-identifiers

@@ -697,7 +697,7 @@ def update_media_type():
                 template = row['Template']
                 # All messages are expected to be about deprecation and obsoletion.
                 if message:
-                    logging.warning(f'{message}: {code}')
+                    logging.warning('%s: %s', message, code)
                 # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
                 elif template and template != code:
                     raise Exception(f"expected {code}, got {template}")
@@ -730,7 +730,7 @@ def add_translation_note(path, language, domain):
     translator = gettext.translation('theme', localedir, languages=[language])
     _ = translator.gettext
 
-    pattern = '{}/{{}}/{}/'.format(base_url, domain)
+    pattern = f'{base_url}/{{}}/{domain}/'
     response = requests.get(pattern.format(language))
 
     # If it's a new page, add the note to the current version of the page.
@@ -744,7 +744,7 @@ def add_translation_note(path, language, domain):
         xpath = '//div[@itemprop="articleBody"]'
 
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
-        replacement.make_links_absolute('{}/{}'.format(base_url, language))
+        replacement.make_links_absolute(f'{base_url}/{language}')
 
         # Remove any existing translation notes.
         parent = replacement.xpath('//h1')[0].getparent()

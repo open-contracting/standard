@@ -50,7 +50,7 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 **json**
 
-```{jsoninclude} ../examples/language.json
+```{jsoninclude} ../examples/language_localization/language.json
 :jsonpointer:
 :expand: tender,item
 ```
@@ -60,7 +60,7 @@ A contract for ‘Software consultancy services’ is published in a release wit
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../examples/language.csv
+:file: ../examples/language_localization/language.csv
 ```
 
 ## Release structure
@@ -84,6 +84,16 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 Releases must be published within a [release package](release_package). The release package provides metadata about the release(s) that it contains.
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer:
+:expand: publisher
+:title: package
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
 :collapse: releases,publisher
 ```
@@ -96,12 +106,25 @@ See the [publication policy](../guidance/publish.md#finalize-your-publication-po
 
 All new information about a contracting process is described within a release. 
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0
+:title: release
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
 ```
 
 ```{extensionlist} The following extensions are available for release
 :list: release
+```
+
+```{workedexamplelist} The following worked examples are available for releases
+:tag: release
 ```
 
 ### Parties
@@ -113,6 +136,16 @@ In OCDS 1.0, the details (address, contact point, etc.) of the organizations inv
 
 Note that the organization references allow, but deprecate, the fields for organization details.
 ```
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/parties
+:expand: roles
+:title: parties
+```
+````
 
 The following details can be provided for each organization.
 
@@ -131,9 +164,22 @@ Each organization has a `details` object. Through extensions, this can be used t
 :list: partyDetail
 ```
 
+```{workedexamplelist} The following worked examples are available for organizations
+:tag: parties
+```
+
 ### Planning
 
 The planning section can be used to describe the background to a contracting process. This can include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/planning
+:title: planning
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Planning
@@ -144,9 +190,22 @@ The planning section can be used to describe the background to a contracting pro
 :list: planning
 ```
 
+```{workedexamplelist} The following worked examples are available for plannings
+:tag: planning
+```
+
 #### Budget 
 
 Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/planning/budget
+:title: budget
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Budget
@@ -163,6 +222,15 @@ The tender section includes details of the announcement that an organization int
 
 It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and can also be used to record details of a completed tender process, including details of bids received. 
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender
+:title: tender
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Tender
 :collapse: items,tenderPeriod,enquiryPeriod,awardPeriod,contractPeriod,tenderers,documents,milestones,amendment,amendments,minValue,value,procuringEntity
@@ -170,6 +238,10 @@ It can contain details of a forthcoming process to receive and evaluate proposal
 
 ```{extensionlist} The following extensions are available for the tender section
 :list: tender
+```
+
+```{workedexamplelist} The following worked examples are available for tenders
+:tag: tender
 ```
 
 ### Bids
@@ -180,6 +252,15 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/framework_agreements).
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/awards/0
+:title: award
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Award
 :collapse: items,value,suppliers,contractPeriod,documents,amendment,amendments
@@ -189,9 +270,22 @@ The award section is used to announce any awards issued for this tender. There c
 :list: award
 ```
 
+```{workedexamplelist} The following worked examples are available for awards
+:tag: award
+```
+
 ### Contract
 
 The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. 
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/contracts/0
+:title: contract
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Contract
@@ -202,9 +296,22 @@ The contract section is used to provide details of contracts that have been ente
 :list: contract
 ```
 
+```{workedexamplelist} The following worked examples are available for contracts
+:tag: contract
+```
+
 ### Implementation
 
 Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to. Implementation blocks include the following elements:
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/contracts/0/implementation
+:title: implementation
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Implementation
@@ -217,7 +324,20 @@ Implementation information can be updated over the course of a contract. It belo
 
 Information on subcontracts is not currently included in the core OCDS schema, but might be handled by [proposed extensions](conformance_and_extensions)
 
+```{workedexamplelist} The following worked examples are available for implementations
+:tag: implementation
+```
+
 #### Transaction
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/contracts/0/implementation/transactions/0
+:title: transaction
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Transaction
@@ -254,9 +374,22 @@ A release may amend values from a previous release. Whilst the release & record 
 
 The amendment array in a tender, award or contract block provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/amendments/0
+:title: amendments
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Amendment
 :collapse: changes
+```
+
+```{workedexamplelist} The following worked examples are available for amendments
+:tag: amendment
 ```
 
 #### Changes
@@ -285,6 +418,19 @@ An organization reference consists of two main components:
 * An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization;
 * A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/buyer
+:title: organizationReference
+```
+````
+
+```{workedexamplelist} The following worked examples are available for organization reference
+:tag: organization_reference
+```
+
 ### Organization
 
 See the [parties](#parties) section.
@@ -295,17 +441,47 @@ The identifier block provides a way to [identify the legal entities](identifiers
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/parties/0
+:expand: identifier
+:title: party
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Identifier
 ```
 
 #### Address
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/parties/0
+:expand: address
+:title: party
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Address
 ```
 
 #### ContactPoint
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/parties/0
+:expand: contactPoint
+:title: party
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/ContactPoint
@@ -323,6 +499,15 @@ OCDS allows summarizing information in the document's `description` field. Provi
 
 If a document contains multiple languages, use the `languages` field to list the languages used in the document. If there are multiple versions of a document, each in a different language, add a separate `Document` object for each version of the document.
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/documents/0
+:title: document
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Document
 ```
@@ -336,6 +521,15 @@ If a document contains multiple languages, use the `languages` field to list the
 A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
 
 Periods can also include a `maxExtentDate` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/awards/0/contractPeriod
+:title: period
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Period
@@ -369,6 +563,15 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 The items block is used to list the line-items associated with a tender, award or contract. 
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/items/0
+:title: items
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item
 :collapse: classification,additionalClassifications,unit
@@ -378,11 +581,6 @@ The items block is used to list the line-items associated with a tender, award o
 :list: item
 ```
 
-#### Classification
-
-```{jsonschema} ../../build/current_lang/release-schema.json
-:pointer: /definitions/Classification
-```
 #### Unit
 
 The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
@@ -391,9 +589,34 @@ If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qud
 
 Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/items/0
+:expand: unit
+:title: unit
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item/properties/unit
 :collapse: value
+```
+
+### Classification
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/items/0/classification
+:title: classification
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Classification
 ```
 
 ### Milestone
@@ -408,6 +631,15 @@ The `dateModified` field should be changed whenever the progress towards a miles
 
 For delivery milestones, if there is a time frame for delivery, use `.dueAfterDate` for the start date and `.dueDate` for the end date.
 
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/planning/milestones/0
+:title: milestones
+```
+````
+
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Milestone
 :collapse: documents
@@ -417,9 +649,22 @@ For delivery milestones, if there is a time frame for delivery, use `.dueAfterDa
 :list: milestones
 ```
 
+```{workedexamplelist} The following worked examples are available for milestones
+:tag: milestone
+```
+
 ### Value
 
 Financial values should be published with a currency attached. 
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/awards/0/value
+:title: value
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Value
@@ -437,6 +682,15 @@ In OCDS each contracting process can have only one planning and tender stage. Th
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
 In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant open contracting processes using their `ocid`.
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/relatedProcesses
+:title: relatedProcesses
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/RelatedProcess
@@ -461,6 +715,15 @@ The [Location](https://extensions.open-contracting.org/en/extensions/location/v1
 ### Publisher
 
 The publisher block is used in release and record packages to identify the source of a dataset. 
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /publisher
+:title: publisher
+```
+````
 
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
 :include: publisher

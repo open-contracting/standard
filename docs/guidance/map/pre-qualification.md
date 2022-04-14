@@ -1,3 +1,7 @@
+```{workedexample} Processes with pre-qualification and pre-selection
+:tags: tender
+```
+
 # Processes with pre-qualification and pre-selection
 
 In single-stage procedures, buyers or procuring entities invite potential suppliers to bid without submitting any prior information.  Such procedures are straightforward to model in OCDS.
@@ -109,7 +113,7 @@ The Bank of England issues a [restricted procedure contract notice](https://ted.
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS:
 
-```{jsoninclude} ../../examples/pre-qualification/pre-qualification-package.json
+```{jsoninclude} ../../examples/pre-qualification/pre-qualification_tender.json
 :jsonpointer: /releases/0/tender
 :title: Tender section
 ```
@@ -130,7 +134,7 @@ The notice represents the initiation of the contracting process, so it is modell
 
 The procuring entitiy will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from.
 
-```{jsoninclude} ../../examples/pre-qualification/pre-selection-package.json
+```{jsoninclude} ../../examples/pre-qualification/pre-selection_tender.json
 :jsonpointer: /releases/0/tender
 :title: Tender section
 ```
@@ -143,7 +147,7 @@ The invitation represents the initiation of a contracting process to establish a
 
 Only qualified potential suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to ‘selective’.
 
-```{jsoninclude} ../../examples/pre-qualification/pre-qualification-paraguay-package.json
+```{jsoninclude} ../../examples/pre-qualification/pre-qualification_paraguay.json
 :jsonpointer: /releases/0/tender
 :title: Tender section
 ```

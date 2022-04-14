@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-24 09:10-0400\n"
+"POT-Creation-Date: 2022-01-13 09:12-0300\n"
 "PO-Revision-Date: 2020-06-29 22:58+0000\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -87,9 +87,9 @@ msgstr ""
 
 #: ../../docs/guidance/map.md:32
 msgid ""
-"As described in the [Field-Level Mapping Template Guidance](https://www"
-".open-contracting.org/resources/ocds-1-1-mapping-template-guidance/) "
-"(introduced below), you will need at least:"
+"As described in the [Field-Level Mapping Template "
+"Guidance](https://www.open-contracting.org/resources/ocds-1-1-mapping-"
+"template-guidance/) (introduced below), you will need at least:"
 msgstr ""
 
 #: ../../docs/guidance/map.md:34
@@ -134,7 +134,7 @@ msgid ""
 "identify those data sources, too."
 msgstr ""
 
-#: ../../docs/guidance/map.md:44 ../../docs/guidance/map.md:147
+#: ../../docs/guidance/map.md:44 ../../docs/guidance/map.md:156
 msgid "Once complete, you can:"
 msgstr ""
 
@@ -281,29 +281,59 @@ msgstr ""
 
 #: ../../docs/guidance/map.md:117
 msgid ""
+"Before using extensions, double-check whether the data elements can be "
+"disclosed using existing fields. For example, to disclose the date by which "
+"the buyer or procuring entity will respond to enquiries, you can use the "
+"`tender.milestones` field, instead of adding a new field."
+msgstr ""
+
+#: ../../docs/guidance/map.md:1
+msgid "[Worked example: Milestones](map/organization_classifications)"
+msgstr ""
+
+#: ../../docs/guidance/map.md:2
+msgid ""
+"[Worked example: Organization "
+"classification](map/organization_classifications)"
+msgstr ""
+
+#: ../../docs/guidance/map.md:124
+msgid ""
+"If you do need to use an extension, consider whether the new fields will "
+"affect how users interpret existing fields. If so, you can add information "
+"to existing fields, to avoid misinterpretation – in addition to adding the "
+"new fields."
+msgstr ""
+
+#: ../../docs/guidance/map.md:126
+msgid ""
+"For example, you have created an extension to add a new field to indicate "
+"whether a contracting process is about the disposal of a state asset (like a"
+" vehicle). If the `tender.title` field refers only to the vehicle, then "
+"users who are unaware of the new field might misinterpret the contracting "
+"process as being about its purchase. To avoid misinterpretation, you can add"
+" a \"Disposal: \" prefix to the `tender.title` field."
+msgstr ""
+
+#: ../../docs/guidance/map.md:128
+msgid ""
 "**Resource:** [Localizing OCDS: Translations, Terminology & "
 "Extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-"
 "translations-terminology-extensions/)"
 msgstr ""
 
-#: ../../docs/guidance/map.md:119
-msgid ""
-"**Resource:** [What to do when fields don't map?](https://www.open-"
-"contracting.org/2018/01/30/fields-dont-map-first/)"
-msgstr ""
-
-#: ../../docs/guidance/map.md:121
+#: ../../docs/guidance/map.md:130
 msgid ""
 "**Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)"
 msgstr ""
 
-#: ../../docs/guidance/map.md:123
+#: ../../docs/guidance/map.md:132
 msgid ""
 "**Action:** [Contact the OCDS Helpdesk](../../support/index) to get help "
 "with mapping data or authoring extensions."
 msgstr ""
 
-#: ../../docs/guidance/map.md:125
+#: ../../docs/guidance/map.md:134
 msgid ""
 "**Action:** If you are stuck on a particular concept and are concerned about"
 " how it is modelled in OCDS, search the issues in our [GitHub "
@@ -312,11 +342,11 @@ msgid ""
 "issue, create a new one!"
 msgstr ""
 
-#: ../../docs/guidance/map.md:133
+#: ../../docs/guidance/map.md:142
 msgid "Link OCDS with other standards"
 msgstr ""
 
-#: ../../docs/guidance/map.md:135
+#: ../../docs/guidance/map.md:144
 msgid ""
 "Not all information that is related to a contracting process belongs in "
 "OCDS. For example, a company's annual filings and incorporation status are "
@@ -324,22 +354,22 @@ msgid ""
 "contracting process."
 msgstr ""
 
-#: ../../docs/guidance/map.md:137
+#: ../../docs/guidance/map.md:146
 msgid ""
 "For guidance on integrating your OCDS data with these related datasets, "
 "refer to [Linked standards](map/linked_standards)."
 msgstr ""
 
-#: ../../docs/guidance/map.md:145
+#: ../../docs/guidance/map.md:154
 msgid "Wrap up"
 msgstr ""
 
-#: ../../docs/guidance/map.md:149
+#: ../../docs/guidance/map.md:158
 msgid ""
 "Ask the [OCDS Helpdesk](../../support/index) to review your Field-Level "
 "Mapping and Technical Assessment Template."
 msgstr ""
 
-#: ../../docs/guidance/map.md:151
+#: ../../docs/guidance/map.md:160
 msgid "[Next phase: Build](build)"
 msgstr ""

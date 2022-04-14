@@ -1,6 +1,6 @@
-import os
+import threading
+from functools import partial
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-from multiprocessing import Process
 
 import pytest
 from selenium import webdriver
@@ -9,15 +9,16 @@ from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope='module')
 def browser(request):
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
 
-    browser = webdriver.Chrome(chrome_options=chrome_options)
+    browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(3)
-    request.addfinalizer(lambda: browser.quit())
 
-    return browser
+    yield browser
+
+    browser.quit()
 
 
 @pytest.fixture(scope='module')
@@ -25,15 +26,12 @@ def server(request):
     host = 'localhost'
     port_number = 8331
 
-    def run():
-        os.chdir('build')
-        HTTPServer((host, port_number), SimpleHTTPRequestHandler).serve_forever()
+    server = HTTPServer((host, port_number), partial(SimpleHTTPRequestHandler, directory='build'))
 
-    p = Process(target=run)
-    p.start()
+    thread = threading.Thread(target=server.serve_forever)
+    thread.start()
 
-    def stop():
-        p.terminate()
-    request.addfinalizer(stop)
+    yield f'http://{host}:{port_number}/'
 
-    return 'http://{}:{}/'.format(host, port_number)
+    server.shutdown()
+    thread.join()

@@ -28,6 +28,7 @@
     "publisher": {
       "title": "Publisher",
       "description": "The original publisher of this release.",
+      "omitWhenMerged": true,
       "$ref": "#/definitions/Identifier"
     },
     "tag": {
@@ -205,9 +206,19 @@
           ],
           "minLength": 1
         },
+        "identifiers": {
+          "title": "Additional tender identifiers",
+          "description": "Additional identifiers for this tender. This field can be used to provide local identifiers for the tender.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleIdentifier"
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
+        },
         "title": {
           "title": "Tender title",
-          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement.",
+          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement. The title should be less than 150 characters in length.",
           "type": [
             "string",
             "null"
@@ -432,7 +443,7 @@
         },
         "selectionCriteria": {
           "title": "Selection criteria",
-          "description": "The minimum requirements for tenderers to participate in the contracting process. Selection criteria ensure that a tenderer has the legal and financial capacities and the technical and professional abilities to perform the contract to be awarded. More structured information can be provided using the selection criteria extension.",
+          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract. More structured information can be provided using the selection criteria extension.",
           "type": [
             "string",
             "null"
@@ -616,6 +627,15 @@
           ],
           "format": "date-time"
         },
+        "datePublished": {
+          "title": "Date published",
+          "description": "The date on which the award was published.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
         "value": {
           "title": "Value",
           "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
@@ -714,6 +734,16 @@
             "integer"
           ],
           "minLength": 1
+        },
+        "identifiers": {
+          "title": "Additional contract identifiers",
+          "description": "Additional identifiers for this contract. This field can be used to provide local identifiers for the contract.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleIdentifier"
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
         },
         "awardID": {
           "title": "Award ID",
@@ -1207,7 +1237,7 @@
         },
         "project": {
           "title": "Project title",
-          "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
+          "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
           "type": [
             "string",
             "null"
@@ -2526,31 +2556,6 @@
         }
       }
     },
-    "SimpleUnit": {
-      "title": "Simple Unit",
-      "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
-      "type": "object",
-      "properties": {
-        "scheme": {
-          "title": "Scheme",
-          "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "unitClassificationScheme.csv",
-          "openCodelist": true
-        },
-        "id": {
-          "title": "ID",
-          "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
     "RelatedProcess": {
       "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
       "type": "object",
@@ -2655,26 +2660,6 @@
             "string",
             "null"
           ]
-        },
-        "weight": {
-          "title": "Weight",
-          "description": "The weight of one item unit.",
-          "type": "object",
-          "properties": {
-            "unit": {
-              "title": "Unit",
-              "description": "The code and scheme for the unit in which the weight is specified.",
-              "$ref": "#/definitions/SimpleUnit"
-            },
-            "quantity": {
-              "title": "Quantity",
-              "description": "The number of units.",
-              "type": [
-                "number",
-                "null"
-              ]
-            }
-          }
         }
       },
       "patternProperties": {
@@ -2703,6 +2688,30 @@
           "description": "The URL of the related resource.",
           "type": "string",
           "format": "uri"
+        }
+      }
+    },
+    "SimpleIdentifier": {
+      "title": "Simple identifier",
+      "description": "An unambiguous reference to a resource within a given context.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list, register or system from which the identifier is taken.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "title": "ID",
+          "description": "The identifier taken from the scheme.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
         }
       }
     }

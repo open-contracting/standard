@@ -110,7 +110,7 @@ If you aren't creating or updating an IT system, but are instead reusing an exis
 
 Contact the [OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on customizing a tool to meet your needs.
 
-**Resource:** [Using tabular versions of JSON to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
+**Resource:** [Using tabular versions of OCDS to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
 
 **Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([Part 1](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/), [Part 2](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/), [Part 3](https://www.open-contracting.org/2020/05/28/prototyping-ocds-data-using-spreadsheets-part-iii/)).
 

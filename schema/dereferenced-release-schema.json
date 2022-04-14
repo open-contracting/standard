@@ -72,7 +72,8 @@
             "null"
           ]
         }
-      }
+      },
+      "omitWhenMerged": true
     },
     "tag": {
       "title": "Release Tag",
@@ -1565,7 +1566,7 @@
             },
             "project": {
               "title": "Project title",
-              "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
+              "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
               "type": [
                 "string",
                 "null"
@@ -2393,9 +2394,40 @@
           ],
           "minLength": 1
         },
+        "identifiers": {
+          "title": "Additional tender identifiers",
+          "description": "Additional identifiers for this tender. This field can be used to provide local identifiers for the tender.",
+          "type": "array",
+          "items": {
+            "title": "Simple identifier",
+            "description": "An unambiguous reference to a resource within a given context.",
+            "type": "object",
+            "properties": {
+              "scheme": {
+                "title": "Scheme",
+                "description": "The list, register or system from which the identifier is taken.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "title": "ID",
+                "description": "The identifier taken from the scheme.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              }
+            }
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
+        },
         "title": {
           "title": "Tender title",
-          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement.",
+          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement. The title should be less than 150 characters in length.",
           "type": [
             "string",
             "null"
@@ -3479,46 +3511,6 @@
                       "string",
                       "null"
                     ]
-                  },
-                  "weight": {
-                    "title": "Weight",
-                    "description": "The weight of one item unit.",
-                    "type": "object",
-                    "properties": {
-                      "unit": {
-                        "title": "Unit",
-                        "description": "The code and scheme for the unit in which the weight is specified.",
-                        "type": "object",
-                        "properties": {
-                          "scheme": {
-                            "title": "Scheme",
-                            "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "codelist": "unitClassificationScheme.csv",
-                            "openCodelist": true
-                          },
-                          "id": {
-                            "title": "ID",
-                            "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-                            "type": [
-                              "string",
-                              "null"
-                            ]
-                          }
-                        }
-                      },
-                      "quantity": {
-                        "title": "Quantity",
-                        "description": "The number of units.",
-                        "type": [
-                          "number",
-                          "null"
-                        ]
-                      }
-                    }
                   }
                 },
                 "patternProperties": {
@@ -4760,7 +4752,7 @@
         },
         "selectionCriteria": {
           "title": "Selection criteria",
-          "description": "The minimum requirements for tenderers to participate in the contracting process. Selection criteria ensure that a tenderer has the legal and financial capacities and the technical and professional abilities to perform the contract to be awarded. More structured information can be provided using the selection criteria extension.",
+          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract. More structured information can be provided using the selection criteria extension.",
           "type": [
             "string",
             "null"
@@ -6485,6 +6477,15 @@
           "date": {
             "title": "Award date",
             "description": "The date of the contract award. This is usually the date on which a decision to award was made.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "datePublished": {
+            "title": "Date published",
+            "description": "The date on which the award was published.",
             "type": [
               "string",
               "null"
@@ -8530,46 +8531,6 @@
                         "string",
                         "null"
                       ]
-                    },
-                    "weight": {
-                      "title": "Weight",
-                      "description": "The weight of one item unit.",
-                      "type": "object",
-                      "properties": {
-                        "unit": {
-                          "title": "Unit",
-                          "description": "The code and scheme for the unit in which the weight is specified.",
-                          "type": "object",
-                          "properties": {
-                            "scheme": {
-                              "title": "Scheme",
-                              "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-                              "type": [
-                                "string",
-                                "null"
-                              ],
-                              "codelist": "unitClassificationScheme.csv",
-                              "openCodelist": true
-                            },
-                            "id": {
-                              "title": "ID",
-                              "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-                              "type": [
-                                "string",
-                                "null"
-                              ]
-                            }
-                          }
-                        },
-                        "quantity": {
-                          "title": "Quantity",
-                          "description": "The number of units.",
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        }
-                      }
                     }
                   },
                   "patternProperties": {
@@ -9015,6 +8976,37 @@
               "integer"
             ],
             "minLength": 1
+          },
+          "identifiers": {
+            "title": "Additional contract identifiers",
+            "description": "Additional identifiers for this contract. This field can be used to provide local identifiers for the contract.",
+            "type": "array",
+            "items": {
+              "title": "Simple identifier",
+              "description": "An unambiguous reference to a resource within a given context.",
+              "type": "object",
+              "properties": {
+                "scheme": {
+                  "title": "Scheme",
+                  "description": "The list, register or system from which the identifier is taken.",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "id": {
+                  "title": "ID",
+                  "description": "The identifier taken from the scheme.",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "versionId": true
+                }
+              }
+            },
+            "uniqueItems": true,
+            "wholeListMerge": true
           },
           "awardID": {
             "title": "Award ID",
@@ -10583,46 +10575,6 @@
                         "string",
                         "null"
                       ]
-                    },
-                    "weight": {
-                      "title": "Weight",
-                      "description": "The weight of one item unit.",
-                      "type": "object",
-                      "properties": {
-                        "unit": {
-                          "title": "Unit",
-                          "description": "The code and scheme for the unit in which the weight is specified.",
-                          "type": "object",
-                          "properties": {
-                            "scheme": {
-                              "title": "Scheme",
-                              "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-                              "type": [
-                                "string",
-                                "null"
-                              ],
-                              "codelist": "unitClassificationScheme.csv",
-                              "openCodelist": true
-                            },
-                            "id": {
-                              "title": "ID",
-                              "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-                              "type": [
-                                "string",
-                                "null"
-                              ]
-                            }
-                          }
-                        },
-                        "quantity": {
-                          "title": "Quantity",
-                          "description": "The number of units.",
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        }
-                      }
                     }
                   },
                   "patternProperties": {
@@ -14828,7 +14780,7 @@
             },
             "project": {
               "title": "Project title",
-              "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
+              "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
               "type": [
                 "string",
                 "null"
@@ -15656,9 +15608,40 @@
           ],
           "minLength": 1
         },
+        "identifiers": {
+          "title": "Additional tender identifiers",
+          "description": "Additional identifiers for this tender. This field can be used to provide local identifiers for the tender.",
+          "type": "array",
+          "items": {
+            "title": "Simple identifier",
+            "description": "An unambiguous reference to a resource within a given context.",
+            "type": "object",
+            "properties": {
+              "scheme": {
+                "title": "Scheme",
+                "description": "The list, register or system from which the identifier is taken.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "title": "ID",
+                "description": "The identifier taken from the scheme.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              }
+            }
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
+        },
         "title": {
           "title": "Tender title",
-          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement.",
+          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement. The title should be less than 150 characters in length.",
           "type": [
             "string",
             "null"
@@ -16742,46 +16725,6 @@
                       "string",
                       "null"
                     ]
-                  },
-                  "weight": {
-                    "title": "Weight",
-                    "description": "The weight of one item unit.",
-                    "type": "object",
-                    "properties": {
-                      "unit": {
-                        "title": "Unit",
-                        "description": "The code and scheme for the unit in which the weight is specified.",
-                        "type": "object",
-                        "properties": {
-                          "scheme": {
-                            "title": "Scheme",
-                            "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "codelist": "unitClassificationScheme.csv",
-                            "openCodelist": true
-                          },
-                          "id": {
-                            "title": "ID",
-                            "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-                            "type": [
-                              "string",
-                              "null"
-                            ]
-                          }
-                        }
-                      },
-                      "quantity": {
-                        "title": "Quantity",
-                        "description": "The number of units.",
-                        "type": [
-                          "number",
-                          "null"
-                        ]
-                      }
-                    }
                   }
                 },
                 "patternProperties": {
@@ -18023,7 +17966,7 @@
         },
         "selectionCriteria": {
           "title": "Selection criteria",
-          "description": "The minimum requirements for tenderers to participate in the contracting process. Selection criteria ensure that a tenderer has the legal and financial capacities and the technical and professional abilities to perform the contract to be awarded. More structured information can be provided using the selection criteria extension.",
+          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract. More structured information can be provided using the selection criteria extension.",
           "type": [
             "string",
             "null"
@@ -19744,6 +19687,15 @@
         "date": {
           "title": "Award date",
           "description": "The date of the contract award. This is usually the date on which a decision to award was made.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "datePublished": {
+          "title": "Date published",
+          "description": "The date on which the award was published.",
           "type": [
             "string",
             "null"
@@ -21789,46 +21741,6 @@
                       "string",
                       "null"
                     ]
-                  },
-                  "weight": {
-                    "title": "Weight",
-                    "description": "The weight of one item unit.",
-                    "type": "object",
-                    "properties": {
-                      "unit": {
-                        "title": "Unit",
-                        "description": "The code and scheme for the unit in which the weight is specified.",
-                        "type": "object",
-                        "properties": {
-                          "scheme": {
-                            "title": "Scheme",
-                            "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "codelist": "unitClassificationScheme.csv",
-                            "openCodelist": true
-                          },
-                          "id": {
-                            "title": "ID",
-                            "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-                            "type": [
-                              "string",
-                              "null"
-                            ]
-                          }
-                        }
-                      },
-                      "quantity": {
-                        "title": "Quantity",
-                        "description": "The number of units.",
-                        "type": [
-                          "number",
-                          "null"
-                        ]
-                      }
-                    }
                   }
                 },
                 "patternProperties": {
@@ -22268,6 +22180,37 @@
             "integer"
           ],
           "minLength": 1
+        },
+        "identifiers": {
+          "title": "Additional contract identifiers",
+          "description": "Additional identifiers for this contract. This field can be used to provide local identifiers for the contract.",
+          "type": "array",
+          "items": {
+            "title": "Simple identifier",
+            "description": "An unambiguous reference to a resource within a given context.",
+            "type": "object",
+            "properties": {
+              "scheme": {
+                "title": "Scheme",
+                "description": "The list, register or system from which the identifier is taken.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "id": {
+                "title": "ID",
+                "description": "The identifier taken from the scheme.",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              }
+            }
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
         },
         "awardID": {
           "title": "Award ID",
@@ -23836,46 +23779,6 @@
                       "string",
                       "null"
                     ]
-                  },
-                  "weight": {
-                    "title": "Weight",
-                    "description": "The weight of one item unit.",
-                    "type": "object",
-                    "properties": {
-                      "unit": {
-                        "title": "Unit",
-                        "description": "The code and scheme for the unit in which the weight is specified.",
-                        "type": "object",
-                        "properties": {
-                          "scheme": {
-                            "title": "Scheme",
-                            "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "codelist": "unitClassificationScheme.csv",
-                            "openCodelist": true
-                          },
-                          "id": {
-                            "title": "ID",
-                            "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-                            "type": [
-                              "string",
-                              "null"
-                            ]
-                          }
-                        }
-                      },
-                      "quantity": {
-                        "title": "Quantity",
-                        "description": "The number of units.",
-                        "type": [
-                          "number",
-                          "null"
-                        ]
-                      }
-                    }
                   }
                 },
                 "patternProperties": {
@@ -31305,7 +31208,7 @@
         },
         "project": {
           "title": "Project title",
-          "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
+          "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
           "type": [
             "string",
             "null"
@@ -34829,46 +34732,6 @@
                 "string",
                 "null"
               ]
-            },
-            "weight": {
-              "title": "Weight",
-              "description": "The weight of one item unit.",
-              "type": "object",
-              "properties": {
-                "unit": {
-                  "title": "Unit",
-                  "description": "The code and scheme for the unit in which the weight is specified.",
-                  "type": "object",
-                  "properties": {
-                    "scheme": {
-                      "title": "Scheme",
-                      "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-                      "type": [
-                        "string",
-                        "null"
-                      ],
-                      "codelist": "unitClassificationScheme.csv",
-                      "openCodelist": true
-                    },
-                    "id": {
-                      "title": "ID",
-                      "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-                      "type": [
-                        "string",
-                        "null"
-                      ]
-                    }
-                  }
-                },
-                "quantity": {
-                  "title": "Quantity",
-                  "description": "The number of units.",
-                  "type": [
-                    "number",
-                    "null"
-                  ]
-                }
-              }
             }
           },
           "patternProperties": {
@@ -35839,31 +35702,6 @@
         }
       }
     },
-    "SimpleUnit": {
-      "title": "Simple Unit",
-      "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
-      "type": "object",
-      "properties": {
-        "scheme": {
-          "title": "Scheme",
-          "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "unitClassificationScheme.csv",
-          "openCodelist": true
-        },
-        "id": {
-          "title": "ID",
-          "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
     "RelatedProcess": {
       "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
       "type": "object",
@@ -36293,46 +36131,6 @@
             "string",
             "null"
           ]
-        },
-        "weight": {
-          "title": "Weight",
-          "description": "The weight of one item unit.",
-          "type": "object",
-          "properties": {
-            "unit": {
-              "title": "Unit",
-              "description": "The code and scheme for the unit in which the weight is specified.",
-              "type": "object",
-              "properties": {
-                "scheme": {
-                  "title": "Scheme",
-                  "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-                  "type": [
-                    "string",
-                    "null"
-                  ],
-                  "codelist": "unitClassificationScheme.csv",
-                  "openCodelist": true
-                },
-                "id": {
-                  "title": "ID",
-                  "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-                  "type": [
-                    "string",
-                    "null"
-                  ]
-                }
-              }
-            },
-            "quantity": {
-              "title": "Quantity",
-              "description": "The number of units.",
-              "type": [
-                "number",
-                "null"
-              ]
-            }
-          }
         }
       },
       "patternProperties": {
@@ -36361,6 +36159,30 @@
           "description": "The URL of the related resource.",
           "type": "string",
           "format": "uri"
+        }
+      }
+    },
+    "SimpleIdentifier": {
+      "title": "Simple identifier",
+      "description": "An unambiguous reference to a resource within a given context.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list, register or system from which the identifier is taken.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "title": "ID",
+          "description": "The identifier taken from the scheme.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
         }
       }
     }
