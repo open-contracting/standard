@@ -733,7 +733,7 @@ def check_iso_6523(ctx):
 
     divs = lxml.html.fromstring(response.content).xpath('//dd/div[@id]')
     if not divs:
-        raise click.ClickException('The HTML markup has changed. Please update the script.')
+        raise click.ClickException('The HTML markup of the data source has changed. Please update the script.')
 
     codes = {}
     for div in divs:
