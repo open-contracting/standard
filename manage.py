@@ -724,7 +724,7 @@ def check_iso_6523(ctx):
     """
     # We use this, because we don't know a better source for the ISO 6523 codelist.
 
-    # As of 2021-04-19, the range is 0002-0213, skipping 0092 0103 0181 0182.
+    # As of 2022-04-19, the range is 0002-0213, skipping 0092 0103 0181 0182.
     minimum = 2
     maximum = 213
     skipped = {92, 103, 181, 182}
