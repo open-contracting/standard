@@ -483,8 +483,7 @@ def missing_changelog(ignore_base):
 
     # Ignore PRs to unmerged branches.
     url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=open'
-    response = requests.get(url)
-    response.raise_for_status()
+    response = get(url)
     ignore.extend(pr['head']['ref'] for pr in response.json())
 
     with open(basedir / 'docs' / 'history' / 'changelog.md') as f:
@@ -504,8 +503,7 @@ def missing_changelog(ignore_base):
 
     url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=closed'
     while url:
-        response = requests.get(url)
-        response.raise_for_status()
+        response = get(url)
         url = response.links.get('next', {}).get('url')
 
         for pr in response.json():
@@ -520,16 +518,16 @@ def missing_changelog(ignore_base):
             # Include merged PRs, not in the "Minor:" or "1.0-RC" milestones, not syncing branches, and not ignored.
             if not merged_at or milestone_number in (26, 27, 28, 29, 2) or pattern.search(title) or base_ref in ignore:
                 if number in prs:
-                    print(f'WARNING: #{number} should not be in changelog', file=sys.stderr)
+                    click.echo(f'WARNING: #{number} should not be in changelog', file=sys.stderr)
                 continue
 
             if number not in prs:
                 count += 1
-                print(f"[#{number}](https://github.com/open-contracting/standard/pull/{number}) ({milestone_title}) "
-                      f"{merged_at[:10]}: {title} ({base_ref}:{pr['head']['ref']})")
+                click.echo(f"[#{number}](https://github.com/open-contracting/standard/pull/{number}) "
+                           f"({milestone_title}) {merged_at[:10]}: {title} ({base_ref}:{pr['head']['ref']})")
 
     if count:
-        print(count)
+        click.echo(count)
 
 
 @cli.command()
@@ -716,6 +714,37 @@ def update(ctx):
     ctx.invoke(update_currency)
     ctx.invoke(update_language)
     ctx.invoke(update_media_type)
+
+
+@cli.command()
+@click.pass_context
+def check_iso_6523(ctx):
+    """
+    Checks PEPPOL BIS Billing 3.0's ISO 6523 ICD codelist for new codes.
+    """
+    # As of 2021-04-19, the range is 0002-0213, skipping 0092 0103 0181 0182.
+    minimum = 2
+    maximum = 213
+    skipped = {92, 103, 181, 182}
+
+    response = get('https://docs.peppol.eu/poacc/billing/3.0/codelist/ICD/')
+
+    divs = lxml.html.fromstring(response.content).xpath('//dd/div[@id]')
+    if not divs:
+        raise click.ClickException('The HTML markup has changed. Please update the script.')
+
+    codes = {}
+    for div in divs:
+        identifier = div.attrib['id']
+        number = int(identifier)
+        if number < minimum or number > maximum or number in skipped:
+            codes[identifier] = div.xpath('./strong/text()')[0]
+
+    if codes:
+        for identifier, name in codes.items():
+            click.echo(f'{identifier}\t{name}')
+    else:
+        click.echo('No new codes found.')
 
 
 def add_translation_note(path, language, domain):
