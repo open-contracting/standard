@@ -719,6 +719,9 @@ def update(ctx):
 @cli.command()
 @click.pass_context
 def check_iso_6523(ctx):
+    def text(node, xpath):
+        return re.sub(r'\s+', ' ', node.xpath(xpath)[0])
+
     """
     Checks PEPPOL BIS Billing 3.0's ISO 6523 ICD codelist for new codes.
     """
@@ -735,16 +738,25 @@ def check_iso_6523(ctx):
     if not divs:
         raise click.ClickException('The HTML markup of the data source has changed. Please update the script.')
 
-    codes = {}
+    rows = []
     for div in divs:
         identifier = div.attrib['id']
         number = int(identifier)
         if number < minimum or number > maximum or number in skipped:
-            codes[identifier] = div.xpath('./strong/text()')[0]
+            name = text(div, './strong/text()')
+            notes = text(div, './p/text()')
+            issuer = ''
 
-    if codes:
-        for identifier, name in codes.items():
-            click.echo(f'{identifier}\t{name}')
+            # "Issuing agency: " appears at the end of the paragraph. The rest of the paragraph contains either a
+            # purpose ("Intended Purpose/App. Area") or notes ("Notes on Use of Code"), with or without the label.
+            notes = re.sub(r'(Notes on Use of Code|Intended Purpose/App. Area)[: ]+', '', notes)
+            if 'Issuing agency: ' in notes:
+                notes, issuer = notes.split('Issuing agency: ')
+
+            rows.append([identifier, name, issuer, notes])
+
+    if rows:
+        csv.writer(sys.stdout, delimiter='\t').writerows(rows)
     else:
         click.echo('No new codes found.')
 
