@@ -69,6 +69,4 @@ Once you have published your data, it's time to share it with the world. It is a
 
 **Action:** [Request support from OCP](mailto:data@open-contracting.org) to build capacity or tools for key stakeholders to start using the data.
 
-**Resource:** [OCDS Tool Directory](https://www.open-contracting.org/resources/open-contracting-tools-directory/)
-
 **Resource:** [Guidance for using OCDS data](https://www.open-contracting.org/data/data-use/)
