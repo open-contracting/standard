@@ -1,8 +1,15 @@
 # Design
 
+```{ifconfig} language != 'es'
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/h6v3BGTai-M" title="Designing your OCDS implementation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+```
+```{ifconfig} language == 'es'
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/o2UTVM8mQnw" title="Diseñando su implementación OCDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+```
 
 This phase is about setting up your OCDS implementation to be a success.
 
