@@ -47,6 +47,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
     * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
     * [#1414](https://github.com/open-contracting/standard/pull/1414) Remove the planning section from Easy releases and Change history.
+    * [#1494](https://github.com/open-contracting/standard/pull/1497) Add guidance on preparing test data to Check your data section.
   * Publish:
     * Merge Publication policy and Licensing pages into Publish page [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012).
     * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).
