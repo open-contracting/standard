@@ -146,6 +146,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
+* [#1509](https://github.com/open-contracting/standard/pull/1509) Update the `tenderStatus`, `awardStatus` and `contractStatus` codelists, including major change of descriptions, removal of 'planning' and 'pending' and the addition of 'withdrawn', 'complete', 'cancelled' and 'unsuccessful' to codelists where they were not before.  
 
 ### Schema
 
