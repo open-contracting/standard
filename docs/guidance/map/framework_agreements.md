@@ -81,7 +81,7 @@ The two extensions should be declared in the package metadata:
 :language: json
 ```
 
-The following guidance describes how to model the different stages of a framework agreement procedure in OCDS.  
+The following guidance describes how to model the different stages of a framework agreement procedure in OCDS. (The guidance does cover modelling that is the same as for other types of contracts, for example populating `contracts`). 
 
 ### Invitation to participate in the first stage of a framework agreement procedure
 
