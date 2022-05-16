@@ -140,13 +140,13 @@ The following guidance describes how to model the different stages of a framewor
 * Add an `Organization` object to the `parties` array, add 'buyer' to its `.roles` and populate its other fields with the details of the buyer for this specific contract.
 * Set `buyer.id` and `buyer.name` to match the buyer's object in the `parties` array.
 
-#### Add an award, contract and supplier
+#### Add an award and supplier
 
-* Add an `Award` object to the `awards` array and a `Contract` object to the `contracts` array.
-* Set the award's `.id` and the contract's `.awardID` to the same value, and set the contract's `.id`.
+* Add an `Award` object to the `awards` array.
+* Set the award's `.id`.
 * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
 * Add an `OrganizationReference` object to the award's `.suppliers` array and set `.id` and `.name` to match the supplier's object in the `parties` array.
-* Populate `awards` and `contracts`.
+* Populate `awards`.
 
 ## Worked examples
 
@@ -208,7 +208,6 @@ Because there was no competition at the second stage, the new contracting proces
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * A minimal `tender` section sets `tender.id` and sets `tender.competitive` to `false`.
 * The `awards` section is populated with the initial contract value, period and items.
-* The `contracts` section is populated and linked to the award.
 * The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` fields are populated with the details of the buyer, procuring entity and supplier.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_award.json
@@ -290,7 +289,6 @@ The release has the following properties:
 * The `tag` is set to 'award' and 'contract'.
 * The `tender.status` is updated to 'complete'.
 * The `awards` section is populated with the initial contract value, period and items.
-* The `contracts` section is populated and linked to the award.
 * The `awards.suppliers` and `parties` fields are populated with the details of the supplier.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_award.json
