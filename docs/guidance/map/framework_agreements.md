@@ -111,7 +111,7 @@ The following guidance describes how to model the different stages of a framewor
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage).
 * [Add a buyer](#add-a-buyer).
 * Set `tender.id` to the `award.id`, set `tender.competitive` to `false`, and set `tender.procuringEntity` if appropriate.
-* [Add an award, contract and supplier](#add-an-award-contract-and-supplier).
+* [Add an award and supplier](#add-an-award-and-supplier).
 
 ### Invitation to participate in a second-stage competition
 
@@ -123,7 +123,7 @@ The following guidance describes how to model the different stages of a framewor
 ### Award of a procurement contract resulting from a second-stage competition
 
 * Create a release with the **same** `ocid` as the tender release *for the invitation to participate in a second-stage competition*, and add 'award' and 'contract' to the `tag`.
-* [Add an award, contract and supplier](#add-an-award-contract-and-supplier).
+* [Add an award and supplier](#add-an-award-and-supplier).
 
 ### Updating the contract value, period or items
 
