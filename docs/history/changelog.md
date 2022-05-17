@@ -198,6 +198,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1189](https://github.com/open-contracting/standard/pull/1189) `Document.url`
   * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
+  * [#1510](https://github.com/open-contracting/standard/pull/1510) Clarify that `organization.additionalIdentifiers` can be used for identifiers of organizational units and remove a few unnecessary words.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
