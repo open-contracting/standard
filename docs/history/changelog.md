@@ -192,13 +192,13 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, to support documents in which multiple languages are used.
 
 * Update and clarify field descriptions:
-  * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
-  * [#1167](https://github.com/open-contracting/standard/pull/1167) `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`
-  * [#1189](https://github.com/open-contracting/standard/pull/1189) `Document.url`
+  * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
+  * [#1510](https://github.com/open-contracting/standard/pull/1510) `Organization.additionalIdentifiers`, to clarify its potential use for organizational units.
+  * [#1167](https://github.com/open-contracting/standard/pull/1167) `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`, to reduce ambiguity and use consistent wording.
+  * [#1189](https://github.com/open-contracting/standard/pull/1189) `Document.url`, to use precise wording and to describe how to indicate a part of a document.
   * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
-  * [#1510](https://github.com/open-contracting/standard/pull/1510) Clarify that `organization.additionalIdentifiers` can be used for identifiers of organizational units and remove a few unnecessary words.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
