@@ -20,7 +20,7 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 ### Release Tag
 
-A contracting (or planning) process can result in a number of releases of information over time. These must be tagged to indicate whether the process they relate to is a contracting or planning process and the stage of the contracting process they relate to.
+A contracting (or planning) process can result in a number of releases of information over time. These must be tagged to distinguish planning and contracting processes and to indicate the stage of the contracting process they relate to.
 
 Additional codes may be used to label releases, based on user needs: for example, to indicate the notice or form to which a release corresponds.
 
