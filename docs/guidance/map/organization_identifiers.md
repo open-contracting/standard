@@ -4,7 +4,7 @@
 
 # Organization identifiers
 
-Publishers regularly collect the *legal identifiers* of the organizations involved in a contracting process. These [organization identifiers](../../schema/identifiers.md#organization-identifiers) can be disclosed using OCDS. An organization identifier is composed of two parts:
+Publishers regularly collect the *legal identifiers* of the organizations involved in a contracting (or planning) process. These [organization identifiers](../../schema/identifiers.md#organization-identifiers) can be disclosed using OCDS. An organization identifier is composed of two parts:
 
 * A prefix for the organization list (also known as registry or register) from which the identifier is drawn: for example, the company register.
 * The existing identifier for the organization within that list.
@@ -30,4 +30,4 @@ Each of the organizations in the [parties section](../../schema/reference.md#par
 
 For organizations with an organization identifier, you ought to construct the local `id` following the pattern `{identifier.scheme}-{identifier.id}`.
 
-For organizations without an organization identifier, you can populate the local `id` with a fixed or sequential value. For example, you can set the buyer's `id` to "1" and set each supplier's `id` sequentially from "2" onwards. Alternatively, you can set the organization's `id` to its `role` and add a sequential number for roles with multiple organizations, e.g. "buyer", "tenderer-1", "tenderer-2", etc. An organization's local `id` needs to be consistent across all releases in a contracting process. For example, if the `id` of an organization is "tenderer-1" in one release, then the `id` of the same organization in another release needs to also be "tenderer-1".
+For organizations without an organization identifier, you can populate the local `id` with a fixed or sequential value. For example, you can set the buyer's `id` to "1" and set each supplier's `id` sequentially from "2" onwards. Alternatively, you can set the organization's `id` to its `role` and add a sequential number for roles with multiple organizations, e.g. "buyer", "tenderer-1", "tenderer-2", etc. An organization's local `id` needs to be consistent across all releases in a contracting (or planning) process. For example, if the `id` of an organization is "tenderer-1" in one release, then the `id` of the same organization in another release needs to also be "tenderer-1".

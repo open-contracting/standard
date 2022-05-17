@@ -36,7 +36,7 @@ For releases, publishers can:
 1. Segment by **release date** - placing all the releases from a given day, month or year in the same file;
 1. Segment by **open contracting process identifier** - placing all the releases related to a given set of process identifiers together in the same package;
 
-For records, publishers can segment by the first **release date** associated with a contracting process, or by **open contracting process identifier.**
+For records, publishers can segment by the first **release date** associated with a contracting (or planning) process, or by **open contracting process identifier.**
 
 Following these approaches will avoid release and records 'jumping' between files when the bulk files are updated. 
 
@@ -58,7 +58,7 @@ Each release and record can be made accessible at a permanent URI. This can be a
 
 (b) Providing access to releases and records through an API.
 
-Note that the second approach needs the API to maintain a full revision history of each contracting process, so that releases from each stage of a contracting process can be provided. 
+Note that the second approach needs the API to maintain a full revision history of each contracting (or planning) process, so that releases from each stage of the process can be provided. 
 
 Publishers ought to consider how to [ensure URIs can remain stable](https://www.w3.org/Provider/Style/URI.html), even across a change of systems.
 
