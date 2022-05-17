@@ -8,7 +8,7 @@ OCDS recognizes two types of processes: contracting processes and planning proce
 
 OCDS defines a contracting process as:
 
-> All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple-stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.
+> All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multi-stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.
 
 > Procedures that failed and were restarted are considered new processes.
 
