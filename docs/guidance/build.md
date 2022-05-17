@@ -118,8 +118,6 @@ Contact the [OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and g
 If you want to use OCDS Kit or Flatten Tool, but don't have access to the command line or can't install new software on your computer, you can use [OCDS Toucan](https://toucan.open-contracting.org/), which gives access to these tools through a web browser.
 
 Re-using tools isn't always easy. [Tool Re-Use in Open Contracting: A Primer](https://www.open-contracting.org/resources/tool-re-use-in-open-contracting-a-primer/) is a step-by-step guide to help you determine what you need, evaluate which tool is the right fit, and evaluate whether the right conditions are in place for successful re-use of a tool.
-
-New tools are continually being authored for publishing OCDS data. Please refer to our [Tools Directory](https://www.open-contracting.org/resources/open-contracting-tools-directory/) for a complete list.
 ```
 
 ## Build your extensions
@@ -147,6 +145,17 @@ Throughout the build phase you ought to regularly use the [OCDS Data Review Tool
 OCDS data needs to be published as part of a release package or a record package. You can use [OCDS Kit](https://pypi.org/project/ocdskit/) to reformat your data before submitting it to the review tool, but any data you publish needs to be correctly packaged.
 
 The Data Review Tool reports any structural issues with your data. It checks whether your data makes sense and displays a preview of your data, so that you can check whether the information is appearing in the correct place within the schema.
+
+You ought to use real data for testing, wherever possible. Using fictional data can lead to false positives and missed errors in your data pipeline: for example, if your test data includes incoherent values for the award date and the contract signature date, it won't be possible to identify issues with how these fields are mapped in your OCDS data.
+
+If your data source doesn't contain any data yet, because you are developing a new system to collect and publish data, for example, then you ought to work with stakeholders to collect enough real data to populate all the data elements for at least one contracting process.
+
+If you can't collect enough real data for testing, then you ought to create realistic and coherent test data:
+
+* use real entities, products, and services
+* use plausible dates and values
+* avoid using placeholder values
+* avoid setting multiple data elements to the same value.
 
 **Action:** Upload some data to the [OCDS Data Review Tool](https://standard.open-contracting.org/review/).
 

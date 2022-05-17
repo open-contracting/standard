@@ -45,7 +45,7 @@ This makes more sense if we realize that a release is always the "first release"
 
 For the examples in the present section, the architecture in the image below is assumed.
 
-![Example architecture](../../_static/png/easyreleases-example-architecture.png)
+![Example architecture](../../_static/png/easy_releases/example_architecture.png)
 
 Data is extracted from the source and transformed to OCDS each time there is a request, and resulting JSON files are not stored by the owner.
 
@@ -53,7 +53,7 @@ Data is extracted from the source and transformed to OCDS each time there is a r
 
 The sample database structure used for the present example is illustrated in the image below.
 
-![Sample database 1](../../_static/png/easyreleases-sampledb-1.png)
+![Sample database 1](../../_static/png/easy_releases/sample_db1.png)
 
 The 'ProcurementProcess' table contains one single row for each contracting process in the system, and the row is updated with each change. Contracts and suppliers are saved in separate tables. For both 'ProcurementProcess' and 'Contract' tables there is a `lastModifiedDate` column, with a timestamp of the last change made for the row.
 
@@ -68,7 +68,7 @@ The contracting process begins with a tender notice. The source tables contain t
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
+:file: ../../examples/easy_releases/worked_example1/tender_procurement_process.csv
 ```
 
 There is no supplier or contract yet, so there are no entries for this contracting process in them. In this stage, the ocid is build by appending the value of the field `processID` to the ocid prefix ('ocds-213czf'), since `processID` is identifying uniquely each contracting process.
@@ -91,7 +91,7 @@ It is possible to use the date alone as the release identifier, but prepending t
 
 See the full JSON file below.
 
-```{jsoninclude} ../../examples/easy-releases/worked-example-1/1-tender.json
+```{jsoninclude} ../../examples/easy_releases/worked_example1/tender.json
 :jsonpointer:
 :expand: releases,tender
 ```
@@ -105,7 +105,7 @@ The tender has been updated: the value increased slighly and the description has
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-1/2-tenderUpdate-procurementProcess.csv
+:file: ../../examples/easy_releases/worked_example1/tender_update_procurement_process.csv
 ```
 
 The `lastModifiedDate` value has changed as well, therefore the value of the release identifier will change:
@@ -118,7 +118,7 @@ The `lastModifiedDate` value has changed as well, therefore the value of the rel
 
 See the full JSON below:
 
-```{jsoninclude} ../../examples/easy-releases/worked-example-1/2-tenderUpdate.json
+```{jsoninclude} ../../examples/easy_releases/worked_example1/tender_update.json
 :jsonpointer:
 :expand: releases,tag,tender
 ```
@@ -134,7 +134,7 @@ Now, the tender has been awarded. The related columns in 'ProcurementProcess' ta
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-1/3-award-procurementProcess.csv
+:file: ../../examples/easy_releases/worked_example1/award_procurement_process.csv
 ```
 
 **Supplier**
@@ -142,7 +142,7 @@ Now, the tender has been awarded. The related columns in 'ProcurementProcess' ta
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-1/3-award-supplier.csv
+:file: ../../examples/easy_releases/worked_example1/award_supplier.csv
 ```
 
 As the 'ProcurementProcess' table has been updated, the related release will have a new id:
@@ -155,7 +155,7 @@ As the 'ProcurementProcess' table has been updated, the related release will hav
 
 And the 'awards' section will be filled with the corresponding data. See the full JSON below.
 
-```{jsoninclude} ../../examples/easy-releases/worked-example-1/3-award.json
+```{jsoninclude} ../../examples/easy_releases/worked_example1/award.json
 :jsonpointer:
 :expand: releases,awards
 ```
@@ -171,7 +171,7 @@ At the last stage there is a signed contract. The 'ProcurementProcess' table cha
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-1/4-contract-procurementProcess.csv
+:file: ../../examples/easy_releases/worked_example1/contract_procurement_process.csv
 ```
 
 **Contract**
@@ -179,7 +179,7 @@ At the last stage there is a signed contract. The 'ProcurementProcess' table cha
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-1/4-contract-contract.csv
+:file: ../../examples/easy_releases/worked_example1/contract.csv
 ```
 
 A new release id is generated:
@@ -192,7 +192,7 @@ A new release id is generated:
 
 See the full JSON below.
 
-```{jsoninclude} ../../examples/easy-releases/worked-example-1/4-contract.json
+```{jsoninclude} ../../examples/easy_releases/worked_example1/contract.json
 :jsonpointer:
 :expand: releases,contracts
 ```
@@ -201,7 +201,7 @@ See the full JSON below.
 
 This approach can be used when there is no last modified date in the source data. Below there is an updated image from the previous example:
 
-![Sample database 2](../../_static/png/easyreleases-sampledb-2.png)
+![Sample database 2](../../_static/png/easy_releases/sample_db2.png)
 
 The example is almost the same as the previous one, with the same steps, but with no last modified date in the tables as seen in the image above.
 
@@ -214,7 +214,7 @@ The example starts with the tender, and the following data in the 'ProcurementPr
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-1/1-tender-procurementProcess.csv
+:file: ../../examples/easy_releases/worked_example1/tender_procurement_process.csv
 ```
 
 The unique identifier for this stage can be generated by joining all fields into a single string, and applying a hash function on it. Depending of tools and/or programming languages used in the transformation process, there can be many ways to achieve this task.  An example of how it can be done using a PostgreSQL query is shown below:
@@ -236,7 +236,7 @@ It is important to include *all* data fields that are included in OCDS data in t
 
 See the full JSON below.
 
-```{jsoninclude} ../../examples/easy-releases/worked-example-2/1-tender.json
+```{jsoninclude} ../../examples/easy_releases/worked_example2/tender.json
 :jsonpointer:
 :expand: releases,tender
 ```
@@ -250,7 +250,7 @@ Now that tender data has changed: there are updates in the value and description
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-2/2-tenderUpdate-procurementProcess.csv
+:file: ../../examples/easy_releases/worked_example2/tender_update_procurement_process.csv
 ```
 
 The same hash operation is repeated over the updated row and the resulting value is `957969e7458f5144a931d2feb452ea48`. The new release identifier is:
@@ -263,7 +263,7 @@ The same hash operation is repeated over the updated row and the resulting value
 
 See the full JSON below.
 
-```{jsoninclude} ../../examples/easy-releases/worked-example-2/2-tenderUpdate.json
+```{jsoninclude} ../../examples/easy_releases/worked_example2/tender_update.json
 :jsonpointer:
 :expand: releases,tag,tender
 ```
@@ -277,7 +277,7 @@ The tender has been awarded, therefore the 'ProcurementProcess' table has been u
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-2/3-award-procurementProcess.csv
+:file: ../../examples/easy_releases/worked_example2/award_procurement_process.csv
 ```
 
 **Supplier**
@@ -285,7 +285,7 @@ The tender has been awarded, therefore the 'ProcurementProcess' table has been u
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-2/3-award-supplier.csv
+:file: ../../examples/easy_releases/worked_example2/award_supplier.csv
 ```
 
 The new data in the 'Supplier' table can be included in the hash generation as well. In PostgreSQL, the previous sentence can be changed to include the 'Supplier' table as follows:
@@ -311,7 +311,7 @@ The result of the query is `610d5900f947bcf67100449999ea49ce`, and the new relea
 
 See the full JSON below.
 
-```{jsoninclude} ../../examples/easy-releases/worked-example-2/3-award.json
+```{jsoninclude} ../../examples/easy_releases/worked_example2/award.json
 :jsonpointer:
 :expand: releases,awards
 ```
@@ -325,7 +325,7 @@ In the last stage the contract is signed, the 'ProcurementProcess' table is upda
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-2/4-contract-procurementProcess.csv
+:file: ../../examples/easy_releases/worked_example2/contract_procurement_process.csv
 ```
 
 **Contract**
@@ -333,7 +333,7 @@ In the last stage the contract is signed, the 'ProcurementProcess' table is upda
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/easy-releases/worked-example-2/4-contract-contract.csv
+:file: ../../examples/easy_releases/worked_example2/contract.csv
 ```
 
 Since there is one more table involved ('Contract'), the *three tables* that store data for the full process can be used to calculate the hash. The previous SQL query can be changed again to include the 'Contract' table:
@@ -362,7 +362,7 @@ The new hash value is `1a87b0662990c66e140e62e813165107`, and the new release id
 
 See the final JSON below.
 
-```{jsoninclude} ../../examples/easy-releases/worked-example-2/4-contract.json
+```{jsoninclude} ../../examples/easy_releases/worked_example2/contract.json
 :jsonpointer:
 :expand: releases,contracts
 ```
