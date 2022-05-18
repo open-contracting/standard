@@ -2191,7 +2191,23 @@
       "properties": {
         "amount": {
           "title": "Amount",
-          "description": "Amount as a number.",
+          "description": "The amount as stated in the tender notice / award notice / contract notice document as a number.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "amountNet": {
+          "title": "Net amount",
+          "description": "The amount excluding all taxes as a number.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "amountGross": {
+          "title": "Gross amount",
+          "description": "The amount including all taxes as a number.",
           "type": [
             "number",
             "null"
