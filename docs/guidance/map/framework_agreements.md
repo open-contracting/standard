@@ -212,7 +212,7 @@ Because there was no competition at the second stage, the new contracting proces
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_award.json
 :jsonpointer:
-:expand: releases, tender, buyer, procuringEntity, awards, suppliers, contracts, parties, roles, relatedProcesses, relationship
+:expand: releases, tender, buyer, procuringEntity, awards, suppliers, parties, roles, relatedProcesses, relationship
 :title: Award of a procurement contract
 ```
 
@@ -293,6 +293,6 @@ The release has the following properties:
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_award.json
 :jsonpointer:
-:expand: releases, tag, tender, procuringEntity, awards, suppliers, contracts, parties, roles, relatedProcesses, relationship
+:expand: releases, tag, tender, procuringEntity, awards, suppliers, parties, roles, relatedProcesses, relationship
 :title: Award of a procurement contract
 ```
