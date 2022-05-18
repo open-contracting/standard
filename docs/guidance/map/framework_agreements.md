@@ -107,7 +107,7 @@ The following guidance describes how to model the different stages of a framewor
 
 ### Award of a procurement contract without second-stage competition
 
-* Create a release with a **new** `ocid` and add 'award' and 'contract' to the `tag`.
+* Create a release with a **new** `ocid` and add 'award' to the `tag`.
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage).
 * [Add a buyer](#add-a-buyer).
 * Set `tender.id` to the `award.id`, set `tender.competitive` to `false`, and set `tender.procuringEntity` if appropriate.
@@ -122,7 +122,7 @@ The following guidance describes how to model the different stages of a framewor
 
 ### Award of a procurement contract resulting from a second-stage competition
 
-* Create a release with the **same** `ocid` as the tender release *for the invitation to participate in a second-stage competition*, and add 'award' and 'contract' to the `tag`.
+* Create a release with the **same** `ocid` as the tender release *for the invitation to participate in a second-stage competition*, and add 'award' to the `tag`.
 * [Add an award and supplier](#add-an-award-and-supplier).
 
 ### Updating the contract value, period or items
@@ -202,7 +202,7 @@ NSS uses the framework agreement to place an order for the supplier to receive a
 
 The order represents the award of a procurement contract at the second stage of the framework agreement procedure.
 
-Because there was no competition at the second stage, the new contracting process has only one release, with a `tag` of 'award' and 'contract'. The release has the following properties:
+Because there was no competition at the second stage, the new contracting process has only one release, with a `tag` of 'award'. The release has the following properties:
 
 * A new `ocid` is used.
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
@@ -286,7 +286,7 @@ The release has the following properties:
 
 * The same `ocid` as the invitation to participate in the second-stage competition is used.
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
-* The `tag` is set to 'award' and 'contract'.
+* The `tag` is set to 'award'.
 * The `tender.status` is updated to 'complete'.
 * The `awards` section is populated with the initial contract value, period and items.
 * The `awards.suppliers` and `parties` fields are populated with the details of the supplier.
