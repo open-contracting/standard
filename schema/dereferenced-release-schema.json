@@ -13,14 +13,14 @@
     },
     "id": {
       "title": "Release ID",
-      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process (identified by the ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
+      "description": "The identifier of the release. The release ID must be unique within the scope of the (contracting or planning) process, for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
     },
     "date": {
       "title": "Release Date",
-      "description": "The date on which the information contained in the release was first recorded in, or published by, any system. For a compiled release, the maximum `date` among the individual releases used to create the compiled release. The release date should be unique within the scope of the contracting process identified by the Open Contracting ID (ocid), for a given version of OCDS.",
+      "description": "The date on which the information contained in the release was first recorded in, or published by, any system. For a compiled release, the maximum `date` among the individual releases used to create the compiled release. The release date should be unique within the scope of the (contracting or planning) process, for a given version of OCDS.",
       "type": "string",
       "format": "date-time",
       "omitWhenMerged": true
@@ -77,7 +77,7 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "A tag labeling the release (for example, as corresponding to a stage of the contracting process), using the the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release. Planning processes must not use the 'tender' code, even if they use `tender` fields.",
+      "description": "A tag labeling the release, using the the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags distinguish, for example, planning and contracting processes and the stages of contracting processes. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release. Planning processes must not use the 'tender' code, even if they use `tender` fields.",
       "type": "array",
       "items": {
         "type": "string"
@@ -103,7 +103,7 @@
     },
     "parties": {
       "title": "Parties",
-      "description": "Information on the organizations who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
+      "description": "Information on the organizations who are involved in the contracting (or planning) process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
       "type": "array",
       "items": {
         "title": "Organization",
@@ -112,7 +112,7 @@
         "properties": {
           "name": {
             "title": "Common name",
-            "description": "A common name for this organization. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+            "description": "A common name for this organization. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization is known. This field may also include details of the department or sub-unit involved in this contracting (or planning) process.",
             "type": [
               "string",
               "null"
@@ -120,7 +120,7 @@
           },
           "id": {
             "type": "string",
-            "description": "The ID used for cross-referencing to this organization from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available.",
+            "description": "The ID used for cross-referencing to this organization from other sections of the release. This field need only be unique within the scope of the contracting (or planning) process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available.",
             "title": "ID"
           },
           "identifier": {
@@ -230,7 +230,7 @@
           },
           "address": {
             "title": "Address",
-            "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
+            "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting (or planning) process.",
             "type": "object",
             "properties": {
               "streetAddress": {
@@ -565,7 +565,7 @@
                   "string",
                   "null"
                 ],
-                "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
               },
               "email": {
                 "title": "Email",
@@ -612,7 +612,7 @@
           },
           "roles": {
             "title": "Roles",
-            "description": "The organization's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
+            "description": "The organization's role(s) in the contracting (or planning) process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
             "type": [
               "array",
               "null"
@@ -1137,7 +1137,7 @@
                 "string",
                 "null"
               ],
-              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
             },
             "email": {
               "title": "Email",
@@ -1215,11 +1215,11 @@
         "budget": {
           "type": "object",
           "title": "Budget",
-          "description": "Details of the budget that funds the planned contracting process.",
+          "description": "Details of the budget that will be used in a future contracting process.",
           "properties": {
             "id": {
               "title": "ID",
-              "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+              "description": "An identifier for the budget line item which will be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
               "type": [
                 "string",
                 "integer",
@@ -1228,7 +1228,7 @@
             },
             "description": {
               "title": "Budget Source",
-              "description": "A short free-text description of the budget allocation for this contracting process. This may be used to provide human-readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
+              "description": "A short free-text description of the budget allocation which will be used in a future contracting process. This may be used to provide human-readable information on the budget category allocated to the future contracts, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
               "type": [
                 "string",
                 "null"
@@ -1236,7 +1236,7 @@
             },
             "amount": {
               "title": "Amount",
-              "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
+              "description": "The value reserved in the budget to be used in a future contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
               "type": "object",
               "properties": {
                 "amount": {
@@ -1566,7 +1566,7 @@
             },
             "project": {
               "title": "Project title",
-              "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+              "description": "The name of the project through which the future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
               "type": [
                 "string",
                 "null"
@@ -1574,7 +1574,7 @@
             },
             "projectID": {
               "title": "Project identifier",
-              "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+              "description": "An external identifier for the project that the future contracting process will be part of, or will be funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
               "type": [
                 "string",
                 "integer",
@@ -1583,7 +1583,7 @@
             },
             "uri": {
               "title": "Linked budget information",
-              "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that fund this contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
+              "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that will be used in the future contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
               "type": [
                 "string",
                 "null"
@@ -1772,7 +1772,7 @@
           "type": "array",
           "items": {
             "title": "Milestone",
-            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
             "type": "object",
             "required": [
               "id"
@@ -1815,7 +1815,7 @@
               },
               "code": {
                 "title": "Milestone code",
-                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                 "type": [
                   "string",
                   "null"
@@ -2942,7 +2942,7 @@
                     "string",
                     "null"
                   ],
-                  "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                  "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                 },
                 "email": {
                   "title": "Email",
@@ -2993,7 +2993,7 @@
             }
           },
           "type": "object",
-          "description": "The organization managing the contracting process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
+          "description": "The organization managing the contracting (or planning) process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
           "title": "Procuring entity"
         },
         "items": {
@@ -4559,7 +4559,7 @@
         },
         "mainProcurementCategory": {
           "title": "Main procurement category",
-          "description": "The primary category describing the main object of this contracting process, from the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
+          "description": "The primary category describing the main object of this contracting (or planning) process, from the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
           "type": [
             "string",
             "null"
@@ -4575,7 +4575,7 @@
         },
         "additionalProcurementCategories": {
           "title": "Additional procurement categories",
-          "description": "Any additional categories describing the objects of this contracting process, using the open [extendedProcurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
+          "description": "Any additional categories describing the objects of this contracting (or planning) process, using the open [extendedProcurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
           "type": [
             "array",
             "null"
@@ -5369,7 +5369,7 @@
                       "string",
                       "null"
                     ],
-                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                   },
                   "email": {
                     "title": "Email",
@@ -5572,7 +5572,7 @@
           "type": "array",
           "items": {
             "title": "Milestone",
-            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
             "type": "object",
             "required": [
               "id"
@@ -5615,7 +5615,7 @@
               },
               "code": {
                 "title": "Milestone code",
-                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                 "type": [
                   "string",
                   "null"
@@ -6210,7 +6210,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -6218,7 +6218,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -6306,7 +6306,7 @@
               "title": "Description"
             },
             "amendsReleaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -6314,7 +6314,7 @@
               "title": "Amended release (identifier)"
             },
             "releaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -6426,7 +6426,7 @@
         "properties": {
           "id": {
             "title": "Award ID",
-            "description": "The identifier for this award. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+            "description": "The identifier for this award. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the contracting process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
             "type": [
               "string",
               "integer"
@@ -7959,7 +7959,7 @@
                         "string",
                         "null"
                       ],
-                      "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                      "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                     },
                     "email": {
                       "title": "Email",
@@ -8781,7 +8781,7 @@
                   "title": "Description"
                 },
                 "amendsReleaseID": {
-                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                   "type": [
                     "string",
                     "null"
@@ -8789,7 +8789,7 @@
                   "title": "Amended release (identifier)"
                 },
                 "releaseID": {
-                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
                   "type": [
                     "string",
                     "null"
@@ -8877,7 +8877,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -8885,7 +8885,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -8970,7 +8970,7 @@
         "properties": {
           "id": {
             "title": "Contract ID",
-            "description": "The identifier for this contract. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+            "description": "The identifier for this contract. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the contracting process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
             "type": [
               "string",
               "integer"
@@ -11629,7 +11629,7 @@
                                 "string",
                                 "null"
                               ],
-                              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                             },
                             "email": {
                               "title": "Email",
@@ -12156,7 +12156,7 @@
                                 "string",
                                 "null"
                               ],
-                              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                             },
                             "email": {
                               "title": "Email",
@@ -12669,7 +12669,7 @@
                 "type": "array",
                 "items": {
                   "title": "Milestone",
-                  "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+                  "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
                   "type": "object",
                   "required": [
                     "id"
@@ -12712,7 +12712,7 @@
                     },
                     "code": {
                       "title": "Milestone code",
-                      "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                      "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                       "type": [
                         "string",
                         "null"
@@ -13412,7 +13412,7 @@
           "relatedProcesses": {
             "uniqueItems": true,
             "items": {
-              "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
+              "description": "A reference to a related contracting (or planning) process: generally one preceding or following on from the current process.",
               "type": "object",
               "title": "Related Process",
               "properties": {
@@ -13435,7 +13435,7 @@
                   "openCodelist": true
                 },
                 "title": {
-                  "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
+                  "description": "The title of the related process, where referencing an open contracting (or planning) process, this field should match the tender/title field in the related process.",
                   "title": "Related process title",
                   "type": [
                     "string",
@@ -13481,7 +13481,7 @@
             "type": "array",
             "items": {
               "title": "Milestone",
-              "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+              "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
               "type": "object",
               "required": [
                 "id"
@@ -13524,7 +13524,7 @@
                 },
                 "code": {
                   "title": "Milestone code",
-                  "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                  "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                   "type": [
                     "string",
                     "null"
@@ -14119,7 +14119,7 @@
                   "title": "Description"
                 },
                 "amendsReleaseID": {
-                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                   "type": [
                     "string",
                     "null"
@@ -14127,7 +14127,7 @@
                   "title": "Amended release (identifier)"
                 },
                 "releaseID": {
-                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
                   "type": [
                     "string",
                     "null"
@@ -14215,7 +14215,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -14223,7 +14223,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -14306,7 +14306,7 @@
     "relatedProcesses": {
       "uniqueItems": true,
       "items": {
-        "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
+        "description": "A reference to a related contracting (or planning) process: generally one preceding or following on from the current process.",
         "type": "object",
         "title": "Related Process",
         "properties": {
@@ -14329,7 +14329,7 @@
             "openCodelist": true
           },
           "title": {
-            "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
+            "description": "The title of the related process, where referencing an open contracting (or planning) process, this field should match the tender/title field in the related process.",
             "title": "Related process title",
             "type": [
               "string",
@@ -14371,7 +14371,7 @@
     },
     "links": {
       "title": "Links",
-      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process. For references to related processes, see the `relatedProcesses` array.",
+      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting (or planning) process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process. For references to related processes, see the `relatedProcesses` array.",
       "type": "array",
       "items": {
         "title": "Link",
@@ -14429,11 +14429,11 @@
         "budget": {
           "type": "object",
           "title": "Budget",
-          "description": "Details of the budget that funds the planned contracting process.",
+          "description": "Details of the budget that will be used in a future contracting process.",
           "properties": {
             "id": {
               "title": "ID",
-              "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+              "description": "An identifier for the budget line item which will be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
               "type": [
                 "string",
                 "integer",
@@ -14442,7 +14442,7 @@
             },
             "description": {
               "title": "Budget Source",
-              "description": "A short free-text description of the budget allocation for this contracting process. This may be used to provide human-readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
+              "description": "A short free-text description of the budget allocation which will be used in a future contracting process. This may be used to provide human-readable information on the budget category allocated to the future contracts, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
               "type": [
                 "string",
                 "null"
@@ -14450,7 +14450,7 @@
             },
             "amount": {
               "title": "Amount",
-              "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
+              "description": "The value reserved in the budget to be used in a future contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
               "type": "object",
               "properties": {
                 "amount": {
@@ -14780,7 +14780,7 @@
             },
             "project": {
               "title": "Project title",
-              "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+              "description": "The name of the project through which the future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
               "type": [
                 "string",
                 "null"
@@ -14788,7 +14788,7 @@
             },
             "projectID": {
               "title": "Project identifier",
-              "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+              "description": "An external identifier for the project that the future contracting process will be part of, or will be funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
               "type": [
                 "string",
                 "integer",
@@ -14797,7 +14797,7 @@
             },
             "uri": {
               "title": "Linked budget information",
-              "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that fund this contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
+              "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that will be used in the future contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
               "type": [
                 "string",
                 "null"
@@ -14986,7 +14986,7 @@
           "type": "array",
           "items": {
             "title": "Milestone",
-            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
             "type": "object",
             "required": [
               "id"
@@ -15029,7 +15029,7 @@
               },
               "code": {
                 "title": "Milestone code",
-                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                 "type": [
                   "string",
                   "null"
@@ -16156,7 +16156,7 @@
                     "string",
                     "null"
                   ],
-                  "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                  "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                 },
                 "email": {
                   "title": "Email",
@@ -16207,7 +16207,7 @@
             }
           },
           "type": "object",
-          "description": "The organization managing the contracting process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
+          "description": "The organization managing the contracting (or planning) process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
           "title": "Procuring entity"
         },
         "items": {
@@ -17773,7 +17773,7 @@
         },
         "mainProcurementCategory": {
           "title": "Main procurement category",
-          "description": "The primary category describing the main object of this contracting process, from the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
+          "description": "The primary category describing the main object of this contracting (or planning) process, from the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
           "type": [
             "string",
             "null"
@@ -17789,7 +17789,7 @@
         },
         "additionalProcurementCategories": {
           "title": "Additional procurement categories",
-          "description": "Any additional categories describing the objects of this contracting process, using the open [extendedProcurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
+          "description": "Any additional categories describing the objects of this contracting (or planning) process, using the open [extendedProcurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
           "type": [
             "array",
             "null"
@@ -18583,7 +18583,7 @@
                       "string",
                       "null"
                     ],
-                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                   },
                   "email": {
                     "title": "Email",
@@ -18786,7 +18786,7 @@
           "type": "array",
           "items": {
             "title": "Milestone",
-            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
             "type": "object",
             "required": [
               "id"
@@ -18829,7 +18829,7 @@
               },
               "code": {
                 "title": "Milestone code",
-                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                 "type": [
                   "string",
                   "null"
@@ -19424,7 +19424,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -19432,7 +19432,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -19520,7 +19520,7 @@
               "title": "Description"
             },
             "amendsReleaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -19528,7 +19528,7 @@
               "title": "Amended release (identifier)"
             },
             "releaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -19636,7 +19636,7 @@
       "properties": {
         "id": {
           "title": "Award ID",
-          "description": "The identifier for this award. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+          "description": "The identifier for this award. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the contracting process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
           "type": [
             "string",
             "integer"
@@ -21169,7 +21169,7 @@
                       "string",
                       "null"
                     ],
-                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                    "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                   },
                   "email": {
                     "title": "Email",
@@ -21991,7 +21991,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -21999,7 +21999,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -22087,7 +22087,7 @@
               "title": "Description"
             },
             "amendsReleaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -22095,7 +22095,7 @@
               "title": "Amended release (identifier)"
             },
             "releaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -22174,7 +22174,7 @@
       "properties": {
         "id": {
           "title": "Contract ID",
-          "description": "The identifier for this contract. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+          "description": "The identifier for this contract. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the contracting process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
           "type": [
             "string",
             "integer"
@@ -24833,7 +24833,7 @@
                               "string",
                               "null"
                             ],
-                            "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                            "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                           },
                           "email": {
                             "title": "Email",
@@ -25360,7 +25360,7 @@
                               "string",
                               "null"
                             ],
-                            "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                            "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                           },
                           "email": {
                             "title": "Email",
@@ -25873,7 +25873,7 @@
               "type": "array",
               "items": {
                 "title": "Milestone",
-                "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+                "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
                 "type": "object",
                 "required": [
                   "id"
@@ -25916,7 +25916,7 @@
                   },
                   "code": {
                     "title": "Milestone code",
-                    "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                    "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                     "type": [
                       "string",
                       "null"
@@ -26616,7 +26616,7 @@
         "relatedProcesses": {
           "uniqueItems": true,
           "items": {
-            "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
+            "description": "A reference to a related contracting (or planning) process: generally one preceding or following on from the current process.",
             "type": "object",
             "title": "Related Process",
             "properties": {
@@ -26639,7 +26639,7 @@
                 "openCodelist": true
               },
               "title": {
-                "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
+                "description": "The title of the related process, where referencing an open contracting (or planning) process, this field should match the tender/title field in the related process.",
                 "title": "Related process title",
                 "type": [
                   "string",
@@ -26685,7 +26685,7 @@
           "type": "array",
           "items": {
             "title": "Milestone",
-            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
             "type": "object",
             "required": [
               "id"
@@ -26728,7 +26728,7 @@
               },
               "code": {
                 "title": "Milestone code",
-                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                 "type": [
                   "string",
                   "null"
@@ -27323,7 +27323,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -27331,7 +27331,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -27419,7 +27419,7 @@
               "title": "Description"
             },
             "amendsReleaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -27427,7 +27427,7 @@
               "title": "Amended release (identifier)"
             },
             "releaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -28342,7 +28342,7 @@
                           "string",
                           "null"
                         ],
-                        "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                        "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                       },
                       "email": {
                         "title": "Email",
@@ -28869,7 +28869,7 @@
                           "string",
                           "null"
                         ],
-                        "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                        "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                       },
                       "email": {
                         "title": "Email",
@@ -29382,7 +29382,7 @@
           "type": "array",
           "items": {
             "title": "Milestone",
-            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+            "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
             "type": "object",
             "required": [
               "id"
@@ -29425,7 +29425,7 @@
               },
               "code": {
                 "title": "Milestone code",
-                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+                "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
                 "type": [
                   "string",
                   "null"
@@ -30124,7 +30124,7 @@
     },
     "Milestone": {
       "title": "Milestone",
-      "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+      "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
       "type": "object",
       "required": [
         "id"
@@ -30167,7 +30167,7 @@
         },
         "code": {
           "title": "Milestone code",
-          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
           "type": [
             "string",
             "null"
@@ -30857,11 +30857,11 @@
     "Budget": {
       "type": "object",
       "title": "Budget information",
-      "description": "This section contains basic information about the budget estimated for, or allocated to, this contracting process at the present time. Further documentation and data about how budgets have been allocated to a contracting process should be published outside of OCDS data, according to the best available standards.",
+      "description": "This section contains basic information about the budget that will be used in a future contracting process. Further documentation and data about how budgets have been allocated should be published outside of OCDS data, according to the best available standards.",
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+          "description": "An identifier for the budget line item which will be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
           "type": [
             "string",
             "integer",
@@ -30870,7 +30870,7 @@
         },
         "description": {
           "title": "Budget Source",
-          "description": "A short free-text description of the budget allocation for this contracting process. This may be used to provide human-readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
+          "description": "A short free-text description of the budget allocation which will be used in a future contracting process. This may be used to provide human-readable information on the budget category allocated to the future contracts, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
           "type": [
             "string",
             "null"
@@ -30878,7 +30878,7 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
+          "description": "The value reserved in the budget to be used in a future contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
           "type": "object",
           "properties": {
             "amount": {
@@ -31208,7 +31208,7 @@
         },
         "project": {
           "title": "Project title",
-          "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+          "description": "The name of the project through which the future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
           "type": [
             "string",
             "null"
@@ -31216,7 +31216,7 @@
         },
         "projectID": {
           "title": "Project identifier",
-          "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+          "description": "An external identifier for the project that the future contracting process will be part of, or will be funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -31225,7 +31225,7 @@
         },
         "uri": {
           "title": "Linked budget information",
-          "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that fund this contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
+          "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that will be used in the future contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
           "type": [
             "string",
             "null"
@@ -32105,7 +32105,7 @@
                     "string",
                     "null"
                   ],
-                  "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                  "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                 },
                 "email": {
                   "title": "Email",
@@ -32632,7 +32632,7 @@
                     "string",
                     "null"
                   ],
-                  "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+                  "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
                 },
                 "email": {
                   "title": "Email",
@@ -33610,7 +33610,7 @@
                 "string",
                 "null"
               ],
-              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
             },
             "email": {
               "title": "Email",
@@ -33671,7 +33671,7 @@
       "properties": {
         "name": {
           "title": "Common name",
-          "description": "A common name for this organization. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+          "description": "A common name for this organization. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization is known. This field may also include details of the department or sub-unit involved in this contracting (or planning) process.",
           "type": [
             "string",
             "null"
@@ -33679,7 +33679,7 @@
         },
         "id": {
           "type": "string",
-          "description": "The ID used for cross-referencing to this organization from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available.",
+          "description": "The ID used for cross-referencing to this organization from other sections of the release. This field need only be unique within the scope of the contracting (or planning) process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available.",
           "title": "ID"
         },
         "identifier": {
@@ -33789,7 +33789,7 @@
         },
         "address": {
           "title": "Address",
-          "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
+          "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting (or planning) process.",
           "type": "object",
           "properties": {
             "streetAddress": {
@@ -34124,7 +34124,7 @@
                 "string",
                 "null"
               ],
-              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+              "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
             },
             "email": {
               "title": "Email",
@@ -34171,7 +34171,7 @@
         },
         "roles": {
           "title": "Roles",
-          "description": "The organization's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
+          "description": "The organization's role(s) in the contracting (or planning) process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
           "type": [
             "array",
             "null"
@@ -34792,7 +34792,7 @@
           "title": "Description"
         },
         "amendsReleaseID": {
-          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
           "type": [
             "string",
             "null"
@@ -34800,7 +34800,7 @@
           "title": "Amended release (identifier)"
         },
         "releaseID": {
-          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting process **after** the amendment was made.",
           "type": [
             "string",
             "null"
@@ -35277,7 +35277,7 @@
     "ContactPoint": {
       "title": "Contact point",
       "type": "object",
-      "description": "A person, contact point or department to contact in relation to this contracting process.",
+      "description": "A person, contact point or department to contact in relation to this contracting (or planning) process.",
       "properties": {
         "name": {
           "title": "Name",
@@ -35285,7 +35285,7 @@
             "string",
             "null"
           ],
-          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
         },
         "email": {
           "title": "Email",
@@ -35662,7 +35662,7 @@
     },
     "Period": {
       "title": "Period",
-      "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+      "description": "Key events during a contracting (or planning) process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
       "type": "object",
       "properties": {
         "startDate": {
@@ -35703,7 +35703,7 @@
       }
     },
     "RelatedProcess": {
-      "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
+      "description": "A reference to a related contracting (or planning) process: generally one preceding or following on from the current process.",
       "type": "object",
       "title": "Related Process",
       "properties": {
@@ -35726,7 +35726,7 @@
           "openCodelist": true
         },
         "title": {
-          "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
+          "description": "The title of the related process, where referencing an open contracting (or planning) process, this field should match the tender/title field in the related process.",
           "title": "Related process title",
           "type": [
             "string",
