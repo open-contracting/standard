@@ -63,7 +63,7 @@ In some cases, complex contracting processes cannot be represented under a singl
 * There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions.
 * The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated.
 
-OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` set to 'framework' is used to identify contracting processes that represent the second stage of a framework agreement procedure.
+OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. The presence of a related first-stage process with a `.relationship` set to 'framework' is used to identify contracting processes that represent the second stage of a framework agreement procedure. Second-stage contracting processes ought to be always related to the first-stage contracting process, never to other second-stage contracting processes.
 
 The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
 
@@ -130,6 +130,7 @@ The following guidance describes how to model the different stages of a framewor
 #### Relate the second stage to the first stage
 
 * Add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id` (to '1', for example), add 'framework' to its `.relationship` array, set its `.scheme` to 'ocid' and set its `.identifier` to the `ocid` of the invitation to participate in the framework agreement.
+* Note: second-stage contracting processes ought to be always related to the first-stage contracting process, never to other second-stage contracting processes.
 
 #### Add a buyer
 
