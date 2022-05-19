@@ -125,10 +125,6 @@ The following guidance describes how to model the different stages of a framewor
 * Create a release with the **same** `ocid` as the tender release *for the invitation to participate in a second-stage competition*, and add 'award' to the `tag`.
 * [Add an award and supplier](#add-an-award-and-supplier).
 
-### Updating the contract value, period or items
-
-* If the award value, period or items are subsequently updated, populate the contract's `.value`, `.period` and `.items` with the updated values.
-
 ### Common operations
 
 #### Relate the second stage to the first stage
