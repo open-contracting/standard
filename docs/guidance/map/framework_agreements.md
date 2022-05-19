@@ -127,7 +127,7 @@ The following guidance describes how to model the different stages of a framewor
 
 ### Updating the contract value, period or items
 
-* If the initial contract value, period or items are subsequently updated, populate the contract's `.value`, `.period` and `.items` with the updated values.
+* If the award value, period or items are subsequently updated, populate the contract's `.value`, `.period` and `.items` with the updated values.
 
 ### Common operations
 
@@ -207,7 +207,7 @@ Because there was no competition at the second stage, the new contracting proces
 * A new `ocid` is used.
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * A minimal `tender` section sets `tender.id` and sets `tender.competitive` to `false`.
-* The `awards` section is populated with the initial contract value, period and items.
+* The `awards` section is populated with the award value, period and items.
 * The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` fields are populated with the details of the buyer, procuring entity and supplier.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_award.json
@@ -288,7 +288,7 @@ The release has the following properties:
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * The `tag` is set to 'award'.
 * The `tender.status` is updated to 'complete'.
-* The `awards` section is populated with the initial contract value, period and items.
+* The `awards` section is populated with the award value, period and items.
 * The `awards.suppliers` and `parties` fields are populated with the details of the supplier.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_award.json
