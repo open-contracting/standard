@@ -133,7 +133,7 @@ The following guidance describes how to model the different stages of a framewor
 
 #### Add a buyer
 
-* Add an `Organization` object to the `parties` array, add 'buyer' to its `.roles` and populate its other fields with the details of the buyer for this specific contract.
+* Add an `Organization` object to the `parties` array, add 'buyer' to its `.roles` and populate its other fields with the details of the buyer for this specific award.
 * Set `buyer.id` and `buyer.name` to match the buyer's object in the `parties` array.
 
 #### Add an award and supplier
