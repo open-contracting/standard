@@ -99,7 +99,7 @@ The following guidance describes how to model the different stages of a framewor
 ### First-stage selection and addition of suppliers to the framework agreement
 
 * Create a release with the **same** `ocid` as the tender release and add 'award' to the `tag` array.
-* Add an `Award` object to the `awards` array.
+* Add an `Award` object to the `awards` array, setting its fields as usual.
 * For each supplier:
   * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
   * Add an `OrganizationReference` object to the award's `.suppliers` array, and set its `.id` and `.name` to match the supplier's object in the `parties` array.
