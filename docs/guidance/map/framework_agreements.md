@@ -130,7 +130,6 @@ The following guidance describes how to model the different stages of a framewor
 #### Relate the second stage to the first stage
 
 * Add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id` (to '1', for example), add 'framework' to its `.relationship` array, set its `.scheme` to 'ocid' and set its `.identifier` to the `ocid` of the invitation to participate in the framework agreement.
-* Note: second-stage contracting processes ought to be always related to the first-stage contracting process, never to other second-stage contracting processes.
 
 #### Add a buyer
 
