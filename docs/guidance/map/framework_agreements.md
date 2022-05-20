@@ -141,7 +141,6 @@ The following guidance describes how to model the different stages of a framewor
 * Add an `Award` object to the `awards` array, setting its fields as usual.
 * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
 * Add an `OrganizationReference` object to the award's `.suppliers` array and set `.id` and `.name` to match the supplier's object in the `parties` array.
-* Populate `awards`.
 
 ## Worked examples
 
