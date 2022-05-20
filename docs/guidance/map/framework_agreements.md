@@ -66,7 +66,7 @@ In some cases, complex contracting processes cannot be represented under a singl
 OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, indicates whether the contracting process represents the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` field set to 'framework' indicates whether the contracting process represents the second stage of a framework agreement procedure.
 
 ```{note}
-The 'framework' code is only used to relate a second-stage contracting process to its first-stage contracting process, never to other second-stage contracting processes.
+The 'framework' code is only used to relate second-stage contracting processes to their first-stage contracting process, never to other second-stage contracting processes.
 ```
 
 The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
