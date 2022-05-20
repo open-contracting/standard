@@ -1215,11 +1215,11 @@
         "budget": {
           "type": "object",
           "title": "Budget",
-          "description": "Details of the budget that will be used in a future contracting process.",
+          "description": "Details of the budget to be used in a future contracting process.",
           "properties": {
             "id": {
               "title": "ID",
-              "description": "An identifier for the budget line item which will be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+              "description": "An identifier of the budget to be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
               "type": [
                 "string",
                 "integer",
@@ -1228,7 +1228,7 @@
             },
             "description": {
               "title": "Budget Source",
-              "description": "A short free-text description of the budget allocation which will be used in a future contracting process. This may be used to provide human-readable information on the budget category allocated to the future contracts, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
+              "description": "A short free-text description of the budget to be used in a future contracting process. This may be used to provide human-readable information on: the budget category for the future contracts and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
               "type": [
                 "string",
                 "null"
@@ -1566,7 +1566,7 @@
             },
             "project": {
               "title": "Project title",
-              "description": "The name of the project through which the future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+              "description": "The name of the project through which a future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
               "type": [
                 "string",
                 "null"
@@ -1574,7 +1574,7 @@
             },
             "projectID": {
               "title": "Project identifier",
-              "description": "An external identifier for the project that the future contracting process will be part of, or will be funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+              "description": "An external identifier for the project of which a future contracting process will be part, or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
               "type": [
                 "string",
                 "integer",
@@ -1583,7 +1583,7 @@
             },
             "uri": {
               "title": "Linked budget information",
-              "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that will be used in the future contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
+              "description": "The URL of a machine-readable resource about the budget to be used in a future contracting process. For human-readable documents, see the `planning.documents` array.",
               "type": [
                 "string",
                 "null"
@@ -14429,11 +14429,11 @@
         "budget": {
           "type": "object",
           "title": "Budget",
-          "description": "Details of the budget that will be used in a future contracting process.",
+          "description": "Details of the budget to be used in a future contracting process.",
           "properties": {
             "id": {
               "title": "ID",
-              "description": "An identifier for the budget line item which will be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+              "description": "An identifier of the budget to be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
               "type": [
                 "string",
                 "integer",
@@ -14442,7 +14442,7 @@
             },
             "description": {
               "title": "Budget Source",
-              "description": "A short free-text description of the budget allocation which will be used in a future contracting process. This may be used to provide human-readable information on the budget category allocated to the future contracts, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
+              "description": "A short free-text description of the budget to be used in a future contracting process. This may be used to provide human-readable information on: the budget category for the future contracts and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
               "type": [
                 "string",
                 "null"
@@ -14780,7 +14780,7 @@
             },
             "project": {
               "title": "Project title",
-              "description": "The name of the project through which the future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+              "description": "The name of the project through which a future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
               "type": [
                 "string",
                 "null"
@@ -14788,7 +14788,7 @@
             },
             "projectID": {
               "title": "Project identifier",
-              "description": "An external identifier for the project that the future contracting process will be part of, or will be funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+              "description": "An external identifier for the project of which a future contracting process will be part, or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
               "type": [
                 "string",
                 "integer",
@@ -14797,7 +14797,7 @@
             },
             "uri": {
               "title": "Linked budget information",
-              "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that will be used in the future contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
+              "description": "The URL of a machine-readable resource about the budget to be used in a future contracting process. For human-readable documents, see the `planning.documents` array.",
               "type": [
                 "string",
                 "null"
@@ -30857,11 +30857,11 @@
     "Budget": {
       "type": "object",
       "title": "Budget information",
-      "description": "This section contains basic information about the budget that will be used in a future contracting process. Further documentation and data about how budgets have been allocated should be published outside of OCDS data, according to the best available standards.",
+      "description": "This section contains basic information about the budget to be used in a future contracting process. Further documentation and data about how budgets have been allocated should be published outside of OCDS data, according to the best available standards.",
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An identifier for the budget line item which will be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+          "description": "An identifier of the budget to be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
           "type": [
             "string",
             "integer",
@@ -30870,7 +30870,7 @@
         },
         "description": {
           "title": "Budget Source",
-          "description": "A short free-text description of the budget allocation which will be used in a future contracting process. This may be used to provide human-readable information on the budget category allocated to the future contracts, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
+          "description": "A short free-text description of the budget to be used in a future contracting process. This may be used to provide human-readable information on: the budget category for the future contracts and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
           "type": [
             "string",
             "null"
@@ -31208,7 +31208,7 @@
         },
         "project": {
           "title": "Project title",
-          "description": "The name of the project through which the future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+          "description": "The name of the project through which a future contracting process will be funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
           "type": [
             "string",
             "null"
@@ -31216,7 +31216,7 @@
         },
         "projectID": {
           "title": "Project identifier",
-          "description": "An external identifier for the project that the future contracting process will be part of, or will be funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+          "description": "An external identifier for the project of which a future contracting process will be part, or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -31225,7 +31225,7 @@
         },
         "uri": {
           "title": "Linked budget information",
-          "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that will be used in the future contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
+          "description": "The URL of a machine-readable resource about the budget to be used in a future contracting process. For human-readable documents, see the `planning.documents` array.",
           "type": [
             "string",
             "null"
