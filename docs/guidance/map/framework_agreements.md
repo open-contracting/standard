@@ -63,7 +63,11 @@ In some cases, complex contracting processes cannot be represented under a singl
 * There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions.
 * The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated.
 
-OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, is used to identify contracting processes that represent the first stage of a framework agreement procedure. The presence of a related first-stage process with a `.relationship` set to 'framework' is used to identify contracting processes that represent the second stage of a framework agreement procedure. Second-stage contracting processes ought to be always related to the first-stage contracting process, never to other second-stage contracting processes.
+OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, indicates whether the contracting process represents the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` field set to 'framework' indicates whether the contracting process represents the second stage of a framework agreement procedure.
+
+```{note}
+The 'framework' code is only used to relate a second-stage contracting process to its first-stage contracting process, never to other second-stage contracting processes.
+```
 
 The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
 
