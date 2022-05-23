@@ -142,11 +142,18 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
   * [#1415](https://github.com/open-contracting/standard/pull/1415) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
-* [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
+* `tenderStatus`, `awardStatus` and `contractStatus`:
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) Major change of descriptions, adding and deprecating the following codes.
+    * Deprecated: 'planning' in `tenderStatus`. Deprecated because it is unnecessary since contracting processes are now split from planning processes (which do not have any states themselves).
+    * Deprecated: 'pending' in `awardStatus` and `contractStatus`. Deprecated because the code (which would follow 'active') does not provide any additional information compared to `awardDate` and `dateSigned` and, in the case of `contractStatus` has unclear semantics ("proposed").
+    * Added: 'withdrawn' in `awardStatus` and `contractStatus`, as information can stop being published at any moment also for only individual awards / contracts.
+    * Added: 'complete' in `awardStatus`, as there was no code suggesting that the award successfully happened and was done (the equivalent in `contractStatus` is 'terminated'.)
+    * Added 'unsuccessful' in `contractStatus`, as a failure not caused by the buyer can happen also in the contract stage (e.g. the winning bidder(s) refuses to sign the contract). 
+  * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
+
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
-* [#1509](https://github.com/open-contracting/standard/pull/1509) Update the `tenderStatus`, `awardStatus` and `contractStatus` codelists, including major change of descriptions, removal of 'planning' and 'pending' and the addition of 'withdrawn', 'complete', 'cancelled' and 'unsuccessful' to codelists where they were not before.  
 
 ### Schema
 
