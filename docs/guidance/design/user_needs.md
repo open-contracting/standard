@@ -27,7 +27,7 @@ Comparable data using common codelists and the availability of unit prices are p
 
 ## Detecting fraud and corruption
 
-All stakeholders (civil society, the private sector, government and donors) have an interest in identifying and combating corruption in public contracting. Open contracting data can be used to scrutinize procurement documents and data for ‘red flags’ that might indicate public monies are being mis-used.
+All stakeholders (civil society, the private sector, government and donors) have an interest in identifying and combating corruption in public contracting. Open contracting data can be used to scrutinize contracting documents (for example, procurement documents) and data for ‘red flags’ that might indicate public monies are being mis-used.
 
 There are two main approaches to fraud and corruption monitoring. A ‘micro’ approach closely scrutinizes individual procurements.
 
