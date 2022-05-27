@@ -11,7 +11,7 @@ In this situation, it is possible to still meet OCDS requirements by following a
 Here, two general approaches that a publisher can follow to renew release identifiers on each data update will be shown:
 
 * **When the system saves a last modified date for entities** - use the dates to create a new release ID. This can be as simple as appending the date to the release identifier.
-* **When the system does not contain a last modified date** - use a hash of all the fields to create a unique release ID. A hash is guaranteed to change when the data changes, and it is almost impossible for it to collide with a previous, existent identifier for the same contracting (or planning) process.
+* **When the system does not contain a last modified date** - use a hash of all the fields to create a unique release ID. A hash is guaranteed to change when the data changes, and it is almost impossible for it to collide with a previous, existent identifier for the same (contracting or planning) process.
 
 See the examples below for more details.
 
@@ -27,7 +27,7 @@ In an 'Easy' releases scenario it is still necessary to package data. Therefore 
 
 ### Release tags
 
-Releases in OCDS have a [release tag](../../schema/codelists.md#release-tag) which distinguishes planning and contracting processes and indicates the stage of the contracting process they relate to.
+A release in OCDS has a [release tag](../../schema/codelists.md#release-tag), which indicates whether it is about a planning process or a contracting process and, if it is about the latter, indicates the stage of the contracting process to which it relates.
 
 When producing a single release for each contracting (or planning) process, we can't use any tags that need other tags to be present in previous releases, e.g. 'tenderUpdate' which follows the 'tender' tag. 
 
@@ -59,9 +59,9 @@ The sample database structure used for the present example is illustrated in the
 
 ![Sample database 1](../../_static/png/easy_releases/sample_db1.png)
 
-The 'ProcurementProcess' table contains one single row for each contracting (or planning) process in the system, and the row is updated with each change. Contracts and suppliers are saved in separate tables. For both 'ProcurementProcess' and 'Contract' tables there is a `lastModifiedDate` column, with a timestamp of the last change made for the row.
+The 'ProcurementProcess' table contains one single row for each contracting process in the system, and the row is updated with each change. Contracts and suppliers are saved in separate tables. For both 'ProcurementProcess' and 'Contract' tables there is a `lastModifiedDate` column, with a timestamp of the last change made for the row.
 
-The following steps show the progress in a single contracting (or planning) process, and how the unique release identifier is built for each update.
+The following steps show the progress in a single contracting process, and how the unique release identifier is built for each update.
 
 #### 1. Tender initiation
 

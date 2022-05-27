@@ -2,7 +2,7 @@
 
 Consistent identifiers are essential to help join up open contracting data.
 
-* The open contracting process identifier (ocid) is a globally unique identifier used to join up all the data about a single contracting or planning process;
+* The open contracting process identifier (ocid) is a globally unique identifier used to join up all the data about a single contracting (or planning) process;
 * Organization identifiers are important to know who is involved in each contract;
 * Release, award and contract identifiers are important to help cross-reference information.
 
@@ -112,7 +112,7 @@ However, publishers are encouraged to consider whether there are any risks of cl
 
 Reliably identifying the legal entities involved in a contracting (or planning) process is vital for transparency and accountability, and for carrying out analysis to improve procurement and contract management.
 
-Publishers should seek to collect and record the **legal identifier** from an official register of any organization involved in a contracting or planning process (including buyers, tenderers and suppliers), and should include this in their OCDS files.
+Publishers should seek to collect and record the **legal identifier** from an official register of any organization involved in a contracting (or planning) process (including buyers, tenderers and suppliers), and should include this in their OCDS files.
 
 There are two parts to expressing an **organization identifier** in open contracting data.
 

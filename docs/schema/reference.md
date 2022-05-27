@@ -76,7 +76,7 @@ The majority of OCDS data is held within a release structure. One or more releas
     * [contract](#contract)
       * [implementation](#implementation)
 
-Releases are given a [tag](codelists.md#release-tag) to distinguish planning and contracting processes and to indicate the stage of the contracting process they relate to. However, there are no formal restrictions on when information about a stage of the process can be provided.
+A release has a [tag](codelists.md#release-tag) to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates. However, there are no formal restrictions on when information about a stage of the process can be provided.
 
 For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 

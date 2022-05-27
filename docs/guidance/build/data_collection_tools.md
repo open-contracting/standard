@@ -42,7 +42,7 @@ Consider using the spreadsheet template to collect data if:
 * Your users are **familiar** with using spreadsheets
 * Data entry will be done by a **small number of** users
 * You have the **capacity to collate** data entered in multiple spreadsheets
-* You need to make **multiple updates** over the life of a contracting (or planning) process
+* You need to make **multiple updates** over the lifetime of a contracting (or planning) process
 
 The template includes a subset of fields from the **planning**, **tender**, **award**, **contract** and **implementation** sections of OCDS.
 
@@ -80,7 +80,7 @@ Read more about OpenContractR in its [introduction](https://drive.google.com/fil
 * Information capture module
 * Visualization module
 
-The objective of the tool is to enable the monitoring of contracting (or planning) processes by using and producing OCDS data.
+The objective of the tool is to enable the monitoring of contracting processes by using and producing OCDS data.
 
 Consider using Contrataciones Abiertas if:
 
