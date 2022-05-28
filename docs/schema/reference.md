@@ -170,7 +170,7 @@ Each organization has a `details` object. Through extensions, this can be used t
 
 ### Planning
 
-The planning section can be used to describe the background to a contracting process. This can include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
+The planning section is used in a planning process. This includes information about, for example, needs identification, budget planning and market research. Background documents such as feasibility studies and project plans can also be included in this section.
 
 ````{admonition} Example
 :class: hint

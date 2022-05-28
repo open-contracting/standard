@@ -23,7 +23,7 @@ Open Contracting Data Standard (OCDS) data is published and updated over time us
 
 The only thing that can be truly called “OCDS data” is JSON data that validates against the OCDS schema. There are two schemas for OCDS data: “releases” and “records.”
 
-OCDS publishers are encouraged to use releases and records to publish data in near real-time and to provide a change history. Tracking change over time is important to users of contracting data because there can be many changes in the lifetime of a contracting (or planning) process. Knowing how and when certain attributes have changed can help users to understand the process, identify inefficiencies, and spot red flags for corruption.
+OCDS publishers are encouraged to use releases and records to publish data in near real-time and to provide a change history. Tracking change over time is important to users of contracting data because there can be many changes in the lifetime of a contracting process. Knowing how and when certain attributes have changed can help users to understand the process, identify inefficiencies, and spot red flags for corruption.
 
 A **release** is JSON data that is published each time there is a change to a contracting (or planning) process. Releases follow the OCDS [release schema](../schema/reference) and contain an OCID to identify the contracting (or planning) process they relate to.
 
