@@ -21,7 +21,8 @@ In OCDS, a publication policy is an essential data guide for users. Each OCDS pu
 * How timely or frequent the publication is
 * Where the data comes from and how it is generated
 * The formats of the publication and where to access the data
-* Any differences in the contracting processes or fields covered by different formats or access methods
+* Any differences in terms of which contracting (or planning) processes are covered by different formats or access methods
+* Any differences in terms of which fields are covered by different formats or access methods
 * License information for data reuse
 * Contact information of the publisher
 

@@ -1,6 +1,6 @@
 # Serialization
 
-The Open Contracting Data Standard provides a **structured data model** for capturing in-depth information about all stages of the contracting process.
+The Open Contracting Data Standard provides a **structured data model** for capturing in-depth information about all stages of contracting (and planning) processes.
 
 The current canonical version of this data model is provided by a **[JSON Schema](../../schema/release)** which describes field names, field definitions and structures for the data. The compliance of data with the Open Contracting Data Standard will be assessed against this schema.
 
