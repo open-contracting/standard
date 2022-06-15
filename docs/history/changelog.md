@@ -201,6 +201,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1189](https://github.com/open-contracting/standard/pull/1189) `Document.url`, to use precise wording and to describe how to indicate a part of a document.
   * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
+  * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquires`, to reduce ambiguity and use consistent wording in description of procurement stages.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
