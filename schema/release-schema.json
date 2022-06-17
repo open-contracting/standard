@@ -638,7 +638,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "$ref": "#/definitions/Value"
         },
         "maximumValue": {
@@ -1299,7 +1299,7 @@
     "Transaction": {
       "type": "object",
       "title": "Transaction information",
-      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "description": "A spending transaction related to the contract. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
       "required": [
         "id"
       ],
