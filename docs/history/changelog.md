@@ -195,6 +195,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
+  * [#1527](https://github.com/open-contracting/standard/pull/1527) `id`, to clarify use in releases and compiled releases.
   * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
   * [#1510](https://github.com/open-contracting/standard/pull/1510) `Organization.additionalIdentifiers`, to clarify its potential use for organizational units.
   * [#1167](https://github.com/open-contracting/standard/pull/1167) `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`, to reduce ambiguity and use consistent wording.
