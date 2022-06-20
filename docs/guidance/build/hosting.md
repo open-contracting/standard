@@ -6,10 +6,10 @@ The W3C [Data on the Web Best Practices](https://www.w3.org/TR/dwbp/#MultipleFor
 
 With respect to your OCDS publication, which best practices are most important will depend on the particular needs of your users, but you are encouraged to consider:
 
-* **[Bulk downloads](#heading=h.pw97dsu9qvtf)** - packaging together multiple releases or multiple records in one or more files for users to download and import into local tools. ([Best Practice 17](https://www.w3.org/TR/dwbp/#BulkAccess))
-* **[Individual release and records](#heading=h.xdv7dzi0tjnm)** - providing a URL at which each release or record can be accessed ([Best Practice 10](https://www.w3.org/TR/dwbp/#identifiersWithinDatasets)).
-* **[API access](#heading=h.5uefugz7ni8o)** - enabling interactive access to your data. ([Best Practice 23](https://www.w3.org/TR/dwbp/#useanAPI))
-* **[CSV and spreadsheet serializations](#heading=h.bzsfhab5stw)** - providing multiple releases or compiled records for download, enabling users to work with data directly in spreadsheet software or other tools. ([Best Practice 14](https://www.w3.org/TR/dwbp/#MultipleFormats))
+* **[Bulk downloads](#bulk-downloads)** - packaging together multiple releases or multiple records in one or more files for users to download and import into local tools. ([Best Practice 17](https://www.w3.org/TR/dwbp/#BulkAccess))
+* **[Individual release and records](#individual-releases-and-records)** - providing a URL at which each release or record can be accessed ([Best Practice 10](https://www.w3.org/TR/dwbp/#identifiersWithinDatasets)).
+* **[API access](#api-access)** - enabling interactive access to your data. ([Best Practice 23](https://www.w3.org/TR/dwbp/#useanAPI))
+* **[CSV and spreadsheet serializations](#csv-and-spreadsheet-serializations)** - providing multiple releases or compiled records for download, enabling users to work with data directly in spreadsheet software or other tools. ([Best Practice 14](https://www.w3.org/TR/dwbp/#MultipleFormats))
 
 To meet the [basic criteria for data quality](https://standard.open-contracting.org/latest/en/guidance/publish/quality/#basic-criteria), it ought to be possible for a user to automate the download of all the data, either using an HTML page listing bulk download URLs, or using only machine-readable data as input.
 
