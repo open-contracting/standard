@@ -1,6 +1,6 @@
 # Extensions
 
-OCDS provides a common core of [sections](../../schema/reference.md#release-structure) and [building blocks](../../schema/reference.md#building-block-reference) for describing contracting processes.
+OCDS provides a common core of [sections](../../schema/reference.md#release-structure) and [building blocks](../../schema/reference.md#building-block-reference) for describing contracting (or planning) processes.
 
 Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard.
 
@@ -31,7 +31,7 @@ You can find the [extension template](https://github.com/open-contracting/standa
 
 ## Profiles
 
-Groups of extensions can be combined into **profiles**. OCDS provides a common core for describing contracting processes, which profiles expand to suit the disclosure requirements and user needs of a particular sector or legal framework.
+Groups of extensions can be combined into **profiles**. OCDS provides a common core for describing contracting (or planning) processes, which profiles expand to suit the disclosure requirements and user needs of a particular sector or legal framework.
 
 ### OCDS for Public-Private Partnerships
 

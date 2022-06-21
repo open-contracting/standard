@@ -4,7 +4,7 @@
 
 # Organization classifications
 
-Many publishers wish to disclose and monitor information about different classifications of organizations involved in contracting processes. Example classifications include organization ownership, incorporation, sector, location, and number of employees. We recognise that publishing information about a variety of organization characteristics, for example women-owned and/or indigenous-owned organizations, is an important part of monitoring participation in public procurement.
+Many publishers wish to disclose and monitor information about different classifications of organizations involved in contracting (or planning) processes. Example classifications include organization ownership, incorporation, sector, location, and number of employees. We recognise that publishing information about a variety of organization characteristics, for example women-owned and/or indigenous-owned organizations, is an important part of monitoring participation in public procurement.
 
 Some organization classifications, such as organization scale, can be published using OCDS fields and codes. Many other classifications are context-specific, and for this case, we provide an organization classification extension that allows publishers to provide their own classifications.
 

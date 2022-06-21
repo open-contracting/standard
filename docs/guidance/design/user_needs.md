@@ -37,7 +37,7 @@ Data that can be linked up using globally unique identifiers for companies is pa
 
 ## Competing for public contracts
 
-Open contracting data can be used by private firms to understand the potential pipeline of procurement opportunities. It is a core principle of open contracting that information ought to be made available at the early stages of a contracting process, including information on planned procurement, and invitations for tenders.
+Open contracting data can be used by private firms to understand the potential pipeline of procurement opportunities. It is a core principle of open contracting that information ought to be made available at the early stages of contracting (or planning) processes, including information on planned procurement and invitations for tenders.
 
 Information on past contracts can allow firms to identify upcoming opportunities for re-contracting, and can support a more competitive marketplace, as transparency creates a level playing field with information on pricing, contract dates and key deliverables. 
 

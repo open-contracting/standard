@@ -23,9 +23,9 @@ Elsewhere in the OCDS schema the buyer is described as:
 There is a proposal to align this description with the above definition.
 ```
 
-In OCDS, the **buyer** is modelled as relating to the contracting process as a whole and each contracting process has only a single `buyer` field, i.e. all awards and contracts resulting from the contracting process share the same buyer.
+In OCDS, the **buyer** is modelled as relating to the contracting (or planning) process as a whole and each process has only a single `buyer` field, i.e. all awards and contracts resulting from the contracting process share the same buyer.
 
-That said, many organizations can be assigned the 'buyer' role in the `parties` section, making it possible to represent contracting processes with a 'lead' buyer and other buyers.
+That said, many organizations can be assigned the 'buyer' role in the `parties` section, making it possible to represent contracting (or planning) processes with a 'lead' buyer and other buyers.
 
 ### Suppliers
 

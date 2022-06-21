@@ -38,7 +38,7 @@ For releases, publishers can:
 * Segment by **release date** - placing all the releases from a given day, month or year in the same file.
 * Segment by **open contracting process identifier** - placing all the releases related to a given set of process identifiers together in the same package.
 
-For records, publishers can segment by the first **release date** associated with a contracting process, or by **open contracting process identifier.**
+For records, publishers can segment by the first **release date** associated with a contracting (or planning) process, or by **open contracting process identifier.**
 
 Following these approaches will avoid releases and records 'jumping' between files when the bulk files are updated.
 

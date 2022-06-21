@@ -152,6 +152,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * Clarify core concepts:
   * [#1216](https://github.com/open-contracting/standard/pull/1216) Define contracting process and planning process in the schema description. Update definition of release, record and ocid. Update references to contracting process so that it takes take the planning process into account.
+  * [#1513](https://github.com/open-contracting/standard/pull/1513) Update fields' use of "contracting process" and "contracting (or planning) process" to reflect the new definition. Align `budget.project` and `budget.projectID`.
   * [#1443](https://github.com/open-contracting/standard/pull/1443) `date`
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
@@ -194,6 +195,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
+  * [#1527](https://github.com/open-contracting/standard/pull/1527) `id`, to clarify use in releases and compiled releases.
   * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
   * [#1510](https://github.com/open-contracting/standard/pull/1510) `Organization.additionalIdentifiers`, to clarify its potential use for organizational units.
   * [#1167](https://github.com/open-contracting/standard/pull/1167) `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`, to reduce ambiguity and use consistent wording.
