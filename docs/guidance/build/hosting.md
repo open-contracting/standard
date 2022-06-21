@@ -11,11 +11,11 @@ With respect to your OCDS publication, which best practices are most important w
 * **[API access](#api-access)** - enabling interactive access to your data. ([Best Practice 23](https://www.w3.org/TR/dwbp/#useanAPI))
 * **[CSV and spreadsheet serializations](#csv-and-spreadsheet-serializations)** - providing multiple releases or compiled records for download, enabling users to work with data directly in spreadsheet software or other tools. ([Best Practice 14](https://www.w3.org/TR/dwbp/#MultipleFormats))
 
-To meet the [basic criteria for data quality](https://standard.open-contracting.org/latest/en/guidance/publish/quality/#basic-criteria), it ought to be possible for a user to automate the download of all the data, either using an HTML page listing bulk download URLs, or using only machine-readable data as input.
+To meet the [basic criteria for data quality](../publish/quality.md#basic-criteria), it ought to be possible for a user to automate the download of all the data, either using an HTML page listing bulk download URLs, or using only machine-readable data as input.
 
 ## Bulk downloads
 
-The [release package](https://standard.open-contracting.org/latest/en/schema/release_package/) and [record package](https://standard.open-contracting.org/latest/en/schema/record_package/) can provide **bulk access** to releases and records, respectively.
+The [release package](../../schema/release_package) and [record package](../../schema/record_package) can provide **bulk access** to releases and records, respectively.
 
 However, very large files can be difficult for users to download and process. The following section suggests good practices to assist users in accessing data. These are not requirements of the standard, but are based on experiences of maximizing the number of users able to work with datasets with their existing hardware and software.
 
@@ -101,7 +101,7 @@ Your design choices in this area ought to be informed by user research. That sai
 
 For package endpoints, you can also provide filtering and ordering options. In particular, consider date filters and/or a reverse chronological order option, so that users can retrieve only new or updated data.
 
-If you choose to provide endpoints for retrieving individual records and/or releases but **not** endpoints for paginating through records and/or releases, then you need to provide a machine-readable list of OCIDs and/or release IDs. Otherwise, it will not be possible to automate the download of all the data, which is a [basic criterion for data quality](https://standard.open-contracting.org/latest/en/guidance/publish/quality/#basic-criteria).
+If you choose to provide endpoints for retrieving individual records and/or releases but **not** endpoints for paginating through records and/or releases, then you need to provide a machine-readable list of OCIDs and/or release IDs. Otherwise, it will not be possible to automate the download of all the data, which is a [basic criterion for data quality](../publish/quality.md#basic-criteria).
 
 ### Response format
 
@@ -146,6 +146,6 @@ Set up error monitoring, so that if a request causes an HTTP 500 Internal Server
 
 ## CSV and spreadsheet serializations
 
-The [serialization](https://standard.open-contracting.org/staging/1.2-dev/en/guidance/build/serialization/) page provides details of how to generate 'flat' versions of OCDS data for use in spreadsheet software.
+The [serialization](serialization) page provides details of how to generate 'flat' versions of OCDS data for use in spreadsheet software.
 
 The same principles discussed for bulk files above ought to be applied to CSV or Excel downloads of data.
