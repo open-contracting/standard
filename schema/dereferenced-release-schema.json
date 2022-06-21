@@ -1215,11 +1215,11 @@
         "budget": {
           "type": "object",
           "title": "Budget",
-          "description": "Details of the budget to be used in a future contracting process.",
+          "description": "Details of the budget that will fund the future contract(s)",
           "properties": {
             "id": {
               "title": "ID",
-              "description": "An identifier of the budget to be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+              "description": "An identifier of the budget that will fund the future contract(s). This identifier should be possible to cross-reference against formal budget documents.",
               "type": [
                 "string",
                 "integer",
@@ -1228,7 +1228,7 @@
             },
             "description": {
               "title": "Budget Source",
-              "description": "A short free-text description of the budget to be used in a future contracting process. This may be used to provide human-readable information on: the budget category for the future contracts and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
+              "description": "A short free-text description of the budget that will fund the future contract(s). This may be used to provide human-readable information on: the budget category for the future contract(s) and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
               "type": [
                 "string",
                 "null"
@@ -1236,7 +1236,7 @@
             },
             "amount": {
               "title": "Amount",
-              "description": "The value reserved in the budget to be used in a future contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
+              "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. If the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
               "type": "object",
               "properties": {
                 "amount": {
@@ -1566,7 +1566,7 @@
             },
             "project": {
               "title": "Project title",
-              "description": "The name of the project of which the future contracting process will be part or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+              "description": "The name of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
               "type": [
                 "string",
                 "null"
@@ -1574,7 +1574,7 @@
             },
             "projectID": {
               "title": "Project identifier",
-              "description": "The identifier of the project of which the future contracting process will be part or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+              "description": "The identifier of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
               "type": [
                 "string",
                 "integer",
@@ -1583,7 +1583,7 @@
             },
             "uri": {
               "title": "Linked budget information",
-              "description": "The URL of a machine-readable resource about the budget to be used in a future contracting process. For human-readable documents, see the `planning.documents` array.",
+              "description": "The URL of a machine-readable resource about the budget that will fund the future contract(s). For human-readable documents, see the `planning.documents` array.",
               "type": [
                 "string",
                 "null"
@@ -3536,7 +3536,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the future contract(s) may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -3866,7 +3866,7 @@
         },
         "minValue": {
           "title": "Minimum value",
-          "description": "The estimated minimum value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated minimum value of the procurement. A negative value indicates that the future contract(s) may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -6494,7 +6494,7 @@
           },
           "value": {
             "title": "Value",
-            "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+            "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
             "type": "object",
             "properties": {
               "amount": {
@@ -10794,7 +10794,7 @@
                 "items": {
                   "type": "object",
                   "title": "Transaction information",
-                  "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+                  "description": "A spending transaction related to the contract. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
                   "required": [
                     "id"
                   ],
@@ -14429,11 +14429,11 @@
         "budget": {
           "type": "object",
           "title": "Budget",
-          "description": "Details of the budget to be used in a future contracting process.",
+          "description": "Details of the budget that will fund the future contract(s)",
           "properties": {
             "id": {
               "title": "ID",
-              "description": "An identifier of the budget to be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+              "description": "An identifier of the budget that will fund the future contract(s). This identifier should be possible to cross-reference against formal budget documents.",
               "type": [
                 "string",
                 "integer",
@@ -14442,7 +14442,7 @@
             },
             "description": {
               "title": "Budget Source",
-              "description": "A short free-text description of the budget to be used in a future contracting process. This may be used to provide human-readable information on: the budget category for the future contracts and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
+              "description": "A short free-text description of the budget that will fund the future contract(s). This may be used to provide human-readable information on: the budget category for the future contract(s) and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
               "type": [
                 "string",
                 "null"
@@ -14450,7 +14450,7 @@
             },
             "amount": {
               "title": "Amount",
-              "description": "The value reserved in the budget to be used in a future contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
+              "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. If the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
               "type": "object",
               "properties": {
                 "amount": {
@@ -14780,7 +14780,7 @@
             },
             "project": {
               "title": "Project title",
-              "description": "The name of the project of which the future contracting process will be part or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+              "description": "The name of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
               "type": [
                 "string",
                 "null"
@@ -14788,7 +14788,7 @@
             },
             "projectID": {
               "title": "Project identifier",
-              "description": "The identifier of the project of which the future contracting process will be part or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+              "description": "The identifier of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
               "type": [
                 "string",
                 "integer",
@@ -14797,7 +14797,7 @@
             },
             "uri": {
               "title": "Linked budget information",
-              "description": "The URL of a machine-readable resource about the budget to be used in a future contracting process. For human-readable documents, see the `planning.documents` array.",
+              "description": "The URL of a machine-readable resource about the budget that will fund the future contract(s). For human-readable documents, see the `planning.documents` array.",
               "type": [
                 "string",
                 "null"
@@ -16750,7 +16750,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the future contract(s) may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -17080,7 +17080,7 @@
         },
         "minValue": {
           "title": "Minimum value",
-          "description": "The estimated minimum value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated minimum value of the procurement. A negative value indicates that the future contract(s) may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -19704,7 +19704,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "type": "object",
           "properties": {
             "amount": {
@@ -23998,7 +23998,7 @@
               "items": {
                 "type": "object",
                 "title": "Transaction information",
-                "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+                "description": "A spending transaction related to the contract. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
                 "required": [
                   "id"
                 ],
@@ -27507,7 +27507,7 @@
           "items": {
             "type": "object",
             "title": "Transaction information",
-            "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+            "description": "A spending transaction related to the contract. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
             "required": [
               "id"
             ],
@@ -30857,11 +30857,11 @@
     "Budget": {
       "type": "object",
       "title": "Budget information",
-      "description": "This section contains basic information about the budget to be used in a future contracting process. Further documentation and data about how budgets have been allocated should be published outside of OCDS data, according to the best available standards.",
+      "description": "This section contains basic information about the budget that will fund the future contract(s). Further documentation and data about how budgets have been allocated should be published outside of OCDS data, according to the best available standards.",
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An identifier of the budget to be used in a future contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+          "description": "An identifier of the budget that will fund the future contract(s). This identifier should be possible to cross-reference against formal budget documents.",
           "type": [
             "string",
             "integer",
@@ -30870,7 +30870,7 @@
         },
         "description": {
           "title": "Budget Source",
-          "description": "A short free-text description of the budget to be used in a future contracting process. This may be used to provide human-readable information on: the budget category for the future contracts and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
+          "description": "A short free-text description of the budget that will fund the future contract(s). This may be used to provide human-readable information on: the budget category for the future contract(s) and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
           "type": [
             "string",
             "null"
@@ -30878,7 +30878,7 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value reserved in the budget to be used in a future contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
+          "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. If the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
           "type": "object",
           "properties": {
             "amount": {
@@ -31208,7 +31208,7 @@
         },
         "project": {
           "title": "Project title",
-          "description": "The name of the project of which the future contracting process will be part or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+          "description": "The name of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
           "type": [
             "string",
             "null"
@@ -31216,7 +31216,7 @@
         },
         "projectID": {
           "title": "Project identifier",
-          "description": "The identifier of the project of which the future contracting process will be part or through which it will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+          "description": "The identifier of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -31225,7 +31225,7 @@
         },
         "uri": {
           "title": "Linked budget information",
-          "description": "The URL of a machine-readable resource about the budget to be used in a future contracting process. For human-readable documents, see the `planning.documents` array.",
+          "description": "The URL of a machine-readable resource about the budget that will fund the future contract(s). For human-readable documents, see the `planning.documents` array.",
           "type": [
             "string",
             "null"
@@ -31270,7 +31270,7 @@
     "Transaction": {
       "type": "object",
       "title": "Transaction information",
-      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "description": "A spending transaction related to the contract. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
       "required": [
         "id"
       ],
