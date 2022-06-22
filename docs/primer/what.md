@@ -21,7 +21,7 @@ This page will:
 </div>
 ```
 
-The Open Contracting Data Standard (OCDS) is a free, non-proprietary open data standard for public contracting, implemented by over 30 governments around the world. It describes how to publish data and documents about contracting processes for goods, works and services.
+The Open Contracting Data Standard (OCDS) is a free, non-proprietary open data standard for public contracting, implemented by over 30 governments around the world. It describes how to publish data and documents about contracting processes for goods, services and works.
 
 There are three concepts behind the Open Contracting Data Standard:
 
@@ -29,7 +29,7 @@ There are three concepts behind the Open Contracting Data Standard:
 * **Open Data** is data that can be freely used, modified, and shared by anyone for any purpose. This requires data to be accessible and machine-readable, and for permission to be granted for reuse.
 * A **Data Standard** defines the structure and meaning of data in order to resolve ambiguity and help systems and people interpret it.
 
-The OCDS builds on all three of these concepts, and the ultimate goal of the OCDS is to **help deliver** open contracting using standardized open data. The OCDS describes how to publish data and documents for the procurement of goods, works, and services. It makes contracting data available for anyone to use, modify, and share, for any purpose.
+The OCDS builds on all three of these concepts, and the ultimate goal of the OCDS is to **help deliver** open contracting using standardized open data. The OCDS describes how to publish data and documents for the procurement of goods, services and works. It makes contracting data available for anyone to use, modify, and share, for any purpose.
 
 The OCDS can be adapted to meet your needs. Whether purchasing medicines, running a municipal recycling program or building an airport, the OCDS helps you organize and publish all relevant data and documents during the process.
 

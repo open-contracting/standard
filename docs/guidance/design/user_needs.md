@@ -19,7 +19,7 @@ As you start implementing OCDS, consider how you will engage with data users, an
 
 ## Value for money in procurement
 
-Open contracting data can help officials to get good value for money on the goods and services in the procurement process, and can also help in identifying whether value for money has been achieved in concluded contracts.
+Open contracting data can help officials to get good value for money on the goods, services and works in the procurement process, and can also help in identifying whether value for money has been achieved in concluded contracts.
 
 These users want to analyze trends in prices and supplier performance, including in terms of quality and duration.
 
@@ -45,6 +45,6 @@ Forward looking and timely information is particularly important for private sec
 
 ## Monitoring service delivery
  
-Monitoring groups want to ensure that public contracting delivers value to citizens in terms of quality of goods, works, and services provided. To monitor contracting effectively involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground.
+Monitoring groups want to ensure that public contracting delivers value to citizens in terms of quality of goods, services and works provided. To monitor contracting effectively involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground.
 
 Data concerning budgets, delivery location and subcontracting arrangements are particularly useful for those involved in contract monitoring. 

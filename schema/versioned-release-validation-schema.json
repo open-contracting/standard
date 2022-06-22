@@ -340,8 +340,8 @@
                 "openCodelist": false,
                 "enum": [
                   "goods",
-                  "works",
                   "services",
+                  "works",
                   null
                 ]
               },
@@ -1483,14 +1483,14 @@
         "providerOrganization": {
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods, services and works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         },
         "receiverOrganization": {
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods , services and works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         }
