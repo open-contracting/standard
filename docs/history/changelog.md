@@ -83,7 +83,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
     * 'COFOG'
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
-  * [#1530](https://github.com/open-contracting/standard/pull/1530) Update description of CPC to refer to goods, services and works. Update description of CUCOP to refer to goods, services, works, and leases.
+  * [#1530](https://github.com/open-contracting/standard/pull/1530) Update description of CPV and CPC to refer to goods, services and works. Update description of CUCOP to refer to goods, services, works, and leases.
 
 * `documentType.csv`:
   * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
