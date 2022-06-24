@@ -262,6 +262,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1375](https://github.com/open-contracting/standard/pull/1375) Update guidance for empty fields in the merging documentation.
 * [#1466](https://github.com/open-contracting/standard/pull/1466) Reference worked examples in release and record reference documentation.
 * [#1466](https://github.com/open-contracting/standard/pull/1482) Add examples in release reference documentation.
+* [#1531](https://github.com/open-contracting/standard/pull/1531) Update wording on change history. Add guidance on change history options. Add a working example on no change history.
 
 ## [1.1.5] - 2020-08-20
 
