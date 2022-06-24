@@ -1,8 +1,8 @@
-```{workedexample} Change history
+```{workedexample} Incremental updates
 :tags: release,record
 ```
 
-# Change history
+# Incremental updates
 
 The following example shows how to publish data about a contracting process. Publish a release for each event in the process and update the record each time you publish a release.
 
@@ -24,13 +24,13 @@ The publisher creates a release to represent this notice. The release uses the '
 
 The publisher also creates a record for the new contracting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled release is nearly identical to this release. Compare the release and the record using the box below.
 
-```{jsoninclude} ../../examples/change_history/tender.json
+```{jsoninclude} ../../examples/incremental_updates/tender.json
 :jsonpointer: /releases
 :expand: tender, tag, documents
 :title: release
 ```
 
-```{jsoninclude} ../../examples/change_history/records/tender.json
+```{jsoninclude} ../../examples/incremental_updates/records/tender.json
 :jsonpointer: /records
 :expand: compiledRelease, tender, documents
 :title: record
@@ -46,13 +46,13 @@ The previous release is not changed. In the new release, the publisher adds a li
 
 The record now has two immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. Also, the field `tender.hasEnquiries` has more than one entry in the versioned release.
 
-```{jsoninclude} ../../examples/change_history/tenderUpdate.json
+```{jsoninclude} ../../examples/incremental_updates/tenderUpdate.json
 :jsonpointer: /releases
 :expand: tender, tag, documents
 :title: release
 ```
 
-```{jsoninclude} ../../examples/change_history/records/tenderUpdate.json
+```{jsoninclude} ../../examples/incremental_updates/records/tenderUpdate.json
 :jsonpointer: /records
 :expand: compiledRelease, tender, documents
 :title: record
@@ -68,13 +68,13 @@ The `parties` array has a new entry with the supplier's information. The complet
 
 The publisher adds the new release to the record. They also update the compiled and versioned releases. The compiled release reflects the changes to the `awards`, `tender` and `parties` sections. The versioned release includes a new change for the `tender.status` field.
 
-```{jsoninclude} ../../examples/change_history/award.json
+```{jsoninclude} ../../examples/incremental_updates/award.json
 :jsonpointer: /releases
 :expand: parties, tender, awards, value, suppliers, contractPeriod
 :title: release
 ```
 
-```{jsoninclude} ../../examples/change_history/records/award.json
+```{jsoninclude} ../../examples/incremental_updates/records/award.json
 :jsonpointer: /records
 :expand: compiledRelease, parties, tender, awards, value, suppliers, contractPeriod
 :title: record
@@ -88,13 +88,13 @@ The publisher creates a new OCDS release using the 'contract' tag. They include 
 
 The record gets updated to include the new release. The compiled and versioned release now have the new `contract` section. There are no updates to other sections.
 
-```{jsoninclude} ../../examples/change_history/contract.json
+```{jsoninclude} ../../examples/incremental_updates/contract.json
 :jsonpointer: /releases
 :expand: contracts, value, period
 :title: release
 ```
 
-```{jsoninclude} ../../examples/change_history/records/contract.json
+```{jsoninclude} ../../examples/incremental_updates/records/contract.json
 :jsonpointer: /records
 :expand: compiledRelease, contracts, value, period
 :title: record
@@ -122,13 +122,13 @@ OCDS can be used to combine data from different systems. For more information re
 
 The publisher adds the new release from the finance system to the releases list in the OCDS record. The compiled and versioned releases get updated to include the new transaction.
 
-```{jsoninclude} ../../examples/change_history/implementation.json
+```{jsoninclude} ../../examples/incremental_updates/implementation.json
 :jsonpointer: /releases
 :expand: contracts, implementation, transactions
 :title: release
 ```
 
-```{jsoninclude} ../../examples/change_history/records/implementation.json
+```{jsoninclude} ../../examples/incremental_updates/records/implementation.json
 :jsonpointer: /records
 :expand: compiledRelease, contracts, implementation, transactions
 :title: record
@@ -144,13 +144,13 @@ Note that contract amendments in OCDS involves more modelling considerations. Re
 
 The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release shows new entries for the contract’s value and end date.
 
-```{jsoninclude} ../../examples/change_history/contractAmendment.json
+```{jsoninclude} ../../examples/incremental_updates/contractAmendment.json
 :jsonpointer: /releases
 :expand: contracts, amendments
 :title: release
 ```
 
-```{jsoninclude} ../../examples/change_history/records/contractAmendment.json
+```{jsoninclude} ../../examples/incremental_updates/records/contractAmendment.json
 :jsonpointer: /records
 :expand: compiledRelease, contracts, amendments
 :title: record

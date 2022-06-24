@@ -42,7 +42,7 @@ Your choice of architecture can determine how frequently your data is updated, w
 :hidden:
 
 build/system_architectures
-build/change_history
+build/incremental_updates
 build/easy_releases
 build/merging
 ```
