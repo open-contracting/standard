@@ -44,6 +44,7 @@ Your choice of architecture can determine how frequently your data is updated, w
 build/system_architectures
 build/incremental_updates
 build/full_updates
+build/no_change_history
 build/merging
 ```
 
