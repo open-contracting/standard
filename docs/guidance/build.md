@@ -42,6 +42,7 @@ Your choice of architecture can determine how frequently your data is updated, w
 :hidden:
 
 build/system_architectures
+build/change_history_options
 build/incremental_updates
 build/full_updates
 build/no_change_history
