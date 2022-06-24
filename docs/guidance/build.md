@@ -43,7 +43,7 @@ Your choice of architecture can determine how frequently your data is updated, w
 
 build/system_architectures
 build/incremental_updates
-build/easy_releases
+build/full_updates
 build/merging
 ```
 

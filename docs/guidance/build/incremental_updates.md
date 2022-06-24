@@ -13,7 +13,7 @@ For an introduction to the concept of a change history, see the [releases and re
 ```
 
 ```{note}
-For guidance on how to set the `id` field on each release, see the [easy releases](easy_releases) worked example.
+For guidance on how to set the `id` field on each release, see the [full updates](full_updates) worked example.
 ```
 
 ## Tender
