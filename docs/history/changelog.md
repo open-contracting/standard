@@ -211,7 +211,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
   * [#1529](https://github.com/open-contracting/standard/pull/1529) `Budget`, `Budget.id`, `Budget.description`, `Budget.amount`, `Budget.project`, `Budget.uri`, `Budget.source`, `tender.value`, `tender.minValue`, `awards.value`, `Transaction`, to replace "contracting process" with "contract(s)"
-  * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` standardize reference to good(s), service(s) and/or work(s)
+  * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` standardize reference to goods, services and/or works.
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
 
 * Remove confusing terminology:
