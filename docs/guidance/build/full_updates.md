@@ -4,7 +4,7 @@
 
 # Full updates
 
-OCDS encourages the use of the [releases and records](../../primer/releases_and_records) model in order to publish up-to-date, timely data. However, sometimes publishers can't fully support the model, because historic data of contracting (or planning) processes is not stored in the source system(s). In such case, the publisher can produce only one release for each process, and the release gets overridden with new updates.
+OCDS encourages publishers to use the [releases and records](../../primer/releases_and_records) to publish both a change history and the current state of each contracting (or planning) process. However, sometimes publishers can't publish a change history because their [system architecture](../build/system_architectures) does not store historic releases. In such cases, implementers can publish full updates by making a single release per process available and updating the release `id` and `date` each time there is a change.
 
 In this situation, it is possible to still meet OCDS requirements by following a strategy to build different release identifiers each time the data changes in a contracting (or planning) process. Over the course of multiple updates, third parties would be able to build their own data store by periodically downloading or scraping the published data, and identifying the updates using release identifiers.
 
