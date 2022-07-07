@@ -122,7 +122,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 :title: Record
 ```
 
-### Example 3: Amendments in a Easy Releases scenario
+### Example 3: Amendments in full updates
 
 The [Full updates guidance](../build/full_updates) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
 

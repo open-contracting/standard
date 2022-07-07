@@ -76,7 +76,7 @@ The structure of the versioned release is described by the {download}`versioned 
 
 ### Merge routine
 
-To create a compiled or versioned release when multiples individual releases are available, you must:
+To create a compiled or versioned release when multiple individual releases are available, you must:
 
 1. Get all releases with the same `ocid` value and same OCDS version
 1. Order the releases in chronological order by `date`

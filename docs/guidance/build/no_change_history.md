@@ -4,9 +4,7 @@
 
 # No change history
 
-OCDS supports and encourages the publication of the change history of a contracting process. But, for some publishers, publishing this information is not feasible. For example, if your system doesn’t implement versioning or track changes, or if you are collecting non-OCDS data from a source and republishing it as OCDS. Similarly, if you publish historical information that won’t change anymore, you might have only the latest state of the contracting process, without its change history.
-
-If this is your case, the best way to publish this information in OCDS is in a compiled release, as a compiled release represents the state of the contracting process at the time of publication.
+If you cannot use releases to publish incremental or full updates for the reasons outlined in [Change History Implementation Options](change_history_options.md), you ought to publish the current state of each contracting process using compiled releases.
 
 ```{note}
 For an introduction to the concept of a change history, see the [releases and records](../../primer/releases_and_records) primer.

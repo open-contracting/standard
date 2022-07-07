@@ -4,7 +4,7 @@
 
 # Incremental updates
 
-The following example shows how to publish data about a contracting process. Publish a release for each event in the process and update the record each time you publish a release.
+The following example shows how to publish data using the releases and records model: publish a release for each event in the process and update the record each time you publish a release.
 
 Each subsection refers to a stage or event in the contracting process lifetime.
 
