@@ -83,7 +83,6 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
     * 'COFOG'
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
-  * [#1530](https://github.com/open-contracting/standard/pull/1530) Update description of CPV and CPC to refer to goods, services and works. Update description of CUCOP to refer to goods, services, works, and leases.
 
 * `documentType.csv`:
   * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
@@ -139,22 +138,16 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1232](https://github.com/open-contracting/standard/pull/1232) Clarify the description of 'supplier'.
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
-  * [#1530](https://github.com/open-contracting/standard/pull/1530) Alter order of codes to reflect consistent reference to goods, services and works.
 
-* `releaseTag`:
+* `releaseTag.csv`:
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
   * [#1415](https://github.com/open-contracting/standard/pull/1415) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
-* [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
-
-* `procurementCategory`:
-  * [#1530](https://github.com/open-contracting/standard/pull/1530) Alter order of codes to reflect consistent reference to goods, services and works.
-
-* `extendedProcurementCategory`:
-  * [#1530](https://github.com/open-contracting/standard/pull/1530) Alter order of codes to reflect consistent reference to goods, services and works.
+* [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
+* [#1530](https://github.com/open-contracting/standard/pull/1530) Use consistent wording for "goods, services and/or works" in the `classificationScheme`, `extendedProcurementCategory`, `partyRole` and `procurementCategory` codelists.
 
 ### Schema
 
@@ -212,7 +205,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
   * [#1529](https://github.com/open-contracting/standard/pull/1529) `Budget`, `Budget.id`, `Budget.description`, `Budget.amount`, `Budget.project`, `Budget.uri`, `Budget.source`, `tender.value`, `tender.minValue`, `awards.value`, `Transaction`, to replace "contracting process" with "contract(s)"
-  * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` standardize reference to goods, services and/or works.
+  * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` to use consistent wording for "goods, services and/or works".
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
 
 * Remove confusing terminology:
