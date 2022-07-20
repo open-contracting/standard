@@ -35,16 +35,6 @@ The OCDS can be adapted to meet your needs. Whether purchasing medicines, runnin
 
 The OCDS is not an electronic procurement system or database. But it can inform how data is collected, stored and published in these systems. The OCDS can help make sure that the contracting data you collect and publish meet global best practices and are fit-for-purpose to meet the needs of a range of different users.
 
-The OCDS was also designed to maximize the utility of contracting information to perform analysis on:
-
-* Generating market opportunities for the private sector to fairly compete for public contracts 
-* Achieving value for money for government
-* Strengthening the transparency, accountability and integrity of public contracting
-* Monitoring the effectiveness of service delivery
-* Improving internal efficiency
-
-**Resource**: See our [Open Contracting Use case guide](https://docs.google.com/document/d/1YXPDn_psBVPdeV6dE21TepLW7nEUUZEWDYZixIL51MQ/edit) 
-
 The OCDS helps to increase transparency, enables deeper analysis of contracting data, and facilitates the use of data by a wide range of stakeholders. [Academic research](https://www.open-contracting.org/impact/evidence/) shows that improved openness and transparency is good for public integrity, value for money and competition when it is linked to systemic changes that allow people to use the information. [More than 50 countries and cities, from Argentina to Zambia](https://www.open-contracting.org/impact/), are pursuing open contracting reforms to make public procurement fairer and more efficient.
 
 To facilitate publication of contracting data to meet a variety of needs, the OCDS provides:
@@ -59,7 +49,8 @@ To facilitate publication of contracting data to meet a variety of needs, the OC
 
 * [Implement Open Contracting](https://www.open-contracting.org/implement/)
 * [Impact of Open Contracting](https://www.open-contracting.org/impact/)
-* [Why implement OCDS](https://www.open-contracting.org/data-standard/)
+* [Why implement OCDS?](https://www.open-contracting.org/data-standard/)
+* [Open Contracting Data Use Cases](https://www.open-contracting.org/resources/open-contracting-data-use-cases/)
 * [Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
 * [What is open data?](https://opendatahandbook.org/guide/en/what-is-open-data/)
 * [What are data standards?](https://standards.theodi.org/introduction/what-are-open-standards-for-data/)
