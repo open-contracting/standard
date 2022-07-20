@@ -113,7 +113,7 @@ The example below includes three OCDS releases:
 
 In the implementation release:
 
-* Milestones have been set for the delivery and payment of goods and services related to the project. Contract information is released along with the implementation milestones.
+* Milestones have been set for the delivery and payment of goods, services and works related to the project. Contract information is released along with the implementation milestones.
 
 In the first implementation update release:
 

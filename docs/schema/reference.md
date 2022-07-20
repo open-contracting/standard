@@ -218,9 +218,9 @@ Apart from documents, the majority of planning information is held within the bu
 
 ### Tender
 
-The tender section includes details of the announcement that an organization intends to source some particular goods, works or services, and to establish one or more contract(s) for these.
+The tender section includes details of the announcement that an organization intends to source some particular goods, services or works and to establish one or more contract(s) for these.
 
-It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and can also be used to record details of a completed tender stage, including details of bids received. 
+It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods, services or works and can also be used to record details of a completed tender stage, including details of bids received. 
 
 ````{admonition} Example
 :class: hint
