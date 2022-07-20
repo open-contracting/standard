@@ -130,9 +130,7 @@ If your [mapping](map) identified data elements which don't map to OCDS or an ex
 
 **Action:** Share your extensions with the OCDS community on [GitHub](https://github.com/open-contracting/standard/issues).
 
-**Resource:** [Creating OCDS extension webinar video](https://youtu.be/1uTik92PWfo).
-
-**Resource:** [Webinar slide deck](https://docs.google.com/presentation/d/16poTfulCN1oYctfWnMJ9YDRrX1GJMi1MuOmFlOJMC5w/edit).
+**Resource:** [Webinar: Creating OCDS Extensions](https://youtu.be/1uTik92PWfo) ([presentation](https://docs.google.com/presentation/d/16poTfulCN1oYctfWnMJ9YDRrX1GJMi1MuOmFlOJMC5w/edit))
 
 ## Keep users in mind as you build
 
