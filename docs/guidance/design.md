@@ -75,7 +75,7 @@ Each of the goals above have different data needs. These needs ought to inform y
 
 **Resource**: [Open Contracting Data Use Cases](https://www.open-contracting.org/resources/open-contracting-data-use-cases/)
 
-**Resource:** [Red flags for integrity methodology guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/) ([red flags to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/12PFkUlQH09jQvcnORjcbh9-8d-NnIuk4mAQwdGiXeSM/edit#gid=0))
+**Resource:** [Red Flags for Integrity Guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/) ([red flags to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/12PFkUlQH09jQvcnORjcbh9-8d-NnIuk4mAQwdGiXeSM/edit#gid=0))
 
 **Resource:** [Indicators to diagnose the performance of a procurement market guide](https://www.open-contracting.org/resources/indicators-to-diagnose-the-performance-of-a-procurement-market/) ([procurement indicators to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222))
 
