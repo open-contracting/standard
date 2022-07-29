@@ -165,4 +165,6 @@ If you can't collect enough real data for testing, then you ought to create real
 
 **Resource:** [How to check your OCDS data validates](https://www.open-contracting.org/2018/05/09/check-ocds-data-validates/)
 
+**Resource:** [OCDS Data Quality Checklist](https://www.open-contracting.org/resources/ocds-data-quality-checklist/)
+
 [Next phase: Publish](publish)
