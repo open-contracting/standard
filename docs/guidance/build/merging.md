@@ -4,7 +4,7 @@
 
 # Updates and Deletions
 
-The [merging documentation](../../schema/merging) specifies how individual releases are merged into compiled releases (the latest version of the contracting process) and versioned releases (the change history for each field), which form part of a [record](../../primer/releases_and_records).
+The [merging documentation](../../schema/merging) specifies how individual releases are merged into compiled releases (the latest version of the contracting or planning process) and versioned releases (the change history for each field), which form part of a [record](../../primer/releases_and_records).
 
 The merge routine also allows a publisher to correct a publication error by deleting a field, object or array entry from the compiled release. To do so, a publisher sets the field's value to `null` in an individual release (more on this below). As such, as a publisher, it is important to **never use a `null` value in an individual release, unless you intend to delete that field**. If you don't have a value to assign to a field, simply omit the field from the JSON. Using `null` values correctly means that publishers and/or users can create compiled releases reliably.
 
@@ -16,7 +16,7 @@ A public procurement agency publishes a release to announce an opportunity on Ja
 
 The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
 
-Through these individual releases, the agency provides real-time data about the contracting process.
+Through these individual releases, the agency provides real-time data about the contracting (or planning) process.
 
 In each release, the agency also updates the record, which combines all the releases to date. In the final record:
 

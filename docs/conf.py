@@ -60,7 +60,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'standard_theme'
+html_theme = 'standard_theme'  # 'pydata_sphinx_theme'
 html_theme_path = [standard_theme.get_html_theme_path()]
 html_favicon = '_static/favicon-16x16.ico'
 

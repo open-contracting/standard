@@ -130,12 +130,12 @@
       "properties": {
         "ocid": {
           "title": "Open contracting process identifier",
-          "description": "A globally unique identifier for the contracting process that the record describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
+          "description": "A globally unique identifier for the contracting process that the record describes. Alternatively, this identifier can refer to a planning process or a single stage of a multi-stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
           "type": "string"
         },
         "releases": {
           "title": "Releases",
-          "description": "All the releases about the contracting process at the time of the record's publication. The releases must be sorted in date order, from oldest to newest.",
+          "description": "All the releases about the contracting (or planning) process at the time of the record's publication. The releases must be sorted in date order, from oldest to newest.",
           "oneOf": [
             {
               "title": "Linked releases",

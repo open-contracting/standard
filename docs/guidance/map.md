@@ -15,7 +15,7 @@ This phase is about documenting your sources of contracting data, and documentin
 
 When starting out, consider working in parallel on the map and build phases, because the choices you make at the build stage might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
 
-If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for guidance on how to identify which OCDS fields match your local concepts.
+If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for guidance on how to identify which OCDS fields match your local concepts.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
@@ -37,9 +37,9 @@ As described in the [Field-Level Mapping Template Guidance](https://www.open-con
 
 ## Identify your data sources
 
-To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/technical-assessment-template/) guides you through this process.
+To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting (and planning) processes. The [Technical Assessment Template](https://www.open-contracting.org/resources/technical-assessment-template/) guides you through this process.
 
-If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, you should use the template to identify those data sources, too.
+If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, you should use the template to identify those data sources, too.
 
 Once complete, you can:
 
@@ -123,7 +123,7 @@ Before using extensions, double-check whether the data elements can be disclosed
 * [Worked example: Organization classification](map/organization_classifications)
 ```
 
-If you do need to use an extension, consider whether the new fields will affect how users interpret existing fields. If so, you can add information to existing fields, to avoid misinterpretation – in addition to adding the new fields.
+If you do need to use an extension, consider whether the new fields will affect how users interpret existing fields. If so, you can add information to existing fields, to avoid misinterpretation – in addition to adding the new fields.
 
 For example, you have created an extension to add a new field to indicate whether a contracting process is about the disposal of a state asset (like a vehicle). If the `tender.title` field refers only to the vehicle, then users who are unaware of the new field might misinterpret the contracting process as being about its purchase. To avoid misinterpretation, you can add a "Disposal: " prefix to the `tender.title` field.
 
@@ -143,7 +143,7 @@ map/extensions
 
 ## Link OCDS with other standards
 
-Not all information that is related to a contracting process belongs in OCDS. For example, a company's annual filings and incorporation status are typically managed in a company registry, outside the lifecycle of a contracting process.
+Not all information that is related to a contracting (or planning) process belongs in OCDS. For example, a company's annual filings and incorporation status are typically managed in a company registry, outside the lifecycle of a contracting process.
 
 For guidance on integrating your OCDS data with these related datasets, refer to [Linked standards](map/linked_standards).
 
