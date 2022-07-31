@@ -250,6 +250,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * [#1450](https://github.com/open-contracting/standard/pull/1450) Replace a repeated example in schema/merging/ with a link to guidance/build/merging/.
 
+* [#1480](https://github.com/open-contracting/standard/pull/1480) Add a voluntary, "strict" schema that adds in missing JSON Schema validation keywords, removes deprecated fields and codes, removes deprecated types, etc.
+
 ### Documentation
 
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier.
