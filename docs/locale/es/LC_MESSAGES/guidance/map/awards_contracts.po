@@ -5,15 +5,17 @@
 # 
 # Translators:
 # James McKinney, 2021
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-31 14:33-0400\n"
+"POT-Creation-Date: 2022-01-13 09:12-0300\n"
 "PO-Revision-Date: 2021-07-31 17:57+0000\n"
-"Last-Translator: James McKinney, 2021\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,6 +49,11 @@ msgid ""
 "awards and contracts occurring in different types of contracting processes "
 "using OCDS."
 msgstr ""
+"OCDS define un modelo común para la divulgación de datos estructurados sobre"
+" los procesos de contratación pública realizados en cualquier jurisdicción, "
+"incluidos los datos sobre adjudicaciones y contratos. Los ejemplos de esta "
+"guía explican cómo modelar adjudicaciones y contratos en diferentes tipos de"
+" procesos de contratación utilizando OCDS."
 
 #: ../../docs/guidance/map/awards_contracts.md:7
 msgid "Definitions"
@@ -117,7 +124,7 @@ msgstr ""
 "acuerdo marco"
 
 #: ../../docs/guidance/map/awards_contracts.md:25
-#: ../../docs/guidance/map/awards_contracts.md:153
+#: ../../docs/guidance/map/awards_contracts.md:149
 msgid "Purchase orders"
 msgstr "Órdenes de compra"
 
@@ -144,8 +151,8 @@ msgstr ""
 msgid ""
 "The OCDS schema and documentation are not clear what, precisely, is meant by"
 " 'contract'. A revision of the definition of `Contract` is being considered "
-"for a future version of the standard ([GitHub issue](https://github.com"
-"/open-contracting/standard/issues/896))."
+"for a future version of the standard ([GitHub "
+"issue](https://github.com/open-contracting/standard/issues/896))."
 msgstr ""
 "El esquema y la documentación de OCDS no son claros en qué precisamente se "
 "entiende por 'contrato'. Se está considerando una revisión de la definición "
@@ -224,80 +231,57 @@ msgstr ""
 #: ../../docs/guidance/map/awards_contracts.md:85
 msgid ""
 "OCDS separates data about the contract award and data about the signed "
-"contract into the `awards` and `contracts` sections respectively. Source "
-"systems can contain data on awards, on contracts, or on both."
+"contract into the `awards` and `contracts` sections respectively. `Award` "
+"objects (within `awards`) and `Contract` objects (within `contracts`) are "
+"connected by setting `awards.id` and `contracts.awardID` to the same value. "
+"Source systems can contain data on awards, on contracts, or on both."
 msgstr ""
 "OCDS separa los datos sobre la adjudicación del contrato y los datos sobre "
-"el contrato firmado en las secciones de `awards` y` contracts` "
-"respectivamente. Los sistemas de origen pueden tener datos sobre "
-"adjudicaciones, contratos o ambos."
+"el contrato firmado en las secciones `awards` y `contracts` respectivamente."
+" Los objetos `Award` (dentro de `awards`) y los objetos `Contract` (dentro "
+"de `contracts`) se conectan estableciendo `awards.id` y `contracts.awardID` "
+"con al mismo valor. Los sistemas de origen pueden contener datos sobre "
+"adjudicaciones, sobre contratos o sobre ambos."
 
 #: ../../docs/guidance/map/awards_contracts.md:87
+msgid "If the data in the source systems relates to:"
+msgstr "Si los datos en los sistemas fuente se relacionan con:"
+
+#: ../../docs/guidance/map/awards_contracts.md:88
 msgid ""
-"If the data in the source system relates only to contract awards, then only "
-"the `award` section of OCDS ought to be populated, unless the law governing "
-"procurement permits no changes between award and signature of a contract, in"
-" which case the `contract` section can be populated."
+"both awards and contracts, then both `awards` and `contracts` ought to be "
+"populated."
 msgstr ""
-"Si los datos en el sistema origen se relacionan sólo con adjudicaciones de "
-"contratos, entonces sólo se debería completar la sección de `awards` de "
-"OCDS, a menos que la ley que rige las adquisiciones no permita cambios entre"
-" la adjudicación y la firma de un contrato, en cuyo caso la sección de "
-"`contracts` puede ser poblada."
+"ambos adjudicaciones y contratos, entonces ambos `awards` y `contracts` "
+"deberían ser completados."
 
 #: ../../docs/guidance/map/awards_contracts.md:89
-msgid ""
-"If the data in the source system relates only to the signed contract and no "
-"changes are permitted between the award and signature of a contract, then:"
-msgstr ""
-"Si los datos en el sistema origen se relacionan sólo con el contrato firmado"
-" y no se permiten cambios entre la adjudicación y la firma de un contrato, "
-"entonces:"
+msgid "only awards, then only `awards` ought to be populated."
+msgstr "solo adjudicaciones, entonces solo `awards` debería ser completado."
 
-#: ../../docs/guidance/map/awards_contracts.md:91
+#: ../../docs/guidance/map/awards_contracts.md:90
 msgid ""
-"Add an `Award` object to `awards` and a `Contract` object to `contracts`"
+"only contracts, then `contracts`, `awards.id`, and `awards.suppliers` ought "
+"to be populated."
 msgstr ""
-"Agregue un objeto `Award` a` awards` y un objeto `Contract` a` contracts`"
+"solo contratos, entonces `contracts`, `awards.id`, y `awards.suppliers` "
+"deberían ser completados."
 
 #: ../../docs/guidance/map/awards_contracts.md:92
-msgid "Set `awards.id` and `contracts.id` to the same value"
-msgstr "Establezca `awards.id` y` contracts.id` con el mismo valor"
-
-#: ../../docs/guidance/map/awards_contracts.md:93
 msgid ""
-"Populate the `awards.value`, `awards.contractPeriod` and `awards.items` "
-"fields with the initial contract value, period and items respectively"
+"If the contract (e.g. its value, period or items) is subsequently updated or"
+" amended, update only the corresponding fields in `contracts`. The fields in"
+" `awards` stay the same."
 msgstr ""
-"Rellene los campos `awards.value`,` awards.contractPeriod` y `awards.items` "
-"con el valor, el período y los artículos iniciales del contrato, "
-"respectivamente."
+"Si el contrato (por ejemplo, su valor, período o artículos) se actualiza o "
+"modifica posteriormente, actualice solo los campos correspondientes en "
+"`contracts`. Los campos en `awards` permanecen iguales."
 
 #: ../../docs/guidance/map/awards_contracts.md:94
-msgid ""
-"If the contract value, period or items are subsequently updated, populate "
-"the `contracts.value`, `contracts.period` and `contracts.items` fields with "
-"the updated value"
-msgstr ""
-"Si el valor del contrato, el período o los artículos se actualizan "
-"posteriormente, complete los campos `contracts.value`, `contracts.period`  y"
-" `contracts.items` con el valor actualizado"
-
-#: ../../docs/guidance/map/awards_contracts.md:96
-msgid ""
-"The above approach is also applicable to direct call-offs from framework "
-"agreements with multiple suppliers, since the call-off is, conceptually, an "
-"award."
-msgstr ""
-"El enfoque anterior también es aplicable a compras directas en acuerdos "
-"marco con múltiples proveedores, ya que la compra directa es, "
-"conceptualmente, una adjudicación."
-
-#: ../../docs/guidance/map/awards_contracts.md:98
 msgid "Example: Changes between award and contract"
 msgstr "Ejemplo: Cambios entre la adjudicación y el contrato"
 
-#: ../../docs/guidance/map/awards_contracts.md:100
+#: ../../docs/guidance/map/awards_contracts.md:96
 msgid ""
 "The Zambia Public Procurement Authority provides a central e-procurement "
 "system, used by procuring entities to manage the tender and award stages of "
@@ -308,7 +292,7 @@ msgstr ""
 "contratantes para administrar las etapas de licitación y adjudicación de los"
 " procesos de contratación, que publica datos OCDS."
 
-#: ../../docs/guidance/map/awards_contracts.md:102
+#: ../../docs/guidance/map/awards_contracts.md:98
 msgid ""
 "Once an award is published by the e-procurement system, there is a 10-day "
 "standstill period for unsuccessful bidders to appeal the award decision."
@@ -317,7 +301,7 @@ msgstr ""
 " hay un período de inactividad de 10 días para que los oferentes que no "
 "tengan éxito apelen la decisión de adjudicación."
 
-#: ../../docs/guidance/map/awards_contracts.md:104
+#: ../../docs/guidance/map/awards_contracts.md:100
 msgid ""
 "If an appeal is made and upheld, then the award is cancelled. If no appeals "
 "are upheld by the end of the standstill period, then a contract is signed "
@@ -331,7 +315,7 @@ msgstr ""
 "contratación electrónica. No se publican ni actualizan datos OCDS desde esta"
 " etapa del proceso de contratación en adelante."
 
-#: ../../docs/guidance/map/awards_contracts.md:106
+#: ../../docs/guidance/map/awards_contracts.md:102
 msgid ""
 "In this example, the Ministry of Finance uses the e-procurement system to "
 "solicit bids for the development of a new website. A contract is awarded to "
@@ -342,7 +326,7 @@ msgstr ""
 "web. Se otorga un contrato a 360nx Designs por 3,000,000 ZMK, a través del "
 "sistema de adquisición electrónica."
 
-#: ../../docs/guidance/map/awards_contracts.md:108
+#: ../../docs/guidance/map/awards_contracts.md:104
 msgid ""
 "An unsuccessful bidder appeals the award decision and the appeal is upheld, "
 "resulting the award being cancelled."
@@ -350,7 +334,7 @@ msgstr ""
 "Un licitador no ganador apela la decisión de adjudicación y la apelación se "
 "confirma, lo que resulta en la cancelación de la adjudicación."
 
-#: ../../docs/guidance/map/awards_contracts.md:110
+#: ../../docs/guidance/map/awards_contracts.md:106
 msgid ""
 "If both the `award` and `contract` sections of OCDS had been populated when "
 "the award was made through the e-procurement system, this would have "
@@ -362,20 +346,20 @@ msgstr ""
 "electrónica, esto habría resultado en la presencia de un contrato en los "
 "datos de OCDS que nunca existió en realidad."
 
-#: ../../docs/guidance/map/awards_contracts.md:112
+#: ../../docs/guidance/map/awards_contracts.md:108
 msgid "Awards and award notices"
-msgstr ""
+msgstr "Adjudicaciones y avisos de adjudicación"
 
-#: ../../docs/guidance/map/awards_contracts.md:114
+#: ../../docs/guidance/map/awards_contracts.md:110
 msgid ""
-"Award notices are used by procuring entities to disclose award decisions, "
-"i.e. the value and/or items awarded to each supplier."
+"Award notices are used by buyers and procuring entities to disclose award "
+"decisions, i.e. the value and/or items awarded to each supplier."
 msgstr ""
-"Los avisos de adjudicación son utilizados por las entidades contratantes "
-"para divulgar decisiones de adjudicación, es decir, el valor y/o los "
-"artículos adjudicados a cada proveedor."
+"Los compradores y las entidades contratantes utilizan los avisos de "
+"adjudicación para divulgar las decisiones de adjudicación, es decir, el "
+"valor y/o los artículos adjudicados a cada proveedor adjudicado."
 
-#: ../../docs/guidance/map/awards_contracts.md:116
+#: ../../docs/guidance/map/awards_contracts.md:112
 msgid ""
 "A single award notice can be used to disclose many award decisions; however "
 "in order for an award in OCDS to communicate a direct relationship between "
@@ -388,11 +372,11 @@ msgstr ""
 "proporciona los artículos y el valor de los mismos, dichos avisos deben "
 "dividirse en múltiples adjudicaciones en OCDS."
 
-#: ../../docs/guidance/map/awards_contracts.md:118
+#: ../../docs/guidance/map/awards_contracts.md:114
 msgid "Example: Modelling award notices with multiple decisions"
 msgstr "Ejemplo: modelar avisos de adjudicación con decisiones múltiples"
 
-#: ../../docs/guidance/map/awards_contracts.md:120
+#: ../../docs/guidance/map/awards_contracts.md:116
 msgid ""
 "In Paraguay, a single award notice is used to disclose many award decisions."
 " Detailed information is provided about each individual award decision; "
@@ -404,7 +388,7 @@ msgstr ""
 "decisión de adjudicación individual; sin embargo, todas las decisiones en un"
 " aviso de adjudicación comparten el mismo identificador. Por ejemplo:"
 
-#: ../../docs/guidance/map/awards_contracts.md:122
+#: ../../docs/guidance/map/awards_contracts.md:118
 msgid ""
 "![Example award notice from "
 "Paraguay](../../_static/png/awards_example_paraguay.png)"
@@ -412,7 +396,7 @@ msgstr ""
 "![Ejemplo de aviso de adjudicación de "
 "Paraguay](../../_static/png/awards_example_paraguay.png)"
 
-#: ../../docs/guidance/map/awards_contracts.md:124
+#: ../../docs/guidance/map/awards_contracts.md:120
 msgid ""
 "Using a single award object to model such a notice in OCDS would make it "
 "impossible to determine which items related to which suppliers or how much "
@@ -423,7 +407,7 @@ msgstr ""
 "proveedores o cuánto del valor total de adjudicación está relacionado con "
 "cada proveedor:"
 
-#: ../../docs/guidance/map/awards_contracts.md:132
+#: ../../docs/guidance/map/awards_contracts.md:128
 msgid ""
 "For the award object in OCDS to communicate a direct relationship between "
 "items, suppliers, and values, Paraguay's award notice is split into multiple"
@@ -434,7 +418,7 @@ msgstr ""
 " se divide en varios objetos de adjudicación, uno para cada par "
 "proveedor/valor en el aviso."
 
-#: ../../docs/guidance/map/awards_contracts.md:140
+#: ../../docs/guidance/map/awards_contracts.md:136
 msgid ""
 "There are no identifiers for the individual supplier/value pairings on the "
 "original award notice, so it is necessary to create a new identifier for "
@@ -450,28 +434,30 @@ msgstr ""
 "por ejemplo, en Paraguay se usa una combinación del identificador de aviso "
 "de adjudicación, el nombre del proveedor y un número consecutivo."
 
-#: ../../docs/guidance/map/awards_contracts.md:148
+#: ../../docs/guidance/map/awards_contracts.md:144
 msgid "View the example in JSON"
 msgstr "Vea el ejemplo en JSON"
 
 #: ../../docs/guidance/map/awards_contracts.md:1
 msgid ""
 "[View the example in Paraguay’s "
-"API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-"
-"03ad3f-340885-1)"
+"API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)"
 msgstr ""
 "[Ver el ejemplo en la API de "
-"Paraguay](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-"
-"03ad3f-340885-1)"
+"Paraguay](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)"
 
-#: ../../docs/guidance/map/awards_contracts.md:155
+#: ../../docs/guidance/map/awards_contracts.md:151
 msgid ""
 "A purchase order is a specific type of contract, an official document issued"
 " by a buyer committing to pay a supplier for the supply of specific goods, "
 "works or services to be delivered in the future."
 msgstr ""
+"Una orden de compra es un tipo específico de contrato, un documento oficial "
+"emitido por un comprador que se compromete a pagar a un proveedor por el "
+"suministro de bienes, obras o servicios específicos que se entregarán en el "
+"futuro."
 
-#: ../../docs/guidance/map/awards_contracts.md:157
+#: ../../docs/guidance/map/awards_contracts.md:153
 msgid ""
 "Purchase orders can be issued against an existing contract, or if no prior "
 "contract exists then acceptance of a purchase order by a supplier forms a "
@@ -481,7 +467,7 @@ msgstr ""
 "existe un contrato previo, la aceptación de una orden de compra por parte de"
 " un proveedor forma un contrato entre el comprador y el proveedor."
 
-#: ../../docs/guidance/map/awards_contracts.md:159
+#: ../../docs/guidance/map/awards_contracts.md:155
 msgid ""
 "Purchase orders that are made against contracts with a definite quantity or "
 "value of items ought to not be disclosed in the `contracts` section of OCDS,"
@@ -493,11 +479,11 @@ msgstr ""
 "`contracts` de OCDS, por el riesgo de contar dos veces los artículos en la "
 "orden de compra y el contrato al que se refiere."
 
-#: ../../docs/guidance/map/awards_contracts.md:161
+#: ../../docs/guidance/map/awards_contracts.md:157
 msgid "Example: Double counting contracts and purchase orders"
 msgstr "Ejemplo: Duplicando el conteo de contratos y órdenes de compra"
 
-#: ../../docs/guidance/map/awards_contracts.md:163
+#: ../../docs/guidance/map/awards_contracts.md:159
 msgid ""
 "The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG "
 "to provide the Project Management Office function for a project to construct"
@@ -512,7 +498,7 @@ msgstr ""
 "montos iguales. El contrato está representado en la sección `contracts` de "
 "OCDS de la siguiente manera:"
 
-#: ../../docs/guidance/map/awards_contracts.md:171
+#: ../../docs/guidance/map/awards_contracts.md:167
 msgid ""
 "Calculating the sum of the contract value in the above example gives the "
 "correct result of £1.2m."
@@ -520,7 +506,7 @@ msgstr ""
 "Calculando la suma del valor del contrato en el ejemplo anterior da el "
 "resultado correcto de £1.2m."
 
-#: ../../docs/guidance/map/awards_contracts.md:173
+#: ../../docs/guidance/map/awards_contracts.md:169
 msgid ""
 "The Department for Transport issues a purchase order on the final day of "
 "each quarter of the contract term, each for £300k."
@@ -528,7 +514,7 @@ msgstr ""
 "El Departamento de Transporte emite una orden de compra el último día de "
 "cada trimestre del plazo del contrato, cada uno por £300k."
 
-#: ../../docs/guidance/map/awards_contracts.md:175
+#: ../../docs/guidance/map/awards_contracts.md:171
 msgid ""
 "If purchase orders were also disclosed in the `contracts` section of OCDS, "
 "by the end of the contract term, the `contracts` section of OCDS would be "
@@ -538,7 +524,7 @@ msgstr ""
 "OCDS, al final del plazo del contrato, la sección `contracts` de OCDS se "
 "completaría de la siguiente manera:"
 
-#: ../../docs/guidance/map/awards_contracts.md:183
+#: ../../docs/guidance/map/awards_contracts.md:179
 msgid ""
 "Calculating the sum of the contract value in the above example gives an "
 "incorrect result of £2.4m - double the actual value of the contract."

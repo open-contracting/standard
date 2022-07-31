@@ -483,8 +483,7 @@ def missing_changelog(ignore_base):
 
     # Ignore PRs to unmerged branches.
     url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=open'
-    response = requests.get(url)
-    response.raise_for_status()
+    response = get(url)
     ignore.extend(pr['head']['ref'] for pr in response.json())
 
     with open(basedir / 'docs' / 'history' / 'changelog.md') as f:
@@ -504,8 +503,7 @@ def missing_changelog(ignore_base):
 
     url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=closed'
     while url:
-        response = requests.get(url)
-        response.raise_for_status()
+        response = get(url)
         url = response.links.get('next', {}).get('url')
 
         for pr in response.json():
@@ -520,16 +518,16 @@ def missing_changelog(ignore_base):
             # Include merged PRs, not in the "Minor:" or "1.0-RC" milestones, not syncing branches, and not ignored.
             if not merged_at or milestone_number in (26, 27, 28, 29, 2) or pattern.search(title) or base_ref in ignore:
                 if number in prs:
-                    print(f'WARNING: #{number} should not be in changelog', file=sys.stderr)
+                    click.echo(f'WARNING: #{number} should not be in changelog', file=sys.stderr)
                 continue
 
             if number not in prs:
                 count += 1
-                print(f"[#{number}](https://github.com/open-contracting/standard/pull/{number}) ({milestone_title}) "
-                      f"{merged_at[:10]}: {title} ({base_ref}:{pr['head']['ref']})")
+                click.echo(f"[#{number}](https://github.com/open-contracting/standard/pull/{number}) "
+                           f"({milestone_title}) {merged_at[:10]}: {title} ({base_ref}:{pr['head']['ref']})")
 
     if count:
-        print(count)
+        click.echo(count)
 
 
 @cli.command()
@@ -697,7 +695,7 @@ def update_media_type():
                 template = row['Template']
                 # All messages are expected to be about deprecation and obsoletion.
                 if message:
-                    logging.warning(f'{message}: {code}')
+                    logging.warning('%s: %s', message, code)
                 # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
                 elif template and template != code:
                     raise Exception(f"expected {code}, got {template}")
@@ -718,6 +716,51 @@ def update(ctx):
     ctx.invoke(update_media_type)
 
 
+@cli.command()
+@click.pass_context
+def check_iso_6523(ctx):
+    def text(node, xpath):
+        return re.sub(r'\s+', ' ', node.xpath(xpath)[0])
+
+    """
+    Checks PEPPOL BIS Billing 3.0's ISO 6523 ICD codelist for new codes.
+    """
+    # We use this, because we don't know a better source for the ISO 6523 codelist.
+
+    # As of 2022-04-19, the range is 0002-0213, skipping 0092 0103 0181 0182.
+    minimum = 2
+    maximum = 213
+    skipped = {92, 103, 181, 182}
+
+    response = get('https://docs.peppol.eu/poacc/billing/3.0/codelist/ICD/')
+
+    divs = lxml.html.fromstring(response.content).xpath('//dd/div[@id]')
+    if not divs:
+        raise click.ClickException('The HTML markup of the data source has changed. Please update the script.')
+
+    rows = []
+    for div in divs:
+        identifier = div.attrib['id']
+        number = int(identifier)
+        if number < minimum or number > maximum or number in skipped:
+            name = text(div, './strong/text()')
+            notes = text(div, './p/text()')
+            issuer = ''
+
+            # "Issuing agency: " appears at the end of the paragraph. The rest of the paragraph contains either a
+            # purpose ("Intended Purpose/App. Area") or notes ("Notes on Use of Code"), with or without the label.
+            notes = re.sub(r'(Notes on Use of Code|Intended Purpose/App. Area)[: ]+', '', notes)
+            if 'Issuing agency: ' in notes:
+                notes, issuer = notes.split('Issuing agency: ')
+
+            rows.append([identifier, name, issuer, notes])
+
+    if rows:
+        csv.writer(sys.stdout, delimiter='\t').writerows(rows)
+    else:
+        click.echo('No new codes found.')
+
+
 def add_translation_note(path, language, domain):
     """
     Adds a translation note to a file.
@@ -730,7 +773,7 @@ def add_translation_note(path, language, domain):
     translator = gettext.translation('theme', localedir, languages=[language])
     _ = translator.gettext
 
-    pattern = '{}/{{}}/{}/'.format(base_url, domain)
+    pattern = f'{base_url}/{{}}/{domain}/'
     response = requests.get(pattern.format(language))
 
     # If it's a new page, add the note to the current version of the page.
@@ -744,7 +787,7 @@ def add_translation_note(path, language, domain):
         xpath = '//div[@itemprop="articleBody"]'
 
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
-        replacement.make_links_absolute('{}/{}'.format(base_url, language))
+        replacement.make_links_absolute(f'{base_url}/{language}')
 
         # Remove any existing translation notes.
         parent = replacement.xpath('//h1')[0].getparent()

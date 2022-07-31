@@ -1,6 +1,6 @@
 # Extensions
 
-OCDS provides a common core of [sections](../../schema/reference.md#release-structure) and [building blocks](../../schema/reference.md#building-block-reference) for describing contracting processes.
+OCDS provides a common core of [sections](../../schema/reference.md#release-structure) and [building blocks](../../schema/reference.md#building-block-reference) for describing contracting (or planning) processes.
 
 Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard.
 
@@ -9,6 +9,8 @@ Some extensions are maintained by the Open Contracting Partnership (OCP). Those 
 Other extensions are maintained by third parties, like OCDS publishers, and do not follow the governance process. These extensions might provide features which are needed by only a small number of publishers or users, or they might be used to document a specific publisher's additional fields or codelist values.
 
 All OCP extensions and many third-party extensions are documented in the [Extension Explorer](https://extensions.open-contracting.org/en/). The [standard development team](../../governance/index) decides which extensions are registered in the [Extension Registry](https://github.com/open-contracting/extension_registry#readme), which controls which extensions appear in the Extension Explorer.
+
+You are encouraged to consider using the extensions tagged as *Recommended* in the Extension Explorer.
 
 ## Using existing extensions
 
@@ -29,7 +31,7 @@ You can find the [extension template](https://github.com/open-contracting/standa
 
 ## Profiles
 
-Groups of extensions can be combined into **profiles**. OCDS provides a common core for describing contracting processes, which profiles expand to suit the disclosure requirements and user needs of a particular sector or legal framework.
+Groups of extensions can be combined into **profiles**. OCDS provides a common core for describing contracting (or planning) processes, which profiles expand to suit the disclosure requirements and user needs of a particular sector or legal framework.
 
 ### OCDS for Public-Private Partnerships
 

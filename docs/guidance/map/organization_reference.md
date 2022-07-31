@@ -1,8 +1,12 @@
+```{workedexample} Organization references
+:tags: parties,organization_reference
+```
+
 # Organization references
 
-Many organizations can be involved in the lifecycle of a contracting process. Sometimes the same organization can have multiple roles. For example, an organization can first be a tenderer and then become a supplier.
+Many organizations can be involved in the lifecycle of contracting and planning processes. Sometimes the same organization can have multiple roles. For example, an organization can first be a tenderer and then become a supplier.
 
-To avoid data repetition, OCDS 1.1 introduced a top-level parties array, where the detailed information about all the organizations and other participants involved in a particular contracting process is declared.
+To avoid data repetition, OCDS 1.1 introduced a top-level parties array, where the detailed information about all the organizations and other participants involved in a particular contracting (or planning) process is declared.
 
 When a **reference** is needed to an entry in the parties array, e.g. to provide a link between a `tenderer` declared in the `tender` section and its organization details, use an `OrganizationReference` object. This object includes just the `name` and `id` of the organization, instead of repeating all its relevant data again.
 
@@ -15,7 +19,7 @@ In the example below:
 * If a user looks at the `tenderers` block and wants to contact *Open Data Services*, then the user has to search for the `id` *GB-COH-09506232* in the `parties` array.
 * The same needs to be applied to each `OrganizationReference` instance.
 
-```{jsoninclude} ../../examples/organization_reference.json
+```{jsoninclude} ../../examples/organizations/organization_reference.json
 :jsonpointer:
 :expand: releases, parties, tender, tenderers, awards, suppliers
 :title: organizationReference

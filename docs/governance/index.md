@@ -10,8 +10,6 @@ The [Open Contracting Partnership (OCP)](https://www.open-contracting.org) was e
 
 OCP is led by an executive director, and is supported by a multi-stakeholder advisory board with representation from governments, multilateral organizations, academia, NGOs and business. 
 
-As of February 2016, OCP is fiscally hosted by the [Fund for the City of New York](https://www.fcny.org/fcny/) (FCNY). Under the terms of this agreement, Intellectual Property is held by FCNY on behalf of OCP, but will transfer to any future legal entity hosting OCP. 
-
 In the pursuit of a consensus and **community-driven process**, subscribers to the [standard-discuss@open-contracting.org](https://groups.google.com/a/open-contracting.org/g/standard-discuss) discussion list (join by sending an email to [standard-discuss+subscribe@open-contracting.org](mailto:standard-discuss+subscribe@open-contracting.org)) and those watching and engaging with the [standard GitHub repository](https://github.com/open-contracting/standard) should be kept informed at all stages about planned revisions to OCDS, and should be offered clear and timely opportunities to input and comment.
 
 To ensure the relevance, quality and effective implementation of proposed updates to the standard, new version releases are subjected to a process of **peer review** with invited reviewers from publisher and user communities, and an open review process. 
@@ -24,7 +22,7 @@ In the future, the Open Contracting Data Standard may be submitted to a formal s
 
 The Open Contracting Data Standard is the Intellectual Property of the Open Contracting Partnership. The schema is licensed under the **[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)** license, with accompanying documentation under a **[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)** where stated.
 
-Contributors to the standard agree to transfer any copyright in their contributions to the Open Contracting Partnership (via its fiscal sponsor) through a contributor agreement process, in order that those contributions are held in trust as part of the standard.
+Contributors to the standard agree to transfer any copyright in their contributions to the Open Contracting Partnership through a contributor agreement process, in order that those contributions are held in trust as part of the standard.
 
 No content infringing upon third-party Intellectual Property Rights will be included in the standard. 
 
@@ -60,6 +58,20 @@ This documentation website is composed of normative content (the prescriptive pa
 
 ### Versions
 
+We use **version numbers** to indicate the nature of changes made to normative content, and to fit the governance process to each change.
+
+* **A MAJOR version (e.g. 1.0.0 -> 2.0.0)** makes backwards-incompatible changes. Systems written to input or output data with a previous major version might need substantial updates. Data that is valid against the 1.X schema might not be valid against the 2.X schema, for example.
+
+* **A MINOR version (e.g. 1.0.0 -> 1.1.0)** makes backward-compatible changes. Systems written to input or output data with a previous minor version should be reviewed to assess whether they can implement any concepts added in the new minor version. Data that is valid against the 1.0 schema is also valid against the 1.1 schema, for example. Where relevant, changes should apply a principle of progressive enhancement, such that updated systems can take advantage of the added concepts, while non-updated systems experience no substantive changes in behavior. 
+
+* **A PATCH version (e.g. 1.1.0 -> 1.1.1)** updates open codelists or external closed codelists, or makes backwards-compatible bug fixes or improvements to normative content. Users are encouraged to upgrade to the latest patch version. Unless they were affected by a fixed bug, they should not see any substantive changes after the upgrade. Data that is valid against the 1.1.0 schema is also valid against the 1.1.1 schema, for example.
+
+MAJOR and MINOR updates to normative content trigger the governance process. PATCH updates to normative content have a short review period to give users an opportunity to confirm that changes are backwards-compatible and non-substantive.
+
+Changes to non-normative content do not trigger the governance process. 
+
+### Branches
+
 Distinct **branches** of the standard will be maintained within GitHub for each version. 
 
 Branches can be in one of two states:
@@ -70,19 +82,11 @@ Both schema and documentation on a development branch may be updated and should 
 * **Live** - with no suffix ( e.g. 1.0)
 Only documentation may be updated on a live branch. All documentation changes must be reviewed to ensure they do not make any changes to the meaning of the standard. 
 
-Semantic Versioning practices will be used to distinguish between:
-
-* **Major versions** which make backwards-incompatible changes (e.g. 2.0)
-
-* **Minor versions** which add functionality in a backwards-compatible manner (e.g. 1.2)
-
-These are captured by a version number in the format MAJOR.MINOR
-
 ## Revision process
 
 To release a new minor or major version upgrade will involve a number of stages outlined in the flowchart below, and described in more depth in the following sections. 
 
-![image alt text](../_static/png/upgrade_process_feb_2016.png)
+![image alt text](../_static/png/upgrade_process.png)
 
 **General principles:**
 
@@ -181,6 +185,16 @@ Any current or potential OCDS publisher or data user of the standard can be cons
 **Consensus**
 
 "The principle of consensus has its origins in the desire to achieve the general acceptance and application of a Standard within its intended sphere of influence. This entails trying to ensure that the interests of all those likely to be affected by it are taken into account, and that individual concerns are carefully and fairly balanced against the wider public interest." [BSI, 2012](https://www.bsigroup.com/Documents/about-bsi/NSB/BSI-pocket-guide-to-standards-development-UK-EN.pdf)
+
+## Versioning of extensions
+
+Extensions are governed and versioned independently of the standard, with the exception of core extensions, where:
+
+* MAJOR or MINOR releases of core extensions only take place as part of the governance process for a MAJOR or MINOR release of OCDS. 
+
+* Each version of the standard explicitly declares the version number of each core extension for that version of the standard. 
+
+Changes to core extensions between standard versions may be staged with labels (like `-alpha` or `-beta`) to indicate these are under development or proposed for adoption in the next version of OCDS, but that their adoption has not yet been formally agreed. 
 
 ```{toctree}
 :hidden:

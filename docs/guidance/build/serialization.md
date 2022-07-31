@@ -1,6 +1,6 @@
 # Serialization
 
-The Open Contracting Data Standard provides a **structured data model** for capturing in-depth information about all stages of the contracting process.
+The Open Contracting Data Standard provides a **structured data model** for capturing in-depth information about all stages of contracting (and planning) processes.
 
 The current canonical version of this data model is provided by a **[JSON Schema](../../schema/release)** which describes field names, field definitions and structures for the data. The compliance of data with the Open Contracting Data Standard will be assessed against this schema.
 
@@ -40,7 +40,7 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](https
 
 **JSON**
 
-```{jsoninclude} ../../examples/serialization-flat.json
+```{jsoninclude} ../../examples/serialization/flat.json
 :jsonpointer:
 :expand: releases, tender, items
 ```
@@ -50,7 +50,7 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](https
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/serialization-flat.csv
+:file: ../../examples/serialization/flat.csv
 ```
 
 [Beta open source tooling](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) exists for generating flat CSV OCDS templates, and converting in both directions between JSON spreadsheets following these templates. The OCDS Data Review Tool incorporates this tooling and will offer to convert files uploaded to it.
@@ -68,12 +68,12 @@ For example, to represent a tender release with two items, the CSV file would in
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/serialization-flat-two-items.csv
+:file: ../../examples/serialization/flat_two_items.csv
 ```
 
 The JSON equivalent of this would be:
 
-```{jsoninclude} ../../examples/serialization-flat-two-items.json
+```{jsoninclude} ../../examples/serialization/flat_two_items.json
 :jsonpointer:
 :expand: releases, tender, items
 ```

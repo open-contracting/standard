@@ -1,3 +1,7 @@
+```{workedexample} Change history
+:tags: release,record
+```
+
 # Change history
 
 The following example shows how to publish data about a contracting process. Publish a release for each event in the process and update the record each time you publish a release.
@@ -12,51 +16,21 @@ For an introduction to the concept of a change history, see the [releases and re
 For guidance on how to set the `id` field on each release, see the [easy releases](easy_releases) worked example.
 ```
 
-## Planning
-
-The London Borough of Barnet plans to publish a tender for cycle lane improvements later in the year. To prepare the market they publish a *notice of planned procurement*.
-
-The publisher creates an OCDS release to represent this notice. The release uses the 'planning' tag and includes data about the planned procurement. The `tender` section holds the estimated values and publication date. The tender status is 'planned'.
-
-The publisher also creates an OCDS record for the new contracting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled version is expected look very much like this release. Compare the planning release and the record using the box below.
-
-```{jsoninclude} ../../examples/planning.json
-:jsonpointer: /releases
-:expand: planning, tag, tender
-:title: release
-```
-
-```{jsoninclude} ../../examples/records/planning.json
-:jsonpointer: /records
-:expand: compiledRelease, planning, tender
-:title: record
-```
-
 ## Tender
 
-The London Borough of Barnet is ready to invite bids for the contract. They issue the tender via an *notice of intended procurement*.
+The London Borough of Barnet publishes a tender for cycle lane improvements. They issue the tender via a *notice of intended procurement*.
 
-The publisher creates a new release to represent this notice. The release uses the 'tender' tag and provides the details in the `tender` section.
+The publisher creates a release to represent this notice. The release uses the 'tender' tag and provides the details in the `tender` section.
 
-There are no changes to the planning release published before. But the new release has the updated information about the tender. This includes the actual publication date, and the following new information:
+The publisher also creates a record for the new contracting process. The releases list includes the new and only release so far. The compiled and versioned releases are also created for the record. Since there is only one release, the compiled release is nearly identical to this release. Compare the release and the record using the box below.
 
-* The deadline for bid submission
-
-* The items to buy
-
-* Links to copies of tender documents
-
-* The estimated tender value
-
-The publisher adds the new release to the record, in the releases list. Also they update the compiled and versioned releases with the new information. Note that the bid submission date has changed in the compiled release. Also, note that the versioned release has a list of changes for each field that has been updated.
-
-```{jsoninclude} ../../examples/tender.json
+```{jsoninclude} ../../examples/change_history/tender.json
 :jsonpointer: /releases
 :expand: tender, tag, documents
 :title: release
 ```
 
-```{jsoninclude} ../../examples/records/tender.json
+```{jsoninclude} ../../examples/change_history/records/tender.json
 :jsonpointer: /records
 :expand: compiledRelease, tender, documents
 :title: record
@@ -68,17 +42,17 @@ The enquiry period has ended, and a few questions from potential suppliers have 
 
 The publisher creates a new OCDS release with the 'tenderUpdate' tag.
 
-The previous releases of planning and tender are not changed. In the new release, the publisher adds a link to the new document in the `tender.documents` section. The `tender.hasEnquiries` field is also set to true. The publisher has decided to keep unchanged fields from the previous releases in the new one.
+The previous release is not changed. In the new release, the publisher adds a link to the new document in the `tender.documents` section. The `tender.hasEnquiries` field is also set to true. The publisher has decided to keep unchanged fields from the previous releases in the new one.
 
-The record now has three immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. Also, the field `tender.hasEnquiries` has more than one entry in the versioned release.
+The record now has two immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. Also, the field `tender.hasEnquiries` has more than one entry in the versioned release.
 
-```{jsoninclude} ../../examples/tenderUpdate.json
+```{jsoninclude} ../../examples/change_history/tenderUpdate.json
 :jsonpointer: /releases
 :expand: tender, tag, documents
 :title: release
 ```
 
-```{jsoninclude} ../../examples/records/tenderUpdate.json
+```{jsoninclude} ../../examples/change_history/records/tenderUpdate.json
 :jsonpointer: /records
 :expand: compiledRelease, tender, documents
 :title: record
@@ -94,13 +68,13 @@ The `parties` array has a new entry with the supplier's information. The complet
 
 The publisher adds the new release to the record. They also update the compiled and versioned releases. The compiled release reflects the changes to the `awards`, `tender` and `parties` sections. The versioned release includes a new change for the `tender.status` field.
 
-```{jsoninclude} ../../examples/award.json
+```{jsoninclude} ../../examples/change_history/award.json
 :jsonpointer: /releases
 :expand: parties, tender, awards, value, suppliers, contractPeriod
 :title: release
 ```
 
-```{jsoninclude} ../../examples/records/award.json
+```{jsoninclude} ../../examples/change_history/records/award.json
 :jsonpointer: /records
 :expand: compiledRelease, parties, tender, awards, value, suppliers, contractPeriod
 :title: record
@@ -114,13 +88,13 @@ The publisher creates a new OCDS release using the 'contract' tag. They include 
 
 The record gets updated to include the new release. The compiled and versioned release now have the new `contract` section. There are no updates to other sections.
 
-```{jsoninclude} ../../examples/contract.json
+```{jsoninclude} ../../examples/change_history/contract.json
 :jsonpointer: /releases
 :expand: contracts, value, period
 :title: release
 ```
 
-```{jsoninclude} ../../examples/records/contract.json
+```{jsoninclude} ../../examples/change_history/records/contract.json
 :jsonpointer: /records
 :expand: compiledRelease, contracts, value, period
 :title: record
@@ -148,13 +122,13 @@ OCDS can be used to combine data from different systems. For more information re
 
 The publisher adds the new release from the finance system to the releases list in the OCDS record. The compiled and versioned releases get updated to include the new transaction.
 
-```{jsoninclude} ../../examples/implementation.json
+```{jsoninclude} ../../examples/change_history/implementation.json
 :jsonpointer: /releases
 :expand: contracts, implementation, transactions
 :title: release
 ```
 
-```{jsoninclude} ../../examples/records/implementation.json
+```{jsoninclude} ../../examples/change_history/records/implementation.json
 :jsonpointer: /records
 :expand: compiledRelease, contracts, implementation, transactions
 :title: record
@@ -170,13 +144,13 @@ Note that contract amendments in OCDS involves more modelling considerations. Re
 
 The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release shows new entries for the contract’s value and end date.
 
-```{jsoninclude} ../../examples/contractAmendment.json
+```{jsoninclude} ../../examples/change_history/contractAmendment.json
 :jsonpointer: /releases
 :expand: contracts, amendments
 :title: release
 ```
 
-```{jsoninclude} ../../examples/records/contractAmendment.json
+```{jsoninclude} ../../examples/change_history/records/contractAmendment.json
 :jsonpointer: /records
 :expand: compiledRelease, contracts, amendments
 :title: record

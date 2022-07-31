@@ -1,0 +1,117 @@
+{
+  "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-06-implementation.json",
+  "publishedDate": "2011-01-10T09:30:00Z",
+  "publisher": {
+    "scheme": "GB-COH",
+    "uid": "09506232",
+    "name": "Open Data Services Co-operative Limited",
+    "uri": "https://standard.open-contracting.org/examples/"
+  },
+  "license": "http://opendatacommons.org/licenses/pddl/1.0/",
+  "publicationPolicy": "https://github.com/open-contracting/sample-data/",
+  "version": "1.2",
+  "extensions": [],
+  "releases": [
+    {
+      "ocid": "ocds-213czf-000-00001",
+      "id": "ocds-213czf-000-00001-06-implementation",
+      "date": "2011-01-10T09:30:00Z",
+      "tag": [
+        "implementation"
+      ],
+      "parties": [
+        {
+          "identifier": {
+            "scheme": "GB-LAC",
+            "id": "E09000003",
+            "legalName": "London Borough of Barnet",
+            "uri": "http://www.barnet.gov.uk/"
+          },
+          "name": "London Borough of Barnet",
+          "address": {
+            "streetAddress": "4, North London Business Park, Oakleigh Rd S",
+            "locality": "London",
+            "region": "London",
+            "postalCode": "N11 1NP",
+            "country": "GB"
+          },
+          "contactPoint": {
+            "name": "Procurement Team",
+            "email": "procurement-team@example.com",
+            "telephone": "01234 345 346",
+            "faxNumber": "01234 345 345",
+            "url": "http://example.com/contact/"
+          },
+          "roles": [
+            "buyer"
+          ],
+          "id": "GB-LAC-E09000003"
+        },
+        {
+          "identifier": {
+            "scheme": "GB-COH",
+            "id": "00395826",
+            "legalName": "Balfour Beatty plc",
+            "uri": "https://opencorporates.com/companies/gb/01881683"
+          },
+          "additionalIdentifiers": [
+            {
+              "scheme": "GB-VAT",
+              "id": "217967235"
+            }
+          ],
+          "name": "Balfour Beatty",
+          "address": {
+            "streetAddress": "5 Churchill Place",
+            "locality": "London",
+            "region": "London",
+            "postalCode": "E14 5HU",
+            "country": "GB"
+          },
+          "contactPoint": {
+            "name": "Contracts Team",
+            "email": "help@balfourbeatty.com",
+            "telephone": "44 (0)20 7216 6800",
+            "faxNumber": "44 (0)20 7216 6800"
+          },
+          "roles": [
+            "supplier"
+          ],
+          "id": "GB-COH-00395826"
+        }
+      ],
+      "buyer": {
+        "id": "GB-LAC-E09000003",
+        "name": "London Borough of Barnet"
+      },
+      "contracts": [
+        {
+          "id": "ocds-213czf-000-00001-contract-01",
+          "awardID": "ocds-213czf-000-00001-award-01",
+          "implementation": {
+            "transactions": [
+              {
+                "id": "ocds-213czf-000-00001-1",
+                "source": "https://openspending.org/uk-barnet-spending/",
+                "date": "2010-08-01T00:00:00Z",
+                "uri": "https://openspending.org/uk-barnet-spending/transaction/asd9235qaghvs1059620ywhgai",
+                "payer": {
+                  "id": "GB-LAC-E09000003",
+                  "name": "London Borough of Barnet"
+                },
+                "payee": {
+                  "id": "GB-COH-00395826",
+                  "name": "Balfour Beatty"
+                },
+                "value": {
+                  "amount": 500000,
+                  "currency": "GBP"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

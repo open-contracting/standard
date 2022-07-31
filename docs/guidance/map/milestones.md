@@ -1,3 +1,7 @@
+```{workedexample} Milestones
+:tags: milestone,planning,tender,contract,implementation
+```
+
 # Milestones
 
 Milestones can be included within the planning, tender, contract and contract implementation sections. 
@@ -5,10 +9,10 @@ Milestones can be included within the planning, tender, contract and contract im
 ## Planning
 
 The planning milestones block is used for two types of milestones:
- * Key events in the planning stage, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
+ * Key events in the planning process, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
  * Anticipated milestones during the contract implementation stage, for example, the date by which goods delivery of the goods is required.
 
-If during the planning stage you have information about tender process milestones, then you
+If during the planning process you have information about tender process milestones, then you
 populate the tender milestones block instead.
 
 ## Tender
@@ -33,37 +37,22 @@ At the point of contract signature, a comparison between `tender/milestones` and
 
 The `dueDate`, `dateMet`, `dateModified` and [`status`](../../schema/codelists.md#milestone-status) fields are used to track the lifecycle of the milestone.
 
+To represent a planned payment, add a `Milestone`, set its `.type` to 'payment' and set its `.value` to the payment's value. Once the milestone is met, add a [Transaction](../../schema/reference.md#transaction) to `contracts/implementation/transactions`. For implementation milestones, the transaction can refer back to the milestone using the [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/).
+
 ## Worked examples
 
 The following worked examples show how to use milestones in different scenarios.
 
-### Planning and tender milestones
+### Planning milestones
 
-The example below includes two OCDS releases:
+The example below includes a planning release with details of a planned procurement, including the date the budget plan is expected to be ready.
 
-* A planning release with details of a planned procurement, including the date the budget plan is expected to be ready and the date the tender notice is expected to be issued.
-* A tender release with the actual date the tender notice was issued.
+The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
 
-In the planning release:
-
-* The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning stage of the contracting process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
-* The date the tender notice is expected to be issued is represented using a milestone in `tender/milestones` because it relates to the tender stage of the contracting process. `.dueDate` is set to the date and `.status` is set to scheduled.
-
-In the tender release:
-
-* The `.dateMet` field in the tender notice milestone is updated with the actual date the notice was issued and `.status` is set to 'met'.
-To explore differences between the planned and actual date of the tender milestone, users can then compare the values of `tender/milestones/dueDate` and `tender/milestones/dateMet` in a single (compiled) release.
-
-```{jsoninclude} ../../examples/milestones/planning-tender-milestones.json
+```{jsoninclude} ../../examples/milestones/planning_milestone.json
 :jsonpointer:
-:expand: releases, planning, milestones, tender, milestones
+:expand: releases, planning, milestones
 :title: planning
-```
-
-```{jsoninclude} ../../examples/milestones/planning-tender-milestones-2.json
-:jsonpointer:
-:expand: releases, planning, milestones, tender, milestones
-:title: tender
 ```
 
 ### Contract implementation milestones
@@ -94,37 +83,37 @@ Users can compare the project commencement milestone's `.dueDate` and `.dateMet`
 In the second implementation update release, which is published after the project completes:
 * In the project completion milestone, `.dateMet` is set to the actual completion date for the project and `.status` is set to 'met'.
 
-```{jsoninclude} ../../examples/milestones/implementation-milestones-1.json
+```{jsoninclude} ../../examples/milestones/implementation_milestones_scheduled.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation
 ```
 
-```{jsoninclude} ../../examples/milestones/implementation-milestones-2.json
+```{jsoninclude} ../../examples/milestones/implementation_milestones_partially_met.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation-update-1
 ```
 
-```{jsoninclude} ../../examples/milestones/implementation-milestones-3.json
+```{jsoninclude} ../../examples/milestones/implementation_milestones_met.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation-update-2
 ```
 
-#### Delivery and financing data
+#### Delivery and payment data
 
-This example shows how milestones can be used to keep track of delivery and financing (payment) data in a contracting process.
+This example shows how milestones can be used to keep track of delivery and payment data in a contracting process.
 
 The example below includes three OCDS releases:
 
-* An implementation release with contract information including scheduled implementation milestones.
+* An implementation release with contract information including scheduled implementation milestones and planned payments.
 * An implementation update release with the actual date the milestone was reached.
 * An implementation update release with payment information
 
 In the implementation release:
 
-* Milestones have been set for the delivery and payment of goods and services related to the project. Contract information is released along with the implementation milestones.
+* Milestones have been set for the delivery and payment of goods, services and works related to the project. Contract information is released along with the implementation milestones.
 
 In the first implementation update release:
 
@@ -132,21 +121,21 @@ In the first implementation update release:
 
 In the second implementation update release:
 
-* The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'financing' is updated. A new `transaction` is disclosed, with the amount paid to the company.
+* The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'payment' is updated. A new `transaction` is disclosed, with the amount paid to the company. The [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/) is used to link the transaction to the milestone.
 
-```{jsoninclude} ../../examples/milestones/af-implementation-milestones-1.json
+```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_not_met.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation
 ```
 
-```{jsoninclude} ../../examples/milestones/af-implementation-milestones-2.json
+```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_partially_met.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones
 :title: implementation-update-1
 ```
 
-```{jsoninclude} ../../examples/milestones/af-implementation-milestones-3.json
+```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_transaction.json
 :jsonpointer:
 :expand: releases, contracts, implementation, milestones, transactions
 :title: implementation-update-2

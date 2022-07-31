@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30 00:08-0400\n"
+"POT-Creation-Date: 2022-01-13 09:12-0300\n"
 "PO-Revision-Date: 2021-03-01 22:02+0000\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../docs/guidance/map/milestones.md:8
 msgid ""
-"Key events in the planning stage, for example, the preparation of an "
+"Key events in the planning process, for example, the preparation of an "
 "environmental impact assessment, the approval to proceed with a project, or "
 "the date of a public consultation."
 msgstr ""
@@ -50,7 +50,7 @@ msgstr ""
 
 #: ../../docs/guidance/map/milestones.md:11
 msgid ""
-"If during the planning stage you have information about tender process "
+"If during the planning process you have information about tender process "
 "milestones, then you populate the tender milestones block instead."
 msgstr ""
 
@@ -139,103 +139,69 @@ msgid ""
 msgstr ""
 
 #: ../../docs/guidance/map/milestones.md:40
-msgid "Planning and tender milestones"
+msgid "Planning milestones"
 msgstr ""
 
 #: ../../docs/guidance/map/milestones.md:42
-msgid "The example below includes two OCDS releases:"
+msgid ""
+"The example below includes a planning release with details of a planned "
+"procurement, including the date the budget plan is expected to be ready."
 msgstr ""
 
 #: ../../docs/guidance/map/milestones.md:44
 msgid ""
-"A planning release with details of a planned procurement, including the date"
-" the budget plan is expected to be ready and the date the tender notice is "
-"expected to be issued."
-msgstr ""
-
-#: ../../docs/guidance/map/milestones.md:45
-msgid "A tender release with the actual date the tender notice was issued."
-msgstr ""
-
-#: ../../docs/guidance/map/milestones.md:47
-msgid "In the planning release:"
-msgstr ""
-
-#: ../../docs/guidance/map/milestones.md:49
-msgid ""
 "The date the budget plan is expected to be ready is represented using a "
 "milestone in `planning/milestones` with `.type` is set to 'preProcurement' "
-"because the milestone relates to the planning stage of the contracting "
-"process. `.dueDate` is set to the date and `.status` is set to 'scheduled'."
-msgstr ""
-
-#: ../../docs/guidance/map/milestones.md:50
-msgid ""
-"The date the tender notice is expected to be issued is represented using a "
-"milestone in `tender/milestones` because it relates to the tender stage of "
-"the contracting process. `.dueDate` is set to the date and `.status` is set "
-"to scheduled."
+"because the milestone relates to the planning process. `.dueDate` is set to "
+"the date and `.status` is set to 'scheduled'."
 msgstr ""
 
 #: ../../docs/guidance/map/milestones.md:52
-msgid "In the tender release:"
-msgstr ""
-
-#: ../../docs/guidance/map/milestones.md:54
-msgid ""
-"The `.dateMet` field in the tender notice milestone is updated with the "
-"actual date the notice was issued and `.status` is set to 'met'. To explore "
-"differences between the planned and actual date of the tender milestone, "
-"users can then compare the values of `tender/milestones/dueDate` and "
-"`tender/milestones/dateMet` in a single (compiled) release."
-msgstr ""
-
-#: ../../docs/guidance/map/milestones.md:69
 msgid "Contract implementation milestones"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:71
+#: ../../docs/guidance/map/milestones.md:54
 msgid ""
 "The following worked examples show how to use milestones in contract "
 "implementation releases"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:73
+#: ../../docs/guidance/map/milestones.md:56
 msgid "Project data"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:75
+#: ../../docs/guidance/map/milestones.md:58
 msgid ""
 "This worked example shows how to use milestones to model the planned and "
 "actual start and finish dates for a construction project."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:77
-#: ../../docs/guidance/map/milestones.md:119
+#: ../../docs/guidance/map/milestones.md:60
+#: ../../docs/guidance/map/milestones.md:102
 msgid "The example below includes three OCDS releases:"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:79
+#: ../../docs/guidance/map/milestones.md:62
 msgid ""
 "An implementation release which includes the scheduled start and end dates "
 "for the project."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:80
+#: ../../docs/guidance/map/milestones.md:63
 msgid ""
 "An implementation update release with the actual start date of the project"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:81
+#: ../../docs/guidance/map/milestones.md:64
 msgid ""
 "An implementation update release with the actual end date of the project"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:83
+#: ../../docs/guidance/map/milestones.md:66
 msgid "In the award release:"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:85
+#: ../../docs/guidance/map/milestones.md:68
 msgid ""
 "The scheduled start and end dates for the project are represented using "
 "milestones in `contracts/implementation/milestones` with `.type` set to "
@@ -243,34 +209,34 @@ msgid ""
 "are provided in `.dueDate` and `.status` is set to 'scheduled'."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:86
+#: ../../docs/guidance/map/milestones.md:69
 msgid ""
 "The publisher has defined their own values for the `.code` field so they can"
 " filter and compare start and end date milestones across different "
 "contracts."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:88
+#: ../../docs/guidance/map/milestones.md:71
 msgid ""
 "In the first implementation update release, which is published after the "
 "project starts but before it completes:"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:89
+#: ../../docs/guidance/map/milestones.md:72
 msgid ""
 "In the project commencement milestone, `.dateMet` is set to the actual start"
 " date and `.status` is set to 'met'. `.dateModified` is set to the date the "
 "milestone was updated."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:90
+#: ../../docs/guidance/map/milestones.md:73
 msgid ""
 "In the project completion milestone, `.status` is set to 'notMet' since the "
 "project is not yet complete and `.dateModified` is set to the date the "
 "milestone was updated."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:92
+#: ../../docs/guidance/map/milestones.md:75
 msgid ""
 "Users can compare the project commencement milestone's `.dueDate` and "
 "`.dateMet` fields to determine if the project started on time. Users can "
@@ -279,71 +245,71 @@ msgid ""
 "since the scheduled completion date."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:94
+#: ../../docs/guidance/map/milestones.md:77
 msgid ""
 "In the second implementation update release, which is published after the "
 "project completes:"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:95
+#: ../../docs/guidance/map/milestones.md:78
 msgid ""
 "In the project completion milestone, `.dateMet` is set to the actual "
 "completion date for the project and `.status` is set to 'met'."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:115
+#: ../../docs/guidance/map/milestones.md:98
 msgid "Delivery and financing data"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:117
+#: ../../docs/guidance/map/milestones.md:100
 msgid ""
 "This example shows how milestones can be used to keep track of delivery and "
 "financing (payment) data in a contracting process."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:121
+#: ../../docs/guidance/map/milestones.md:104
 msgid ""
 "An implementation release with contract information including scheduled "
 "implementation milestones."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:122
+#: ../../docs/guidance/map/milestones.md:105
 msgid ""
 "An implementation update release with the actual date the milestone was "
 "reached."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:123
+#: ../../docs/guidance/map/milestones.md:106
 msgid "An implementation update release with payment information"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:125
+#: ../../docs/guidance/map/milestones.md:108
 msgid "In the implementation release:"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:127
+#: ../../docs/guidance/map/milestones.md:110
 msgid ""
 "Milestones have been set for the delivery and payment of goods and services "
 "related to the project. Contract information is released along with the "
 "implementation milestones."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:129
+#: ../../docs/guidance/map/milestones.md:112
 msgid "In the first implementation update release:"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:131
+#: ../../docs/guidance/map/milestones.md:114
 msgid ""
 "The milestone (\"Finish the exterior and interior walls\") has been met, so "
 "the `status` field is set to 'met' and the relevant dates are added to the "
 "`dateMet` and `dateModified` fields."
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:133
+#: ../../docs/guidance/map/milestones.md:116
 msgid "In the second implementation update release:"
 msgstr ""
 
-#: ../../docs/guidance/map/milestones.md:135
+#: ../../docs/guidance/map/milestones.md:118
 msgid ""
 "The construction company has received payment for the work done so far, so "
 "the milestone for the wall restoration with type 'financing' is updated. A "

@@ -1,6 +1,10 @@
+```{workedexample} Organizational units
+:tags: parties
+```
+
 # Organizational units
 
-For some use cases, publishers might need to disclose the organizational units involved in the contracting process, e.g agency branches or divisions.
+For some use cases, publishers might need to disclose the organizational units involved in the contracting (or planning) process, e.g agency branches or divisions.
 
 There is more than one approach to model organizational units in OCDS:
 
@@ -25,7 +29,7 @@ In the release below, the publisher adds the hospital name at the end of the pro
 
 An identifier for the hospital has been added using the "HN-ONCAE-UNIT" list code. The `address` and `contactPoint` information belongs to the hospital only.
 
-```{jsoninclude} ../../examples/organizational-units/honduras-planning.json
+```{jsoninclude} ../../examples/organizations/organizational_units/honduras_organization_identifier_scheme.json
 :jsonpointer:
 :expand: releases, parties, identifier, additionalIdentifiers
 :title: release
@@ -37,19 +41,19 @@ In Moldova, the national procurement agency needs to include a division code for
 
 In the release below, a branch of the Bank of Moldova announces a contract opportunity for the provision of consumables for electrical appliances.
 
-```{jsoninclude} ../../examples/organizational-units/moldova-tender.json
+```{jsoninclude} ../../examples/organizations/organizational_units/moldova_organization_extension.json
 :jsonpointer:
 :expand: releases, parties, identifier, additionalIdentifiers, details
 :title: release
 ```
 
-```{jsoninclude} ../../examples/organizational-units/ocds_divisionCode_extension/extension.json
+```{jsoninclude} ../../examples/organizations/organizational_units/ocds_divisionCode_extension/extension.json
 :jsonpointer:
 :expand: name, description, schemas, compatibility
 :title: extension
 ```
 
-```{jsoninclude} ../../examples/organizational-units/ocds_divisionCode_extension/release-schema.json
+```{jsoninclude} ../../examples/organizations/organizational_units/ocds_divisionCode_extension/release-schema.json
 :jsonpointer:
 :expand: definitions, Organization, properties, details, properties, divisionCode
 :title: release-schema
@@ -61,13 +65,13 @@ The `extension.json` and `release-schema.json` files for the Division code exten
 
 ### 3. Using the Organization building block with an organizational hierarchy
 
-The *Hospital de Clínicas* is in the planning stage of procuring supplies for their Blood Center. The Hospital is part of the Medical School in the National University of Asuncion. Since the hospital is key in the provision of healthcare for low income groups in the community, it is in the interest of many to clearly identify the procurement of the Hospital only. It is also important for the publisher that users can group the data following organizational hierarchies.
+The *Hospital de Clínicas* is planning to procure supplies for their Blood Center. The Hospital is part of the Medical School in the National University of Asuncion. Since the hospital is key in the provision of healthcare for low income groups in the community, it is in the interest of many to clearly identify the procurement of the Hospital only. It is also important for the publisher that users can group the data following organizational hierarchies.
 
 It is important to note that OCDS ought to not be used to publish organizational hierarchies unless there is a strong case to support it. Organizational hierarchies can be disclosed in additional datasets. Publishers can refer to the [W3C Organization Ontology](https://www.w3.org/TR/vocab-org/) to design a hierarchy-oriented dataset.
 
 The release below shows how the publisher chooses to model the hospital as an organizational unit of the Medical School (*Facultad de Ciencias Médicas*). The source systems collect the name of the organizational unit only, and this is appended to the organization name.
 
-```{jsoninclude} ../../examples/organizational-units/paraguay-planning.json
+```{jsoninclude} ../../examples/organizations/organizational_units/paraguay_organization_name.json
 :jsonpointer:
 :expand: releases, tag, parties, identifier
 :title: release
@@ -78,6 +82,6 @@ In a separate dataset, the publisher discloses the organizational hierarchy. Thi
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/organizational-units/paraguay-organizations.csv
+:file: ../../examples/organizations/organizational_units/paraguay_organizations.csv
 ```
 

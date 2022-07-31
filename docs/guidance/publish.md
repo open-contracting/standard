@@ -21,7 +21,8 @@ In OCDS, a publication policy is an essential data guide for users. Each OCDS pu
 * How timely or frequent the publication is
 * Where the data comes from and how it is generated
 * The formats of the publication and where to access the data
-* Any differences in the contracting processes or fields covered by different formats or access methods
+* Any differences in terms of which contracting (or planning) processes are covered by different formats or access methods
+* Any differences in terms of which fields are covered by different formats or access methods
 * License information for data reuse
 * Contact information of the publisher
 
@@ -68,7 +69,5 @@ Once you have published your data, it's time to share it with the world. It is a
 **Action:** Request a data quality and usability feedback report from the [OCDS Helpdesk](../support/index.md#ocds-helpdesk).
 
 **Action:** [Request support from OCP](mailto:data@open-contracting.org) to build capacity or tools for key stakeholders to start using the data.
-
-**Resource:** [OCDS Tool Directory](https://www.open-contracting.org/resources/open-contracting-tools-directory/)
 
 **Resource:** [Guidance for using OCDS data](https://www.open-contracting.org/data/data-use/)

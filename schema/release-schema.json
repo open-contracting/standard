@@ -2,25 +2,25 @@
   "id": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an Open Contracting Release",
-  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, establishing the rationale for the procurement, giving the market a general description of the purchase, getting the necessary budget, forecasting and conducting market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
+  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multi-stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
   "type": "object",
   "properties": {
     "ocid": {
       "title": "Open contracting process identifier",
-      "description": "A globally unique identifier for the contracting process that the release describes. Alternatively, this identifier can refer to a planning process or a single stage of a multiple stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
+      "description": "A globally unique identifier for the contracting process that the release describes. Alternatively, this identifier can refer to a planning process or a single stage of a multi-stage procedure. It is composed of an ocid prefix and an internal identifier. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`). For more information, see the [identifiers](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) reference.",
       "type": "string",
       "minLength": 1
     },
     "id": {
       "title": "Release ID",
-      "description": "The identifier of the release. The release ID must be unique within the scope of the contracting process (identified by the ocid), for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
+      "description": "The identifier of the individual release or compiled release. For an individual release, the release ID must be unique within the scope of the (contracting or planning) process, for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the release ID should be the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
     },
     "date": {
       "title": "Release Date",
-      "description": "The date on which the information contained in the release was first recorded in, or published by, any system. For a compiled release, the maximum `date` among the individual releases used to create the compiled release.",
+      "description": "The date on which the information contained in the release was first recorded in, or published by, any system. For a compiled release, the maximum `date` among the individual releases used to create the compiled release. The release date should be unique within the scope of the (contracting or planning) process, for a given version of OCDS.",
       "type": "string",
       "format": "date-time",
       "omitWhenMerged": true
@@ -28,11 +28,12 @@
     "publisher": {
       "title": "Publisher",
       "description": "The original publisher of this release.",
+      "omitWhenMerged": true,
       "$ref": "#/definitions/Identifier"
     },
     "tag": {
       "title": "Release Tag",
-      "description": "One or more values from the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. A tag labels the release: for example, as corresponding to a particular stage of the contracting process. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release.",
+      "description": "A tag labeling the release, using the the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags distinguish, for example, planning and contracting processes and the stages of contracting processes. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release. Planning processes must not use the 'tender' code, even if they use `tender` fields.",
       "type": "array",
       "items": {
         "type": "string"
@@ -58,7 +59,7 @@
     },
     "parties": {
       "title": "Parties",
-      "description": "Information on the organizations who are involved in the contracting process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
+      "description": "Information on the organizations who are involved in the contracting (or planning) process and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Organization"
@@ -67,22 +68,22 @@
     },
     "buyer": {
       "title": "Buyer",
-      "description": "The organization aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.",
+      "description": "The organization aiming to conclude a contract with a supplier or to use the goods, services or works resulting from the contract.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "planning": {
       "title": "Planning",
-      "description": "Information from the planning process. This includes information related to the process of deciding what to contract, when and how.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
       "$ref": "#/definitions/Planning"
     },
     "tender": {
       "title": "Tender",
-      "description": "The activities undertaken in order to enter into a contract.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
       "$ref": "#/definitions/Tender"
     },
     "awards": {
       "title": "Awards",
-      "description": "Information from the award phase of the contracting process. There can be more than one award per contracting process e.g. because the contract is split among different providers, or because it is a standing offer.",
+      "description": "Information about the awards. This information concerns the contracting process. This information typically concerns the period after the bid submission deadline and ending with the award or, if there is a standstill period, the end of the standstill period.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Award"
@@ -91,7 +92,7 @@
     },
     "contracts": {
       "title": "Contracts",
-      "description": "Information from the contract creation and implementation phase of the contracting process.",
+      "description": "Information about the contracts and their implementation. This information concerns the contracting process. This information typically concerns the period after the award or, if there was a standstill period, after the end of the standstill period.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Contract"
@@ -119,7 +120,7 @@
     },
     "links": {
       "title": "Links",
-      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process.",
+      "description": "Links to related resources. In a release, links relate to the individual release: for example, a link to a canonical version of the release in another OCDS publication. In a compiled release, links relate to the entire contracting (or planning) process: for example, a link to a resource in a non-OCDS publication that represents the entire contracting process. For references to related processes, see the `relatedProcesses` array.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Link"
@@ -138,7 +139,7 @@
   "definitions": {
     "Planning": {
       "title": "Planning",
-      "description": "Information from the planning process. Note that many other fields can be filled in a planning release, in the appropriate fields in the tender section; these would likely be estimates at this stage, e.g. value in tender.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
       "type": "object",
       "properties": {
         "id": {
@@ -159,7 +160,7 @@
         },
         "budget": {
           "title": "Budget",
-          "description": "Details of the budget that funds the planned contracting process.",
+          "description": "Details of the budget that will fund the future contract(s)",
           "$ref": "#/definitions/Budget"
         },
         "documents": {
@@ -190,7 +191,7 @@
     },
     "Tender": {
       "title": "Tender",
-      "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
       "type": "object",
       "required": [
         "id"
@@ -198,16 +199,26 @@
       "properties": {
         "id": {
           "title": "Tender ID",
-          "description": "An identifier for this tender process. This may be the same as the ocid, or may be an internal identifier for this tender. Although an integer is allowed, it is recommended to use a string.",
+          "description": "An identifier for this tender. This may be the same as the ocid, or may be an internal identifier for this tender. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer"
           ],
           "minLength": 1
         },
+        "identifiers": {
+          "title": "Additional tender identifiers",
+          "description": "Additional identifiers for this tender. This field can be used to provide local identifiers for the tender.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleIdentifier"
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
+        },
         "title": {
           "title": "Tender title",
-          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement.",
+          "description": "A title for this tender. This will often be used by applications as a headline to attract interest, and to help analysts understand the nature of this procurement. The title should be less than 150 characters in length.",
           "type": [
             "string",
             "null"
@@ -251,12 +262,12 @@
         },
         "procuringEntity": {
           "title": "Procuring entity",
-          "description": "The organization managing the contracting process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
+          "description": "The organization managing the contracting (or planning) process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
           "$ref": "#/definitions/OrganizationReference"
         },
         "items": {
           "title": "Items to be procured",
-          "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
+          "description": "The goods, services or works to be purchased, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Item"
@@ -265,12 +276,12 @@
         },
         "value": {
           "title": "Value",
-          "description": "The estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated value of the procurement, as estimated when publishing the tender information. A negative value indicates that the future contract(s) may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "$ref": "#/definitions/Value"
         },
         "minValue": {
           "title": "Minimum value",
-          "description": "The estimated minimum value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
+          "description": "The estimated minimum value of the procurement. A negative value indicates that the future contract(s) may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "$ref": "#/definitions/Value"
         },
         "maximumValue": {
@@ -313,7 +324,7 @@
         },
         "mainProcurementCategory": {
           "title": "Main procurement category",
-          "description": "The primary category describing the main object of this contracting process, from the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
+          "description": "The primary category describing the main object of this contracting (or planning) process, from the closed [procurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#procurement-category) codelist.",
           "type": [
             "string",
             "null"
@@ -322,14 +333,14 @@
           "openCodelist": false,
           "enum": [
             "goods",
-            "works",
             "services",
+            "works",
             null
           ]
         },
         "additionalProcurementCategories": {
           "title": "Additional procurement categories",
-          "description": "Any additional categories describing the objects of this contracting process, using the open [extendedProcurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
+          "description": "Any additional categories describing the objects of this contracting (or planning) process, using the open [extendedProcurementCategory](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#extended-procurement-category) codelist.",
           "type": [
             "array",
             "null"
@@ -377,7 +388,7 @@
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
-          "description": "Any detailed or further information on the submission method. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions.",
+          "description": "Information about the methods by which bids are submitted. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions. More structured information can be provided using the submission terms extension.",
           "type": [
             "string",
             "null"
@@ -404,7 +415,7 @@
         },
         "hasEnquiries": {
           "title": "Has enquiries?",
-          "description": "A true/false field to indicate whether any enquiries were received during the tender process. Structured information on enquiries that were received, and responses to them, can be provided using the enquiries extension.",
+          "description": "A true/false field to indicate whether any enquiries were received during the tender stage. Structured information on enquiries that were received, and responses to them, can be provided using the enquiries extension.",
           "type": [
             "boolean",
             "null"
@@ -432,7 +443,7 @@
         },
         "selectionCriteria": {
           "title": "Selection criteria",
-          "description": "The minimum requirements for tenderers to participate in the contracting process. Selection criteria ensure that a tenderer has the legal and financial capacities and the technical and professional abilities to perform the contract to be awarded. More structured information can be provided using the selection criteria extension.",
+          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract. More structured information can be provided using the selection criteria extension.",
           "type": [
             "string",
             "null"
@@ -441,6 +452,11 @@
         "awardPeriod": {
           "title": "Evaluation and award period",
           "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalized. The start date may be used to indicate the start of an evaluation period.",
+          "$ref": "#/definitions/Period"
+        },
+        "standstillPeriod": {
+          "title": "Standstill period",
+          "description": "The period before the contract signature during which the award decision can be challenged. This period typically starts on the date on which the tenderers are informed about the award decision.",
           "$ref": "#/definitions/Period"
         },
         "contractPeriod": {
@@ -554,7 +570,7 @@
       "properties": {
         "id": {
           "title": "Award ID",
-          "description": "The identifier for this award. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+          "description": "The identifier for this award. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the contracting process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
           "type": [
             "string",
             "integer"
@@ -611,9 +627,18 @@
           ],
           "format": "date-time"
         },
+        "datePublished": {
+          "title": "Date published",
+          "description": "The date on which the award was published.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
         "value": {
           "title": "Value",
-          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "$ref": "#/definitions/Value"
         },
         "maximumValue": {
@@ -637,7 +662,7 @@
         },
         "items": {
           "title": "Items awarded",
-          "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
+          "description": "The goods, services or works awarded in this award, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -703,12 +728,22 @@
       "properties": {
         "id": {
           "title": "Contract ID",
-          "description": "The identifier for this contract. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the Open Contracting Process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
+          "description": "The identifier for this contract. Although an integer is allowed, it is recommended to use a string. It must be unique and must not change within the contracting process it is part of (defined by a single ocid). See the [identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for further details.",
           "type": [
             "string",
             "integer"
           ],
           "minLength": 1
+        },
+        "identifiers": {
+          "title": "Additional contract identifiers",
+          "description": "Additional identifiers for this contract. This field can be used to provide local identifiers for the contract.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleIdentifier"
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
         },
         "awardID": {
           "title": "Award ID",
@@ -788,7 +823,7 @@
         },
         "items": {
           "title": "Items contracted",
-          "description": "The goods, services, and any intangible outcomes in this contract. If the items contracted are identical to the items awarded, this field should be omitted.",
+          "description": "The goods, services or works in this contract. If the items contracted are identical to the items awarded, this field should be omitted.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -901,7 +936,7 @@
     },
     "Milestone": {
       "title": "Milestone",
-      "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process.",
+      "description": "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process.",
       "type": "object",
       "required": [
         "id"
@@ -944,11 +979,20 @@
         },
         "code": {
           "title": "Milestone code",
-          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of contracting (or planning) process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
           "type": [
             "string",
             "null"
           ]
+        },
+        "dueAfterDate": {
+          "title": "Due after date",
+          "description": "The date after which the milestone is due.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "dueDate": {
           "title": "Due date",
@@ -1006,6 +1050,11 @@
             "$ref": "#/definitions/Document"
           },
           "uniqueItems": true
+        },
+        "value": {
+          "title": "Value",
+          "description": "The payment's value, if the milestone represents a planned payment.",
+          "$ref": "#/definitions/Value"
         }
       },
       "patternProperties": {
@@ -1103,6 +1152,19 @@
           "codelist": "mediaType.csv",
           "openCodelist": true
         },
+        "languages": {
+          "title": "Languages",
+          "description": "The languages used in the document, from the open [language](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. A [BCP47 language tag](https://www.w3.org/International/articles/language-tags/) is allowed, if there is a user need for the additional information.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "language.csv",
+          "openCodelist": true
+        },
         "language": {
           "title": "Language",
           "description": "The language of the linked document, from the open [language](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. A [BCP47 language tag](https://www.w3.org/International/articles/language-tags/) is allowed, if there is a user need for the additional information.",
@@ -1111,7 +1173,24 @@
             "null"
           ],
           "codelist": "language.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "deprecated": {
+            "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
+            "deprecatedVersion": "1.2"
+          }
+        },
+        "relatedItems": {
+          "title": "Related items",
+          "description": "The subset of items to which this document relates, expressed as the `id` values of the related entries in the parent object's `items` array. For example, an entry in the `tender.documents` array may be related only to entries in the `tender.items` array.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string"
+            ]
+          }
         }
       },
       "patternProperties": {
@@ -1132,11 +1211,11 @@
     "Budget": {
       "type": "object",
       "title": "Budget information",
-      "description": "This section contains basic information about the budget estimated for, or allocated to, this contracting process at the present time. Further documentation and data about how budgets have been allocated to a contracting process should be published outside of OCDS data, according to the best available standards.",
+      "description": "This section contains basic information about the budget that will fund the future contract(s). Further documentation and data about how budgets have been allocated should be published outside of OCDS data, according to the best available standards.",
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An identifier for the budget line item which provides funds for this contracting process. This identifier should be possible to cross-reference against formal budget documents.",
+          "description": "An identifier of the budget that will fund the future contract(s). This identifier should be possible to cross-reference against formal budget documents.",
           "type": [
             "string",
             "integer",
@@ -1145,7 +1224,7 @@
         },
         "description": {
           "title": "Budget Source",
-          "description": "A short free-text description of the budget allocation for this contracting process. This may be used to provide human-readable information on the budget category allocated to this contracting process, and/or, information about the nature and source of the allocation (e.g. conditional, confirmed; any official authorizations given to the budget allocation).",
+          "description": "A short free-text description of the budget that will fund the future contract(s). This may be used to provide human-readable information on: the budget category for the future contract(s) and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
           "type": [
             "string",
             "null"
@@ -1153,12 +1232,12 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line funding this contracting process.",
+          "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. If the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
           "$ref": "#/definitions/Value"
         },
         "project": {
           "title": "Project title",
-          "description": "The name of the project through which this contracting process is funded (if applicable). Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry. No translation option is offered for this string, as translated values can be provided in third-party data, linked from the data source above.",
+          "description": "The name of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
           "type": [
             "string",
             "null"
@@ -1166,7 +1245,7 @@
         },
         "projectID": {
           "title": "Project identifier",
-          "description": "An external identifier for the project that this contracting process forms part of, or is funded via (if applicable). Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+          "description": "The identifier of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -1175,7 +1254,7 @@
         },
         "uri": {
           "title": "Linked budget information",
-          "description": "A URI pointing directly to a machine-readable record about the budget line-item or line-items that fund this contracting process. Information can be provided in a range of formats, including using IATI, the Open Fiscal Data Standard or any other standard which provides structured data on budget sources. Human readable documents can be included using the planning.documents block.",
+          "description": "The URL of a machine-readable resource about the budget that will fund the future contract(s). For human-readable documents, see the `planning.documents` array.",
           "type": [
             "string",
             "null"
@@ -1220,7 +1299,7 @@
     "Transaction": {
       "type": "object",
       "title": "Transaction information",
-      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "description": "A spending transaction related to the contract. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
       "required": [
         "id"
       ],
@@ -1290,7 +1369,7 @@
           "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods, services or works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         },
@@ -1299,7 +1378,7 @@
           "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods, services or works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1377,7 +1456,7 @@
       "properties": {
         "name": {
           "title": "Common name",
-          "description": "A common name for this organization. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+          "description": "A common name for this organization. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization is known. This field may also include details of the department or sub-unit involved in this contracting (or planning) process.",
           "type": [
             "string",
             "null"
@@ -1385,7 +1464,7 @@
         },
         "id": {
           "type": "string",
-          "description": "The ID used for cross-referencing to this organization from other sections of the release. This field need only be unique within the scope of the contracting process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available.",
+          "description": "The ID used for cross-referencing to this organization from other sections of the release. This field need only be unique within the scope of the (contracting or planning) process, but should be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available.",
           "title": "ID"
         },
         "identifier": {
@@ -1395,7 +1474,7 @@
         },
         "additionalIdentifiers": {
           "title": "Additional identifiers",
-          "description": "A list of additional / supplemental identifiers for the organization or participant, using the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
+          "description": "Additional identifiers for this organization, following the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/). This field can also be used to provide an identifier for an organizational unit (for example, an agency, branch or division).",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Identifier"
@@ -1405,7 +1484,7 @@
         },
         "address": {
           "title": "Address",
-          "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
+          "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting (or planning) process.",
           "$ref": "#/definitions/Address"
         },
         "contactPoint": {
@@ -1415,7 +1494,7 @@
         },
         "roles": {
           "title": "Roles",
-          "description": "The organization's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
+          "description": "The organization's role(s) in the contracting (or planning) process, using the open [partyRole](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#party-role) codelist.",
           "type": [
             "array",
             "null"
@@ -1432,7 +1511,28 @@
             "null"
           ],
           "description": "Additional classification information about organizations can be provided using organization details extensions that define particular fields and classification schemes.",
-          "title": "Details"
+          "title": "Details",
+          "properties": {
+            "scale": {
+              "title": "Scale",
+              "description": "The size or scale of the organization.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "micro",
+                "sme",
+                "small",
+                "medium",
+                "large",
+                "selfEmployed",
+                null
+              ],
+              "codelist": "partyScale.csv",
+              "openCodelist": false
+            }
+          }
         }
       },
       "patternProperties": {
@@ -1447,7 +1547,7 @@
     "Item": {
       "title": "Item",
       "type": "object",
-      "description": "A good, service, or work to be contracted.",
+      "description": "A line-item of the goods, services, or works to be contracted.",
       "required": [
         "id"
       ],
@@ -1463,7 +1563,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "A description of the goods, services to be provided.",
+          "description": "A description of the goods, services or works to be provided.",
           "type": [
             "string",
             "null"
@@ -1494,7 +1594,7 @@
         },
         "unit": {
           "title": "Unit",
-          "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price.",
+          "description": "A description of the unit in which the goods, services or works are provided (e.g. hours, kilograms) and the unit-price.",
           "$ref": "#/definitions/Unit"
         }
       },
@@ -1546,7 +1646,7 @@
           "title": "Description"
         },
         "amendsReleaseID": {
-          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **before** the amendment was made.",
+          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
           "type": [
             "string",
             "null"
@@ -1554,7 +1654,7 @@
           "title": "Amended release (identifier)"
         },
         "releaseID": {
-          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting process) that provides the values for this contracting process **after** the amendment was made.",
+          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
           "type": [
             "string",
             "null"
@@ -2031,7 +2131,7 @@
     "ContactPoint": {
       "title": "Contact point",
       "type": "object",
-      "description": "A person, contact point or department to contact in relation to this contracting process.",
+      "description": "A person, contact point or department to contact in relation to this contracting (or planning) process.",
       "properties": {
         "name": {
           "title": "Name",
@@ -2039,7 +2139,7 @@
             "string",
             "null"
           ],
-          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting (or planning) process."
         },
         "email": {
           "title": "Email",
@@ -2416,7 +2516,7 @@
     },
     "Period": {
       "title": "Period",
-      "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+      "description": "Key events during a contracting (or planning) process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
       "type": "object",
       "properties": {
         "startDate": {
@@ -2456,33 +2556,8 @@
         }
       }
     },
-    "SimpleUnit": {
-      "title": "Simple Unit",
-      "description": "A simple unit of measure, consisting of: an identifier for the list (scheme) from which the unit is taken, and an identifier for the unit from that list.",
-      "type": "object",
-      "properties": {
-        "scheme": {
-          "title": "Scheme",
-          "description": "The list from which identifiers for units of measure are taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "unitClassificationScheme.csv",
-          "openCodelist": true
-        },
-        "id": {
-          "title": "ID",
-          "description": "The identifier from the codelist referenced in the `scheme` field. Check the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find and use identifiers from the scheme in use.",
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
     "RelatedProcess": {
-      "description": "A reference to a related contracting process: generally one preceding or following on from the current process.",
+      "description": "A reference to a related contracting (or planning) process: generally one preceding or following on from the current process.",
       "type": "object",
       "title": "Related Process",
       "properties": {
@@ -2505,7 +2580,7 @@
           "openCodelist": true
         },
         "title": {
-          "description": "The title of the related process, where referencing an open contracting process, this field should match the tender/title field in the related process.",
+          "description": "The title of the related process, where referencing a contracting (or planning) process, this field should match the tender/title field in the related process.",
           "title": "Related process title",
           "type": [
             "string",
@@ -2543,7 +2618,7 @@
     },
     "Unit": {
       "title": "Unit",
-      "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price.",
+      "description": "A description of the unit in which the goods, services or works are provided (e.g. hours, kilograms) and the unit-price.",
       "type": "object",
       "properties": {
         "scheme": {
@@ -2585,26 +2660,6 @@
             "string",
             "null"
           ]
-        },
-        "weight": {
-          "title": "Weight",
-          "description": "The weight of one item unit.",
-          "type": "object",
-          "properties": {
-            "unit": {
-              "title": "Unit",
-              "description": "The code and scheme for the unit in which the weight is specified.",
-              "$ref": "#/definitions/SimpleUnit"
-            },
-            "quantity": {
-              "title": "Quantity",
-              "description": "The number of units.",
-              "type": [
-                "number",
-                "null"
-              ]
-            }
-          }
         }
       },
       "patternProperties": {
@@ -2633,6 +2688,30 @@
           "description": "The URL of the related resource.",
           "type": "string",
           "format": "uri"
+        }
+      }
+    },
+    "SimpleIdentifier": {
+      "title": "Simple identifier",
+      "description": "An unambiguous reference to a resource within a given context.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list, register or system from which the identifier is taken.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "title": "ID",
+          "description": "The identifier taken from the scheme.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
         }
       }
     }

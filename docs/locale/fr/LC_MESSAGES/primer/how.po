@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-31 13:56-0400\n"
+"POT-Creation-Date: 2022-01-13 09:12-0300\n"
 "PO-Revision-Date: 2021-07-31 18:32+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
@@ -47,114 +47,112 @@ msgstr ""
 msgid "Describe the formats for publishing OCDS data"
 msgstr ""
 
-#: ../../docs/primer/how.md:17
+#: ../../docs/primer/how.md:24
 msgid ""
 "The OCDS defines a unique contracting process as all the actions aimed at "
-"concluding one or more contracts. An individual contracting process has "
+"implementing one or more contracts. An individual contracting process has "
 "several different stages: **tendering, awarding, contracting** and "
 "**implementation.** The OCDS describes a way to model and publish data in a "
 "standardized way along entire public contracting processes."
 msgstr ""
 
-#: ../../docs/primer/how.md:23
+#: ../../docs/primer/how.md:30
 msgid "![Tender](../_static/svg/green_tendering.svg)"
 msgstr ""
 
-#: ../../docs/primer/how.md:25
+#: ../../docs/primer/how.md:32
 msgid ""
 "**Tender**\\ *Including:*\\ Tender notices\\ Specifications\\ Line items\\ "
 "Values\\ Enquiries"
 msgstr ""
 
-#: ../../docs/primer/how.md:37
+#: ../../docs/primer/how.md:44
 msgid "![Award](../_static/svg/green_awarded.svg)"
 msgstr ""
 
-#: ../../docs/primer/how.md:39
+#: ../../docs/primer/how.md:46
 msgid ""
 "**Award**\\ *Including:*\\ Details of award\\ Bidder information\\ Bid "
 "evaluation\\ Values"
 msgstr ""
 
-#: ../../docs/primer/how.md:50
+#: ../../docs/primer/how.md:57
 msgid "![Contract](../_static/svg/green_signed.svg)"
 msgstr ""
 
-#: ../../docs/primer/how.md:52
+#: ../../docs/primer/how.md:59
 msgid ""
 "**Contract**\\ *Including:*\\ Final details\\ Signed contract\\ Amendments\\"
 " Values"
 msgstr ""
 
-#: ../../docs/primer/how.md:63
+#: ../../docs/primer/how.md:70
 msgid "![Implementation](../_static/svg/green_implementation.svg)"
 msgstr ""
 
-#: ../../docs/primer/how.md:65
+#: ../../docs/primer/how.md:72
 msgid ""
 "**Implementation**\\ *Including:*\\ Payments\\ Progress updates\\ Location\\"
 " Extensions\\ Amendments\\ Completion or Termination info"
 msgstr ""
 
-#: ../../docs/primer/how.md:80
+#: ../../docs/primer/how.md:87
 msgid ""
 "The OCDS brings together the data published at each stage using a single "
 "open contracting process identifier: the **OCID.** An OCID is composed of a "
-"prefix [registered by the publisher with OCP](https://standard.open-"
-"contracting.org/latest/en/guidance/build/#register-an-ocid-prefix), and a "
-"unique process identifier chosen by the publisher."
+"prefix, [registered by the publisher with "
+"OCP](../guidance/build.md#register-an-ocid-prefix), and a unique process "
+"identifier chosen by the publisher."
 msgstr ""
 
-#: ../../docs/primer/how.md:82
-msgid "![ocid](../_static/png/ocid_en.png)"
-msgstr ""
-
-#: ../../docs/primer/how.md:84
+#: ../../docs/primer/how.md:89
 msgid ""
 "The OCID helps users to join up data across the whole contracting process – "
 "a key feature and benefit of publishing and using OCDS data."
 msgstr ""
 
-#: ../../docs/primer/how.md:86
+#: ../../docs/primer/how.md:91
 msgid ""
-"In designing the OCDS, we explored a range of different user needs and use "
-"cases for data about public contracting. Each use case has different data "
-"needs in terms of data fields, documents, publication frequency, and data "
-"quality. The OCDS provides a common framework to maximize the number of user"
-" needs that can be met through data and document disclosure."
+"In designing the OCDS, we [explored](https://www.open-"
+"contracting.org/resources/demand-side-assessment-report/) a range of "
+"different user needs and use cases for data about public contracting. Each "
+"use case has different data needs in terms of data fields, documents, "
+"publication frequency, and data quality. The OCDS provides a common "
+"framework to maximize the number of user needs that can be met through data "
+"and document disclosure."
 msgstr ""
 
-#: ../../docs/primer/how.md:88
+#: ../../docs/primer/how.md:93
 msgid ""
-"The OCDS provides a common framework, in addition to the OCID, through the "
+"In addition to the OCID, another component of OCDS' common framework is the "
 "OCDS **schema.** The schema sets out the fields, structure, data types and "
 "validation rules for OCDS data. The schema is described using JSON Schema, "
 "and the default format of the data is JSON (JavaScript Object Notation). The"
-" schema is documented in the [Reference](https://standard.open-"
-"contracting.org/latest/en/schema/) section of the OCDS."
+" schema is documented in the [Reference](../schema/index) section of the "
+"OCDS."
 msgstr ""
 
-#: ../../docs/primer/how.md:90
+#: ../../docs/primer/how.md:95
 msgid ""
-"When mapping your data to the OCDS our sing OCDS data, you will encounter a "
-"number of common data fields and structures, which are described by the "
-"schema:"
+"When mapping your data to the OCDS or when using OCDS data, you will "
+"encounter a number of common data fields and structures, which are described"
+" by the schema:"
 msgstr ""
 
-#: ../../docs/primer/how.md:92
+#: ../../docs/primer/how.md:97
 msgid ""
 "**release metadata** - contextual information about each release of data;"
 msgstr ""
 "**release metadata** - des informations contextuelles sur chaque instance de"
 " données ;"
 
-#: ../../docs/primer/how.md:93
+#: ../../docs/primer/how.md:98
 msgid ""
 "**parties** - information about the organizations and participants in the "
 "contracting process;"
 msgstr ""
 
-#: ../../docs/primer/how.md:94
+#: ../../docs/primer/how.md:99
 msgid ""
 "**planning** - information about the goals, budgets and projects a "
 "contracting process relates to;"
@@ -162,7 +160,7 @@ msgstr ""
 "**planning** - informations sur les objectifs, les budgets et les projets "
 "relatifs au marché ;"
 
-#: ../../docs/primer/how.md:95
+#: ../../docs/primer/how.md:100
 msgid ""
 "**tender** - information about how a tender will take place, or has taken "
 "place;"
@@ -170,12 +168,12 @@ msgstr ""
 "**tender** - informations sur le déroulement de l'appel d'offres, tel qu'il "
 "a ou aura eu lieu ;"
 
-#: ../../docs/primer/how.md:96
+#: ../../docs/primer/how.md:101
 msgid ""
 "**awards** - information on awards made as part of a contracting process;"
 msgstr "**awards** - informations sur l'attribution du marché ;"
 
-#: ../../docs/primer/how.md:97
+#: ../../docs/primer/how.md:102
 msgid ""
 "**contract** - information on contracts signed as part of a contracting "
 "process;"
@@ -183,34 +181,33 @@ msgstr ""
 "**contract** - informations sur les contrats signés dans le cadre du "
 "processus de passation de marché ;"
 
-#: ../../docs/primer/how.md:98
+#: ../../docs/primer/how.md:103
 msgid ""
 "**implementation** - information on the progress of each contract towards "
 "completion."
 msgstr ""
 
-#: ../../docs/primer/how.md:100
+#: ../../docs/primer/how.md:105
 msgid ""
-"Some schema fields refer to [codelists](https://standard.open-"
-"contracting.org/latest/en/schema/codelists/), to limit and standardize the "
-"possible values of the fields, in order to promote data interoperability."
+"Some schema fields refer to [codelists](../schema/codelists), to limit and "
+"standardize the possible values of the fields, in order to promote data "
+"interoperability."
 msgstr ""
 
-#: ../../docs/primer/how.md:102
+#: ../../docs/primer/how.md:107
 msgid ""
-"When you publish OCDS data, the default format of the data is JSON. In "
-"addition to JSON format, OCDS can be published as Excel and CSV (comma-"
-"separated values) files."
+"In addition to the default format of JSON, you can convert and publish your "
+"OCDS data as Excel and CSV (comma-separated values) files."
 msgstr ""
 
-#: ../../docs/primer/how.md:104
+#: ../../docs/primer/how.md:109
 msgid "Publication formats: JSON and Excel/CSV"
 msgstr ""
 
 #: ../../docs/primer/how.md:1
 msgid ""
 "While the OCDS schema is described using JSON Schema, OCDS data can be "
-"published in both JSON format and in tabular formats such as CSV files or "
+"converted from its JSON format to tabular formats such as CSV files or "
 "spreadsheets. JSON is favored by developers because it uses human-readable "
 "text to exchange complex information, such as nested objects. It can contain"
 " large volumes of information and is particularly good at handling one-to-"
@@ -226,46 +223,44 @@ msgid ""
 "both so that more users’ needs can be satisfied."
 msgstr ""
 
-#: ../../docs/primer/how.md:112
+#: ../../docs/primer/how.md:117
 msgid ""
 "No matter what type of contracting data you are working with or format you "
 "publish in, following OCDS rules and guidance will help you and your users "
 "to:"
 msgstr ""
 
-#: ../../docs/primer/how.md:114
+#: ../../docs/primer/how.md:119
 msgid ""
 "Access clear definitions for the meaning, structure and format of your data"
 msgstr ""
 
-#: ../../docs/primer/how.md:115
+#: ../../docs/primer/how.md:120
 msgid ""
 "Access a growing ecosystem of reusable tools and methodologies for working "
 "with OCDS data"
 msgstr ""
 
-#: ../../docs/primer/how.md:116
+#: ../../docs/primer/how.md:121
 msgid ""
 "Compare your data with other publishers’ data to examine value for money and"
 " other types of analysis"
 msgstr ""
 
-#: ../../docs/primer/how.md:117
+#: ../../docs/primer/how.md:122
 msgid ""
 "Check the structure, format and quality of your data against the OCDS schema"
 msgstr ""
 
 #: ../../docs/primer/how.md:1
 msgid ""
-"**To learn more,** go to the next page in the primer: [How is OCDS data "
+"**To learn more,** go to the next page in the Primer: [How is OCDS data "
 "published?](releases_and_records) You can also review the further resources "
 "below to go deeper into the subjects introduced on this page."
 msgstr ""
 
 #: ../../docs/primer/how.md:3
-msgid ""
-"[Guidance to implementing OCDS](https://standard.open-"
-"contracting.org/latest/en/guidance/)"
+msgid "[Guidance to implementing OCDS](../guidance/index)"
 msgstr ""
 
 #: ../../docs/primer/how.md:4

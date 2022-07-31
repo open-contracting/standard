@@ -2,12 +2,9 @@
   "id": "https://standard.open-contracting.org/schema/1__1__5/versioned-release-validation-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for a compiled, versioned Open Contracting Release.",
-  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multiple stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, establishing the rationale for the procurement, giving the market a general description of the purchase, getting the necessary budget, forecasting and conducting market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
+  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multi-stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
   "type": "object",
   "properties": {
-    "publisher": {
-      "$ref": "#/definitions/Identifier"
-    },
     "initiationType": {
       "type": "array",
       "items": {
@@ -185,6 +182,34 @@
             }
           }
         },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/SimpleIdentifierUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
         "title": {
           "$ref": "#/definitions/StringNullVersioned"
         },
@@ -315,8 +340,8 @@
                 "openCodelist": false,
                 "enum": [
                   "goods",
-                  "works",
                   "services",
+                  "works",
                   null
                 ]
               },
@@ -508,6 +533,9 @@
         "awardPeriod": {
           "$ref": "#/definitions/Period"
         },
+        "standstillPeriod": {
+          "$ref": "#/definitions/Period"
+        },
         "contractPeriod": {
           "$ref": "#/definitions/Period"
         },
@@ -677,6 +705,9 @@
         "date": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
+        "datePublished": {
+          "$ref": "#/definitions/StringNullDateTimeVersioned"
+        },
         "value": {
           "$ref": "#/definitions/Value"
         },
@@ -753,6 +784,34 @@
             "integer"
           ],
           "minLength": 1
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/SimpleIdentifierUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "awardID": {
           "type": "array",
@@ -981,6 +1040,9 @@
         "code": {
           "$ref": "#/definitions/StringNullVersioned"
         },
+        "dueAfterDate": {
+          "$ref": "#/definitions/StringNullDateTimeVersioned"
+        },
         "dueDate": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
@@ -1036,6 +1098,9 @@
             "$ref": "#/definitions/Document"
           },
           "uniqueItems": true
+        },
+        "value": {
+          "$ref": "#/definitions/Value"
         }
       },
       "patternProperties": {
@@ -1139,6 +1204,38 @@
             }
           }
         },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                },
+                "codelist": "language.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
         "language": {
           "type": "array",
           "items": {
@@ -1157,7 +1254,43 @@
                   "null"
                 ],
                 "codelist": "language.csv",
-                "openCodelist": true
+                "openCodelist": true,
+                "deprecated": {
+                  "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
+                  "deprecatedVersion": "1.2"
+                }
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "relatedItems": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -1350,14 +1483,14 @@
         "providerOrganization": {
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods, services or works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         },
         "receiverOrganization": {
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods, services or works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1549,7 +1682,26 @@
                 "type": [
                   "object",
                   "null"
-                ]
+                ],
+                "properties": {
+                  "scale": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      "micro",
+                      "sme",
+                      "small",
+                      "medium",
+                      "large",
+                      "selfEmployed",
+                      null
+                    ],
+                    "codelist": "partyScale.csv",
+                    "openCodelist": false
+                  }
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -2619,43 +2771,6 @@
         }
       }
     },
-    "SimpleUnit": {
-      "type": "object",
-      "properties": {
-        "scheme": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "releaseDate": {
-                "format": "date-time",
-                "type": "string"
-              },
-              "releaseID": {
-                "type": "string"
-              },
-              "value": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "codelist": "unitClassificationScheme.csv",
-                "openCodelist": true
-              },
-              "releaseTag": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "id": {
-          "$ref": "#/definitions/StringNullVersioned"
-        }
-      }
-    },
     "RelatedProcess": {
       "type": "object",
       "properties": {
@@ -2777,41 +2892,6 @@
         },
         "uri": {
           "$ref": "#/definitions/StringNullUriVersioned"
-        },
-        "weight": {
-          "type": "object",
-          "properties": {
-            "unit": {
-              "$ref": "#/definitions/SimpleUnit"
-            },
-            "quantity": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "releaseDate": {
-                    "format": "date-time",
-                    "type": "string"
-                  },
-                  "releaseID": {
-                    "type": "string"
-                  },
-                  "value": {
-                    "type": [
-                      "number",
-                      "null"
-                    ]
-                  },
-                  "releaseTag": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       },
       "patternProperties": {
@@ -2867,6 +2947,42 @@
               "value": {
                 "type": "string",
                 "format": "uri"
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "SimpleIdentifier": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "id": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
               },
               "releaseTag": {
                 "type": "array",
@@ -3113,6 +3229,24 @@
         }
       },
       "type": "object"
+    },
+    "SimpleIdentifierUnversioned": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
+        }
+      }
     },
     "ClassificationUnversioned": {
       "type": "object",

@@ -1,65 +1,18 @@
 # Merging
 
-An OCDS [record](../schema/records_reference) aggregates all the releases available for a contracting process at a given time, and can include:
+An OCDS [record](../schema/records_reference) aggregates all the releases available for a contracting (or planning) process at a given time, and can include:
 
-* a compiled release, which expresses the current state of the contracting process, by showing only the most recent field values
-* a versioned release, which expresses all historical states of the contracting process, by showing all the field values over time
+* a compiled release, which expresses the current state of the contracting (or planning) process, by showing only the most recent field values
+* a versioned release, which expresses all historical states of the contracting (or planning) process, by showing all the field values over time
 
 **Merging** is the process of combining individual releases with the same OCDS version into a compiled or versioned release, described in more detail below. At a high level:
 
-* A compiled release is created by taking only the most recent values of fields from releases in a given contracting process.
-* A versioned release is created by taking all values of fields from releases in a given contracting process, copying metadata about the release from which they are taken, and putting them in chronological order.
+* A compiled release is created by taking only the most recent values of fields from releases in a given contracting (or planning) process.
+* A versioned release is created by taking all values of fields from releases in a given contracting (or planning) process, copying metadata about the release from which they are taken, and putting them in chronological order.
 
-````{admonition} Worked Example
-:class: hint
-
-A public procurement agency publishes a release to announce an opportunity on January 1, in which the estimated value of the procurement is $1,000. On January 31, it publishes a release to correct the information, in which the description of the procurement is expanded. On February 5, the agency publishes a release to amend the opportunity, in which the estimated value of the procurement is increased to $2,000.
-
-The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
-
-Through these individual releases, the agency provides real-time data about the contracting process.
-
-At each release, the agency also updates the record, which combines all the releases to date. In the final record:
-
-* The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
-* The versioned release makes it easy to see how the description and estimated value changed over time.
-
-```{jsoninclude} ../examples/merging/merge-tender-1.json
-:jsonpointer: /releases
-:expand: releases, tag, tender
-:title: tender
+```{seealso}
+Guidance: [Updates and deletions](../guidance/build/merging)
 ```
-
-```{jsoninclude} ../examples/merging/merge-tender-3.json
-:jsonpointer: /releases
-:expand: releases, tag, tender
-:title: tenderAmendment
-```
-
-```{jsoninclude} ../examples/merging/merge-award-1.json
-:jsonpointer: /releases
-:expand: releases, tag, awards
-:title: awardOne
-```
-
-```{jsoninclude} ../examples/merging/merge-award-2.json
-:jsonpointer: /releases
-:expand: releases, tag, awards
-:title: awardTwo
-```
-
-```{jsoninclude} ../examples/merging/merged.json
-:jsonpointer:
-:expand: records, compiledRelease, tag, tender, awards
-:title: record
-```
-
-```{jsoninclude} ../examples/merging/versioned.json
-:jsonpointer:
-:expand: records, versionedRelease, tag, tender, awards
-:title: versioned
-```
-````
 
 ## Merging specification
 
@@ -107,13 +60,13 @@ In a **versioned release**, with a few exceptions, a field's value is replaced w
 
 For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer: /records/0/versionedRelease/tender/value
 :expand: value, amount
 :title: Versioned_values
 ```
 
-```{jsoninclude} ../examples/merging/versioned.json
+```{jsoninclude} ../examples/merging/updates/versioned.json
 :jsonpointer:
 :expand: records, versionedRelease
 :title: Versioned_release

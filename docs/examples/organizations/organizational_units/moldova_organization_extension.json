@@ -1,0 +1,81 @@
+{
+  "uri": "https://standard.open-contracting.org/release/ocds-b3wdp1-MD-1539840280133-1539840280205",
+  "version": "1.1",
+  "extensions": [
+    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_budget_breakdown_extension/master/extension.json",
+    "https://standard.open-contracting.org/examples/extensions/ocds_divisionCode_extension/extension.json"
+  ],
+  "publisher": {
+    "name": "M-Tender"
+  },
+  "license": "http://opendefinition.org/licenses/",
+  "publicationPolicy": "https://standard.open-contracting.org/examples/publicationPolicy/",
+  "publishedDate": "2018-10-18T05:24:39Z",
+  "releases": [
+    {
+      "ocid": "ocds-b3wdp1-MD-1539840280133",
+      "id": "ocds-b3wdp1-MD-1539840280133-1539840280205",
+      "date": "2018-10-18T05:24:39Z",
+      "tag": [
+        "tender"
+      ],
+      "tender": {
+        "id": "ocds-b3wdp1-MD-1539840280133",
+        "title": "Piese consumabile pentru aparatele multifuncționale",
+        "description": "Livrarea timp de 30 zile",
+        "status": "active",
+        "value": {
+          "amount": 1400000.0,
+          "currency": "MDL"
+        },
+        "procurementMethod": "open",
+        "mainProcurementCategory": "goods",
+        "hasEnquiries": false,
+        "items": [
+          {
+            "id": "1",
+            "description": "Piese consumabile pentru aparatele multifuncționale",
+            "classification": {
+              "scheme": "CPV",
+              "id": "30100000-0",
+              "description": "Maşini, echipament şi accesorii de birou, cu excepţia computerelor, a imprimantelor şi a mobilierului"
+            }
+          }
+        ]
+      },
+      "buyer": {
+        "id": "MD-IDNO-1006601001182",
+        "name": "National Bank of Moldova - Chişinău Branch"
+      },
+      "parties": [
+        {
+          "id": "MD-IDNO-1006601001182",
+          "name": "National Bank of Moldova - Chişinău Branch",
+          "identifier": {
+            "scheme": "MD-IDNO",
+            "id": "1006601001182",
+            "legalName": "National Bank of Moldova"
+          },
+          "address": {
+            "streetAddress": "1 Grigore Vieru Avenue",
+            "locality": "Chişinău",
+            "region": "Chişinău",
+            "postalCode": "MD 2005",
+            "country": "MD"
+          },
+          "contactPoint": {
+            "email": "official@bnm.md",
+            "telephone": "+373 22 822 606"
+          },
+          "roles": [
+            "payer",
+            "buyer"
+          ],
+          "details": {
+            "divisionCode": "101"
+          }
+        }
+      ]
+    }
+  ]
+}
