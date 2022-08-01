@@ -68,9 +68,10 @@ Improvement on the below indicators demonstrates that the concepts are being pub
 
 Improvements on the below indicators demonstrate that it is becoming easier for users to access the published information.
 
-11. Publish record packages containing compiled releases
-12. Decrease the number of HTTP errors
-13. Increase the number of access methods (API endpoints, bulk downloads)
+1. Publish record packages containing compiled releases
+1. Decrease the number of HTTP errors
+1. Increase the number of access methods (API endpoints, bulk downloads)
+1. Decrease the number of license restrictions
 
 As publishers improve, the OCDS Helpdesk can work with them to identify how they can improve on the above criteria. OCP will note whether a publisher has improved in [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
