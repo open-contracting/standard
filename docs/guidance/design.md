@@ -106,7 +106,7 @@ To achieve success, an OCDS implementation team ought to include the following r
 
 **Action:** Ask everyone in your team to [read the Primer](../../primer/index).
 
-**Action**: [Contact the OCDS Helpdesk](https://standard.open-contracting.org/latest/en/support/) or [complete this form](http://bit.ly/OCP-Training) to arrange an online introductory training for your technical team, in English or Spanish.
+**Action**: [Contact the OCDS Helpdesk](../../support/index) or [complete this form](http://bit.ly/OCP-Training) to arrange an online introductory training for your technical team, in English or Spanish.
 
 **Action:** [Join the OCDS discussion group](../../support/index) to keep up to date and engage with other implementers.
 
