@@ -139,19 +139,21 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
-* `releaseTag`:
+* `releaseTag.csv`:
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
   * [#1415](https://github.com/open-contracting/standard/pull/1415) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
 * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
-* [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
+* [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
+* [#1530](https://github.com/open-contracting/standard/pull/1530) Use consistent wording for "goods, services and/or works" in the `classificationScheme`, `extendedProcurementCategory`, `partyRole` and `procurementCategory` codelists.
 
 ### Schema
 
 * Clarify core concepts:
   * [#1216](https://github.com/open-contracting/standard/pull/1216) Define contracting process and planning process in the schema description. Update definition of release, record and ocid. Update references to contracting process so that it takes take the planning process into account.
+  * [#1513](https://github.com/open-contracting/standard/pull/1513) Update fields' use of "contracting process" and "contracting (or planning) process" to reflect the new definition. Align `budget.project` and `budget.projectID`.
   * [#1443](https://github.com/open-contracting/standard/pull/1443) `date`
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
@@ -195,12 +197,16 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
+  * [#1527](https://github.com/open-contracting/standard/pull/1527) `id`, to clarify use in releases and compiled releases.
   * [#1094](https://github.com/open-contracting/standard/pull/1094) `Organization.id`, to clarify its uniqueness.
   * [#1510](https://github.com/open-contracting/standard/pull/1510) `Organization.additionalIdentifiers`, to clarify its potential use for organizational units.
-  * [#1167](https://github.com/open-contracting/standard/pull/1167) `Budget`,` Budget.id`, `Budget.description`, `Budget.amount`, to reduce ambiguity and use consistent wording.
+  * [#1167](https://github.com/open-contracting/standard/pull/1167) `Budget`, `Budget.id`, `Budget.description`, `Budget.amount`, to reduce ambiguity and use consistent wording.
+  * [#1529](https://github.com/open-contracting/standard/pull/1529) `Budget`, `Budget.id`, `Budget.description`, `Budget.amount`, `Budget.project`, `Budget.uri`, `Budget.source`, `tender.value`, `tender.minValue`, `awards.value`, `Transaction`, to replace "contracting process" with "contract(s)".
   * [#1189](https://github.com/open-contracting/standard/pull/1189) `Document.url`, to use precise wording and to describe how to indicate a part of a document.
   * [#1229](https://github.com/open-contracting/standard/pull/1229) Standardize the descriptions of `planning.documents`, `tender.documents`, `awards.documents`, `contracts.documents`, and `contracts.implementation.documents`.
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
+  * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` to use consistent wording for "goods, services and/or works".
+  * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `value.amount`, to clarify amount from tender/award/contract notice document.
 
 * Remove confusing terminology:
@@ -215,7 +221,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
   * [#1112](https://github.com/open-contracting/standard/pull/1112) `Organization.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available" ("may" replaced with "should")
   * [#1112](https://github.com/open-contracting/standard/pull/1112) `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
-  * [#1112](https://github.com/open-contracting/standard/pull/1112) `Contract.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
+  * [#1112](https://github.com/open-contracting/standard/pull/1112) `contracts.items`: "If the items contracted are identical to the items awarded, this field **should** be omitted." (rephrased)
 
 * Clarify merging behavior:
   * [#1242](https://github.com/open-contracting/standard/pull/1242) Clarify that the releases to merge must use the same version of OCDS.
@@ -224,7 +230,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * Make minor changes to the schema's organization:
   * [#1240](https://github.com/open-contracting/standard/pull/1240) Move `Unit` from `Item.unit` to the schema definitions.
-  * [#1354](https://github.com/open-contracting/standard/pull/1354) Switch the positions of `contract.dateSigned` and `contract.period` to correspond with the order in `Award`.
+  * [#1354](https://github.com/open-contracting/standard/pull/1354) Switch the positions of `contracts.dateSigned` and `contracts.period` to correspond with the order in `Award`.
 
 * Make minor changes to the JSON Schema properties:
   * [#1257](https://github.com/open-contracting/standard/pull/1257) Remove the default value (was `"en"`) for the `language` field.

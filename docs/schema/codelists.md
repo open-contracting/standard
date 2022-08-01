@@ -20,7 +20,7 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 ### Release Tag
 
-A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to.
+A contracting (or planning) process can result in a number of releases of information over time. A release must be tagged to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates.
 
 Additional codes may be used to label releases, based on user needs: for example, to indicate the notice or form to which a release corresponds.
 
@@ -39,7 +39,7 @@ Added the 'planningUpdate' code.
 ```{versionadded} 1.1
 ```
 
-The organizations participating in a contracting process are listed in the [parties section](reference.md#parties). A single organization can have one or more roles in the contracting process.
+The organizations participating in a contracting (or planning) process are listed in the [parties section](reference.md#parties). In a given process, a single organization can have one or more roles.
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -86,7 +86,7 @@ The `organizationIdentifierRegistrationAgency_iati.csv` file was removed. This l
 
 The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates the section of an OCDS release they are most likely to be applicable within. 
 
-The code descriptions are necessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
+The code descriptions are necessarily broad, to cover their usage in a range of contracting (or planning) processes, including for goods, services and works, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
 
 Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
@@ -154,7 +154,7 @@ The related process scheme describes the kind of identifier used to cross-refere
 ```{versionadded} 1.1
 ```
 
-The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.
+The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -167,7 +167,7 @@ The milestone block can be used to represent a wide variety of events in the lif
 ```{versionadded} 1.1
 ```
 
-The extended procurement category codelist is used to provide additional detail about the focus of a contracting process. 
+The extended procurement category codelist is used to provide additional detail about the focus of a contracting (or planning) process. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -273,7 +273,7 @@ Added the 'direct' code.
 ```{versionadded} 1.1
 ```
 
-The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers should use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
+The procurement category codelist is used to indicate the **primary** focus of a contracting (or planning) process. Where a contracting (or planning) process covers more than one of the options below, publishers should use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
 
 ```{csv-table-no-translate}
 :header-rows: 1

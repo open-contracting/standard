@@ -4,14 +4,14 @@
 
 # 'Easy' Releases
 
-OCDS encourages the use of the [releases and records](../../primer/releases_and_records) model in order to publish up-to-date, timely data. However, sometimes publishers can't fully support the model, because historic data of contracting processes is not stored in the source system(s). In such case, the publisher can produce only one release for each contracting process, and the release gets overridden with new updates.
+OCDS encourages the use of the [releases and records](../../primer/releases_and_records) model in order to publish up-to-date, timely data. However, sometimes publishers can't fully support the model, because historic data of contracting (or planning) processes is not stored in the source system(s). In such case, the publisher can produce only one release for each process, and the release gets overridden with new updates.
 
-In this situation, it is possible to still meet OCDS requirements by following a strategy to build different release identifiers each time the data changes in a contracting process. Over the course of multiple updates, third parties would be able to build their own data store by periodically downloading or scraping the published data, and identifying the updates using release identifiers.
+In this situation, it is possible to still meet OCDS requirements by following a strategy to build different release identifiers each time the data changes in a contracting (or planning) process. Over the course of multiple updates, third parties would be able to build their own data store by periodically downloading or scraping the published data, and identifying the updates using release identifiers.
 
 Here, two general approaches that a publisher can follow to renew release identifiers on each data update will be shown:
 
 * **When the system saves a last modified date for entities** - use the dates to create a new release ID. This can be as simple as appending the date to the release identifier.
-* **When the system does not contain a last modified date** - use a hash of all the fields to create a unique release ID. A hash is guaranteed to change when the data changes, and it is almost impossible for it to collide with a previous, existent identifier for the same contracting process.
+* **When the system does not contain a last modified date** - use a hash of all the fields to create a unique release ID. A hash is guaranteed to change when the data changes, and it is almost impossible for it to collide with a previous, existent identifier for the same (contracting or planning) process.
 
 See the examples below for more details.
 
@@ -27,9 +27,9 @@ In an 'Easy' releases scenario it is still necessary to package data. Therefore 
 
 ### Release tags
 
-Releases in OCDS have a [release tag](../../schema/codelists.md#release-tag) which indicates the stage of the contracting process they relate to.
+A release in OCDS has a [release tag](../../schema/codelists.md#release-tag), which indicates whether it is about a planning process or a contracting process and, if it is about the latter, indicates the stage of the contracting process to which it relates.
 
-When producing a single release for each contracting process, we can't use any tags that need other tags to be present in previous releases, e.g. 'tenderUpdate' which follows the 'tender' tag. 
+When producing a single release for each contracting (or planning) process, we can't use any tags that need other tags to be present in previous releases, e.g. 'tenderUpdate' which follows the 'tender' tag. 
 
 In this case, tags need to indicate the sections of the schema which are populated. For example, if a release provides data in the `tender`, `award`, and `contract` sections, the `tag` array would look like this:
 
@@ -43,7 +43,7 @@ In this case, tags need to indicate the sections of the schema which are populat
 }
 ```
 
-This makes more sense if we realize that a release is always the "first release" of a contracting process for an user that access the data for the first time. All sections contain new data, and the release needs a tag for each one.
+This makes more sense if we realize that a release is always the "first release" of a contracting (or planning) process for an user that access the data for the first time. All sections contain new data, and the release needs a tag for each one.
 
 ## Worked examples
 

@@ -6,7 +6,7 @@
 
 Contracting processes can take many forms and follow many different types of procedure, from a simple contracting process resulting in a single contract between a buyer and supplier, to a multi-buyer, multi-supplier framework agreement implemented as an electronic catalog.
 
-OCDS defines a common model for disclosing structured data on public contracting processes carried out in any jurisdiction, including data on awards and contracts. The examples in this guidance explain how to model awards and contracts occurring in different types of contracting processes using OCDS.
+OCDS defines a common model for disclosing structured data on public contracting (and planning) processes carried out in any jurisdiction, including data on awards and contracts. The examples in this guidance explain how to model awards and contracts occurring in different types of contracting processes using OCDS.
 
 ## Definitions
 
@@ -150,7 +150,7 @@ There are no identifiers for the individual supplier/value pairings on the origi
 ```
 ## Purchase orders
 
-A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, works or services to be delivered in the future.
+A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, services or works to be delivered in the future.
 
 Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 

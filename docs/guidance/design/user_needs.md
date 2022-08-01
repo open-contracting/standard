@@ -19,7 +19,7 @@ As you start implementing OCDS, consider how you will engage with data users, an
 
 ## Value for money in procurement
 
-Open contracting data can help officials to get good value for money on the goods and services in the procurement process, and can also help in identifying whether value for money has been achieved in concluded contracts.
+Open contracting data can help officials to get good value for money on the goods, services and works in the procurement process, and can also help in identifying whether value for money has been achieved in concluded contracts.
 
 These users want to analyze trends in prices and supplier performance, including in terms of quality and duration.
 
@@ -37,7 +37,7 @@ Data that can be linked up using globally unique identifiers for companies is pa
 
 ## Competing for public contracts
 
-Open contracting data can be used by private firms to understand the potential pipeline of procurement opportunities. It is a core principle of open contracting that information ought to be made available at the early stages of a contracting process, including information on planned procurement, and invitations for tenders.
+Open contracting data can be used by private firms to understand the potential pipeline of procurement opportunities. It is a core principle of open contracting that information ought to be made available at the early stages of contracting (or planning) processes, including information on planned procurement and invitations for tenders.
 
 Information on past contracts can allow firms to identify upcoming opportunities for re-contracting, and can support a more competitive marketplace, as transparency creates a level playing field with information on pricing, contract dates and key deliverables. 
 
@@ -45,6 +45,6 @@ Forward looking and timely information is particularly important for private sec
 
 ## Monitoring service delivery
  
-Monitoring groups want to ensure that public contracting delivers value to citizens in terms of quality of goods, works, and services provided. To monitor contracting effectively involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground.
+Monitoring groups want to ensure that public contracting delivers value to citizens in terms of quality of goods, services and works provided. To monitor contracting effectively involves being able to link budgets and donor data to the contracts and results. It also involves being able to verify whether results are being delivered on the ground.
 
 Data concerning budgets, delivery location and subcontracting arrangements are particularly useful for those involved in contract monitoring. 

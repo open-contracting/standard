@@ -4,7 +4,7 @@
 
 # Organizational units
 
-For some use cases, publishers might need to disclose the organizational units involved in the contracting process, e.g agency branches or divisions.
+For some use cases, publishers might need to disclose the organizational units involved in the contracting (or planning) process, e.g agency branches or divisions.
 
 There is more than one approach to model organizational units in OCDS:
 

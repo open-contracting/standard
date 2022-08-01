@@ -56,9 +56,9 @@ When local legislation mandates specific contracting disclosures, it can be usef
 
 You can use the [field-level mapping template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) to document a mapping to local legislation. If you localized the mapping template, then start with the localized version.
 
-You will need a clear list of the disclosure requirements set out in law. These should be divided up by which stage of the contracting process they apply to and under which circumstances.
+You will need a clear list of the disclosure requirements set out in law. These should be divided up by which stage of the contracting (or planning) process they apply to and under which circumstances.
 
-Work through the OCDS tabs (1. - 6.) for each stage of the contracting process and for each field note any related legal requirements. Use column E to note the requirements or add a new column if you prefer.
+Work through the OCDS tabs (1. - 6.) for each stage of the contracting (or planning) process and for each field note any related legal requirements. Use column E to note the requirements or add a new column if you prefer.
 
 OCDS often breaks down the concepts used in disclosure legislation to make sure the data is useful. For example, the concept of a supplier is broken down into fields for the supplier's name, organization identifier and address. So you may find that one legal requirement maps to many fields.
 

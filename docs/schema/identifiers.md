@@ -2,7 +2,7 @@
 
 Consistent identifiers are essential to help join up open contracting data.
 
-* The open contracting process identifier (ocid) is a globally unique identifier used to join up all the data about a single contracting or planning process;
+* The open contracting process identifier (ocid) is a globally unique identifier used to join up all the data about a single contracting (or planning) process;
 * Organization identifiers are important to know who is involved in each contract;
 * Release, award and contract identifiers are important to help cross-reference information.
 
@@ -104,15 +104,15 @@ The registered prefixes are dumb identifiers. They are not intended to carry any
 
 Earlier versions of this documentation imposed a stricter pattern on how internal identifiers ought to be combined with the ocid prefix, including a requirement for local namespaces. This requirement has been relaxed in practice and can be considered deprecated.
 
-However, publishers are encouraged to consider whether there are any risks of clashes in local identifiers (e.g. the possibility that two parts of the publishing body might use the same identifier for different contracting processes) and to plan to mitigate this when establishing their own patterns to generate their `ocid`
+However, publishers are encouraged to consider whether there are any risks of clashes in local identifiers (e.g. the possibility that two parts of the publishing body might use the same identifier for different contracting or planning processes) and to plan to mitigate this when establishing their own patterns to generate their `ocid`
 
 ## Organization identifiers
 
 <img src="../../_static/svg/green_organisation.svg" width="150" align="right"/>
 
-Reliably identifying the legal entities involved in a contracting process is vital for transparency and accountability, and for carrying out analysis to improve procurement and contract management.
+Reliably identifying the legal entities involved in a contracting (or planning) process is vital for transparency and accountability, and for carrying out analysis to improve procurement and contract management.
 
-Publishers should seek to collect and record the **legal identifier** from an official register of any organization involved in a contracting process (including buyers, tenderers and suppliers), and should include this in their OCDS files.
+Publishers should seek to collect and record the **legal identifier** from an official register of any organization involved in a contracting (or planning) process (including buyers, tenderers and suppliers), and should include this in their OCDS files.
 
 There are two parts to expressing an **organization identifier** in open contracting data.
 
@@ -154,17 +154,17 @@ If you want to disclose identifiers for natural persons, see the [personal ident
 
 ## Local organization IDs
 
-Each of the organizations involved in a contracting process is declared in the [parties section](reference.md#parties).
+Each of the organizations involved in a contracting (or planning) process is declared in the [parties section](reference.md#parties).
 
 Each organization has a local identifier (`id`) used to reference it from elsewhere in the data. For example, `buyer/id` references the buyer's entry in the parties section at `parties/id`.
 
-An organization's `id` is distinct from its organization identifier and need only be unique within the scope of the contracting process in which it is involved. An organization’s `id` must be consistent across all releases with the same `ocid` value.
+An organization's `id` is distinct from its organization identifier and need only be unique within the scope of the (contracting or planning) process in which it is involved. An organization’s `id` must be consistent across all releases with the same `ocid` value.
 
 See the [guidance](../guidance/map/organization_identifiers.md#organization-identifiers) for more information on organization identifiers and local IDs.
 
 ## Release ID
 
-A release identifier must be unique within the scope of the contracting process of which it is a part. In other words, across all releases with the same `ocid` value, each release identifier refers to exactly one release; no two releases use the same release identifier.
+A release identifier must be unique within the scope of the (contracting or planning) process of which it is a part. In other words, across all releases with the same `ocid` value, each release identifier refers to exactly one release; no two releases use the same release identifier.
 
 A release identifier must also be consistent within this scope. For example, if the `id` of a release is "12345" in one release package, then the `id` of the same release in another release package must also be "12345".
 
@@ -178,7 +178,7 @@ Contracts must cross-reference a related award (using the `awardID` field), as k
 
 ## Item, Document and Milestone IDs
 
-An item, document or milestone identifier must be unique within a given array of items, and must be used consistently across all the releases in a contracting process.
+An item, document or milestone identifier must be unique within a given array of items, and must be used consistently across all the releases in a (contracting or planning) process.
 
 The same `id` value may be re-used in another array of items within the same release, and no cross-reference between these identifiers is implied.
 
