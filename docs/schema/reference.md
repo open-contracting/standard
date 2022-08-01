@@ -655,7 +655,11 @@ For delivery milestones, if there is a time frame for delivery, use `.dueAfterDa
 
 ### Value
 
-Financial values should be published with a currency attached. 
+Financial values should be published with a currency attached. There are three fields available for providing the value amount:
+
+* When it is known that the value includes all taxes use `value/amountGross`;
+* When it is known that the value excludes all taxes use `value/amountNet`;
+* When it is unknown if the value includes all taxes or not use `value/amount`.
 
 ````{admonition} Example
 :class: hint
@@ -670,7 +674,7 @@ Financial values should be published with a currency attached.
 :pointer: /definitions/Value
 ```
 
-Support for exchange rates, and tax information, can be provided using extensions.
+Support for exchange rates can be provided using extensions.
 
 ### RelatedProcess
 
