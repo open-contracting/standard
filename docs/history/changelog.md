@@ -241,9 +241,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1339](https://github.com/open-contracting/standard/pull/1339) Deprecate `packages`.
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `records.minItems` requirement.
   * [#1393](https://github.com/open-contracting/standard/pull/1393) Remove `releases` as a required field of the `Record` object.
+  * [#1422](https://github.com/open-contracting/standard/pull/1422) Add `links` to support pagination.
  
 * Release package schema:
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `releases.minItems` requirement.
+  * [#1422](https://github.com/open-contracting/standard/pull/1422) Add `links` to support pagination.
 
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
