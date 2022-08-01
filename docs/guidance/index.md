@@ -17,4 +17,4 @@ build
 publish
 ```
 
-Do you have questions or need assistance? Contact the [OCDS Helpdesk](../support/index) or you can fill out the [Training Request Form](http://bit.ly/OCP-Training).
+Do you have questions or need assistance? Contact the [OCDS Helpdesk](../support/index).
