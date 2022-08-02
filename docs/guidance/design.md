@@ -116,4 +116,8 @@ If you will be hiring a team to develop or update an electronic government procu
 
 The World Bank Group's [e-Procurement Toolkit](http://www.eprocurementtoolkit.org/) offers additional advice and template requirements for procuring e-GP systems, and its [Open Contracting Data Standard Implementation Methodology](http://www.eprocurementtoolkit.org/sites/default/files/2016-11/OCDS_Implemetation_Methodology_0.pdf#page=27) has guidance relevant to OCDS in e-GP systems from section 3.2.3 on page 27 onwards. *(Note: Its earlier sections are based on OCDS 1.0.0.)*
 
+**Resource:** [Guidebook: Crafting a Results-Driven Request for Proposals (RFP)](https://govlab.hks.harvard.edu/guidebook-crafting-results-driven-request-proposals-rfp), by the Harvard Kennedy School [Government Performance Lab](https://govlab.hks.harvard.edu)
+
+**Resource:** [Contract Design Pattern Library](https://contract-design.worldcc.com), by [World Commerce & Contracting](https://www.worldcc.com) – provides solutions to common usability and understandability problems in contracts, to help you organize and communicate your contracts more clearly, so that they are read, understood, and acted upon
+
 [Next phase: Map](map)
