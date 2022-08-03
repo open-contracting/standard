@@ -655,11 +655,14 @@ For delivery milestones, if there is a time frame for delivery, use `.dueAfterDa
 
 ### Value
 
-Financial values should be published with a currency attached. There are three fields available for providing the value amount:
+`currency`, `amountNet` and `amountGross` should be provided, wherever possible.
 
-* When it is known that the value includes all taxes use `value/amountGross`;
-* When it is known that the value excludes all taxes use `value/amountNet`;
-* When it is unknown if the value includes all taxes or not use `value/amount`.
+`amount` is defined as:
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/Value/properties/amount
+```
+
+If both the `amountNet` and the `amountGross` match this definition, enter the `amountNet` as the `amount`.
 
 ````{admonition} Example
 :class: hint
