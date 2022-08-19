@@ -1,11 +1,27 @@
-# Change History Implementation Options
+# Change history implementation options
 
-The releases and records model allows publishers to disclose the change history of a contracting process and/or its current state. To meet the widest range of user needs, the preferred approach is to [publish both the change history and the current state](../build/incremental_updates).
+First, you need to decide whether or not to publish a change history.
 
-In order to publish a change history, your data sources need to track what changed and when, for example, by implementing events and/or last modified dates on database records. The [system architecture](../build/system_architectures) for your OCDS implementation also needs to store historic releases. If you cannot store historic releases, you can [publish full releases and update the release `id` and `date` each time there is a change](../build/full_updates).
+To publish a change history, you need to be able to determine what changed and when within your data sources: for example, by using event-based triggers or last-modified dates. You also need to use a [system architecture](system_architectures) that has a [separate OCDS datastore]((system_architectures.md#separate-ocds-datastore), so that you can provide access to historic releases.
 
-However, publishing a change history is not always possible. Sometimes, it is only possible to publish the full information about a contracting process at a given time. This might be the case if, for example, your data sources don't implement versioning, events, good identifiers, or proper controls (e.g. allowing users to just change a supplier's name instead of requiring the user to register a new supplier in the system). This also might be the case if you collect non-OCDS data from a data source and re-publish it as OCDS and you don't have direct access to the data source.
+Sometimes, it isn't possible to determine what changed and when: for example, because your data sources don't implement triggers, timestamps, versioning, or consistent identifiers. If identifiers are inconsistent, publishing a change history can lead to incoherent data, due to how the [merge routine](../../schema/merging.md#merge-routine) handles array entries.
 
-In the above scenarios, if you publish data as individual releases, problems can occur if new releases have different array entries from earlier releases, that were intended to replace the entries in the earlier releases. Due to how the [merge routine](../../schema/merging.md#merge-routine) works for most arrays of objects, the new entries wouldn't replace the existing entries but would be added to as new entries, leading to erroneous data.
+If you choose to publish a change history, you need to decide whether to publish [incremental or full updates](#incremental-or-full-updates).
 
-Therefore, if you cannot publish a change history for the above reasons, you ought to [publish compiled releases only](../build/no_change_history).
+If you choose not to publish a change history, you need to decide whether to publish [individual releases or compiled releases](#individual-releases-or-compiled-releases).
+
+## Incremental or full updates
+
+A *full* update is a [release](../../schema/reference) that contains all the available information about the contracting (or planning) process. An *incremental* update is a release that contains a subset of the available information, focusing on what's new or changed.
+
+Incremental updates are smaller than full updates. Smaller releases reduce the OCDS datastore's size and users' download times. If you anticipate many releases per contracting process or very many contracting processes, you ought to consider incremental updates.
+
+If you choose to publish incremental updates, the preferred approach is to also publish [compiled releases](../../schema/records_reference.md#compiled-release), so that users can easily access the latest state of the contracting process.
+
+Read about how to [publish incremental updates](incremental_updates) or [publish full updates](full_updates).
+
+## Individual releases or compiled releases
+
+If you can determine what changed and when within your data sources – but cannot implement a separate OCDS datastore – then you ought to publish individual releases. To publish individual releases, you need to update the release identifier along with each change to the data about a contracting process. That way, users can track each update to the contracting process. You also need to ensure that identifiers are consistent for objects in arrays.
+
+If you cannot determine what changed and when, then you ought to [publish compiled releases only](no_change_history).
