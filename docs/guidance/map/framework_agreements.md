@@ -93,6 +93,7 @@ The following guidance describes how to model the different stages of a framewor
 * In the `tender` section, set:
   * `tender.techniques.hasFrameworkAgreement` to `true`.
   * `tender.contractPeriod` to the duration of the framework agreement.
+  * `tender.maximumValue` to the maximum value of the framework agreement and/or `tender.value` to the estimated value of the framework agreement (the values may be different e.g. if the budget for the framework agreement contains a reserve in case of an unforseen situation, but the situation is unlikely to occur).
   * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
   * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
 
@@ -100,6 +101,8 @@ The following guidance describes how to model the different stages of a framewor
 
 * Create a release with the **same** `ocid` as the tender release and add 'award' to the `tag` array
 * Add an `Award` object to the `awards` array.
+* In the `Award` section, set `award.maximumValue` to the maximum value fo the framework agreement and/or `awards.estimatedValue` to the estimated value fo the framework agreement.
+* In the `Contract` section, set `contract.maximumValue` to the maximum value of the framework agreement and/or `contract.estimatedValue` to the stimated value of the framework agreement.
 * For each supplier:
   * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
   * Add an `OrganizationReference` object to the award's `.suppliers` array, and set its `.id` and `.name` to match the supplier's object in the `parties` array.
