@@ -148,6 +148,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 * [#1530](https://github.com/open-contracting/standard/pull/1530) Use consistent wording for "goods, services and/or works" in the `classificationScheme`, `extendedProcurementCategory`, `partyRole` and `procurementCategory` codelists.
+* [#1550](https://github.com/open-contracting/standard/pull/1550) Align and improve code descriptions in `extendedProcurementCategory` and `procurementCategory`.
 
 ### Schema
 
