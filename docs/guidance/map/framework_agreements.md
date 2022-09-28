@@ -93,7 +93,7 @@ The following guidance describes how to model the different stages of a framewor
 * In the `tender` section, set:
   * `tender.techniques.hasFrameworkAgreement` to `true`.
   * `tender.contractPeriod` to the duration of the framework agreement.
-  * `tender.maximumValue` to the maximum value of the framework agreement and/or `tender.value` to the estimated value of the framework agreement (the values may be different e.g. if the budget for the framework agreement contains a reserve in case of an unforseen situation, but the situation is unlikely to occur).
+  * `tender.maximumValue` to the maximum value of the framework agreement and/or `tender.value` to the estimated value of the framework agreement (the values can be different e.g. if the budget for the framework agreement contains a reserve in case of an unforseen situation, but the situation is unlikely to occur).
   * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
   * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
 
