@@ -23,7 +23,7 @@ To localize a field title or description, edit the values columns C or D. We rec
 ```{csv-table}
 :header-rows: 1
 :widths: auto
-:file: ../../examples/localization.csv
+:file: ../../examples/language_localization/localization.csv
 ```
 
 This makes it easier for reviewers to check that localization has not changed the meaning of titles and descriptions. You can use the comments feature of Google Docs to discuss the proposed localization.

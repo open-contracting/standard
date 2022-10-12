@@ -50,7 +50,7 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 **json**
 
-```{jsoninclude} ../examples/language.json
+```{jsoninclude} ../examples/language_localization/language.json
 :jsonpointer:
 :expand: tender,item
 ```
@@ -60,7 +60,7 @@ A contract for ‘Software consultancy services’ is published in a release wit
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../examples/language.csv
+:file: ../examples/language_localization/language.csv
 ```
 
 ## Release structure

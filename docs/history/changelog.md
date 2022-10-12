@@ -26,7 +26,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
       * Pre-qualification and pre-selection [#999](https://github.com/open-contracting/standard/pull/999) [#1345](https://github.com/open-contracting/standard/pull/1345)
       * Unsuccessful processes [#1007](https://github.com/open-contracting/standard/pull/1007)
       * Milestones [#1048](https://github.com/open-contracting/standard/pull/1048)
-      * Framework agreements [#1123](https://github.com/open-contracting/standard/pull/1123) [#1269](https://github.com/open-contracting/standard/pull/1269) [#1332](https://github.com/open-contracting/standard/pull/1332)
+      * Framework agreements [#1123](https://github.com/open-contracting/standard/pull/1123) [#1269](https://github.com/open-contracting/standard/pull/1269) [#1332](https://github.com/open-contracting/standard/pull/1332) [#1461](https://github.com/open-contracting/standard/pull/1461)
       * Electronic catalogs [#1223](https://github.com/open-contracting/standard/pull/1223)
       * Beneficial ownership information [#1305](https://github.com/open-contracting/standard/pull/1305)
       * [#1414](https://github.com/open-contracting/standard/pull/1414) Rephrase planning stage to planning process in worked examples.
@@ -47,6 +47,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * [#986](https://github.com/open-contracting/standard/pull/986) Merge Registration page into Build page.
     * [#1150](https://github.com/open-contracting/standard/pull/1150) Align language in Build phase with language in Map phase.
     * [#1414](https://github.com/open-contracting/standard/pull/1414) Remove the planning section from Easy releases and Change history.
+    * [#1494](https://github.com/open-contracting/standard/pull/1497) Add guidance on preparing test data to Check your data section.
   * Publish:
     * Merge Publication policy and Licensing pages into Publish page [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012).
     * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).

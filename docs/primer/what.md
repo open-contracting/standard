@@ -40,7 +40,7 @@ The OCDS helps to increase transparency, enables deeper analysis of contracting 
 To facilitate publication of contracting data to meet a variety of needs, the OCDS provides:
 
 * A common structured [data model](../schema/index), including a schema, codelists, and common rules and definitions for data fields and contracting processes;
-* [Guidance](../guidance/index) and [tools](https://www.open-contracting.org/resources/open-contracting-tools-directory/) to support implementation and data use;
+* [Guidance and tools](../guidance/index) to support implementation and data use;
 * An [extension](../guidance/map/extensions) mechanism to add additional key information to your OCDS data; and
 * A free global [helpdesk](../support/index.md#ocds-helpdesk).
 
@@ -49,7 +49,8 @@ To facilitate publication of contracting data to meet a variety of needs, the OC
 
 * [Implement Open Contracting](https://www.open-contracting.org/implement/)
 * [Impact of Open Contracting](https://www.open-contracting.org/impact/)
-* [Why implement OCDS](https://www.open-contracting.org/data-standard/)
+* [Why implement OCDS?](https://www.open-contracting.org/data-standard/)
+* [Open Contracting Data Use Cases](https://www.open-contracting.org/resources/open-contracting-data-use-cases/)
 * [Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
 * [What is open data?](https://opendatahandbook.org/guide/en/what-is-open-data/)
 * [What are data standards?](https://standards.theodi.org/introduction/what-are-open-standards-for-data/)

@@ -1,8 +1,15 @@
 # Design
 
+```{ifconfig} language != 'es'
 <div class="video-wrapper">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/h6v3BGTai-M" title="Designing your OCDS implementation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+```
+```{ifconfig} language == 'es'
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/o2UTVM8mQnw" title="Diseñando su implementación OCDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+```
 
 This phase is about setting up your OCDS implementation to be a success.
 
@@ -73,9 +80,13 @@ Each of the goals above have different data needs. These needs ought to inform y
 * Whether to publish a change history
 * What data formats and access methods to provide
 
-**Resource:** [Red flags for integrity methodology guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/) ([red flags to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/12PFkUlQH09jQvcnORjcbh9-8d-NnIuk4mAQwdGiXeSM/edit#gid=0))
+**Resource**: [Open Contracting Data Use Cases](https://www.open-contracting.org/resources/open-contracting-data-use-cases/)
+
+**Resource:** [Red Flags for Integrity Guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/) ([red flags to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/12PFkUlQH09jQvcnORjcbh9-8d-NnIuk4mAQwdGiXeSM/edit#gid=0))
 
 **Resource:** [Indicators to diagnose the performance of a procurement market guide](https://www.open-contracting.org/resources/indicators-to-diagnose-the-performance-of-a-procurement-market/) ([procurement indicators to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222))
+
+**Resource:** [How to calculate sustainable public procurement indicators with OCDS data](https://www.open-contracting.org/resources/how-to-calculate-sustainable-public-procurement-indicators-with-ocds-data/)
 
 **Action:** Prioritize your goals based on the recommendations in the [Technical Assessment Template](https://www.open-contracting.org/resources/technical-assessment-template/).
 
@@ -97,7 +108,7 @@ To achieve success, an OCDS implementation team ought to include the following r
 
 **Action:** Ask everyone in your team to [read the Primer](../../primer/index).
 
-**Action:** [Contact the OCDS Helpdesk](../../support/index) to arrange an online introductory training for your technical team, in English or Spanish.
+**Action**: [Contact the OCDS Helpdesk](../../support/index) or [complete this form](http://bit.ly/OCP-Training) to arrange an online introductory training for your technical team, in English or Spanish.
 
 **Action:** [Join the OCDS discussion group](../../support/index) to keep up to date and engage with other implementers.
 
@@ -106,5 +117,9 @@ To achieve success, an OCDS implementation team ought to include the following r
 If you will be hiring a team to develop or update an electronic government procurement (e-GP) system or open contracting data portal and wish to include the OCDS in the terms of reference, please refer to our [Guide to Defining OCDS Functional Requirements for e-GP Systems](https://www.open-contracting.org/resources/guide-defining-open-contracting-data-standard-functional-requirements-electronic-government-procurement-systems/), which includes functional requirements and template clauses that you can adapt for your technical specifications or procurement documents (terms of reference, request for proposals, etc.).
 
 The World Bank Group's [e-Procurement Toolkit](http://www.eprocurementtoolkit.org/) offers additional advice and template requirements for procuring e-GP systems, and its [Open Contracting Data Standard Implementation Methodology](http://www.eprocurementtoolkit.org/sites/default/files/2016-11/OCDS_Implemetation_Methodology_0.pdf#page=27) has guidance relevant to OCDS in e-GP systems from section 3.2.3 on page 27 onwards. *(Note: Its earlier sections are based on OCDS 1.0.0.)*
+
+**Resource:** [Guidebook: Crafting a Results-Driven Request for Proposals (RFP)](https://govlab.hks.harvard.edu/guidebook-crafting-results-driven-request-proposals-rfp), by the Harvard Kennedy School [Government Performance Lab](https://govlab.hks.harvard.edu)
+
+**Resource:** [Contract Design Pattern Library](https://contract-design.worldcc.com), by [World Commerce & Contracting](https://www.worldcc.com) – provides solutions to common usability and understandability problems in contracts, to help you organize and communicate your contracts more clearly, so that they are read, understood, and acted upon
 
 [Next phase: Map](map)
