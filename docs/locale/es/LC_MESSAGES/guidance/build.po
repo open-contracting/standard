@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2022-10-11 21:13-0300\n"
 "PO-Revision-Date: 2020-06-29 22:58+0000\n"
 "Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/guidance/build.md:1
 msgid "Build"
@@ -571,23 +571,11 @@ msgstr ""
 "qué herramienta es la adecuada para utilizar y evaluar si existen las "
 "condiciones adecuadas para la reutilización exitosa de una herramienta."
 
-#: ../../docs/guidance/build.md:5
-msgid ""
-"New tools are continually being authored for publishing OCDS data. Please "
-"refer to our [Tools Directory](https://www.open-"
-"contracting.org/resources/open-contracting-tools-directory/) for a complete "
-"list."
-msgstr ""
-"Se están desarrollando continuamente herramientas nuevas para publicar datos"
-" OCDS. Consulte nuestro [Directorio de herramientas](https://www.open-"
-"contracting.org/resources/open-contracting-tools-directory/) para obtener "
-"una lista completa."
-
-#: ../../docs/guidance/build.md:125
+#: ../../docs/guidance/build.md:123
 msgid "Build your extensions"
 msgstr "Desarrolle sus extensiones"
 
-#: ../../docs/guidance/build.md:127
+#: ../../docs/guidance/build.md:125
 msgid ""
 "If your [mapping](map) identified data elements which don't map to OCDS or "
 "an existing extension, you ought to develop your own extensions. Documenting"
@@ -600,7 +588,7 @@ msgstr ""
 " importante sobre la estructura, el formato y el significado de sus datos "
 "esté disponible para los usuarios."
 
-#: ../../docs/guidance/build.md:129
+#: ../../docs/guidance/build.md:127
 msgid ""
 "**Action:** Read the guidance on [developing new "
 "extensions](map/extensions.md#developing-new-extensions), which includes "
@@ -610,7 +598,7 @@ msgstr ""
 "extensiones](map/extensions.md#developing-new-extensions), que incluye "
 "enlaces a herramientas y recursos útiles."
 
-#: ../../docs/guidance/build.md:131
+#: ../../docs/guidance/build.md:129
 msgid ""
 "**Action:** Request support from the [OCDS Helpdesk](../../support/index) to"
 " model your extensions."
@@ -618,13 +606,23 @@ msgstr ""
 "**Acción:** Pida ayuda del [Helpdesk OCDS](../../support/index) para modelar"
 " sus extensiones."
 
-#: ../../docs/guidance/build.md:133
+#: ../../docs/guidance/build.md:131
 msgid ""
 "**Action:** Share your extensions with the OCDS community on "
 "[GitHub](https://github.com/open-contracting/standard/issues)."
 msgstr ""
 "**Acción:** Comparta sus extensiones con la comunidad OCDS en "
 "[GitHub](https://github.com/open-contracting/standard/issues)."
+
+#: ../../docs/guidance/build.md:133
+msgid ""
+"**Resource:** [Webinar: Creating OCDS "
+"Extensions](https://youtu.be/1uTik92PWfo) "
+"([presentation](https://docs.google.com/presentation/d/16poTfulCN1oYctfWnMJ9YDRrX1GJMi1MuOmFlOJMC5w/edit))"
+msgstr ""
+"**Recurso:** [Seminario web: Creación de extensiones "
+"OCDS](https://youtu.be/1uTik92PWfo) "
+"([presentación](https://docs.google.com/presentation/d/16poTfulCN1oYctfWnMJ9YDRrX1GJMi1MuOmFlOJMC5w/edit))"
 
 #: ../../docs/guidance/build.md:135
 msgid "Keep users in mind as you build"
@@ -703,13 +701,65 @@ msgstr ""
 
 #: ../../docs/guidance/build.md:151
 msgid ""
+"You ought to use real data for testing, wherever possible. Using fictional "
+"data can lead to false positives and missed errors in your data pipeline: "
+"for example, if your test data includes incoherent values for the award date"
+" and the contract signature date, it won't be possible to identify issues "
+"with how these fields are mapped in your OCDS data."
+msgstr ""
+"Debe utilizar datos reales para las pruebas, siempre que sea posible. El uso"
+" de datos ficticios puede generar falsos positivos y omitir errores en su "
+"flujo de datos: por ejemplo, si sus datos de prueba incluyen valores "
+"incoherentes para la fecha de adjudicación y la fecha de firma del contrato,"
+" no será posible identificar problemas con la forma en que estos campos son "
+"mapeado en sus datos OCDS."
+
+#: ../../docs/guidance/build.md:153
+msgid ""
+"If your data source doesn't contain any data yet, because you are developing"
+" a new system to collect and publish data, for example, then you ought to "
+"work with stakeholders to collect enough real data to populate all the data "
+"elements for at least one contracting process."
+msgstr ""
+"Si su fuente de datos aún no contiene ningún dato, porque está desarrollando"
+" un nuevo sistema para recopilar y publicar datos, por ejemplo, entonces "
+"debe trabajar con las partes interesadas para recopilar suficientes datos "
+"reales para completar todos los elementos de datos para al menos un proceso "
+"de contratación"
+
+#: ../../docs/guidance/build.md:155
+msgid ""
+"If you can't collect enough real data for testing, then you ought to create "
+"realistic and coherent test data:"
+msgstr ""
+"Si no puede recopilar suficientes datos reales para la prueba, debe crear "
+"datos de prueba realistas y coherentes:"
+
+#: ../../docs/guidance/build.md:157
+msgid "use real entities, products, and services"
+msgstr "utilizar entidades, productos y servicios reales"
+
+#: ../../docs/guidance/build.md:158
+msgid "use plausible dates and values"
+msgstr "usar fechas y valores plausibles"
+
+#: ../../docs/guidance/build.md:159
+msgid "avoid using placeholder values"
+msgstr "evitar el uso de valores del tipo placeholders"
+
+#: ../../docs/guidance/build.md:160
+msgid "avoid setting multiple data elements to the same value."
+msgstr "evite establecer varios elementos de datos en el mismo valor."
+
+#: ../../docs/guidance/build.md:162
+msgid ""
 "**Action:** Upload some data to the [OCDS Data Review "
 "Tool](https://standard.open-contracting.org/review/)."
 msgstr ""
 "**Acción:** Cargue algunos datos a la [Herramienta de revisión de datos "
 "OCDS](https://standard.open-contracting.org/review/)."
 
-#: ../../docs/guidance/build.md:153
+#: ../../docs/guidance/build.md:164
 msgid ""
 "**Action:** Request feedback on your draft data from the [OCDS "
 "Helpdesk](../../support/index)."
@@ -717,7 +767,7 @@ msgstr ""
 "**Acción:** Solicite un informe de retroalimentación sus datos preliminares "
 "al [Helpdesk OCDS](../../support/index)."
 
-#: ../../docs/guidance/build.md:155
+#: ../../docs/guidance/build.md:166
 msgid ""
 "**Tool:** The [jOCDS Validator](https://developmentgateway.org/blog/your-"
 "data-ocds-compliant-introducing-jocds-validator) can be used for bulk "
@@ -728,7 +778,7 @@ msgstr ""
 "introducing-jocds-validator) puede usarse para la verificación masiva de la "
 "estructura y  formato de datos OCDS"
 
-#: ../../docs/guidance/build.md:157
+#: ../../docs/guidance/build.md:168
 msgid ""
 "**Resource:** [How to check your OCDS data validates](https://www.open-"
 "contracting.org/2018/05/09/check-ocds-data-validates/)"
@@ -736,6 +786,6 @@ msgstr ""
 "**Recurso:** [Cómo revisar que sus datos OCDS son válidos](https://www.open-"
 "contracting.org/2018/05/09/check-ocds-data-validates/)"
 
-#: ../../docs/guidance/build.md:159
+#: ../../docs/guidance/build.md:170
 msgid "[Next phase: Publish](publish)"
 msgstr "[Siguiente fase: Publicación](publish)"
