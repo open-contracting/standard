@@ -121,7 +121,7 @@ all: build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
 
 .PHONY: autobuild
 autobuild: current_lang.en
-	sphinx-autobuild -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
+	sphinx-autobuild $(SPHINX_AUTOBUILD_EXTRA_ARGS) -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
 
 .PHONY: update
 update: clean_dist
