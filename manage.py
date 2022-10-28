@@ -115,12 +115,12 @@ keywords_to_remove = (
 )
 
 
-def json_load(filename, library=json):
+def json_load(filename, library=json, **kwargs):
     """
     Loads JSON data from the given filename.
     """
     with (schemadir / filename).open() as f:
-        return library.load(f)
+        return library.load(f, **kwargs)
 
 
 def json_dump(filename, data):
@@ -355,29 +355,6 @@ def remove_metadata_and_extended_keywords(schema):
             remove_metadata_and_extended_keywords(value)
 
 
-def get_dereferenced_release_schema(schema, output=None):
-    """
-    Returns the dereferenced release schema.
-    """
-    # Without a deepcopy, changes to referenced objects are copied across referring objects. However, the deepcopy does
-    # not retain the `__reference__` property.
-    if not output:
-        output = deepcopy(schema)
-
-    if isinstance(schema, list):
-        for index, item in enumerate(schema):
-            get_dereferenced_release_schema(item, output[index])
-    elif isinstance(schema, dict):
-        for key, value in schema.items():
-            get_dereferenced_release_schema(value, output[key])
-        if hasattr(schema, '__reference__'):
-            for prop in schema.__reference__:
-                if prop != '$ref':
-                    output[prop] = schema.__reference__[prop]
-
-    return output
-
-
 def get_versioned_release_schema(schema):
     """
     Returns the versioned release schema.
@@ -539,10 +516,10 @@ def pre_commit():
     - versioned-release-validation-schema.json
     """
     release_schema = json_load('release-schema.json')
-    jsonref_release_schema = json_load('release-schema.json', jsonref)
+    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
 
     json_dump('meta-schema.json', get_metaschema())
-    json_dump('dereferenced-release-schema.json', get_dereferenced_release_schema(jsonref_release_schema))
+    json_dump('dereferenced-release-schema.json', jsonref_release_schema)
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
 
 
