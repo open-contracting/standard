@@ -2,12 +2,15 @@
 import csv
 import gettext
 import json
+import logging
 import os
 import re
 import sys
 import warnings
+from contextlib import contextmanager
 from copy import deepcopy
 from glob import glob
+from io import StringIO
 from pathlib import Path
 
 import click
@@ -109,25 +112,46 @@ keywords_to_remove = (
     # http://os4d.opendataservices.coop/development/schema/#extended-json-schema
     'omitWhenMerged',
     'wholeListMerge',
-    'versionId',
 )
 
 
-def json_load(filename, library=json):
+def json_load(filename, library=json, **kwargs):
     """
     Loads JSON data from the given filename.
     """
-    with open(os.path.join(schemadir, filename)) as f:
-        return library.load(f)
+    with (schemadir / filename).open() as f:
+        return library.load(f, **kwargs)
 
 
 def json_dump(filename, data):
     """
     Writes JSON data to the given filename.
     """
-    with open(os.path.join(schemadir, filename), 'w') as f:
+    with (schemadir / filename).open('w') as f:
         json.dump(data, f, indent=2)
         f.write('\n')
+
+
+def csv_load(url, delimiter=','):
+    """
+    Loads CSV data into a ``csv.DictReader`` from the given URL.
+    """
+    reader = csv.DictReader(StringIO(get(url).text), delimiter=delimiter)
+    return reader
+
+
+@contextmanager
+def csv_dump(filename, fieldnames):
+    """
+    Writes CSV headers to the given filename, and yields a ``csv.writer``.
+    """
+    f = (schemadir / 'codelists' / filename).open('w')
+    writer = csv.writer(f, lineterminator='\n')
+    writer.writerow(fieldnames)
+    try:
+        yield writer
+    finally:
+        f.close()
 
 
 def get(url):
@@ -310,7 +334,8 @@ def remove_omit_when_merged(schema):
                 for prop in list(value):
                     if value[prop].get('omitWhenMerged'):
                         del value[prop]
-                        schema['required'].remove(prop)
+                        if prop in schema['required']:
+                            schema['required'].remove(prop)
             remove_omit_when_merged(value)
 
 
@@ -398,7 +423,9 @@ def cli():
 @click.argument('filename')
 def unused_terms(filename):
     """
-    Prints terms from the provided filename that do not occur in the documentation.
+    Print terms in FILENAME that don't occur in the documentation.
+
+    Can be used to remove unused terms from a glossary.
     """
     paths = []
     for extension in ('csv', 'json', 'md'):
@@ -431,8 +458,7 @@ def missing_changelog(ignore_base):
 
     # Ignore PRs to unmerged branches.
     url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=open'
-    response = requests.get(url)
-    response.raise_for_status()
+    response = get(url)
     ignore.extend(pr['head']['ref'] for pr in response.json())
 
     with open(basedir / 'docs' / 'history' / 'changelog.md') as f:
@@ -452,8 +478,7 @@ def missing_changelog(ignore_base):
 
     url = 'https://api.github.com/repos/open-contracting/standard/pulls?per_page=100&state=closed'
     while url:
-        response = requests.get(url)
-        response.raise_for_status()
+        response = get(url)
         url = response.links.get('next', {}).get('url')
 
         for pr in response.json():
@@ -468,34 +493,79 @@ def missing_changelog(ignore_base):
             # Include merged PRs, not in the "Minor:" or "1.0-RC" milestones, not syncing branches, and not ignored.
             if not merged_at or milestone_number in (26, 27, 28, 29, 2) or pattern.search(title) or base_ref in ignore:
                 if number in prs:
-                    print(f'WARNING: #{number} should not be in changelog', file=sys.stderr)
+                    click.echo(f'WARNING: #{number} should not be in changelog', file=sys.stderr)
                 continue
 
             if number not in prs:
                 count += 1
-                print(f"[#{number}](https://github.com/open-contracting/standard/pull/{number}) ({milestone_title}) "
-                      f"{merged_at[:10]}: {title} ({base_ref}:{pr['head']['ref']})")
+                click.echo(f"[#{number}](https://github.com/open-contracting/standard/pull/{number}) "
+                           f"({milestone_title}) {merged_at[:10]}: {title} ({base_ref}:{pr['head']['ref']})")
 
     if count:
-        print(count)
+        click.echo(count)
 
 
 @cli.command()
 def pre_commit():
     """
-    Updates meta-schema.json, dereferenced-release-schema.json and versioned-release-validation-schema.json.
+    Update derivative schema files.
+
+    \b
+    - meta-schema.json
+    - dereferenced-release-schema.json
+    - versioned-release-validation-schema.json
     """
     release_schema = json_load('release-schema.json')
+    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
 
     json_dump('meta-schema.json', get_metaschema())
-    json_dump('dereferenced-release-schema.json', json_load('release-schema.json', jsonref))
+    json_dump('dereferenced-release-schema.json', jsonref_release_schema)
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
+
+
+@cli.command()
+@click.argument('file', type=click.File())
+def update_country(file):
+    """
+    Update country.csv from ISO 3166-1 using FILE.
+
+    To retrieve the file:
+
+    \b
+    1. Open https://www.iso.org/obp/ui/#search/code/
+    2. Open the "Network" tab of the "Web Inspector" utility (Option-Cmd-I in Safari)
+    3. Set "Results per page:" to 300
+    4. Click the last "UIDL" entry in the "Network" tab
+    5. Copy its contents, excluding the for-loop, into a file
+    """
+    # https://www.iso.org/iso-3166-country-codes.html
+    # https://www.iso.org/obp/ui/#search
+
+    codes = {
+        # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#User-assigned_code_elements
+        'XK': 'Kosovo',
+    }
+
+    rpc = json.load(file)[0]['rpc'][0]
+    offset = int(rpc[0])
+    for entry in rpc[3][1]:
+        d = entry['d']
+        # Clean "Western Sahara*", "United Arab Emirates (the)", etc.
+        codes[d[str(offset + 9)]] = re.sub(r' \(the\)|\*', '', d[str(offset + 13)])
+        # The country code appears at offsets 9 and 15. Check that they are always the same.
+        assert d[str(offset + 9)] == d[str(offset + 15)]
+
+    with open(schemadir / 'codelists' / 'country.csv', 'w') as f:
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(['Code', 'Title'])
+        for code in sorted(codes):
+            writer.writerow([code, codes[code]])
 
 
 @cli.command()
 def update_currency():
     """
-    Updates schema/codelists/currency.csv from ISO 4217.
+    Update currency.csv from ISO 4217.
     """
     # https://www.iso.org/iso-4217-currency-codes.html
     # https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes
@@ -533,28 +603,137 @@ def update_currency():
             elif valid_until > historic_codes[code]['Valid Until']:
                 historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
 
-    with (schemadir / 'codelists' / 'currency.csv').open('w') as fp:
-        writer = csv.writer(fp, lineterminator='\n')
-        writer.writerow(['Code', 'Title', 'Valid Until'])
-        for code in sorted(current_codes.keys()):
+    with csv_dump('currency.csv', ['Code', 'Title', 'Valid Until']) as writer:
+        for code in sorted(current_codes):
             writer.writerow([code, current_codes[code], None])
-        for code in sorted(historic_codes.keys()):
+        for code in sorted(historic_codes):
             writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
     release_schema = json_load('release-schema.json')
-    codes = sorted(list(current_codes.keys()) + list(historic_codes.keys()))
+    codes = sorted(list(current_codes) + list(historic_codes))
     release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
 
     json_dump('release-schema.json', release_schema)
 
 
 @cli.command()
+def update_language():
+    """
+    Update language.csv from ISO 639-1.
+    """
+    # https://www.iso.org/iso-639-language-codes.html
+    # https://id.loc.gov/vocabulary/iso639-1.html
+
+    with csv_dump('language.csv', ['Code', 'Title']) as writer:
+        reader = csv_load('https://id.loc.gov/vocabulary/iso639-1.tsv', delimiter='\t')
+        for row in reader:
+            # Remove parentheses, like "Greek, Modern (1453-)", and split alternatives.
+            titles = re.split(r' *\| *', re.sub(r' \(.+\)', '', row['Label (English)']))
+            # Remove duplication like "Ndebele, North |  North Ndebele" and join alternatives using a comma instead of
+            # a pipe. To preserve order, a dict without values is used instead of a set.
+            titles = ', '.join({' '.join(reversed(title.split(', '))): None for title in titles})
+            writer.writerow([row['code'], titles])
+
+
+@cli.command()
+def update_media_type():
+    """
+    Update mediaType.csv from IANA.
+
+    Ignores deprecated and obsolete media types.
+    """
+    # https://www.iana.org/assignments/media-types/media-types.xhtml
+
+    # See "Registries included below".
+    registries = [
+        'application',
+        'audio',
+        'font',
+        'image',
+        'message',
+        'model',
+        'multipart',
+        'text',
+        'video',
+    ]
+
+    with csv_dump('mediaType.csv', ['Code', 'Title']) as writer:
+        for registry in registries:
+            # See "Available Formats" under each heading.
+            reader = csv_load(f'https://www.iana.org/assignments/media-types/{registry}.csv')
+            for row in reader:
+                if ' ' in row['Name']:
+                    name, message = row['Name'].split(' ', 1)
+                else:
+                    name, message = row['Name'], None
+                code = f"{registry}/{name}"
+                template = row['Template']
+                # All messages are expected to be about deprecation and obsoletion.
+                if message:
+                    logging.warning('%s: %s', message, code)
+                # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
+                elif template and template != code:
+                    raise Exception(f"expected {code}, got {template}")
+                else:
+                    writer.writerow([code, name])
+
+        writer.writerow(['offline/print', 'print'])
+
+
+@cli.command()
 @click.pass_context
 def update(ctx):
     """
-    Updates external codelists (currency).
+    Update codelists except country.csv.
     """
     ctx.invoke(update_currency)
+    ctx.invoke(update_language)
+    ctx.invoke(update_media_type)
+
+
+@cli.command()
+@click.pass_context
+def check_iso_6523(ctx):
+    def text(node, xpath):
+        return re.sub(r'\s+', ' ', node.xpath(xpath)[0])
+
+    """
+    Checks PEPPOL BIS Billing 3.0's ISO 6523 ICD codelist for new codes.
+    """
+    # We use this, because we don't know a better source for the ISO 6523 codelist.
+
+    # As of 2022-04-19, the range is 0002-0213, skipping 0092 0103 0181 0182.
+    minimum = 2
+    maximum = 213
+    skipped = {92, 103, 181, 182}
+
+    response = get('https://docs.peppol.eu/poacc/billing/3.0/codelist/ICD/')
+
+    divs = lxml.html.fromstring(response.content).xpath('//dd/div[@id]')
+    if not divs:
+        raise click.ClickException('The HTML markup of the data source has changed. Please update the script.')
+
+    rows = []
+    for div in divs:
+        identifier = div.attrib['id']
+        number = int(identifier)
+        if number < minimum or number > maximum or number in skipped:
+            name = text(div, './strong/text()')
+            notes = text(div, './p/text()')
+            issuer = ''
+
+            # "Issuing agency: " appears at the end of the paragraph. The rest of the paragraph contains either a
+            # purpose ("Intended Purpose/App. Area") or notes ("Notes on Use of Code"), with or without the label.
+            notes = re.sub(r'(Notes on Use of Code|Intended Purpose/App. Area)[: ]+', '', notes)
+            if 'Issuing agency: ' in notes:
+                notes, issuer = notes.split('Issuing agency: ')
+
+            rows.append([identifier, name, issuer, notes])
+
+    if rows:
+        csv.writer(sys.stdout, delimiter='\t').writerows(rows)
+    else:
+        click.echo('No new codes found.')
 
 
 def add_translation_note(path, language, domain):
@@ -569,7 +748,7 @@ def add_translation_note(path, language, domain):
     translator = gettext.translation('theme', localedir, languages=[language])
     _ = translator.gettext
 
-    pattern = '{}/{{}}/{}/'.format(base_url, domain)
+    pattern = f'{base_url}/{{}}/{domain}/'
     response = requests.get(pattern.format(language))
 
     # If it's a new page, add the note to the current version of the page.
@@ -583,7 +762,7 @@ def add_translation_note(path, language, domain):
         xpath = '//div[@itemprop="articleBody"]'
 
         replacement = lxml.html.fromstring(response.content).xpath(xpath)[0]
-        replacement.make_links_absolute('{}/{}'.format(base_url, language))
+        replacement.make_links_absolute(f'{base_url}/{language}')
 
         # Remove any existing translation notes.
         parent = replacement.xpath('//h1')[0].getparent()
@@ -609,7 +788,7 @@ def add_translation_note(path, language, domain):
 @cli.command()
 def add_translation_notes():
     """
-    Implements the localization policy.
+    Implement the localization policy.
 
     "Minor, non-normative, documentation updates will be translated promptly, but may not always be translated before
     the updates are released. The documentation will clearly display when the English documentation is 'ahead' of
