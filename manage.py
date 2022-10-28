@@ -21,7 +21,6 @@ import lxml.html
 import requests
 from babel.messages.pofile import read_po
 from docutils.utils import relative_path
-from jsonref import JsonRef, JsonRefError
 from lxml import etree
 
 basedir = Path(__file__).resolve().parent
@@ -397,7 +396,7 @@ def get_versioned_release_schema(schema):
 
     # Determine which `id` fields occur on objects in arrays.
     unversioned_pointers = set()
-    get_unversioned_pointers(JsonRef.replace_refs(schema), unversioned_pointers)
+    get_unversioned_pointers(jsonref.replace_refs(schema), unversioned_pointers)
 
     # Omit `ocid` from versioning.
     ocid = schema['properties'].pop('ocid')
@@ -414,11 +413,11 @@ def get_versioned_release_schema(schema):
 
     # Add missing definitions.
     while True:
-        ref = JsonRef.replace_refs(schema)
+        ref = jsonref.replace_refs(schema)
         try:
             repr(ref)
             break
-        except JsonRefError as e:
+        except jsonref.JsonRefError as e:
             name = e.cause.args[0]
 
             if name.endswith('VersionedId'):
