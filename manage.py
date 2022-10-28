@@ -365,9 +365,8 @@ def get_versioned_release_schema(schema):
 
     # Add missing definitions.
     while True:
-        ref = jsonref.replace_refs(schema)
         try:
-            repr(ref)
+            jsonref.replace_refs(schema, lazy_load=False)
             break
         except jsonref.JsonRefError as e:
             name = e.cause.args[0]
