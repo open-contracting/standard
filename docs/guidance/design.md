@@ -122,4 +122,6 @@ The World Bank Group's [e-Procurement Toolkit](http://www.eprocurementtoolkit.or
 
 **Resource:** [Contract Design Pattern Library](https://contract-design.worldcc.com), by [World Commerce & Contracting](https://www.worldcc.com) – provides solutions to common usability and understandability problems in contracts, to help you organize and communicate your contracts more clearly, so that they are read, understood, and acted upon
 
+**Resource:** [What data should I collect? A guide to prioritizing data fields in an e-GP implementation](https://www.open-contracting.org/es/resources/what-data-should-i-collect-a-guide-to-prioritizing-data-fields-in-an-e-gp-implementation/)
+
 [Next phase: Map](map)
