@@ -15,14 +15,6 @@ OCDS defines the buyer as:
 ```{field-description} ../../../build/current_lang/release-schema.json /properties/buyer
 ```
 
-```{note}
-Elsewhere in the OCDS schema the buyer is described as:
-
-> *The entity managing the procurement. This may be different from the buyer who pays for, **or uses**, the items being procured.*
-
-There is a proposal to align this description with the above definition.
-```
-
 In OCDS, the **buyer** is modelled as relating to the contracting (or planning) process as a whole and each process has only a single `buyer` field, i.e. all awards and contracts resulting from the contracting process share the same buyer.
 
 That said, many organizations can be assigned the 'buyer' role in the `parties` section, making it possible to represent contracting (or planning) processes with a 'lead' buyer and other buyers.
