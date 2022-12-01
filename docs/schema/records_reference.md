@@ -9,7 +9,7 @@ There should be a single record per ocid per [distribution](https://www.w3.org/T
 ```{admonition} Browsing the schema
 :class: note
 
-This page presents the record package schema as tables. You can also download the canonical version of the record package schema as {download}`JSON Schema <../../build/current_lang/record-package-schema.json>`, or view it in an [interactive browser](record_package).
+This page presents the record package schema as tables. You can also download the canonical version of the record package schema as [JSON Schema](../../build/current_lang/record-package-schema.json), or view it in an [interactive browser](record_package).
 ```
 
 ```{workedexamplelist} The following worked examples are available for records
