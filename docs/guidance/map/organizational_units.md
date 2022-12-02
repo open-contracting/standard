@@ -81,7 +81,6 @@ In a separate dataset, the publisher discloses the organizational hierarchy. Thi
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/organizations/organizational_units/paraguay_organizations.csv
 ```
 
