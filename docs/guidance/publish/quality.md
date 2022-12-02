@@ -4,18 +4,19 @@ The Open Contracting Data Standard enables publication of detailed information a
 
 The limits of what can be published using the OCDS are usually defined by (1) absence of a legal mandate for publication and (2) challenges with data collection.
 
-The OCDS was also designed to maximize the utility of contracting information for:
+The OCDS was also designed to maximize the utility of contracting information for performing analysis on:
 
-* Value for money analysis
-* Fairness and ease of doing business
-* Deterring corruption and monitoring the integrity of the procurement system
-* Boosting the efficiency and effectiveness of public contracts.
+* Generating market opportunities for the private sector to fairly compete for public contracts 
+* Achieving value for money for government
+* Strengthening the transparency, accountability and integrity of public contracting
+* Monitoring the effectiveness of service delivery
+* Improving internal efficiency
 
 However, the less information you publish, and the more incomplete the information, the less useful it will be for these objectives.
 
 For example, if your stakeholders are interested to monitor the integrity of the public procurement system, or its competitiveness, you will need data about bidders to be published. If your stakeholders want to monitor late payments to contractors, you will need to publish information about the dates that invoices are received and paid.
 
-We have prepared a [Usability spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222) that indicates which OCDS fields are needed for some of the most common goals.
+We have prepared a [list of procurement indicators related to key use cases](http://bit.ly/UsingIt-indicators) that indicates which OCDS fields are needed for some of the most common goals.
 
 Regulations or policies might need to be changed to enable publication of additional information to increase the scope and coverage of your OCDS publication.
 
@@ -67,9 +68,10 @@ Improvement on the below indicators demonstrates that the concepts are being pub
 
 Improvements on the below indicators demonstrate that it is becoming easier for users to access the published information.
 
-11. Publish record packages containing compiled releases
-12. Decrease the number of HTTP errors
-13. Increase the number of access methods (API endpoints, bulk downloads)
+1. Publish record packages containing compiled releases
+1. Decrease the number of HTTP errors
+1. Increase the number of access methods (API endpoints, bulk downloads)
+1. Decrease the number of license restrictions
 
 As publishers improve, the OCDS Helpdesk can work with them to identify how they can improve on the above criteria. OCP will note whether a publisher has improved in [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 

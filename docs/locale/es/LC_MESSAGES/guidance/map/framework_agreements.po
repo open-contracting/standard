@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2022-10-11 21:13-0300\n"
 "PO-Revision-Date: 2021-09-23 03:28+0000\n"
 "Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/guidance/map/framework_agreements.md:1
 msgid "Framework agreements"
@@ -157,11 +157,11 @@ msgid ""
 "Directive 2014/24/EU, Article 33)."
 msgstr ""
 "Los sistemas de contratación que prevén acuerdos marco cerrados incluyen  a "
-"la UE (Acuerdos Marco, según la Directiva 2014/24 / UE, artículo 33) y el "
+"la UE (Acuerdos Marco, según la Directiva 2014/24/EU, Artículo 33) y el "
 "sistema federal de los EE.UU. (Contratos de entrega indefinida, según el "
 "Reglamento Federal de Adquisiciones, Subparte 16.5). Un ejemplo de un "
 "sistema de contratación que prevé acuerdos marco abiertos es la UE (Sistemas"
-" de compra dinámica, según la Directiva 2014/24 / UE, artículo 33)."
+" de compra dinámica, según la Directiva 2014/24/EE, Artículo 33)."
 
 #: ../../docs/guidance/map/framework_agreements.md:39
 msgid ""
@@ -284,25 +284,34 @@ msgid ""
 " separate contracting processes, linked together using the "
 "`relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` "
 "field, from the [Techniques](https://extensions.open-"
-"contracting.org/en/extensions/techniques/master/) extension, is used to "
-"identify contracting processes that represent the first stage of a framework"
-" agreement procedure. The presence of a related process with a "
-"`.relationship` set to 'framework' is used to identify contracting processes"
-" that represent the second stage of a framework agreement procedure."
+"contracting.org/en/extensions/techniques/master/) extension, indicates "
+"whether the contracting process represents the first stage of a framework "
+"agreement procedure. The presence of a related process with a "
+"`.relationship` field set to 'framework' indicates whether the contracting "
+"process represents the second stage of a framework agreement procedure."
 msgstr ""
-"OCDS modela la primera y segunda etapa de los procedimientos por acuerdo "
-"marco como procesos de contratación separados, enlazándolos utilizando la "
-"lista `relatedProcesses`. El campo  "
-"`tender.techniques.hasFrameworkAgreement` de la extensión "
-"[Técnicas](https://extensions.open-"
-"contracting.org/en/extensions/techniques/master/), es usado para identificar"
-" los procesos de contratación que representan la primera etapa de un "
-"procedimiento por acuerdo marco. La presencia de un proceso relacionado con "
-"el 'framework' establecido a `.relationship` es usado para identificar los "
-"procesos de contratación que representan la segunda etapa de un "
-"procedimiento por acuerdo marco. "
+"OCDS modela la primera y la segunda etapa de los procedimientos del acuerdo "
+"marco como procesos de contratación separados, vinculados entre sí mediante "
+"el array `relatedProcesses`. El campo "
+"`tender.techniques.hasFrameworkAgreement`, de la extensión "
+"[Techniques](https://extensions.open-"
+"contracting.org/es/extensions/techniques/master/), indica si el proceso de "
+"contratación representa la primera etapa de un procedimiento de acuerdo "
+"marco. La presencia de un proceso relacionado con un campo '.relationship' "
+"establecido en 'framework' indica si el proceso de contratación representa "
+"la segunda etapa de un procedimiento de acuerdo marco."
 
-#: ../../docs/guidance/map/framework_agreements.md:68
+#: ../../docs/guidance/map/framework_agreements.md:1
+msgid ""
+"The 'framework' code is only used to relate second-stage contracting "
+"processes to their first-stage contracting process, never to other second-"
+"stage contracting processes."
+msgstr ""
+"El código 'framework' sólo se utiliza para relacionar procesos de "
+"contratación de segunda etapa con su proceso de contratación de primera "
+"etapa, nunca con otros procesos de contratación de segunda etapa."
+
+#: ../../docs/guidance/map/framework_agreements.md:72
 msgid ""
 "The following diagram shows how OCDS models a framework agreement procedure "
 "with two second stages: one with competition and one without competition. "
@@ -313,7 +322,7 @@ msgstr ""
 "competencia. Los bloques en gris representan las secciones no utilizadas del"
 " esquema OCDS."
 
-#: ../../docs/guidance/map/framework_agreements.md:70
+#: ../../docs/guidance/map/framework_agreements.md:74
 msgid ""
 "![OCDS framework agreement "
 "model](../../_static/png/framework_agreement/model.png)"
@@ -321,11 +330,11 @@ msgstr ""
 "![Modelo OCDS de acuerdos "
 "marco](../../_static/png/framework_agreement/model.png)"
 
-#: ../../docs/guidance/map/framework_agreements.md:72
+#: ../../docs/guidance/map/framework_agreements.md:76
 msgid "Extensions"
 msgstr "Extensiones"
 
-#: ../../docs/guidance/map/framework_agreements.md:74
+#: ../../docs/guidance/map/framework_agreements.md:78
 msgid ""
 "The `tender.techniques.hasFrameworkAgreement` field, from the "
 "[Techniques](https://extensions.open-"
@@ -343,7 +352,7 @@ msgstr ""
 "acuerdo marco puede ser proveída vía el objeto "
 "`tender.techniques.frameworkAgreement`."
 
-#: ../../docs/guidance/map/framework_agreements.md:76
+#: ../../docs/guidance/map/framework_agreements.md:80
 msgid ""
 "The `tender.competitive` field, from the "
 "[Competitive](https://extensions.open-"
@@ -355,20 +364,26 @@ msgstr ""
 "contracting.org/en/extensions/competitive/master/), es usado para indicar si"
 " la segunda etapa es competitiva."
 
-#: ../../docs/guidance/map/framework_agreements.md:78
+#: ../../docs/guidance/map/framework_agreements.md:82
 msgid "The two extensions should be declared in the package metadata:"
 msgstr ""
 "Las dos extensiones deberían ser declaradas en los metadatos del paquete:"
 
-#: ../../docs/guidance/map/framework_agreements.md:84
+#: ../../docs/guidance/map/framework_agreements.md:88
 msgid ""
 "The following guidance describes how to model the different stages of a "
-"framework agreement procedure in OCDS."
+"framework agreement procedure in OCDS. (It does not describe how to model "
+"the contract (using the `contracts` array), because the modeling is the same"
+" for a framework agreement as for other types of contracts.)"
 msgstr ""
 "La siguiente guía describe cómo modelar las diferentes etapas de un "
-"procedimiento por acuerdo marco en OCDS."
+"procedimiento de acuerdo marco en OCDS. (No describe cómo modelar el "
+"contrato (usando el array de `contracts`), porque el modelado es el mismo "
+"para un acuerdo marco que para otros tipos de contratos)."
 
-#: ../../docs/guidance/map/framework_agreements.md:86
+#: ../../docs/guidance/map/framework_agreements.md:90
+#: ../../docs/guidance/map/framework_agreements.md:160
+#: ../../docs/guidance/map/framework_agreements.md:223
 msgid ""
 "Invitation to participate in the first stage of a framework agreement "
 "procedure"
@@ -376,11 +391,11 @@ msgstr ""
 "Invitación a participar en la primera etapa del procedimiento por acuerdo "
 "marco."
 
-#: ../../docs/guidance/map/framework_agreements.md:88
-msgid "Create a release and add 'tender' to the `tag` array"
-msgstr "Crear una entrega y agregar 'tender' a la lista de 'tag'"
+#: ../../docs/guidance/map/framework_agreements.md:92
+msgid "Create a release and add 'tender' to the `tag` array."
+msgstr "Cree una entrega y agregue 'tender' al array `tag`."
 
-#: ../../docs/guidance/map/framework_agreements.md:89
+#: ../../docs/guidance/map/framework_agreements.md:93
 msgid ""
 "For each buyer that will participate in the framework agreement, add an "
 "`Organization` object to the `parties` array, add 'buyer' to its `.roles`, "
@@ -390,7 +405,7 @@ msgstr ""
 "`Organization` a la lista de `parties`, agregar 'buyer' a sus `.roles`, y "
 "completar sus otros campos."
 
-#: ../../docs/guidance/map/framework_agreements.md:90
+#: ../../docs/guidance/map/framework_agreements.md:94
 msgid ""
 "If all potential buyers can participate, don't add them to the `parties` "
 "array. Instead, add a note in the [publication policy](../publish) to "
@@ -401,7 +416,7 @@ msgstr ""
 "publicación](../publish) para explicar cómo los usuarios deben interpretar "
 "un proceso de contratación sin compradores."
 
-#: ../../docs/guidance/map/framework_agreements.md:91
+#: ../../docs/guidance/map/framework_agreements.md:95
 msgid ""
 "If a single buyer will participate in the framework agreement, set the "
 "`buyer.id` and `buyer.name` to match the buyer's object in the `parties` "
@@ -411,19 +426,29 @@ msgstr ""
 "y `buyer.name` con los mismos valores del objeto 'buyer' a la lista de "
 "`parties`. De lo contrario, no incluir el campo `buyer`."
 
-#: ../../docs/guidance/map/framework_agreements.md:92
+#: ../../docs/guidance/map/framework_agreements.md:96
 msgid "In the `tender` section, set:"
 msgstr "En la sección `tender`, establecer:"
 
-#: ../../docs/guidance/map/framework_agreements.md:93
+#: ../../docs/guidance/map/framework_agreements.md:97
+msgid ""
+"`tender.procurementMethod` according to the competitive conditions of the "
+"first stage of the framework agreement. Since framework agreements typically"
+" involve qualification, this is most often 'selective'."
+msgstr ""
+"`tender.procurementMethod` de acuerdo con las condiciones competitivas de la"
+" primera etapa del acuerdo marco. Dado que los acuerdos marco suelen "
+"implicar cualificación, la mayoría de las veces es 'selective'."
+
+#: ../../docs/guidance/map/framework_agreements.md:98
 msgid "`tender.techniques.hasFrameworkAgreement` to `true`."
 msgstr "`tender.techniques.hasFrameworkAgreement` a `true`."
 
-#: ../../docs/guidance/map/framework_agreements.md:94
+#: ../../docs/guidance/map/framework_agreements.md:99
 msgid "`tender.contractPeriod` to the duration of the framework agreement."
 msgstr "`tender.contractPeriod` a la duración del acuerdo marco."
 
-#: ../../docs/guidance/map/framework_agreements.md:95
+#: ../../docs/guidance/map/framework_agreements.md:100
 msgid ""
 "If the framework agreement is closed, set `tender.tenderPeriod.endDate` to "
 "the deadline for responses to the invitation."
@@ -431,7 +456,7 @@ msgstr ""
 "Si el acuerdo marco es cerrado, establecer `tender.tenderPeriod.endDate` a "
 "la fecha máxima de respuestas a la invitación."
 
-#: ../../docs/guidance/map/framework_agreements.md:96
+#: ../../docs/guidance/map/framework_agreements.md:101
 msgid ""
 "If the framework agreement is open, set `tender.tenderPeriod.endDate` to the"
 " last date that new suppliers can be added."
@@ -439,29 +464,34 @@ msgstr ""
 "Si el acuerdo marco es abierto, establecer `tender.tenderPeriod.endDate` a "
 "la última fecha en la que nuevos proveedores pueden ser añadidos."
 
-#: ../../docs/guidance/map/framework_agreements.md:98
+#: ../../docs/guidance/map/framework_agreements.md:103
+#: ../../docs/guidance/map/framework_agreements.md:242
 msgid ""
 "First-stage selection and addition of suppliers to the framework agreement"
 msgstr ""
 "Selección de primera etapa y incorporación de proveedores al acuerdo marco "
 
-#: ../../docs/guidance/map/framework_agreements.md:100
+#: ../../docs/guidance/map/framework_agreements.md:105
 msgid ""
 "Create a release with the **same** `ocid` as the tender release and add "
-"'award' to the `tag` array"
+"'award' to the `tag` array."
 msgstr ""
 "Crear una entrega con el **mismo** `ocid` que la entrega de licitación y "
-"agregar 'award' a la lista `tag`"
+"agregar 'award' al array `tag`."
 
-#: ../../docs/guidance/map/framework_agreements.md:101
-msgid "Add an `Award` object to the `awards` array."
-msgstr "Agregar un objeto `Award` a la lista `awards`."
+#: ../../docs/guidance/map/framework_agreements.md:106
+#: ../../docs/guidance/map/framework_agreements.md:145
+msgid ""
+"Add an `Award` object to the `awards` array, setting its fields as usual."
+msgstr ""
+"Agregar un objeto `Award` al array de `awards`, completando sus campos como "
+"de costumbre."
 
-#: ../../docs/guidance/map/framework_agreements.md:102
+#: ../../docs/guidance/map/framework_agreements.md:107
 msgid "For each supplier:"
 msgstr "Por cada proveedor:"
 
-#: ../../docs/guidance/map/framework_agreements.md:103
+#: ../../docs/guidance/map/framework_agreements.md:108
 #: ../../docs/guidance/map/framework_agreements.md:146
 msgid ""
 "Add an `Organization` object to the `parties` array, add 'supplier' to its "
@@ -470,7 +500,7 @@ msgstr ""
 "Agregar un objeto `Organization` a la lista `parties`, agregar 'supplier' a "
 "sus `.roles` y completar sus otros campos."
 
-#: ../../docs/guidance/map/framework_agreements.md:104
+#: ../../docs/guidance/map/framework_agreements.md:109
 msgid ""
 "Add an `OrganizationReference` object to the award's `.suppliers` array, and"
 " set its `.id` and `.name` to match the supplier's object in the `parties` "
@@ -480,7 +510,7 @@ msgstr ""
 "adjudicaciones, y establecer su `.id` y `.name` para que coincida con el "
 "objeto del proveedor de la lista `parties`."
 
-#: ../../docs/guidance/map/framework_agreements.md:105
+#: ../../docs/guidance/map/framework_agreements.md:110
 msgid ""
 "If no further suppliers will be added to the framework agreement, set "
 "`tender.status` to 'complete'."
@@ -488,110 +518,90 @@ msgstr ""
 "Si no se agregarán más proveedores al acuerdo marco, establecer "
 "`tender.status` a 'complete'."
 
-#: ../../docs/guidance/map/framework_agreements.md:107
-#: ../../docs/guidance/map/framework_agreements.md:198
+#: ../../docs/guidance/map/framework_agreements.md:112
+#: ../../docs/guidance/map/framework_agreements.md:197
 msgid "Award of a procurement contract without second-stage competition"
 msgstr "Adjudicación de un contrato sin una segunda etapa competitiva"
 
-#: ../../docs/guidance/map/framework_agreements.md:109
-msgid ""
-"Create a release with a **new** `ocid` and add 'award' and 'contract' to the"
-" `tag`"
-msgstr ""
-"Crear una entrega con un **nuevo** `ocid` y agregar 'award' y 'contract' a "
-"`tag`"
-
-#: ../../docs/guidance/map/framework_agreements.md:110
-#: ../../docs/guidance/map/framework_agreements.md:118
-msgid ""
-"[Relate the second stage to the first stage](#relate-the-second-stage-to-"
-"the-first-stage)"
-msgstr ""
-"[Relacionar la segunda etapa con la primera etapa](#relate-the-second-stage-"
-"to-the-first-stage)"
-
-#: ../../docs/guidance/map/framework_agreements.md:111
-#: ../../docs/guidance/map/framework_agreements.md:119
-msgid "[Add a buyer](#add-a-buyer)"
-msgstr "[Agregar un comprador](#add-a-buyer)"
-
-#: ../../docs/guidance/map/framework_agreements.md:112
-msgid ""
-"Set `tender.id` to the `award.id`, set `tender.competitive` to `false`, and "
-"set `tender.procuringEntity` if appropriate"
-msgstr ""
-"Establecer `tender.id` al valor de `award.id`, establecer "
-"`tender.competitive` a `false`, y completar `tender.procuringEntity` si "
-"corresponde"
-
-#: ../../docs/guidance/map/framework_agreements.md:113
-#: ../../docs/guidance/map/framework_agreements.md:125
-msgid ""
-"[Add an award, contract and supplier](#add-an-award-contract-and-supplier)"
-msgstr ""
-"[Agregar una adjudicación, contrato y proveedor](#add-an-award-contract-and-"
-"supplier)"
+#: ../../docs/guidance/map/framework_agreements.md:114
+msgid "Create a release with a **new** `ocid` and add 'award' to the `tag`."
+msgstr "Crear una entrega con un **nuevo** `ocid` y agregar 'award' a `tag`."
 
 #: ../../docs/guidance/map/framework_agreements.md:115
-#: ../../docs/guidance/map/framework_agreements.md:263
-msgid "Invitation to participate in a second-stage competition"
-msgstr "Invitación a participar en una segunda etapa competitiva"
+#: ../../docs/guidance/map/framework_agreements.md:123
+msgid ""
+"[Relate the second stage to the first stage](#relate-the-second-stage-to-"
+"the-first-stage)."
+msgstr ""
+"[Relacionar la segunda etapa con la primera](#relate-the-second-stage-to-"
+"the-first-stage)."
+
+#: ../../docs/guidance/map/framework_agreements.md:116
+#: ../../docs/guidance/map/framework_agreements.md:124
+msgid "[Add a buyer](#add-a-buyer)."
+msgstr "[Agregar un comprador](#add-a-buyer)."
 
 #: ../../docs/guidance/map/framework_agreements.md:117
 msgid ""
-"Create a release with a **new** `ocid` and add 'tender' to the `.tag` array"
+"Set `tender.id` to the `award.id`, set `tender.competitive` to `false`, and "
+"set `tender.procuringEntity` if appropriate."
 msgstr ""
-"Crear una entrega con un **nuevo** `ocid` y agregar 'tender' a la lista "
-"`.tag`"
+"Establecer `tender.id` en `award.id`, establecer `tender.competitive` a "
+"`false` y completar `tender.prouringEntity` si corresponde."
+
+#: ../../docs/guidance/map/framework_agreements.md:118
+#: ../../docs/guidance/map/framework_agreements.md:130
+msgid "[Add an award and supplier](#add-an-award-and-supplier)."
+msgstr ""
+"[Agregar una adjudicación y un proveedor adjudicado](#add-an-award-and-"
+"supplier)."
 
 #: ../../docs/guidance/map/framework_agreements.md:120
-msgid ""
-"Populate the `tender` section, setting `tender.procurementMethod` to the "
-"same value as in the first stage, and `tender.competitive` to `true`"
-msgstr ""
-"Complete la sección `tender`, estableciendo `tender.procurementMethod` en el"
-" mismo valor que en la primera etapa, y `tender.competitive` en` true` "
+#: ../../docs/guidance/map/framework_agreements.md:261
+msgid "Invitation to participate in a second-stage competition"
+msgstr "Invitación a participar en una segunda etapa competitiva"
 
 #: ../../docs/guidance/map/framework_agreements.md:122
-#: ../../docs/guidance/map/framework_agreements.md:281
+msgid ""
+"Create a release with a **new** `ocid` and add 'tender' to the `.tag` array."
+msgstr ""
+"Crear una entrega con un **nuevo** `ocid` y agregar 'tender' al array "
+"`.tag`."
+
+#: ../../docs/guidance/map/framework_agreements.md:125
+msgid ""
+"Populate the `tender` section, setting `tender.procurementMethod` to the "
+"same value as in the first stage, and `tender.competitive` to `true`."
+msgstr ""
+"Completar la sección `tender`, estableciendo `tender.procurementMethod` en "
+"el mismo valor que en la primera etapa, y `tender.competitive` en `true`."
+
+#: ../../docs/guidance/map/framework_agreements.md:127
+#: ../../docs/guidance/map/framework_agreements.md:279
 msgid ""
 "Award of a procurement contract resulting from a second-stage competition"
 msgstr ""
 "Adjudicación de un contrato resultante de una segunda etapa competitiva"
 
-#: ../../docs/guidance/map/framework_agreements.md:124
-msgid ""
-"Create a release with the **same** `ocid` as the tender release *for the "
-"invitation to participate in a second-stage competition*, and add 'award' "
-"and 'contract' to the `tag`"
-msgstr ""
-"Cree un comunicado con el **mismo** `ocid` que el comunicado de licitación "
-"*para la invitación a participar en una competencia de segunda etapa*, y "
-"agregue 'award' y 'contract' a la` tag` "
-
-#: ../../docs/guidance/map/framework_agreements.md:127
-msgid "Updating the contract value, period or items"
-msgstr "Actualizando el valor, periodo o ítems del contrato"
-
 #: ../../docs/guidance/map/framework_agreements.md:129
 msgid ""
-"If the initial contract value, period or items are subsequently updated, "
-"populate the contract's `.value`, `.period` and `.items` with the updated "
-"values."
+"Create a release with the **same** `ocid` as the tender release *for the "
+"invitation to participate in a second-stage competition*, and add 'award' to"
+" the `tag`."
 msgstr ""
-"Si el valor, periodo o ítems iniciales del contrato son actualizados "
-"subsecuentemente, completar los campos `.value`, `.period` e `.items` del "
-"contrato con los valores actualizados."
+"Crear una entrega con el **mismo** `ocid` que en la entrega de licitación "
+"*para la invitación a participar en una competencia de segunda etapa*, y "
+"agregue 'award' a `tag`."
 
-#: ../../docs/guidance/map/framework_agreements.md:131
+#: ../../docs/guidance/map/framework_agreements.md:132
 msgid "Common operations"
 msgstr "Operaciones comunes"
 
-#: ../../docs/guidance/map/framework_agreements.md:133
+#: ../../docs/guidance/map/framework_agreements.md:134
 msgid "Relate the second stage to the first stage"
 msgstr "Relacionar la segunda etapa con la primera etapa"
 
-#: ../../docs/guidance/map/framework_agreements.md:135
+#: ../../docs/guidance/map/framework_agreements.md:136
 msgid ""
 "Add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id`"
 " (to '1', for example), add 'framework' to its `.relationship` array, set "
@@ -603,21 +613,21 @@ msgstr ""
 "`.relationship`, establecer su `.scheme` a 'ocid' y establecer su "
 "`.identifier` al `ocid` de la invitación a participar en el acuerdo marco."
 
-#: ../../docs/guidance/map/framework_agreements.md:137
+#: ../../docs/guidance/map/framework_agreements.md:138
 msgid "Add a buyer"
 msgstr "Agregar un comprador"
 
-#: ../../docs/guidance/map/framework_agreements.md:139
+#: ../../docs/guidance/map/framework_agreements.md:140
 msgid ""
 "Add an `Organization` object to the `parties` array, add 'buyer' to its "
 "`.roles` and populate its other fields with the details of the buyer for "
-"this specific contract."
+"this specific award."
 msgstr ""
-"Agregar un objeto `Organization` a la lista `parties`, agregar 'buyer' a sus"
-" `.roles` y completar sus otros campos con los detalles del comprador para "
-"este contrato específico."
+"Agregar un objeto `Organización` al array de `parties`, agregar 'buyerr' a "
+"sus `.roles` y completar sus otros campos con los detalles del comprador "
+"para esta adjudicación específica."
 
-#: ../../docs/guidance/map/framework_agreements.md:140
+#: ../../docs/guidance/map/framework_agreements.md:141
 msgid ""
 "Set `buyer.id` and `buyer.name` to match the buyer's object in the `parties`"
 " array."
@@ -625,22 +635,9 @@ msgstr ""
 "Establecer los campos `buyer.id` y `buyer.name` para que coincidan con el "
 "objeto del comprador en la lista `parties`."
 
-#: ../../docs/guidance/map/framework_agreements.md:142
-msgid "Add an award, contract and supplier"
-msgstr "Agregar una adjudicación, contrato y proveedor"
-
-#: ../../docs/guidance/map/framework_agreements.md:144
-msgid ""
-"Add an `Award` object to the `awards` array and a `Contract` object to the "
-"`contracts` array."
-msgstr ""
-"Agregar un objeto `Award` a la lista `awards` y un objeto `Contract` a la "
-"lista `contracts`."
-
-#: ../../docs/guidance/map/framework_agreements.md:145
-msgid "Set the award's `.id` and the contract's `.id` to the same value."
-msgstr ""
-"Establecer el `.id` de la adjudicación `.id` del contrato al mismo valor."
+#: ../../docs/guidance/map/framework_agreements.md:143
+msgid "Add an award and supplier"
+msgstr "Agregar una adjudicación y un proveedor adjudicado"
 
 #: ../../docs/guidance/map/framework_agreements.md:147
 msgid ""
@@ -651,19 +648,11 @@ msgstr ""
 "adjudicación y establecer los campos `.id` y `.name` para que coincidan con "
 "el objeto del proveedor en la lista `parties`."
 
-#: ../../docs/guidance/map/framework_agreements.md:148
-msgid ""
-"Populate the award's `.value`, `.contractPeriod` and `.items` with the "
-"initial contract value, period and items."
-msgstr ""
-"Completar los campos `.value`, `.contractPeriod` e `.items` de la "
-"adjudicación con los valores, periodo e ítems iniciales del contrato."
-
-#: ../../docs/guidance/map/framework_agreements.md:150
+#: ../../docs/guidance/map/framework_agreements.md:149
 msgid "Worked examples"
 msgstr "Ejemplos prácticos"
 
-#: ../../docs/guidance/map/framework_agreements.md:152
+#: ../../docs/guidance/map/framework_agreements.md:151
 msgid ""
 "The following examples show how to model two framework agreements, covering "
 "a range of characteristics:"
@@ -671,7 +660,7 @@ msgstr ""
 "Los siguientes ejemplos muestran cómo modelar dos acuerdos marco, cubriendo "
 "una serie de características:"
 
-#: ../../docs/guidance/map/framework_agreements.md:154
+#: ../../docs/guidance/map/framework_agreements.md:153
 msgid ""
 "A closed framework agreement established for a single buyer, with a single "
 "supplier and **without** second-stage competition"
@@ -679,7 +668,7 @@ msgstr ""
 "Un acuerdo marco cerrado establecido para un único comprador, con un único "
 "proveedor y **sin**  segunda etapa competitiva"
 
-#: ../../docs/guidance/map/framework_agreements.md:155
+#: ../../docs/guidance/map/framework_agreements.md:154
 msgid ""
 "A open framework agreement established for multiple buyers, with multiple "
 "suppliers and **with** second-stage competition"
@@ -687,15 +676,15 @@ msgstr ""
 "Un acuerdo marco abierto establecido para múltiples compradores, con "
 "múltiples proveedores y **con** segunda etapa competitiva"
 
-#: ../../docs/guidance/map/framework_agreements.md:157
+#: ../../docs/guidance/map/framework_agreements.md:156
 msgid ""
-"Closed framework agreement with single buyer, single supplier and without "
-"second-stage competition"
+"Example 1: Closed framework agreement with single buyer, single supplier and"
+" without second-stage competition"
 msgstr ""
-"Un acuerdo marco cerrado con un solo comprador, un solo proveedor y sin "
-"segunda etapa competitiva"
+"Ejemplo 1: Acuerdo marco cerrado con comprador único, proveedor único y sin "
+"competencia de segunda etapa"
 
-#: ../../docs/guidance/map/framework_agreements.md:159
+#: ../../docs/guidance/map/framework_agreements.md:158
 msgid ""
 "NHS National Services Scotland (NSS) wants to establish a framework "
 "agreement for the receipt, storage and distribution of seasonal influenza "
@@ -707,12 +696,7 @@ msgstr ""
 "estacional a médicos generales, instalaciones de atención social, centros de"
 " almacenamiento de vacunas y farmacias comunitarias en todo el NHS Escocia."
 
-#: ../../docs/guidance/map/framework_agreements.md:161
-#: ../../docs/guidance/map/framework_agreements.md:225
-msgid "Invitation to participate in the first stage"
-msgstr "Invitación a participar en la primera etapa"
-
-#: ../../docs/guidance/map/framework_agreements.md:163
+#: ../../docs/guidance/map/framework_agreements.md:162
 msgid ""
 "NSS issues a [contract "
 "notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) "
@@ -733,8 +717,8 @@ msgstr ""
 "dado que el aviso de licitación especifica solo una autoridad de "
 "contratación."
 
-#: ../../docs/guidance/map/framework_agreements.md:165
-#: ../../docs/guidance/map/framework_agreements.md:229
+#: ../../docs/guidance/map/framework_agreements.md:164
+#: ../../docs/guidance/map/framework_agreements.md:227
 msgid ""
 "The notice is modelled as an OCDS release with a `tag` of 'tender' and the "
 "following properties:"
@@ -742,13 +726,13 @@ msgstr ""
 "El aviso es modelado como una entrega OCDS con el `tag` establecido a "
 "'tender' y las siguientes propiedades:"
 
-#: ../../docs/guidance/map/framework_agreements.md:167
-#: ../../docs/guidance/map/framework_agreements.md:231
+#: ../../docs/guidance/map/framework_agreements.md:166
+#: ../../docs/guidance/map/framework_agreements.md:229
 msgid "The techniques extension is declared in the package metadata."
 msgstr "La extensión de técnicas es declarada en los metadatos del paquete."
 
-#: ../../docs/guidance/map/framework_agreements.md:168
-#: ../../docs/guidance/map/framework_agreements.md:232
+#: ../../docs/guidance/map/framework_agreements.md:167
+#: ../../docs/guidance/map/framework_agreements.md:230
 msgid ""
 "Since this contracting process is for the set-up of a framework agreement, "
 "`tender.techniques.hasFrameworkAgreement` is set to `true`."
@@ -757,17 +741,16 @@ msgstr ""
 "acuerdo marco, `tender.techniques.hasFrameworkAgreement` es establecido a "
 "`true`."
 
-#: ../../docs/guidance/map/framework_agreements.md:169
+#: ../../docs/guidance/map/framework_agreements.md:168
+#: ../../docs/guidance/map/framework_agreements.md:231
 msgid ""
-"Since the framework agreement will be concluded with a single supplier and "
-"since any supplier is able to submit a response to the invitation to "
-"participate, `tender.procurementMethod` is set to 'open'."
+"Since any supplier is able to submit a response to the invitation to "
+"participate, `tender.procurementMethod` is set to 'selective'."
 msgstr ""
-"Dado que el acuerdo marco será concluido con un único proveedor y dado que "
-"cualquier proveedor puede enviar una respuesta a la invitación a participar,"
-" `tender.procurementMethod` es establecido a 'open'."
+"Dado que cualquier proveedor puede enviar una respuesta a la invitación a "
+"participar, `tender.procurementMethod` se establece en 'selective'."
 
-#: ../../docs/guidance/map/framework_agreements.md:170
+#: ../../docs/guidance/map/framework_agreements.md:169
 msgid ""
 "Since the framework agreement is closed, `tender.tenderPeriod` is set to the"
 " deadline for responses to the invitation to participate."
@@ -775,7 +758,7 @@ msgstr ""
 "Dado que el acuerdo marco es cerrado, `tender.tenderPeriod` es establecido a"
 " la fecha límite para enviar respuestas a la invitación a participar."
 
-#: ../../docs/guidance/map/framework_agreements.md:171
+#: ../../docs/guidance/map/framework_agreements.md:170
 msgid ""
 "Since there is only one buyer, `buyer` is set to reference the buyer's "
 "object in the `parties` array."
@@ -783,12 +766,13 @@ msgstr ""
 "Dado que hay un solo comprador, `buyer` se establece como referencia al "
 "objeto del comprador en la lista `parties`."
 
-#: ../../docs/guidance/map/framework_agreements.md:179
-#: ../../docs/guidance/map/framework_agreements.md:244
-msgid "Adding a supplier to the framework agreement"
-msgstr "Agregando un proveedor al acuerdo marco"
+#: ../../docs/guidance/map/framework_agreements.md:178
+msgid ""
+"First-stage selection and addition of a supplier to the framework agreement"
+msgstr ""
+"Primera etapa de selección e incorporación de un proveedor al acuerdo marco"
 
-#: ../../docs/guidance/map/framework_agreements.md:181
+#: ../../docs/guidance/map/framework_agreements.md:180
 msgid ""
 "NSS issues a [contract award "
 "notice](https://ted.europa.eu/udl?uri=TED:NOTICE:268595-2020:TEXT:EN:HTML&src=0)"
@@ -800,8 +784,8 @@ msgstr ""
 " para anunciar que el acuerdo marco ha sido concluido con un solo proveedor,"
 " Movianto UK."
 
-#: ../../docs/guidance/map/framework_agreements.md:183
-#: ../../docs/guidance/map/framework_agreements.md:248
+#: ../../docs/guidance/map/framework_agreements.md:182
+#: ../../docs/guidance/map/framework_agreements.md:246
 msgid ""
 "The notice is modelled as an OCDS release with the same `ocid` as the "
 "previous release, a `tag` of 'award', and the following properties:"
@@ -809,7 +793,7 @@ msgstr ""
 "El aviso se modela como una entrega OCDS con el mismo `ocid` como la entrega"
 " previa, el `tag` 'award', y las siguientes características:"
 
-#: ../../docs/guidance/map/framework_agreements.md:185
+#: ../../docs/guidance/map/framework_agreements.md:184
 msgid ""
 "Since no further suppliers will be added to the framework agreement, "
 "`tender.status` is set to 'complete'."
@@ -817,12 +801,12 @@ msgstr ""
 "Dado que no se añadirán más proveedores al acuerdo marco, `tender.status` se"
 " establece a 'complete'."
 
-#: ../../docs/guidance/map/framework_agreements.md:186
-#: ../../docs/guidance/map/framework_agreements.md:251
+#: ../../docs/guidance/map/framework_agreements.md:185
+#: ../../docs/guidance/map/framework_agreements.md:249
 msgid "An `Award` object is added to the `awards` array."
 msgstr "Un objeto `Award` es agregado a la lista `awards`."
 
-#: ../../docs/guidance/map/framework_agreements.md:187
+#: ../../docs/guidance/map/framework_agreements.md:186
 msgid ""
 "An `Organization` object is added to the `parties` array with the supplier's"
 " details."
@@ -830,7 +814,7 @@ msgstr ""
 "Un objeto `Organization` es agregado a la lista `parties` con los detalles "
 "de los proveedores."
 
-#: ../../docs/guidance/map/framework_agreements.md:188
+#: ../../docs/guidance/map/framework_agreements.md:187
 msgid ""
 "An `OrganizationReference` object is added to award's `.suppliers` array to "
 "reference the supplier's object in the `parties` array."
@@ -838,7 +822,7 @@ msgstr ""
 "Un objeto `OrganizationReference` es agregado a la lista `.suppliers` de la "
 "adjudicación para referenciar el objeto del proveedor en la lista `parties`."
 
-#: ../../docs/guidance/map/framework_agreements.md:196
+#: ../../docs/guidance/map/framework_agreements.md:195
 msgid ""
 "The first stage of the framework agreement procedure is complete and NSS can"
 " now purchase services from the supplier."
@@ -846,7 +830,7 @@ msgstr ""
 "La primera etapa del acuerdo marco está completa y NSS puede ahora contratar"
 " servicios del proveedor."
 
-#: ../../docs/guidance/map/framework_agreements.md:200
+#: ../../docs/guidance/map/framework_agreements.md:199
 msgid ""
 "NSS uses the framework agreement to place an order for the supplier to "
 "receive and store ten pallets of seasonal flu vaccine. Under the terms of "
@@ -856,7 +840,7 @@ msgstr ""
 "reciba y almacene diez tarimas de vacuna contra la influenza estacional. "
 "Según los términos del acuerdo, el costo de este servicio es de £ 10,000."
 
-#: ../../docs/guidance/map/framework_agreements.md:202
+#: ../../docs/guidance/map/framework_agreements.md:201
 msgid ""
 "The order represents the award of a procurement contract at the second stage"
 " of the framework agreement procedure."
@@ -864,24 +848,24 @@ msgstr ""
 "El pedido representa la adjudicación de un contrato de adquisición en la "
 "segunda etapa del procedimiento del acuerdo marco."
 
-#: ../../docs/guidance/map/framework_agreements.md:204
+#: ../../docs/guidance/map/framework_agreements.md:203
 msgid ""
 "Because there was no competition at the second stage, the new contracting "
-"process has only one release, with a `tag` of 'award' and 'contract'. The "
-"release has the following properties:"
+"process has only one release, with a `tag` of 'award'. The release has the "
+"following properties:"
 msgstr ""
 "Debido a que no hubo competencia en la segunda etapa, el nuevo proceso de "
-"contratación tiene un solo release, con una `tag` de 'award' y 'contract'. "
-"La entrega tiene las siguientes propiedades:"
+"contratación tiene una sola entrega, con un `tag` de 'award'. La entrega "
+"tiene las siguientes propiedades:"
 
-#: ../../docs/guidance/map/framework_agreements.md:206
-#: ../../docs/guidance/map/framework_agreements.md:269
+#: ../../docs/guidance/map/framework_agreements.md:205
+#: ../../docs/guidance/map/framework_agreements.md:267
 msgid "A new `ocid` is used."
 msgstr "Un nuevo `ocid` es usado."
 
-#: ../../docs/guidance/map/framework_agreements.md:207
-#: ../../docs/guidance/map/framework_agreements.md:270
-#: ../../docs/guidance/map/framework_agreements.md:288
+#: ../../docs/guidance/map/framework_agreements.md:206
+#: ../../docs/guidance/map/framework_agreements.md:268
+#: ../../docs/guidance/map/framework_agreements.md:286
 msgid ""
 "The `relatedProcesses` section is populated with a reference to the "
 "contracting process for the first stage."
@@ -889,7 +873,7 @@ msgstr ""
 "La sección `relatedProcesses` se completa con una referencia al proceso de "
 "contratación para la primera etapa."
 
-#: ../../docs/guidance/map/framework_agreements.md:208
+#: ../../docs/guidance/map/framework_agreements.md:207
 msgid ""
 "A minimal `tender` section sets `tender.id` and sets `tender.competitive` to"
 " `false`."
@@ -897,21 +881,15 @@ msgstr ""
 "Una sección mínima de `tender` establece` tender.id` y establece "
 "`tender.competitive` a` false`."
 
-#: ../../docs/guidance/map/framework_agreements.md:209
-#: ../../docs/guidance/map/framework_agreements.md:291
+#: ../../docs/guidance/map/framework_agreements.md:208
+#: ../../docs/guidance/map/framework_agreements.md:289
 msgid ""
-"The `awards` section is populated with the initial contract value, period "
-"and items."
+"The `awards` section is populated with the award value, period and items."
 msgstr ""
-"La sección de `awards` se completa con el valor inicial del contrato, "
-"periodo e ítems."
+"La sección `awards` se completa con el valor de la adjudicación, el período "
+"y los artículos."
 
-#: ../../docs/guidance/map/framework_agreements.md:210
-#: ../../docs/guidance/map/framework_agreements.md:292
-msgid "The `contracts` section is populated and linked to the award."
-msgstr "La sección `contracts` se completa y se vincula con la adjudicación."
-
-#: ../../docs/guidance/map/framework_agreements.md:211
+#: ../../docs/guidance/map/framework_agreements.md:209
 msgid ""
 "The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` "
 "fields are populated with the details of the buyer, procuring entity and "
@@ -921,7 +899,7 @@ msgstr ""
 " son completados con los detalles del comprador, la entidad contratante y "
 "proveedor."
 
-#: ../../docs/guidance/map/framework_agreements.md:219
+#: ../../docs/guidance/map/framework_agreements.md:217
 msgid ""
 "Each additional purchase made under the framework agreement is represented "
 "by a new contracting process with a new `ocid`."
@@ -929,15 +907,15 @@ msgstr ""
 "Cada compra adicional realizada bajo el acuerdo marco está representada por "
 "un nuevo proceso de contratación con un nuevo `ocid`."
 
-#: ../../docs/guidance/map/framework_agreements.md:221
+#: ../../docs/guidance/map/framework_agreements.md:219
 msgid ""
-"Open framework agreement with multiple buyers, with multiple suppliers and "
-"with second-stage competition"
+"Example 2: Open framework agreement with multiple buyers, with multiple "
+"suppliers and with second-stage competition"
 msgstr ""
-"Acuerdo marco abierto con múltiples compradores, con múltiples proveedores y"
-" con segunda etapa competitiva"
+"Ejemplo 2: Acuerdo marco abierto con múltiples compradores, con múltiples "
+"proveedores y con competencia de segunda etapa"
 
-#: ../../docs/guidance/map/framework_agreements.md:223
+#: ../../docs/guidance/map/framework_agreements.md:221
 msgid ""
 "The National Procurement Agency in Chile (Chile Compra) wants to establish a"
 " framework agreement for the purchase of office supplies, including paper "
@@ -948,7 +926,7 @@ msgstr ""
 "incluyendo papel y artículos de papelería para las distintas entidades "
 "públicas de Chile."
 
-#: ../../docs/guidance/map/framework_agreements.md:227
+#: ../../docs/guidance/map/framework_agreements.md:225
 msgid ""
 "Chile Compra publishes a [tender "
 "notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==)"
@@ -959,26 +937,16 @@ msgid ""
 "agreement is for multiple buyers, since the tender notice specifies two "
 "contracting authorities."
 msgstr ""
-"Chile Compra publica un [aviso de licitación] "
-"(https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==)"
+"Chile Compra publica un [aviso de "
+"licitación](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==)"
 " invitando a los proveedores a participar en el acuerdo marco. El aviso de "
 "licitación especifica que varios proveedores pueden unirse al acuerdo marco."
-" El convenio marco es abierto, ya que todos los acuerdos marco en Chile "
+" El acuerdo marco es abierto, ya que todos los acuerdos marco en Chile "
 "implican el establecimiento de un sistema dinámico de compras. El acuerdo "
 "marco es para varios compradores, ya que el anuncio de licitación especifica"
 " dos autoridades de contratación."
 
-#: ../../docs/guidance/map/framework_agreements.md:233
-msgid ""
-"Since the framework agreement will be concluded with multiple suppliers and "
-"will involve second-stage competition, `tender.procurementMethod` is set to "
-"'selective'."
-msgstr ""
-"Dado que el acuerdo marco se celebrará con varios proveedores e implicará "
-"una segunda fase competitiva, `tender.procurementMethod` se establece en "
-"'selective'."
-
-#: ../../docs/guidance/map/framework_agreements.md:234
+#: ../../docs/guidance/map/framework_agreements.md:232
 msgid ""
 "Since the framework agreement is open, `tender.tenderPeriod` is set to the "
 "end of the framework agreement."
@@ -986,7 +954,7 @@ msgstr ""
 "Dado que el acuerdo marco es abierto, `tender.tenderPeriod` se establece a "
 "la fecha de fin del acuerdo marco."
 
-#: ../../docs/guidance/map/framework_agreements.md:235
+#: ../../docs/guidance/map/framework_agreements.md:233
 msgid ""
 "Since there are two buyers, the 'buyer' object is not set, and the buyers "
 "are declared in the `parties` array."
@@ -994,7 +962,7 @@ msgstr ""
 "Dado que hay dos compradores, el objeto 'buyer' no se establece y los "
 "compradores se declaran en la lista `parties`."
 
-#: ../../docs/guidance/map/framework_agreements.md:236
+#: ../../docs/guidance/map/framework_agreements.md:234
 msgid ""
 "Since Chile Compra is the entity that manages the contracting process, "
 "`tender.procuringEntity` is set to reference Chile Compra's object in the "
@@ -1004,7 +972,7 @@ msgstr ""
 "contratación, `tender.procuringEntity` se establece para referenciar el "
 "objeto de Chile Compra en la lista `parties`."
 
-#: ../../docs/guidance/map/framework_agreements.md:246
+#: ../../docs/guidance/map/framework_agreements.md:244
 msgid ""
 "Chile Compra issues an [award "
 "notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/StepsProcessAward/PreviewAwardAct.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==)"
@@ -1012,13 +980,13 @@ msgid ""
 " Rodrigo Alejandro Vidal Campos and Comercializadora e Importadora Grupo "
 "RAVC SPA."
 msgstr ""
-"Chile Compra emite un [aviso de adjudicación] "
-"(https://www.mercadopublico.cl/Procurement/Modules/RFB/StepsProcessAward/PreviewAwardAct.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==)"
+"Chile Compra emite un [aviso de "
+"adjudicación](https://www.mercadopublico.cl/Procurement/Modules/RFB/StepsProcessAward/PreviewAwardAct.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==)"
 " para anunciar que el acuerdo marco ha sido adjudicado a dos proveedores: "
 "Rodrigo Alejandro Vidal Campos y Comercializadora e Importadora Grupo RAVC "
 "SPA."
 
-#: ../../docs/guidance/map/framework_agreements.md:250
+#: ../../docs/guidance/map/framework_agreements.md:248
 msgid ""
 "Since other suppliers are still able to submit a request to participate in "
 "the framework agreement, no change is made to `tender.status`."
@@ -1027,7 +995,7 @@ msgstr ""
 "participar en el acuerdo marco, no se realiza ningún cambio en "
 "`tender.status`."
 
-#: ../../docs/guidance/map/framework_agreements.md:252
+#: ../../docs/guidance/map/framework_agreements.md:250
 msgid ""
 "An `Organization` object is added to the `parties` array for each supplier "
 "with its details."
@@ -1035,7 +1003,7 @@ msgstr ""
 "Se agrega un objeto `Organization` a la lista `parties` para cada proveedor "
 "con sus detalles."
 
-#: ../../docs/guidance/map/framework_agreements.md:253
+#: ../../docs/guidance/map/framework_agreements.md:251
 msgid ""
 "An `OrganizationReference` object is added to the award's `.suppliers` array"
 " for each supplier to reference its object in the `parties` array."
@@ -1044,7 +1012,7 @@ msgstr ""
 "adjudicaciones para que cada proveedor haga referencia a su objeto en la "
 "lista `parties`."
 
-#: ../../docs/guidance/map/framework_agreements.md:261
+#: ../../docs/guidance/map/framework_agreements.md:259
 msgid ""
 "The framework is now established, and both buyers can now purchase items "
 "from the suppliers."
@@ -1052,7 +1020,7 @@ msgstr ""
 "El acuerdo está establecido y ambos compradores ahora pueden comprar "
 "artículos de los proveedores."
 
-#: ../../docs/guidance/map/framework_agreements.md:265
+#: ../../docs/guidance/map/framework_agreements.md:263
 msgid ""
 "Servicio Local de Educación Pública Puerto Cordillera publishes a [tender "
 "notice](https://www.mercadopublico.cl/CMII/Tienda/frm_GCV2_Ficha.aspx?IURL=uPteMZpbYBeM$07gdm9g$08EFecMSuZM0euS4Z$07cbeFMX_05ohEOMPbeteMZpbYBeM),"
@@ -1066,16 +1034,16 @@ msgstr ""
 "suministro de 200 lápices. Esto representa una invitación a participar en "
 "una segunda etapa competitiva."
 
-#: ../../docs/guidance/map/framework_agreements.md:267
-#: ../../docs/guidance/map/framework_agreements.md:285
+#: ../../docs/guidance/map/framework_agreements.md:265
+#: ../../docs/guidance/map/framework_agreements.md:283
 msgid "The release has the following properties:"
 msgstr "La entrega tiene las siguientes propiedades:"
 
-#: ../../docs/guidance/map/framework_agreements.md:271
+#: ../../docs/guidance/map/framework_agreements.md:269
 msgid "The `tag` is set to 'tender'."
 msgstr "El `tag` es establecido a 'tender'."
 
-#: ../../docs/guidance/map/framework_agreements.md:272
+#: ../../docs/guidance/map/framework_agreements.md:270
 msgid ""
 "The tender section includes details about the competition, and "
 "`tender.competitive` is set to `true`."
@@ -1083,7 +1051,7 @@ msgstr ""
 "La sección de licitación incluye detalles sobre la competencia, y "
 "`tender.competitive` es establecido a `true`."
 
-#: ../../docs/guidance/map/framework_agreements.md:273
+#: ../../docs/guidance/map/framework_agreements.md:271
 msgid ""
 "Since this new contracting process has a single buyer, the `buyer` is set to"
 " Servicio Local de Educación Pública Puerto Cordillera."
@@ -1092,7 +1060,7 @@ msgstr ""
 "`buyer` se establece en el Servicio Local de Educación Pública Puerto "
 "Cordillera."
 
-#: ../../docs/guidance/map/framework_agreements.md:283
+#: ../../docs/guidance/map/framework_agreements.md:281
 msgid ""
 "Following the invitation to participate in the second-stage competition, "
 "Servicio Local de Educación Pública Puerto Cordillera awards a contract to "
@@ -1102,7 +1070,7 @@ msgstr ""
 "Servicio Local de Educación Pública Puerto Cordillera adjudica un contrato a"
 " Comercializadora e Importadora Grupo RAVC SPA."
 
-#: ../../docs/guidance/map/framework_agreements.md:287
+#: ../../docs/guidance/map/framework_agreements.md:285
 msgid ""
 "The same `ocid` as the invitation to participate in the second-stage "
 "competition is used."
@@ -1110,15 +1078,15 @@ msgstr ""
 "Se utiliza el mismo `ocid` que la invitación a participar en la segunda "
 "etapa competitiva."
 
-#: ../../docs/guidance/map/framework_agreements.md:289
-msgid "The `tag` is set to 'award' and 'contract'."
-msgstr "El `tag` es establecido a 'award' y 'contract'."
+#: ../../docs/guidance/map/framework_agreements.md:287
+msgid "The `tag` is set to 'award'."
+msgstr "El `tag` se establece a 'award'."
 
-#: ../../docs/guidance/map/framework_agreements.md:290
+#: ../../docs/guidance/map/framework_agreements.md:288
 msgid "The `tender.status` is updated to 'complete'."
 msgstr "El `tender.status` es actualizado a 'complete'."
 
-#: ../../docs/guidance/map/framework_agreements.md:293
+#: ../../docs/guidance/map/framework_agreements.md:290
 msgid ""
 "The `awards.suppliers` and `parties` fields are populated with the details "
 "of the supplier."
