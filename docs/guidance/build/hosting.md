@@ -84,7 +84,7 @@ If access controls are necessary, do not use access tokens that need to be refre
 If the API implements rate limits (throttling):
 
 * Document the rate limits in the API documentation ([example](https://developer.twitter.com/en/docs/twitter-api/rate-limits)).
-* When a user exceeds a rate limit, return a [HTTP 429 “Too Many Requests” response status code, ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)and set the [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) HTTP header to indicate how long to wait before making a new request.
+* When a user exceeds a rate limit, return a [HTTP 429 “Too Many Requests” response status code,](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) and set the [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) HTTP header to indicate how long to wait before making a new request.
 
 ### Completeness
 
