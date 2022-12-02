@@ -88,8 +88,8 @@
             "title": "Entity ID"
           },
           "identifier": {
-            "title": "Identifier",
-            "description": "A unique identifier for a party (organization).",
+            "title": "Primary identifier",
+            "description": "The primary identifier for this organization or participant. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
             "type": "object",
             "properties": {
               "scheme": {
@@ -196,7 +196,7 @@
           },
           "address": {
             "title": "Address",
-            "description": "An address.",
+            "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
             "type": "object",
             "properties": {
               "streetAddress": {
@@ -252,7 +252,7 @@
           "contactPoint": {
             "title": "Contact point",
             "type": "object",
-            "description": "A person, contact point or department to contact in relation to this contracting process.",
+            "description": "Contact details that can be used for this party.",
             "properties": {
               "name": {
                 "title": "Name",
@@ -358,8 +358,8 @@
           "title": "Organization ID"
         },
         "identifier": {
-          "title": "Identifier",
-          "description": "A unique identifier for a party (organization).",
+          "title": "Primary identifier",
+          "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
           "type": "object",
           "properties": {
             "scheme": {
@@ -405,11 +405,15 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           }
         },
         "address": {
           "title": "Address",
-          "description": "An address.",
+          "description": "(Deprecated outside the parties section)",
           "type": "object",
           "properties": {
             "streetAddress": {
@@ -460,6 +464,10 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           }
         },
         "additionalIdentifiers": {
@@ -526,7 +534,7 @@
         "contactPoint": {
           "title": "Contact point",
           "type": "object",
-          "description": "A person, contact point or department to contact in relation to this contracting process.",
+          "description": "(Deprecated outside the parties section)",
           "properties": {
             "name": {
               "title": "Name",
@@ -577,16 +585,20 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           }
         }
       },
       "type": "object",
-      "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-      "title": "Organization reference"
+      "description": "A buyer is an entity whose budget will be used to pay for goods, works or services related to a contract. This may be different from the procuring entity who may be specified in the tender data.",
+      "title": "Buyer"
     },
     "planning": {
       "title": "Planning",
-      "description": "Information from the planning phase of the contracting process. Note that many other fields can be filled in a planning release, in the appropriate fields in other schema sections; these would likely be estimates at this stage, e.g. value in tender.",
+      "description": "Information from the planning phase of the contracting process. This includes information related to the process of deciding what to contract, when and how.",
       "type": "object",
       "properties": {
         "rationale": {
@@ -599,8 +611,8 @@
         },
         "budget": {
           "type": "object",
-          "title": "Budget information",
-          "description": "This section contains information about the budget line, and associated projects, through which this contracting process is funded. It draws upon the data model of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+          "title": "Budget",
+          "description": "Details of the budget that funds this contracting process.",
           "properties": {
             "id": {
               "title": "ID",
@@ -620,8 +632,8 @@
               ]
             },
             "amount": {
-              "title": "Value",
-              "description": "Financial values should be published with a currency attached.",
+              "title": "Amount",
+              "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources, the budget breakdown extension can be used.",
               "type": "object",
               "properties": {
                 "amount": {
@@ -1357,7 +1369,7 @@
     },
     "tender": {
       "title": "Tender",
-      "description": "Data regarding tender process - publicly inviting prospective contractors to submit bids for evaluation and selecting a winner or winners.",
+      "description": "The activities undertaken in order to enter into a contract.",
       "type": "object",
       "required": [
         "id"
@@ -1429,8 +1441,8 @@
               "title": "Organization ID"
             },
             "identifier": {
-              "title": "Identifier",
-              "description": "A unique identifier for a party (organization).",
+              "title": "Primary identifier",
+              "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
               "type": "object",
               "properties": {
                 "scheme": {
@@ -1476,11 +1488,15 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             },
             "address": {
               "title": "Address",
-              "description": "An address.",
+              "description": "(Deprecated outside the parties section)",
               "type": "object",
               "properties": {
                 "streetAddress": {
@@ -1531,6 +1547,10 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             },
             "additionalIdentifiers": {
@@ -1597,7 +1617,7 @@
             "contactPoint": {
               "title": "Contact point",
               "type": "object",
-              "description": "A person, contact point or department to contact in relation to this contracting process.",
+              "description": "(Deprecated outside the parties section)",
               "properties": {
                 "name": {
                   "title": "Name",
@@ -1648,12 +1668,16 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             }
           },
           "type": "object",
-          "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-          "title": "Organization reference"
+          "description": "The entity managing the procurement. This may be different from the buyer who pays for, or uses, the items being procured.",
+          "title": "Procuring entity"
         },
         "items": {
           "title": "Items to be procured",
@@ -1686,7 +1710,7 @@
               },
               "classification": {
                 "title": "Classification",
-                "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+                "description": "The primary classification for the item.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -1837,7 +1861,7 @@
                   },
                   "value": {
                     "title": "Value",
-                    "description": "Financial values should be published with a currency attached.",
+                    "description": "The monetary value of a single unit.",
                     "type": "object",
                     "properties": {
                       "amount": {
@@ -2198,7 +2222,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "description": "The total upper estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -2527,8 +2551,8 @@
           }
         },
         "minValue": {
-          "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "title": "Minimum value",
+          "description": "The minimum estimated value of the procurement.  A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -2958,8 +2982,8 @@
           ]
         },
         "tenderPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Tender period",
+          "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -3000,8 +3024,8 @@
           }
         },
         "enquiryPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Enquiry period",
+          "description": "The period during which potential bidders may submit questions and requests for clarification to the entity managing procurement. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -3058,8 +3082,8 @@
           ]
         },
         "awardPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Evaluation and award period",
+          "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalized. The start date may be used to indicate the start of an evaluation period.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -3100,8 +3124,8 @@
           }
         },
         "contractPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Contract period",
+          "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -3173,8 +3197,8 @@
                 "title": "Organization ID"
               },
               "identifier": {
-                "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "title": "Primary identifier",
+                "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -3220,11 +3244,15 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               },
               "address": {
                 "title": "Address",
-                "description": "An address.",
+                "description": "(Deprecated outside the parties section)",
                 "type": "object",
                 "properties": {
                   "streetAddress": {
@@ -3275,6 +3303,10 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               },
               "additionalIdentifiers": {
@@ -3341,7 +3373,7 @@
               "contactPoint": {
                 "title": "Contact point",
                 "type": "object",
-                "description": "A person, contact point or department to contact in relation to this contracting process.",
+                "description": "(Deprecated outside the parties section)",
                 "properties": {
                   "name": {
                     "title": "Name",
@@ -3392,6 +3424,10 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               }
             },
@@ -3839,7 +3875,7 @@
         "amendment": {
           "title": "Amendment",
           "type": "object",
-          "description": "Amendment information",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "properties": {
             "date": {
               "title": "Amendment date",
@@ -3929,6 +3965,10 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "deprecatedVersion": "1.1"
           }
         }
       },
@@ -4036,7 +4076,7 @@
           },
           "value": {
             "title": "Value",
-            "description": "Financial values should be published with a currency attached.",
+            "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts).",
             "type": "object",
             "properties": {
               "amount": {
@@ -4388,8 +4428,8 @@
                   "title": "Organization ID"
                 },
                 "identifier": {
-                  "title": "Identifier",
-                  "description": "A unique identifier for a party (organization).",
+                  "title": "Primary identifier",
+                  "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                   "type": "object",
                   "properties": {
                     "scheme": {
@@ -4435,11 +4475,15 @@
                         "null"
                       ]
                     }
+                  },
+                  "deprecated": {
+                    "deprecatedVersion": "1.1",
+                    "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                   }
                 },
                 "address": {
                   "title": "Address",
-                  "description": "An address.",
+                  "description": "(Deprecated outside the parties section)",
                   "type": "object",
                   "properties": {
                     "streetAddress": {
@@ -4490,6 +4534,10 @@
                         "null"
                       ]
                     }
+                  },
+                  "deprecated": {
+                    "deprecatedVersion": "1.1",
+                    "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                   }
                 },
                 "additionalIdentifiers": {
@@ -4556,7 +4604,7 @@
                 "contactPoint": {
                   "title": "Contact point",
                   "type": "object",
-                  "description": "A person, contact point or department to contact in relation to this contracting process.",
+                  "description": "(Deprecated outside the parties section)",
                   "properties": {
                     "name": {
                       "title": "Name",
@@ -4607,6 +4655,10 @@
                         "null"
                       ]
                     }
+                  },
+                  "deprecated": {
+                    "deprecatedVersion": "1.1",
+                    "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                   }
                 }
               },
@@ -4648,7 +4700,7 @@
                 },
                 "classification": {
                   "title": "Classification",
-                  "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+                  "description": "The primary classification for the item.",
                   "type": "object",
                   "properties": {
                     "scheme": {
@@ -4799,7 +4851,7 @@
                     },
                     "value": {
                       "title": "Value",
-                      "description": "Financial values should be published with a currency attached.",
+                      "description": "The monetary value of a single unit.",
                       "type": "object",
                       "properties": {
                         "amount": {
@@ -5159,8 +5211,8 @@
             "uniqueItems": true
           },
           "contractPeriod": {
-            "title": "Period",
-            "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+            "title": "Contract period",
+            "description": "The period for which the contract has been awarded.",
             "type": "object",
             "properties": {
               "startDate": {
@@ -5411,7 +5463,7 @@
           "amendment": {
             "title": "Amendment",
             "type": "object",
-            "description": "Amendment information",
+            "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
             "properties": {
               "date": {
                 "title": "Amendment date",
@@ -5501,6 +5553,10 @@
                   "null"
                 ]
               }
+            },
+            "deprecated": {
+              "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+              "deprecatedVersion": "1.1"
             }
           }
         },
@@ -5587,7 +5643,7 @@
           },
           "period": {
             "title": "Period",
-            "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+            "description": "The start and end date for the contract.",
             "type": "object",
             "properties": {
               "startDate": {
@@ -5629,7 +5685,7 @@
           },
           "value": {
             "title": "Value",
-            "description": "Financial values should be published with a currency attached.",
+            "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts).",
             "type": "object",
             "properties": {
               "amount": {
@@ -5989,7 +6045,7 @@
                 },
                 "classification": {
                   "title": "Classification",
-                  "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+                  "description": "The primary classification for the item.",
                   "type": "object",
                   "properties": {
                     "scheme": {
@@ -6140,7 +6196,7 @@
                     },
                     "value": {
                       "title": "Value",
-                      "description": "Financial values should be published with a currency attached.",
+                      "description": "The monetary value of a single unit.",
                       "type": "object",
                       "properties": {
                         "amount": {
@@ -6619,7 +6675,7 @@
           "implementation": {
             "type": "object",
             "title": "Implementation",
-            "description": "Information during the performance / implementation stage of the contract.",
+            "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.",
             "properties": {
               "transactions": {
                 "title": "Transactions",
@@ -6662,7 +6718,7 @@
                     },
                     "value": {
                       "title": "Value",
-                      "description": "Financial values should be published with a currency attached.",
+                      "description": "The value of the transaction.",
                       "type": "object",
                       "properties": {
                         "amount": {
@@ -7010,8 +7066,8 @@
                           "title": "Organization ID"
                         },
                         "identifier": {
-                          "title": "Identifier",
-                          "description": "A unique identifier for a party (organization).",
+                          "title": "Primary identifier",
+                          "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                           "type": "object",
                           "properties": {
                             "scheme": {
@@ -7057,11 +7113,15 @@
                                 "null"
                               ]
                             }
+                          },
+                          "deprecated": {
+                            "deprecatedVersion": "1.1",
+                            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                           }
                         },
                         "address": {
                           "title": "Address",
-                          "description": "An address.",
+                          "description": "(Deprecated outside the parties section)",
                           "type": "object",
                           "properties": {
                             "streetAddress": {
@@ -7112,6 +7172,10 @@
                                 "null"
                               ]
                             }
+                          },
+                          "deprecated": {
+                            "deprecatedVersion": "1.1",
+                            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                           }
                         },
                         "additionalIdentifiers": {
@@ -7178,7 +7242,7 @@
                         "contactPoint": {
                           "title": "Contact point",
                           "type": "object",
-                          "description": "A person, contact point or department to contact in relation to this contracting process.",
+                          "description": "(Deprecated outside the parties section)",
                           "properties": {
                             "name": {
                               "title": "Name",
@@ -7229,12 +7293,16 @@
                                 "null"
                               ]
                             }
+                          },
+                          "deprecated": {
+                            "deprecatedVersion": "1.1",
+                            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                           }
                         }
                       },
                       "type": "object",
-                      "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-                      "title": "Organization reference"
+                      "description": "An organization reference for the organization from which the funds in this transaction originate.",
+                      "title": "Payer"
                     },
                     "payee": {
                       "properties": {
@@ -7256,8 +7324,8 @@
                           "title": "Organization ID"
                         },
                         "identifier": {
-                          "title": "Identifier",
-                          "description": "A unique identifier for a party (organization).",
+                          "title": "Primary identifier",
+                          "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                           "type": "object",
                           "properties": {
                             "scheme": {
@@ -7303,11 +7371,15 @@
                                 "null"
                               ]
                             }
+                          },
+                          "deprecated": {
+                            "deprecatedVersion": "1.1",
+                            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                           }
                         },
                         "address": {
                           "title": "Address",
-                          "description": "An address.",
+                          "description": "(Deprecated outside the parties section)",
                           "type": "object",
                           "properties": {
                             "streetAddress": {
@@ -7358,6 +7430,10 @@
                                 "null"
                               ]
                             }
+                          },
+                          "deprecated": {
+                            "deprecatedVersion": "1.1",
+                            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                           }
                         },
                         "additionalIdentifiers": {
@@ -7424,7 +7500,7 @@
                         "contactPoint": {
                           "title": "Contact point",
                           "type": "object",
-                          "description": "A person, contact point or department to contact in relation to this contracting process.",
+                          "description": "(Deprecated outside the parties section)",
                           "properties": {
                             "name": {
                               "title": "Name",
@@ -7475,12 +7551,16 @@
                                 "null"
                               ]
                             }
+                          },
+                          "deprecated": {
+                            "deprecatedVersion": "1.1",
+                            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                           }
                         }
                       },
                       "type": "object",
-                      "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-                      "title": "Organization reference"
+                      "description": "An organization reference for the organization which receives the funds in this transaction.",
+                      "title": "Payee"
                     },
                     "uri": {
                       "title": "Linked spending information",
@@ -7492,8 +7572,8 @@
                       "format": "uri"
                     },
                     "amount": {
-                      "title": "Value",
-                      "description": "Financial values should be published with a currency attached.",
+                      "title": "Amount",
+                      "description": "(Deprecated in 1.1. Use transaction.value instead) The value of the transaction. A negative value indicates a refund or correction.",
                       "type": "object",
                       "properties": {
                         "amount": {
@@ -7819,11 +7899,15 @@
                             null
                           ]
                         }
+                      },
+                      "deprecated": {
+                        "description": "This field has been replaced by the `transaction.value` field for consistency with the use of value and amount elsewhere in the standard.",
+                        "deprecatedVersion": "1.1"
                       }
                     },
                     "providerOrganization": {
-                      "title": "Identifier",
-                      "description": "A unique identifier for a party (organization).",
+                      "title": "Provider organization",
+                      "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
                       "type": "object",
                       "properties": {
                         "scheme": {
@@ -7869,11 +7953,15 @@
                             "null"
                           ]
                         }
+                      },
+                      "deprecated": {
+                        "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "deprecatedVersion": "1.1"
                       }
                     },
                     "receiverOrganization": {
-                      "title": "Identifier",
-                      "description": "A unique identifier for a party (organization).",
+                      "title": "Receiver organization",
+                      "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
                       "type": "object",
                       "properties": {
                         "scheme": {
@@ -7919,6 +8007,10 @@
                             "null"
                           ]
                         }
+                      },
+                      "deprecated": {
+                        "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                        "deprecatedVersion": "1.1"
                       }
                     }
                   }
@@ -8661,7 +8753,7 @@
           "amendment": {
             "title": "Amendment",
             "type": "object",
-            "description": "Amendment information",
+            "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
             "properties": {
               "date": {
                 "title": "Amendment date",
@@ -8751,6 +8843,10 @@
                   "null"
                 ]
               }
+            },
+            "deprecated": {
+              "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+              "deprecatedVersion": "1.1"
             }
           }
         },
@@ -8870,8 +8966,8 @@
         },
         "budget": {
           "type": "object",
-          "title": "Budget information",
-          "description": "This section contains information about the budget line, and associated projects, through which this contracting process is funded. It draws upon the data model of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/), and should be used to cross-reference to more detailed information held using a Budget Data Package, or, where no linked Budget Data Package is available, to provide enough information to allow a user to manually or automatically cross-reference with another published source of budget and project information.",
+          "title": "Budget",
+          "description": "Details of the budget that funds this contracting process.",
           "properties": {
             "id": {
               "title": "ID",
@@ -8891,8 +8987,8 @@
               ]
             },
             "amount": {
-              "title": "Value",
-              "description": "Financial values should be published with a currency attached.",
+              "title": "Amount",
+              "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources, the budget breakdown extension can be used.",
               "type": "object",
               "properties": {
                 "amount": {
@@ -9700,8 +9796,8 @@
               "title": "Organization ID"
             },
             "identifier": {
-              "title": "Identifier",
-              "description": "A unique identifier for a party (organization).",
+              "title": "Primary identifier",
+              "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
               "type": "object",
               "properties": {
                 "scheme": {
@@ -9747,11 +9843,15 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             },
             "address": {
               "title": "Address",
-              "description": "An address.",
+              "description": "(Deprecated outside the parties section)",
               "type": "object",
               "properties": {
                 "streetAddress": {
@@ -9802,6 +9902,10 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             },
             "additionalIdentifiers": {
@@ -9868,7 +9972,7 @@
             "contactPoint": {
               "title": "Contact point",
               "type": "object",
-              "description": "A person, contact point or department to contact in relation to this contracting process.",
+              "description": "(Deprecated outside the parties section)",
               "properties": {
                 "name": {
                   "title": "Name",
@@ -9919,12 +10023,16 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             }
           },
           "type": "object",
-          "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-          "title": "Organization reference"
+          "description": "The entity managing the procurement. This may be different from the buyer who pays for, or uses, the items being procured.",
+          "title": "Procuring entity"
         },
         "items": {
           "title": "Items to be procured",
@@ -9957,7 +10065,7 @@
               },
               "classification": {
                 "title": "Classification",
-                "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+                "description": "The primary classification for the item.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -10108,7 +10216,7 @@
                   },
                   "value": {
                     "title": "Value",
-                    "description": "Financial values should be published with a currency attached.",
+                    "description": "The monetary value of a single unit.",
                     "type": "object",
                     "properties": {
                       "amount": {
@@ -10469,7 +10577,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "description": "The total upper estimated value of the procurement. A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -10798,8 +10906,8 @@
           }
         },
         "minValue": {
-          "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "title": "Minimum value",
+          "description": "The minimum estimated value of the procurement.  A negative value indicates that the contracting process may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -11229,8 +11337,8 @@
           ]
         },
         "tenderPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Tender period",
+          "description": "The period when the tender is open for submissions. The end date is the closing date for tender submissions.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -11271,8 +11379,8 @@
           }
         },
         "enquiryPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Enquiry period",
+          "description": "The period during which potential bidders may submit questions and requests for clarification to the entity managing procurement. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -11329,8 +11437,8 @@
           ]
         },
         "awardPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Evaluation and award period",
+          "description": "The period for decision making regarding the contract award. The end date should be the date on which an award decision is due to be finalized. The start date may be used to indicate the start of an evaluation period.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -11371,8 +11479,8 @@
           }
         },
         "contractPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Contract period",
+          "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -11444,8 +11552,8 @@
                 "title": "Organization ID"
               },
               "identifier": {
-                "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "title": "Primary identifier",
+                "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -11491,11 +11599,15 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               },
               "address": {
                 "title": "Address",
-                "description": "An address.",
+                "description": "(Deprecated outside the parties section)",
                 "type": "object",
                 "properties": {
                   "streetAddress": {
@@ -11546,6 +11658,10 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               },
               "additionalIdentifiers": {
@@ -11612,7 +11728,7 @@
               "contactPoint": {
                 "title": "Contact point",
                 "type": "object",
-                "description": "A person, contact point or department to contact in relation to this contracting process.",
+                "description": "(Deprecated outside the parties section)",
                 "properties": {
                   "name": {
                     "title": "Name",
@@ -11663,6 +11779,10 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               }
             },
@@ -12110,7 +12230,7 @@
         "amendment": {
           "title": "Amendment",
           "type": "object",
-          "description": "Amendment information",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "properties": {
             "date": {
               "title": "Amendment date",
@@ -12200,6 +12320,10 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "deprecatedVersion": "1.1"
           }
         }
       },
@@ -12303,7 +12427,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "description": "The total value of this award. In the case of a framework contract this may be the total estimated lifetime value, or maximum value, of the agreement. There may be more than one award per procurement. A negative value indicates that the award may involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -12655,8 +12779,8 @@
                 "title": "Organization ID"
               },
               "identifier": {
-                "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "title": "Primary identifier",
+                "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -12702,11 +12826,15 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               },
               "address": {
                 "title": "Address",
-                "description": "An address.",
+                "description": "(Deprecated outside the parties section)",
                 "type": "object",
                 "properties": {
                   "streetAddress": {
@@ -12757,6 +12885,10 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               },
               "additionalIdentifiers": {
@@ -12823,7 +12955,7 @@
               "contactPoint": {
                 "title": "Contact point",
                 "type": "object",
-                "description": "A person, contact point or department to contact in relation to this contracting process.",
+                "description": "(Deprecated outside the parties section)",
                 "properties": {
                   "name": {
                     "title": "Name",
@@ -12874,6 +13006,10 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "deprecatedVersion": "1.1",
+                  "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                 }
               }
             },
@@ -12915,7 +13051,7 @@
               },
               "classification": {
                 "title": "Classification",
-                "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+                "description": "The primary classification for the item.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -13066,7 +13202,7 @@
                   },
                   "value": {
                     "title": "Value",
-                    "description": "Financial values should be published with a currency attached.",
+                    "description": "The monetary value of a single unit.",
                     "type": "object",
                     "properties": {
                       "amount": {
@@ -13426,8 +13562,8 @@
           "uniqueItems": true
         },
         "contractPeriod": {
-          "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "title": "Contract period",
+          "description": "The period for which the contract has been awarded.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -13678,7 +13814,7 @@
         "amendment": {
           "title": "Amendment",
           "type": "object",
-          "description": "Amendment information",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "properties": {
             "date": {
               "title": "Amendment date",
@@ -13768,6 +13904,10 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "deprecatedVersion": "1.1"
           }
         }
       },
@@ -13848,7 +13988,7 @@
         },
         "period": {
           "title": "Period",
-          "description": "Key events during a contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+          "description": "The start and end date for the contract.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -13890,7 +14030,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "description": "The total value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts).",
           "type": "object",
           "properties": {
             "amount": {
@@ -14250,7 +14390,7 @@
               },
               "classification": {
                 "title": "Classification",
-                "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+                "description": "The primary classification for the item.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -14401,7 +14541,7 @@
                   },
                   "value": {
                     "title": "Value",
-                    "description": "Financial values should be published with a currency attached.",
+                    "description": "The monetary value of a single unit.",
                     "type": "object",
                     "properties": {
                       "amount": {
@@ -14880,7 +15020,7 @@
         "implementation": {
           "type": "object",
           "title": "Implementation",
-          "description": "Information during the performance / implementation stage of the contract.",
+          "description": "Information related to the implementation of the contract in accordance with the obligations laid out therein.",
           "properties": {
             "transactions": {
               "title": "Transactions",
@@ -14923,7 +15063,7 @@
                   },
                   "value": {
                     "title": "Value",
-                    "description": "Financial values should be published with a currency attached.",
+                    "description": "The value of the transaction.",
                     "type": "object",
                     "properties": {
                       "amount": {
@@ -15271,8 +15411,8 @@
                         "title": "Organization ID"
                       },
                       "identifier": {
-                        "title": "Identifier",
-                        "description": "A unique identifier for a party (organization).",
+                        "title": "Primary identifier",
+                        "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                         "type": "object",
                         "properties": {
                           "scheme": {
@@ -15318,11 +15458,15 @@
                               "null"
                             ]
                           }
+                        },
+                        "deprecated": {
+                          "deprecatedVersion": "1.1",
+                          "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                         }
                       },
                       "address": {
                         "title": "Address",
-                        "description": "An address.",
+                        "description": "(Deprecated outside the parties section)",
                         "type": "object",
                         "properties": {
                           "streetAddress": {
@@ -15373,6 +15517,10 @@
                               "null"
                             ]
                           }
+                        },
+                        "deprecated": {
+                          "deprecatedVersion": "1.1",
+                          "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                         }
                       },
                       "additionalIdentifiers": {
@@ -15439,7 +15587,7 @@
                       "contactPoint": {
                         "title": "Contact point",
                         "type": "object",
-                        "description": "A person, contact point or department to contact in relation to this contracting process.",
+                        "description": "(Deprecated outside the parties section)",
                         "properties": {
                           "name": {
                             "title": "Name",
@@ -15490,12 +15638,16 @@
                               "null"
                             ]
                           }
+                        },
+                        "deprecated": {
+                          "deprecatedVersion": "1.1",
+                          "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                         }
                       }
                     },
                     "type": "object",
-                    "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-                    "title": "Organization reference"
+                    "description": "An organization reference for the organization from which the funds in this transaction originate.",
+                    "title": "Payer"
                   },
                   "payee": {
                     "properties": {
@@ -15517,8 +15669,8 @@
                         "title": "Organization ID"
                       },
                       "identifier": {
-                        "title": "Identifier",
-                        "description": "A unique identifier for a party (organization).",
+                        "title": "Primary identifier",
+                        "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                         "type": "object",
                         "properties": {
                           "scheme": {
@@ -15564,11 +15716,15 @@
                               "null"
                             ]
                           }
+                        },
+                        "deprecated": {
+                          "deprecatedVersion": "1.1",
+                          "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                         }
                       },
                       "address": {
                         "title": "Address",
-                        "description": "An address.",
+                        "description": "(Deprecated outside the parties section)",
                         "type": "object",
                         "properties": {
                           "streetAddress": {
@@ -15619,6 +15775,10 @@
                               "null"
                             ]
                           }
+                        },
+                        "deprecated": {
+                          "deprecatedVersion": "1.1",
+                          "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                         }
                       },
                       "additionalIdentifiers": {
@@ -15685,7 +15845,7 @@
                       "contactPoint": {
                         "title": "Contact point",
                         "type": "object",
-                        "description": "A person, contact point or department to contact in relation to this contracting process.",
+                        "description": "(Deprecated outside the parties section)",
                         "properties": {
                           "name": {
                             "title": "Name",
@@ -15736,12 +15896,16 @@
                               "null"
                             ]
                           }
+                        },
+                        "deprecated": {
+                          "deprecatedVersion": "1.1",
+                          "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                         }
                       }
                     },
                     "type": "object",
-                    "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-                    "title": "Organization reference"
+                    "description": "An organization reference for the organization which receives the funds in this transaction.",
+                    "title": "Payee"
                   },
                   "uri": {
                     "title": "Linked spending information",
@@ -15753,8 +15917,8 @@
                     "format": "uri"
                   },
                   "amount": {
-                    "title": "Value",
-                    "description": "Financial values should be published with a currency attached.",
+                    "title": "Amount",
+                    "description": "(Deprecated in 1.1. Use transaction.value instead) The value of the transaction. A negative value indicates a refund or correction.",
                     "type": "object",
                     "properties": {
                       "amount": {
@@ -16080,11 +16244,15 @@
                           null
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "description": "This field has been replaced by the `transaction.value` field for consistency with the use of value and amount elsewhere in the standard.",
+                      "deprecatedVersion": "1.1"
                     }
                   },
                   "providerOrganization": {
-                    "title": "Identifier",
-                    "description": "A unique identifier for a party (organization).",
+                    "title": "Provider organization",
+                    "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
                     "type": "object",
                     "properties": {
                       "scheme": {
@@ -16130,11 +16298,15 @@
                           "null"
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                      "deprecatedVersion": "1.1"
                     }
                   },
                   "receiverOrganization": {
-                    "title": "Identifier",
-                    "description": "A unique identifier for a party (organization).",
+                    "title": "Receiver organization",
+                    "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
                     "type": "object",
                     "properties": {
                       "scheme": {
@@ -16180,6 +16352,10 @@
                           "null"
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                      "deprecatedVersion": "1.1"
                     }
                   }
                 }
@@ -16922,7 +17098,7 @@
         "amendment": {
           "title": "Amendment",
           "type": "object",
-          "description": "Amendment information",
+          "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "properties": {
             "date": {
               "title": "Amendment date",
@@ -17012,6 +17188,10 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "deprecatedVersion": "1.1"
           }
         }
       },
@@ -17076,7 +17256,7 @@
               },
               "value": {
                 "title": "Value",
-                "description": "Financial values should be published with a currency attached.",
+                "description": "The value of the transaction.",
                 "type": "object",
                 "properties": {
                   "amount": {
@@ -17424,8 +17604,8 @@
                     "title": "Organization ID"
                   },
                   "identifier": {
-                    "title": "Identifier",
-                    "description": "A unique identifier for a party (organization).",
+                    "title": "Primary identifier",
+                    "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                     "type": "object",
                     "properties": {
                       "scheme": {
@@ -17471,11 +17651,15 @@
                           "null"
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "deprecatedVersion": "1.1",
+                      "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     }
                   },
                   "address": {
                     "title": "Address",
-                    "description": "An address.",
+                    "description": "(Deprecated outside the parties section)",
                     "type": "object",
                     "properties": {
                       "streetAddress": {
@@ -17526,6 +17710,10 @@
                           "null"
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "deprecatedVersion": "1.1",
+                      "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     }
                   },
                   "additionalIdentifiers": {
@@ -17592,7 +17780,7 @@
                   "contactPoint": {
                     "title": "Contact point",
                     "type": "object",
-                    "description": "A person, contact point or department to contact in relation to this contracting process.",
+                    "description": "(Deprecated outside the parties section)",
                     "properties": {
                       "name": {
                         "title": "Name",
@@ -17643,12 +17831,16 @@
                           "null"
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "deprecatedVersion": "1.1",
+                      "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     }
                   }
                 },
                 "type": "object",
-                "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-                "title": "Organization reference"
+                "description": "An organization reference for the organization from which the funds in this transaction originate.",
+                "title": "Payer"
               },
               "payee": {
                 "properties": {
@@ -17670,8 +17862,8 @@
                     "title": "Organization ID"
                   },
                   "identifier": {
-                    "title": "Identifier",
-                    "description": "A unique identifier for a party (organization).",
+                    "title": "Primary identifier",
+                    "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
                     "type": "object",
                     "properties": {
                       "scheme": {
@@ -17717,11 +17909,15 @@
                           "null"
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "deprecatedVersion": "1.1",
+                      "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     }
                   },
                   "address": {
                     "title": "Address",
-                    "description": "An address.",
+                    "description": "(Deprecated outside the parties section)",
                     "type": "object",
                     "properties": {
                       "streetAddress": {
@@ -17772,6 +17968,10 @@
                           "null"
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "deprecatedVersion": "1.1",
+                      "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     }
                   },
                   "additionalIdentifiers": {
@@ -17838,7 +18038,7 @@
                   "contactPoint": {
                     "title": "Contact point",
                     "type": "object",
-                    "description": "A person, contact point or department to contact in relation to this contracting process.",
+                    "description": "(Deprecated outside the parties section)",
                     "properties": {
                       "name": {
                         "title": "Name",
@@ -17889,12 +18089,16 @@
                           "null"
                         ]
                       }
+                    },
+                    "deprecated": {
+                      "deprecatedVersion": "1.1",
+                      "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
                     }
                   }
                 },
                 "type": "object",
-                "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-                "title": "Organization reference"
+                "description": "An organization reference for the organization which receives the funds in this transaction.",
+                "title": "Payee"
               },
               "uri": {
                 "title": "Linked spending information",
@@ -17906,8 +18110,8 @@
                 "format": "uri"
               },
               "amount": {
-                "title": "Value",
-                "description": "Financial values should be published with a currency attached.",
+                "title": "Amount",
+                "description": "(Deprecated in 1.1. Use transaction.value instead) The value of the transaction. A negative value indicates a refund or correction.",
                 "type": "object",
                 "properties": {
                   "amount": {
@@ -18233,11 +18437,15 @@
                       null
                     ]
                   }
+                },
+                "deprecated": {
+                  "description": "This field has been replaced by the `transaction.value` field for consistency with the use of value and amount elsewhere in the standard.",
+                  "deprecatedVersion": "1.1"
                 }
               },
               "providerOrganization": {
-                "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "title": "Provider organization",
+                "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -18283,11 +18491,15 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                  "deprecatedVersion": "1.1"
                 }
               },
               "receiverOrganization": {
-                "title": "Identifier",
-                "description": "A unique identifier for a party (organization).",
+                "title": "Receiver organization",
+                "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
                 "type": "object",
                 "properties": {
                   "scheme": {
@@ -18333,6 +18545,10 @@
                       "null"
                     ]
                   }
+                },
+                "deprecated": {
+                  "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+                  "deprecatedVersion": "1.1"
                 }
               }
             }
@@ -19026,8 +19242,8 @@
           ]
         },
         "amount": {
-          "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "title": "Amount",
+          "description": "The value reserved in the budget for this contracting process. A negative value indicates anticipated income to the budget as a result of this contracting process, rather than expenditure. Where the budget is drawn from multiple sources, the budget breakdown extension can be used.",
           "type": "object",
           "properties": {
             "amount": {
@@ -19453,7 +19669,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "description": "The value of the transaction.",
           "type": "object",
           "properties": {
             "amount": {
@@ -19801,8 +20017,8 @@
               "title": "Organization ID"
             },
             "identifier": {
-              "title": "Identifier",
-              "description": "A unique identifier for a party (organization).",
+              "title": "Primary identifier",
+              "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
               "type": "object",
               "properties": {
                 "scheme": {
@@ -19848,11 +20064,15 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             },
             "address": {
               "title": "Address",
-              "description": "An address.",
+              "description": "(Deprecated outside the parties section)",
               "type": "object",
               "properties": {
                 "streetAddress": {
@@ -19903,6 +20123,10 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             },
             "additionalIdentifiers": {
@@ -19969,7 +20193,7 @@
             "contactPoint": {
               "title": "Contact point",
               "type": "object",
-              "description": "A person, contact point or department to contact in relation to this contracting process.",
+              "description": "(Deprecated outside the parties section)",
               "properties": {
                 "name": {
                   "title": "Name",
@@ -20020,12 +20244,16 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             }
           },
           "type": "object",
-          "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-          "title": "Organization reference"
+          "description": "An organization reference for the organization from which the funds in this transaction originate.",
+          "title": "Payer"
         },
         "payee": {
           "properties": {
@@ -20047,8 +20275,8 @@
               "title": "Organization ID"
             },
             "identifier": {
-              "title": "Identifier",
-              "description": "A unique identifier for a party (organization).",
+              "title": "Primary identifier",
+              "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
               "type": "object",
               "properties": {
                 "scheme": {
@@ -20094,11 +20322,15 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             },
             "address": {
               "title": "Address",
-              "description": "An address.",
+              "description": "(Deprecated outside the parties section)",
               "type": "object",
               "properties": {
                 "streetAddress": {
@@ -20149,6 +20381,10 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             },
             "additionalIdentifiers": {
@@ -20215,7 +20451,7 @@
             "contactPoint": {
               "title": "Contact point",
               "type": "object",
-              "description": "A person, contact point or department to contact in relation to this contracting process.",
+              "description": "(Deprecated outside the parties section)",
               "properties": {
                 "name": {
                   "title": "Name",
@@ -20266,12 +20502,16 @@
                     "null"
                   ]
                 }
+              },
+              "deprecated": {
+                "deprecatedVersion": "1.1",
+                "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
               }
             }
           },
           "type": "object",
-          "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
-          "title": "Organization reference"
+          "description": "An organization reference for the organization which receives the funds in this transaction.",
+          "title": "Payee"
         },
         "uri": {
           "title": "Linked spending information",
@@ -20283,8 +20523,8 @@
           "format": "uri"
         },
         "amount": {
-          "title": "Value",
-          "description": "Financial values should be published with a currency attached.",
+          "title": "Amount",
+          "description": "(Deprecated in 1.1. Use transaction.value instead) The value of the transaction. A negative value indicates a refund or correction.",
           "type": "object",
           "properties": {
             "amount": {
@@ -20610,11 +20850,15 @@
                 null
               ]
             }
+          },
+          "deprecated": {
+            "description": "This field has been replaced by the `transaction.value` field for consistency with the use of value and amount elsewhere in the standard.",
+            "deprecatedVersion": "1.1"
           }
         },
         "providerOrganization": {
-          "title": "Identifier",
-          "description": "A unique identifier for a party (organization).",
+          "title": "Provider organization",
+          "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "type": "object",
           "properties": {
             "scheme": {
@@ -20660,11 +20904,15 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "deprecatedVersion": "1.1"
           }
         },
         "receiverOrganization": {
-          "title": "Identifier",
-          "description": "A unique identifier for a party (organization).",
+          "title": "Receiver organization",
+          "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "type": "object",
           "properties": {
             "scheme": {
@@ -20710,6 +20958,10 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "deprecatedVersion": "1.1"
           }
         }
       }
@@ -20734,8 +20986,8 @@
           "title": "Organization ID"
         },
         "identifier": {
-          "title": "Identifier",
-          "description": "A unique identifier for a party (organization).",
+          "title": "Primary identifier",
+          "description": "The primary identifier for this organization. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
           "type": "object",
           "properties": {
             "scheme": {
@@ -20781,11 +21033,15 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and detailed legal identifier information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           }
         },
         "address": {
           "title": "Address",
-          "description": "An address.",
+          "description": "(Deprecated outside the parties section)",
           "type": "object",
           "properties": {
             "streetAddress": {
@@ -20836,6 +21092,10 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and address information should only be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           }
         },
         "additionalIdentifiers": {
@@ -20902,7 +21162,7 @@
         "contactPoint": {
           "title": "Contact point",
           "type": "object",
-          "description": "A person, contact point or department to contact in relation to this contracting process.",
+          "description": "(Deprecated outside the parties section)",
           "properties": {
             "name": {
               "title": "Name",
@@ -20953,6 +21213,10 @@
                 "null"
               ]
             }
+          },
+          "deprecated": {
+            "deprecatedVersion": "1.1",
+            "description": "From version 1.1, organizations should be referenced by their identifier and name in a document, and contact point information for an organization should be provided in the relevant cross-referenced entry in the parties section at the top level of a release."
           }
         }
       },
@@ -20979,8 +21243,8 @@
           "title": "Entity ID"
         },
         "identifier": {
-          "title": "Identifier",
-          "description": "A unique identifier for a party (organization).",
+          "title": "Primary identifier",
+          "description": "The primary identifier for this organization or participant. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred scheme and identifier to use.",
           "type": "object",
           "properties": {
             "scheme": {
@@ -21087,7 +21351,7 @@
         },
         "address": {
           "title": "Address",
-          "description": "An address.",
+          "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
           "type": "object",
           "properties": {
             "streetAddress": {
@@ -21143,7 +21407,7 @@
         "contactPoint": {
           "title": "Contact point",
           "type": "object",
-          "description": "A person, contact point or department to contact in relation to this contracting process.",
+          "description": "Contact details that can be used for this party.",
           "properties": {
             "name": {
               "title": "Name",
@@ -21254,7 +21518,7 @@
         },
         "classification": {
           "title": "Classification",
-          "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+          "description": "The primary classification for the item.",
           "type": "object",
           "properties": {
             "scheme": {
@@ -21405,7 +21669,7 @@
             },
             "value": {
               "title": "Value",
-              "description": "Financial values should be published with a currency attached.",
+              "description": "The monetary value of a single unit.",
               "type": "object",
               "properties": {
                 "amount": {

@@ -40,7 +40,6 @@ release = '1.1.5'
 extensions = [
     'myst_parser',
     'sphinx.ext.ifconfig',
-    'sphinx_panels',
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
@@ -87,8 +86,6 @@ locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'lo
 smartquotes = False
 
 # MyST configuration.
-# Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
-# https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = ['linkify']
 myst_heading_anchors = 6
 myst_heading_slug_func = make_id
@@ -159,7 +156,7 @@ def setup(app):
     standard_dir = basedir / 'schema'
     standard_build_dir = basedir / 'build' / language
 
-    branch = os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1]
+    branch = os.getenv('GITHUB_REF_NAME', 'latest')
 
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.

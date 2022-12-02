@@ -12,6 +12,7 @@ test_basic_params = {
 
 test_search_params = [
     ('en', r'found \d+ page\(s\) matching'),
-    ('es', r'encontró \d+ página\(s\) acorde'),
-    ('fr', r'\d+ page\(s\) trouvée\(s\) qui corresponde\(nt\)'),
+    # See https://github.com/sphinx-doc/sphinx/issues/11008
+    # ('es', r'encontraron \d+ páginas que coinciden'),
+    # ('fr', r'\d+ page\(s\) correspondant'),
 ]
