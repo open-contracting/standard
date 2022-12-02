@@ -22,7 +22,6 @@ To localize a field title or description, edit the values columns C or D. We rec
 
 ```{csv-table}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/language_localization/localization.csv
 ```
 

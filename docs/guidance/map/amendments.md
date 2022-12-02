@@ -132,7 +132,6 @@ The table below shows an example of a contract signature notices table from a pr
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/amendments/contract_notice.csv
 ```
 

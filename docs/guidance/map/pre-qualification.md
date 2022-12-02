@@ -10,7 +10,6 @@ But, many jurisdictions also use multi-stage procedures. Such procedures follow 
 
 ```{csv-table}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/pre-qualification/multi-stage.csv
 ```
 
@@ -103,7 +102,6 @@ The `tender` section is also used to disclose information about the procedure us
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../../build/current_lang/codelists/method.csv
 ```
 

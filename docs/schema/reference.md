@@ -59,7 +59,6 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../examples/language_localization/language.csv
 ```
 
