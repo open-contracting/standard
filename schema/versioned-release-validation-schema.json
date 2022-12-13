@@ -2,7 +2,7 @@
   "id": "https://standard.open-contracting.org/schema/1__1__5/versioned-release-validation-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for a compiled, versioned Open Contracting Release.",
-  "description": "Each release provides data about a single contracting process at a particular point in time. Releases can be used to notify users of new tenders, awards, contracts and other updates. Releases may repeat or update information provided previously in this contracting process. One contracting process may have many releases. A 'record' of a contracting process follows the same structure as a release, but combines information from multiple points in time into a single summary.",
+  "description": "OCDS is used for contracts in public procurement (including design contests), concessions, public-private partnerships, government asset sales and other contexts. A \"release\" describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.\\n\\nA \"compiled release\" follows the same structure as a release, but combines information about a contracting or planning process from multiple points in time into a single summary.\\n\\nOCDS defines a \"contracting process\" as: \"All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multi-stage procedures (e.g. framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.\\n\\nProcedures that failed and were restarted are considered new processes.\\n\\nBoundaries between processes (e.g. whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (e.g. efficient division of labor, clear communication with the market) and legislation (e.g. rules on using procedures and lots).\"\\n\\nOCDS defines a \"planning process\" as: \"All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.\\n\\nPlanning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.\"",
   "type": "object",
   "properties": {
     "initiationType": {
@@ -23,7 +23,11 @@
               "tender"
             ],
             "codelist": "initiationType.csv",
-            "openCodelist": false
+            "openCodelist": false,
+            "deprecated": {
+              "description": "This field is deprecated, because the approach to data modelling that it supports was not pursued.",
+              "deprecatedVersion": "1.2"
+            }
           },
           "releaseTag": {
             "type": "array",
@@ -65,7 +69,33 @@
       "uniqueItems": true
     },
     "language": {
-      "$ref": "#/definitions/StringNullVersioned"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "releaseDate": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "releaseID": {
+            "type": "string"
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "codelist": "language.csv",
+            "openCodelist": true
+          },
+          "releaseTag": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
     },
     "relatedProcesses": {
       "uniqueItems": true,
@@ -87,6 +117,9 @@
     "Planning": {
       "type": "object",
       "properties": {
+        "id": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
         "rationale": {
           "$ref": "#/definitions/StringNullVersioned"
         },
@@ -138,8 +171,35 @@
                   "string",
                   "integer"
                 ],
-                "minLength": 1,
-                "versionId": true
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/SimpleIdentifierUnversioned"
+                },
+                "uniqueItems": true
               },
               "releaseTag": {
                 "type": "array",
@@ -195,6 +255,9 @@
             }
           }
         },
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
         "procuringEntity": {
           "$ref": "#/definitions/OrganizationReferenceVersionedId"
         },
@@ -209,6 +272,9 @@
           "$ref": "#/definitions/Value"
         },
         "minValue": {
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
           "$ref": "#/definitions/Value"
         },
         "procurementMethod": {
@@ -274,8 +340,8 @@
                 "openCodelist": false,
                 "enum": [
                   "goods",
-                  "works",
                   "services",
+                  "works",
                   null
                 ]
               },
@@ -373,7 +439,11 @@
                   "type": "string"
                 },
                 "codelist": "submissionMethod.csv",
-                "openCodelist": true
+                "openCodelist": true,
+                "deprecated": {
+                  "description": "This field is deprecated, because all codes from the submissionMethod codelist are deprecated. Refer to the Deprecation note of individual codes.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -386,6 +456,9 @@
         },
         "submissionMethodDetails": {
           "$ref": "#/definitions/StringNullVersioned"
+        },
+        "datePublished": {
+          "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
         "tenderPeriod": {
           "$ref": "#/definitions/Period"
@@ -421,9 +494,46 @@
           }
         },
         "eligibilityCriteria": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "deprecated": {
+                  "description": "This field had unclear semantics and used ambiguous terms, and is deprecated in favor of exclusionGrounds.",
+                  "deprecatedVersion": "1.2"
+                }
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "exclusionGrounds": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "selectionCriteria": {
           "$ref": "#/definitions/StringNullVersioned"
         },
         "awardPeriod": {
+          "$ref": "#/definitions/Period"
+        },
+        "standstillPeriod": {
           "$ref": "#/definitions/Period"
         },
         "contractPeriod": {
@@ -525,6 +635,12 @@
             "string",
             "null"
           ]
+        },
+        "^(selectionCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       }
     },
@@ -583,10 +699,22 @@
             }
           }
         },
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
         "date": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
+        "datePublished": {
+          "$ref": "#/definitions/StringNullDateTimeVersioned"
+        },
         "value": {
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "$ref": "#/definitions/Value"
+        },
+        "estimatedValue": {
           "$ref": "#/definitions/Value"
         },
         "suppliers": {
@@ -657,6 +785,34 @@
           ],
           "minLength": 1
         },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/SimpleIdentifierUnversioned"
+                },
+                "uniqueItems": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
         "awardID": {
           "type": "array",
           "items": {
@@ -713,6 +869,8 @@
                   "active",
                   "cancelled",
                   "terminated",
+                  "terminatedEarly",
+                  "terminatedSuccessfully",
                   null
                 ],
                 "codelist": "contractStatus.csv",
@@ -727,10 +885,19 @@
             }
           }
         },
-        "period": {
-          "$ref": "#/definitions/Period"
+        "statusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "dateSigned": {
+          "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
         "value": {
+          "$ref": "#/definitions/Value"
+        },
+        "maximumValue": {
+          "$ref": "#/definitions/Value"
+        },
+        "estimatedValue": {
           "$ref": "#/definitions/Value"
         },
         "items": {
@@ -741,8 +908,8 @@
           },
           "uniqueItems": true
         },
-        "dateSigned": {
-          "$ref": "#/definitions/StringNullDateTimeVersioned"
+        "period": {
+          "$ref": "#/definitions/Period"
         },
         "documents": {
           "type": "array",
@@ -873,6 +1040,9 @@
         "code": {
           "$ref": "#/definitions/StringNullVersioned"
         },
+        "dueAfterDate": {
+          "$ref": "#/definitions/StringNullDateTimeVersioned"
+        },
         "dueDate": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
@@ -928,6 +1098,9 @@
             "$ref": "#/definitions/Document"
           },
           "uniqueItems": true
+        },
+        "value": {
+          "$ref": "#/definitions/Value"
         }
       },
       "patternProperties": {
@@ -1003,10 +1176,130 @@
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
         "format": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "mediaType.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                },
+                "codelist": "language.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "language": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "language.csv",
+                "openCodelist": true,
+                "deprecated": {
+                  "description": "This field is deprecated in favor of `languages`, to support documents in which multiple languages are used.",
+                  "deprecatedVersion": "1.2"
+                }
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "relatedItems": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string"
+                  ]
+                }
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       },
       "patternProperties": {
@@ -1190,14 +1483,14 @@
         "providerOrganization": {
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods, services or works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         },
         "receiverOrganization": {
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods, services or works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1389,7 +1682,26 @@
                 "type": [
                   "object",
                   "null"
-                ]
+                ],
+                "properties": {
+                  "scale": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      "micro",
+                      "sme",
+                      "small",
+                      "medium",
+                      "large",
+                      "selfEmployed",
+                      null
+                    ],
+                    "codelist": "partyScale.csv",
+                    "openCodelist": false
+                  }
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -1485,83 +1797,7 @@
           }
         },
         "unit": {
-          "type": "object",
-          "properties": {
-            "scheme": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "releaseDate": {
-                    "format": "date-time",
-                    "type": "string"
-                  },
-                  "releaseID": {
-                    "type": "string"
-                  },
-                  "value": {
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "codelist": "unitClassificationScheme.csv",
-                    "openCodelist": true
-                  },
-                  "releaseTag": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            },
-            "id": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "releaseDate": {
-                    "format": "date-time",
-                    "type": "string"
-                  },
-                  "releaseID": {
-                    "type": "string"
-                  },
-                  "value": {
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "versionId": true
-                  },
-                  "releaseTag": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            },
-            "name": {
-              "$ref": "#/definitions/StringNullVersioned"
-            },
-            "value": {
-              "$ref": "#/definitions/Value"
-            },
-            "uri": {
-              "$ref": "#/definitions/StringNullUriVersioned"
-            }
-          },
-          "patternProperties": {
-            "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-              "type": [
-                "string",
-                "null"
-              ]
-            }
-          }
+          "$ref": "#/definitions/Unit"
         }
       },
       "patternProperties": {
@@ -1652,7 +1888,7 @@
                   "string",
                   "null"
                 ],
-                "codelist": "itemClassificationScheme.csv",
+                "codelist": "classificationScheme.csv",
                 "openCodelist": true
               },
               "releaseTag": {
@@ -1681,8 +1917,7 @@
                   "string",
                   "integer",
                   "null"
-                ],
-                "versionId": true
+                ]
               },
               "releaseTag": {
                 "type": "array",
@@ -1732,8 +1967,7 @@
                   "string",
                   "integer",
                   "null"
-                ],
-                "versionId": true
+                ]
               },
               "releaseTag": {
                 "type": "array",
@@ -1775,8 +2009,318 @@
         "postalCode": {
           "$ref": "#/definitions/StringNullVersioned"
         },
+        "country": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "country.csv",
+                "openCodelist": false,
+                "enum": [
+                  "AD",
+                  "AE",
+                  "AF",
+                  "AG",
+                  "AI",
+                  "AL",
+                  "AM",
+                  "AO",
+                  "AQ",
+                  "AR",
+                  "AS",
+                  "AT",
+                  "AU",
+                  "AW",
+                  "AX",
+                  "AZ",
+                  "BA",
+                  "BB",
+                  "BD",
+                  "BE",
+                  "BF",
+                  "BG",
+                  "BH",
+                  "BI",
+                  "BJ",
+                  "BL",
+                  "BM",
+                  "BN",
+                  "BO",
+                  "BQ",
+                  "BR",
+                  "BS",
+                  "BT",
+                  "BV",
+                  "BW",
+                  "BY",
+                  "BZ",
+                  "CA",
+                  "CC",
+                  "CD",
+                  "CF",
+                  "CG",
+                  "CH",
+                  "CI",
+                  "CK",
+                  "CL",
+                  "CM",
+                  "CN",
+                  "CO",
+                  "CR",
+                  "CU",
+                  "CV",
+                  "CW",
+                  "CX",
+                  "CY",
+                  "CZ",
+                  "DE",
+                  "DJ",
+                  "DK",
+                  "DM",
+                  "DO",
+                  "DZ",
+                  "EC",
+                  "EE",
+                  "EG",
+                  "EH",
+                  "ER",
+                  "ES",
+                  "ET",
+                  "FI",
+                  "FJ",
+                  "FK",
+                  "FM",
+                  "FO",
+                  "FR",
+                  "GA",
+                  "GB",
+                  "GD",
+                  "GE",
+                  "GF",
+                  "GG",
+                  "GH",
+                  "GI",
+                  "GL",
+                  "GM",
+                  "GN",
+                  "GP",
+                  "GQ",
+                  "GR",
+                  "GS",
+                  "GT",
+                  "GU",
+                  "GW",
+                  "GY",
+                  "HK",
+                  "HM",
+                  "HN",
+                  "HR",
+                  "HT",
+                  "HU",
+                  "ID",
+                  "IE",
+                  "IL",
+                  "IM",
+                  "IN",
+                  "IO",
+                  "IQ",
+                  "IR",
+                  "IS",
+                  "IT",
+                  "JE",
+                  "JM",
+                  "JO",
+                  "JP",
+                  "KE",
+                  "KG",
+                  "KH",
+                  "KI",
+                  "KM",
+                  "KN",
+                  "KP",
+                  "KR",
+                  "KW",
+                  "KY",
+                  "KZ",
+                  "LA",
+                  "LB",
+                  "LC",
+                  "LI",
+                  "LK",
+                  "LR",
+                  "LS",
+                  "LT",
+                  "LU",
+                  "LV",
+                  "LY",
+                  "MA",
+                  "MC",
+                  "MD",
+                  "ME",
+                  "MF",
+                  "MG",
+                  "MH",
+                  "MK",
+                  "ML",
+                  "MM",
+                  "MN",
+                  "MO",
+                  "MP",
+                  "MQ",
+                  "MR",
+                  "MS",
+                  "MT",
+                  "MU",
+                  "MV",
+                  "MW",
+                  "MX",
+                  "MY",
+                  "MZ",
+                  "NA",
+                  "NC",
+                  "NE",
+                  "NF",
+                  "NG",
+                  "NI",
+                  "NL",
+                  "NO",
+                  "NP",
+                  "NR",
+                  "NU",
+                  "NZ",
+                  "OM",
+                  "PA",
+                  "PE",
+                  "PF",
+                  "PG",
+                  "PH",
+                  "PK",
+                  "PL",
+                  "PM",
+                  "PN",
+                  "PR",
+                  "PS",
+                  "PT",
+                  "PW",
+                  "PY",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RS",
+                  "RU",
+                  "RW",
+                  "SA",
+                  "SB",
+                  "SC",
+                  "SD",
+                  "SE",
+                  "SG",
+                  "SH",
+                  "SI",
+                  "SJ",
+                  "SK",
+                  "SL",
+                  "SM",
+                  "SN",
+                  "SO",
+                  "SR",
+                  "SS",
+                  "ST",
+                  "SV",
+                  "SX",
+                  "SY",
+                  "SZ",
+                  "TC",
+                  "TD",
+                  "TF",
+                  "TG",
+                  "TH",
+                  "TJ",
+                  "TK",
+                  "TL",
+                  "TM",
+                  "TN",
+                  "TO",
+                  "TR",
+                  "TT",
+                  "TV",
+                  "TW",
+                  "TZ",
+                  "UA",
+                  "UG",
+                  "UM",
+                  "US",
+                  "UY",
+                  "UZ",
+                  "VA",
+                  "VC",
+                  "VE",
+                  "VG",
+                  "VI",
+                  "VN",
+                  "VU",
+                  "WF",
+                  "WS",
+                  "XK",
+                  "YE",
+                  "YT",
+                  "ZA",
+                  "ZM",
+                  "ZW",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
         "countryName": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "deprecated": {
+                  "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+                  "deprecatedVersion": "1.2"
+                }
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       },
       "patternProperties": {
@@ -1784,7 +2328,11 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "deprecated": {
+            "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
+            "deprecatedVersion": "1.2"
+          }
         }
       }
     },
@@ -2301,6 +2849,152 @@
         }
       }
     },
+    "Unit": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "unitClassificationScheme.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "id": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "name": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "value": {
+          "$ref": "#/definitions/Value"
+        },
+        "uri": {
+          "$ref": "#/definitions/StringNullUriVersioned"
+        }
+      },
+      "patternProperties": {
+        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Link": {
+      "type": "object",
+      "properties": {
+        "rel": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string",
+                "codelist": "linkRelationType.csv",
+                "openCodelist": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "href": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string",
+                "format": "uri"
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "SimpleIdentifier": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "id": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "StringNullUriVersioned": {
       "type": "array",
       "items": {
@@ -2497,6 +3191,24 @@
       },
       "type": "object"
     },
+    "SimpleIdentifierUnversioned": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true
+        }
+      }
+    },
     "IdentifierUnversioned": {
       "type": "object",
       "properties": {
@@ -2511,8 +3223,7 @@
             "string",
             "integer",
             "null"
-          ],
-          "versionId": true
+          ]
         },
         "legalName": {
           "type": [
@@ -2545,7 +3256,7 @@
             "string",
             "null"
           ],
-          "codelist": "itemClassificationScheme.csv",
+          "codelist": "classificationScheme.csv",
           "openCodelist": true
         },
         "id": {
@@ -2553,8 +3264,7 @@
             "string",
             "integer",
             "null"
-          ],
-          "versionId": true
+          ]
         },
         "description": {
           "type": [

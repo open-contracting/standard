@@ -20,7 +20,7 @@ As you complete this phase, you can:
 
 ## Register an OCID prefix
 
-In OCDS, the contracting process identifier (`ocid`) uniquely identifies a contracting process. As a publisher, you will assign a unique `ocid` to each contracting process.
+In OCDS, the open contracting process identifier (`ocid`) uniquely identifies a contracting (or planning) process. As a publisher, you will assign a unique `ocid` to each contracting (or planning) process.
 
 To ensure that your `ocid`s do not conflict with those of another publisher, you need to register an ocid prefix.
 
@@ -72,7 +72,7 @@ OCDS data can be published in different formats and accessed using different met
 
 It is best practice to provide data in multiple formats, so that as many users as possible can use the data without first having to transform it to their preferred format. In OCDS terms, this means [publishing both structured JSON data and tabular CSV or spreadsheet data](build/serialization).
 
-Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means [providing both bulk downloads and an API](build/hosting). The [OCDS pagination extension](https://extensions.open-contracting.org/en/extensions/pagination/master/) describes how to paginate OCDS data via an API.
+Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means [providing both bulk downloads and an API](build/hosting). For information on how to paginate OCDS data via an API, see [Pagination](build/hosting.md#pagination).
 
 **Remember to check that your chosen publication formats and access methods meet the needs you identified at the design stage.**
 
@@ -166,5 +166,7 @@ If you can't collect enough real data for testing, then you ought to create real
 **Tool:** The [jOCDS Validator](https://developmentgateway.org/blog/your-data-ocds-compliant-introducing-jocds-validator) can be used for bulk checking of the structure and format of OCDS data
 
 **Resource:** [How to check your OCDS data validates](https://www.open-contracting.org/2018/05/09/check-ocds-data-validates/)
+
+**Resource:** [OCDS Data Quality Checklist](https://www.open-contracting.org/resources/ocds-data-quality-checklist/)
 
 [Next phase: Publish](publish)

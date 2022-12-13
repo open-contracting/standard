@@ -1,6 +1,10 @@
+```{workedexample} Organizational units
+:tags: parties
+```
+
 # Organizational units
 
-For some use cases, publishers might need to disclose the organizational units involved in the contracting process, e.g agency branches or divisions.
+For some use cases, publishers might need to disclose the organizational units involved in the contracting (or planning) process, e.g agency branches or divisions.
 
 There is more than one approach to model organizational units in OCDS:
 
@@ -55,7 +59,7 @@ In the release below, a branch of the Bank of Moldova announces a contract oppor
 :title: release-schema
 ```
 
-The branch name (*Chişinău Branch*) is appended at the end of the name of the procuring entity. A new extension called "Division code" has been defined to add the `divisionCode` field in the `parties/details` section. The branch code in the example is "101".
+The branch name (*Chişinău Branch*) is appended at the end of the name of the buyer. A new extension called "Division code" has been defined to add the `divisionCode` field in the `parties/details` section. The branch code in the example is "101".
 
 The `extension.json` and `release-schema.json` files for the Division code extension can be displayed using the combo box above the JSON example. Instructions on how to create an OCDS extension can be found [here](https://github.com/open-contracting/standard_extension_template).
 
@@ -77,7 +81,6 @@ In a separate dataset, the publisher discloses the organizational hierarchy. Thi
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/organizations/organizational_units/paraguay_organizations.csv
 ```
 

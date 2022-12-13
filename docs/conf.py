@@ -60,7 +60,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'standard_theme'
+html_theme = 'standard_theme'  # 'pydata_sphinx_theme'
 html_theme_path = [standard_theme.get_html_theme_path()]
 html_favicon = '_static/favicon-16x16.ico'
 
@@ -132,8 +132,6 @@ linkcheck_ignore = [
     r'^https://www.fcny.org/fcny/$',
     r'^http://www.eprocurementtoolkit.org/sites/default/files/2016-11/OCDS_Implemetation_Methodology_0.pdf#page=27$',
     # Ignore unwanted links created by linkify.
-    r'^http://buyandsell.gc.ca$',
-    r'^http://(?:identifier|release).id$',
     r'^http://vnd\.',
     # Ignore expected redirects.
     r'^https://docs.google.com/spreadsheets/d/[^/]+/pub?gid=\d+&single=true&output=csv$',

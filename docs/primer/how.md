@@ -21,6 +21,8 @@ The Open Contracting Data Standards (OCDS) is designed to support publishing dat
 </div>
 ```
 
+% Align the first sentence with the top-level `description` field of the `release-schema.json` file.
+
 The OCDS defines a unique contracting process as all the actions aimed at implementing one or more contracts. An individual contracting process has several different stages: **tendering, awarding, contracting** and **implementation.** The OCDS describes a way to model and publish data in a standardized way along entire public contracting processes.
 
 <div style="width:100%">

@@ -5,22 +5,16 @@
   },
   "publishedDate": "",
   "version": "1.1",
-  "packages": [
-    "https://standard.open-contracting.org/examples/releases/ocds-23g63a01-200502-awardAmendment.json",
-    "https://standard.open-contracting.org/examples/releases/ocds-23g63a01-200502-award.json"
-  ],
   "records": [
     {
       "ocid": "ocds-23g63a01-200502",
       "releases": [
         {
-          "language": "en",
           "ocid": "ocds-23g63a01-200502",
           "id": "ocds-23g63a01-200502-awardAmendment",
           "tag": [
             "awardAmendment"
           ],
-          "initiationType": "tender",
           "date": "2019-01-21T09:00:00Z",
           "parties": [
             {
@@ -39,7 +33,7 @@
               "name": "Zambia Telecommunications Company Limited",
               "address": {
                 "postalCode": "37000",
-                "countryName": "Zambia",
+                "country": "ZM",
                 "region": "ZM",
                 "streetAddress": "Zamtel House, Corner Church and Chilubi Roads",
                 "locality": "Lusaka"
@@ -62,7 +56,7 @@
               },
               "address": {
                 "postalCode": "",
-                "countryName": "Zambia",
+                "country": "ZM",
                 "region": "ZM",
                 "streetAddress": "Plot 17 Chaholi Road Rhodes Park",
                 "locality": "Lusaka"
@@ -175,7 +169,7 @@
                 {
                   "id": "001",
                   "description": "One awarded item has been removed in favor of other two ones.",
-                  "rationale": "Items have been changed after negociations with the awarded supplier.",
+                  "rationale": "Items have been changed after negotiations with the supplier.",
                   "amendsReleaseID": "ocds-23g63a01-200502-award"
                 }
               ],
@@ -185,13 +179,11 @@
           ]
         },
         {
-          "language": "en",
           "ocid": "ocds-23g63a01-200502",
           "id": "ocds-23g63a01-200502-award",
           "tag": [
             "award"
           ],
-          "initiationType": "tender",
           "date": "2018-12-31T23:00:00Z",
           "parties": [
             {
@@ -210,7 +202,7 @@
               "name": "Zambia Telecommunications Company Limited",
               "address": {
                 "postalCode": "37000",
-                "countryName": "Zambia",
+                "country": "ZM",
                 "region": "ZM",
                 "streetAddress": "Zamtel House, Corner Church and Chilubi Roads",
                 "locality": "Lusaka"
@@ -233,7 +225,7 @@
               },
               "address": {
                 "postalCode": "",
-                "countryName": "Zambia",
+                "country": "ZM",
                 "region": "ZM",
                 "streetAddress": "Plot 17 Chaholi Road Rhodes Park",
                 "locality": "Lusaka"
@@ -329,8 +321,6 @@
         "id": "ocds-23g63a01-200502-2019-01-21T09:00:00Z",
         "date": "2019-01-21T09:00:00Z",
         "ocid": "ocds-23g63a01-200502",
-        "language": "en",
-        "initiationType": "tender",
         "parties": [
           {
             "id": "ZM-PCR-001",
@@ -348,7 +338,7 @@
             "name": "Zambia Telecommunications Company Limited",
             "address": {
               "postalCode": "37000",
-              "countryName": "Zambia",
+              "country": "ZM",
               "region": "ZM",
               "streetAddress": "Zamtel House, Corner Church and Chilubi Roads",
               "locality": "Lusaka"
@@ -371,7 +361,7 @@
             },
             "address": {
               "postalCode": "",
-              "countryName": "Zambia",
+              "country": "ZM",
               "region": "ZM",
               "streetAddress": "Plot 17 Chaholi Road Rhodes Park",
               "locality": "Lusaka"
@@ -478,7 +468,7 @@
               {
                 "id": "001",
                 "description": "One awarded item has been removed in favor of other two ones.",
-                "rationale": "Items have been changed after negociations with the awarded supplier.",
+                "rationale": "Items have been changed after negotiations with the supplier.",
                 "amendsReleaseID": "ocds-23g63a01-200502-award"
               }
             ]
@@ -487,26 +477,6 @@
       },
       "versionedRelease": {
         "ocid": "ocds-23g63a01-200502",
-        "language": [
-          {
-            "releaseID": "ocds-23g63a01-200502-award",
-            "releaseDate": "2018-12-31T23:00:00Z",
-            "releaseTag": [
-              "award"
-            ],
-            "value": "en"
-          }
-        ],
-        "initiationType": [
-          {
-            "releaseID": "ocds-23g63a01-200502-award",
-            "releaseDate": "2018-12-31T23:00:00Z",
-            "releaseTag": [
-              "award"
-            ],
-            "value": "tender"
-          }
-        ],
         "parties": [
           {
             "id": "ZM-PCR-001",
@@ -605,14 +575,14 @@
                   "value": "37000"
                 }
               ],
-              "countryName": [
+              "country": [
                 {
                   "releaseID": "ocds-23g63a01-200502-award",
                   "releaseDate": "2018-12-31T23:00:00Z",
                   "releaseTag": [
                     "award"
                   ],
-                  "value": "Zambia"
+                  "value": "ZM"
                 }
               ],
               "region": [
@@ -736,14 +706,14 @@
                   "value": ""
                 }
               ],
-              "countryName": [
+              "country": [
                 {
                   "releaseID": "ocds-23g63a01-200502-award",
                   "releaseDate": "2018-12-31T23:00:00Z",
                   "releaseTag": [
                     "award"
                   ],
-                  "value": "Zambia"
+                  "value": "ZM"
                 }
               ],
               "region": [
@@ -1373,7 +1343,7 @@
                     "releaseTag": [
                       "awardAmendment"
                     ],
-                    "value": "Items have been changed after negociations with the awarded supplier."
+                    "value": "Items have been changed after negotiations with the supplier."
                   }
                 ],
                 "amendsReleaseID": [

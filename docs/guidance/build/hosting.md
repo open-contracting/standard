@@ -35,10 +35,10 @@ When the suggested limits entail publication of multiple files, publishers ought
 
 For releases, publishers can:
 
-1. Segment by **release date** - placing all the releases from a given day, month or year in the same file;
-1. Segment by **contracting process identifier** - placing all the releases related to a given set of contract process identifiers together in the same package;
+* Segment by **release date** - placing all the releases from a given day, month or year in the same file.
+* Segment by **open contracting process identifier** - placing all the releases related to a given set of process identifiers together in the same package.
 
-For records, publishers can segment by the first **release date** associated with a contracting process, or by **contracting process identifier.**
+For records, publishers can segment by the first **release date** associated with a contracting (or planning) process, or by **open contracting process identifier.**
 
 Following these approaches will avoid releases and records 'jumping' between files when the bulk files are updated.
 

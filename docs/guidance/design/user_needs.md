@@ -28,13 +28,13 @@ The private sector can use open contracting data to understand the potential pip
 
 ## Value for money in procurement
 
-Value for money refers to the effective, efficient and economic use of resources in public procurement across the different stages of the process. This means value for money might not be achieved considering only the price, but also assessing other non-price attributes such as the quality of the items procured and the efficiency of the process.
+Value for money refers to the effective, efficient and economic use of resources in public procurement across the different stages of the contracting process. This means value for money might not be achieved considering only the price, but also assessing other non-price attributes such as the quality of the items procured and the efficiency of the contracting process.
 
 In public procurement, value for money can be achieved, for example, when a contract is implemented competently (in a quality manner and following specifications), timely (achieving milestones by specified dates), and competitively (at or below the estimated price).
 
 Open contracting data can help public officials get better value for money on goods, services and works, and can help in determining whether value for money has been achieved in concluded contracts. The private sector can analyze trends in prices and supplier performance, in order to identify opportunities. Civil society (NGOs, journalists, community organizations, etc.) can analyze this data to monitor government overspending.
 
-**Key data fields**: The values at different stages of the process, unit prices, and item details.
+**Key data fields**: The values at different stages of the contracting process, unit prices, and item details.
 
 ## Promoting public integrity
 
@@ -44,7 +44,7 @@ There are two main approaches to fraud and corruption monitoring. A ‘micro’ 
 
 All stakeholders from civil society, the private sector, government, and donors have an interest in identifying and combating corruption in public procurement.
 
-**Key data fields**: The procurement method used, bid details (including the bidders and bid values), the values at different stages of the process, key dates, key documents, and item details.
+**Key data fields**: The procurement method used, bid details (including the bidders and bid values), the values at different stages of the contracting process, key dates, key documents, and item details.
 
 **Resource**: [Red Flags for Integrity Guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/)
 
@@ -62,6 +62,6 @@ Internal efficiency refers to ensuring that the investments of money, time, and 
 
 Inefficiencies might arise due to inadequate systems or institutional arrangements that cause delays, carry high transactional costs, involve complex technical processes, create silos of information, or lack award and contract management systems.
 
-Public procurement agencies are particularly interested in identifying areas for efficiency improvements. Interventions might include, for example: analyzing delays; analyzing the duration of different stages of the process; structuring procurement information to improve internal coordination; streamlining internal processes without duplicating effort across different stages of the contracting process; developing market engagement strategies to prepare better tender specifications; or promoting the use of e-procurement systems.
+Public procurement agencies are particularly interested in identifying areas for efficiency improvements. Interventions might include, for example: analyzing delays; analyzing the duration of different stages of the contracting process; structuring procurement information to improve internal coordination; streamlining internal processes without duplicating effort across different stages of the contracting process; developing market engagement strategies to prepare better tender specifications; or promoting the use of e-procurement systems.
 
-**Key data fields**: The dates for the different stages of the process, and the status of the tender, awards and contracts.
+**Key data fields**: The dates for the different stages of the contracting process, and the status of the tender, awards and contracts.

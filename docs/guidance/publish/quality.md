@@ -1,6 +1,6 @@
 # Assessing data quality
 
-The Open Contracting Data Standard enables publication of detailed information about all stages of the public contracting process (and extensions can be used for additional information not covered by the core standard).
+The Open Contracting Data Standard enables publication of detailed information about all stages of contracting (and planning) processes (and extensions can be used for additional information not covered by the core standard).
 
 The limits of what can be published using the OCDS are usually defined by (1) absence of a legal mandate for publication and (2) challenges with data collection.
 
@@ -30,13 +30,13 @@ Understanding all of the challenges above, we understand that increasing the tra
 
 All OCDS publications ought to meet the following criteria:
 
-1. **Registered**: The data uses a [registered OCID prefix](../../schema/identifiers.md#contracting-process-identifier-ocid).
+1. **Registered**: The data uses a [registered OCID prefix](../../schema/identifiers.md#open-contracting-process-identifier-ocid).
 1. **Discoverable**: It is possible to discover the data by navigating a website whose homepage is indexed by popular web search engines.
 1. **Retrievable**: It is possible to automate the download of all the data, either using an HTML page listing bulk download URLs, or using only machine-readable data as input.
 1. **Reviewable**: The [OCDS Data Review Tool](https://standard.open-contracting.org/review/) is able to report results on the data.
 1. **Appropriate**: Concepts are published in semantic accordance with the rules of the OCDS (or registered extensions) rather than using a non-OCDS field or code.
 1. **Active**: For each publisher, there is an OCDS release with a top-level `date` field value within the last 12 months.
-1. **Parity**: For each publisher, for the _time period_ and _contracting authorities_ covered by the data, there isn’t another dataset by the same publisher that covers more than 25% more contracting processes.
+1. **Parity**: For each publisher, for the _time period_ and _contracting authorities_ covered by the data, there isn’t another dataset by the same publisher that covers more than 25% more contracting (or planning) processes.
 
 The OCDS Helpdesk is happy to review draft and newly published OCDS data and can work with publishers with advice to meet the above criteria. A publication that does not meet this minimum threshold will not be listed as a publisher by OCP as part of [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
@@ -46,9 +46,9 @@ From the minimum threshold above, we want to support publishers to continue to i
 
 ### Completeness
 
-Improvement on the below indicators demonstrate that the published information is becoming more complete about the contracting processes within the publisher’s jurisdiction.
+Improvement on the below indicators demonstrate that the published information is becoming more complete about the contracting (or planning) processes within the publisher’s jurisdiction.
 
-1. Publish subsequent releases per OCID to show how the contracting process is progressing over time
+1. Publish subsequent releases per OCID to show how the contracting (or planning) process is progressing over time
 1. Increase the publication of historical information (based on a minimal set of date fields that appear across all sources, e.g. `tender.tenderPeriod`, `awards.date`, and `contracts.dateSigned`)
 1. Increase the average coverage of fields per compiled release, for example either new fields not previously published in any release, or an increase in the use of a field across releases (e.g. very little data was published about direct awards and now more is being published about direct awards)
 1. Increase the number of contracting authorities covered in the publication
@@ -81,10 +81,10 @@ The most advanced OCDS publishers will demonstrate that they have achieved the b
 
 **Completionist**  
 _Indicates_: Whether the public can get data about all contracts that are disclosable according to local laws and regulations.  
-_Measures_: The percentage of all contracting processes that are disclosed in OCDS data, by number and by value.
+_Measures_: The percentage of all contracting (or planning) processes that are disclosed in OCDS data, by number and by value.
 
 **Timely Publisher**  
-_Indicates_: Whether the public can track the progress of a contracting process.  
+_Indicates_: Whether the public can track the progress of a contracting (or planning) process.  
 _Measures_: Whether the OCDS publication is updated daily, including information from human-readable notices, that is published within an expected number of days of the notice.
 
 **Thorough Publisher**  

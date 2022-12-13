@@ -1,3 +1,7 @@
+```{workedexample} Beneficial ownership information
+:tags: parties
+```
+
 # Beneficial ownership information
 
 This worked example describes how to:
@@ -29,7 +33,7 @@ Therefore, the preferred approach is to **publish separate contracting and benef
 * Periodically confirm the accuracy of data in the register and record changes as they happen.
 * Publish beneficial ownership data using BODS, including a history of changes.
 
-To allow users to connect contracting data and beneficial ownership data, you should use the same [organization identifiers](../../schema/identifiers.md#organization-ids) in both datasets.
+To allow users to connect contracting data and beneficial ownership data, you should use the same [organization identifiers](../../schema/identifiers.md#organization-identifiers) in both datasets.
 
 At the same time, you can **publish beneficial ownership data in OCDS** using the [beneficial owners extension](https://extensions.open-contracting.org/en/extensions/beneficialOwners/master/), in particular if:
 
@@ -48,7 +52,7 @@ The UK publishes OCDS data from [Contracts Finder](https://www.contractsfinder.s
 This example shows a contract award to T.M. ENGINEERS (MIDLANDS) LIMITED. `parties.identifier.id` is set to the supplier’s company number (00507062) and `parties.identifier.scheme` is set to ‘GB-COH’ to identify the register the number is drawn from. 
 
 ```{note}
-For more information on publishing organization identifiers in OCDS, see [Organization IDs](../../schema/identifiers.md#organization-ids).
+For more information on publishing organization identifiers in OCDS, see [Organization identifiers](../../schema/identifiers.md#organization-identifiers).
 ```
 
 ```{jsoninclude} ../../examples/beneficial_ownership/award.json

@@ -1,6 +1,10 @@
+```{workedexample} Updates and amendments
+:tags: amendment,tender,contract
+```
+
 # Updates and amendments
 
-Information about a contracting process will often change over time.
+Information about a contracting (or planning) process will often change over time.
 
 Each time information changes, a new OCDS release ought to be published. The new release can contain information that was previously published, in addition to the new information.
 
@@ -80,7 +84,7 @@ This example shows an update to the value and scope of a contract.
 
 #### Contract
 
-A contract notice is published for the purchase of domestic appliances. The publisher builds a release and uses the 'contract' `tag`.
+A contract signature notice is published for the purchase of domestic appliances. The publisher builds a release and uses the 'contract' `tag`.
 
 See the JSON release below.
 
@@ -122,17 +126,16 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 
 The [Easy releases guidance](../build/easy_releases) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
 
-Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract notice, contract amendments can be published as separate releases in OCDS. For example, Australia's AusTender platform [stores contract amendments as separate notices, related to the original contract notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516).
+Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract signature notice, contract amendments can be published as separate releases in OCDS. For example, Australia's AusTender platform [stores contract amendments as separate notices, related to the original contract signature notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516).
 
-The table below shows an example of a contract notices table from a procurement system, with an original contract in the first row and an amendment of the same contract in the second. The amendment increases the value of the original contract and changes the contract period.
+The table below shows an example of a contract signature notices table from a procurement system, with an original contract in the first row and an amendment of the same contract in the second. The amendment increases the value of the original contract and changes the contract period.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/amendments/contract_notice.csv
 ```
 
-This can be modelled as the separate releases in OCDS as shown below. The original `contract` release includes all the fields from the first entry in the contract notices table. A `contractAmendment` release is built for each contract amendment identified in the table (by verifying that the `amendmentId` column in the contract notices table is not empty).
+This can be modelled as the separate releases in OCDS as shown below. The original `contract` release includes all the fields from the first entry in the contract signature notices table. A `contractAmendment` release is built for each contract amendment identified in the table (by verifying that the `amendmentId` column in the contract signature notices table is not empty).
 
 ```{jsoninclude} ../../examples/amendments/easy_releases.json
 :jsonpointer: /records/0/releases/1
@@ -146,7 +149,7 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
 :title: ContractAmendment
 ```
 
-Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
+Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract signature notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
 

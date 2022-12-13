@@ -1,3 +1,7 @@
+```{workedexample} Change history
+:tags: release,record
+```
+
 # Change history
 
 The following example shows how to publish data about a contracting process. Publish a release for each event in the process and update the record each time you publish a release.
@@ -14,7 +18,7 @@ For guidance on how to set the `id` field on each release, see the [easy release
 
 ## Tender
 
-The London Borough of Barnet publishes a tender for cycle lane improvements. They issue the tender via a *notice of intended procurement*. This is also known as *contract notice* or *opportunity notice*.
+The London Borough of Barnet publishes a tender for cycle lane improvements. They issue the tender via a *notice of intended procurement*.
 
 The publisher creates a release to represent this notice. The release uses the 'tender' tag and provides the details in the `tender` section.
 
@@ -104,7 +108,7 @@ So far, the council used a single procurement system to manage the process. The 
 
 The council now uses a separate financial system to manage payments. The financial system publishes the new OCDS release.
 
-The procurement system and the financial system share a common contracting process identifier. This means that the two systems can publish releases using the same `ocid`.
+The procurement system and the financial system share a common identifier for contracting processes. This means that the two systems can publish releases using the same `ocid`.
 
 The new release uses the 'implementation' tag. The `contracts.implementation.transactions` section includes the details of the payment.
 

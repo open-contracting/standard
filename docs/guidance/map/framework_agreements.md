@@ -1,3 +1,7 @@
+```{workedexample} Framework agreements
+:tags: tender,award,contract
+```
+
 # Framework agreements
 
 ## Definitions
@@ -58,10 +62,7 @@ In OCDS, a contracting process brings together, under a single identifier, the i
 * What was the total value of spending that resulted from this award?
 * Was a renewal of this contract signed?
 
-In some cases, complex contracting processes cannot be represented under a single identifier under OCDS' model, because:
-
-* There are multiple competitive stages: for example, when a framework agreement involves second-stage competitions.
-* The procurement systems used at different stages of the process are managed by different bodies, and cannot be integrated.
+In some cases, a complex contracting activity cannot be represented as a single contracting process, because there are multiple tender stages. For example, this is the case when a framework is set up, and then mini-competitions are used for purchases from the framework.
 
 OCDS models the first and second stages of framework agreement procedures as separate contracting processes, linked together using the `relatedProcesses` array. The `tender.techniques.hasFrameworkAgreement` field, from the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension, indicates whether the contracting process represents the first stage of a framework agreement procedure. The presence of a related process with a `.relationship` field set to 'framework' indicates whether the contracting process represents the second stage of a framework agreement procedure.
 
@@ -97,6 +98,7 @@ The following guidance describes how to model the different stages of a framewor
   * `tender.procurementMethod` according to the competitive conditions of the first stage of the framework agreement. Since framework agreements typically involve qualification, this is most often 'selective'.
   * `tender.techniques.hasFrameworkAgreement` to `true`.
   * `tender.contractPeriod` to the duration of the framework agreement.
+  * `tender.maximumValue` to the maximum value of the framework agreement and/or `tender.value` to the estimated value of the framework agreement (the values can be different e.g. if the budget for the framework agreement contains a reserve in case of an unforeseen situation, but the situation is unlikely to occur).
   * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
   * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
 
@@ -104,6 +106,7 @@ The following guidance describes how to model the different stages of a framewor
 
 * Create a release with the **same** `ocid` as the tender release and add 'award' to the `tag` array.
 * Add an `Award` object to the `awards` array, setting its fields as usual.
+* Set the award's `.maximumValue` to the maximum value of the framework agreement and/or its `.estimatedValue` to the estimated value of the framework agreement.
 * For each supplier:
   * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
   * Add an `OrganizationReference` object to the award's `.suppliers` array, and set its `.id` and `.name` to match the supplier's object in the `parties` array.
@@ -159,7 +162,7 @@ NHS National Services Scotland (NSS) wants to establish a framework agreement fo
 
 #### Invitation to participate in the first stage of a framework agreement procedure
 
-NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
+NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting potential suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
 
 The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
 
@@ -231,7 +234,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 * Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'selective'.
 * Since the framework agreement is open, `tender.tenderPeriod` is set to the end of the framework agreement.
 * Since there are two buyers, the 'buyer' object is not set, and the buyers are declared in the `parties` array.
-* Since Chile Compra is the entity that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
+* Since Chile Compra is the organization that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_first_stage.json
 :jsonpointer:

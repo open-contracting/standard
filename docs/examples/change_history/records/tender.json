@@ -1,5 +1,5 @@
 {
-  "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001.json",
+  "uri": "https://standard.open-contracting.org/examples/records/ocds-213czf-000-00001.json",
   "publisher": {
     "scheme": "GB-COH",
     "uid": "09506232",
@@ -10,9 +10,6 @@
   "license": "http://opendatacommons.org/licenses/pddl/1.0/",
   "publicationPolicy": "https://github.com/open-contracting/sample-data/",
   "version": "1.1",
-  "packages": [
-    "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json"
-  ],
   "records": [
     {
       "ocid": "ocds-213czf-000-00001",
@@ -21,11 +18,9 @@
           "ocid": "ocds-213czf-000-00001",
           "id": "ocds-213czf-000-00001-02-tender",
           "date": "2010-03-15T09:30:00Z",
-          "language": "en",
           "tag": [
             "tender"
           ],
-          "initiationType": "tender",
           "parties": [
             {
               "identifier": {
@@ -40,7 +35,7 @@
                 "locality": "London",
                 "region": "London",
                 "postalCode": "N11 1NP",
-                "countryName": "United Kingdom"
+                "country": "GB"
               },
               "contactPoint": {
                 "name": "Procurement Team",
@@ -105,9 +100,6 @@
             "procurementMethodRationale": "An open competitive tender is required by EU Rules",
             "awardCriteria": "bestProposal",
             "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
-            "submissionMethod": [
-              "electronicSubmission"
-            ],
             "submissionMethodDetails": "Submit through the online portal at http://example.com/submissions/ocds-213czf-000-00001-01/",
             "enquiryPeriod": {
               "startDate": "2010-03-01T09:00:00Z",
@@ -134,8 +126,7 @@
                 "description": "Official tender notice.",
                 "url": "http://example.com/tender-notices/ocds-213czf-000-00001-01.html",
                 "datePublished": "2010-03-01T09:00:00Z",
-                "format": "text/html",
-                "language": "en"
+                "format": "text/html"
               }
             ]
           }
@@ -148,8 +139,6 @@
         "id": "ocds-213czf-000-00001-2010-03-15T09:30:00Z",
         "date": "2010-03-15T09:30:00Z",
         "ocid": "ocds-213czf-000-00001",
-        "language": "en",
-        "initiationType": "tender",
         "parties": [
           {
             "id": "GB-LAC-E09000003",
@@ -165,7 +154,7 @@
               "locality": "London",
               "region": "London",
               "postalCode": "N11 1NP",
-              "countryName": "United Kingdom"
+              "country": "GB"
             },
             "contactPoint": {
               "name": "Procurement Team",
@@ -229,9 +218,6 @@
           "procurementMethodRationale": "An open competitive tender is required by EU Rules",
           "awardCriteria": "bestProposal",
           "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
-          "submissionMethod": [
-            "electronicSubmission"
-          ],
           "submissionMethodDetails": "Submit through the online portal at http://example.com/submissions/ocds-213czf-000-00001-01/",
           "enquiryPeriod": {
             "startDate": "2010-03-01T09:00:00Z",
@@ -258,34 +244,13 @@
               "description": "Official tender notice.",
               "url": "http://example.com/tender-notices/ocds-213czf-000-00001-01.html",
               "datePublished": "2010-03-01T09:00:00Z",
-              "format": "text/html",
-              "language": "en"
+              "format": "text/html"
             }
           ]
         }
       },
       "versionedRelease": {
         "ocid": "ocds-213czf-000-00001",
-        "language": [
-          {
-            "releaseID": "ocds-213czf-000-00001-02-tender",
-            "releaseDate": "2010-03-15T09:30:00Z",
-            "releaseTag": [
-              "tender"
-            ],
-            "value": "en"
-          }
-        ],
-        "initiationType": [
-          {
-            "releaseID": "ocds-213czf-000-00001-02-tender",
-            "releaseDate": "2010-03-15T09:30:00Z",
-            "releaseTag": [
-              "tender"
-            ],
-            "value": "tender"
-          }
-        ],
         "parties": [
           {
             "id": "GB-LAC-E09000003",
@@ -382,14 +347,14 @@
                   "value": "N11 1NP"
                 }
               ],
-              "countryName": [
+              "country": [
                 {
                   "releaseID": "ocds-213czf-000-00001-02-tender",
                   "releaseDate": "2010-03-15T09:30:00Z",
                   "releaseTag": [
                     "tender"
                   ],
-                  "value": "United Kingdom"
+                  "value": "GB"
                 }
               ]
             },
@@ -725,18 +690,6 @@
               "value": "The best proposal, subject to value for money requirements, will be accepted."
             }
           ],
-          "submissionMethod": [
-            {
-              "releaseID": "ocds-213czf-000-00001-02-tender",
-              "releaseDate": "2010-03-15T09:30:00Z",
-              "releaseTag": [
-                "tender"
-              ],
-              "value": [
-                "electronicSubmission"
-              ]
-            }
-          ],
           "submissionMethodDetails": [
             {
               "releaseID": "ocds-213czf-000-00001-02-tender",
@@ -906,16 +859,6 @@
                     "tender"
                   ],
                   "value": "text/html"
-                }
-              ],
-              "language": [
-                {
-                  "releaseID": "ocds-213czf-000-00001-02-tender",
-                  "releaseDate": "2010-03-15T09:30:00Z",
-                  "releaseTag": [
-                    "tender"
-                  ],
-                  "value": "en"
                 }
               ]
             }

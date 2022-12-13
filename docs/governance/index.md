@@ -58,6 +58,20 @@ This documentation website is composed of normative content (the prescriptive pa
 
 ### Versions
 
+We use **version numbers** to indicate the nature of changes made to normative content, and to fit the governance process to each change.
+
+* **A MAJOR version (e.g. 1.0.0 -> 2.0.0)** makes backwards-incompatible changes. Systems written to input or output data with a previous major version might need substantial updates. Data that is valid against the 1.X schema might not be valid against the 2.X schema, for example.
+
+* **A MINOR version (e.g. 1.0.0 -> 1.1.0)** makes backward-compatible changes. Systems written to input or output data with a previous minor version should be reviewed to assess whether they can implement any concepts added in the new minor version. Data that is valid against the 1.0 schema is also valid against the 1.1 schema, for example. Where relevant, changes should apply a principle of progressive enhancement, such that updated systems can take advantage of the added concepts, while non-updated systems experience no substantive changes in behavior. 
+
+* **A PATCH version (e.g. 1.1.0 -> 1.1.1)** updates open codelists or external closed codelists, or makes backwards-compatible bug fixes or improvements to normative content. Users are encouraged to upgrade to the latest patch version. Unless they were affected by a fixed bug, they should not see any substantive changes after the upgrade. Data that is valid against the 1.1.0 schema is also valid against the 1.1.1 schema, for example.
+
+MAJOR and MINOR updates to normative content trigger the governance process. PATCH updates to normative content have a short review period to give users an opportunity to confirm that changes are backwards-compatible and non-substantive.
+
+Changes to non-normative content do not trigger the governance process. 
+
+### Branches
+
 Distinct **branches** of the standard will be maintained within GitHub for each version. 
 
 Branches can be in one of two states:
@@ -67,14 +81,6 @@ Both schema and documentation on a development branch may be updated and should 
 
 * **Live** - with no suffix ( e.g. 1.0)
 Only documentation may be updated on a live branch. All documentation changes must be reviewed to ensure they do not make any changes to the meaning of the standard. 
-
-Semantic Versioning practices will be used to distinguish between:
-
-* **Major versions** which make backwards-incompatible changes (e.g. 2.0)
-
-* **Minor versions** which add functionality in a backwards-compatible manner (e.g. 1.2)
-
-These are captured by a version number in the format MAJOR.MINOR
 
 ## Revision process
 
@@ -179,6 +185,16 @@ Any current or potential OCDS publisher or data user of the standard can be cons
 **Consensus**
 
 "The principle of consensus has its origins in the desire to achieve the general acceptance and application of a Standard within its intended sphere of influence. This entails trying to ensure that the interests of all those likely to be affected by it are taken into account, and that individual concerns are carefully and fairly balanced against the wider public interest." [BSI, 2012](https://www.bsigroup.com/Documents/about-bsi/NSB/BSI-pocket-guide-to-standards-development-UK-EN.pdf)
+
+## Versioning of extensions
+
+Extensions are governed and versioned independently of the standard, with the exception of core extensions, where:
+
+* MAJOR or MINOR releases of core extensions only take place as part of the governance process for a MAJOR or MINOR release of OCDS. 
+
+* Each version of the standard explicitly declares the version number of each core extension for that version of the standard. 
+
+Changes to core extensions between standard versions may be staged with labels (like `-alpha` or `-beta`) to indicate these are under development or proposed for adoption in the next version of OCDS, but that their adoption has not yet been formally agreed. 
 
 ```{toctree}
 :hidden:

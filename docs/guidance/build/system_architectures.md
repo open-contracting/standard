@@ -18,7 +18,7 @@ This guidance describes some design approaches with their advantages and disadva
 
 ## On-demand transformation from data sources
 
-In this scenario, data from each source is converted to OCDS format on-demand. OCDS data is not stored, but is created each time a user or third-party invokes the conversion process. This is the easiest path when a single source manages the data for all contracting processes. But it involves adding an OCDS conversion module.
+In this scenario, data from each source is converted to OCDS format on-demand. OCDS data is not stored, but is created each time a user or third-party invokes the conversion process. This is the easiest path when a single source manages the data for all contracting (and planning) processes. But it involves adding an OCDS conversion module.
 
 An API performs data transformation on the fly each time it receives a request.
 
@@ -38,7 +38,7 @@ In the scenarios that follow, a middleware component converts and stores the dat
 
 * It is possible to merge and centralize data from more than one data source in a single datastore.
 * It can relieve data sources from expensive queries.
-* It can enable the generation of the change history for each contracting process.
+* It can enable the generation of the change history for each contracting (or planning) process.
 
 On the other hand, there is a cost of maintaining a separate datastore. In these scenarios, we assume an API provides access to OCDS data.
 

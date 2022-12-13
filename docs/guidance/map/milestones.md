@@ -1,3 +1,7 @@
+```{workedexample} Milestones
+:tags: milestone,planning,tender,contract,implementation
+```
+
 # Milestones
 
 Milestones can be included within the planning, tender, contract and contract implementation sections. 
@@ -32,6 +36,8 @@ The nature of the milestone is indicated by the [milestone type codelist](../../
 At the point of contract signature, a comparison between `tender/milestones` and `contract/implementation/milestones` with a `milestone/type` of 'delivery' or 'reporting' should reveal how the negotiated contract differs from what was set out at tender time.
 
 The `dueDate`, `dateMet`, `dateModified` and [`status`](../../schema/codelists.md#milestone-status) fields are used to track the lifecycle of the milestone.
+
+To represent a planned payment, add a `Milestone`, set its `.type` to 'payment' and set its `.value` to the payment's value. Once the milestone is met, add a [Transaction](../../schema/reference.md#transaction) to `contracts/implementation/transactions`. For implementation milestones, the transaction can refer back to the milestone using the [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/).
 
 ## Worked examples
 
@@ -95,19 +101,19 @@ In the second implementation update release, which is published after the projec
 :title: implementation-update-2
 ```
 
-#### Delivery and financing data
+#### Delivery and payment data
 
-This example shows how milestones can be used to keep track of delivery and financing (payment) data in a contracting process.
+This example shows how milestones can be used to keep track of delivery and payment data in a contracting process.
 
 The example below includes three OCDS releases:
 
-* An implementation release with contract information including scheduled implementation milestones.
+* An implementation release with contract information including scheduled implementation milestones and planned payments.
 * An implementation update release with the actual date the milestone was reached.
 * An implementation update release with payment information
 
 In the implementation release:
 
-* Milestones have been set for the delivery and payment of goods and services related to the project. Contract information is released along with the implementation milestones.
+* Milestones have been set for the delivery and payment of goods, services and works related to the project. Contract information is released along with the implementation milestones.
 
 In the first implementation update release:
 
@@ -115,7 +121,7 @@ In the first implementation update release:
 
 In the second implementation update release:
 
-* The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'financing' is updated. A new `transaction` is disclosed, with the amount paid to the company.
+* The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'payment' is updated. A new `transaction` is disclosed, with the amount paid to the company. The [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/) is used to link the transaction to the milestone.
 
 ```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_not_met.json
 :jsonpointer:

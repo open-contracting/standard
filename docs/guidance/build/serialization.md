@@ -1,6 +1,6 @@
 # Serialization
 
-The Open Contracting Data Standard provides a **structured data model** for capturing in-depth information about all stages of the contracting process.
+The Open Contracting Data Standard provides a **structured data model** for capturing in-depth information about all stages of contracting (and planning) processes.
 
 The current canonical version of this data model is provided by a **[JSON Schema](../../schema/release)** which describes field names, field definitions and structures for the data. The compliance of data with the Open Contracting Data Standard will be assessed against this schema.
 
@@ -49,7 +49,6 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](https
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/serialization/flat.csv
 ```
 
@@ -67,7 +66,6 @@ For example, to represent a tender release with two items, the CSV file would in
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/serialization/flat_two_items.csv
 ```
 

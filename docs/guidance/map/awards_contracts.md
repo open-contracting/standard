@@ -1,8 +1,12 @@
+```{workedexample} Awards and contracts
+:tags: award,contract
+```
+
 # Awards and contracts
 
 Contracting processes can take many forms and follow many different types of procedure, from a simple contracting process resulting in a single contract between a buyer and supplier, to a multi-buyer, multi-supplier framework agreement implemented as an electronic catalog.
 
-OCDS defines a common model for disclosing structured data on public contracting processes carried out in any jurisdiction, including data on awards and contracts. The examples in this guidance explain how to model awards and contracts occurring in different types of contracting processes using OCDS.
+OCDS defines a common model for disclosing structured data on public contracting (and planning) processes carried out in any jurisdiction, including data on awards and contracts. The examples in this guidance explain how to model awards and contracts occurring in different types of contracting processes using OCDS.
 
 ## Definitions
 
@@ -10,26 +14,24 @@ In order to understand the modelling examples, it’s important to first clarify
 
 ### Award
 
-In OCDS, the `Award` object is intended to communicate a direct relationship between items, suppliers, and values. It ought to be possible to know, at the award stage, in OCDS data, which items will later be supplied by which suppliers, and what the value of those contracts will be.
+OCDS defines an award as:
+
+```{field-description} ../../../build/current_lang/release-schema.json /definitions/Award
+```
 
 ```{note}
-The OCDS schema and documentation are not clear what, precisely, is meant by 'award'. A revision of the definition of `Award` in OCDS is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/895)).
+In OCDS 1.2 and earlier, a single contract cannot be linked to more than one award. Consequently, in cases where real-world awards are more detailed than the resulting real-world contract (for example, two lots are awarded to a single supplier and only a single contract is signed), this cannot be represented fully accurately in OCDS. There are two possible workarounds: (1) summarizing the multiple real-world awards into a single OCDS award (that is, summing the values of the lots, choosing a common award date, etc.), (2) splitting the single real-world contract into multiple OCDS contracts. If you want to disclose this type of information, we recommend using approach (1) or contacting the [helpdesk](../../support/index).
 ```
 
 ### Contract
 
-Contracting processes can result in different types of contract between buyers and suppliers, which can include:
+Contracting processes can result in different types of contracts between buyers and suppliers, such as:
 
-* A contract establishing the relationship, like the set-up of a framework agreement
-* A contract within the relationship, like a call-off contract under a framework agreement
-* Purchase orders
-* Catalog purchases
+* Contract describing all the contractual conditions (e.g. item, quantity, price, payment terms, time and place of delivery)
+* Contracts only describing the general contractual conditions, such as a framework agreement
+* Contracts only describing the specific contractual conditions, such as a contract within a framework agreement
 
-In OCDS, the `Contract` object is intended to communicate a legally binding agreement between a buyer and suppliers to provide items. This excludes agreements to set-up a structure through which contracts are later awarded to provide items, for example: a contract to set up or add suppliers to a framework agreement or dynamic purchasing system.
-
-```{note}
-The OCDS schema and documentation are not clear what, precisely, is meant by 'contract'. A revision of the definition of `Contract` is being considered for a future version of the standard ([GitHub issue](https://github.com/open-contracting/standard/issues/896)).
-```
+Communication between contractual parties that consists of minor specifications of conditions agreed previously (e.g. specifying the time or place of delivery) is not considered a contract. Amendments are considered as part of the contract that is being amended. Contracts also govern the granting of prizes or other rewards (e.g. a follow-up contract) resulting from a design contest.
 
 ## Awards and contracts
 
@@ -121,7 +123,6 @@ Using a single award object to model such a notice in OCDS would make it impossi
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/award_decisions/single_award.csv
 ```
 
@@ -129,7 +130,6 @@ For the award object in OCDS to communicate a direct relationship between items,
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/award_decisions/multi_award.csv
 ```
 
@@ -137,7 +137,6 @@ There are no identifiers for the individual supplier/value pairings on the origi
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/award_decisions/identifiers.csv
 ```
 
@@ -148,7 +147,7 @@ There are no identifiers for the individual supplier/value pairings on the origi
 ```
 ## Purchase orders
 
-A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, works or services to be delivered in the future.
+A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, services or works to be delivered in the future.
 
 Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 
@@ -160,7 +159,6 @@ The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG to 
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/purchase_orders/parent_contract.csv
 ```
 
@@ -172,7 +170,6 @@ If purchase orders were also disclosed in the `contracts` section of OCDS, by th
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/purchase_orders/contracts_pos.csv
 ```
 

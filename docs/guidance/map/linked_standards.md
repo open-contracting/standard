@@ -1,6 +1,6 @@
 # Linked standards
 
-OCDS data often refers to other datasets, like company registers, government budgets and infrastructure projects. These datasets contain information that is managed outside the lifecycle of a contracting process.
+OCDS data often refers to other datasets, like company registers, government budgets and infrastructure projects. These datasets contain information that is managed outside the lifecycle of a contracting (or planning) process.
 
 ## Open Contracting for Infrastructure Data Standards
 
