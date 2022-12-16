@@ -74,7 +74,7 @@ For example:
 
 This internal identifier can be exchanged with, and recorded in, any other systems which process information about this contracting process. For example, systems for reporting or recording spending transactions to suppliers.
 
-Mexico City then registered a prefix with the OCDS helpdesk. They have been given the prefix ‘ocds-87sd3t’ which can be added to their unique process identifiers to give a globally unique `ocid`. E.g.
+Mexico City then registered a prefix with the Data Support Team. They have been given the prefix ‘ocds-87sd3t’ which can be added to their unique process identifiers to give a globally unique `ocid`. E.g.
 
 > ocds-87sd3t-OM-DGRMSG-004-13
 ```
