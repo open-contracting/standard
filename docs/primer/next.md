@@ -27,7 +27,7 @@ OCP and the OCDS offers free support in publishing or using OCDS data. If you ar
 * Providing guidance on mapping your data structures to the OCDS
 * Giving you feedback on draft data files, and checking the structure of your data
 
-Support is available in English and Spanish. If you have a question about OCDS implementation, e-mail [data@open-contracting.org](mailto:data@open-contracting.org) and a member of the Data Support Team will be in touch with you soon.
+Support is available in English, Spanish and Russian. If you have a question about OCDS implementation, e-mail [data@open-contracting.org](mailto:data@open-contracting.org) and a member of the Data Support Team will be in touch with you soon.
 
 ```{note}
 **To continue learning about OCDS implementation,** go to the next page in the documentation: [Guidance](../guidance/index). You can also review the resources below to go deeper into the subjects introduced on this page.
