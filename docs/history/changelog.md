@@ -126,7 +126,7 @@ See the changelogs for:
   * **Action:** Versioned releases that set these fields will likely need to be re-created to validate against the OCDS 1.1.4 schema.
 * [#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit).
 * [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [Translation and localization policy](../governance/index.md#translation-and-localization-policy).
-* [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a [privacy notice](../privacy-notice).
+* [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a privacy notice.
 * The documentation is now available in Italian.
 
 ### Codelists
