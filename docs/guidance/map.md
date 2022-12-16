@@ -69,7 +69,7 @@ To make the mapping easier we provide templates to list the data elements within
 
 If your contracting data is managed on paper or in unstructured electronic documents, you should use the templates to list the data elements in those data sources and map them to OCDS.
 
-You can [contact the Data Support Team](../support/index) for support and guidance on using the mapping templates.
+You can [contact the Data Support Team](../support/index) for guidance on using the mapping templates.
 
 ## Complete the mapping
 

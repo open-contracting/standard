@@ -20,7 +20,7 @@ Beyond the Primer, you can use the following resources contained in the OCDS doc
 
 **Have a question? Ask us!**
 
-OCP and the OCDS offers free support in publishing or using OCDS data. If you are planning to publish or use OCDS data, then the Data Support Team is on-hand to offer advice and input, by:
+OCP and the OCDS offers free global support in publishing or using OCDS data. If you are planning to publish or use OCDS data, then the Data Support Team is on-hand to offer advice and input, by:
 
 * Helping you identify approaches for converting data from your existing systems to the OCDS
 * Suggesting existing tools and services that can help you publish or use OCDS data

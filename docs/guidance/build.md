@@ -108,7 +108,7 @@ If you aren't creating or updating an IT system, but are instead reusing an exis
 * The [data collection spreadsheet](https://www.open-contracting.org/resources/data-collection-spreadsheet/) includes instructions describing how to add fields and how to add and reformat sheets.
 * The [data collection form](https://www.open-contracting.org/resources/ocds-data-collection-form/) includes instructions describing how to add fields and how to customize descriptions and guidance.
 
-Contact the [Data Support Team](../support/index) for support and guidance on customizing a tool to meet your needs.
+Contact the [Data Support Team](../support/index) for guidance on customizing a tool to meet your needs.
 
 **Resource:** [Using tabular versions of OCDS to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
 
@@ -124,7 +124,7 @@ If your [mapping](map) identified data elements which don't map to OCDS or an ex
 
 **Action:** Read the guidance on [developing new extensions](map/extensions.md#developing-new-extensions), which includes links to useful tools and resources.
 
-**Action:** Request support from the [Data Support Team](../../support/index) to model your extensions.
+**Action:** Request assistance from the [Data Support Team](../../support/index) to model your extensions.
 
 **Action:** Share your extensions with the OCDS community on [GitHub](https://github.com/open-contracting/standard/issues).
 
