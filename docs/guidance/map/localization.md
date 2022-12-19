@@ -44,7 +44,7 @@ To localize a code title or description, edit the values in columns B and C. As 
 Do not edit the values in column A. These are the OCDS field paths which cannot be edited.
 ```
 
-You can ask the [OCDS Helpdesk](../../support/index) to review your localized mapping template before you put it to use.
+You can ask the [Data Support Team](../../support/index) to review your localized mapping template before you put it to use.
 
 ## Mapping between disclosures required by law and OCDS fields
 
@@ -64,7 +64,7 @@ OCDS often breaks down the concepts used in disclosure legislation to make sure 
 
 There may be some disclosure requirements that are not covered by OCDS fields. Use the space at the bottom of each mapping sheet to list any extra requirements.
 
-Provide as much detail as you can about these extra requirements and then share your mapping with the OCDS Helpdesk. The helpdesk can work with you to identify whether to model the requirements using an existing field or whether to develop an extension.
+Provide as much detail as you can about these extra requirements and then share your mapping with the Data Support Team. The team can work with you to identify whether to model the requirements using an existing field or whether to develop an extension.
 
 ## Extending the standard
 
@@ -80,7 +80,7 @@ If the standard is not yet available in your language, you can propose a new tra
 
 Translations are managed using [Transifex](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/) which can generate translated versions of the schema, documentation and other resources.
 
-Contact the [OCDS Helpdesk](../../support/index) to get access to Transifex or to propose a new translation.
+Contact the [Data Support Team](../../support/index) to get access to Transifex or to propose a new translation.
 
 ## Document and share your work
 
