@@ -42,7 +42,7 @@ To facilitate publication of contracting data to meet a variety of needs, the OC
 * A common structured [data model](../schema/index), including a schema, codelists, and common rules and definitions for data fields and contracting processes;
 * [Guidance and tools](../guidance/index) to support implementation and data use;
 * An [extension](../guidance/map/extensions) mechanism to add additional key information to your OCDS data; and
-* A free global [helpdesk](../support/index.md#ocds-helpdesk).
+* Free global support from the [Data Support Team](../support/index).
 
 ```{note}
 **To learn more,** go to the next page in the Primer: [How does the OCDS work?](how) You can also review the further resources below to go deeper into the subjects introduced on this page.

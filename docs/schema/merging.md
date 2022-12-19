@@ -119,7 +119,7 @@ For example, in the above worked example, the estimated value was $1,000 in a re
 :title: Versioned_release
 ```
 
-The structure of the versioned release is described by the {download}`versioned release schema <../../build/current_lang/versioned-release-validation-schema.json>`; note that the `ocid` field's value is not versioned.
+The structure of the versioned release is described by the [versioned release schema](../../build/current_lang/versioned-release-validation-schema.json); note that the `ocid` field's value is not versioned.
 
 ### Merge routine
 
@@ -159,7 +159,7 @@ If the **input** array contains anything other than objects, treat the array as 
 
 ##### Whole list merge
 
-An **input** array must be treated as a literal value if the corresponding field in a {download}`dereferenced copy <../../build/current_lang/dereferenced-release-schema.json>` of the release schema has `"array"` in its `type` and if any of the following are also true:
+An **input** array must be treated as a literal value if the corresponding field in a [dereferenced copy](../../build/current_lang/dereferenced-release-schema.json) of the release schema has `"array"` in its `type` and if any of the following are also true:
 
 * The field has `"wholeListMerge": true`
 * The field sets `items/type`, and has anything other than `"object"` in `items/type`

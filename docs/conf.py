@@ -13,6 +13,8 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import csv
+import json
 import os
 from glob import glob
 from pathlib import Path
@@ -20,6 +22,7 @@ from pathlib import Path
 import standard_theme
 from docutils.nodes import make_id
 from ocds_babel.translate import translate
+from ocdskit.mapping_sheet import mapping_sheet
 from sphinx.locale import get_translation
 
 # -- Project information -----------------------------------------------------
@@ -40,10 +43,10 @@ release = '1.1.5'
 extensions = [
     'myst_parser',
     'sphinx.ext.ifconfig',
-    'sphinx_panels',
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
+    'sphinx_design',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -87,8 +90,6 @@ locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'lo
 smartquotes = False
 
 # MyST configuration.
-# Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
-# https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = ['linkify']
 myst_heading_anchors = 6
 myst_heading_slug_func = make_id
@@ -159,7 +160,7 @@ def setup(app):
     standard_dir = basedir / 'schema'
     standard_build_dir = basedir / 'build' / language
 
-    branch = os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1]
+    branch = os.getenv('GITHUB_REF_NAME', 'latest')
 
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
@@ -167,3 +168,11 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(standard_dir / 'codelists' / '*.csv')), standard_build_dir / 'codelists', codelists_domain),
     ], localedir, language, headers, version=branch)
+
+    with (standard_build_dir / 'release-schema.json').open() as f:
+        fieldnames, rows = mapping_sheet(json.load(f), infer_required=True)
+
+    with (standard_build_dir / 'release-schema.csv').open('w') as f:
+        writer = csv.DictWriter(f, fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)

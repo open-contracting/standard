@@ -108,7 +108,7 @@ To achieve success, an OCDS implementation team ought to include the following r
 
 **Action:** Ask everyone in your team to [read the Primer](../../primer/index).
 
-**Action**: [Contact the OCDS Helpdesk](../../support/index) or [complete this form](http://bit.ly/OCP-Training) to arrange an online introductory training for your technical team, in English or Spanish.
+**Action**: [Contact the Data Support Team](../../support/index) or [complete this form](http://bit.ly/OCP-Training) to arrange an online introductory training for your technical team, in English or Spanish.
 
 **Action:** [Join the OCDS discussion group](../../support/index) to keep up to date and engage with other implementers.
 
@@ -121,5 +121,7 @@ The World Bank Group's [e-Procurement Toolkit](http://www.eprocurementtoolkit.or
 **Resource:** [Guidebook: Crafting a Results-Driven Request for Proposals (RFP)](https://govlab.hks.harvard.edu/guidebook-crafting-results-driven-request-proposals-rfp), by the Harvard Kennedy School [Government Performance Lab](https://govlab.hks.harvard.edu)
 
 **Resource:** [Contract Design Pattern Library](https://contract-design.worldcc.com), by [World Commerce & Contracting](https://www.worldcc.com) – provides solutions to common usability and understandability problems in contracts, to help you organize and communicate your contracts more clearly, so that they are read, understood, and acted upon
+
+**Resource:** [What data should I collect? A guide to prioritizing data fields in an e-GP implementation](https://www.open-contracting.org/es/resources/what-data-should-i-collect-a-guide-to-prioritizing-data-fields-in-an-e-gp-implementation/)
 
 [Next phase: Map](map)
