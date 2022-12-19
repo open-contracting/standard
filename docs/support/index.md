@@ -11,7 +11,7 @@ If you are planning to publish or use OCDS data, then the Data Support Team is o
 * Providing guidance on mapping your data structures to OCDS
 * Giving you feedback on draft data files, and checking the structure of your data
 
-Support is provided free of charge and is available in English, Russian and Spanish.
+Support is provided free of charge and is available in English, Spanish and Russian.
 
 Please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the Data Support Team will be in touch with you soon.
 

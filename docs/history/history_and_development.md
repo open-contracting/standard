@@ -28,7 +28,7 @@ Old tools that have been superseded or obsoleted by new tools can be found in th
 
 The OCDS was developed with input from many people, to whom we extend our thanks.
 
-From 2015 to 2022, [data support](../support/index) was delivered through collaboration with [Open Data Services Co-operative Limited](https://opendataservices.coop) in the United Kingdom and [Centro de Desarrollo Sostenible](http://www.cds.com.py) in Paraguay.
+From 2015 to 2022, [data support](../support/index) was delivered through collaboration with [Open Data Services Co-operative Limited](https://opendataservices.coop) in the United Kingdom and [Centro de Desarrollo Sostenible](https://www.cds.com.py) in Paraguay.
 
 ### Core team
 
