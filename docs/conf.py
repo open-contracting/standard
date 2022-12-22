@@ -13,6 +13,8 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import csv
+import json
 import os
 from glob import glob
 from pathlib import Path
@@ -20,6 +22,7 @@ from pathlib import Path
 import standard_theme
 from docutils.nodes import make_id
 from ocds_babel.translate import translate
+from ocdskit.mapping_sheet import mapping_sheet
 from sphinx.locale import get_translation
 
 # -- Project information -----------------------------------------------------
@@ -43,6 +46,7 @@ extensions = [
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
+    'sphinx_design',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -162,3 +166,11 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(standard_dir / 'codelists' / '*.csv')), standard_build_dir / 'codelists', codelists_domain),
     ], localedir, language, headers, version=branch)
+
+    with (standard_build_dir / 'release-schema.json').open() as f:
+        fieldnames, rows = mapping_sheet(json.load(f), infer_required=True)
+
+    with (standard_build_dir / 'release-schema.csv').open('w') as f:
+        writer = csv.DictWriter(f, fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)

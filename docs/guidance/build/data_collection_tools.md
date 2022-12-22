@@ -23,9 +23,9 @@ Consider using the form if:
 * You want to minimize the work required to collate data
 * You **don’t need to update** the data about a contracting (or planning) process after it is first entered
 
-The form includes a subset of fields from the **tender** and **buyer** sections of OCDS. The OCDS Helpdesk can help you extend and adapt the form to suit your needs.
+The form includes a subset of fields from the **tender** and **buyer** sections of OCDS. The Data Support Team can help you extend and adapt the form to suit your needs.
 
-Read more about using and customizing the form in the [resource guide](https://www.open-contracting.org/resources/ocds-data-collection-form/). The OCDS helpdesk can also provide guidance on using the form to collect data and help you to analyze the data that you collect.
+Read more about using and customizing the form in the [resource guide](https://www.open-contracting.org/resources/ocds-data-collection-form/). The Data Support Team can also provide guidance on using the form to collect data and help you to analyze the data that you collect.
 
 ## Data collection spreadsheet
 
@@ -48,7 +48,7 @@ The template includes a subset of fields from the **planning**, **tender**, **aw
 
 The spreadsheet includes instructions describing how to enter data and how to customize the spreadsheet to suit your needs. Read more about developing data collection spreadsheets in our blog series on [prototyping OCDS data using spreadsheets](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/).
 
-The OCDS Helpdesk can:
+The Data Support Team can:
 
 * Provide guidance on using the template to collect data
 * Help you to extend or adapt the template to meet your requirements
@@ -71,7 +71,7 @@ Consider using OpenContractR if:
 * You want users to be able to **edit or update** already entered data
 * You want an online **search** interface for your data
 
-Read more about OpenContractR in its [introduction](https://drive.google.com/file/d/18WHnQcnA6oESZtcZgS4rgaBLjd8BKvbM/view). If you’re interested in using OpenContractR please get in touch with the OCDS Helpdesk.
+Read more about OpenContractR in its [introduction](https://drive.google.com/file/d/18WHnQcnA6oESZtcZgS4rgaBLjd8BKvbM/view). If you’re interested in using OpenContractR please get in touch with the Data Support Team.
 
 ## Contrataciones Abiertas tool
 
