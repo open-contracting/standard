@@ -6,7 +6,7 @@
 
 This phase is about creating a new IT system, or updating an existing IT system, to implement your [mapping](map) and publish OCDS data.
 
-Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../support/index.md#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
+Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [Data Support Team](../support/index) can help you to consider options for collecting, combining and publishing data.
 
 ```{toctree}
 :hidden:
@@ -92,7 +92,7 @@ Having determined your system architecture, it's time to implement it. This is o
 Whether your current infrastructure is low tech or high tech, we have tools and resources to help you publish OCDS. Depending on your [data sources](map.md#identify-your-data-sources) and system architecture, you might be able to reuse some of these OCDS tools:
 
 ```{note}
-If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../support/index).
+If you have any issues using OCDS tools, contact the [Data Support Team](../../support/index).
 ```
 
 * If you are creating (or upgrading) an **electronic government procurement (e-GP) system** or open contracting data portal, refer to our [Guide to Defining OCDS Functional Requirements for e-GP Systems](https://www.open-contracting.org/resources/guide-defining-open-contracting-data-standard-functional-requirements-electronic-government-procurement-systems/).
@@ -108,15 +108,13 @@ If you aren't creating or updating an IT system, but are instead reusing an exis
 * The [data collection spreadsheet](https://www.open-contracting.org/resources/data-collection-spreadsheet/) includes instructions describing how to add fields and how to add and reformat sheets.
 * The [data collection form](https://www.open-contracting.org/resources/ocds-data-collection-form/) includes instructions describing how to add fields and how to customize descriptions and guidance.
 
-Contact the [OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on customizing a tool to meet your needs.
+Contact the [Data Support Team](../support/index) for guidance on customizing a tool to meet your needs.
 
 **Resource:** [Using tabular versions of OCDS to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
 
 **Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([Part 1](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/), [Part 2](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/), [Part 3](https://www.open-contracting.org/2020/05/28/prototyping-ocds-data-using-spreadsheets-part-iii/)).
 
 ```{note}
-If you want to use OCDS Kit or Flatten Tool, but don't have access to the command line or can't install new software on your computer, you can use [OCDS Toucan](https://toucan.open-contracting.org/), which gives access to these tools through a web browser.
-
 Re-using tools isn't always easy. [Tool Re-Use in Open Contracting: A Primer](https://www.open-contracting.org/resources/tool-re-use-in-open-contracting-a-primer/) is a step-by-step guide to help you determine what you need, evaluate which tool is the right fit, and evaluate whether the right conditions are in place for successful re-use of a tool.
 ```
 
@@ -126,7 +124,7 @@ If your [mapping](map) identified data elements which don't map to OCDS or an ex
 
 **Action:** Read the guidance on [developing new extensions](map/extensions.md#developing-new-extensions), which includes links to useful tools and resources.
 
-**Action:** Request support from the [OCDS Helpdesk](../../support/index) to model your extensions.
+**Action:** Request assistance from the [Data Support Team](../../support/index) to model your extensions.
 
 **Action:** Share your extensions with the OCDS community on [GitHub](https://github.com/open-contracting/standard/issues).
 
@@ -161,7 +159,7 @@ If you can't collect enough real data for testing, then you ought to create real
 
 **Action:** Upload some data to the [OCDS Data Review Tool](https://standard.open-contracting.org/review/).
 
-**Action:** Request feedback on your draft data from the [OCDS Helpdesk](../../support/index).
+**Action:** Request feedback on your draft data from the [Data Support Team](../../support/index).
 
 **Tool:** The [jOCDS Validator](https://developmentgateway.org/blog/your-data-ocds-compliant-introducing-jocds-validator) can be used for bulk checking of the structure and format of OCDS data
 

@@ -121,7 +121,7 @@ Any potential supplier can submit a request to take part in the first stage, but
 ```{note}
 OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [GitHub](https://github.com/open-contracting/standard/issues/440).
 
-Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
+Contact the [Data Support Team](../../support/index) if you want to disclose this type of information.
 ```
 
 ## Example: Pre-selection
@@ -153,5 +153,5 @@ Only qualified potential suppliers will be invited to bid in subsequent tenders 
 ```{note}
 OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [GitHub issue](https://github.com/open-contracting/standard/issues/440).
 
-Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
+Contact the [Data Support Team](../../support/index) if you want to disclose this type of information.
 ```
