@@ -15,3 +15,5 @@ jobs:
           cache-dependency-path: '**/requirements*.txt'
       - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
       - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
+      - run: pip install codespell
+      - run: codespell -S .git,docson,locale,examples,country.csv,currency.csv,language.csv,mediaType.csv -L fo,zar .
