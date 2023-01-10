@@ -20,7 +20,7 @@ OCDS defines an award as:
 ```
 
 ```{note}
-In OCDS 1.2 and earlier, a single contract cannot be linked to more than one award. Consequently, in cases where real-world awards are more detailed than the resulting real-world contract (for example, two lots are awarded to a single supplier and only a single contract is signed), this cannot be represented fully accurately in OCDS. There are two possible workarounds: (1) summarizing the multiple real-world awards into a single OCDS award (that is, summing the values of the lots, choosing a common award date, etc.), (2) splitting the single real-world contract into multiple OCDS contracts. If you want to disclose this type of information, we recommend using approach (1) or contacting the [helpdesk](../../support/index).
+In OCDS 1.2 and earlier, a single contract cannot be linked to more than one award. Consequently, in cases where real-world awards are more detailed than the resulting real-world contract (for example, two lots are awarded to a single supplier and only a single contract is signed), this cannot be represented fully accurately in OCDS. There are two possible workarounds: (1) summarizing the multiple real-world awards into a single OCDS award (that is, summing the values of the lots, choosing a common award date, etc.), (2) splitting the single real-world contract into multiple OCDS contracts. If you want to disclose this type of information, we recommend using approach (1) or contacting the [Data Support Team](../../support/index).
 ```
 
 ### Contract
