@@ -9,7 +9,7 @@ Publishers regularly collect the *legal identifiers* of the organizations involv
 * A prefix for the organization list (also known as registry or register) from which the identifier is drawn: for example, the company register.
 * The existing identifier for the organization within that list.
 
-To disclose an organization identifier, first, use [org-id.guide](http://org-id.guide) to find the prefix for the organization list. If the list is not described by org-id.guide, contact the [OCDS Helpdesk](../../support/index) to register the list.
+To disclose an organization identifier, first, use [org-id.guide](http://org-id.guide) to find the prefix for the organization list. If the list is not described by org-id.guide, contact the [Data Support Team](../../support/index) to register the list.
 
 If you choose not to register an organization list with org-id.guide, you ought to describe the list in a [publication policy](../publish.md#finalize-your-publication-policy), and select a prefix that is not in use by another list in org-id.guide, by following the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code).
 
