@@ -101,7 +101,7 @@ See the full JSON file below.
 
 #### 2. Tender update
 
-The tender has been updated: the value increased slighly and the description has changed.
+The tender has been updated: the value increased slightly and the description has changed.
 
 **ProcurementProcess**
 
