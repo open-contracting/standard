@@ -70,12 +70,12 @@ push: extract
 	tx push -s
 
 force_push.%: extract
-	tx push -s -t -f --no-interactive -l $*
+	tx push -f -s -t -l $*
 
 # Also pushes the translation .po files (`file_filter` in .tx/config) to Transifex.
 .PHONY: force_push
 force_push: extract
-	tx push -s -t -f --no-interactive -l $(COMMA_SEPARATED_TRANSLATIONS)
+	tx push -f -s -t -l $(COMMA_SEPARATED_TRANSLATIONS)
 
 pull.%: FORCE
 	tx pull -f -l $*
