@@ -13,5 +13,7 @@ jobs:
           python-version: 3.8
           cache: pip
           cache-dependency-path: '**/requirements*.txt'
-      - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
-      - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
+      - shell: bash
+        run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
+      - shell: bash
+        run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
