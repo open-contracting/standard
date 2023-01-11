@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2023-01-10 13:45-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/schema/identifiers.md:1
 msgid "Identifiers"
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Worked Example"
 msgstr ""
 
-#: ../../docs/schema/identifiers.md:1
+#: ../../docs/schema/identifiers.md:22
 msgid ""
 "Two government publishers (Town A and Town B) number their contracting "
 "processes from 0 upwards."
@@ -105,7 +105,7 @@ msgstr ""
 "Deux producteurs de données publiques (ville A et ville B) numérotent leurs "
 "processus de passation de marché de 0 à la suite."
 
-#: ../../docs/schema/identifiers.md:3
+#: ../../docs/schema/identifiers.md:24
 msgid ""
 "Town A publishes information on a contracting process to build a new road. "
 "Internally they know this as contract 0005."
@@ -114,7 +114,7 @@ msgstr ""
 "pour construire une nouvelle route. En interne, ils savent que c'est le "
 "contrat 0005."
 
-#: ../../docs/schema/identifiers.md:5
+#: ../../docs/schema/identifiers.md:26
 msgid ""
 "Town B publishes information on a contracting process to buy textbooks for a"
 " school. Internally they also know this as contract 0005."
@@ -123,7 +123,7 @@ msgstr ""
 " pour acheter des manuels scolaires pour une école. En interne, ils le "
 "connaissant aussi sous l'identifiant 0005."
 
-#: ../../docs/schema/identifiers.md:7
+#: ../../docs/schema/identifiers.md:28
 msgid ""
 "When they publish their OCDS data, each government adds a unique prefix onto"
 " their internal identifiers."
@@ -131,7 +131,7 @@ msgstr ""
 "Quand ils publient leurs données OCDS, chaque administration ajoute un "
 "préfixe unique à leurs identifiants internes."
 
-#: ../../docs/schema/identifiers.md:9
+#: ../../docs/schema/identifiers.md:30
 msgid ""
 "Now Town A's contracting process has the `ocid` of 'ocds-fh349f-0005' and "
 "Town B's contracting process has the `ocid` of 'ocds-twb234-0005'."
@@ -139,7 +139,7 @@ msgstr ""
 "Maintenant, les processus de passation de marchés de la ville A ont l'`ocid`"
 " 'ocds-fh349f-0005' et ceux de la ville B ont l'`ocid` 'ocds-twb234-0005'."
 
-#: ../../docs/schema/identifiers.md:11
+#: ../../docs/schema/identifiers.md:32
 msgid ""
 "There is now no chance of these getting mixed up in a system which imports "
 "data from both towns."
@@ -147,7 +147,7 @@ msgstr ""
 "Il n'est maintenant plus possible que ces identifiants soient confondus par "
 "un système qui importe les données des deux villes."
 
-#: ../../docs/schema/identifiers.md:13
+#: ../../docs/schema/identifiers.md:34
 msgid ""
 "And, if an independent civil society contract monitoring group want to "
 "publish a report about implementation of Town A's road project, or Town B's "
@@ -271,7 +271,7 @@ msgstr ""
 "l'information sur vos processus de passation de marchés aient un identifiant"
 " interne commun."
 
-#: ../../docs/schema/identifiers.md:1
+#: ../../docs/schema/identifiers.md:67
 msgid ""
 "In Mexico City, each time a tender or direct contract award process is "
 "initiated, the department responsible assigns an identifier."
@@ -280,7 +280,7 @@ msgstr ""
 "qu'un marché direct est lancé, le ministère responsable attribue un "
 "identifiant."
 
-#: ../../docs/schema/identifiers.md:3
+#: ../../docs/schema/identifiers.md:69
 msgid ""
 "These are made up of an identifier for the department responsible for the "
 "procurement, a tender number, and the year."
@@ -288,15 +288,15 @@ msgstr ""
 "Ceux-ci sont constitués d'un identifiant pour le département responsable du "
 "marché, du numéro d'appel d'offres et de l'année."
 
-#: ../../docs/schema/identifiers.md:5 ../../docs/schema/identifiers.md:172
+#: ../../docs/schema/identifiers.md:71 ../../docs/schema/identifiers.md:172
 msgid "For example:"
 msgstr "Par exemple : "
 
-#: ../../docs/schema/identifiers.md:7
+#: ../../docs/schema/identifiers.md:73
 msgid "OM-DGRMSG-004-13"
 msgstr "OM-DGRMSG-004-13"
 
-#: ../../docs/schema/identifiers.md:9
+#: ../../docs/schema/identifiers.md:75
 msgid ""
 "This internal identifier can be exchanged with, and recorded in, any other "
 "systems which process information about this contracting process. For "
@@ -308,17 +308,14 @@ msgstr ""
 "marché. Par exemple, des systèmes de notification ou d'enregistrement des "
 "transactions de paiement des fournisseurs."
 
-#: ../../docs/schema/identifiers.md:11
+#: ../../docs/schema/identifiers.md:77
 msgid ""
-"Mexico City then registered a prefix with the OCDS helpdesk. They have been "
-"given the prefix ‘ocds-87sd3t’ which can be added to their unique process "
-"identifiers to give a globally unique `ocid`. E.g."
+"Mexico City then registered a prefix with the Data Support Team. They have "
+"been given the prefix ‘ocds-87sd3t’ which can be added to their unique "
+"process identifiers to give a globally unique `ocid`. E.g."
 msgstr ""
-"Mexico a alors enregistré un préfixe avec l'assistance technique OCDS. Ils "
-"ont reçu le préfixe 'OCDS-87sd3t' qui peut être ajouté à leurs identifiants "
-"uniques pour donner un `ocid` mondialement unique. Par exemple :"
 
-#: ../../docs/schema/identifiers.md:13
+#: ../../docs/schema/identifiers.md:79
 msgid "ocds-87sd3t-OM-DGRMSG-004-13"
 msgstr "ocds-87sd3t-OM-DGRMSG-004-13"
 
@@ -473,7 +470,7 @@ msgid "The **existing organizational ID** provided in that public register"
 msgstr ""
 "L'**identifiant existant de l'organisation** prévu dans ce registre public"
 
-#: ../../docs/schema/identifiers.md:1
+#: ../../docs/schema/identifiers.md:120
 msgid ""
 "The **organization register prefix** for UK Companies House is GB-COH. The "
 "organization **Development Initiatives** has been assigned the company "
