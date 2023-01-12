@@ -77,7 +77,7 @@ Each of the goals above have different data needs. These needs ought to inform y
 
 * Which fields to publish
 * How often to publish or update data
-* Whether to publish a change history
+* Whether to publish a [change history](../../primer/releases_and_records)
 * What data formats and access methods to provide
 
 **Resource**: [Open Contracting Data Use Cases](https://www.open-contracting.org/resources/open-contracting-data-use-cases/)
