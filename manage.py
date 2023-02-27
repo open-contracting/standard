@@ -361,7 +361,7 @@ def get_versioned_release_schema(schema):
     """
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
-    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'  # noqa
+    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'  # noqa: E501
     schema['title'] = 'Schema for a compiled, versioned Open Contracting Release.'
 
     # Release IDs, dates and tags appear alongside values in the versioned release schema.
@@ -575,9 +575,8 @@ def update_currency():
     url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_one.xml'  # noqa: E501
     tree = etree.fromstring(get(url).content)
     for node in tree.xpath('//CcyNtry'):
-        match = node.xpath('./Ccy')
         # Entries like Antarctica have no universal currency.
-        if match:
+        if match := node.xpath('./Ccy'):
             code = node.xpath('./Ccy')[0].text
             title = node.xpath('./CcyNm')[0].text.strip()
             if code not in current_codes:

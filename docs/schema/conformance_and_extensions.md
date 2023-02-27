@@ -10,7 +10,7 @@ To maximize the interoperability of data published using the Open Contracting Da
 1. It *must not* use terms from outside this specification's terms where this specification's terms would suffice.
 1. Its usage of this specification's terms *must* be consistent with the semantics of those terms.
 1. It *may* use terms from outside this specification's terms where this specification's terms are insufficient.
-1. If an implementation serializes to JSON, its serializations *must* [validate](https://standard.open-contracting.org/review/) against this specification's JSON Schema.
+1. If an implementation serializes to JSON, its serializations *must* [validate](https://review.standard.open-contracting.org/) against this specification's JSON Schema.
 
 Whenever using terms from outside the OCDS standard, we encourage the publisher or user responsible to consult with the community on the best approach to adopt. 
 
