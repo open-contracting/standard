@@ -33,7 +33,7 @@ All OCDS publications ought to meet the following criteria:
 1. **Registered**: The data uses a [registered OCID prefix](../../schema/identifiers.md#open-contracting-process-identifier-ocid).
 1. **Discoverable**: It is possible to discover the data by navigating a website whose homepage is indexed by popular web search engines.
 1. **Retrievable**: It is possible to automate the download of all the data, either using an HTML page listing bulk download URLs, or using only machine-readable data as input.
-1. **Reviewable**: The [OCDS Data Review Tool](https://standard.open-contracting.org/review/) is able to report results on the data.
+1. **Reviewable**: The [OCDS Data Review Tool](https://review.standard.open-contracting.org/) is able to report results on the data.
 1. **Appropriate**: Concepts are published in semantic accordance with the rules of the OCDS (or registered extensions) rather than using a non-OCDS field or code.
 1. **Active**: For each publisher, there is an OCDS release with a top-level `date` field value within the last 12 months.
 1. **Parity**: For each publisher, for the _time period_ and _contracting authorities_ covered by the data, there isn’t another dataset by the same publisher that covers more than 25% more contracting (or planning) processes.

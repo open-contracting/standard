@@ -12,7 +12,7 @@ The [data collection form](https://www.open-contracting.org/resources/ocds-data-
 
 Data from the form is copied to a Google Sheet which structures and formats it to conform to OCDS.
 
-Data entered using the form can be checked and converted using the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) and published in either spreadsheet or JSON format.
+Data entered using the form can be checked and converted using the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) and published in either spreadsheet or JSON format.
 
 Consider using the form if:
 
@@ -33,7 +33,7 @@ The [data collection spreadsheet](https://www.open-contracting.org/resources/dat
 
 Data is entered directly into the template, which is structured and formatted to conform to OCDS.
 
-Data entered the template can be checked and converted using the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) and published in either spreadsheet or JSON format.
+Data entered the template can be checked and converted using the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) and published in either spreadsheet or JSON format.
 
 Consider using the spreadsheet template to collect data if:
 

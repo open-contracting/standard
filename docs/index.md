@@ -62,7 +62,7 @@ See how the OCDS has changed over time
 
 ```{grid-item-card} Data Review Tool
 :img-top: _static/png/homepage/question.png
-:link: https://standard.open-contracting.org/review/
+:link: https://review.standard.open-contracting.org/
 :text-align: center
 
 Check whether your data follows the OCDS correctly

@@ -140,7 +140,7 @@ As covered in the [Design](design) phase, different users will need information 
 
 ## Check your data
 
-Throughout the build phase you ought to regularly use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check the structure and format of your data. This ensures that your data is compatible with OCDS tools and is comparable with other OCDS data.
+Throughout the build phase you ought to regularly use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check the structure and format of your data. This ensures that your data is compatible with OCDS tools and is comparable with other OCDS data.
 
 OCDS data needs to be published as part of a release package or a record package. You can use [OCDS Kit](https://pypi.org/project/ocdskit/) to reformat your data before submitting it to the review tool, but any data you publish needs to be correctly packaged.
 
@@ -157,7 +157,7 @@ If you can't collect enough real data for testing, then you ought to create real
 * avoid using placeholder values
 * avoid setting multiple data elements to the same value.
 
-**Action:** Upload some data to the [OCDS Data Review Tool](https://standard.open-contracting.org/review/).
+**Action:** Upload some data to the [OCDS Data Review Tool](https://review.standard.open-contracting.org/).
 
 **Action:** Request feedback on your draft data from the [Data Support Team](../../support/index).
 
