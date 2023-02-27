@@ -576,7 +576,7 @@ def update_currency():
     tree = etree.fromstring(get(url).content)
     for node in tree.xpath('//CcyNtry'):
         # Entries like Antarctica have no universal currency.
-        if match := node.xpath('./Ccy'):
+        if node.xpath('./Ccy'):
             code = node.xpath('./Ccy')[0].text
             title = node.xpath('./CcyNm')[0].text.strip()
             if code not in current_codes:
