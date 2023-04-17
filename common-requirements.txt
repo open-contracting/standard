@@ -23,7 +23,7 @@ babel==2.9.1
     #   sphinx-intl
 certifi==2022.12.7
     # via
-    #   elasticsearch
+    #   elastic-transport
     #   requests
     #   urllib3
 cffi==1.15.0
@@ -46,7 +46,9 @@ docutils==0.18
     # via
     #   myst-parser
     #   sphinx
-elasticsearch==7.17.6
+elastic-transport==8.4.0
+    # via elasticsearch
+elasticsearch[requests]==8.6.2
     # via ocdsindex
 exceptiongroup==1.0.0
     # via pytest
@@ -91,7 +93,7 @@ ocds-babel==0.3.1
     # via -r common-requirements.in
 ocdsextensionregistry==0.1.12
     # via -r common-requirements.in
-ocdsindex==0.1.1
+ocdsindex==0.2.0
     # via -r common-requirements.in
 outcome==1.1.0
     # via trio
@@ -123,6 +125,7 @@ pyyaml==5.4.1
     # via myst-parser
 requests==2.25.1
     # via
+    #   elasticsearch
     #   ocdsextensionregistry
     #   requests-cache
     #   sphinx
@@ -178,7 +181,7 @@ uc-micro-py==1.0.1
     # via linkify-it-py
 urllib3[secure,socks]==1.26.5
     # via
-    #   elasticsearch
+    #   elastic-transport
     #   requests
     #   selenium
 wheel==0.38.4
