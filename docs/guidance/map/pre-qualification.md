@@ -128,7 +128,7 @@ The National Nuclear Laboratory issues a [restricted procedure contract notice](
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
-The procuring entitiy will invite a maximum of 5 qualified suppliers to submit a tender at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which suppliers to invite proposals from.
+The procuring entity will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-selection_tender.json
 :jsonpointer: /releases/0/tender
