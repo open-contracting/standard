@@ -178,7 +178,7 @@ var module;
                                                           return renderjson; };
     renderjson.set_sort_objects = function(sort_bool) { renderjson.sort_objects = sort_bool;
                                                         return renderjson; };
-    // Backwards compatiblity. Use set_show_to_level() for new code.
+    // Backwards compatibility. Use set_show_to_level() for new code.
     renderjson.set_show_by_default = function(show) { renderjson.show_to_level = show ? Number.MAX_VALUE : 0;
                                                       return renderjson; };
                                                       

@@ -87,7 +87,7 @@ The ocid is case-sensitive; in other words, the letter case of an ocid must be c
 
 Publishers must register an ocid prefix. See the [registration pages](../guidance/build) for details of how to obtain your ocid prefix.
 
-Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes.
+Prefix are randomly generated lowercase alphanumeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes.
 
 Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organizations might be able to issue prefixes, each with their own prefix agency identifiers.
 
