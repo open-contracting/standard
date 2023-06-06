@@ -40,7 +40,7 @@ Specifically:
 These files are presently:
 
 * Accessible at [https://standard.open-contracting.org/schema/](https://standard.open-contracting.org/schema/)
-* Accessible under [https://standard.open-contracting.org/latest/en/](../index) ([example](../release-schema.json))
+* Accessible under [https://standard.open-contracting.org/latest/en/](../index) ([example](../../build/current_lang/release-schema.json))
 * Rendered as tables and using Docson under [Reference](../schema/index) ([example](../schema/release))
 * Located in the [`schema` directory](https://github.com/open-contracting/standard/tree/HEAD/schema)
 
