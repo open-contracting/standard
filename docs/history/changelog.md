@@ -271,6 +271,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1466](https://github.com/open-contracting/standard/pull/1482) Add examples in release reference documentation.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
+* [#1618](https://github.com/open-contracting/standard/pull/1618) Move governance policies from Google Docs, updating references for OCDS 1.1.5 and OCDS 1.2.0, and removing references to GitHub issues.
 
 ## [1.1.5] - 2020-08-20
 
