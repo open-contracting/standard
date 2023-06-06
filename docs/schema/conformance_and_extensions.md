@@ -6,7 +6,8 @@ To maximize the interoperability of data published using the Open Contracting Da
 
 ### Publication conformance
 
-1. A conforming implementation *may* use only a subset of this specification's terms.
+1. A conforming implementation *must* respect the normative statements in the [reference section](index) of this specification's documentation, in its JSON Schema files, and in its CSV codelist files. Normative statements are expressions containing [RFC 2119 keywords](https://datatracker.ietf.org/doc/html/rfc2119) in lowercase.
+1. It *may* use only a subset of this specification's terms.
 1. It *must not* use terms from outside this specification's terms where this specification's terms would suffice.
 1. Its usage of this specification's terms *must* be consistent with the semantics of those terms.
 1. It *may* use terms from outside this specification's terms where this specification's terms are insufficient.

@@ -267,6 +267,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1375](https://github.com/open-contracting/standard/pull/1375) Update guidance for empty fields in the merging documentation.
 * [#1466](https://github.com/open-contracting/standard/pull/1466) Reference worked examples in release and record reference documentation.
 * [#1466](https://github.com/open-contracting/standard/pull/1482) Add examples in release reference documentation.
+* [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
 
 ## [1.1.5] - 2020-08-20
