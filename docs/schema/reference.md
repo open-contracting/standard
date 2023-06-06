@@ -738,3 +738,12 @@ The entries of the top-level `links` array are `Link` objects:
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Link
 ```
+
+### SimpleIdentifier
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleIdentifier
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/SimpleIdentifier
+```
