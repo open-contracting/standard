@@ -208,6 +208,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
   * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` to use consistent wording for "goods, services and/or works".
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
+  * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
