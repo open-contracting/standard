@@ -53,6 +53,16 @@ extract_markdown: current_lang.en
 .PHONY: extract
 extract: extract_theme extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
 
+$(TRANSLATIONS:.%=docs/locale/%): docs/locale/%: FORCE
+	sphinx-intl update -p $(POT_DIR) -d $(LOCALE_DIR) -l "$*"
+
+.PHONY: docs/locale
+docs/locale: $(TRANSLATIONS:.%=docs/locale/%)
+
+.PHONY: pocount
+pocount:
+	find $(LOCALE_DIR) -name LC_MESSAGES -exec pocount --incomplete --short "{}" +
+
 ### Transifex
 
 .PHONY: clean_txconfig
@@ -62,7 +72,7 @@ clean_txconfig:
 
 .PHONY: update_txconfig
 update_txconfig:
-	sphinx-intl update-txconfig-resources --transifex-project-name $(TRANSIFEX_PROJECT) --pot-dir $(POT_DIR) --locale-dir $(LOCALE_DIR)
+	sphinx-intl update-txconfig-resources --transifex-organization-name $(TRANSIFEX_ORGANIZATION) --transifex-project-name $(TRANSIFEX_PROJECT) --pot-dir $(POT_DIR) --locale-dir $(LOCALE_DIR)
 
 # Builds and pushes the .pot files (`source_file` in .tx/config) to Transifex.
 .PHONY: push
