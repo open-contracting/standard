@@ -200,4 +200,6 @@ Changes to core extensions between standard versions may be staged with labels (
 :hidden:
 
 deprecation
+normative
+translation
 ```

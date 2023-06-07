@@ -6,7 +6,8 @@ To maximize the interoperability of data published using the Open Contracting Da
 
 ### Publication conformance
 
-1. A conforming implementation *may* use only a subset of this specification's terms.
+1. A conforming implementation *must* respect the normative statements in the [reference section](index) of this specification's documentation, in its JSON Schema files, and in its CSV codelist files. Normative statements are expressions containing [RFC 2119 keywords](https://datatracker.ietf.org/doc/html/rfc2119) in lowercase.
+1. It *may* use only a subset of this specification's terms.
 1. It *must not* use terms from outside this specification's terms where this specification's terms would suffice.
 1. Its usage of this specification's terms *must* be consistent with the semantics of those terms.
 1. It *may* use terms from outside this specification's terms where this specification's terms are insufficient.
@@ -15,28 +16,6 @@ To maximize the interoperability of data published using the Open Contracting Da
 Whenever using terms from outside the OCDS standard, we encourage the publisher or user responsible to consult with the community on the best approach to adopt. 
 
 (Our publication conformance section is [based on the Popolo Project](https://www.popoloproject.com/specs/#conformance) approach.)
-
-### Validator and application conformance
-
-As of OCDS 1.1, release/record packages must include a `version` field to explicitly declare their version. All packages without an explicit version declared should be validated against the version 1.0 schema unless otherwise instructed by the user.
-
-Validators and applications should:
-
-* Report to the user when it encounters a version of the data it does not support;
-
-* Reject data from a higher integer version than it supports, unless otherwise instructed by the user; 
-
-* Report to the user when it encounters extensions it does not support;
-
-Validators **must** report a warning to the user when they encounter fields not covered by the version of the schema and extensions that they are validating against.
-
-Applications **may** report a warning to use the user when they encounter fields they do not support, or **may** discard these fields.
-
-The handling of additional fields and deprecated fields is implementation defined.
-
-For behaviours that are implementation defined, applications should clearly document their chosen approach. 
-
-See also the [deprecation guidance](../governance/deprecation).
 
 ## Extensions
 

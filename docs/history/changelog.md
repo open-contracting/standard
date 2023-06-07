@@ -105,6 +105,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1416](https://github.com/open-contracting/standard/pull/1416) Change "interested supplier" to "potential supplier".
   * [#1464](https://github.com/open-contracting/standard/pull/1464) Deprecate 'eligibilityCriteria', add 'exclusionGrounds' and 'selectionCriteria'.
   * [#1508](https://github.com/open-contracting/standard/pull/1508) Clarify that "evaluation" in 'evaluationCriteria' and 'evaluationReports' covers exclusion grounds, selection criteria and award criteria. Add a document type for 'awardCriteria'. 
+  * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove non-existent sections from `Section` column.
 
 * `method.csv`:
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
@@ -207,6 +208,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
   * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` to use consistent wording for "goods, services and/or works".
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
+  * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
+  * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
@@ -267,6 +270,9 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1375](https://github.com/open-contracting/standard/pull/1375) Update guidance for empty fields in the merging documentation.
 * [#1466](https://github.com/open-contracting/standard/pull/1466) Reference worked examples in release and record reference documentation.
 * [#1466](https://github.com/open-contracting/standard/pull/1482) Add examples in release reference documentation.
+* [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
+* [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
+* [#1618](https://github.com/open-contracting/standard/pull/1618) Move governance policies from Google Docs, updating references for OCDS 1.1.5 and OCDS 1.2.0, and removing references to GitHub issues.
 
 ## [1.1.5] - 2020-08-20
 
