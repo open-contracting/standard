@@ -36,7 +36,7 @@ All OCDS publications ought to meet the following criteria:
 1. **Reviewable**: The [OCDS Data Review Tool](https://standard.open-contracting.org/review/) is able to report results on the data.
 1. **Appropriate**: Concepts are published in semantic accordance with the rules of the OCDS (or registered extensions) rather than using a non-OCDS field or code.
 1. **Active**: For each publisher, there is an OCDS release with a top-level `date` field value within the last 12 months.
-1. **Parity**: For each publisher, for the _time period_ and _contracting authorities_ covered by the data, there isn’t another dataset by the same publisher that covers more than 25% more contracting processes.
+1. **Parity**: For each publisher, for the _time period_ and _buyers_ covered by the data, there isn’t another dataset by the same publisher that covers more than 25% more contracting processes.
 
 The Data Support Team is happy to review draft and newly published OCDS data and can work with publishers with advice to meet the above criteria. A publication that does not meet this minimum threshold will not be listed as a publisher by OCP as part of [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
@@ -51,7 +51,7 @@ Improvement on the below indicators demonstrate that the published information i
 1. Publish subsequent releases per OCID to show how the contracting process is progressing over time
 1. Increase the publication of historical information (based on a minimal set of date fields that appear across all sources, e.g. `tender.tenderPeriod`, `awards.date`, and `contracts.dateSigned`)
 1. Increase the average coverage of fields per compiled release, for example either new fields not previously published in any release, or an increase in the use of a field across releases (e.g. very little data was published about direct awards and now more is being published about direct awards)
-1. Increase the number of contracting authorities covered in the publication
+1. Increase the number of buyers covered in the publication
 1. Increase the number of concepts covered relative to non-OCDS data
 
 ### Correctness

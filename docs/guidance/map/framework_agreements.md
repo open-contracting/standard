@@ -222,7 +222,7 @@ The National Procurement Agency in Chile (Chile Compra) wants to establish a fra
 
 #### Invitation to participate in the first stage of a framework agreement procedure
 
-Chile Compra publishes a [tender notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) inviting suppliers to participate in the framework agreement. The tender notice specifies that multiple suppliers can join the framework agreement. The framework agreement is open, since all the framework agreements in Chile involve the setting up of a dynamic purchasing system. The framework agreement is for multiple buyers, since the tender notice specifies two contracting authorities.
+Chile Compra publishes a [tender notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) inviting suppliers to participate in the framework agreement. The tender notice specifies that multiple suppliers can join the framework agreement. The framework agreement is open, since all the framework agreements in Chile involve the setting up of a dynamic purchasing system. The framework agreement is for multiple buyers, since the tender notice specifies two buyers.
 
 The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
 
