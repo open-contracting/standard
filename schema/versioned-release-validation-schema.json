@@ -244,7 +244,11 @@
                   "unsuccessful",
                   "withdrawn",
                   null
-                ]
+                ],
+                "deprecated": {
+                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -683,14 +687,16 @@
                 "enum": [
                   "pending",
                   "active",
-                  "complete",
                   "cancelled",
                   "unsuccessful",
-                  "withdrawn",
                   null
                 ],
                 "codelist": "awardStatus.csv",
-                "openCodelist": false
+                "openCodelist": false,
+                "deprecated": {
+                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -870,15 +876,15 @@
                   "pending",
                   "active",
                   "terminated",
-                  "terminatedEarly",
-                  "terminatedSuccessfully",
                   "cancelled",
-                  "unsuccessful",
-                  "withdrawn",
                   null
                 ],
                 "codelist": "contractStatus.csv",
-                "openCodelist": false
+                "openCodelist": false,
+                "deprecated": {
+                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",
