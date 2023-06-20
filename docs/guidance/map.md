@@ -15,17 +15,17 @@ This phase is about documenting your sources of contracting data, and documentin
 
 When starting out, consider working in parallel on the map and build phases, because the choices you make at the build stage might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
 
-If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for guidance on how to identify which OCDS fields match your local concepts.
+If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the Data Support Team](../support/index) for guidance on how to identify which OCDS fields match your local concepts.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
 * Catch errors early on
 * Identify [hard cases](#deal-with-the-hard-cases) that need more attention
-* Get input from the [OCDS Helpdesk](../../support/index)
+* Get input from the [Data Support Team](../../support/index)
 
 The documentation you produce can also later be included in your [Data User Guide](publish.md#finalize-your-publication-policy).
 
-As you make progress through this phase, we encourage you to maintain a project plan, in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk.
+As you make progress through this phase, we encourage you to maintain a project plan, in order to help set priorities and ease communication within your team, with your stakeholders, and with the Data Support Team.
 
 ## Involve the right people
 
@@ -37,13 +37,13 @@ As described in the [Field-Level Mapping Template Guidance](https://www.open-con
 
 ## Identify your data sources
 
-To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting process. The [Technical Assessment Template](https://www.open-contracting.org/resources/technical-assessment-template/) guides you through this process.
+To implement OCDS you need to first identify which IT systems capture and store contracting data and related documents. You also need to identify how to connect data held in different systems, to get a complete picture of the contracting (and planning) processes. The [Technical Assessment Template](https://www.open-contracting.org/resources/technical-assessment-template/) guides you through this process.
 
-If your contracting processes are managed on paper, using local spreadsheets or via unstructured electronic documents, you should use the template to identify those data sources, too.
+If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, you should use the template to identify those data sources, too.
 
 Once complete, you can:
 
-* Ask the [OCDS Helpdesk](../../support/index) to review your Technical Assessment.
+* Ask the [Data Support Team](../../support/index) to review your Technical Assessment.
 * Fill in the _Systems_ sheet of your Field-Level Mapping (introduced below).
 
 ## Localize OCDS to your context
@@ -69,7 +69,7 @@ To make the mapping easier we provide templates to list the data elements within
 
 If your contracting data is managed on paper or in unstructured electronic documents, you should use the templates to list the data elements in those data sources and map them to OCDS.
 
-You can [contact the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on using the mapping templates.
+You can [contact the Data Support Team](../support/index) for guidance on using the mapping templates.
 
 ## Complete the mapping
 
@@ -123,7 +123,7 @@ Before using extensions, double-check whether the data elements can be disclosed
 * [Worked example: Organization classification](map/organization_classifications)
 ```
 
-If you do need to use an extension, consider whether the new fields will affect how users interpret existing fields. If so, you can add information to existing fields, to avoid misinterpretation – in addition to adding the new fields.
+If you do need to use an extension, consider whether the new fields will affect how users interpret existing fields. If so, you can add information to existing fields, to avoid misinterpretation – in addition to adding the new fields.
 
 For example, you have created an extension to add a new field to indicate whether a contracting process is about the disposal of a state asset (like a vehicle). If the `tender.title` field refers only to the vehicle, then users who are unaware of the new field might misinterpret the contracting process as being about its purchase. To avoid misinterpretation, you can add a "Disposal: " prefix to the `tender.title` field.
 
@@ -131,7 +131,7 @@ For example, you have created an extension to add a new field to indicate whethe
 
 **Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)
 
-**Action:** [Contact the OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
+**Action:** [Contact the Data Support Team](../../support/index) to get help with mapping data or authoring extensions.
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [GitHub tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
 
@@ -143,7 +143,7 @@ map/extensions
 
 ## Link OCDS with other standards
 
-Not all information that is related to a contracting process belongs in OCDS. For example, a company's annual filings and incorporation status are typically managed in a company registry, outside the lifecycle of a contracting process.
+Not all information that is related to a contracting (or planning) process belongs in OCDS. For example, a company's annual filings and incorporation status are typically managed in a company registry, outside the lifecycle of a contracting process.
 
 For guidance on integrating your OCDS data with these related datasets, refer to [Linked standards](map/linked_standards).
 
@@ -157,6 +157,6 @@ map/linked_standards
 
 Once complete, you can:
 
-* Ask the [OCDS Helpdesk](../../support/index) to review your Field-Level Mapping and Technical Assessment Template.
+* Ask the [Data Support Team](../../support/index) to review your Field-Level Mapping and Technical Assessment Template.
 
 [Next phase: Build](build)

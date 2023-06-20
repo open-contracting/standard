@@ -12,7 +12,7 @@ Publishers must use the codes in the codelists, unless no code is appropriate. I
 If you use new codes outside those in an open codelist, please document the codes in an [OCDS extension](../guidance/map/extensions) and in your [publication policy](../guidance/publish.md#finalize-your-publication-policy). Please also create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues), so that the codes can be considered for inclusion in the codelist.
 ```
 
-The release schema, in {download}`JSON Schema <../../build/current_lang/release-schema.json>`, has a `codelist` property to indicate the <a href="../../codelists/">CSV File</a> that defines the codes in the codelist (shown as tables below). It also has an `openCodelist` property, to indicate whether the codelist is open or closed.
+The release schema, in [JSON Schema](../../build/current_lang/release-schema.json), has a `codelist` property to indicate the <a href="../../codelists/">CSV File</a> that defines the codes in the codelist (shown as tables below). It also has an `openCodelist` property, to indicate whether the codelist is open or closed.
 
 Codes are case-sensitive, and are generally provided as English language camelCase. Codes must not be translated, though the OCDS team will work with publishers to translate code titles and definitions.
 
@@ -20,7 +20,7 @@ Codes are case-sensitive, and are generally provided as English language camelCa
 
 ### Release Tag
 
-A contracting process can result in a number of releases of information over time. These must be tagged to indicate the stage of the contracting process they relate to.
+A contracting (or planning) process can result in a number of releases of information over time. A release must be tagged to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates.
 
 Additional codes may be used to label releases, based on user needs: for example, to indicate the notice or form to which a release corresponds.
 
@@ -30,7 +30,6 @@ Added the 'planningUpdate' code.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/releaseTag.csv
 ```
 
@@ -39,11 +38,10 @@ Added the 'planningUpdate' code.
 ```{versionadded} 1.1
 ```
 
-The organizations participating in a contracting process are listed in the [parties section](reference.md#parties). A single organization can have one or more roles in the contracting process.
+The organizations participating in a contracting (or planning) process are listed in the [parties section](reference.md#parties). In a given process, a single organization can have one or more roles.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
@@ -53,7 +51,6 @@ The `classificationScheme` codelist is referenced by the `scheme` field of the `
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/classificationScheme.csv
 ```
 
@@ -66,7 +63,6 @@ Item quantities can be provided using an established codelist for units of measu
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/unitClassificationScheme.csv
 ```
 
@@ -76,7 +72,7 @@ Item quantities can be provided using an established codelist for units of measu
 
 The Organization Identifier Scheme uses the codes from [org-id.guide](http://org-id.guide). The latest version of the codelist can be [downloaded](http://org-id.guide/download.csv) or [browsed](http://org-id.guide) from its website.
 
-To add new codes to the codelist, contact the [OCDS Helpdesk](../../support/index).
+To add new codes to the codelist, contact the [Data Support Team](../../support/index).
 
 ```{versionchanged} 1.1
 The `organizationIdentifierRegistrationAgency_iati.csv` file was removed. This list was formerly maintained by the International Aid Transparency Initiative.
@@ -86,13 +82,12 @@ The `organizationIdentifierRegistrationAgency_iati.csv` file was removed. This l
 
 The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates the section of an OCDS release they are most likely to be applicable within. 
 
-The code descriptions are necessarily broad, to cover their usage in a range of contracting processes, including for goods, works and services, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
+The code descriptions are necessarily broad, to cover their usage in a range of contracting (or planning) processes, including for goods, services and works, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
 
 Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/documentType.csv
 ```
 
@@ -106,7 +101,6 @@ Added all new codes. Deprecated all old codes, which were undefined.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/awardCriteria.csv
 ```
 
@@ -119,7 +113,6 @@ The submission method codelist is used to identify the mechanism through which a
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/submissionMethod.csv
 ```
 
@@ -132,7 +125,6 @@ The related process block is used at the release level to point backwards to pri
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/relatedProcess.csv
 ```
 
@@ -145,7 +137,6 @@ The related process scheme describes the kind of identifier used to cross-refere
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/relatedProcessScheme.csv
 ```
 
@@ -154,11 +145,10 @@ The related process scheme describes the kind of identifier used to cross-refere
 ```{versionadded} 1.1
 ```
 
-The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process. The milestone type codelist is used to indicate the nature of each milestone.
+The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/milestoneType.csv
 ```
 
@@ -167,11 +157,10 @@ The milestone block can be used to represent a wide variety of events in the lif
 ```{versionadded} 1.1
 ```
 
-The extended procurement category codelist is used to provide additional detail about the focus of a contracting process. 
+The extended procurement category codelist is used to provide additional detail about the focus of a contracting (or planning) process. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/extendedProcurementCategory.csv
 ```
 
@@ -184,7 +173,6 @@ The language codelist is used to provide the default language used in text field
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/language.csv
 ```
 
@@ -197,7 +185,6 @@ The media type codelist is based on the [IANA Media Types](https://www.iana.org/
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/mediaType.csv
 ```
 
@@ -210,7 +197,6 @@ The link relation type codelist is based on a subset of the [IANA Link Relation 
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/linkRelationType.csv
 ```
 
@@ -225,7 +211,6 @@ The country codelist is used to provide the country component of an address, usi
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/country.csv
 ```
 
@@ -236,7 +221,6 @@ The country codelist is used to provide the country component of an address, usi
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/initiationType.csv
 ```
 
@@ -250,7 +234,6 @@ Added the 'planning' and 'withdrawn' codes.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/tenderStatus.csv
 ```
 
@@ -264,7 +247,6 @@ Added the 'direct' code.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/method.csv
 ```
 
@@ -273,11 +255,10 @@ Added the 'direct' code.
 ```{versionadded} 1.1
 ```
 
-The procurement category codelist is used to indicate the **primary** focus of a contracting process. Where a contracting process covers more than one of the options below, publishers should use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
+The procurement category codelist is used to indicate the **primary** focus of a contracting (or planning) process. Where a contracting (or planning) process covers more than one of the options below, publishers should use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/procurementCategory.csv
 ```
 
@@ -289,7 +270,6 @@ The `awardStatus` field and codelist is used to indicate when a tender did not r
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/awardStatus.csv
 ```
 
@@ -305,7 +285,6 @@ Added the 'terminatedEarly' and 'terminatedSuccessfully' codes.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/contractStatus.csv
 ```
 
@@ -317,7 +296,6 @@ Added the 'scheduled' code.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/milestoneStatus.csv
 ```
 
@@ -330,7 +308,6 @@ The currency for each amount must be specified using the uppercase 3-letter curr
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/currency.csv
 ```
 
@@ -354,6 +331,5 @@ For enterprises without employees, use the 'micro' code.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/partyScale.csv
 ```

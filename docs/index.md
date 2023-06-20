@@ -12,12 +12,63 @@ The Open Contracting Data Standard (OCDS) enables disclosure of data and documen
 
 The OCDS documentation is made up of several parts, designed to help you use the OCDS effectively.
 
-* [Primer](primer/index): Introducing the key concepts and features of the OCDS
-* [Guidance](../guidance/index): Step-by-step instructions on how to design and implement an OCDS publication, including practical examples
-* [Reference](../schema/index): The OCDS data model (schemas, codelists and validation rules) as well as specific rules that need to be followed to publish OCDS data
-* [Getting help](../support/index): How you can get Helpdesk support, tools that can help you use the OCDS, and how you can participate in the OCDS community
-* [History](../history/index): Information about the changes in each version of the OCDS
-* [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly
+````{grid} 1 2 2 3
+:gutter: 2
+
+```{grid-item-card} Primer
+:img-top: _static/png/homepage/video.png
+:link: primer/index
+:link-type: doc
+:text-align: center
+
+Learn about the key concepts and features of the OCDS
+```
+
+```{grid-item-card} Guidance
+:img-top: _static/png/homepage/book.png
+:link: guidance/index
+:link-type: doc
+:text-align: center
+
+Follow step-by-step instructions to design and implement an OCDS publication
+```
+
+```{grid-item-card} Reference
+:img-top: _static/png/homepage/code.png
+:link: schema/index
+:link-type: doc
+:text-align: center
+
+Review the schemas, codelists and rules that need to be followed to publish OCDS data
+```
+
+```{grid-item-card} Getting Help
+:img-top: _static/png/homepage/info.png
+:link: support/index
+:link-type: doc
+:text-align: center
+
+Get free support and learn how to participate in the OCDS community
+```
+
+```{grid-item-card} History
+:img-top: _static/png/homepage/stack.png
+:link: history/index
+:link-type: doc
+:text-align: center
+
+See how the OCDS has changed over time
+```
+
+```{grid-item-card} Data Review Tool
+:img-top: _static/png/homepage/question.png
+:link: https://review.standard.open-contracting.org/
+:text-align: center
+
+Check whether your data follows the OCDS correctly
+```
+
+````
 
 The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](https://www.open-contracting.org/) (OCP). If you are interested to learn more about Open Contracting advocacy and how it can be used to support wider reform and measurable improvements in public contracting, please visit www.open-contracting.org.
 

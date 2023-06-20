@@ -5,22 +5,22 @@
 # 
 # Translators:
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
-# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021
+# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2023-01-10 13:45-0500\n"
 "PO-Revision-Date: 2021-03-01 22:02+0000\n"
-"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/guidance/map/localization.md:1
 msgid "Localizing OCDS"
@@ -109,6 +109,10 @@ msgstr ""
 "![Plantilla de mapeo a nivel de "
 "campo](../../_static/png/mapping_template.png)"
 
+#: ../../docs/guidance/map/localization.md:19
+msgid "Field Level Mapping Template"
+msgstr "Plantilla de Mapeo a Nivel de Campos"
+
 #: ../../docs/guidance/map/localization.md:21
 msgid ""
 "To localize a field title or description, edit the values columns C or D. We"
@@ -119,19 +123,19 @@ msgstr ""
 " valores C o D. Le recomendamos que mantenga el título o la descripción "
 "original entre paréntesis después de la versión localizada. Por ejemplo:"
 
-#: ../../docs/guidance/map/localization.md:1
+#: ../../docs/guidance/map/localization.md:27
 msgid "Path"
 msgstr "Ruta"
 
-#: ../../docs/guidance/map/localization.md:1
+#: ../../docs/guidance/map/localization.md:27
 msgid "Title"
 msgstr "Título"
 
-#: ../../docs/guidance/map/localization.md:1
+#: ../../docs/guidance/map/localization.md:27
 msgid "tender/items"
 msgstr "tender/items"
 
-#: ../../docs/guidance/map/localization.md:1
+#: ../../docs/guidance/map/localization.md:27
 msgid "Items de la licitación (Artículos que se adquirirán)"
 msgstr "Items de la licitación (Artículos que se adquirirán)"
 
@@ -146,7 +150,7 @@ msgstr ""
 "utilizar la función de comentarios de Google Docs para discutir la "
 "localización propuesta."
 
-#: ../../docs/guidance/map/localization.md:1
+#: ../../docs/guidance/map/localization.md:32
 msgid ""
 "Do not edit the values in column B. These are the OCDS field paths which "
 "cannot be edited."
@@ -180,6 +184,10 @@ msgstr ""
 "![Plantilla de mapeo para listas de "
 "códigos](../../_static/png/codelist_mapping.png)"
 
+#: ../../docs/guidance/map/localization.md:39
+msgid "Codelist Mapping Template"
+msgstr "Plantilla de Mapeo de lista de códigos"
+
 #: ../../docs/guidance/map/localization.md:41
 msgid ""
 "To localize a code title or description, edit the values in columns B and C."
@@ -191,7 +199,7 @@ msgstr ""
 " campos, le recomendamos que mantenga el título o la descripción original "
 "entre paréntesis después de la versión localizada."
 
-#: ../../docs/guidance/map/localization.md:1
+#: ../../docs/guidance/map/localization.md:44
 msgid ""
 "Do not edit the values in column A. These are the OCDS field paths which "
 "cannot be edited."
@@ -201,11 +209,11 @@ msgstr ""
 
 #: ../../docs/guidance/map/localization.md:47
 msgid ""
-"You can ask the [OCDS Helpdesk](../../support/index) to review your "
+"You can ask the [Data Support Team](../../support/index) to review your "
 "localized mapping template before you put it to use."
 msgstr ""
-"Puede preguntar a la [Mesa de Ayuda de OCDS](../../support/index) para "
-"revisar su plantilla de mapeo localizada antes de ponerla en uso."
+"Puede pedirle al [Equipo de Soporte de Datos](../../support/index) que "
+"revise su plantilla de mapeo localizada antes de usarla."
 
 #: ../../docs/guidance/map/localization.md:49
 msgid "Mapping between disclosures required by law and OCDS fields"
@@ -296,14 +304,14 @@ msgstr ""
 #: ../../docs/guidance/map/localization.md:67
 msgid ""
 "Provide as much detail as you can about these extra requirements and then "
-"share your mapping with the OCDS Helpdesk. The helpdesk can work with you to"
+"share your mapping with the Data Support Team. The team can work with you to"
 " identify whether to model the requirements using an existing field or "
 "whether to develop an extension."
 msgstr ""
-"Proporcione todos los detalles que pueda sobre estos requisitos adicionales "
-"y luego comparta su mapeo con la Mesa de ayuda de OCDS. La mesa de ayuda "
-"puede trabajar con usted para identificar si modelar los requisitos "
-"utilizando un campo existente o si desarrollar una extensión."
+"Proporcione tantos detalles como pueda sobre estos requisitos adicionales y "
+"luego comparta su mapeo con el Equipo de Soporte de Datos. El equipo puede "
+"trabajar con usted para identificar si modelar los requisitos usando un "
+"campo existente o si desarrollar una extensión."
 
 #: ../../docs/guidance/map/localization.md:69
 msgid "Extending the standard"
@@ -366,11 +374,11 @@ msgstr ""
 
 #: ../../docs/guidance/map/localization.md:83
 msgid ""
-"Contact the [OCDS Helpdesk](../../support/index) to get access to Transifex "
-"or to propose a new translation."
+"Contact the [Data Support Team](../../support/index) to get access to "
+"Transifex or to propose a new translation."
 msgstr ""
-"Contacte a la  [La Mesa de Ayuda de OCDS](../../support/index) para obtener "
-"acceso al Transfiex o para proponer una nueva traducción."
+"Póngase en contacto con el [Equipo de Soporte de Datos](../../support/index)"
+" para obtener acceso a Transifex o para proponer una nueva traducción."
 
 #: ../../docs/guidance/map/localization.md:87
 msgid ""

@@ -2,21 +2,21 @@
 
 The [Release Schema](release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into release packages and how to compile releases into records.
 
-Releases are immutable – presenting information about a particular event in the lifetime of a contracting process. Publishers must not edit a release after publication; a new release can be created by changing the release's `id` and `date`.
+Releases are immutable – presenting information about a particular event in the lifetime of a contracting (or planning) process. Publishers must not edit a release after publication; a new release can be created by changing the release's `id` and `date`.
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
 ```{admonition} Browsing the schema
 :class: note
 
-This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as {download}`JSON Schema <../../build/current_lang/release-schema.json>`, download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
+This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as [JSON Schema](../../build/current_lang/release-schema.json), download it as a [CSV spreadsheet](../../build/current_lang/release-schema.csv), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
 ```
 
 ## Release handling
 
-The full OCDS data model is based on the idea of publishing a new release every time information about a contracting process changes. This way, users can gain a full view of change over time, and third-parties can  understand what needs to be updated in any system that is tracking the progress of a contracting process.
+The full OCDS data model is based on the idea of publishing a new release every time information about a contracting (or planning) process changes. This way, users can gain a full view of change over time, and third-parties can understand what needs to be updated in any system that is tracking the progress of a contracting (or planning) process.
 
-Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice ought to be based on an understanding of the [merging process](merging) that is used to generate a snapshot record of a full contracting process.
+Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice ought to be based on an understanding of the [merging process](merging) that is used to generate a snapshot record of a full contracting (or planning) process.
 
 In this model, publishers need to to pay careful attention to null values and missing fields.
 
@@ -59,7 +59,6 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../examples/language_localization/language.csv
 ```
 
@@ -76,7 +75,7 @@ The majority of OCDS data is held within a release structure. One or more releas
     * [contract](#contract)
       * [implementation](#implementation)
 
-Releases are given a [tag](codelists.md#release-tag) to indicate the specific stage of a contracting process they represent. However, there are no formal restrictions on when information about a stage of the contracting process can be provided.
+A release has a [tag](codelists.md#release-tag) to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates. However, there are no formal restrictions on when information about a stage of the process can be provided.
 
 For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 
@@ -104,7 +103,7 @@ See the [publication policy](../guidance/publish.md#finalize-your-publication-po
 
 ### Release
 
-All new information about a contracting process is described within a release. 
+All new information about a contracting (or planning) process is described within a release. 
 
 ````{admonition} Example
 :class: hint
@@ -170,7 +169,7 @@ Each organization has a `details` object. Through extensions, this can be used t
 
 ### Planning
 
-The planning section can be used to describe the background to a contracting process. This can include details of the budget from which funds are drawn, or related projects for this contracting process. Background documents such as a needs assessment, feasibility study and project plan can also be included in this section.
+The planning section is used in a planning process. This includes information about, for example, needs identification, budget planning and market research. Background documents such as feasibility studies and project plans can also be included in this section.
 
 ````{admonition} Example
 :class: hint
@@ -196,7 +195,7 @@ The planning section can be used to describe the background to a contracting pro
 
 #### Budget 
 
-Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting process to existing projects and budgets even where linked data is not available.
+Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
 
 ````{admonition} Example
 :class: hint
@@ -218,9 +217,9 @@ Apart from documents, the majority of planning information is held within the bu
 
 ### Tender
 
-The tender section includes details of the announcement that an organization intends to source some particular goods, works or services, and to establish one or more contract(s) for these.
+The tender section includes details of the announcement that an organization intends to source some particular goods, services or works and to establish one or more contract(s) for these.
 
-It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods and services, and can also be used to record details of a completed tender process, including details of bids received. 
+It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods, services or works and can also be used to record details of a completed tender stage, including details of bids received. 
 
 ````{admonition} Example
 :class: hint
@@ -437,7 +436,7 @@ See the [parties](#parties) section.
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting process.
+The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting (or planning) process.
 
 If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
 
@@ -491,7 +490,7 @@ If a contracting process represents a contract arranged by the department or bra
 
 Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
 
-Documents related to contracting processes should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
+Documents related to contracting (or planning) processes should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
 
 Documents should be published at their own stable URLs, accessible for free and without the need to search or login, and available at the time of publication of the OCDS release that refers to them.
 
@@ -585,7 +584,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
 
-If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
+If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
 Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
 
@@ -674,14 +673,14 @@ Support for exchange rates, and tax information, can be provided using extension
 
 ### RelatedProcess
 
-In OCDS each contracting process can have only one planning and tender stage. There are a number of cases where it is important to know about related planning and tendering processes, including:
+In OCDS each contracting process can have only one tender stage. There are a number of cases where it is important to know about related contracting processes, including:
 
 * When one planning process results in many tenders;
-* What a contract is awarded following two distinct, but related, tender processes, such as in national frameworks with locally run mini-competitions;
+* When a contract is awarded following two distinct, but related, tender processes, such as in national frameworks with locally run mini-competitions;
 * When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
-In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant open contracting processes using their `ocid`.
+In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant contracting processes using their `ocid`.
 
 ````{admonition} Example
 :class: hint
@@ -706,7 +705,7 @@ As well as providing this machine-readable link between processes, publishers ma
 
 * When recording a `release/relatedProcess` pointing to the ocid of the planning process that resulted in a tender, a `tender/documents` entry with a `documentType` of 'procurementPlan' and a link to web pages about the procurement plan could be provided;
 * When recording a `contract/relatedProcess` pointing to the ocid of a  sub-contracting process, a `contract/documents` entry with a `documentType` of 'subContract' and a title that describes it as the subcontracting process, could be provided;
-* When recording a `contract/relatedProcess` pointing to the ocid of a tender process to renew a given contract, a `contract/documents` entry with a `documentType` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
+* When recording a `contract/relatedProcess` pointing to the ocid of a contracting process to renew a given contract, a `contract/documents` entry with a `documentType` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
 
 ### Location
 
@@ -738,4 +737,13 @@ The entries of the top-level `links` array are `Link` objects:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Link
+```
+
+### SimpleIdentifier
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleIdentifier
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/SimpleIdentifier
 ```
