@@ -2,7 +2,7 @@
 
 ````{ifconfig} language and language not in ('en', 'es', 'fr')
 ```{note}
-This is a [community translation](https://docs.google.com/document/d/1GLwWTpgDDkKmMr1hZE4D75LI8VQtFiD0VA7TF_FvY_Q/view) of OCDS carried out by [ TRANSLATORS ].
+This is a [community translation](governance/translation) of OCDS carried out by [ TRANSLATORS ].
 ```
 ````
 

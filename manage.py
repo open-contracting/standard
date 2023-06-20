@@ -793,7 +793,7 @@ def add_translation_notes():
     the updates are released. The documentation will clearly display when the English documentation is 'ahead' of
     translations for a particular version."
 
-    https://standard.open-contracting.org/1.1/en/governance/#translation-and-localization-policy
+    https://standard.open-contracting.org/latest/en/governance/translation/
     """
     excluded = ('.doctrees', '_downloads', '_images', '_sources', '_static', 'codelists', 'genindex', 'search')
 

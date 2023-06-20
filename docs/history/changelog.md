@@ -4,7 +4,7 @@ These release notes describe what's new in each version. OCDS adheres to [Semant
 
 ## Iterative improvements
 
-Per the [normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit), iterative improvements to non-normative content can be made outside the release cycle.
+Per the [normative and non-normative content and changes policy](../governance/normative), iterative improvements to non-normative content can be made outside the release cycle.
 
 ### Documentation
 
@@ -276,7 +276,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 ## [1.1.5] - 2020-08-20
 
-* [#1054](https://github.com/open-contracting/standard/pull/1054) The [Translation and localization policy](../governance/index.md#translation-and-localization-policy) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
+* [#1054](https://github.com/open-contracting/standard/pull/1054) The [Translation and localization policy](../governance/translation) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
 
 ### Codelists
 
@@ -333,8 +333,8 @@ See the changelogs for:
   * **Action:** If you had upgraded to OCDS 1.1.3, then compiled releases and versioned releases that set `Item.unit` will likely need to be re-created to validate against the OCDS 1.1.4 schema.
 * [#810](https://github.com/open-contracting/standard/pull/810) `buyer.id`, `Tender.procuringEntity.id`, `Contract.implementation.payer.id` `Contract.implementation.payee.id`, `Budget.id`, `Identifier.id`, and `Classification.id` are now versioned, consistent with the documentation.
   * **Action:** Versioned releases that set these fields will likely need to be re-created to validate against the OCDS 1.1.4 schema.
-* [#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit).
-* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [Translation and localization policy](../governance/index.md#translation-and-localization-policy).
+* [#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a [Normative and non-normative content and changes policy](../governance/normative).
+* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [Translation and localization policy](../governance/translation).
 * [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a privacy notice.
 * The documentation is now available in Italian.
 
