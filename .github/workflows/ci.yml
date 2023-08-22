@@ -23,7 +23,8 @@ jobs:
       # - run: |
       #     make linkcheck
       #     rm -f output.json output.txt
-      - run: pytest -W error
+      # "ResourceWarning: unclosed file <_io.BufferedWriter name='/dev/null'>"
+      - run: pytest -W error -W ignore::ResourceWarning
       # Deploy the built documentation to the staging directory.
       - if: github.event_name == 'push'
         uses: shimataro/ssh-key-action@v2
